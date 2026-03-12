@@ -1478,7 +1478,7 @@
       "key": "f5f22445-bdf3-4497-a0b5-182e88d41482",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
+        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
       },
       "seeding_key": {
         "activity_section.key": "f5f22445-bdf3-4497-a0b5-182e88d41482",
@@ -2173,7 +2173,7 @@
       "key": "04242726-a9ac-4897-9891-e17d4f24eb72",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/focus-on-data/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/focus-on-data/2023] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3944,7 +3944,7 @@
       "key": "84c5d882-7406-4f28-bb65-971c5d30615e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/focus-on-data/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/focus-on-data/2023] video in the slides.\n",
         "progression_name": "Video: Netflix and Data",
         "tips": [
           {
@@ -3973,7 +3973,7 @@
       "key": "0d84f791-28e5-407c-b789-4606155d1831",
       "position": 6,
       "properties": {
-        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/focus-on-data/2023] video in the slides.\n",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/focus-on-data/2023] video in the slides.\n",
         "name": "Routz\r",
         "progression_name": "Video: Waze and Data"
       },
@@ -3997,7 +3997,7 @@
       "key": "f2b2217a-4859-4492-9b7e-f3100bbc701b",
       "position": 8,
       "properties": {
-        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/focus-on-data/2023] video in the slides.\n",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/focus-on-data/2023] video in the slides.\n",
         "name": "Nyle\r",
         "progression_name": "Video: Amazon and Data"
       },
@@ -4132,7 +4132,7 @@
       "key": "219abf11-e0ca-4d9c-b84a-55e04b199e6f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/focus-on-data/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/focus-on-data/2023] video in the slides.\n",
         "progression_name": "Video: What is Machine Learning?",
         "tips": [
           {
@@ -4186,7 +4186,7 @@
       "key": "79f0bcaf-c373-41ed-b38f-78b47b831d17",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/focus-on-data/2023] video in the slides.\n",
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/focus-on-data/2023] video in the slides.\n",
         "progression_name": "Video: Training Data and Bias"
       },
       "seeding_key": {
@@ -4273,7 +4273,7 @@
       "key": "a5968f1f-abb1-413d-a1f2-7044796f4f09",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/focus-on-data/2023] video in the slides which recaps the concepts discussed today.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/focus-on-data/2023] video in the slides which recaps the concepts discussed today.\n",
         "progression_name": "Video: Impact on Society"
       },
       "seeding_key": {

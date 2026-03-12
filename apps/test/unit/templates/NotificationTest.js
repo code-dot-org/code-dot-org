@@ -161,7 +161,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="info-circle" />
+              <FontAwesome icon="circle-info" />
             </div>
             <div>
               <div>
@@ -219,7 +219,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="exclamation-triangle" />
+              <FontAwesome icon="triangle-exclamation" />
             </div>
             <div>
               <div>
@@ -248,7 +248,7 @@ describe('Notification', () => {
         <div>
           <div>
             <div>
-              <FontAwesome icon="exclamation-triangle" />
+              <FontAwesome icon="triangle-exclamation" />
             </div>
             <div>
               <div>

@@ -70,7 +70,7 @@ export default function PreviewPaneHeader({
                 recordingFileType: RecordingFileType.WAV,
               })
             }
-            iconClass="fa fa-upload"
+            iconClass="fa-solid fa-upload"
             label={i18n.manageAssets()}
             isRtl={false}
             isDisabled={disableAssetManagerButton}

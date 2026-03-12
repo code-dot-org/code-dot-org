@@ -383,7 +383,7 @@
       "key": "2fda82e4-06ad-4564-95e3-27daf6bef013",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Opening Paul Revere’s Time Capsule” slide\n\n**Do This**: Watch the video. Stop at 2:10.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**:  Show “Discuss” slide\n\n**Discuss**:  _Imagine you are creating a time capsule about life right now._ \n\n- _What would you want to tell someone in the future about the history of today?_ \n- _What artifacts would be found in your time capsule?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to a time capsule project. Students will begin brainstorming ideas for a time capsule poem about events in their lives today.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Digital Time Capsule Example” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Opening Paul Revere’s Time Capsule” slide\n\n**Do This**: Watch the video. Stop at 2:10.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**:  Show “Discuss” slide\n\n**Discuss**:  _Imagine you are creating a time capsule about life right now._ \n\n- _What would you want to tell someone in the future about the history of today?_ \n- _What artifacts would be found in your time capsule?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to a time capsule project. Students will begin brainstorming ideas for a time capsule poem about events in their lives today.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Digital Time Capsule Example” slide"
       },
       "seeding_key": {
         "activity_section.key": "2fda82e4-06ad-4564-95e3-27daf6bef013",
@@ -422,7 +422,7 @@
       "key": "d55b29e1-b781-412a-b5ec-bb50f17d0b2b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Vocabulary” slides\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Vocabulary” slides\n"
       },
       "seeding_key": {
         "activity_section.key": "d55b29e1-b781-412a-b5ec-bb50f17d0b2b",
@@ -456,7 +456,7 @@
       "key": "227b8dcb-fb59-4c77-925c-f696d7585eca",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "name": "Digital Time Capsule Intro",
         "progression_name": "Video"
       },
@@ -469,7 +469,7 @@
       "key": "01960eb6-da79-4b0c-8e95-4bd3cf23ce42",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Time Capsule\" slide\n\n**Say:** **A time capsule is like a treasure box,** but instead of keeping toys and candy inside, it holds special items that tell the story of what life was like right now. Then, it is put in a safe place, like buried in the ground or in a strong box in a library, for many years.\n\n**When the time is right, someone will open the box** and see all the special things put inside, and they'll know all about what life was like when it was buried.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Digital Time Capsule\" slide\n\n**Say:** **A digital time capsule poem is similar,** but instead of keeping things inside of a box, it holds pictures, videos, and messages that are stored on a computer or on the internet.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Time Capsule\" slide\n\n**Say:** **A time capsule is like a treasure box,** but instead of keeping toys and candy inside, it holds special items that tell the story of what life was like right now. Then, it is put in a safe place, like buried in the ground or in a strong box in a library, for many years.\n\n**When the time is right, someone will open the box** and see all the special things put inside, and they'll know all about what life was like when it was buried.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Digital Time Capsule\" slide\n\n**Say:** **A digital time capsule poem is similar,** but instead of keeping things inside of a box, it holds pictures, videos, and messages that are stored on a computer or on the internet.\n",
         "name": "Skill Building",
         "progression_name": "Time Capsules"
       },
@@ -512,7 +512,7 @@
       "key": "ef6e8766-c654-408f-89c5-bd6d21105185",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 3 - Prediction\" slide\n\n**Level 3**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Level 3 - Prediction\" slide\n\n**Level 3**: Consider reading the time capsule poem out loud to all students before they begin writing their prediction. ",
         "progression_name": "Prediction",
         "tips": [
           {
@@ -530,7 +530,7 @@
       "key": "3802d1bc-5279-467a-a816-fbc28aea136d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-7 Skill Building\" Slide \n\n**Level 4**: Students will be provided with a time capsule poem example during this level. Show students how to drag & drop the blocks. Explain that the blocks are like puzzle pieces that must fit together to run. Explain the difference between the different background block options. Show students how to use the drop down menu to select a background and a text color.\n\n**Level 5**: Students may use just the text effect and set text color blocks and have the option to change the font, highlight, and more. Explain to students the different text effect block options. Again, support time management. Consider setting a 2 minute timer when all students must move on to the next level.\n\n**Level 6**: Students may need headphones to listen to the various sound options. If there are no headphones available, remind students to use a low volume that is respectful of the other students.\n\n**Level 7**: Students will explore sprites in this level. Remind them of the meaning of this vocabulary word. Students will require continued time management support. Consider that this is about halfway through the level progression.\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-7 Skill Building\" Slide \n\n**Level 4**: Students will be provided with a time capsule poem example during this level. Show students how to drag & drop the blocks. Explain that the blocks are like puzzle pieces that must fit together to run. Explain the difference between the different background block options. Show students how to use the drop down menu to select a background and a text color.\n\n**Level 5**: Students may use just the text effect and set text color blocks and have the option to change the font, highlight, and more. Explain to students the different text effect block options. Again, support time management. Consider setting a 2 minute timer when all students must move on to the next level.\n\n**Level 6**: Students may need headphones to listen to the various sound options. If there are no headphones available, remind students to use a low volume that is respectful of the other students.\n\n**Level 7**: Students will explore sprites in this level. Remind them of the meaning of this vocabulary word. Students will require continued time management support. Consider that this is about halfway through the level progression.\n\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -542,7 +542,7 @@
       "key": "1866cc0b-cf1a-4c09-a6db-de3c4aeceedc",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Events\" Video\n\n**Level 8**: Decide whether to watch this video all together as a class or allow students to watch it independently at their computers. The skill building with events blocks shown in this Poem Art video is applicable to how students will be coding their digital time capsule poem. This is a good stopping point for students to share with a partner what they have done so far.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Events\" Video\n\n**Level 8**: Decide whether to watch this video all together as a class or allow students to watch it independently at their computers. The skill building with events blocks shown in this Poem Art video is applicable to how students will be coding their digital time capsule poem. This is a good stopping point for students to share with a partner what they have done so far.\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -570,7 +570,7 @@
       "key": "f81d0e7f-7176-4ef8-a5c0-07bb9b9bdcbe",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Skill Building\" and “Level 10: Skill Building\" slides\n\n**Level 9**:  Show students the line numbers on the left-hand side of the short stories. Explain that students need to type a line number into the event block.\n\n**Level 10**: Ensure that the sprite students created earlier is the same sprite in the sprite behavior block. Students may choose to have several sprites with various behaviors.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Skill Building\" and “Level 10: Skill Building\" slides\n\n**Level 9**:  Show students the line numbers on the left-hand side of the short stories. Explain that students need to type a line number into the event block.\n\n**Level 10**: Ensure that the sprite students created earlier is the same sprite in the sprite behavior block. Students may choose to have several sprites with various behaviors.\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -582,7 +582,7 @@
       "key": "a3390911-54da-4db0-b15a-a6209ceae860",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 11 - Free Play\" slide\n\n**Level 11**: Free Play. Encourage students to bring a new time capsule poem to life using all the new skills they’ve acquired. Have students share their work with a partner once they are finished.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Level 11 - Free Play\" slide\n\n**Level 11**: Free Play. Encourage students to bring a new time capsule poem to life using all the new skills they’ve acquired. Have students share their work with a partner once they are finished.",
         "progression_name": "Explore!",
         "tips": [
           {
@@ -600,7 +600,7 @@
       "key": "bd9ab676-de64-4498-ba56-bb0e7b0a8e29",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites enhance your time capsule poem?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short poem to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites enhance your time capsule poem?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short poem to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
         "duration": "10",
         "name": "Bringing a Time Capsule to Life"
       },
@@ -630,7 +630,7 @@
       "key": "45a57785-1232-4312-956f-1652042c5329",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide",
         "name": "Unique Time Capsules"
       },
       "seeding_key": {
@@ -654,7 +654,7 @@
       "key": "ac0ec697-f931-4ace-a24f-fd799d96c613",
       "position": 3,
       "properties": {
-        "description": "\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n"
+        "description": "\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n"
       },
       "seeding_key": {
         "activity_section.key": "ac0ec697-f931-4ace-a24f-fd799d96c613",
@@ -692,7 +692,7 @@
       "key": "d276a6f0-02f4-4608-a819-8a8724b1476b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Time Capsule Project Rubric\" slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show \"Time Capsule Project Rubric\" slide"
       },
       "seeding_key": {
         "activity_section.key": "d276a6f0-02f4-4608-a819-8a8724b1476b",
@@ -721,7 +721,7 @@
       "key": "f042313c-2917-4ffd-9613-985abf9bf38a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Plan Your Time Capsule Poem: Sentence Stems\" slide or \"Plan Your Time Capsule Poem: Question Grab Bag\" slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show \"Plan Your Time Capsule Poem: Sentence Stems\" slide or \"Plan Your Time Capsule Poem: Question Grab Bag\" slide",
         "duration": "10",
         "name": "Brainstorming"
       },
@@ -808,7 +808,7 @@
       "key": "2fe7f1f4-2ba2-4076-98aa-5a1631b12c84",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Poem” slide\n\n**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their time capsule poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their time capsule poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example Poem” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule poem?_\n\n- _What **text effects** might go with your time capsule poem?_\n\n- _What **sounds** might go with your time capsule poem?_\n\n- _What **sprites** might go with your time capsule poem?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Poem” slide\n\n**Do This**: Have students flip their handout to the last page. They will select a couple ideas from their brainstorming session to use for their time capsule poem. Students should come up with a title and about 8 lines of poem. Afterwards, students will begin thinking about how they will code their time capsule poem to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short poem.\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule poem.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Example Poem” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule poem?_\n\n- _What **text effects** might go with your time capsule poem?_\n\n- _What **sounds** might go with your time capsule poem?_\n\n- _What **sprites** might go with your time capsule poem?_",
         "duration": "20",
         "name": "Write Your Time Capsule Poem"
       },
@@ -849,7 +849,7 @@
       "key": "f994bd08-413f-4be3-960d-a2bd29dce7e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your poem to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital time capsule. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your poem to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short poem to use in their digital time capsule. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -879,7 +879,7 @@
       "key": "239e4137-6c3a-45ef-a6e6-6c267855ba37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Poems: 1963 - March on Washington” slide\n\n***1963 - March on Washington***\\\n*By Aaron H.*\n\n*I love to see people coming together\\\nTo fight for their rights, it's like no other.\\\nI just learned about Dr. King's dream\\\nOf equality for all, it's like a lightning beam.\\\nIn my neighborhood, we face segregation\\\nBut we come together to fight for our nation.\\\nPeople I know like to stand up for what's right\\\nTo join in solidarity, it's a beautiful sight.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule poem?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Poems: 1963 - March on Washington” slide\n\n***1963 - March on Washington***\\\n*By Aaron H.*\n\n*I love to see people coming together\\\nTo fight for their rights, it's like no other.\\\nI just learned about Dr. King's dream\\\nOf equality for all, it's like a lightning beam.\\\nIn my neighborhood, we face segregation\\\nBut we come together to fight for our nation.\\\nPeople I know like to stand up for what's right\\\nTo join in solidarity, it's a beautiful sight.*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule poem?_",
         "duration": "10",
         "name": "Read Time Capsule Poem Examples"
       },
@@ -892,7 +892,7 @@
       "key": "cd58fa65-b126-46f9-b637-2bfc2c93fbd4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Poems: 1980 - Bring Us Together” slide\n\n \\\n***1980 - Bring Us Together***\\\n*By Mike H.*\n\n*I love to dribble and shoot hoops so high,\\\nI'm just eight years old, watch me fly!\\\nI follow the NBA, with Magic leading the way,\\\nWith an average of 23 points per game, what can I say!\\\nReagan's in the White House, the world's on edge,\\\nBut sports bring us together, let's all pledge!\\\nFrom basketball to soccer, I love it all,\\\nSports bring us joy, no matter how tall.*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule poem?_\n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule poems that can easily be visualized. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Poems: 1980 - Bring Us Together” slide\n\n \\\n***1980 - Bring Us Together***\\\n*By Mike H.*\n\n*I love to dribble and shoot hoops so high,\\\nI'm just eight years old, watch me fly!\\\nI follow the NBA, with Magic leading the way,\\\nWith an average of 23 points per game, what can I say!\\\nReagan's in the White House, the world's on edge,\\\nBut sports bring us together, let's all pledge!\\\nFrom basketball to soccer, I love it all,\\\nSports bring us joy, no matter how tall.*\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule poem?_\n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule poems that can easily be visualized. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -933,7 +933,7 @@
       "key": "8850e4a1-b18f-4fc9-922d-ba85c7cf84e1",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Time Capsule Poem handout and Time Capsule Poem Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">video</a> explanation before beginning.\n\n",
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule poem. Students should use their Write Your Time Capsule Poem handout and Time Capsule Poem Checklist as a guide as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule poems. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their poem.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Poem” slide \n\n**Debugging tips**: \n\n**Level 1**: To type up their poems, students will need to click the \"Enter Your Own\" option in the poem dropdown menu. Students will fill in the text for their time capsule poem that they wrote last class. They will write in their title, their own name or nickname, and each line of their short poem. Have students watch the short <a href=\"https://www.youtube.com/watch?v=oKPgbzdpTSA\" target=\"_blank\">video</a> explanation before beginning.\n\n",
         "progression_name": "My Time Capsule"
       },
       "seeding_key": {
@@ -945,7 +945,7 @@
       "key": "7e59c185-497a-4224-8c4d-7c42621aa4c8",
       "position": 4,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 2 - Bring Your Time Capsule to Life\" slide\n\n**Level 2 - Choice Level**: Level 2 is a choice level in which students will review the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students also have the option to return to Lesson 1 and rewatch any of the videos.\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Level 2 - Bring Your Time Capsule to Life\" slide\n\n**Level 2 - Choice Level**: Level 2 is a choice level in which students will review the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students also have the option to return to Lesson 1 and rewatch any of the videos.\n",
         "progression_name": "Choice Level: Add Effects",
         "tips": [
           {
@@ -963,7 +963,7 @@
       "key": "39836089-7042-4ed6-a96c-cc3f5874ee2b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show Partner Share and Final Revisions\" slide\n\n**Do This**: Before next class, students should show their work to a partner. After a brief discussion, students have the opportunity to finish their time capsule and make any last revisions."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show Partner Share and Final Revisions\" slide\n\n**Do This**: Before next class, students should show their work to a partner. After a brief discussion, students have the opportunity to finish their time capsule and make any last revisions."
       },
       "seeding_key": {
         "activity_section.key": "39836089-7042-4ed6-a96c-cc3f5874ee2b",
@@ -990,7 +990,7 @@
       "key": "3da2ce72-c5f6-49b0-af27-760527a9dedb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What do you hope someone in the future might learn from your time capsule poem?_\n- _What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection questions should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their poem. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What do you hope someone in the future might learn from your time capsule poem?_\n- _What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection questions should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their poem. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
         "duration": "5",
         "name": "Reflection"
       },
@@ -1020,7 +1020,7 @@
       "key": "8d3b0123-cd18-44a7-a4d8-4967c8a71110",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule poem from last class. Imagine if someone else told the poem of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule poem from last class. Imagine if someone else told the poem of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
         "duration": "5",
         "name": "Discussion"
       },
@@ -1033,7 +1033,7 @@
       "key": "9ba1e467-488c-4946-9b72-0c9ae2cbf3c0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Time Capsule” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Time Capsule” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
         "duration": "30",
         "name": "Share Your Time Capsule"
       },
@@ -1046,7 +1046,7 @@
       "key": "16427813-d916-4c74-8e65-f0799cea8c12",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Present Your Time Capsule” slide\n\n**Do This:** Make sure students read the checklist before presenting:\n- Run your time capsule poem and read it aloud as it plays\n- Explain why you chose each background \n- Explain why you included each sprite\n- Explain how the effects help represent the meaning or tone of your time capsule poem\n- Share your favorite part of the poem\n- Share the most challenging part of coding your poem\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Present Your Time Capsule” slide\n\n**Do This:** Make sure students read the checklist before presenting:\n- Run your time capsule poem and read it aloud as it plays\n- Explain why you chose each background \n- Explain why you included each sprite\n- Explain how the effects help represent the meaning or tone of your time capsule poem\n- Share your favorite part of the poem\n- Share the most challenging part of coding your poem\n\n"
       },
       "seeding_key": {
         "activity_section.key": "16427813-d916-4c74-8e65-f0799cea8c12",
@@ -1073,7 +1073,7 @@
       "key": "9df93aa4-07c7-4165-9494-53ce15c31de4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked that your code included___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *We both wrote about ________!*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked that your code included___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *We both wrote about ________!*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "9df93aa4-07c7-4165-9494-53ce15c31de4",
@@ -1111,7 +1111,7 @@
       "key": "0510b578-c44b-48d3-87c2-0886282e0857",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
         "duration": "10",
         "name": "Reflection"
       },

@@ -1010,7 +1010,7 @@
       "key": "22f0ba79-7e2e-4a4e-abb1-797bdd132783",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know about Java, how could we store this data in a program?*\n\n**Discussion Goal:** Students suggest storing the data in multiple 1D arrays. They might suggest storing each column or each row as separate 1D arrays.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know about Java, how could we store this data in a program?*\n\n**Discussion Goal:** Students suggest storing the data in multiple 1D arrays. They might suggest storing each column or each row as separate 1D arrays.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1027,7 +1027,7 @@
       "key": "1af741ac-ee79-4f55-87c5-6eec6d2bce91",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of using this approach? What would be a better way to store this data?*\n\n**Discussion Goal:** Students realize that working with multiple 1D arrays to get information would be difficult and require keeping track of each array. Students suggest that storing the data as a table would be more efficient because it would make it easier to keep track of the data with one variable and to find information in the table.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations of using this approach? What would be a better way to store this data?*\n\n**Discussion Goal:** Students realize that working with multiple 1D arrays to get information would be difficult and require keeping track of each array. Students suggest that storing the data as a table would be more efficient because it would make it easier to keep track of the data with one variable and to find information in the table.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1044,7 +1044,7 @@
       "key": "dc6caee9-41e7-4365-b972-b2761a756a73",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1069,7 +1069,7 @@
       "key": "1555fe8c-582f-41b5-baab-21a3c7d1fb14",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: 2D Arrays"
       },
       "seeding_key": {
@@ -1081,7 +1081,7 @@
       "key": "5c1a39f5-98a5-4221-9ccc-764dfdf0f9f2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the array has two sets of brackets instead of one like they have used with 1D arrays. Students also notice that the data prints in rows of values. Students may wonder what the values in each set of brackets reference or the benefits of this type of data structure."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the array has two sets of brackets instead of one like they have used with 1D arrays. Students also notice that the data prints in rows of values. Students may wonder what the values in each set of brackets reference or the benefits of this type of data structure."
       },
       "seeding_key": {
         "activity_section.key": "5c1a39f5-98a5-4221-9ccc-764dfdf0f9f2",
@@ -1106,7 +1106,7 @@
       "key": "5404fd3f-e678-4547-ad32-335d336a9c21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Two-Dimensional (2D) Arrays*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Two-Dimensional (2D) Arrays*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1123,7 +1123,7 @@
       "key": "51f8c936-bf22-4cd1-903c-3f7ea1a5bcb9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are stored in a one-dimensional (1D) array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***two-dimensional (2D) array***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that 2D arrays are often represented as a table and define ***row*** and ***column***.\n\n**Do This:** Demonstrate declaring and initializing a 2D array using the `new` keyword:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare a 2D array\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Initialize a 2D array using the `new` keyword\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Declare and initialize a 2D array in one line\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Identify the default values for elements when using the `new` keyword\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to practice creating a 2D array using the `new` keyword.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall how objects are stored in a one-dimensional (1D) array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***two-dimensional (2D) array***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that 2D arrays are often represented as a table and define ***row*** and ***column***.\n\n**Do This:** Demonstrate declaring and initializing a 2D array using the `new` keyword:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Declare a 2D array\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Initialize a 2D array using the `new` keyword\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Declare and initialize a 2D array in one line\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Identify the default values for elements when using the `new` keyword\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to practice creating a 2D array using the `new` keyword.",
         "progression_name": "Skill Building: Creating 2D Arrays",
         "tips": [
           {
@@ -1155,7 +1155,7 @@
       "key": "5b7d9570-dda3-4442-a3a8-520240760df5",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***outer array***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***inner array***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate initializing a row in a 2D array using an initializer list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate declaring and initializing a 2D array using initializer lists.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students complete a Check for Understanding, then continue to Level 5 to complete a choice level to use an initializer list to declare and initialize a 2D array.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***outer array***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***inner array***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate initializing a row in a 2D array using an initializer list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate declaring and initializing a 2D array using initializer lists.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students complete a Check for Understanding, then continue to Level 5 to complete a choice level to use an initializer list to declare and initialize a 2D array.",
         "progression_name": "Skill Building: Using Initializer Lists",
         "tips": [
           {
@@ -1186,7 +1186,7 @@
       "key": "eeb4c31c-b973-4929-b38e-596cc6519b62",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between 1D and 2D arrays?*\n\n**Discussion Goal:** Students identify that both 1D and 2D arrays are immutable, so the data type and size cannot be changed after it has been initialized. Students also note that 2D arrays use a similar syntax as 1D arrays.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between 1D and 2D arrays?*\n\n**Discussion Goal:** Students identify that both 1D and 2D arrays are immutable, so the data type and size cannot be changed after it has been initialized. Students also note that 2D arrays use a similar syntax as 1D arrays.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1203,7 +1203,7 @@
       "key": "cffdd6e2-6d8d-4142-96ad-45ca9ba27bea",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would a 2D array make it easier to store this data?*\n\n**Discussion Goal:** Students suggest that a 2D array makes it easier to store the example data because each row represents values for a specific category, and elements can be accessed as a table.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How would a 2D array make it easier to store this data?*\n\n**Discussion Goal:** Students suggest that a 2D array makes it easier to store the example data because each row represents values for a specific category, and elements can be accessed as a table.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1220,7 +1220,7 @@
       "key": "2701a7ce-c2f4-48fe-ae81-7fa904a555cf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2701a7ce-c2f4-48fe-ae81-7fa904a555cf",
@@ -1255,7 +1255,7 @@
       "key": "01e02734-fd52-492e-9ea0-9d8b0b38ad4a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know about 1D arrays, how do you think we would access an element in a 2D array?*\n\n**Discussion Goal:** Students recall that with a 1D array, they specified an index for the position in the list. Students suggest using the row and column indexes to specify the position in a 2D array.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you know about 1D arrays, how do you think we would access an element in a 2D array?*\n\n**Discussion Goal:** Students recall that with a 1D array, they specified an index for the position in the list. Students suggest using the row and column indexes to specify the position in a 2D array.",
         "name": "Accessing Elements in a 1D Array",
         "tips": [
           {
@@ -1273,7 +1273,7 @@
       "key": "d127d9c6-710d-479f-94a6-20a486e2c742",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1298,7 +1298,7 @@
       "key": "6977fe2f-15ba-4e6a-ae78-585bb2980dc4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: 2D Array Elements"
       },
       "seeding_key": {
@@ -1310,7 +1310,7 @@
       "key": "1841271a-86e9-40e3-90ec-71d3bd3cf4b6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different syntax for accessing an individual row and element in a 2D array. Students also notice that a new 1D array can be assigned to a specific row in a 2D array, which replaces the values in that row. Students might wonder if they can access an individual column or how they might traverse a 2D array to access all of its elements."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the different syntax for accessing an individual row and element in a 2D array. Students also notice that a new 1D array can be assigned to a specific row in a 2D array, which replaces the values in that row. Students might wonder if they can access an individual column or how they might traverse a 2D array to access all of its elements."
       },
       "seeding_key": {
         "activity_section.key": "1841271a-86e9-40e3-90ec-71d3bd3cf4b6",
@@ -1335,7 +1335,7 @@
       "key": "04af5e99-d711-4912-9b50-b71b81570170",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: 2D Array Elements"
       },
       "seeding_key": {
@@ -1347,7 +1347,7 @@
       "key": "2a341e58-4777-4c42-88cd-510b51b97a0f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "2a341e58-4777-4c42-88cd-510b51b97a0f",
@@ -1358,7 +1358,7 @@
       "key": "cac80a5e-d42a-48eb-990f-61f6ac05eb5f",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with 2D Array Elements*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with 2D Array Elements*.",
         "duration": "15",
         "name": "Working with Elements",
         "tips": [
@@ -1377,7 +1377,7 @@
       "key": "2ef4e4e5-5bf3-44b8-9b27-f024ef4f75e6",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access a row from a two-dimensional array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access an element from a two-dimensional array.\n\n**Do This:** Have students respond to the self-check questions. Click through the animated slides to reveal the correct answer and discuss it as a class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Which element is at `numbers[0][0]`?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Which element is at `numbers[2][1]`?\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Which element is at `numbers[3]`?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access a row from a two-dimensional array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to demonstrate how to access an element from a two-dimensional array.\n\n**Do This:** Have students respond to the self-check questions. Click through the animated slides to reveal the correct answer and discuss it as a class:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Which element is at `numbers[0][0]`?\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Which element is at `numbers[2][1]`?\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Which element is at `numbers[3]`?"
       },
       "seeding_key": {
         "activity_section.key": "2ef4e4e5-5bf3-44b8-9b27-f024ef4f75e6",
@@ -1388,7 +1388,7 @@
       "key": "7990dc66-bf78-45d5-b8a1-550bed4e4795",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete a choice level on Level 6 to access and modify elements in a 2D array. On Level 7, students complete a choice level to create a 2D array and access and modify its rows and elements.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete a choice level on Level 6 to access and modify elements in a 2D array. On Level 7, students complete a choice level to create a 2D array and access and modify its rows and elements.",
         "progression_name": "Practice: 2D Array Elements",
         "tips": [
           {
@@ -1419,7 +1419,7 @@
       "key": "830e6e19-111a-4beb-bffd-7b0fbac5db9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is accessing and modifying elements in a 2D array similar to a 1D array? How is it different?*\n* *What parts of this lesson were similar to things you have encountered in your life?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students identify similarities and differences, such as using square brackets and the assignment operator to access and modify elements and how 1D arrays use one set of square brackets and 2D arrays use two sets of square brackets. Students also make connections to real-world scenarios, such as organizing data in a table or grid.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is accessing and modifying elements in a 2D array similar to a 1D array? How is it different?*\n* *What parts of this lesson were similar to things you have encountered in your life?*\n* *What were you confident about? What would you like to practice?*\n\n**Discussion Goal:** Students identify similarities and differences, such as using square brackets and the assignment operator to access and modify elements and how 1D arrays use one set of square brackets and 2D arrays use two sets of square brackets. Students also make connections to real-world scenarios, such as organizing data in a table or grid.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1436,7 +1436,7 @@
       "key": "730ce6a5-ecf5-46a0-92d0-e80bfd8759f9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1490,7 +1490,7 @@
       "key": "483965c2-37fb-4db2-892f-e4fdca7fe391",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm in pseudocode to find the values greater than 10 in the 2D array.",
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm in pseudocode to find the values greater than 10 in the 2D array.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1507,7 +1507,7 @@
       "key": "8e1a8e0c-a058-4c90-93ec-c1ac13c6f4d9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1532,7 +1532,7 @@
       "key": "f4e18228-760c-4967-ae14-8e1386d5bf38",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Nested Loops and 2D Arrays"
       },
       "seeding_key": {
@@ -1544,7 +1544,7 @@
       "key": "35d5aa4f-dd83-417f-9848-41b99ed8060f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the outer loop accesses each row, and the inner loop accesses each column in the current row. Students may wonder about the syntax for referring to the column in the inner loop."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the outer loop accesses each row, and the inner loop accesses each column in the current row. Students may wonder about the syntax for referring to the column in the inner loop."
       },
       "seeding_key": {
         "activity_section.key": "35d5aa4f-dd83-417f-9848-41b99ed8060f",
@@ -1569,7 +1569,7 @@
       "key": "28ae3880-85e9-41b5-aaf7-51d927013f58",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Row-Major Traversal*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Row-Major Traversal*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1586,7 +1586,7 @@
       "key": "4b48dbc4-a9a6-4750-bc3a-8b436825d377",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of rows in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid row indices.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of columns in a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid column indices.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can this code segment be rewritten to prevent an `ArrayIndexOutOfBoundsException`?*\n\n**Discussion Goal:** Students share solutions, such as setting `numRows` to `values.length - 1`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a row-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing 2D Array Traversals handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing 2D Array Traversals handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of rows in a 2D array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid row indices.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to determine the number of columns in a 2D array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use valid column indices.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can this code segment be rewritten to prevent an `ArrayIndexOutOfBoundsException`?*\n\n**Discussion Goal:** Students share solutions, such as setting `numRows` to `values.length - 1`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a row-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Tracing 2D Array Traversals handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing 2D Array Traversals handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1617,7 +1617,7 @@
       "key": "3bd1dc52-321e-433c-b2f7-5e639d23a9d8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest questions that would require finding information within a row or column or performing calculations on values within a row or column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest questions that would require finding information within a row or column or performing calculations on values within a row or column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1646,7 +1646,7 @@
       "key": "fbe0db35-6aa1-4dbb-b21e-5acdbc198faf",
       "position": 11,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Writing Algorithms with 2D Arrays handout and a set of the Planning Array Algorithms manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for one of the problems to find the sum of all the values in a 2D array\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to traverse a 2D array and find the average of all its values.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Writing Algorithms with 2D Arrays handout and a set of the Planning Array Algorithms manipulatives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for one of the problems to find the sum of all the values in a 2D array\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to traverse a 2D array and find the average of all its values.",
         "progression_name": "Practice: Traversing 2D Arrays",
         "tips": [
           {
@@ -1677,7 +1677,7 @@
       "key": "9bb734c5-6887-4e3d-841e-63bbc7d76eb8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did you use your skills as a software engineer to implement your algorithms?*\n\n**Discussion Goal:** Students share examples of how they used software engineering skills and characteristics to implement their algorithms.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How did you use your skills as a software engineer to implement your algorithms?*\n\n**Discussion Goal:** Students share examples of how they used software engineering skills and characteristics to implement their algorithms.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1694,7 +1694,7 @@
       "key": "83137ebe-8b5e-472b-a737-a6a95d3e90d0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "83137ebe-8b5e-472b-a737-a6a95d3e90d0",
@@ -1742,7 +1742,7 @@
       "key": "f53acac0-2bf9-45c8-881b-37f7004f56ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what we know about Java and 2D arrays, how could we find the sum of the values in each column in this 2D array?*\n\n**Discussion Goal:** Students suggest various solutions to this problem, including going through the 2D array column-by-column instead of row-by-row or keeping track of which column they are in.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Based on what we know about Java and 2D arrays, how could we find the sum of the values in each column in this 2D array?*\n\n**Discussion Goal:** Students suggest various solutions to this problem, including going through the 2D array column-by-column instead of row-by-row or keeping track of which column they are in.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1759,7 +1759,7 @@
       "key": "50ddc3ef-56b0-480c-8084-5ff35a52b63c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1784,7 +1784,7 @@
       "key": "baff0c15-bcd2-4f32-9c6e-e8f9a8abd67b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Column-Major Traversal"
       },
       "seeding_key": {
@@ -1796,7 +1796,7 @@
       "key": "eef3488b-eed0-4fca-a7d5-262771cde31e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the outer loop traverses each column, and the inner loop traverses each row. Students also notice that the syntax for accessing an individual element is still the same. Students may wonder when they would traverse a 2D array in column-major order."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the outer loop traverses each column, and the inner loop traverses each row. Students also notice that the syntax for accessing an individual element is still the same. Students may wonder when they would traverse a 2D array in column-major order."
       },
       "seeding_key": {
         "activity_section.key": "eef3488b-eed0-4fca-a7d5-262771cde31e",
@@ -1821,7 +1821,7 @@
       "key": "67e56492-e16b-42e2-9cae-5555bec0327c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Column-Major Traversal*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Column-Major Traversal*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1838,7 +1838,7 @@
       "key": "4c93bccd-6fa2-45cb-b713-188a9c1ee830",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a column-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Column-Major Traversals handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Column-Major Traversals handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a column-major traversal.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Tracing Column-Major Traversals handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Tracing Column-Major Traversals handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1869,7 +1869,7 @@
       "key": "b681f175-0eea-4f4d-a12d-8fadbdeb9d6d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to traverse a 2D array in column-major order. On Level 4, students complete a choice level to apply a standard 1D array algorithm to a 2D array using the console or The Theater.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to complete a choice level to traverse a 2D array in column-major order. On Level 4, students complete a choice level to apply a standard 1D array algorithm to a 2D array using the console or The Theater.",
         "progression_name": "Practice: Column-Major Traversal",
         "tips": [
           {
@@ -1900,7 +1900,7 @@
       "key": "865117f5-f148-483d-b86a-70e95700a6ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the differences between the row-major and column-major order traversal algorithms?*\n\n**Discussion Goal:** Students note that the `for` loop headers are swapped. In row-major order, the loop variable in the outer `for` loop is used as a row index, and the loop variable from the inner `for` loop is used as a column index. Conversely, in column-major order, the loop variable in the outer `for` loop is used as a column index, and the loop variable from the inner `for` loop is used as a row index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain use cases for each traversal approach.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the differences between the row-major and column-major order traversal algorithms?*\n\n**Discussion Goal:** Students note that the `for` loop headers are swapped. In row-major order, the loop variable in the outer `for` loop is used as a row index, and the loop variable from the inner `for` loop is used as a column index. Conversely, in column-major order, the loop variable in the outer `for` loop is used as a column index, and the loop variable from the inner `for` loop is used as a row index.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain use cases for each traversal approach.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1917,7 +1917,7 @@
       "key": "cb031a2f-7a79-4ee6-9cb3-34a31aae94b7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "cb031a2f-7a79-4ee6-9cb3-34a31aae94b7",
@@ -1965,7 +1965,7 @@
       "key": "db363800-686f-47b5-a895-70a6ddd9e31b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Enhanced For Loops Anticipation Guide handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to each statement in the Before column on the Enhanced For Loops Anticipation Guide handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Enhanced For Loops Anticipation Guide handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to each statement in the Before column on the Enhanced For Loops Anticipation Guide handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1982,7 +1982,7 @@
       "key": "8dab2640-2889-4997-8979-f2e8ed05329f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2007,7 +2007,7 @@
       "key": "9ce5fec1-26cc-401a-8a35-524fe369453a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Enhanced For Loops and Objects"
       },
       "seeding_key": {
@@ -2019,7 +2019,7 @@
       "key": "3d5c77a5-f3c5-4be5-a0f6-431bd45ad7ee",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the values stored in the instance variables for each object are modified in the enhanced `for` loop. Students may wonder why objects can be modified in an enhanced `for` loop when primitive values cannot be modified."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the values stored in the instance variables for each object are modified in the enhanced `for` loop. Students may wonder why objects can be modified in an enhanced `for` loop when primitive values cannot be modified."
       },
       "seeding_key": {
         "activity_section.key": "3d5c77a5-f3c5-4be5-a0f6-431bd45ad7ee",
@@ -2030,7 +2030,7 @@
       "key": "15b360b1-ca69-4068-949e-fe0ae262d1b6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the changes made to the loop variable affected the original object reference?*\n\n**Discussion Goal:** Students recall that the enhanced `for` loop variable stores a copy of the value stored in the array. Students realize that the enhanced `for` loop variable is storing a copy of the object reference, which makes it an alias of the object reference stored in the array. Since the enhanced `for` loop variable is an alias, both variables reference the same object.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the changes made to the loop variable affected the original object reference?*\n\n**Discussion Goal:** Students recall that the enhanced `for` loop variable stores a copy of the value stored in the array. Students realize that the enhanced `for` loop variable is storing a copy of the object reference, which makes it an alias of the object reference stored in the array. Since the enhanced `for` loop variable is an alias, both variables reference the same object.",
         "duration": "15",
         "name": "Enhanced For Loops and 2D Arrays",
         "tips": [
@@ -2049,7 +2049,7 @@
       "key": "13aedc17-706c-4c24-889e-81a8e429afda",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate using an enhanced `for` loop to modify an object:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The enhanced `for` loop variable gets a copy of the value stored in the array.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> With objects, the value is a reference or pointer to the object in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The enhanced `for` loop variable gets a copy of the reference or pointer to the object in memory.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The enhanced `for` loop variable is an alias of the reference stored in the array."
+        "description": "**Do This:** Click through the animated slides to demonstrate using an enhanced `for` loop to modify an object:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The enhanced `for` loop variable gets a copy of the value stored in the array.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> With objects, the value is a reference or pointer to the object in memory.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The enhanced `for` loop variable gets a copy of the reference or pointer to the object in memory.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The enhanced `for` loop variable is an alias of the reference stored in the array."
       },
       "seeding_key": {
         "activity_section.key": "13aedc17-706c-4c24-889e-81a8e429afda",
@@ -2072,7 +2072,7 @@
       "key": "a0cc9397-cb44-4346-8f94-83b0381c0ccb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Enhanced For Loops"
       },
       "seeding_key": {
@@ -2084,7 +2084,7 @@
       "key": "06834402-8e53-48cd-bae2-8e0c8b2dde8f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Enhanced For Loops and 2D Arrays*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2113,7 +2113,7 @@
       "key": "af0d089e-9e0f-489f-9d8e-a15661d34270",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array? How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using an enhanced `for` loop with a 2D array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How is using an enhanced `for` loop with a 2D array similar to using it with a 1D array? How is it different?*\n\n**Discussion Goal:** Students identify the similarities in the syntax and that the enhanced `for` loop traverses each row and column from first to last. Students note that traversing a 2D array requires nested loops to traverse each row with the outer loop and each column with the inner loop."
       },
       "seeding_key": {
         "activity_section.key": "af0d089e-9e0f-489f-9d8e-a15661d34270",
@@ -2124,7 +2124,7 @@
       "key": "3d15b0f1-9ec0-4607-b4ff-559f00cb054d",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6 and 7 to use an enhanced `for` loop with a 2D array using the console or The Theater.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6 and 7 to use an enhanced `for` loop with a 2D array using the console or The Theater.",
         "duration": "15",
         "name": "Practice",
         "progression_name": "Practice: Enhanced For Loops and 2D Arrays",
@@ -2157,7 +2157,7 @@
       "key": "16e180f0-62fe-4ee7-b52b-6c8637f31772",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to each statement in the After column on the Enhanced For Loops Anticipation Guide handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to each statement in the After column on the Enhanced For Loops Anticipation Guide handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2174,7 +2174,7 @@
       "key": "24eb0033-e3b5-4338-b83c-a04894ef8ae5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2228,7 +2228,7 @@
       "key": "9ed04ad1-7729-4fa7-b17b-066fa1a74afc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen image filters used? Why do we use them?*\n\n**Discussion Goal:** Students share examples of apps and programs with image filters, such as social media apps and photo editing programs. Students suggest that image filters are used to enhance the visual appeal or mood of images.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen image filters used? Why do we use them?*\n\n**Discussion Goal:** Students share examples of apps and programs with image filters, such as social media apps and photo editing programs. Students suggest that image filters are used to enhance the visual appeal or mood of images.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2245,7 +2245,7 @@
       "key": "3a2667f9-3fc8-4d1b-9a95-5dab91557a47",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think software engineers decide what new image filters to add to apps and programs?*\n\n**Discussion Goal:** Students share ideas about how new image filters are chosen and developed, such as creating image filters that are similar to popular ones."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think software engineers decide what new image filters to add to apps and programs?*\n\n**Discussion Goal:** Students share ideas about how new image filters are chosen and developed, such as creating image filters that are similar to popular ones."
       },
       "seeding_key": {
         "activity_section.key": "3a2667f9-3fc8-4d1b-9a95-5dab91557a47",
@@ -2256,7 +2256,7 @@
       "key": "b5f7010f-af79-4cee-aa18-d770e4a509e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2281,7 +2281,7 @@
       "key": "2259fe24-f2f7-41ef-ae05-ae5a47c1f076",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Image Filters"
       },
       "seeding_key": {
@@ -2293,7 +2293,7 @@
       "key": "f51b1790-ac8b-40aa-8df7-a9ff3e4cc7f6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there is a 2D array of `Pixel` objects that is traversed to change the color values of each pixel in an image. Students may wonder how pixels are represented and how they can tell where a pixel is located in an image."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that there is a 2D array of `Pixel` objects that is traversed to change the color values of each pixel in an image. Students may wonder how pixels are represented and how they can tell where a pixel is located in an image."
       },
       "seeding_key": {
         "activity_section.key": "f51b1790-ac8b-40aa-8df7-a9ff3e4cc7f6",
@@ -2304,7 +2304,7 @@
       "key": "37fb6b2e-f22d-4550-97d6-b17f23a99f5e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Images and Pixels*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Images and Pixels*.",
         "duration": "15",
         "name": "Images and Pixels",
         "tips": [
@@ -2323,7 +2323,7 @@
       "key": "7109d074-dbd4-497e-9493-4b43b87d8e01",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how images are made up of pixels and pixels are made up of RGB color values.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how images are made up of pixels and pixels are made up of RGB color values.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Image Filters"
       },
       "seeding_key": {
@@ -2335,7 +2335,7 @@
       "key": "9828244f-d957-42af-af27-1744d9dead0d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Click through the animated slides to introduce the `Image` and `Pixel` classes:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Image` class and its methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Pixel` class and its methods\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate getting a pixel from an image.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using object references as parameters to a method or constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that when the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Click through the animated slides to introduce the `Image` and `Pixel` classes:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `Image` class and its methods\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `Pixel` class and its methods\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate getting a pixel from an image.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using object references as parameters to a method or constructor.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that when the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object."
       },
       "seeding_key": {
         "activity_section.key": "9828244f-d957-42af-af27-1744d9dead0d",
@@ -2360,7 +2360,7 @@
       "key": "85b0c910-d906-453a-a47b-eb64323cd252",
       "position": 9,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Creating Image Filters handout and manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to set either the red, green, or blue color values to zero for each pixel in an image.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to write a method to create a 2D array of Pixel objects on Level 6. On Level 7, students complete a choice level to create an image filter.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Creating Image Filters handout and manipulatives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to set either the red, green, or blue color values to zero for each pixel in an image.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to write a method to create a 2D array of Pixel objects on Level 6. On Level 7, students complete a choice level to create an image filter.",
         "progression_name": "Practice: Creating Image Filters",
         "tips": [
           {
@@ -2395,7 +2395,7 @@
       "key": "0f2ac341-ce11-4cc6-9a21-355fb9e47313",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of image filters would you want to create?*\n\n**Discussion Goal:** Students share examples of image filters they want to create, such as replicating or modifying existing ones that they like or creating a new one that they wish existing apps and programs had.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What kind of image filters would you want to create?*\n\n**Discussion Goal:** Students share examples of image filters they want to create, such as replicating or modifying existing ones that they like or creating a new one that they wish existing apps and programs had.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2412,7 +2412,7 @@
       "key": "cdafe287-54aa-4038-8a42-7b41fb561947",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "cdafe287-54aa-4038-8a42-7b41fb561947",
@@ -2460,7 +2460,7 @@
       "key": "e08a6011-a4a4-4ce9-8ddc-3e660619b059",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a concept map in response to the prompt by brainstorming any concepts and ideas that come to mind.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a concept map in response to the prompt by brainstorming any concepts and ideas that come to mind.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2477,7 +2477,7 @@
       "key": "e3617cfb-80d3-4bf8-bb48-aad2879db7b2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review their brainstorm, identify the concepts that are central to the prompt, and draw arrows to connect the concepts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to label the arrows with verbs or short descriptions to identify the relationships between the concepts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students share their concept maps with a neighbor to compare concepts and relationships. Have students add to or revise their concept maps based on their discussions.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review their brainstorm, identify the concepts that are central to the prompt, and draw arrows to connect the concepts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to label the arrows with verbs or short descriptions to identify the relationships between the concepts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students share their concept maps with a neighbor to compare concepts and relationships. Have students add to or revise their concept maps based on their discussions.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2494,7 +2494,7 @@
       "key": "e7a7c5f9-be30-4ff6-940d-22269f30cdf3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2519,7 +2519,7 @@
       "key": "4049f908-480f-4f88-ac7b-a2f5dfaa37b3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: The indexOf() Method"
       },
       "seeding_key": {
@@ -2531,7 +2531,7 @@
       "key": "96fa7b3e-9799-4337-90cb-37a83d18a7cd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program counts the number of times a `String` that contains a specific phrase appears in each row of the 2D array. Students also notice that the `indexOf()` method returns `-1` if the `String` is not found. Students may wonder what the `indexOf()` method does and how this can be used in other scenarios."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program counts the number of times a `String` that contains a specific phrase appears in each row of the 2D array. Students also notice that the `indexOf()` method returns `-1` if the `String` is not found. Students may wonder what the `indexOf()` method does and how this can be used in other scenarios."
       },
       "seeding_key": {
         "activity_section.key": "96fa7b3e-9799-4337-90cb-37a83d18a7cd",
@@ -2542,7 +2542,7 @@
       "key": "a2d36ec3-6424-468c-9581-a6a2fca2be78",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall that each character in a `String` is at an index which starts at `0`.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall that each character in a `String` is at an index which starts at `0`.",
         "duration": "15",
         "name": "The indexOf() Method"
       },
@@ -2567,7 +2567,7 @@
       "key": "9430d59e-854f-4fb4-86a4-5709d2263167",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: The indexOf() Method"
       },
       "seeding_key": {
@@ -2579,7 +2579,7 @@
       "key": "7a94222c-69af-4652-b75c-7983c9af7d98",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `indexOf()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the output of the first code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students complete a choice level to practice using the `indexOf()` method to find the location of a character or `String` in a `String` object.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `indexOf()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the output of the first code segment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students complete a choice level to practice using the `indexOf()` method to find the location of a character or `String` in a `String` object.",
         "progression_name": "Skill Building: The indexOf() Method"
       },
       "seeding_key": {
@@ -2605,7 +2605,7 @@
       "key": "a5164891-87a6-429b-998a-a2afd06ca445",
       "position": 10,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Writing Algorithms with 2D Arrays handout and a set of the Planning Algorithms manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Writing Algorithms with 2D Arrays handout and a set of the Planning Algorithms manipulatives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2622,7 +2622,7 @@
       "key": "a9e13c33-37ad-43c1-834e-a1ac169b62f5",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding, then continue to Level 7 to implement their algorithm for their chosen problem.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding, then continue to Level 7 to implement their algorithm for their chosen problem.",
         "progression_name": "Practice: 2D Array Algorithms",
         "tips": [
           {
@@ -2654,7 +2654,7 @@
       "key": "4bb9dcf8-0d8e-4d4d-9c11-c43b99ac36fe",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their chosen problem.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2684,7 +2684,7 @@
       "key": "3f343498-748b-442d-9018-646077607d13",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share their achievements and aspects of their program that they are proud of as well as challenges they overcame and how they solved them. Students may suggest ways they can improve their program, such as decomposing the problem down further or identifying additional preconditions for their algorithms.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share their achievements and aspects of their program that they are proud of as well as challenges they overcame and how they solved them. Students may suggest ways they can improve their program, such as decomposing the problem down further or identifying additional preconditions for their algorithms.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2701,7 +2701,7 @@
       "key": "25d306fe-c764-403f-ac19-b520a06d93fe",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2755,7 +2755,7 @@
       "key": "c045edab-6e32-4845-95d6-169c1c79b681",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
       },
       "seeding_key": {
         "activity_section.key": "c045edab-6e32-4845-95d6-169c1c79b681",
@@ -2766,7 +2766,7 @@
       "key": "14c45d4a-d01d-4f3a-81b1-65f7ebd6498d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2791,7 +2791,7 @@
       "key": "1166f233-b32e-4ffd-a8f7-b285aa95729f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Image Filters"
       },
       "seeding_key": {
@@ -2803,7 +2803,7 @@
       "key": "fcf77f6a-9078-4f58-bc9b-5446938e6db8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by calculating new values for the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the color of each pixel is modified by calculating new values for the red, green, and blue values. Students may wonder about other ways they can manipulate colors or make connections to image filters they might have seen in other apps and programs."
       },
       "seeding_key": {
         "activity_section.key": "fcf77f6a-9078-4f58-bc9b-5446938e6db8",
@@ -2814,7 +2814,7 @@
       "key": "19501d5e-80f4-4341-8296-24ed8f2ddde6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Modifying Colors handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create an image filter or effect.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how grayscale images are created.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Modifying Colors handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to create an image filter or effect.",
         "duration": "10",
         "name": "Planning the Algorithm",
         "tips": [
@@ -2833,7 +2833,7 @@
       "key": "cd5fc590-042d-4564-bf00-445148f9d098",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed."
       },
       "seeding_key": {
         "activity_section.key": "cd5fc590-042d-4564-bf00-445148f9d098",
@@ -2857,7 +2857,7 @@
       "key": "32007258-eaa6-4145-b6e3-5a4afaaaa1d2",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Levels 4 and 5, students complete a choice level to create an image filter.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Levels 4 and 5, students complete a choice level to create an image filter.",
         "progression_name": "Practice: Image Filters",
         "tips": [
           {
@@ -2888,7 +2888,7 @@
       "key": "b9d65a8a-6888-4674-b128-8d0abb80a970",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2942,7 +2942,7 @@
       "key": "8be02478-38b3-4ad0-bfb0-ca187fdf0e97",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Am I Real? activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2959,7 +2959,7 @@
       "key": "1401f254-3f2d-4e34-9a69-bbc7881ea1bb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the first pair of images and have students choose which image they think is real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the second pair of images and have students choose which image they think is real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why did you choose your image as real? Why does the other image look less real?*\n\n**Discussion Goal:** Students share their reasoning for their choices, which may include features of an image that they believe is fake or real.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show which image is real and which is not real."
       },
       "seeding_key": {
         "activity_section.key": "1401f254-3f2d-4e34-9a69-bbc7881ea1bb",
@@ -2970,7 +2970,7 @@
       "key": "cdb046d3-8cbe-44a3-b137-61a1892ebe91",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Deep Fakes"
       },
@@ -2995,7 +2995,7 @@
       "key": "d94a78b9-cce9-4206-b8b5-e5f089578dc1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen deep fakes before?*\n\n**Discussion Goal:** Students share examples of deep fakes they have seen, including in media and TV shows or on social media.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Where have you seen deep fakes before?*\n\n**Discussion Goal:** Students share examples of deep fakes they have seen, including in media and TV shows or on social media.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3012,7 +3012,7 @@
       "key": "4ed1b5dd-7d67-48cf-8430-f22d651d80bc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What did this example make you wonder or feel?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deep fakes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you think are some benefits of deep fakes?*\n* *What do you think are some harmful impacts of deep fakes?*\n\n**Discussion Goal:** Students identify some benefits of deep fakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *This is Not Morgan Freeman*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What did this example make you wonder or feel?*\n\n**Discussion Goal:** Students share their thoughts and feelings about this example of deep fakes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you think are some benefits of deep fakes?*\n* *What do you think are some harmful impacts of deep fakes?*\n\n**Discussion Goal:** Students identify some benefits of deep fakes, such as automatically generating extras in movies. Students also identify some harmful impacts, like creating images and videos that look like someone communicating a message they may not actually support.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3041,7 +3041,7 @@
       "key": "77e3f809-5a6e-4028-bde6-bafe5832cf05",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given the harmful impacts of deep fakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deep fakes should be developed. Students justify their ideas with positive or negative impacts of deep fakes.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Given the harmful impacts of deep fakes, should software engineers continue to develop them? Why or why not?*\n\n**Discussion Goal:** Students share their ideas about whether or not software to create deep fakes should be developed. Students justify their ideas with positive or negative impacts of deep fakes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3072,7 +3072,7 @@
       "key": "66f1d9c8-0f58-4505-8d4a-cf6270645c39",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "**Do This:** Show the examples of edge detection:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect abnormalities, such as tumors, in the body\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect curves in fingertips for fingerprint recognition\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Detect other vehicles and people on the road\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Image Manipulations"
       },
       "seeding_key": {
@@ -3084,7 +3084,7 @@
       "key": "e68aaf33-a886-4be2-b1cc-007f4baf8f9a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "e68aaf33-a886-4be2-b1cc-007f4baf8f9a",
@@ -3095,7 +3095,7 @@
       "key": "dc965601-b3b5-4833-8e5a-3a63a471e2e3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
@@ -3125,7 +3125,7 @@
       "key": "d23812c4-5b53-4539-aaa2-e82f4e274f79",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 5 Study Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Personal Narrative Project."
       },
       "seeding_key": {
         "activity_section.key": "d23812c4-5b53-4539-aaa2-e82f4e274f79",
@@ -3185,7 +3185,7 @@
       "key": "616cae0b-d15a-455c-aeca-eafbf688f7b9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals."
       },
       "seeding_key": {
         "activity_section.key": "616cae0b-d15a-455c-aeca-eafbf688f7b9",
@@ -3210,7 +3210,7 @@
       "key": "ab061e78-30d8-4076-a345-40b589ed6cb3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3227,7 +3227,7 @@
       "key": "b30c10a1-2210-40f0-8415-7bb00a2ac27b",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Day 3 steps"
+        "description": "**Do This:** Introduce the steps students will take each day to complete the project:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 1 steps\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 2 steps\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Day 3 steps"
       },
       "seeding_key": {
         "activity_section.key": "b30c10a1-2210-40f0-8415-7bb00a2ac27b",
@@ -3250,7 +3250,7 @@
       "key": "332799c2-6a5c-49ba-ab3e-ea42de2a336d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "332799c2-6a5c-49ba-ab3e-ea42de2a336d",
@@ -3261,7 +3261,7 @@
       "key": "fc863759-739c-473a-9e9a-7976b4c5dcec",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "15",
         "name": "Development",
         "progression_name": "Personal Narrative Project"
@@ -3287,7 +3287,7 @@
       "key": "41629c85-9bc5-4cb9-ae27-5f2120b0649b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3318,7 +3318,7 @@
       "key": "c387821e-6b55-4654-b387-3e10c1da0e87",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Personal Narrative Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3353,7 +3353,7 @@
       "key": "afa15c5c-8787-4631-84e1-e487c61712b7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Personal Narrative Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3384,7 +3384,7 @@
       "key": "ccb486e3-3292-42da-a16e-98df9ea814be",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects."
       },
       "seeding_key": {
         "activity_section.key": "ccb486e3-3292-42da-a16e-98df9ea814be",
@@ -3409,7 +3409,7 @@
       "key": "0041e644-9761-48ba-a9d3-d7f974c94883",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3438,7 +3438,7 @@
       "key": "24eabd91-f49b-4926-8b9b-b33680f5f03c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Personal Narrative Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Personal Narrative Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3469,7 +3469,7 @@
       "key": "b34da338-4bc9-4103-82cc-312eff059e4f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Personal Narrative Project Planning Guide based on the feedback they received from the code review.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Personal Narrative Project Planning Guide based on the feedback they received from the code review.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3500,7 +3500,7 @@
       "key": "8b515cfd-ab25-4a66-bd4a-bcf3c4204a48",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Personal Narrative Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3535,7 +3535,7 @@
       "key": "b8df95b1-80dd-4f0e-b7d7-6db5073fe4a8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "b8df95b1-80dd-4f0e-b7d7-6db5073fe4a8",
@@ -3546,7 +3546,7 @@
       "key": "c2cf925b-a6ab-499f-aaf9-aac2f9ad6aa6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the steps for Day 3 of the project.",
         "duration": "15",
         "name": "Development"
       },
@@ -3571,7 +3571,7 @@
       "key": "67937ab3-5f08-4c54-9e57-cfc2c7c257de",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Personal Narrative Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the project requirements and rubric on the Personal Narrative Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "67937ab3-5f08-4c54-9e57-cfc2c7c257de",
@@ -3594,7 +3594,7 @@
       "key": "7d469fa4-7b93-4315-b570-2457045f5dc4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Personal Narrative Project. Have students submit their projects at the end of the allotted time."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Personal Narrative Project. Have students submit their projects at the end of the allotted time."
       },
       "seeding_key": {
         "activity_section.key": "7d469fa4-7b93-4315-b570-2457045f5dc4",
@@ -3619,7 +3619,7 @@
       "key": "68ac6dac-3d50-43a3-9aa4-d367502f753d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "68ac6dac-3d50-43a3-9aa4-d367502f753d",
@@ -3630,7 +3630,7 @@
       "key": "b8971248-329b-4a86-b849-d8538282f055",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -3685,7 +3685,7 @@
       "key": "5d2235ce-2694-4b3d-a2c9-b00b663a6ac9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
       },
       "seeding_key": {
         "activity_section.key": "5d2235ce-2694-4b3d-a2c9-b00b663a6ac9",
@@ -3708,7 +3708,7 @@
       "key": "6183366c-8db2-4254-b042-024b8978dc31",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
       },
       "seeding_key": {
         "activity_section.key": "6183366c-8db2-4254-b042-024b8978dc31",
@@ -3719,7 +3719,7 @@
       "key": "f403a003-66c6-4f48-96bc-ae685caa19b0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ handout and Java Quick Reference.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ handout and Java Quick Reference.",
         "duration": "25",
         "name": "Writing",
         "tips": [
@@ -3750,7 +3750,7 @@
       "key": "1aa02ac4-9c90-4ee7-a0ae-d84eb2c5a53f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3767,7 +3767,7 @@
       "key": "5f2db72f-8e48-4ee1-925a-4f819b042fd8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ Scoring Guidelines.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the GrayscaleImage FRQ Scoring Guidelines.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the GrayscaleImage FRQ Scoring Guidelines.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the GrayscaleImage FRQ Scoring Guidelines.",
         "duration": "10",
         "name": "Scoring and Review"
       },
@@ -3792,7 +3792,7 @@
       "key": "3bada7da-8dcd-4d6d-b1b0-5a77fb0803aa",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` access all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` compares an element in the array with `BLACK` or with `0` during traversal\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` initializes and increments a counter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `countBlackPixels()` returns the correct count of the number of black pixels in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all necessary elements in at least one row or one column of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all entries in `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` increases the value at index `[row][col]` by the value found at index `[row + 2][col + 2]`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()` modifies all appropriate elements of `pixels`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  `lightenImage()`assigns `WHITE` or `255` to elements of `pixels` that would otherwise have a value greater than `WHITE`"
+        "description": "**Do This:** Explain the potential solution and scoring guidelines:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `countBlackPixels()` access all entries in `pixels`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `countBlackPixels()` compares an element in the array with `BLACK` or with `0` during traversal\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `countBlackPixels()` initializes and increments a counter\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `countBlackPixels()` returns the correct count of the number of black pixels in `pixels`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all necessary elements in at least one row or one column of `pixels`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `lightenImage()` accesses all entries in `pixels`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `lightenImage()` increases the value at index `[row][col]` by the value found at index `[row + 2][col + 2]`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `lightenImage()` modifies all appropriate elements of `pixels`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  `lightenImage()`assigns `WHITE` or `255` to elements of `pixels` that would otherwise have a value greater than `WHITE`"
       },
       "seeding_key": {
         "activity_section.key": "3bada7da-8dcd-4d6d-b1b0-5a77fb0803aa",
@@ -3803,7 +3803,7 @@
       "key": "03d44e4e-9bed-40a7-9785-09b721759b20",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "name": "Give One, Get One"
       },
       "seeding_key": {
@@ -3851,7 +3851,7 @@
       "key": "92a94389-263c-4d77-8254-00d6bb430fc5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 5 Assessment on Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 5 Assessment on Code Studio.",
         "progression_name": "Unit 5 Assessment"
       },
       "seeding_key": {
@@ -3863,7 +3863,7 @@
       "key": "41c400cb-e75f-4cc3-9f09-6c894482716f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {
@@ -3905,7 +3905,7 @@
       "key": "d856eea4-d3cc-40ec-86d1-7a6d94be111b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of personal narratives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a collage or animation about your personal experiences or interests?*\n\n**Discussion Goal:** Students share ideas about collages or animations they might make to portray their personal experiences or interests. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Personal Narrative Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the project requirements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 2 and 3.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3922,7 +3922,7 @@
       "key": "e10eb992-1103-4d21-95ce-2690129c6f62",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their collage or animation, create UML diagrams for their classes, and identify the algorithms they need to develop on the Personal Narrative Project Planning Guide.",
         "duration": "10",
         "name": "Brainstorming and Planning"
       },
@@ -3935,7 +3935,7 @@
       "key": "15c2780e-02a3-41a8-a368-52067ce54078",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Personal Narrative Good Project.",
         "duration": "20",
         "name": "Development",
         "progression_name": "Personal Narrative Project"
@@ -3961,7 +3961,7 @@
       "key": "0f1d1dc8-11d3-409b-b3f3-a889d4082a15",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3978,7 +3978,7 @@
       "key": "6052fc83-91c2-4557-8cef-7ae375f97948",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Personal Narrative Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {

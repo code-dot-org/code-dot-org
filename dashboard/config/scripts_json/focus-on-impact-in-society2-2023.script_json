@@ -4102,7 +4102,7 @@
       "key": "d5eae2b8-b6b3-4093-bef7-f1481d9a3648",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/focus-on-impact-in-society/2023] video in the slides. This gives a model for what the testing process should look like.",
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/focus-on-impact-in-society/2023] video in the slides. This gives a model for what the testing process should look like.",
         "name": "Preparing for Testing\r",
         "tips": [
           {
@@ -4285,7 +4285,7 @@
       "key": "7a574850-b4cc-4138-8c8d-8ba2446927b8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/focus-on-impact-in-society/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/focus-on-impact-in-society/2023] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
         "progression_name": "Video: Intro to Design Mode",
         "tips": [
           {
@@ -4678,7 +4678,7 @@
       "key": "c6c9560c-c53b-4c9a-8e06-84da7c182dc5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab/focus-on-impact-in-society/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab/focus-on-impact-in-society/2023] video in the slides.\n",
         "progression_name": "Video: Events in App Lab",
         "tips": [
           {

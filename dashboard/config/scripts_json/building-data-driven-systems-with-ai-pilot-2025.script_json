@@ -847,7 +847,7 @@
       "key": "6928fc04-d569-43b5-b9ad-24488313e2a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Perfect Shelf activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students examine the sequence of items on their Perfect Shelf handout. They should look for thematic similarities and name the collection accordingly (e.g., \"stickies\" or \"markers\"). Point out the position numbering in the example shelf and have students number the items on their shelf. Have students determine the length (How many elements does it contain?), and compare the `length` to its last position (`length − 1`).",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Perfect Shelf activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students examine the sequence of items on their Perfect Shelf handout. They should look for thematic similarities and name the collection accordingly (e.g., \"stickies\" or \"markers\"). Point out the position numbering in the example shelf and have students number the items on their shelf. Have students determine the length (How many elements does it contain?), and compare the `length` to its last position (`length − 1`).",
         "tips": [
           {
             "type": "teachingTip",
@@ -874,7 +874,7 @@
       "key": "a3ec842a-547c-426e-a735-da5eed4955a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "a3ec842a-547c-426e-a735-da5eed4955a0",
@@ -941,7 +941,7 @@
       "key": "2c44e50a-8356-4403-8818-d91cacf55868",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to design a magazine cover using arrays. Make sure students understand that all three arrays must stay aligned—index 0 in each array belongs together, index 1 belongs together, and so on. Encourage them to keep arrays to 3–5 entries so they can focus on getting the index logic right.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students to show you where they declare `headlines`, `coverImages`, and `taglines`, and how they use the same index to populate `headline`, `coverImage.src`, and `tagline`. Check for mismatched lengths or broken images and prompt them to use AI only for specific pieces (like suggesting three sports headlines in an array) rather than full rewrites.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2 to design a magazine cover using arrays. Make sure students understand that all three arrays must stay aligned—index 0 in each array belongs together, index 1 belongs together, and so on. Encourage them to keep arrays to 3–5 entries so they can focus on getting the index logic right.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students to show you where they declare `headlines`, `coverImages`, and `taglines`, and how they use the same index to populate `headline`, `coverImage.src`, and `tagline`. Check for mismatched lengths or broken images and prompt them to use AI only for specific pieces (like suggesting three sports headlines in an array) rather than full rewrites.",
         "progression_name": "Building Magazine Covers with Arrays",
         "tips": [
           {
@@ -969,7 +969,7 @@
       "key": "0ad7f010-91bb-4fa9-b88c-3404c44eab8a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair students up. Have them review each other’s code and find where the index variable is created and referenced.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you change the index variable (ex: `let index = 1`), how many things on the screen would change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should point out that three things: the cover image, headline, and tagline should change. Listen for students to explain that the index variable is the bridge connecting the separate arrays that keeps the display items synchronized.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *For our magazine covers, if we delete the first title from the list but keep the first image, what happens to the magazine covers?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question immediately forces students to visualize the \"shift\" in data. It highlights that without a shared container (like an object, which comes later in Lesson 4 ), our program only connects items based on their position (index) in the list.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3. Have students run the code first, then use the on-screen Debugging Checklist to inspect the index for the third item, the expression using `snacks.length + 1`, and the calculation for the last snack.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students noticing undefined and counts that are off by one. Ask: How many items are in snacks? What are the valid indices? What does `snacks.length` equal here? Guide them toward changing the third index to 2, removing `+ 1` from the count, and using `snacks.length - 1` for the last snack. Encourage them to talk through each fix in words (what the code now does) before testing.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Pair students up. Have them review each other’s code and find where the index variable is created and referenced.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you change the index variable (ex: `let index = 1`), how many things on the screen would change?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should point out that three things: the cover image, headline, and tagline should change. Listen for students to explain that the index variable is the bridge connecting the separate arrays that keeps the display items synchronized.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *For our magazine covers, if we delete the first title from the list but keep the first image, what happens to the magazine covers?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This question immediately forces students to visualize the \"shift\" in data. It highlights that without a shared container (like an object, which comes later in Lesson 4 ), our program only connects items based on their position (index) in the list.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3. Have students run the code first, then use the on-screen Debugging Checklist to inspect the index for the third item, the expression using `snacks.length + 1`, and the calculation for the last snack.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen for students noticing undefined and counts that are off by one. Ask: How many items are in snacks? What are the valid indices? What does `snacks.length` equal here? Guide them toward changing the third index to 2, removing `+ 1` from the count, and using `snacks.length - 1` for the last snack. Encourage them to talk through each fix in words (what the code now does) before testing.",
         "progression_name": "Debugging Mini-Challenge",
         "tips": [
           {
@@ -997,7 +997,7 @@
       "key": "98738301-8501-43ea-ab20-0933c63c22b9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students open Lesson 1, Level 4 and write a reflection that reflects on how AI assisted with their work with arrays (favorites, magazine covers, debugging).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage specific references to their own code (playlists, headlines, snacks). Ask: How would your code look if you used separate variables instead of arrays? How might that confuse a user? How did clear arrays and names help AI give better suggestions or make debugging easier?",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students open Lesson 1, Level 4 and write a reflection that reflects on how AI assisted with their work with arrays (favorites, magazine covers, debugging).\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage specific references to their own code (playlists, headlines, snacks). Ask: How would your code look if you used separate variables instead of arrays? How might that confuse a user? How did clear arrays and names help AI give better suggestions or make debugging easier?",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -1026,7 +1026,7 @@
       "key": "b09f2317-fb44-48f1-ac1c-f5c591973eef",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "b09f2317-fb44-48f1-ac1c-f5c591973eef",
@@ -1037,7 +1037,7 @@
       "key": "c630529e-108b-4c2b-9ae0-350e9808f1df",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 7 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1084,7 +1084,7 @@
       "key": "af276208-65e2-4eef-95a4-b0c4bc9902ae",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1-3\n- Level 1: Students design a schema in Sketch Lab around a specific topic.\n- Level 2: Students utilize an AI chat to refine your schema.\n- Level 3: Students they will now turn their refined schemas into real interfaces\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are not using real personal data and are labeling fields with clear data types. Ask, “Which of these fields would you actually show on-screen?” Look for evidence that students working through these levels step by step. If they are running into bugs, ask them if they have updated the html and css according to their schema. Check that students are questioning AI suggestions rather than copying them. Ask, “Why did you accept or reject that AI suggestion?”",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1-3\n- Level 1: Students design a schema in Sketch Lab around a specific topic.\n- Level 2: Students utilize an AI chat to refine your schema.\n- Level 3: Students they will now turn their refined schemas into real interfaces\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are not using real personal data and are labeling fields with clear data types. Ask, “Which of these fields would you actually show on-screen?” Look for evidence that students working through these levels step by step. If they are running into bugs, ask them if they have updated the html and css according to their schema. Check that students are questioning AI suggestions rather than copying them. Ask, “Why did you accept or reject that AI suggestion?”",
         "progression_name": "Brainstorming a Schema "
       },
       "seeding_key": {
@@ -1144,7 +1144,7 @@
       "key": "054e9b14-55de-4945-97cc-5070e7515e82",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What choices did you make about which fields to show and how to lay them out on the screen?*\nHow do those choices help make the display clear and accessible for users? (You might mention labels, order, grouping, or readability.)\nHow did you protect users’ privacy or safety when deciding what not to show?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to make connections between the schema they developed and how that thinking and planning influenced what or how information was displayed on their app screens.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5. Explain that students will practice debugging a misaligned schema in a storefront. Once they have completed the debugging, they should move on to complete the two vocabulary levels on schema.\n- Level 5: Use the Human Debugging Checklist to identify symptoms on the storefront, predict causes like different array lengths or hard-coded indices, fix the code to follow a simple schema (name, price, image), and use a loop or .map to render products. Then consult Web Lab AI Tutor to compare approaches.\n- Level 6: Read the panel definition of schema and examine the example table.\n- Level 7: Write a free-response explanation of schema in their own words with an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** During debugging, watch for students aligning array lengths and replacing hard-coded indices with loops. Ask, \"What schema are these arrays trying to follow?\" and \"How can you make sure each index lines up across arrays?\"",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What choices did you make about which fields to show and how to lay them out on the screen?*\nHow do those choices help make the display clear and accessible for users? (You might mention labels, order, grouping, or readability.)\nHow did you protect users’ privacy or safety when deciding what not to show?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to make connections between the schema they developed and how that thinking and planning influenced what or how information was displayed on their app screens.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5. Explain that students will practice debugging a misaligned schema in a storefront. Once they have completed the debugging, they should move on to complete the two vocabulary levels on schema.\n- Level 5: Use the Human Debugging Checklist to identify symptoms on the storefront, predict causes like different array lengths or hard-coded indices, fix the code to follow a simple schema (name, price, image), and use a loop or .map to render products. Then consult Web Lab AI Tutor to compare approaches.\n- Level 6: Read the panel definition of schema and examine the example table.\n- Level 7: Write a free-response explanation of schema in their own words with an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** During debugging, watch for students aligning array lengths and replacing hard-coded indices with loops. Ask, \"What schema are these arrays trying to follow?\" and \"How can you make sure each index lines up across arrays?\"",
         "progression_name": "Safe and Clear Displays"
       },
       "seeding_key": {
@@ -1194,7 +1194,7 @@
       "key": "897fd4dc-47a8-4164-b5d7-9dd1f7e237bf",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did AI suggest? How were its ideas similar to or different from yours?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Invite a few students to share how they fixed the storefront and how AI's suggested fix compared. Capture one or two sample strategies on the board (for example, \"create an array of product objects\" vs. \"loop over index with aligned arrays\"). Emphasize that students can and should form their own debugging hypotheses, then use AI to cross-check and refine their reasoning, rather than letting AI make all the decisions."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did AI suggest? How were its ideas similar to or different from yours?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Invite a few students to share how they fixed the storefront and how AI's suggested fix compared. Capture one or two sample strategies on the board (for example, \"create an array of product objects\" vs. \"loop over index with aligned arrays\"). Emphasize that students can and should form their own debugging hypotheses, then use AI to cross-check and refine their reasoning, rather than letting AI make all the decisions."
       },
       "seeding_key": {
         "activity_section.key": "897fd4dc-47a8-4164-b5d7-9dd1f7e237bf",
@@ -1205,7 +1205,7 @@
       "key": "888d816d-f3b9-4b9f-9f41-a6163fb1b4f6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a quick reflection using the Three W's.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Facilitate a quick reflection using the Three W's.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "888d816d-f3b9-4b9f-9f41-a6163fb1b4f6",
@@ -1216,7 +1216,7 @@
       "key": "bdf92c79-1b5e-4d97-b435-dc566c9b0ec9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1240,7 +1240,7 @@
       "key": "0e02a2fe-5740-4aa7-a062-6ae9a65a685e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to complete Levels 1 through 2. Remind students to click each button multiple times, watch how size and order change, highlight event handlers and ask AI questions like \"Explain what this function does\" or \"What does push do to the array here?\"\n- Level 1: Explore the app with `push`, `pop`, `shift`, and `unshift` buttons and use AI as a code explainer.\n- Level 2: Reflect on what these array operations have in common and how they keep parallel arrays in sync.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students testing each button, checking that the display matches the array, and making small, safe edits. Ask probing questions: What changed in the array? Which method caused that change? How would you describe this in your own words? Support students who rely on AI to rewrite everything by redirecting them to ask explanation questions instead.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to complete Levels 1 through 2. Remind students to click each button multiple times, watch how size and order change, highlight event handlers and ask AI questions like \"Explain what this function does\" or \"What does push do to the array here?\"\n- Level 1: Explore the app with `push`, `pop`, `shift`, and `unshift` buttons and use AI as a code explainer.\n- Level 2: Reflect on what these array operations have in common and how they keep parallel arrays in sync.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students testing each button, checking that the display matches the array, and making small, safe edits. Ask probing questions: What changed in the array? Which method caused that change? How would you describe this in your own words? Support students who rely on AI to rewrite everything by redirecting them to ask explanation questions instead.",
         "progression_name": "Explore and Explain"
       },
       "seeding_key": {
@@ -1279,7 +1279,7 @@
       "key": "6b1fa228-2027-4d65-857e-d5c4b85017d4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do `push`, `pop`, `shift`, and `unshift` all have in common?*\n- *How can helper functions keep multiple arrays in sync?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate that these methods add or remove items at the ends of an array, changing size and sometimes order, and that to keep multiple arrays in sync they must use the same operation on every related array.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PAIR Framework activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the PAIR framework explicitly and connect each step to today's helper-function work: Prompt AI for a helper, Analyze whether it uses the right method on all arrays, Integrate it into the helper section, and Reflect on how it protects data consistency.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What do `push`, `pop`, `shift`, and `unshift` all have in common?*\n- *How can helper functions keep multiple arrays in sync?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate that these methods add or remove items at the ends of an array, changing size and sometimes order, and that to keep multiple arrays in sync they must use the same operation on every related array.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the PAIR Framework activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the PAIR framework explicitly and connect each step to today's helper-function work: Prompt AI for a helper, Analyze whether it uses the right method on all arrays, Integrate it into the helper section, and Reflect on how it protects data consistency.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1296,7 +1296,7 @@
       "key": "c81e53e3-e571-44c4-ba51-1280bee10b22",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3 to complete Levels 3 through 7. Remind students to follow PAIR for each helper: Prompt AI for a helper function using the correct array method, Analyze the different code implementations suggested by AI, Integrate one placing the helper in the correct section and calling it,and Reflect on what happens in the UI.\n- Level 3: Use the PAIR framework to create a helper function for `push()`\n- Level 4: Create a helper function for `pop()`\n- Level 5: Create a helper function for `unshift()`\n- Level 6: Create a helper function for `shift()`\n- Level 7: Reflect on how these helper functions protect data consistency in your project.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students keep the three arrays aligned, call helpers before `renderFeed()`, and avoid manual HTML edits. Ask: Which method are you using here? Did you update titles, contents, and images together? How can you test that everything stayed in sync?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3 to complete Levels 3 through 7. Remind students to follow PAIR for each helper: Prompt AI for a helper function using the correct array method, Analyze the different code implementations suggested by AI, Integrate one placing the helper in the correct section and calling it,and Reflect on what happens in the UI.\n- Level 3: Use the PAIR framework to create a helper function for `push()`\n- Level 4: Create a helper function for `pop()`\n- Level 5: Create a helper function for `unshift()`\n- Level 6: Create a helper function for `shift()`\n- Level 7: Reflect on how these helper functions protect data consistency in your project.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students keep the three arrays aligned, call helpers before `renderFeed()`, and avoid manual HTML edits. Ask: Which method are you using here? Did you update titles, contents, and images together? How can you test that everything stayed in sync?",
         "progression_name": "Social Media Story Scheduler"
       },
       "seeding_key": {
@@ -1335,7 +1335,7 @@
       "key": "4e3ed0a0-a285-4cd8-9cec-78effa8b03d5",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the reflection questions in their PAIR Framework activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8. Before they start, remind students to focus on what breaks when only one array is updated and to connect that to today's idea of data consistency. Have students run the buggy app, observe when names, hours, and notes do not line up, and record observations with the Human Debugging Checklist.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students: When you add or remove a stop, what do you expect to see? What actually happened? Which helper looks suspicious? Encourage them to use precise terms like array method, `push`, `pop`, `shift`, and `unshift` in their observations and reflections.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the reflection questions in their PAIR Framework activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8. Before they start, remind students to focus on what breaks when only one array is updated and to connect that to today's idea of data consistency. Have students run the buggy app, observe when names, hours, and notes do not line up, and record observations with the Human Debugging Checklist.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students: When you add or remove a stop, what do you expect to see? What actually happened? Which helper looks suspicious? Encourage them to use precise terms like array method, `push`, `pop`, `shift`, and `unshift` in their observations and reflections.",
         "progression_name": "Debugging: Street Art Route Planner"
       },
       "seeding_key": {
@@ -1347,7 +1347,7 @@
       "key": "f906c504-188b-46bd-8699-ca4b488d890b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "f906c504-188b-46bd-8699-ca4b488d890b",
@@ -1358,7 +1358,7 @@
       "key": "2f687057-c146-4043-8be0-b9b14736f0c8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1398,7 +1398,7 @@
       "key": "871faea2-e117-4f8c-a52f-73cbda785b23",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What objects and properties did you come up with? How does each list change what the item seems like or who it is for?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that people bring different experiences and needs, so their property choices can differ. Emphasize that this is why fairness and clarity matter when we represent real-world data in code.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What objects and properties did you come up with? How does each list change what the item seems like or who it is for?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that people bring different experiences and needs, so their property choices can differ. Emphasize that this is why fairness and clarity matter when we represent real-world data in code.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "871faea2-e117-4f8c-a52f-73cbda785b23",
@@ -1497,7 +1497,7 @@
       "key": "c1c4d3c3-a46a-4dd4-b4ef-a285fe1b9f1c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 7. Students create a dessert object and update the `render()` function to update the card.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for:\n- Correct object syntax with curly braces and key: value pairs.\n- Students updating the DOM using dot notation.\n- Students remembering to call `render()`.\n\nAsk questions like: How does this object make it easier to see all the Brownie data in one place? What would be harder if we kept using three arrays?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 7. Students create a dessert object and update the `render()` function to update the card.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for:\n- Correct object syntax with curly braces and key: value pairs.\n- Students updating the DOM using dot notation.\n- Students remembering to call `render()`.\n\nAsk questions like: How does this object make it easier to see all the Brownie data in one place? What would be harder if we kept using three arrays?",
         "progression_name": "Object from Arrays",
         "tips": [
           {
@@ -1525,7 +1525,7 @@
       "key": "a73b84e6-a510-4e53-9f0e-c50f6a2ed364",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that dot notation is great when you know the property name ahead of time, while bracket notation is helpful when the property name comes from a variable or has special characters. Show the two short examples and connect them to the dessert object they just created."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that dot notation is great when you know the property name ahead of time, while bracket notation is helpful when the property name comes from a variable or has special characters. Show the two short examples and connect them to the dessert object they just created."
       },
       "seeding_key": {
         "activity_section.key": "a73b84e6-a510-4e53-9f0e-c50f6a2ed364",
@@ -1548,7 +1548,7 @@
       "key": "7f86524d-44f8-4474-a770-5c5392844377",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 4, Level 8. Remind students to PROMPT the AI Tutor with questions like \"How do I update object properties using dot vs. bracket notation?\" and \"Why would I use bracket notation with a variable?\"\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for:\n- Correct use of dot notation vs. bracket notation.\n- Buttons that actually trigger the functions (no console errors).\n- Students using the AI Tutor for targeted questions, not letting it write everything.\n\nAsk: Which syntax felt easier to you? Can you think of a case where you must use bracket notation?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 4, Level 8. Remind students to PROMPT the AI Tutor with questions like \"How do I update object properties using dot vs. bracket notation?\" and \"Why would I use bracket notation with a variable?\"\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Watch for:\n- Correct use of dot notation vs. bracket notation.\n- Buttons that actually trigger the functions (no console errors).\n- Students using the AI Tutor for targeted questions, not letting it write everything.\n\nAsk: Which syntax felt easier to you? Can you think of a case where you must use bracket notation?",
         "progression_name": "Dot Notation vs Bracket Notation",
         "tips": [
           {
@@ -1576,7 +1576,7 @@
       "key": "e3649333-1511-45fd-adab-1299c3865113",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 4, Level 9. Students should change at least two existing property values using dot notation or bracket notation, add at least one new property to the object, and modify the HTML and `render()` so all updated and new properties appear on screen.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for:\n- Objects that have clearly changed from the starter values and include a new property.\n- Matching IDs between HTML and JavaScript.\n- Students testing and verifying that the visual card reflects the updated data.\n\nAsk: How did changing the object data change what you see? What did you ask the AI Tutor to help you with, and how did you decide whether to accept its suggestion?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 4, Level 9. Students should change at least two existing property values using dot notation or bracket notation, add at least one new property to the object, and modify the HTML and `render()` so all updated and new properties appear on screen.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for:\n- Objects that have clearly changed from the starter values and include a new property.\n- Matching IDs between HTML and JavaScript.\n- Students testing and verifying that the visual card reflects the updated data.\n\nAsk: How did changing the object data change what you see? What did you ask the AI Tutor to help you with, and how did you decide whether to accept its suggestion?",
         "progression_name": "Update and Evolve Objects",
         "tips": [
           {
@@ -1598,7 +1598,7 @@
       "key": "49367105-4258-47f7-aa78-a9382d6dcc9a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When we use AI to create objects, what responsibilities do we still have as the human collaborator?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate that they must review AI outputs for clarity, fairness, and accuracy, make edits when needed, and take responsibility for the final code. Highlight examples from Level 2 reflections or today's objects where students changed AI suggestions to better represent the data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When we use AI to create objects, what responsibilities do we still have as the human collaborator?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate that they must review AI outputs for clarity, fairness, and accuracy, make edits when needed, and take responsibility for the final code. Highlight examples from Level 2 reflections or today's objects where students changed AI suggestions to better represent the data.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "49367105-4258-47f7-aa78-a9382d6dcc9a",
@@ -1609,7 +1609,7 @@
       "key": "020bd8bd-69f5-41bb-8523-b1367186718a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 10 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 10 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1656,7 +1656,7 @@
       "key": "9cc128e7-ad32-456e-99dd-bc4965515653",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 and 2.\n- Level 1: Use the AI to generate an array of at least five school supply objects and paste it into the supplies variable. Then complete `getItemByIndex` and `updateLocationByIndex`, and test with valid and invalid indexes.\n- Level 2: Use `getItemByIndex`, and then AI-assisted `getItemById` and `getItemByName`, to inspect objects that have missing properties and see how that shows up in the UI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that:\n- Students' supplies arrays in Level 1 have all four properties: id, name, location, isAvailable.\n- getItemByIndex uses `supplies[index]` and handles invalid indexes safely.\n- `updateLocationByIndex` first calls `getItemByIndex` and updates only `item.location` when item exists.\n- In Level 2, students actually test items with missing fields (IDs 3 or 4) and notice undefined or blanks.\n\nAsk probing questions like, \"What happens in the UI when a property is missing?\" and \"If this dataset were about people, who would be invisible to the AI?\"",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 and 2.\n- Level 1: Use the AI to generate an array of at least five school supply objects and paste it into the supplies variable. Then complete `getItemByIndex` and `updateLocationByIndex`, and test with valid and invalid indexes.\n- Level 2: Use `getItemByIndex`, and then AI-assisted `getItemById` and `getItemByName`, to inspect objects that have missing properties and see how that shows up in the UI.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that:\n- Students' supplies arrays in Level 1 have all four properties: id, name, location, isAvailable.\n- getItemByIndex uses `supplies[index]` and handles invalid indexes safely.\n- `updateLocationByIndex` first calls `getItemByIndex` and updates only `item.location` when item exists.\n- In Level 2, students actually test items with missing fields (IDs 3 or 4) and notice undefined or blanks.\n\nAsk probing questions like, \"What happens in the UI when a property is missing?\" and \"If this dataset were about people, who would be invisible to the AI?\"",
         "progression_name": "Lists of Objects",
         "tips": [
           {
@@ -1684,7 +1684,7 @@
       "key": "86c5990e-60c6-41e7-997f-59b8d13ebd18",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did using helper functions like `getItemByIndex` or `getItemById` help you see where the data was clean or messy?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that helper functions act like \"lenses\" into a dataset, revealing both complete and missing information. Listen for comments like \"When I changed the index, I could see which objects were missing a name\" or \"Using `getItemById(3)` showed me the missing category.\" Steer the conversation toward how these coding tools help them diagnose bias or gaps.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define bias.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 5, Level 3. Remind them to start by prompting the AI Tutor to generate their dataset.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that:\n- Arrays (animals, events, or stops) have at least three objects and follow the suggested schema.\n- `yesNo` returns exactly \"Yes\" or \"No\" for true/false.\n- `getItemByIndex` simply returns `array[index]` for the chosen context.\n- `updateFieldByIndex` only changes the intended field on one object instead of reassigning the whole array.\n- addNewItem uses .push(newItem) and the count updates when `addBtn` is clicked.\n- `renderItem` use data from the array, not hard-coded strings.\n\nAsk questions like, \"Where could missing or uneven data show up in this UI?\" or \"If you left some fields blank, what might a user or AI misunderstand?\"",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did using helper functions like `getItemByIndex` or `getItemById` help you see where the data was clean or messy?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that helper functions act like \"lenses\" into a dataset, revealing both complete and missing information. Listen for comments like \"When I changed the index, I could see which objects were missing a name\" or \"Using `getItemById(3)` showed me the missing category.\" Steer the conversation toward how these coding tools help them diagnose bias or gaps.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define bias.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 5, Level 3. Remind them to start by prompting the AI Tutor to generate their dataset.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that:\n- Arrays (animals, events, or stops) have at least three objects and follow the suggested schema.\n- `yesNo` returns exactly \"Yes\" or \"No\" for true/false.\n- `getItemByIndex` simply returns `array[index]` for the chosen context.\n- `updateFieldByIndex` only changes the intended field on one object instead of reassigning the whole array.\n- addNewItem uses .push(newItem) and the count updates when `addBtn` is clicked.\n- `renderItem` use data from the array, not hard-coded strings.\n\nAsk questions like, \"Where could missing or uneven data show up in this UI?\" or \"If you left some fields blank, what might a user or AI misunderstand?\"",
         "progression_name": "Plan and Build",
         "tips": [
           {
@@ -1712,7 +1712,7 @@
       "key": "231482d2-d5af-4bc6-8136-445ead7a787d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students together based on the choice they made for Level 3: Animal Adoption, Community Events, or Metro Expansion.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Group students together based on the choice they made for Level 3: Animal Adoption, Community Events, or Metro Expansion.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1739,7 +1739,7 @@
       "key": "9fc0a736-3abb-4b8c-ac0b-24406f1317e0",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete Levels 4 through 6.\n- Level 4: Respond to the Check Your Understanding question.\n- Level 5: Review the definition for _bias_.\n- Level 6: Explain the term _bias_ in their own words.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to reference at least one helper function (for example, `getItemByIndex`, `updateFieldByIndex`, `addNewItem`, or `renderItem)` and at least one concrete detail from their dataset (like missing groups or repeated types). Ask, \"What would an AI think the world looks like based only on your data?\" to deepen their answers.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete Levels 4 through 6.\n- Level 4: Respond to the Check Your Understanding question.\n- Level 5: Review the definition for _bias_.\n- Level 6: Explain the term _bias_ in their own words.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to reference at least one helper function (for example, `getItemByIndex`, `updateFieldByIndex`, `addNewItem`, or `renderItem)` and at least one concrete detail from their dataset (like missing groups or repeated types). Ask, \"What would an AI think the world looks like based only on your data?\" to deepen their answers.",
         "progression_name": "Free Response: What AI Sees Shaped By Data Choices"
       },
       "seeding_key": {
@@ -1768,7 +1768,7 @@
       "key": "683a5942-8868-4856-aca5-3dbc7e0b63eb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do the choices we make when building a dataset affect what an AI can see or display?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students tie together their coding work, the warm-up, and the vocabulary term bias. Listen for explanations that mention schemas, missing fields, and which records were included or left out. Highlight comments that show how helper functions and UI made some patterns visible and others invisible.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do the choices we make when building a dataset affect what an AI can see or display?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students tie together their coding work, the warm-up, and the vocabulary term bias. Listen for explanations that mention schemas, missing fields, and which records were included or left out. Highlight comments that show how helper functions and UI made some patterns visible and others invisible.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "683a5942-8868-4856-aca5-3dbc7e0b63eb",
@@ -1779,7 +1779,7 @@
       "key": "f6ef9d72-7d32-44e4-ab0e-3b04aa9d766c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 7 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 7 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1819,7 +1819,7 @@
       "key": "57d8ffb6-c429-4fcf-bfd3-058b4626aa3b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "57d8ffb6-c429-4fcf-bfd3-058b4626aa3b",
@@ -1853,7 +1853,7 @@
       "key": "cc207782-028b-4e9a-9c6c-e0cbc65b64f1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the `.map()` method.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the `.map()` method.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1880,7 +1880,7 @@
       "key": "08c743ad-790e-423b-a1b8-7c7d19943400",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 3.\n- Level 1: Run the given `nums.map(x => x * 2)` example, read the console output, and answer the comment questions about the rule and whether nums changed.\n- Level 2: Use `.map()` to create `supplyNames`, render the names, and optionally try the labeled card extension.\n- Level 3: Write a brief explanation of what `.map()` does.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students correctly identifying the \"rule\" in the number example (multiply each number by two) and noticing that the original array does not change. On the objects level, check that they are using `.map()` to pull out name and using .join(\"\") to build HTML without commas. Ask probing questions like, \"What stayed the same between the original array and the new one?\" and \"Where do you see the rule in your code?\" Redirect students who try to rewrite the starter code instead of focusing on the comments or who try to use loops instead of `.map()`.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 through 3.\n- Level 1: Run the given `nums.map(x => x * 2)` example, read the console output, and answer the comment questions about the rule and whether nums changed.\n- Level 2: Use `.map()` to create `supplyNames`, render the names, and optionally try the labeled card extension.\n- Level 3: Write a brief explanation of what `.map()` does.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students correctly identifying the \"rule\" in the number example (multiply each number by two) and noticing that the original array does not change. On the objects level, check that they are using `.map()` to pull out name and using .join(\"\") to build HTML without commas. Ask probing questions like, \"What stayed the same between the original array and the new one?\" and \"Where do you see the rule in your code?\" Redirect students who try to rewrite the starter code instead of focusing on the comments or who try to use loops instead of `.map()`.",
         "progression_name": "Introduction to .map() "
       },
       "seeding_key": {
@@ -1925,7 +1925,7 @@
       "key": "51c14bfc-3520-44d1-a070-14bb6ce78b98",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the process of rendering objects as cards in a web app.\n- Data: Create an array of objects. Determine which data should be displayed and how.\n- Transform: Use `.map()` to extract object data and put into an HTML card container as a string\n- Combine: Use `.join(\"\")` to combine all of the HTML card container strings together.\n- Render: Insert combined HTML code into the DOM.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Based on your experience, where do you think this process could be useful in real apps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface examples like changing formats (numbers to percentages), extracting one field from many objects (names, titles), or building visual elements from data (cards, list items). Emphasize that `.map()` lets us keep the original data intact while we create new views or displays, which connects directly to fairness and accessibility choices in how data is shown.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the CHAT framework.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the process of rendering objects as cards in a web app.\n- Data: Create an array of objects. Determine which data should be displayed and how.\n- Transform: Use `.map()` to extract object data and put into an HTML card container as a string\n- Combine: Use `.join(\"\")` to combine all of the HTML card container strings together.\n- Render: Insert combined HTML code into the DOM.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Based on your experience, where do you think this process could be useful in real apps?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface examples like changing formats (numbers to percentages), extracting one field from many objects (names, titles), or building visual elements from data (cards, list items). Emphasize that `.map()` lets us keep the original data intact while we create new views or displays, which connects directly to fairness and accessibility choices in how data is shown.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the CHAT framework.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1985,7 +1985,7 @@
       "key": "7ad8e8ea-7e6e-41be-b746-c993da4f555f",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 6, Level 4. Students decompose design decisions and important features to implement for this app.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for evidence that students are drafting prompts in the markdown files before asking AI for code. Support students in explicitly naming the steps, like \"I need to map the data to HTML strings\" rather than just guessing.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 6, Level 4. Students decompose design decisions and important features to implement for this app.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for evidence that students are drafting prompts in the markdown files before asking AI for code. Support students in explicitly naming the steps, like \"I need to map the data to HTML strings\" rather than just guessing.",
         "progression_name": "Using CHAT to Generate System Prompts"
       },
       "seeding_key": {
@@ -2007,7 +2007,7 @@
       "key": "31f84eef-a116-4c1a-9ce6-365b9b80a3e2",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What were some of the features or steps that you identified in the Clarify stage of CHAT?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share concrete examples like \"I need a text label that says 'Open' or 'Closed'\" or \"I need a way to show the number of beds available.\" If they didn't write down \"I need to display the address,\" the AI likely won't do it. Decomposition means finding every single feature you want to appear on the screen and listing it before you start building.  Features and and steps to listen for:\n- Data Features (The \"What\"): Displaying the Name of the center. Showing the Capacity (number of people) or Status (Open/Closed). Creating a specific visual layout\n- Logic Steps (The \"How\"): Creating a function (like `makeCard`) to handle just one object. Using `.map()` to transform the entire list of data into HTML. Using `.join(\"\")` to Combine the list into a string without commas."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What were some of the features or steps that you identified in the Clarify stage of CHAT?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share concrete examples like \"I need a text label that says 'Open' or 'Closed'\" or \"I need a way to show the number of beds available.\" If they didn't write down \"I need to display the address,\" the AI likely won't do it. Decomposition means finding every single feature you want to appear on the screen and listing it before you start building.  Features and and steps to listen for:\n- Data Features (The \"What\"): Displaying the Name of the center. Showing the Capacity (number of people) or Status (Open/Closed). Creating a specific visual layout\n- Logic Steps (The \"How\"): Creating a function (like `makeCard`) to handle just one object. Using `.map()` to transform the entire list of data into HTML. Using `.join(\"\")` to Combine the list into a string without commas."
       },
       "seeding_key": {
         "activity_section.key": "31f84eef-a116-4c1a-9ce6-365b9b80a3e2",
@@ -2030,7 +2030,7 @@
       "key": "aa6feeb1-6827-4540-bf0d-dc130fcca0f2",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Hone and Apply step of CHAT.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the Hone and Apply step of CHAT.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2057,7 +2057,7 @@
       "key": "95fc4db0-e7d3-44ad-af6b-e26db5470113",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to complete Levels 5 and 6.\n- Level 5: Students draft a prompt that will create cards that will display the information in the centers dataset. Apply and test the code that AI produces.\n- Level 6: Choose an additional feature and write a draft for the specific feature. Apply and test the code that AI produces.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Use the Hone and Apply checklist to assist students who might be struggling:\n- Hone: Pick one feature from your Clarify list (e.g., \"Just render the names\"). Draft a specific prompt for it.\n- Apply: Run the code with real data. Does it work?\n- Repeat: Once it works, add the next feature (e.g., \"Add the capacity\" or \"Filter closed centers\").",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to complete Levels 5 and 6.\n- Level 5: Students draft a prompt that will create cards that will display the information in the centers dataset. Apply and test the code that AI produces.\n- Level 6: Choose an additional feature and write a draft for the specific feature. Apply and test the code that AI produces.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Use the Hone and Apply checklist to assist students who might be struggling:\n- Hone: Pick one feature from your Clarify list (e.g., \"Just render the names\"). Draft a specific prompt for it.\n- Apply: Run the code with real data. Does it work?\n- Repeat: Once it works, add the next feature (e.g., \"Add the capacity\" or \"Filter closed centers\").",
         "progression_name": "From Features to Code"
       },
       "seeding_key": {
@@ -2069,7 +2069,7 @@
       "key": "e208c3a5-9d74-4fa0-a066-5342a57b183a",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What changes or revisions did you have to make to your prompts as you honed and applied them in your design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface examples of iterative refinement where the AI's output wasn't perfect. Look for students mentioning: formatting fixes, UI tweaks, and increased specificity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that they will come up with a general \"Card Renderer\" prompt based on their experience from creating their Warming Center prompts."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What changes or revisions did you have to make to your prompts as you honed and applied them in your design?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface examples of iterative refinement where the AI's output wasn't perfect. Look for students mentioning: formatting fixes, UI tweaks, and increased specificity.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Tell students that they will come up with a general \"Card Renderer\" prompt based on their experience from creating their Warming Center prompts."
       },
       "seeding_key": {
         "activity_section.key": "e208c3a5-9d74-4fa0-a066-5342a57b183a",
@@ -2108,7 +2108,7 @@
       "key": "39fbdb37-1542-4eca-8808-e3c6e8bf40a2",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 6, Level 4. Students use abstraction to turn their specific \"Warming Center\" prompt into a general tool they can reuse in other contexts.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students are struggling to abstract a prompt, you can share the following steps:\n1. Identify Specifics: Find words like \"Center,\" \"Capacity,\" or \"Address.\"\n1. Replace with General Terms: Change them to \"Item,\" \"Subtitle,\" or \"Property.\"\n1. Save: Save this general prompt to your Backpack.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 6, Level 4. Students use abstraction to turn their specific \"Warming Center\" prompt into a general tool they can reuse in other contexts.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** If students are struggling to abstract a prompt, you can share the following steps:\n1. Identify Specifics: Find words like \"Center,\" \"Capacity,\" or \"Address.\"\n1. Replace with General Terms: Change them to \"Item,\" \"Subtitle,\" or \"Property.\"\n1. Save: Save this general prompt to your Backpack.",
         "progression_name": "Creating Reusable Prompts"
       },
       "seeding_key": {
@@ -2120,7 +2120,7 @@
       "key": "c5a1fd79-d552-4ad9-97fe-b3c79a59cee2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "c5a1fd79-d552-4ad9-97fe-b3c79a59cee2",
@@ -2131,7 +2131,7 @@
       "key": "c180db25-1b5d-45c3-8af4-47df900e4a9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2171,7 +2171,7 @@
       "key": "9d974a50-1183-468d-9f07-29de49e5d730",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students to discuss the issues that they see in Display A.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students to discuss the issues that they see in Display B.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students to discuss the issues that they see in Display A.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students to discuss the issues that they see in Display B.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2198,7 +2198,7 @@
       "key": "67b08400-f627-49e4-83f6-b8791ba50d18",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which display would you trust more, and why?*\n- *What patterns do you notice in which design we trust more?*\n- *What is one clue that helped you decide?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should name specific design details (labels, contrast, warnings, wording) that influence their trust and sense of fairness, not just say “A looks nicer” or “B looks better.” Help them connect these details to real users trying to understand information. Surface that clearer labels, readable text, and more inclusive wording lead to greater trust and perceived fairness, setting up the idea that display choices can include or exclude people.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which display would you trust more, and why?*\n- *What patterns do you notice in which design we trust more?*\n- *What is one clue that helped you decide?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should name specific design details (labels, contrast, warnings, wording) that influence their trust and sense of fairness, not just say “A looks nicer” or “B looks better.” Help them connect these details to real users trying to understand information. Surface that clearer labels, readable text, and more inclusive wording lead to greater trust and perceived fairness, setting up the idea that display choices can include or exclude people.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2225,7 +2225,7 @@
       "key": "fa217fe5-b792-4c6b-b28a-df9b3bca66a8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fa217fe5-b792-4c6b-b28a-df9b3bca66a8",
@@ -2263,7 +2263,7 @@
       "key": "56e2d9b0-2dd4-4393-bc41-18bfa2be9031",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly define the three terms, then facilitate a quick partner discussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which one do you think is the hardest for a computer to judge automatically? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that while computers can easily check contrast ratios (Accessibility) or overflow boundaries (Readability), judging \"Clarity\" (how easy a sentence is to understand for a human) is more subjective and requires advanced AI processing. This sets up the need for the PAIR method in the next level."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Briefly define the three terms, then facilitate a quick partner discussion.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which one do you think is the hardest for a computer to judge automatically? Why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that while computers can easily check contrast ratios (Accessibility) or overflow boundaries (Readability), judging \"Clarity\" (how easy a sentence is to understand for a human) is more subjective and requires advanced AI processing. This sets up the need for the PAIR method in the next level."
       },
       "seeding_key": {
         "activity_section.key": "56e2d9b0-2dd4-4393-bc41-18bfa2be9031",
@@ -2286,7 +2286,7 @@
       "key": "4cba685b-8b3f-4b36-b4c4-5fa895c457c7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 and 2.\n- Level 1: Use the AI to review the code for accessibility and fairness issues, then accept or reject 2–3 suggestions and log your decisions in the reflection table.\n- Level 2: Use toggles and the AI to audit clarity, readability, and accessibility, then rewrite the summary text to be shorter, clearer, and accurate.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who:\n- Ask the suggested review prompt to AI and do not just copy everything it says.\n- Make small, safe edits (labels, alt text, contrast, simple ARIA attributes) without breaking the page.\n- Fill out the reflection table with specific suggestions and reasons for accepting or rejecting them.\n\nOn Level 2, check that they:\n- Use both Large Text and High Contrast toggles and record one clarity, one readability, and one accessibility issue.\n- Ask AI to rewrite the summary with specific constraints (word limit and correct numbers) and verify the AI did not change the counts.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete Levels 1 and 2.\n- Level 1: Use the AI to review the code for accessibility and fairness issues, then accept or reject 2–3 suggestions and log your decisions in the reflection table.\n- Level 2: Use toggles and the AI to audit clarity, readability, and accessibility, then rewrite the summary text to be shorter, clearer, and accurate.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who:\n- Ask the suggested review prompt to AI and do not just copy everything it says.\n- Make small, safe edits (labels, alt text, contrast, simple ARIA attributes) without breaking the page.\n- Fill out the reflection table with specific suggestions and reasons for accepting or rejecting them.\n\nOn Level 2, check that they:\n- Use both Large Text and High Contrast toggles and record one clarity, one readability, and one accessibility issue.\n- Ask AI to rewrite the summary with specific constraints (word limit and correct numbers) and verify the AI did not change the counts.",
         "progression_name": "PAIR Accessibility Reviewer"
       },
       "seeding_key": {
@@ -2352,7 +2352,7 @@
       "key": "5374732b-05c6-4cf4-a42d-8e4212ad7bbe",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Evaluating Fairness and Accessibility activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 3-4.\n- Level 3: Students analyze which activities appear in the featured list and use PAIR to adjust the dataset order to address a fairness or perspective issue.\n- Level 4: Students review the text and properties inside each activity and revise them to improve clarity, inclusivity, and accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are examining the activities array rather than editing HTML and using PAIR to ask focused questions about reordering or rewriting data. Listen for students identifying fairness issues (like category imbalance or missing images) and explaining how their change improves representation. Redirect students if they assume fairness means simply \"equal numbers\" or if they overlook the impact of unclear or exclusive wording.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Evaluating Fairness and Accessibility activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Levels 3-4.\n- Level 3: Students analyze which activities appear in the featured list and use PAIR to adjust the dataset order to address a fairness or perspective issue.\n- Level 4: Students review the text and properties inside each activity and revise them to improve clarity, inclusivity, and accuracy.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are examining the activities array rather than editing HTML and using PAIR to ask focused questions about reordering or rewriting data. Listen for students identifying fairness issues (like category imbalance or missing images) and explaining how their change improves representation. Redirect students if they assume fairness means simply \"equal numbers\" or if they overlook the impact of unclear or exclusive wording.",
         "progression_name": "Bias and Fairness",
         "tips": [
           {
@@ -2401,7 +2401,7 @@
       "key": "4909bc44-f45d-4e31-b712-4d658ded640f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4909bc44-f45d-4e31-b712-4d658ded640f",
@@ -2412,7 +2412,7 @@
       "key": "e8385d26-e645-49e7-918d-f5574384e02c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2452,7 +2452,7 @@
       "key": "8cdf2e1b-bc4d-47a8-8a51-692816269a43",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is this playlist different from the previous one? Who might feel more included here?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion helps students compare two curated lists so they can see how subtle shifts in filtering change who appears and who feels represented. By noticing differences in genre, style, or artist identity, students start to connect filtering choices with inclusion. The goal is to build awareness that filters are design decisions that shape user experience.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is this playlist different from the previous one? Who might feel more included here?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion helps students compare two curated lists so they can see how subtle shifts in filtering change who appears and who feels represented. By noticing differences in genre, style, or artist identity, students start to connect filtering choices with inclusion. The goal is to build awareness that filters are design decisions that shape user experience.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2479,7 +2479,7 @@
       "key": "fe7f9119-71e5-44e9-8903-d7f459fba876",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If an app only shows songs from the Top 10, what happens to everyone else?*\n- *What rule might that filter use?*\n- *What is one change you would make to the filter to make the playlist feel more fair or inclusive?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that a simple rule, such as filtering by high popularity, hides many other songs and artists. Listen for comments about lesser-known, new, indie, or local artists being invisible, and gently connect this to the idea that “what you see” is controlled by hidden conditions. Surface the idea that fairness comes from the conditions we choose. Highlight suggestions that change numeric thresholds, add extra conditions, or create multiple views, and emphasize that these are all choices about what conditions to use.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Wrap up the warm up by stating explicitly: every filter starts as a condition, and every condition is a choice that affects what people see and do not see. Optionally, if you have one extra minute, invite students to jot a quick pseudocode condition such as `if artist.popularity > 90` in their notebook.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If an app only shows songs from the Top 10, what happens to everyone else?*\n- *What rule might that filter use?*\n- *What is one change you would make to the filter to make the playlist feel more fair or inclusive?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students notice that a simple rule, such as filtering by high popularity, hides many other songs and artists. Listen for comments about lesser-known, new, indie, or local artists being invisible, and gently connect this to the idea that “what you see” is controlled by hidden conditions. Surface the idea that fairness comes from the conditions we choose. Highlight suggestions that change numeric thresholds, add extra conditions, or create multiple views, and emphasize that these are all choices about what conditions to use.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Wrap up the warm up by stating explicitly: every filter starts as a condition, and every condition is a choice that affects what people see and do not see. Optionally, if you have one extra minute, invite students to jot a quick pseudocode condition such as `if artist.popularity > 90` in their notebook.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2506,7 +2506,7 @@
       "key": "1a369e79-53bb-4f35-96ce-356b52c6b2c7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "1a369e79-53bb-4f35-96ce-356b52c6b2c7",
@@ -2546,7 +2546,7 @@
       "key": "70859052-e291-4434-b0e9-12bd62871d62",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Level 1.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are asking AI for just the filter functions, not a full app rewrite. Check that:\n- `filterGenreVersionA` builds and returns a new array of only sci-fi movies using a condition like `if (movie.genre === \"Sci-Fi\")`.\n- `filterGenreVersionB` uses `.map()` plus a cleanup step (such as `.filter(Boolean)`) so there are no undefined entries.\n- Students can explain one structural difference between Version A and B and identify a strong practice related to missing values or clean output.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Level 1.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are asking AI for just the filter functions, not a full app rewrite. Check that:\n- `filterGenreVersionA` builds and returns a new array of only sci-fi movies using a condition like `if (movie.genre === \"Sci-Fi\")`.\n- `filterGenreVersionB` uses `.map()` plus a cleanup step (such as `.filter(Boolean)`) so there are no undefined entries.\n- Students can explain one structural difference between Version A and B and identify a strong practice related to missing values or clean output.",
         "progression_name": "ECHO Framework: Explore and Own Filter Logic Patterns",
         "tips": [
           {
@@ -2574,7 +2574,7 @@
       "key": "c2fe8d43-698b-4d80-9290-8f3c806b54c0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one important difference you noticed between Version A and Version B? Which strong practice do you think matters most for fairness or reliability?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students connect code structure to fairness and reliability. Listen for ideas like \"this version starts with an empty array,\" \"this one skips songs without a genre instead of crashing,\" or \"filtering out undefined keeps the results clean,\" and link those to clearer, more trustworthy filters.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define filter.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to walk through the parts of a generalized filter function.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the CHAT Framework.\n- Clarify: Decompose all the steps necessary to create the desired output.\n- Hone: Draft a prompt that will add one of the decomposed features.\n- Apply: Run and test the code with real data.\n- Transfer: Turn your best prompt into a reusable template.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one important difference you noticed between Version A and Version B? Which strong practice do you think matters most for fairness or reliability?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students connect code structure to fairness and reliability. Listen for ideas like \"this version starts with an empty array,\" \"this one skips songs without a genre instead of crashing,\" or \"filtering out undefined keeps the results clean,\" and link those to clearer, more trustworthy filters.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define filter.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to walk through the parts of a generalized filter function.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the CHAT Framework.\n- Clarify: Decompose all the steps necessary to create the desired output.\n- Hone: Draft a prompt that will add one of the decomposed features.\n- Apply: Run and test the code with real data.\n- Transfer: Turn your best prompt into a reusable template.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2601,7 +2601,7 @@
       "key": "b2ce3163-35ad-47ff-a621-996269a342b0",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 4.\n- Level 2: Students complete a choice level and apply the CHAT Framework.\n- Level 3: Review the definition for _filter_.\n- Level 4: Explain _filter_ in their own words.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work:\n- Check that each student has clearly Clarified the goal of their filter in words before diving into code.\n- Encourage them to Hone one condition at a time and ask AI to explain any new lines, especially guard clauses for missing or undefined data.\n- Watch that their apps Apply filters correctly (UI updates and accurate result counts) and that they Transfer what they learned by editing their final prompt and recording how they improved fairness.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 4.\n- Level 2: Students complete a choice level and apply the CHAT Framework.\n- Level 3: Review the definition for _filter_.\n- Level 4: Explain _filter_ in their own words.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work:\n- Check that each student has clearly Clarified the goal of their filter in words before diving into code.\n- Encourage them to Hone one condition at a time and ask AI to explain any new lines, especially guard clauses for missing or undefined data.\n- Watch that their apps Apply filters correctly (UI updates and accurate result counts) and that they Transfer what they learned by editing their final prompt and recording how they improved fairness.",
         "progression_name": "Filter Choice Levels"
       },
       "seeding_key": {
@@ -2640,7 +2640,7 @@
       "key": "57748801-b3b1-474d-8859-2f6efe3b8e2f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What condition in your filter made the biggest difference to fairness? How did AI help you test or improve that condition?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students connect their implementation details—like guard clauses, lowercasing, or multi-condition checks—to real impacts on fairness and reliability. Encourage them to name concrete examples (for instance, “skipping songs with missing popularity so the app does not crash” or “treating 'Tomato' and 'tomato' the same”) and to see AI as a partner in generating tests and spotting gaps.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What condition in your filter made the biggest difference to fairness? How did AI help you test or improve that condition?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students connect their implementation details—like guard clauses, lowercasing, or multi-condition checks—to real impacts on fairness and reliability. Encourage them to name concrete examples (for instance, “skipping songs with missing popularity so the app does not crash” or “treating 'Tomato' and 'tomato' the same”) and to see AI as a partner in generating tests and spotting gaps.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2657,7 +2657,7 @@
       "key": "060cc85d-531c-4194-a5cb-a3d4a950dc09",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to use one of the question stems to write a question they have from the lesson that day. Give them time to share their questions with the person next to them. Invite 1–2 volunteers to share their examples with the whole class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of paper.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to use one of the question stems to write a question they have from the lesson that day. Give them time to share their questions with the person next to them. Invite 1–2 volunteers to share their examples with the whole class.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2684,7 +2684,7 @@
       "key": "2bc84dd6-5a67-4992-8b14-d79c25ed32f2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "2bc84dd6-5a67-4992-8b14-d79c25ed32f2",
@@ -2695,7 +2695,7 @@
       "key": "47df49c7-eba4-41bd-b89f-729f2ea953a1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey"
       },
       "seeding_key": {
@@ -2745,7 +2745,7 @@
       "key": "ef8b8611-45e3-4e47-8f23-87524ee3a768",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards fit the criteria for a search for the term \"Pop\" in the Title property.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Look closely at 'PoPcorN'. It has the letters P, o, and p. Why exactly did the computer reject it when we searched for 'Pop'?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that an exact match is required: 'P' is not equal to 'p'. We often think computers are smart, but in this case, they are extremely literal. A computer doesn't read the word \"Pop\"; it reads a specific code for \"Big P\", \"Little o\", \"Little p\". If the sequence doesn't match perfectly—like in Popcorn where the third letter is a \"Big P\"—the computer says \"No match!\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards fit the criteria for a search for the term \"pop\" in the Title property\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does this search return match your expectations? Why or why not?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that users don't usually pay attention to capitalization when typing. If a user types \"pop\" and gets zero results for \"K-Pop\" or \"Pop\", they will think the app is broken or the song doesn't exist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards, if any, fit the criteria when the search box is left empty.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does it make logical sense for a computer to show ALL results when the search bar is empty?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Every string technically \"contains\" an empty string. When you first open a search page or clear the search bar, you usually expect to see a default list of all items, not a blank screen. The \"empty string = all\" logic is actually a helpful feature in many applications. This looks like a bug, but it's often a feature.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards fit the criteria for a search for the term \"Pop\" in the Title property.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Look closely at 'PoPcorN'. It has the letters P, o, and p. Why exactly did the computer reject it when we searched for 'Pop'?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that an exact match is required: 'P' is not equal to 'p'. We often think computers are smart, but in this case, they are extremely literal. A computer doesn't read the word \"Pop\"; it reads a specific code for \"Big P\", \"Little o\", \"Little p\". If the sequence doesn't match perfectly—like in Popcorn where the third letter is a \"Big P\"—the computer says \"No match!\"\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards fit the criteria for a search for the term \"pop\" in the Title property\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does this search return match your expectations? Why or why not?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that users don't usually pay attention to capitalization when typing. If a user types \"pop\" and gets zero results for \"K-Pop\" or \"Pop\", they will think the app is broken or the song doesn't exist.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to predict which of the cards, if any, fit the criteria when the search box is left empty.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does it make logical sense for a computer to show ALL results when the search bar is empty?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Every string technically \"contains\" an empty string. When you first open a search page or clear the search bar, you usually expect to see a default list of all items, not a blank screen. The \"empty string = all\" logic is actually a helpful feature in many applications. This looks like a bug, but it's often a feature.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "ef8b8611-45e3-4e47-8f23-87524ee3a768",
@@ -2783,7 +2783,7 @@
       "key": "8ce5ac99-16c3-464e-b038-f6d468e9a507",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work individually or in small groups to propose at least two different filters or searches a user might want to run on this dataset for an item of the student's choosing. For each filter, they should note which field it uses and describe how it would narrow or sort the list.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask questions like: Is this filter something a real user would care about? How would the app decide which items match? Encourage them to think about fairness (for example, not hiding items unexpectedly) and clarity.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students work individually or in small groups to propose at least two different filters or searches a user might want to run on this dataset for an item of the student's choosing. For each filter, they should note which field it uses and describe how it would narrow or sort the list.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask questions like: Is this filter something a real user would care about? How would the app decide which items match? Encourage them to think about fairness (for example, not hiding items unexpectedly) and clarity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2800,7 +2800,7 @@
       "key": "ce552ba4-a3f9-403f-bd48-2be112313cac",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which filters from your list seem most useful to real users, and what is one edge case you definitely want your future search function to handle?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface a few high-value filters (for example, by category, rating, or tags) and highlight common edge cases (case differences, empty queries, missing data). Capture these on the board as “rules of thumb” to guide coding later.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 9, Level 1. Students will:\n- Run the app and test searches like blue, Blue, blu, and an empty query.\n- Paste the `searchColors` function into AI and ask focused questions (why lowercase, what happens on empty query, does it change the original list?).\n- Add short comments above the function explaining the rules they discovered.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are actually reading AI explanations and translating them into their own words in comments. Ask: How is this function handling case differences? What happens when the query is \"\"? Are we ever changing the original colors array?",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which filters from your list seem most useful to real users, and what is one edge case you definitely want your future search function to handle?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface a few high-value filters (for example, by category, rating, or tags) and highlight common edge cases (case differences, empty queries, missing data). Capture these on the board as “rules of thumb” to guide coding later.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 9, Level 1. Students will:\n- Run the app and test searches like blue, Blue, blu, and an empty query.\n- Paste the `searchColors` function into AI and ask focused questions (why lowercase, what happens on empty query, does it change the original list?).\n- Add short comments above the function explaining the rules they discovered.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are actually reading AI explanations and translating them into their own words in comments. Ask: How is this function handling case differences? What happens when the query is \"\"? Are we ever changing the original colors array?",
         "progression_name": "Explore and Explain",
         "tips": [
           {
@@ -2851,7 +2851,7 @@
       "key": "1c903373-5f43-4b18-b7c6-dda18b478f11",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 9, Level 2. Explain that students will now choose one search style to co-build with AI: Option A (text field), Option B (dropdown), or Option C (chips/tags). Clarify that each option uses the same core ideas about queries and safe search, just in different UIs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students choose an option that fits their comfort and interest. Ensure every student knows which level letter (a, b, or c) they are working on.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 9, Level 2. Explain that students will now choose one search style to co-build with AI: Option A (text field), Option B (dropdown), or Option C (chips/tags). Clarify that each option uses the same core ideas about queries and safe search, just in different UIs.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Help students choose an option that fits their comfort and interest. Ensure every student knows which level letter (a, b, or c) they are working on.",
         "progression_name": "Co-Build a Search"
       },
       "seeding_key": {
@@ -2890,7 +2890,7 @@
       "key": "5102a2dd-923a-47bb-95c2-a504c5dd4b00",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What rules did your search function follow to stay fair and predictable?*\n- *How did working with AI (CHAT steps) help you design and debug your search?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Draw out shared rules like case-insensitivity, clear behavior for empty queries, not mutating original data, and guarding missing fields. Highlight AI as a partner for clarifying requirements and checking edge cases, not just generating code."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What rules did your search function follow to stay fair and predictable?*\n- *How did working with AI (CHAT steps) help you design and debug your search?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Draw out shared rules like case-insensitivity, clear behavior for empty queries, not mutating original data, and guarding missing fields. Highlight AI as a partner for clarifying requirements and checking edge cases, not just generating code."
       },
       "seeding_key": {
         "activity_section.key": "5102a2dd-923a-47bb-95c2-a504c5dd4b00",
@@ -2901,7 +2901,7 @@
       "key": "16b2fae0-743c-437c-a5ce-f944b2c10f97",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is one improvement you would still like to make to your search function?*\n- *How could AI help you design good tests for that change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to see search as something they can iterate on and to view AI as a tool for generating and refining edge-case tests, not just code. Listen for ideas like adding more filters, improving messages, or handling more tricky inputs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is one improvement you would still like to make to your search function?*\n- *How could AI help you design good tests for that change?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to see search as something they can iterate on and to view AI as a tool for generating and refining edge-case tests, not just code. Listen for ideas like adding more filters, improving messages, or handling more tricky inputs.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "16b2fae0-743c-437c-a5ce-f944b2c10f97",
@@ -2912,7 +2912,7 @@
       "key": "72cc2999-3e93-4587-92cc-db22a1d73952",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2964,7 +2964,7 @@
       "key": "33c988ad-147c-4a4c-8d42-684637a43c47",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which algorithm felt better overall: filter → sort or sort → filter?*\n- *Why, thinking about both effort and fairness?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface that filter → sort usually takes less work because sorting a smaller set is “lighter,” and that both sequences can still hide mis-labeled items. Steer students to notice that good pipelines think about both efficiency and fairness, not just one.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _pipeline_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the CHAT framework. Point out to them that they should treat this framework as dynamic rather than linear and that the middle steps should be repeated and iterated on as many times as needed.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which algorithm felt better overall: filter → sort or sort → filter?*\n- *Why, thinking about both effort and fairness?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface that filter → sort usually takes less work because sorting a smaller set is “lighter,” and that both sequences can still hide mis-labeled items. Steer students to notice that good pipelines think about both efficiency and fairness, not just one.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _pipeline_.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Remind students of the CHAT framework. Point out to them that they should treat this framework as dynamic rather than linear and that the middle steps should be repeated and iterated on as many times as needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2981,7 +2981,7 @@
       "key": "dac66f9a-aace-4265-8dda-512480328feb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete Levels 2 through 5.\n- Level 2: Students pick a scenario (For You Page, Comment Climb, or Ad Transparency), use CHAT to design a filter → sort → map _pipeline_, implement it in Web Lab, and build an AI-supported test table.\n- Level 3: Students write a free-response reflection about how their _pipeline_’s sort and map choices affect who gets seen and how fair it feels.\n- Level 4: Read a definition, example, and visual description of a _pipeline_.\n- Level 5: Write their own explanation of _pipeline_ with an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students choose an option that interests them and fits their skill level. As they work, check that their plain-language CHAT planning matches the code they write and that their test tables include tricky edge cases (missing labels, low engagement, borderline ages, bot bursts, etc.). Ask: How could this rule unintentionally hide or over-promote certain people or content?",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete Levels 2 through 5.\n- Level 2: Students pick a scenario (For You Page, Comment Climb, or Ad Transparency), use CHAT to design a filter → sort → map _pipeline_, implement it in Web Lab, and build an AI-supported test table.\n- Level 3: Students write a free-response reflection about how their _pipeline_’s sort and map choices affect who gets seen and how fair it feels.\n- Level 4: Read a definition, example, and visual description of a _pipeline_.\n- Level 5: Write their own explanation of _pipeline_ with an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Help students choose an option that interests them and fits their skill level. As they work, check that their plain-language CHAT planning matches the code they write and that their test tables include tricky edge cases (missing labels, low engagement, borderline ages, bot bursts, etc.). Ask: How could this rule unintentionally hide or over-promote certain people or content?",
         "progression_name": "Design a Filter → Sort → Render Pipeline"
       },
       "seeding_key": {
@@ -3021,7 +3021,7 @@
       "key": "df8d94de-f6b5-40ec-9244-6418028867c5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to write a brief exit reflection (on paper or digitally) naming one concrete improvement they would make to their pipeline for fairness or representation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to write a brief exit reflection (on paper or digitally) naming one concrete improvement they would make to their pipeline for fairness or representation.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "df8d94de-f6b5-40ec-9244-6418028867c5",
@@ -3032,7 +3032,7 @@
       "key": "13e9a360-744c-44d9-a689-606aec312e9a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3045,7 +3045,7 @@
       "key": "7096f3ea-3334-453d-a061-05a0d7a15b73",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What's an app or website that helps you explore or compare information?*\n- *What makes it helpful, fair, or easy to use?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify qualities of apps that present data clearly and fairly, grounding today’s work in what makes information accessible and meaningful.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *What's an app or website that helps you explore or compare information?*\n- *What makes it helpful, fair, or easy to use?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify qualities of apps that present data clearly and fairly, grounding today’s work in what makes information accessible and meaningful.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3058,7 +3058,7 @@
       "key": "bf398fa0-9f23-4284-bb75-7dd24b43f72c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Values Explorer Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Values Explorer Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their app concept to showcasing their final product.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Values Explorer Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Values Explorer Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their app concept to showcasing their final product.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3087,7 +3087,7 @@
       "key": "27e4513e-e069-4d5c-8be0-11b767f41d85",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Plan Your Values Explorer & Design The Schema, where students identify a central value, design their schema, and generate a prototype dataset. Direct students to open their Values Explorer Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Plan Your Values Explorer & Design The Schema, where students identify a central value, design their schema, and generate a prototype dataset. Direct students to open their Values Explorer Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3114,7 +3114,7 @@
       "key": "5e7ce93d-e1ac-4130-8f94-cbabd7135667",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Plan Your Values Explorer & Design The Schema. Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their schema plan, and generating their prototype dataset.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “Which value does your project focus on?”\n- “What kinds of items will be in your dataset?”\n- “How does your schema help represent what matters to users?”\n- “Who might be missing from your data right now?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Plan Your Values Explorer & Design The Schema. Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their schema plan, and generating their prototype dataset.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “Which value does your project focus on?”\n- “What kinds of items will be in your dataset?”\n- “How does your schema help represent what matters to users?”\n- “Who might be missing from your data right now?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.",
         "progression_name": "Milestone 1",
         "tips": [
           {
@@ -3132,7 +3132,7 @@
       "key": "45cb95bb-83a7-4762-8f99-397c70f8757a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3151,7 +3151,7 @@
       "key": "bfa23303-e72c-4d3e-a945-7ce7d4b4cd9f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *What's one part of your dataset that you're most excited to display visually?*\n- *What's one thing you're not sure how to show clearly yet?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on data display challenges, preparing for wireframing and UI design decisions.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *What's one part of your dataset that you're most excited to display visually?*\n- *What's one thing you're not sure how to show clearly yet?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on data display challenges, preparing for wireframing and UI design decisions.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3164,7 +3164,7 @@
       "key": "c37cc441-d800-4f82-92c3-aea39f661f42",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Values Explorer Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to use Level 1 if they still need to complete any Milestone 1 work or would benefit from one of the support tools, and move to Level 2 to begin Milestone 2, where they will shift from planning their data to designing how it will appear on the page. Explain that today’s focus is creating clear wireframes and starting the UI structure that will eventually display their dataset using `.map()`. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- “Which schema fields will appear on your card?”\n- “Where will users look first when viewing your data?”\n- “Does your wireframe show clear labels for every field?”\n- “How will you make your data easy to scan or compare?”\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Values Explorer Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to use Level 1 if they still need to complete any Milestone 1 work or would benefit from one of the support tools, and move to Level 2 to begin Milestone 2, where they will shift from planning their data to designing how it will appear on the page. Explain that today’s focus is creating clear wireframes and starting the UI structure that will eventually display their dataset using `.map()`. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- “Which schema fields will appear on your card?”\n- “Where will users look first when viewing your data?”\n- “Does your wireframe show clear labels for every field?”\n- “How will you make your data easy to scan or compare?”\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 2"
@@ -3178,7 +3178,7 @@
       "key": "54d3f01c-e24c-4f3f-b93d-4b76f3c1a7e4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help users understand the data clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help users understand the data clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.",
         "duration": "5",
         "name": "Wrap Up",
         "progression_name": "Milestone Two",
@@ -3198,7 +3198,7 @@
       "key": "93b8973f-5a47-44ac-97e6-0901c70bddbe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s something in your app that isn’t showing the data the way you expected? What do you think might be causing it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice articulating how their code transforms or displays data, normalizing debugging as an ongoing part of algorithm design.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s something in your app that isn’t showing the data the way you expected? What do you think might be causing it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice articulating how their code transforms or displays data, normalizing debugging as an ongoing part of algorithm design.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3211,7 +3211,7 @@
       "key": "8124f059-9edf-4cd1-a589-5a125fe83a30",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Values Explorer Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Values Explorer Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 3",
@@ -3241,7 +3241,7 @@
       "key": "f709910b-934b-40c6-8d85-6bdc42e5f787",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3258,7 +3258,7 @@
       "key": "f7591866-1962-4cab-84bc-7ccc77913a62",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3277,7 +3277,7 @@
       "key": "74748242-d9a5-433c-8023-e19adbbe0e0b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone were testing your app right now, what’s the one thing you’d want them to notice first?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the purpose and user experience of their app, setting an intentional focus for peer testing and feedback during today’s class.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone were testing your app right now, what’s the one thing you’d want them to notice first?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the purpose and user experience of their app, setting an intentional focus for peer testing and feedback during today’s class.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3290,7 +3290,7 @@
       "key": "0a2ffb52-16de-4c97-b3f3-885115195c37",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Values Explorer Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Values Explorer Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 4",
@@ -3310,7 +3310,7 @@
       "key": "c784e809-6907-4c59-b06e-835ac48d37a5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period. They should update their Fixes + Features List, record any new debugging insights, and reflect on how their search/filter/sort choices influence which items users see first.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period. They should update their Fixes + Features List, record any new debugging insights, and reflect on how their search/filter/sort choices influence which items users see first.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3329,7 +3329,7 @@
       "key": "40d33a22-b0c5-42f7-b696-55c13b0ee370",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one thing you still need to check or polish before your app feels ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement tasks related to clarity, accessibility, fairness, or data accuracy as they prepare to finalize their Values Explorer app.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one thing you still need to check or polish before your app feels ready to share?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement tasks related to clarity, accessibility, fairness, or data accuracy as they prepare to finalize their Values Explorer app.",
         "duration": "5",
         "name": "Warm Up",
         "progression_name": "Milestone Three"
@@ -3343,7 +3343,7 @@
       "key": "5fa2271d-433e-45c0-80a9-d0cb322db933",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4 – Finalize, where students polish their app and make it ready for showcasing. Remind students to check their Values Explorer Project Guide for the Milestone 4 deliverables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Values Explorer Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4 – Finalize, where students polish their app and make it ready for showcasing. Remind students to check their Values Explorer Project Guide for the Milestone 4 deliverables.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Values Explorer Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
         "duration": "30",
         "name": "Activity",
         "progression_name": "Milestone Four",
@@ -3373,7 +3373,7 @@
       "key": "859e2c24-86b0-4877-9571-8b86e16719ed",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Values Explorer Projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Values Explorer Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Values Explorer Projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Values Explorer Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3400,7 +3400,7 @@
       "key": "6d701d1b-592c-48fc-9921-9d2f9283bbbc",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Values Explorer Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Values Explorer Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3439,7 +3439,7 @@
       "key": "68d224d3-db39-4059-bbcf-c4f8aed90143",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Values Explorer Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Values Explorer Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.",
         "tips": [
           {
             "type": "assessmentOpportunity",

@@ -367,7 +367,7 @@
       "key": "2c88b705-753b-46a1-a0a4-a7fca087c9fa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to consider these rhetorical questions and then show the notice/wonder map slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “What do you notice? What do you Wonder?” Slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Allow students to consider these rhetorical questions and then show the notice/wonder map slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “What do you notice? What do you Wonder?” Slide"
       },
       "seeding_key": {
         "activity_section.key": "2c88b705-753b-46a1-a0a4-a7fca087c9fa",
@@ -390,7 +390,7 @@
       "key": "c26470f1-42f3-4ea5-aaae-b2d6d8e60d1e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow 1-2 minutes for students to think independently, talk in partners or small groups about what they see, and wonder about the map. If there is time, offer space to share out or discuss as a class, otherwise leaving some ideas/questions unanswered is expected at this point.\n\n**Discussion Goal:** Students identify landmarks, the country, the ocean, etc.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map Components\" Slide\n\nReview basic map vocabulary including Compass Rose, Landmark, Country, Ocean, etc. Extend and elaborate as needed for your class. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Allow 1-2 minutes for students to think independently, talk in partners or small groups about what they see, and wonder about the map. If there is time, offer space to share out or discuss as a class, otherwise leaving some ideas/questions unanswered is expected at this point.\n\n**Discussion Goal:** Students identify landmarks, the country, the ocean, etc.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Map Components\" Slide\n\nReview basic map vocabulary including Compass Rose, Landmark, Country, Ocean, etc. Extend and elaborate as needed for your class. "
       },
       "seeding_key": {
         "activity_section.key": "c26470f1-42f3-4ea5-aaae-b2d6d8e60d1e",
@@ -423,7 +423,7 @@
       "key": "daad4f39-b61a-471a-be65-54d14f9a7832",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Exploring Maps\" Slide\n\n**Discuss:** *What can we learn from these maps? What stories do these maps tell? What can we infer about the map makers?*\n\n**Discussion Goal:** Help students recognize maps have a variety of purposes and the choices of what to label are at times objective boundaries and facts (Native American tribes & Oregon Trail fort, river, mountain locations) while at other times they are subjective choices (best tacos & roller coasters).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Looking Closer\" Slide\n\n**Discuss:** *How do the colors, symbols, and landmarks help us understand the purpose of maps? What are some design choices the map maker needed to decide on (color, graphics, labels, etc)?*\n\n**Discussion Goal:** Students will start to recognize that map makers have a lot to consider when designing a new map. The use of color can help identify patterns and different boundaries, and provide focus. Graphics can be added to show specific landmark details and labels help point out the purpose of the map. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Exploring Maps\" Slide\n\n**Discuss:** *What can we learn from these maps? What stories do these maps tell? What can we infer about the map makers?*\n\n**Discussion Goal:** Help students recognize maps have a variety of purposes and the choices of what to label are at times objective boundaries and facts (Native American tribes & Oregon Trail fort, river, mountain locations) while at other times they are subjective choices (best tacos & roller coasters).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Looking Closer\" Slide\n\n**Discuss:** *How do the colors, symbols, and landmarks help us understand the purpose of maps? What are some design choices the map maker needed to decide on (color, graphics, labels, etc)?*\n\n**Discussion Goal:** Students will start to recognize that map makers have a lot to consider when designing a new map. The use of color can help identify patterns and different boundaries, and provide focus. Graphics can be added to show specific landmark details and labels help point out the purpose of the map. "
       },
       "seeding_key": {
         "activity_section.key": "daad4f39-b61a-471a-be65-54d14f9a7832",
@@ -448,7 +448,7 @@
       "key": "5eccc11f-a35a-4165-b805-241644df3b7e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Introduction to Sprite Lab video with the full class or have students watch it independently on their computer. Then allow students to follow instructions independently on levels 2-5.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the Introduction to Sprite Lab video with the full class or have students watch it independently on their computer. Then allow students to follow instructions independently on levels 2-5.\n"
       },
       "seeding_key": {
         "activity_section.key": "5eccc11f-a35a-4165-b805-241644df3b7e",
@@ -476,7 +476,7 @@
       "key": "de1e3612-6277-4550-ae60-4590326fbd3a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is a landmark?*\n\n**Discussion Goal:** The rest of the module focuses on important and historical landmarks on maps so it is important students all have a solid understanding that a landmark is an object (natural or manmade) that has importance or makes a place easily recognizable.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is a landmark?*\n\n**Discussion Goal:** The rest of the module focuses on important and historical landmarks on maps so it is important students all have a solid understanding that a landmark is an object (natural or manmade) that has importance or makes a place easily recognizable.",
         "duration": "5",
         "name": "What is a landmark?"
       },
@@ -512,7 +512,7 @@
       "key": "6f46e1b0-15b2-4f3a-ac06-b39eaf44ecee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students continue onto levels 7-12 independently. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students continue onto levels 7-12 independently. "
       },
       "seeding_key": {
         "activity_section.key": "6f46e1b0-15b2-4f3a-ac06-b39eaf44ecee",
@@ -534,7 +534,7 @@
       "key": "170363d4-c1f9-437b-a15a-e7dffd911f49",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Encourage students to add more landmarks, program the guide to explain their significance, and check out the toolbox for new blocks to test out. When they’re finished with their project there is an option to click the Share button and send the project to a friend or family member. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Encourage students to add more landmarks, program the guide to explain their significance, and check out the toolbox for new blocks to test out. When they’re finished with their project there is an option to click the Share button and send the project to a friend or family member. ",
         "progression_name": "Free Play - Landmarks"
       },
       "seeding_key": {
@@ -557,7 +557,7 @@
       "key": "e8844f5b-cfb6-4ecf-b3ab-3580965ba604",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is another way a map can teach us about a place?*\n\n**Discussion Goal:** Explanation of what is being discussed and main points to bring out.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is another way a map can teach us about a place?*\n\n**Discussion Goal:** Explanation of what is being discussed and main points to bring out.",
         "duration": "10",
         "name": "Campfire Discussion"
       },
@@ -582,7 +582,7 @@
       "key": "9cfc97c3-fa85-46d3-8ffe-397717a7d8f8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Campfire Discussion directions:\n1) Divide into groups of 4-5.\n2) Each student writes an individual response to the prompt or question on a sticky note or scratch paper and places it around the \"campfire\" (a sheet of paper or object in the center of the group). \n3) Each student then takes turns reading aloud a sticky note other than their own, providing each person in the group an opportunity to question, agree, disagree, and respond to it. \n4) Repeat until each sticky note has been read and discussed.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Campfire Discussion directions:\n1) Divide into groups of 4-5.\n2) Each student writes an individual response to the prompt or question on a sticky note or scratch paper and places it around the \"campfire\" (a sheet of paper or object in the center of the group). \n3) Each student then takes turns reading aloud a sticky note other than their own, providing each person in the group an opportunity to question, agree, disagree, and respond to it. \n4) Repeat until each sticky note has been read and discussed.\n"
       },
       "seeding_key": {
         "activity_section.key": "9cfc97c3-fa85-46d3-8ffe-397717a7d8f8",
@@ -605,7 +605,7 @@
       "key": "4ac45122-0644-45de-ab3f-a5de8471917e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"What are the important landmarks in the area?\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a blank piece of paper to write a list on."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"What are the important landmarks in the area?\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a blank piece of paper to write a list on."
       },
       "seeding_key": {
         "activity_section.key": "4ac45122-0644-45de-ab3f-a5de8471917e",
@@ -628,7 +628,7 @@
       "key": "36c1b5e4-1d95-4ce1-9f0a-5f708c9f9ad0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to start a list of landmarks on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give students 2-3 minutes to start a list of landmarks on their own.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
       },
       "seeding_key": {
         "activity_section.key": "36c1b5e4-1d95-4ce1-9f0a-5f708c9f9ad0",
@@ -651,7 +651,7 @@
       "key": "975c6461-a281-407b-bc31-6ce2c240fac1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students guidance on who they should pair up with first. Then set a timer or play the music on the slide by clicking on the speaker graphic near the slide title."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give students guidance on who they should pair up with first. Then set a timer or play the music on the slide by clicking on the speaker graphic near the slide title."
       },
       "seeding_key": {
         "activity_section.key": "975c6461-a281-407b-bc31-6ce2c240fac1",
@@ -676,7 +676,7 @@
       "key": "58ec2eaf-e611-4194-8883-4d9d64931ddc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Planning handout."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Planning handout."
       },
       "seeding_key": {
         "activity_section.key": "58ec2eaf-e611-4194-8883-4d9d64931ddc",
@@ -699,7 +699,7 @@
       "key": "35d6dc44-1872-4215-8977-1f88d48f74cb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom to support students and narrate ideas as you see them develop.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom to support students and narrate ideas as you see them develop.",
         "tips": [
           {
             "type": "teachingTip",
@@ -730,7 +730,7 @@
       "key": "a21b5ee3-280a-4030-afd7-5280b551efea",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Discuss: People\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could personal stories make a map better?*\n\n**Discussion Goal:** Students will realize that people across the area may have different perspectives and experiences that help us understand the place better. The choice of stories that are included shape the perception of the area and are very important decisions for the mapmaker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Discuss: People\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How could personal stories make a map better?*\n\n**Discussion Goal:** Students will realize that people across the area may have different perspectives and experiences that help us understand the place better. The choice of stories that are included shape the perception of the area and are very important decisions for the mapmaker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide"
       },
       "seeding_key": {
         "activity_section.key": "a21b5ee3-280a-4030-afd7-5280b551efea",
@@ -753,7 +753,7 @@
       "key": "985e4d28-1e2e-43e3-83b9-4a0c61c63734",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom and support students with ideas for potential questions to ask/research."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Circulate the classroom and support students with ideas for potential questions to ask/research."
       },
       "seeding_key": {
         "activity_section.key": "985e4d28-1e2e-43e3-83b9-4a0c61c63734",
@@ -776,7 +776,7 @@
       "key": "757409c8-b71b-4bd4-b7ea-bdf50bd3ae26",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Interview practice\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the \"Tips for an Effective Interview\" on the slide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Interview practice\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the \"Tips for an Effective Interview\" on the slide."
       },
       "seeding_key": {
         "activity_section.key": "757409c8-b71b-4bd4-b7ea-bdf50bd3ae26",
@@ -799,7 +799,7 @@
       "key": "8149b32f-c1a6-4457-80a3-904cd4e3f847",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students into pairs or small groups to practice asking their interview questions. If time allows, you can highlight a successful model by demonstrating for the full class. When the practice is complete, collect the handouts for use in the next lesson."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Guide students into pairs or small groups to practice asking their interview questions. If time allows, you can highlight a successful model by demonstrating for the full class. When the practice is complete, collect the handouts for use in the next lesson."
       },
       "seeding_key": {
         "activity_section.key": "8149b32f-c1a6-4457-80a3-904cd4e3f847",
@@ -810,7 +810,7 @@
       "key": "d19ced66-febb-4268-a9e3-c35e3d716033",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Check In\" Slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Check In\" Slide",
         "name": "Check In"
       },
       "seeding_key": {
@@ -840,7 +840,7 @@
       "key": "defe9a18-a4b0-4854-94e7-25b84e04c6eb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Debugging Strategies\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Debugging Strategies\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges, normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
       },
       "seeding_key": {
         "activity_section.key": "defe9a18-a4b0-4854-94e7-25b84e04c6eb",
@@ -863,7 +863,7 @@
       "key": "c49c17bd-acfd-4304-8168-a923ae3649bb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1-4\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Local Landmarks Map Planning handout if they were collected in the previous lesson.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Level 1-4\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Return student’s Local Landmarks Map Planning handout if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -897,7 +897,7 @@
       "key": "8e11b8d9-5a60-4c29-a7bd-bea98b203d8b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Stop, Show, & Support\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide Students to pair up."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Stop, Show, & Support\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Guide Students to pair up."
       },
       "seeding_key": {
         "activity_section.key": "8e11b8d9-5a60-4c29-a7bd-bea98b203d8b",
@@ -920,7 +920,7 @@
       "key": "aed3e1a7-309f-4705-9480-01a83bed37fb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 5-11\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students return to their own project and resume the progression.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Level 5-11\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students return to their own project and resume the progression.",
         "duration": "15",
         "name": "Landmarks & Events",
         "progression_name": "Landmarks & Events"
@@ -958,7 +958,7 @@
       "key": "0e6c4376-f6e8-4713-8ea1-b3d1283e0ff9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Gallery Walk\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Guide students to move around the room to view their peer's projects. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Gallery Walk\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Guide students to move around the room to view their peer's projects. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -988,7 +988,7 @@
       "key": "420c85ca-b383-4e8c-9d66-d7f3df0dcfda",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Be a storyteller\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students guidance on how to find a group of 3-4 and which order to tell their stories in. While you circulate, listen for examples of location details and rich descriptions of the personal importance of places. If time allows, share out your observations with the full group. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Be a storyteller\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give students guidance on how to find a group of 3-4 and which order to tell their stories in. While you circulate, listen for examples of location details and rich descriptions of the personal importance of places. If time allows, share out your observations with the full group. "
       },
       "seeding_key": {
         "activity_section.key": "420c85ca-b383-4e8c-9d66-d7f3df0dcfda",
@@ -1017,7 +1017,7 @@
       "key": "28e21f6c-9c38-4c94-a8c1-47675f7afaa1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 1 Project Demonstration\" Slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Level 1 Project Demonstration\" Slide",
         "duration": "30",
         "name": "Storytellers"
       },
@@ -1043,7 +1043,7 @@
       "key": "82faef1a-dc1c-40ec-81ba-be561b587b25",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 2 Project Demonstration\" Slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Level 2 Project Demonstration\" Slide"
       },
       "seeding_key": {
         "activity_section.key": "82faef1a-dc1c-40ec-81ba-be561b587b25",
@@ -1067,7 +1067,7 @@
       "key": "25a797ee-1bf4-4e0e-b2b9-81d4c614a25b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Level 3-6 Program Storytellers\" Slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Level 3-6 Program Storytellers\" Slide",
         "progression_name": "Programming Storytellers",
         "tips": [
           {
@@ -1109,7 +1109,7 @@
       "key": "93af838c-0e1a-418c-bf42-77b32dd9c619",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Share Your Map\" Slide\n\nFollow the directions on the slide:\n1) At the top of your app, click the \"Share\" button.\n2) Choose how you want to share your project with your friends, family, or teacher.\n\n**Do This:** Guide students to share their project by pasting the link into an email or entering a parent's phone number."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Share Your Map\" Slide\n\nFollow the directions on the slide:\n1) At the top of your app, click the \"Share\" button.\n2) Choose how you want to share your project with your friends, family, or teacher.\n\n**Do This:** Guide students to share their project by pasting the link into an email or entering a parent's phone number."
       },
       "seeding_key": {
         "activity_section.key": "93af838c-0e1a-418c-bf42-77b32dd9c619",
@@ -1120,7 +1120,7 @@
       "key": "c7189139-2965-4bac-8984-96debf92facf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Map Reflection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Reflect\" Slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Local Landmarks Map Reflection handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Reflect\" Slide",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1144,7 +1144,7 @@
       "key": "8c8c90b9-a2a6-4ca1-aeda-59a958edbff9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students time to complete the reflection.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give students time to complete the reflection.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1161,7 +1161,7 @@
       "key": "6b051224-cccd-45cb-93f7-d86794124ff8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) Be prepared: Is your code complete?  Is your project ready?\n2) Explain everything: Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) Ask for questions & comments: Allow your audience to participate in your presentations.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) Be prepared: Is your code complete?  Is your project ready?\n2) Explain everything: Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) Ask for questions & comments: Allow your audience to participate in your presentations.\n",
         "duration": "25",
         "name": "Presentations"
       },
@@ -1192,7 +1192,7 @@
       "key": "745e64a9-d3e5-4bf1-8822-3af6c4938cc9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Glows, Grows, Want-to-Knows\" Slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Glows, Grows, Want-to-Knows\" Slide",
         "name": "Glows, Grows, Want-To-Knows"
       },
       "seeding_key": {
@@ -1216,7 +1216,7 @@
       "key": "40e88f88-7eac-43a1-b62b-4eae9e3d7341",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Facilitate a full group or small groups share out. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Facilitate a full group or small groups share out. "
       },
       "seeding_key": {
         "activity_section.key": "40e88f88-7eac-43a1-b62b-4eae9e3d7341",

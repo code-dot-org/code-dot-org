@@ -292,7 +292,7 @@
       "key": "48391229-e46b-48b6-b22d-d4ed2fc97de5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  On a whiteboard, draw a T-chart that says \"Helpful\" and \"Harmful\"."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:**  On a whiteboard, draw a T-chart that says \"Helpful\" and \"Harmful\"."
       },
       "seeding_key": {
         "activity_section.key": "48391229-e46b-48b6-b22d-d4ed2fc97de5",
@@ -303,7 +303,7 @@
       "key": "24da4d9a-3535-4e33-9cc7-dd723720e098",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The Internet has been one of the greatest technological innovations in the last century. What are ways it has been helpful towards society? What are ways it has been harmful?",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The Internet has been one of the greatest technological innovations in the last century. What are ways it has been helpful towards society? What are ways it has been harmful?",
         "tips": [
           {
             "type": "teachingTip",
@@ -330,7 +330,7 @@
       "key": "8beb2941-dd64-44f4-9e99-6149c445067a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples.",
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students brainstorm individually, then share with a neighbor before regrouping. Call on students to share, keeping track of responses on the T-chart. \n\nStudents should be able to pull from news sources or lived experiences to populate the chart. If students struggle generating ideas, continue to the next slide which includes a few examples.",
         "tips": [
           {
             "type": "teachingTip",
@@ -357,7 +357,7 @@
       "key": "85de25c7-c750-4c07-99e4-680d10487b72",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with various news articles about the impact of the Internet on society. If you changed the prompt to a different technology, also update these slides."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with various news articles about the impact of the Internet on society. If you changed the prompt to a different technology, also update these slides."
       },
       "seeding_key": {
         "activity_section.key": "85de25c7-c750-4c07-99e4-680d10487b72",
@@ -418,7 +418,7 @@
       "key": "f8a20179-de59-4160-9fab-c4d9133f6d3b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Show students the definition of artificial intelligence.\n\n- **Artificial Intelligence**: A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Show students the definition of artificial intelligence.\n\n- **Artificial Intelligence**: A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions."
       },
       "seeding_key": {
         "activity_section.key": "f8a20179-de59-4160-9fab-c4d9133f6d3b",
@@ -439,7 +439,7 @@
       "key": "6b7277bf-f7a8-489e-bee9-c9dfc9298a3f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of artificial intelligence you are already familiar with?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are some examples of artificial intelligence you are already familiar with?"
       },
       "seeding_key": {
         "activity_section.key": "6b7277bf-f7a8-489e-bee9-c9dfc9298a3f",
@@ -460,7 +460,7 @@
       "key": "a867ec36-73ea-4ba9-b3ab-98c7e45f6619",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Responses may include examples from movies and television, such as robots like WALL-E or R2D2. They may also include personal examples, like Siri on a phone or TikTok filters that can detect facial features. Try to surface examples that may not be immediately apparent but still govern ways we interact with the world, such as recommendation algorithms on social media, facial recognition, or times when a computer makes a decision."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Responses may include examples from movies and television, such as robots like WALL-E or R2D2. They may also include personal examples, like Siri on a phone or TikTok filters that can detect facial features. Try to surface examples that may not be immediately apparent but still govern ways we interact with the world, such as recommendation algorithms on social media, facial recognition, or times when a computer makes a decision."
       },
       "seeding_key": {
         "activity_section.key": "a867ec36-73ea-4ba9-b3ab-98c7e45f6619",
@@ -525,7 +525,7 @@
       "key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Digitally share the [r ai_research_areas/ai-ethics/2023]. This activity guide is designed to be used digitally so students can click the links and explore the online resources.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "00f0ba89-cddd-45a1-9669-a2cd4b0b684f",
@@ -536,7 +536,7 @@
       "key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have students choose an area of specialization.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have students choose an area of specialization.",
         "tips": [
           {
             "type": "teachingTip",
@@ -553,7 +553,7 @@
       "key": "d314fbbc-6eef-46ca-9e01-26cabb1aca65",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with one copy of the [r research_reflection_guide/ai-ethics/2023] handout.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with one copy of the [r research_reflection_guide/ai-ethics/2023] handout.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d314fbbc-6eef-46ca-9e01-26cabb1aca65",
@@ -564,7 +564,7 @@
       "key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area, answering questions on the handout along the way. Make sure students only answer questions on the front of their reflection guide for now. \n\nEncourage students to look over 3-4 articles from their list, making sure at least one article comes from the \"Societal Impact\" section and at least one article comes from the \"Ethical Considerations\" section. Students can also do their own research, for example: looking up the \"Spotlight Person\" listed in each section. \n\nStudents can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students research their area, answering questions on the handout along the way. Make sure students only answer questions on the front of their reflection guide for now. \n\nEncourage students to look over 3-4 articles from their list, making sure at least one article comes from the \"Societal Impact\" section and at least one article comes from the \"Ethical Considerations\" section. Students can also do their own research, for example: looking up the \"Spotlight Person\" listed in each section. \n\nStudents can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.",
         "tips": [
           {
             "type": "teachingTip",
@@ -581,7 +581,7 @@
       "key": "378dbba8-2a98-4d7b-8695-141021465608",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they perform their research. Consider prompting students for their reactions as they read certain articles, especially on unexpected impacts of technology on society."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they perform their research. Consider prompting students for their reactions as they read certain articles, especially on unexpected impacts of technology on society."
       },
       "seeding_key": {
         "activity_section.key": "378dbba8-2a98-4d7b-8695-141021465608",
@@ -603,7 +603,7 @@
       "key": "98b65021-bdf1-49a1-a85d-58102b4d4347",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one thing that surprised you in your research? This could be about a positive use of this technology, or something concerning you didn't know about."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one thing that surprised you in your research? This could be about a positive use of this technology, or something concerning you didn't know about."
       },
       "seeding_key": {
         "activity_section.key": "98b65021-bdf1-49a1-a85d-58102b4d4347",
@@ -614,7 +614,7 @@
       "key": "58aa1c76-1932-4388-a141-a2efb19b3fee",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to avoid open debate, but acknowledge that the pros and cons of these technologies must be weighed against the potential benefits and consequences to society. Consider reminding students that there are entire career paths dedicated towards addressing these issues in AI Ethics – policy writers, software engineers, AI ethicists, researchers, stakeholder advocates, and more. "
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to avoid open debate, but acknowledge that the pros and cons of these technologies must be weighed against the potential benefits and consequences to society. Consider reminding students that there are entire career paths dedicated towards addressing these issues in AI Ethics – policy writers, software engineers, AI ethicists, researchers, stakeholder advocates, and more. "
       },
       "seeding_key": {
         "activity_section.key": "58aa1c76-1932-4388-a141-a2efb19b3fee",
@@ -637,7 +637,7 @@
       "key": "9b1e32fb-7b7e-4387-8267-5ba5c7d51f18",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students flip to the back of their handout and read the introduction."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students flip to the back of their handout and read the introduction."
       },
       "seeding_key": {
         "activity_section.key": "9b1e32fb-7b7e-4387-8267-5ba5c7d51f18",
@@ -648,7 +648,7 @@
       "key": "871eb332-b63a-430f-958a-075cbe3bf544",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them as well as the hypothetical scenario",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them as well as the hypothetical scenario",
         "tips": [
           {
             "type": "teachingTip",
@@ -697,7 +697,7 @@
       "key": "501981ff-3864-4b52-8bd6-f11c031cc49c",
       "position": 27,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the back of their reflection guide"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the back of their reflection guide"
       },
       "seeding_key": {
         "activity_section.key": "501981ff-3864-4b52-8bd6-f11c031cc49c",
@@ -718,7 +718,7 @@
       "key": "1e292fb2-2f86-4eee-89b1-ffc0d5b7ccb2",
       "position": 29,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete the task, connecting their own ideas with different ethical frameworks. The frameworks are meant to help students shape their thoughts and potentially make them more coherent, and introduce them to other viewpoints on how to solve a particular problem. For example, students may default to a Utilitarian point of view where as long as the most people get the benefits everything is fine, but may shift their thinking when considering an Ethics of Care perspective and reconsider how technology impacts different groups."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete the task, connecting their own ideas with different ethical frameworks. The frameworks are meant to help students shape their thoughts and potentially make them more coherent, and introduce them to other viewpoints on how to solve a particular problem. For example, students may default to a Utilitarian point of view where as long as the most people get the benefits everything is fine, but may shift their thinking when considering an Ethics of Care perspective and reconsider how technology impacts different groups."
       },
       "seeding_key": {
         "activity_section.key": "1e292fb2-2f86-4eee-89b1-ffc0d5b7ccb2",
@@ -797,7 +797,7 @@
       "key": "80d3070d-0569-491d-9fbb-e5c7ec1a993c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/)."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/)."
       },
       "seeding_key": {
         "activity_section.key": "80d3070d-0569-491d-9fbb-e5c7ec1a993c",
@@ -818,7 +818,7 @@
       "key": "5d2dd908-c71d-4321-a133-72ce09445105",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task"
       },
       "seeding_key": {
         "activity_section.key": "5d2dd908-c71d-4321-a133-72ce09445105",
@@ -839,7 +839,7 @@
       "key": "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page)."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page)."
       },
       "seeding_key": {
         "activity_section.key": "b2b4b9e6-fe3f-4d2d-a828-1402cc1572e8",
@@ -850,7 +850,7 @@
       "key": "a509a8e3-b10c-409a-a019-2b5a0545272c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete this activity. You might ask which ethical framework most influenced their final Code of Ethics, or if they combined multiple frameworks to come up with their best practices.  \n\nRemind students that creating a code of ethics means having empathy for multiple stakeholders – the people who benefit most and benefit least from these technologies. A Code of Ethics can also include protocols for speaking to the most impacted people, or setting up ways to respond if bias occurs. The entirety of AI ethics is too large a problem to solve, but a Code of Ethics gives us some best practices."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete this activity. You might ask which ethical framework most influenced their final Code of Ethics, or if they combined multiple frameworks to come up with their best practices.  \n\nRemind students that creating a code of ethics means having empathy for multiple stakeholders – the people who benefit most and benefit least from these technologies. A Code of Ethics can also include protocols for speaking to the most impacted people, or setting up ways to respond if bias occurs. The entirety of AI ethics is too large a problem to solve, but a Code of Ethics gives us some best practices."
       },
       "seeding_key": {
         "activity_section.key": "a509a8e3-b10c-409a-a019-2b5a0545272c",
@@ -898,7 +898,7 @@
       "key": "c2060893-080c-476f-9cfb-145689ad923b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Share the slide with the [Holstee Manifesto](https://www.beachtig.com/dl/019096d7d9c066d5d1c53ef5f5e35b7f/The-Holstee-Manifesto.pdf) on it"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Share the slide with the [Holstee Manifesto](https://www.beachtig.com/dl/019096d7d9c066d5d1c53ef5f5e35b7f/The-Holstee-Manifesto.pdf) on it"
       },
       "seeding_key": {
         "activity_section.key": "c2060893-080c-476f-9cfb-145689ad923b",
@@ -919,7 +919,7 @@
       "key": "ff86c44a-bd1e-4876-b6b3-0b0bc506f5cf",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** This is a document called the Holstee Manifesto. What do you notice about how it's structured? What is one line that stands out to you?\n\nGive students a chance to discuss with partners before regrouping"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** This is a document called the Holstee Manifesto. What do you notice about how it's structured? What is one line that stands out to you?\n\nGive students a chance to discuss with partners before regrouping"
       },
       "seeding_key": {
         "activity_section.key": "ff86c44a-bd1e-4876-b6b3-0b0bc506f5cf",
@@ -962,7 +962,7 @@
       "key": "e0fa933a-b0ea-48ae-9106-951ae7e62c07",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r create_a_manifesto/ai-ethics/2023]. Have students read through the top section while displaying the slides on the board."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r create_a_manifesto/ai-ethics/2023]. Have students read through the top section while displaying the slides on the board."
       },
       "seeding_key": {
         "activity_section.key": "e0fa933a-b0ea-48ae-9106-951ae7e62c07",
@@ -983,7 +983,7 @@
       "key": "da135df7-b2b8-482b-827d-069599226e03",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slides describing the three reasons to create a manifesto, along with the links.\n\nAs students finish reading, open up each of the manifestos so students can see what they look like and skim some of the principles. Don't spend time deeply reading each one, but instead let students get a sense of the length of the manifesto, how it's designed visually, and the structure of each of the statements in the manifesto."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slides describing the three reasons to create a manifesto, along with the links.\n\nAs students finish reading, open up each of the manifestos so students can see what they look like and skim some of the principles. Don't spend time deeply reading each one, but instead let students get a sense of the length of the manifesto, how it's designed visually, and the structure of each of the statements in the manifesto."
       },
       "seeding_key": {
         "activity_section.key": "da135df7-b2b8-482b-827d-069599226e03",
@@ -1004,7 +1004,7 @@
       "key": "ad86262b-b33a-4575-9b4b-940a0da61d80",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students create their own personal manifesto centered on AI technology. Encourage them to be creative in how they design their manifesto. "
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students create their own personal manifesto centered on AI technology. Encourage them to be creative in how they design their manifesto. "
       },
       "seeding_key": {
         "activity_section.key": "ad86262b-b33a-4575-9b4b-940a0da61d80",
@@ -1058,7 +1058,7 @@
       "key": "892dff19-aada-4831-88e6-67ef787cf40d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following quote from Dr. Ruha Benjamin\n\n> \"Remember to imagine and craft the worlds you cannot live without, just as you dismantle the ones you cannot live within\""
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the following quote from Dr. Ruha Benjamin\n\n> \"Remember to imagine and craft the worlds you cannot live without, just as you dismantle the ones you cannot live within\""
       },
       "seeding_key": {
         "activity_section.key": "892dff19-aada-4831-88e6-67ef787cf40d",
@@ -1079,7 +1079,7 @@
       "key": "169c3eed-52d7-4a4b-b7c6-161cf287ed33",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you think this quote could apply to some of the scenarios we've read about today?\n\nHave students reflect on their own and share with a partner before returning as a full group",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you think this quote could apply to some of the scenarios we've read about today?\n\nHave students reflect on their own and share with a partner before returning as a full group",
         "tips": [
           {
             "type": "teachingTip",
@@ -1128,7 +1128,7 @@
       "key": "f10668a6-5484-4ab6-8892-959bc8b427f7",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r imagine_your_world/ai-ethics/2023] activity guide.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r imagine_your_world/ai-ethics/2023] activity guide.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f10668a6-5484-4ab6-8892-959bc8b427f7",
@@ -1149,7 +1149,7 @@
       "key": "780e3c62-c0e5-45b6-910f-7d4d488af8d1",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the top two paragraphs and answer any questions about the directions.\n\nGive students directions on how they should complete their artwork, for example:\n\n* Using physical materials, such as drawing paper and paint\n* Using three-dimensional materials, such as sculpting with clay or molding with cardboard\n* Using a digital representation by designing using digital tools.\n\nYou may also decide to give students choice in the materials or format that they use. If teaching this in a single day, consider something on a smaller scale such as just a pencil and paper or a digital photo collage."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the top two paragraphs and answer any questions about the directions.\n\nGive students directions on how they should complete their artwork, for example:\n\n* Using physical materials, such as drawing paper and paint\n* Using three-dimensional materials, such as sculpting with clay or molding with cardboard\n* Using a digital representation by designing using digital tools.\n\nYou may also decide to give students choice in the materials or format that they use. If teaching this in a single day, consider something on a smaller scale such as just a pencil and paper or a digital photo collage."
       },
       "seeding_key": {
         "activity_section.key": "780e3c62-c0e5-45b6-910f-7d4d488af8d1",
@@ -1170,7 +1170,7 @@
       "key": "ce33ae3c-68b4-4e41-b974-dcf08aba2483",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete their artwork. Also ensure they are completing the Artist Card to explain the artwork they are creating.\n\nSome students may simply imagine a world where the AI problems they read about are fixed. For example, facial recognition that works on everyone’s faces. Encourage students to use ‘moonshot thinking’ – “an approach of choosing a huge, seemingly insurmountable problem and proposing a radical solution to that problem using technology”. An imagined world can be as outlandish as they want. Think big!"
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete their artwork. Also ensure they are completing the Artist Card to explain the artwork they are creating.\n\nSome students may simply imagine a world where the AI problems they read about are fixed. For example, facial recognition that works on everyone’s faces. Encourage students to use ‘moonshot thinking’ – “an approach of choosing a huge, seemingly insurmountable problem and proposing a radical solution to that problem using technology”. An imagined world can be as outlandish as they want. Think big!"
       },
       "seeding_key": {
         "activity_section.key": "ce33ae3c-68b4-4e41-b974-dcf08aba2483",
@@ -1202,7 +1202,7 @@
       "key": "be0c807b-5159-476b-9179-dba5a1929502",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023] video as a class"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r ethics_and_ai_privacy_the_future_of_work/ai-ethics/2023] video as a class"
       },
       "seeding_key": {
         "activity_section.key": "be0c807b-5159-476b-9179-dba5a1929502",
@@ -1223,7 +1223,7 @@
       "key": "f1632666-ffc1-457a-832a-c2d3b2d1fc20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe \"AI ethics\" to a family member or friend who didn’t participate in today’s lesson?",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How would you describe \"AI ethics\" to a family member or friend who didn’t participate in today’s lesson?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1264,7 +1264,7 @@
       "key": "e202d49e-0189-48aa-8672-f701e331b4a8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with the following vocabulary and prompt on it:\n\n* **Generative AI** - A type of Artificial Intelligence (AI) that uses patterns from existing content to create new content, such as new text or new images."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with the following vocabulary and prompt on it:\n\n* **Generative AI** - A type of Artificial Intelligence (AI) that uses patterns from existing content to create new content, such as new text or new images."
       },
       "seeding_key": {
         "activity_section.key": "e202d49e-0189-48aa-8672-f701e331b4a8",
@@ -1285,7 +1285,7 @@
       "key": "93e9de87-5bc0-4650-9962-84f28833a791",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Have you seen AI-generated text before? Or AI-generated images? What's one example you've seen in your life or in the media?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Have you seen AI-generated text before? Or AI-generated images? What's one example you've seen in your life or in the media?"
       },
       "seeding_key": {
         "activity_section.key": "93e9de87-5bc0-4650-9962-84f28833a791",
@@ -1306,7 +1306,7 @@
       "key": "fe23f1b5-9b09-44a1-a698-e741fbf05dbb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is meant to be a low-stakes brainstorm about different ways students have experienced AI-generated content before. Encourage students to share with a neighbor before sharing with the class. Students only need to share a few examples before the lesson can continue. This prompt assumes students are at least aware of AI-generated content - if not, see the teaching tip below for some alternative options.",
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This is meant to be a low-stakes brainstorm about different ways students have experienced AI-generated content before. Encourage students to share with a neighbor before sharing with the class. Students only need to share a few examples before the lesson can continue. This prompt assumes students are at least aware of AI-generated content - if not, see the teaching tip below for some alternative options.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1355,7 +1355,7 @@
       "key": "30b72c79-b2c4-46cb-892a-c6a586384bfc",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show students the \n[r how_ai_works_large_language_models/ai-ethics/2023] video"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show students the \n[r how_ai_works_large_language_models/ai-ethics/2023] video"
       },
       "seeding_key": {
         "activity_section.key": "30b72c79-b2c4-46cb-892a-c6a586384bfc",
@@ -1405,7 +1405,7 @@
       "key": "5876b0af-69bf-4b09-a543-add7b5f66a32",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute a Character Card for each student. You may decide to distribute these randomly, or pre-select roles for certain students based on their interests, or have students self-select which character they would like. Here are a few options for how to handle the logistics of distributing these:"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute a Character Card for each student. You may decide to distribute these randomly, or pre-select roles for certain students based on their interests, or have students self-select which character they would like. Here are a few options for how to handle the logistics of distributing these:"
       },
       "seeding_key": {
         "activity_section.key": "5876b0af-69bf-4b09-a543-add7b5f66a32",
@@ -1455,7 +1455,7 @@
       "key": "75c2be17-6096-46dd-8550-4ae4928da3b0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read through the card individually. The card also has a few blank spaces - you can fill these in with additional information about your fake character to make them your own!"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read through the card individually. The card also has a few blank spaces - you can fill these in with additional information about your fake character to make them your own!"
       },
       "seeding_key": {
         "activity_section.key": "75c2be17-6096-46dd-8550-4ae4928da3b0",
@@ -1476,7 +1476,7 @@
       "key": "73e8e1a3-84aa-4961-9b3a-b1016892b994",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they read through their character persona. At this point, students are only getting familiar with their character - they do not need to start reading the articles on the bottom of the card yet"
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they read through their character persona. At this point, students are only getting familiar with their character - they do not need to start reading the articles on the bottom of the card yet"
       },
       "seeding_key": {
         "activity_section.key": "73e8e1a3-84aa-4961-9b3a-b1016892b994",
@@ -1497,7 +1497,7 @@
       "key": "f5632254-e0bb-43f6-b231-51591f13da4f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read through the articles on the bottom of the card _as if you were this character_. Think about how they would react to what is happening in these articles. Think about how they would feel about what's happening - are there things happening that would benefit them? Or that would concern them? On the bottom of your character card, respond to the articles _in character_."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read through the articles on the bottom of the card _as if you were this character_. Think about how they would react to what is happening in these articles. Think about how they would feel about what's happening - are there things happening that would benefit them? Or that would concern them? On the bottom of your character card, respond to the articles _in character_."
       },
       "seeding_key": {
         "activity_section.key": "f5632254-e0bb-43f6-b231-51591f13da4f",
@@ -1518,7 +1518,7 @@
       "key": "cf68ffba-f44a-4294-80ed-0ebce5eb0b82",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **(Optional) Distribute:** Digitally distribute the \n[r generative_ai_news_articles/ai-ethics/2023] resource, which is a complete list of all the articles that different groups are reading. Students can quickly identify which articles to read by the Group Letter on their character sheet. Students can use this resource to click into each link and read it for easy access. This is an especially good option if you decided to physically distribute the character cards."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **(Optional) Distribute:** Digitally distribute the \n[r generative_ai_news_articles/ai-ethics/2023] resource, which is a complete list of all the articles that different groups are reading. Students can quickly identify which articles to read by the Group Letter on their character sheet. Students can use this resource to click into each link and read it for easy access. This is an especially good option if you decided to physically distribute the character cards."
       },
       "seeding_key": {
         "activity_section.key": "cf68ffba-f44a-4294-80ed-0ebce5eb0b82",
@@ -1539,7 +1539,7 @@
       "key": "fa698dc0-120b-4835-a766-593dc7dd5873",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they read through the articles. As they begin answering questions, remind them that they are acting in-character. You may even encourage them to speak to you as if they were that character, acting out how they feel about these articles."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they read through the articles. As they begin answering questions, remind them that they are acting in-character. You may even encourage them to speak to you as if they were that character, acting out how they feel about these articles."
       },
       "seeding_key": {
         "activity_section.key": "fa698dc0-120b-4835-a766-593dc7dd5873",
@@ -1561,7 +1561,7 @@
       "key": "5ea08797-7a6a-46ec-a70b-5eaf2009f258",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with a visual explanation for the next part of the activity"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide with a visual explanation for the next part of the activity"
       },
       "seeding_key": {
         "activity_section.key": "5ea08797-7a6a-46ec-a70b-5eaf2009f258",
@@ -1584,7 +1584,7 @@
       "key": "f84e03fc-6beb-4162-9355-f5c6b7710da5",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r generative_ai_activity_instructions/ai-ethics/2023] resource to each student.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r generative_ai_activity_instructions/ai-ethics/2023] resource to each student.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f84e03fc-6beb-4162-9355-f5c6b7710da5",
@@ -1605,7 +1605,7 @@
       "key": "e1be7ff8-a6f9-44e1-bd80-176ef1c52f47",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the first page as a class so students understand the instructions. Emphasize that the goals is not to argue or have a debate, but instead to try and work together to find common ground. It's okay to disagree, but students should use that the find common ground that includes all perspectives rather than invalidate or dismiss a point of view."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the first page as a class so students understand the instructions. Emphasize that the goals is not to argue or have a debate, but instead to try and work together to find common ground. It's okay to disagree, but students should use that the find common ground that includes all perspectives rather than invalidate or dismiss a point of view."
       },
       "seeding_key": {
         "activity_section.key": "e1be7ff8-a6f9-44e1-bd80-176ef1c52f47",
@@ -1647,7 +1647,7 @@
       "key": "f4096a8c-b142-489e-9e16-3ea83be49b30",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Once students are in their groups, pass out the corresponding [r group_scenarios/ai-ethics/2023] to each group.\n\nIf a group is missing a person, distribute the Character Card for that person so the group can still advocate on behalf of this person's interests and concerns."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Once students are in their groups, pass out the corresponding [r group_scenarios/ai-ethics/2023] to each group.\n\nIf a group is missing a person, distribute the Character Card for that person so the group can still advocate on behalf of this person's interests and concerns."
       },
       "seeding_key": {
         "activity_section.key": "f4096a8c-b142-489e-9e16-3ea83be49b30",
@@ -1668,7 +1668,7 @@
       "key": "9bcab929-d773-4dab-bfb0-d09892056944",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students follow the steps on their instruction sheet and discuss as a group what their recommendations should be, taking into account the different needs of each person.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students follow the steps on their instruction sheet and discuss as a group what their recommendations should be, taking into account the different needs of each person.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1695,7 +1695,7 @@
       "key": "5417593d-f1ca-4856-b6fd-40244bb8d194",
       "position": 28,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they have their discussions and come up with their recommendations."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they have their discussions and come up with their recommendations."
       },
       "seeding_key": {
         "activity_section.key": "5417593d-f1ca-4856-b6fd-40244bb8d194",
@@ -1733,7 +1733,7 @@
       "key": "1649f972-3d75-401d-8f88-5c0ac43b20c3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Choose 2-3 prompts below to have students reflect on their experiences:"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Choose 2-3 prompts below to have students reflect on their experiences:"
       },
       "seeding_key": {
         "activity_section.key": "1649f972-3d75-401d-8f88-5c0ac43b20c3",

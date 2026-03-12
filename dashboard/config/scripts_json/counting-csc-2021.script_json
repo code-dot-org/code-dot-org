@@ -122,7 +122,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces letters in the alphabet and how they are used to form words. \n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces letters in the alphabet and how they are used to form words. \n\n**Slides:** The slide icon <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
           }
         ]
       },
@@ -147,7 +147,7 @@
       "key": "832534be-0d9f-4307-b81f-5aa7577ca638",
       "position": 1,
       "properties": {
-        "description": "####Modeling a Think Aloud\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.",
+        "description": "####Modeling a Think Aloud\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.",
         "name": "Counting with Laurel",
         "tips": [
           {
@@ -165,7 +165,7 @@
       "key": "298743fd-eae1-496e-ab67-cdae006a7e14",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Model for students your thinking process out loud when going through the actions and steps to help Laurel collect her gems. Share with students that they will think out loud as they help Laurel in later puzzles.\n\n**Say:** *As I’m getting ready to help Laurel, I should think about...*\n- *counting how many gems I want Laurel to collect.*\n- *counting how many steps Laurel should take to collect the gems.*\n- *pointing in the direction Laurel should take to collect the gems.*\n\nComplete the first problem as a class, modeling how to draw the arrows for Laurel’s movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n\n\n\n"
+        "description": "**Do This:** Model for students your thinking process out loud when going through the actions and steps to help Laurel collect her gems. Share with students that they will think out loud as they help Laurel in later puzzles.\n\n**Say:** *As I’m getting ready to help Laurel, I should think about...*\n- *counting how many gems I want Laurel to collect.*\n- *counting how many steps Laurel should take to collect the gems.*\n- *pointing in the direction Laurel should take to collect the gems.*\n\nComplete the first problem as a class, modeling how to draw the arrows for Laurel’s movement.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "298743fd-eae1-496e-ab67-cdae006a7e14",
@@ -176,7 +176,7 @@
       "key": "4aaa7148-1a1b-4b97-bfef-4f0caaa0170d",
       "position": 3,
       "properties": {
-        "description": "####Solving Puzzles with Code\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
+        "description": "####Solving Puzzles with Code\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
         "progression_name": "Video: Introduction to Maze Puzzles"
       },
       "seeding_key": {
@@ -188,7 +188,7 @@
       "key": "1ff15821-2109-49bf-986c-406b979dd035",
       "position": 4,
       "properties": {
-        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the second puzzle. Students can start working through levels two through five.\n\n\n\n\n**Levels 2-3:** These levels are meant to introduce the Maze and drag-and-drop environment to your students before returning to the collector puzzles with Laurel. Use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in these levels.",
+        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the second puzzle. Students can start working through levels two through five.\n\n\n\n\n**Levels 2-3:** These levels are meant to introduce the Maze and drag-and-drop environment to your students before returning to the collector puzzles with Laurel. Use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in these levels.",
         "progression_name": "Maze Practice"
       },
       "seeding_key": {
@@ -222,7 +222,7 @@
       "key": "d6304714-1c7c-4482-9397-2c4c62008e3c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Regroup the class to watch the Repeat Block video together. If some students are still working on the Maze levels, it's okay to skip them ahead to the Collector levels.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:**  Regroup the class to watch the Repeat Block video together. If some students are still working on the Maze levels, it's okay to skip them ahead to the Collector levels.",
         "progression_name": "Video: The Repeat Block"
       },
       "seeding_key": {
@@ -246,7 +246,7 @@
       "key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the levels in Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the levels in Code Studio.",
         "progression_name": "Practice",
         "tips": [
           {
@@ -288,7 +288,7 @@
       "key": "35aeef87-2f5b-4190-8b75-3a108f4935b9",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Pass out the Wrap Up worksheet to each student.\n\nGuide the Math Talk with the whole class by using the example in the Wrap-Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How many gems should Laurel collect?  How many steps should Laurel take to collect the gems?_\n\nAs you discuss these prompts with students, incorporate concepts of addition into the discussion by pointing out the different gems along Laurel’s path (West, South, then West again). Students can use manipulatives (ie: blocks, fingers) or images from the handout to help explain their reasoning. Consider the following prompts as part of this discussion:\n\n- *Show me with your fingers how many gems Laurel should collect going West? Going South? Going West Again.*\n- *What if Laurel collects the first three gems, how many more gems should Laurel collect to finish the puzzle?*\n  - For this type of question, using directions might help students develop multiple ways to show collecting gems such as 3 + 5 + 2 ( three west, five south, two west).\n",
+        "description": "**Do This:** Pass out the Wrap Up worksheet to each student.\n\nGuide the Math Talk with the whole class by using the example in the Wrap-Up worksheet.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _How many gems should Laurel collect?  How many steps should Laurel take to collect the gems?_\n\nAs you discuss these prompts with students, incorporate concepts of addition into the discussion by pointing out the different gems along Laurel’s path (West, South, then West again). Students can use manipulatives (ie: blocks, fingers) or images from the handout to help explain their reasoning. Consider the following prompts as part of this discussion:\n\n- *Show me with your fingers how many gems Laurel should collect going West? Going South? Going West Again.*\n- *What if Laurel collects the first three gems, how many more gems should Laurel collect to finish the puzzle?*\n  - For this type of question, using directions might help students develop multiple ways to show collecting gems such as 3 + 5 + 2 ( three west, five south, two west).\n",
         "progression_name": "Math Talk"
       },
       "seeding_key": {

@@ -972,7 +972,7 @@
       "key": "eeb6c29f-80cb-4024-aa21-fc6e8f91d428",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What do you notice about how they look or work in a browser?*\n- *What makes them web apps instead of just apps you install on your phone?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that web apps are accessed through a browser rather than installed on a device and begin to notice patterns such as needing internet access, working across devices, and being updated automatically. The key takeaway is that web apps live online and can be used anywhere, which connects to how design choices affect accessibility and usability.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What do you notice about how they look or work in a browser?*\n- *What makes them web apps instead of just apps you install on your phone?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that web apps are accessed through a browser rather than installed on a device and begin to notice patterns such as needing internet access, working across devices, and being updated automatically. The key takeaway is that web apps live online and can be used anywhere, which connects to how design choices affect accessibility and usability.",
         "tips": [
           {
             "type": "teachingTip",
@@ -999,7 +999,7 @@
       "key": "9dc85caf-4520-4163-97db-d8d5b178906a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9dc85caf-4520-4163-97db-d8d5b178906a",
@@ -1039,7 +1039,7 @@
       "key": "193aed99-3e22-40f6-b405-55409699b06f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Which of these web apps let you do things instead of just look at or read content?*\n- *What kinds of actions do you take in those web apps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students deepen their understanding of what makes web apps unique by comparing how different apps are accessed and used. They recognize that while some apps are installed and device-specific, others run in a browser and let users interact—create, post, comment, or edit—directly online. Through this comparison, students identify that web apps allow users to interact and create, not just view content. They begin connecting this interactivity to design and coding concepts, setting up how HTML and CSS combine to make web apps dynamic.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Which of these web apps let you do things instead of just look at or read content?*\n- *What kinds of actions do you take in those web apps?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students deepen their understanding of what makes web apps unique by comparing how different apps are accessed and used. They recognize that while some apps are installed and device-specific, others run in a browser and let users interact—create, post, comment, or edit—directly online. Through this comparison, students identify that web apps allow users to interact and create, not just view content. They begin connecting this interactivity to design and coding concepts, setting up how HTML and CSS combine to make web apps dynamic.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1066,7 +1066,7 @@
       "key": "ca859285-7205-4077-ba47-fdfc678dd47b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Welcome to Web Apps activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll use the guide to record what they notice about how web pages are built as they explore examples.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define HTML and CSS. Explain that HTML provides the structure and content of a page, while CSS adds the style and visual design. Direct students to look closely at the two versions of the page on the slide. Have them record in their activity guide what they think HTML is controlling and what CSS is controlling based on what they notice in each image.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Welcome to Web Apps activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll use the guide to record what they notice about how web pages are built as they explore examples.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define HTML and CSS. Explain that HTML provides the structure and content of a page, while CSS adds the style and visual design. Direct students to look closely at the two versions of the page on the slide. Have them record in their activity guide what they think HTML is controlling and what CSS is controlling based on what they notice in each image.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1116,7 +1116,7 @@
       "key": "28e8f7be-de39-4726-8f2e-123893a82ab4",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2.\n- Level 1: Students prompt AI to create a webpage with only HTML.\n- Level 2: Students prompt AI to create a webpage with only CSS.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to add any new observations to their activity guide as they notice what each language controls or lacks. Check that students are noticing the limitations at each level. Ask questions like: \"What’s missing from this page when it’s only HTML?\" \"What’s missing when it’s only CSS?\"",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2.\n- Level 1: Students prompt AI to create a webpage with only HTML.\n- Level 2: Students prompt AI to create a webpage with only CSS.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Remind students to add any new observations to their activity guide as they notice what each language controls or lacks. Check that students are noticing the limitations at each level. Ask questions like: \"What’s missing from this page when it’s only HTML?\" \"What’s missing when it’s only CSS?\"",
         "duration": "25",
         "name": "Generating Web Pages",
         "progression_name": "Producing HTML and CSS",
@@ -1146,7 +1146,7 @@
       "key": "81051ceb-97dc-4e7a-bdab-7f9a5fb27a4c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did you notice about each page’s look and feel?*\n- *Which human decisions made one easier to use?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that both HTML and CSS contribute to a webpage's usability and overall experience—HTML defines the structure and content, while CSS adds design and visual hierarchy. They also begin connecting these technical roles to human-centered design decisions, understanding that choices like color, spacing, and readability all affect how users experience a page.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did you notice about each page’s look and feel?*\n- *Which human decisions made one easier to use?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that both HTML and CSS contribute to a webpage's usability and overall experience—HTML defines the structure and content, while CSS adds design and visual hierarchy. They also begin connecting these technical roles to human-centered design decisions, understanding that choices like color, spacing, and readability all affect how users experience a page.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1173,7 +1173,7 @@
       "key": "0f88da61-05d2-4ff2-99c4-ca0a54614a8a",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the AI knew what to write?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to wonder about how AI systems produce responses and form initial hypotheses about where the AI's \"knowledge\" comes from. The goal is to surface students' prior ideas. Some may assume the AI is programmed with all the answers, while others may guess it has learned from examples. This primes curiosity for the next slide, where they'll explore how AI actually learns from patterns in data.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the AI knew what to write?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to wonder about how AI systems produce responses and form initial hypotheses about where the AI's \"knowledge\" comes from. The goal is to surface students' prior ideas. Some may assume the AI is programmed with all the answers, while others may guess it has learned from examples. This primes curiosity for the next slide, where they'll explore how AI actually learns from patterns in data.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1212,7 +1212,7 @@
       "key": "cf32af56-ef90-4362-b61a-9938a55ef789",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"How AI Works - Machine Learning\" video.\n\n**Questions to consider with the video:** \n\n- What kind of data do you think our AI tool was trained on to make your HTML and CSS code?\n- How might that training data affect what the AI creates?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to understand that AI tools learn by recognizing patterns in large sets of existing examples—in this case, examples of HTML and CSS code written by humans. They realize that the AI doesn't \"think\" or \"know\" how to code; instead, it generates code by predicting what comes next based on patterns it has seen before. Students also connect this idea to the earlier activity: just as CSS depends on HTML for structure, the AI depends on human-created data for guidance and context.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the \"How AI Works - Machine Learning\" video.\n\n**Questions to consider with the video:** \n\n- What kind of data do you think our AI tool was trained on to make your HTML and CSS code?\n- How might that training data affect what the AI creates?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to understand that AI tools learn by recognizing patterns in large sets of existing examples—in this case, examples of HTML and CSS code written by humans. They realize that the AI doesn't \"think\" or \"know\" how to code; instead, it generates code by predicting what comes next based on patterns it has seen before. Students also connect this idea to the earlier activity: just as CSS depends on HTML for structure, the AI depends on human-created data for guidance and context.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1239,7 +1239,7 @@
       "key": "7c2ca3c3-f5ad-43a8-806f-2ae5ee97faa4",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3 through 7.\n- Level 3: Students will read the official definition for HTML.\n- Level 4: Students will add their own notes or examples that help them remember what HTML does.\n- Level 5: Students will read the official definition for CSS.\n- Level 6: Students will add their own notes or examples that help them remember what CSS controls.\n- Level 7: Students answer a Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for evidence that they understand the difference between structure/content (HTML) and style/appearance (CSS). Encourage students to use their own language and examples when adding context.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3 through 7.\n- Level 3: Students will read the official definition for HTML.\n- Level 4: Students will add their own notes or examples that help them remember what HTML does.\n- Level 5: Students will read the official definition for CSS.\n- Level 6: Students will add their own notes or examples that help them remember what CSS controls.\n- Level 7: Students answer a Check for Understanding question.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, look for evidence that they understand the difference between structure/content (HTML) and style/appearance (CSS). Encourage students to use their own language and examples when adding context.",
         "progression_name": "Vocab: HTML"
       },
       "seeding_key": {
@@ -1283,7 +1283,7 @@
       "key": "7c832e35-ddc1-4c6e-b661-b6ce390aa75c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How do web apps shape our daily lives?*\n- *Who builds these apps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Student should share their responses to Level 7 Check for Understanding question which has them connect today's lesson to their own experiences with technology. They should recognize that web apps shape how people communicate, learn, and create by being accessible on any device and designed for interaction. Students also acknowledge that web apps are built by teams of humans—designers, developers, and problem-solvers—who make decisions about how apps look, feel, and function. This reinforces that web apps are human-built systems that combine both technical structure and human-centered design choices that shape user experience.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How do web apps shape our daily lives?*\n- *Who builds these apps?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Student should share their responses to Level 7 Check for Understanding question which has them connect today's lesson to their own experiences with technology. They should recognize that web apps shape how people communicate, learn, and create by being accessible on any device and designed for interaction. Students also acknowledge that web apps are built by teams of humans—designers, developers, and problem-solvers—who make decisions about how apps look, feel, and function. This reinforces that web apps are human-built systems that combine both technical structure and human-centered design choices that shape user experience.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1310,7 +1310,7 @@
       "key": "186329e4-e93d-482a-960b-a8fb98f144f9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "186329e4-e93d-482a-960b-a8fb98f144f9",
@@ -1321,7 +1321,7 @@
       "key": "4e5e5dbc-21a7-4b5c-b30a-4328515971ec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1357,7 +1357,7 @@
       "key": "cb1bac17-ea06-40bc-9cbc-2902a7245b74",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which version would you rather use and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noticing specific usability improvements, not just visual ones. Look for comments that highlight how modern websites feel easier to navigate, look cleaner and less cluttered, and are more accessible or efficient. Students might mention clearer menus, readable text, or AI-driven personalization that helps them find what they need faster.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which version would you rather use and why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noticing specific usability improvements, not just visual ones. Look for comments that highlight how modern websites feel easier to navigate, look cleaner and less cluttered, and are more accessible or efficient. Students might mention clearer menus, readable text, or AI-driven personalization that helps them find what they need faster.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1396,7 +1396,7 @@
       "key": "6c83748b-ce80-4bd2-b4d4-0cdbdd48e32d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Keep the 2025 Amazon site on screen. Ask students to look closely and describe what makes it feel easier or more useful for real people today.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think there are more pictures now?*\n- *What makes it easier to find or buy things?*\n- *How might the site change based on who's using it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note how the site reflects people's habits and needs, such as being able to see items before buying, simple layouts that make shopping quicker, and personalized suggestions that save time. These observations help students see that design is becoming more human-centered — built around what people need and do.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Keep the 2025 Amazon site on screen. Ask students to look closely and describe what makes it feel easier or more useful for real people today.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why do you think there are more pictures now?*\n- *What makes it easier to find or buy things?*\n- *How might the site change based on who's using it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should note how the site reflects people's habits and needs, such as being able to see items before buying, simple layouts that make shopping quicker, and personalized suggestions that save time. These observations help students see that design is becoming more human-centered — built around what people need and do.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1423,7 +1423,7 @@
       "key": "fcc1c320-4ed4-47ce-b6e7-c499aa5b1dc4",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fcc1c320-4ed4-47ce-b6e7-c499aa5b1dc4",
@@ -1459,7 +1459,7 @@
       "key": "90c93086-1d50-43dc-b78e-cf7ff304ce68",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Walk students through each design decision one at a time.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Do you think these choices help everyone equally? Why or why not?*\n- *Who might find this design confusing or less helpful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize how that even designs meant to help users can still work better for some people than others. Encourage them to consider factors like ability, access, identity, or personal preferences. Encourage students to think about whose experiences are missing and why fairness and accessibility matter in design. Students might note that:\n- People who can't see well might struggle with image-heavy layouts.\n- Recommendations might not show the same options to everyone.\n- Some users might not see their style or interests represented."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the Amazon screenshot with callouts showing examples of human-centered design choices (e.g., large images, clear categories, personalized recommendations). Walk students through each design decision one at a time.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Do you think these choices help everyone equally? Why or why not?*\n- *Who might find this design confusing or less helpful?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize how that even designs meant to help users can still work better for some people than others. Encourage them to consider factors like ability, access, identity, or personal preferences. Encourage students to think about whose experiences are missing and why fairness and accessibility matter in design. Students might note that:\n- People who can't see well might struggle with image-heavy layouts.\n- Recommendations might not show the same options to everyone.\n- Some users might not see their style or interests represented."
       },
       "seeding_key": {
         "activity_section.key": "90c93086-1d50-43dc-b78e-cf7ff304ce68",
@@ -1470,7 +1470,7 @@
       "key": "3fe1c461-0155-480f-83ec-d22afffdbc05",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills do you think a UX designer needs to make sure technology works for people?*\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that UX designers use a mix of empathy, observation, creativity, and problem-solving to make technology fit users' needs. Students might say: listening, testing, creativity, empathy, noticing details.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 6.\n- Level 1: Students read the definition for user experience.\n- Level 2: Students write the definition in their own words and/or include examples.\n- Level 3: Students read the definition for user profile.\n- Level 4: Students write the definition in their own words and/or include examples.\n- Level 5: Students read the definition for human-centered design.\n- Level 6: Students write the definition in their own words and/or include examples.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to use their own language and examples when adding context.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the clip from the \"What is UX Design?\" video.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills do you think a UX designer needs to make sure technology works for people?*\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that UX designers use a mix of empathy, observation, creativity, and problem-solving to make technology fit users' needs. Students might say: listening, testing, creativity, empathy, noticing details.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 6.\n- Level 1: Students read the definition for user experience.\n- Level 2: Students write the definition in their own words and/or include examples.\n- Level 3: Students read the definition for user profile.\n- Level 4: Students write the definition in their own words and/or include examples.\n- Level 5: Students read the definition for human-centered design.\n- Level 6: Students write the definition in their own words and/or include examples.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to use their own language and examples when adding context.",
         "progression_name": "Vocab: User Experience"
       },
       "seeding_key": {
@@ -1529,7 +1529,7 @@
       "key": "04474a1b-e812-4a45-a7cd-3257f1173269",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide and several markers or colored pencils."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the three UX Designer tasks: Observe, Evaluate, Suggest. Explain that these are the same steps real designers use to make technology more human-centered.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The User's Experience activity guide and several markers or colored pencils."
       },
       "seeding_key": {
         "activity_section.key": "04474a1b-e812-4a45-a7cd-3257f1173269",
@@ -1552,7 +1552,7 @@
       "key": "a5ae5673-d4b1-4b4a-8cb4-4fdf9ca787c7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each person takes one user profile (Jordan, Mark, or Sam). Students review the app and annotate it using the Usability Checklist, focusing on how well it meets their user's needs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct groups to discussion their ratings and annotations and identify any patterns across the different user profiles.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students should begin to recognize that usability is not absolute but depends on the user's context and needs. Encourage students to share specific examples from their critiques. Listen for students connecting specific app features (or lack thereof) to the needs of their user profiles.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students to make specific, user-centered suggestions for improvement. Probe students who are struggling to connect their critique to a concrete change. Ask: \"Why would that specific change be important for Jordan/Mark/Sam?\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Each person takes one user profile (Jordan, Mark, or Sam). Students review the app and annotate it using the Usability Checklist, focusing on how well it meets their user's needs.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct groups to discussion their ratings and annotations and identify any patterns across the different user profiles.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Students should begin to recognize that usability is not absolute but depends on the user's context and needs. Encourage students to share specific examples from their critiques. Listen for students connecting specific app features (or lack thereof) to the needs of their user profiles.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 7.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students to make specific, user-centered suggestions for improvement. Probe students who are struggling to connect their critique to a concrete change. Ask: \"Why would that specific change be important for Jordan/Mark/Sam?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1607,7 +1607,7 @@
       "key": "7ee7b399-4d45-4c1c-a9f4-1caf674a430d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 7 prompt: \"If I designed with [user profile], I'd change ___.\" Encourage them to refer back to the reasons they noted with their color ratings. Students will articulate specific design changes based on the needs of their user profile, demonstrating an understanding of user-centered design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to share what they wrote for the Level 7 prompt: \"If I designed with [user profile], I'd change ___.\" Encourage them to refer back to the reasons they noted with their color ratings. Students will articulate specific design changes based on the needs of their user profile, demonstrating an understanding of user-centered design.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "7ee7b399-4d45-4c1c-a9f4-1caf674a430d",
@@ -1618,7 +1618,7 @@
       "key": "fda13a81-2db7-4a05-912c-8105f30a02be",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1658,7 +1658,7 @@
       "key": "06a10236-e5f8-492c-8cc2-600bca9efc3b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How might this make the developer's job easier?*\n- *Where could it make the job harder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students consider how AI can change the development process—making some parts faster or simpler while introducing new challenges. They recognize that AI can boost productivity but also misinterpret instructions or produce flawed code, requiring human review and refinement. This discussion should aim to build nuance around the idea of AI as a helpful but fallible partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How might this make the developer's job easier?*\n- *Where could it make the job harder?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students consider how AI can change the development process—making some parts faster or simpler while introducing new challenges. They recognize that AI can boost productivity but also misinterpret instructions or produce flawed code, requiring human review and refinement. This discussion should aim to build nuance around the idea of AI as a helpful but fallible partner.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "06a10236-e5f8-492c-8cc2-600bca9efc3b",
@@ -1698,7 +1698,7 @@
       "key": "96289fd0-9c66-4454-95ad-b2c8a9f7dd2c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three strategies with students as an introduction to prompting. Explain that they'll get more detailed guidance and examples in Level 1's Prompting & Versioning panel, which they can revisit whenever they need support.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three strategies with students as an introduction to prompting. Explain that they'll get more detailed guidance and examples in Level 1's Prompting & Versioning panel, which they can revisit whenever they need support.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1725,7 +1725,7 @@
       "key": "b47b54f8-6fd9-4045-8ec2-48e2e981613b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Web Page Features activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Level 1: Students review the prompting strategies and learn about version control.\n- Level 2: Students explore the example webpage and identify its main features on their Web Page Features activity guide\n- Level 3: Students try prompting the AI to recreate one feature from Level 2 and prompt the AI to revise as needed.\n- Level 4: Students read the vocabulary definition for prompt engineering.\n- Level 5: Students add their own explanation or example of prompt engineering to the vocab free response.\n- Level 6: Students read the vocabulary definition for versioning.\n- Level 7: Students add their own explanation or example of versioning to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check that they're using details from their prompts (not just \"make a nav bar\"). Ask students questions like, \"What changed after you refined your prompt?\" or \"Why did you save that version?\" Make sure to reinforce that iteration—trying, refining, and saving—is how developers manage complex builds."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Web Page Features activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Level 1: Students review the prompting strategies and learn about version control.\n- Level 2: Students explore the example webpage and identify its main features on their Web Page Features activity guide\n- Level 3: Students try prompting the AI to recreate one feature from Level 2 and prompt the AI to revise as needed.\n- Level 4: Students read the vocabulary definition for prompt engineering.\n- Level 5: Students add their own explanation or example of prompt engineering to the vocab free response.\n- Level 6: Students read the vocabulary definition for versioning.\n- Level 7: Students add their own explanation or example of versioning to the vocab free response.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check that they're using details from their prompts (not just \"make a nav bar\"). Ask students questions like, \"What changed after you refined your prompt?\" or \"Why did you save that version?\" Make sure to reinforce that iteration—trying, refining, and saving—is how developers manage complex builds."
       },
       "seeding_key": {
         "activity_section.key": "b47b54f8-6fd9-4045-8ec2-48e2e981613b",
@@ -1785,7 +1785,7 @@
       "key": "e433a6a5-6cc0-4a57-909b-06a7131d82ea",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Why do developers iterate?*\n- *What does it say about our role when the AI doesn't get it right the first time?*\n- *How do you think real developers use AI like this?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect iteration to real development practice. They recognize that iteration isn't just rework—it's how developers refine, debug, and improve both their own instructions and AI outputs. Students also understand that AI speeds up creation but still relies on human judgment, creativity, and accountability for quality results.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Why do developers iterate?*\n- *What does it say about our role when the AI doesn't get it right the first time?*\n- *How do you think real developers use AI like this?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect iteration to real development practice. They recognize that iteration isn't just rework—it's how developers refine, debug, and improve both their own instructions and AI outputs. Students also understand that AI speeds up creation but still relies on human judgment, creativity, and accountability for quality results.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1812,7 +1812,7 @@
       "key": "c9345ade-b110-40d8-8d3b-59f1cf3e8dcf",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy set of the Feature Roulette Cards.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll draw one card at a time and prompt the AI to create that feature or follow the instructions. Encourage them to refer to the Prompting & Versioning panels as needed.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8. Explain that this is their chance to apply everything they've learned—prompting, refining, and versioning—to build their first AI-assisted web page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe pair as they work. Check if they are successfully refining their prompts and if they understand how to revert to a previous version. Ask probing questions about why they are making certain prompt changes or why they chose to revert such as: \"What did you change in your latest version?\" or \"How are you deciding when your page looks finished?\" or \"What did the AI get right—or wrong—this time?\" Encourage students to compare different AI outputs and think critically about what each version improved or broke.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy set of the Feature Roulette Cards.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Tell students they'll draw one card at a time and prompt the AI to create that feature or follow the instructions. Encourage them to refer to the Prompting & Versioning panels as needed.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 8. Explain that this is their chance to apply everything they've learned—prompting, refining, and versioning—to build their first AI-assisted web page.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Observe pair as they work. Check if they are successfully refining their prompts and if they understand how to revert to a previous version. Ask probing questions about why they are making certain prompt changes or why they chose to revert such as: \"What did you change in your latest version?\" or \"How are you deciding when your page looks finished?\" or \"What did the AI get right—or wrong—this time?\" Encourage students to compare different AI outputs and think critically about what each version improved or broke.",
         "duration": "15",
         "name": "Building with AI",
         "progression_name": "My First Web Page",
@@ -1836,7 +1836,7 @@
       "key": "3f1ece66-cb52-4bc6-aac1-5335be6496fd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to draw on what they noticed while prompting the AI—how it sped up creation and when it needed their refinement or direction. After a minute, invite a few volunteers to share highlights with the class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Have students turn and talk with a partner to share their ideas. Encourage them to draw on what they noticed while prompting the AI—how it sped up creation and when it needed their refinement or direction. After a minute, invite a few volunteers to share highlights with the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1863,7 +1863,7 @@
       "key": "a965631a-89f4-494f-a560-f335e98441dd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "a965631a-89f4-494f-a560-f335e98441dd",
@@ -1874,7 +1874,7 @@
       "key": "6b725c1f-9ed3-4d4f-ae1d-ae19767f2c1a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1887,7 +1887,7 @@
       "key": "25104c5b-c5f7-4eba-9e85-e22a6455c5bd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the first of four websites that varies in style (e.g., clean vs. cluttered, playful vs. serious). Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Encourage quick, instinctive responses—students shouldn't overthink.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the first of four websites that varies in style (e.g., clean vs. cluttered, playful vs. serious). Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Encourage quick, instinctive responses—students shouldn't overthink.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1914,7 +1914,7 @@
       "key": "ce49402b-3ca4-48bd-bc5a-deac47835124",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the second website, which has a playful and colorful style. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses—students shouldn't overthink.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the second website, which has a playful and colorful style. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses—students shouldn't overthink.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1941,7 +1941,7 @@
       "key": "b8c827f3-db17-48bf-ad4d-1775d085071b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the third website, which has an elegant, high-contrast design. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the third website, which has an elegant, high-contrast design. Ask students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Continue to encourage quick, instinctive responses.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1968,7 +1968,7 @@
       "key": "db330f47-31c8-44af-8bba-d55f2d8507a9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the fourth website, which has a warm and cozy design for a small business or café.\nAsk students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Once again, encourage quick, instinctive responses.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the fourth website, which has a warm and cozy design for a small business or café.\nAsk students to jot down one first-impression word that captures their reaction to the site and one idea for who this website might be designed for. Once again, encourage quick, instinctive responses.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1995,7 +1995,7 @@
       "key": "78a88cc1-80aa-4e18-bf7b-f6bc0585b26e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Gather student responses for each site (use the board, sticky notes, or a digital tool). As students share their first-impression words and ideas for who each site might be for, record patterns such as repeated words, shared audiences, or clear differences between designs.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Gather student responses for each site (use the board, sticky notes, or a digital tool). As students share their first-impression words and ideas for who each site might be for, record patterns such as repeated words, shared audiences, or clear differences between designs.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2034,7 +2034,7 @@
       "key": "9b5f31ac-c820-4342-b0d8-b18bd1d734b3",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9b5f31ac-c820-4342-b0d8-b18bd1d734b3",
@@ -2045,7 +2045,7 @@
       "key": "30ca68a0-bb90-4cf4-92bd-5874798b2897",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Style Critique activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students annotate the website images in their Style Critique activity guide by labeling Strengths and Weaknesses. Remind them to think about clarity (is it easy to read?), cohesion (do the design elements feel consistent?), and audience fit (does the style match who the site is for?).\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they're using the three criteria to explain their annotations. If students write vague notes (e.g., \"bad colors\"), prompt them to be specific (e.g., \"low contrast between text and background makes it hard to read\").",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Style Critique activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students annotate the website images in their Style Critique activity guide by labeling Strengths and Weaknesses. Remind them to think about clarity (is it easy to read?), cohesion (do the design elements feel consistent?), and audience fit (does the style match who the site is for?).\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they're using the three criteria to explain their annotations. If students write vague notes (e.g., \"bad colors\"), prompt them to be specific (e.g., \"low contrast between text and background makes it hard to read\").",
         "duration": "15",
         "name": "Style Critique",
         "tips": [
@@ -2074,7 +2074,7 @@
       "key": "dbfb2694-3531-415a-9cf5-0e2f2f259901",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What made one site's design stronger than another?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify specific design strengths (e.g., clear navigation, balanced color scheme, readable text). Help students notice how design choices—like layout, color, or readability—affect how effective a site feels. Use this moment to introduce the idea of competitive analysis (learning by comparing what works and what doesn't in different designs) and establish criteria that students will later apply to their own mood boards.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What made one site's design stronger than another?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify specific design strengths (e.g., clear navigation, balanced color scheme, readable text). Help students notice how design choices—like layout, color, or readability—affect how effective a site feels. Use this moment to introduce the idea of competitive analysis (learning by comparing what works and what doesn't in different designs) and establish criteria that students will later apply to their own mood boards.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2101,7 +2101,7 @@
       "key": "d1681c6a-3fec-437b-9bfd-c74b8a610872",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do these tools help them test or share their ideas before building the final design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to see that designers use these tools to explore and communicate style or direction before committing to a final design. Students should understand that these tools allow designers to test ideas quickly, get feedback, and align with teammates or clients on the \"feel\" of a project.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How do these tools help them test or share their ideas before building the final design?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to see that designers use these tools to explore and communicate style or direction before committing to a final design. Students should understand that these tools allow designers to test ideas quickly, get feedback, and align with teammates or clients on the \"feel\" of a project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2140,7 +2140,7 @@
       "key": "2df421fe-7b84-4585-86bc-4216de73cdbb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define mood boarding as a tool designers use to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define mood boarding as a tool designers use to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.",
         "duration": "20",
         "name": "Mood Boarding",
         "tips": [
@@ -2159,7 +2159,7 @@
       "key": "3379ed82-6789-479d-aa7f-345cd7f95a36",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students use Sketch Lab to build a mood board that communicates a clear style direction\n- Level 2: Students read the vocabulary definition for mood boarding.\n- Level 3: Students add their own explanation or example of mood boarding to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components (colors, fonts/typography, images, and 2–3 style words). Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students use Sketch Lab to build a mood board that communicates a clear style direction\n- Level 2: Students read the vocabulary definition for mood boarding.\n- Level 3: Students add their own explanation or example of mood boarding to the vocab free response.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are including all key components (colors, fonts/typography, images, and 2–3 style words). Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"",
         "progression_name": "Mood Board Design"
       },
       "seeding_key": {
@@ -2202,7 +2202,7 @@
       "key": "9b7ebd17-8824-451c-aaa2-faa0a129581f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students walk around and look at other mood boards created for the same use case. Explain that this mirrors real design reviews, where teams give each other feedback focused on clarity, cohesion, and audience fit. Direct each student to leave at least one sticky note of feedback using one of the sentence frames.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students walk around and look at other mood boards created for the same use case. Explain that this mirrors real design reviews, where teams give each other feedback focused on clarity, cohesion, and audience fit. Direct each student to leave at least one sticky note of feedback using one of the sentence frames.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2219,7 +2219,7 @@
       "key": "bdedd650-b3fc-4423-8509-045b8f7bb297",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a quick reflection using the Three W's."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Facilitate a quick reflection using the Three W's."
       },
       "seeding_key": {
         "activity_section.key": "bdedd650-b3fc-4423-8509-045b8f7bb297",
@@ -2230,7 +2230,7 @@
       "key": "e415b7af-0e9c-4e55-b20e-cecf88a37528",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2266,7 +2266,7 @@
       "key": "f8563bf7-ca74-49eb-9e48-25b68b7daeee",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show 4 color palettes. Ask students to label each of them with one of the categories (energetic, calming, playful, or luxury). Encourage quick, instinctive choices—there are no wrong answers.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show 4 color palettes. Ask students to label each of them with one of the categories (energetic, calming, playful, or luxury). Encourage quick, instinctive choices—there are no wrong answers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2293,7 +2293,7 @@
       "key": "a1303102-409a-4781-8407-c3ac0b94de82",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reveal brand logos or names behind the color palettes after students have labeled them by mood. If students aren't familiar with a brand, have them focus on what the colors communicate: \"What mood or message do these colors send?\" or \"Do they feel consistent with the kind of product or audience this brand might have?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Do these palettes fit the brands shown? Why or why not?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize that colors communicate emotion and identity — and that meaning can change based on culture, audience, or context. Emphasize how color can reinforce or challenge a brand's identity and why inclusive design considers different interpretations."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Reveal brand logos or names behind the color palettes after students have labeled them by mood. If students aren't familiar with a brand, have them focus on what the colors communicate: \"What mood or message do these colors send?\" or \"Do they feel consistent with the kind of product or audience this brand might have?\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Do these palettes fit the brands shown? Why or why not?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students recognize that colors communicate emotion and identity — and that meaning can change based on culture, audience, or context. Emphasize how color can reinforce or challenge a brand's identity and why inclusive design considers different interpretations."
       },
       "seeding_key": {
         "activity_section.key": "a1303102-409a-4781-8407-c3ac0b94de82",
@@ -2316,7 +2316,7 @@
       "key": "f841f2b7-5fb8-4782-a222-671b72328eab",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "f841f2b7-5fb8-4782-a222-671b72328eab",
@@ -2327,7 +2327,7 @@
       "key": "bbcc0d62-6e34-438d-8e1b-c9e808bfb722",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the professional role of a marketing specialist to frame the lesson. Explain that students will take on this role as they analyze existing brands and create their own.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the professional role of a marketing specialist to frame the lesson. Explain that students will take on this role as they analyze existing brands and create their own.",
         "duration": "10",
         "name": "Brand Analysis",
         "tips": [
@@ -2384,7 +2384,7 @@
       "key": "ec983525-bcd0-4767-9742-2999cce8d6e0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns did you notice in how brands use fonts and colors?*\n- *How did the design choices connect to audience?*\n- *What audiences might feel left out by these design choices?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify common design patterns (how fonts and colors communicate tone), connect those choices to the intended audience, and consider who might feel excluded or misrepresented by the same design choices. Encourage reasoning over preference—students explain why design decisions work or don't work for different audiences. If needed, model with examples: Bold sans-serif fonts and high-contrast colors often signal energy or athleticism, while muted serif fonts and gold tones feel more elegant or luxurious. For instance, Nike's dark palette feels powerful and competitive, while Spotify's rounded fonts and bright green feel youthful and approachable.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define brand kit. Briefly point out that a strong brand kit supports clarity, consistency, and accessibility in design."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns did you notice in how brands use fonts and colors?*\n- *How did the design choices connect to audience?*\n- *What audiences might feel left out by these design choices?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify common design patterns (how fonts and colors communicate tone), connect those choices to the intended audience, and consider who might feel excluded or misrepresented by the same design choices. Encourage reasoning over preference—students explain why design decisions work or don't work for different audiences. If needed, model with examples: Bold sans-serif fonts and high-contrast colors often signal energy or athleticism, while muted serif fonts and gold tones feel more elegant or luxurious. For instance, Nike's dark palette feels powerful and competitive, while Spotify's rounded fonts and bright green feel youthful and approachable.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define brand kit. Briefly point out that a strong brand kit supports clarity, consistency, and accessibility in design."
       },
       "seeding_key": {
         "activity_section.key": "ec983525-bcd0-4767-9742-2999cce8d6e0",
@@ -2490,7 +2490,7 @@
       "key": "228e4312-bff3-4bcb-8357-afb2afee8e6f",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your design avoid stereotypes or bias?*\n- *How might users from different backgrounds interpret your color and font choices?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how design choices communicate identity and values while considering inclusivity and diverse perspectives. They connect visual decisions (color, font, tone) to ethical design—recognizing that different users may interpret designs differently based on culture, experience, or ability."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your design avoid stereotypes or bias?*\n- *How might users from different backgrounds interpret your color and font choices?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how design choices communicate identity and values while considering inclusivity and diverse perspectives. They connect visual decisions (color, font, tone) to ethical design—recognizing that different users may interpret designs differently based on culture, experience, or ability."
       },
       "seeding_key": {
         "activity_section.key": "228e4312-bff3-4bcb-8357-afb2afee8e6f",
@@ -2501,7 +2501,7 @@
       "key": "fadd806e-9e3a-4ea9-a73e-cc66941807b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their reflection responses from Level 5: Check for Understanding or display a few anonymous responses to share aloud.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students share their reflection responses from Level 5: Check for Understanding or display a few anonymous responses to share aloud.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2528,7 +2528,7 @@
       "key": "a1c7d6a7-debf-47db-9532-a86efb71d142",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "a1c7d6a7-debf-47db-9532-a86efb71d142",
@@ -2539,7 +2539,7 @@
       "key": "309663d2-2be3-4c2e-b9e6-0352d305cf5e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2575,7 +2575,7 @@
       "key": "7c075392-c30b-4da1-8f61-6e6cb8662ac1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "7c075392-c30b-4da1-8f61-6e6cb8662ac1",
@@ -2644,7 +2644,7 @@
       "key": "1562cde4-6fe0-4d8f-8c6f-8ff3aafcd8e1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent.",
         "progression_name": "Vocabulary"
       },
       "seeding_key": {
@@ -2692,7 +2692,7 @@
       "key": "44649476-c99e-4c0a-b42a-03be1e24cf64",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite students to reflect on their learning by responding to the prompts on the slide. Ask them to share quick responses out loud or record them on sticky notes, a shared board, or a digital tool. Help students connect today's lesson to the larger story of how design becomes code. They should recognize that CSS translates brand identity into real web pages, and that AI acts as a coding assistant, not an automatic expert.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Invite students to reflect on their learning by responding to the prompts on the slide. Ask them to share quick responses out loud or record them on sticky notes, a shared board, or a digital tool. Help students connect today's lesson to the larger story of how design becomes code. They should recognize that CSS translates brand identity into real web pages, and that AI acts as a coding assistant, not an automatic expert.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "44649476-c99e-4c0a-b42a-03be1e24cf64",
@@ -2703,7 +2703,7 @@
       "key": "8046011b-3074-489c-9923-be3407668be8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2764,7 +2764,7 @@
       "key": "9682e916-cc85-4f5e-8123-34426b04b6aa",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define problem statement. Problem statement format - [user] needs a way to [need] because [reason].\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which statement is stronger? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that B is better because it's specific, user-centered, and explains constraints."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define problem statement. Problem statement format - [user] needs a way to [need] because [reason].\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which statement is stronger? Why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that B is better because it's specific, user-centered, and explains constraints."
       },
       "seeding_key": {
         "activity_section.key": "9682e916-cc85-4f5e-8123-34426b04b6aa",
@@ -2789,7 +2789,7 @@
       "key": "34e0f896-1b6d-4a05-8781-9de36a81e015",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students swap personas and problem statements with a partner to provide feedback. Students use a Peer Review Checklist to provide feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for feedback that is specific and actionable.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4 and 5.\n- Level 4: Review the vocabulary term problem statement.\n- Level 5: Define the term in student's own words. Use examples from the lesson to explain their thinking.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students swap personas and problem statements with a partner to provide feedback. Students use a Peer Review Checklist to provide feedback.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen for feedback that is specific and actionable.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4 and 5.\n- Level 4: Review the vocabulary term problem statement.\n- Level 5: Define the term in student's own words. Use examples from the lesson to explain their thinking.",
         "progression_name": "Vocab: Problem Statement"
       },
       "seeding_key": {
@@ -2801,7 +2801,7 @@
       "key": "722ec9ac-bc2d-48e0-b878-08624ebd9d8c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "722ec9ac-bc2d-48e0-b878-08624ebd9d8c",
@@ -2812,7 +2812,7 @@
       "key": "990ee183-bf36-47fe-ab5a-f4dbd46d78bf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2848,7 +2848,7 @@
       "key": "f747b946-78e9-4ed2-9590-d2ff0afb9466",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards into a logical structure, using arrows to show how users would move through the site.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move between groups and ask why they grouped pages a certain way. Encourage reasoning such as \"We put Contact under About because users usually look for it with company info.\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards into a logical structure, using arrows to show how users would move through the site.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move between groups and ask why they grouped pages a certain way. Encourage reasoning such as \"We put Contact under About because users usually look for it with company info.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -2875,7 +2875,7 @@
       "key": "0fe29328-dfd3-49b2-92a1-ac24641f1b69",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define site map. Explain that site maps help us see the overall structure and logic of a site — not just the pages themselves but how they relate. Tell students that now that they have explored what makes navigation clear, they will create their own structured site map later in today's activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns do we notice across site maps?*\n  - *Where did most groups put Home?*\n  - *Where did most groups put Contact?*\n  - *How did groups handle sections or sub-pages?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define site map. Explain that site maps help us see the overall structure and logic of a site — not just the pages themselves but how they relate. Tell students that now that they have explored what makes navigation clear, they will create their own structured site map later in today's activity.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns do we notice across site maps?*\n  - *Where did most groups put Home?*\n  - *Where did most groups put Contact?*\n  - *How did groups handle sections or sub-pages?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2902,7 +2902,7 @@
       "key": "8ed5348c-cafd-43e2-af30-8699c16b39b6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "8ed5348c-cafd-43e2-af30-8699c16b39b6",
@@ -2954,7 +2954,7 @@
       "key": "a1cfc2cc-6127-42c4-b080-15ad891bc2db",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Levels 1 and 2: Students create a site map and trace a user flow for a chosen persona.\n- Levels 3 through 6: Students read and explain the key terms site map and user flow.\n- Level 7: Students respond to a final reflection or Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Levels 1 and 2: Students create a site map and trace a user flow for a chosen persona.\n- Levels 3 through 6: Students read and explain the key terms site map and user flow.\n- Level 7: Students respond to a final reflection or Check for Understanding question.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\"",
         "progression_name": "Create a Site Map and User Flow"
       },
       "seeding_key": {
@@ -3031,7 +3031,7 @@
       "key": "9b472ea1-1afb-4f40-b4c9-68d7b4d8f8f1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *How do we explain our site's logic to AI so it builds what we intend?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should recognize that:\n- A clear site map helps users navigate and achieve goals easily.\n- Communicating that structure clearly helps the AI generate more accurate, user-friendly designs.\n\nEncourage students to explain their reasoning using examples: \"We put Help under Contact because that's where users expect it.\" and \"If we don't tell the AI why a section is important, it might skip it or place it wrong.\"",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *How do we explain our site's logic to AI so it builds what we intend?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should recognize that:\n- A clear site map helps users navigate and achieve goals easily.\n- Communicating that structure clearly helps the AI generate more accurate, user-friendly designs.\n\nEncourage students to explain their reasoning using examples: \"We put Help under Contact because that's where users expect it.\" and \"If we don't tell the AI why a section is important, it might skip it or place it wrong.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -3082,7 +3082,7 @@
       "key": "502359c7-fcda-455e-aac6-c86bcffcd1fa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *When we prompted the AI, how did we make sure it understood our site's logic?*\n- *What made your structure easier or harder for the AI to get right?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to reflect on what made their site map clear and how effectively they communicated that logic to the AI. Students should recognize that:\n- Clear, organized structure helps both users and AI follow site logic.\n- Precise prompts and explicit relationships (like navigation links) improve AI accuracy.\n- Iterating on prompts is part of refining and testing how well AI interprets design intent.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *When we prompted the AI, how did we make sure it understood our site's logic?*\n- *What made your structure easier or harder for the AI to get right?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to reflect on what made their site map clear and how effectively they communicated that logic to the AI. Students should recognize that:\n- Clear, organized structure helps both users and AI follow site logic.\n- Precise prompts and explicit relationships (like navigation links) improve AI accuracy.\n- Iterating on prompts is part of refining and testing how well AI interprets design intent.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "502359c7-fcda-455e-aac6-c86bcffcd1fa",
@@ -3093,7 +3093,7 @@
       "key": "2ba5a5bc-d192-4f70-ba1d-922d6a4f2b90",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3129,7 +3129,7 @@
       "key": "7622ac6e-93dd-4a60-856f-f947f4877d33",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Low Vision Experience\" and “Color Blindness Experience” videos.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What stood out about the challenges these users faced?*\n- *What mistakes might AI make if it doesn't consider these challenges?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify specific usability barriers, such as difficulty reading small or low-contrast text, confusing navigation, or reliance on color alone. Students should explain how these issues affect a user's experience (for example, not being able to find a button or read important text). Students should recognize that AI might reproduce inaccessible patterns — for instance, choosing poor color contrast, omitting alt text, or generating layouts that assume perfect vision.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the \"Low Vision Experience\" and “Color Blindness Experience” videos.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What stood out about the challenges these users faced?*\n- *What mistakes might AI make if it doesn't consider these challenges?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify specific usability barriers, such as difficulty reading small or low-contrast text, confusing navigation, or reliance on color alone. Students should explain how these issues affect a user's experience (for example, not being able to find a button or read important text). Students should recognize that AI might reproduce inaccessible patterns — for instance, choosing poor color contrast, omitting alt text, or generating layouts that assume perfect vision.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3156,7 +3156,7 @@
       "key": "e18c913f-cde6-4bab-b97a-4b4cb2f7ac89",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "e18c913f-cde6-4bab-b97a-4b4cb2f7ac89",
@@ -3192,7 +3192,7 @@
       "key": "aff4d869-c41b-4fe0-bd80-8189b80b4a49",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If most websites have accessibility issues, what might AI learn from that data?*\n- *How could those patterns show up in AI-generated layouts or code?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI systems learn from existing examples on the web. If most of those examples are inaccessible, the AI will also learn and reproduce those same barriers. Students should start connecting data quality to AI output quality. Students should identify concrete ways inaccessibility could appear in AI work. Students should see that AI can generate polished-looking designs that still fail real users.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Inclusive Designer role.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the “Thinking Accessibility in UX Design” video."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If most websites have accessibility issues, what might AI learn from that data?*\n- *How could those patterns show up in AI-generated layouts or code?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI systems learn from existing examples on the web. If most of those examples are inaccessible, the AI will also learn and reproduce those same barriers. Students should start connecting data quality to AI output quality. Students should identify concrete ways inaccessibility could appear in AI work. Students should see that AI can generate polished-looking designs that still fail real users.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Inclusive Designer role.\n\n<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the “Thinking Accessibility in UX Design” video."
       },
       "seeding_key": {
         "activity_section.key": "aff4d869-c41b-4fe0-bd80-8189b80b4a49",
@@ -3266,7 +3266,7 @@
       "key": "90415f72-331d-485a-94b5-f5af738fa331",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do we need a framework like POUR when designing for accessibility?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that POUR provides a structured approach to ensure digital products are usable by everyone. Guide them to see it as a checklist or a set of guiding principles that help designers systematically consider different aspects of accessibility. Emphasize that it helps ensure inclusivity and usability across a wide range of user needs and abilities."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do we need a framework like POUR when designing for accessibility?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that POUR provides a structured approach to ensure digital products are usable by everyone. Guide them to see it as a checklist or a set of guiding principles that help designers systematically consider different aspects of accessibility. Emphasize that it helps ensure inclusivity and usability across a wide range of user needs and abilities."
       },
       "seeding_key": {
         "activity_section.key": "90415f72-331d-485a-94b5-f5af738fa331",
@@ -3289,7 +3289,7 @@
       "key": "e540d13a-e954-4a5a-91b6-8bb0a23c17bc",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4. Students apply accessibility principles to their own apps from Lesson 8 by revisiting them with a user persona who has an accessibility constraint.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind them to be specific in their prompts, referencing the POUR principles. Ask students to explain how their user's constraint makes certain aspects of their app challenging. Prompt them to connect specific design elements to potential accessibility barriers.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 5."
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4. Students apply accessibility principles to their own apps from Lesson 8 by revisiting them with a user persona who has an accessibility constraint.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Remind them to be specific in their prompts, referencing the POUR principles. Ask students to explain how their user's constraint makes certain aspects of their app challenging. Prompt them to connect specific design elements to potential accessibility barriers.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 5."
       },
       "seeding_key": {
         "activity_section.key": "e540d13a-e954-4a5a-91b6-8bb0a23c17bc",
@@ -3332,7 +3332,7 @@
       "key": "8c68dd2f-7b91-446e-831f-1ddea19e18cb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "8c68dd2f-7b91-446e-831f-1ddea19e18cb",
@@ -3343,7 +3343,7 @@
       "key": "0ea18e9d-e983-4006-a43d-2538bd81f382",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3379,7 +3379,7 @@
       "key": "e880f233-fe17-4de5-a73c-ce941ae42391",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough home page for a fictional music playlist app. It should include basic navigation, key sections, a short paragraph, and an image gallery.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough home page for a fictional music playlist app. It should include basic navigation, key sections, a short paragraph, and an image gallery.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3406,7 +3406,7 @@
       "key": "eab6be29-05de-4411-b92b-9e8bfeb2307f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough About page for the same fictional music playlist app. The page should include a short description of the app, a section for team or creator information, and navigation that links back to the homepage.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough About page for the same fictional music playlist app. The page should include a short description of the app, a section for team or creator information, and navigation that links back to the homepage.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3433,7 +3433,7 @@
       "key": "7193fe49-1a3a-41dd-92ca-edb0df06fe0a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What choices did you make about what to include or leave out?*\n- *Which parts of your sketch feel like human design choices, and which could AI handle later?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to reflect on how they made structural decisions (abstraction) and how these choices connect to the designer's role in a human-in-the-loop workflow. Students should recognize that:\n- Sketching focuses on what's essential for structure and function, not polished visuals.\n- Designers make early layout and content decisions before AI or developers build — that's what keeps humans in control of the creative process."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What choices did you make about what to include or leave out?*\n- *Which parts of your sketch feel like human design choices, and which could AI handle later?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to reflect on how they made structural decisions (abstraction) and how these choices connect to the designer's role in a human-in-the-loop workflow. Students should recognize that:\n- Sketching focuses on what's essential for structure and function, not polished visuals.\n- Designers make early layout and content decisions before AI or developers build — that's what keeps humans in control of the creative process."
       },
       "seeding_key": {
         "activity_section.key": "7193fe49-1a3a-41dd-92ca-edb0df06fe0a",
@@ -3456,7 +3456,7 @@
       "key": "1532b869-a224-4e87-959d-3b79ae943dab",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define wireframe as a low-fidelity, structural layout showing content and functionality without colors, images, or visual styling. Use the blueprint analogy: just like an architect sketches a blueprint before building, designers create wireframes to plan structure and layout before adding visuals. Explain that this step keeps humans in the loop — designers decide structure and logic, while AI or developers handle styling and details later.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define wireframe as a low-fidelity, structural layout showing content and functionality without colors, images, or visual styling. Use the blueprint analogy: just like an architect sketches a blueprint before building, designers create wireframes to plan structure and layout before adding visuals. Explain that this step keeps humans in the loop — designers decide structure and logic, while AI or developers handle styling and details later.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3483,7 +3483,7 @@
       "key": "a3f8309f-689e-4369-af6c-ffa0d2c92f7e",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "a3f8309f-689e-4369-af6c-ffa0d2c92f7e",
@@ -3517,7 +3517,7 @@
       "key": "88f6af2b-8b6c-4e1f-a946-4369c14bfaf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students create two wireframes each for a chosen a web app idea in Sketch Lab\n- Level 2: Students read the vocabulary definition for wireframe.\n- Level 3: Students add their own explanation or example of wireframe to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students have chosen an app idea and understand its basic purpose. Look for consistent navigation and layout across pages. Prompt pairs to discuss why consistency is important for user experience. If groups struggle, remind them that AI can assist later with text or visuals — but humans design the structure first. Ask probing questions about how consistency helps users move through their app or why their layout make sense for their user persona.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students create two wireframes each for a chosen a web app idea in Sketch Lab\n- Level 2: Students read the vocabulary definition for wireframe.\n- Level 3: Students add their own explanation or example of wireframe to the vocab free response.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students have chosen an app idea and understand its basic purpose. Look for consistent navigation and layout across pages. Prompt pairs to discuss why consistency is important for user experience. If groups struggle, remind them that AI can assist later with text or visuals — but humans design the structure first. Ask probing questions about how consistency helps users move through their app or why their layout make sense for their user persona.",
         "progression_name": "Wireframe an App Idea"
       },
       "seeding_key": {
@@ -3572,7 +3572,7 @@
       "key": "f5f66a7b-a730-40b6-a6ff-45268ba878af",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs share their user journey and wireframes with another pair. Students place sticky-note comments using the sentence starters. Encourage students to focus on clarity and usability, not visuals or polish.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to the feedback being exchanged. Ensure students are providing specific and constructive feedback. Guide them if their feedback is too vague or not helpful.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have pairs share their user journey and wireframes with another pair. Students place sticky-note comments using the sentence starters. Encourage students to focus on clarity and usability, not visuals or polish.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen to the feedback being exchanged. Ensure students are providing specific and constructive feedback. Guide them if their feedback is too vague or not helpful.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3599,7 +3599,7 @@
       "key": "b132caa0-bfc8-420f-acac-8f8934d83bce",
       "position": 9,
       "properties": {
-        "description": "**Discuss:** Click the animated slide to display the prompts.\n- *How does wireframing make design work faster and clearer?*\n- *What design decisions must always stay human?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to recognize that wireframing improves both clarity and efficiency by allowing designers to plan structure and fix problems early, before visuals or coding begin. Students should also understand that some decisions—like layout, usability, and user flow—must remain human choices because they require reasoning, empathy, and ethical awareness. This conversation reinforces the idea that humans lead the creative and structural stages of design, while AI can assist later with details and automation."
+        "description": "**Discuss:** Click the animated slide to display the prompts.\n- *How does wireframing make design work faster and clearer?*\n- *What design decisions must always stay human?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to recognize that wireframing improves both clarity and efficiency by allowing designers to plan structure and fix problems early, before visuals or coding begin. Students should also understand that some decisions—like layout, usability, and user flow—must remain human choices because they require reasoning, empathy, and ethical awareness. This conversation reinforces the idea that humans lead the creative and structural stages of design, while AI can assist later with details and automation."
       },
       "seeding_key": {
         "activity_section.key": "b132caa0-bfc8-420f-acac-8f8934d83bce",
@@ -3610,7 +3610,7 @@
       "key": "e142cf61-6cd0-4a9e-9527-af8f9b8e6e5f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on \"Glows\", \"Grows\", and \"Want to Knows\".\n- Glows: Which choices helped make your wireframe clear and easy to understand — for users or for AI later in the process?\n- Grows: What's one thing you could improve next time you wireframe?\n- Want-to-Knows: What questions do you still have about wireframing or the design process?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on \"Glows\", \"Grows\", and \"Want to Knows\".\n- Glows: Which choices helped make your wireframe clear and easy to understand — for users or for AI later in the process?\n- Grows: What's one thing you could improve next time you wireframe?\n- Want-to-Knows: What questions do you still have about wireframing or the design process?\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "e142cf61-6cd0-4a9e-9527-af8f9b8e6e5f",
@@ -3621,7 +3621,7 @@
       "key": "e08e034d-dd97-41dc-a1da-f529762a7215",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3657,7 +3657,7 @@
       "key": "492f2a96-2821-4be6-b97b-3c68fa35c5b9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that the wireframe and written prompt help the AI understand what to build."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that the wireframe and written prompt help the AI understand what to build."
       },
       "seeding_key": {
         "activity_section.key": "492f2a96-2821-4be6-b97b-3c68fa35c5b9",
@@ -3680,7 +3680,7 @@
       "key": "43806d1a-3f2a-495a-a6a3-d4286c8b0ed5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What kinds of things might the AI understand or do better when it also has your wireframe as context?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reason that giving AI visual context (like a wireframe) helps it make smarter, more aligned design choices — beyond just structure. Listen for ideas like:\n- matching the layout and proportions to their plan\n- choosing color schemes or images that fit the page's purpose\n- organizing content logically based on the design\n- generating code that's easier to adjust or style later\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What kinds of things might the AI understand or do better when it also has your wireframe as context?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reason that giving AI visual context (like a wireframe) helps it make smarter, more aligned design choices — beyond just structure. Listen for ideas like:\n- matching the layout and proportions to their plan\n- choosing color schemes or images that fit the page's purpose\n- organizing content logically based on the design\n- generating code that's easier to adjust or style later\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "43806d1a-3f2a-495a-a6a3-d4286c8b0ed5",
@@ -3721,7 +3721,7 @@
       "key": "c4af10d1-a81f-4d01-afd0-74b05bc08e79",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did the AI omit any parts of your wireframe or miss user needs when generating your layout?*\n- *What might have caused that, and how did you adjust your prompt or code to fix it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that some omissions may come from unclear prompts, while others reflect the AI's own limitations. Listen for students identifying specific mismatches between their wireframe and the generated layout and considering whether those issues came from how they prompted or from how the AI interpreted the task. Students should discuss possible causes for mismatches, like vague wording, missing details, or AI misunderstanding structure. They should describe how they iterated to improve results. Listen for students showing accountability (clarifying or refining their prompt) while also recognizing when AI-generated outputs require human correction or more guidance."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did the AI omit any parts of your wireframe or miss user needs when generating your layout?*\n- *What might have caused that, and how did you adjust your prompt or code to fix it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that some omissions may come from unclear prompts, while others reflect the AI's own limitations. Listen for students identifying specific mismatches between their wireframe and the generated layout and considering whether those issues came from how they prompted or from how the AI interpreted the task. Students should discuss possible causes for mismatches, like vague wording, missing details, or AI misunderstanding structure. They should describe how they iterated to improve results. Listen for students showing accountability (clarifying or refining their prompt) while also recognizing when AI-generated outputs require human correction or more guidance."
       },
       "seeding_key": {
         "activity_section.key": "c4af10d1-a81f-4d01-afd0-74b05bc08e79",
@@ -3752,7 +3752,7 @@
       "key": "5673bf7c-1c61-4eaf-8616-570ef5eb5bdd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How has your AI build workflow evolved now that you're translating wireframes into full layouts?*\n- *What's your responsibility when the AI's layout doesn't match your plan or your users' needs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should describe how their workflow has become more intentional. Listen for students explaining that they now use wireframes as input to guide the AI, include clear goals or context in their prompts, and make targeted refinements to align structure with their plan. They should recognize that they're learning to communicate design intent more effectively to the AI. Students should identify that they are responsible for ensuring the final layout aligns with their design and user needs. Listen for students discussing how they revise prompts, debug or adjust code, and apply design principles to fix mismatches.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the check for understanding on Level 3.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How has your AI build workflow evolved now that you're translating wireframes into full layouts?*\n- *What's your responsibility when the AI's layout doesn't match your plan or your users' needs?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should describe how their workflow has become more intentional. Listen for students explaining that they now use wireframes as input to guide the AI, include clear goals or context in their prompts, and make targeted refinements to align structure with their plan. They should recognize that they're learning to communicate design intent more effectively to the AI. Students should identify that they are responsible for ensuring the final layout aligns with their design and user needs. Listen for students discussing how they revise prompts, debug or adjust code, and apply design principles to fix mismatches.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the check for understanding on Level 3.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -3770,7 +3770,7 @@
       "key": "602dac65-df60-4505-9308-9179ab11338e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "602dac65-df60-4505-9308-9179ab11338e",
@@ -3781,7 +3781,7 @@
       "key": "9a83d081-c4b8-414b-a81b-16b46979d64d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3817,7 +3817,7 @@
       "key": "65af4ead-88aa-4a06-9a4e-4319f2792f73",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the video of website resizing. After watching the video, ask:\n- What changes?\n- What breaks?",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show students the video of website resizing. After watching the video, ask:\n- What changes?\n- What breaks?",
         "tips": [
           {
             "type": "teachingTip",
@@ -3844,7 +3844,7 @@
       "key": "95d42811-5698-4c7d-9e45-66331f3c0c89",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define responsiveness.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define responsiveness.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "95d42811-5698-4c7d-9e45-66331f3c0c89",
@@ -3878,7 +3878,7 @@
       "key": "a524621d-3385-4da4-94fe-441c6855a1ee",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Designing for Responsiveness activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3. Explain that they will be testing and refining their AI-generated web apps from Lesson 11. If they don't have their webpage from the previous class, instruct them to copy and paste the HTML and CSS files from the exemplar in the instructions. Students open their webpages, resize the browser to simulate different device widths, and log any responsiveness issues using the checklist. They then refine prompts to fix those issues, save versions to track progress, and swap with a partner for peer feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students test and refine, ask them to explain the issues they noticed and how their fixes improve usability across screen sizes. When observing peer review, prompt students to connect their suggestions to common responsive design patterns.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Designing for Responsiveness activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3. Explain that they will be testing and refining their AI-generated web apps from Lesson 11. If they don't have their webpage from the previous class, instruct them to copy and paste the HTML and CSS files from the exemplar in the instructions. Students open their webpages, resize the browser to simulate different device widths, and log any responsiveness issues using the checklist. They then refine prompts to fix those issues, save versions to track progress, and swap with a partner for peer feedback.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students test and refine, ask them to explain the issues they noticed and how their fixes improve usability across screen sizes. When observing peer review, prompt students to connect their suggestions to common responsive design patterns.",
         "progression_name": "Web App Responsiveness"
       },
       "seeding_key": {
@@ -3917,7 +3917,7 @@
       "key": "cd2860bd-5bbf-4aa4-84ec-8e21d62e8df7",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why should we design websites that work well on all devices and screen sizes?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that responsive design is more inclusive for all users. Push students to think about who is excluded when websites are not designed responsively, e.g. a website that only displays content well for desktops.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why should we design websites that work well on all devices and screen sizes?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that responsive design is more inclusive for all users. Push students to think about who is excluded when websites are not designed responsively, e.g. a website that only displays content well for desktops.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -3939,7 +3939,7 @@
       "key": "6b58d196-26ca-41b5-9db4-4e53d525d17b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "6b58d196-26ca-41b5-9db4-4e53d525d17b",
@@ -3950,7 +3950,7 @@
       "key": "53c31329-df07-45e1-aeaf-8e0412f4de4d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3963,7 +3963,7 @@
       "key": "8566b628-7017-4360-8664-401f2049ed84",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you could create a magazine about anything, what would it be? Who would read it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect personal interests to an audience or community, priming them to think about purpose and audience in their digital magazine project.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you could create a magazine about anything, what would it be? Who would read it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect personal interests to an audience or community, priming them to think about purpose and audience in their digital magazine project.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3976,7 +3976,7 @@
       "key": "afa61bea-9da2-49b4-89cd-e58b029b72fb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Digital Magazine Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Digital Magazine Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Digital Magazine Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Digital Magazine Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -4005,7 +4005,7 @@
       "key": "66504a00-62bf-4b4f-85d5-95bc79d2ca71",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Digital Magazine Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Digital Magazine Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4022,7 +4022,7 @@
       "key": "4c66af90-ad62-4521-aadb-b8efc78941d7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Define Your Magazine. Students can use the tools on this level to support their work.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions such as:\n- \"How would you describe your magazine's main audience in one sentence?\"\n- \"What kind of stories or visuals would fit your theme?\"\n- \"How might your design choices make your magazine feel more cohesive?\"\n\nUse these quick check-ins to confirm that students are connecting their creative choices to a clear audience and purpose.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Define Your Magazine. Students can use the tools on this level to support their work.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask guiding questions such as:\n- \"How would you describe your magazine's main audience in one sentence?\"\n- \"What kind of stories or visuals would fit your theme?\"\n- \"How might your design choices make your magazine feel more cohesive?\"\n\nUse these quick check-ins to confirm that students are connecting their creative choices to a clear audience and purpose.",
         "progression_name": "Milestone 1: Define Your Magazine",
         "tips": [
           {
@@ -4050,7 +4050,7 @@
       "key": "aa5b741e-8d35-4584-b7e0-b6665caac17c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide. Explain that this reflection helps them capture what they learned today and how it will shape their next steps.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide. Explain that this reflection helps them capture what they learned today and how it will shape their next steps.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4079,7 +4079,7 @@
       "key": "14ecb0e9-93eb-46cf-b4dc-c21aa91b24f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one element you're excited to see come to life from your design?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reconnect with their design vision and build enthusiasm to begin the hands-on coding phase. This primes them to think intentionally about how their design ideas translate into real HTML/CSS builds today.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one element you're excited to see come to life from your design?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reconnect with their design vision and build enthusiasm to begin the hands-on coding phase. This primes them to think intentionally about how their design ideas translate into real HTML/CSS builds today.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -4092,7 +4092,7 @@
       "key": "2a3282db-bf20-45f0-8163-34d3475e65e3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Digital Magazine Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Digital Magazine Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -4111,7 +4111,7 @@
       "key": "1b63afef-a769-4929-a5fb-97469c779ad4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 2 and 3 to work on their first draft of their pages. Clarify that they'll begin building the first draft of their magazine pages using HTML and CSS, with help from the AI tools available at these levels. Encourage students to use AI prompts strategically — for example, to generate layouts, apply color palettes, or organize text elements, while checking that the code makes sense.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- \"What part of your magazine are you starting with?\"\n- \"What feedback from your plan or Milestone 1 are you using as you build?\"\n- \"Have you tested your page to make sure it behaves the way you expect?\"\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 2 and 3 to work on their first draft of their pages. Clarify that they'll begin building the first draft of their magazine pages using HTML and CSS, with help from the AI tools available at these levels. Encourage students to use AI prompts strategically — for example, to generate layouts, apply color palettes, or organize text elements, while checking that the code makes sense.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- \"What part of your magazine are you starting with?\"\n- \"What feedback from your plan or Milestone 1 are you using as you build?\"\n- \"Have you tested your page to make sure it behaves the way you expect?\"\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.",
         "progression_name": "Milestone 2: Build Your First Draft"
       },
       "seeding_key": {
@@ -4134,7 +4134,7 @@
       "key": "1df73238-c344-4e4d-be5e-06b4c6d25a15",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights before moving to Milestone 3.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights before moving to Milestone 3.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4161,7 +4161,7 @@
       "key": "41284b01-1efb-45c3-84b6-037ce66355ee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Explain that this reflection helps them identify what's working well and what still needs adjustment before the final milestone. Give students a few minutes to reflect individually, then share with a partner or small group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps (e.g., \"I need to fix spacing,\" \"My navigation isn't consistent,\" or \"I want to make my site more accessible\"). Encourage students to connect these adjustments back to their user goals and audience experience.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Explain that this reflection helps them identify what's working well and what still needs adjustment before the final milestone. Give students a few minutes to reflect individually, then share with a partner or small group.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps (e.g., \"I need to fix spacing,\" \"My navigation isn't consistent,\" or \"I want to make my site more accessible\"). Encourage students to connect these adjustments back to their user goals and audience experience.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4180,7 +4180,7 @@
       "key": "cf63c10d-9912-49c6-8c21-8400c6c2bcc5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What challenge do you still need to solve before your site is ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify one specific challenge or improvement area that will guide their focus during today's Milestone 4 – Test and Finalize work. This primes them to enter work time with clear direction and purpose.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What challenge do you still need to solve before your site is ready to share?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify one specific challenge or improvement area that will guide their focus during today's Milestone 4 – Test and Finalize work. This primes them to enter work time with clear direction and purpose.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -4193,7 +4193,7 @@
       "key": "d3c25f3f-fed7-4c91-ad2f-f0e9c042e602",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today is focused on Milestone 4 – Test and Finalize, where students polish their site using feedback from peers, teachers, and their own self-assessment. Remind students to check their Digital Magazine Project Guide for the Milestone 4 deliverables, which include final usability, accessibility, and design checks.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today is focused on Milestone 4 – Test and Finalize, where students polish their site using feedback from peers, teachers, and their own self-assessment. Remind students to check their Digital Magazine Project Guide for the Milestone 4 deliverables, which include final usability, accessibility, and design checks.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -4222,7 +4222,7 @@
       "key": "06a3e4b8-89ae-4bad-927c-ba9815015a95",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Digital Magazine Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Digital Magazine Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4239,7 +4239,7 @@
       "key": "409d0236-af6e-4c03-aac5-f9c4abc91383",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Digital Magazine projects. Explain that this is their final dedicated work session for Milestone 4 – Test and Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Digital Magazine project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Digital Magazine projects. Explain that this is their final dedicated work session for Milestone 4 – Test and Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Digital Magazine project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.",
         "progression_name": "Milestone 4: Test and Finalize",
         "tips": [
           {
@@ -4267,7 +4267,7 @@
       "key": "a15dbf52-5bb9-481e-9cdf-d5b20f6b5810",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their digital magazines on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their digital magazines on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4297,7 +4297,7 @@
       "key": "c8dacac9-8cbd-4e0e-b0ff-e04ba7576d60",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Digital Magazine Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Digital Magazine Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.",
         "tips": [
           {
             "type": "assessmentOpportunity",

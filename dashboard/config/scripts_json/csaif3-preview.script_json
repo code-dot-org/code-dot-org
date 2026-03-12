@@ -937,7 +937,7 @@
       "key": "b93857fd-7e41-4ec9-881a-089f1caec8ee",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computer system*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What are some examples of computing systems you use in everyday life?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars. This discussion helps students recognize how these systems process and respond to data in different ways. (e.g. *\"A smartwatch is a computer system because it tracks my steps and syncs data to my phone.\"*)",
+        "description": " <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *computer system*.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What are some examples of computing systems you use in everyday life?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars. This discussion helps students recognize how these systems process and respond to data in different ways. (e.g. *\"A smartwatch is a computer system because it tracks my steps and syncs data to my phone.\"*)",
         "tips": [
           {
             "type": "teachingTip",
@@ -954,7 +954,7 @@
       "key": "a171155c-dbb9-41a5-9d2d-c71e9c28957b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Computer Innovations and Careers activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Computer Innovations and Careers activity guide."
       },
       "seeding_key": {
         "activity_section.key": "a171155c-dbb9-41a5-9d2d-c71e9c28957b",
@@ -977,7 +977,7 @@
       "key": "c4e7a8c8-6b99-4c56-a9c6-987bf20d6ecf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students should open the Computer Innovation Map, and click on the markers to explore innovations in medicine, agriculture, education, and fashion. The markers have videos and descriptions to learn about each innovation. Students should select one innovation to investigate, then complete the first page of their activity guide.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. Students should open the Computer Innovation Map, and click on the markers to explore innovations in medicine, agriculture, education, and fashion. The markers have videos and descriptions to learn about each innovation. Students should select one innovation to investigate, then complete the first page of their activity guide.",
         "progression_name": "Pick an Innovation",
         "tips": [
           {
@@ -995,7 +995,7 @@
       "key": "668f7384-f3fe-40c9-a27b-8c2ed44d5543",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "668f7384-f3fe-40c9-a27b-8c2ed44d5543",
@@ -1020,7 +1020,7 @@
       "key": "2e9424c3-3f58-4fe4-88bc-aaef7e52aed9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2. Levels 2 through 9 have several industry professionals they can interview in different industries. Student should choose the level that matches their selected innovation and complete the Industry Interviews section of their activity guide.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2. Levels 2 through 9 have several industry professionals they can interview in different industries. Student should choose the level that matches their selected innovation and complete the Industry Interviews section of their activity guide.",
         "progression_name": "Industry Interviews"
       },
       "seeding_key": {
@@ -1046,7 +1046,7 @@
       "key": "d129cd3a-d3d2-497d-88e9-b283eff24582",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students each choose one of the roles (Hardware Engineer, Software Engineer, Product Designer) within their group - each group should have only one person serving that role.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 10. Each student selects the option with their assigned technical role. They watch a short video to introduce them to the skills and responsibilities for their selected role.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students each choose one of the roles (Hardware Engineer, Software Engineer, Product Designer) within their group - each group should have only one person serving that role.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 10. Each student selects the option with their assigned technical role. They watch a short video to introduce them to the skills and responsibilities for their selected role.",
         "progression_name": "Exploring Technical Roles"
       },
       "seeding_key": {
@@ -1058,7 +1058,7 @@
       "key": "d060cbe7-50ed-4ee4-a0b2-160f8f5fe044",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students will share their observations about the career they explored in a whole class discussion.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you about the career you explored?*\n- **Round Robin Sharing**: Invite students to share one insight about their chosen career. If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to encourage students to reflect on the skills and tools used in different computing careers and to connect these insights to their own interests. (e.g., *\"I didn’t realize product designers help decide how apps and websites look and feel!\"*).\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 11. Student use AI chat to research how their assigned role contributes to building their selected innovation and record their findings on page 3 their activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Students will share their observations about the career they explored in a whole class discussion.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What stood out to you about the career you explored?*\n- **Round Robin Sharing**: Invite students to share one insight about their chosen career. If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to encourage students to reflect on the skills and tools used in different computing careers and to connect these insights to their own interests. (e.g., *\"I didn’t realize product designers help decide how apps and websites look and feel!\"*).\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 1, Level 11. Student use AI chat to research how their assigned role contributes to building their selected innovation and record their findings on page 3 their activity guide.",
         "progression_name": "Your Role in Innovation"
       },
       "seeding_key": {
@@ -1070,7 +1070,7 @@
       "key": "f2476964-f881-487c-baf6-cbbab0a41b8e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns sharing how their role contributes to building their selected innovation and record notes in the Your Role in Innovation section of their activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns sharing how their role contributes to building their selected innovation and record notes in the Your Role in Innovation section of their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "f2476964-f881-487c-baf6-cbbab0a41b8e",
@@ -1097,7 +1097,7 @@
       "key": "5e93b33b-b592-4e08-9840-74867fac4c17",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pair student groups with another student group (ideally one with a different selected innovation) to share their findings.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 12 to complete the reflection questions.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Pair student groups with another student group (ideally one with a different selected innovation) to share their findings.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 12 to complete the reflection questions.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -1126,7 +1126,7 @@
       "key": "44b1a0e8-a9f2-482e-b3bd-2aeac62c7e92",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *hardware*."
+        "description": " <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define *hardware*."
       },
       "seeding_key": {
         "activity_section.key": "44b1a0e8-a9f2-482e-b3bd-2aeac62c7e92",
@@ -1149,7 +1149,7 @@
       "key": "f2d0bb3b-0cfb-41dc-8092-f1ec95e3d0e4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *input devices* and *output devices*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define *input devices* and *output devices*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in groups of three.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Hardware activity guide."
       },
       "seeding_key": {
         "activity_section.key": "f2d0bb3b-0cfb-41dc-8092-f1ec95e3d0e4",
@@ -1172,7 +1172,7 @@
       "key": "036a1b39-a8e5-4850-b0b6-37f1ae886de7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** In their groups, students walk around the classroom, identify different input and output devices, and record their observations in the Venn Diagram in the Device Walk section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** In their groups, students walk around the classroom, identify different input and output devices, and record their observations in the Venn Diagram in the Device Walk section of their activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Students will discuss the essential components a computer needs to function beyond input and output devices.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  *Besides input and output devices, what other components does a computer need to work?*\n- Round Robin Sharing: Invite students to share one insight about a crucial internal component that makes a computer function (e.g., CPU, RAM, storage, power supply). If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion aims to help students recognize that a computer is more than just peripherals—it requires processing power, memory, and storage to operate. By identifying these key components, students will build a foundation for understanding how computers process and store information.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "036a1b39-a8e5-4850-b0b6-37f1ae886de7",
@@ -1197,7 +1197,7 @@
       "key": "d6a3de74-df45-4fb8-a5a6-96cc928453aa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"How Computers Work\" from timemarks 2:50 to 4:24 to learn about the ISPO model."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video \"How Computers Work\" from timemarks 2:50 to 4:24 to learn about the ISPO model."
       },
       "seeding_key": {
         "activity_section.key": "d6a3de74-df45-4fb8-a5a6-96cc928453aa",
@@ -1220,7 +1220,7 @@
       "key": "c7bf6dfb-a54b-4320-9b3b-a2f4fcb5122c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define*memory*and*storage*."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define*memory*and*storage*."
       },
       "seeding_key": {
         "activity_section.key": "c7bf6dfb-a54b-4320-9b3b-a2f4fcb5122c",
@@ -1243,7 +1243,7 @@
       "key": "aeeb9c78-a1cc-4f2a-a656-c400c66b19aa",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage and memory components and take notes by writing a definition and an analogy for each in the Storage & Memory section of their activity guide.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 1. Each student will read about storage and memory components and take notes by writing a definition and an analogy for each in the Storage & Memory section of their activity guide.",
         "progression_name": "Storage and Memory Components"
       },
       "seeding_key": {
@@ -1267,7 +1267,7 @@
       "key": "4fbe5f5c-58bf-4118-8043-d568c86e9699",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define*processing components*."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define*processing components*."
       },
       "seeding_key": {
         "activity_section.key": "4fbe5f5c-58bf-4118-8043-d568c86e9699",
@@ -1290,7 +1290,7 @@
       "key": "c328c7fc-b500-4fb4-813b-947154432c38",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 2. Each student will read about processing components and take notes by writing a definition and an analogy for each in the Processing Components section of their activity guide.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 2. Each student will read about processing components and take notes by writing a definition and an analogy for each in the Processing Components section of their activity guide.",
         "progression_name": "Processing Components",
         "tips": [
           {
@@ -1320,7 +1320,7 @@
       "key": "c2912c82-7633-4387-b6a8-554cf7e4aade",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder web app and drag and drop components from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to Lesson 2, Level 3. Each student will open the PC Builder web app and drag and drop components from the left panel into the diagram, placing them in their correct locations. They will then select a highlight color to categorize each component based on its role in the computer system.",
         "progression_name": "Connecting Components"
       },
       "seeding_key": {
@@ -1346,7 +1346,7 @@
       "key": "18dc2ab5-a51c-478a-b1b2-94b230079d23",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 2, Level 4 to complete Levels 4 and 5. Each student will select a career option—gamer, music producer, content creator, or graphic designer. They will watch a short video where the professional explains how a specific hardware component (GPU, CPU, SSD, or RAM) impacts their work.",
         "progression_name": "Career Hardware Needs",
         "tips": [
           {
@@ -1375,7 +1375,7 @@
       "key": "e78d8786-c4ed-4f9e-88ad-522ab5bd28ff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Build My First PC\" from timemarks 1:08 to 5:48 to learn how to assemble a computer from scratch.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Ask students to share their thoughts with the class after watching the “How to Build a PC” video.\n- *What did you notice about the process of building a computer?*\n- *Did anything surprise you?*"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video \"Build My First PC\" from timemarks 1:08 to 5:48 to learn how to assemble a computer from scratch.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Ask students to share their thoughts with the class after watching the “How to Build a PC” video.\n- *What did you notice about the process of building a computer?*\n- *Did anything surprise you?*"
       },
       "seeding_key": {
         "activity_section.key": "e78d8786-c4ed-4f9e-88ad-522ab5bd28ff",
@@ -1386,7 +1386,7 @@
       "key": "d3ee4cce-b370-4bac-a5a6-9e4ee139a790",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Guess Who? Device Edition handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one to two**yes**or**no**questions with a shoulder partner that can help to narrow down the possible devices (*e.g. Does the device have a touch screen?*)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Call on students and have them pose one of their questions to ask out loud. You should answer with a***Yes***or***No***depending which device you’ve chosen. Instruct students to cross out the options they think are eliminated based on your answer on their activity guides. Continue this until students the majority of students raise their hand, signaling that are able to use deductive reasoning in order to accurately guess the device.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What strategy did you use to determine the device?*\n- *How could you have arrived at the correct device quicker?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might have asked about specific properties – the use, the appearance, or the price, for instance. By asking enough of these questions, they are able to systematically eliminate possibilities until only one remains. This is an example of deductive reasoning and is a useful troubleshooting strategy that we will use in today's lesson. Students might note that asking the questions in a different order might have helped them narrow down the potential right answer more quickly depending on which question they asked first. Asking a question that might eliminate the most possible answers is an effective strategy to employ.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Guess Who? Device Edition handout.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write one to two**yes**or**no**questions with a shoulder partner that can help to narrow down the possible devices (*e.g. Does the device have a touch screen?*)\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Call on students and have them pose one of their questions to ask out loud. You should answer with a***Yes***or***No***depending which device you’ve chosen. Instruct students to cross out the options they think are eliminated based on your answer on their activity guides. Continue this until students the majority of students raise their hand, signaling that are able to use deductive reasoning in order to accurately guess the device.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What strategy did you use to determine the device?*\n- *How could you have arrived at the correct device quicker?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might have asked about specific properties – the use, the appearance, or the price, for instance. By asking enough of these questions, they are able to systematically eliminate possibilities until only one remains. This is an example of deductive reasoning and is a useful troubleshooting strategy that we will use in today's lesson. Students might note that asking the questions in a different order might have helped them narrow down the potential right answer more quickly depending on which question they asked first. Asking a question that might eliminate the most possible answers is an effective strategy to employ.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "d3ee4cce-b370-4bac-a5a6-9e4ee139a790",
@@ -1397,7 +1397,7 @@
       "key": "496bf1cf-2a7c-4e80-bda1-5a408acbd75f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *troubleshooting*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the SNOT troubleshooting strategy and the first step.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the second step of the SNOT strategy.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the third step of the SNOT strategy.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the last step of the SNOT strategy.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Troubleshooting Hardware Issues activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Students should navigate to Lesson 3, Level 1.",
         "name": "Troubleshooting Hardware Issues",
         "progression_name": "Wearable Troubleshooting Scenario"
       },
@@ -1410,7 +1410,7 @@
       "key": "59d8e0ef-a3de-4cde-a402-4a4bc01b61c0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask a student read the description of the issue in the first panel, then have students examine the diagram on the right-hand side. This diagram is an abstraction of a computing system with descriptions of the important hardware components and connections. Students should restate the issue that the user in their own words under the ***Self*** step on page one of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students should examine the possible technical solutions to Maya's issue with her wearable on the second panel of Level 1. Have them select the most likely solutions and write them in the boxes under the ***Neighbor*** portion of their activity guide. Encourage students to also add a few of their own ideas into the activity guide as well.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should examine the online resources presented on the remaining panels on Level 1 to narrow down Maya's problem further. In their activity guide, have them cross out solutions that seem unlikely given the new information that they learn from these online resources.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask a student read the description of the issue in the first panel, then have students examine the diagram on the right-hand side. This diagram is an abstraction of a computing system with descriptions of the important hardware components and connections. Students should restate the issue that the user in their own words under the ***Self*** step on page one of their activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** With a partner, students should examine the possible technical solutions to Maya's issue with her wearable on the second panel of Level 1. Have them select the most likely solutions and write them in the boxes under the ***Neighbor*** portion of their activity guide. Encourage students to also add a few of their own ideas into the activity guide as well.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students should examine the online resources presented on the remaining panels on Level 1 to narrow down Maya's problem further. In their activity guide, have them cross out solutions that seem unlikely given the new information that they learn from these online resources.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1449,7 +1449,7 @@
       "key": "0f6fdf38-fef0-4c43-aaeb-9cb964c07be1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 2. Guide students through troubleshooting Maya’s wearable as a class:\n- Use this [**example script**](https://docs.google.com/document/d/1EYYl4pCvx9htfz1RpXylU3SZpaUf_K_dlkUNeNPZMmQ/edit?usp=sharing) for the demo.\n- Model how to ask logical questions to gather information and eliminate incorrect causes.\n- Reference the activity guide to pull information from self, a neighbor, and online resources.\n- Show how to use deductive reasoning to propose and test a solution.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 2. Guide students through troubleshooting Maya’s wearable as a class:\n- Use this [**example script**](https://docs.google.com/document/d/1EYYl4pCvx9htfz1RpXylU3SZpaUf_K_dlkUNeNPZMmQ/edit?usp=sharing) for the demo.\n- Model how to ask logical questions to gather information and eliminate incorrect causes.\n- Reference the activity guide to pull information from self, a neighbor, and online resources.\n- Show how to use deductive reasoning to propose and test a solution.",
         "progression_name": "Troubleshooting Maya's Wearable"
       },
       "seeding_key": {
@@ -1461,7 +1461,7 @@
       "key": "5e22d4de-6f91-4487-9d45-79c329a3e2a7",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 3 to complete the **You Do** section of the activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 3, Level 3 to complete the **You Do** section of the activity guide.",
         "progression_name": "Hardware Troubleshooting Scenarios"
       },
       "seeding_key": {
@@ -1473,7 +1473,7 @@
       "key": "fbb604c5-cc41-43cd-b71b-48dfb45a9b9d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students as necessary with the steps of the SNOT strategy."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist students as necessary with the steps of the SNOT strategy."
       },
       "seeding_key": {
         "activity_section.key": "fbb604c5-cc41-43cd-b71b-48dfb45a9b9d",
@@ -1514,7 +1514,7 @@
       "key": "97f7dfaa-b637-4c05-b41e-b5af4e39daf9",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did employing a strategy for troubleshooting assist with resolving hardware issues?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might articulate that using a strategy like SNOT reduces guesswork and frustration by breaking down the problem into manageable parts (**decomposition** in computational thinking), helps pinpoint causes more quickly and accurately, and encourages independent, logical problem-solving skills that transfer to various real-world situations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students choose one of the videos that provides details about a hardware-related career\n- **Level 6:** Students speculate about how troubleshooting strategies might be employed within this specific career",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did employing a strategy for troubleshooting assist with resolving hardware issues?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might articulate that using a strategy like SNOT reduces guesswork and frustration by breaking down the problem into manageable parts (**decomposition** in computational thinking), helps pinpoint causes more quickly and accurately, and encourages independent, logical problem-solving skills that transfer to various real-world situations.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 5 to complete Levels 5 and 6.\n- **Level 5:** Students choose one of the videos that provides details about a hardware-related career\n- **Level 6:** Students speculate about how troubleshooting strategies might be employed within this specific career",
         "progression_name": "Hardware Careers: Components and Troubleshooting",
         "tips": [
           {
@@ -1543,7 +1543,7 @@
       "key": "e1912135-6a27-486b-af32-bf328539e8b3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What real-life problems could benefit from a troubleshooting strategy and how?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share examples of problems they have encountered before where the troubleshooting strategy they used today could have helped them.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What real-life problems could benefit from a troubleshooting strategy and how?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share examples of problems they have encountered before where the troubleshooting strategy they used today could have helped them.\n"
       },
       "seeding_key": {
         "activity_section.key": "e1912135-6a27-486b-af32-bf328539e8b3",
@@ -1566,7 +1566,7 @@
       "key": "1562f9d7-5b48-4c2e-866d-0f14c3c56824",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to show each scenario and ask students which device they would use for that scenario. Ask students to hold up one finger if they would choose laptop, two fingers if they would choose a phone, or three fingers for a tablet. Have students look around the room to see if their answer is different from their peers. Call on a student after each prompt to justify their answer.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to show each scenario and ask students which device they would use for that scenario. Ask students to hold up one finger if they would choose laptop, two fingers if they would choose a phone, or three fingers for a tablet. Have students look around the room to see if their answer is different from their peers. Call on a student after each prompt to justify their answer.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "1562f9d7-5b48-4c2e-866d-0f14c3c56824",
@@ -1577,7 +1577,7 @@
       "key": "b41cd6ea-0eff-423e-82c5-9d3d628a477f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"How Computers Work: Hardware and Software\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> Questions To Consider with the **Video:** \n- *What pieces of hardware do you recognize?*\n- *How are operating systems different from other types of software?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the CPU and also various input and output components in the video. They may also point out that in the video “Memory” has a generic label but that this job would be taken care of by a hard drive or RAM. Listen for students to rephrase “master program” from the video in their own words or articulate that it controls which software runs and which input and output devices it has access to.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the video \"How Computers Work: Hardware and Software\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> Questions To Consider with the **Video:** \n- *What pieces of hardware do you recognize?*\n- *How are operating systems different from other types of software?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the CPU and also various input and output components in the video. They may also point out that in the video “Memory” has a generic label but that this job would be taken care of by a hard drive or RAM. Listen for students to rephrase “master program” from the video in their own words or articulate that it controls which software runs and which input and output devices it has access to.",
         "name": "Software Scavenger Hunt",
         "tips": [
           {
@@ -1617,7 +1617,7 @@
       "key": "f8284eba-ed2c-42b9-89f4-f1fe764f9a46",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the components of a computer system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to introduce operating systems, application software, and utility software.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have students work on the Scavenger Hunt.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students are working encourage them to share task solutions with each other as they explore where to find these. Push them to consider looking in multiple places and on different devices for the tasks they might get stuck on. They don’t need to find all the solutions on a single device or platform. If students finish early, push them to find as many examples for the bonus tasks as possible.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the components of a computer system diagram.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to introduce operating systems, application software, and utility software.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Have each pair make a copy of the Scavenger Hunt slides.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Have students work on the Scavenger Hunt.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students are working encourage them to share task solutions with each other as they explore where to find these. Push them to consider looking in multiple places and on different devices for the tasks they might get stuck on. They don’t need to find all the solutions on a single device or platform. If students finish early, push them to find as many examples for the bonus tasks as possible.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1634,7 +1634,7 @@
       "key": "da6b5d50-2310-4a8e-a251-dff09ff15b1d",
       "position": 5,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to answer the questions.",
+        "description": "\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1 to answer the questions.",
         "progression_name": "Software Scavenger Hunt Debrief",
         "tips": [
           {
@@ -1662,7 +1662,7 @@
       "key": "df675d9b-f675-4e44-9b37-8ad9543b1228",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about the roles of operating systems, application software, and utility software?*\n- *Which of these types of software do you use most often, and why?*\n- *How do you think understanding these tools will help you in the future?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ensure students can clearly articulate the distinct roles of each type of software: operating systems manage hardware and software, application software helps users complete tasks, and utility software keeps systems running smoothly. Help students connect the lesson to their own lives by identifying the software they use regularly. Highlight how each type of software impacts their day-to-day activities, such as gaming, communicating, or studying. Prompt students to consider why some types of software might feel more \"invisible\" (like utility software) compared to application software they interact with directly. Discuss how knowledge of these software types applies to future careers or problem-solving scenarios (e.g., using applications in a job, troubleshooting operating systems, optimizing devices with utilities). Emphasize how understanding software roles can make students more independent when troubleshooting or choosing the right tools for a task. Help students see the value of learning about software now to prepare for challenges in technology-driven fields or daily life.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you learn about the roles of operating systems, application software, and utility software?*\n- *Which of these types of software do you use most often, and why?*\n- *How do you think understanding these tools will help you in the future?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Ensure students can clearly articulate the distinct roles of each type of software: operating systems manage hardware and software, application software helps users complete tasks, and utility software keeps systems running smoothly. Help students connect the lesson to their own lives by identifying the software they use regularly. Highlight how each type of software impacts their day-to-day activities, such as gaming, communicating, or studying. Prompt students to consider why some types of software might feel more \"invisible\" (like utility software) compared to application software they interact with directly. Discuss how knowledge of these software types applies to future careers or problem-solving scenarios (e.g., using applications in a job, troubleshooting operating systems, optimizing devices with utilities). Emphasize how understanding software roles can make students more independent when troubleshooting or choosing the right tools for a task. Help students see the value of learning about software now to prepare for challenges in technology-driven fields or daily life.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1690,7 +1690,7 @@
       "key": "63e71c1f-d41d-4152-97cb-41727dc2016c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What role does software play in enabling computer systems to function? Give a specific example from today's activities.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Emphasize the interdependence of hardware and software in modern technology. Ensure students can link specific examples from the scavenger hunt to their everyday lives or future careers (e.g., writing programs for authors, productivity tools for entrepreneurs, system maintenance tools for IT professionals). Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What role does software play in enabling computer systems to function? Give a specific example from today's activities.*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that software enables hardware to perform meaningful tasks and makes devices useful. Emphasize the interdependence of hardware and software in modern technology. Ensure students can link specific examples from the scavenger hunt to their everyday lives or future careers (e.g., writing programs for authors, productivity tools for entrepreneurs, system maintenance tools for IT professionals). Encourage students to consider how their own devices and software enable their daily tasks and what they would do if these systems failed.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1707,7 +1707,7 @@
       "key": "2963190c-bd2e-4619-9aaf-871d12a8d109",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do these jobs have in common?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Pull out that they all work on seeing how products work, meet certain standards, or don’t.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Meet Test Engineers at Google\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:**\n- *Why do you think Google invests the money and resources that it does into test engineering?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to point out that catching errors and bugs will result in a better experience for users and Google’s ability to sell more products. Students may also bring up that companies can build trust in their products by investing money into testing them internally before releasing them to the public.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do these jobs have in common?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Pull out that they all work on seeing how products work, meet certain standards, or don’t.\n\n<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Meet Test Engineers at Google\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Question to Consider While Watching:**\n- *Why do you think Google invests the money and resources that it does into test engineering?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to point out that catching errors and bugs will result in a better experience for users and Google’s ability to sell more products. Students may also bring up that companies can build trust in their products by investing money into testing them internally before releasing them to the public.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1734,7 +1734,7 @@
       "key": "4a4402a5-e605-4562-b65e-08e2b93a6260",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4a4402a5-e605-4562-b65e-08e2b93a6260",
@@ -1745,7 +1745,7 @@
       "key": "03623627-f842-4e5f-a2b3-b856572e3178",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Give them time to discover how it works, run across the scenarios that pop up as they are playing the game, and attempt to troubleshoot them.",
         "duration": "20",
         "name": "Troubleshooting",
         "progression_name": "Troubleshooting",
@@ -1775,7 +1775,7 @@
       "key": "88fc0277-6123-44b2-8409-412ff5f9207c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 5, Level 2 and have them answer the prompts.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 5, Level 2 and have them answer the prompts.",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -1807,7 +1807,7 @@
       "key": "d922892f-8909-4c4a-a503-5ec84574278a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which scenario felt most realistic?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share comparisons to real-world troubleshooting situations they’ve encountered and how those were similar or different to what they encountered in the simulation. Pull out the idea of a process being followed no matter what the problem you are facing.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one step you would always try first in a real-world troubleshooting process?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Pick out themes or specific answers for students to expand on.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share the “why” behind the step they picked and have them expand on their reasoning. Some examples of things students might share:\n- “I always restart my device when there is an issue because I’ve found that it fixes most problems even if I don’t necessarily understand why.”\n- “I start by googling the error or problem I’m facing to see if I can find a youtube video showing how to fix it. That way I have a step-by-step guide that I can go through at my own pace.”\n- “I would try anything that would help me narrow down the what it causing the issue because that’s what we learned a few lessons ago.”"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which scenario felt most realistic?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share comparisons to real-world troubleshooting situations they’ve encountered and how those were similar or different to what they encountered in the simulation. Pull out the idea of a process being followed no matter what the problem you are facing.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one step you would always try first in a real-world troubleshooting process?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Pick out themes or specific answers for students to expand on.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to share the “why” behind the step they picked and have them expand on their reasoning. Some examples of things students might share:\n- “I always restart my device when there is an issue because I’ve found that it fixes most problems even if I don’t necessarily understand why.”\n- “I start by googling the error or problem I’m facing to see if I can find a youtube video showing how to fix it. That way I have a step-by-step guide that I can go through at my own pace.”\n- “I would try anything that would help me narrow down the what it causing the issue because that’s what we learned a few lessons ago.”"
       },
       "seeding_key": {
         "activity_section.key": "d922892f-8909-4c4a-a503-5ec84574278a",
@@ -1832,7 +1832,7 @@
       "key": "9cffc06b-7c83-4573-a864-bb8c612eb734",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the difference between troubleshooting and optimization.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Optimization activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 5, Level 3. Students complete the activity guide with the chatbot.",
         "progression_name": "Optimization"
       },
       "seeding_key": {
@@ -1844,7 +1844,7 @@
       "key": "e312cb8f-776f-4249-b453-e1c8a7cdf1fb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students going back and forth between discussing the options amongst themselves and asking the AI Chat for input. If students aren’t engaging with each other, use questioning to get them to explain their process and thinking about whichever scenario they are working through.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students going back and forth between discussing the options amongst themselves and asking the AI Chat for input. If students aren’t engaging with each other, use questioning to get them to explain their process and thinking about whichever scenario they are working through.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1861,7 +1861,7 @@
       "key": "ff958958-852a-45ff-9eef-b6c141fba838",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the end of the Unit Guide for Lesson 5. Have students reflect on the lesson using Closing the Loop.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the end of the Unit Guide for Lesson 5. Have students reflect on the lesson using Closing the Loop.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1889,7 +1889,7 @@
       "key": "59f661ec-b7ca-41d3-8806-f800fc48a9d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of 4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each student a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write \"Input\", \"Output\", \"Storage\", and \"Internal Components\" on separate pieces of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students participate in a round-robin activity where they brainstorm an idea quickly, and pass their paper to the left. They start by writing one hardware example under the category heading on their paper and circle their example on the paper. They then pass their paper to the left and repeat this process, adding as many examples as possible in the time given. If a student cannot think of an example, they can skip and pass the paper.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with examples. If a group appears stuck, encourage them to switch papers. The time will go fast, and the idea is to brainstorm as quickly as possible.\n\n\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of 4.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Give each student a blank piece of paper.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write \"Input\", \"Output\", \"Storage\", and \"Internal Components\" on separate pieces of paper.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students participate in a round-robin activity where they brainstorm an idea quickly, and pass their paper to the left. They start by writing one hardware example under the category heading on their paper and circle their example on the paper. They then pass their paper to the left and repeat this process, adding as many examples as possible in the time given. If a student cannot think of an example, they can skip and pass the paper.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with examples. If a group appears stuck, encourage them to switch papers. The time will go fast, and the idea is to brainstorm as quickly as possible.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1916,7 +1916,7 @@
       "key": "4738ad5d-dce8-485b-b5b1-eac225c7ed9e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Could you make a working computer from all of the hardware that your group has listed, or are there important components missing?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students collaboratively analyze the list of computer hardware components generated during the activity to determine if they have all the essential parts needed to build a functioning computer. They identify any missing components and explain why each component is critical to the computer's operation. This discussion aims to deepen their understanding of computer architecture and enhance their critical thinking and communication skills.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students redistribute the papers. Students choose one of the components on the paper from Round One and write a definition, description, analogy, or make a fast sketch that explains what this component is or what it does within a computer system. They then pass papers to the left and repeat the process.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with contributions. If a group member appears stuck, encourage them to switch papers.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of this hardware component in a computer system? Are there descriptions, analogies, or images you might add to further explain the component?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion seeks to help them recall prior learning and discuss the work that they have created as a group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Could you make a working computer from all of the hardware that your group has listed, or are there important components missing?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students collaboratively analyze the list of computer hardware components generated during the activity to determine if they have all the essential parts needed to build a functioning computer. They identify any missing components and explain why each component is critical to the computer's operation. This discussion aims to deepen their understanding of computer architecture and enhance their critical thinking and communication skills.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students redistribute the papers. Students choose one of the components on the paper from Round One and write a definition, description, analogy, or make a fast sketch that explains what this component is or what it does within a computer system. They then pass papers to the left and repeat the process.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As the students work, encourage them to keep coming up with contributions. If a group member appears stuck, encourage them to switch papers.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is the importance of this hardware component in a computer system? Are there descriptions, analogies, or images you might add to further explain the component?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion seeks to help them recall prior learning and discuss the work that they have created as a group.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "4738ad5d-dce8-485b-b5b1-eac225c7ed9e",
@@ -1927,7 +1927,7 @@
       "key": "02bf0af8-bc60-46cd-a441-07a026c1ef38",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *build*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students should spend a few minutes exploring PCPartPicker by clicking the blue buttons to explore different components, using the filtering options available on the left-hand side of the screen, or even exploring builds that other users have shared. ",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *build*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students should spend a few minutes exploring PCPartPicker by clicking the blue buttons to explore different components, using the filtering options available on the left-hand side of the screen, or even exploring builds that other users have shared. ",
         "progression_name": "PCPartPicker"
       },
       "seeding_key": {
@@ -1939,7 +1939,7 @@
       "key": "c18b3240-cef2-46ed-96bd-525d0dc4c575",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Show students how to click the buttons and search components. Point out the different ways to filter - price, manufacturer, specifications, etc.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Show students how to click the buttons and search components. Point out the different ways to filter - price, manufacturer, specifications, etc.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1966,7 +1966,7 @@
       "key": "19e61135-86ca-4926-8267-19a4850be3a2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about this website? What do you wonder about this website?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that this website helps users build a computer by allowing them to choose a list of compatible parts; it shows prices for different components which makes it easier to budget; there is a section for completed builds that users have shared; and there are warnings that pop up if incompatible parts are selected. Students might wonder: *What are all of the specifications for? What is the difference between brands and manufacturers? Why are some parts more expensive than others?*\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Place students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Build a Computer System activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2. Students should select a user that they want to design a computer system for and complete the User Profile section of the activity guide.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice about this website? What do you wonder about this website?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students might notice that this website helps users build a computer by allowing them to choose a list of compatible parts; it shows prices for different components which makes it easier to budget; there is a section for completed builds that users have shared; and there are warnings that pop up if incompatible parts are selected. Students might wonder: *What are all of the specifications for? What is the difference between brands and manufacturers? Why are some parts more expensive than others?*\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Place students into pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Build a Computer System activity guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2. Students should select a user that they want to design a computer system for and complete the User Profile section of the activity guide.",
         "progression_name": "Computer Build User Profiles"
       },
       "seeding_key": {
@@ -1978,7 +1978,7 @@
       "key": "87af51c1-e393-4824-b160-df783beda9a7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 3. Students should complete their activity guide using the PCPartPicker website and the Computer Build Assistant.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 6, Level 3. Students should complete their activity guide using the PCPartPicker website and the Computer Build Assistant.",
         "progression_name": "Computer Build Assistant"
       },
       "seeding_key": {
@@ -1990,7 +1990,7 @@
       "key": "69d929b1-71e5-4c4a-bfab-192907482036",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students who are stuck, help craft questions for the AI chatbot with students, ask leading questions to get them to consider the needs of their chosen user.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist students who are stuck, help craft questions for the AI chatbot with students, ask leading questions to get them to consider the needs of their chosen user.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2017,7 +2017,7 @@
       "key": "5cf04fee-c019-405d-9193-25e1259bbe6b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one decision that you had to make in your build to align with your user's needs or preferences?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share how they considered and prioritized needs and preferences while working on their build."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one decision that you had to make in your build to align with your user's needs or preferences?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share how they considered and prioritized needs and preferences while working on their build."
       },
       "seeding_key": {
         "activity_section.key": "5cf04fee-c019-405d-9193-25e1259bbe6b",
@@ -2039,7 +2039,7 @@
       "key": "9f160b2f-8b5d-4b9e-b320-af4a3dde9aad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4. Students should write a news headline that summarizes something important that they learned or a key takeaway from their experience creating their computer build.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4. Students should write a news headline that summarizes something important that they learned or a key takeaway from their experience creating their computer build.\n",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -2057,7 +2057,7 @@
       "key": "f7cbc51c-9463-4b27-b761-febc861ac7a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a blank piece of paper.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Play the video clip. Students should list the data or types of data that could be collected in this scenario.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - number of vehicles or pedestrians on the street\n- Audio Data - noise level, types of sounds (car horns, rain, footsteps, etc.)\n- Location Data - GPS coordinates of where the video was recorded\n- Environmental Data - Temperature, rain intensity\n- Text Data - Street signs, billboards, shop names, or license plate numbers.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Actions being performed (chopping, stirring, plating)\n- Audio Data - Type of sounds (alarms for timers, equipment hums, verbal orders)\n- Location Data - Movements of staff (areas of the kitchen frequently occupied, paths taken between stations)\n- Environmental Data - Kitchen temperature\n- Biometric Data - Stress indicators (heart rate, hurried movements)\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Students repeat the activity again for a different 10 second scene. They should write down as many ideas for how data might be gathered from the scenario that they can within a minute.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to think about different types of data that might be collected from the scene: \n- Visual Data - Number and types of trees, plants, or rocks visible\n- Audio Data - Birdsong frequency and species identification\n- Location Data - Pathways and trails mapped within the scene\n- Environmental Data - Air quality\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an example of data that could be collected from one of the scenarios. Why might this data be useful?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students suggest ways that the data can be used. For example, in the rainy city scenario, they might suggest that the number of vehicles on the street might help city planners identify peak traffic times and design better traffic flow solutions. In the restaurant kitchen scenario, the movements of staff could help inform the kitchen layout to minimize traffic and improve workflow efficiency. In the nature scenario, the temperature or air quality could be tracked over time.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce types of data that computer systems can collect.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "f7cbc51c-9463-4b27-b761-febc861ac7a6",
@@ -2068,7 +2068,7 @@
       "key": "2cc31162-fb6b-49cd-9c48-a2d3ce438740",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of three or four.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students choose one of the stations. With their group, they read the station activity card. This card sets up unique challenges or problems faced by different careers. Students should complete the **Empathize with the User** section of their activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students should complete the Define the Data and Ideate a Solution sections of the activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Repeat the activity, allowing students to select a new station. Encourage them to add different data ideas to the station's sticky notes.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Data in Computer Systems activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *sensor*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1. Students work on posing questions about data, sensors, and their role in a computer system. They should research sensors that came up as part of their solution to their scenarios that they explored in the station activity.\n",
         "progression_name": "Sensors and AI Chatbot",
         "tips": [
           {
@@ -2086,7 +2086,7 @@
       "key": "c753681e-083e-4764-be71-99e4ec13213b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 4 minutes, sharing information about one of the sensors that they encountered with a classmate, and getting information about a different sensor back in return. Note: students should not feel obligated to complete the entire chart. It should be used as a way to document their learning experience based on the sensors that were applicable to their station."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students rotate around the room for 4 minutes, sharing information about one of the sensors that they encountered with a classmate, and getting information about a different sensor back in return. Note: students should not feel obligated to complete the entire chart. It should be used as a way to document their learning experience based on the sensors that were applicable to their station."
       },
       "seeding_key": {
         "activity_section.key": "c753681e-083e-4764-be71-99e4ec13213b",
@@ -2108,7 +2108,7 @@
       "key": "4feb900a-6154-409e-82df-7272888a2108",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write one key insight or takeaway from today's lesson that relates to the Question of the Day. This can be completed in the Unit Guide, under the Question of the Day section. Have them share their takeaways with a partner or with the class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write one key insight or takeaway from today's lesson that relates to the Question of the Day. This can be completed in the Unit Guide, under the Question of the Day section. Have them share their takeaways with a partner or with the class.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2125,7 +2125,7 @@
       "key": "3a62f828-9233-4403-aef4-e40df3a34696",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students 20 to 25 UNO cards.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of four.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students 20 to 25 UNO cards.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2164,7 +2164,7 @@
       "key": "e4ac5f10-1aa4-4275-9da6-57a06f3267ee",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students sort their cards by number in ascending order.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after sorting?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for responses like, \"The cards were easier to analyze,\" or \"It helped us quickly identify the highest and lowest values.\""
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Students sort their cards by number in ascending order.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after sorting?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for responses like, \"The cards were easier to analyze,\" or \"It helped us quickly identify the highest and lowest values.\""
       },
       "seeding_key": {
         "activity_section.key": "e4ac5f10-1aa4-4275-9da6-57a06f3267ee",
@@ -2187,7 +2187,7 @@
       "key": "ef6593e5-ca12-4237-9902-da746579e9ca",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students will choose one color and filter their deck to include only the cards of that color, setting aside the others.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after filtering?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for responses like, \"We could focus on a specific group of cards,\" or \"It showed which colors had more or fewer cards.\""
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Students will choose one color and filter their deck to include only the cards of that color, setting aside the others.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after filtering?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for responses like, \"We could focus on a specific group of cards,\" or \"It showed which colors had more or fewer cards.\""
       },
       "seeding_key": {
         "activity_section.key": "ef6593e5-ca12-4237-9902-da746579e9ca",
@@ -2210,7 +2210,7 @@
       "key": "39e902bc-5c72-4f73-91be-141bd7f82948",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will count how many cards they have for each color and record the totals for red, blue, yellow, and green.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after counting?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for insights like, \"Red and blue cards made up most of the deck,\" or \"It helped us see which colors were more common.\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Play the music clip (blue volume icon) during this round as students work.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students will count how many cards they have for each color and record the totals for red, blue, yellow, and green.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss**: *What patterns or insights did you notice after counting?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal**: Listen for insights like, \"Red and blue cards made up most of the deck,\" or \"It helped us see which colors were more common.\"\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "39e902bc-5c72-4f73-91be-141bd7f82948",
@@ -2221,7 +2221,7 @@
       "key": "8cb03658-9152-43a9-aab2-0107b3f93ff1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Processing Library Data activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Processing Library Data activity guide.",
         "duration": "20",
         "name": "Processing Library Data"
       },
@@ -2246,7 +2246,7 @@
       "key": "556b8d28-30af-449d-8964-672109abb2ce",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps:\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (verb):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort** by descending order of Popularity Score.\n- **Describe the output:** Sort by descending order of Popularity Score.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition**: Direct students to open Lesson 8, Level 1. Walk students through solving the first choice level using the following steps:\n- **Define the goal:** A new visitor wants to know the hottest books to start reading.\n- **Identify the relevant data:** Popularity Score column.\n- **Choose the action (verb):** Sort.\n- **Apply the action:** Use the spreadsheet to **sort** by descending order of Popularity Score.\n- **Describe the output:** Sort by descending order of Popularity Score.\n- **Describe the output:** The books are now listed from most popular to least popular.\n- **Reflect on insights**: This helps the library highlight the most popular books to new visitors.",
         "progression_name": "Processing Library Data"
       },
       "seeding_key": {
@@ -2258,7 +2258,7 @@
       "key": "c6f3948f-7775-46d8-82e6-ad0afa8d1bee",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Model filling out the Madlib template on chart paper or the board for the first scenario: “The system needs to [show the hottest books to visitors]. To do this, it will [Sort] the [Popularity Score column] by [descending order]. The system will then produce [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Model filling out the Madlib template on chart paper or the board for the first scenario: “The system needs to [show the hottest books to visitors]. To do this, it will [Sort] the [Popularity Score column] by [descending order]. The system will then produce [a list of books ranked by popularity] so that [visitors know the best books to start with].”"
       },
       "seeding_key": {
         "activity_section.key": "c6f3948f-7775-46d8-82e6-ad0afa8d1bee",
@@ -2281,7 +2281,7 @@
       "key": "d5a720b9-b4b6-40ec-a466-19aa6e0f6f7c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Students complete the remaining library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for three of the choice levels, and fill out the Madlib template to summarize their process and results for three of the choice levels level."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Students complete the remaining library data choice levels in Lesson 8, Level 1. They use their activity guide to write down the steps for three of the choice levels, and fill out the Madlib template to summarize their process and results for three of the choice levels level."
       },
       "seeding_key": {
         "activity_section.key": "d5a720b9-b4b6-40ec-a466-19aa6e0f6f7c",
@@ -2292,7 +2292,7 @@
       "key": "f2916cd7-fa35-431d-b013-73c0f111c717",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their flowchart worksheets and Madlib templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate**:\n- Observe students as they work through the scenarios.\n- Check that students are filling out their flowchart worksheets and Madlib templates correctly.\n- Provide guidance or clarification if students are stuck on any step.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2319,7 +2319,7 @@
       "key": "fb4e2395-5a9d-4a9c-afbb-293268ff3693",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. Ask student pairs to share their answers, focusing on the flowchart steps and the Madlib templates. Highlight and clarify any differences or commonalities in their findings."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Once students have completed their scenarios, lead a review as a class. Ask student pairs to share their answers, focusing on the flowchart steps and the Madlib templates. Highlight and clarify any differences or commonalities in their findings."
       },
       "seeding_key": {
         "activity_section.key": "fb4e2395-5a9d-4a9c-afbb-293268ff3693",
@@ -2344,7 +2344,7 @@
       "key": "88c55c5f-074c-4292-93da-4996a5860c64",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to respond to the reflection questions on Levels 2, 3, and 4.",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -2373,7 +2373,7 @@
       "key": "8014d956-406f-41b9-9ef5-f609ba1933cf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or small piece of paper."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or small piece of paper."
       },
       "seeding_key": {
         "activity_section.key": "8014d956-406f-41b9-9ef5-f609ba1933cf",
@@ -2396,7 +2396,7 @@
       "key": "457ae046-f0ef-453c-a7b2-909039939dd4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video**: Show the video \"This AI coach can show tennis players how to up their game\".\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students watch the video carefully and answer the questions on their index card.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2425,7 +2425,7 @@
       "key": "8eab9275-460f-4f82-8207-545c50f7b771",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Can AI help us predict extreme weather\" from 0:00 to 1:39.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What types of atmospheric data gets collected by satellites, weather stations, and buoys?*\n- Round Robin Sharing: Invite students to share one data type. If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should mention temperature, wind speed, humidity, air pressure, and cloud images as key data inputs.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Can AI help us predict extreme weather\" from 3:54 to 5:30.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What benefits are there to using AI to make weather forecasts?*\n- *Do you think AI forecasts always get it right?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** AI speeds up analysis, making predictions in seconds instead of weeks. AI models prioritize accuracy and learn from penalties for incorrect predictions. Ultimately, whether it’s done by a human or by AI it’s still a prediction or educated guess about what will happen. This particular forecasting AI prioritizes safer, more likely outcomes and can miss catastrophic weather events. This is especially true because these AI models are trained on the past 40 years of weather data and we currently have (and will continue to have) more unpredictable, extreme weather events due to climate change.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video \"Can AI help us predict extreme weather\" from 0:00 to 1:39.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What types of atmospheric data gets collected by satellites, weather stations, and buoys?*\n- Round Robin Sharing: Invite students to share one data type. If time allows, go around the room or ask for volunteers.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should mention temperature, wind speed, humidity, air pressure, and cloud images as key data inputs.\n\n<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video \"Can AI help us predict extreme weather\" from 3:54 to 5:30.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What benefits are there to using AI to make weather forecasts?*\n- *Do you think AI forecasts always get it right?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** AI speeds up analysis, making predictions in seconds instead of weeks. AI models prioritize accuracy and learn from penalties for incorrect predictions. Ultimately, whether it’s done by a human or by AI it’s still a prediction or educated guess about what will happen. This particular forecasting AI prioritizes safer, more likely outcomes and can miss catastrophic weather events. This is especially true because these AI models are trained on the past 40 years of weather data and we currently have (and will continue to have) more unpredictable, extreme weather events due to climate change.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "8eab9275-460f-4f82-8207-545c50f7b771",
@@ -2436,7 +2436,7 @@
       "key": "f35bae51-25cc-46a1-ae0e-288e73b58783",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a How AI Uses Data activity guide.",
         "duration": "10",
         "name": "AI in the Real World"
       },
@@ -2461,7 +2461,7 @@
       "key": "dd95068b-712d-4166-bc38-5b046795852a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 1. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of 3-4. Assign each group an AI use case:\n- Voice Assistants (Alexa/Siri): AI processes voice input and generates responses.\n- Self-Driving Cars: AI uses sensor data to navigate roads.\n- Medical Imaging AI: AI scans medical images for disease detection.\n- AI Translation Tools: AI converts text/audio between languages.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to open Lesson 9, Level 1. In their groups, students will watch a video about the assigned technology and answer the following questions in their activity guide:\n- What is the AI model doing in this scenario?\n- What type of data is being input?\n- What is the decision being made? In other words, what does this AI system do with the data?\n- Why does this task require speed and scale?",
         "progression_name": "Explore an AI Model"
       },
       "seeding_key": {
@@ -2473,7 +2473,7 @@
       "key": "8ea75f75-1d02-4b31-8bdb-35d1e1d7e2ec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Make sure that all students are able to answer all questions. At the end of the lesson, students will do a jigsaw activity to share out their answers."
       },
       "seeding_key": {
         "activity_section.key": "8ea75f75-1d02-4b31-8bdb-35d1e1d7e2ec",
@@ -2484,7 +2484,7 @@
       "key": "3da79737-633f-47dd-a1bc-c35afb6f3e9b",
       "position": 5,
       "properties": {
-        "description": " <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 2. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
+        "description": " <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define *processing unit*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Explain that just like different tools are suited for different jobs, AI models need the right kind of hardware to function efficiently. Computers use different types of processing units depending on the task. Some are more flexible, meaning they can handle a variety of tasks, while others are built for efficiency, meaning they are designed for a specific purpose and run faster with less energy. Let’s explore how these four processing units work.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce CPUs.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce GPUs.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce FPGA.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Click through the animated slide to introduce ASICs.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to open Lesson 9, Level 2. Students will select a computing task from a list of options and choose a processing unit (CPU, GPU, FPGA, or ASIC) to complete the task. They will observe the benchmarking results and receive a performance score based on their selection. Students should record their observations in their activity guide, analyzing which processor performed best for each task and why.",
         "duration": "15",
         "name": "AI Hardware",
         "progression_name": "Processing Unit Battle"
@@ -2498,7 +2498,7 @@
       "key": "762867e9-176a-4252-862a-00666512cd33",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for their AI model. They record their findings and respond to guided questions in the Determine AI Hardware section of their activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Direct students to Lesson 9, Level 3. Students use AI Chat to research and choose the best AI hardware for their AI model. They record their findings and respond to guided questions in the Determine AI Hardware section of their activity guide.",
         "progression_name": "Determine AI Hardware",
         "tips": [
           {
@@ -2527,7 +2527,7 @@
       "key": "211d20ed-3c2c-4f23-859b-10dfe3a082e2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This**: Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Form new groups (1 student from each AI case study per group). Each student presents their AI system, explaining what the AI model does, what kind of data it processes, and what hardware best supports it and why.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate**: Ensure students explain why specific hardware is best suited for their AI model.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2544,7 +2544,7 @@
       "key": "ac3b3481-ce59-4990-8430-7754c3070f88",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Play the video (0:00 - 1:48).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Play the video (0:00 - 1:48).\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of IoT devices you've heard about or used?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to realize they interact with IoT devices and systems in different parts of their lives. For example, a smartwatch tracks your steps and sends the information to an app on your phone, or a smart thermostat adjusts the temperature in your home based on the weather outside.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2571,7 +2571,7 @@
       "key": "f5848331-5593-4166-b391-e5c00ec0934f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *Internet of Things (IoT)*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *Internet of Things (IoT)*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "f5848331-5593-4166-b391-e5c00ec0934f",
@@ -2582,7 +2582,7 @@
       "key": "00b10e83-f3a9-45dc-9495-97402639ebb4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Transmission of Data Unit Guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Internet of Things activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce examples of standalone devices, such as pedometers or digital thermometers. Then give students examples of IoT devices, such as an Alexa speaker or a Ring camera.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to choose one pair of devices and respond to the first question on the activity guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are different ways that you might connect a device in order to communicate data?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This should be a quick whole-class discussion to activate prior knowledge before reviewing some of the different methods that IoT devices communicate to the internet.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Transmission of Data Unit Guide.",
         "duration": "15",
         "name": "Exploring IoT Systems, Hardware, and Privacy Concerns"
       },
@@ -2607,7 +2607,7 @@
       "key": "ce009352-89e5-40a9-b6ba-c594dde79e5d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Introduce the examples for short-range communications.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the corresponding section of their unit guide. For each of the examples presented, have students brainstorm a device or two that uses that communication protocol.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for short-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for medium-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to finish the remaining two questions on their activity guide:\n- How might the device transmit data, if at all?\n- What privacy risks might this device introduce?\n- With internet connectivity, how might a device’s functionality change?\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to respond to the question.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Introduce the examples for short-range communications.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the corresponding section of their unit guide. For each of the examples presented, have students brainstorm a device or two that uses that communication protocol.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the examples for short-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the examples for medium-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the examples for long-range communications. Have students complete the corresponding section of their unit guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to finish the remaining two questions on their activity guide:\n- How might the device transmit data, if at all?\n- What privacy risks might this device introduce?\n- With internet connectivity, how might a device’s functionality change?\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1 to respond to the question.",
         "progression_name": "Security, Privacy, and Data Ownership",
         "tips": [
           {
@@ -2635,7 +2635,7 @@
       "key": "94f7e212-14dc-4b2d-81f0-9ce42d022be4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Smart Classroom Template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the steps students need to take to complete the activity. Refer to the example that is in the template.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Have each student make a copy of the Smart Classroom Template.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design a Smart Classroom activity.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the steps students need to take to complete the activity. Refer to the example that is in the template.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share the innovation they developed. Students should share the innovation as well as the data it collects, how it transmits that information, and any privacy or security concerns that might exist.",
         "duration": "20",
         "name": "Design a Smart Classroom",
         "tips": [
@@ -2658,7 +2658,7 @@
       "key": "f5d2cfed-4e1f-419c-ad6c-f258280ea4d2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Give a recommendation to someone thinking about designing their home using smart devices. What are some things they should consider?*\n- *What will be easier or safer?*\n- *What will be more challenging or dangerous?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students think critically about the benefits and challenges of designing a smart home. Encourage them to balance convenience and security in their recommendations by considering factors such as privacy risks, data security, and device compatibility. Guide students to explore how smart devices can enhance safety, such as through security cameras and alarms, while also introducing potential risks like hacking and data breaches. Additionally, prompt them to think about long-term costs, reliability, and ethical implications, helping them develop well-rounded recommendations for someone considering a smart home."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Give a recommendation to someone thinking about designing their home using smart devices. What are some things they should consider?*\n- *What will be easier or safer?*\n- *What will be more challenging or dangerous?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal of this discussion is to help students think critically about the benefits and challenges of designing a smart home. Encourage them to balance convenience and security in their recommendations by considering factors such as privacy risks, data security, and device compatibility. Guide students to explore how smart devices can enhance safety, such as through security cameras and alarms, while also introducing potential risks like hacking and data breaches. Additionally, prompt them to think about long-term costs, reliability, and ethical implications, helping them develop well-rounded recommendations for someone considering a smart home."
       },
       "seeding_key": {
         "activity_section.key": "f5d2cfed-4e1f-419c-ad6c-f258280ea4d2",
@@ -2680,7 +2680,7 @@
       "key": "08feace1-4dfd-4c49-a834-07bdd0e39f88",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Guerilla Testing with Usability Cafe\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> Questions to Consider with the **Video:** *How might usability testing look different when testing a physical device or system that is not run solely on a computer, tablet, or phone?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to bring up challenges when testing something that has many parts and might need to be done in specific environments and/or under specific circumstances.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Guerilla Testing with Usability Cafe\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> Questions to Consider with the **Video:** *How might usability testing look different when testing a physical device or system that is not run solely on a computer, tablet, or phone?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to bring up challenges when testing something that has many parts and might need to be done in specific environments and/or under specific circumstances.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2707,7 +2707,7 @@
       "key": "2533d204-a527-4b53-8d3f-b7a4ce599df5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *user testing*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *user testing*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "2533d204-a527-4b53-8d3f-b7a4ce599df5",
@@ -2718,7 +2718,7 @@
       "key": "69ff8c10-60da-442d-9b97-6f168c07187f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 1. Students look at user testing results for a product and pull out the main themes.",
         "duration": "15",
         "name": "User Testing Data",
         "progression_name": "User Testing Results"
@@ -2732,7 +2732,7 @@
       "key": "68475940-8b3e-4107-84eb-9a8b38e5523b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Walk around to ensure students are looking at all the types of data (observations, user survey response tables, and feedback) when doing their analysis."
       },
       "seeding_key": {
         "activity_section.key": "68475940-8b3e-4107-84eb-9a8b38e5523b",
@@ -2743,7 +2743,7 @@
       "key": "603b4d17-e308-415d-a01a-d71696bfe370",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 11, Level 2 to work with the chatbot to help summarize the same data they just looked at.",
         "progression_name": "Using AI to Analyze Data"
       },
       "seeding_key": {
@@ -2755,7 +2755,7 @@
       "key": "0e254e67-693d-43ed-b710-668f6289a574",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is AI helpful when processing user testing data? What would have been difficult to do without it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to point out for when the chatbot noticed something that they did not or for times when AI summarized the results more clearly. Also make sure to make space in the conversation for evaluating the AI responses and having students share the tips they used to help the AI work better at generating insights from the data or when the AI made incorrect statements from the data.\n\nDepending on where the discussion goes, here are some potential follow-up questions to engage the class with:\n- Which summary do you think you would include a report to the team working on this product, yours or the chatbots? Why?\n- How do you think your summary would have been different if you’d used AI to summarize the data first before doing your own analysis?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How is AI helpful when processing user testing data? What would have been difficult to do without it?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to point out for when the chatbot noticed something that they did not or for times when AI summarized the results more clearly. Also make sure to make space in the conversation for evaluating the AI responses and having students share the tips they used to help the AI work better at generating insights from the data or when the AI made incorrect statements from the data.\n\nDepending on where the discussion goes, here are some potential follow-up questions to engage the class with:\n- Which summary do you think you would include a report to the team working on this product, yours or the chatbots? Why?\n- How do you think your summary would have been different if you’d used AI to summarize the data first before doing your own analysis?"
       },
       "seeding_key": {
         "activity_section.key": "0e254e67-693d-43ed-b710-668f6289a574",
@@ -2766,7 +2766,7 @@
       "key": "1bdace8c-5dd7-4e0b-b159-aafb668895f1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 3. Students will see the same scenario, along with four choices for how Alice should respond to this situation.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 3. Students will see the same scenario, along with four choices for how Alice should respond to this situation.",
         "duration": "20",
         "name": "What's Next",
         "progression_name": "Alice's Scenario"
@@ -2780,7 +2780,7 @@
       "key": "94d5c4da-6367-4a5b-9b0e-8829eb964488",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Alice should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Alice should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2807,7 +2807,7 @@
       "key": "8d1e6a69-58ed-4a03-81ef-e71108b239ad",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What should the next steps be for Alice?\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:**  What should the next steps be for Alice?\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no definitive right answer here, as long as students can explain and justify their thoughts. Some students may choose option A, given that the device works as intended for the specific target user – gamers with mobility issues. Other students may gravitate towards options B or C - either fixing it after launch, or delaying in order to fix - because it doesn’t work as well as it should for all users and it should be made more equitable before launching.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2834,7 +2834,7 @@
       "key": "f3397856-602d-4fa6-9c47-f030f724d8f8",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4. Students will see the same scenario, along with four choices for how Josh should respond to this situation.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4. Students will see the same scenario, along with four choices for how Josh should respond to this situation.",
         "progression_name": "Josh's Scenario"
       },
       "seeding_key": {
@@ -2846,7 +2846,7 @@
       "key": "a08b2ed2-71af-4b6c-81cf-3bc72623faa7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Josh should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option they think Josh should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
       },
       "seeding_key": {
         "activity_section.key": "a08b2ed2-71af-4b6c-81cf-3bc72623faa7",
@@ -2857,7 +2857,7 @@
       "key": "5b859331-d9db-40a5-8825-86a7f7373c29",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should Josh do about his device?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should Josh do about his device?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This answer tends to have a more moral or ethical component, since the technology shows a clear gender bias against women, who are more likely to have higher pitched voices and therefore not be able to use the technology. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2884,7 +2884,7 @@
       "key": "d7a84848-2874-41c1-9dae-eb822f6b9f48",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 5. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have a student read the scenario out loud.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:**  Direct students to Lesson 11, Level 5. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.",
         "progression_name": "Lydia's Scenario"
       },
       "seeding_key": {
@@ -2896,7 +2896,7 @@
       "key": "c31aa40e-8801-4426-99a3-9f90f068d635",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide."
       },
       "seeding_key": {
         "activity_section.key": "c31aa40e-8801-4426-99a3-9f90f068d635",
@@ -2907,7 +2907,7 @@
       "key": "8638e7e4-0352-4ad1-af5c-48dad4dffe2b",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What should the next steps be for Lydia?*\n- Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Similar to the previous scenario, students will likely gravitate towards options C or D, opting to cancel or pause implementation so more testing can be conducted and the harm can be addressed before it is released. Because this device excludes a group of users who are color blind, launching it as is means that the device is inequitable and not accessible for all users. Students should consider how Lydia can improve her design by considering all intended users.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Give one example of something you heard a classmate share that made you think about one of the scenarios differently.*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students noting when someone shared something from a different perspective. You may need to push students to explore this part a bit more, but the goal here is for them to understand the collaborative decision making with a group of people who bring different perspectives leads to better outcomes.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2935,7 +2935,7 @@
       "key": "790fb83a-06fe-43e4-9b49-2f6a7dce713b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you choose, and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to cite examples shared during the class period and/or personal experiences the students have had themselves as justifications for their answers.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two reasons why user testing can improve a product in their unit guides.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write down their top two answers for what happens when user testing is skipped in their unit guides.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you choose, and why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to cite examples shared during the class period and/or personal experiences the students have had themselves as justifications for their answers.\n"
       },
       "seeding_key": {
         "activity_section.key": "790fb83a-06fe-43e4-9b49-2f6a7dce713b",
@@ -2946,7 +2946,7 @@
       "key": "4dd1b7c0-34b1-474c-bd8b-fa9d66f23431",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Ethics and AI: Privacy and the Future of Work\"\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider the questions posed here as they watch the video.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the video \"Ethics and AI: Privacy and the Future of Work\"\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider the questions posed here as they watch the video.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2973,7 +2973,7 @@
       "key": "edcd8b2e-66fe-45fa-8ec6-b01084b3e8ec",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What computer system in the video might raise ethical concerns for some people? What are those concerns?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that artificial intelligence and robotics—particularly systems designed to collect personal data or replace human workers—can raise ethical concerns regarding privacy, job displacement, and the broader social impact of technology. Encourage them to explore how these concerns might differ among various stakeholders and emphasize the importance of transparency, responsible data handling, and dignity in AI-driven solutions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What computer system in the video might raise ethical concerns for some people? What are those concerns?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to recognize that artificial intelligence and robotics—particularly systems designed to collect personal data or replace human workers—can raise ethical concerns regarding privacy, job displacement, and the broader social impact of technology. Encourage them to explore how these concerns might differ among various stakeholders and emphasize the importance of transparency, responsible data handling, and dignity in AI-driven solutions.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "edcd8b2e-66fe-45fa-8ec6-b01084b3e8ec",
@@ -2984,7 +2984,7 @@
       "key": "2d27dabf-119d-407d-9b99-828c5c1347b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the FigJam or Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Put students into groups of three or four.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group several blank half-sheets of paper and access to either the class FigJam or slides.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Define *ethics*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Student should access a class-editable version of the FigJam or Slide template. Each member of the group should pick a distinct role – there are four roles per scenario.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students should populate the digital sticky notes on the FigJam or slide that corresponds to the Scenario and Role that they are examining. There are a variety of different discussion questions that the students can choose to answer with their group.",
         "duration": "20",
         "name": "Role Playing",
         "tips": [
@@ -3013,7 +3013,7 @@
       "key": "66e5c099-808e-4d2f-97ab-7a761a5b0438",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between roles, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Remind students that their proposal should reflect a compromise between roles, not just one perspective. Encourage students to justify their ideas and challenge each other’s assumptions respectfully.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have groups present their proposals and discuss differences in approaches.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3040,7 +3040,7 @@
       "key": "b3d198bd-90b6-4288-8368-1549f625b131",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's roleplaying experience.*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the role that had been assumed.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share an insight or highlight from your group's roleplaying experience.*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** The goal with this discussion is to allow students to share their learning and ethical explorations with the class, and to talk through their personal thoughts about the ethical considerations of the scenario apart from the role that had been assumed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3071,7 +3071,7 @@
       "key": "0159c4db-0288-4bc9-ba4a-dc6d94dc1d3c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Based on your discussion, students should identify a key ethical value or rule that should guide the responsible use of technology. They should write this on a half-sheet of paper.",
         "duration": "15",
         "name": "AI Guidelines"
       },
@@ -3084,7 +3084,7 @@
       "key": "457e34b8-14f2-4288-9681-dfa126acd624",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students hang up the ethical guidelines that they have developed around the classroom or in the hallway. They should wander around and read what other classmates have written as a result of their learning and conversations.",
         "progression_name": "Student Survey",
         "tips": [
           {
@@ -3112,7 +3112,7 @@
       "key": "824ff8c8-e884-4311-b39b-68d4856773ee",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1 to respond to the question.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Lesson 12, Level 1 to respond to the question.",
         "progression_name": "Check for Understanding"
       },
       "seeding_key": {
@@ -3134,7 +3134,7 @@
       "key": "d6a8a4f7-f0b5-400d-9aaf-f38684b2c8de",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which guideline do you personally believe is the most important?*\n- *If only one could be universally adopted, which would you choose and why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Allow students to synthesize their learning for the day and to advocate for their own personal ethical points of view as a capstone activity."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which guideline do you personally believe is the most important?*\n- *If only one could be universally adopted, which would you choose and why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Allow students to synthesize their learning for the day and to advocate for their own personal ethical points of view as a capstone activity."
       },
       "seeding_key": {
         "activity_section.key": "d6a8a4f7-f0b5-400d-9aaf-f38684b2c8de",
@@ -3156,7 +3156,7 @@
       "key": "84e08cfb-346f-474d-b631-da33900687ac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three for the project.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to students that you will be starting a three day project today centered around designing a computer system that helps make the world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the video \"UN Sustainable Development Goals\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Question To Consider While Watching:** *Which goals are personally relevant or interesting to you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to be making connections to their lives, communities, friends, and family as they talk about which goals are of interest to them.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Place students into groups of two or three for the project.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a Sustainable Systems project guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain to students that you will be starting a three day project today centered around designing a computer system that helps make the world a better place. Introduce the UN Sustainable Development Goals as the specific framework that students will be using to pick a focus for their project.\n\n<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the video \"UN Sustainable Development Goals\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Question To Consider While Watching:** *Which goals are personally relevant or interesting to you?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Listen for students to be making connections to their lives, communities, friends, and family as they talk about which goals are of interest to them.",
         "duration": "15",
         "name": "Warm Up",
         "tips": [
@@ -3189,7 +3189,7 @@
       "key": "1e1c46da-2cda-437e-8127-6d712e66d150",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 8-9 and look at the example project on pages 10-11 of the Sustainable Systems project guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the example of what a completed system diagram project might look like using the slide with the blown up version of the system diagram. Point out that this example project was done in line with Target 12.5 - “By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse”. Give students time to look over the rubric and the example project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the rubric and example project? What do you wonder about the rubric and example project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements, rubric, and example project."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on pages 8-9 and look at the example project on pages 10-11 of the Sustainable Systems project guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show students the example of what a completed system diagram project might look like using the slide with the blown up version of the system diagram. Point out that this example project was done in line with Target 12.5 - “By 2030, substantially reduce waste generation through prevention, reduction, recycling and reuse”. Give students time to look over the rubric and the example project.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the rubric and example project? What do you wonder about the rubric and example project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements, rubric, and example project."
       },
       "seeding_key": {
         "activity_section.key": "1e1c46da-2cda-437e-8127-6d712e66d150",
@@ -3200,7 +3200,7 @@
       "key": "db1ae226-e524-458f-a693-7e0184b7420d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to look through the different categories of targets and list the ones they are interested in under Explore SDG Targets in their Project Guide. Once they have listed the targets they are individually interested in, have them discuss with their groups and pick one target to focus their project on.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to look through the different categories of targets and list the ones they are interested in under Explore SDG Targets in their Project Guide. Once they have listed the targets they are individually interested in, have them discuss with their groups and pick one target to focus their project on.",
         "duration": "25",
         "name": "Activity",
         "progression_name": "Explore Sustainable Development Goal Targets"
@@ -3214,7 +3214,7 @@
       "key": "00fe35cd-db8a-4fd4-a3fb-a766ca6a1934",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students use discuss the targets they identified as interesting and get them to agree on one target to focus on for their project. Direct students to record this target in their Project Guide under Select an SDG Target.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 2 to use AI Chat to help them learn more about the target they’ve chosen and start to brainstorm potential solutions and project ideas.",
         "progression_name": "Brainstorm Your Project"
       },
       "seeding_key": {
@@ -3226,7 +3226,7 @@
       "key": "49f1bb88-2166-47bc-af97-ee834f5cd013",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their project ideas with their group and agree on one idea to design for their project. Students should write a description of the system in the Project Description section of their project guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 3 to use AI Chat to help them empathize with users.",
         "progression_name": "Understanding Your Users",
         "tips": [
           {
@@ -3254,7 +3254,7 @@
       "key": "830d48ad-f031-4cda-83a5-b823574bd540",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Step 2 in their Project Guides which includes defining the data, ideating a solution, and sketching a rapid prototype.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work in their groups to complete Step 2 in their Project Guides which includes defining the data, ideating a solution, and sketching a rapid prototype.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Push students to not fret over details at this point as the goal of the first day is to get ideas flowing and to quickly put pen to paper so groups can get an idea of what components their device will need to solve the problem it is designed to solve."
       },
       "seeding_key": {
         "activity_section.key": "830d48ad-f031-4cda-83a5-b823574bd540",
@@ -3265,7 +3265,7 @@
       "key": "c5c7ce58-7934-4d87-95fb-5829eac9f295",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the components section in their project guide. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
         "duration": "5",
         "name": "Wrap Up",
         "progression_name": "Survey"
@@ -3279,7 +3279,7 @@
       "key": "95179bdf-09aa-42eb-a664-da545d6ca76e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete Step 3 Data Flow in their project guide with the help of their group.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing ideas with their group members. If groups come up with more than one answer for these, remind them that their system can use multiple types of data to help solve the problem.",
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -3291,7 +3291,7 @@
       "key": "678c848b-e3a6-4a9f-ad35-0dae9525a31e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the System Diagram slides template and a System Diagram Checklist.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write a problem statement in the Problem Statement section of their project guide. Students should add this to their system diagram.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Direct students to work collaboratively on the System Diagram, starting with the system description and then moving on to building the diagram from the library of components provided and the template items provided.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure that groups are dividing up work and collaborating on the different parts of building this diagram, discussing issues and questions as they arise.",
         "duration": "35",
         "name": "Activity"
       },
@@ -3304,7 +3304,7 @@
       "key": "315649f2-a798-466c-9c84-6e1f05332044",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the Day 2 Reflection section in their project guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:**  Direct students to complete the Day 2 Reflection section in their project guide. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n\n**Teaching Tip**If time permits, have students share their thoughts and ideas with a neighbor and with the class.",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -3317,7 +3317,7 @@
       "key": "c526c922-1128-402d-8267-13db249d2ead",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one feature of your project that you think will impress others?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Give students a chance to share about the things they feel good about from their project heading into the gallery walk where they will be showing their work to others.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is one feature of your project that you think will impress others?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Give students a chance to share about the things they feel good about from their project heading into the gallery walk where they will be showing their work to others.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3330,7 +3330,7 @@
       "key": "898ea54e-ecb5-4113-8993-2d1a4be402d7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have groups get their presentations ready for the gallery walk and set them up around the room so that there is space to move smoothly around the room and gather at each station.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the questions for students to consider when looking at each system diagram. Provide each student with some post-it notes and have them write responses to the questions and leave them in the area of the presentation before moving on to the next diagram.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have groups get their presentations ready for the gallery walk and set them up around the room so that there is space to move smoothly around the room and gather at each station.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the questions for students to consider when looking at each system diagram. Provide each student with some post-it notes and have them write responses to the questions and leave them in the area of the presentation before moving on to the next diagram.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3359,7 +3359,7 @@
       "key": "24c15212-fbfd-4fbd-afc0-0a4ea473dd63",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 4. Students use the chatbot to help synthesize this feedback and uncover any areas related to ethics and societal impact they hadn’t already thought of.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 4. Students use the chatbot to help synthesize this feedback and uncover any areas related to ethics and societal impact they hadn’t already thought of.\n",
         "progression_name": "Ethics and Impact"
       },
       "seeding_key": {
@@ -3371,7 +3371,7 @@
       "key": "3e7f940d-6bf2-49fd-baff-4feb826f514b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to use the remaining time in class to complete the reflection section of their diagram and to make any improvements or revisions to their project they think will help them align better with the criteria on the rubric."
       },
       "seeding_key": {
         "activity_section.key": "3e7f940d-6bf2-49fd-baff-4feb826f514b",
@@ -3382,7 +3382,7 @@
       "key": "659f5a70-1afa-4534-8fe0-19a9819d9589",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students submit their projects before the end of class.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [

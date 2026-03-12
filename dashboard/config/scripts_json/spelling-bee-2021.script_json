@@ -121,7 +121,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces letters in the alphabet and how they are used to form words. \n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces letters in the alphabet and how they are used to form words. \n\n**Slides:** The slide icon <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
           }
         ]
       },
@@ -152,7 +152,7 @@
       "key": "54806b1c-cb69-4767-a9a1-5c64fc3bc253",
       "position": 1,
       "properties": {
-        "description": "####Modeling a Think Aloud\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.\n",
+        "description": "####Modeling a Think Aloud\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.\n",
         "name": "Spelling with Bee",
         "tips": [
           {
@@ -170,7 +170,7 @@
       "key": "b629a893-20dc-4649-b655-cf952fb6465b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b629a893-20dc-4649-b655-cf952fb6465b",
@@ -181,7 +181,7 @@
       "key": "38075598-1e8d-49dd-9e3d-bb4105db9411",
       "position": 3,
       "properties": {
-        "description": "####Solving Puzzles with Code\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
+        "description": "####Solving Puzzles with Code\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
         "progression_name": "Introduction to Maze Puzzles"
       },
       "seeding_key": {
@@ -193,7 +193,7 @@
       "key": "25be421b-0cd7-45e1-9536-bf9e39a56c29",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Open the first level of this activity on your computer in front of the class. A short video will play at first introducing students to these bee puzzles.\n\n**Model:** Model for students how to complete the level. Point out that this puzzle is the same as the puzzle on their warm-up. Ask students to describe how you should move the blocks and connect them to complete the puzzle.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Open the first level of this activity on your computer in front of the class. A short video will play at first introducing students to these bee puzzles.\n\n**Model:** Model for students how to complete the level. Point out that this puzzle is the same as the puzzle on their warm-up. Ask students to describe how you should move the blocks and connect them to complete the puzzle.\n\n",
         "progression_name": "Model Level",
         "tips": [
           {
@@ -211,7 +211,7 @@
       "key": "50ff932f-62e1-4b84-bd79-05d3353027a2",
       "position": 5,
       "properties": {
-        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n"
+        "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n"
       },
       "seeding_key": {
         "activity_section.key": "50ff932f-62e1-4b84-bd79-05d3353027a2",
@@ -274,7 +274,7 @@
       "key": "18193bcb-bc78-44e8-b054-6c0f8a868f24",
       "position": 2,
       "properties": {
-        "description": "\n**Do This:** Give each student a Wrap Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many letters will the bee need to find in order to spell the word SQUARE?  How many steps should the bee take to spell the word SQUARE?*\n\nThe goal of the Math Talk is to incorporate addition into the discussion using manipulatives (e.g. blocks, fingers, or images on the handout). Consider the following prompts as part of this discussion:\n- *Show me with your fingers how many letters are in the word SQUARE?*\n\n-  *What direction should the bee take to spell the word SQUARE?*\n\n- *How many steps should the bee take to the [East, West, North, or South]?*\n\n- Consider including and discussing the number zero to represent no steps in a certain direction. For example, the bee would take zero steps North to spell SQUARE.  \n\n- Use directions to help students develop multiple ways to show the total number of letters in a word.  \n\n  - SQUARE has six letters (3 + 3; three letters South, three letters East).\n\n  - Show me with your fingers another way to make six (two fingers one hand, four fingers with another hand, etc).\n",
+        "description": "\n**Do This:** Give each student a Wrap Up worksheet.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How many letters will the bee need to find in order to spell the word SQUARE?  How many steps should the bee take to spell the word SQUARE?*\n\nThe goal of the Math Talk is to incorporate addition into the discussion using manipulatives (e.g. blocks, fingers, or images on the handout). Consider the following prompts as part of this discussion:\n- *Show me with your fingers how many letters are in the word SQUARE?*\n\n-  *What direction should the bee take to spell the word SQUARE?*\n\n- *How many steps should the bee take to the [East, West, North, or South]?*\n\n- Consider including and discussing the number zero to represent no steps in a certain direction. For example, the bee would take zero steps North to spell SQUARE.  \n\n- Use directions to help students develop multiple ways to show the total number of letters in a word.  \n\n  - SQUARE has six letters (3 + 3; three letters South, three letters East).\n\n  - Show me with your fingers another way to make six (two fingers one hand, four fingers with another hand, etc).\n",
         "tips": [
           {
             "type": "teachingTip",

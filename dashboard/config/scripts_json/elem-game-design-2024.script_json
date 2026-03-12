@@ -359,7 +359,7 @@
       "key": "40ad817d-cded-4c94-9a9e-fd74b16a7c2d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n**Vocabulary:** Read aloud the vocabulary words written in the slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**:Lesson Objectives slide\n\n**Do This:** Read aloud the objectives written on the slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n**Vocabulary:** Read aloud the vocabulary words written in the slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**:Lesson Objectives slide\n\n**Do This:** Read aloud the objectives written on the slide",
         "name": "Lesson Introduction"
       },
       "seeding_key": {
@@ -371,7 +371,7 @@
       "key": "1112a75a-98b2-457e-ba9b-04b620588e16",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide"
       },
       "seeding_key": {
         "activity_section.key": "1112a75a-98b2-457e-ba9b-04b620588e16",
@@ -395,7 +395,7 @@
       "key": "6ea67c3c-9bae-4f43-9cd3-e4c43b0b8514",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n\n**Vocabulary:** You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?\n\n**Discussion Goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n\n**Vocabulary:** You will choose the costume the sprite starts with and you can code the costume to change whenever you want in the program or game.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** How would you describe this sprite scene? If you wanted someone to create this scene for you on a computer what instructions would they need?\n\n**Discussion Goal:** Students should identify both sprites in this project, describe their behaviors (movements), and also notice there is a background. Give students time to brainstorm ideas. If they aren’t sure what to say, clarify that you are just asking them to state observations about what they see.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6ea67c3c-9bae-4f43-9cd3-e4c43b0b8514",
@@ -406,7 +406,7 @@
       "key": "dd51c325-db18-425f-b579-5009233c6afd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Reflect slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Reflect slide"
       },
       "seeding_key": {
         "activity_section.key": "dd51c325-db18-425f-b579-5009233c6afd",
@@ -453,7 +453,7 @@
       "key": "b78d5689-4ccc-4023-b947-5aa74237e174",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 Video slide\n\n**Do This:** Play the video for students full group.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 1 Video slide\n\n**Do This:** Play the video for students full group.",
         "tips": [
           {
             "type": "teachingTip",
@@ -470,7 +470,7 @@
       "key": "56b1cbff-722d-4374-b8a0-87bd0ff189d2",
       "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 2-7 Skill Building slide\n\n**Do This:** Transition students to their devices. Have them go to Level 2. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.\n"
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Levels 2-7 Skill Building slide\n\n**Do This:** Transition students to their devices. Have them go to Level 2. Remind them to follow the instructions on each level, click on the light bulb for hints and read the feedback in the yellow box under the instructions if something is not quite right in their code.\n"
       },
       "seeding_key": {
         "activity_section.key": "56b1cbff-722d-4374-b8a0-87bd0ff189d2",
@@ -521,7 +521,7 @@
       "key": "b3a124f5-8320-4da8-b6af-12ea57dc4030",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 8 Video slide\n\n**Do This:** Pause students’ independent work when several students have finished level 7 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 7 to preview the Lots of Sprites video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Events slide\n\nExplain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n\n**Do This:** Explain that arrow keys are one type of event that can make a program interactive.\n\n**Discuss:** What other ways could we give a user control over what happens in an app or game?\n\n**Discussion Goal:** Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 8 Video slide\n\n**Do This:** Pause students’ independent work when several students have finished level 7 in order to give an overview of using groups of sprites. It’s okay if the whole class is not yet finished with level 7 to preview the Lots of Sprites video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Events slide\n\nExplain how events work with the four part diagram on this slide. 1. The user presses a key on the keyboard. 2. The keyboard sends a signal to the computer. 3. The computer makes a decision based on the code. 4. The computer updates the display.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n\n**Do This:** Explain that arrow keys are one type of event that can make a program interactive.\n\n**Discuss:** What other ways could we give a user control over what happens in an app or game?\n\n**Discussion Goal:** Students will start to recognize that events trigger actions to happen on the computer. Some other examples might include: pushing the power button, moving the mouse, clicking on an button on the screen, pressing buttons on the keyboard\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: (next) Events slide\n"
       },
       "seeding_key": {
         "activity_section.key": "b3a124f5-8320-4da8-b6af-12ea57dc4030",
@@ -567,7 +567,7 @@
       "key": "b41322d3-6bbd-4380-834c-818ca88a060e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Today you learned... slide\n\n**Do This:** Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slide\n(Click on the slide to reveal the first scenario)\n\n**Do This:** Look over and read aloud the 3 code snippets together as a class.\n\nHave students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.\n\n**…to arrange 8 enemies in a perfect line?** [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]\n\n**… to make a game with 100 randomly placed gems to collect?** [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]\n\n**…to set the location of one player at the beginning of the game?** [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]\n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Today you learned... slide\n\n**Do This:** Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Review slide\n(Click on the slide to reveal the first scenario)\n\n**Do This:** Look over and read aloud the 3 code snippets together as a class.\n\nHave students write down which code they think would be best. After everyone has an answer, discuss as a class. Repeat for all three scenarios.\n\n**…to arrange 8 enemies in a perfect line?** [Answer: Code C because with the grid block you can easily place multiple sprites exactly where you want them to go]\n\n**… to make a game with 100 randomly placed gems to collect?** [Answer: Code B because with this block you can choose the number of sprites and they will be randomly placed on screen]\n\n**…to set the location of one player at the beginning of the game?** [Answer: Code A because with this block you are placing just one sprite at a time and setting the location with x,y coordinates]\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b41322d3-6bbd-4380-834c-818ca88a060e",
@@ -590,7 +590,7 @@
       "key": "a15b18c4-3842-4c7a-a0cd-23e748a70176",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slide. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slide\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slide. \n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide",
         "name": "Lesson Overview"
       },
       "seeding_key": {
@@ -602,7 +602,7 @@
       "key": "689554d4-042a-43b5-8afe-bf64bcd30bcc",
       "position": 2,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Review slide\n\n☑️ Do This: Have students read the code aloud one line at a time. It may be helpful to have a student (or yourself) point to one block at a time and students read aloud as a group or quietly in pairs.\n\nThen label each of the following actions. If you are not projecting the slides onto a white board or smartboard that you can write on, just point to the block that matches each action on the list.   \n\n- **Main player sprite** [Answer: Red block- make new unicorn sprite]\n- **Opponent/Enemy Sprites** [Answer: Red block- make 3 new small fireball sprites]\n- **Main character’s movement** [Answer: Blue block- sprite unicorn begins moving with arrow keys]\n- **What happens when sprites touch?** [Answer: remove unicorn sprite and fireball says Game over!]\n- **Mountain scene in the background** [Answer: Purple block set background to mountain scene]\n- **Sprite explains how to play** [Answer: Blue block- unicorn says Avoid the fireballs!]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: (next) Review slide\n\n**Discuss:** How do you play this game? How do you win/lose? \n\n**Discussion Goal:** By looking at the code, we can make a guess about how to play. We can see the unicorn’s behavior is set to moving with arrow keys so we know we will be controlling the unicorn with arrow keys. We see that the unicorn gives us instructions to “Avoid the fireballs!” so we know we have to try not to let the fireballs touch the unicorn. Under the event when unicorn touches fireball we see the unicorn goes away and the game is over so we can assume that’s how you would lose the game. By looking closely at each line of code, students will gain confidence and experience reading the code blocks and understanding the purpose of each block. ",
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Review slide\n\n☑️ Do This: Have students read the code aloud one line at a time. It may be helpful to have a student (or yourself) point to one block at a time and students read aloud as a group or quietly in pairs.\n\nThen label each of the following actions. If you are not projecting the slides onto a white board or smartboard that you can write on, just point to the block that matches each action on the list.   \n\n- **Main player sprite** [Answer: Red block- make new unicorn sprite]\n- **Opponent/Enemy Sprites** [Answer: Red block- make 3 new small fireball sprites]\n- **Main character’s movement** [Answer: Blue block- sprite unicorn begins moving with arrow keys]\n- **What happens when sprites touch?** [Answer: remove unicorn sprite and fireball says Game over!]\n- **Mountain scene in the background** [Answer: Purple block set background to mountain scene]\n- **Sprite explains how to play** [Answer: Blue block- unicorn says Avoid the fireballs!]\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: (next) Review slide\n\n**Discuss:** How do you play this game? How do you win/lose? \n\n**Discussion Goal:** By looking at the code, we can make a guess about how to play. We can see the unicorn’s behavior is set to moving with arrow keys so we know we will be controlling the unicorn with arrow keys. We see that the unicorn gives us instructions to “Avoid the fireballs!” so we know we have to try not to let the fireballs touch the unicorn. Under the event when unicorn touches fireball we see the unicorn goes away and the game is over so we can assume that’s how you would lose the game. By looking closely at each line of code, students will gain confidence and experience reading the code blocks and understanding the purpose of each block. ",
         "name": "Code Review & Discuss"
       },
       "seeding_key": {
@@ -626,7 +626,7 @@
       "key": "d5ba3d67-34f6-4b89-ab17-29db168417b2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n☑️ Do This: Have students transition to their computer and explore variables as score in the choices on level 1. Set the timer on the slide to limit the exploration. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n☑️ Do This: Play the video for students. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n☑️ Do This: Have students transition to their computer and explore variables as score in the choices on level 1. Set the timer on the slide to limit the exploration. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n☑️ Do This: Play the video for students. \n"
       },
       "seeding_key": {
         "activity_section.key": "d5ba3d67-34f6-4b89-ab17-29db168417b2",
@@ -660,7 +660,7 @@
       "key": "62de8921-d7a3-4a05-ae13-d5db60070208",
       "position": 5,
       "properties": {
-        "description": "☑️ Do This: Point out that variables are similar to a box that holds information (data). We can always find the information (data) by looking in the correct box. Then have students click through the panels on level 3 to preview how to use them in their game.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 4-10 slide\n\n\n☑️ Do This: Have students work through the levels at their own pace. ",
+        "description": "☑️ Do This: Point out that variables are similar to a box that holds information (data). We can always find the information (data) by looking in the correct box. Then have students click through the panels on level 3 to preview how to use them in their game.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 4-10 slide\n\n\n☑️ Do This: Have students work through the levels at their own pace. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -677,7 +677,7 @@
       "key": "11c2fd25-5f8a-4a1f-9f38-9c6953d4d724",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 8 slide\n\n☑️ Do This: Take a moment to introduce conditionals to the class using the information on level 8. Point out how the starburst effect only starts as soon as the score variable is equal to 5. Let students know they can choose to put anything inside the conditional statement to celebrate the winning or losing score. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 9 - 10 slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 8 slide\n\n☑️ Do This: Take a moment to introduce conditionals to the class using the information on level 8. Point out how the starburst effect only starts as soon as the score variable is equal to 5. Let students know they can choose to put anything inside the conditional statement to celebrate the winning or losing score. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Levels 9 - 10 slide",
         "name": "Winning Conditions"
       },
       "seeding_key": {
@@ -713,7 +713,7 @@
       "key": "75ff473a-4f95-4317-b7ab-07419437ff9b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 11 slide\n\n☑️ Do This: Students can use their newly developed skills in a creative way on one of the games that aren’t working. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 12 slide\n\n☑️ Do This: Encourage students to get creative here! If they’re having trouble getting started, you might suggest that they try recreating a game they have played before.\n\nTeaching Tip: Free Play Level\nFree Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be remixed and shared.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 11 slide\n\n☑️ Do This: Students can use their newly developed skills in a creative way on one of the games that aren’t working. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 12 slide\n\n☑️ Do This: Encourage students to get creative here! If they’re having trouble getting started, you might suggest that they try recreating a game they have played before.\n\nTeaching Tip: Free Play Level\nFree Play levels are like offering an artist all the tools they need to fill a blank page. This is an opportunity for students to apply the skills and concepts they learned throughout the progression with a high ceiling for creativity. These levels can be remixed and shared.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -730,7 +730,7 @@
       "key": "12a8bfc6-1408-41cd-8e1f-711c6bbadce9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Today, you learned... slide\n\n☑️ Do This: Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Today, you learned... slide\n\n☑️ Do This: Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity. "
       },
       "seeding_key": {
         "activity_section.key": "12a8bfc6-1408-41cd-8e1f-711c6bbadce9",
@@ -764,7 +764,7 @@
       "key": "e30911e9-afa0-4443-9084-1e97361c0957",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide",
         "name": "Lesson Intro"
       },
       "seeding_key": {
@@ -776,7 +776,7 @@
       "key": "28ad152e-331d-4f1a-ab66-0197c0296d11",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Example slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Example slide"
       },
       "seeding_key": {
         "activity_section.key": "28ad152e-331d-4f1a-ab66-0197c0296d11",
@@ -811,7 +811,7 @@
       "key": "c612bda5-82a5-4d6e-b61d-8a9dcfc4407a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Say:** Now let’s look at another classic video game and answer the following questions about the game mechanics. \n\n☑️ Do This: You can play the video animation and pause it as needed.\n\n*Click the slide to reveal one question at a time.* Read the question and find the evidence in the image or video\n\n1. [Answer: The objective is to reach the end of the level. Collect coins to earn the reward of an extra life. We know this because the scoreboard increases each time Mario gets a coin and if the counter reaches 100, then he gets an extra life. There is a scoreboard and a coin collection at the top.]\n2. [Answer: Mario can get points and coins]\n3. [Answer: Mario runs on top of the ground blocks, jumps on top of bricks, jumps over on onto monsters, etc]",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Say:** Now let’s look at another classic video game and answer the following questions about the game mechanics. \n\n☑️ Do This: You can play the video animation and pause it as needed.\n\n*Click the slide to reveal one question at a time.* Read the question and find the evidence in the image or video\n\n1. [Answer: The objective is to reach the end of the level. Collect coins to earn the reward of an extra life. We know this because the scoreboard increases each time Mario gets a coin and if the counter reaches 100, then he gets an extra life. There is a scoreboard and a coin collection at the top.]\n2. [Answer: Mario can get points and coins]\n3. [Answer: Mario runs on top of the ground blocks, jumps on top of bricks, jumps over on onto monsters, etc]",
         "name": "(Optional) Example 2"
       },
       "seeding_key": {
@@ -847,7 +847,7 @@
       "key": "c5058a68-3a2b-45bc-b979-f4e3e0ef2865",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n**Level 1:** On this exploratory choice level, students don't have to complete all levels but can choose one that interests them."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n**Level 1:** On this exploratory choice level, students don't have to complete all levels but can choose one that interests them."
       },
       "seeding_key": {
         "activity_section.key": "c5058a68-3a2b-45bc-b979-f4e3e0ef2865",
@@ -870,7 +870,7 @@
       "key": "70cdccbc-e52e-4a3f-9b16-28513dac12bb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n**Level 2:** As a class or in pairs, have students look over the gifs and read the text on the first and second panel in level 2. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 3-4 slide\n\n**Level 3-4:** Have students practice with environment types.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n**Level 2:** As a class or in pairs, have students look over the gifs and read the text on the first and second panel in level 2. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Levels 3-4 slide\n\n**Level 3-4:** Have students practice with environment types.\n"
       },
       "seeding_key": {
         "activity_section.key": "70cdccbc-e52e-4a3f-9b16-28513dac12bb",
@@ -893,7 +893,7 @@
       "key": "c86125d0-299b-4c77-b7eb-e0ad45d51781",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 5 slide\n\n**Level 5:** As a class or in pairs, have students look over the GIFs and read the text in all four panels in level 5. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Levels 6-8 slide\n\n**Level 6-8:** Have students practice with player types."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 5 slide\n\n**Level 5:** As a class or in pairs, have students look over the GIFs and read the text in all four panels in level 5. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Levels 6-8 slide\n\n**Level 6-8:** Have students practice with player types."
       },
       "seeding_key": {
         "activity_section.key": "c86125d0-299b-4c77-b7eb-e0ad45d51781",
@@ -916,7 +916,7 @@
       "key": "9e2b11b6-5416-491d-b7da-e6e07f884cf8",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 9 slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 9 slide"
       },
       "seeding_key": {
         "activity_section.key": "9e2b11b6-5416-491d-b7da-e6e07f884cf8",
@@ -945,7 +945,7 @@
       "key": "42480d4c-6183-46a5-95fa-bfb75b6dd2cb",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 10 slide\n\n**Level 10:** Students can use their newly developed skills in a creative way on one of the games that aren’t working. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 10 slide\n\n**Level 10:** Students can use their newly developed skills in a creative way on one of the games that aren’t working. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -962,7 +962,7 @@
       "key": "c8fdbc3c-b523-48f9-9012-257084e94aa5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Today, you learned... slide\n\n☑️ Do This: Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Today, you learned... slide\n\n☑️ Do This: Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Discuss slide"
       },
       "seeding_key": {
         "activity_section.key": "c8fdbc3c-b523-48f9-9012-257084e94aa5",
@@ -1012,7 +1012,7 @@
       "key": "ad247413-d786-4ea8-bad1-15338cb01a4a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n"
       },
       "seeding_key": {
         "activity_section.key": "ad247413-d786-4ea8-bad1-15338cb01a4a",
@@ -1059,7 +1059,7 @@
       "key": "e3f63121-9a78-4c2c-9e32-564364e07c5e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Team slide\n\n☑️ Do This: Use a [random team generator](https://app-sorteos.com/en/apps/random-teams-generator) or any other strategy to create groups of 2-3 students. Have students sit with their teams.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Team slide\n\n☑️ Do This: Use a [random team generator](https://app-sorteos.com/en/apps/random-teams-generator) or any other strategy to create groups of 2-3 students. Have students sit with their teams.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1076,7 +1076,7 @@
       "key": "de850d79-324b-4dbc-8d88-a846668ebc8f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Distribute slide\n\n**Distribute:** Pass out the Game Plan & Create Activity Guide\n\n☑️ Do This: In teams, have students ready to complete the first question on the plan using Lesson 4 Level 1, Game Jam Theme Generator."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Distribute slide\n\n**Distribute:** Pass out the Game Plan & Create Activity Guide\n\n☑️ Do This: In teams, have students ready to complete the first question on the plan using Lesson 4 Level 1, Game Jam Theme Generator."
       },
       "seeding_key": {
         "activity_section.key": "de850d79-324b-4dbc-8d88-a846668ebc8f",
@@ -1100,7 +1100,7 @@
       "key": "e13b791d-27ab-4df0-bfd4-2ff7bd6bd038",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n\n☑️ Do This: Open Lesson 1 Level 1. It may be most efficient and effective for the instructor to make the official roll (or have a student come to the board to do the clicking) to generate a theme for each team. Have the students write the results on their Game Plan & Create Activity Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 1 slide\n\n\n☑️ Do This: Open Lesson 1 Level 1. It may be most efficient and effective for the instructor to make the official roll (or have a student come to the board to do the clicking) to generate a theme for each team. Have the students write the results on their Game Plan & Create Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "e13b791d-27ab-4df0-bfd4-2ff7bd6bd038",
@@ -1124,7 +1124,7 @@
       "key": "c8d76b72-4aa7-4de2-9912-b8daa788b30c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n\n☑️ Do This: Have students complete their Game Plan & Create Activity Guide as a team.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> ***Optional Display***: Level 2 Brainstorm slide\n\nThis is an optional slide to support students who might need help thinking of ideas for their selected game mechanic.\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Level 2 slide\n\n\n☑️ Do This: Have students complete their Game Plan & Create Activity Guide as a team.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> ***Optional Display***: Level 2 Brainstorm slide\n\nThis is an optional slide to support students who might need help thinking of ideas for their selected game mechanic.\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1141,7 +1141,7 @@
       "key": "ef499f93-beaa-496c-91a0-7a1cd2bdc328",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> ***Display***: Pair Programming Video slide\n\nPlay the video on the slide to prepare students for Pair Programming\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> ***Display***: Turn on Pair Programming slide\n\nShow students how to turn on Pair Programming"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> ***Display***: Pair Programming Video slide\n\nPlay the video on the slide to prepare students for Pair Programming\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> ***Display***: Turn on Pair Programming slide\n\nShow students how to turn on Pair Programming"
       },
       "seeding_key": {
         "activity_section.key": "ef499f93-beaa-496c-91a0-7a1cd2bdc328",
@@ -1199,7 +1199,7 @@
       "key": "e35533a5-8813-49c1-9938-3f9d61064f05",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Distribute slide\n\n\n☑️ Do This: Pass out the Activity Guide User Testing Data.Read the overview together as a class. Preview the questions for the user tests and explain that the Activity Guide will stay at the computer with the game. When students move to a new computer to test another game, they will leave the Activity Guide. This way, when they return to their own computer and Activity Guide, it will be full of user data specific to their game which they will use to complete pages 4 - 5 in the second half of the lesson. \n\n Give students a little time to set up their game on their device and place the User Testing Data activity guide beside it. Each member of the team from the game jam will open the game on their own computer. If they have set up pair programming properly, they will all have access to the game the made in Lesson 4 Level 3.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary slides\n\n✏️ Vocabulary: Read aloud the vocabulary words written in the slides. \n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Lesson Objectives slide\n\n☑️ Do This: Read aloud the objectives written on the slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Distribute slide\n\n\n☑️ Do This: Pass out the Activity Guide User Testing Data.Read the overview together as a class. Preview the questions for the user tests and explain that the Activity Guide will stay at the computer with the game. When students move to a new computer to test another game, they will leave the Activity Guide. This way, when they return to their own computer and Activity Guide, it will be full of user data specific to their game which they will use to complete pages 4 - 5 in the second half of the lesson. \n\n Give students a little time to set up their game on their device and place the User Testing Data activity guide beside it. Each member of the team from the game jam will open the game on their own computer. If they have set up pair programming properly, they will all have access to the game the made in Lesson 4 Level 3.\n\n",
         "name": "Set Up for User Testing"
       },
       "seeding_key": {
@@ -1223,7 +1223,7 @@
       "key": "db1018b5-9a5b-4b92-85fe-f516a75d31cf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Play the game! slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Play the game! slide\n",
         "duration": "15",
         "name": "User Testing",
         "progression_name": "Game Jam: Play"
@@ -1249,7 +1249,7 @@
       "key": "183c954f-108b-49b2-aabb-6105e1268065",
       "position": 3,
       "properties": {
-        "description": "Provide a timer to signal when it’s time to start playing the game and when they user test is finished so they have time to record their testing data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Record testing data! slide\n\n\n☑️ Do This: Signal to students that it is time to record their testing data on the Activity Guide next to the game they have just played. "
+        "description": "Provide a timer to signal when it’s time to start playing the game and when they user test is finished so they have time to record their testing data.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Record testing data! slide\n\n\n☑️ Do This: Signal to students that it is time to record their testing data on the Activity Guide next to the game they have just played. "
       },
       "seeding_key": {
         "activity_section.key": "183c954f-108b-49b2-aabb-6105e1268065",
@@ -1272,7 +1272,7 @@
       "key": "ec2edc55-edfb-4c45-a56c-d74dc5e01cd9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Play the game! slide\n\nGuide students in how they should move to the next game. Begin the timer. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Record testing data! slide\n\nSignal to students that it is time to record their testing data on the Activity Guide next to the game they have just played. \n\nRepeat as many rounds as time allows."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Play the game! slide\n\nGuide students in how they should move to the next game. Begin the timer. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Record testing data! slide\n\nSignal to students that it is time to record their testing data on the Activity Guide next to the game they have just played. \n\nRepeat as many rounds as time allows."
       },
       "seeding_key": {
         "activity_section.key": "ec2edc55-edfb-4c45-a56c-d74dc5e01cd9",
@@ -1283,7 +1283,7 @@
       "key": "9a977bbe-d603-4b90-9143-7296f3a01d55",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Analyze your data slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Analyze your data slide\n",
         "duration": "20",
         "name": "Data Analysis "
       },
@@ -1308,7 +1308,7 @@
       "key": "d3bfde84-af9b-4649-97af-eb8e5e2b56ad",
       "position": 8,
       "properties": {
-        "description": "☑️ Do This: Have students analyze the data using the steps on this slide as a guide. They will complete the graphs on pages 4-5 of their Activity Guide and then answer the reflection question on page 5. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Compiling your data slide\n\n☑️ Do This: Have students chart the results from the user testing by coloring in one box for each response. Depending on time, it may be valuable for students to get with their Game Jam teammates and compile the results from all of their data sheets and discuss the reflection questions together. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Reflect on your data slide\n\n☑️ Do This: Be sure to leave time for students to reflect on the data they’ve collected and compiled by answering the questions on their Activity Guide."
+        "description": "☑️ Do This: Have students analyze the data using the steps on this slide as a guide. They will complete the graphs on pages 4-5 of their Activity Guide and then answer the reflection question on page 5. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Compiling your data slide\n\n☑️ Do This: Have students chart the results from the user testing by coloring in one box for each response. Depending on time, it may be valuable for students to get with their Game Jam teammates and compile the results from all of their data sheets and discuss the reflection questions together. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Reflect on your data slide\n\n☑️ Do This: Be sure to leave time for students to reflect on the data they’ve collected and compiled by answering the questions on their Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "d3bfde84-af9b-4649-97af-eb8e5e2b56ad",
@@ -1319,7 +1319,7 @@
       "key": "cced1e68-5321-442c-82a3-8fba1d1ed192",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** Explain how user testing can make product better. Was there any user data that surprised you? Can you think of any other projects that would benefit from doing user testing? \n\n**Discussion Goal:** Students will reflect on the benefits of user testing and consider how it may be a helpful strategy to improve other projects they’re working on."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Discuss slide\n\n**Discuss:** Explain how user testing can make product better. Was there any user data that surprised you? Can you think of any other projects that would benefit from doing user testing? \n\n**Discussion Goal:** Students will reflect on the benefits of user testing and consider how it may be a helpful strategy to improve other projects they’re working on."
       },
       "seeding_key": {
         "activity_section.key": "cced1e68-5321-442c-82a3-8fba1d1ed192",

@@ -355,7 +355,7 @@
       "key": "fc7dc26a-2799-47de-87e3-64dc1b9eee08",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _People often post information about themselves on social media like:_\r\n\r\n- _Their name and age_\r\n- _The school they go to_\r\n- _Where they live_\r\n- _Movies they like_\r\n- _Restaurants they’ve been to_\r\n- _Their birthday_\r\n\r\n_If all of this data was collected, what is one thing you think a machine learning model could try and predict from this data?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _People often post information about themselves on social media like:_\r\n\r\n- _Their name and age_\r\n- _The school they go to_\r\n- _Where they live_\r\n- _Movies they like_\r\n- _Restaurants they’ve been to_\r\n- _Their birthday_\r\n\r\n_If all of this data was collected, what is one thing you think a machine learning model could try and predict from this data?_",
         "name": "Journal \r"
       },
       "seeding_key": {
@@ -390,7 +390,7 @@
       "key": "72cffe06-49a2-4e93-add1-0dd7dafc0cdf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?"
       },
       "seeding_key": {
         "activity_section.key": "72cffe06-49a2-4e93-add1-0dd7dafc0cdf",
@@ -401,7 +401,7 @@
       "key": "b5a31d97-84fa-4dae-9a95-86c937c00363",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/vpl-csd/2025] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r model_cards_in_ai_lab/vpl-csd/2025] video, which summarizes Model Cards that students saw yesterday and shows how they can be saved in AI Lab.",
         "duration": "5",
         "name": "Model Cards in AI Lab",
         "tips": [
@@ -420,7 +420,7 @@
       "key": "b5153d17-bd65-4e05-a304-18e67f0a6f82",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first three levels represent the zoo dataset in AI Lab where students can train a model. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r zoo_models/vpl-csd/2025] activity guide to each student."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first three levels represent the zoo dataset in AI Lab where students can train a model. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r zoo_models/vpl-csd/2025] activity guide to each student."
       },
       "seeding_key": {
         "activity_section.key": "b5153d17-bd65-4e05-a304-18e67f0a6f82",
@@ -431,7 +431,7 @@
       "key": "a76ccafa-8500-4ff3-992c-dbff8caa4657",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the scenario for today’s task, where we've been hired by a zoo to create different apps for customers to interact with around the zoo. Have students read the slide aloud."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide with the scenario for today’s task, where we've been hired by a zoo to create different apps for customers to interact with around the zoo. Have students read the slide aloud."
       },
       "seeding_key": {
         "activity_section.key": "a76ccafa-8500-4ff3-992c-dbff8caa4657",
@@ -442,7 +442,7 @@
       "key": "fd9c197e-109d-4465-a0cf-dacae0c36b57",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the first three levels of Code Studio. Students will train and save 3 models using the Zoo dataset. They will also record some of their responses on the activity guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the first three levels of Code Studio. Students will train and save 3 models using the Zoo dataset. They will also record some of their responses on the activity guide.",
         "duration": "20",
         "name": "Zoo Predictions",
         "progression_name": "Zoo Predictions"
@@ -483,7 +483,7 @@
       "key": "daab34b2-0f2e-4c98-92c2-8d0b93b3e552",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. This is an App Lab level where students can import their trained model and begin customizing their app.\n\n**Circulate:** Help students import their app and verify that the model works correctly before continuing to level 3. Students should use the remaining time to customize their app, reinforcing the skills they learned in the last lesson on how to make their app more user friendly.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level. This is an App Lab level where students can import their trained model and begin customizing their app.\n\n**Circulate:** Help students import their app and verify that the model works correctly before continuing to level 3. Students should use the remaining time to customize their app, reinforcing the skills they learned in the last lesson on how to make their app more user friendly.",
         "duration": "10",
         "name": "Importing Your Model",
         "tips": [
@@ -534,7 +534,7 @@
       "key": "88ce89ba-c30a-44f4-94e9-2b10a9591c46",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** _Why is a model card useful when creating a model in AI Lab? How is a model card useful when creating an app in App Lab?_\n\nStudents can answer this on their activity guide or as an exit ticket.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Reflection:** _Why is a model card useful when creating a model in AI Lab? How is a model card useful when creating an app in App Lab?_\n\nStudents can answer this on their activity guide or as an exit ticket.",
         "name": "Journal \r"
       },
       "seeding_key": {

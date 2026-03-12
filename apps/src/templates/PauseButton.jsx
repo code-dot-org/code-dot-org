@@ -55,8 +55,8 @@ class PauseButton extends React.Component {
             style={iconStyle}
             className={
               this.props.isPaused
-                ? 'fa fa-fw fa-play-circle'
-                : 'fa fa-fw fa-pause-circle'
+                ? 'fa-solid fa-fw fa-play-circle'
+                : 'fa-solid fa-fw fa-pause-circle'
             }
           />
         </div>

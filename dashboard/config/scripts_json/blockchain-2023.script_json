@@ -665,7 +665,7 @@
       "key": "410f1f92-724a-4608-84d6-d481af2766d7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Most people purchase things using cash, credit cards, or online apps. Can you think of an example where you were able to buy something with something other than cash, such as with a trade?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Most people purchase things using cash, credit cards, or online apps. Can you think of an example where you were able to buy something with something other than cash, such as with a trade?"
       },
       "seeding_key": {
         "activity_section.key": "410f1f92-724a-4608-84d6-d481af2766d7",
@@ -676,7 +676,7 @@
       "key": "b7fae761-bfdd-44f5-b8d4-653c6ce9f521",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt encourages students to think about situations where people can trade or exchange goods, and start considering other forms of currency used for trading. Students might think of collectibles or video games, where people can trade “cards” with each other. They may also think of bartering with services, such as helping to pick fruit in exchange for some of the fruit that was collected. If this lesson is being taught in conjunction with other Blockchain lessons, you may decide to explicitly mention cryptocurrencies (such as Bitcoin) as an example of something other than cash or credit cards used to make purchases."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt encourages students to think about situations where people can trade or exchange goods, and start considering other forms of currency used for trading. Students might think of collectibles or video games, where people can trade “cards” with each other. They may also think of bartering with services, such as helping to pick fruit in exchange for some of the fruit that was collected. If this lesson is being taught in conjunction with other Blockchain lessons, you may decide to explicitly mention cryptocurrencies (such as Bitcoin) as an example of something other than cash or credit cards used to make purchases."
       },
       "seeding_key": {
         "activity_section.key": "b7fae761-bfdd-44f5-b8d4-653c6ce9f521",
@@ -753,7 +753,7 @@
       "key": "211fd054-e772-49d5-9c9b-9085bbb5bee4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute the pre-cut [r decentralized_market_resource_cutouts/blockchain/2023] to each group (for example: by having them pre-sorted in envelopes that each group opens). Groups can look at their own resources, but should keep them a secret from other groups for now. "
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute the pre-cut [r decentralized_market_resource_cutouts/blockchain/2023] to each group (for example: by having them pre-sorted in envelopes that each group opens). Groups can look at their own resources, but should keep them a secret from other groups for now. "
       },
       "seeding_key": {
         "activity_section.key": "211fd054-e772-49d5-9c9b-9085bbb5bee4",
@@ -764,7 +764,7 @@
       "key": "bdfec6e3-b1b4-4ef9-aaf6-57ac7376db47",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the next set of slides which explain the rules of the simulation and the rules for trading."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the next set of slides which explain the rules of the simulation and the rules for trading."
       },
       "seeding_key": {
         "activity_section.key": "bdfec6e3-b1b4-4ef9-aaf6-57ac7376db47",
@@ -786,7 +786,7 @@
       "key": "bff78cdc-e983-4ec5-9b1b-62e5f39b5c44",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **(Optional) Model:** Show a short demonstration for how a trade could work:\n- Ask a group if someone would like to trade for a resource\n- Fold up the card and have the other group fold up their card\n- Trade the cards with each other\n- Unfold and verify that the cards match what each party agreed on"
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **(Optional) Model:** Show a short demonstration for how a trade could work:\n- Ask a group if someone would like to trade for a resource\n- Fold up the card and have the other group fold up their card\n- Trade the cards with each other\n- Unfold and verify that the cards match what each party agreed on"
       },
       "seeding_key": {
         "activity_section.key": "bff78cdc-e983-4ec5-9b1b-62e5f39b5c44",
@@ -813,7 +813,7 @@
       "key": "6c1836ed-27b9-42d8-92a5-404e05fbe86d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter and trade with each other to try and \"win\" the game."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter and trade with each other to try and \"win\" the game."
       },
       "seeding_key": {
         "activity_section.key": "6c1836ed-27b9-42d8-92a5-404e05fbe86d",
@@ -824,7 +824,7 @@
       "key": "b504e723-b155-4b14-a054-18e702c7edc8",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to barter and trade with each other, and be sure to participate in the activity itself by instigating trades with students.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to barter and trade with each other, and be sure to participate in the activity itself by instigating trades with students.",
         "tips": [
           {
             "type": "teachingTip",
@@ -869,7 +869,7 @@
       "key": "d0026892-c3eb-4ee5-9d5e-c33845676db3",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
       },
       "seeding_key": {
         "activity_section.key": "d0026892-c3eb-4ee5-9d5e-c33845676db3",
@@ -880,7 +880,7 @@
       "key": "47fc325e-b8c3-4bc5-bdcd-f2999458b91f",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment that, when someone had a lot of one resource and another group had less, it was easy to trade. However, students should also call out when students were taken advantage of or when not everyone was able to have their needs met. You should also point out any observations you made about student behaviors, such as forming “cliques” or hoarding resources. Students should leave this discussion with examples of potential flaws in this system."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment that, when someone had a lot of one resource and another group had less, it was easy to trade. However, students should also call out when students were taken advantage of or when not everyone was able to have their needs met. You should also point out any observations you made about student behaviors, such as forming “cliques” or hoarding resources. Students should leave this discussion with examples of potential flaws in this system."
       },
       "seeding_key": {
         "activity_section.key": "47fc325e-b8c3-4bc5-bdcd-f2999458b91f",
@@ -891,7 +891,7 @@
       "key": "ed49d7e5-1634-4b33-bb6f-3ac4d2d00f35",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **trust** play a role in the situations we just talked about? Would you have made different decisions based on whether or not you could trust someone when making a trade?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **trust** play a role in the situations we just talked about? Would you have made different decisions based on whether or not you could trust someone when making a trade?"
       },
       "seeding_key": {
         "activity_section.key": "ed49d7e5-1634-4b33-bb6f-3ac4d2d00f35",
@@ -902,7 +902,7 @@
       "key": "e68a26bb-1f5c-428f-b833-d651f9e7131f",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “trust” being a central component to both the issues and successes with this system - untrustworthy behavior can lead to some of the issues seen so far, but being able to “trust” another person can lead to successful trades. Help students make these connections on their own, but if the class struggles surfacing this themselves, you can make this explicit in the transition to the next activity."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “trust” being a central component to both the issues and successes with this system - untrustworthy behavior can lead to some of the issues seen so far, but being able to “trust” another person can lead to successful trades. Help students make these connections on their own, but if the class struggles surfacing this themselves, you can make this explicit in the transition to the next activity."
       },
       "seeding_key": {
         "activity_section.key": "e68a26bb-1f5c-428f-b833-d651f9e7131f",
@@ -944,7 +944,7 @@
       "key": "01a0b697-df92-4eb1-b109-b92f59eb0c6d",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** \n- Pass out a pre-cut [r centralized_market_-_individual_group_resources/blockchain/2023] slip to each group so they know how many resources they start with\n- Pass out **one** [r centralized_market_-_bank_ledger/blockchain/2023] handout to the bank group (do not distribute one per student - distribute one for the whole group)\n- Have a stack of \n[r centralized_market_-_bank_trading_note/blockchain/2023] available for groups to use for trades"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** \n- Pass out a pre-cut [r centralized_market_-_individual_group_resources/blockchain/2023] slip to each group so they know how many resources they start with\n- Pass out **one** [r centralized_market_-_bank_ledger/blockchain/2023] handout to the bank group (do not distribute one per student - distribute one for the whole group)\n- Have a stack of \n[r centralized_market_-_bank_trading_note/blockchain/2023] available for groups to use for trades"
       },
       "seeding_key": {
         "activity_section.key": "01a0b697-df92-4eb1-b109-b92f59eb0c6d",
@@ -955,7 +955,7 @@
       "key": "4727842a-04b5-4665-8589-90e59910f034",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slides with the rules for the simulation and trading."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the following slides with the rules for the simulation and trading."
       },
       "seeding_key": {
         "activity_section.key": "4727842a-04b5-4665-8589-90e59910f034",
@@ -977,7 +977,7 @@
       "key": "d02937f0-ebc1-42c2-92f7-d8b860bdf076",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter with each other to meet the demands of the game. You should also circulate and participate in the game."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Set a timer for 10 minutes and allow students to barter with each other to meet the demands of the game. You should also circulate and participate in the game."
       },
       "seeding_key": {
         "activity_section.key": "d02937f0-ebc1-42c2-92f7-d8b860bdf076",
@@ -988,7 +988,7 @@
       "key": "7ebfb146-b671-4169-8d56-9a008a59750d",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to trade with each other, and be sure to participate in the activity itself as a bank teller. It may take longer to initiate trades because of the added layer of presenting bank slips to tellers to complete trades."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they begin to trade with each other, and be sure to participate in the activity itself as a bank teller. It may take longer to initiate trades because of the added layer of presenting bank slips to tellers to complete trades."
       },
       "seeding_key": {
         "activity_section.key": "7ebfb146-b671-4169-8d56-9a008a59750d",
@@ -1021,7 +1021,7 @@
       "key": "1eeb207b-6ecb-4a1e-8a16-1d8005739da3",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is an example where this system worked as intended and you were able to get the resources you needed? What’s an example where this system wasn’t working effectively or disadvantaged certain groups?"
       },
       "seeding_key": {
         "activity_section.key": "1eeb207b-6ecb-4a1e-8a16-1d8005739da3",
@@ -1032,7 +1032,7 @@
       "key": "42a98bb1-d161-46bc-868c-444a36d223f0",
       "position": 27,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment on how trustworthy the system is, but may not like how long it takes to get anything done. You should also point out any observations you made about student behaviors, such as forming “cliques” or the potential for overdrafting with so many transactions occurring. Students should leave this discussion with examples of potential flaws in this system."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to pull out any significant exchanges during the simulation, especially ones that you architected using the strategies above. Students may comment on how trustworthy the system is, but may not like how long it takes to get anything done. You should also point out any observations you made about student behaviors, such as forming “cliques” or the potential for overdrafting with so many transactions occurring. Students should leave this discussion with examples of potential flaws in this system."
       },
       "seeding_key": {
         "activity_section.key": "42a98bb1-d161-46bc-868c-444a36d223f0",
@@ -1043,7 +1043,7 @@
       "key": "3296d595-98d7-41eb-b93e-2493e483b3d5",
       "position": 28,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **individual freedom** play a role in the situations we just talked about? Even though there’s more trust in this system, were there times when you were restricted from making certain choices?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How did **individual freedom** play a role in the situations we just talked about? Even though there’s more trust in this system, were there times when you were restricted from making certain choices?"
       },
       "seeding_key": {
         "activity_section.key": "3296d595-98d7-41eb-b93e-2493e483b3d5",
@@ -1054,7 +1054,7 @@
       "key": "68d8f3b3-58de-494f-9320-89093a78f5b4",
       "position": 29,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “individual freedom” being a central component to this system as a counter-balance to trust. Trades are more likely to be successful because of the central authority managing it, but you may not always be able to trade when you need to or you may be restricted on where you can trade if the bank is located somewhere else."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This question is meant to focus on “individual freedom” being a central component to this system as a counter-balance to trust. Trades are more likely to be successful because of the central authority managing it, but you may not always be able to trade when you need to or you may be restricted on where you can trade if the bank is located somewhere else."
       },
       "seeding_key": {
         "activity_section.key": "68d8f3b3-58de-494f-9320-89093a78f5b4",
@@ -1077,7 +1077,7 @@
       "key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [r how_blockchain_works_why_blockchain_/blockchain/2023] video. After the previous activities, students should recognize and be able to relate to many of the themes in the video."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the [r how_blockchain_works_why_blockchain_/blockchain/2023] video. After the previous activities, students should recognize and be able to relate to many of the themes in the video."
       },
       "seeding_key": {
         "activity_section.key": "b686dc40-791e-4ae9-b924-0e4aa7b998c2",
@@ -1088,7 +1088,7 @@
       "key": "d139a89c-f7ab-49e5-b9c0-8d203730ad78",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** \n- What is one issue from today that could be improved by Blockchain?\n- What is a potential new issue that you think could occur because of Blockchain?\n\nHave students think on their answer first and discuss with their groups before sharing as a class."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** \n- What is one issue from today that could be improved by Blockchain?\n- What is a potential new issue that you think could occur because of Blockchain?\n\nHave students think on their answer first and discuss with their groups before sharing as a class."
       },
       "seeding_key": {
         "activity_section.key": "d139a89c-f7ab-49e5-b9c0-8d203730ad78",
@@ -1099,7 +1099,7 @@
       "key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary depending on the experiences students had during the simulation - however, hopefully students see how their experiences are reflected in the lead-up to blockchain technology as presented in the video."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary depending on the experiences students had during the simulation - however, hopefully students see how their experiences are reflected in the lead-up to blockchain technology as presented in the video."
       },
       "seeding_key": {
         "activity_section.key": "bbcd397e-a3f0-4be6-aa96-4d983eaef536",
@@ -1186,7 +1186,7 @@
       "key": "2130e860-558e-4c9c-8a8a-cdd51516ab38",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Two friends, Kim and Isaac, want to send secret messages to each other but their parents read all of their text messages. How do you think they can communicate with each other even if someone reads all of their messages?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Two friends, Kim and Isaac, want to send secret messages to each other but their parents read all of their text messages. How do you think they can communicate with each other even if someone reads all of their messages?"
       },
       "seeding_key": {
         "activity_section.key": "2130e860-558e-4c9c-8a8a-cdd51516ab38",
@@ -1197,7 +1197,7 @@
       "key": "cd97af4d-5c82-44e0-b776-794f2e39bb49",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may come up with several solutions to this problem:\n- They could scramble the letters in their messages so, if someone were reading them, it would look like nonsense. Then the other person would know how to unscramble the message\n- They could embed a secret message into an unimportant message. For example: by circling the first letter of each word to create a secret message, or by reading every third word. \n- They could not use text messages at all and instead just meet in person to communicate\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may come up with several solutions to this problem:\n- They could scramble the letters in their messages so, if someone were reading them, it would look like nonsense. Then the other person would know how to unscramble the message\n- They could embed a secret message into an unimportant message. For example: by circling the first letter of each word to create a secret message, or by reading every third word. \n- They could not use text messages at all and instead just meet in person to communicate\n"
       },
       "seeding_key": {
         "activity_section.key": "cd97af4d-5c82-44e0-b776-794f2e39bb49",
@@ -1247,7 +1247,7 @@
       "key": "24846590-4640-4049-bb26-1c19879408c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine two people, Kim and Isaac, had to make a purchase without ever meeting: Kim wants to pay Isaac $300 for the latest gaming system. What problems could happen between Kim and Isaac while completing this transaction?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine two people, Kim and Isaac, had to make a purchase without ever meeting: Kim wants to pay Isaac $300 for the latest gaming system. What problems could happen between Kim and Isaac while completing this transaction?"
       },
       "seeding_key": {
         "activity_section.key": "24846590-4640-4049-bb26-1c19879408c3",
@@ -1258,7 +1258,7 @@
       "key": "ceb073d9-3731-462c-8e6c-a8bb1bdd154b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may come up with several responses, but focus on the ones involving trust. For example:\n\n- Kim may not have all the money he says he has\n- Isaac may not have a working gaming system and it will be broken on arrival\n- How do they know they’re actually communicating with who they say they are?\n- One of them may say they’ve completed their end of the bargain when they really haven’t\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may come up with several responses, but focus on the ones involving trust. For example:\n\n- Kim may not have all the money he says he has\n- Isaac may not have a working gaming system and it will be broken on arrival\n- How do they know they’re actually communicating with who they say they are?\n- One of them may say they’ve completed their end of the bargain when they really haven’t\n"
       },
       "seeding_key": {
         "activity_section.key": "ceb073d9-3731-462c-8e6c-a8bb1bdd154b",
@@ -1322,7 +1322,7 @@
       "key": "f5c89b6f-508d-4a91-a0b0-c60f105ed419",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r vocabulary_matching/blockchain/2023] activity guide to each student. Students will use this while watching the video to identify vocabulary"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [r vocabulary_matching/blockchain/2023] activity guide to each student. Students will use this while watching the video to identify vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f5c89b6f-508d-4a91-a0b0-c60f105ed419",
@@ -1333,7 +1333,7 @@
       "key": "3dd7058d-fa3b-41c5-a3b3-4f3ae255c2d1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [r encryption/blockchain/2023] video"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the [r encryption/blockchain/2023] video"
       },
       "seeding_key": {
         "activity_section.key": "3dd7058d-fa3b-41c5-a3b3-4f3ae255c2d1",
@@ -1344,7 +1344,7 @@
       "key": "01a4f9f2-fefd-4f0a-b94e-68125dc8c635",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Review the following vocabulary from the video. Allow students to check their answers from their matching notetaker.\n\n- **Encryption** - Scrambling or changing a message to hide the original text\n- **Decryption** - Unscrambling a message to make it readable\n- **Key** - A secret password for unlocking a message\n- **Symmetric Encryption** - When the same key is used to encrypt and decrypt a message\n- **Asymmetric Encryption** - When different keys are used to encrypt and decrypt a message\n- **Public Key** - A key that is shared with everybody so anyone can encrypt a message\n- **Private Key** - A key that is kept private so only a specific person can decrypt a message"
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Review the following vocabulary from the video. Allow students to check their answers from their matching notetaker.\n\n- **Encryption** - Scrambling or changing a message to hide the original text\n- **Decryption** - Unscrambling a message to make it readable\n- **Key** - A secret password for unlocking a message\n- **Symmetric Encryption** - When the same key is used to encrypt and decrypt a message\n- **Asymmetric Encryption** - When different keys are used to encrypt and decrypt a message\n- **Public Key** - A key that is shared with everybody so anyone can encrypt a message\n- **Private Key** - A key that is kept private so only a specific person can decrypt a message"
       },
       "seeding_key": {
         "activity_section.key": "01a4f9f2-fefd-4f0a-b94e-68125dc8c635",
@@ -1383,7 +1383,7 @@
       "key": "a4bbf324-c976-4bbf-a911-398008ac2369",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slides showing how a message can be encrypted and decrypted using public and private keys. The slide will animate automatically showing the process."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slides showing how a message can be encrypted and decrypted using public and private keys. The slide will animate automatically showing the process."
       },
       "seeding_key": {
         "activity_section.key": "a4bbf324-c976-4bbf-a911-398008ac2369",
@@ -1417,7 +1417,7 @@
       "key": "17b8a4e8-5999-4bbb-a3d6-ec219b37707d",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Show the slide with the definition and visual for the following terms:\n- **Message Hash** - a unique representation of an original message that has been transformed so it is unrecognizable.\n\nPoint out the last two examples on the slide, where the only difference is the capitalization. Emphasize that even though the original messages are very similar, the resulting hashes don’t look anything alike."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Show the slide with the definition and visual for the following terms:\n- **Message Hash** - a unique representation of an original message that has been transformed so it is unrecognizable.\n\nPoint out the last two examples on the slide, where the only difference is the capitalization. Emphasize that even though the original messages are very similar, the resulting hashes don’t look anything alike."
       },
       "seeding_key": {
         "activity_section.key": "17b8a4e8-5999-4bbb-a3d6-ec219b37707d",
@@ -1444,7 +1444,7 @@
       "key": "bf441471-d7ad-46bc-bdd6-739cd429551c",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the next slide with the Hash Example. The slide has animations to click through:\n- Clicking the first animation will show an example of the phrase \"A dog barks\" being converted into a hash by turning each letter into a number corresponding to its place in the alphabet. Creating these numbers is **easy** because we can clearly define what each letter maps onto\n- Clicking the second animation shows what happens if you try to reverse-engineer the same hash numbers from the first example. Because it's not clear how to separate the numbers, it is **hard** to reconstruct the original phrase and you end up with jumbles instead."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the next slide with the Hash Example. The slide has animations to click through:\n- Clicking the first animation will show an example of the phrase \"A dog barks\" being converted into a hash by turning each letter into a number corresponding to its place in the alphabet. Creating these numbers is **easy** because we can clearly define what each letter maps onto\n- Clicking the second animation shows what happens if you try to reverse-engineer the same hash numbers from the first example. Because it's not clear how to separate the numbers, it is **hard** to reconstruct the original phrase and you end up with jumbles instead."
       },
       "seeding_key": {
         "activity_section.key": "bf441471-d7ad-46bc-bdd6-739cd429551c",
@@ -1467,7 +1467,7 @@
       "key": "0e693449-6152-4a5c-af76-56ea1e5065f8",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide presenting how public key cryptography can be used to verify the sender using a message signature."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide presenting how public key cryptography can be used to verify the sender using a message signature."
       },
       "seeding_key": {
         "activity_section.key": "0e693449-6152-4a5c-af76-56ea1e5065f8",
@@ -1489,7 +1489,7 @@
       "key": "99a292aa-e36c-4449-a021-7a0c1cf24b5d",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary for students to match on their activity guide\n\n- **Message Signature** - A unique encrypted message used to verify the sender of a message."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary for students to match on their activity guide\n\n- **Message Signature** - A unique encrypted message used to verify the sender of a message."
       },
       "seeding_key": {
         "activity_section.key": "99a292aa-e36c-4449-a021-7a0c1cf24b5d",
@@ -1528,7 +1528,7 @@
       "key": "849da6d7-35dc-4c57-8e6c-90272230052b",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Send students to Level 1 in Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Send students to Level 1 in Code Studio",
         "progression_name": "Widget: Verifying Signatures"
       },
       "seeding_key": {
@@ -1540,7 +1540,7 @@
       "key": "0f02ba6b-2f79-4179-af02-748178c64ac1",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students how to use the widget to view different messages and the corresponding hash. Model how to verify the signature of a message by testing each public key:\n\n- Use the orange arrows at the top to scroll through different messages\n- Choose a public key from the table on the level and type it into the box, then press Verify Signature\n- Check that the decrypted signature matches the original message hash. If it does, you’ve verified the signature!\n\nComplete the first example together as a class"
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students how to use the widget to view different messages and the corresponding hash. Model how to verify the signature of a message by testing each public key:\n\n- Use the orange arrows at the top to scroll through different messages\n- Choose a public key from the table on the level and type it into the box, then press Verify Signature\n- Check that the decrypted signature matches the original message hash. If it does, you’ve verified the signature!\n\nComplete the first example together as a class"
       },
       "seeding_key": {
         "activity_section.key": "0f02ba6b-2f79-4179-af02-748178c64ac1",
@@ -1551,7 +1551,7 @@
       "key": "2279beb1-ade1-4963-a227-3918d4c2ba13",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r blockchain_scenarios/blockchain/2023] Activity Guide. Have students complete the section on verifying signatures. They can fill in one of the rows from the example completed as a class.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r blockchain_scenarios/blockchain/2023] Activity Guide. Have students complete the section on verifying signatures. They can fill in one of the rows from the example completed as a class.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2279beb1-ade1-4963-a227-3918d4c2ba13",
@@ -1562,7 +1562,7 @@
       "key": "c51d2dde-dad9-4157-b584-818a1c6ddf5d",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor that students verifying each signature. You can check-in with students as the widget is running to verify that they understand that the decrypted signature and the original hash should match in order to verify the sender.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor that students verifying each signature. You can check-in with students as the widget is running to verify that they understand that the decrypted signature and the original hash should match in order to verify the sender.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1592,7 +1592,7 @@
       "key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
       "position": 25,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_blockchain_works_under_the_hood/blockchain/2023] video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_blockchain_works_under_the_hood/blockchain/2023] video (~6 minutes). Have students match the vocabulary words from the video on their notetaker as well."
       },
       "seeding_key": {
         "activity_section.key": "9f5d443f-57ee-4e69-b9cf-a79c6d354e5b",
@@ -1603,7 +1603,7 @@
       "key": "4e100d5e-716b-450f-9760-088db5e22e15",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with the following vocabulary. Allow students to check their matches from their notetaker.\n\n- **Ledger** - A record of all transactions in a group\n- **Consensus** - A mechanism requiring enough people to agree which transactions are valid\n- **Proof of Work** - Verifying information with a lot of computing effort"
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with the following vocabulary. Allow students to check their matches from their notetaker.\n\n- **Ledger** - A record of all transactions in a group\n- **Consensus** - A mechanism requiring enough people to agree which transactions are valid\n- **Proof of Work** - Verifying information with a lot of computing effort"
       },
       "seeding_key": {
         "activity_section.key": "4e100d5e-716b-450f-9760-088db5e22e15",
@@ -1626,7 +1626,7 @@
       "key": "bb64cc6b-0af4-4e4d-84f9-fad008b8adbc",
       "position": 28,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Send students to the next level in Code Studio. They will also be using their activity guide again.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Send students to the next level in Code Studio. They will also be using their activity guide again.",
         "progression_name": "Widget: Blockchain Scenario 1"
       },
       "seeding_key": {
@@ -1638,7 +1638,7 @@
       "key": "be34737e-5587-443b-9ef4-0a4b1d1072c1",
       "position": 29,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students how to view individual messages in the widget and how to use the public keys to verify signatures: "
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Model:** Show students how to view individual messages in the widget and how to use the public keys to verify signatures: "
       },
       "seeding_key": {
         "activity_section.key": "be34737e-5587-443b-9ef4-0a4b1d1072c1",
@@ -1660,7 +1660,7 @@
       "key": "846910f5-4e4a-4a87-939e-13118baca6dc",
       "position": 31,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As the class works together, have students record their answers on their activity guide for Blockchain Scenario 1. Decide as a class which messages to add to the blockchain, then continue to the next screen. Pause on this next screen to explain how this relates to Proof of Work."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** As the class works together, have students record their answers on their activity guide for Blockchain Scenario 1. Decide as a class which messages to add to the blockchain, then continue to the next screen. Pause on this next screen to explain how this relates to Proof of Work."
       },
       "seeding_key": {
         "activity_section.key": "846910f5-4e4a-4a87-939e-13118baca6dc",
@@ -1671,7 +1671,7 @@
       "key": "11f8aed5-b1ee-4413-a4f1-67dd9a202e37",
       "position": 32,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the following slides, which explains how the widget handles Proof of Work."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the following slides, which explains how the widget handles Proof of Work."
       },
       "seeding_key": {
         "activity_section.key": "11f8aed5-b1ee-4413-a4f1-67dd9a202e37",
@@ -1693,7 +1693,7 @@
       "key": "cc3785a3-c804-4538-890d-2aa75110b741",
       "position": 34,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary slide. Allow students to check their vocabulary matching notetaker.\n\n- **Nonce** - A number used to try and change the hash of a block of messages so that it starts with a unique set of 0’s. It’s an abbreviation for “Number used once”.\n- **Mining** - When you continually generate new numbers to try and get a hash to start with a unique set of 0’s. This is a puzzle that can only be solved by guessing."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary slide. Allow students to check their vocabulary matching notetaker.\n\n- **Nonce** - A number used to try and change the hash of a block of messages so that it starts with a unique set of 0’s. It’s an abbreviation for “Number used once”.\n- **Mining** - When you continually generate new numbers to try and get a hash to start with a unique set of 0’s. This is a puzzle that can only be solved by guessing."
       },
       "seeding_key": {
         "activity_section.key": "cc3785a3-c804-4538-890d-2aa75110b741",
@@ -1716,7 +1716,7 @@
       "key": "05c19916-6167-44bf-9c1b-3fbdbf628c75",
       "position": 36,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Demonstrate how to iterate through various guesses to determine a correct nonce for the block:"
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Model:** Demonstrate how to iterate through various guesses to determine a correct nonce for the block:"
       },
       "seeding_key": {
         "activity_section.key": "05c19916-6167-44bf-9c1b-3fbdbf628c75",
@@ -1762,7 +1762,7 @@
       "key": "200a9384-b540-44bc-bb15-269261a39e8e",
       "position": 39,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the next 3 scenarios on Code Studio, filling in their activity guide as they continue.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the next 3 scenarios on Code Studio, filling in their activity guide as they continue.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1812,7 +1812,7 @@
       "key": "47fe6e64-8b5a-4045-a39e-eb49da7e60ce",
       "position": 43,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Look back at the scenarios in each of these levels. Since the transactions are public, we can see how these people are trading money. Look through the scenarios and see if you can identify one that seems like it has a pattern. What story can you tell about that scenario amongst that group of friends?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Look back at the scenarios in each of these levels. Since the transactions are public, we can see how these people are trading money. Look through the scenarios and see if you can identify one that seems like it has a pattern. What story can you tell about that scenario amongst that group of friends?"
       },
       "seeding_key": {
         "activity_section.key": "47fe6e64-8b5a-4045-a39e-eb49da7e60ce",
@@ -1823,7 +1823,7 @@
       "key": "f7b1651e-a9b6-456d-b671-ba0fd301da27",
       "position": 44,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is the same prompt repeated on the activity guide. Invite students to share any ideas or observations that they noticed while validating transactions. Some examples may include:\n\n- in Blockchain Scenario 1: A group of friends paying each other back for meals when they can’t split the check and 1 person has to pay for everyone (similar to Venmo or Zelle transactions)\n- in Blockchain Scenario 2: One person trying to create fraudulent transactions and steal money from others\n- in Blockchain Scenario 3: Some kind of gambling ring, where everyone sends their “bets” to a central person who then redistributes it to the winner\n- in Blockchain Scenario 4: One person gives “loans” to their friends, who pay it back later with a little extra as interest.\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This is the same prompt repeated on the activity guide. Invite students to share any ideas or observations that they noticed while validating transactions. Some examples may include:\n\n- in Blockchain Scenario 1: A group of friends paying each other back for meals when they can’t split the check and 1 person has to pay for everyone (similar to Venmo or Zelle transactions)\n- in Blockchain Scenario 2: One person trying to create fraudulent transactions and steal money from others\n- in Blockchain Scenario 3: Some kind of gambling ring, where everyone sends their “bets” to a central person who then redistributes it to the winner\n- in Blockchain Scenario 4: One person gives “loans” to their friends, who pay it back later with a little extra as interest.\n"
       },
       "seeding_key": {
         "activity_section.key": "f7b1651e-a9b6-456d-b671-ba0fd301da27",
@@ -1834,7 +1834,7 @@
       "key": "27bd8f47-2273-4f06-b395-c54727e6c3fc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. Based on what you’ve seen today, how does cryptography help the Blockchain accomplish this goal?\n\nThis prompt is also on the last page of the activity guide. Students can write their responses first, then share with a neighbor before sharing out as a full class."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. Based on what you’ve seen today, how does cryptography help the Blockchain accomplish this goal?\n\nThis prompt is also on the last page of the activity guide. Students can write their responses first, then share with a neighbor before sharing out as a full class."
       },
       "seeding_key": {
         "activity_section.key": "27bd8f47-2273-4f06-b395-c54727e6c3fc",
@@ -1845,7 +1845,7 @@
       "key": "ed763334-833a-4b15-a82c-05b61d736052",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion can help summarize some of the big-picture takeaways relating the blockchain to cryptography. Student answers may vary, but some responses may include:\n- Signatures help verify that the person sending money is actually who they say they are\n- The effort to verify all of the blocks contributes to the proof of work, ensuring that only accurate blocks are added to the blockchain\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This discussion can help summarize some of the big-picture takeaways relating the blockchain to cryptography. Student answers may vary, but some responses may include:\n- Signatures help verify that the person sending money is actually who they say they are\n- The effort to verify all of the blocks contributes to the proof of work, ensuring that only accurate blocks are added to the blockchain\n"
       },
       "seeding_key": {
         "activity_section.key": "ed763334-833a-4b15-a82c-05b61d736052",
@@ -1916,7 +1916,7 @@
       "key": "7ea837ab-7d9c-4eff-9fd7-2283d1d3c7b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine you go out to dinner with a large group of friends where each person orders their meal. When the bill comes, they’re not able to split it individually - the group needs to handle it themselves.\n\nHow would you go about trying to split the bill? What are important factors to consider? How can you be sure it’s being done fairly?\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine you go out to dinner with a large group of friends where each person orders their meal. When the bill comes, they’re not able to split it individually - the group needs to handle it themselves.\n\nHow would you go about trying to split the bill? What are important factors to consider? How can you be sure it’s being done fairly?\n"
       },
       "seeding_key": {
         "activity_section.key": "7ea837ab-7d9c-4eff-9fd7-2283d1d3c7b1",
@@ -1927,7 +1927,7 @@
       "key": "41cf211b-cc1e-416b-b1fd-7dc92fd64c1b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one right answer to this prompt - instead, this scenario helps motivate the complexities of executing an agreement amongst a group of people. Students may consider the cost of each person’s meal and whether or not someone ordered a drink, or students may go the “simple route” and split the entire check evenly which means some people may be paying more or less than their meal would have been individually."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** There is no one right answer to this prompt - instead, this scenario helps motivate the complexities of executing an agreement amongst a group of people. Students may consider the cost of each person’s meal and whether or not someone ordered a drink, or students may go the “simple route” and split the entire check evenly which means some people may be paying more or less than their meal would have been individually."
       },
       "seeding_key": {
         "activity_section.key": "41cf211b-cc1e-416b-b1fd-7dc92fd64c1b",
@@ -1950,7 +1950,7 @@
       "key": "16a7450d-2457-43e4-b997-7b32849e6bab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of \n[r vocabulary_matching_2/blockchain/2023] notetaker to each student.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy of \n[r vocabulary_matching_2/blockchain/2023] notetaker to each student.",
         "duration": "15",
         "name": "Blockchain & Smart Contracts"
       },
@@ -1963,7 +1963,7 @@
       "key": "df5b8bfc-1bb5-4868-91e2-d9e43a9dbc20",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the [r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Watch the [r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class"
       },
       "seeding_key": {
         "activity_section.key": "df5b8bfc-1bb5-4868-91e2-d9e43a9dbc20",
@@ -1974,7 +1974,7 @@
       "key": "656756a1-cf32-4072-adc7-411a5253efb3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Smart Contract** - An autonomous program that ensures rules of a transaction are followed without the need for legal contracts\n- **NFT (Non-Fungible Token)** - An asset, tracked on the blockchain, associated with ownership of digital collectibles, artwork, or items in a game\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Smart Contract** - An autonomous program that ensures rules of a transaction are followed without the need for legal contracts\n- **NFT (Non-Fungible Token)** - An asset, tracked on the blockchain, associated with ownership of digital collectibles, artwork, or items in a game\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
       },
       "seeding_key": {
         "activity_section.key": "656756a1-cf32-4072-adc7-411a5253efb3",
@@ -1997,7 +1997,7 @@
       "key": "89197a02-2101-40d1-b074-a9c090fcbceb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the [r what_do_computers_do_/blockchain/2023] video, which introduces the input - processing - storage - output model for how computers work."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Watch the [r what_do_computers_do_/blockchain/2023] video, which introduces the input - processing - storage - output model for how computers work."
       },
       "seeding_key": {
         "activity_section.key": "89197a02-2101-40d1-b074-a9c090fcbceb",
@@ -2008,7 +2008,7 @@
       "key": "37dc4629-6dce-478f-a30f-c58b9250373a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Input** - The information computers get from users, devices, or other computers\n- **Output** - The information computers give to users, devices, or other computers\n- **Processing** - The thinking work computers do to turn input into output\n- **Storage** - Saving information to use in the future\n"
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the vocabulary slide and allow students to check their responses from their vocabulary notetaker.\n- **Input** - The information computers get from users, devices, or other computers\n- **Output** - The information computers give to users, devices, or other computers\n- **Processing** - The thinking work computers do to turn input into output\n- **Storage** - Saving information to use in the future\n"
       },
       "seeding_key": {
         "activity_section.key": "37dc4629-6dce-478f-a30f-c58b9250373a",
@@ -2019,7 +2019,7 @@
       "key": "8e780025-eccc-4c16-9077-ee3f2cf5977b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** In the restaurant scenario...\n- What are the inputs?\n- What is being processed?\n- What is being stored?\n- What are the outputs?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** In the restaurant scenario...\n- What are the inputs?\n- What is being processed?\n- What is being stored?\n- What are the outputs?"
       },
       "seeding_key": {
         "activity_section.key": "8e780025-eccc-4c16-9077-ee3f2cf5977b",
@@ -2030,7 +2030,7 @@
       "key": "94c83fdd-99ed-4245-b7c6-ea5c3f5ba754",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Have students discuss with their neighbors or in small groups, but don’t have them share as full group. Instead, be listening for insights that match the smart contract example that will be revealed in the next section. This can be an opportunity to highlight student insights from small group conversations as they match the next part of the activity."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Have students discuss with their neighbors or in small groups, but don’t have them share as full group. Instead, be listening for insights that match the smart contract example that will be revealed in the next section. This can be an opportunity to highlight student insights from small group conversations as they match the next part of the activity."
       },
       "seeding_key": {
         "activity_section.key": "94c83fdd-99ed-4245-b7c6-ea5c3f5ba754",
@@ -2053,7 +2053,7 @@
       "key": "3486e27d-4396-4d6c-9c54-b87962a1a7d2",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  Show the example Restaurant Bill Smart Contract."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:**  Show the example Restaurant Bill Smart Contract."
       },
       "seeding_key": {
         "activity_section.key": "3486e27d-4396-4d6c-9c54-b87962a1a7d2",
@@ -2064,7 +2064,7 @@
       "key": "ab7bb5bd-8fda-4bdf-a3cd-c66864293c1d",
       "position": 11,
       "properties": {
-        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/320e3d9432c4b14c6ebc174ea7e9bb61-slides1-sm.png) | <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Highlight each row of the smart contract and the purpose it serves. Shout out any students whose ideas matched the smart contract representation, but also acknowledge that there could be many different ways to write this contract and could have different results. Emphasize that the “Storage” row is always “On the blockchain” because that’s how smart contracts operate. |"
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/320e3d9432c4b14c6ebc174ea7e9bb61-slides1-sm.png) | <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Highlight each row of the smart contract and the purpose it serves. Shout out any students whose ideas matched the smart contract representation, but also acknowledge that there could be many different ways to write this contract and could have different results. Emphasize that the “Storage” row is always “On the blockchain” because that’s how smart contracts operate. |"
       },
       "seeding_key": {
         "activity_section.key": "ab7bb5bd-8fda-4bdf-a3cd-c66864293c1d",
@@ -2100,7 +2100,7 @@
       "key": "279d5109-e968-4c7c-bcdd-9265ca06754c",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r smart_contract_template/blockchain/2023]. If you have poster paper or whiteboards, also assign students a piece of poster paper or whiteboard to copy this template onto. Working on poster paper or whiteboards will make the gallery walk in the second half of this activity easier to facilitate."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r smart_contract_template/blockchain/2023]. If you have poster paper or whiteboards, also assign students a piece of poster paper or whiteboard to copy this template onto. Working on poster paper or whiteboards will make the gallery walk in the second half of this activity easier to facilitate."
       },
       "seeding_key": {
         "activity_section.key": "279d5109-e968-4c7c-bcdd-9265ca06754c",
@@ -2111,7 +2111,7 @@
       "key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **(Optional) Distribute:** You may decide to distribute the [r example_user_stories/blockchain/2023] resource to groups to give them an idea of a smart contract to create."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **(Optional) Distribute:** You may decide to distribute the [r example_user_stories/blockchain/2023] resource to groups to give them an idea of a smart contract to create."
       },
       "seeding_key": {
         "activity_section.key": "a33c7650-1408-4ec9-805b-2379fd6de9cc",
@@ -2122,7 +2122,7 @@
       "key": "8efac7c1-99b0-4bff-b581-8dc92337b5a6",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Each group should come up with a scenario that could be made simpler with a smart contract, then represent that scenario on their smart contract template.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Each group should come up with a scenario that could be made simpler with a smart contract, then represent that scenario on their smart contract template.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2152,7 +2152,7 @@
       "key": "331d71f2-77e3-40b4-8af9-5a3e664c7b45",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the headline from the news story about the Blockchain alarm clock. Emphasize that this is an example where someone was able to find a loophole in the contract and exploit it for profit."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the headline from the news story about the Blockchain alarm clock. Emphasize that this is an example where someone was able to find a loophole in the contract and exploit it for profit."
       },
       "seeding_key": {
         "activity_section.key": "331d71f2-77e3-40b4-8af9-5a3e664c7b45",
@@ -2175,7 +2175,7 @@
       "key": "0360d0ff-ebae-4c73-96a2-cb38a74ed3e8",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the bill splitting example from earlier."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the bill splitting example from earlier."
       },
       "seeding_key": {
         "activity_section.key": "0360d0ff-ebae-4c73-96a2-cb38a74ed3e8",
@@ -2186,7 +2186,7 @@
       "key": "e10151c0-4cf8-48bf-88af-eb64bdab58d3",
       "position": 21,
       "properties": {
-        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/e4d614b94cec345596c649d8f63e6b7b-slides2-sm.png) | <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** The template now shows two post-it notes asking “What if someone doesn’t have any money in their wallet?” and “What if someone only has foreign currency, like pesos or euros?”. Emphasize that in this situation, the contract may not know how to process these inputs and may make a mistake that could let someone get a free meal, or may leave the restaurant without a full payment. |"
+        "description": "| Slides | Speaker Notes |\n|---|---|\n|![](https://images.code.org/e4d614b94cec345596c649d8f63e6b7b-slides2-sm.png) | <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** The template now shows two post-it notes asking “What if someone doesn’t have any money in their wallet?” and “What if someone only has foreign currency, like pesos or euros?”. Emphasize that in this situation, the contract may not know how to process these inputs and may make a mistake that could let someone get a free meal, or may leave the restaurant without a full payment. |"
       },
       "seeding_key": {
         "activity_section.key": "e10151c0-4cf8-48bf-88af-eb64bdab58d3",
@@ -2230,7 +2230,7 @@
       "key": "7d41e60a-a1e8-4fed-b7c7-8f0a6727efaa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Which do you think is the most important part of a smart contract - input, processing, storage, or output? Why?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Which do you think is the most important part of a smart contract - input, processing, storage, or output? Why?"
       },
       "seeding_key": {
         "activity_section.key": "7d41e60a-a1e8-4fed-b7c7-8f0a6727efaa",
@@ -2241,7 +2241,7 @@
       "key": "1fccf4e3-29f5-4ef9-b0aa-71c7a79795b8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a chance for students to further solidify the connection between these four components and smart contracts. It’s also a chance to reflect on the second half of the activity where students may have discovered vulnerabilities in their smart contracts, usually stemming from the input or processing part of their contract."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a chance for students to further solidify the connection between these four components and smart contracts. It’s also a chance to reflect on the second half of the activity where students may have discovered vulnerabilities in their smart contracts, usually stemming from the input or processing part of their contract."
       },
       "seeding_key": {
         "activity_section.key": "1fccf4e3-29f5-4ef9-b0aa-71c7a79795b8",
@@ -2322,7 +2322,7 @@
       "key": "f6f094db-4304-471b-904d-4fa3574bd1cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are examples of physical things that people buy just to own and collect? For example, some people collect limited edition sneakers."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are examples of physical things that people buy just to own and collect? For example, some people collect limited edition sneakers."
       },
       "seeding_key": {
         "activity_section.key": "f6f094db-4304-471b-904d-4fa3574bd1cd",
@@ -2333,7 +2333,7 @@
       "key": "0fe713f4-e5fe-4a14-b81e-195033fcb653",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should think of examples where people invest money in a physical object that may not have a ton of utility but is still valuable. Additional examples might include:\n- Collecting limited edition movie posters ([example here](https://mondoshop.com/collections/posters))\n- Collecting limited edition plush animals or toys ([example here](https://parade.com/1172319/stephanieosmanski/most-valuable-beanie-babies/))\n- Collecting memorabilia from concerts or events, especially T-shirts\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should think of examples where people invest money in a physical object that may not have a ton of utility but is still valuable. Additional examples might include:\n- Collecting limited edition movie posters ([example here](https://mondoshop.com/collections/posters))\n- Collecting limited edition plush animals or toys ([example here](https://parade.com/1172319/stephanieosmanski/most-valuable-beanie-babies/))\n- Collecting memorabilia from concerts or events, especially T-shirts\n"
       },
       "seeding_key": {
         "activity_section.key": "0fe713f4-e5fe-4a14-b81e-195033fcb653",
@@ -2378,7 +2378,7 @@
       "key": "5146e01d-9579-4b9c-9d25-d11953a6dbb4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the\n[r vocabulary_matching_1/blockchain/2023] handout. Students will use this to keep track of vocabulary throughout the lesson.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the\n[r vocabulary_matching_1/blockchain/2023] handout. Students will use this to keep track of vocabulary throughout the lesson.",
         "duration": "25",
         "name": "Introduction"
       },
@@ -2391,7 +2391,7 @@
       "key": "098281b0-6bb1-438e-b077-5ee372e1090a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show students the [r how_blockchain_works_marketplace_price/blockchain/2023] video"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show students the [r how_blockchain_works_marketplace_price/blockchain/2023] video"
       },
       "seeding_key": {
         "activity_section.key": "098281b0-6bb1-438e-b077-5ee372e1090a",
@@ -2402,7 +2402,7 @@
       "key": "7e00413f-1a77-483d-a566-2e85a96c7b90",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with this vocabulary. Allow students to check their answers on their vocabulary notetaker.\n- **Exchange** - a marketplace where anybody can buy or sell something\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
+        "description": "<i class=\"fa-solid fa-pencil\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with this vocabulary. Allow students to check their answers on their vocabulary notetaker.\n- **Exchange** - a marketplace where anybody can buy or sell something\n- **Asset** - Something you own that is valuable. Often, assets are exchanged or converted into currency."
       },
       "seeding_key": {
         "activity_section.key": "7e00413f-1a77-483d-a566-2e85a96c7b90",
@@ -2436,7 +2436,7 @@
       "key": "11b1d5c5-7b81-4a4e-bd16-9598ca92c299",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023].",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of\n[r asset_cards/blockchain/2023].",
         "tips": [
           {
             "type": "teachingTip",
@@ -2465,7 +2465,7 @@
       "key": "caf2755a-1314-49ee-a96c-fae38f87e175",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Give students time to look over each card and read more about the assets. After a while, transition students to completing the bottom section of their vocabulary notetaker to identify qualities of NFTs, Cryptocurrencies, and Stablecoins. It's okay for students to be unsure of some responses - they will have a chance to check their work in the next activity."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Give students time to look over each card and read more about the assets. After a while, transition students to completing the bottom section of their vocabulary notetaker to identify qualities of NFTs, Cryptocurrencies, and Stablecoins. It's okay for students to be unsure of some responses - they will have a chance to check their work in the next activity."
       },
       "seeding_key": {
         "activity_section.key": "caf2755a-1314-49ee-a96c-fae38f87e175",
@@ -2476,7 +2476,7 @@
       "key": "12a778c5-46e1-4d9c-84b7-a7eeae47bf9f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the set of slides giving an overview of NFTs, Cryptocurrencies, and Stablecoins. Give students an opportunity to check their work and update their answers based on the slides.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the set of slides giving an overview of NFTs, Cryptocurrencies, and Stablecoins. Give students an opportunity to check their work and update their answers based on the slides.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2493,7 +2493,7 @@
       "key": "48b9f4bf-4558-4863-b383-4517bd48ba83",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of \n[r crypto_market_simulation_overview/blockchain/2023]."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of \n[r crypto_market_simulation_overview/blockchain/2023]."
       },
       "seeding_key": {
         "activity_section.key": "48b9f4bf-4558-4863-b383-4517bd48ba83",
@@ -2504,7 +2504,7 @@
       "key": "ef0580ce-d957-4eb1-81b5-2c9125b8a1f7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a class, review the Background section at the top of the handout. Explain that there are multiple stages to this simulation, which is outlined in each row of this handout."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** As a class, review the Background section at the top of the handout. Explain that there are multiple stages to this simulation, which is outlined in each row of this handout."
       },
       "seeding_key": {
         "activity_section.key": "ef0580ce-d957-4eb1-81b5-2c9125b8a1f7",
@@ -2527,7 +2527,7 @@
       "key": "5b1a9fec-793a-4dc4-9c39-87b23458dbed",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Look through the assets individually first, reading over the different descriptions and information on each card. As a table, put them in order from “most risky” to “most stable”"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Look through the assets individually first, reading over the different descriptions and information on each card. As a table, put them in order from “most risky” to “most stable”"
       },
       "seeding_key": {
         "activity_section.key": "5b1a9fec-793a-4dc4-9c39-87b23458dbed",
@@ -2538,7 +2538,7 @@
       "key": "068ed79f-1e26-44a2-ae4f-cecc677fca90",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are looking through the collection of assets - each one has a unique description that can give insights into what might happen throughout the simulation. Then monitor table conversations to hear which assets students think are risky versus stable."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are looking through the collection of assets - each one has a unique description that can give insights into what might happen throughout the simulation. Then monitor table conversations to hear which assets students think are risky versus stable."
       },
       "seeding_key": {
         "activity_section.key": "068ed79f-1e26-44a2-ae4f-cecc677fca90",
@@ -2549,7 +2549,7 @@
       "key": "d376c0c9-3df1-4bfd-b85d-7d1deeb38e9d",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What was an asset that seemed especially risky? What was an asset that seemed especially stable? Why?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What was an asset that seemed especially risky? What was an asset that seemed especially stable? Why?"
       },
       "seeding_key": {
         "activity_section.key": "d376c0c9-3df1-4bfd-b85d-7d1deeb38e9d",
@@ -2560,7 +2560,7 @@
       "key": "f9c0b187-e74b-4711-92be-f17cf688d01d",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask each table to share their thoughts on this prompt or just one part of it. There’s no one “right answer” to this question or the ordering that students come up with, but there are definitely some assets that appear more risky or more stable than others:\n- ByteCoin, Connect USD, and Sol may appear the most stable to some groups, although some groups may question the extremely high return rate for Sol\n- ParrotCoin may appear the most risky to some groups\n- The NFTs are harder to predict and students may end up using the descriptions to justify why they think a particular NFT is more or less table, especially if they connect the value to the perks or utility of the stablecoin.\n"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask each table to share their thoughts on this prompt or just one part of it. There’s no one “right answer” to this question or the ordering that students come up with, but there are definitely some assets that appear more risky or more stable than others:\n- ByteCoin, Connect USD, and Sol may appear the most stable to some groups, although some groups may question the extremely high return rate for Sol\n- ParrotCoin may appear the most risky to some groups\n- The NFTs are harder to predict and students may end up using the descriptions to justify why they think a particular NFT is more or less table, especially if they connect the value to the perks or utility of the stablecoin.\n"
       },
       "seeding_key": {
         "activity_section.key": "f9c0b187-e74b-4711-92be-f17cf688d01d",
@@ -2583,7 +2583,7 @@
       "key": "a86d8fe3-b321-467d-9893-66ee2964e6c4",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** As a table, have a discussion about:\n1. How risky do you want your investment strategy to be?\n2. How much of your strategy do you want to based on the purpose and utility of the asset (and not just its value)?\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** As a table, have a discussion about:\n1. How risky do you want your investment strategy to be?\n2. How much of your strategy do you want to based on the purpose and utility of the asset (and not just its value)?\n"
       },
       "seeding_key": {
         "activity_section.key": "a86d8fe3-b321-467d-9893-66ee2964e6c4",
@@ -2594,7 +2594,7 @@
       "key": "26adee2f-8621-448a-8d38-405056a412fd",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to students as they discuss their options, paying attention to group dynamics and ensuring all students have a voice in the discussion. Some groups may decide they only care about value and will make investment decisions based on how risky or stable an asset is. Some groups may care more about impact or utility and may decide to invest in an asset because of its status (for example: buying all the crypto gerbils because they want to participate in the game). Be sure to give students a time limit on their discussion so they can continue to the next part of the activity."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen to students as they discuss their options, paying attention to group dynamics and ensuring all students have a voice in the discussion. Some groups may decide they only care about value and will make investment decisions based on how risky or stable an asset is. Some groups may care more about impact or utility and may decide to invest in an asset because of its status (for example: buying all the crypto gerbils because they want to participate in the game). Be sure to give students a time limit on their discussion so they can continue to the next part of the activity."
       },
       "seeding_key": {
         "activity_section.key": "26adee2f-8621-448a-8d38-405056a412fd",
@@ -2619,7 +2619,7 @@
       "key": "a7dad98d-98b5-47a0-a0fc-503b0c87e312",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Model:** Open up the Crypto Market Simulation Widget. You will use this app the run the simulation for the class - it should remain open on a teacher computer and running the entire class period."
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Model:** Open up the Crypto Market Simulation Widget. You will use this app the run the simulation for the class - it should remain open on a teacher computer and running the entire class period."
       },
       "seeding_key": {
         "activity_section.key": "a7dad98d-98b5-47a0-a0fc-503b0c87e312",
@@ -2641,7 +2641,7 @@
       "key": "02355e7f-a5dc-4c1c-bc70-27ff492ac4e2",
       "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the \n[r value_on_the_blockchain_1/blockchain/2023] activity guide",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the \n[r value_on_the_blockchain_1/blockchain/2023] activity guide",
         "tips": [
           {
             "type": "teachingTip",
@@ -2658,7 +2658,7 @@
       "key": "54ab3396-a566-49eb-ab25-ae1481798991",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, decide which assets they would like to purchase. Teams can spend up to $1500. Teams should record their results on their activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** As a group, decide which assets they would like to purchase. Teams can spend up to $1500. Teams should record their results on their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "54ab3396-a566-49eb-ab25-ae1481798991",
@@ -2680,7 +2680,7 @@
       "key": "817ccb1f-dab6-4b7d-9a9a-fad000cc1572",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with groups to ensure they understand some of the rules and outcomes of the assets they are purchasing: \n- Groups will be able to sell their assets in the middle of the simulation and purchase new ones. When this happens, the order of buying is reversed (so the last team to purchase now will be the first team to purchase later on)\n- NFTs and Stablecoins can only be sold in whole values, but cryptocurrencies can be sold in decimal quantities. For example a team can purchase $100 of Bytecoin by purchasing 0.39 Bytecoins\n- When purchasing a Stablecoin, the investment is locked until the end of the simulation in order for the investment to mature. This means teams won’t be able to buy or sell any Stablecoin investments in the middle of the simulation\n"
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with groups to ensure they understand some of the rules and outcomes of the assets they are purchasing: \n- Groups will be able to sell their assets in the middle of the simulation and purchase new ones. When this happens, the order of buying is reversed (so the last team to purchase now will be the first team to purchase later on)\n- NFTs and Stablecoins can only be sold in whole values, but cryptocurrencies can be sold in decimal quantities. For example a team can purchase $100 of Bytecoin by purchasing 0.39 Bytecoins\n- When purchasing a Stablecoin, the investment is locked until the end of the simulation in order for the investment to mature. This means teams won’t be able to buy or sell any Stablecoin investments in the middle of the simulation\n"
       },
       "seeding_key": {
         "activity_section.key": "817ccb1f-dab6-4b7d-9a9a-fad000cc1572",
@@ -2691,7 +2691,7 @@
       "key": "02269588-2456-4798-afaf-13c1785c8160",
       "position": 27,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Starting at group 1 and going in order, ask groups to share which assets they are purchasing and in what quantities. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** Starting at group 1 and going in order, ask groups to share which assets they are purchasing and in what quantities. "
       },
       "seeding_key": {
         "activity_section.key": "02269588-2456-4798-afaf-13c1785c8160",
@@ -2702,7 +2702,7 @@
       "key": "1b812a08-1ec2-4d97-89cc-175021cd2f60",
       "position": 28,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **(Optional) Distribute:** As groups purchase assets, distribute physical copies of these assets from the [r printable_asset_sheets/blockchain/2023] folder. This folder has several sheets available to print out, creating physical representations of the digital assets in the simulation (for example: 15 Crypto Gerbil NFTs). These physical manipulatives can help groups keep track of their investments during the Buy and Sell stages, and can be a fun addition to the lesson."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **(Optional) Distribute:** As groups purchase assets, distribute physical copies of these assets from the [r printable_asset_sheets/blockchain/2023] folder. This folder has several sheets available to print out, creating physical representations of the digital assets in the simulation (for example: 15 Crypto Gerbil NFTs). These physical manipulatives can help groups keep track of their investments during the Buy and Sell stages, and can be a fun addition to the lesson."
       },
       "seeding_key": {
         "activity_section.key": "1b812a08-1ec2-4d97-89cc-175021cd2f60",
@@ -2730,7 +2730,7 @@
       "key": "30a2b9a8-9772-4f0f-9a04-7d6c7d9526d3",
       "position": 30,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
         "duration": "5",
         "name": "Crypto Market Simulation: Fall Quarter"
       },
@@ -2754,7 +2754,7 @@
       "key": "b09c54f0-7799-4192-b0a8-f6cf63347e32",
       "position": 32,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
       },
       "seeding_key": {
         "activity_section.key": "b09c54f0-7799-4192-b0a8-f6cf63347e32",
@@ -2792,7 +2792,7 @@
       "key": "bc0d2bd0-7238-4085-acf0-dfb3de754ee7",
       "position": 35,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
         "duration": "5",
         "name": "Crypto Market Simulation: Winter Quarter"
       },
@@ -2816,7 +2816,7 @@
       "key": "da8977d4-0699-4304-8b59-a71b8e6ae097",
       "position": 37,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
       },
       "seeding_key": {
         "activity_section.key": "da8977d4-0699-4304-8b59-a71b8e6ae097",
@@ -2852,7 +2852,7 @@
       "key": "17b4ed91-26cf-40bc-9dca-a45b8132d186",
       "position": 40,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on the news from the last two quarters, what decisions are you glad you made at the start of this simulation? Are there any decisions you regret?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Based on the news from the last two quarters, what decisions are you glad you made at the start of this simulation? Are there any decisions you regret?"
       },
       "seeding_key": {
         "activity_section.key": "17b4ed91-26cf-40bc-9dca-a45b8132d186",
@@ -2863,7 +2863,7 @@
       "key": "7efa01d6-c9cc-4caf-b4b3-c95ffe6f1047",
       "position": 41,
       "properties": {
-        "description": "Have students record their thoughts on a sheet of paper first before sharing with their group, then invite students to share as a full group.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt helps foreshadow the next step of the simulation, where teams will be able to sell some of their assets and redistribute their investments if they’d like. It’s also an opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Even though it’s just a simulation, people with real money are often impacted by similar events on real investments.",
+        "description": "Have students record their thoughts on a sheet of paper first before sharing with their group, then invite students to share as a full group.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt helps foreshadow the next step of the simulation, where teams will be able to sell some of their assets and redistribute their investments if they’d like. It’s also an opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Even though it’s just a simulation, people with real money are often impacted by similar events on real investments.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2894,7 +2894,7 @@
       "key": "24f5ec51-1788-4124-9154-988871c49f62",
       "position": 43,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which assets they would like to sell (if any). The amount they earn from selling can be used in the next round to purchase new assets. Students should record their decisions on their activity guide, filling in the _Transaction_ and _Money Earned from Selling_ columns. An example of what this could look like on their activity guide is available in the slide deck.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which assets they would like to sell (if any). The amount they earn from selling can be used in the next round to purchase new assets. Students should record their decisions on their activity guide, filling in the _Transaction_ and _Money Earned from Selling_ columns. An example of what this could look like on their activity guide is available in the slide deck.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2922,7 +2922,7 @@
       "key": "61d33361-2f73-4cb0-acd1-89216bbe80fb",
       "position": 45,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students transition to the second page of their activity guide. They will need to copy over the _Cash From Previous Round_ value from the previous page and re-copy the current market values into the _Market Value_ column. An example of what this could look like on their activity guide is available in the slide deck.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which new assets they want to purchase. They should also keep track of how many they are carrying over from the previous rounds. Students can keep track of this in the _Transaction_ and _Fund Value_ columns. An example of what this could look like on their activity guide is available in the slide deck."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students transition to the second page of their activity guide. They will need to copy over the _Cash From Previous Round_ value from the previous page and re-copy the current market values into the _Market Value_ column. An example of what this could look like on their activity guide is available in the slide deck.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students discuss which new assets they want to purchase. They should also keep track of how many they are carrying over from the previous rounds. Students can keep track of this in the _Transaction_ and _Fund Value_ columns. An example of what this could look like on their activity guide is available in the slide deck."
       },
       "seeding_key": {
         "activity_section.key": "61d33361-2f73-4cb0-acd1-89216bbe80fb",
@@ -2944,7 +2944,7 @@
       "key": "29294cae-22fa-4648-9a8a-70a5e10986e0",
       "position": 47,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets.",
         "duration": "5",
         "name": "Crypto Market Simulation: Spring Quarter"
       },
@@ -2968,7 +2968,7 @@
       "key": "ccda4760-cb0b-4d11-832c-4226d8f87a70",
       "position": 49,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
       },
       "seeding_key": {
         "activity_section.key": "ccda4760-cb0b-4d11-832c-4226d8f87a70",
@@ -2990,7 +2990,7 @@
       "key": "e96fc1bf-e836-4297-a617-f0aba48a0088",
       "position": 51,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Use the teacher widget to generate a set of news stories. Scroll through all stories and invite the class to read them aloud. After viewing each story, have students make a prediction on how they think the news will affect the different assets."
       },
       "seeding_key": {
         "activity_section.key": "e96fc1bf-e836-4297-a617-f0aba48a0088",
@@ -3012,7 +3012,7 @@
       "key": "a6bc5e49-c0a8-4093-8af9-a220559bb4a1",
       "position": 53,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen in the simulation, revealing how the news affected the markets."
       },
       "seeding_key": {
         "activity_section.key": "a6bc5e49-c0a8-4093-8af9-a220559bb4a1",
@@ -3034,7 +3034,7 @@
       "key": "268b7aa3-c2c9-41ea-b846-05dc6ecfd64c",
       "position": 55,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen on the widget to show a summary screen. Note that the Stablecoins have appreciated in value. Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. An example of what this could look like on their activity guide is available in the slide deck.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Continue to the next screen on the widget to show a summary screen. Note that the Stablecoins have appreciated in value. Have students complete the _Quantity We Own_ and _Fund Value_ columns of their guide, then add up the elements in the _Fund Value_ column to fill in the _Total Fund Value_ at the bottom of the guide. An example of what this could look like on their activity guide is available in the slide deck.",
         "duration": "5",
         "name": "Crypto Market Simulation: Summary"
       },
@@ -3058,7 +3058,7 @@
       "key": "9e859998-9ba0-441f-af4d-d8b511174543",
       "position": 57,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you feel about the changes you made to your investments at the midway point of this activity?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** How do you feel about the changes you made to your investments at the midway point of this activity?"
       },
       "seeding_key": {
         "activity_section.key": "9e859998-9ba0-441f-af4d-d8b511174543",
@@ -3069,7 +3069,7 @@
       "key": "87889a40-9fc5-4696-9c03-edfb8b2a0f0a",
       "position": 58,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is another opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Some students may be ready to reflect on the activity as a whole and the impact that the market has on their emotional state, since some funds may have skyrocketed in value and others may be close to bottoming out. This can be a useful thread to return to in the wrap-up of this activity."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This is another opportunity to decompress and discuss the whims of the market based and how it’s impacting their investments. Some students may be ready to reflect on the activity as a whole and the impact that the market has on their emotional state, since some funds may have skyrocketed in value and others may be close to bottoming out. This can be a useful thread to return to in the wrap-up of this activity."
       },
       "seeding_key": {
         "activity_section.key": "87889a40-9fc5-4696-9c03-edfb8b2a0f0a",
@@ -3092,7 +3092,7 @@
       "key": "9dd4d11c-1318-4c77-b047-9f3f25706d1b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Some assets in this activity had uses beyond just their financial value, especially some of the NFTs. If you were to own one of these items without caring about its financial value, what type of asset would you want to own? Why?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Some assets in this activity had uses beyond just their financial value, especially some of the NFTs. If you were to own one of these items without caring about its financial value, what type of asset would you want to own? Why?"
       },
       "seeding_key": {
         "activity_section.key": "9dd4d11c-1318-4c77-b047-9f3f25706d1b",
@@ -3103,7 +3103,7 @@
       "key": "f30659d1-c21e-444d-be9a-b1b83415ad94",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt attempts to expand the reasoning why someone might want to own a digital asset - even though there is a narrative that all digital assets exist to make money, there may be other reasons to own one. This is similar to the warm-up prompt, where there are other reasons to own physical assets beyond being used solely for investment. Students may decide they want to own a piece of digital art just because it’s appealing to them, or own an NFT to be a part of a community or support an artist, or invest in a certain cryptocurrency because of the purpose it serves (such as IntCoin for international currency). "
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt attempts to expand the reasoning why someone might want to own a digital asset - even though there is a narrative that all digital assets exist to make money, there may be other reasons to own one. This is similar to the warm-up prompt, where there are other reasons to own physical assets beyond being used solely for investment. Students may decide they want to own a piece of digital art just because it’s appealing to them, or own an NFT to be a part of a community or support an artist, or invest in a certain cryptocurrency because of the purpose it serves (such as IntCoin for international currency). "
       },
       "seeding_key": {
         "activity_section.key": "f30659d1-c21e-444d-be9a-b1b83415ad94",
@@ -3114,7 +3114,7 @@
       "key": "9041c2fa-44b4-49a0-a5d6-32bacd93d36f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **(Optional) Video:**  Consider showing the [Blockchain: Trustworthy or a Scam?](https://youtu.be/WzxbwEQRJPo?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf&t=133) video starting around 2:15, which addresses many of the topics simulated in this lesson, especially the impact of fraud and volatility on people's finances."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **(Optional) Video:**  Consider showing the [Blockchain: Trustworthy or a Scam?](https://youtu.be/WzxbwEQRJPo?list=PLzdnOPI1iJNdzDlGJxd6B22G1bCDnPzkf&t=133) video starting around 2:15, which addresses many of the topics simulated in this lesson, especially the impact of fraud and volatility on people's finances."
       },
       "seeding_key": {
         "activity_section.key": "9041c2fa-44b4-49a0-a5d6-32bacd93d36f",
@@ -3201,7 +3201,7 @@
       "key": "fd71455b-ea7e-437b-9a42-4bf1eafc0516",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are possible applications of blockchain in society?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What are possible applications of blockchain in society?"
       },
       "seeding_key": {
         "activity_section.key": "fd71455b-ea7e-437b-9a42-4bf1eafc0516",
@@ -3212,7 +3212,7 @@
       "key": "5b3100cb-da35-459a-85cb-939d12e3ae89",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge. Students share applications for blockchain they’ve seen over the course of the lessons"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge. Students share applications for blockchain they’ve seen over the course of the lessons"
       },
       "seeding_key": {
         "activity_section.key": "5b3100cb-da35-459a-85cb-939d12e3ae89",
@@ -3223,7 +3223,7 @@
       "key": "87627a4d-9add-436f-9a97-6c10f70a39df",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of times when these applications of blockchain has been helpful? Can you think of times when these applications have been harmful, even if unintended?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of times when these applications of blockchain has been helpful? Can you think of times when these applications have been harmful, even if unintended?"
       },
       "seeding_key": {
         "activity_section.key": "87627a4d-9add-436f-9a97-6c10f70a39df",
@@ -3234,7 +3234,7 @@
       "key": "22f80af6-fd37-4438-a2cb-2858cbb1dc2e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intentionally open-ended to allow students to reflect on what they’ve learned about Blockchain throughout the last few lessons. Students may recall how the cryptographic elements of Blockchain help people exchange goods and services in a trustworthy manner, but they may also recall how financial investments could have a harmful impact due to the volatile nature of blockchain assets. Give students space to explore these labels of “harmful” and “helpful” and try to hear from a wide variety of voices in your classroom. "
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intentionally open-ended to allow students to reflect on what they’ve learned about Blockchain throughout the last few lessons. Students may recall how the cryptographic elements of Blockchain help people exchange goods and services in a trustworthy manner, but they may also recall how financial investments could have a harmful impact due to the volatile nature of blockchain assets. Give students space to explore these labels of “harmful” and “helpful” and try to hear from a wide variety of voices in your classroom. "
       },
       "seeding_key": {
         "activity_section.key": "22f80af6-fd37-4438-a2cb-2858cbb1dc2e",
@@ -3257,7 +3257,7 @@
       "key": "8864b16b-8560-4788-9763-8ef9c9e5717a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
       },
       "seeding_key": {
         "activity_section.key": "8864b16b-8560-4788-9763-8ef9c9e5717a",
@@ -3284,7 +3284,7 @@
       "key": "e3e6a2e8-5bee-42a4-8828-ab6ee599b9b3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example of how a new piece of technology has improved your life, or improved the life of someone you know?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example of how a new piece of technology has improved your life, or improved the life of someone you know?"
       },
       "seeding_key": {
         "activity_section.key": "e3e6a2e8-5bee-42a4-8828-ab6ee599b9b3",
@@ -3295,7 +3295,7 @@
       "key": "7ac6b601-c1a4-4f1c-9641-564aa54b521d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge about ways technology impacts the world around us. Students may share examples of recent technologies, or technology they only recently got access to (for example: having a newer cell phone with a better camera)"
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This can be a quick discussion to activate prior knowledge about ways technology impacts the world around us. Students may share examples of recent technologies, or technology they only recently got access to (for example: having a newer cell phone with a better camera)"
       },
       "seeding_key": {
         "activity_section.key": "7ac6b601-c1a4-4f1c-9641-564aa54b521d",
@@ -3306,7 +3306,7 @@
       "key": "6a51ea1f-eb79-423f-ae3c-153afccff429",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example where one of these pieces of technology has had an unintended effect that may have been helpful or harmful to a different group of people?\n\nGive students a chance to discuss in small groups before sharing as a class. Their responses may depend on the examples the rest of the class shared."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Can you think of an example where one of these pieces of technology has had an unintended effect that may have been helpful or harmful to a different group of people?\n\nGive students a chance to discuss in small groups before sharing as a class. Their responses may depend on the examples the rest of the class shared."
       },
       "seeding_key": {
         "activity_section.key": "6a51ea1f-eb79-423f-ae3c-153afccff429",
@@ -3317,7 +3317,7 @@
       "key": "7c275e5d-a2dc-429d-83fd-628c49f3ea0d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intended to help students consider the impact of technology beyond how we may typically see or use it, and to empathize with people outside their immediate experience. For example, students may talk about how AI-generated artwork has helped them be creative or help create projects for school, but another student may know an artist or designer whose job has been affected by the increased use of AI-generated artwork."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is intended to help students consider the impact of technology beyond how we may typically see or use it, and to empathize with people outside their immediate experience. For example, students may talk about how AI-generated artwork has helped them be creative or help create projects for school, but another student may know an artist or designer whose job has been affected by the increased use of AI-generated artwork."
       },
       "seeding_key": {
         "activity_section.key": "7c275e5d-a2dc-429d-83fd-628c49f3ea0d",
@@ -3340,7 +3340,7 @@
       "key": "77d8b4a8-c7a7-4a50-844d-daf8aa8f2ced",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Big Question:** What are the societal impacts of blockchain?"
       },
       "seeding_key": {
         "activity_section.key": "77d8b4a8-c7a7-4a50-844d-daf8aa8f2ced",
@@ -3351,7 +3351,7 @@
       "key": "441b3c74-2786-4115-a058-116e88f2cf69",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [r blockchain_societal_impact/blockchain/2023] video",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the [r blockchain_societal_impact/blockchain/2023] video",
         "duration": " 25",
         "name": "Research"
       },
@@ -3375,7 +3375,7 @@
       "key": "bddcefc3-30fb-4b00-9436-c21dcf27f266",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Digitally distribute copies of the [r societal_impact_research_areas/blockchain/2023] handout.\n\n\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Digitally distribute copies of the [r societal_impact_research_areas/blockchain/2023] handout.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "bddcefc3-30fb-4b00-9436-c21dcf27f266",
@@ -3386,7 +3386,7 @@
       "key": "400d69b7-b1a2-42c6-b845-67b673241c2a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, choose an area of application. Each group is encouraged to pick different topics if possible."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** As a group, choose an area of application. Each group is encouraged to pick different topics if possible."
       },
       "seeding_key": {
         "activity_section.key": "400d69b7-b1a2-42c6-b845-67b673241c2a",
@@ -3397,7 +3397,7 @@
       "key": "bd4d7034-f3cf-4de7-bd84-310f52f9fb60",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Within that area of application, each person chooses an article or video to review. Students can also use the internet to find new articles or videos to research."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Within that area of application, each person chooses an article or video to review. Students can also use the internet to find new articles or videos to research."
       },
       "seeding_key": {
         "activity_section.key": "bd4d7034-f3cf-4de7-bd84-310f52f9fb60",
@@ -3408,7 +3408,7 @@
       "key": "5dd7f9ed-6d33-4894-96e4-766444c12530",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the [r societal_impact_research_reflection/blockchain/2023] handout.\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the [r societal_impact_research_reflection/blockchain/2023] handout.\n"
       },
       "seeding_key": {
         "activity_section.key": "5dd7f9ed-6d33-4894-96e4-766444c12530",
@@ -3419,7 +3419,7 @@
       "key": "958eb483-7de2-4385-a463-fcb13ece8fe8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Blockchain Research Reflection handout. Each student will research a particular resource and discuss what they find with their group. The handout should be completed as a group, pulling from different research articles and videos that each person investigates. ",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Blockchain Research Reflection handout. Each student will research a particular resource and discuss what they find with their group. The handout should be completed as a group, pulling from different research articles and videos that each person investigates. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -3436,7 +3436,7 @@
       "key": "6bd8505d-36bf-4384-82b4-b655b29a7108",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor groups as they complete their research, encouraging groups to share what they discover with group members. Make sure groups are filling out the activity guide as they research, incorporating ideas from each group member as they discover different articles and areas of research.\n\nGive students a 2-minute warning before transitioning to the next activity."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor groups as they complete their research, encouraging groups to share what they discover with group members. Make sure groups are filling out the activity guide as they research, incorporating ideas from each group member as they discover different articles and areas of research.\n\nGive students a 2-minute warning before transitioning to the next activity."
       },
       "seeding_key": {
         "activity_section.key": "6bd8505d-36bf-4384-82b4-b655b29a7108",
@@ -3461,7 +3461,7 @@
       "key": "927edaf8-f19d-4d87-b464-ec3262babc9c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As a group, decide if blockchain is helpful or harmful in their area of research, then move towards that side of the room. Groups can also move to anywhere in between the two sides.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** As a group, decide if blockchain is helpful or harmful in their area of research, then move towards that side of the room. Groups can also move to anywhere in between the two sides.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3478,7 +3478,7 @@
       "key": "a71e6dc1-e5ae-4495-8268-64ac7a418937",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What did you learn about your application of blockchain? Why did you choose your application as \"helpful\" or \"harmful\"?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What did you learn about your application of blockchain? Why did you choose your application as \"helpful\" or \"harmful\"?"
       },
       "seeding_key": {
         "activity_section.key": "a71e6dc1-e5ae-4495-8268-64ac7a418937",
@@ -3489,7 +3489,7 @@
       "key": "c8eec936-e57e-4e06-bf67-c0f8fbd9b1cf",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask students from different ends of the spectrum to respond to the question, sharing different perspectives. Try to curate a conversation where multiple viewpoints are represented, emphasizing that the technology is neither “inherently helpful” or “inherently harmful” but depends on how it’s used."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Ask students from different ends of the spectrum to respond to the question, sharing different perspectives. Try to curate a conversation where multiple viewpoints are represented, emphasizing that the technology is neither “inherently helpful” or “inherently harmful” but depends on how it’s used."
       },
       "seeding_key": {
         "activity_section.key": "c8eec936-e57e-4e06-bf67-c0f8fbd9b1cf",
@@ -3500,7 +3500,7 @@
       "key": "7b742b66-8106-4b54-9031-0464bc959bc4",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students return to their seats."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students return to their seats."
       },
       "seeding_key": {
         "activity_section.key": "7b742b66-8106-4b54-9031-0464bc959bc4",
@@ -3511,7 +3511,7 @@
       "key": "fa8c7ac4-d31a-4703-86f8-cb2ec3da94d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine two of your friends are having an argument - one says “Blockchain is terrible - everything it touches is bad!” but the other says “Blockchain is amazing! It can improve every aspect of society”. If they asked for your opinion, what would you say?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** Imagine two of your friends are having an argument - one says “Blockchain is terrible - everything it touches is bad!” but the other says “Blockchain is amazing! It can improve every aspect of society”. If they asked for your opinion, what would you say?"
       },
       "seeding_key": {
         "activity_section.key": "fa8c7ac4-d31a-4703-86f8-cb2ec3da94d6",
@@ -3522,7 +3522,7 @@
       "key": "d3fc6873-086c-4d10-8fd0-8c8931dbecb9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is purposefully open-ended, but is designed to focus students on the gray area of technology and see the nuance in these types of arguments. Listen for responses that can push back against both points of view in this fictitious argument, or that consider larger issues beyond just blockchain technology."
+        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This prompt is purposefully open-ended, but is designed to focus students on the gray area of technology and see the nuance in these types of arguments. Listen for responses that can push back against both points of view in this fictitious argument, or that consider larger issues beyond just blockchain technology."
       },
       "seeding_key": {
         "activity_section.key": "d3fc6873-086c-4d10-8fd0-8c8931dbecb9",
@@ -3569,7 +3569,7 @@
       "key": "71b674d2-2e86-4933-8fe1-88e26d30cac9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/blockchain/2023] video"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the \n[r how_blockchain_works_introduction/blockchain/2023] video"
       },
       "seeding_key": {
         "activity_section.key": "71b674d2-2e86-4933-8fe1-88e26d30cac9",
@@ -3592,7 +3592,7 @@
       "key": "64adeba7-9bd4-4244-8fae-04d5d55d0957",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** the [r vocabulary_matching_3/blockchain/2023] notetaker to students."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** the [r vocabulary_matching_3/blockchain/2023] notetaker to students."
       },
       "seeding_key": {
         "activity_section.key": "64adeba7-9bd4-4244-8fae-04d5d55d0957",
@@ -3603,7 +3603,7 @@
       "key": "224520ec-0afa-45fa-864f-767ccbda6372",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_why_blockchain_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "224520ec-0afa-45fa-864f-767ccbda6372",
@@ -3614,7 +3614,7 @@
       "key": "430d17b4-453a-48e1-9401-85e7b48f2e54",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one issue in today’s society that might be improved by blockchain? What is a potential new issue that you think could occur because of Blockchain?"
       },
       "seeding_key": {
         "activity_section.key": "430d17b4-453a-48e1-9401-85e7b48f2e54",
@@ -3625,7 +3625,7 @@
       "key": "7c692a80-3869-4995-a96a-6cce1d747365",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_under_the_hood/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "7c692a80-3869-4995-a96a-6cce1d747365",
@@ -3636,7 +3636,7 @@
       "key": "66f223c8-9d62-4d88-8026-154d10cec739",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** The blockchain helps facilitate thousands of transactions each day between people who’ve never met or trust each other. What are some of the ways the blockchain helps ensure this trust or helps make sure people don’t abuse the network?"
       },
       "seeding_key": {
         "activity_section.key": "66f223c8-9d62-4d88-8026-154d10cec739",
@@ -3647,7 +3647,7 @@
       "key": "a47e806c-1373-45e5-9986-f43e07af9afc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_beyond_currencies/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "a47e806c-1373-45e5-9986-f43e07af9afc",
@@ -3658,7 +3658,7 @@
       "key": "e93d42f1-c682-4701-b667-5970fb9337e0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s a real-world situation that you think smart contracts could help with? What might make them better than how it’s handled now?"
       },
       "seeding_key": {
         "activity_section.key": "e93d42f1-c682-4701-b667-5970fb9337e0",
@@ -3669,7 +3669,7 @@
       "key": "acc2028d-8dea-4af9-ae92-ebb0db661e74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r how_blockchain_works_marketplace_price/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "acc2028d-8dea-4af9-ae92-ebb0db661e74",
@@ -3680,7 +3680,7 @@
       "key": "d3f00fcd-faef-483e-a6cb-200cc7f316b5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s an example of something whose value has changed over time? What factors caused it to change? Did it go mostly up, mostly down, or mostly stay the same?"
       },
       "seeding_key": {
         "activity_section.key": "d3f00fcd-faef-483e-a6cb-200cc7f316b5",
@@ -3691,7 +3691,7 @@
       "key": "b17564a8-2121-41ea-8b0f-6a41833a9573",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_trustworthy_or_a_scam_/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "b17564a8-2121-41ea-8b0f-6a41833a9573",
@@ -3702,7 +3702,7 @@
       "key": "240aedfc-69c1-469b-8b5f-f812f41bc004",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** After watching the video, do you think Blockchain is mostly trustworthy? Or mostly a scam?"
       },
       "seeding_key": {
         "activity_section.key": "240aedfc-69c1-469b-8b5f-f812f41bc004",
@@ -3713,7 +3713,7 @@
       "key": "e6294a6a-1d22-433a-9946-da9c914171c8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the \n[r blockchain_societal_impact/blockchain/2023] video as a class. Students should be listening for vocabulary terms to match on their notetaker."
       },
       "seeding_key": {
         "activity_section.key": "e6294a6a-1d22-433a-9946-da9c914171c8",
@@ -3724,7 +3724,7 @@
       "key": "427b2b83-444a-41f0-914c-88171f19bbbc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What’s one way Blockchain could be beneficial to society? What’s one way Blockchain might be harmful?"
       },
       "seeding_key": {
         "activity_section.key": "427b2b83-444a-41f0-914c-88171f19bbbc",

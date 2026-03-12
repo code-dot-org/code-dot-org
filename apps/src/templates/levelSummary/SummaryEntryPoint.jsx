@@ -42,7 +42,7 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
       {selectedSection && (
         <>
           <div className={styles.responseIcon}>
-            <i className="fa fa-user" />
+            <i className="fa-solid fa-user" />
           </div>
           <div
             className={styles.responseCounter}

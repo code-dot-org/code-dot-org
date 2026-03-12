@@ -450,7 +450,7 @@
       "key": "54a4689b-4b1c-4bb7-b63d-9ef270880df9",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -524,7 +524,7 @@
       "key": "7845004b-6b49-4bc0-9284-8ee93fead990",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_2/vpl-csd/2023] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_2/vpl-csd/2023] video in the slides.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "tips": [
           {
             "type": "teachingTip",

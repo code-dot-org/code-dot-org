@@ -196,11 +196,17 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.viewMore}
           >
             {this.props.isDetailView && (
-              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
+              <i
+                className="fa-solid fa-angle-left"
+                style={styles.iconPaddingRight}
+              />
             )}
             {this.props.labViewMoreString}
             {!this.props.isDetailView && (
-              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
+              <i
+                className="fa-solid fa-angle-right"
+                style={styles.iconPaddingLeft}
+              />
             )}
           </span>
         )}

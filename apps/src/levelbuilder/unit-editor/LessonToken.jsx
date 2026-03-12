@@ -114,7 +114,7 @@ export class LessonTokenContents extends Component {
       >
         {this.props.allowMajorCurriculumChanges && (
           <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-            <i className="fa fa-arrows-v" />
+            <i className="fa-solid fa-up-down" />
           </div>
         )}
         <span style={styles.lessonTokenName}>
@@ -138,17 +138,17 @@ export class LessonTokenContents extends Component {
         </span>
         {this.props.lesson.id && (
           <div style={styles.edit} onClick={this.handleEditLesson}>
-            <i className="fa fa-pencil" />
+            <i className="fa-solid fa-pencil" />
           </div>
         )}
         {this.props.lesson.id && (
           <div style={styles.clone} onMouseDown={this.handleClone}>
-            <i className="fa fa-clone" />
+            <i className="fa-solid fa-clone" />
           </div>
         )}
         {this.props.allowMajorCurriculumChanges && (
           <div style={styles.remove} onMouseDown={this.handleRemove}>
-            <i className="fa fa-times" />
+            <i className="fa-solid fa-xmark" />
           </div>
         )}
       </div>

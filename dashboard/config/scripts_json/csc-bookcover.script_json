@@ -222,7 +222,7 @@
       "key": "6f342755-a2c2-4e4b-9400-6fb39e6762f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Judge A Book By Its Cover” slide\n\n**Do This**: As a class, look at the book covers shown on the slide. The books featured are _The Lightning Thief_, _Front Desk_, and _Refugee_. Have students answer the following questions.\n\n**Discuss**: \n- _Which of these books would you want to read based on its cover?_ \n- _What is the target audience for each of these books?_\n\n**Discussion Goal**: Students should mention what they see featured on the cover, including the title, the author, the scenery, the characters, and other information, such as awards the book has won or highlighted author quotes. Have students discuss which features of the cover capture their attention and make them want to pick up the book. \n\nPerhaps, the book covers depict some of the main characters or settings in the book. For students who have read the books featured, ask _“Does the cover art accurately reflect the content and mood of the book?”_ \n\nFor students who have not read the books, ask _“If you had to guess, what do you think this story is about?”_\n\nStudents should also recognize that a good book cover design will reflect the book’s themes without giving away the ending. See if students can determine the genre of the book (e.g. fantasy, mystery, non-fiction) based on context clues. This will help them determine the target audience for each book. For context:\n\n- _The Lightning Thief_ is part of the larger Percy Jackson series which are fantasy-adventure stories.\n- _Front Desk_ is a realistic fiction novel based on the author’s lived experience.\n- _Refugee_ is a historical fiction novel grounded in real-world events.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Judge A Book By Its Cover” slide\n\n**Do This**: As a class, look at the book covers shown on the slide. The books featured are _The Lightning Thief_, _Front Desk_, and _Refugee_. Have students answer the following questions.\n\n**Discuss**: \n- _Which of these books would you want to read based on its cover?_ \n- _What is the target audience for each of these books?_\n\n**Discussion Goal**: Students should mention what they see featured on the cover, including the title, the author, the scenery, the characters, and other information, such as awards the book has won or highlighted author quotes. Have students discuss which features of the cover capture their attention and make them want to pick up the book. \n\nPerhaps, the book covers depict some of the main characters or settings in the book. For students who have read the books featured, ask _“Does the cover art accurately reflect the content and mood of the book?”_ \n\nFor students who have not read the books, ask _“If you had to guess, what do you think this story is about?”_\n\nStudents should also recognize that a good book cover design will reflect the book’s themes without giving away the ending. See if students can determine the genre of the book (e.g. fantasy, mystery, non-fiction) based on context clues. This will help them determine the target audience for each book. For context:\n\n- _The Lightning Thief_ is part of the larger Percy Jackson series which are fantasy-adventure stories.\n- _Front Desk_ is a realistic fiction novel based on the author’s lived experience.\n- _Refugee_ is a historical fiction novel grounded in real-world events.\n",
         "duration": "10",
         "name": "Book Covers"
       },
@@ -251,7 +251,7 @@
       "key": "3d0cfc1a-d38d-43d3-9196-8cf23551d654",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n- **Code** - (v) to write instructions for a computer.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **Event** - An action that causes something to happen.\n- **Program** - A series of steps that have been coded into something that can be run by a machine.\n- **Prompt** - A message on the computer screen that waits for input from the user."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n- **Code** - (v) to write instructions for a computer.\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n- **Event** - An action that causes something to happen.\n- **Program** - A series of steps that have been coded into something that can be run by a machine.\n- **Prompt** - A message on the computer screen that waits for input from the user."
       },
       "seeding_key": {
         "activity_section.key": "3d0cfc1a-d38d-43d3-9196-8cf23551d654",
@@ -275,7 +275,7 @@
       "key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Do This**: Play through the provided Book Cover example [level](https://studio.code.org/s/csc-bookcover/lessons/1/levels/1) as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Exploration” slide\n\n**Do This**: Play through the provided Book Cover example [level](https://studio.code.org/s/csc-bookcover/lessons/1/levels/1) as a class. Have students reflect on what they see and compare it to the book covers they saw on the slide.\n\n**Discuss**: _How is this digital book cover similar to or different from a regular book cover?_\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e7b4f8ba-3357-4d03-8359-38a5b2b8d47b",
@@ -298,7 +298,7 @@
       "key": "bee79760-f43d-4b4f-b70d-304ab8b268ed",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Introducing Sprite Lab” video\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Introducing Sprite Lab” video\n",
         "name": "Introduction to Sprite Lab",
         "progression_name": "Video"
       },
@@ -327,7 +327,7 @@
       "key": "086226d5-a173-4065-95f1-f6729dd488f3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-9 - Skill Building” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. \n\nStudents should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level.\n",
         "name": "Skill Building",
         "tips": [
           {
@@ -380,7 +380,7 @@
       "key": "d094d6c6-d018-44a7-8491-7c242a9ee7e5",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Programming with Events” video\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Programming with Events” video\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -410,7 +410,7 @@
       "key": "8eb09aa7-4007-4876-a268-07c2b3be8ffa",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-15 - Skill Building” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-15 - Skill Building” slide\n",
         "name": "Front Desk",
         "progression_name": "Skill Building"
       },
@@ -434,7 +434,7 @@
       "key": "b15b4141-45c5-45dc-b9a7-d449622765ba",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n\n\n",
         "name": "Free Play",
         "progression_name": "Free Play"
       },
@@ -464,7 +464,7 @@
       "key": "b95e84f4-2430-4fe4-a2cd-bf46c4f6ee25",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _How do event blocks make your book cover interactive?_\n- _What sprites would you use to animate your favorite book?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _How do event blocks make your book cover interactive?_\n- _What sprites would you use to animate your favorite book?_\n",
         "duration": "5",
         "name": "Reflect"
       },
@@ -488,7 +488,7 @@
       "key": "7adf7548-dbc5-4ab0-ba62-247fb66b856f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: _Think of a book you read this year. Imagine you are trying to get your classmates to read that book. How would you design the book cover to capture their attention?_\n\n**Do This**: Have students pair up and answer the Discussion question.\n\n**Discussion Goal**: The purpose of this discussion is for students to begin thinking about how they will design their book cover. They should think about which characters they want to feature, the background for the scene, and the brief dialogue. \n\nStudents should understand that their classmates may not have any prior knowledge of the book so their digital book covers will feature a brief plot synopsis.\n\nStudents should also try to represent the genre of the book. For example, if a student designed a book cover for a book in the Percy Jackson fantasy-adventure series, then their target audience would be interested in seeing elements of magic. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n- **Synopsis** - A brief summary of something, for example, the plot of a book\n- **Program** - A series of steps that have been coded into something that can be run by a machine.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: _Think of a book you read this year. Imagine you are trying to get your classmates to read that book. How would you design the book cover to capture their attention?_\n\n**Do This**: Have students pair up and answer the Discussion question.\n\n**Discussion Goal**: The purpose of this discussion is for students to begin thinking about how they will design their book cover. They should think about which characters they want to feature, the background for the scene, and the brief dialogue. \n\nStudents should understand that their classmates may not have any prior knowledge of the book so their digital book covers will feature a brief plot synopsis.\n\nStudents should also try to represent the genre of the book. For example, if a student designed a book cover for a book in the Percy Jackson fantasy-adventure series, then their target audience would be interested in seeing elements of magic. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary:**\n- **Synopsis** - A brief summary of something, for example, the plot of a book\n- **Program** - A series of steps that have been coded into something that can be run by a machine.",
         "duration": "5",
         "name": "Discussion"
       },
@@ -501,7 +501,7 @@
       "key": "1e8054d5-aa89-4e27-9373-794df6e8e5e6",
       "position": 2,
       "properties": {
-        "description": "**Do This**: Hand out a [rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview\t\n) and a [graphic organizer](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\t\n) to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Rubric” slide\n\n\n",
+        "description": "**Do This**: Hand out a [rubric](https://docs.google.com/document/d/1fEHKtMFE_uLJEP6YScvXV-LfOEqBz9QyW1NlKTQzveM/template/preview\t\n) and a [graphic organizer](https://docs.google.com/document/d/1r7dnygat_SH_us1TWYil-Bx5ulROZ2PDbF-Njcz27RM/template/preview\t\n) to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Rubric” slide\n\n\n",
         "duration": "10",
         "name": "Plan Your Book Cover"
       },
@@ -553,7 +553,7 @@
       "key": "223c6557-2bcc-4cb6-8487-76edddc6fe83",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Book Cover Handout” slide\n\n**Say:** Start your planning by choosing the book that you’re going to use. On this handout, you will choose to feature two or more main characters having a conversation with each other. Make sure to draw the dialogue using speech bubbles and include a brief synopsis, which is a description of the plot.\n\n**Do This**: Give students about 10 minutes to plan their book cover. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the book covers is to pique their classmates interest and motivate them to want to read the book based on the sprite’s dialogue and synopsis.\n\nPrompt students to ask themselves “Do my characters say or think something that represents a scene in the book?” Encourage students to include dialogue that reveals to the reader what the character is like, or how their actions lead to big events in the story. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Book Cover Handout” slide\n\n**Say:** Start your planning by choosing the book that you’re going to use. On this handout, you will choose to feature two or more main characters having a conversation with each other. Make sure to draw the dialogue using speech bubbles and include a brief synopsis, which is a description of the plot.\n\n**Do This**: Give students about 10 minutes to plan their book cover. Circulate the room to support students in their brainstorming and planning. Remind students that the purpose of the book covers is to pique their classmates interest and motivate them to want to read the book based on the sprite’s dialogue and synopsis.\n\nPrompt students to ask themselves “Do my characters say or think something that represents a scene in the book?” Encourage students to include dialogue that reveals to the reader what the character is like, or how their actions lead to big events in the story. \n"
       },
       "seeding_key": {
         "activity_section.key": "223c6557-2bcc-4cb6-8487-76edddc6fe83",
@@ -593,7 +593,7 @@
       "key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-4” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Skill Building - Levels 1-4” slide\n\n**Transition**: Have students move to their computer and sign in. All students should complete all levels in this section in order. Students should complete the Skill Building levels and then spend any remaining time trying out their own code in the final Free Play level."
       },
       "seeding_key": {
         "activity_section.key": "834fe113-8e28-494b-9c49-2ec5af92cb3a",
@@ -615,7 +615,7 @@
       "key": "e4e93995-6ff9-4974-91ed-d0e737c137f2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choice Level - Level 5” slide\n\n**Level 5:** This is a choice level for students to customize their book covers. They can choose to add sounds, foreground effects, background effects and more! When students are done customizing their book cover they can move on to the final Free Play level to add finishing touches.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Choice Level - Level 5” slide\n\n**Level 5:** This is a choice level for students to customize their book covers. They can choose to add sounds, foreground effects, background effects and more! When students are done customizing their book cover they can move on to the final Free Play level to add finishing touches.\n",
         "progression_name": "Extend Your Book Cover!"
       },
       "seeding_key": {
@@ -627,7 +627,7 @@
       "key": "f3886a91-78c8-4dc8-99e5-2dd41c23c21d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 6” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Free Play - Level 6” slide\n\n**Do This:** If a student finishes early, encourage them to show their work to a partner. Invite students to share ideas and to learn from each other. After a brief discussion, students have the opportunity to finish their book cover and make any last revisions before next class.\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -639,7 +639,7 @@
       "key": "7ae9d047-7fb9-4c99-b75e-4bda9bd88dc1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _Who is the target audience for your book cover app?_\n- _What visual or text effects does your Book Cover use to accomplish that goal?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _Who is the target audience for your book cover app?_\n- _What visual or text effects does your Book Cover use to accomplish that goal?_\n",
         "duration": "5",
         "name": "Reflection"
       },
@@ -663,7 +663,7 @@
       "key": "0e5d7bf3-ad27-4c16-8731-28c693a28298",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What choices did you make in designing your book cover?_\n- _How is your digital book cover similar to or different from the book’s original cover?_\n\n**Do This:** Have students pair up and answer the Discussion questions.\n\n**Discussion Goal:** The purpose of this discussion is for students to understand how the choices they make in designing a book cover can influence whether someone will choose to pick up a book. They should also understand that they should give the future reader enough information to make an informed decision about whether or not to read the book without giving away too much of the plot.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What choices did you make in designing your book cover?_\n- _How is your digital book cover similar to or different from the book’s original cover?_\n\n**Do This:** Have students pair up and answer the Discussion questions.\n\n**Discussion Goal:** The purpose of this discussion is for students to understand how the choices they make in designing a book cover can influence whether someone will choose to pick up a book. They should also understand that they should give the future reader enough information to make an informed decision about whether or not to read the book without giving away too much of the plot.\n",
         "duration": "5",
         "name": "Discussion"
       },
@@ -676,7 +676,7 @@
       "key": "ef8754d9-054d-4764-a81e-ca283115edf1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Book Cover” slide\n\n**Display**: Follow the directions on the slide:\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Your Book Cover” slide\n\n**Display**: Follow the directions on the slide:\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
         "duration": "20",
         "name": "Share Your Book Cover"
       },
@@ -705,7 +705,7 @@
       "key": "695828e4-e1e0-4445-b98c-486caefcb0af",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ book covers, think about the sprites and dialogue they used. Did any of your classmates choose the same book that you did? How did their choices compare to yours?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked your decision to ____!*\n- *I liked that your code included ____.*\n- *I want to read the book you chose because ____.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ book covers, think about the sprites and dialogue they used. Did any of your classmates choose the same book that you did? How did their choices compare to yours?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *I liked your decision to ____!*\n- *I liked that your code included ____.*\n- *I want to read the book you chose because ____.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "695828e4-e1e0-4445-b98c-486caefcb0af",
@@ -732,7 +732,7 @@
       "key": "09abfc52-8d7f-4146-8016-c58970403224",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What sprites and dialogue did you see in your classmates’ book covers?*\\\n*2. What is being portrayed in this scene?*\\\n*3. How were their choices similar to yours? How were they different?*\\\n*4. Would you want to read the book based on its cover?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**: The goal is for students to understand how their book covers are similar to or different from their classmates’ book covers. They should also notice how different choices of sprites and dialogue made them feel about wanting to read the book.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What sprites and dialogue did you see in your classmates’ book covers?*\\\n*2. What is being portrayed in this scene?*\\\n*3. How were their choices similar to yours? How were they different?*\\\n*4. Would you want to read the book based on its cover?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**: The goal is for students to understand how their book covers are similar to or different from their classmates’ book covers. They should also notice how different choices of sprites and dialogue made them feel about wanting to read the book.",
         "duration": "10",
         "name": "Discuss Your Book Cover"
       },
@@ -745,7 +745,7 @@
       "key": "a323c20b-54b5-4097-80d9-fa8f0c68d360",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Reflect**: \n_You've probably heard the saying \"don't judge a book by its cover\". Think about the book covers that you and your classmates coded._ \n\n_Do you agree with the saying? Why or why not?_\n\n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: Students should recognize that a book cover can convey some, but not all, information about a book. Also, the same book cover can be designed differently by different people. The book covers that students coded might be more helpful than a regular book cover in helping someone choose what book to read because they feature sprites and dialogue. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Reflect**: \n_You've probably heard the saying \"don't judge a book by its cover\". Think about the book covers that you and your classmates coded._ \n\n_Do you agree with the saying? Why or why not?_\n\n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: Students should recognize that a book cover can convey some, but not all, information about a book. Also, the same book cover can be designed differently by different people. The book covers that students coded might be more helpful than a regular book cover in helping someone choose what book to read because they feature sprites and dialogue. \n",
         "duration": "10",
         "name": "Reflection"
       },

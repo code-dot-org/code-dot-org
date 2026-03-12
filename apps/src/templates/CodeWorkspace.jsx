@@ -139,7 +139,7 @@ class CodeWorkspace extends React.Component {
             aria-label={i18n.toolboxHeaderDroplet()}
             aria-expanded
           >
-            <i className="fa fa-chevron-circle-right" />
+            <i className="fa-solid fa-circle-chevron-right" />
           </button>
         </span>
         <span style={textStyle}>
@@ -160,7 +160,7 @@ class CodeWorkspace extends React.Component {
             aria-label={i18n.toolboxHeaderDroplet()}
             aria-expanded={false}
           >
-            <i className="fa fa-chevron-circle-right" />
+            <i className="fa-solid fa-circle-chevron-right" />
           </button>
           <span className="show-toolbox-label">{i18n.showToolbox()}</span>
         </span>
@@ -221,7 +221,7 @@ class CodeWorkspace extends React.Component {
               <PaneButton
                 id="clear-puzzle-header"
                 headerHasFocus={hasFocus}
-                iconClass="fa fa-undo"
+                iconClass="fa-solid fa-rotate-left"
                 label={i18n.clearPuzzle()}
                 isRtl={isRtl}
                 isMinecraft={props.isMinecraft}
@@ -230,7 +230,7 @@ class CodeWorkspace extends React.Component {
             <PaneButton
               id="versions-header"
               headerHasFocus={hasFocus}
-              iconClass="fa fa-clock-o"
+              iconClass="fa-solid fa-clock"
               label={i18n.showVersionsHeader()}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}
@@ -238,7 +238,7 @@ class CodeWorkspace extends React.Component {
             <PaneButton
               id="settings-header"
               headerHasFocus={hasFocus}
-              iconClass="fa fa-cog"
+              iconClass="fa-solid fa-gear"
               label={'Settings'}
               isRtl={isRtl}
               isMinecraft={props.isMinecraft}

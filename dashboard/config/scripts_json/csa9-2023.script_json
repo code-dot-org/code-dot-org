@@ -936,7 +936,7 @@
       "key": "5c86c090-b27c-4ed2-b0a0-06b4f9c3f509",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can you use computer science to solve problems?*\n* *What topics do you feel the most confident about as you prepare for the AP Exam?*\n\n**Discussion Goal:** Students share that computer science allows them to write programs to solve problems across different industries for various needs. Students identify which topics they feel most confident."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How can you use computer science to solve problems?*\n* *What topics do you feel the most confident about as you prepare for the AP Exam?*\n\n**Discussion Goal:** Students share that computer science allows them to write programs to solve problems across different industries for various needs. Students identify which topics they feel most confident."
       },
       "seeding_key": {
         "activity_section.key": "5c86c090-b27c-4ed2-b0a0-06b4f9c3f509",
@@ -947,7 +947,7 @@
       "key": "0a243429-7875-4165-971b-2c6ff4fde63d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit, we will prepare for the AP CSA Exam. The exam is 3 hours and has two sections. The first part of the exam consists of 40 multiple-choice questions, and the second part consists of 4 free response questions. Each section is worth 50% of your final grade, and you will have 90 minutes per section.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> In this unit, we will prepare for the AP CSA Exam. The exam is 3 hours and has two sections. The first part of the exam consists of 40 multiple-choice questions, and the second part consists of 4 free response questions. Each section is worth 50% of your final grade, and you will have 90 minutes per section.",
         "duration": "10",
         "name": "Structure of the AP CSA Exam",
         "remarks": true
@@ -961,7 +961,7 @@
       "key": "3c14eccb-91f9-4f9f-9206-40192e1b50eb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference resource."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference resource."
       },
       "seeding_key": {
         "activity_section.key": "3c14eccb-91f9-4f9f-9206-40192e1b50eb",
@@ -984,7 +984,7 @@
       "key": "79c1f64f-2fcd-44a5-ba3f-a26df4b86ee0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Course Exam Description resource."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Course Exam Description resource."
       },
       "seeding_key": {
         "activity_section.key": "79c1f64f-2fcd-44a5-ba3f-a26df4b86ee0",
@@ -1013,7 +1013,7 @@
       "key": "d9d27391-a434-48c0-9279-4fe8340e1daf",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What topics do you feel the most comfortable?*\n* *What topics do you think you need to review?*\n\n**Discussion Goal:** Students identify the topics they feel most comfortable with and those they think they need to review."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What topics do you feel the most comfortable?*\n* *What topics do you think you need to review?*\n\n**Discussion Goal:** Students identify the topics they feel most comfortable with and those they think they need to review."
       },
       "seeding_key": {
         "activity_section.key": "d9d27391-a434-48c0-9279-4fe8340e1daf",
@@ -1038,7 +1038,7 @@
       "key": "73cc0075-4f3c-42d1-963b-a6c72770137e",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students with a partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Exploring Exam Expectations handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Exploring Exam Expectations handout.",
+        "description": "**Group:** Place students with a partner.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Exploring Exam Expectations handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Exploring Exam Expectations handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1055,7 +1055,7 @@
       "key": "7e4aea55-522c-4acc-8a7b-dd6a568c3d43",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What exam expectations surprised you the most?*\n* *Do you feel adequately prepared to pass the AP CSA Exam? Why or why not?*\n\n**Discussion Goal:** Students share their findings from the Exploring Exam Expectations handout. Students share how prepared they feel for the AP CSA Exam."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What exam expectations surprised you the most?*\n* *Do you feel adequately prepared to pass the AP CSA Exam? Why or why not?*\n\n**Discussion Goal:** Students share their findings from the Exploring Exam Expectations handout. Students share how prepared they feel for the AP CSA Exam."
       },
       "seeding_key": {
         "activity_section.key": "7e4aea55-522c-4acc-8a7b-dd6a568c3d43",
@@ -1080,7 +1080,7 @@
       "key": "211360f4-377f-45f7-80dd-2b4e4095adf7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What test-taking and study strategies were the most effective for the end-of-unit multiple-choice assessments we took in this course?*\n\n**Discussion Goal:** Students share strategies they used to prepare for the end-of-unit multiple-choice assessments and how they approached the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss study strategies.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss test-taking strategies.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What test-taking and study strategies were the most effective for the end-of-unit multiple-choice assessments we took in this course?*\n\n**Discussion Goal:** Students share strategies they used to prepare for the end-of-unit multiple-choice assessments and how they approached the questions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss study strategies.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss test-taking strategies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1097,7 +1097,7 @@
       "key": "239fb421-47d3-4131-ba31-14552e05e519",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the AP Daily videos. Encourage students to use their independent study time to watch the videos."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the AP Daily videos. Encourage students to use their independent study time to watch the videos."
       },
       "seeding_key": {
         "activity_section.key": "239fb421-47d3-4131-ba31-14552e05e519",
@@ -1108,7 +1108,7 @@
       "key": "07547ef6-8737-4eb8-b041-be41caae8763",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that students will access AP Classroom to take a practice MCQ assessment in the next lesson. \n\n**Distribute:** Give each student 2 or 3 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write a positive message and exam tip to provide support and encouragement to their classmates as they prepare for the exam. Have students add their sticky notes to the Exam Affirmation Wall. If time permits, students should read the sticky notes placed by other students.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain that students will access AP Classroom to take a practice MCQ assessment in the next lesson. \n\n**Distribute:** Give each student 2 or 3 sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write a positive message and exam tip to provide support and encouragement to their classmates as they prepare for the exam. Have students add their sticky notes to the Exam Affirmation Wall. If time permits, students should read the sticky notes placed by other students.",
         "name": "Exam Affirmations",
         "tips": [
           {
@@ -1152,7 +1152,7 @@
       "key": "4abad259-2e84-48d4-9060-691811aaeadf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the AP Classroom User Guide for Students resource.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the AP Classroom User Guide for Students resource.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1169,7 +1169,7 @@
       "key": "259726e3-4163-41a8-a5fa-8e998a4d3994",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Assignments section on AP Classroom to locate the Multiple-Choice Pre-Assessment you created.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Multiple-Choice Pre-Assessment on AP Classroom.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Java Quick Reference.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Assignments section on AP Classroom to locate the Multiple-Choice Pre-Assessment you created.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Multiple-Choice Pre-Assessment on AP Classroom.",
         "duration": "40",
         "name": "Multiple-Choice Pre-Assessment"
       },
@@ -1195,7 +1195,7 @@
       "key": "f37a1f7e-6019-4e5d-8304-cd7a2e003ea9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give each student 5-10 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to prompt students to write ideas for a strong study plan. Students should write down one idea per sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students sort their sticky notes into three different categories around the room:\n* Qualities of an effective study plan\n* Differences between effective and ineffective study plans\n* Tools, resources, activities, or actions to help them study",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give each student 5-10 sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to prompt students to write ideas for a strong study plan. Students should write down one idea per sticky note.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students sort their sticky notes into three different categories around the room:\n* Qualities of an effective study plan\n* Differences between effective and ineffective study plans\n* Tools, resources, activities, or actions to help them study",
         "tips": [
           {
             "type": "teachingTip",
@@ -1226,7 +1226,7 @@
       "key": "ffe130fe-728b-461f-9d70-bfd06ce3d026",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the AP CSA scoring structure and curve.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Pre-Assessment Scoring Reflection handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review their results on the Multiple-Choice Pre-Assessment and complete the MCQ Pre-Assessment Scoring Reflection handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the AP CSA scoring structure and curve.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Pre-Assessment Scoring Reflection handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to review their results on the Multiple-Choice Pre-Assessment and complete the MCQ Pre-Assessment Scoring Reflection handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1243,7 +1243,7 @@
       "key": "5db9a14b-1bac-48e3-8b1e-30318b471007",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which topics or subtopics do you feel most confident?*\n* *Which topics or subtopics did you miss most often?*\n* *Were your results surprising to you?*\n\n**Discussion Goal:** Students should identify common topics and subtopics that they missed. Students identify that they have both strengths and areas for improvement and share any aspects of their results they found surprising."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which topics or subtopics do you feel most confident?*\n* *Which topics or subtopics did you miss most often?*\n* *Were your results surprising to you?*\n\n**Discussion Goal:** Students should identify common topics and subtopics that they missed. Students identify that they have both strengths and areas for improvement and share any aspects of their results they found surprising."
       },
       "seeding_key": {
         "activity_section.key": "5db9a14b-1bac-48e3-8b1e-30318b471007",
@@ -1280,7 +1280,7 @@
       "key": "d417ec04-1523-49a3-a429-b084e15cb331",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give each student a copy of the MCQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the ten College Board units\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the multiple-choice pre-assessment in the appropriate box for each topic. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give each student a copy of the MCQ Study Plan handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the ten College Board units\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the multiple-choice pre-assessment in the appropriate box for each topic. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1297,7 +1297,7 @@
       "key": "953d31ab-19f4-41eb-b8d7-7739ec1cf646",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further."
       },
       "seeding_key": {
         "activity_section.key": "953d31ab-19f4-41eb-b8d7-7739ec1cf646",
@@ -1320,7 +1320,7 @@
       "key": "86912e2f-78cb-46e3-a1db-82f0d2258442",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1349,7 +1349,7 @@
       "key": "a945fdb4-bb4f-4150-9459-2bd1c0b7b7bc",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on pages 7-8 of the MCQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their MCQ Study Plan handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on pages 7-8 of the MCQ Study Plan handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their MCQ Study Plan handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1379,7 +1379,7 @@
       "key": "00ec5f27-a20b-4906-bcd4-d45d00fcfdde",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1409,7 +1409,7 @@
       "key": "d75af17a-f074-4254-bd8b-c92ce2567f40",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the different types of multiple-choice questions that appear on the AP CSA Exam.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide.\n* *Which type of multiple-choice questions am I most comfortable with? Which takes the least amount of time?*\n* *What strategies do I have for the different types of questions?*\n\n**Discussion Goal:** Students identify the types of questions they are most comfortable with. Students share strategies they can use on the exam, such as skipping the questions that they are least comfortable with and that take the most time."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the different types of multiple-choice questions that appear on the AP CSA Exam.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide.\n* *Which type of multiple-choice questions am I most comfortable with? Which takes the least amount of time?*\n* *What strategies do I have for the different types of questions?*\n\n**Discussion Goal:** Students identify the types of questions they are most comfortable with. Students share strategies they can use on the exam, such as skipping the questions that they are least comfortable with and that take the most time."
       },
       "seeding_key": {
         "activity_section.key": "d75af17a-f074-4254-bd8b-c92ce2567f40",
@@ -1434,7 +1434,7 @@
       "key": "66ab2b96-76b9-4263-b374-98215adb2171",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Practice handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the MCQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer all the MCQ questions at their station before moving on to the next station.\n* Encourage students to move on from a station after eight minutes.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MCQ Practice handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the MCQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer all the MCQ questions at their station before moving on to the next station.\n* Encourage students to move on from a station after eight minutes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1451,7 +1451,7 @@
       "key": "c877ed22-3ea3-4b31-a987-10644c3e8a01",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Discuss the MCQ Practice solution.\n\n**Discuss:** Click through the animated slides for each station.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *How would you describe this style of question?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What was challenging about the style of question in this station?*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> *What strategies do you have for this style?*\n\n**Discussion Goal:** Students share that Station A asks the output or value returned by code segment. Station B asks students to analyze the behavior of the code segment. Station C asks students to complete the code segment. Students share their challenges and strategies.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Discuss the MCQ Practice solution.\n\n**Discuss:** Click through the animated slides for each station.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> *How would you describe this style of question?*\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> *What was challenging about the style of question in this station?*\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> *What strategies do you have for this style?*\n\n**Discussion Goal:** Students share that Station A asks the output or value returned by code segment. Station B asks students to analyze the behavior of the code segment. Station C asks students to complete the code segment. Students share their challenges and strategies.",
         "duration": "10",
         "name": "Reflection",
         "tips": [
@@ -1470,7 +1470,7 @@
       "key": "1a5bccf4-ebe5-4976-b84b-b5a9bf7a7628",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to apply their strategies to the remaining questions on the MCQ Practice handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to apply their strategies to the remaining questions on the MCQ Practice handout.",
         "duration": "5",
         "name": "Applying Strategies",
         "tips": [
@@ -1502,7 +1502,7 @@
       "key": "e7d2ff32-c7d0-4991-a190-3a71fac92169",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What study strategies did you include in your study plan?*\n\n**Discussion Goal:** Students share the strategies they included in their study plan."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What study strategies did you include in your study plan?*\n\n**Discussion Goal:** Students share the strategies they included in their study plan."
       },
       "seeding_key": {
         "activity_section.key": "e7d2ff32-c7d0-4991-a190-3a71fac92169",
@@ -1537,7 +1537,7 @@
       "key": "1d0e119d-fdf7-46e2-9df4-52e649f5c0a6",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student several index cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to set up their self-test vocabulary flashcards."
+        "description": "**Distribute:** Give each student several index cards.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to set up their self-test vocabulary flashcards."
       },
       "seeding_key": {
         "activity_section.key": "1d0e119d-fdf7-46e2-9df4-52e649f5c0a6",
@@ -1560,7 +1560,7 @@
       "key": "2f775ffa-78b3-4f95-93b8-85aa81cc60b5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-test using their vocabulary flashcards."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students self-test using their vocabulary flashcards."
       },
       "seeding_key": {
         "activity_section.key": "2f775ffa-78b3-4f95-93b8-85aa81cc60b5",
@@ -1602,7 +1602,7 @@
       "key": "fce179b7-f00a-4e23-bf8e-b1ff43e2c124",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their study plan to identify topics they want to review. Students should identify their 1-3 highest priority topics and list them on a sticky note to help plan their tasks for the day."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their study plan to identify topics they want to review. Students should identify their 1-3 highest priority topics and list them on a sticky note to help plan their tasks for the day."
       },
       "seeding_key": {
         "activity_section.key": "fce179b7-f00a-4e23-bf8e-b1ff43e2c124",
@@ -1613,7 +1613,7 @@
       "key": "a70b5ede-3ede-482f-9046-ff3df75daf32",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy to reinforce their learning about one of the topics from the study plan that they'd like to revisit. Some students may use one strategy to review multiple topics or take the entire period to complete one choice.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Flashcards\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video Script\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Topic Cheat Sheet\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Design Your Own Multiple-Choice Questions\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Multiple- Choice Practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Code.org Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom Videos + Notecatcher\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Participate in a Mini-Lesson\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Concept Diagram",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy to reinforce their learning about one of the topics from the study plan that they'd like to revisit. Some students may use one strategy to review multiple topics or take the entire period to complete one choice.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Flashcards\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Video Script\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Topic Cheat Sheet\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Design Your Own Multiple-Choice Questions\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> AP Classroom Multiple- Choice Practice\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Code.org Videos + Notecatcher\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> AP Classroom Videos + Notecatcher\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Participate in a Mini-Lesson\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Concept Diagram",
         "tips": [
           {
             "type": "teachingTip",
@@ -1630,7 +1630,7 @@
       "key": "3a7ec511-feb7-4c1d-9023-378b1139df87",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the MCQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the MCQ Choice Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board.",
         "progression_name": "CSA Curriculum Videos",
         "tips": [
           {
@@ -1661,7 +1661,7 @@
       "key": "38e918a9-3b85-404d-8d3c-74bcdf7728c1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
       },
       "seeding_key": {
         "activity_section.key": "38e918a9-3b85-404d-8d3c-74bcdf7728c1",
@@ -1715,7 +1715,7 @@
       "key": "dee5cb52-c163-4000-ad36-e8a14cfbcf19",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Pre-Assessment, Java Quick Reference, two FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Pre-Assessment, Java Quick Reference, two FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk."
       },
       "seeding_key": {
         "activity_section.key": "dee5cb52-c163-4000-ad36-e8a14cfbcf19",
@@ -1726,7 +1726,7 @@
       "key": "68521eeb-94da-4850-9fb7-18aedb08a2a6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the FRQ Pre-Assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Pre-Assessment, Java Quick Reference, FRQ answer sheets, and scrap paper from each student.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the FRQ Pre-Assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Pre-Assessment, Java Quick Reference, FRQ answer sheets, and scrap paper from each student.",
         "duration": "40",
         "name": "FRQ Pre-Assessment"
       },
@@ -1752,7 +1752,7 @@
       "key": "3b6b7809-6d59-4a11-bdd7-d4ba609e3101",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students update their MCQ Study Plan."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students update their MCQ Study Plan."
       },
       "seeding_key": {
         "activity_section.key": "3b6b7809-6d59-4a11-bdd7-d4ba609e3101",
@@ -1777,7 +1777,7 @@
       "key": "da53d9db-b464-4641-8c7e-d959302828f1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Pre-Assessment, the Scoring Guidelines, and their answer sheets.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students score their FRQ using the Scoring Guidelines.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the exam did you earn points?*\n* *Which parts of the exam did you deduct penalties?*\n* *Were there any places on the exam where you made an error, but did not lose points?*\n\n**Discussion Goal:** Students discuss which elements of their solution added and deducted points from their overall score. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Pre-Assessment, the Scoring Guidelines, and their answer sheets.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students score their FRQ using the Scoring Guidelines.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the exam did you earn points?*\n* *Which parts of the exam did you deduct penalties?*\n* *Were there any places on the exam where you made an error, but did not lose points?*\n\n**Discussion Goal:** Students discuss which elements of their solution added and deducted points from their overall score. "
       },
       "seeding_key": {
         "activity_section.key": "da53d9db-b464-4641-8c7e-d959302828f1",
@@ -1814,7 +1814,7 @@
       "key": "e15dd437-3337-47c9-8af2-b911b310891e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Study Plan handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the four FRQ topics\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the FRQ pre-assessment in the appropriate box for each topic. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on the FRQ Study Plan handout."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Study Plan handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their mastery of the content to self-identify their areas of highest need. This process has three parts:\n* Recording their assessment data from the practice exam\n* Identifying any subtopics they would like to spend additional time with\n* Self-rating their current level of mastery for each of the four FRQ topics\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to record assessment data from the FRQ pre-assessment in the appropriate box for each topic. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to identify subtopics to focus on:\n* Students read through subtopics listed for each topic.\n* Students check any topic they would like to review further.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the mastery tracker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use the study plan table on the FRQ Study Plan handout."
       },
       "seeding_key": {
         "activity_section.key": "e15dd437-3337-47c9-8af2-b911b310891e",
@@ -1838,7 +1838,7 @@
       "key": "261952a8-f6b6-4b22-b013-5d048d6cea57",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write down their needs on their sticky note.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1879,7 +1879,7 @@
       "key": "f7875755-5ae4-4282-95d0-1b0e3c215b97",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their Free Response Question Study Plan to identify topics they want to review.  Students should identify their 1-3 highest priority topics, and list them on a sticky note to help plan their tasks for the day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to look at their Free Response Question Study Plan to identify topics they want to review.  Students should identify their 1-3 highest priority topics, and list them on a sticky note to help plan their tasks for the day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1909,7 +1909,7 @@
       "key": "d7c611c1-e660-4378-b59c-e4fd74071111",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy as a way of reinforcing their learning about one of the topics from the study plan that they'd like to revisit. Some students may choose to use one strategy to review multiple topics/skills, or take the entire period to complete one choice.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Create a tutorial video\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Create a topic \"Cheat Sheet\"\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> AP Classroom FRQ practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Small group guided study session\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Fishbowl skills practice\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sketch notes",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the activity and six study strategies options. Answer any general questions about the task. Students should attempt to complete two activities, using the study strategy as a way of reinforcing their learning about one of the topics from the study plan that they'd like to revisit. Some students may choose to use one strategy to review multiple topics/skills, or take the entire period to complete one choice.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Create a tutorial video\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Create a topic \"Cheat Sheet\"\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> AP Classroom FRQ practice\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Small group guided study session\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Fishbowl skills practice\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Sketch notes",
         "tips": [
           {
             "type": "teachingTip",
@@ -1926,7 +1926,7 @@
       "key": "c64608f8-c87d-4f4d-aed9-8acb56164e84",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the FRQ Choice Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a digital copy of the FRQ Choice Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose a strategy and follow the directions on the choice board."
       },
       "seeding_key": {
         "activity_section.key": "c64608f8-c87d-4f4d-aed9-8acb56164e84",
@@ -1950,7 +1950,7 @@
       "key": "72b469d4-8847-4113-8e72-665ee159b065",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
       },
       "seeding_key": {
         "activity_section.key": "72b469d4-8847-4113-8e72-665ee159b065",
@@ -1986,7 +1986,7 @@
       "key": "8b814b79-cb70-4156-bed4-6e0a85b704cc",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Have students participate in an FRQ Advice Snowball:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to explain the instructions.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Conduct the FRQ Advice Snowball after each student has a piece of advice by throwing their snowball. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> After the time is up, students read the snowball that is closest to them.",
+        "description": "**Do This:** Have students participate in an FRQ Advice Snowball:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Click through the animated slide to explain the instructions.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Conduct the FRQ Advice Snowball after each student has a piece of advice by throwing their snowball. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> After the time is up, students read the snowball that is closest to them.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2016,7 +2016,7 @@
       "key": "e9eb2cd5-533e-4bf1-aedc-414d5a36b03c",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to review the FRQ section of the AP CSA Exam:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are four FRQ questions to be completed in 90 minutes. The FRQs are 50% of the score, and each question is worth 9 points. Each question has a specific topic.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Each FRQ uses specific task verbs.\n\n**Do This:** Click through the animated slides to introduce the stations:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Common Errors\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Objectives\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Predict the Scoring Guide\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Spot the Error\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the FRQ Practice handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the FRQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer the prompts on their activity guides. \n* Students should move between stations after 8 minutes or completing the question, whichever comes first."
+        "description": "**Do This:** Click through the animated slides to review the FRQ section of the AP CSA Exam:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> There are four FRQ questions to be completed in 90 minutes. The FRQs are 50% of the score, and each question is worth 9 points. Each question has a specific topic.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Each FRQ uses specific task verbs.\n\n**Do This:** Click through the animated slides to introduce the stations:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Common Errors\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Objectives\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Predict the Scoring Guide\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Spot the Error\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the FRQ Practice handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station and complete the FRQ Practice handout.\n* Students find a station. (Students do not need to go in order.)\n* Students answer the prompts on their activity guides. \n* Students should move between stations after 8 minutes or completing the question, whichever comes first."
       },
       "seeding_key": {
         "activity_section.key": "e9eb2cd5-533e-4bf1-aedc-414d5a36b03c",
@@ -2039,7 +2039,7 @@
       "key": "23250209-ec42-4ba3-9a25-827094c06a44",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain strategies for the FRQs."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain strategies for the FRQs."
       },
       "seeding_key": {
         "activity_section.key": "23250209-ec42-4ba3-9a25-827094c06a44",
@@ -2063,7 +2063,7 @@
       "key": "3d9df57d-2c4b-44e5-985b-f496cc1701da",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their study plan. Students add another indicator to the mastery tracker key on the front page of their study plan, update their mastery ratings for the subjects they targeted in this lesson, and cross out any subtopics they no longer need to review. "
       },
       "seeding_key": {
         "activity_section.key": "3d9df57d-2c4b-44e5-985b-f496cc1701da",
@@ -2138,7 +2138,7 @@
       "key": "664a2aa7-79c4-4d66-b5b4-edc082249e17",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "664a2aa7-79c4-4d66-b5b4-edc082249e17",
@@ -2186,7 +2186,7 @@
       "key": "705da266-fead-40be-9a2f-98e01cc09f10",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students start the multiple-choice mock exam. On the board, write the start and end times."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students start the multiple-choice mock exam. On the board, write the start and end times."
       },
       "seeding_key": {
         "activity_section.key": "705da266-fead-40be-9a2f-98e01cc09f10",
@@ -2209,7 +2209,7 @@
       "key": "4417a8c7-2df0-4f0b-8603-7d24b9ed4548",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student."
       },
       "seeding_key": {
         "activity_section.key": "4417a8c7-2df0-4f0b-8603-7d24b9ed4548",
@@ -2257,7 +2257,7 @@
       "key": "217e4d42-7e8c-4b10-a185-ce477e26c16a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, each student's answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the Test Booklet, Java Quick Reference, each student's answer sheet, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "217e4d42-7e8c-4b10-a185-ce477e26c16a",
@@ -2291,7 +2291,7 @@
       "key": "5292fc0f-fb09-4ab2-9e0b-bb2da1f15ed2",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the MCQ portion of the mock exam. On the board, write the start and end times.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students complete the MCQ portion of the mock exam. On the board, write the start and end times.",
         "duration": "40",
         "name": "Multiple-Choice Mock Exam"
       },
@@ -2316,7 +2316,7 @@
       "key": "727226bf-5f17-47fd-ae62-752f3db9d753",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the MCQ Mock Exam, Java Quick Reference, answer sheet, and scrap paper from each student.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2347,7 +2347,7 @@
       "key": "8e58016a-f84a-4aab-8bb4-c95a41ff2bc0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student the Test Booklet and answer sheet for the MCQ Mock Exam.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answer to each multiple-choice question and its AP Classroom topic. Students should record the topic next to each question to update their study plans. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student the Test Booklet and answer sheet for the MCQ Mock Exam.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answer to each multiple-choice question and its AP Classroom topic. Students should record the topic next to each question to update their study plans. "
       },
       "seeding_key": {
         "activity_section.key": "8e58016a-f84a-4aab-8bb4-c95a41ff2bc0",
@@ -2372,7 +2372,7 @@
       "key": "ecd420f5-795f-4ab3-ae4e-537a95703dd7",
       "position": 4,
       "properties": {
-        "description": "**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students review the multiple-choice questions they missed.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students summarize their results by topic and update their study plan."
+        "description": "**Do This:**\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students review the multiple-choice questions they missed.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students summarize their results by topic and update their study plan."
       },
       "seeding_key": {
         "activity_section.key": "ecd420f5-795f-4ab3-ae4e-537a95703dd7",
@@ -2437,7 +2437,7 @@
       "key": "4ba638a2-d558-451c-a717-d0e29b67a248",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, four FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, four FRQ answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "4ba638a2-d558-451c-a717-d0e29b67a248",
@@ -2508,7 +2508,7 @@
       "key": "77f3dbe9-99c1-4950-a8b7-cdaad905d76d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students start the FRQ mock exam. On the board, write the start and end times."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students start the FRQ mock exam. On the board, write the start and end times."
       },
       "seeding_key": {
         "activity_section.key": "77f3dbe9-99c1-4950-a8b7-cdaad905d76d",
@@ -2531,7 +2531,7 @@
       "key": "c330990d-9ac6-4019-8fb9-6075e5a5ecb2",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
       },
       "seeding_key": {
         "activity_section.key": "c330990d-9ac6-4019-8fb9-6075e5a5ecb2",
@@ -2579,7 +2579,7 @@
       "key": "3ec7666b-5c76-4dfa-ad09-953117b86ea1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, each student's answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Mock Exam, Java Quick Reference, each student's answer sheets, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "3ec7666b-5c76-4dfa-ad09-953117b86ea1",
@@ -2613,7 +2613,7 @@
       "key": "de6184e0-fd0e-47e3-9570-bc471add1053",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students complete the FRQ portion of the mock exam. On the board, write the start and end times.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students complete the FRQ portion of the mock exam. On the board, write the start and end times.",
         "duration": "40",
         "name": "FRQ Mock Exam"
       },
@@ -2638,7 +2638,7 @@
       "key": "517ea395-1301-4a35-9896-5de2841dd5fa",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Mock Exam, Java Quick Reference, answer sheets, and scrap paper from each student."
       },
       "seeding_key": {
         "activity_section.key": "517ea395-1301-4a35-9896-5de2841dd5fa",
@@ -2674,7 +2674,7 @@
       "key": "93ae5275-ded7-4e1f-a7e5-0c8ea7250bcd",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their answer sheets.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the FRQ stations instructions.",
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student their answer sheets.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the FRQ stations instructions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2691,7 +2691,7 @@
       "key": "2babab65-105f-4bd2-8143-0b718d4a5319",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were you confident about?*\n* *Are there some things you left out that could have brought up your score?*\n* *How could you improve your time management?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution, areas of improvement, and time management strategies.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were you confident about?*\n* *Are there some things you left out that could have brought up your score?*\n* *How could you improve your time management?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution, areas of improvement, and time management strategies.",
         "duration": "10",
         "name": "Study Plan",
         "tips": [
@@ -2722,7 +2722,7 @@
       "key": "cb553431-7883-41c2-87bc-84284a720e42",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their study plan. Students should categorize each topic as high, medium, or low priority, identify tangible goals, and specific action items to help them achieve their desired level of mastery. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students add topics and subtopics to their study plan. Students should categorize each topic as high, medium, or low priority, identify tangible goals, and specific action items to help them achieve their desired level of mastery. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2763,7 +2763,7 @@
       "key": "eedb7b67-9810-4ef8-9cbc-1dd9d2f64b98",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in the Give One, Get One activity."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in the Give One, Get One activity."
       },
       "seeding_key": {
         "activity_section.key": "eedb7b67-9810-4ef8-9cbc-1dd9d2f64b98",

@@ -295,7 +295,7 @@
       "key": "9861853d-f4bb-4d00-a1e2-49c860164ac2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide",
         "duration": "5",
         "name": "Think About It"
       },
@@ -320,7 +320,7 @@
       "key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
+        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
       },
       "seeding_key": {
         "activity_section.key": "8c2f83ad-c319-45f6-aef5-d6bd464c1f0e",
@@ -343,7 +343,7 @@
       "key": "4f4fd4fd-6d15-4b1a-9b68-261f3d2a1d5f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet.",
         "duration": "5",
         "name": "Discuss"
       },
@@ -372,7 +372,7 @@
       "key": "2541896d-e85a-4cfc-8dec-21f8e3df759a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2541896d-e85a-4cfc-8dec-21f8e3df759a",
@@ -395,7 +395,7 @@
       "key": "d8ad2443-d4db-413f-8b6e-deeb10d2c3b2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
         "progression_name": "Video: Animal Adaptations Introduction"
       },
       "seeding_key": {
@@ -419,7 +419,7 @@
       "key": "3d82e301-876e-4d61-9d8e-ea0a4281c088",
       "position": 4,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n**Adaptations:** Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators. \n"
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n**Adaptations:** Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators. \n"
       },
       "seeding_key": {
         "activity_section.key": "3d82e301-876e-4d61-9d8e-ea0a4281c088",
@@ -430,7 +430,7 @@
       "key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
       "position": 5,
       "properties": {
-        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Level 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
+        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Level 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "af28437f-8bd2-48d3-84b2-f731d8ba090e",
@@ -468,7 +468,7 @@
       "key": "ec67c018-2d09-4c5b-9d78-2bc119193420",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Hello World: Programming with Events” video\n\n**Level 6**: Video introduction of events in computer science\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Hello World: Programming with Events” video\n\n**Level 6**: Video introduction of events in computer science\n",
         "duration": "1",
         "name": "Events Video",
         "progression_name": "Video: Hello World: Programming with Events"
@@ -482,7 +482,7 @@
       "key": "788c7de5-02fd-4ed3-a0b4-099d610a6e6a",
       "position": 9,
       "properties": {
-        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing. This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
+        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing. This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
         "duration": "14",
         "name": "Animal Adaptations - Skill Building",
         "progression_name": "Skill Building"
@@ -496,7 +496,7 @@
       "key": "9b011b7d-ac36-4362-bf14-0a9c4c6a33ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1,000 of years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1,000 of years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
         "duration": "5",
         "name": "Discuss"
       },
@@ -536,7 +536,7 @@
       "key": "f8b819ac-8167-4a55-8c10-fa7febe38b15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Prompts:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n**Prompts:** \n- _What are these animals doing?_\n- _What do the pictures have in common?_\n\n**Goal**: Students should start to notice that both pictures show animals moving in groups. This is a behavior for survival! \n\n",
         "duration": "5",
         "name": "Think About It"
       },
@@ -549,7 +549,7 @@
       "key": "1fb909c3-a900-42a6-97b0-3595ad3a9301",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn & Talk” slide\n\n**Discuss:** \n- _Why is this school of sardines acting like this?_\n\n**Discussion Goals:** Students should create an argument for why there is strength in numbers. This could include facts about how small sardines are, how easy it would be to catch a sardine on its own, how this swarming behavior confuses its predators, and that there is a smaller chance of being eaten or caught when they swarm.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science & Coding” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Turn & Talk” slide\n\n**Discuss:** \n- _Why is this school of sardines acting like this?_\n\n**Discussion Goals:** Students should create an argument for why there is strength in numbers. This could include facts about how small sardines are, how easy it would be to catch a sardine on its own, how this swarming behavior confuses its predators, and that there is a smaller chance of being eaten or caught when they swarm.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Science & Coding” slide\n",
         "duration": "5",
         "name": "Turn & Talk"
       },
@@ -603,7 +603,7 @@
       "key": "b880121b-cfa3-46c6-a2ab-4f8da12ae0d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Behaviors Intro\" slide\n\n**Level 1:** Level 1 is an informational level comparing behaviors in nature with behaviors in computer science. Consider asking a student to read each section aloud and describe the pictures. Highlight for students that the behavior block is a green block connected to a `sprite begins` block. In this case, the block on screen shows the sprite `moving swimming left and right`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Migration\" slide\n\n**Level 2:**  Level 2 models whale migration. Students add a new block to the program that begins the behavior ‘moving NSEW with arrow keys’ After clicking the run button, the whale will move in the direction of the arrow keys pressed. Students can use the arrow keys below the playspace or on their keyboard. In order to pass the level, students should model that whales migrate north (up arrow key).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 4 - Behaviors in CS  \" slide\n\n**Levels 3-4:** In Levels 3 - 4, students experiment with beginning and stopping behaviors. They can test out different behaviors to gain an understanding of how changing the code changes the animation of the bug sprites. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Dancing Birds \" slide\n\n**Levels 5-7:**  Levels 5-7 use the natural bird dancing behavior to explore layering different behaviors with code. These three levels are linked, meaning students’ code will carry over from level to level so they can build on it. In level 5, students begin one behavior for the bird sprite. In level 6, they add a second behavior so the sprite is doing both behaviors at the same time. In level 7, students add a `when key pressed` event that triggers a third behavior for the bird sprite. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Behaviors Intro\" slide\n\n**Level 1:** Level 1 is an informational level comparing behaviors in nature with behaviors in computer science. Consider asking a student to read each section aloud and describe the pictures. Highlight for students that the behavior block is a green block connected to a `sprite begins` block. In this case, the block on screen shows the sprite `moving swimming left and right`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Migration\" slide\n\n**Level 2:**  Level 2 models whale migration. Students add a new block to the program that begins the behavior ‘moving NSEW with arrow keys’ After clicking the run button, the whale will move in the direction of the arrow keys pressed. Students can use the arrow keys below the playspace or on their keyboard. In order to pass the level, students should model that whales migrate north (up arrow key).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - 4 - Behaviors in CS  \" slide\n\n**Levels 3-4:** In Levels 3 - 4, students experiment with beginning and stopping behaviors. They can test out different behaviors to gain an understanding of how changing the code changes the animation of the bug sprites. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Dancing Birds \" slide\n\n**Levels 5-7:**  Levels 5-7 use the natural bird dancing behavior to explore layering different behaviors with code. These three levels are linked, meaning students’ code will carry over from level to level so they can build on it. In level 5, students begin one behavior for the bird sprite. In level 6, they add a second behavior so the sprite is doing both behaviors at the same time. In level 7, students add a `when key pressed` event that triggers a third behavior for the bird sprite. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -642,7 +642,7 @@
       "key": "a472aba6-ab14-4c36-b1a6-0d4d0f7ce6b9",
       "position": 6,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Speed\" slide\n\n**Level 8:**  In Level 8, students can modify the speed of the behavior for each sprite. Although both sprites are using the same behavior, they are moving at the speed set in the code. This level compares the difference in behavior between the turtle and the cheetah to highlight the different needs of each animal. \n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Many Sprites\" slide\n\n**Level 9:**  Level 9 demonstrates that when a behavior is assigned to one sprite, it applies to all sprites with the same costume. In this example, when one butterfly begins migrating, they all begin migrating. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Survival in Groups \" slide\n\n**Level 10:**  In Level 10, students are able to set one sprite as the leader which other sprites will follow. This models a school of fish swimming together in a group for survival."
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Speed\" slide\n\n**Level 8:**  In Level 8, students can modify the speed of the behavior for each sprite. Although both sprites are using the same behavior, they are moving at the speed set in the code. This level compares the difference in behavior between the turtle and the cheetah to highlight the different needs of each animal. \n\n <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Many Sprites\" slide\n\n**Level 9:**  Level 9 demonstrates that when a behavior is assigned to one sprite, it applies to all sprites with the same costume. In this example, when one butterfly begins migrating, they all begin migrating. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Survival in Groups \" slide\n\n**Level 10:**  In Level 10, students are able to set one sprite as the leader which other sprites will follow. This models a school of fish swimming together in a group for survival."
       },
       "seeding_key": {
         "activity_section.key": "a472aba6-ab14-4c36-b1a6-0d4d0f7ce6b9",
@@ -664,7 +664,7 @@
       "key": "528d1ae0-f10a-4d66-9ef6-1b68fdf33140",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:**\n- _Why do bears hibernate in the winter?_ \n- _If these bears lived in areas without a winter, how might they adapt to their new environment?_ \n- _What would change about the bear?_ \n\n**Discussion Goal:** Students should make the connection that bear hibernate because of less food in the winter, and if they lived in an area without winter, they probably would not hibernate. Example: The bear would get stronger because it won't lose weight hibernating during the winter.\n\n\n**Do This:** Have students examine the picture of the hibernating bear. Read the prompt as well as the words in the word bank, out loud. Allow students 3-5 minutes to write their responses. Choose to share in partners or as a group. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:**\n- _Why do bears hibernate in the winter?_ \n- _If these bears lived in areas without a winter, how might they adapt to their new environment?_ \n- _What would change about the bear?_ \n\n**Discussion Goal:** Students should make the connection that bear hibernate because of less food in the winter, and if they lived in an area without winter, they probably would not hibernate. Example: The bear would get stronger because it won't lose weight hibernating during the winter.\n\n\n**Do This:** Have students examine the picture of the hibernating bear. Read the prompt as well as the words in the word bank, out loud. Allow students 3-5 minutes to write their responses. Choose to share in partners or as a group. \n",
         "duration": "10",
         "name": "Reflect"
       },
@@ -732,7 +732,7 @@
       "key": "b39c7568-ae47-4cc0-b5eb-eb5ca5b06c0b",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Think, Pair, Share” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n\n**Discuss:** \n\n- _Would a tree frog survive in this Mars-like environment?_\n- _Why or why not?_ \n- _How could it change or adapt to be able to survive?_\n\n**Discussion Goals:** Students should create an argument for how a frog would need to change to be able to survive in a hot, dry environment. Answers might include an adaptation of their skin, a new way to store water, and a change in their color to blend in with the environment. \n\n",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Think, Pair, Share” slide \n\n**Do This:** Read the two questions out loud. Allow students 2-4 minutes to think or write independently.\n\n\n**Discuss:** \n\n- _Would a tree frog survive in this Mars-like environment?_\n- _Why or why not?_ \n- _How could it change or adapt to be able to survive?_\n\n**Discussion Goals:** Students should create an argument for how a frog would need to change to be able to survive in a hot, dry environment. Answers might include an adaptation of their skin, a new way to store water, and a change in their color to blend in with the environment. \n\n",
         "duration": "10",
         "name": "Think & Discuss"
       },
@@ -759,7 +759,7 @@
       "key": "09ccb6d9-c423-4da3-af4c-3bb1a3c5eb5c",
       "position": 2,
       "properties": {
-        "description": "\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Behaviors Intro\" slide\n\n**Level 2:** Consider showing students Level 2 and answering the Prediction question as a class to demonstrate how to “edit” a behavior and look at the code inside.",
+        "description": "\n\n <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 2 - Behaviors Intro\" slide\n\n**Level 2:** Consider showing students Level 2 and answering the Prediction question as a class to demonstrate how to “edit” a behavior and look at the code inside.",
         "duration": "3",
         "name": "Prediction",
         "progression_name": "Predict"
@@ -773,7 +773,7 @@
       "key": "04d46073-6413-49a8-b9e5-5f8e1bde46a6",
       "position": 3,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Skill Building\" slide\n\n**Do This:** Have students move to their computers and sign in. Students will work through the levels at their own speed.  \n\nCirculate the room to support students. Encourage them to read the instructions carefully and click on the lightbulb for hints on each level if they get stuck. \n",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Skill Building\" slide\n\n**Do This:** Have students move to their computers and sign in. Students will work through the levels at their own speed.  \n\nCirculate the room to support students. Encourage them to read the instructions carefully and click on the lightbulb for hints on each level if they get stuck. \n",
         "duration": "10",
         "name": "Skill Building",
         "progression_name": "Skill Building",
@@ -793,7 +793,7 @@
       "key": "ae43f5f0-d656-4a78-b865-de1912732745",
       "position": 4,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:**  Show “Level 9 - Code Your Own Adaptations\" slide\n\n**Level 9:** Level 9 is a choice level with three different scenarios of environmental changes. Students will choose an animal and code a new behavior that models an adaptation the animal might need to survive the new environment. \n",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:**  Show “Level 9 - Code Your Own Adaptations\" slide\n\n**Level 9:** Level 9 is a choice level with three different scenarios of environmental changes. Students will choose an animal and code a new behavior that models an adaptation the animal might need to survive the new environment. \n",
         "duration": "8",
         "name": "Choice Level",
         "progression_name": "Choice"
@@ -807,7 +807,7 @@
       "key": "0ace60b8-6ee7-487a-bf1c-988eb7c527cc",
       "position": 5,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 10 - Share Your Project\" slide\n\n**Level 10:**  Level 10 includes prompts to support students in sharing their projects with a partner or in small groups. \n\n*Now that you have coded a survival adaptation, it's time to share it out!\nAs you view your classmates' projects consider the following questions:*\n- Did you choose the same environment scenario or different ones?\n- Did they use any of the same coding blocks?\n- Do you think the animal would survive the environment change? Why or why not?\n",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 10 - Share Your Project\" slide\n\n**Level 10:**  Level 10 includes prompts to support students in sharing their projects with a partner or in small groups. \n\n*Now that you have coded a survival adaptation, it's time to share it out!\nAs you view your classmates' projects consider the following questions:*\n- Did you choose the same environment scenario or different ones?\n- Did they use any of the same coding blocks?\n- Do you think the animal would survive the environment change? Why or why not?\n",
         "duration": "2",
         "name": "Share Out",
         "progression_name": "Share Out"
@@ -821,7 +821,7 @@
       "key": "4aa4f76e-e005-45dc-9f19-530ab829547e",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Partner Reflection\" slide\n\n**Do This:** Have students pair up or gather in small groups. Read one question at a time and allow both partners time to share before moving on to the next question. Gather students self evaluation through a fist of five, on a sticky note or scrap paper or other collection method used in your classroom. \n\n- What did you learn about sprites?\n- What did you learn about animals?\n- Which level was the most challenging?\n",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Partner Reflection\" slide\n\n**Do This:** Have students pair up or gather in small groups. Read one question at a time and allow both partners time to share before moving on to the next question. Gather students self evaluation through a fist of five, on a sticky note or scrap paper or other collection method used in your classroom. \n\n- What did you learn about sprites?\n- What did you learn about animals?\n- Which level was the most challenging?\n",
         "duration": "5",
         "name": "Partner Reflection"
       },

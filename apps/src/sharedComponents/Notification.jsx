@@ -106,7 +106,7 @@ const Notification = ({
               {tooltipText ? (
                 <span>
                   <span data-tip data-for={tooltipId} style={styles.tooltip}>
-                    <FontAwesome icon="info-circle" />
+                    <FontAwesome icon="circle-info" />
                   </span>
                   <ReactTooltip id={tooltipId} effect="solid">
                     <p style={styles.tooltipText}>{tooltipText}</p>
@@ -165,7 +165,7 @@ const Notification = ({
         </div>
         {dismissible && (
           <div style={styles.dismiss}>
-            <FontAwesome icon="times" onClick={handleDismiss} />
+            <FontAwesome icon="xmark" onClick={handleDismiss} />
           </div>
         )}
       </div>

@@ -1257,7 +1257,7 @@
       "key": "30c767ad-f9f5-4212-8d52-7bbf9344a815",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you know or remember about algorithms?*\n\n**Discussion Goal:** Students recall what they learned about algorithms in Computer Science Principles (CSP), including the components of an algorithm such as sequencing, selection, and iteration. Students identify sequencing as the order that steps are executed and make connections to how they have been using sequencing in The Neighborhood. Students may recall that selection is used to determine a different set of instructions to execute based on a condition and that iteration is used to execute a set of instructions a specific number of times or while a condition is true.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you know or remember about algorithms?*\n\n**Discussion Goal:** Students recall what they learned about algorithms in Computer Science Principles (CSP), including the components of an algorithm such as sequencing, selection, and iteration. Students identify sequencing as the order that steps are executed and make connections to how they have been using sequencing in The Neighborhood. Students may recall that selection is used to determine a different set of instructions to execute based on a condition and that iteration is used to execute a set of instructions a specific number of times or while a condition is true.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1274,7 +1274,7 @@
       "key": "a929e03e-b60f-4ed2-8454-452b4ded6b69",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***algorithm*** and introduce the components of an algorithm."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***algorithm*** and introduce the components of an algorithm."
       },
       "seeding_key": {
         "activity_section.key": "a929e03e-b60f-4ed2-8454-452b4ded6b69",
@@ -1285,7 +1285,7 @@
       "key": "66e2af8c-e0f6-4994-883a-b5440cf399f2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -1310,7 +1310,7 @@
       "key": "2ce2fb55-6dec-4959-a05f-26e73f8025c0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -1322,7 +1322,7 @@
       "key": "2cc4d596-c298-46f2-9fd3-cee56638cde0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the `canMove()`, `isOnBucket()`, and `hasPaint()` methods used in the program and share ideas about what each method does. Students should also notice that these methods are used with `while` loops to determine if the `Painter` object can move or has paint and repeats the instructions as long as the condition is `true`. Students might wonder about the similarities and differences between these methods and those they have used previously or if there are other methods they can use to check other conditions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce `boolean` values and the `Painter` class methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some scenarios that you can think of where you would want to know if something is either true or false? Why might you need to know that?*\n\n**Discussion Goal:** Students share examples from their personal lives and experiences, such as deciding if they needed a jacket based on the weather or if they could hang out with their friends based on whether they had finished their homework or chores.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the `canMove()`, `isOnBucket()`, and `hasPaint()` methods used in the program and share ideas about what each method does. Students should also notice that these methods are used with `while` loops to determine if the `Painter` object can move or has paint and repeats the instructions as long as the condition is `true`. Students might wonder about the similarities and differences between these methods and those they have used previously or if there are other methods they can use to check other conditions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce `boolean` values and the `Painter` class methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some scenarios that you can think of where you would want to know if something is either true or false? Why might you need to know that?*\n\n**Discussion Goal:** Students share examples from their personal lives and experiences, such as deciding if they needed a jacket based on the weather or if they could hang out with their friends based on whether they had finished their homework or chores.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1353,7 +1353,7 @@
       "key": "3d336ab9-9da6-484b-97f0-69669168fea8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *While Loops*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *While Loops*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1370,7 +1370,7 @@
       "key": "4a603e15-f550-4103-85c8-8e8cab9cc16a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example flowchart of washing dishes.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the example flowchart of washing dishes.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Loops and Boolean Methods"
       },
       "seeding_key": {
@@ -1382,7 +1382,7 @@
       "key": "9da97669-24c1-4e24-95fe-3591816c0752",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1399,7 +1399,7 @@
       "key": "d3fcb9d4-91bb-4f06-a2ae-35122d094124",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that iteration is required when we need to repeat an action until a condition is met, but we don't know in advance how many times it must run.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the syntax and functionality of a `while` loop and define ***iteration statement*** and ***condition***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain that iteration is required when we need to repeat an action until a condition is met, but we don't know in advance how many times it must run.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that if the condition evaluates to `false` initially, the loop body is not executed at all."
       },
       "seeding_key": {
         "activity_section.key": "d3fcb9d4-91bb-4f06-a2ae-35122d094124",
@@ -1424,7 +1424,7 @@
       "key": "95928594-c46b-4b78-b1cb-e2e239248f5b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1441,7 +1441,7 @@
       "key": "dd262c3b-cf99-4220-80df-0008b0fbf7c3",
       "position": 12,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem solving process to plan their solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio to complete Levels 6 and 7. Students complete a Check for Understanding on Level 6, then continue to complete Level 7 to implement their solution for their chosen problem.",
         "progression_name": "Practice: Using Loops and Boolean Methods",
         "tips": [
           {
@@ -1472,7 +1472,7 @@
       "key": "b4dc8d3c-3ca0-4736-9812-7ac7dccf6216",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as `boolean` and iteration. Students also identify the syntax for writing a `while` loop and how it can be used to repeat a set of instructions in The Neighborhood. They should realize that they now have the knowledge to develop more complex algorithms with two of the three components of an algorithm and might suggest selection as the next component to learn.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "b4dc8d3c-3ca0-4736-9812-7ac7dccf6216",
@@ -1520,7 +1520,7 @@
       "key": "440e5c40-51cd-4400-97dd-ef99a88cbefc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we would implement selection in Java?*\n\n**Discussion Goal:** Students recall selection statements they implemented in Computer Science Discoveries (CSD), Computer Science Principles (CSP), or other similar course and suggest using the `if` instead of `while` to check a condition.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think we would implement selection in Java?*\n\n**Discussion Goal:** Students recall selection statements they implemented in Computer Science Discoveries (CSD), Computer Science Principles (CSP), or other similar course and suggest using the `if` instead of `while` to check a condition.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1537,7 +1537,7 @@
       "key": "e45012c3-a66c-4e9e-8622-4b0bac5e3bcc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -1562,7 +1562,7 @@
       "key": "39241120-05de-402c-9cbc-6fcb236dc170",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Selection Statements"
       },
       "seeding_key": {
@@ -1574,7 +1574,7 @@
       "key": "6f83e4b2-2b5f-420d-8df0-188a829ba8c4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the code uses an `if` statement to check if a condition is `true` and only executes the block of code once if the condition is `true`. Students may wonder how they might use an `if` statement with sequencing and iteration to write algorithms in The Neighborhood."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the code uses an `if` statement to check if a condition is `true` and only executes the block of code once if the condition is `true`. Students may wonder how they might use an `if` statement with sequencing and iteration to write algorithms in The Neighborhood."
       },
       "seeding_key": {
         "activity_section.key": "6f83e4b2-2b5f-420d-8df0-188a829ba8c4",
@@ -1585,7 +1585,7 @@
       "key": "0e247626-bd4b-4f02-84b8-e71c9d1260cd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Conditional Statements*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Conditional Statements*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1602,7 +1602,7 @@
       "key": "c5eb267b-f610-455b-b94a-971061c07623",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Explain the syntax and functionality of an `if` statement:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***selection statement***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The condition of an `if` statement"
+        "description": "**Do This:** Explain the syntax and functionality of an `if` statement:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***selection statement***\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The condition of an `if` statement"
       },
       "seeding_key": {
         "activity_section.key": "c5eb267b-f610-455b-b94a-971061c07623",
@@ -1627,7 +1627,7 @@
       "key": "8db6011c-5e38-43ec-a333-bb86045b1d8a",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Selection Statements handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Selection Statements handout.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Selection Statements handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Selection Statements handout.",
         "progression_name": "Investigate and Modify: Selection Statements"
       },
       "seeding_key": {
@@ -1639,7 +1639,7 @@
       "key": "431343e2-4d34-4f9f-841e-d00818b84d32",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Selection Statements handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Selection Statements handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1668,7 +1668,7 @@
       "key": "9aeaf646-cea6-4f5d-bd88-9475b79d39a1",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might these methods be useful to solve problems in The Neighborhood?*\n\n**Discussion Goal:** Students suggest algorithms they have written or problems they have solved before that they could expand using these methods, such as moving along a wall and turning right when a `Painter` object can move south.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How might these methods be useful to solve problems in The Neighborhood?*\n\n**Discussion Goal:** Students suggest algorithms they have written or problems they have solved before that they could expand using these methods, such as moving along a wall and turning right when a `Painter` object can move south.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1699,7 +1699,7 @@
       "key": "c488fb58-b7a1-4d5b-8400-61004b486def",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem-solving process to plan their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to Level 4 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one of the problems and use the problem-solving process to plan their solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to Level 4 to create a subclass of the `PainterPlus` class and implement their algorithm for their chosen problem.",
         "progression_name": "Practice: Writing Algorithms",
         "tips": [
           {
@@ -1729,7 +1729,7 @@
       "key": "da461a37-5ff4-4f0a-af89-ca0f7bf7c1a5",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1759,7 +1759,7 @@
       "key": "e81cfd3a-b07c-4632-9529-aa0909274e8f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "e81cfd3a-b07c-4632-9529-aa0909274e8f",
@@ -1794,7 +1794,7 @@
       "key": "827375ff-49dc-4d20-80ee-bf7ce2ac6e0e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you're organizing a field trip for your class. You check the weather and see it’s supposed to rain tomorrow. What would your plan be if it rains? What about if it doesn't?*\n\n**Discussion Goal:** Students should recognize that in real life, we often prepare for both possibilities when something is true and when it's false. This sets up the idea that `if/else` lets us write two different code paths based on whether a condition is true or not. It also helps introduce the idea of negation (e.g., `if NOT sunny`)."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Imagine you're organizing a field trip for your class. You check the weather and see it’s supposed to rain tomorrow. What would your plan be if it rains? What about if it doesn't?*\n\n**Discussion Goal:** Students should recognize that in real life, we often prepare for both possibilities when something is true and when it's false. This sets up the idea that `if/else` lets us write two different code paths based on whether a condition is true or not. It also helps introduce the idea of negation (e.g., `if NOT sunny`)."
       },
       "seeding_key": {
         "activity_section.key": "827375ff-49dc-4d20-80ee-bf7ce2ac6e0e",
@@ -1805,7 +1805,7 @@
       "key": "5ece5f62-49c9-4515-9773-cd2f50d9c2aa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1830,7 +1830,7 @@
       "key": "4c9908bc-cfb6-4bbf-b538-37e4df6621c7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Selection and Logic"
       },
       "seeding_key": {
@@ -1842,7 +1842,7 @@
       "key": "c0b18173-65b1-49a7-9044-83449dc97420",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the `!` (NOT) before the condition for the `if` statement and the `if/else` statement that executes a separate block of code if the condition is false. Students may wonder when they would choose to use the NOT ( `!` ) operator instead of an `if/else` statement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***logical operator***.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the `!` (NOT) before the condition for the `if` statement and the `if/else` statement that executes a separate block of code if the condition is false. Students may wonder when they would choose to use the NOT ( `!` ) operator instead of an `if/else` statement.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***logical operator***.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1859,7 +1859,7 @@
       "key": "b75ee4f3-e824-430e-a9b3-d61b5acb79ce",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Selection and Logic handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Selection and Logic handout.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigate: Selection and Logic handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program and complete the Investigate: Selection and Logic handout.",
         "duration": "10",
         "name": "Selection and Logic",
         "progression_name": "Investigate and Modify: Selection and Logic"
@@ -1873,7 +1873,7 @@
       "key": "f7fb9568-3307-4003-923b-13fb748a1f7d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Selection and Logic handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***two-way selection statement***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Two-Way Selection and NOT*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Selection and Logic handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***two-way selection statement***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Two-Way Selection and NOT*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1890,7 +1890,7 @@
       "key": "4251f509-ed6d-46d7-a87d-eba2962a615b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can two-way selection statements and the NOT ( `!` ) operator be useful in the algorithms we have developed so far?*\n\n**Discussion Goal:** Students suggest using two-way selection statements to execute a block of code if the condition is `true` and a separate block of code if the condition is `false`. Students may also suggest using the NOT ( `!` ) operator to execute a block of code if a condition is not `true`, such as turning if a `Painter` object cannot move forward in the direction it is facing.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can two-way selection statements and the NOT ( `!` ) operator be useful in the algorithms we have developed so far?*\n\n**Discussion Goal:** Students suggest using two-way selection statements to execute a block of code if the condition is `true` and a separate block of code if the condition is `false`. Students may also suggest using the NOT ( `!` ) operator to execute a block of code if a condition is not `true`, such as turning if a `Painter` object cannot move forward in the direction it is facing.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1921,7 +1921,7 @@
       "key": "0da454f6-808e-4d2c-84b4-45c95112cb13",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete a choice level on Level 4 to create a subclass of the `PainterPlus` class and implement their algorithm using two-way selection statements and the NOT ( `!` ) operator.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then continue to complete a choice level on Level 4 to create a subclass of the `PainterPlus` class and implement their algorithm using two-way selection statements and the NOT ( `!` ) operator.",
         "progression_name": "Practice: Writing Algorithms",
         "tips": [
           {
@@ -1955,7 +1955,7 @@
       "key": "af8d64a2-b553-4897-ad43-cdef4f103eaa",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new `PainterPlus` subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1972,7 +1972,7 @@
       "key": "a3235c95-f834-4acb-a5ec-8bf5ef1dcf04",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a3235c95-f834-4acb-a5ec-8bf5ef1dcf04",
@@ -2020,7 +2020,7 @@
       "key": "abbe9241-2d1b-47c4-8733-911c223daccf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for two objects to be considered equal?*\n\n**Discussion Goal:** Students suggest that two objects are considered equal if they have the same values for their attributes.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does it mean to you for two objects to be considered equal?*\n\n**Discussion Goal:** Students suggest that two objects are considered equal if they have the same values for their attributes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2037,7 +2037,7 @@
       "key": "35ce8ebd-dfd8-4f35-b3e6-240b0977ff93",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do we consider these two objects to be equal? Why or why not?*\n\n**Discussion Goal:** Students share whether they consider the example objects equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they share the same values for their attributes or that they are not equivalent because they are two separate objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How about different names for the same object? Do we consider these to be equal? Why or why not?*\n\n**Discussion Goal:** Students might have varying opinions on whether they consider different names for the same object as equivalent. Have students share their opinions and provide their reasoning. For example, students may suggest that they are equivalent because they both refer to one object or are not equivalent because they are two different references.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Do we consider these two objects to be equal? Why or why not?*\n\n**Discussion Goal:** Students share whether they consider the example objects equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they share the same values for their attributes or that they are not equivalent because they are two separate objects.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How about different names for the same object? Do we consider these to be equal? Why or why not?*\n\n**Discussion Goal:** Students might have varying opinions on whether they consider different names for the same object as equivalent. Have students share their opinions and provide their reasoning. For example, students may suggest that they are equivalent because they both refer to one object or are not equivalent because they are two different references.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2054,7 +2054,7 @@
       "key": "f8e11dcf-1793-4aeb-9c5c-106f95e9ca85",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2079,7 +2079,7 @@
       "key": "36e822a6-fcf9-4be2-9d56-4ebff3b08490",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Comparing Objects"
       },
       "seeding_key": {
@@ -2091,7 +2091,7 @@
       "key": "963775f8-2f6b-46e0-bf26-71460b230ed9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that some object comparisons returned `true` while others returned `false`. Students realize that the reference variables assigned to another reference variable return `true`, but the reference variables pointing to new objects return `false`. Students may wonder why these comparisons return `false` when the values for the instance variables are the same and how they might check these values for equality."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that some object comparisons returned `true` while others returned `false`. Students realize that the reference variables assigned to another reference variable return `true`, but the reference variables pointing to new objects return `false`. Students may wonder why these comparisons return `false` when the values for the instance variables are the same and how they might check these values for equality."
       },
       "seeding_key": {
         "activity_section.key": "963775f8-2f6b-46e0-bf26-71460b230ed9",
@@ -2102,7 +2102,7 @@
       "key": "365dfc50-f96b-4dd7-80cb-d4da4693e485",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Aliases",
         "progression_name": "Investigate and Modify: Comparing Objects"
@@ -2116,7 +2116,7 @@
       "key": "9146e3a9-261e-465c-b1fb-6c090e01e20e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "9146e3a9-261e-465c-b1fb-6c090e01e20e",
@@ -2139,7 +2139,7 @@
       "key": "e95025ce-5e00-40c0-9d1c-da4bc14354bf",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Aliasing*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Aliasing*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2156,7 +2156,7 @@
       "key": "d52c6afe-f727-4ebb-a978-4706b67f8a6a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***alias*** and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would it be useful to use the `==` or `!=` operators with objects? When would these NOT be useful?*\n\n**Discussion Goal:** Students suggest using the equality operators to check if two reference variables are aliases or if an object is `null`. Students note that the equality operators are not useful when checking if two objects have the same values for the instance variables."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***alias*** and demonstrate the example.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When would it be useful to use the `==` or `!=` operators with objects? When would these NOT be useful?*\n\n**Discussion Goal:** Students suggest using the equality operators to check if two reference variables are aliases or if an object is `null`. Students note that the equality operators are not useful when checking if two objects have the same values for the instance variables."
       },
       "seeding_key": {
         "activity_section.key": "d52c6afe-f727-4ebb-a978-4706b67f8a6a",
@@ -2181,7 +2181,7 @@
       "key": "fb03fc05-c994-4930-a56b-58a02ec5f95b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and the `toString()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `equals()` method in the `Object` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall overriding and introduce the method signature for the `equals()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The parameter in the `equals()` method is of type `Object`, which means the parameter in the `equals()` methods we write must be of type `Object`. How can we treat the parameter as the type we need so we can access its instance variables?*\n\n**Discussion Goal:** Students recall using casting to treat a value as a different type and suggest using casting to treat the parameter as the type needed.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and the `toString()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the `equals()` method in the `Object` class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall overriding and introduce the method signature for the `equals()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *The parameter in the `equals()` method is of type `Object`, which means the parameter in the `equals()` methods we write must be of type `Object`. How can we treat the parameter as the type we need so we can access its instance variables?*\n\n**Discussion Goal:** Students recall using casting to treat a value as a different type and suggest using casting to treat the parameter as the type needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2198,7 +2198,7 @@
       "key": "03658472-a115-4bc2-b511-7f3cd6b7ca31",
       "position": 12,
       "properties": {
-        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Checking if the `Object` parameter point to the same object as `this` object\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `instanceof` operator to check if the `Object` parameter is an instance of the class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program.",
+        "description": "**Do This:** Explain how to override the `equals()` method:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The method signature must be the same as the `equals()` method in the `Object` class\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Cast the `Object` parameter as the type we need\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Checking if the `Object` parameter point to the same object as `this` object\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Using the `instanceof` operator to check if the `Object` parameter is an instance of the class\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to complete a choice level to debug the program.",
         "progression_name": "Practice: The equals() Method",
         "tips": [
           {
@@ -2229,7 +2229,7 @@
       "key": "d1855c17-4a46-41ce-be74-8e818590f073",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2246,7 +2246,7 @@
       "key": "c6e20b54-9310-4b9b-b68e-b4f391a59492",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c6e20b54-9310-4b9b-b68e-b4f391a59492",
@@ -2294,7 +2294,7 @@
       "key": "46363cef-47eb-45ad-b187-ca273d92693c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What patterns or relationships do you see in this dataset?*\n\n**Discussion Goal:** Students share patterns and relationships they notice in the dataset.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What patterns or relationships do you see in this dataset?*\n\n**Discussion Goal:** Students share patterns and relationships they notice in the dataset.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2311,7 +2311,7 @@
       "key": "da3220e7-2260-4b05-974e-04c0b4ea29b6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2336,7 +2336,7 @@
       "key": "7aa25db2-4693-4a31-91ee-f609914366ef",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Nested if Statements"
       },
       "seeding_key": {
@@ -2348,7 +2348,7 @@
       "key": "c7dec69f-88fd-48f6-8bdd-084bc6fe9979",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the nested `if` statements and that both the outer and inner `if` statements have to be `true` for the code to execute. Students may wonder if they can also nest `if` statements inside the `else` statement or if there are other ways to check multiple conditions."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the nested `if` statements and that both the outer and inner `if` statements have to be `true` for the code to execute. Students may wonder if they can also nest `if` statements inside the `else` statement or if there are other ways to check multiple conditions."
       },
       "seeding_key": {
         "activity_section.key": "c7dec69f-88fd-48f6-8bdd-084bc6fe9979",
@@ -2359,7 +2359,7 @@
       "key": "69f816bc-c210-42f6-8a4e-1cc168b139ac",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Nested If Statements",
         "progression_name": "Investigate and Modify: Nested if Statements"
@@ -2373,7 +2373,7 @@
       "key": "b7c404eb-e4a0-4d87-ba7f-a0cd263ed6b0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***nested conditional statement*** and introduce the example code segment.\n\n**Do This:** Click through the animated slides to demonstrate the flowchart for the code segment:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second condition is `true`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `\"Both true!\"` is printed "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***nested conditional statement*** and introduce the example code segment.\n\n**Do This:** Click through the animated slides to demonstrate the flowchart for the code segment:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> First condition is `true`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Second condition is `true`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `\"Both true!\"` is printed "
       },
       "seeding_key": {
         "activity_section.key": "b7c404eb-e4a0-4d87-ba7f-a0cd263ed6b0",
@@ -2396,7 +2396,7 @@
       "key": "286b321b-81cb-4652-b366-05734bb836c4",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that each character in a `String` is at an index which starts at `0`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the cause of an `IndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the first `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the second `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why does the `length()` method not return the last index in a `String`?*\n\n**Discussion Goal:** Students recall that the last index of a `String` object is one less than its size, so the value for `length()` is one more than the last index."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that each character in a `String` is at an index which starts at `0`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the cause of an `IndexOutOfBoundsException`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the first `String`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the self-check question to determine the length of the second `String`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why does the `length()` method not return the last index in a `String`?*\n\n**Discussion Goal:** Students recall that the last index of a `String` object is one less than its size, so the value for `length()` is one more than the last index."
       },
       "seeding_key": {
         "activity_section.key": "286b321b-81cb-4652-b366-05734bb836c4",
@@ -2421,7 +2421,7 @@
       "key": "69907000-2acc-4a12-b643-2f628dc9bd8d",
       "position": 10,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2438,7 +2438,7 @@
       "key": "5b95d7de-9cef-405a-8817-5ad6c9501ba6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding on Level 4, then continue to Level 5 to implement their algorithm. On Level 6, students use nested `if` statements while traversing a one-dimensional (1D) array.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding on Level 4, then continue to Level 5 to implement their algorithm. On Level 6, students use nested `if` statements while traversing a one-dimensional (1D) array.",
         "progression_name": "Practice: Nested if Statements",
         "tips": [
           {
@@ -2456,7 +2456,7 @@
       "key": "2f3c6913-085f-4bb4-9dde-fe09c8a2285b",
       "position": 1,
       "properties": {
-        "description": "**Discuss:** *Today we learned how to use nested `if` statements to check multiple conditions before running a block of code. Why might that be more useful than a single `if` statement?*\n\n**Discussion Goal:** Students should explain that nested `if` statements allow programs to make more specific decisions by checking an additional condition only if the first condition is true. This helps programs handle complex scenarios where different outcomes depend on combinations of conditions. Students should also be able to give a concrete example from their pseudocode or code implementation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "**Discuss:** *Today we learned how to use nested `if` statements to check multiple conditions before running a block of code. Why might that be more useful than a single `if` statement?*\n\n**Discussion Goal:** Students should explain that nested `if` statements allow programs to make more specific decisions by checking an additional condition only if the first condition is true. This helps programs handle complex scenarios where different outcomes depend on combinations of conditions. Students should also be able to give a concrete example from their pseudocode or code implementation.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2f3c6913-085f-4bb4-9dde-fe09c8a2285b",
@@ -2504,7 +2504,7 @@
       "key": "217edf05-aa18-457d-92be-0ccc81b3cb43",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to draw a flowchart to represent the algorithm needed to solve the problem.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to draw a flowchart to represent the algorithm needed to solve the problem.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2521,7 +2521,7 @@
       "key": "19a773a1-7ab3-4ee3-ac57-ea0e10fd9a91",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their flowcharts with a neighbor to compare and modify their flowcharts.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share their flowcharts with a neighbor to compare and modify their flowcharts.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2538,7 +2538,7 @@
       "key": "56141ff3-9fe2-4749-8fcb-88cd852e3ecf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2563,7 +2563,7 @@
       "key": "92a13831-c650-406b-8eab-746f5ced3362",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Logical Operators"
       },
       "seeding_key": {
@@ -2575,7 +2575,7 @@
       "key": "c176d7f3-1ebb-43a1-95c7-20f0896f69d2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` operator in the condition and share ideas about its functionality. Students may wonder how this is similar and different from using nested `if` statements."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the program uses `&&` operator in the condition and share ideas about its functionality. Students may wonder how this is similar and different from using nested `if` statements."
       },
       "seeding_key": {
         "activity_section.key": "c176d7f3-1ebb-43a1-95c7-20f0896f69d2",
@@ -2586,7 +2586,7 @@
       "key": "9555039e-1a77-4b68-bb4c-64e4d5403518",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Logical Operators",
         "progression_name": "Investigate and Modify: Logical Operators"
@@ -2600,7 +2600,7 @@
       "key": "49e6df93-1763-4ab1-9e1e-0c35f99a4bb6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the logical operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***compound Boolean expression*** and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might logical operators help us simplify the use of conditional statements?*\n\n**Discussion Goal:** Students suggest using logical operators instead of multiple or nested `if` statements to check whether multiple conditions are `true` or if at least one of two conditions are `true`.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the logical operators.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***compound Boolean expression*** and demonstrate the example.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How might logical operators help us simplify the use of conditional statements?*\n\n**Discussion Goal:** Students suggest using logical operators instead of multiple or nested `if` statements to check whether multiple conditions are `true` or if at least one of two conditions are `true`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2617,7 +2617,7 @@
       "key": "4272ead1-e9e2-466f-ab14-f37dc1c45d6f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson, we used nested `if` statements to solve this scenario. How would this solution change using logical operators?*\n\n**Discussion Goal:** Students share examples of how they would rewrite the code they wrote in the previous lesson to use logical operators instead of nested `if` statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example conditional statement using a logical operator."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson, we used nested `if` statements to solve this scenario. How would this solution change using logical operators?*\n\n**Discussion Goal:** Students share examples of how they would rewrite the code they wrote in the previous lesson to use logical operators instead of nested `if` statements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the example conditional statement using a logical operator."
       },
       "seeding_key": {
         "activity_section.key": "4272ead1-e9e2-466f-ab14-f37dc1c45d6f",
@@ -2642,7 +2642,7 @@
       "key": "5e193446-5b8c-4b32-a0df-6cc3ad2d45e8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***truth table***."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***truth table***."
       },
       "seeding_key": {
         "activity_section.key": "5e193446-5b8c-4b32-a0df-6cc3ad2d45e8",
@@ -2665,7 +2665,7 @@
       "key": "ab81f957-511c-405d-8add-26e92b7548bb",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth table for `A || !B`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***short-circuited evaluation***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Truth Tables handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth table for `A || !B`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***short-circuited evaluation***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Truth Tables handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Truth Tables handout.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2682,7 +2682,7 @@
       "key": "055ee8a9-47aa-4c1f-a3d6-d4b3ce2573dc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Today you used AND (`&&`), OR (`||`), and NOT (`!`) to combine conditions. Why might using logical operators be better than writing multiple or nested `if` statements?*\n\n**Discussion Goal:** Students should explain that logical operators help simplify code by letting them combine multiple conditions into a single line. This can make programs more readable, less repetitive, and easier to debug. They should also reflect on how logical operators help test combinations of scenarios more efficiently, especially compared to nested conditionals.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Today you used AND (`&&`), OR (`||`), and NOT (`!`) to combine conditions. Why might using logical operators be better than writing multiple or nested `if` statements?*\n\n**Discussion Goal:** Students should explain that logical operators help simplify code by letting them combine multiple conditions into a single line. This can make programs more readable, less repetitive, and easier to debug. They should also reflect on how logical operators help test combinations of scenarios more efficiently, especially compared to nested conditionals.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "055ee8a9-47aa-4c1f-a3d6-d4b3ce2573dc",
@@ -2730,7 +2730,7 @@
       "key": "171feba2-444a-4210-a988-04e708ef0af3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a concept map in response to the prompt by brainstorming any concepts and ideas that come to mind.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a concept map in response to the prompt by brainstorming any concepts and ideas that come to mind.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2747,7 +2747,7 @@
       "key": "03b35db1-99c4-454e-ac91-fe91697e949c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review their brainstorm, identify the concepts that are central to the prompt, and draw arrows to connect the concepts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to label the arrows with verbs or short descriptions to identify the relationships between the concepts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students share their concept maps with a neighbor to compare concepts and relationships. Have students add to or revise their concept maps based on their discussions.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review their brainstorm, identify the concepts that are central to the prompt, and draw arrows to connect the concepts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to label the arrows with verbs or short descriptions to identify the relationships between the concepts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students share their concept maps with a neighbor to compare concepts and relationships. Have students add to or revise their concept maps based on their discussions.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2764,7 +2764,7 @@
       "key": "b2381d55-7667-4bfe-b9a8-eb8b99f76a32",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "De Morgan's Laws"
       },
@@ -2789,7 +2789,7 @@
       "key": "01e04553-0996-4899-bc50-2e5c6ee2c2da",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth tables for `!(A && B)` and `!A || !B`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can truth tables help us determine if two Boolean expressions are equivalent?*\n\n**Discussion Goal:** Students realize that since the last column of the truth table shows the resulting Boolean values for the expression, they could compare the last column of both truth tables to check for equivalence.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth tables for `!(A && B)` and `!A || !B`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can truth tables help us determine if two Boolean expressions are equivalent?*\n\n**Discussion Goal:** Students realize that since the last column of the truth table shows the resulting Boolean values for the expression, they could compare the last column of both truth tables to check for equivalence.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2806,7 +2806,7 @@
       "key": "cb937c3c-29d0-4189-bf26-a61dc7c5ee47",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***De Morgan's Laws*** and introduce the rules.\n\n**Do This:** Click through the animated slides to demonstrate simplifying the Boolean expressions:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***De Morgan's Laws*** and introduce the rules.\n\n**Do This:** Click through the animated slides to demonstrate simplifying the Boolean expressions:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `A`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Changing the AND ( `&&` ) to OR ( `||` )\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Applying the NOT ( `!` ) to `B`\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
       },
       "seeding_key": {
         "activity_section.key": "cb937c3c-29d0-4189-bf26-a61dc7c5ee47",
@@ -2829,7 +2829,7 @@
       "key": "bb3511e4-9c46-4cfe-bcc2-9ff84a2c6d22",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate simplifying Boolean expressions with relational operators.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate simplifying Boolean expressions with relational operators.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2860,7 +2860,7 @@
       "key": "6cb5a026-d78b-40f0-bb95-49f77a4cb7d2",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the De Morgan's Laws handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the Around the World activity.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the De Morgan's Laws handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the Around the World activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2877,7 +2877,7 @@
       "key": "e85aa732-8a96-40b6-9863-1f67b7db70c6",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for Station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both Stations A and B because their resulting truth tables had the same final truth values.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for Station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both Stations A and B because their resulting truth tables had the same final truth values.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2907,7 +2907,7 @@
       "key": "d2a03336-930d-4a4a-a8c7-e1375370d930",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to use De Morgan's Laws to determine if the two code segments are equivalent.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the scenario.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to use De Morgan's Laws to determine if the two code segments are equivalent.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d2a03336-930d-4a4a-a8c7-e1375370d930",
@@ -2942,7 +2942,7 @@
       "key": "e3c375f4-cb4f-46df-ab26-70e5bed81a0d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *The owner of the Joyful Pastries food truck wants to find all orders with quantities that are multiples of 12. How would we write the condition to find these orders?*\n\n**Discussion Goal:** Students suggest using the mod operator to check if there is a remainder from dividing the quantity by 12. If there is no remainder, they can return that order or add it to an array to keep track of all orders found.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *The owner of the Joyful Pastries food truck wants to find all orders with quantities that are multiples of 12. How would we write the condition to find these orders?*\n\n**Discussion Goal:** Students suggest using the mod operator to check if there is a remainder from dividing the quantity by 12. If there is no remainder, they can return that order or add it to an array to keep track of all orders found.",
         "name": "Evenly Divisible",
         "tips": [
           {
@@ -2960,7 +2960,7 @@
       "key": "eeff6e3c-e959-4a65-9351-c339eddcbf8f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the solution."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the solution."
       },
       "seeding_key": {
         "activity_section.key": "eeff6e3c-e959-4a65-9351-c339eddcbf8f",
@@ -2971,7 +2971,7 @@
       "key": "ed1a2b5b-9bd2-493e-8c8c-c6295ac90a86",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -2996,7 +2996,7 @@
       "key": "3b140249-ba61-4cd3-a9a9-46fc9e696e12",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Multi-Selection Statements"
       },
       "seeding_key": {
@@ -3008,7 +3008,7 @@
       "key": "64d251da-b6b3-4dde-b19d-fcb9c720a2a4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the code segment includes an `else-if` branch that checks an additional condition and executes its block of code when that condition is `true`. Students may wonder how this is similar and different from using nested `if` statements and logical operators."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the code segment includes an `else-if` branch that checks an additional condition and executes its block of code when that condition is `true`. Students may wonder how this is similar and different from using nested `if` statements and logical operators."
       },
       "seeding_key": {
         "activity_section.key": "64d251da-b6b3-4dde-b19d-fcb9c720a2a4",
@@ -3033,7 +3033,7 @@
       "key": "ba23288d-bb47-4f76-aeba-37a14af4990d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Multi-Selection Statements"
       },
       "seeding_key": {
@@ -3045,7 +3045,7 @@
       "key": "d5e4823b-c231-43df-adeb-86d14fdb63e4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Multi-Selection Statements*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Multi-Selection Statements*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3062,7 +3062,7 @@
       "key": "4fe063a7-08db-434b-b90d-966621c1e172",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***multi-selection statement***.\n\n**Do This:** Explain the flowchart for a multi-selection statement:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `false`, we move to the next condition\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> If the condition is `true`, its task is execute"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***multi-selection statement***.\n\n**Do This:** Explain the flowchart for a multi-selection statement:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Explain each branch of the flowchart\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> If the condition is `false`, we move to the next condition\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> If the condition is `true`, its task is execute"
       },
       "seeding_key": {
         "activity_section.key": "4fe063a7-08db-434b-b90d-966621c1e172",
@@ -3087,7 +3087,7 @@
       "key": "76b90c3f-d4c6-41fe-9bb4-92c303357e23",
       "position": 10,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Writing Algorithms handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with their partner to write pseudocode for one of the problems.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3104,7 +3104,7 @@
       "key": "0016108b-4f04-477b-b54d-7c919038bed0",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to implement their algorithm.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding on Level 5, then continue to Level 6 to implement their algorithm.",
         "progression_name": "Practice: Multi-Selection Statements",
         "tips": [
           {
@@ -3122,7 +3122,7 @@
       "key": "a1fe61af-e3c3-4cd9-b8c2-7dd49135e8e2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a1fe61af-e3c3-4cd9-b8c2-7dd49135e8e2",
@@ -3157,7 +3157,7 @@
       "key": "071efc84-1c1c-4b70-b196-6740260d6a21",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of something you've done where you had to repeat the same action over and over . . . maybe a chore, a warm-up drill, or something in a game. What was it? How did you keep track of how many times you had done it?*\n\n**Discussion Goal:** Students recognize that many tasks involve repeating actions a known number of times and that they often use counters (e.g., tally marks, scoreboards, timer apps). This prepares them to understand why `for` loops are useful in programming: they automate repetition when the number of iterations is known."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think of something you've done where you had to repeat the same action over and over . . . maybe a chore, a warm-up drill, or something in a game. What was it? How did you keep track of how many times you had done it?*\n\n**Discussion Goal:** Students recognize that many tasks involve repeating actions a known number of times and that they often use counters (e.g., tally marks, scoreboards, timer apps). This prepares them to understand why `for` loops are useful in programming: they automate repetition when the number of iterations is known."
       },
       "seeding_key": {
         "activity_section.key": "071efc84-1c1c-4b70-b196-6740260d6a21",
@@ -3168,7 +3168,7 @@
       "key": "92169742-1b29-4245-aa8c-73734f8143e0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3193,7 +3193,7 @@
       "key": "6591d4aa-6f85-4b9d-9b33-c5e3fadac61c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: For Loops"
       },
       "seeding_key": {
@@ -3205,7 +3205,7 @@
       "key": "4a469b52-ab03-4cfd-9427-8801e6ae398c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the syntax and functionality of the `for` loop in the program to repeat a block of code. Students might also notice similarities and differences between a `while` loop and the `for` loop and suggest benefits of using a `for` loop. Students may wonder why they might use a `for` loop instead of a `while` loop."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the syntax and functionality of the `for` loop in the program to repeat a block of code. Students might also notice similarities and differences between a `while` loop and the `for` loop and suggest benefits of using a `for` loop. Students may wonder why they might use a `for` loop instead of a `while` loop."
       },
       "seeding_key": {
         "activity_section.key": "4a469b52-ab03-4cfd-9427-8801e6ae398c",
@@ -3230,7 +3230,7 @@
       "key": "4db30cf1-562d-40e5-9ebc-858ac427a916",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *For Loops*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *For Loops*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3247,7 +3247,7 @@
       "key": "47575836-8c4b-40b1-9af3-4e77138eb444",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: For Loops"
       },
       "seeding_key": {
@@ -3259,7 +3259,7 @@
       "key": "bd9e157e-45f8-4687-9905-96b075e4d7f0",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Explain the components of a `for` loop:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***loop control variable***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The condition that must be `true` to continue the loop\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The change of the loop control variable\n\n**Do This:** Explain the functionality of the increment and decrement operators:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***increment*** and introduce the increment operator\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***decrement*** and introduce the decrement operator"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n**Do This:** Explain the components of a `for` loop:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***loop control variable***\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The condition that must be `true` to continue the loop\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The change of the loop control variable\n\n**Do This:** Explain the functionality of the increment and decrement operators:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***increment*** and introduce the increment operator\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***decrement*** and introduce the decrement operator"
       },
       "seeding_key": {
         "activity_section.key": "bd9e157e-45f8-4687-9905-96b075e4d7f0",
@@ -3270,7 +3270,7 @@
       "key": "122558ee-6833-45ed-9370-5d8c43caeee3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing a `for` loop.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate tracing a `for` loop.",
         "duration": "20",
         "name": "Tracing Loops",
         "tips": [
@@ -3289,7 +3289,7 @@
       "key": "27d09191-a7c9-4fb1-ab1f-ff0cacb9482f",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Define ***off-by-one error***:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the error\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain the cause of the error\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain possible solutions to fix the error",
+        "description": "**Do This:** Define ***off-by-one error***:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Introduce the error\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Explain the cause of the error\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Explain possible solutions to fix the error",
         "tips": [
           {
             "type": "teachingTip",
@@ -3306,7 +3306,7 @@
       "key": "d18ff060-77b9-4a9d-9607-4c4c86e14660",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a Check for Understanding, then continue to Level 6 to complete a choice level to traverse a 1D array using a `for` loop in the console or The Neighborhood.",
         "progression_name": "Practice: Using for Loops",
         "tips": [
           {
@@ -3337,7 +3337,7 @@
       "key": "f6758afe-593c-4d08-86a5-d29fcf3a3b0d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `while` loop because this problem does not have a value that can be used as a loop control variable. Students realize that a `while` loop might be more ideal for this type of scenario because they are unsure how many times the loop might need to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `for` loop because this problem has a value that can be used as a loop control variable. Students realize that a `for` loop might be more ideal for this type of scenario because they can determine how many times the loop needs to repeat.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `while` loop because this problem does not have a value that can be used as a loop control variable. Students realize that a `while` loop might be more ideal for this type of scenario because they are unsure how many times the loop might need to repeat.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which type of loop would be best for this scenario? Why?*\n\n**Discussion Goal:** Students suggest using a `for` loop because this problem has a value that can be used as a loop control variable. Students realize that a `for` loop might be more ideal for this type of scenario because they can determine how many times the loop needs to repeat.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f6758afe-593c-4d08-86a5-d29fcf3a3b0d",
@@ -3385,7 +3385,7 @@
       "key": "075771ec-a749-4726-bb10-6abff8ef119f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When we use search engines like Google, they use Natural Language Processing to return relevant results. How do they know what we are looking for?  How might algorithms to identify key words or phrases in our searches work?*\n\n**Discussion Goal:** Students should recognize that search engines are able to parse the text of what has been searched for in order to extract keywords or phrases. Students should offer suggestions for how a keyword or phrase is found, such as looping through each word in the search query.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When we use search engines like Google, they use Natural Language Processing to return relevant results. How do they know what we are looking for?  How might algorithms to identify key words or phrases in our searches work?*\n\n**Discussion Goal:** Students should recognize that search engines are able to parse the text of what has been searched for in order to extract keywords or phrases. Students should offer suggestions for how a keyword or phrase is found, such as looping through each word in the search query.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3402,7 +3402,7 @@
       "key": "6f7ce585-4932-40fc-9d4b-db4716af64ac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -3427,7 +3427,7 @@
       "key": "789e6e04-434f-4e86-a186-f4d6a0610ef0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: A Standard String Algorithm"
       },
       "seeding_key": {
@@ -3439,7 +3439,7 @@
       "key": "9a39fe8b-353c-4be1-aa7e-97ff42985024",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students should notice that the program iterates through the characters of a `String` using a `for` loop. This should lead to a discussion about what the `String` variable `forward` looks like at the end of the loop. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students should notice that the program iterates through the characters of a `String` using a `for` loop. This should lead to a discussion about what the `String` variable `forward` looks like at the end of the loop. "
       },
       "seeding_key": {
         "activity_section.key": "9a39fe8b-353c-4be1-aa7e-97ff42985024",
@@ -3450,7 +3450,7 @@
       "key": "13c13eaa-bce4-44dd-b6a6-51e8a5abfa6b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the difference between the way the substring() method is used in each line?*\n\n**Discussion Goal:** Students should recall that the substring() method can get the characters between a starting and ending index in a String object or from a starting index to the end of the String object.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is the difference between the way the substring() method is used in each line?*\n\n**Discussion Goal:** Students should recall that the substring() method can get the characters between a starting and ending index in a String object or from a starting index to the end of the String object.\n",
         "duration": "15",
         "name": "Reversing a String"
       },
@@ -3475,7 +3475,7 @@
       "key": "dfc2bffd-483f-4247-84ca-5cdc98206e3a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What is the purpose of the `current` variable in this code?*\n- *What happens to the `forward` variable each time the loop executes?*\n- *What modifications would you need to make to print the `palindrome` variable backward?*\n\n\n**Discussion Goal:** Students should recognize that the current variable is “looking at” a single character each time the loop iterates. This should allow them to build the forward variable piece by piece and see that the word is being “constructed”. This should lead students to speculate about how one might build the string backwards. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What is the purpose of the `current` variable in this code?*\n- *What happens to the `forward` variable each time the loop executes?*\n- *What modifications would you need to make to print the `palindrome` variable backward?*\n\n\n**Discussion Goal:** Students should recognize that the current variable is “looking at” a single character each time the loop iterates. This should allow them to build the forward variable piece by piece and see that the word is being “constructed”. This should lead students to speculate about how one might build the string backwards. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -3492,7 +3492,7 @@
       "key": "8cd08ddc-add2-4800-b28d-4bc8aba47571",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Reversing a String"
       },
       "seeding_key": {
@@ -3504,7 +3504,7 @@
       "key": "3d0f2ea4-8563-49d3-9fca-728c67704c37",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "3d0f2ea4-8563-49d3-9fca-728c67704c37",
@@ -3515,7 +3515,7 @@
       "key": "ffd265eb-b0d4-4374-a0d7-f354d7235991",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a choice level on Level 5 to practice using the `substring()` method to find if one or more `substrings` have a particular property. On Level 6, students complete a choice level using the substring() method and conditional expressions to determine the number of substrings that meet specific criteria. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students complete a choice level on Level 5 to practice using the `substring()` method to find if one or more `substrings` have a particular property. On Level 6, students complete a choice level using the substring() method and conditional expressions to determine the number of substrings that meet specific criteria. \n",
         "duration": "15",
         "name": "Implementing String Algorithms",
         "progression_name": "Practice: Implementing String Algorithms"
@@ -3529,7 +3529,7 @@
       "key": "f919d995-95f6-4dce-a808-eadaa225ba0e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can the standard algorithms we learned about today be applied to search engine results to improve functionality and provide more relevant results to users?*\n\n**Discussion Goal:** Students should begin brainstorming and suggesting ideas about applying the algorithms they learned in today’s lesson in order to improve the functionality of search engine results. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can the standard algorithms we learned about today be applied to search engine results to improve functionality and provide more relevant results to users?*\n\n**Discussion Goal:** Students should begin brainstorming and suggesting ideas about applying the algorithms they learned in today’s lesson in order to improve the functionality of search engine results. ",
         "name": "Implementing String Algorithms"
       },
       "seeding_key": {
@@ -3541,7 +3541,7 @@
       "key": "a9aa3d13-e69a-4aa8-af1e-fbf029ca18b4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How might we use methods in the `String` class to analyze text and data in our upcoming project?*\n\n**Discussion Goal:** Students will likely have several different ideas for using these methods, such as using the `indexOf()` and `substring()` methods to break a sentence up into words or using the `indexOf()` method to check if a sentence or phrase contains specific characters and provide a response based on the result."
       },
       "seeding_key": {
         "activity_section.key": "a9aa3d13-e69a-4aa8-af1e-fbf029ca18b4",
@@ -3552,7 +3552,7 @@
       "key": "73033c61-dfe4-4dd6-b8f4-55a2138ab917",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "73033c61-dfe4-4dd6-b8f4-55a2138ab917",
@@ -3576,7 +3576,7 @@
       "key": "d2c728c7-04bf-46da-a87a-d08c268244ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many times did the second hand “tick” before the minute hand “ticked”? \nHow could you use iteration statements to represent the ticking of a clock?*\n\n**Discussion Goal:** Students should recognize that two loops, one for the ticking of the minutes and one for the ticking of the seconds, would be required.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How many times did the second hand “tick” before the minute hand “ticked”? \nHow could you use iteration statements to represent the ticking of a clock?*\n\n**Discussion Goal:** Students should recognize that two loops, one for the ticking of the minutes and one for the ticking of the seconds, would be required.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3593,7 +3593,7 @@
       "key": "36333079-fe92-473e-a65a-49616fbdb777",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -3619,7 +3619,7 @@
       "key": "6b0d832d-16d5-41c1-9eb4-25c11c935657",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to display the prompts.*\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize the nested loops allow them to simulate the same clock movements they explored in the warm up. They should notice the different variables used in the loop headers and discuss the roles each variable plays in the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Click through the animated slide to display the prompts.*\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students recognize the nested loops allow them to simulate the same clock movements they explored in the warm up. They should notice the different variables used in the loop headers and discuss the roles each variable plays in the program."
       },
       "seeding_key": {
         "activity_section.key": "6b0d832d-16d5-41c1-9eb4-25c11c935657",
@@ -3630,7 +3630,7 @@
       "key": "fb96d90b-6c4d-4054-a476-fe76ac91c651",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Nested Loops.*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video - *Nested Loops.*",
         "tips": [
           {
             "type": "teachingTip",
@@ -3661,7 +3661,7 @@
       "key": "f8b2cf9e-0387-4fe6-bd2a-918fd28a09c4",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate & Modify: Nested Iteration"
       },
       "seeding_key": {
@@ -3673,7 +3673,7 @@
       "key": "d97a2498-4fde-4c5d-b00a-109cb7c68bbb",
       "position": 7,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Define nested loop and explain that when a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to demonstrate tracing a nested loop.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3690,7 +3690,7 @@
       "key": "edcb30b0-8ce4-40e3-b805-febfb4e5a39e",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Have students trace the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to explain the solution.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Have students trace the code segment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to explain the solution.\n"
       },
       "seeding_key": {
         "activity_section.key": "edcb30b0-8ce4-40e3-b805-febfb4e5a39e",
@@ -3735,7 +3735,7 @@
       "key": "88c8051b-00ae-4df8-920f-b573b1a79776",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "88c8051b-00ae-4df8-920f-b573b1a79776",
@@ -3772,7 +3772,7 @@
       "key": "f7eba399-d4a4-4814-84ea-b53cf114dca6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the sample code on the slide and ask students to review statement 1 and statement 2.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the number of times each statement executes? What do you notice about the total number of times the program statements execute?*\n\n**Discussion Goal:** Students gain an introductory understanding of informal runtime analysis by observing and discussing the frequency of statement execution in a program. They will analyze the number of times each statement executes and consider the total number of executions for all program statements. Through this discussion, students will develop their skills in tracing code and gain insights into informal runtime analysis."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the sample code on the slide and ask students to review statement 1 and statement 2.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the number of times each statement executes? What do you notice about the total number of times the program statements execute?*\n\n**Discussion Goal:** Students gain an introductory understanding of informal runtime analysis by observing and discussing the frequency of statement execution in a program. They will analyze the number of times each statement executes and consider the total number of executions for all program statements. Through this discussion, students will develop their skills in tracing code and gain insights into informal runtime analysis."
       },
       "seeding_key": {
         "activity_section.key": "f7eba399-d4a4-4814-84ea-b53cf114dca6",
@@ -3783,7 +3783,7 @@
       "key": "cb766d6a-0fc9-4c39-9987-004d5c01296b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Introduction"
       },
@@ -3808,7 +3808,7 @@
       "key": "66d18023-9ce8-4226-bf46-89773bbb78d7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Informal Run-Time Analysis"
       },
       "seeding_key": {
@@ -3820,7 +3820,7 @@
       "key": "2148a849-ee2d-4e4c-a440-897fd87573f1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about?*\n\n**Discussion Goal:** Students should identify the nested loops from the warm up and share ideas about what each loop controls. Students should also identify the different values used in the loop headers. Students might wonder about the way to count how many times each loop executes, or what The Neighborhood will look like when the program completes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the first step to determining statement execution counts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the second step to determining statement execution counts.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review statement execution count and informal run-time analysis.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss the ways that determining statement execution counts may not always be straightforward. What are some things that might add complexity to determining the statement execution count of a loop?*\n\n**Discussion Goal:** Students might mention the various ways a loop header can be modified, adding complexity to determining the statement execution count. Some students may mention changing the loop control variable’s starting value. Others might note that the conditional expression may be altered. Others still may add the different ways the loop control variable may be incremented."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about?*\n\n**Discussion Goal:** Students should identify the nested loops from the warm up and share ideas about what each loop controls. Students should also identify the different values used in the loop headers. Students might wonder about the way to count how many times each loop executes, or what The Neighborhood will look like when the program completes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the first step to determining statement execution counts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the second step to determining statement execution counts.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review statement execution count and informal run-time analysis.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Discuss the ways that determining statement execution counts may not always be straightforward. What are some things that might add complexity to determining the statement execution count of a loop?*\n\n**Discussion Goal:** Students might mention the various ways a loop header can be modified, adding complexity to determining the statement execution count. Some students may mention changing the loop control variable’s starting value. Others might note that the conditional expression may be altered. Others still may add the different ways the loop control variable may be incremented."
       },
       "seeding_key": {
         "activity_section.key": "2148a849-ee2d-4e4c-a440-897fd87573f1",
@@ -3845,7 +3845,7 @@
       "key": "627b7f91-6762-4f1e-a80f-d1b7d6121c37",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Informal Runtime Analysis practice card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to find a partner, and assign themselves the role of Partner A or Partner B. Students should then take turns solving each other’s question before swapping cards and finding a new partner. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Determining statement execution counts is not always straightforward, but there are some patterns we can use. What patterns did you notice when you were solving the practice problems?*\n\n**Discussion Goal:** This discussion should elicit a variety of responses. Students may notice that it is important to carefully watch how many times each level of the nested loop will iterate. Others may point out that the total number of executions is equal to the product of the number of executions of the inner loop and outer loop. Still more may point out that oftentimes the boundaries of the loop, such as the starting point, ending condition, and step value, can make problems more complex."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student an Informal Runtime Analysis practice card.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Instruct students to find a partner, and assign themselves the role of Partner A or Partner B. Students should then take turns solving each other’s question before swapping cards and finding a new partner. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Determining statement execution counts is not always straightforward, but there are some patterns we can use. What patterns did you notice when you were solving the practice problems?*\n\n**Discussion Goal:** This discussion should elicit a variety of responses. Students may notice that it is important to carefully watch how many times each level of the nested loop will iterate. Others may point out that the total number of executions is equal to the product of the number of executions of the inner loop and outer loop. Still more may point out that oftentimes the boundaries of the loop, such as the starting point, ending condition, and step value, can make problems more complex."
       },
       "seeding_key": {
         "activity_section.key": "627b7f91-6762-4f1e-a80f-d1b7d6121c37",
@@ -3869,7 +3869,7 @@
       "key": "5cc5df45-fc87-4361-8dc8-cc87e5832fe3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight a variety of strategies for conducting informal loop analysis. Students also recognize that informal loop analysis can help optimize their code in order to make it more efficient. They should also realize that they are now prepared to tackle similar types of multiple choice questions on the AP CS A exam.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight a variety of strategies for conducting informal loop analysis. Students also recognize that informal loop analysis can help optimize their code in order to make it more efficient. They should also realize that they are now prepared to tackle similar types of multiple choice questions on the AP CS A exam.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "5cc5df45-fc87-4361-8dc8-cc87e5832fe3",
@@ -3905,7 +3905,7 @@
       "key": "d16bf93b-817f-4846-bcef-23296f64c8f7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3922,7 +3922,7 @@
       "key": "dfebd083-6a7e-4544-8c78-c391b01c450a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "dfebd083-6a7e-4544-8c78-c391b01c450a",
@@ -3947,7 +3947,7 @@
       "key": "1a6d9038-c397-4503-b7d0-f8558c53d8ec",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
         "progression_name": "Creative Coding with the Console Project",
         "tips": [
           {
@@ -3978,7 +3978,7 @@
       "key": "bd5f5302-14f7-4675-b83d-7c36d5a7e358",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review acceptance testing."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review acceptance testing."
       },
       "seeding_key": {
         "activity_section.key": "bd5f5302-14f7-4675-b83d-7c36d5a7e358",
@@ -4001,7 +4001,7 @@
       "key": "a8148b39-e1af-48d0-9758-69e9cdd7362e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4018,7 +4018,7 @@
       "key": "8c5b4fa8-3fd9-4b42-aa38-4ea464a7fd0b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4051,7 +4051,7 @@
       "key": "33154225-1d30-4b20-bffb-e75e04347429",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with the Console Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4082,7 +4082,7 @@
       "key": "13d999b9-21d7-4357-a5c8-b8b5603121b2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4113,7 +4113,7 @@
       "key": "fba4178d-ce17-4091-bbe4-fcd28072b83c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4142,7 +4142,7 @@
       "key": "df9a498c-aa4b-4d8c-9b04-45d2933b9cf9",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4159,7 +4159,7 @@
       "key": "f3a43e58-dc1d-45db-a0c8-c156a81d668a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4192,7 +4192,7 @@
       "key": "53941b49-2e9d-473f-a42e-30c3ddd66fd3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "53941b49-2e9d-473f-a42e-30c3ddd66fd3",
@@ -4217,7 +4217,7 @@
       "key": "df0ec33b-9cab-42ce-96b1-56be7826ca07",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4248,7 +4248,7 @@
       "key": "39fea624-8667-46df-915d-47153eac1e65",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "39fea624-8667-46df-915d-47153eac1e65",
@@ -4259,7 +4259,7 @@
       "key": "56fac15b-3f50-46de-859b-d16ca278205f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -4278,7 +4278,7 @@
       "key": "7996e4df-4676-486a-9412-c222d09b492a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey"
       },
@@ -4338,7 +4338,7 @@
       "key": "3602357c-1a8a-44c2-aee0-f9c2883b3362",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4355,7 +4355,7 @@
       "key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "f77b11ed-6467-4a22-8d49-c89c106c36be",
@@ -4379,7 +4379,7 @@
       "key": "d5f43205-8967-4b72-be16-e54e2d2c82d6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
         "progression_name": "Creative Coding with the Console Project",
         "tips": [
           {
@@ -4409,7 +4409,7 @@
       "key": "b427e52c-0bd3-4108-bb1d-72799f1208af",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4426,7 +4426,7 @@
       "key": "5ae79900-3bb9-46c2-b730-19bad176f41d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {
@@ -4467,7 +4467,7 @@
       "key": "c9fa7f37-ea9d-45ad-a861-efe64bdacb45",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey"
       },
@@ -4505,7 +4505,7 @@
       "key": "08aed1e6-8e3d-4bef-ad17-073b33d4d766",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4522,7 +4522,7 @@
       "key": "0c15b720-19d5-4d04-b2a1-63ff3d10fc36",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "0c15b720-19d5-4d04-b2a1-63ff3d10fc36",
@@ -4547,7 +4547,7 @@
       "key": "3e7bc227-66ea-4c8f-b94f-1634f17980cc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
         "tips": [
           {
@@ -4579,7 +4579,7 @@
       "key": "ffc41abc-9721-442b-92eb-bc1132453f77",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance criteria*** and outline the steps for writing acceptance criteria in a scenario-based format.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate an example of scenario-based acceptance criteria.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Acceptance Testing*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance criteria*** and outline the steps for writing acceptance criteria in a scenario-based format.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate an example of scenario-based acceptance criteria.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Acceptance Testing*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4596,7 +4596,7 @@
       "key": "d7a6433f-4468-4198-acc2-df23609ceaaa",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance testing***."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance testing***."
       },
       "seeding_key": {
         "activity_section.key": "d7a6433f-4468-4198-acc2-df23609ceaaa",
@@ -4619,7 +4619,7 @@
       "key": "0f84acc3-5521-426d-bc1b-a2d797b1ff5b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response."
       },
       "seeding_key": {
         "activity_section.key": "0f84acc3-5521-426d-bc1b-a2d797b1ff5b",
@@ -4630,7 +4630,7 @@
       "key": "356e4ff4-c623-4e72-8bcf-8dd28d3e1093",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4647,7 +4647,7 @@
       "key": "5a6d3759-0a6c-4288-be09-cd989ab14ac4",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4680,7 +4680,7 @@
       "key": "50fdb25f-fa2e-4692-902c-8728ada25b0e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with The Theater Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4711,7 +4711,7 @@
       "key": "f48dfdba-2883-4bce-bbd6-deffa1a02dc3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4742,7 +4742,7 @@
       "key": "b5ed19d2-952a-4fb2-bfa1-96d1081655cb",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4771,7 +4771,7 @@
       "key": "9c451c13-d79b-4387-b305-0e49f7090929",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4788,7 +4788,7 @@
       "key": "8b66768f-8e13-445b-917a-d3bddd7c9aa3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -4821,7 +4821,7 @@
       "key": "c4f9a81e-6c41-488b-8ec1-8af90bb63704",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "c4f9a81e-6c41-488b-8ec1-8af90bb63704",
@@ -4846,7 +4846,7 @@
       "key": "c6b005e0-91a2-4741-adf9-f2fd29cc5825",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4877,7 +4877,7 @@
       "key": "e49c045b-1488-4d98-80e8-5ad50e38a0a5",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "e49c045b-1488-4d98-80e8-5ad50e38a0a5",
@@ -4888,7 +4888,7 @@
       "key": "00c7eadb-d124-4dd1-997f-e2e766f0e2e9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -4907,7 +4907,7 @@
       "key": "fc41f330-0024-4acf-9ce7-883900d14c9b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey",
         "tips": [
@@ -4973,7 +4973,7 @@
       "key": "94ad8287-ad8f-4953-9a3a-d3d9f07bba34",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4990,7 +4990,7 @@
       "key": "cde0de90-2b0b-47c9-b6f8-a9f36579dc95",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "cde0de90-2b0b-47c9-b6f8-a9f36579dc95",
@@ -5014,7 +5014,7 @@
       "key": "c09ce4a2-7cde-4ef7-839b-9f6d160481a7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
         "tips": [
           {
@@ -5044,7 +5044,7 @@
       "key": "5289bec4-5f6e-409e-a394-b2d3d722c67d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -5061,7 +5061,7 @@
       "key": "ade25ca9-3374-4813-9e4b-e5258b4a5743",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {
@@ -5102,7 +5102,7 @@
       "key": "f8c6e7b5-88bb-4799-a636-6485abe02638",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey"
       },

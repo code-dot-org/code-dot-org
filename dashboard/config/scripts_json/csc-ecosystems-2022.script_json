@@ -236,7 +236,7 @@
       "key": "7fab6c93-bb37-47ac-b836-1914fb54c3a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n- _Where do they live?_ \n- _How much time do they spend in water?_\n- _What do their feet look like?_\n- _What is the best kind of foot for swimming? Why?_\n\n**Discussion Goal**:  Use the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. Students should discuss similarities and differences between the animals listed. Let them start with very broad points such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide\n\n**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n- _Where do they live?_ \n- _How much time do they spend in water?_\n- _What do their feet look like?_\n- _What is the best kind of foot for swimming? Why?_\n\n**Discussion Goal**:  Use the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. Students should discuss similarities and differences between the animals listed. Let them start with very broad points such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show next slide\n",
         "duration": "5",
         "name": "Think About It"
       },
@@ -261,7 +261,7 @@
       "key": "a3b28f5a-ed57-4d76-b9fb-54ecc44a4ef6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet is an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that animal adaptations usually happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet is an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that animal adaptations usually happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet."
       },
       "seeding_key": {
         "activity_section.key": "a3b28f5a-ed57-4d76-b9fb-54ecc44a4ef6",
@@ -288,7 +288,7 @@
       "key": "853555c6-026d-40f3-a1db-15595da68a6c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**:\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n**Display**:\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
       },
       "seeding_key": {
         "activity_section.key": "853555c6-026d-40f3-a1db-15595da68a6c",
@@ -329,7 +329,7 @@
       "key": "9213e364-6d7e-4d90-9c56-3cc4afdcc798",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
       },
       "seeding_key": {
@@ -341,7 +341,7 @@
       "key": "bfb5d380-6a43-46e6-8e76-f914be6e2676",
       "position": 4,
       "properties": {
-        "description": "**Do This**: Circulate as students work at their own pace. Have them read the instructions on each level to code their own programs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n_**Adaptations**_\n\n_Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators._ \n",
+        "description": "**Do This**: Circulate as students work at their own pace. Have them read the instructions on each level to code their own programs. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n_**Adaptations**_\n\n_Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators._ \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -358,7 +358,7 @@
       "key": "1b74326a-11a6-4e8f-8890-9cfab6b0ec09",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide\n\n**Levels 2-6**: _Bunny Adaptations_ - These levels teach students how to position their sprites and make them talk. Students also learn how to switch the background and sprite costumes to simulate how bunnies adapted the color of their fur to blend into their environments. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide\n\n**Levels 2-6**: _Bunny Adaptations_ - These levels teach students how to position their sprites and make them talk. Students also learn how to switch the background and sprite costumes to simulate how bunnies adapted the color of their fur to blend into their environments. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -370,7 +370,7 @@
       "key": "9c39e0f9-2313-4e2e-ae1a-30e5d4f435ba",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
         "progression_name": "Video: Hello World: Programming with Events"
       },
       "seeding_key": {
@@ -382,7 +382,7 @@
       "key": "a422d364-77e1-43e3-a546-657716f00d47",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Evolution” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-10 - Skill Building” slide\n\n**Level 7**: _Giraffe Evolution_ - In this level, students will program two new events that enable the user to click on the giraffe sprite to change it three times. It models the evolution of a giraffe’s neck allowing the animal to reach high trees. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Migration” slide\n\n\n**Level 8-9**: _Whale Migration_ - This level models a whale’s migration north and south when the seasons change. Students learn how to make a whale sprite move up and down and review how to switch the background and make their sprite say an explanation. \n\n**Level 10**: _Bug Behaviors_ - This level uses bug sprites to teach students how to assign a behavior or movement to each sprite individually.\n\n**Level 11**: Students will choose to program one of the ecosystems they have learned about. If they finish early they can choose more than one.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Evolution” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-10 - Skill Building” slide\n\n**Level 7**: _Giraffe Evolution_ - In this level, students will program two new events that enable the user to click on the giraffe sprite to change it three times. It models the evolution of a giraffe’s neck allowing the animal to reach high trees. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Migration” slide\n\n\n**Level 8-9**: _Whale Migration_ - This level models a whale’s migration north and south when the seasons change. Students learn how to make a whale sprite move up and down and review how to switch the background and make their sprite say an explanation. \n\n**Level 10**: _Bug Behaviors_ - This level uses bug sprites to teach students how to assign a behavior or movement to each sprite individually.\n\n**Level 11**: Students will choose to program one of the ecosystems they have learned about. If they finish early they can choose more than one.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -394,7 +394,7 @@
       "key": "c7b1fd38-73f6-43a2-bb44-511d230cdfd8",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Survival in Groups” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Survival in Groups” slide\n",
         "progression_name": "Choice Level"
       },
       "seeding_key": {
@@ -446,7 +446,7 @@
       "key": "5c4abb23-a603-4fa9-a6bf-a2f77f454a34",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video\n\n**Level 12**: This video shows students how to create their own creative project in the free play level.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video\n\n**Level 12**: This video shows students how to create their own creative project in the free play level.",
         "progression_name": "Video: Hello World: Do What You Want"
       },
       "seeding_key": {
@@ -458,7 +458,7 @@
       "key": "9e4eb200-8f4b-487d-8b3b-ddd0dd245639",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide\n\n",
         "name": "Free Play",
         "progression_name": "Free Play"
       },
@@ -498,7 +498,7 @@
       "key": "fbc84a3c-4f4b-449b-a5c3-fa0f63d234ae",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n   - _What animals live near us?_ \n   - _Describe their environment._ \n   - _How have animals adapted to survive in this environment?_\n\n**Discussion Goal**: The goal of this short discussion is to prepare students to make their own animal adaptation model. Through this discussion, students will be able to explain that animals change in order to survive. Survival may be growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospital climates, or gathering in groups. This will lead to examples of animal adaptations in your local area and brainstorming of ideas for the last, open-ended level.  ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n   - _What animals live near us?_ \n   - _Describe their environment._ \n   - _How have animals adapted to survive in this environment?_\n\n**Discussion Goal**: The goal of this short discussion is to prepare students to make their own animal adaptation model. Through this discussion, students will be able to explain that animals change in order to survive. Survival may be growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospital climates, or gathering in groups. This will lead to examples of animal adaptations in your local area and brainstorming of ideas for the last, open-ended level.  ",
         "name": "Discuss"
       },
       "seeding_key": {
@@ -510,7 +510,7 @@
       "key": "1a7ee975-b3d8-4f3f-801e-fb985563a47f",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Make Your Own!” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Make Your Own!” slide\n",
         "name": "Make Your Own"
       },
       "seeding_key": {
@@ -540,7 +540,7 @@
       "key": "c678661a-56fe-415c-b0a7-6684dbfbe46a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Do This**: Pair students in a new and random way (popsicle sticks, matching cards, [online randomization tool](https://flippity.net/Randomizer.htm)) to discuss this reflection.\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n* _Which level was the most challenging?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Do This**: Pair students in a new and random way (popsicle sticks, matching cards, [online randomization tool](https://flippity.net/Randomizer.htm)) to discuss this reflection.\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n* _Which level was the most challenging?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -552,7 +552,7 @@
       "key": "1647dbc1-3643-4b91-a61b-0de7afd29bf4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What differences do you notice between the two photos?_ \n- _Which picture shows a balanced ecosystem? What evidence do you see?_ \n\n**Do This**: Show students the photos on the slideshow or find your own example and non example of a balanced ecosystem.\n\n**Discussion Goal**: Students will realize that a balanced ecosystem is bright, colorful and full of life but an unbalanced ecosystem is dreary and dead. Evidence may include multiple types of fish swimming, living and brightly colored coral, fish swimming in groups, and bright colored water in the healthy and balanced ecosystem. Evidence of the unhealthy ecosystem may include a lack of fish, old and dead coral, an old fishing net, etc. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What differences do you notice between the two photos?_ \n- _Which picture shows a balanced ecosystem? What evidence do you see?_ \n\n**Do This**: Show students the photos on the slideshow or find your own example and non example of a balanced ecosystem.\n\n**Discussion Goal**: Students will realize that a balanced ecosystem is bright, colorful and full of life but an unbalanced ecosystem is dreary and dead. Evidence may include multiple types of fish swimming, living and brightly colored coral, fish swimming in groups, and bright colored water in the healthy and balanced ecosystem. Evidence of the unhealthy ecosystem may include a lack of fish, old and dead coral, an old fishing net, etc. \n",
         "duration": "5",
         "name": "Think About It"
       },
@@ -593,7 +593,7 @@
       "key": "fe0a27d4-9229-476b-b367-22c9a1920d00",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide",
         "duration": "25",
         "name": "Aquatic Ecosystem Simulation - Skill Building"
       },
@@ -645,7 +645,7 @@
       "key": "143ef8d7-56a3-4069-bb02-f1b11633d327",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-3 - Skill Building” slide\n\n**Do This**: Have students set up the aquatic ecosystem. Add fish to the system and then program them to eat the algae and be removed by touching the boat. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-3 - Skill Building” slide\n\n**Do This**: Have students set up the aquatic ecosystem. Add fish to the system and then program them to eat the algae and be removed by touching the boat. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -657,7 +657,7 @@
       "key": "78b2408e-bb94-49c6-932e-4872c43d5258",
       "position": 6,
       "properties": {
-        "description": "**Do This**: As soon as a few students have completed Level 4, bring the whole class together to preview Level 5. Make a prediction together and discuss the correct answer. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Prediction” slide\n"
+        "description": "**Do This**: As soon as a few students have completed Level 4, bring the whole class together to preview Level 5. Make a prediction together and discuss the correct answer. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Prediction” slide\n"
       },
       "seeding_key": {
         "activity_section.key": "78b2408e-bb94-49c6-932e-4872c43d5258",
@@ -707,7 +707,7 @@
       "key": "b1cae75b-6cb7-45a0-89f1-3010ed60ab9f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: Introduce conditionals as a key concept. Show the anatomy of a conditional statement and then show the video on the following slide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Conditional Statements” video\n\n**Discuss**: Computers are very good at using true or false statements to make decisions on what to do. For example: “If the volume+  key is pressed, then the sound will get louder. Or if the mute key is pressed then the sound will turn off. What other examples can you think of that computers check a condition to see if it’s true or false and then execute an action based on the answer? \n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n* **Conditionals** - Statements that only run under certain conditions.\n"
       },
       "seeding_key": {
         "activity_section.key": "b1cae75b-6cb7-45a0-89f1-3010ed60ab9f",
@@ -734,7 +734,7 @@
       "key": "f86d7a17-7f7c-4b7a-a587-083155967e42",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” and \"Level 7\" slides\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 6 and 7, send students to resume working at their own pace for the remainder of the lesson.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6” and \"Level 7\" slides\n \n**Do This**: Point out the science of the cause and effect of fish being removed from the ecosystem and show the conditional statement blocks that will check if the number of algae is high (>8) or low (<8).  After discussing conditionals and previewing levels 6 and 7, send students to resume working at their own pace for the remainder of the lesson.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -746,7 +746,7 @@
       "key": "8681cfc2-5269-4338-9f7f-c9a9c8acabd9",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -758,7 +758,7 @@
       "key": "399c3280-d93e-4cfd-940a-bea3a5423b1a",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9” slide\n",
         "progression_name": "Multiple Choice",
         "tips": [
           {
@@ -776,7 +776,7 @@
       "key": "d11959d2-49b1-4705-868f-a37910f54b05",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10” slide\n",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -824,7 +824,7 @@
       "key": "dd8949ae-7f39-4207-9f41-258d57379dbd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
         "duration": "10",
         "name": "Cause and Effect"
       },
@@ -860,7 +860,7 @@
       "key": "9f2276f6-9067-4b58-832a-79373b1152eb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing article digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: _How does the article connect to the overfishing simulation we made in Lesson 2? How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled **“Harm to ecosystems”** Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Read & Discuss” slide\n\n**Do This**: Provide students with the Understanding Overfishing article digitally or printed. Read the article together out loud, taking time to address new vocabulary as needed for your class. \n\n**Discuss**: _How does the article connect to the overfishing simulation we made in Lesson 2? How could we change the code to balance the ecosystem?_\n\n**Discussion Goal**: Students should see the connection to the unbalanced ecosystem, specifically if there are fewer fish, the algae overgrows and the coral becomes sick. Have students refer to the paragraph of the article titled **“Harm to ecosystems”** Students can also find several solutions to the problem in the section titled “How to prevent overfishing”. Students should brainstorm how they could apply these solutions to their coded simulation. ",
         "duration": "10",
         "name": "Read and Discuss",
         "tips": [
@@ -891,7 +891,7 @@
       "key": "3672b603-4551-4cb2-b06c-cdcd062e9e49",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide\n",
         "duration": "35",
         "name": "Balancing the Aquatic Ecosystem Simulation - Skill Building"
       },
@@ -932,7 +932,7 @@
       "key": "efc689a1-7c3c-445a-bd88-df899622f9c9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction” slide\n\n**Say**: _What is causing the coral to die in this aquatic simulation?_\n\n**Do This**: Have students start together on the first level. They will type an answer into the text box using evidence from the text in the article they read during the warm-up. You can use their responses as a check for understanding and address any common misconceptions. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction” slide\n\n**Say**: _What is causing the coral to die in this aquatic simulation?_\n\n**Do This**: Have students start together on the first level. They will type an answer into the text box using evidence from the text in the article they read during the warm-up. You can use their responses as a check for understanding and address any common misconceptions. \n"
       },
       "seeding_key": {
         "activity_section.key": "efc689a1-7c3c-445a-bd88-df899622f9c9",
@@ -970,7 +970,7 @@
       "key": "a3f4a1e4-cbe2-4eb4-bf4a-823024d4f9e2",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-3 - Limit the Number of Fish Caught ” slide\n\n**Do This**: Have students complete the code using the instructions on levels 2-3 at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-3 - Limit the Number of Fish Caught ” slide\n\n**Do This**: Have students complete the code using the instructions on levels 2-3 at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). ",
         "name": "Overfishing Solution #1  - Limit the Number of Fish Caught",
         "progression_name": "Solution 1 - Fishing Limits"
       },
@@ -983,7 +983,7 @@
       "key": "1cc5aa09-8946-44df-87fe-203db8542f6e",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Debugging” slide\n\n**Do This**: Pause the class to address the concept of debugging in computer science. There are two optional videos linked in the notes of this slide that you can show your class depending on their familiarity with the concept. Guide students to look closely at the code and choose the answer that best describes the bug and its fix. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Debugging” slide\n\n**Do This**: Pause the class to address the concept of debugging in computer science. There are two optional videos linked in the notes of this slide that you can show your class depending on their familiarity with the concept. Guide students to look closely at the code and choose the answer that best describes the bug and its fix. \n",
         "progression_name": "Debugging"
       },
       "seeding_key": {
@@ -1023,7 +1023,7 @@
       "key": "d70a8039-dbef-4d81-9c65-efe467ef7e68",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 5 - Establish Marine Protected Areas” slide\n\n**Do This**: Have students follow the instructions to complete level 5. Remind students to try running their code several times and using the built-in hints to figure out the solution before asking their peers for assistance. Consider making a connection to the text displayed on the slide. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 5 - Establish Marine Protected Areas” slide\n\n**Do This**: Have students follow the instructions to complete level 5. Remind students to try running their code several times and using the built-in hints to figure out the solution before asking their peers for assistance. Consider making a connection to the text displayed on the slide. ",
         "name": "Overfishing Solution #2 - Establish Marine Protected Areas",
         "progression_name": "Solution 2 - Off Limits"
       },
@@ -1036,7 +1036,7 @@
       "key": "827a4c88-1f72-4681-9795-46eee3eef61d",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Check for Understanding” slide\n\n**Do This**: Have students read through the provided program and answer a question about it. The question must be answered before the student may press the “Run” button. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Check for Understanding” slide\n\n**Do This**: Have students read through the provided program and answer a question about it. The question must be answered before the student may press the “Run” button. ",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -1054,7 +1054,7 @@
       "key": "69e1ec66-9937-497e-b77b-d1e318d7d743",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 7-8 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 7-8 - Create a Fishing Season” slide\n\n**Do This**: Have students complete the code in these levels at their own pace. Consider pulling the group together to make a connection to the text (displayed on the slide). \n",
         "name": "Overfishing Solution #3  - Create a “Fishing Season”",
         "progression_name": "Solution 3 - Fishing Season"
       },
@@ -1067,7 +1067,7 @@
       "key": "f965b982-c7d3-434a-83ed-a6700f00ec7d",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Check for Understanding” slide\n\n**Do This**: Level 9 is a final check for understanding. There is an empty text box where students can write in an answer describing the third overfishing solution. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Check for Understanding” slide\n\n**Do This**: Level 9 is a final check for understanding. There is an empty text box where students can write in an answer describing the third overfishing solution. ",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1095,7 +1095,7 @@
       "key": "5bc6a2ca-9a96-4b21-ae48-56105ffdb953",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. [This](https://youtu.be/8KCAvNt4jRg) is a video that explains how to upload your own images for your students to use as sprites. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Free Play” slide\n\n**Do This**: Students can use the animals and backgrounds to create their own ecosystem. \n\n**(Optional) Do This**: It is possible for you to make a remix of the Free Play level and then upload your own images to use for sprites. You could use this technique to put a local lens on the last level. [This](https://youtu.be/8KCAvNt4jRg) is a video that explains how to upload your own images for your students to use as sprites. \n",
         "duration": "10",
         "name": "Create a Local Ecosystem",
         "progression_name": "Free Play"
@@ -1127,7 +1127,7 @@
       "key": "a2d884f0-bc48-4f16-be8d-1435a88c5177",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What you Know” slide\n\n**Say:** \n- _Name THREE blocks of code used in Lesson 3: Balancing the Ecosystem._ \n- _Describe TWO solutions to the overfishing problem._\n- _Explain your ONE favorite part of the lesson._\n\n**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. _Optional: Extended reading and discussion._\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Show What you Know” slide\n\n**Say:** \n- _Name THREE blocks of code used in Lesson 3: Balancing the Ecosystem._ \n- _Describe TWO solutions to the overfishing problem._\n- _Explain your ONE favorite part of the lesson._\n\n**Do This**: Have students record their answers on sticky notes, a journal, Google form or other content management system used in your class. _Optional: Extended reading and discussion._\n",
         "duration": "10",
         "name": "Show What You Know"
       },

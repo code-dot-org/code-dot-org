@@ -868,7 +868,7 @@
       "key": "3b54d79a-006a-437f-9a2c-87f39fd6c30e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\nIf students are unsure about which features are interactive, ask prompting questions such as: “What buttons, menus, search bars, or icons do you see?” “What do you expect will happen when you click/tap/hover on it?”",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\nIf students are unsure about which features are interactive, ask prompting questions such as: “What buttons, menus, search bars, or icons do you see?” “What do you expect will happen when you click/tap/hover on it?”",
         "tips": [
           {
             "type": "teachingTip",
@@ -895,7 +895,7 @@
       "key": "035625e5-9dca-4382-94c4-b1588b4b4d8c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What clues did you find that indicated an element was interactive?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on how common elements, words, or icons on a page indicate interactivity. For example, a magnifying glass indicates a search bar, a carrot symbol ^ indicates a dropdown, and a ribbon indicates being able to save something.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show students the image on this page and ask:\n- What parts of this site do you think are interactive?\n- How do users interact with it?\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What clues did you find that indicated an element was interactive?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students reflect on how common elements, words, or icons on a page indicate interactivity. For example, a magnifying glass indicates a search bar, a carrot symbol ^ indicates a dropdown, and a ribbon indicates being able to save something.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "035625e5-9dca-4382-94c4-b1588b4b4d8c",
@@ -931,7 +931,7 @@
       "key": "21c81813-aa63-4082-aa01-f4d4b02616aa",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2. Explain that they will be exploring two versions of a web app. On Level 1, they will note any features or functionality that are unclear, inconsistent, or frustrating. On Level 2, they will note how those features were improved.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2. Explain that they will be exploring two versions of a web app. On Level 1, they will note any features or functionality that are unclear, inconsistent, or frustrating. On Level 2, they will note how those features were improved.\n",
         "progression_name": "Explore a Web App"
       },
       "seeding_key": {
@@ -970,7 +970,7 @@
       "key": "c492a567-1865-4f1e-bc5c-ac01b2bf242c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you feel using the first version of the web app? Why? What design choices made the second version better?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their feelings of frustration or ease to specific design elements like button placement, clarity of icons, navigation flow, and responsiveness. Guide them to use specific examples from their experience. Listen for students identifying issues like 'the button kept moving' or 'I didn't know where to go next' for the bad design, and 'it was obvious what to do' or 'each button did what I expected it to' for the improved design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define interactivity.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you feel using the first version of the web app? Why? What design choices made the second version better?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their feelings of frustration or ease to specific design elements like button placement, clarity of icons, navigation flow, and responsiveness. Guide them to use specific examples from their experience. Listen for students identifying issues like 'the button kept moving' or 'I didn't know where to go next' for the bad design, and 'it was obvious what to do' or 'each button did what I expected it to' for the improved design.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define interactivity.\n"
       },
       "seeding_key": {
         "activity_section.key": "c492a567-1865-4f1e-bc5c-ac01b2bf242c",
@@ -1018,7 +1018,7 @@
       "key": "13a7ed93-11e5-40ba-8691-6519a932f2f0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define trade-offs.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you designed a new website with the feature you explored, what trade offs would you have to make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify specific design features and articulate the conflicting needs they serve. Guide the discussion towards understanding that there is rarely a single 'perfect' design, and that design decisions often involve balancing competing priorities. Listen for students identifying trade-offs like 'Autoplay is good for users who want to consume content quickly without thinking, but it's bad for users who have limited data or prefer to choose what they watch.'\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define trade-offs.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you designed a new website with the feature you explored, what trade offs would you have to make?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify specific design features and articulate the conflicting needs they serve. Guide the discussion towards understanding that there is rarely a single 'perfect' design, and that design decisions often involve balancing competing priorities. Listen for students identifying trade-offs like 'Autoplay is good for users who want to consume content quickly without thinking, but it's bad for users who have limited data or prefer to choose what they watch.'\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1035,7 +1035,7 @@
       "key": "e6d5e812-84fe-4936-aa9d-fc78bad0a2c2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "e6d5e812-84fe-4936-aa9d-fc78bad0a2c2",
@@ -1058,7 +1058,7 @@
       "key": "6bee6c55-5717-41fc-b17d-dc496f1544ce",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one small action you took today that caused something else to happen?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify a cause and its resulting effect. Listen for examples like: pressing a button to turn on a light, opening a door to enter a room, or tapping a screen to unlock a phone. Guide students to see that each 'event' (the trigger) caused a 'response' (the system's reaction).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one small action you took today that caused something else to happen?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify a cause and its resulting effect. Listen for examples like: pressing a button to turn on a light, opening a door to enter a room, or tapping a screen to unlock a phone. Guide students to see that each 'event' (the trigger) caused a 'response' (the system's reaction).\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "6bee6c55-5717-41fc-b17d-dc496f1544ce",
@@ -1069,7 +1069,7 @@
       "key": "a77bca82-ba17-4272-96ae-dadc3819b352",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Students should each have a copy of the Making a Button Respond activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define DOM. Explain that the DOM turns static elements on a page into objects that users can interact with.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 where students will explore an interactive page with buttons. They will describe how they interact with the page and attempt to document the corresponding code in script.js. Students should use AI to help understand the code by asking questions like, 'What does [this line of code] mean?' They can attach specific lines of code as context within the AI chat interface.\n",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Students should each have a copy of the Making a Button Respond activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define DOM. Explain that the DOM turns static elements on a page into objects that users can interact with.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 where students will explore an interactive page with buttons. They will describe how they interact with the page and attempt to document the corresponding code in script.js. Students should use AI to help understand the code by asking questions like, 'What does [this line of code] mean?' They can attach specific lines of code as context within the AI chat interface.\n",
         "duration": "15",
         "name": "Making a Button Respond",
         "progression_name": "Button Response",
@@ -1099,7 +1099,7 @@
       "key": "cac31ce1-16fc-4a05-b0a1-63c9bdb6b816",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define event handler. Explain that an event handler defines the reaction that a program takes based on a specific action, like a button click.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What event handlers did you trigger in Level 1?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to understand that clicking a button requires an event handler to trigger a reaction. Students should note where in their code they see document.querySelector and addEventListener which indicate onscreen content manipulation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2, where they will act as QA Engineers, debugging broken code both by following a prescribed checklist, and then with AI assistance. Remind them to first try their own strategies and to ask AI specific questions like 'Why isn't this button working?' rather than asking for the full solution.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define event handler. Explain that an event handler defines the reaction that a program takes based on a specific action, like a button click.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What event handlers did you trigger in Level 1?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to understand that clicking a button requires an event handler to trigger a reaction. Students should note where in their code they see document.querySelector and addEventListener which indicate onscreen content manipulation.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2, where they will act as QA Engineers, debugging broken code both by following a prescribed checklist, and then with AI assistance. Remind them to first try their own strategies and to ask AI specific questions like 'Why isn't this button working?' rather than asking for the full solution.\n",
         "progression_name": "Fixing Broken Features",
         "tips": [
           {
@@ -1127,7 +1127,7 @@
       "key": "0ca428d2-a08b-4c49-9e84-ed1bb3068607",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Share one error you found and how you were able to debug it.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** To reinforce learning through peer explanation and to highlight common pitfalls. Encourage students to explain the error and the solution in their own words, modeling effective communication and collaborative problem-solving.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Share one error you found and how you were able to debug it.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** To reinforce learning through peer explanation and to highlight common pitfalls. Encourage students to explain the error and the solution in their own words, modeling effective communication and collaborative problem-solving.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1154,7 +1154,7 @@
       "key": "71906712-5145-4fe6-836b-8b6e2a244c20",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3 and 4.\n- Level 3: Students write working code for getting a button click to respond, using AI for assistance.\n- Level 4: Students will create a simple app that utilizes multiple buttons.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3 and 4.\n- Level 3: Students write working code for getting a button click to respond, using AI for assistance.\n- Level 4: Students will create a simple app that utilizes multiple buttons.\n",
         "duration": "20",
         "name": "Coding Clickable Buttons",
         "progression_name": "First Click!"
@@ -1217,7 +1217,7 @@
       "key": "2be15d5e-c028-4a93-8c8c-19559e8132c9",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the three-step process that they followed in order to update the DOM when a user clicks a a button in a web application: Select an element, add an event listener, and update specific content (text, image, color, etc.)\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Remind students of the three-step process that they followed in order to update the DOM when a user clicks a a button in a web application: Select an element, add an event listener, and update specific content (text, image, color, etc.)\n"
       },
       "seeding_key": {
         "activity_section.key": "2be15d5e-c028-4a93-8c8c-19559e8132c9",
@@ -1228,7 +1228,7 @@
       "key": "a6ebe10c-d23d-4fdf-b951-c80ff1dd0209",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 9 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 9 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "a6ebe10c-d23d-4fdf-b951-c80ff1dd0209",
@@ -1251,7 +1251,7 @@
       "key": "8ca371bb-d0e1-48d0-893b-2b9ff38148e6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Likes and Dislikes buttons on the screen. Give students 10–15 seconds to think, then ask a few to share quick observations.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the Submit Form example. Give students 10–15 seconds to think about what happens behind the scenes, then invite a few quick responses.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the Comments Section visual. Give students a few seconds to consider how new comments appear, then invite 2–3 responses.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where else have you seen elements on a page that track and update a value?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify examples of dynamic content that changes based on user interaction or data. Examples include: view counts, likes, scores, timers, progress bars, etc. Guide the discussion to connect these observable changes to underlying data that is being tracked and updated.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the Likes and Dislikes buttons on the screen. Give students 10–15 seconds to think, then ask a few to share quick observations.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the Submit Form example. Give students 10–15 seconds to think about what happens behind the scenes, then invite a few quick responses.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the Comments Section visual. Give students a few seconds to consider how new comments appear, then invite 2–3 responses.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Where else have you seen elements on a page that track and update a value?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify examples of dynamic content that changes based on user interaction or data. Examples include: view counts, likes, scores, timers, progress bars, etc. Guide the discussion to connect these observable changes to underlying data that is being tracked and updated.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "8ca371bb-d0e1-48d0-893b-2b9ff38148e6",
@@ -1287,7 +1287,7 @@
       "key": "2d6e7f35-bc0b-4728-a127-e520bf2115a1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the simulation activity to students and use the animated slide to show an example of what each role will do. As you click through, point out how one student will write the starting number, and others will take turns giving new numbers to add or subtract. The animation should help students visualize what they’ll write on their papers and how the number changes each time.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the simulation activity to students and use the animated slide to show an example of what each role will do. As you click through, point out how one student will write the starting number, and others will take turns giving new numbers to add or subtract. The animation should help students visualize what they’ll write on their papers and how the number changes each time.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1314,7 +1314,7 @@
       "key": "730a2a38-6356-4d88-9aa0-f1e3463cef42",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the simulation. One student writes score = 0 on their paper. The “+” and “–” students take turns giving new numbers to add or subtract, while the score student crosses out the old number and writes the new one each time. Encourage students to say the new score aloud so everyone  follow the changes.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they act out the changing values. Check that the score student is correctly updating the number and not keeping the old values. Ask prompting questions like: “How do you know what the current score is right now?” or “What happens to the old number once a new one is written?”\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the simulation. One student writes score = 0 on their paper. The “+” and “–” students take turns giving new numbers to add or subtract, while the score student crosses out the old number and writes the new one each time. Encourage students to say the new score aloud so everyone  follow the changes.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they act out the changing values. Check that the score student is correctly updating the number and not keeping the old values. Ask prompting questions like: “How do you know what the current score is right now?” or “What happens to the old number once a new one is written?”\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1341,7 +1341,7 @@
       "key": "b5a104a8-794f-46ba-9912-87148f94aeba",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When we changed the number on the paper, what did that paper represent?*\n- *How is that like what a computer keeps track of in a program?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify that the paper’s number acts like a stored value that can change — a bridge to the idea of a variable. The paper keeps track of the most recent value, just as a program stores and updates data over time.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When we changed the number on the paper, what did that paper represent?*\n- *How is that like what a computer keeps track of in a program?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to identify that the paper’s number acts like a stored value that can change — a bridge to the idea of a variable. The paper keeps track of the most recent value, just as a program stores and updates data over time.\n"
       },
       "seeding_key": {
         "activity_section.key": "b5a104a8-794f-46ba-9912-87148f94aeba",
@@ -1364,7 +1364,7 @@
       "key": "8a486303-69ba-4b44-8d76-282b8c0e4d09",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define variable. Connect the definition back to the simulation they just did by explaining that the paper held a number that kept changing — like a score that went up and down. In programming, we call that paper a variable because it’s a container that holds one value at a time. That value can change as the program runs.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define variable. Connect the definition back to the simulation they just did by explaining that the paper held a number that kept changing — like a score that went up and down. In programming, we call that paper a variable because it’s a container that holds one value at a time. That value can change as the program runs.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1391,7 +1391,7 @@
       "key": "8468fd66-abe1-4c8e-a8cf-59adb2f1cca1",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define state for students and connect it back to the simulation and the variable definition by explaining how our variable’s number kept changing — but at any given moment, it only showed one value. That current value is called the state. It describes what’s happening right now in the program.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define state for students and connect it back to the simulation and the variable definition by explaining how our variable’s number kept changing — but at any given moment, it only showed one value. That current value is called the state. It describes what’s happening right now in the program.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1418,7 +1418,7 @@
       "key": "a61fff02-2b2b-4f0f-9ef9-47e4b269217a",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define operation for students. Connect this concept to the earlier simulation by explaining that when someone added or subtracted a number, that was an operation. In code, operations are what make variables change. For example, adding one to your score when you click a ‘like’ button.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define operation for students. Connect this concept to the earlier simulation by explaining that when someone added or subtracted a number, that was an operation. In code, operations are what make variables change. For example, adding one to your score when you click a ‘like’ button.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1459,7 +1459,7 @@
       "key": "62d573f0-4db9-400b-9527-41c37ead10c7",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** After students discuss their predictions, reveal the code for the Score Tracker app (or direct them to open script.js). Point out the variable declaration, the operations that add or subtract from the score, and how that number is displayed on screen.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** After students discuss their predictions, reveal the code for the Score Tracker app (or direct them to open script.js). Point out the variable declaration, the operations that add or subtract from the score, and how that number is displayed on screen.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1558,7 +1558,7 @@
       "key": "2c7abbd0-ac2a-4a54-934e-a9ad41f9afad",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When you were debugging, how did you figure out whether the value on the screen matched the program’s state?*\n- *How did AI help you find or fix bugs — and when did you have to step in to make your own decision?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect debugging with verifying that the program’s state (variable values) and what appears on screen are consistent. Encourage students to mention the four key debugging checks they may have practiced:\n- Name check: Did I spell the variable name right and use it consistently?\n- Value check: Does the variable have the value I expect? (Try console.log() to confirm.)\n- DOM check: Am I changing the correct element or class on the page?\n- Order check: Does the code that updates the page run after the variable’s value changes?\n\nThese checks help students reason about how and when the program updates information. Also connect this back to AI debugging: AI can help spot likely errors because it recognizes patterns, but students still need to verify the logic — especially when the pattern doesn’t quite fit.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *When you were debugging, how did you figure out whether the value on the screen matched the program’s state?*\n- *How did AI help you find or fix bugs — and when did you have to step in to make your own decision?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect debugging with verifying that the program’s state (variable values) and what appears on screen are consistent. Encourage students to mention the four key debugging checks they may have practiced:\n- Name check: Did I spell the variable name right and use it consistently?\n- Value check: Does the variable have the value I expect? (Try console.log() to confirm.)\n- DOM check: Am I changing the correct element or class on the page?\n- Order check: Does the code that updates the page run after the variable’s value changes?\n\nThese checks help students reason about how and when the program updates information. Also connect this back to AI debugging: AI can help spot likely errors because it recognizes patterns, but students still need to verify the logic — especially when the pattern doesn’t quite fit.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1585,7 +1585,7 @@
       "key": "28c82436-5ea7-4313-aa70-4f3059bf6dcb",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 10 and have them select one of the available projects to complete. Explain that each project uses variables differently — for example, tracking music beats, social interactions, or mood states.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask them to explain which variable they chose, how it changes, and what causes the change. Encourage them to connect their app’s feature back to a real-world example (e.g., a like counter or score tracker). As you see students using AI Chat to troubleshoot, prompt them to:\n- Describe their AI prompt out loud.\n- Evaluate whether the AI’s suggestion actually fits their goal.\n\nRemind students that AI is a tool to help them learn, not just fix problems — they should still verify and understand the reasoning behind any code changes.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 10 and have them select one of the available projects to complete. Explain that each project uses variables differently — for example, tracking music beats, social interactions, or mood states.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask them to explain which variable they chose, how it changes, and what causes the change. Encourage them to connect their app’s feature back to a real-world example (e.g., a like counter or score tracker). As you see students using AI Chat to troubleshoot, prompt them to:\n- Describe their AI prompt out loud.\n- Evaluate whether the AI’s suggestion actually fits their goal.\n\nRemind students that AI is a tool to help them learn, not just fix problems — they should still verify and understand the reasoning behind any code changes.\n",
         "progression_name": "Build Your Own Web App",
         "tips": [
           {
@@ -1607,7 +1607,7 @@
       "key": "d5f07693-412f-4974-91ba-fedb9e59a940",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is the difference between updating a variable and updating the DOM?*\n- *How do these two actions work together in your app?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that updating a variable changes the program’s internal data (its state), while updating the DOM changes what the user sees on the screen. The goal is for them to realize that these two processes are connected but distinct — the DOM reflects the variable’s value, but it doesn’t update automatically. Students should leave the discussion recognizing that keeping variables and the DOM in sync is an essential part of making interactive web apps work correctly.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When was a time that you trusted your own debugging process over AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that while AI can be a powerful debugging partner, their own reasoning, testing, and understanding of the code are essential for verifying solutions. The goal is for them to realize that AI sometimes assumes patterns that may not apply, and human judgment is needed to confirm accuracy. This discussion helps students develop confidence in their debugging process and understand AI as a tool to collaborate with—not rely on blindly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 11 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What is the difference between updating a variable and updating the DOM?*\n- *How do these two actions work together in your app?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that updating a variable changes the program’s internal data (its state), while updating the DOM changes what the user sees on the screen. The goal is for them to realize that these two processes are connected but distinct — the DOM reflects the variable’s value, but it doesn’t update automatically. Students should leave the discussion recognizing that keeping variables and the DOM in sync is an essential part of making interactive web apps work correctly.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When was a time that you trusted your own debugging process over AI?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that while AI can be a powerful debugging partner, their own reasoning, testing, and understanding of the code are essential for verifying solutions. The goal is for them to realize that AI sometimes assumes patterns that may not apply, and human judgment is needed to confirm accuracy. This discussion helps students develop confidence in their debugging process and understand AI as a tool to collaborate with—not rely on blindly.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 11 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "d5f07693-412f-4974-91ba-fedb9e59a940",
@@ -1630,7 +1630,7 @@
       "key": "17440603-0d0a-4015-87b6-485d81fb2202",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Working individually or with a partner, they should jot the steps down on a scrap piece of paper in the order they think makes the most sense. After ordering, students will give their set of steps a short, descriptive name and share how they decided on the order.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the slide and remind students that the steps are intentionally out of order. Instruct students to jot them down on a scrap piece of paper in the order that makes the most sense to them. Let them know that there isn’t one “right” sequence. After arranging their steps, they should give the process a short, descriptive name and share with a neighbor how they decided on the order. Then, ask a few students to share with the class. Emphasize how giving their set of steps a clear name makes it easier for others to understand what it does—this will connect directly to how programmers name and reuse functions\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Working individually or with a partner, they should jot the steps down on a scrap piece of paper in the order they think makes the most sense. After ordering, students will give their set of steps a short, descriptive name and share how they decided on the order.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the slide and remind students that the steps are intentionally out of order. Instruct students to jot them down on a scrap piece of paper in the order that makes the most sense to them. Let them know that there isn’t one “right” sequence. After arranging their steps, they should give the process a short, descriptive name and share with a neighbor how they decided on the order. Then, ask a few students to share with the class. Emphasize how giving their set of steps a clear name makes it easier for others to understand what it does—this will connect directly to how programmers name and reuse functions\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1657,7 +1657,7 @@
       "key": "5c514aee-fc63-45bd-9834-16a8e164f47b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect their activity to the new vocabulary. Explain that what they just did — naming and reusing a set of steps — is exactly what programmers call a function. When we reuse those steps to make complex processes easier, we’re practicing abstraction.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Connect their activity to the new vocabulary. Explain that what they just did — naming and reusing a set of steps — is exactly what programmers call a function. When we reuse those steps to make complex processes easier, we’re practicing abstraction.\n"
       },
       "seeding_key": {
         "activity_section.key": "5c514aee-fc63-45bd-9834-16a8e164f47b",
@@ -1696,7 +1696,7 @@
       "key": "c7e461b5-8aa8-4fb4-a836-6a62f5823c56",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "c7e461b5-8aa8-4fb4-a836-6a62f5823c56",
@@ -1732,7 +1732,7 @@
       "key": "133a1d2f-654f-4422-9625-7abf4f317502",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 5.\n- Level 1: Students rename functions descriptively and add helpful comments.\n- Level 2: Students read the vocabulary definition for function.\n- Level 3: Students add their own explanation or example of function to the vocab free response.\n- Level 2: Students read the vocabulary definition for abstraction.\n- Level 3: Students add their own explanation or example of abstraction to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for the reasoning behind their renaming choices. Ask guiding questions like: “Why did you choose that name?” or “Would someone new to this code understand what that function does?”\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 5.\n- Level 1: Students rename functions descriptively and add helpful comments.\n- Level 2: Students read the vocabulary definition for function.\n- Level 3: Students add their own explanation or example of function to the vocab free response.\n- Level 2: Students read the vocabulary definition for abstraction.\n- Level 3: Students add their own explanation or example of abstraction to the vocab free response.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for the reasoning behind their renaming choices. Ask guiding questions like: “Why did you choose that name?” or “Would someone new to this code understand what that function does?”\n",
         "progression_name": "What's in a Name?"
       },
       "seeding_key": {
@@ -1782,7 +1782,7 @@
       "key": "eb0858a5-80e9-42ca-9eb2-f295d9006cde",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do descriptive names for functions matter?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that descriptive names make code easier to read, understand, and maintain—for both themselves and others. Help them connect this to abstraction, explaining that a good name lets programmers focus on what a function does instead of how it works.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do descriptive names for functions matter?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that descriptive names make code easier to read, understand, and maintain—for both themselves and others. Help them connect this to abstraction, explaining that a good name lets programmers focus on what a function does instead of how it works.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1809,7 +1809,7 @@
       "key": "54c30ddf-ef7f-41e3-8f2b-82dc9f5673a3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show examples of functions and point out the similarities:\n- Both perform the same action (returning \"Hello!\").\n- The difference is mainly in syntax — arrow functions use => instead of the word function.\n- We still give them clear names and use them to reuse code.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show examples of functions and point out the similarities:\n- Both perform the same action (returning \"Hello!\").\n- The difference is mainly in syntax — arrow functions use => instead of the word function.\n- We still give them clear names and use them to reuse code.\n"
       },
       "seeding_key": {
         "activity_section.key": "54c30ddf-ef7f-41e3-8f2b-82dc9f5673a3",
@@ -1884,7 +1884,7 @@
       "key": "7786776f-3d05-408c-b7aa-ed198fdc5e06",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** At the end of the Mini-Hackathon, have students rotate to view 2–3 peers’ projects. Provide physical sticky notes for feedback. Their comments should focus on clarity, naming, and alignment between the function’s name, comment, and behavior.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to use descriptive language in their feedback. If they’re unsure what to say, prompt them with: “Is the name of the function clear?”, “Can you tell what this code does without reading every line?”, “Does the comment match the code’s behavior?”\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** At the end of the Mini-Hackathon, have students rotate to view 2–3 peers’ projects. Provide physical sticky notes for feedback. Their comments should focus on clarity, naming, and alignment between the function’s name, comment, and behavior.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Remind students to use descriptive language in their feedback. If they’re unsure what to say, prompt them with: “Is the name of the function clear?”, “Can you tell what this code does without reading every line?”, “Does the comment match the code’s behavior?”\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1911,7 +1911,7 @@
       "key": "5952962b-eb0f-4e4b-a6a5-cd4d6b8376da",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does writing clear, well-named functions make it easier for other people—or AI—to test, debug, and reuse your code?*\n- *What did you notice when reviewing a peer’s code that made it easier (or harder) to understand?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that clear, descriptive function names support readability, reuse, and testing. Students should recognize that part of being a QA engineer or collaborator is ensuring that code is easy to understand for both humans and AI tools that analyze it.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How does writing clear, well-named functions make it easier for other people—or AI—to test, debug, and reuse your code?*\n- *What did you notice when reviewing a peer’s code that made it easier (or harder) to understand?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that clear, descriptive function names support readability, reuse, and testing. Students should recognize that part of being a QA engineer or collaborator is ensuring that code is easy to understand for both humans and AI tools that analyze it.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1928,7 +1928,7 @@
       "key": "3b4df57d-6a0d-4e94-8af9-1fcc26bce606",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their responses to the Question of the Day with a partner. After a few minutes, ask for volunteers to share with the class. Encourage students to use examples from their code today — such as how they renamed a function, created a reusable arrow function, or refactored repeated code — to explain how they made their code cleaner and easier to reuse.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1955,7 +1955,7 @@
       "key": "f3a8ed4c-964f-42a5-8e10-f6298c38ec38",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 9 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 9 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "f3a8ed4c-964f-42a5-8e10-f6298c38ec38",
@@ -1978,7 +1978,7 @@
       "key": "f52b4712-3c98-4238-b4db-8bf9677c6433",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What functionality of YouTube does this flowchart represent? What users would want the condition (yellow diamond) to evaluate to “Yes”? “No”?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps make decisions based on user input or app data, similar to the flowchart. Examples include YouTube deciding which videos to suggest next or login screens checking if username and password match. This helps students recognize that apps are full of decision-making points and anchors abstract conditionals in contexts they know. It also helps them understand that user input can determine the user experience, for example turning on Autoplay might help some users and frustrate others.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What functionality of YouTube does this flowchart represent? What users would want the condition (yellow diamond) to evaluate to “Yes”? “No”?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that apps make decisions based on user input or app data, similar to the flowchart. Examples include YouTube deciding which videos to suggest next or login screens checking if username and password match. This helps students recognize that apps are full of decision-making points and anchors abstract conditionals in contexts they know. It also helps them understand that user input can determine the user experience, for example turning on Autoplay might help some users and frustrate others.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "f52b4712-3c98-4238-b4db-8bf9677c6433",
@@ -2056,7 +2056,7 @@
       "key": "3af94ebf-9161-4bd9-8c92-e29967f1d260",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students partner up to trace through the different paths of their partner’s flowchart.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does your partner’s flowchart make sense? Are the decision points clear?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate how their partner’s flowchart represents a decision-making process and receive constructive feedback on the clarity and completeness of their own flowchart. This peer feedback reinforces the concepts of algorithmic thinking and visual logic.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define flowchart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define conditional statement.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define Boolean.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students partner up to trace through the different paths of their partner’s flowchart.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does your partner’s flowchart make sense? Are the decision points clear?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate how their partner’s flowchart represents a decision-making process and receive constructive feedback on the clarity and completeness of their own flowchart. This peer feedback reinforces the concepts of algorithmic thinking and visual logic.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define flowchart.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define conditional statement.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define Boolean.\n"
       },
       "seeding_key": {
         "activity_section.key": "3af94ebf-9161-4bd9-8c92-e29967f1d260",
@@ -2097,7 +2097,7 @@
       "key": "7a2d7397-0fb4-47b8-8beb-b9e7e9aa16b8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. Who benefits from the decision evaluating to “True”? Who benefits from it evaluating to “False”?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on who benefits from rules that are implemented. This can be the user themself having a better or worse outcome, or someone else affected by the decision point. For example, consider a decision point based on the business hours of a restaurant. If a customer arrives after a restaurant’s kitchen has closed and is not able to order food, it creates a worse outcome for the customer but a better outcome for the restaurant staff who can close on time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete the Level 8.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students are interpreting a conditional statement and answering a question about it. As students read over the question, ask them to explain their reasoning.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Consider an if-else conditional you included in your code. Who benefits from the decision evaluating to “True”? Who benefits from it evaluating to “False”?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reflect on who benefits from rules that are implemented. This can be the user themself having a better or worse outcome, or someone else affected by the decision point. For example, consider a decision point based on the business hours of a restaurant. If a customer arrives after a restaurant’s kitchen has closed and is not able to order food, it creates a worse outcome for the customer but a better outcome for the restaurant staff who can close on time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete the Level 8.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Students are interpreting a conditional statement and answering a question about it. As students read over the question, ask them to explain their reasoning.\n",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -2115,7 +2115,7 @@
       "key": "e3ea7069-5a7e-4c28-b1c9-d8d15b363415",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 9 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 9 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "e3ea7069-5a7e-4c28-b1c9-d8d15b363415",
@@ -2138,7 +2138,7 @@
       "key": "77ae46b3-aff7-4eea-bf72-5bc401ead72f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to imagine they are shopping online for clothing and click the \"Add to Cart\" button. Prompt them to think about what information the website needs to process this request. Record their ideas on the board. Ask students to consider what would happen if one of the pieces of information (like size, color, or quantity) was missing when they clicked \"Add to Cart\". Guide them to understand that functions need specific information to work correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to imagine they are shopping online for clothing and click the \"Add to Cart\" button. Prompt them to think about what information the website needs to process this request. Record their ideas on the board. Ask students to consider what would happen if one of the pieces of information (like size, color, or quantity) was missing when they clicked \"Add to Cart\". Guide them to understand that functions need specific information to work correctly.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "77ae46b3-aff7-4eea-bf72-5bc401ead72f",
@@ -2162,7 +2162,7 @@
       "key": "d7b6a739-8e90-4154-a8f8-66ba83808aa4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students will complete Lesson 6, Levels 1 through 3.\n- Level 1: Analyze a flowchart in Sketch Lab to identified repeated code that might be refactored into one parameterized function.\n- Level 2: Write clear, beginner-friendly docs for your refactored function from Sketch Lab.\n- Level 3: Trace the user flow within an actual application.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students will complete Lesson 6, Levels 1 through 3.\n- Level 1: Analyze a flowchart in Sketch Lab to identified repeated code that might be refactored into one parameterized function.\n- Level 2: Write clear, beginner-friendly docs for your refactored function from Sketch Lab.\n- Level 3: Trace the user flow within an actual application.\n",
         "duration": "25",
         "name": "Writing Functions with Parameters",
         "progression_name": "Exploring Functions with Parameters"
@@ -2176,7 +2176,7 @@
       "key": "4353b21b-be7e-49ea-9c98-d5b537a6a58a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4. Explain that students will now create their own parameterized function. Provide examples of contexts they could use (e.g., rendering a card, setting a status, updating a score). Instruct them to document their function in Markdown and then use AI Suggest Mode to help draft the JavaScript code, emphasizing that AI will provide hints rather than full solutions.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Provide support and guidance as students design their functions. Offer suggestions for different contexts and help them refine their documentation and code. Encourage them to experiment with different parameters and their effects.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 4. Explain that students will now create their own parameterized function. Provide examples of contexts they could use (e.g., rendering a card, setting a status, updating a score). Instruct them to document their function in Markdown and then use AI Suggest Mode to help draft the JavaScript code, emphasizing that AI will provide hints rather than full solutions.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Provide support and guidance as students design their functions. Offer suggestions for different contexts and help them refine their documentation and code. Encourage them to experiment with different parameters and their effects.",
         "progression_name": "Writing Functions with Parameters"
       },
       "seeding_key": {
@@ -2226,7 +2226,7 @@
       "key": "ed7da37a-bbde-4262-b779-8ca4594e468d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief discussion about working with parameters. Prompt students to share specific examples of how their functions that they created were made more reusable and flexible by adding one or more parameters. Then ask students to share their experiences using the AI tool for coding assistance. Encourage them to discuss both the benefits (e.g., faster code generation, debugging hints) and the drawbacks (e.g., potential for incorrect suggestions, difficulty understanding the generated code).\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Facilitate a brief discussion about working with parameters. Prompt students to share specific examples of how their functions that they created were made more reusable and flexible by adding one or more parameters. Then ask students to share their experiences using the AI tool for coding assistance. Encourage them to discuss both the benefits (e.g., faster code generation, debugging hints) and the drawbacks (e.g., potential for incorrect suggestions, difficulty understanding the generated code).\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2253,7 +2253,7 @@
       "key": "e5e63518-2b79-4143-a4c5-43a22e9e12d0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 8 to complete the End of Lesson Survey.\n",
         "duration": "5",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
@@ -2267,7 +2267,7 @@
       "key": "2593501a-6b56-4b74-a7ae-e290d31e35cb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the Understanding Assistive Technology video of a user with visual needs navigating a web page.\n\nQuestion to consider with the video:\n- What made navigating the site easy or hard for this user?\n- What changes could developers make in the code to improve this experience?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the idea that accessibility isn’t about adding effects—it’s about designing code that communicates dynamically with different users. This prepares them to use variables, parameters, and event listeners to build pages that respond to user needs. Encourage students to refer to what they noticed in the video—how the screen reader described or skipped elements, and how the user interacted through swipes, double-taps, or the rotor feature.\n"
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the Understanding Assistive Technology video of a user with visual needs navigating a web page.\n\nQuestion to consider with the video:\n- What made navigating the site easy or hard for this user?\n- What changes could developers make in the code to improve this experience?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect the idea that accessibility isn’t about adding effects—it’s about designing code that communicates dynamically with different users. This prepares them to use variables, parameters, and event listeners to build pages that respond to user needs. Encourage students to refer to what they noticed in the video—how the screen reader described or skipped elements, and how the user interacted through swipes, double-taps, or the rotor feature.\n"
       },
       "seeding_key": {
         "activity_section.key": "2593501a-6b56-4b74-a7ae-e290d31e35cb",
@@ -2290,7 +2290,7 @@
       "key": "d1ceef39-2d94-4238-b75f-bf1b1dca987c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "d1ceef39-2d94-4238-b75f-bf1b1dca987c",
@@ -2342,7 +2342,7 @@
       "key": "f7abb70c-a5c5-46c8-ab24-790078f4f528",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how UX Designers make sure websites and apps are easy to use and accessible for everyone. They research how people interact with technology, spot problems that make it harder to use, and design ways to fix them. Sometimes they use AI tools to test for accessibility issues—like checking contrast or detecting missing image descriptions—but they still rely on human judgment to make the best decisions about layout, tone, and user needs.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain how UX Designers make sure websites and apps are easy to use and accessible for everyone. They research how people interact with technology, spot problems that make it harder to use, and design ways to fix them. Sometimes they use AI tools to test for accessibility issues—like checking contrast or detecting missing image descriptions—but they still rely on human judgment to make the best decisions about layout, tone, and user needs.\n"
       },
       "seeding_key": {
         "activity_section.key": "f7abb70c-a5c5-46c8-ab24-790078f4f528",
@@ -2365,7 +2365,7 @@
       "key": "67a5ddd4-c953-488a-900a-a470d95f6373",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Building More Dynamic Pages activity guide.\n"
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Building More Dynamic Pages activity guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "67a5ddd4-c953-488a-900a-a470d95f6373",
@@ -2400,7 +2400,7 @@
       "key": "1a40cf8b-40ae-4190-bca3-9e9b63d9e1ed",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Send students to Level 1 to complete the a T-chart in their activity guide. The three columns should include:\n- Concept: Accessibility principle (e.g., High Contrast)\n- User Benefit: What improvement this creates for the user (e.g., Readability for users with visual impairments or bright lighting)\n- DOM Hook: The part of the code or element that can be updated to achieve that change (e.g., Toggle a class like theme-dark or high-contrast)\n\nRemind students that the T-Chart connects human needs to the specific technical hooks developers use to meet those needs.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask: “Which code element or variable might control that behavior?” or “How could this improvement be made responsive instead of static?” Encourage them to think about how code logic helps meet the user’s needs, not just what problems exist.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Send students to Level 1 to complete the a T-chart in their activity guide. The three columns should include:\n- Concept: Accessibility principle (e.g., High Contrast)\n- User Benefit: What improvement this creates for the user (e.g., Readability for users with visual impairments or bright lighting)\n- DOM Hook: The part of the code or element that can be updated to achieve that change (e.g., Toggle a class like theme-dark or high-contrast)\n\nRemind students that the T-Chart connects human needs to the specific technical hooks developers use to meet those needs.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask: “Which code element or variable might control that behavior?” or “How could this improvement be made responsive instead of static?” Encourage them to think about how code logic helps meet the user’s needs, not just what problems exist.\n",
         "progression_name": "Accessibility Concepts",
         "tips": [
           {
@@ -2442,7 +2442,7 @@
       "key": "47d1438e-aedc-4326-ba2e-68ef275087fa",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3.\n- Level 2: Students choose a starter website and user persona, then plan which accessibility improvements to make in their activity guide.\n- Level 3: Students review the accessibility feature menu to learn about possible changes and decide which ones best serve their user.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask: “What will your feature respond to—a click, an input, or another event?” and “How could this feature adapt dynamically as a user interacts with the page?” Remind students that dynamic features use variables and event handlers to respond to user actions, rather than static, one-time edits.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3.\n- Level 2: Students choose a starter website and user persona, then plan which accessibility improvements to make in their activity guide.\n- Level 3: Students review the accessibility feature menu to learn about possible changes and decide which ones best serve their user.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, ask: “What will your feature respond to—a click, an input, or another event?” and “How could this feature adapt dynamically as a user interacts with the page?” Remind students that dynamic features use variables and event handlers to respond to user actions, rather than static, one-time edits.\n",
         "progression_name": "Redesign for a User"
       },
       "seeding_key": {
@@ -2485,7 +2485,7 @@
       "key": "71052c2e-bd6c-4f30-8b56-3b45d60fc2c8",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students rotate through the classroom (or share projects digitally) to demo their accessibility features. As they explore, they should identify:\n- The change: What was added or improved?\n- The behavior: Does it respond dynamically to user actions or settings (e.g., slider, toggle, user input)?\n- The impact: Who benefits and how does it improve accessibility?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students rotate, prompt with questions that push students to think beyond visuals and into the logic of interaction and inclusivity, such as: “How does this feature change based on what the user does?”, “Would this improvement help more than one kind of user?” and “What trade-offs might this feature create?”\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students rotate through the classroom (or share projects digitally) to demo their accessibility features. As they explore, they should identify:\n- The change: What was added or improved?\n- The behavior: Does it respond dynamically to user actions or settings (e.g., slider, toggle, user input)?\n- The impact: Who benefits and how does it improve accessibility?\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students rotate, prompt with questions that push students to think beyond visuals and into the logic of interaction and inclusivity, such as: “How does this feature change based on what the user does?”, “Would this improvement help more than one kind of user?” and “What trade-offs might this feature create?”\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2502,7 +2502,7 @@
       "key": "9189ee7a-6a3a-435f-80de-56b577177177",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What trade-offs did you have to make when improving your page’s accessibility or interactivity?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that real-world design often involves trade-offs between accessibility, aesthetics, and functionality. They reflect on how they balanced competing priorities to best serve their users—just like real UX designers do. Encourage students to share examples where they simplified, redesigned, or adjusted their features to improve accessibility (for example, reducing motion or increasing contrast). Use this discussion to reinforce the third lesson objective: Revising interactions to improve accessibility and balance trade-offs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What trade-offs did you have to make when improving your page’s accessibility or interactivity?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that real-world design often involves trade-offs between accessibility, aesthetics, and functionality. They reflect on how they balanced competing priorities to best serve their users—just like real UX designers do. Encourage students to share examples where they simplified, redesigned, or adjusted their features to improve accessibility (for example, reducing motion or increasing contrast). Use this discussion to reinforce the third lesson objective: Revising interactions to improve accessibility and balance trade-offs.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "9189ee7a-6a3a-435f-80de-56b577177177",
@@ -2525,7 +2525,7 @@
       "key": "610b8a69-ab8e-4818-8745-bf5e5a2e3a79",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to follow the paths on the flowchart that apply to them and complete the corresponding task. Emphasize that they should be ready to explain the path they took.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Based on what a classmate is wearing, which path would they follow in the flowchart? What ending task would they complete?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice tracing nested decisions step-by-step, recognizing how each condition leads to a specific outcome. This builds understanding that nested conditionals evaluate one condition inside another to reach a final result.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to follow the paths on the flowchart that apply to them and complete the corresponding task. Emphasize that they should be ready to explain the path they took.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Based on what a classmate is wearing, which path would they follow in the flowchart? What ending task would they complete?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice tracing nested decisions step-by-step, recognizing how each condition leads to a specific outcome. This builds understanding that nested conditionals evaluate one condition inside another to reach a final result.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "610b8a69-ab8e-4818-8745-bf5e5a2e3a79",
@@ -2577,7 +2577,7 @@
       "key": "e79b1f4c-9c47-4097-9ccd-ced01d98fa11",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does nesting conditions add depth to our logic?*\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that nesting creates a hierarchy of decisions, allowing for a more granular control flow that mirrors complex real-world scenarios and flowcharts.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does nesting conditions add depth to our logic?*\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that nesting creates a hierarchy of decisions, allowing for a more granular control flow that mirrors complex real-world scenarios and flowcharts.\n"
       },
       "seeding_key": {
         "activity_section.key": "e79b1f4c-9c47-4097-9ccd-ced01d98fa11",
@@ -2623,7 +2623,7 @@
       "key": "e2a58791-6d70-4258-928c-4ecdc90c0132",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What paths in your flowchart did AI miss?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may notice that the AI assumed one condition mattered more (e.g., finished movie = true) — a small example of bias in logic or oversimplification.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What paths in your flowchart did AI miss?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students may notice that the AI assumed one condition mattered more (e.g., finished movie = true) — a small example of bias in logic or oversimplification.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2640,7 +2640,7 @@
       "key": "067df326-aef8-426a-b7d0-c5580192c533",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to complete the sentences as an exit ticket:\n- 'One thing a nested if/else enables in my app is ___.'\n- In my flowchart, branch ___ maps to this exact code line: ___.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Prompt students to complete the sentences as an exit ticket:\n- 'One thing a nested if/else enables in my app is ___.'\n- In my flowchart, branch ___ maps to this exact code line: ___.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2657,7 +2657,7 @@
       "key": "6d1cb45b-9c68-40c7-a751-501d4d727777",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.\n",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2670,7 +2670,7 @@
       "key": "986f3a17-811d-4f28-8409-533ac8aa44e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the two example \"style rules\" on the slide. Have students come up with their own rule, using either 'and' or 'or' and discuss it with a partner. Emphasize that these should be school-appropriate, positive descriptors only.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the two example \"style rules\" on the slide. Have students come up with their own rule, using either 'and' or 'or' and discuss it with a partner. Emphasize that these should be school-appropriate, positive descriptors only.\n"
       },
       "seeding_key": {
         "activity_section.key": "986f3a17-811d-4f28-8409-533ac8aa44e1",
@@ -2693,7 +2693,7 @@
       "key": "88176173-ef9f-4ade-ac1c-b780551faeb5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "88176173-ef9f-4ade-ac1c-b780551faeb5",
@@ -2767,7 +2767,7 @@
       "key": "724c53ab-bb95-4e6e-9956-f76788afbcf8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does changing the operator from && to || affect the outcome?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate how AND and OR operators change the logic of conditional statements. Guide the discussion towards understanding that AND requires all conditions to be met, while OR requires only one.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define AND (&&).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define OR (||).\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define truth table.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does changing the operator from && to || affect the outcome?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate how AND and OR operators change the logic of conditional statements. Guide the discussion towards understanding that AND requires all conditions to be met, while OR requires only one.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define AND (&&).\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define OR (||).\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define truth table.\n"
       },
       "seeding_key": {
         "activity_section.key": "724c53ab-bb95-4e6e-9956-f76788afbcf8",
@@ -2809,7 +2809,7 @@
       "key": "50e8b49c-c0d3-4083-b2bc-0b70429dc200",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 11 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 11 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "50e8b49c-c0d3-4083-b2bc-0b70429dc200",
@@ -2832,7 +2832,7 @@
       "key": "de65bb85-e124-4cac-8bad-e9ecea997d94",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the NOT Simon-Says-style activity. Call out the idea that 'not false is true.' and 'not true is false'. Read random statements from the Opposite Simon Says Statements resource to facilitate the activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the NOT Simon-Says-style activity. Call out the idea that 'not false is true.' and 'not true is false'. Read random statements from the Opposite Simon Says Statements resource to facilitate the activity.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n"
       },
       "seeding_key": {
         "activity_section.key": "de65bb85-e124-4cac-8bad-e9ecea997d94",
@@ -2868,7 +2868,7 @@
       "key": "3bf727dd-79f8-4168-8d7c-b2633822cc0b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice? What did you wonder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Elicit observations about the immediate visual feedback and the underlying state change. Encourage students to ask questions about how the code makes this happen.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define NOT (!).\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some examples outside of the classroom where a toggle or a 'not' condition is used?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect the concept of NOT and Boolean toggles to everyday technology. Organize examples across different categories to highlight the broad application. Examples: mute/unmute, password visibility, like/unlike, captions on/off, dark mode.\n"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What did you notice? What did you wonder?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Elicit observations about the immediate visual feedback and the underlying state change. Encourage students to ask questions about how the code makes this happen.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define NOT (!).\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some examples outside of the classroom where a toggle or a 'not' condition is used?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect the concept of NOT and Boolean toggles to everyday technology. Organize examples across different categories to highlight the broad application. Examples: mute/unmute, password visibility, like/unlike, captions on/off, dark mode.\n"
       },
       "seeding_key": {
         "activity_section.key": "3bf727dd-79f8-4168-8d7c-b2633822cc0b",
@@ -2931,7 +2931,7 @@
       "key": "c5c38ae9-0826-4bf5-9645-be52e4430c80",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the State Flip Pattern that students encountered today. Step one starts with creating an event listener. When the event occurs, the NOT operator can be used to switch the boolean logic of a variable from true to false, or vice versa. Finally, the content onscreen is rendered in order to display the change that occurs.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the State Flip Pattern that students encountered today. Step one starts with creating an event listener. When the event occurs, the NOT operator can be used to switch the boolean logic of a variable from true to false, or vice versa. Finally, the content onscreen is rendered in order to display the change that occurs.\n"
       },
       "seeding_key": {
         "activity_section.key": "c5c38ae9-0826-4bf5-9645-be52e4430c80",
@@ -2942,7 +2942,7 @@
       "key": "754c7ef1-10fd-433c-8257-30cb2f9c54a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 6 to complete the End of Lesson Survey.\n"
       },
       "seeding_key": {
         "activity_section.key": "754c7ef1-10fd-433c-8257-30cb2f9c54a6",
@@ -2965,7 +2965,7 @@
       "key": "7d96bffa-06d9-498e-bc0e-da710436580e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s an example of an app, game, or website that reacts in a way you really like ? Why do you think it feels satisfying or fun?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify qualities of engaging interactivity to inspire their own app designs and ground today’s planning in real user experiences.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s an example of an app, game, or website that reacts in a way you really like ? Why do you think it feels satisfying or fun?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify qualities of engaging interactivity to inspire their own app designs and ground today’s planning in real user experiences.\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -2978,7 +2978,7 @@
       "key": "ffba42c3-6862-43bb-a1fd-3c88021dca82",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Reactive Logic Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Reactive Logic Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.\n",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Reactive Logic Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Reactive Logic Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from defining their magazine concept to showcasing their final product.\n",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3007,7 +3007,7 @@
       "key": "f2e6a463-deb2-4dc6-9ab3-fa08480fa9b9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Define Your Magazine, where students plan their magazine's concept, audience, and design direction. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3034,7 +3034,7 @@
       "key": "19816b07-c1e2-457b-9135-e7b181e353e8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Plan Your Interactive App. Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their logic and design.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “What type of interaction or outcome are you imagining for your app?”\n- “Which of these tools will help you move your idea forward right now?”\n- “How does your planned logic connect to the kind of experience you want your user to have?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Plan Your Interactive App. Students can choose which tool best supports their current task: brainstorming ideas, organizing their plan, or sketching out their logic and design.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “What type of interaction or outcome are you imagining for your app?”\n- “Which of these tools will help you move your idea forward right now?”\n- “How does your planned logic connect to the kind of experience you want your user to have?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.\n",
         "progression_name": "Milestone 1",
         "tips": [
           {
@@ -3066,7 +3066,7 @@
       "key": "5e752fc7-80a1-467e-873f-e6b760e5c3c0",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3085,7 +3085,7 @@
       "key": "9fc45f04-0e06-4f15-9d0a-7a74d5daafac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one part of your app that you’re most excited to see working? What’s one piece you’re not sure how to build yet?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate clear goals and challenges for their first build session, helping them prioritize tasks and seek targeted support.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one part of your app that you’re most excited to see working? What’s one piece you’re not sure how to build yet?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students articulate clear goals and challenges for their first build session, helping them prioritize tasks and seek targeted support.\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3098,7 +3098,7 @@
       "key": "fc70c8e5-1159-44e6-bd5e-e163bad09259",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2 to work on completing their planning and moving to drafting their app. Frame this transition as the point where their ideas become interactive. Encourage students to build one working piece before adding more complexity — professional developers also prototype small, testable pieces first. If students feel unsure where to start, remind them to revisit their flowchart and focus on building the first clear cause-and-effect moment from their logic plan.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- “Do your flowchart and wireframe clearly show what the user can do and what will happen?\n- “What’s the first part of your plan you’ll try to build today?”\n- “How will you know your first interaction is working correctly?”\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Reactive Logic Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 and 2 to work on completing their planning and moving to drafting their app. Frame this transition as the point where their ideas become interactive. Encourage students to build one working piece before adding more complexity — professional developers also prototype small, testable pieces first. If students feel unsure where to start, remind them to revisit their flowchart and focus on building the first clear cause-and-effect moment from their logic plan.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- “Do your flowchart and wireframe clearly show what the user can do and what will happen?\n- “What’s the first part of your plan you’ll try to build today?”\n- “How will you know your first interaction is working correctly?”\n\nProvide quick support if students get stuck — redirect them to the AI Chat or Project Support Bot for troubleshooting help before intervening directly.\n",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 2"
@@ -3112,7 +3112,7 @@
       "key": "907c60ac-2050-4fda-8340-41677d52f126",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps. Encourage students to document these next steps clearly so they can pick up with them in the next class period.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that identify concrete next steps. Encourage students to document these next steps clearly so they can pick up with them in the next class period.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3131,7 +3131,7 @@
       "key": "0f23dea5-83da-457e-b765-ffd4d2518fcd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one bug, glitch, or weird behavior your app is showing right now?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice describing and analyzing problems out loud, normalizing debugging as part of the creative process and preparing for peer or AI-assisted troubleshooting.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one bug, glitch, or weird behavior your app is showing right now?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students practice describing and analyzing problems out loud, normalizing debugging as part of the creative process and preparing for peer or AI-assisted troubleshooting.\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3144,7 +3144,7 @@
       "key": "d632cae0-5090-47e4-893d-b58732637a7d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Reactive Logic Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Reactive Logic Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3173,7 +3173,7 @@
       "key": "811e7c8a-5ef6-48a5-9fe5-d148007d3895",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
         "progression_name": "Milestone 3",
         "tips": [
           {
@@ -3201,7 +3201,7 @@
       "key": "63c01047-0a6c-41a6-a7fe-fac288966f93",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3220,7 +3220,7 @@
       "key": "a25384dc-87a4-477f-9b56-16d64bb4491b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone were testing your app right now, what’s the one thing you’d want them to notice first?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the purpose and user experience of their app, setting an intentional focus for peer testing and feedback during today’s class.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If someone were testing your app right now, what’s the one thing you’d want them to notice first?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the purpose and user experience of their app, setting an intentional focus for peer testing and feedback during today’s class.\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3233,7 +3233,7 @@
       "key": "8e6bfd08-9663-475b-908a-464f93817429",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Reactive Logic Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Reactive Logic Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the TAG Peer Review process and model what thoughtful feedback looks like. Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3.\n",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone 4",
@@ -3263,7 +3263,7 @@
       "key": "02e11bc4-ea54-4206-9017-007c79f14289",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period.\n",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3282,7 +3282,7 @@
       "key": "6cb52181-da9d-4677-b51f-b667d0979120",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one thing you still need to check or polish before your app feels ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students self-assess their progress and identify final next steps, using available resources and the rubric to guide productive final work time.\n",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What’s one thing you still need to check or polish before your app feels ready to share?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students self-assess their progress and identify final next steps, using available resources and the rubric to guide productive final work time.\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3295,7 +3295,7 @@
       "key": "7002d346-1f70-44ab-9940-d054ad90a646",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today is focused on Milestone 4 – Finalize, where students polish their app and make their code ready for showcasing. Remind students to check their Reactive Logic Project Guide for the Milestone 4 deliverables.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Reactive Logic Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today is focused on Milestone 4 – Finalize, where students polish their app and make their code ready for showcasing. Remind students to check their Reactive Logic Project Guide for the Milestone 4 deliverables.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Reactive Logic Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion.\n",
         "duration": "30",
         "name": "Activity",
         "tips": [
@@ -3324,7 +3324,7 @@
       "key": "d2278f2f-f60a-4621-9e84-72c4e5fe2a77",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Reactive Logic projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Reactive Logic project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.\n",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Reactive Logic projects. Explain that this is their final dedicated work session for Milestone 4 – Finalize. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Reactive Logic project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.\n",
         "progression_name": "Milestone 4",
         "tips": [
           {
@@ -3352,7 +3352,7 @@
       "key": "6000f8a7-0d0d-4151-b9f8-e6c36f7d19e0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Reactive Logic Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.\n",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Reactive Logic Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3393,7 +3393,7 @@
       "key": "02d3c61d-bffa-4aa3-9adc-d6175f9a4bbf",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Reactive Logic Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.\n",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Reactive Logic Project Guide. Explain that this final step helps them consolidate their learning and ensure their site meets key design goals — usability, consistency, accessibility, and thoughtful use of AI.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to elaborate on their answers with specific examples of how they used feedback or iteration to improve their project. If students finish early, prompt them to help peers finalize their submissions or review their rubric one more time for completeness.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",

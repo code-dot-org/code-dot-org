@@ -1230,7 +1230,7 @@
       "key": "c18fd075-a1c6-4a2d-a364-6bf227726257",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Welcome to the Future School Convention. You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on a the Future School. At the end of the convention, your team will pitch your best idea to a panel of judges.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Welcome to the Future School Convention. You have been chosen to attend this convention because you represent an important stakeholder in the broader school community. Together with a small group you will brainstorm and research computing innovations that you believe will have a positive impact on a the Future School. At the end of the convention, your team will pitch your best idea to a panel of judges.",
         "name": "Start the Simulation\r",
         "remarks": true
       },
@@ -1243,7 +1243,7 @@
       "key": "cf67ee27-386d-4b83-aa45-c59d40d6c454",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Group:** Place students in groups of 5-6.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Group:** Place students in groups of 5-6.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1260,7 +1260,7 @@
       "key": "2c859d5e-ffc8-4c98-bd65-dd05e7b41f7b",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Hand out a random role card to each group. Each group should have at least one *TEACHER*, *STUDENT*, *STAFF*, *PARENT*, and *ADMIN*. Students will need\n\n* A character bio from [CSP Innovation Simulation Character Bios](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/)\n* A nameplate from [CSP Innovation Simulation Nameplates](\thttps://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/)\n* A badge from [\tCSP Innovation Simulation Badges](\thttps://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Each students should tape their badge to their shirt and place their nameplate on their desk after folding on the marked lines. When the nameplates and badges are out, students should be in simulation mode."
+        "description": "**Distribute:** Hand out a random role card to each group. Each group should have at least one *TEACHER*, *STUDENT*, *STAFF*, *PARENT*, and *ADMIN*. Students will need\n\n* A character bio from [CSP Innovation Simulation Character Bios](https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/)\n* A nameplate from [CSP Innovation Simulation Nameplates](\thttps://drive.google.com/file/d/1b4hIYm6CK5BUr0rdpUBtvgR_AoZxGz8c/)\n* A badge from [\tCSP Innovation Simulation Badges](\thttps://drive.google.com/file/d/1iTYcQ-Jqe-aCQ3Jcq0Td0xZEgreNdGVp/)\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Each students should tape their badge to their shirt and place their nameplate on their desk after folding on the marked lines. When the nameplates and badges are out, students should be in simulation mode."
       },
       "seeding_key": {
         "activity_section.key": "2c859d5e-ffc8-4c98-bd65-dd05e7b41f7b",
@@ -1282,7 +1282,7 @@
       "key": "964706fa-fd8c-40f2-b4f7-67dfdc5f8ef0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read over your role sheet and introduce yourself to your group.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Read over your role sheet and introduce yourself to your group.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1311,7 +1311,7 @@
       "key": "cd9c3972-b54a-4ba8-a207-01a4d4f62b2f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything.](https://youtu.be/QvyTEx1wyOY) (End at 4:40)"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything.](https://youtu.be/QvyTEx1wyOY) (End at 4:40)"
       },
       "seeding_key": {
         "activity_section.key": "cd9c3972-b54a-4ba8-a207-01a4d4f62b2f",
@@ -1322,7 +1322,7 @@
       "key": "1cdb1f4c-227c-432b-acc3-32bf7a1a8dc3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide/csp/2022]\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Brainstorm (10 mins):** Teams spend five minutes brainstorming computing innovations they believe would be beneficial to the Future School. Students should be considering if the innovations include programs as an important part of their function. If not, it's possible that it is not a computing innovation. Remind students to stay in their roles.   \r\n\r\n**Distribute:** [r csp_innovation_simulation_project_guide/csp/2022]\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Step 1 - Reflect (10 mins):** Students use this time to consider the wants and needs of their characters and what types of computing innovations would and would not appeal to the character they are playing. Students write their reflection in the Project Guide.",
         "name": "Innovation Simulation Project\r"
       },
       "seeding_key": {
@@ -1346,7 +1346,7 @@
       "key": "70e4b7bc-3d04-42d9-be85-9fbc9ca8ce93",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 2 - Research (10 mins):** Model doing a Google search with your students to determine a computing innovation related to long distance travel. You might directly Google the term, search out articles, or turn to Wikipedia. After you have found a computing innovation that is promising, model filling out the table in the Project Guide. You can project a copy of the Project Guide while doing this, flipping back and forth between the guide and the website you are using. You do not need to fill out the last section in the table, but you should discuss with your students how they will fill this section out. It is important to note that students will have the next lesson to conduct their own research.  Today, your goal is to only model how to approach this research and using the Project Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Step 2 - Research (10 mins):** Model doing a Google search with your students to determine a computing innovation related to long distance travel. You might directly Google the term, search out articles, or turn to Wikipedia. After you have found a computing innovation that is promising, model filling out the table in the Project Guide. You can project a copy of the Project Guide while doing this, flipping back and forth between the guide and the website you are using. You do not need to fill out the last section in the table, but you should discuss with your students how they will fill this section out. It is important to note that students will have the next lesson to conduct their own research.  Today, your goal is to only model how to approach this research and using the Project Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1375,7 +1375,7 @@
       "key": "cd78be7e-e726-4d9d-964e-345f36d0691b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** End the day by instructing students to put away their badges and nameplates. You may want to collect them so they are not lost."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** End the day by instructing students to put away their badges and nameplates. You may want to collect them so they are not lost."
       },
       "seeding_key": {
         "activity_section.key": "cd78be7e-e726-4d9d-964e-345f36d0691b",
@@ -1386,7 +1386,7 @@
       "key": "192e34dd-4e41-428c-a305-01e8e8fa634f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the purpose of a computing innovation?*\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What is the purpose of a computing innovation?*\n\n**Discussion Goal:** A computing innovation is designed to solve a problem. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "192e34dd-4e41-428c-a305-01e8e8fa634f",
@@ -1442,7 +1442,7 @@
       "key": "094c4ae9-584b-4a83-b0c8-a2fb41288985",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson."
       },
       "seeding_key": {
         "activity_section.key": "094c4ae9-584b-4a83-b0c8-a2fb41288985",
@@ -1465,7 +1465,7 @@
       "key": "a82e150c-9618-4ff0-9456-1d15a4bb5e96",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Why do you believe the Future School is in need of computing innovations? What can computing innovations provide to a community?*\n\n**Discussion Goal:** In the near future, we will discuss the harms that computing innovations can bring to society. For today, we want to focus on the positive benefits. \n\nComputing Innovations can:\n\n   \t* help schools run more efficiently\n   \t* help certain groups gain a voice and be heard\n   \t* make learning more fun!\n   \t* save time and money\n\n"
       },
       "seeding_key": {
         "activity_section.key": "a82e150c-9618-4ff0-9456-1d15a4bb5e96",
@@ -1476,7 +1476,7 @@
       "key": "9f36bb40-be84-448b-be0f-f679a4fd9ee6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:**  Students research three different innovations that they believe their character would recommend for the Future School. \r\n\r\nIn their Project Guides they mark down:\r\n\r\n* The name of the innovation\r\n* Sources\r\n* What data is being collected\r\n* Brief descriptions of the function and purpose of the innovation\r\n* Why their character would recommend it \r\n \r\nStudents should regularly check in with their group to make sure no one else is researching the same innovation. For each group, there should be a total of 15 (or three times the amount of group members) innovations researched."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Research:**  Students research three different innovations that they believe their character would recommend for the Future School. \r\n\r\nIn their Project Guides they mark down:\r\n\r\n* The name of the innovation\r\n* Sources\r\n* What data is being collected\r\n* Brief descriptions of the function and purpose of the innovation\r\n* Why their character would recommend it \r\n \r\nStudents should regularly check in with their group to make sure no one else is researching the same innovation. For each group, there should be a total of 15 (or three times the amount of group members) innovations researched."
       },
       "seeding_key": {
         "activity_section.key": "9f36bb40-be84-448b-be0f-f679a4fd9ee6",
@@ -1487,7 +1487,7 @@
       "key": "7d8d9373-975b-483f-8347-edb894430f66",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group. *\n\nWith your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \n\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which of your computing innovations would bring the most positive change to the school community? Share with your group. *\n\nWith your group and then with the whole class discuss the common characteristics of these computing innovations that would bring the most positive change. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "7d8d9373-975b-483f-8347-edb894430f66",
@@ -1532,7 +1532,7 @@
       "key": "1988fa10-d440-4d2d-b164-3fdd0a164cfa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which of the following pieces of information would you consider to be \"personal\", as in you wouldn't want it shared with just anyone.*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Which of the following pieces of information would you consider to be \"personal\", as in you wouldn't want it shared with just anyone.*",
         "name": "What Information is Private?\r"
       },
       "seeding_key": {
@@ -1587,7 +1587,7 @@
       "key": "69702eb2-fc62-4c8f-82b5-8669fdcfee58",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the [video](https://www.youtube.com/watch?v=zZkY3MLBGh8&feature=emb_logo) about how to read a data privacy policy.  Take note of the teaching tip about the date and content of the video to the right."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the [video](https://www.youtube.com/watch?v=zZkY3MLBGh8&feature=emb_logo) about how to read a data privacy policy.  Take note of the teaching tip about the date and content of the video to the right."
       },
       "seeding_key": {
         "activity_section.key": "69702eb2-fc62-4c8f-82b5-8669fdcfee58",
@@ -1612,7 +1612,7 @@
       "key": "be2128f3-ff41-4f59-9303-12db54eaac55",
       "position": 4,
       "properties": {
-        "description": "**Group:** If students like they can work in pairs for today's activity when they will be reading the privacy policy. Each student, however, should be completing their own activity guide.\n\n**Distribute: ** Give each student a copy of [r privacy_security_and_innovation/csp/2022]\n\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Choose a Website and Find the Data Privacy Policy:** Have students pick a company / app to use. If students are having a hard time picking a specific website, many big technology companies have fairly robust data policy pages, like Facebook, Google, Twitter, Instagram, and so on.\n\n**What Is Their Data Policy?:** Students should spend 10-15 minutes reviewing the data policies and answering the questions there. \n\n**Share Findings:** Have groups meet with another group to share what they discovered."
+        "description": "**Group:** If students like they can work in pairs for today's activity when they will be reading the privacy policy. Each student, however, should be completing their own activity guide.\n\n**Distribute: ** Give each student a copy of [r privacy_security_and_innovation/csp/2022]\n\n\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Choose a Website and Find the Data Privacy Policy:** Have students pick a company / app to use. If students are having a hard time picking a specific website, many big technology companies have fairly robust data policy pages, like Facebook, Google, Twitter, Instagram, and so on.\n\n**What Is Their Data Policy?:** Students should spend 10-15 minutes reviewing the data policies and answering the questions there. \n\n**Share Findings:** Have groups meet with another group to share what they discovered."
       },
       "seeding_key": {
         "activity_section.key": "be2128f3-ff41-4f59-9303-12db54eaac55",
@@ -1623,7 +1623,7 @@
       "key": "a3f1d7aa-3802-4cf8-b5e7-de665af6750e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson and have students record the definition of Personally Identifiable Information in their journal."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson and have students record the definition of Personally Identifiable Information in their journal."
       },
       "seeding_key": {
         "activity_section.key": "a3f1d7aa-3802-4cf8-b5e7-de665af6750e",
@@ -1718,7 +1718,7 @@
       "key": "26062424-0add-455f-898c-a352b3abd7b5",
       "position": 1,
       "properties": {
-        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient/fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the benefits/convenience?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
+        "description": "As we watch the following video on facial recognition takes notes on:\n\n* What are the benefits of the technology? What does it make more convenient/fun?\n* What are the privacy concerns that arise?\n* Why would governments or businesses be interested in this technology?\n\nAfterwards we'll discuss whether we think the benefits outweigh the privacy conerns.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video about facial recognition technology.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Students should share notes with their partner about the three prompts and then discuss the provided question \"Do you believe the privacy risks posed by facial recognition technology outweigh the benefits/convenience?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this first video to focus on the tradeoffs between convenience and privacy. Students have likely used or seen new technology that uses facial recognition that might be helpful or fun, and many examples are provided in the video. The following video focuses more on the security vs. privacy balance.\n\n",
         "duration": "10",
         "name": "Convenience vs Privacy - Facial Recognition "
       },
@@ -1744,7 +1744,7 @@
       "key": "93f07ea0-e30d-4226-a1d6-39e8da3b56c5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video about location data.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Students should share notes with their partner about the three prompts and then discuss the provided question *\"Do you agree with the Supreme Court’s ruling? Do you think it should apply to other kinds of data?\"* Have students share some of their thoughts as a class.\n\n**Discussion Goal:** Use this discussion to build off the theme's discussed after the previous video about facial recognition. Push students to think of other types of data that third-parties collect about them and how they think that data should be handled by those parties and the government."
       },
       "seeding_key": {
         "activity_section.key": "93f07ea0-e30d-4226-a1d6-39e8da3b56c5",
@@ -1784,7 +1784,7 @@
       "key": "31f0de29-4fdf-4e89-aab1-b72a031c4f0b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Based on the discussions we had today, which of the following best describes your overall feelings with sharing private data in order to power innovations or ensure security.*\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Based on the discussions we had today, which of the following best describes your overall feelings with sharing private data in order to power innovations or ensure security.*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "31f0de29-4fdf-4e89-aab1-b72a031c4f0b",
@@ -1795,7 +1795,7 @@
       "key": "dee4b8a7-845c-435b-b401-b482c90551ee",
       "position": 2,
       "properties": {
-        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\nHave a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways at the end of the lesson."
+        "description": "* 1: Totally Comfortable: \"Have my data! It makes the technology I love work and I have nothing to hide!\"\n* 2: Mostly Comfortable: \"I want tech innovations and stronger security. Let's make sure we take care of the most damaging privacy concerns.\"\n* 3: Mixed: \"There's a lot of this that makes me uncomfortable, but I'm still going to use technology.\"\n* 4: Mostly Uncomfortable: \"Privacy is more important than empowering innovations or ensuring security. I would give up on some tech innovations to ensure my privacy\"\n* 5: Totally Uncomfortable: \"I'd give up most technology and would like to see much stronger limits on what kind of data can be collected and stored, even if it limits the introduction of new technology\"\n\nHave a few people from each end of the spectrum share their reasoning.\n\n**Discussion Goal:** Use this discussion to do some classwide synthesis of today's discussions about the tradeoffs between privacy and empowering new technology or ensuring security. The goal here is to move individual students to think broadly about their opinions, not force every student to have the same opinion. It's not necessary that students agree, but prompt them to think critically about this important question posed by modern technology. Some ways to do this:\n\n* Ask them why they hold their opinions and ask them to tie them to today's lesson\n* Ask them to give specific examples\n* Ask students who disagree to politely debate their opinions\n* Ask students to tie their opinions to their own experiences\n\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways at the end of the lesson."
       },
       "seeding_key": {
         "activity_section.key": "dee4b8a7-845c-435b-b401-b482c90551ee",
@@ -1852,7 +1852,7 @@
       "key": "6668e6cb-efc6-493d-9d50-7bbd2c8ff787",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [the video](https://youtu.be/POTosC2q6Hs) embedded in the slides about unintended consequences of computing innovations (~6 minutes).  Show the following slide which summarizes some important key points."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates from the previous lesson. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their team from the previous lesson. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show [the video](https://youtu.be/POTosC2q6Hs) embedded in the slides about unintended consequences of computing innovations (~6 minutes).  Show the following slide which summarizes some important key points."
       },
       "seeding_key": {
         "activity_section.key": "6668e6cb-efc6-493d-9d50-7bbd2c8ff787",
@@ -1879,7 +1879,7 @@
       "key": "aa848cd2-edd8-4459-919c-7ea4f4129103",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Ensure students have access to their copies of the [\tCSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Remind yourself of your character’s goals and motivations. What can your character’s perspectives and goals bring to the table? How can you help avoid some of the unintended consequences of your innovations?*"
+        "description": "**Distribute:** Ensure students have access to their copies of the [\tCSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Remind yourself of your character’s goals and motivations. What can your character’s perspectives and goals bring to the table? How can you help avoid some of the unintended consequences of your innovations?*"
       },
       "seeding_key": {
         "activity_section.key": "aa848cd2-edd8-4459-919c-7ea4f4129103",
@@ -1890,7 +1890,7 @@
       "key": "7ba60686-9f85-415b-8226-ae5414e35c07",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Review Proposed Innovations:** Students should meet with their groups to discuss the different proposed innovations they researched previously. Students will need to move quickly through their different ideas and offer potential pros and cons of each innovation in character. Record feedback in \"Step 3\" of the Activity Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Review Proposed Innovations:** Students should meet with their groups to discuss the different proposed innovations they researched previously. Students will need to move quickly through their different ideas and offer potential pros and cons of each innovation in character. Record feedback in \"Step 3\" of the Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "7ba60686-9f85-415b-8226-ae5414e35c07",
@@ -1901,7 +1901,7 @@
       "key": "9c467629-efdb-486a-8da2-0242c2d33a5c",
       "position": 4,
       "properties": {
-        "description": "This discussion should highlight the fact that a computing innovation, and even a single effect of a computing innovation can be viewed as both beneficial and harmful by the different people, or even by the same person. \r\n\r\nStudents should aim to spend roughly half their class time discussing their different ideas with the goal of settling on one innovation that they believe will bring the most overall benefit while also making sense with the broader vision of their team. \r\n\r\n\r\nStudents should brainstorm a unifying theme for their group's vision.  Each member of the team should determine which one of their three innovations will ultimately be included in their group's vision for the Future School. This innovation will be presented alongside the innovations selected by the other members in their group later in this project.\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Begin working on Innovation One-Pager:** Students should individually move to the next portion of their project guide where they will be working on their innovation one-pager. Students will need to do further research about their innovation in order to complete this guide. Students should be allowed to work on this activity for the remainder of the class period."
+        "description": "This discussion should highlight the fact that a computing innovation, and even a single effect of a computing innovation can be viewed as both beneficial and harmful by the different people, or even by the same person. \r\n\r\nStudents should aim to spend roughly half their class time discussing their different ideas with the goal of settling on one innovation that they believe will bring the most overall benefit while also making sense with the broader vision of their team. \r\n\r\n\r\nStudents should brainstorm a unifying theme for their group's vision.  Each member of the team should determine which one of their three innovations will ultimately be included in their group's vision for the Future School. This innovation will be presented alongside the innovations selected by the other members in their group later in this project.\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Begin working on Innovation One-Pager:** Students should individually move to the next portion of their project guide where they will be working on their innovation one-pager. Students will need to do further research about their innovation in order to complete this guide. Students should be allowed to work on this activity for the remainder of the class period."
       },
       "seeding_key": {
         "activity_section.key": "9c467629-efdb-486a-8da2-0242c2d33a5c",
@@ -1935,7 +1935,7 @@
       "key": "2f26fe2f-959c-49d9-81b1-f703500985a8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?*\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Have you ever received an email or a text message that looked suspicious? Have you ever been unsure if you should open the message or click on a link? What are the things that made you suspicious?*\n\n**Discussion Goal** In this discussion, we are previewing malicious links and common phishing attempts. If students do not have any of their own examples to offer up, try to be prepared with one of your own where you received an email that was clearly not wise to open. \n\nThings that might make you suspicious:\n\n* Mispellings of the person's name, email, or company\n* Something that seems to good to be true (\"Free Vacations for a year!\")\n* Asking for personal information\n* A flashy link they want you to click on\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2f26fe2f-959c-49d9-81b1-f703500985a8",
@@ -1995,7 +1995,7 @@
       "key": "26a5cc48-e8e6-4b99-bd39-941ff13104c1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (20 mins):** Students navigate to their assigned levels on Code Studio and examine their topic. After they have a good understanding of the content, students make a PSA (Public Service Announcement) slide covering the following things:\n\n* What is the security risk?\n* How are people targeted? \n* What are the warnings?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group (10 mins):** After students finish their slides, rearrange the class so there is a representative covering each topic in each group. Students share their slides with each other and give a voice over of the security risks."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This (20 mins):** Students navigate to their assigned levels on Code Studio and examine their topic. After they have a good understanding of the content, students make a PSA (Public Service Announcement) slide covering the following things:\n\n* What is the security risk?\n* How are people targeted? \n* What are the warnings?\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group (10 mins):** After students finish their slides, rearrange the class so there is a representative covering each topic in each group. Students share their slides with each other and give a voice over of the security risks."
       },
       "seeding_key": {
         "activity_section.key": "26a5cc48-e8e6-4b99-bd39-941ff13104c1",
@@ -2006,7 +2006,7 @@
       "key": "aff26297-3c5c-4f2c-8891-8c83b1c2b423",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss (5 mins):** *Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss (5 mins):** *Bring the class back together and ask for a volunteer from each of the topics to share their slide with the class and give a one minute overview.*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2047,7 +2047,7 @@
       "key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocabulary words: Phishing, Keylogging, Malware, Rogue Access Point. \n\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Record in your journal the following vocabulary words: Phishing, Keylogging, Malware, Rogue Access Point. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "ae9d39e4-4a65-4c9f-87ef-d7802c2e68db",
@@ -2104,7 +2104,7 @@
       "key": "86c61997-1716-41ff-b137-97b516225cb2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** [The Internet: Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y)"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** [The Internet: Cybersecurity & Crime](https://youtu.be/AuYNXgO_f3Y)"
       },
       "seeding_key": {
         "activity_section.key": "86c61997-1716-41ff-b137-97b516225cb2",
@@ -2127,7 +2127,7 @@
       "key": "bb6bdadf-ecfb-46e8-a402-7218db6a7ee7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Click the audio symbol to play the podcast. Stop the podcast at 13:30.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Click the audio symbol to play the podcast. Stop the podcast at 13:30.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2144,7 +2144,7 @@
       "key": "862c4283-fad1-4ab7-9567-4005cb0c86d0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click the audio symbol to play the podcast. Start the podcast at 6:05 and end at 11:13. **Note:** There is a swear word that occurs around a minute after we are stopping the podcast, so please make sure to stop early."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click the audio symbol to play the podcast. Start the podcast at 6:05 and end at 11:13. **Note:** There is a swear word that occurs around a minute after we are stopping the podcast, so please make sure to stop early."
       },
       "seeding_key": {
         "activity_section.key": "862c4283-fad1-4ab7-9567-4005cb0c86d0",
@@ -2155,7 +2155,7 @@
       "key": "96ed8c40-5d92-4e65-8139-8e32cc0b4488",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Discussion Goal:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high-interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What information does Equifax store? Why should I care?*\n\n**Discussion Goal:** Equifax stores information on everyone who has a credit score. This information includes private data like social security numbers and whether or not you pay your bills on time. This information is often used when consumers want to make purchases and determines whether or not they are eligible and how high-interest rates will be for loans. This can affect your family's ability to buy a house or a car.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "96ed8c40-5d92-4e65-8139-8e32cc0b4488",
@@ -2166,7 +2166,7 @@
       "key": "a3afadc9-896b-4528-abd9-bac15830def6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Discussion Goal:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit-making these decisions. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the security risks?*\n\n**Discussion Goal:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *As a computing innovation what are the benefits of Equifax? What are the potential harms?* \n\n**Discussion Goal:** *Benefits:* companies are able to use data to make decisions when deciding who to lend money to or how much a person can be trusted to pay back a loan. With this system, we can purchase large items on loan like cars or houses, which would be out of reach for many people if they had to pay outright. *Harms:* Decisions made are not always fair or equitable. In addition, sometimes information is incorrect and difficult to get changed. A lot of trust is put in a small number of companies who are making a profit-making these decisions. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the security risks?*\n\n**Discussion Goal:** Data that Equifax stores can be hacked and distributed for malicious purposes. With the personal information that Equifax stores, hackers can commit identity theft and make purchases, drain bank accounts, or ruin people's financial history. "
       },
       "seeding_key": {
         "activity_section.key": "a3afadc9-896b-4528-abd9-bac15830def6",
@@ -2189,7 +2189,7 @@
       "key": "d7b4c0e9-250f-4c78-b0a7-359c8dc5f518",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*\n\n**Discussion Goal:** This discussion is open-ended. There is no right or wrong answer here - prompt students to be thoughtful in the types of change they would like to see in how companies like Equifax are regulated. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What rules or regulations would you recommend be put in place to control how data is collected and shared? What role (if any) should the government play?*\n\n**Discussion Goal:** This discussion is open-ended. There is no right or wrong answer here - prompt students to be thoughtful in the types of change they would like to see in how companies like Equifax are regulated. \n"
       },
       "seeding_key": {
         "activity_section.key": "d7b4c0e9-250f-4c78-b0a7-359c8dc5f518",
@@ -2212,7 +2212,7 @@
       "key": "42387565-0e9e-4d23-8828-8d9a2c88eb40",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/5961fcf0-0dd2-4c76-bd0a-081fc9f1cf8b) to review Security Risks. \r\n\r\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/5961fcf0-0dd2-4c76-bd0a-081fc9f1cf8b) to review Security Risks. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "42387565-0e9e-4d23-8828-8d9a2c88eb40",
@@ -2247,7 +2247,7 @@
       "key": "855590f2-dcd0-4bc9-a42a-e1331c889f6a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project team."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project team."
       },
       "seeding_key": {
         "activity_section.key": "855590f2-dcd0-4bc9-a42a-e1331c889f6a",
@@ -2270,7 +2270,7 @@
       "key": "28780a5f-764b-4107-80ab-5c6ed455247c",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide/csp/2022] if they don't already have them on hand.\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
+        "description": "**Distribute:** Give students back [r csp_innovation_simulation_project_guide/csp/2022] if they don't already have them on hand.\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Instruct students to continue working on their projects following the instructions in the Activity Guide.  Students will be working on *Step 4 - One-pager* during this hour.\r\n\r\n**Circulate:** Throughout the lesson circulate and provide support to students on completing their one pagers."
       },
       "seeding_key": {
         "activity_section.key": "28780a5f-764b-4107-80ab-5c6ed455247c",
@@ -2327,7 +2327,7 @@
       "key": "70b01350-f478-4d27-9996-885c512e2090",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** This message was encrypted using a Caesar Cipher (an \"alphabetic shift\"). Let's see how long it takes you to decode this message (remember it's just a shifting of the alphabet).",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** This message was encrypted using a Caesar Cipher (an \"alphabetic shift\"). Let's see how long it takes you to decode this message (remember it's just a shifting of the alphabet).",
         "tips": [
           {
             "type": "teachingTip",
@@ -2367,7 +2367,7 @@
       "key": "441bdbce-9c4d-4051-8e26-b0436bfaeaa7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (5 mins):** \n\n* Navigate to Code Studio, Level 1.\n* Experiment with the tool - click things, poke around, figure out what it's doing. \n* Choose one of the messages from the drop-down menu and try to crack it using the tool."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This (5 mins):** \n\n* Navigate to Code Studio, Level 1.\n* Experiment with the tool - click things, poke around, figure out what it's doing. \n* Choose one of the messages from the drop-down menu and try to crack it using the tool."
       },
       "seeding_key": {
         "activity_section.key": "441bdbce-9c4d-4051-8e26-b0436bfaeaa7",
@@ -2378,7 +2378,7 @@
       "key": "c5f20242-7eae-423d-a5e9-fce7fe67ad9d",
       "position": 2,
       "properties": {
-        "description": "With the tool, cracking an alphabetic shift is easy. Once you've done one, it only takes a matter of seconds to do others.Let's review some terminology here. \r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Terms:\r\n\r\n* **Encryption:** a process of encoding messages to keep them secret, so only \"authorized\" parties can read it.\r\n* **Decryption:** a process that reverses encryption, taking a secret message and reproducing the original plain text\r\n* **Cipher:**  the generic term for a technique (or algorithm) that performs encryption\r\n* **Caesar's Cipher:** a technique for encryption that shifts the alphabet by some number of characters.\r\n* **Cracking encryption:** When you attempt to decode a secret message without knowing all the specifics of the cipher, you are trying to crack the encryption.\r\n\r\nWhat if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of th alphabet? This is called a random substitution cipher.\r\n\r\nLet's take a look at a new decryption challenge using a random substitution cipher.",
+        "description": "With the tool, cracking an alphabetic shift is easy. Once you've done one, it only takes a matter of seconds to do others.Let's review some terminology here. \r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Terms:\r\n\r\n* **Encryption:** a process of encoding messages to keep them secret, so only \"authorized\" parties can read it.\r\n* **Decryption:** a process that reverses encryption, taking a secret message and reproducing the original plain text\r\n* **Cipher:**  the generic term for a technique (or algorithm) that performs encryption\r\n* **Caesar's Cipher:** a technique for encryption that shifts the alphabet by some number of characters.\r\n* **Cracking encryption:** When you attempt to decode a secret message without knowing all the specifics of the cipher, you are trying to crack the encryption.\r\n\r\nWhat if instead of shifting the whole alphabet, we matched every letter of the alphabet to a random different letter of th alphabet? This is called a random substitution cipher.\r\n\r\nLet's take a look at a new decryption challenge using a random substitution cipher.",
         "remarks": true,
         "tips": [
           {
@@ -2396,7 +2396,7 @@
       "key": "c83f7601-88ae-48db-bc99-5a9cf93d421f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (3 mins):** \n\n* Navigate to Level 2\n* Explore the tool: how does it work?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This (3 mins):** \n\n* Navigate to Level 2\n* Explore the tool: how does it work?"
       },
       "seeding_key": {
         "activity_section.key": "c83f7601-88ae-48db-bc99-5a9cf93d421f",
@@ -2418,7 +2418,7 @@
       "key": "aaaa9e42-fd2c-47f5-9484-b7da17454536",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How does the widget work? What steps would you take to crack the code?*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How does the widget work? What steps would you take to crack the code?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2435,7 +2435,7 @@
       "key": "a6fef447-e3ea-4aa5-95c2-1b52a1e4ce64",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This (10 mins):** Take ten minutes to crack another message using the steps we just talked about."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This (10 mins):** Take ten minutes to crack another message using the steps we just talked about."
       },
       "seeding_key": {
         "activity_section.key": "a6fef447-e3ea-4aa5-95c2-1b52a1e4ce64",
@@ -2458,7 +2458,7 @@
       "key": "fd4afc35-f8d5-457e-b956-b32f840a3248",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch: [r encryption_and_public_keys/csp/2022]"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch: [r encryption_and_public_keys/csp/2022]"
       },
       "seeding_key": {
         "activity_section.key": "fd4afc35-f8d5-457e-b956-b32f840a3248",
@@ -2469,7 +2469,7 @@
       "key": "d5d4c62a-ce52-4803-83f3-4e41437d2245",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the difference between symmetric encryption and asymmetric (public key) encryption?*\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What is the difference between symmetric encryption and asymmetric (public key) encryption?*\n\n**Discussion Goal:** This is the main takeaway. Students need to understand that symmetric encryption involves one key that is shared between the encoder and decoder. Asymmetric (public key) encryption uses two keys - a public and a private one. The encoder and the decoder never need to meet to exchange a key. The modern Internet is built around pulic key encryption. \n"
       },
       "seeding_key": {
         "activity_section.key": "d5d4c62a-ce52-4803-83f3-4e41437d2245",
@@ -2480,7 +2480,7 @@
       "key": "b52aabfc-501d-4d70-b625-31a11b99e733",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Students add the following words and definitions to their journals: encryption, decryption, symmetric key encryption, public key encryption",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Journal:** Students add the following words and definitions to their journals: encryption, decryption, symmetric key encryption, public key encryption",
         "tips": [
           {
             "type": "teachingTip",
@@ -2554,7 +2554,7 @@
       "key": "67e30d61-c570-475d-988d-2e483a77ff30",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies do you use when creating a good password?*\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies do you use when creating a good password?*\n\nStudents should discuss good password management, building off of their knowledge from earlier in the  unit. The following slide contains best practices, but your students may have some more concrete suggestions for how they craft complex but memorable passwords. \n"
       },
       "seeding_key": {
         "activity_section.key": "67e30d61-c570-475d-988d-2e483a77ff30",
@@ -2576,7 +2576,7 @@
       "key": "b9b38d58-2f72-4e4f-8489-2cb1194a1e68",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> A good password is easy to remember, but hard for someone else to guess based on knowledge they have about you.\r\n\r\nIf your password is your dog's name and your birthdate, that's all personal information that someone else might be able to guess!",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> A good password is easy to remember, but hard for someone else to guess based on knowledge they have about you.\r\n\r\nIf your password is your dog's name and your birthdate, that's all personal information that someone else might be able to guess!",
         "remarks": true
       },
       "seeding_key": {
@@ -2613,7 +2613,7 @@
       "key": "890b3910-dead-4781-9a6b-11d0568ec005",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Hand out [Call Center - Reading Passage](https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing)\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a few minutes to read the information about the computing innovation. They do not need to memorize anything - they can look back at the paper at any time while answering the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read through the \"Sample Questions\" slide as a class. This slide introduces the two categories from which questions will be pulled, along with common phrases. Go through the phrases, and make sure students understand what each phrase means. For example, you may want to spend time on the phrase \"unintended effect\" as this may be a confusing combination of words for some students. The focus here is on understanding question types - it may be useful to have students think through what some of the possible answer options might be for some of the questions."
+        "description": "**Distribute:** Hand out [Call Center - Reading Passage](https://docs.google.com/document/d/1ukiDCZ1tnd0CtuPl0o2H6vOLGaYbIgjbO2xHlLTuTio/edit?usp=sharing)\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to take a few minutes to read the information about the computing innovation. They do not need to memorize anything - they can look back at the paper at any time while answering the questions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Read through the \"Sample Questions\" slide as a class. This slide introduces the two categories from which questions will be pulled, along with common phrases. Go through the phrases, and make sure students understand what each phrase means. For example, you may want to spend time on the phrase \"unintended effect\" as this may be a confusing combination of words for some students. The focus here is on understanding question types - it may be useful to have students think through what some of the possible answer options might be for some of the questions."
       },
       "seeding_key": {
         "activity_section.key": "890b3910-dead-4781-9a6b-11d0568ec005",
@@ -2624,7 +2624,7 @@
       "key": "a741b15b-898f-43ba-a989-0165abfde834",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **AP Classroom:** Direct students to navigate to AP Classroom and complete the five practice questions relating to the Call Center. Allow students to see the answers. Following this, discuss with the class any confusion over the questions or the computing innovation.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **AP Classroom:** Direct students to navigate to AP Classroom and complete the five practice questions relating to the Call Center. Allow students to see the answers. Following this, discuss with the class any confusion over the questions or the computing innovation.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2665,7 +2665,7 @@
       "key": "27c44073-26dc-4534-a435-b795cb7319ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with a partner how you plan to protect your data.*\n\nIf students are struggling with answering this question, prompt them with more specific questions:\n\n* How will you decide on your next password?\n* Will you use two-factor or multifactor authentication when you have the opportunity?\n* How often do you update your software?\n* How up to date is the software on your devices?\n \n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with a partner how you plan to protect your data.*\n\nIf students are struggling with answering this question, prompt them with more specific questions:\n\n* How will you decide on your next password?\n* Will you use two-factor or multifactor authentication when you have the opportunity?\n* How often do you update your software?\n* How up to date is the software on your devices?\n \n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "27c44073-26dc-4534-a435-b795cb7319ee",
@@ -2676,7 +2676,7 @@
       "key": "a5ffddcd-8c4c-4366-8651-811b0a5bf7a7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: multifactor authentication and computer virus scanning software. \r\n\r\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: multifactor authentication and computer virus scanning software. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "a5ffddcd-8c4c-4366-8651-811b0a5bf7a7",
@@ -2721,7 +2721,7 @@
       "key": "2fad5f8f-3b20-4681-8ba5-4fbe0589624a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
       },
       "seeding_key": {
         "activity_section.key": "2fad5f8f-3b20-4681-8ba5-4fbe0589624a",
@@ -2767,7 +2767,7 @@
       "key": "df086fd2-9611-4284-ae44-1106db60a620",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Step 5 - Preparing Your Group Presentation - 5 mins:** As a class review the instructions in their project guides. Highlight the fact that they have a lot of freedom to choose their presentation format.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Step 5 - Preparing Your Group Presentation - 5 mins:** As a class review the instructions in their project guides. Highlight the fact that they have a lot of freedom to choose their presentation format.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2818,7 +2818,7 @@
       "key": "bb73e9b7-c651-48f6-a025-0349114e6ac9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
       },
       "seeding_key": {
         "activity_section.key": "bb73e9b7-c651-48f6-a025-0349114e6ac9",
@@ -2857,7 +2857,7 @@
       "key": "fa3d6b29-38a0-45ad-a1df-6277c1254e51",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give students back [CSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) if they don't already have them on hand.\n\n**Group:** Have 2 - 3 members of each project team meet with 2 - 3 members of another project team, forming groups of 4 - 6. Ideally groups will get feedback from multiple other groups but this may be difficult to guarantee.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Feedback - 10 Mins:** Groups should spend at most 10 minutes, 5 minutes on each project, sharing their project team's overall vision, the innovations they'll be presenting, and the high level format of their presentation. Members of the other group should provide critiques and suggestions, in particular any feedback from the perspective of their character about how they could benefit or be harmed by the proposed innovation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Work Time - 30 minutes:** Groups should get 30 minutes to work on finish designing their presentations and making any final edits to their one-pagers."
+        "description": "**Distribute:** Give students back [CSP Innovation Simulation Project Guide](https://docs.google.com/document/d/19git_OKuw7fGJV53Xgieb0FYwrPZ3svKxHaHxwzlA-c/) if they don't already have them on hand.\n\n**Group:** Have 2 - 3 members of each project team meet with 2 - 3 members of another project team, forming groups of 4 - 6. Ideally groups will get feedback from multiple other groups but this may be difficult to guarantee.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Feedback - 10 Mins:** Groups should spend at most 10 minutes, 5 minutes on each project, sharing their project team's overall vision, the innovations they'll be presenting, and the high level format of their presentation. Members of the other group should provide critiques and suggestions, in particular any feedback from the perspective of their character about how they could benefit or be harmed by the proposed innovation.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Work Time - 30 minutes:** Groups should get 30 minutes to work on finish designing their presentations and making any final edits to their one-pagers."
       },
       "seeding_key": {
         "activity_section.key": "fa3d6b29-38a0-45ad-a1df-6277c1254e51",
@@ -2868,7 +2868,7 @@
       "key": "9b635774-ee0d-4a09-8a91-82269ed1c898",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Thank you delegates for your hard work today. Next time we meet it will be for the actual presentations and to decide on the strongest overall presentations in our Future School Convention. I look forward to seeing you there!",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Thank you delegates for your hard work today. Next time we meet it will be for the actual presentations and to decide on the strongest overall presentations in our Future School Convention. I look forward to seeing you there!",
         "remarks": true,
         "tips": [
           {
@@ -2897,7 +2897,7 @@
       "key": "499a7938-0844-4ca2-b02d-cd02e2bf8929",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** Pass out badges and nameplates. While you are doing this, draw students' attention to the red box in the slide header that indicates the class is in simulation mode. From this point on in the class, students are thinking from the perspective of their given character. \r\n\r\n**Group:** Instruct students to sit with their project teams"
       },
       "seeding_key": {
         "activity_section.key": "499a7938-0844-4ca2-b02d-cd02e2bf8929",
@@ -2936,7 +2936,7 @@
       "key": "ba46239a-d479-4f51-b5d9-d4c7165f9fe0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Presentations - 25 mins:** One by one have each group present to the class as a whole.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Gallery Walk - 15 mins:** Have groups leave their one-pagers and any presentation materials around the room, collected by team. Give students time to walk around the room, review the materials, and try to identify the overall group and individual innovation, other than their own, that they believe is best based on the perspective of their character."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Presentations - 25 mins:** One by one have each group present to the class as a whole.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Gallery Walk - 15 mins:** Have groups leave their one-pagers and any presentation materials around the room, collected by team. Give students time to walk around the room, review the materials, and try to identify the overall group and individual innovation, other than their own, that they believe is best based on the perspective of their character."
       },
       "seeding_key": {
         "activity_section.key": "ba46239a-d479-4f51-b5d9-d4c7165f9fe0",
@@ -2958,7 +2958,7 @@
       "key": "e1fa4b71-f276-4361-b777-e028fc139664",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Thank you delegates for an amazing convention. We will be excited to share the results of our convention next time we meet. For now thank you for your incredibly hard work to help us improve schools for all. Give yourselves a round of applause!",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Thank you delegates for an amazing convention. We will be excited to share the results of our convention next time we meet. For now thank you for your incredibly hard work to help us improve schools for all. Give yourselves a round of applause!",
         "remarks": true
       },
       "seeding_key": {
@@ -3015,7 +3015,7 @@
       "key": "a589ce35-0465-4db9-b261-73e5f3df963c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 10 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Administer the Unit 10 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "progression_name": "Unit 10 Exam",
         "tips": [
           {

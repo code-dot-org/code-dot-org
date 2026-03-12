@@ -638,7 +638,7 @@
       "key": "cadf6153-1af6-4ab7-bd76-50c2ae1cf824",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the software setup to download and install the following:\n\n* Java JDK\n* Maven\n* VS Code Insiders",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the software setup to download and install the following:\n\n* Java JDK\n* Maven\n* VS Code Insiders",
         "progression_name": "Software Setup"
       },
       "seeding_key": {
@@ -650,7 +650,7 @@
       "key": "cfc0216a-22e5-4a9c-bc19-4b2e7ec930e2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the GitHub setup to:\n\n* Create a GitHub account\n* Download and install Git\n* Configure Git in VS Code",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the GitHub setup to:\n\n* Create a GitHub account\n* Download and install Git\n* Configure Git in VS Code",
         "progression_name": "GitHub Setup"
       },
       "seeding_key": {
@@ -662,7 +662,7 @@
       "key": "ced62608-b404-467e-9e20-1123424475ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the setup test to make sure their software is correctly installed and configured.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the setup test to make sure their software is correctly installed and configured.",
         "progression_name": "Software Setup Test"
       },
       "seeding_key": {
@@ -674,7 +674,7 @@
       "key": "38e6e512-bade-4328-937b-e7b86d640f76",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** If students are using Macs, have them complete the TensorFlow setup so they can run the computer vision apps in Chapter 2.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** If students are using Macs, have them complete the TensorFlow setup so they can run the computer vision apps in Chapter 2.",
         "progression_name": "TensorFlow Setup (Mac Only)"
       },
       "seeding_key": {
@@ -686,7 +686,7 @@
       "key": "03106b23-e4f5-4d5f-8824-fafa17cffe20",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Pre-Survey and Assessment.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Pre-Survey and Assessment.",
         "progression_name": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "seeding_key": {
@@ -711,7 +711,7 @@
       "key": "724371e3-49d3-4cf3-a328-3bd2330039a1",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i>  **Distribute:** Give each student a copy of the Frame of Reference: Teamwork and Collaboration handout.",
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i>  **Distribute:** Give each student a copy of the Frame of Reference: Teamwork and Collaboration handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -728,7 +728,7 @@
       "key": "587601bf-b26d-4eed-ba0c-238ba07aa7c7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Frame of Reference activity.\n\n* At the center of the \"frame\" is the topic _group projects_ where a picture would be placed in a picture frame.\n* Students will have several minutes to individually jot down words or phrases that come to mind related to the topic. These words go in the \"mat\" area of their frame of reference.\n* Students will then jot down how they came to know what they know or think - the sources, people, and/or events that have influenced their thinking. These reactions go in the \"frame\" area of the graphic.\n* After the individual reflection and writing, students will share their \"frames of reference\" with a partner or small group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete their frame of reference.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students share their frame of reference with a partner or small group.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each group share common themes in their frames of reference with the class."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Frame of Reference activity.\n\n* At the center of the \"frame\" is the topic _group projects_ where a picture would be placed in a picture frame.\n* Students will have several minutes to individually jot down words or phrases that come to mind related to the topic. These words go in the \"mat\" area of their frame of reference.\n* Students will then jot down how they came to know what they know or think - the sources, people, and/or events that have influenced their thinking. These reactions go in the \"frame\" area of the graphic.\n* After the individual reflection and writing, students will share their \"frames of reference\" with a partner or small group.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete their frame of reference.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students share their frame of reference with a partner or small group.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have each group share common themes in their frames of reference with the class."
       },
       "seeding_key": {
         "activity_section.key": "587601bf-b26d-4eed-ba0c-238ba07aa7c7",
@@ -753,7 +753,7 @@
       "key": "3e269cd6-5e1f-4c55-aad4-0d98337b0506",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How did some of the tools we used throughout the year address some of the challenges we just discussed? What was missing or something you wished you had?_\n\n**Discussion Goal:** Students should reflect on how they used Java Lab and code reviews throughout the year and the specific functionalities of these tools. They should identify ways that these tools addressed or attempted to address the challenges that surfaced from their Frame of Reference, such as aiding in collaboration, as well as challenges they faced while using these tools, such as lack of specific features.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How did some of the tools we used throughout the year address some of the challenges we just discussed? What was missing or something you wished you had?_\n\n**Discussion Goal:** Students should reflect on how they used Java Lab and code reviews throughout the year and the specific functionalities of these tools. They should identify ways that these tools addressed or attempted to address the challenges that surfaced from their Frame of Reference, such as aiding in collaboration, as well as challenges they faced while using these tools, such as lack of specific features.",
         "tips": [
           {
             "type": "teachingTip",
@@ -782,7 +782,7 @@
       "key": "3066aecd-3ea9-49ff-a4c2-6b34f706b066",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**version control system**_.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**version control system**_.",
         "tips": [
           {
             "type": "teachingTip",
@@ -799,7 +799,7 @@
       "key": "a4c6336d-94e2-4bcd-8e15-71c65100e820",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**Git**_.\n\n**Do This:** Explain how version control works with Git.\n\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> The main branch is the \"official\" branch where all changes eventually get merged back into.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> When we create a branch, we are creating an isolated version of the project and can make changes without affecting any of the other branches.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> When we're ready to merge our changes back to the main branch, we can then open a pull request.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Before the changes are merged, we can get feedback on our code, make any additional changes needed, and test the changes to make sure there are no issues.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Then our changes can be merged back to the main branch.\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Along the way, other software engineers can be doing the same.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce and define _**Git**_.\n\n**Do This:** Explain how version control works with Git.\n\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> The main branch is the \"official\" branch where all changes eventually get merged back into.\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> When we create a branch, we are creating an isolated version of the project and can make changes without affecting any of the other branches.\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> When we're ready to merge our changes back to the main branch, we can then open a pull request.\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> Before the changes are merged, we can get feedback on our code, make any additional changes needed, and test the changes to make sure there are no issues.\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> Then our changes can be merged back to the main branch.\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> Along the way, other software engineers can be doing the same.",
         "tips": [
           {
             "type": "teachingTip",
@@ -816,7 +816,7 @@
       "key": "ed6c2106-b5ab-4637-bf70-3fcc88ce2d74",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of a situation in your daily life where a form of version control is used, or where using a form of version control could be beneficial?_\n\n**Discussion Goal:** The main goal of this discussion is to enable students to identify and understand the applications of version control in everyday situations. Encourage students to think creatively about where version control could be implemented in their daily lives, such as document editing, managing photos, organizing digital music, or even planning events.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of a situation in your daily life where a form of version control is used, or where using a form of version control could be beneficial?_\n\n**Discussion Goal:** The main goal of this discussion is to enable students to identify and understand the applications of version control in everyday situations. Encourage students to think creatively about where version control could be implemented in their daily lives, such as document editing, managing photos, organizing digital music, or even planning events.",
         "tips": [
           {
             "type": "teachingTip",
@@ -847,7 +847,7 @@
       "key": "d88f6f29-a4b0-4d46-9f91-9d5411b348ae",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce GitHub.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the GitHub Scavenger Hunt handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to complete the GitHub Scavenger Hunt handout.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce GitHub.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the GitHub Scavenger Hunt handout.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to complete the GitHub Scavenger Hunt handout.",
         "progression_name": "GitHub Scavenger Hunt"
       },
       "seeding_key": {
@@ -859,7 +859,7 @@
       "key": "a625e062-9b14-405d-a30f-e48296e7ec1a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _What is GitHub?_.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video – _What is GitHub?_.",
         "tips": [
           {
             "type": "teachingTip",
@@ -889,7 +889,7 @@
       "key": "16044a10-e9a2-42a8-a883-d4a74c2ac67f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What was the most surprising or unexpected thing you learned about GitHub today?_\n* _What is a situation where you think using GitHub could significantly simplify the development process?_\n* _How do you see version control systems and platforms like GitHub influencing your approach to coding and collaboration?_\n\n**Discussion Goal:** Students should recall and articulate the main points of the lesson, such as GitHub's features, their role in team collaboration, and how they facilitate project development. They should highlight how these tools could improve their development process and share their own personal insights and reactions to the lesson content.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What was the most surprising or unexpected thing you learned about GitHub today?_\n* _What is a situation where you think using GitHub could significantly simplify the development process?_\n* _How do you see version control systems and platforms like GitHub influencing your approach to coding and collaboration?_\n\n**Discussion Goal:** Students should recall and articulate the main points of the lesson, such as GitHub's features, their role in team collaboration, and how they facilitate project development. They should highlight how these tools could improve their development process and share their own personal insights and reactions to the lesson content.",
         "tips": [
           {
             "type": "teachingTip",
@@ -918,7 +918,7 @@
       "key": "8ccd92c5-ad42-4eed-848d-89710aa675b1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "8ccd92c5-ad42-4eed-848d-89710aa675b1",
@@ -1026,7 +1026,7 @@
       "key": "703656e4-f4ef-460b-83ed-9b291fdb5583",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n\n* _What are the benefits of pair programming?_\n* _What are some of the skills needed to make pair programming successful?_\n\n**Discussion Goal:** Students should mention aspects like code review in real-time, knowledge sharing, improved code quality, and reduced errors as benefits to pair programming. Students could highlight the importance of communication, problem-solving, adaptability, and patience as skills needed to make this strategy successful. They should also mention that pair programming requires a clear understanding of each person's role (driver or navigator).",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n\n* _What are the benefits of pair programming?_\n* _What are some of the skills needed to make pair programming successful?_\n\n**Discussion Goal:** Students should mention aspects like code review in real-time, knowledge sharing, improved code quality, and reduced errors as benefits to pair programming. Students could highlight the importance of communication, problem-solving, adaptability, and patience as skills needed to make this strategy successful. They should also mention that pair programming requires a clear understanding of each person's role (driver or navigator).",
         "tips": [
           {
             "type": "teachingTip",
@@ -1043,7 +1043,7 @@
       "key": "2245fb5c-8b5f-45c1-81a3-7d20c1d55983",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What are some challenges that arise when pair programming?_\n\n**Discussion Goal:** Students should consider elements like potential conflicts due to differing coding styles or approaches, productivity issues if the pairing is mismatched, and possible inefficiencies if one programmer dominates the process. They might also mention challenges associated with communication difficulties or even the potential for burnout due to constant collaboration and reduced time for independent thinking."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What are some challenges that arise when pair programming?_\n\n**Discussion Goal:** Students should consider elements like potential conflicts due to differing coding styles or approaches, productivity issues if the pairing is mismatched, and possible inefficiencies if one programmer dominates the process. They might also mention challenges associated with communication difficulties or even the potential for burnout due to constant collaboration and reduced time for independent thinking."
       },
       "seeding_key": {
         "activity_section.key": "2245fb5c-8b5f-45c1-81a3-7d20c1d55983",
@@ -1054,7 +1054,7 @@
       "key": "603b1e96-4ee6-45f1-8adb-bd5da74de520",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Intro to Copilot handout.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Intro to Copilot handout.",
         "duration": "10",
         "name": "Large Language Models"
       },
@@ -1079,7 +1079,7 @@
       "key": "1267f8ae-07f0-4ed5-8e6c-01ccad0cb46a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _How AI Works: Large Language Models_.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video – _How AI Works: Large Language Models_.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1096,7 +1096,7 @@
       "key": "e7cd1df3-c4d4-47c3-99b5-cf47af455b2d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What questions do you have after watching the video?_&#x20;\n\n**Discussion Goal:** Students share questions they may have about concepts introduced in the video. For example, students might ask questions similar to the following:\n\n* How does the AI ensure the output is accurate and not producing misleading information, since it's just predicting based on probabilities?\n* What are the specific ways human tuning is applied to a system like ChatGPT to ensure reasonable results and to protect against biased or dangerous content?\n* The video mentioned AI can sometimes get things wrong. What are some common errors that a language model like ChatGPT can make?\n* How does the model decide when to use full words, word parts, or code when it's choosing tokens? What kind of logic does it use to make these decisions?",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What questions do you have after watching the video?_&#x20;\n\n**Discussion Goal:** Students share questions they may have about concepts introduced in the video. For example, students might ask questions similar to the following:\n\n* How does the AI ensure the output is accurate and not producing misleading information, since it's just predicting based on probabilities?\n* What are the specific ways human tuning is applied to a system like ChatGPT to ensure reasonable results and to protect against biased or dangerous content?\n* The video mentioned AI can sometimes get things wrong. What are some common errors that a language model like ChatGPT can make?\n* How does the model decide when to use full words, word parts, or code when it's choosing tokens? What kind of logic does it use to make these decisions?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1113,7 +1113,7 @@
       "key": "482ed869-e7a2-4e87-8486-4f3d4360cb2c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _large language model_."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _large language model_."
       },
       "seeding_key": {
         "activity_section.key": "482ed869-e7a2-4e87-8486-4f3d4360cb2c",
@@ -1138,7 +1138,7 @@
       "key": "88570fd9-232e-46a1-9010-377e4d1830d1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the pair programming roles. Click through the animated slide to explain that students will act as the driver and write the code, and they should use Copilot as the navigator by prompting it to provide suggestions for improvement, debugging the code, and making sure that the code they are writing will achieve the goal.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 1 - Copilot as the Navigator section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the pair programming roles. Click through the animated slide to explain that students will act as the driver and write the code, and they should use Copilot as the navigator by prompting it to provide suggestions for improvement, debugging the code, and making sure that the code they are writing will achieve the goal.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 1 - Copilot as the Navigator section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
         "progression_name": "Copilot as the Navigator",
         "tips": [
           {
@@ -1156,7 +1156,7 @@
       "key": "d5c25a94-c1e6-41ce-b505-feb626ddd8c6",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the pair programming roles. Click through the animated slide to explain that they will now use Copilot as the driver to write the code, and they act as the navigator to provide suggestions for improvement, debug the code, and making sure that the code Copilot is writing will achieve the goal.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the pair programming roles. Click through the animated slide to explain that they will now use Copilot as the driver to write the code, and they act as the navigator to provide suggestions for improvement, debug the code, and making sure that the code Copilot is writing will achieve the goal.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1173,7 +1173,7 @@
       "key": "8574681b-5a50-48ea-87a5-24faad89971d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 2 - Copilot as the Driver section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Part 2 - Copilot as the Driver section of the Intro to Copilot activity guide by choosing one of the provided activities and using Copilot as the navigator.",
         "progression_name": "Copilot as the Driver"
       },
       "seeding_key": {
@@ -1185,7 +1185,7 @@
       "key": "1592e1c1-32a6-488b-b7ce-0149af01fde7",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you discover from working with Copilot as a pair programmer?_\n\n**Discussion Goal:** Students should share their experience using Copilot as a tool for automated code suggestions, exploring how it aided (or potentially hindered) their coding process. They might mention points like using Copilot to generate starter code, suggest solutions for common coding problems, and even learning from its suggestions. Students may also be aware of its limitations, like the risk of over-reliance or the occasional incorrect or suboptimal solution. They should realize the need for balancing the productivity benefits and the learning opportunities Copilot presents with an understanding of its potential shortcomings.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share reflections they had from working with Copilot with their peers. Listen for themes as you circulate around that you can highlight to the whole class as you transition to the wrap up."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you discover from working with Copilot as a pair programmer?_\n\n**Discussion Goal:** Students should share their experience using Copilot as a tool for automated code suggestions, exploring how it aided (or potentially hindered) their coding process. They might mention points like using Copilot to generate starter code, suggest solutions for common coding problems, and even learning from its suggestions. Students may also be aware of its limitations, like the risk of over-reliance or the occasional incorrect or suboptimal solution. They should realize the need for balancing the productivity benefits and the learning opportunities Copilot presents with an understanding of its potential shortcomings.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Give One, Get One to share reflections they had from working with Copilot with their peers. Listen for themes as you circulate around that you can highlight to the whole class as you transition to the wrap up."
       },
       "seeding_key": {
         "activity_section.key": "1592e1c1-32a6-488b-b7ce-0149af01fde7",
@@ -1209,7 +1209,7 @@
       "key": "0ed28eb8-735c-4c89-aeba-bf44a2f4e871",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you notice about these descriptions?_\n\n**Discussion Goal:** Students should point out the difference in specificity and detail. The CSA FRQ provides a lot of details, while the Engineering Team Task lacks many details.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Based on your experience today, which of these tasks do you think Copilot would be more helpful with?_\n\n**Discussion Goal:** Students should recall from their experience that Copilot struggles with very open-ended tasks that are presented without context. They might suggest that creative and innovative problem-solving required for open-ended tasks is still something humans need to perform, while AI tools will be most helpful with assisting with well-defined tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you notice about these descriptions?_\n\n**Discussion Goal:** Students should point out the difference in specificity and detail. The CSA FRQ provides a lot of details, while the Engineering Team Task lacks many details.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Based on your experience today, which of these tasks do you think Copilot would be more helpful with?_\n\n**Discussion Goal:** Students should recall from their experience that Copilot struggles with very open-ended tasks that are presented without context. They might suggest that creative and innovative problem-solving required for open-ended tasks is still something humans need to perform, while AI tools will be most helpful with assisting with well-defined tasks.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "0ed28eb8-735c-4c89-aeba-bf44a2f4e871",
@@ -1317,7 +1317,7 @@
       "key": "f00a40b8-38b2-44f6-be24-092a278b4bf5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the code segment and ask students to write down what they think the bug is and how it can be fixed.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the code segment and ask students to write down what they think the bug is and how it can be fixed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1334,7 +1334,7 @@
       "key": "3e01cb4b-f52e-4bd3-966b-06c3976664ea",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the result from using the Copilot chat to identify the bug and how to fix it.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show the result from using Copilot by right-clicking on the selected code to suggest a fix for the bug.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the result from using the Copilot chat to identify the bug and how to fix it.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Show the result from using Copilot by right-clicking on the selected code to suggest a fix for the bug.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1351,7 +1351,7 @@
       "key": "0c0aa81d-e99f-4897-a83f-1bae7084e88f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does this compare to what you wrote down? How is it similar or different?_\n\n**Discussion Goal:** Students should reflect on their own understanding of code debugging in comparison to the solutions suggested by Copilot. They should identify similarities or differences between their own solutions and AI-generated fixes, fostering critical thinking and discernment in evaluating code solutions."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does this compare to what you wrote down? How is it similar or different?_\n\n**Discussion Goal:** Students should reflect on their own understanding of code debugging in comparison to the solutions suggested by Copilot. They should identify similarities or differences between their own solutions and AI-generated fixes, fostering critical thinking and discernment in evaluating code solutions."
       },
       "seeding_key": {
         "activity_section.key": "0c0aa81d-e99f-4897-a83f-1bae7084e88f",
@@ -1376,7 +1376,7 @@
       "key": "aa3eb01e-cb49-490c-be6c-f3eb8ae8c404",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of three.\n\n**Do This:** Introduce the problems and have each pair choose the problem they want to work on:\n\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the FlixRate app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the VirtualPet app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the BinaryBazaar app\n* <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> the WeatherWise app\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the activity guide for their chosen problem.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fork the corresponding program and complete the activity guide.",
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n**Do This:** Introduce the problems and have each pair choose the problem they want to work on:\n\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> the FlixRate app\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> the VirtualPet app\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> the BinaryBazaar app\n* <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> the WeatherWise app\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the activity guide for their chosen problem.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students fork the corresponding program and complete the activity guide.",
         "progression_name": "Copilot as a Dev Tool"
       },
       "seeding_key": {
@@ -1402,7 +1402,7 @@
       "key": "2e654658-219d-4ed6-a522-a27545b9c00b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does AI-generated code aid in the development process? What are the drawbacks of using AI-generated code?_\n\n**Discussion Goal:** Students should identify and explain the significant benefits of AI-generated code in streamlining the software development process, including aspects like bug detection, code suggestion, and time efficiency. Additionally, they should also provide thoughtful commentary on potential drawbacks associated with AI-generated code, such as reliability concerns, lack of creative problem-solving, and over-reliance risks. Students should express their ideas on how to strike a balance between AI-assisted and human-driven coding to maximize productivity and maintain software quality.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does AI-generated code aid in the development process? What are the drawbacks of using AI-generated code?_\n\n**Discussion Goal:** Students should identify and explain the significant benefits of AI-generated code in streamlining the software development process, including aspects like bug detection, code suggestion, and time efficiency. Additionally, they should also provide thoughtful commentary on potential drawbacks associated with AI-generated code, such as reliability concerns, lack of creative problem-solving, and over-reliance risks. Students should express their ideas on how to strike a balance between AI-assisted and human-driven coding to maximize productivity and maintain software quality.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1432,7 +1432,7 @@
       "key": "d49edd71-9d1b-46d6-b9e5-9986c4fc6c4a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students jot down their key takeaways about AI in programming from this lesson. They should focus on how Copilot and AI might influence their own coding practices and the potential implications for their future in computer science.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have each student share one insight or takeaway they wrote down. It could be an observation, a question they still have, a concern, or an idea about how they might use AI tools like Copilot in their future projects.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _How do you see tools like GitHub Copilot changing the landscape of programming in the future?_\n* _How can we ensure that AI tools like GitHub Copilot are used responsibly in programming?_\n* _In what ways can AI tools and human programmers complement each other?_\n\n**Discussion Goal:** Students should share their thoughts on how AI tools like GitHub Copilot might revolutionize the future of programming, including implications for coding speed, efficiency, and accessibility. They should also suggest strategies for ensuring the responsible and ethical use of AI in programming, taking into account issues of code reliability, security, and over-reliance. Students should also consider the potential synergy between AI tools and human programmers by identifying how each can supplement the other's strengths and compensate for their weaknesses for optimal software development.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students jot down their key takeaways about AI in programming from this lesson. They should focus on how Copilot and AI might influence their own coding practices and the potential implications for their future in computer science.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have each student share one insight or takeaway they wrote down. It could be an observation, a question they still have, a concern, or an idea about how they might use AI tools like Copilot in their future projects.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _How do you see tools like GitHub Copilot changing the landscape of programming in the future?_\n* _How can we ensure that AI tools like GitHub Copilot are used responsibly in programming?_\n* _In what ways can AI tools and human programmers complement each other?_\n\n**Discussion Goal:** Students should share their thoughts on how AI tools like GitHub Copilot might revolutionize the future of programming, including implications for coding speed, efficiency, and accessibility. They should also suggest strategies for ensuring the responsible and ethical use of AI in programming, taking into account issues of code reliability, security, and over-reliance. Students should also consider the potential synergy between AI tools and human programmers by identifying how each can supplement the other's strengths and compensate for their weaknesses for optimal software development.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "d49edd71-9d1b-46d6-b9e5-9986c4fc6c4a",
@@ -1540,7 +1540,7 @@
       "key": "a571fb07-db91-4295-971a-77daabccb86e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you were driving down a road being followed closely by another car and all of a sudden, a tree branch fell in front of you from the left and a garbage can blew out in front of you from the right. If you had to choose only one way to react, which would you pick?_\n\n_(1) Swerve to the left._\n\n_(2) Swerve to the right._\n\n_(3) Break sharply._\n\n**Discussion Goal:** Students should reflect on and choose one of the given reactions, considering the immediate implications and potential consequences of each choice. They should begin to realize the complexities of decision-making, emphasizing that various factors inform our choices.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you were driving down a road being followed closely by another car and all of a sudden, a tree branch fell in front of you from the left and a garbage can blew out in front of you from the right. If you had to choose only one way to react, which would you pick?_\n\n_(1) Swerve to the left._\n\n_(2) Swerve to the right._\n\n_(3) Break sharply._\n\n**Discussion Goal:** Students should reflect on and choose one of the given reactions, considering the immediate implications and potential consequences of each choice. They should begin to realize the complexities of decision-making, emphasizing that various factors inform our choices.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1569,7 +1569,7 @@
       "key": "843bd9b2-88bf-4d15-a356-d397dad4c25b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _How Computer Vision Works_.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video – _How Computer Vision Works_.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1586,7 +1586,7 @@
       "key": "0701fd3a-d8b3-40ad-b74e-a09133cbd585",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "30",
         "name": "MediaPipe Model Testing"
       },
@@ -1611,7 +1611,7 @@
       "key": "915fee95-5707-48ee-bdc5-192e133eda6d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Send students to the MediaPipe Object Detection model demo and let them play with the model using their own webcam for a minute or two. Instruct students not to worry about the dropdowns but to make sure they play around with the two sliders at the bottom.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Send students to the MediaPipe Object Detection model demo and let them play with the model using their own webcam for a minute or two. Instruct students not to worry about the dropdowns but to make sure they play around with the two sliders at the bottom.",
         "progression_name": "MediaPipe Object Detection Model Demo",
         "tips": [
           {
@@ -1629,7 +1629,7 @@
       "key": "bbfa9548-9087-46f9-8365-43f4749b6be9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n**Discussion Goal:** Students should notice the effects of adjusting the two sliders and share observations about the model's behavior. They should recognize the impact of parameter adjustments on AI model outputs and share questions about how these models function.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n**Discussion Goal:** Students should notice the effects of adjusting the two sliders and share observations about the model's behavior. They should recognize the impact of parameter adjustments on AI model outputs and share questions about how these models function.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1646,7 +1646,7 @@
       "key": "39a9d984-d20b-4afa-a3ea-b0c7abecfb44",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _confidence score_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the auto dog door scenario.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students download the image files to test the model with.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _confidence score_.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the auto dog door scenario.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Have students download the image files to test the model with.",
         "progression_name": "MediaPipe Model Testing: Image Files"
       },
       "seeding_key": {
@@ -1658,7 +1658,7 @@
       "key": "df7dd237-925c-4a8a-8ba3-fcfa4c88a532",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Dog** folder. If students have time, have them find their own images of dogs to test.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:*** Click through the animated slide to display the prompts.\n\n* _What were your results? Which dogs would the model let in?_\n* _Which dogs would the model keep locked out?_\n\n**Discussion Goal:**  Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to foreshadow the concept of bias.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Dog** folder. If students have time, have them find their own images of dogs to test.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:*** Click through the animated slide to display the prompts.\n\n* _What were your results? Which dogs would the model let in?_\n* _Which dogs would the model keep locked out?_\n\n**Discussion Goal:**  Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to foreshadow the concept of bias.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1675,7 +1675,7 @@
       "key": "eecbfeef-cd38-49df-95b6-ffd8e6d26e98",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _bias_."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _bias_."
       },
       "seeding_key": {
         "activity_section.key": "eecbfeef-cd38-49df-95b6-ffd8e6d26e98",
@@ -1698,7 +1698,7 @@
       "key": "5f41af4c-727b-4c6b-8e43-62d549558f63",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the self-driving cars scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Cars/Trucks/Bikes etc** folder. If students have time, have them find their own images of things a car might encounter on the road to test.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the self-driving cars scenario.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Cars/Trucks/Bikes etc** folder. If students have time, have them find their own images of things a car might encounter on the road to test.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1715,7 +1715,7 @@
       "key": "6fffa368-ead4-4832-8c44-23ba80dc4628",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What were your results?_\n* _Did the results you got make sense? Or did some of them feel unfair?_\n\n**Discussion Goal:** Students should critically assess how the model identifies and distinguishes between various vehicles and road objects. They should reflect on the model's predictions, identifying any instances where the model might have made unexpected or \"unfair\" decisions. Students should begin to realize the intricacies and potential pitfalls in AI model responses and the importance of accuracy and fairness in real-world applications like self-driving cars.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What were your results?_\n* _Did the results you got make sense? Or did some of them feel unfair?_\n\n**Discussion Goal:** Students should critically assess how the model identifies and distinguishes between various vehicles and road objects. They should reflect on the model's predictions, identifying any instances where the model might have made unexpected or \"unfair\" decisions. Students should begin to realize the intricacies and potential pitfalls in AI model responses and the importance of accuracy and fairness in real-world applications like self-driving cars.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1752,7 +1752,7 @@
       "key": "7354c33a-82fb-43ed-a841-d0fed55dc550",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** COCO Datatset - Activity Guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and explore the dataset following the directions in the activity guide.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** COCO Datatset - Activity Guide\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and explore the dataset following the directions in the activity guide.",
         "progression_name": "COCO - Common Objects in Context Dataset"
       },
       "seeding_key": {
@@ -1776,7 +1776,7 @@
       "key": "a7cc86cf-465a-4702-9592-86d9292c6a1f",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Datasheets for Datasets_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _datasheet_."
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Show the video – _Datasheets for Datasets_.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _datasheet_."
       },
       "seeding_key": {
         "activity_section.key": "a7cc86cf-465a-4702-9592-86d9292c6a1f",
@@ -1799,7 +1799,7 @@
       "key": "1cd91f74-d160-44d0-8a50-9ceecaf04d5e",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Object Detection Dataset Datasheets handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object Detection Dataset Datasheets handout.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Object Detection Dataset Datasheets handout.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object Detection Dataset Datasheets handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1816,7 +1816,7 @@
       "key": "34f04a7f-10e4-4315-aad9-4d2052f460c5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Common Objects in Context dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the contents, source, and primary intentions behind the dataset in order to determine its suitability for training a car-based model.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Common Objects in Context dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the contents, source, and primary intentions behind the dataset in order to determine its suitability for training a car-based model.",
         "name": "Which Model to Use?",
         "tips": [
           {
@@ -1834,7 +1834,7 @@
       "key": "4f9e2e48-aa92-4ca3-b44d-51aceba4a7ec",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this ImageNet dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the vastness of ImageNet, its diverse categories, and discern if it's specific enough for training a car AI model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Waymo Open Dataset? Why or why not?_\n\n**Discussion Goal:** Students should realize the direct relevance of this dataset to driving scenarios and the comprehensive nature of data collected from actual road conditions. Students will most likely see clearly that it is the most appropriate for training an autonomous driving-related model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this ImageNet dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the vastness of ImageNet, its diverse categories, and discern if it's specific enough for training a car AI model.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Waymo Open Dataset? Why or why not?_\n\n**Discussion Goal:** Students should realize the direct relevance of this dataset to driving scenarios and the comprehensive nature of data collected from actual road conditions. Students will most likely see clearly that it is the most appropriate for training an autonomous driving-related model.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "4f9e2e48-aa92-4ca3-b44d-51aceba4a7ec",
@@ -1942,7 +1942,7 @@
       "key": "16082601-a59e-4196-949a-64f4e42d7bcb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Train Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Select a Program section of the activity guide.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Train Your Model activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Select a Program section of the activity guide.",
         "progression_name": "Select a Program"
       },
       "seeding_key": {
@@ -1954,7 +1954,7 @@
       "key": "0533ca8b-006c-4d32-8d5d-35e42c0cd346",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students who picked the same Java program in pairs or small groups of three.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How could you incorporate an AI model into your program?_\n\n**Discussion Goal:** Students should share ideas about how AI integration might enhance the functionality of their chosen program. They should point out AI's role, its impact on user experience, and may even identify potential challenges."
+        "description": "**Group:** Place students who picked the same Java program in pairs or small groups of three.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How could you incorporate an AI model into your program?_\n\n**Discussion Goal:** Students should share ideas about how AI integration might enhance the functionality of their chosen program. They should point out AI's role, its impact on user experience, and may even identify potential challenges."
       },
       "seeding_key": {
         "activity_section.key": "0533ca8b-006c-4d32-8d5d-35e42c0cd346",
@@ -1978,7 +1978,7 @@
       "key": "cdc2afcc-7cd8-4127-8ef9-488e19242c6f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _**class**_.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What classes might you need for your model?_\n\n**Discussion Goal:** Students should identify and describe specific categories or types of data their AI model would need to recognize or differentiate between. They should consider the distinct outputs or decisions the model is expected to make and group the data into clear, manageable classes.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define _**class**_.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What classes might you need for your model?_\n\n**Discussion Goal:** Students should identify and describe specific categories or types of data their AI model would need to recognize or differentiate between. They should consider the distinct outputs or decisions the model is expected to make and group the data into clear, manageable classes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1995,7 +1995,7 @@
       "key": "a6aeaa12-04c0-4cdf-b7b2-c14451f67db9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Teachable Machine portion of the activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Teachable Machine portion of the activity guide.",
         "progression_name": "Teachable Machine",
         "tips": [
           {
@@ -2026,7 +2026,7 @@
       "key": "f3025951-9f76-4968-92dc-0bbc5b46263b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _When did your model not work?_\n* _How did you retrain it?_\n\n**Discussion Goal:** Students share situations when their model did not work. For example, if students were training a model to detect rock, paper, scissors, their model may not work if two hands show two different symbols. They may share that they added additional categories (classes) to detect unknown symbols.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _When did your model not work?_\n* _How did you retrain it?_\n\n**Discussion Goal:** Students share situations when their model did not work. For example, if students were training a model to detect rock, paper, scissors, their model may not work if two hands show two different symbols. They may share that they added additional categories (classes) to detect unknown symbols.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "f3025951-9f76-4968-92dc-0bbc5b46263b",
@@ -2134,7 +2134,7 @@
       "key": "0152baf2-cff5-4d72-8bf1-6e1badb14151",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Use Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Why Computer Vision section of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Think back to the Java app you chose last lesson. How might incorporating computer vision make it a better app? How might it make the app worse?_\n\n**Discussion Goal:** Students reflect on the pros and cons of incorporating computer vision. They may predict that adding computer vision will make the app more interactive and fun. They may also note that if the model isn't trained well, the app will not work. In addition, using computer vision requires collecting more video and image data from the user."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Use Your Model activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Why Computer Vision section of the activity guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Think back to the Java app you chose last lesson. How might incorporating computer vision make it a better app? How might it make the app worse?_\n\n**Discussion Goal:** Students reflect on the pros and cons of incorporating computer vision. They may predict that adding computer vision will make the app more interactive and fun. They may also note that if the model isn't trained well, the app will not work. In addition, using computer vision requires collecting more video and image data from the user."
       },
       "seeding_key": {
         "activity_section.key": "0152baf2-cff5-4d72-8bf1-6e1badb14151",
@@ -2159,7 +2159,7 @@
       "key": "3c1b6294-1a39-4716-9d54-9ebc0bc6bde1",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students follow the Incorporate Your Model section of the activity guide.",
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students follow the Incorporate Your Model section of the activity guide.",
         "progression_name": "Incorporate Your Model",
         "tips": [
           {
@@ -2191,7 +2191,7 @@
       "key": "a8e89679-758f-4d41-a01c-567ba957e1a1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge and Test Your App section of the activity guide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge and Test Your App section of the activity guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2220,7 +2220,7 @@
       "key": "af48032f-beac-4169-96b6-e43b2dbe8d79",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review datasheets.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Datasheet section of the activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review datasheets.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Datasheet section of the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "af48032f-beac-4169-96b6-e43b2dbe8d79",
@@ -2245,7 +2245,7 @@
       "key": "8de729d8-8786-4b86-99db-9b4b2704a1de",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs with a partner that worked on a different app than themselves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students try their partner's app and complete the Your Partner's App section of the activity guide."
+        "description": "**Group:** Place students in pairs with a partner that worked on a different app than themselves.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students try their partner's app and complete the Your Partner's App section of the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "8de729d8-8786-4b86-99db-9b4b2704a1de",
@@ -2269,7 +2269,7 @@
       "key": "fd1d5a0a-6df9-4672-8467-628a2f72b034",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the quote by computer scientists Remi Denton and Timnit Gebru.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Software Engineering and Computer Vision portion of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Given what you wrote down and the previous quote, when do you think software engineers should or should not use computer vision?_\n\n**Discussion Goal:** Students share that although it is important to make sure that the model works and is not biased, software engineers should also think critically about whether or not their computer vision model should exist and how it can be used.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the quote by computer scientists Remi Denton and Timnit Gebru.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Software Engineering and Computer Vision portion of the activity guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Given what you wrote down and the previous quote, when do you think software engineers should or should not use computer vision?_\n\n**Discussion Goal:** Students share that although it is important to make sure that the model works and is not biased, software engineers should also think critically about whether or not their computer vision model should exist and how it can be used.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2286,7 +2286,7 @@
       "key": "90e805c8-2d16-4d2d-b24f-44991f816b51",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "90e805c8-2d16-4d2d-b24f-44991f816b51",

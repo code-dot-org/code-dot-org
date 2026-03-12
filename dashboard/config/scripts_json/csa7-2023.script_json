@@ -1031,7 +1031,7 @@
       "key": "170a035a-8eb3-49c4-be69-b9ee3b5a1cdb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you keep track of the work you need to complete for a project?*\n\n**Discussion Goal:** Students share strategies and processes they use to keep track of their work, such as using planners to plan when they will work on the project or breaking down a project into tasks and checking them off as they complete them.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you keep track of the work you need to complete for a project?*\n\n**Discussion Goal:** Students share strategies and processes they use to keep track of their work, such as using planners to plan when they will work on the project or breaking down a project into tasks and checking them off as they complete them.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1048,7 +1048,7 @@
       "key": "6da7d4e4-6301-42df-90f5-d830de9a0932",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Project Introduction"
       },
@@ -1073,7 +1073,7 @@
       "key": "62596008-082f-4398-94c5-ad31b87fcc81",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creative Coding with The Theater Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1090,7 +1090,7 @@
       "key": "68606ad3-62fd-448b-8d8f-d3992dfe04f5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric."
       },
       "seeding_key": {
         "activity_section.key": "68606ad3-62fd-448b-8d8f-d3992dfe04f5",
@@ -1113,7 +1113,7 @@
       "key": "89d805fc-e079-4f1e-b192-715c55ab2bf1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1142,7 +1142,7 @@
       "key": "24fe735e-dd1e-43fb-8cfb-6df7ea9ea6e6",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Creative Coding with The Theater Project Planning Guide.",
         "progression_name": "Creative Coding with The Theater Example Projects",
         "tips": [
           {
@@ -1160,7 +1160,7 @@
       "key": "d5c0fd09-2f26-49af-b3f9-432b26e5231c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1191,7 +1191,7 @@
       "key": "cded8572-95a7-4494-a54b-e37d352a6fa9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***project backlog***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a manilla folder, a Project Planning Board, and 10-12 sticky notes.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***project backlog***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a manilla folder, a Project Planning Board, and 10-12 sticky notes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1208,7 +1208,7 @@
       "key": "7df085bb-d8e8-43a4-9dcf-4f0f0c277336",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students tape the Project Planning Board to one side of their manilla folder.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***benchmark***. \n\n**Do This:** Explain the key benchmarks and deadlines for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #1\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #2\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students tape the Project Planning Board to one side of their manilla folder.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***benchmark***. \n\n**Do This:** Explain the key benchmarks and deadlines for the project:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #1\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #2\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #3\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1225,7 +1225,7 @@
       "key": "6225fae2-4b20-4dba-aaf8-3d381017e061",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Creative Coding with The Theater Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Creative Coding with The Theater Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "6225fae2-4b20-4dba-aaf8-3d381017e061",
@@ -1236,7 +1236,7 @@
       "key": "8cd41e1d-d143-4614-b7a6-3e2fadb62a38",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create a project backlog. Students make predictions about how they will use their Project Planning Board to keep track of the tasks they need to complete for their project and share some of the steps they need to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create a project backlog. Students make predictions about how they will use their Project Planning Board to keep track of the tasks they need to complete for their project and share some of the steps they need to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Three W's",
         "tips": [
           {
@@ -1254,7 +1254,7 @@
       "key": "a764abfe-e2e5-4d63-a092-97895710cf38",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a764abfe-e2e5-4d63-a092-97895710cf38",
@@ -1302,7 +1302,7 @@
       "key": "83396575-03a9-4a05-832e-0014fa741e09",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1319,7 +1319,7 @@
       "key": "a8d2d479-3749-4fce-bf1b-ea443db59f7c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1336,7 +1336,7 @@
       "key": "3f0ffa31-d42f-4ecc-bd56-46a47ecc5024",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between primitive and reference variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between primitive and reference variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "duration": "5",
         "name": "Introduction",
         "progression_name": "Predict and Run: Object References as Parameters"
@@ -1350,7 +1350,7 @@
       "key": "9f60a3c2-8feb-4486-bcba-f83920901f24",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method that uses an object reference as a parameter makes changes to the original object, while the method that uses a primitive value as a parameter does not make changes to the original variable. Students also notice that a method can only access the `private` data of a parameter that is a reference to an object when the parameter is the same type as the method's enclosing class. Students may wonder why the method that uses an object reference makes changes to the original object while the method that uses a primitive value does not make changes to the original value. Students may also wonder if there are scenarios when modifying the original object is not ideal."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method that uses an object reference as a parameter makes changes to the original object, while the method that uses a primitive value as a parameter does not make changes to the original variable. Students also notice that a method can only access the `private` data of a parameter that is a reference to an object when the parameter is the same type as the method's enclosing class. Students may wonder why the method that uses an object reference makes changes to the original object while the method that uses a primitive value does not make changes to the original value. Students may also wonder if there are scenarios when modifying the original object is not ideal."
       },
       "seeding_key": {
         "activity_section.key": "9f60a3c2-8feb-4486-bcba-f83920901f24",
@@ -1361,7 +1361,7 @@
       "key": "4c81170e-e608-4312-85f0-df2445cd7c31",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between formal parameters and actual parameters and how these function.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Recall the difference between formal parameters and actual parameters and how these function.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "15",
         "name": "Exploring Parameters",
         "progression_name": "Investigate and Modify: Object References as Parameters"
@@ -1375,7 +1375,7 @@
       "key": "1e4c155f-218c-4949-b722-66b134f0de3d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1406,7 +1406,7 @@
       "key": "55964510-1b3f-409a-8407-3e80ecd4f054",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the `this` keyword refers to the current object. Students identify that using the `this` keyword as a parameter passes the current object in the method call.",
+        "description": "**Do This:** Click through the animated slides to demonstrate object references and primitives as parameters:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Object references as the actual parameter and the result in the formal parameter\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The formal and actual parameter are aliases\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Primitive values as the actual parameter\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Define ***pass by value***\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Accessing `private` data of a parameter in a method\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does the `this` keyword do when it is used as a parameter?*\n\n**Discussion Goal:** Students recall that the `this` keyword refers to the current object. Students identify that using the `this` keyword as a parameter passes the current object in the method call.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1423,7 +1423,7 @@
       "key": "166951da-da1b-49e4-9136-69230a2c5f7c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is this similar to how we have used the `this` keyword before? How is it different?*\n\n**Discussion Goal:** Students suggest similarities and differences, such as using the `this` keyword to refer to the current object and using the `this` keyword to pass the entire object instead of only referring to its instance variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `this` keyword as a method parameter."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How is this similar to how we have used the `this` keyword before? How is it different?*\n\n**Discussion Goal:** Students suggest similarities and differences, such as using the `this` keyword to refer to the current object and using the `this` keyword to pass the entire object instead of only referring to its instance variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `this` keyword as a method parameter."
       },
       "seeding_key": {
         "activity_section.key": "166951da-da1b-49e4-9136-69230a2c5f7c",
@@ -1448,7 +1448,7 @@
       "key": "439526ba-553d-45f6-b69a-3de2b4926b6d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When is it ideal to pass objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest passing objects as parameters when a problem requires the original object to be modified by a method or constructor.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When is it ideal to pass objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest passing objects as parameters when a problem requires the original object to be modified by a method or constructor.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1465,7 +1465,7 @@
       "key": "1b39750f-7f2d-4c2a-821f-be1aea321106",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When should we avoid passing objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest avoiding passing objects as parameters when the method or constructor should not modify the original object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when an object reference is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to complete choice levels on Levels 6 and 7 to practice using object references as parameters to methods and constructors.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When should we avoid passing objects as parameters? Why?*\n\n**Discussion Goal:** Students suggest avoiding passing objects as parameters when the method or constructor should not modify the original object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that when an object reference is a constructor parameter, the instance variable should be initialized with a copy of the referenced object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding, then continue to complete choice levels on Levels 6 and 7 to practice using object references as parameters to methods and constructors.",
         "progression_name": "Practice: Object References as Parameters",
         "tips": [
           {
@@ -1497,7 +1497,7 @@
       "key": "f343f352-3cc8-470e-a82a-ea1cf03eec15",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***end user*** and ***user story***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: User Stories*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***end user*** and ***user story***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: User Stories*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1514,7 +1514,7 @@
       "key": "61b43747-208d-452a-ae60-abe8e1121a94",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about an app or program you use every day. Who are the end users for that app or program?*\n\n**Discussion Goal:** Students share apps or programs they use and the end users for these. For example, the end users for an app like Instagram might be photographers or influencers, while the end users for a banking app might be the customers of the bank.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What might a user story be for that app or program?*\n\n**Discussion Goal:** Students suggest user stories for the app or program they shared. For example, a user story for Instagram might be \"As a user, I want to be able to upload a photo to my profile\", while a user story for a banking app might be \"As a user, I want to be able to check my balance\".",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think about an app or program you use every day. Who are the end users for that app or program?*\n\n**Discussion Goal:** Students share apps or programs they use and the end users for these. For example, the end users for an app like Instagram might be photographers or influencers, while the end users for a banking app might be the customers of the bank.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What might a user story be for that app or program?*\n\n**Discussion Goal:** Students suggest user stories for the app or program they shared. For example, a user story for Instagram might be \"As a user, I want to be able to upload a photo to my profile\", while a user story for a banking app might be \"As a user, I want to be able to check my balance\".",
         "tips": [
           {
             "type": "teachingTip",
@@ -1543,7 +1543,7 @@
       "key": "04900a4e-f4e7-4143-8adc-7a81c8e3f32a",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with The Theater Project Planning Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with The Theater Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "04900a4e-f4e7-4143-8adc-7a81c8e3f32a",
@@ -1567,7 +1567,7 @@
       "key": "67a3e7f4-7a89-4f45-ac83-a0fbcc1dbd70",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1584,7 +1584,7 @@
       "key": "a3e9605b-fa48-4c72-81f3-11719678a5c1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1601,7 +1601,7 @@
       "key": "3fecced5-ba20-49e3-9317-80308efe69ee",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "3fecced5-ba20-49e3-9317-80308efe69ee",
@@ -1649,7 +1649,7 @@
       "key": "524ecfed-9281-49e2-b11e-7ca868fadbeb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we retrieve a club member's first and last name from their username?*\n\n**Discussion Goal:** Students suggest using `indexOf()` to find the location of the dot. Students note that they can then use the two-parameter version of `substring()` to find the first name and then use the one-parameter version of `substring()` to find the last name.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can we retrieve a club member's first and last name from their username?*\n\n**Discussion Goal:** Students suggest using `indexOf()` to find the location of the dot. Students note that they can then use the two-parameter version of `substring()` to find the first name and then use the one-parameter version of `substring()` to find the last name.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1666,7 +1666,7 @@
       "key": "5520c519-58ec-484a-a312-82e5dbb29f76",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review a solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n\n**Discussion Goal:** Students recall that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Students identify that Java can differentiate between the two by the method signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students suggest that the methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review a solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n\n**Discussion Goal:** Students recall that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Students identify that Java can differentiate between the two by the method signature.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students suggest that the methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
       },
       "seeding_key": {
         "activity_section.key": "5520c519-58ec-484a-a312-82e5dbb29f76",
@@ -1677,7 +1677,7 @@
       "key": "444ee142-bc9a-4e87-b1d0-48ccd576c534",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1702,7 +1702,7 @@
       "key": "d83df52b-e902-4e48-b856-2fd053a70e07",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Overloaded Methods"
       },
       "seeding_key": {
@@ -1714,7 +1714,7 @@
       "key": "4d5803ef-7d6d-4b9b-870f-6c4c28a9c3c9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program has multiple methods with the same name but different parameters. Students also notice that they all perform the same task but with different inputs. Students may wonder how this is similar to overloaded constructors or how overloaded methods might be useful."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program has multiple methods with the same name but different parameters. Students also notice that they all perform the same task but with different inputs. Students may wonder how this is similar to overloaded constructors or how overloaded methods might be useful."
       },
       "seeding_key": {
         "activity_section.key": "4d5803ef-7d6d-4b9b-870f-6c4c28a9c3c9",
@@ -1725,7 +1725,7 @@
       "key": "c885ab1e-d632-4c06-974c-168da0c8ae8d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading and overloaded constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Joyful Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Students suggest that overloading methods make code more flexible for program requirements. The same task might require a different number of parameters, so having these methods share the same name also makes it easier to maintain.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading and overloaded constructors.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Joyful Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Students suggest that overloading methods make code more flexible for program requirements. The same task might require a different number of parameters, so having these methods share the same name also makes it easier to maintain.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "10",
         "name": "Overloading",
         "progression_name": "Investigate and Modify: Overloaded Methods"
@@ -1739,7 +1739,7 @@
       "key": "32ce5dd3-11da-4986-b608-81ff18e43f7a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1756,7 +1756,7 @@
       "key": "00bf4503-7f6b-45e8-aa6d-1f32ffd29506",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that methods are said to be overloaded when there are multiple methods with the same name but a different signature.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6 and 7 to practice writing overloaded methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain that methods are said to be overloaded when there are multiple methods with the same name but a different signature.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5, 6, and 7. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6 and 7 to practice writing overloaded methods.",
         "duration": "15",
         "name": "Overloaded Methods",
         "progression_name": "Practice: Overloaded Methods"
@@ -1783,7 +1783,7 @@
       "key": "23525edd-2d7e-44af-98ca-33292e3719e2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1800,7 +1800,7 @@
       "key": "711d93f1-8e34-4429-a8da-4fed25a7c777",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1854,7 +1854,7 @@
       "key": "1c8b281e-f427-438b-a71f-e4aa3f83eff5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1871,7 +1871,7 @@
       "key": "41128c16-3254-470e-ab82-08e71cde934c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "41128c16-3254-470e-ab82-08e71cde934c",
@@ -1882,7 +1882,7 @@
       "key": "bf4b96ce-3041-48d9-b7c3-d08c7ee9f4a5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "The private Keyword"
       },
@@ -1907,7 +1907,7 @@
       "key": "c6365c98-ded8-40df-94ea-6238ccd0b7d3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Private Methods"
       },
       "seeding_key": {
@@ -1919,7 +1919,7 @@
       "key": "633d14da-f0ba-4291-bb8c-7f0b08d3fbc3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "633d14da-f0ba-4291-bb8c-7f0b08d3fbc3",
@@ -1944,7 +1944,7 @@
       "key": "2985f094-f86a-4e0b-a07c-098393135654",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Private Methods*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Private Methods*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1961,7 +1961,7 @@
       "key": "29ce8f29-1ddd-4681-805f-434523889b06",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the functionality of a `private` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to use a `private` method?*\n\n**Discussion Goal:** Students suggest using a `private` method as a helper method to perform a task within the class. Students identify that a `private` method can help keep a `public` method easy to read and maintain since specific tasks can be decomposed into `private` and `public` methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the functionality of a `private` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to use a `private` method?*\n\n**Discussion Goal:** Students suggest using a `private` method as a helper method to perform a task within the class. Students identify that a `private` method can help keep a `public` method easy to read and maintain since specific tasks can be decomposed into `private` and `public` methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1978,7 +1978,7 @@
       "key": "2b61df72-dc9f-41ae-b072-6f32a75b929c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding, then continue to complete choice levels on Levels 5 and 6 to practice writing `private` methods.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding, then continue to complete choice levels on Levels 5 and 6 to practice writing `private` methods.",
         "progression_name": "Practice: Private Methods",
         "tips": [
           {
@@ -2009,7 +2009,7 @@
       "key": "c8424277-4642-47f2-ba13-fe8a2c03cf0d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2026,7 +2026,7 @@
       "key": "3d0cfffe-59f8-4d82-92c5-b5416efb7435",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2080,7 +2080,7 @@
       "key": "d249711d-2d96-4b68-a687-47d7aa1e2fb5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with The Theater Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with The Theater Project.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "d249711d-2d96-4b68-a687-47d7aa1e2fb5",
@@ -2091,7 +2091,7 @@
       "key": "9d45b227-dd55-4eef-a668-664eea682480",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Overriding"
       },
@@ -2116,7 +2116,7 @@
       "key": "ef7cee0c-8984-42da-b2d8-9e7599913c02",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Overriding Methods"
       },
       "seeding_key": {
@@ -2128,7 +2128,7 @@
       "key": "7a8e56e2-8243-4ff3-abda-08107846e6b8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "7a8e56e2-8243-4ff3-abda-08107846e6b8",
@@ -2153,7 +2153,7 @@
       "key": "3f284c97-a265-4f2e-b308-8658de5ad69e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why would we want to override methods written in a class?*\n* *Where else have we seen the benefits of overriding methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass. Students also make connections to polymorphism and recall how traversing an array of a superclass type allows them to easily call each subclass version of a method.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why would we want to override methods written in a class?*\n* *Where else have we seen the benefits of overriding methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass. Students also make connections to polymorphism and recall how traversing an array of a superclass type allows them to easily call each subclass version of a method.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2170,7 +2170,7 @@
       "key": "399a7d75-e128-4877-8702-bc64ce0cf8fb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review polymorphism.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate calling a superclass method in a subclass using the `super` keyword.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding, then continue to complete choice levels on Levels 5 and 6 to practice overriding a method.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review polymorphism.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate calling a superclass method in a subclass using the `super` keyword.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4, 5, and 6. Students complete a Check for Understanding, then continue to complete choice levels on Levels 5 and 6 to practice overriding a method.",
         "progression_name": "Practice: Overriding Methods",
         "tips": [
           {
@@ -2201,7 +2201,7 @@
       "key": "8ad7de83-acd4-4522-bfe7-49d4584710ff",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\nDo This: Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with The Theater Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\nDo This: Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2218,7 +2218,7 @@
       "key": "71aa06fd-10b1-40bf-a255-8adc65492701",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2272,7 +2272,7 @@
       "key": "b8a30914-81fd-458f-b21a-fb96d39c9fa3",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Planning Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Planning Feedback handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "b8a30914-81fd-458f-b21a-fb96d39c9fa3",
@@ -2283,7 +2283,7 @@
       "key": "2eb38e95-f976-4d66-b3b9-88c14926915d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "AI-Generated Art"
       },
@@ -2308,7 +2308,7 @@
       "key": "16e13635-f433-480d-91c0-a86163970fe8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the example of AI-generated artwork.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder or feel?*\n\n**Discussion Goal:** Students share their reactions to the example and discuss their thoughts on whether they believe this was right or ethical. Students may express surprise or may agree with the person who won the award.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the example of AI-generated artwork.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder or feel?*\n\n**Discussion Goal:** Students share their reactions to the example and discuss their thoughts on whether they believe this was right or ethical. Students may express surprise or may agree with the person who won the award.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2325,7 +2325,7 @@
       "key": "14d82321-d345-41c6-afaf-d4c647b65121",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of AI art-generating programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how AI art-generating programs work."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of AI art-generating programs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how AI art-generating programs work."
       },
       "seeding_key": {
         "activity_section.key": "14d82321-d345-41c6-afaf-d4c647b65121",
@@ -2336,7 +2336,7 @@
       "key": "68efcb37-26e7-478f-9390-af03ce130f6d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Should we consider AI-generated images art?*\n\n**Discussion Goal:** Students share their opinions on whether AI-generated images can be considered art and explain their reasoning. For example, some students might believe that these are not art because of the lack of human effort while other students might believe these are art because the images have to be generated with prompts and modifications to achieve the desired effect."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Should we consider AI-generated images art?*\n\n**Discussion Goal:** Students share their opinions on whether AI-generated images can be considered art and explain their reasoning. For example, some students might believe that these are not art because of the lack of human effort while other students might believe these are art because the images have to be generated with prompts and modifications to achieve the desired effect."
       },
       "seeding_key": {
         "activity_section.key": "68efcb37-26e7-478f-9390-af03ce130f6d",
@@ -2361,7 +2361,7 @@
       "key": "7c7dc1a0-a008-40ce-8785-b1dd2fb19e02",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property***.\n\n**Group:** Place students in small groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the AI Carousel and assign each group to a station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***intellectual property***.\n\n**Group:** Place students in small groups of three or four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a different colored pen or marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the AI Carousel and assign each group to a station.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give groups 1-2 minutes to discuss the topic or question at their station and write down their thoughts and ideas on the chart paper using their assigned colored pen or marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to rotate to the next station and read the new topic or question and the previous group's responses. Have students discuss the topic or question and the responses with their group and add new thoughts and ideas to the chart paper using their assigned colored pen or marker. Students can also write questions about things the other groups wrote. Continue this process until each group is back at their original station.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have each group share the responses at their station."
       },
       "seeding_key": {
         "activity_section.key": "7c7dc1a0-a008-40ce-8785-b1dd2fb19e02",
@@ -2385,7 +2385,7 @@
       "key": "edc5eef4-418e-4129-b05d-813d6021f362",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2402,7 +2402,7 @@
       "key": "11ee44d4-91cc-4d8c-b110-d54775b54a2d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2419,7 +2419,7 @@
       "key": "31194840-5662-4974-8df1-05744ccb2e8f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "31194840-5662-4974-8df1-05744ccb2e8f",
@@ -2467,7 +2467,7 @@
       "key": "d5824dad-bbe3-44c6-b385-88d3641035fb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate fractal art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is repetition used in fractal art?*\n\n**Discussion Goal:** Students identify that fractal art is created by repeating patterns over and over again.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate fractal art.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How is repetition used in fractal art?*\n\n**Discussion Goal:** Students identify that fractal art is created by repeating patterns over and over again.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2484,7 +2484,7 @@
       "key": "571148cc-3dd9-4c87-9950-86cfd40badf9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Introduction"
       },
@@ -2509,7 +2509,7 @@
       "key": "678b3f9d-a65e-429e-876e-5eab0bdcc535",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs choose a challenge to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students the materials for the challenge they chose.\n* Wall Walking: one set of Wall Walking method cards\n* Cup Stacking: ten disposable cups, one set of Cup Stacking method cards\n* Coloring: one coloring sheet, one marker or colored pencil, one set of Coloring method cards\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the instructions, then have students complete their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened in your activity?*\n* *How is this type of algorithm different from any other type of algorithm you’ve seen?*\n\n**Discussion Goal:** Students describe the activity they completed. Students note that the code repeated until a certain point and then did something different before ending, which seems to be a combination of loops and if-else statements."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Recursion Unplugged handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have pairs choose a challenge to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give students the materials for the challenge they chose.\n* Wall Walking: one set of Wall Walking method cards\n* Cup Stacking: ten disposable cups, one set of Cup Stacking method cards\n* Coloring: one coloring sheet, one marker or colored pencil, one set of Coloring method cards\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the instructions, then have students complete their activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened in your activity?*\n* *How is this type of algorithm different from any other type of algorithm you’ve seen?*\n\n**Discussion Goal:** Students describe the activity they completed. Students note that the code repeated until a certain point and then did something different before ending, which seems to be a combination of loops and if-else statements."
       },
       "seeding_key": {
         "activity_section.key": "678b3f9d-a65e-429e-876e-5eab0bdcc535",
@@ -2534,7 +2534,7 @@
       "key": "003e18e2-6a9d-42fb-9618-235b324b0ed9",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***recursion***, ***base case***, and ***recursive case***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that the recursive call has its own set of local variables, including the formal parameters. The parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Recursion*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***recursion***, ***base case***, and ***recursive case***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that the recursive call has its own set of local variables, including the formal parameters. The parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Recursion*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2551,7 +2551,7 @@
       "key": "c0de7147-1a10-42e8-ad84-d9cf14fa21fe",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2581,7 +2581,7 @@
       "key": "5996177d-477c-47a5-9c93-b4f192933de4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some benefits to writing an algorithm using recursion? What are some drawbacks?*\n\n**Discussion Goal:** Students note that recursion can make it easier to represent a solution by breaking it down into sub-problems and can help reduce the amount of code written. Students suggest that recursion might be harder to read and understand or can be harder to trace if there are a large number of recursive calls.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some benefits to writing an algorithm using recursion? What are some drawbacks?*\n\n**Discussion Goal:** Students note that recursion can make it easier to represent a solution by breaking it down into sub-problems and can help reduce the amount of code written. Students suggest that recursion might be harder to read and understand or can be harder to trace if there are a large number of recursive calls.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2598,7 +2598,7 @@
       "key": "5aa2a46c-7abb-4db5-8181-9404bde25b67",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2615,7 +2615,7 @@
       "key": "2e746a96-7425-413b-8ed8-444376e9d59d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2e746a96-7425-413b-8ed8-444376e9d59d",
@@ -2663,7 +2663,7 @@
       "key": "2b3dbda4-c2a1-4d6a-88e6-16d4f9b96000",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
       },
       "seeding_key": {
         "activity_section.key": "2b3dbda4-c2a1-4d6a-88e6-16d4f9b96000",
@@ -2688,7 +2688,7 @@
       "key": "ca5f50ef-9edf-494f-9cc6-97b96f65b645",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to begin development on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to begin development on their Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project"
       },
       "seeding_key": {
@@ -2714,7 +2714,7 @@
       "key": "0a3c9274-2ec5-4338-be53-40b358225bcf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2743,7 +2743,7 @@
       "key": "5a36a09c-dd86-4488-8fb7-2679f14e9655",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2760,7 +2760,7 @@
       "key": "8d090fb7-cd59-478c-bc84-c03ee647610d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down one word that summarizes their experience working on their Creative Coding with The Theater Project so far.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their word with a partner and briefly explain why they chose it.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down one word that summarizes their experience working on their Creative Coding with The Theater Project so far.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share their word with a partner and briefly explain why they chose it.",
         "name": "One Word Summary",
         "tips": [
           {
@@ -2815,7 +2815,7 @@
       "key": "2b4cdfe7-f115-40ab-bbde-520c68e0ddbf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you experienced a bug in an application or program that you use that affected system reliability - a system's ability to function without failure?*\n\n**Discussion Goal:** Students share examples of bugs they have experienced, such as a website being down or apps that they use crashing.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When have you experienced a bug in an application or program that you use that affected system reliability - a system's ability to function without failure?*\n\n**Discussion Goal:** Students share examples of bugs they have experienced, such as a website being down or apps that they use crashing.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2832,7 +2832,7 @@
       "key": "e89cc4ff-ede3-4985-8ec7-a771674b605b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "20",
         "name": "Open Source Bugs"
       },
@@ -2857,7 +2857,7 @@
       "key": "131eb99d-ea76-46a5-bb73-120c73192b2d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity and have students complete the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***system reliability***.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair two copies of the same version of the Open Source Bugs handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Open Source Bugs activity and have students complete the activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was the bug?*\n* *How widespread was it?*\n* *What is being done to maximize system reliability in the future?*\n\n**Discussion Goal:** Students share the bug they reviewed and the impacts resulting from the bug. Students identify the actions that are being taken to prevent these issues in the future and may also suggest additional actions that can be taken to prevent these issues."
       },
       "seeding_key": {
         "activity_section.key": "131eb99d-ea76-46a5-bb73-120c73192b2d",
@@ -2868,7 +2868,7 @@
       "key": "c83c02e9-edd5-4b9e-a25b-63638b9c0fd4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Rise of Open Source Software*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *The Rise of Open Source Software*.",
         "duration": "15",
         "name": "Maximizing Reliability",
         "tips": [
@@ -2899,7 +2899,7 @@
       "key": "e4d67b09-9e3c-4e72-91a7-b3699fb735e9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What can you do as software engineers to maximize the reliability of open source software?*\n\n**Discussion Goal:** Students suggest ways to maximize the reliability of open source software, such as contributing code to existing projects or identifying and submitting bugs found in existing projects.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What can you do as software engineers to maximize the reliability of open source software?*\n\n**Discussion Goal:** Students suggest ways to maximize the reliability of open source software, such as contributing code to existing projects or identifying and submitting bugs found in existing projects.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2916,7 +2916,7 @@
       "key": "a0fbc93e-7beb-435a-827e-f3a24e9ee30e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
@@ -2946,7 +2946,7 @@
       "key": "78b82ebd-601f-46f1-89c2-f9f0ebdee795",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "78b82ebd-601f-46f1-89c2-f9f0ebdee795",
@@ -3006,7 +3006,7 @@
       "key": "bd494742-6525-42ec-8b17-2c9ae91cf0f3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3023,7 +3023,7 @@
       "key": "94b1e46b-3964-4698-bc71-8b61b56bb152",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "94b1e46b-3964-4698-bc71-8b61b56bb152",
@@ -3048,7 +3048,7 @@
       "key": "712721fc-195c-464b-abc2-a38f30d73733",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
         "tips": [
           {
@@ -3080,7 +3080,7 @@
       "key": "83f3d0be-6796-4e4d-88b4-122432741e73",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance criteria*** and outline the steps for writing acceptance criteria in a scenario-based format.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate an example of scenario-based acceptance criteria.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Acceptance Testing*.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance criteria*** and outline the steps for writing acceptance criteria in a scenario-based format.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate an example of scenario-based acceptance criteria.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Acceptance Testing*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3097,7 +3097,7 @@
       "key": "76364314-e8b6-402b-8a88-d3cd1f101034",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance testing***."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***acceptance testing***."
       },
       "seeding_key": {
         "activity_section.key": "76364314-e8b6-402b-8a88-d3cd1f101034",
@@ -3120,7 +3120,7 @@
       "key": "0b1c243e-2424-4398-9320-b6b2233c7261",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response."
       },
       "seeding_key": {
         "activity_section.key": "0b1c243e-2424-4398-9320-b6b2233c7261",
@@ -3131,7 +3131,7 @@
       "key": "8ae3260d-3034-4940-8f51-d44ddb9d0fb6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3148,7 +3148,7 @@
       "key": "cda25e51-7147-4e24-b294-982fbc658d6a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3181,7 +3181,7 @@
       "key": "941d5f55-cdcc-4f18-8921-659c4082af66",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with The Theater Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3212,7 +3212,7 @@
       "key": "f967d89c-93ef-49e1-b497-faa2200adaec",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3243,7 +3243,7 @@
       "key": "8a2d9dd8-a5f5-4d7e-8867-053e6f694873",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3272,7 +3272,7 @@
       "key": "b31d931c-2404-4f7a-8805-68c95149bdda",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3289,7 +3289,7 @@
       "key": "77420beb-ce1b-4f1b-9558-d1cd04144027",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3322,7 +3322,7 @@
       "key": "e2467661-6ae8-469a-a66a-ddc3d148c546",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "e2467661-6ae8-469a-a66a-ddc3d148c546",
@@ -3347,7 +3347,7 @@
       "key": "34e75e34-6283-4f45-97d4-fc63d1cc5eb5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with The Theater Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3378,7 +3378,7 @@
       "key": "220266bd-f582-4b20-a4c4-511a2c684f08",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "220266bd-f582-4b20-a4c4-511a2c684f08",
@@ -3389,7 +3389,7 @@
       "key": "dee59fdd-d825-4953-b151-e7d5d0eb2ba1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -3444,7 +3444,7 @@
       "key": "030b1f6c-dc18-45ea-b888-371981843f29",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
       },
       "seeding_key": {
         "activity_section.key": "030b1f6c-dc18-45ea-b888-371981843f29",
@@ -3469,7 +3469,7 @@
       "key": "a24ec22d-ff40-4daf-b8f4-c579bfd1aef8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "a24ec22d-ff40-4daf-b8f4-c579bfd1aef8",
@@ -3492,7 +3492,7 @@
       "key": "102d1db1-0136-47d4-b7ac-5e9732da415e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the MusicQueue FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the MusicQueue FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "102d1db1-0136-47d4-b7ac-5e9732da415e",
@@ -3515,7 +3515,7 @@
       "key": "e637bd41-2b61-4213-a8ab-1b22bb270c26",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "e637bd41-2b61-4213-a8ab-1b22bb270c26",
@@ -3538,7 +3538,7 @@
       "key": "bdecf67d-c0c6-4fae-bb48-4c612eac3fee",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the MusicQueue FRQ handout."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the MusicQueue FRQ handout."
       },
       "seeding_key": {
         "activity_section.key": "bdecf67d-c0c6-4fae-bb48-4c612eac3fee",
@@ -3563,7 +3563,7 @@
       "key": "e6702a75-33b9-4fa3-ad66-b39ce743dce0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the MusicQueue FRQ. On the board, write the start and end times.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the MusicQueue FRQ. On the board, write the start and end times.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3593,7 +3593,7 @@
       "key": "b40d658c-c576-4148-b61b-32d4c79e2c8f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the MusicQueue FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MusicQueue FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the MusicQueue FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the MusicQueue FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
       },
       "seeding_key": {
         "activity_section.key": "b40d658c-c576-4148-b61b-32d4c79e2c8f",
@@ -3640,7 +3640,7 @@
       "key": "321f2faa-ef39-4f60-bccb-c570cc9b77e9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 7 Assessment on Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 7 Assessment on Code Studio.",
         "progression_name": "Unit 7 Assessment"
       },
       "seeding_key": {
@@ -3652,7 +3652,7 @@
       "key": "544305cd-d4ac-4f92-9a65-9fe84159e10f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {
@@ -3694,7 +3694,7 @@
       "key": "29277997-7ed5-4bca-a41d-55afdab0b86b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with The Theater Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3711,7 +3711,7 @@
       "key": "295724b9-e5f6-41db-831b-9b5505b08469",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "295724b9-e5f6-41db-831b-9b5505b08469",
@@ -3735,7 +3735,7 @@
       "key": "9a1e2d5e-9432-4124-9970-de1197a8b25d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with The Theater Project.",
         "progression_name": "Creative Coding with The Theater Project",
         "tips": [
           {
@@ -3765,7 +3765,7 @@
       "key": "923719cf-9ddf-4802-928b-6905ae29b244",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3782,7 +3782,7 @@
       "key": "66b23aab-825e-4cd2-85da-427af9787f50",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with The Theater Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {

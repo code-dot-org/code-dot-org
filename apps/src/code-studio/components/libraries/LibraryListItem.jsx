@@ -69,7 +69,7 @@ export class LibraryListItem extends React.Component {
               onClick={() => this.props.onUpdate(library.channelId)}
               className={classNames(styles.actionBtn, styles.updateBtn)}
             >
-              <FontAwesome icon="refresh" className={styles.updateIcon} />
+              <FontAwesome icon="arrows-rotate" className={styles.updateIcon} />
               <span className={styles.updateText}>{i18n.update()}</span>
             </button>
           )}
@@ -93,7 +93,11 @@ export class LibraryListItem extends React.Component {
                 )}
                 disabled={!!library.fromLevelbuilder}
               >
-                <FontAwesome icon="trash-o" className={styles.iconPadding} />
+                <FontAwesome
+                  icon="trash-can"
+                  style="regular"
+                  className={styles.iconPadding}
+                />
               </button>
             </Tooltip>
           )}

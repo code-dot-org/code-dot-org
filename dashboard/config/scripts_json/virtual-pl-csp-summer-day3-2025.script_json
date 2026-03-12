@@ -459,7 +459,7 @@
       "key": "e25c8d8d-d9aa-42e0-adda-7244f60e61b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *In the previous lesson, we explored the Internet Simulator, where each of you were connected to one other person by a single wire. What are the potential problems with this setup?*\n\n**Discussion Goal:** Direct the conversation towards the need to be able to talk to multiple people and the need to have a backup if that wire is damaged or unable to transmit information. \n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *In the previous lesson, we explored the Internet Simulator, where each of you were connected to one other person by a single wire. What are the potential problems with this setup?*\n\n**Discussion Goal:** Direct the conversation towards the need to be able to talk to multiple people and the need to have a backup if that wire is damaged or unable to transmit information. \n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e25c8d8d-d9aa-42e0-adda-7244f60e61b7",
@@ -482,7 +482,7 @@
       "key": "d706b650-540b-4e1b-b462-85602f91b2a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Group:** Place students in groups of 5-7. Give each group string according to the following chart:\n* Groups of 5: 10 strings\n* Groups of 6: 15 strings\n* Groups of 7: 21 strings",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n **Group:** Place students in groups of 5-7. Give each group string according to the following chart:\n* Groups of 5: 10 strings\n* Groups of 6: 15 strings\n* Groups of 7: 21 strings",
         "tips": [
           {
             "type": "teachingTip",
@@ -522,7 +522,7 @@
       "key": "cd2c8866-a0d0-4e33-9f66-e413170ca992",
       "position": 4,
       "properties": {
-        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class, read through the rules for all challenges. \n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #1 (3 mins):** Students work in groups to create a network where everyone can speak directly to everyone else.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #2 (3 mins):** As a class, read through Guideline A before having students work through the challenge.\n\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #3 (8 mins):** As a class, read through Guideline B before having students start work on the challenge.\n\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #4 (10 mins):** As a class, read through Guideline C before having students start work on the challenge. Let students know there are many possible answers to this as long as they have a reason for why they created the network that they did.\n",
+        "description": "* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> As a class, read through the rules for all challenges. \n\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #1 (3 mins):** Students work in groups to create a network where everyone can speak directly to everyone else.\n\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #2 (3 mins):** As a class, read through Guideline A before having students work through the challenge.\n\n\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #3 (8 mins):** As a class, read through Guideline B before having students start work on the challenge.\n\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #4 (10 mins):** As a class, read through Guideline C before having students start work on the challenge. Let students know there are many possible answers to this as long as they have a reason for why they created the network that they did.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -539,7 +539,7 @@
       "key": "0e438555-63d8-419d-93fe-0249564604fa",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about our 3 guidelines, what is a strength of the network your group created? What is a weakness for the network your group created?*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about our 3 guidelines, what is a strength of the network your group created? What is a weakness for the network your group created?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -585,7 +585,7 @@
       "key": "8cb35235-4fba-40ad-b492-1a9483bfb1a7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Vocabulary words for students to add to their Vocabulary Canvas.\n\n* Computing Device\n* Computing System\n* Computing Network\n* Path\n* Bandwidth",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Vocabulary words for students to add to their Vocabulary Canvas.\n\n* Computing Device\n* Computing System\n* Computing Network\n* Path\n* Bandwidth",
         "tips": [
           {
             "type": "teachingTip",
@@ -602,7 +602,7 @@
       "key": "fffa27f8-af69-482c-a37d-b0181c097ae9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "tips": [
           {
             "type": "teachingTip",
@@ -619,7 +619,7 @@
       "key": "ff89ad6c-ca63-4277-87f4-96ea7ee3232e",
       "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How would you use these words to describe today’s activity?*\n\n**Discussion Goal:** Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\n\n* Each individual person was acting as a computing device\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\n* The entire system - devices and paths - make up a computer network\n* A computing network is a type of a computing system. \n"
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How would you use these words to describe today’s activity?*\n\n**Discussion Goal:** Students should discuss in pairs how to describe today's activity using the new vocabulary from this unit. They should make the following connections between these words and this activity:\n\n* Each individual person was acting as a computing device\n* The strings were the paths between devices. If two people aren’t directly connected, then a path may require multiple strings to communicate\n* The entire system - devices and paths - make up a computer network\n* A computing network is a type of a computing system. \n"
       },
       "seeding_key": {
         "activity_section.key": "ff89ad6c-ca63-4277-87f4-96ea7ee3232e",
@@ -642,7 +642,7 @@
       "key": "1e2392fb-46e4-49fb-827f-ce5c71416c1d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Record the following words and definitions in your journal: Computing Device, Computing System, Computing Network, Path, Bandwidth. \r\n\r\n\r\n\r\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Record the following words and definitions in your journal: Computing Device, Computing System, Computing Network, Path, Bandwidth. \r\n\r\n\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "1e2392fb-46e4-49fb-827f-ce5c71416c1d",
@@ -666,7 +666,7 @@
       "key": "8dbed034-5d48-4233-9de7-e946ff4cd463",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?*\n\n**Discussion Goal:** This discussion is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\n\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\n* People may stop communicating because of the confusion.\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were in a room with 5 other people, all with the same name as you.  What might happen when you start communicating? How could you solve these problems?*\n\n**Discussion Goal:** This discussion is meant to foreshadow some of the issues students will face when they use the Internet Simulator.  Key points to draw out:\n\n* There might be confusion about who the person is trying to talk to because everyone has the same name.\n* Multiple people might be talking at once, making it hard to tell what people are talking about.\n* People may stop communicating because of the confusion.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8dbed034-5d48-4233-9de7-e946ff4cd463",
@@ -719,7 +719,7 @@
       "key": "e7312198-1d86-4654-a664-a5e46e954601",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** \n[r u2l03_the_need_for_addressing/virtual-pl-csp-summer/2025]"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** \n[r u2l03_the_need_for_addressing/virtual-pl-csp-summer/2025]"
       },
       "seeding_key": {
         "activity_section.key": "e7312198-1d86-4654-a664-a5e46e954601",
@@ -730,7 +730,7 @@
       "key": "7ed313d8-b0b3-4650-b8e6-3fdecad2ff48",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With your group follow the directions given in the box for Week 1\n\n* If you are a group of 5, everyone cross out Sunday\n* If you are a group of 4, everyone cross out Sunday and Saturday\n* Before starting to schedule each week, choose a random day of that week when you’re busy and cross it out\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.*\n\nStudents do not need to share out their conversations with the class but circulate the room and listen as they discuss."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** With your group follow the directions given in the box for Week 1\n\n* If you are a group of 5, everyone cross out Sunday\n* If you are a group of 4, everyone cross out Sunday and Saturday\n* Before starting to schedule each week, choose a random day of that week when you’re busy and cross it out\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n **Run Week 1:** Have students work on filling out their schedules, agreeing with one another on the days when they will meet. This should take 3 - 5 minutes for all groups to finish. When they're done ask students to quickly check that their schedules actually line up.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n **Discuss:** *With your group check that everyone's schedules match. Then discuss what worked well, what made this tricky, if there's anything you want to try differently in Week 2.*\n\nStudents do not need to share out their conversations with the class but circulate the room and listen as they discuss."
       },
       "seeding_key": {
         "activity_section.key": "7ed313d8-b0b3-4650-b8e6-3fdecad2ff48",
@@ -754,7 +754,7 @@
       "key": "f8f24e4f-d6a9-4261-9172-c6adcc6e4237",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students set up their boards for week two in the same way as last time:\n\n* If you're a group of 4 or 5 cross out Saturday and/or Sunday.\n* Randomly cross out a day in Week 2.\n* Once you're ready you can start on Week 2, but no talking is allowed at all.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Have students set up their boards for week two in the same way as last time:\n\n* If you're a group of 4 or 5 cross out Saturday and/or Sunday.\n* Randomly cross out a day in Week 2.\n* Once you're ready you can start on Week 2, but no talking is allowed at all.",
         "duration": "10",
         "name": "Scheduling on the Internet Simulator - Week 2",
         "tips": [
@@ -773,7 +773,7 @@
       "key": "ef1aaea7-4dcf-4c7a-afec-aab370794cef",
       "position": 6,
       "properties": {
-        "description": "\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Do This:** Login and join a room with your group mates. Once everyone is in the room complete Week 2 on the simulator only, no talking!\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n **Discuss:** *Fill out the table on the back side of your sheet. What problems did you have when communicating on the Internet Simulator this time around? What solutions did you create or would you like to try for Week 3?*\n\n Have students share out some of the challenges they encountered and ways they're going to try to address them the second time around."
+        "description": "\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n **Do This:** Login and join a room with your group mates. Once everyone is in the room complete Week 2 on the simulator only, no talking!\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n **Discuss:** *Fill out the table on the back side of your sheet. What problems did you have when communicating on the Internet Simulator this time around? What solutions did you create or would you like to try for Week 3?*\n\n Have students share out some of the challenges they encountered and ways they're going to try to address them the second time around."
       },
       "seeding_key": {
         "activity_section.key": "ef1aaea7-4dcf-4c7a-afec-aab370794cef",
@@ -784,7 +784,7 @@
       "key": "20261e6b-4934-4f0b-8341-6613e1b1b953",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Agree with your group on the set of rules you'd like to try this time around for how to communicate. Then complete Week 3 like the previous two weeks. No talking!\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Do This:** Based on your experience, take 5 minutes to write down in the rules section the collective rules you and your team would advise using going forward.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \r\n **Do This:** Agree with your group on the set of rules you'd like to try this time around for how to communicate. Then complete Week 3 like the previous two weeks. No talking!\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \r\n **Do This:** Based on your experience, take 5 minutes to write down in the rules section the collective rules you and your team would advise using going forward.",
         "duration": "10",
         "name": "Formalizing Rules - Week 3"
       },
@@ -820,7 +820,7 @@
       "key": "5d5626db-15e0-41e3-afda-5391e8dacd50",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  [r the_internet_ip_addresses_and_dns/virtual-pl-csp-summer/2025].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:**  [r the_internet_ip_addresses_and_dns/virtual-pl-csp-summer/2025].  You can stop the video at the 3:23 mark.  We watch the second half of this video in a later lesson on DNS.",
         "tips": [
           {
             "type": "teachingTip",
@@ -837,7 +837,7 @@
       "key": "89bce336-e8ee-48a8-8ead-02335b4a5f79",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and to your journal: protocol and IP address.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and to your journal: protocol and IP address.",
         "tips": [
           {
             "type": "teachingTip",
@@ -854,7 +854,7 @@
       "key": "48d2714d-2339-4305-aecf-bf485384dfdc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the similarities and differences between Internet Protocol (IP) and the addressing rules our class made?  Would rules like ours or IP work if they were secret?* \n\nHave students share their responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Students should walk away with an understanding that both the class rules and IP are shared, open protocols.  Key points:\n\n* All devices and computers on the Internet use IP to connect and communicate with each other.\n* Devices are assigned unique numbers (converted to binary sequences) called IP addresses.\n* All devices format the sender and receiver information the same way so that devices on different networks can still communicate.\n* These shared rules are called protocols. The Internet as we know it is actually these sets of protocols that are used to communicate over networks.\n"
       },
       "seeding_key": {
         "activity_section.key": "48d2714d-2339-4305-aecf-bf485384dfdc",
@@ -954,7 +954,7 @@
       "key": "b20fc2c5-cd1f-4c3e-96ba-bd1eb865e06c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *At the end of class yesterday, we saw that the Internet uses the Internet Protocol and IP Addresses to communicate across the shared Internet. How is this system similar to how we send letters in the mail? How is it different?*\n\n**DIscussion Goal:** Students will probably identify that both systems involve a numerical address that helps identify where the letter should go, and that both a 'to' and 'from' address are needed. \n\nHowever, something that may be less obvious is that our postal system has several intermediary steps before it reaches the destination - it is picked up by a postal worker, sorted in a postal center, and eventually directed to the recipient. This point is helpful in foreshadowing how today's lesson builds on yesterday's activity and the introduction of routers. \n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *At the end of class yesterday, we saw that the Internet uses the Internet Protocol and IP Addresses to communicate across the shared Internet. How is this system similar to how we send letters in the mail? How is it different?*\n\n**DIscussion Goal:** Students will probably identify that both systems involve a numerical address that helps identify where the letter should go, and that both a 'to' and 'from' address are needed. \n\nHowever, something that may be less obvious is that our postal system has several intermediary steps before it reaches the destination - it is picked up by a postal worker, sorted in a postal center, and eventually directed to the recipient. This point is helpful in foreshadowing how today's lesson builds on yesterday's activity and the introduction of routers. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "b20fc2c5-cd1f-4c3e-96ba-bd1eb865e06c",
@@ -1016,7 +1016,7 @@
       "key": "b8852773-24da-47cf-8bf0-2c68bbe0e057",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** \r\n\r\n1. Log into Code Studio and connect to the same router as your group number. \r\n\r\n2. Use this new version of the Internet Simulator to say hello to each person connected to your same router."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** \r\n\r\n1. Log into Code Studio and connect to the same router as your group number. \r\n\r\n2. Use this new version of the Internet Simulator to say hello to each person connected to your same router."
       },
       "seeding_key": {
         "activity_section.key": "b8852773-24da-47cf-8bf0-2c68bbe0e057",
@@ -1074,7 +1074,7 @@
       "key": "b62f5a3b-fae5-4543-80a6-bcf638398827",
       "position": 7,
       "properties": {
-        "description": "**Do This:** \r\n\r\n1. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students open the router logs and view the messages being sent on their router. \r\n\r\n2. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> After students have seen their own messages, use the drop-down menu to view the messages across all routers. Students will see all messages sent across all routers and the IP addresses of students on other routers.\r\n\r\n3. <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use the router logs to choose an IP address from each of the other routers. Send each of those people a message to ask them who they are and one of the following questions:\r\n\r\n\t* What is your favorite food?\r\n\t* What is your favorite type of animal?\r\n\t* What is your favorite color?\r\n\t* Note: Be sure to also respond to questions you get from people on other routers! \r\n\r\n**Circulate:** Monitor students as they send messages. Help students to use the router logs to find other IP Addresses. If students finish, encourage them to continue gathering data from as many people as they can.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** As a class, open the router logs and view the messages across all router logs. There should now be examples of messages appearing multiple times. Ask students to find one of their own messages and see how many times it appears."
+        "description": "**Do This:** \r\n\r\n1. <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students open the router logs and view the messages being sent on their router. \r\n\r\n2. <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> After students have seen their own messages, use the drop-down menu to view the messages across all routers. Students will see all messages sent across all routers and the IP addresses of students on other routers.\r\n\r\n3. <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Use the router logs to choose an IP address from each of the other routers. Send each of those people a message to ask them who they are and one of the following questions:\r\n\r\n\t* What is your favorite food?\r\n\t* What is your favorite type of animal?\r\n\t* What is your favorite color?\r\n\t* Note: Be sure to also respond to questions you get from people on other routers! \r\n\r\n**Circulate:** Monitor students as they send messages. Help students to use the router logs to find other IP Addresses. If students finish, encourage them to continue gathering data from as many people as they can.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** As a class, open the router logs and view the messages across all router logs. There should now be examples of messages appearing multiple times. Ask students to find one of their own messages and see how many times it appears."
       },
       "seeding_key": {
         "activity_section.key": "b62f5a3b-fae5-4543-80a6-bcf638398827",
@@ -1085,7 +1085,7 @@
       "key": "d2b01193-71c8-4169-b1b2-4facf8729de3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Can you predict why some messages are appearing multiple times?*\n\n\n**Discussion Goal:** Students should notice that each copy of their message is identical except for the ‘Logged By’ column. This column shows which routers the message is passing through as it travels through the network. This shows that the messages are not taking a direct route to the destination - it may pass through multiple routers before getting to the final destination.\n\nIt may be helpful to draw a network diagram on the board (similar to the activity from the second lesson) - even though each user is directly connected to a centralized router (as you can see in the Internet Simulator), the routers are connected to each other and pass messages along the way. \n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Can you predict why some messages are appearing multiple times?*\n\n\n**Discussion Goal:** Students should notice that each copy of their message is identical except for the ‘Logged By’ column. This column shows which routers the message is passing through as it travels through the network. This shows that the messages are not taking a direct route to the destination - it may pass through multiple routers before getting to the final destination.\n\nIt may be helpful to draw a network diagram on the board (similar to the activity from the second lesson) - even though each user is directly connected to a centralized router (as you can see in the Internet Simulator), the routers are connected to each other and pass messages along the way. \n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1114,7 +1114,7 @@
       "key": "c377482d-8e1d-49b9-9018-d9f158b2bc90",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** \r\n\r\n1. Pick someone on a different router and send three separate messages with your top three favorite movies or TV shows. \r\n2. After you send the messages, open the router logs and find these same messages in the logs. Notice how these messages traveled through the network. Did they always take the same path from your router to the other router?\r\n3. Look at other messages that are being sent. Are there any patterns in the paths that they take?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** \r\n\r\n1. Pick someone on a different router and send three separate messages with your top three favorite movies or TV shows. \r\n2. After you send the messages, open the router logs and find these same messages in the logs. Notice how these messages traveled through the network. Did they always take the same path from your router to the other router?\r\n3. Look at other messages that are being sent. Are there any patterns in the paths that they take?"
       },
       "seeding_key": {
         "activity_section.key": "c377482d-8e1d-49b9-9018-d9f158b2bc90",
@@ -1125,7 +1125,7 @@
       "key": "12602c43-a190-404d-a258-2f2c21dc3856",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Discuss:** *What did you notice about the messages you sent in the router logs? Did they always take the same path from your router to the other router?*\n\n**Discussion Goal:** Students should notice that their messages are taking different paths between routers to get to their destination - one message may take a certain path, while the next message takes a different path. Once this observation is made, the discussion can move to the wrap-up prompt.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>   **Discuss:** *What did you notice about the messages you sent in the router logs? Did they always take the same path from your router to the other router?*\n\n**Discussion Goal:** Students should notice that their messages are taking different paths between routers to get to their destination - one message may take a certain path, while the next message takes a different path. Once this observation is made, the discussion can move to the wrap-up prompt.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1142,7 +1142,7 @@
       "key": "4ebe81e0-1d80-4a2c-8360-a61dcf3eccd2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Read:** Read the vocabulary on the slide. Students should not put these terms in their journals yet."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Read:** Read the vocabulary on the slide. Students should not put these terms in their journals yet."
       },
       "seeding_key": {
         "activity_section.key": "4ebe81e0-1d80-4a2c-8360-a61dcf3eccd2",
@@ -1153,7 +1153,7 @@
       "key": "b0c4ac62-d97e-4c51-b49c-7dfa75643873",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Have students add the following words to their vocabulary canvas: router, redundancy, fault tolerance. \n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Journal:** Have students add the following words to their vocabulary canvas: router, redundancy, fault tolerance. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "b0c4ac62-d97e-4c51-b49c-7dfa75643873",
@@ -1164,7 +1164,7 @@
       "key": "1a71df0c-c7d6-4a70-b8f0-208969e5845e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n\n---\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Thinking about these terms, how can we describe what we've observed in the router logs at the end of this activity? What are some practical reasons that you think messages might take different paths from one router to the other?*\n\n**Discussion Goal:** Students may brainstorm several reasons why the messages are taking different paths, such as:\n\n* Some paths have lots of traffic, which can slow down the message. Instead, the router sends the message along a different path.\n* One of the paths may have been ‘cut’ like in the activity from Unit 2-Lesson 2, requiring the message to take a different path.\n\nStudents should use these new vocabulary words to describe these reasons, especially how the different paths can help make the network fault-tolerant. Students may see these words as having a cause & effect relationship: the redundancy in the network is what helps make it fault-tolerant.\n\n---\n"
       },
       "seeding_key": {
         "activity_section.key": "1a71df0c-c7d6-4a70-b8f0-208969e5845e",

@@ -623,7 +623,7 @@
       "key": "a961ff6a-4ed7-4d8e-9b21-ba151ffb96aa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _We use the word “if” to make sure that some action only occurs when it is supposed to._\n\n_Finish this statement: \nIf I do well in my classes, then...._\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _We use the word “if” to make sure that some action only occurs when it is supposed to._\n\n_Finish this statement: \nIf I do well in my classes, then...._\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -635,7 +635,7 @@
       "key": "e48679f8-0ac3-4f05-abad-470181a91f83",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n\n- **Pseudocode** - A plain language description of the steps in an algorithm.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Conditionals** - Statements that only run under certain conditions.\n\n- **Pseudocode** - A plain language description of the steps in an algorithm.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -647,7 +647,7 @@
       "key": "53a0628b-ce04-4317-866e-24887e5d757f",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reward” slide\n- We can start this lesson off right away\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\n\t\t- Sing an opera song\n\t\t- Give five more minutes of recess\n\t\t- Do a handstand\n\n\t- Start counting right away.\n\t- If the students succeed, point out that they succeeded, so they get the reward.\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “If Statement” slide\n\n**Say:** *What was the condition of the reward?*\n\n- _The condition was IF you were quiet for 30 seconds_\n\n\t- _If you were quiet, the condition would be true, and you would get the reward._\n\t- _If you weren't quiet, the condition would be false, so the reward would not apply._\n\n- _Can we come up with another conditional?_\n\t- _If you can guess my age correctly, the class can give you applause._\n\t- _If I know an answer, I can raise my hand._\n\t- _What examples can you come up with?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement” slide\n\n- *Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.*\n\t- *This extra condition is called an \"ELSE\" statement*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement (example)” slide\n\n- *When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do*\n\t- *Example: **IF** I draw a king from this deck of cards, everybody claps. \n  - Or **ELSE**, everyone says \"Awwwwwwe.\"*\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's Try It” slide\n\n- *Let's try it.*(Draw a card and see if your class reacts appropriately.)\n\t- Ask the class to analyze what just happened.\n\t\t- *What was the IF?*\n\t\t- *What was the ELSE?*\n\t\t- *Which condition was met?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Believe it or Not” slide\n\n- *Believe it or not, we have even one more option.*\n\t- **If** I draw a 7, clap.\n\n   - **Else if** I draw something less than 7, you say \"YAY\".\n\n   - **Else** say \"Awwwwe\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “If, Else-If, Else” slide\n\n- *This is why we have the terms If, Else-If, and Else.*\n\t- _**If** is the first condition._\n\t- _**Else-If** gets looked at only if the \"If isn't true._\n\t- _**Else** gets looked at only if nothing before it is true._\n\n_Now let's play a game._",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reward” slide\n- We can start this lesson off right away\n\t- Let the class know that if they can be completely quiet for thirty seconds, you will do something like:\n\t\t- Sing an opera song\n\t\t- Give five more minutes of recess\n\t\t- Do a handstand\n\n\t- Start counting right away.\n\t- If the students succeed, point out that they succeeded, so they get the reward.\n\t- Otherwise, point out that they were not completely quiet for a full thirty seconds, so they do not get the reward.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “If Statement” slide\n\n**Say:** *What was the condition of the reward?*\n\n- _The condition was IF you were quiet for 30 seconds_\n\n\t- _If you were quiet, the condition would be true, and you would get the reward._\n\t- _If you weren't quiet, the condition would be false, so the reward would not apply._\n\n- _Can we come up with another conditional?_\n\t- _If you can guess my age correctly, the class can give you applause._\n\t- _If I know an answer, I can raise my hand._\n\t- _What examples can you come up with?_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement” slide\n\n- *Sometimes, we want to have an extra condition, in case the \"IF\" statement is not true.*\n\t- *This extra condition is called an \"ELSE\" statement*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Else Statement (example)” slide\n\n- *When the \"IF\" condition isn't met, we can look at the \"ELSE\" for what to do*\n\t- *Example: **IF** I draw a king from this deck of cards, everybody claps. \n  - Or **ELSE**, everyone says \"Awwwwwwe.\"*\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let's Try It” slide\n\n- *Let's try it.*(Draw a card and see if your class reacts appropriately.)\n\t- Ask the class to analyze what just happened.\n\t\t- *What was the IF?*\n\t\t- *What was the ELSE?*\n\t\t- *Which condition was met?*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Believe it or Not” slide\n\n- *Believe it or not, we have even one more option.*\n\t- **If** I draw a 7, clap.\n\n   - **Else if** I draw something less than 7, you say \"YAY\".\n\n   - **Else** say \"Awwwwe\".\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “If, Else-If, Else” slide\n\n- *This is why we have the terms If, Else-If, and Else.*\n\t- _**If** is the first condition._\n\t- _**Else-If** gets looked at only if the \"If isn't true._\n\t- _**Else** gets looked at only if nothing before it is true._\n\n_Now let's play a game._",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -671,7 +671,7 @@
       "key": "d51284bb-24af-444c-830e-9acf42ad5145",
       "position": 2,
       "properties": {
-        "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample” slide\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's play a game!” slide\n\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals. (Three additional slides have been provided for this part of the activity if needed.)\n\n\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Let's nest conditionals” slide\n\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
+        "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sample” slide\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let's play a game!” slide\n\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals. (Three additional slides have been provided for this part of the activity if needed.)\n\n\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Let's nest conditionals” slide\n\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
       },
       "seeding_key": {
         "activity_section.key": "d51284bb-24af-444c-830e-9acf42ad5145",
@@ -682,7 +682,7 @@
       "key": "0620e1c1-0d75-49f8-8e68-3e22744135f1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
         "duration": "5",
         "name": "Optional Assessment"
       },
@@ -695,7 +695,7 @@
       "key": "24daa302-9f21-4499-b20b-3c5f9fe9a270",
       "position": 1,
       "properties": {
-        "description": "&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide",
+        "description": "&nbsp\n####Flash Chat: What did we learn?\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide",
         "tips": [
           {
             "type": "teachingTip",
@@ -723,7 +723,7 @@
       "key": "1aa8a8bb-b004-4b3e-810c-00fdb23af1d6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n-  *What are some of the conditionals you used today?* \n- *Can you come up with some more that you would use with a deck of cards?*\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n-  *What are some of the conditionals you used today?* \n- *Can you come up with some more that you would use with a deck of cards?*\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -757,7 +757,7 @@
       "key": "d20eff0d-bb82-43cc-8387-a5168649af14",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nReview the \"Conditionals with Cards\" activity with your students.\n\n- _What is a conditional statement?_\n- _When is it useful for you to use a conditional in your program?_",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -769,7 +769,7 @@
       "key": "3a0896a6-c22b-4f4a-8563-e23082fa4589",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Preview - If/Else with Bee” slide\n\n**Say:** *Now we're going to use conditionals with the Code.org bee to help him deal with some mysterious clouds. We don't know if his flowers have nectar or not, so we'll need to use conditionals to make sure that we collect nectar if it's there, but that we don't try to collect nectar from a flower that doesn't have any.*\n\nPull up a puzzle from this lesson, we recommend puzzle 9. \n\n - Ask the class what the bee should do when it gets to the cloud.\n    - The bee should use a conditional to check for a flower or a honeycomb.\n - Use the \"if at flower / else block\". Ask the class what the bee should do if there's a flower. If there's not a flower, there will be a honeycomb. What should the bee do then?\n    - The bee should \"get nectar\" if there is a flower and \"make honey\" if there is a honeycomb.\n\nFill in the rest of the code and press \"Run\". Discuss with the class why this worked.",
         "name": "Preview of Online Puzzles \r"
       },
       "seeding_key": {
@@ -781,7 +781,7 @@
       "key": "63d901b4-60d1-4ea7-a0aa-3e70e29b2da2",
       "position": 3,
       "properties": {
-        "description": "###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Conditionals** - Statements that only run under certain conditions.\n"
+        "description": "###Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Conditionals** - Statements that only run under certain conditions.\n"
       },
       "seeding_key": {
         "activity_section.key": "63d901b4-60d1-4ea7-a0aa-3e70e29b2da2",
@@ -804,7 +804,7 @@
       "key": "55e03e8c-4bd4-4d86-a4c6-427ea48c4c2f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Conditionals: If Statements” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Conditionals: If Statements” video",
         "progression_name": "Video: Conditionals: If Statements"
       },
       "seeding_key": {
@@ -816,7 +816,7 @@
       "key": "00eddbb6-68d1-4e2b-ae0d-4ed20a004e20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -828,7 +828,7 @@
       "key": "2dcda00d-8d92-4935-b8ba-ecb3f0faa5e1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-7 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -840,7 +840,7 @@
       "key": "a9863079-06be-4e80-9737-07000a3dc00a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “If and If/Else Statements” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “If and If/Else Statements” video",
         "progression_name": "Video: Conditionals: If and If/Else Statements"
       },
       "seeding_key": {
@@ -852,7 +852,7 @@
       "key": "6107b3e8-e13b-4ea8-9c98-5e07199a0763",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -864,7 +864,7 @@
       "key": "4206f3cf-679d-4185-80e1-cd3bf413bf13",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Predict” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Predict” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -876,7 +876,7 @@
       "key": "287f7048-3c6d-485e-b506-a0aeb9c516bf",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -888,7 +888,7 @@
       "key": "5e923fb1-1491-48ab-88c2-5e8a4d9007f3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-13 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 12-13 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -900,7 +900,7 @@
       "key": "c6b175a0-3d30-48d8-9c92-0e899b110f4c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 14-15 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -912,7 +912,7 @@
       "key": "70d82d4b-4780-4c9e-ac2c-cca551849a54",
       "position": 11,
       "properties": {
-        "description": "####Lesson Extras\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
+        "description": "####Lesson Extras\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -924,7 +924,7 @@
       "key": "481163bb-e2c2-4341-b8d1-8c208c11466f",
       "position": 1,
       "properties": {
-        "description": " \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** *What conditionals did you use in your code today?*\n",
+        "description": " \n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** *What conditionals did you use in your code today?*\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -991,7 +991,7 @@
       "key": "a4958314-1675-48d1-8483-3fa39e3aa305",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_\n\n",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_\n\n",
         "name": "Setting the Stage"
       },
       "seeding_key": {
@@ -1003,7 +1003,7 @@
       "key": "d6bc9854-e30b-4b9c-8920-6ee49c87a80e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn Computer Science, events cause other actions to happen.\n\n- **Event** - An action that causes something to happen",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n####Vocabulary\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn Computer Science, events cause other actions to happen.\n\n- **Event** - An action that causes something to happen",
         "name": "A Series of Events"
       },
       "seeding_key": {
@@ -1062,7 +1062,7 @@
       "key": "075e41de-2be6-437b-8af9-b37919585142",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
         "name": "Hello World",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
       },
@@ -1075,7 +1075,7 @@
       "key": "6ab95e9e-0e5a-4bcf-a052-74877c9db71f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1087,7 +1087,7 @@
       "key": "99b54222-371a-4a41-8046-c10bbf173fa6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
         "progression_name": "Video: Hello World: Programming with Events"
       },
       "seeding_key": {
@@ -1099,7 +1099,7 @@
       "key": "f26aad37-7e8c-46e0-b549-77b53605e7e4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1111,7 +1111,7 @@
       "key": "b185f63e-16ba-4934-8ff7-7ad98afa30f1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
         "progression_name": "Video: Hello World: Do What You Want"
       },
       "seeding_key": {
@@ -1123,7 +1123,7 @@
       "key": "858765c6-77ea-4b9b-9afb-2149df49b6bb",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1146,7 +1146,7 @@
       "key": "f76628ed-c779-4e12-b107-0446e6662d6b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1195,7 +1195,7 @@
       "key": "8387baff-96aa-4a9c-9190-33646ded683f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What differences do you notice between the two photos?_ \n- _Which picture shows a balanced ecosystem? What evidence do you see?_ \n\n**Do This**: Show students the photos on the slideshow or find your own example and non example of a balanced ecosystem.\n\n**Discussion Goal**: Students will realize that a balanced ecosystem is bright, colorful, and full of life but an unbalanced ecosystem is dreary and dead. Evidence may include multiple types of fish swimming, living and brightly colored coral, fish swimming in groups, and bright-colored water in the healthy and balanced ecosystem. Evidence of the unhealthy ecosystem may include a lack of fish, old and dead coral, an old fishing net, etc.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _What differences do you notice between the two photos?_ \n- _Which picture shows a balanced ecosystem? What evidence do you see?_ \n\n**Do This**: Show students the photos on the slideshow or find your own example and non example of a balanced ecosystem.\n\n**Discussion Goal**: Students will realize that a balanced ecosystem is bright, colorful, and full of life but an unbalanced ecosystem is dreary and dead. Evidence may include multiple types of fish swimming, living and brightly colored coral, fish swimming in groups, and bright-colored water in the healthy and balanced ecosystem. Evidence of the unhealthy ecosystem may include a lack of fish, old and dead coral, an old fishing net, etc.",
         "duration": "5",
         "name": "Think About It"
       },
@@ -1236,7 +1236,7 @@
       "key": "501abd42-0d17-4947-b65e-42dc39c76fef",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Project Overview” slide",
         "duration": "25",
         "name": "Aquatic Ecosystem Simulation - Skill Building"
       },
@@ -1261,7 +1261,7 @@
       "key": "5076c736-f0dd-42dd-ac34-bd3bb0da645e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Ecosystems video” slide\n\n**Do This**: Show the introduction video to the entire class",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Ecosystems video” slide\n\n**Do This**: Show the introduction video to the entire class",
         "progression_name": "Ecosystems Video"
       },
       "seeding_key": {
@@ -1273,7 +1273,7 @@
       "key": "fcc4d63c-047f-438e-9558-758bc818922e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Test the simulation” slide\n\n**Do This**: Have students try the unfinished simulation on their own computers. Ask guiding questions to help them notice what is missing from the simulation.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Test the simulation” slide\n\n**Do This**: Have students try the unfinished simulation on their own computers. Ask guiding questions to help them notice what is missing from the simulation.",
         "progression_name": "Ecosystems Simulation"
       },
       "seeding_key": {
@@ -1312,7 +1312,7 @@
       "key": "d48b91de-c8fe-4573-bbc2-09c948bde1b3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Code the Food Chain” slide\n\n**Do This**: Have students complete levels 3-5 independently to set up the aquatic ecosystem. They will add event blocks to the simulation to make the fish eat the algae and be removed when they touch the boat. \n\n**Level 3** - Students find the `When fish touches algae` event block and add an `eats object algae` block under the event. \n\n**Level 4** - Students find the `When boat touches fish` event block and add a `catches object fish` block under the event.\n\n**Level 5** - You can use this matching level as a Check For Understanding and to reinforce the learning in levels 3-4. Students drag the picture of the code that matches the GIF. One GIF shows the fish eating algae and the other GIF shows the boat catching fish. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-5 - Code the Food Chain” slide\n\n**Do This**: Have students complete levels 3-5 independently to set up the aquatic ecosystem. They will add event blocks to the simulation to make the fish eat the algae and be removed when they touch the boat. \n\n**Level 3** - Students find the `When fish touches algae` event block and add an `eats object algae` block under the event. \n\n**Level 4** - Students find the `When boat touches fish` event block and add a `catches object fish` block under the event.\n\n**Level 5** - You can use this matching level as a Check For Understanding and to reinforce the learning in levels 3-4. Students drag the picture of the code that matches the GIF. One GIF shows the fish eating algae and the other GIF shows the boat catching fish. \n",
         "progression_name": "Ecosystems Video"
       },
       "seeding_key": {
@@ -1335,7 +1335,7 @@
       "key": "d1f2ff12-3a18-497b-bc03-68bcdd8c5831",
       "position": 9,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: As soon as a few students have completed Level 5, bring the whole class together to preview Level 6. Read over the cause-and-effect scenarios of too much, too little, and just enough algae. Spiral in the conversation from the warm-up to remind students about unbalanced ecosystems. In this simulation, the amount of algae causes the system to fall out of balance. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer."
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Key Concept” slide\n\n**Do This**: As soon as a few students have completed Level 5, bring the whole class together to preview Level 6. Read over the cause-and-effect scenarios of too much, too little, and just enough algae. Spiral in the conversation from the warm-up to remind students about unbalanced ecosystems. In this simulation, the amount of algae causes the system to fall out of balance. \n\n* **Condition** - Something a program checks to see if it is true before allowing an action.\n\n* **Conditionals** - Statements that only run under certain conditions.\n\n**Discussion Goal**: Students will understand that computers can check to see if something is true or false and ‘decide’ which action to execute based on the answer."
       },
       "seeding_key": {
         "activity_section.key": "d1f2ff12-3a18-497b-bc03-68bcdd8c5831",
@@ -1358,7 +1358,7 @@
       "key": "b3f78dad-48b4-4bfd-a019-93de6cb9ff57",
       "position": 11,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - 10 Cause & Effect” slide\n\n**Do This**: Have students complete levels 6-10 independently to set up the cause & effect conditionals. They will add one conditional at a time that checks how much algae is in the water. \n\n**Level 6** - Look closely at the photos of the ecosystem and the code that represents the situation.\n\n**Level 7** - Students will add a conditional block that checks to see if there is **too much algae**. When the condition is true, the computer will run the code inside the conditional block. In this case, when overfishing occurs, there aren't enough fish to eat all the algae. If there is too much algae, the healthy coral changes costume to become sick coral.\n\n**Level 8** - Students will add a second conditional statement that checks to see if there is **too little algae**. When the condition is true the computer will run the code inside the conditional block. This time the fish will stop everything, then begin leaving the area. These two blocks are glued together to help students easily nest them inside the conditional block.\n\n**Level 9** - Students now add one final conditional statement that checks if the amount of **algae is just right**. When that’s true, the coral changes costume from sick to healthy.\n\n**Level 10** - This is a matching level similar to Level 5 and can be used as a check for understanding, It is also an opportunity to reinforce how the three conditional blocks check the amount of algae (cause) and change the ecosystem accordingly (effect). \n\n"
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - 10 Cause & Effect” slide\n\n**Do This**: Have students complete levels 6-10 independently to set up the cause & effect conditionals. They will add one conditional at a time that checks how much algae is in the water. \n\n**Level 6** - Look closely at the photos of the ecosystem and the code that represents the situation.\n\n**Level 7** - Students will add a conditional block that checks to see if there is **too much algae**. When the condition is true, the computer will run the code inside the conditional block. In this case, when overfishing occurs, there aren't enough fish to eat all the algae. If there is too much algae, the healthy coral changes costume to become sick coral.\n\n**Level 8** - Students will add a second conditional statement that checks to see if there is **too little algae**. When the condition is true the computer will run the code inside the conditional block. This time the fish will stop everything, then begin leaving the area. These two blocks are glued together to help students easily nest them inside the conditional block.\n\n**Level 9** - Students now add one final conditional statement that checks if the amount of **algae is just right**. When that’s true, the coral changes costume from sick to healthy.\n\n**Level 10** - This is a matching level similar to Level 5 and can be used as a check for understanding, It is also an opportunity to reinforce how the three conditional blocks check the amount of algae (cause) and change the ecosystem accordingly (effect). \n\n"
       },
       "seeding_key": {
         "activity_section.key": "b3f78dad-48b4-4bfd-a019-93de6cb9ff57",
@@ -1397,7 +1397,7 @@
       "key": "e3218ddc-c677-47ed-81a1-e98a9266dd37",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Now You’re in Control” slide\n \n**Do This**: With the remaining time, allow students to modify the fully coded simulation on their own. The instructions include prompts to give students an idea of how to change their code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Now You’re in Control” slide\n \n**Do This**: With the remaining time, allow students to modify the fully coded simulation on their own. The instructions include prompts to give students an idea of how to change their code.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1438,7 +1438,7 @@
       "key": "6f5dccfe-1074-46c3-b960-98dba5138bce",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review\" slide\n\n**Discuss**: \n- What is the conditional statement checking for?\n- If the condition is true, what happens? \n- What happens if it is false?\n\n**Discussion Goal**: Students will be able to see that the condition is checking if there are 10 corgis. If the statement is true, then the bunny says, \"Yay! There are 10 corgis.\" If the statement is false, nothing happens. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Review\" slide\n\n**Discuss**: \n- What is the conditional statement checking for?\n- If the condition is true, what happens? \n- What happens if it is false?\n\n**Discussion Goal**: Students will be able to see that the condition is checking if there are 10 corgis. If the statement is true, then the bunny says, \"Yay! There are 10 corgis.\" If the statement is false, nothing happens. ",
         "duration": "3",
         "name": "Review"
       },
@@ -1451,7 +1451,7 @@
       "key": "41129825-5ac5-4559-a8a3-32e4fcd994a2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Show What You Know!” slide\n\n**Discuss**: Use conditional statements to explain balanced and/or unbalanced ecosystems.\n\n**Discussion Goal**: Students will be able to articulate what they have learned about the effects of one organism on another in an ecosystem. ",
         "duration": "7",
         "name": "Cause and Effect"
       },
@@ -1558,7 +1558,7 @@
       "key": "5a837d24-a6fd-42ea-9b23-620de1d190df",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How did we use variables in our \nBlank Space Stories?_\n\n",
+        "description": "**Do This:** Remind students what they did last class or ask them to share. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _How did we use variables in our \nBlank Space Stories?_\n\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -1570,7 +1570,7 @@
       "key": "098c11d2-9582-4769-b393-b6eb4661a47d",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program."
+        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Prompt** - A message on the computer screen that waits for input from the user.\n- **Variable** - A label for a piece of information used in a program."
       },
       "seeding_key": {
         "activity_section.key": "098c11d2-9582-4769-b393-b6eb4661a47d",
@@ -1581,7 +1581,7 @@
       "key": "332e4c3a-63a1-4baa-95eb-983713500e5c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Prompts” slide\n\n**Discuss:** How do computer programs ask us for information?\n\n**Discussion Goal:** Students should think about their own experiences as users and times when a computer asks them for information. There are lots of ways to input information into a computer, but focus on ideas where something is typed into a prompt for now.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Variables” slide\n"
       },
       "seeding_key": {
         "activity_section.key": "332e4c3a-63a1-4baa-95eb-983713500e5c",
@@ -1604,7 +1604,7 @@
       "key": "2d9c906a-aa1f-4976-a446-c9f3a11a3656",
       "position": 1,
       "properties": {
-        "description": "####Prediction (5 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide \n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
+        "description": "####Prediction (5 mins)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Predict” slide \n\n**Do This:** Have students read the provided code and make a prediction about what will happen. After pressing “Run”, provide time for students to reflect on anything they found interesting or that surprised them.",
         "name": "Text and Prompts",
         "progression_name": "Prediction"
       },
@@ -1617,7 +1617,7 @@
       "key": "40ca20c9-9d50-40f4-aaaa-89e4655b1980",
       "position": 2,
       "properties": {
-        "description": "####Video (5 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprite Lab: Text and Prompts” video\n",
+        "description": "####Video (5 minutes)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sprite Lab: Text and Prompts” video\n",
         "progression_name": "Video: Text and Prompts",
         "tips": [
           {
@@ -1635,7 +1635,7 @@
       "key": "ed38c26d-5ec1-41f6-a677-2e2707f77467",
       "position": 3,
       "properties": {
-        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-8 - Skill Building” slide \n\n**Transition:** Have students move to their computer and sign in. All students should complete all levels in this section in order. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
+        "description": "####Skill Building and Practice (20 mins)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-8 - Skill Building” slide \n\n**Transition:** Have students move to their computer and sign in. All students should complete all levels in this section in order. These activities are suitable for independent learning or pair programming.\n\nStudents should complete the Skill Building levels and then spend any remaining time choosing from the various Practice activities.\n",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -1653,7 +1653,7 @@
       "key": "9f0987ca-a8d5-4f71-9ecb-b8b5961ec6c2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice (Choice)” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice (Choice)” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1665,7 +1665,7 @@
       "key": "6ac15d24-7f86-4714-9422-4ce235ae01e7",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up Summary” slide\n",
+        "description": "**Do This:** Use the lesson slides to review the vocabulary for this lesson. Be sure that students can recall from the lesson where they saw each of these concepts. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Wrap-Up Summary” slide\n",
         "name": "Review"
       },
       "seeding_key": {
@@ -1689,7 +1689,7 @@
       "key": "32679f6f-354a-45ed-b3bf-d0f478c12c6b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nPick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n**Reflect:**\n* _How is a variable like a box? How is it different?_\n* _Why do programmers need variables?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nPick one (or both) of the reflection prompts below to give to students. They can journal individually, or discuss the answers in groups or as a class.\n\n**Reflect:**\n* _How is a variable like a box? How is it different?_\n* _Why do programmers need variables?_",
         "name": "Reflection"
       },
       "seeding_key": {

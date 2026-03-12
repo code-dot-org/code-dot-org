@@ -89,7 +89,7 @@ class WebLabView extends React.Component {
                 !this.props.isReadOnlyWorkspace && (
                   <div>
                     <PaneButton
-                      iconClass="fa fa-plus-circle"
+                      iconClass="fa-solid fa-circle-plus"
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
@@ -97,7 +97,7 @@ class WebLabView extends React.Component {
                       label={weblabMsg.addHTMLButton()}
                     />
                     <PaneButton
-                      iconClass="fa fa-plus-circle"
+                      iconClass="fa-solid fa-circle-plus"
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
@@ -106,7 +106,7 @@ class WebLabView extends React.Component {
                     />
                     <PaneButton
                       id="ui-test-add-image"
-                      iconClass="fa fa-plus-circle"
+                      iconClass="fa-solid fa-circle-plus"
                       leftJustified={true}
                       headerHasFocus={true}
                       isRtl={false}
@@ -119,8 +119,8 @@ class WebLabView extends React.Component {
                 <PaneButton
                   iconClass={
                     this.props.isFullScreenPreviewOn
-                      ? 'fa fa-compress'
-                      : 'fa fa-arrows-alt'
+                      ? 'fa-solid fa-compress'
+                      : 'fa-solid fa-up-down-left-right'
                   }
                   leftJustified={false}
                   headerHasFocus={true}
@@ -140,7 +140,7 @@ class WebLabView extends React.Component {
                 {!this.props.isFullScreenPreviewOn && (
                   <PaneButton
                     id="versions-header"
-                    iconClass="fa fa-clock-o"
+                    iconClass="fa-solid fa-clock"
                     leftJustified={true}
                     headerHasFocus={true}
                     isRtl={false}
@@ -163,7 +163,7 @@ class WebLabView extends React.Component {
                         />
                       )}
                       <PaneButton
-                        iconClass="fa fa-repeat"
+                        iconClass="fa-solid fa-rotate-right"
                         leftJustified={false}
                         headerHasFocus={true}
                         isRtl={false}
@@ -174,7 +174,7 @@ class WebLabView extends React.Component {
                   )}
                 {!this.props.isFullScreenPreviewOn && (
                   <PaneButton
-                    iconClass="fa fa-mouse-pointer"
+                    iconClass="fa-solid fa-arrow-pointer"
                     leftJustified={false}
                     headerHasFocus={true}
                     isPressed={this.props.isInspectorOn}

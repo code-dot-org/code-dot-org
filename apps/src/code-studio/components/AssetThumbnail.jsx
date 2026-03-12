@@ -5,12 +5,12 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
-  image: 'fa fa-picture-o',
-  audio: 'fa fa-music',
-  video: 'fa fa-video-camera',
-  pdf: 'fa fa-file-pdf-o',
-  doc: 'fa fa-file-text-o',
-  unknown: 'fa fa-question',
+  image: 'fa-regular fa-image',
+  audio: 'fa-solid fa-music',
+  video: 'fa-solid fa-video',
+  pdf: 'fa-regular fa-file-pdf',
+  doc: 'fa-regular fa-file-lines',
+  unknown: 'fa-solid fa-question',
 };
 
 const assetThumbnailStyle = {

@@ -357,7 +357,7 @@
       "key": "171901ca-fd8a-4645-b917-fae2759c6e51",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Learn the Basics with Hello World!” slide\n\n**Reflect**: _What are some of your favorite animated stories?_",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Learn the Basics with Hello World!” slide\n\n**Reflect**: _What are some of your favorite animated stories?_",
         "name": "Setting the Stage "
       },
       "seeding_key": {
@@ -369,7 +369,7 @@
       "key": "b4dd3d2a-1955-437a-aa8a-7c48eb4039a4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide",
         "name": "A Series of Events"
       },
       "seeding_key": {
@@ -431,7 +431,7 @@
       "key": "bd0f17ef-0574-4002-8513-f24da943ed7f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
         "name": "Hello World",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
       },
@@ -444,7 +444,7 @@
       "key": "731a60a7-3368-49b7-adff-82e7af66447f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -456,7 +456,7 @@
       "key": "a5d90950-6eda-4b6d-9dd3-ebc2f22e934f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
         "progression_name": "Video: Hello World: Programming with Events"
       },
       "seeding_key": {
@@ -468,7 +468,7 @@
       "key": "4c91d8e3-aa07-4b5d-b23d-12331878d5bb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-13 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-13 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -480,7 +480,7 @@
       "key": "3536d8c6-b62f-474c-8ab2-a0f2e64c427d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
         "progression_name": "Video: Hello World: Do What You Want"
       },
       "seeding_key": {
@@ -492,7 +492,7 @@
       "key": "d9d32b68-4eb1-4b33-8574-34d1a6e32dce",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 15 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -531,7 +531,7 @@
       "key": "28f6cc76-0588-4abe-bd4f-1040d609cf4e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do events work in your code?_\n* _What sprites would you use to animate your favorite story?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do events work in your code?_\n* _What sprites would you use to animate your favorite story?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -554,7 +554,7 @@
       "key": "1eae1f71-de3d-47ae-9fdf-6e4355d5c3a6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _What is an example of a story with a lesson?_\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members or stories they’ve seen in movies or television. Ask students to share these stories with the group. Use **The Tortoise and the Hare** as an example to help guide the discussion. \n\nAs students share, connect their stories back to the ones they read as a class and compare how characters or morals/lessons can be similar between many different stories. Students should understand that short stories that are fairytales, fables, folklore, or myths explain or show a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share other stories they’ve read that may have a moral.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _What is an example of a story with a lesson?_\n\n**Discussion Goal**: Encourage students to make connections to stories they’ve heard growing up or from family members or stories they’ve seen in movies or television. Ask students to share these stories with the group. Use **The Tortoise and the Hare** as an example to help guide the discussion. \n\nAs students share, connect their stories back to the ones they read as a class and compare how characters or morals/lessons can be similar between many different stories. Students should understand that short stories that are fairytales, fables, folklore, or myths explain or show a moral. Review examples of common fables students may be familiar with, like The Tortoise and the Hare, The Boy who Cried Wolf, or The Ugly Duckling. You can also ask students to share other stories they’ve read that may have a moral.",
         "duration": "5",
         "name": "Reflect"
       },
@@ -579,7 +579,7 @@
       "key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable, Fairytale, Folklore, or Myth** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Key Detail** - An important moment in the story that adds meaning\n\n\n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**\n\n- **Fable, Fairytale, Folklore, or Myth** - A short story conveying a moral\n- **Moral** - A lesson learned\n- **Key Detail** - An important moment in the story that adds meaning\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d9c25cc5-67d5-4005-989b-906ca2a88a1e",
@@ -646,7 +646,7 @@
       "key": "dd838c02-ba76-41b5-8f4c-1b3d1bc16219",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _How were the short stories we read similar?_\n- _How were they different?_\n\n**Discussion Goal**: Encourage students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to another, et cetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _How were the short stories we read similar?_\n- _How were they different?_\n\n**Discussion Goal**: Encourage students to give specific examples about the story they read by using titles and specific details. All had a moral of ____________, One short story had a similar problem to another, et cetera. Students will gain an understanding, that all of these types of stories follow a similar pattern.  \n",
         "duration": "10",
         "name": "Review Anchor Chart"
       },
@@ -684,7 +684,7 @@
       "key": "ddfc79ff-62fb-49ba-8566-161d13056b85",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What are some examples of short stories we have read?_\n- _What was the moral of those stories?_\n\n\n**Discussion Goal**: Students should recall from the previous lesson that short stories we have read are fables, fairy tales, or myths and they all end with a moral. Students may also remember certain characters and their traits from the earlier lesson."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What are some examples of short stories we have read?_\n- _What was the moral of those stories?_\n\n\n**Discussion Goal**: Students should recall from the previous lesson that short stories we have read are fables, fairy tales, or myths and they all end with a moral. Students may also remember certain characters and their traits from the earlier lesson."
       },
       "seeding_key": {
         "activity_section.key": "ddfc79ff-62fb-49ba-8566-161d13056b85",
@@ -709,7 +709,7 @@
       "key": "e15442c3-1814-4a24-8ea2-55b7512c3732",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**: \n- **Moral** - A lesson that is learned \n- **Key Detail** - An important moment in the story that adds meaning\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**: \n- **Moral** - A lesson that is learned \n- **Key Detail** - An important moment in the story that adds meaning\n"
       },
       "seeding_key": {
         "activity_section.key": "e15442c3-1814-4a24-8ea2-55b7512c3732",
@@ -720,7 +720,7 @@
       "key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _Think back to our previous class._ \n- _What were the stories we read, and what were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the sequence of events and key details lead to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: \n- _Think back to our previous class._ \n- _What were the stories we read, and what were their morals?_\n\n**Discussion Goal**:  Students should recall the morals from the previous lessons and key details of those stories. They can also brainstorm other scenes in stories they are familiar with.\n\n**Do This:** As students reach the end of their brainstorm, remind them of the moral of a previous story they have read and help them see how the sequence of events and key details lead to the moral of the story. This is because the reader learns the moral of the story through the character’s actions and growth.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "40e3df32-0c5e-4fd0-ad1a-3ccc8434bb3d",
@@ -788,7 +788,7 @@
       "key": "577647aa-633b-41fe-a372-c8710b14ab72",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Story” slide\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Story” slide\n\n"
       },
       "seeding_key": {
         "activity_section.key": "577647aa-633b-41fe-a372-c8710b14ab72",
@@ -850,7 +850,7 @@
       "key": "eee612da-143d-4011-a845-f69b9dc0d57c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \nReflect on your project plan. Does your plan include the following items? \n\n- Three characters (sprites) with detailed descriptions \n- A setting (background)\n- Dialogue for three or more characters (think or say blocks)\n- A beginning, middle, and end to the story (events)\n- A moral or theme that is clearly stated\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Check In” slide\n\n**Check In**: \nReflect on your project plan. Does your plan include the following items? \n\n- Three characters (sprites) with detailed descriptions \n- A setting (background)\n- Dialogue for three or more characters (think or say blocks)\n- A beginning, middle, and end to the story (events)\n- A moral or theme that is clearly stated\n\n"
       },
       "seeding_key": {
         "activity_section.key": "eee612da-143d-4011-a845-f69b9dc0d57c",
@@ -896,7 +896,7 @@
       "key": "dd181ec2-4915-46e6-b164-51bb4f593fbf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Match - Check out an example program\" slide\n\n**Match**: \n- Check out the example program in Lesson 4\n- In the [Short Stories Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Match - Check out an example program\" slide\n\n**Match**: \n- Check out the example program in Lesson 4\n- In the [Short Stories Warm Up Activity](https://docs.google.com/document/d/1lAyYd8byvk6dIgoZjW9JCiLpOoC7mJfVR9yeUyYBY4M/template/preview) handout, draw a line to match each block to what it does\n\n**Do This**: Give students time to match the blocks with the corresponding action. Students will review what the blocks do and think about when it is best to use each one.  \n",
         "duration": "5",
         "name": "Activity"
       },
@@ -909,7 +909,7 @@
       "key": "3339de28-d1d4-47c2-acac-d21a60793c17",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling short stories?_\n- _Why are characters important in a short story?_\n\n**Discussion Goal**: Students should understand that the purpose of a short story is to teach a moral or lesson. They should be able to explain that a character and their traits directly relate to the moral of the story. They should also understand that the reader typically learns the central lesson through the main character's traits and actions. Students can refer back to previous short stories as examples, where they learned the moral through the actions of the characters."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What is the purpose of reading or telling short stories?_\n- _Why are characters important in a short story?_\n\n**Discussion Goal**: Students should understand that the purpose of a short story is to teach a moral or lesson. They should be able to explain that a character and their traits directly relate to the moral of the story. They should also understand that the reader typically learns the central lesson through the main character's traits and actions. Students can refer back to previous short stories as examples, where they learned the moral through the actions of the characters."
       },
       "seeding_key": {
         "activity_section.key": "3339de28-d1d4-47c2-acac-d21a60793c17",
@@ -936,7 +936,7 @@
       "key": "9ef24861-6b5a-424a-83ef-106d17493cde",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Key Detail** - An important moment in the story that adds meaning\t\n* **Moral** - A lesson learned"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n* **Fable** - A short story conveying a moral\n* **Key Detail** - An important moment in the story that adds meaning\t\n* **Moral** - A lesson learned"
       },
       "seeding_key": {
         "activity_section.key": "9ef24861-6b5a-424a-83ef-106d17493cde",
@@ -959,7 +959,7 @@
       "key": "e5cd2cb7-0b2b-41b6-8f33-263e71b524a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Sample Program” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Sample Program” slide\n",
         "duration": "35",
         "name": "Code Your Short Story"
       },
@@ -996,7 +996,7 @@
       "key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _How did this coder set up the story?_ \n- _What happens when the main character touches another character?_ \n- _How does the story end?_\n\n**Discussion Goal**: Students should start to make the connection that each `when sprite touches` event includes a character’s dialogue that is a “key detail”. A key detail moves the story forward to reveal more of the moral or lesson. At the end of the story, the moral is clearly displayed. \n\n**Do This**: Hand back the Story Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Discussion” slide\n\n**Discuss**: \n- _How did this coder set up the story?_ \n- _What happens when the main character touches another character?_ \n- _How does the story end?_\n\n**Discussion Goal**: Students should start to make the connection that each `when sprite touches` event includes a character’s dialogue that is a “key detail”. A key detail moves the story forward to reveal more of the moral or lesson. At the end of the story, the moral is clearly displayed. \n\n**Do This**: Hand back the Story Planning Sheet from yesterday’s lesson and make sure students have it available for the remainder of class. "
       },
       "seeding_key": {
         "activity_section.key": "257affb9-b2d9-4e3a-99df-5091da461bb8",
@@ -1023,7 +1023,7 @@
       "key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-10 - Code Your Short Story” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-10 - Code Your Short Story” slide"
       },
       "seeding_key": {
         "activity_section.key": "6fb41dc6-00ff-458a-bd42-0c0a2c8ea180",
@@ -1101,7 +1101,7 @@
       "key": "b6078f72-6ecc-4ff8-a487-dad93eb6078d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “3-2-1” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “3-2-1” slide",
         "duration": "5",
         "name": "Daily 10"
       },
@@ -1153,7 +1153,7 @@
       "key": "3b4fc933-9b77-4b92-9297-b089df032937",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect on your project” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect on your project” slide",
         "duration": "10",
         "name": "Reflection Preparation"
       },
@@ -1189,7 +1189,7 @@
       "key": "5401a5eb-d09f-4f03-b0b7-75c6abcf2bd3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “High Five Hustle” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “High Five Hustle” slide",
         "duration": "30",
         "name": "“High Five Hustle”"
       },
@@ -1214,7 +1214,7 @@
       "key": "f260c459-a8eb-45c0-8e73-bd41ef074254",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions:\n\n- _How is your adaptation similar to or different from your partner’s story?_\n- _Do the characters interact with each other in ways that are similar to or different from the characters in your partner’s story?_\n\nOnce students are both finished sharing, play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\nOnce everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
+        "description": "**Do This**: Ask students to stand up, raise their hands and high-five a peer. Play “do the hustle” song while students find their partners. When students find a partner, they should lower their hands.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do the Hustle!” slide\n\n**Do This**: When there are no hands left, prompt students to share their projects and the answers to the discussion questions:\n\n- _How is your adaptation similar to or different from your partner’s story?_\n- _Do the characters interact with each other in ways that are similar to or different from the characters in your partner’s story?_\n\nOnce students are both finished sharing, play “Do the Hustle” as a signal for students to raise their hands and high-five a different partner for the next question. (Source: Edutopia). \n\nOnce everyone is partnered up, start the timer for a new 2 minute sharing. Repeat this process for 3-4 rounds, depending on how much time you have. Leave 5 minutes left at the end of class to wrap up as a whole class. "
       },
       "seeding_key": {
         "activity_section.key": "f260c459-a8eb-45c0-8e73-bd41ef074254",
@@ -1225,7 +1225,7 @@
       "key": "29dd7fc3-2b04-45e8-9c5a-c06f4314c79b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, and/or character traits. Encourage students to think about the elements of a short story that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How was your program similar to or different from your classmates' programs?_\n\n**Discussion Goal**: Students will discuss how the programs had similar morals, dialogue, and/or character traits. Encourage students to think about the elements of a short story that they discussed in previous classes. Students may also discuss the similarities and differences in their code, such as in what order their characters were introduced.  \n",
         "name": "Reflect"
       },
       "seeding_key": {

@@ -294,7 +294,7 @@
       "key": "d41f9b6d-5a0e-4eac-8ed1-b3a38cf9abc1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Opening Paul Revere’s Time Capsule” slide\n\n**Do This**: Watch the video. Stop at 2:10.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**:  Show “Discuss” slide\n\n**Discuss**: Imagine you are creating a time capsule about life right now. What would you want to tell someone in the future about the history of today? What artifacts would be found in your time capsule?\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to a time capsule project. Students will begin to brainstorm ideas for a time capsule story about events happening in their lives today.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**: \n\n- _**Mood** - The expression of a feeling, atmosphere, or emotion in art or writing_ \n- _**Imagery** - Mental images produced by a story_\n- _**Sprite** - An image or character in your program_\n- _**Event** - An action that causes something to happen_\n\n**Goal**: The mood and imagery of a short story are important concepts for students to understand. Throughout the unit they will make choices that add details and complexity to a time capsule short story to bring it to life for someone in the future.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Opening Paul Revere’s Time Capsule” slide\n\n**Do This**: Watch the video. Stop at 2:10.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**:  Show “Discuss” slide\n\n**Discuss**: Imagine you are creating a time capsule about life right now. What would you want to tell someone in the future about the history of today? What artifacts would be found in your time capsule?\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to a time capsule project. Students will begin to brainstorm ideas for a time capsule story about events happening in their lives today.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**: \n\n- _**Mood** - The expression of a feeling, atmosphere, or emotion in art or writing_ \n- _**Imagery** - Mental images produced by a story_\n- _**Sprite** - An image or character in your program_\n- _**Event** - An action that causes something to happen_\n\n**Goal**: The mood and imagery of a short story are important concepts for students to understand. Throughout the unit they will make choices that add details and complexity to a time capsule short story to bring it to life for someone in the future.",
         "duration": "5",
         "name": "What is a Time Capsule?",
         "tips": [
@@ -332,7 +332,7 @@
       "key": "d3be155d-591d-4926-b920-74f7375b49f1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introduction\" Video ",
         "duration": "40",
         "name": "Level-by-Level Support",
         "progression_name": "Video"
@@ -362,7 +362,7 @@
       "key": "45db9776-4519-4911-95d3-06f748865b72",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 2**: Consider reading the time capsule story out loud to all students before they begin writing their prediction. Ensure that students understand the terms background, sound, sprites. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Level 2 - Prediction\" slides\n\n**Level 2**: Consider reading the time capsule story out loud to all students before they begin writing their prediction. Ensure that students understand the terms background, sound, sprites. \n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -453,7 +453,7 @@
       "key": "f766701f-2a80-4fbb-a60e-a46f46adf399",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites add to your time capsule story?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short story to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Reflect” slide\n\n**Discuss**: _How did adding backgrounds, text effects, sounds and sprites add to your time capsule story?_\n\n**Discussion Goal**: The purpose of this reflection is for students to articulate the power of computer science in bringing a short story to life. Students may share a favorite block that they feel evokes the biggest effect on mood and imagery.\n",
         "duration": "10",
         "name": "Bringing a Time Capsule to Life"
       },
@@ -466,7 +466,7 @@
       "key": "206f721c-17f4-46a0-aa62-1853152e54a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Unique Time Capsules” slide\n\n**Do This**: Read the caption for each time capsule. Allow students to share observations about each time capsule. This could be a quick turn and talk or brief class discussion. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: _What are the pros and cons of each of these unique time capsules?_ \n\n**Anticipated student responses:**\n \n**Message in a bottle**\n\nPros - This message in a bottle was free to make. \n\nCons - You don’t know if it will be lost out at sea; the ocean currents could drag the bottle to the middle of the ocean and it would add to ocean pollution. You don’t know when someone will find it; it is hard to predict when the bottle would wash up on shore again. \n\n**Paris Apartment**\n\nPros - This time capsule was able to show a lot of what life was like; it is a house full of preserved items. The items were all kept safe from damage because they were kept indoors.\n\nCons - It costs a lot of money to rent an apartment for 70 years. No one might know to go look inside the apartment. \n\n**Plymouth Belvedere Sport Coupe**\n\nPros - A lot of people love vintage cars; this is an interesting item to preserve. It would be interesting to compare old cars to cars today.\n\nCons - This time capsule was completely ruined by water. It hasn’t been possible to restore it and museums don’t even want to show it because of too much water damage.\n\n**Space Time Capsule**\n\nPros - They used images to communicate with someone in any language. They used strong materials so that it could withstand traveling through space.\n\nCons - It is unknown whether anyone will ever receive this time capsule.\n",
         "name": "Unique Time Capsules"
       },
       "seeding_key": {
@@ -489,7 +489,7 @@
       "key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n\n- **Time Capsule** - A place to hold memories and everyday items that represent a day in the life of someone living during a specific time period. "
       },
       "seeding_key": {
         "activity_section.key": "9b078c3e-8a6f-47b1-8033-7c0bfeeb0395",
@@ -516,7 +516,7 @@
       "key": "b2409699-c5e4-4910-b7aa-4254be931b67",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Plan Your Time Capsule Story” slide\n\n**Do this**: Have students pair up with a partner and read through the brainstorming questions. Explain to students that today they will pick 3 questions to answer. They should decide which 3 questions they have the most to say about and would be excited to answer for someone in the future. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Plan Your Time Capsule Story” slide\n\n**Do this**: Have students pair up with a partner and read through the brainstorming questions. Explain to students that today they will pick 3 questions to answer. They should decide which 3 questions they have the most to say about and would be excited to answer for someone in the future. Students should tell their partner which questions they are going to pick and how they are going to answer those questions.",
         "duration": "10",
         "name": "Brainstorming"
       },
@@ -556,7 +556,7 @@
       "key": "a9e12d73-0945-4824-888b-5b3d445aec96",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Story” slide\n\n**Discuss**: _What are some potential ideas for your time capsule short stories?_\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule story?_\n\n- _What **text effects** might go with your time capsule story?_\n\n- _What **sounds** might go with your time capsule story?_\n\n- _What **sprites** might go with your time capsule story?_\n\n**Do This**: Have students flip their handout to the other side. They will select one idea from the brainstorming session to use for their time capsule story. Students should come up with a title and about 8 lines of story. Afterwards, students will begin thinking about how they will code their time capsule story to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short story.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Time Capsule Story” slide\n\n**Discuss**: _What are some potential ideas for your time capsule short stories?_\n\n**Discussion goal**: Share ideas with classmates, spark new ideas and ensure that everyone has an idea for their own time capsule story.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Example” and “Bring Your Time Capsule to Life” slides \n\n- _What **background** might go with your time capsule story?_\n\n- _What **text effects** might go with your time capsule story?_\n\n- _What **sounds** might go with your time capsule story?_\n\n- _What **sprites** might go with your time capsule story?_\n\n**Do This**: Have students flip their handout to the other side. They will select one idea from the brainstorming session to use for their time capsule story. Students should come up with a title and about 8 lines of story. Afterwards, students will begin thinking about how they will code their time capsule story to bring it to life. They will consider the skills they learned in Lesson 1 and how they will apply them to their own short story.",
         "duration": "20",
         "name": "Write Your Time Capsule Story"
       },
@@ -585,7 +585,7 @@
       "key": "f4eb408f-86cf-4da0-9ed6-4dd6c5113b85",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your short story to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short story to use in their digital time capsule. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Read your short story to a partner._ \n\n_Discuss the backgrounds, text effects, sounds, and sprites that you plan to use._\n\n**Discussion Goal:** For the next lesson, students should have a peer-reviewed short story to use in their digital time capsule. The goal of the discussion is to ensure that students have planned out the backgrounds, text effects, sounds, and sprites they plan to use in their code. Students may want to do small revisions after speaking with their partner.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -598,7 +598,7 @@
       "key": "c596146a-a029-4d5d-bbfe-bed1b4c034c2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: March on Washington” slide\n\n***March on Washington*** \\\n*I went with my family to Washington, DC. \\\nWe came all the way from Little Rock, Arkansas. \\\nTo hear Dr. Martin Luther King speak. \\\nHe said “I have a dream that my four little children\\\nWill one day live in a nation \\\nWhere they will not be judged \\\nBy the color of their skin \\\nBut by the content of their character.\"*\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule story?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: March on Washington” slide\n\n***March on Washington*** \\\n*I went with my family to Washington, DC. \\\nWe came all the way from Little Rock, Arkansas. \\\nTo hear Dr. Martin Luther King speak. \\\nHe said “I have a dream that my four little children\\\nWill one day live in a nation \\\nWhere they will not be judged \\\nBy the color of their skin \\\nBut by the content of their character.\"*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule story?_",
         "duration": "5",
         "name": "Read Time Capsule Story Examples"
       },
@@ -611,7 +611,7 @@
       "key": "42dc9a29-397f-4814-811f-819cffa02af7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: A Special Day in 1969” slide\n\n***A Special Day in 1969*** \\\n*This is how our evening goes \\\nAnother bowl of new Spaghettios \\\nThe Beatles are on our radios \\\nSiblings play Rock 'em Sock 'em delivering blows \\\nBut I sit and wait to hear \\\nThe news that's near \\\nThe country waits in fear \\\nSuccess! We stand and cheer! \\\nIt's one small step for man. \\\nOne giant leap for mankind.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule story?_\n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Time Capsule Stories: A Special Day in 1969” slide\n\n***A Special Day in 1969*** \\\n*This is how our evening goes \\\nAnother bowl of new Spaghettios \\\nThe Beatles are on our radios \\\nSiblings play Rock 'em Sock 'em delivering blows \\\nBut I sit and wait to hear \\\nThe news that's near \\\nThe country waits in fear \\\nSuccess! We stand and cheer! \\\nIt's one small step for man. \\\nOne giant leap for mankind.*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: _What backgrounds, text effects, sounds, and sprites might go with this time capsule story?_\n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -652,7 +652,7 @@
       "key": "8e35c560-12b3-44a6-9bc1-12441ac96fb3",
       "position": 3,
       "properties": {
-        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule story. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule stories. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Story” slide \n\n**Debugging tips**: \n\n**Level 1**: Students will be introduced to a couple new blocks: set title, set author and add line. Students will fill in the text for each block using the time capsule short story they wrote last class. They will write in their title, their own name or nickname, and each line of their short story. They may need to add additional blocks to match the number of lines in their short story. \n\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 2-7 - Bring Your Time Capsule to Life\" slide\n\n**Levels 2-7**: In levels 2-7, students will use the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students have the option to rewatch any of the videos.\n\n\n",
+        "description": "**Do This**: Have students move to their computers and sign in. Students will now code their own time capsule story. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from the Lesson 1 tutorial to enhance their time capsule stories. \n\nCirculate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Level 1 - Code Your Short Story” slide \n\n**Debugging tips**: \n\n**Level 1**: Students will be introduced to a couple new blocks: set title, set author and add line. Students will fill in the text for each block using the time capsule short story they wrote last class. They will write in their title, their own name or nickname, and each line of their short story. They may need to add additional blocks to match the number of lines in their short story. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show “Level 2-7 - Bring Your Time Capsule to Life\" slide\n\n**Levels 2-7**: In levels 2-7, students will use the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students have the option to rewatch any of the videos.\n\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -680,7 +680,7 @@
       "key": "ffd1b276-3636-461f-82fd-6c9fd8b4030d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show \"Lesson 8 - Partner Share and Final Revisions\" slide\n\n**Level 8**: Before starting this level, students should show their work to a partner. After a brief discussion, students have the opportunity to finish their time capsule and make any last revisions."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=“true”></i> **Display**: Show \"Lesson 8 - Partner Share and Final Revisions\" slide\n\n**Level 8**: Before starting this level, students should show their work to a partner. After a brief discussion, students have the opportunity to finish their time capsule and make any last revisions."
       },
       "seeding_key": {
         "activity_section.key": "ffd1b276-3636-461f-82fd-6c9fd8b4030d",
@@ -718,7 +718,7 @@
       "key": "bda85075-aa54-4eeb-973c-2c68a545d744",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What do you hope someone in the future might learn from your time capsule story?_\n- _What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n- _What do you hope someone in the future might learn from your time capsule story?_\n- _What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
         "duration": "5",
         "name": "Reflection"
       },
@@ -731,7 +731,7 @@
       "key": "b94adb01-48bf-41f1-b700-a1af193ae7f7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule story from last class. Imagine if someone else told the story of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule story from last class. Imagine if someone else told the story of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
         "duration": "5",
         "name": "Discussion"
       },
@@ -744,7 +744,7 @@
       "key": "54560e8d-c90a-4f93-8518-7f99e2ae1977",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your App” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Your App” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
         "duration": "20",
         "name": "Share Your Time Capsule"
       },
@@ -773,7 +773,7 @@
       "key": "a83af8a9-5cfb-43de-a374-9f53dbfeb70d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *We both wrote about ___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *I liked your decision to ________.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *We both wrote about ___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *I liked your decision to ________.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "a83af8a9-5cfb-43de-a374-9f53dbfeb70d",
@@ -800,7 +800,7 @@
       "key": "89de27dd-9164-448b-b827-72d81190c6d2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see in your classmates’ time capsules?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see in your classmates’ time capsules?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
         "duration": "10",
         "name": "Discuss Your Time Capsule"
       },
@@ -813,7 +813,7 @@
       "key": "c5cb8f85-dba9-4236-8380-44c568f17f18",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
         "duration": "10",
         "name": "Reflection"
       },

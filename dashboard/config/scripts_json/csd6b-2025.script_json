@@ -1411,7 +1411,7 @@
       "key": "cb8362b3-bc5e-4723-9312-eadbd9d91cdc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search_2/csd/2025] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search_2/csd/2025] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "cb8362b3-bc5e-4723-9312-eadbd9d91cdc",
@@ -1434,7 +1434,7 @@
       "key": "5613c8ab-2f2b-4a26-b03b-688001a7b4f6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1451,7 +1451,7 @@
       "key": "927200eb-9e54-4a04-b093-d9aed7fe3bcc",
       "position": 6,
       "properties": {
-        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1479,7 +1479,7 @@
       "key": "70a1335b-4921-4134-83e9-35716cef5c3c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2025] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd/2025] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1557,7 +1557,7 @@
       "key": "3b915a5e-5458-4284-8a9b-fe1d11752cf0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an app with a physical device?\n\n**Discussion Goal:** Even though students haven't designed any apps with devices yet, guide students to imagine the steps involved from having the first inspiration for an app with a device to having it created. Some ideas may include:\n* Define: Deciding the problem you'd like your app and device to solve\n* Prepare: Looking at similar apps or think about similar devices we've used in the real world\n* Try: Creating a sketch of your device and how it interacts with the app\n* Reflect: Showing it to friends to get feedback and improving the physical design\n\nAs students finish discussing, transition to the main activity.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an app with a physical device?\n\n**Discussion Goal:** Even though students haven't designed any apps with devices yet, guide students to imagine the steps involved from having the first inspiration for an app with a device to having it created. Some ideas may include:\n* Define: Deciding the problem you'd like your app and device to solve\n* Prepare: Looking at similar apps or think about similar devices we've used in the real world\n* Try: Creating a sketch of your device and how it interacts with the app\n* Reflect: Showing it to friends to get feedback and improving the physical design\n\nAs students finish discussing, transition to the main activity.\n"
       },
       "seeding_key": {
         "activity_section.key": "3b915a5e-5458-4284-8a9b-fe1d11752cf0",
@@ -1697,7 +1697,7 @@
       "key": "c17a53bc-1ac5-4b5a-a633-ef43cc0ac06a",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day:**  How can we design apps with physical devices based on the needs of a user?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
+        "description": "**Question of the Day:**  How can we design apps with physical devices based on the needs of a user?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
       },
       "seeding_key": {
         "activity_section.key": "c17a53bc-1ac5-4b5a-a633-ef43cc0ac06a",
@@ -1733,7 +1733,7 @@
       "key": "472e9e59-6d5f-468b-aea7-fc5b4c01ce49",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a micro:bit board and USB cable. Let them know that they should not plug the micro:bits into their computers yet, just spend one minute inspecting them carefully.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you think the micro:bit is? What do you think it might be used for?\n\n**Discussion Goal:** Prompt students to make links between features of the micro:bit and other devices they may know, like phones or game controllers that may also have inputs like buttons, outputs like displays. Record student ideas for using the micro:bit on the board. Ideas may not be accurate or practical, but that’s fine if they are based on evidence from inspecting the micro:bit board. You and your students can revisit these ideas and refine them as you work through the unit.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a micro:bit board and USB cable. Let them know that they should not plug the micro:bits into their computers yet, just spend one minute inspecting them carefully.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What do you think the micro:bit is? What do you think it might be used for?\n\n**Discussion Goal:** Prompt students to make links between features of the micro:bit and other devices they may know, like phones or game controllers that may also have inputs like buttons, outputs like displays. Record student ideas for using the micro:bit on the board. Ideas may not be accurate or practical, but that’s fine if they are based on evidence from inspecting the micro:bit board. You and your students can revisit these ideas and refine them as you work through the unit.\n",
         "name": "What is a micro:bit?"
       },
       "seeding_key": {
@@ -1745,7 +1745,7 @@
       "key": "8695ea79-0d8f-443f-a606-55897a315597",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I control the main output on the BBC micro:bit?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:** How can I control the main output on the BBC micro:bit?"
       },
       "seeding_key": {
         "activity_section.key": "8695ea79-0d8f-443f-a606-55897a315597",
@@ -1756,7 +1756,7 @@
       "key": "0b38995c-bbb3-4b42-9fa3-ce9ba2dcaf77",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
         "name": "Connecting The Board"
       },
       "seeding_key": {
@@ -1768,7 +1768,7 @@
       "key": "7a1675f0-2778-4187-901f-50bb0b30990c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "7a1675f0-2778-4187-901f-50bb0b30990c",
@@ -1925,7 +1925,7 @@
       "key": "781aeed4-54ef-4d89-9a13-f475c959b586",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did we learn using just 25 LEDs?\n\n**Discussion Goal:** Encourage students to talk about uses of LED matrix displays like the one on the micro:bit, and in particular how they found the experience of using it. What was positive? Did they find the limitations and simplicity freeing? Did they enjoy holding a physical display in their hands? Did it help cement their understanding of how numbered coordinates work? What was frustrating? For example, they may have found it hard to draw pictures on the display using coordinates. In later lessons in this unit, we will look at other ways of creating pictures on the LED display they may find quicker to use.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** If time allows, it’s a good idea to get students to record their observations in a learning journal which they can update and revisit throughout the unit."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What did we learn using just 25 LEDs?\n\n**Discussion Goal:** Encourage students to talk about uses of LED matrix displays like the one on the micro:bit, and in particular how they found the experience of using it. What was positive? Did they find the limitations and simplicity freeing? Did they enjoy holding a physical display in their hands? Did it help cement their understanding of how numbered coordinates work? What was frustrating? For example, they may have found it hard to draw pictures on the display using coordinates. In later lessons in this unit, we will look at other ways of creating pictures on the LED display they may find quicker to use.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** If time allows, it’s a good idea to get students to record their observations in a learning journal which they can update and revisit throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "781aeed4-54ef-4d89-9a13-f475c959b586",
@@ -1936,7 +1936,7 @@
       "key": "35551a29-20cd-4983-935c-805d2d791714",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students this example image\n\n<img alt=\"\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/diamond.png\" style=\"max-width: 200px;\">",
         "name": "UI Element Properties Refresher"
       },
       "seeding_key": {
@@ -1948,7 +1948,7 @@
       "key": "199843fa-0f6e-448b-b677-6b807f6fabfc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _How would you describe to somebody else how to recreate this screen? What specific details would they need to know about each design element?_"
       },
       "seeding_key": {
         "activity_section.key": "199843fa-0f6e-448b-b677-6b807f6fabfc",
@@ -2071,7 +2071,7 @@
       "key": "82011a9b-5acc-4d45-8957-6ec7a977c11a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and micro:bit?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Imagine you were creating an app and needed to represent an “error” to the user. Thinking about today’s lesson and yesterday’s lesson, how could we show an “error” to the user on both the screen and micro:bit?_"
       },
       "seeding_key": {
         "activity_section.key": "82011a9b-5acc-4d45-8957-6ec7a977c11a",
@@ -2114,7 +2114,7 @@
       "key": "4c30d4c8-0c77-452f-af3f-fd96fb061007",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the micro:bit. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the bottom of the micro:bit, or they may notice the wording on the back of the micro:bit saying \"accelerometer\" and other sensors. These sensors are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Ask pairs to spend one minute looking over the board, focusing on potential input devices. Based on what you already know about this board, how do you think you might use it to get input?\n\n**Share:** Have groups share back their thoughts to the whole group, keeping track of ideas on the board. Push students to support their ideas with evidence from reviewing the board, but don't worry about ensuring correctness at this point.\n\n**Discussion Goal:** Students will probably notice the buttons on the micro:bit. If students don’t address these, be sure to bring them up. Students may also ask about the small pads on the bottom of the micro:bit, or they may notice the wording on the back of the micro:bit saying \"accelerometer\" and other sensors. These sensors are types of inputs that are discussed in later lessons - if students bring these up, acknowledge them but also let students know we’ll investigate these more in future lessons.",
         "name": "Board Inspection: Inputs\r"
       },
       "seeding_key": {
@@ -2138,7 +2138,7 @@
       "key": "029551e3-6c61-4a6c-8a5f-9beceaeaa620",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:**\n\n- **Input:** the information computers get from users, devices, or other computers"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:**\n\n- **Input:** the information computers get from users, devices, or other computers"
       },
       "seeding_key": {
         "activity_section.key": "029551e3-6c61-4a6c-8a5f-9beceaeaa620",
@@ -2320,7 +2320,7 @@
       "key": "6f18d47c-d753-4e58-9641-dd4e39ecc4bf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r variables_1/csd/2025] video in the slides.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r variables_1/csd/2025] video in the slides.",
         "progression_name": "Video - Variables",
         "tips": [
           {
@@ -2349,7 +2349,7 @@
       "key": "429c67b6-b985-4e7a-9729-5154684e9a30",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_counter_pattern_2/csd/2025] video in the slides.\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r the_counter_pattern_2/csd/2025] video in the slides.\n\n\n\n",
         "progression_name": "Video - The Counter Pattern",
         "tips": [
           {
@@ -2378,7 +2378,7 @@
       "key": "98020475-89e8-4294-a82a-6757a79d419b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r if_statements_1/csd/2025] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r if_statements_1/csd/2025] video in the slides.\n",
         "progression_name": "Video - If Statements",
         "tips": [
           {
@@ -2465,7 +2465,7 @@
       "key": "7df43a67-b3bd-4553-8242-41276a11f868",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think about a time when you've needed to collect data to help solve a problem or answer a question, or when data is being collected about you. How was that data collected? What happened to that data?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think about a time when you've needed to collect data to help solve a problem or answer a question, or when data is being collected about you. How was that data collected? What happened to that data?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2539,7 +2539,7 @@
       "key": "0c4f7f1d-cc3e-4da3-badf-25b8d4de5493",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?"
       },
       "seeding_key": {
         "activity_section.key": "0c4f7f1d-cc3e-4da3-badf-25b8d4de5493",
@@ -2566,7 +2566,7 @@
       "key": "df9c8af6-4b71-407d-9b9d-175b929330b3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
         "name": "Project Ideation",
         "tips": [
           {
@@ -2584,7 +2584,7 @@
       "key": "6f83d923-d439-4b09-809a-0b80eef1ee97",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides**: Present an overview of the project and the steps students will take to complete it. There are multiple slides available to help explain the project.\n\n**(Optional) Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Slides**: Present an overview of the project and the steps students will take to complete it. There are multiple slides available to help explain the project.\n\n**(Optional) Class Brainstorm:** Before diving into individual projects, consider leading a class brainstorm of what some example projects could look like that fit this criteria. You may also decide to show one or two of the exemplar apps to help inspire the brainstorm. Using these ideas, students may find it easier to latch onto an initial idea for their project",
         "tips": [
           {
             "type": "teachingTip",
@@ -2614,7 +2614,7 @@
       "key": "105ed369-5f06-4bca-be17-f083d3f01731",
       "position": 5,
       "properties": {
-        "description": "**Distribute:** Hand out a copy of the [r problem_solving_process_with_programming/csd/2025] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic."
+        "description": "**Distribute:** Hand out a copy of the [r problem_solving_process_with_programming/csd/2025] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the problem solving process graphic."
       },
       "seeding_key": {
         "activity_section.key": "105ed369-5f06-4bca-be17-f083d3f01731",
@@ -2637,7 +2637,7 @@
       "key": "77356c08-6a60-4c3d-ae7c-c5bfc509ed71",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "77356c08-6a60-4c3d-ae7c-c5bfc509ed71",
@@ -2706,7 +2706,7 @@
       "key": "bd3506ea-ed03-4e15-8402-4b2a40e4ee23",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2729,7 +2729,7 @@
       "key": "61c5180a-b003-46eb-b468-2d733db9b53b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** \n\n1) _What are all the ways we can get input from the user on a micro:bit?_\n2) _What are some ways you’ve seen where you can get input from the user in an app?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** \n\n1) _What are all the ways we can get input from the user on a micro:bit?_\n2) _What are some ways you’ve seen where you can get input from the user in an app?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -2887,7 +2887,7 @@
       "key": "97f8a4df-812c-4cb9-93fc-435d4a446975",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students. Let students know that they should not yet plug the boards in."
       },
       "seeding_key": {
         "activity_section.key": "97f8a4df-812c-4cb9-93fc-435d4a446975",
@@ -2898,7 +2898,7 @@
       "key": "cc8052cb-c177-483f-82f1-b18834f1f7a1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Create a chart like the one below. Write down all the design elements or micro:bit components that go in each box_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Create a chart like the one below. Write down all the design elements or micro:bit components that go in each box_"
       },
       "seeding_key": {
         "activity_section.key": "cc8052cb-c177-483f-82f1-b18834f1f7a1",
@@ -2965,7 +2965,7 @@
       "key": "baddf398-4159-43ff-9003-a22af9743399",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r input_output_devices/csd/2025] video.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r input_output_devices/csd/2025] video.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2982,7 +2982,7 @@
       "key": "0662ad5c-81c0-42c8-bd4d-f4918f740298",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
         "tips": [
           {
             "type": "teachingTip",
@@ -3062,7 +3062,7 @@
       "key": "e71076c7-9265-441e-bddc-68416426f888",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What’s an example of a device you’ve seen that combines inputs and outputs between an app and a device? For example, you might press buttons on a device and then something changes on the app._"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What’s an example of a device you’ve seen that combines inputs and outputs between an app and a device? For example, you might press buttons on a device and then something changes on the app._"
       },
       "seeding_key": {
         "activity_section.key": "e71076c7-9265-441e-bddc-68416426f888",
@@ -3084,7 +3084,7 @@
       "key": "58502edf-f0d5-41ec-877b-babc0d28638a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What's an example of when someone has used an app to control a physical device of some kind? For example, using an app to automatically unlock or lock a car door._\n\n**Share Out:** Have students discuss with their neighbors, then lead a full class discussion\n\n**Discussion Goal:** Hopefully students will have a wide variety of experiences. Some examples might include:\n- Using an app to control a thermostat\n- Using an app to control a vacuum robot\n- Using an app to control a security camera\n- Using an app to turn on and off a light or change its color",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What's an example of when someone has used an app to control a physical device of some kind? For example, using an app to automatically unlock or lock a car door._\n\n**Share Out:** Have students discuss with their neighbors, then lead a full class discussion\n\n**Discussion Goal:** Hopefully students will have a wide variety of experiences. Some examples might include:\n- Using an app to control a thermostat\n- Using an app to control a vacuum robot\n- Using an app to control a security camera\n- Using an app to turn on and off a light or change its color",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3115,7 +3115,7 @@
       "key": "071f8387-9957-4f21-bc6e-c9677b9c44d9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:**\n- **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:**\n- **Prototype** - A first or early model of a product that allows you to test assumptions before developing a final version."
       },
       "seeding_key": {
         "activity_section.key": "071f8387-9957-4f21-bc6e-c9677b9c44d9",
@@ -3126,7 +3126,7 @@
       "key": "d569850c-750e-4e3b-95b5-00db20e77e06",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.\n\n**Slides**: Present an overview of the project and the steps students will take to complete it.",
         "duration": "15",
         "name": "Introduce the Project",
         "tips": [
@@ -3390,7 +3390,7 @@
       "key": "b48cc9d5-09cf-4f81-98ad-5cf32a127b8f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out micro:bits to each pair of students "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out micro:bits to each pair of students "
       },
       "seeding_key": {
         "activity_section.key": "b48cc9d5-09cf-4f81-98ad-5cf32a127b8f",
@@ -3401,7 +3401,7 @@
       "key": "7f121835-7ec6-4a0e-81fd-4c2ed0224c36",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the micro:bit has? Are there any that you think the micro:bit has that we don’t?_\n\nAs students consider this question, encourage them to look at the markings on the micro:bit for clues (for example: there are eye and ear icons on the micro:bit that can give clues)\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Humans have 5 senses - touch, taste, sight, smell, and hearing. Which of these senses do you think the micro:bit has? Are there any that you think the micro:bit has that we don’t?_\n\nAs students consider this question, encourage them to look at the markings on the micro:bit for clues (for example: there are eye and ear icons on the micro:bit that can give clues)\n"
       },
       "seeding_key": {
         "activity_section.key": "7f121835-7ec6-4a0e-81fd-4c2ed0224c36",
@@ -3446,7 +3446,7 @@
       "key": "529f536c-5d9d-43ea-83ea-47c38ae572d8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use sensors to detect changes in the environment?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:** How can I use sensors to detect changes in the environment?"
       },
       "seeding_key": {
         "activity_section.key": "529f536c-5d9d-43ea-83ea-47c38ae572d8",
@@ -3457,7 +3457,7 @@
       "key": "b0db08a6-2cec-4778-8a6d-dbc05b1a270a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
         "tips": [
           {
             "type": "teachingTip",
@@ -3560,7 +3560,7 @@
       "key": "22ec9bac-35d9-4daa-affd-3a7467018cad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Considering all of the computing devices that you interact with on a regular basis, write down as many potential sensors as you can. What type of sensor do you think you interact with the most?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Considering all of the computing devices that you interact with on a regular basis, write down as many potential sensors as you can. What type of sensor do you think you interact with the most?",
         "name": "Sensors All Around\r"
       },
       "seeding_key": {
@@ -3583,7 +3583,7 @@
       "key": "ccab0694-d36a-4742-ab9a-d4903e22266b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Have you ever tried to walk across a raised narrow platform, one foot in front of the other? How do you keep your balance and avoid falling over?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Have you ever tried to walk across a raised narrow platform, one foot in front of the other? How do you keep your balance and avoid falling over?_"
       },
       "seeding_key": {
         "activity_section.key": "ccab0694-d36a-4742-ab9a-d4903e22266b",
@@ -3628,7 +3628,7 @@
       "key": "2f09939f-b067-4cf7-838b-3845e84b8ebd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3708,7 +3708,7 @@
       "key": "d62a4056-5f0a-4d04-a7eb-539ec8b43a13",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:**  _What are some uses for pitch and roll in an everyday app?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:**  _What are some uses for pitch and roll in an everyday app?_",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -3731,7 +3731,7 @@
       "key": "8d3512f0-5916-4a93-8547-7f2de6523107",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out a board and USB cable to each pair of students."
       },
       "seeding_key": {
         "activity_section.key": "8d3512f0-5916-4a93-8547-7f2de6523107",
@@ -3742,7 +3742,7 @@
       "key": "46181ea6-3cb7-460d-bfea-509c4989bbc0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition to Code Studio:** Have students get started in Code Studio right away",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition to Code Studio:** Have students get started in Code Studio right away",
         "tips": [
           {
             "type": "teachingTip",
@@ -3759,7 +3759,7 @@
       "key": "d82f4fc9-ba7d-436b-8e7c-c49fe72ce2c3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio",
         "tips": [
           {
             "type": "teachingTip",
@@ -3788,7 +3788,7 @@
       "key": "7aa06172-a9c7-4565-9abd-47a3db8689ea",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions/csd/2025] video in the slides.",
+        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions/csd/2025] video in the slides.",
         "progression_name": "Video - Functions",
         "tips": [
           {
@@ -3828,7 +3828,7 @@
       "key": "c2dafe27-d333-4d97-9e71-99c231e448d3",
       "position": 6,
       "properties": {
-        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_with_parameters/csd/2025] from the lesson slides.",
+        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show the  [r functions_with_parameters/csd/2025] from the lesson slides.",
         "progression_name": "Video - Parameters",
         "tips": [
           {
@@ -3885,7 +3885,7 @@
       "key": "ed0531ec-52d7-4450-a9be-922094e7285f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think back to some of the programs that you have made before.  What is one time that you could have used functions with parameters?  What would the parameter be?  How should the function's behavior change when the parameter changes?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think back to some of the programs that you have made before.  What is one time that you could have used functions with parameters?  What would the parameter be?  How should the function's behavior change when the parameter changes?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -3909,7 +3909,7 @@
       "key": "66d5a7f0-671a-4263-ac97-edd958c4b219",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show the video [Microbit Character Demo](https://www.youtube.com/watch?v=yIig7oIYNZw) by maker Tiffany Tseng. You may need to watch the video 2 times.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show the video [Microbit Character Demo](https://www.youtube.com/watch?v=yIig7oIYNZw) by maker Tiffany Tseng. You may need to watch the video 2 times.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3982,7 +3982,7 @@
       "key": "5e450b2c-6e0a-47d6-bfde-50865d22df7d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** (Optional) pass out copies of the project guide. Students will use this to plan their project, and includes items that can be used for assessment at the end of the project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3999,7 +3999,7 @@
       "key": "56a625fa-1ec8-41cf-b132-c9fffdf03f6b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Slides:** Present an overview of the project and the steps students will take to complete it."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Slides:** Present an overview of the project and the steps students will take to complete it."
       },
       "seeding_key": {
         "activity_section.key": "56a625fa-1ec8-41cf-b132-c9fffdf03f6b",
@@ -4010,7 +4010,7 @@
       "key": "65bfeeee-a9b2-46dc-b087-b6971ce86297",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4067,7 +4067,7 @@
       "key": "8590cbc9-74de-4079-a3cd-e100e4215381",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What was your favorite part of the app you created? What is something you wish you had time to improve?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4090,7 +4090,7 @@
       "key": "5a868e2d-3165-40b9-80a0-870ad4818985",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _If you could create any kind of computational device, what would it be? What would it do? How would people interact with it?_"
       },
       "seeding_key": {
         "activity_section.key": "5a868e2d-3165-40b9-80a0-870ad4818985",
@@ -4231,7 +4231,7 @@
       "key": "5776d0db-b651-4293-9af6-8c7bda118601",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What’s a new type of device you can create now that you know how to wire up external LEDs that you wouldn’t have been able to create before this lesson?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What’s a new type of device you can create now that you know how to wire up external LEDs that you wouldn’t have been able to create before this lesson?_"
       },
       "seeding_key": {
         "activity_section.key": "5776d0db-b651-4293-9af6-8c7bda118601",
@@ -4253,7 +4253,7 @@
       "key": "6f828f13-8588-4519-97c8-dff6012c689c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we used electricity to create a circuit to light up an LED. Today, we’re going to explore how to use electricity to represent a button press that we can use for input. What do you think that circuit will look like? What materials do you think we’ll need?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we used electricity to create a circuit to light up an LED. Today, we’re going to explore how to use electricity to represent a button press that we can use for input. What do you think that circuit will look like? What materials do you think we’ll need?_"
       },
       "seeding_key": {
         "activity_section.key": "6f828f13-8588-4519-97c8-dff6012c689c",
@@ -4354,7 +4354,7 @@
       "key": "6a2ed049-a65f-4ebb-abb6-303eb3b820af",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think back to the list of devices you wish you could develop and how people would use it. Using what we’ve learned in the last few lessons, describe with more details how you could start to create a device like that. How would you connect the wires? What external components would you use?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think back to the list of devices you wish you could develop and how people would use it. Using what we’ve learned in the last few lessons, describe with more details how you could start to create a device like that. How would you connect the wires? What external components would you use?_"
       },
       "seeding_key": {
         "activity_section.key": "6a2ed049-a65f-4ebb-abb6-303eb3b820af",

@@ -1629,7 +1629,7 @@
       "key": "3c12cb1a-68e3-40de-bfac-973906809102",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** _When would you need to complete a list of steps in order?_\n\n**Discussion Goal:** Students will think of examples of when they would need to complete a list of steps in order. Such as steps to turn on the light in your classroom or to get a drink of water.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** _When would you need to complete a list of steps in order?_\n\n**Discussion Goal:** Students will think of examples of when they would need to complete a list of steps in order. Such as steps to turn on the light in your classroom or to get a drink of water.\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1641,7 +1641,7 @@
       "key": "6266cf76-c33f-42e9-a240-f03c186b55e1",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine\n\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine\n\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -1653,7 +1653,7 @@
       "key": "752fa4a7-9312-4533-b199-c332586f92f7",
       "position": 3,
       "properties": {
-        "description": "\n####Talking to Robots\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n\nWatch one of the videos below to give students context for the types of things that robots can do:\n\n - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \n**Display**: Show “Discuss” slide\n\n**Discuss:** Refer to the video that you chose and ask students:\n- _How do you think that the robot knew what to do?_\n -  _Does a robot really “understand” what you say?_ \n- _Is it worried about getting in trouble if it doesn't do what it's told?_\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.",
+        "description": "\n####Talking to Robots\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Introduction” slide\n\nWatch one of the videos below to give students context for the types of things that robots can do:\n\n - [Asimo by Honda](https://youtu.be/QdQL11uWWcI) (3:58)\n - [Egg Drawing Robot](https://youtu.be/slh5vMIc33I) (3:15)\n - [Dancing Lego Robot](https://youtu.be/NPIq5qldbio) (1:35)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \n**Display**: Show “Discuss” slide\n\n**Discuss:** Refer to the video that you chose and ask students:\n- _How do you think that the robot knew what to do?_\n -  _Does a robot really “understand” what you say?_ \n- _Is it worried about getting in trouble if it doesn't do what it's told?_\n\nThe goal of this quick discussion is to call out that while robots may seem to behave like people, they're actually responding only to their programming. Students will likely refer to robots from movies and TV that behave more like humans. Push them to consider robots that they've seen or heard of in real life, like _Roombas_, or even digital assistants like _Amazon Alexa_.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1727,7 +1727,7 @@
       "key": "1bf8055c-d6cc-4961-befe-ac753cd49263",
       "position": 5,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Symbol Key” slide\n\n**Display:** ***Symbol Key** or write the allowed actions on the board - make sure these are in a place where they can be seen for the whole activity. Explain to the class that these will be the only four actions that they can use for this exercise. For this task, they will instruct their “robot” friend to build a specific cup stack using only the commands listed on the key.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Three Cup Pattern” slide\n\n**Model:** In order to explain how the instructions are intended to work, model for the class how to create and follow an algorithm for replicating a simple pattern. Place a single stack of cups in front of you to start.\n\n**Display:** Hold up the pattern you plan to model. A simple three cup pattern is a great place to start.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “List of Steps” slide\n\n**Prompt:** Ask the class what the first instruction should be, using only the four instructions allowed. The first move should be to \"pick up cup.\" If students suggest something else from the list, perform that action and allow them to see their error.  If they suggest something not from the list, make a clear malfunction reaction and let them know that the command is not understood.\n\nWith cup in hand, ask the class to continue giving you instructions until the first cup is placed. This is a great place to clarify that \"step forward\" and \"step backward\" each imply moving half a cup width. See the image below for reference.\n\n![3 cup pattern](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinue asking for instructions from the classroom until you have completed the entire design.\n\nOnce your stack is complete, point out that they just gave you a list of steps for completing a task. That's an algorithm.  Algorithms are great for sharing ideas, but spelling them out word by word can take a long time. That's what the symbols are for!  When you change an algorithm into symbols that a robot (or computer) understands, that's called programming.\n\n\nAsk the class to help you write the \"program\" for that first move by changing the text into an arrow. Then work with them to write down the rest of the moves necessary to complete the pattern. Depending on the confidence of your students, you might switch back and forth frequently between acting as the \"robot\" and writing down the code, or you might push them to write the whole program before you will implement it. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n\n**Say:** _One possible solution looks like this:_\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Volunteer:** Once the class has completed the model program, ask one of the students to come up and act as the \"robot\" to ensure that the program really works. Encourage them to say the instructions out loud as they \"run\" the code."
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Symbol Key” slide\n\n**Display:** ***Symbol Key** or write the allowed actions on the board - make sure these are in a place where they can be seen for the whole activity. Explain to the class that these will be the only four actions that they can use for this exercise. For this task, they will instruct their “robot” friend to build a specific cup stack using only the commands listed on the key.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Three Cup Pattern” slide\n\n**Model:** In order to explain how the instructions are intended to work, model for the class how to create and follow an algorithm for replicating a simple pattern. Place a single stack of cups in front of you to start.\n\n**Display:** Hold up the pattern you plan to model. A simple three cup pattern is a great place to start.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/image_29uZ9YD.png\" style=\"max-width: 300px; margin: 10px;\">\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “List of Steps” slide\n\n**Prompt:** Ask the class what the first instruction should be, using only the four instructions allowed. The first move should be to \"pick up cup.\" If students suggest something else from the list, perform that action and allow them to see their error.  If they suggest something not from the list, make a clear malfunction reaction and let them know that the command is not understood.\n\nWith cup in hand, ask the class to continue giving you instructions until the first cup is placed. This is a great place to clarify that \"step forward\" and \"step backward\" each imply moving half a cup width. See the image below for reference.\n\n![3 cup pattern](https://curriculum.code.org/media/uploads/image_d0bGRBl.png)\n\nContinue asking for instructions from the classroom until you have completed the entire design.\n\nOnce your stack is complete, point out that they just gave you a list of steps for completing a task. That's an algorithm.  Algorithms are great for sharing ideas, but spelling them out word by word can take a long time. That's what the symbols are for!  When you change an algorithm into symbols that a robot (or computer) understands, that's called programming.\n\n\nAsk the class to help you write the \"program\" for that first move by changing the text into an arrow. Then work with them to write down the rest of the moves necessary to complete the pattern. Depending on the confidence of your students, you might switch back and forth frequently between acting as the \"robot\" and writing down the code, or you might push them to write the whole program before you will implement it. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n\n**Say:** _One possible solution looks like this:_\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZ_0OrQqsy.png)\n\n**Volunteer:** Once the class has completed the model program, ask one of the students to come up and act as the \"robot\" to ensure that the program really works. Encourage them to say the instructions out loud as they \"run\" the code."
       },
       "seeding_key": {
         "activity_section.key": "1bf8055c-d6cc-4961-befe-ac753cd49263",
@@ -1738,7 +1738,7 @@
       "key": "2f95f72c-b782-48cd-be63-8222d18f2a2d",
       "position": 6,
       "properties": {
-        "description": "####Programming Your Robots\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming Your Robots” slide\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program to be \"run\" by the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** ***Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which design they would like their robots to do. Try to push for an easier design for the first time, then have them choose a more complex design later on. Encourage pairs to keep their choice secret from the other half of their group.\n\n**Say:**\n\n- _Once you are in your group, divide into partners._\n\n- _Look at Cup Stacking Ideas._\n- _With your partner, choose one design for your robot to do._\n\n\n![](https://images.code.org/9b0af665c700fb9a17f825f4f3ff98d4-cup stack ideas.png)\n\n\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “The “Program” slide\n\n**Discuss:** \n- _In pairs, discuss how the stack should be built, using only arrows._\n- _Write down your algorithm on a piece of paper._\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Running and Debugging Your Robots” slide\n\n**Say:** \n- _Now it’s time to be a robot! Trade algorithms with the other partners in your group._\n\n- _Be on the lookout for bugs. If you see one, have the robot finish the instructions as best as it can._\n\n- _Discuss the bug with your partners and come up with a solution._\n- _Keep testing the algorithm until it works!_\n\n\n**Circulate:** Look for groups who are trying to take shortcuts by adding extra things (like numbers) to their code.  Praise them for their ingenuity, but remind them that for this exercise, the robots do not understand *anything* but the provided symbols.  If you like, you can hint that they should save their brilliant solution for the next time they play this game, since they might get the chance to use their invention soon!\n\n**Iterate:** Depending on the time available, mix up the pairs and give them a chance to do a different pattern. Each time groups repeat the process, encourage them to choose a more challenging pattern.\n\n"
+        "description": "####Programming Your Robots\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming Your Robots” slide\n\n**Group:** Place students into groups of 4. Each group should then further break down into two pairs - each pair will develop their own program to be \"run\" by the other pair.\n\n**Distribute:** Give each group one stack of cups or paper cutouts.\n\n**Display:** ***Cup Stacking Ideas** to the class or hand out individual copies for groups to use. Have each pair (not group) choose which design they would like their robots to do. Try to push for an easier design for the first time, then have them choose a more complex design later on. Encourage pairs to keep their choice secret from the other half of their group.\n\n**Say:**\n\n- _Once you are in your group, divide into partners._\n\n- _Look at Cup Stacking Ideas._\n- _With your partner, choose one design for your robot to do._\n\n\n![](https://images.code.org/9b0af665c700fb9a17f825f4f3ff98d4-cup stack ideas.png)\n\n\n\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “The “Program” slide\n\n**Discuss:** \n- _In pairs, discuss how the stack should be built, using only arrows._\n- _Write down your algorithm on a piece of paper._\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Running and Debugging Your Robots” slide\n\n**Say:** \n- _Now it’s time to be a robot! Trade algorithms with the other partners in your group._\n\n- _Be on the lookout for bugs. If you see one, have the robot finish the instructions as best as it can._\n\n- _Discuss the bug with your partners and come up with a solution._\n- _Keep testing the algorithm until it works!_\n\n\n**Circulate:** Look for groups who are trying to take shortcuts by adding extra things (like numbers) to their code.  Praise them for their ingenuity, but remind them that for this exercise, the robots do not understand *anything* but the provided symbols.  If you like, you can hint that they should save their brilliant solution for the next time they play this game, since they might get the chance to use their invention soon!\n\n**Iterate:** Depending on the time available, mix up the pairs and give them a chance to do a different pattern. Each time groups repeat the process, encourage them to choose a more challenging pattern.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2f95f72c-b782-48cd-be63-8222d18f2a2d",
@@ -1749,7 +1749,7 @@
       "key": "89ce0ab9-9151-4e69-bc90-c4597572c6c4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** After everyone has had a chance to be the robot, bring the class back together to discuss their experience.  The goal of this discussion is to give students space to make sense of their experience both as robot and programmer. The questions are intentionally broad, but designed to get students thinking about the challenges of writing a clear program and the constraints of a robot or computer in interpreting your instructions. In particular, discuss as a class:"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** After everyone has had a chance to be the robot, bring the class back together to discuss their experience.  The goal of this discussion is to give students space to make sense of their experience both as robot and programmer. The questions are intentionally broad, but designed to get students thinking about the challenges of writing a clear program and the constraints of a robot or computer in interpreting your instructions. In particular, discuss as a class:"
       },
       "seeding_key": {
         "activity_section.key": "89ce0ab9-9151-4e69-bc90-c4597572c6c4",
@@ -1771,7 +1771,7 @@
       "key": "00c7f50c-489f-42e9-a338-2d11a9429372",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss (continued)” slide\n\n- _Did anyone find a bug in your instructions once your robot started following them?_\n\n- _What was the bug?_\n\n- _Why do you think you didn't notice it when writing the program?_\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss (continued)” slide\n\n- _Did anyone find a bug in your instructions once your robot started following them?_\n\n- _What was the bug?_\n\n- _Why do you think you didn't notice it when writing the program?_\n"
       },
       "seeding_key": {
         "activity_section.key": "00c7f50c-489f-42e9-a338-2d11a9429372",
@@ -1799,7 +1799,7 @@
       "key": "07403102-f3fe-44dd-944e-c7ea71dd93dd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n_Draw your own stack of cups that you would like to see a robot build. Can you create a program for that cup stack?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n_Draw your own stack of cups that you would like to see a robot build. Can you create a program for that cup stack?_"
       },
       "seeding_key": {
         "activity_section.key": "07403102-f3fe-44dd-944e-c7ea71dd93dd",
@@ -1810,7 +1810,7 @@
       "key": "dca0bab0-de6b-4aa1-bb46-558975cb00f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to give a robot specific instructions when you “program” it?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1822,7 +1822,7 @@
       "key": "bc338af2-c8da-4503-94ca-241a4d9be9f7",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n- **Bug** - Part of a program that does not work correctly.\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n- **Sequencing** - Putting commands in correct order so computers can read the commands.\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n- **Bug** - Part of a program that does not work correctly.\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n- **Sequencing** - Putting commands in correct order so computers can read the commands.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -1834,7 +1834,7 @@
       "key": "41e62950-ec86-46cc-93bd-80054a79be46",
       "position": 3,
       "properties": {
-        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Display:** Show students a cup stack from the \"My Robotic Friends\" exercise that they completed in the lessons prior to this one. \n\n\n**Discuss:** Ask students to recall the symbols used in \"My Robotic Friends.\"    \n\n- _What happens when the robot reads the different arrows?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging Tips” slide\n\n\nEncourage students to think about the debugging tips:\n\n- _Was everything right at the first step?_\n- _How about the second?_\n- _Where did it go wrong?_\n\n\n**Transition:** Once you are satisfied that your students remember \"My Robotic Friends\", you can move into the Bridging Activity.",
+        "description": "This lesson relies on many of the unplugged ideas that students have learned in the weeks leading up to this first online activity.  It is important that you bring those concepts (such as persistence, debugging, algorithms, and programs) around full-circle so that your class can benefit from them in their online work as well.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Display:** Show students a cup stack from the \"My Robotic Friends\" exercise that they completed in the lessons prior to this one. \n\n\n**Discuss:** Ask students to recall the symbols used in \"My Robotic Friends.\"    \n\n- _What happens when the robot reads the different arrows?_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Debugging Tips” slide\n\n\nEncourage students to think about the debugging tips:\n\n- _Was everything right at the first step?_\n- _How about the second?_\n- _Where did it go wrong?_\n\n\n**Transition:** Once you are satisfied that your students remember \"My Robotic Friends\", you can move into the Bridging Activity.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1846,7 +1846,7 @@
       "key": "0a5e2389-f223-4189-9a85-db10fc49345d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Bridging” slide\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Maze Blocks** in a configuration like the one below (this is already configured for you on the slide):\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\nUse the blocks provided on the slide and drag them into the work area to demonstrate student solutions.\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis short activity will help students relate the ideas of persistence and debugging to the puzzles that they are about to complete online.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Maze Bridging” slide\n\n**Display:** Project a copy of the ***Maze Bridging Page** for the class to see.  Make sure that you have pre-placed the movement blocks in the workspace using ***Maze Blocks** in a configuration like the one below (this is already configured for you on the slide):\n\n![](https://images.code.org/ac052e9d25e77dd800fbf18871bc5fcf-image-1611178828427.47.39.png)\n\n**Model:**  Tell students that you have this workspace on display that looks just like the area that they will see when they start to do the Code.org puzzles online.  As the teacher, let them know that you are SO SMART that you already put all of the code in that you are going to need to solve this puzzle, then ask them to watch you \"Run\" it by moving your finger (or a penny, or some other indicator) along the path.\n\nIt won't be long before you run into a block of TNT.  Feign frustration.\n\n**Discuss:**\n\n- _What am I feeling right now, do you think?_\n- _Should I quit?_\n- _Should I throw all of the code away and start over?_\n\n**Think:** _How can I fix this program so that I don't run into the TNT?_\n\nUse the blocks provided on the slide and drag them into the work area to demonstrate student solutions.\n\n**Pair:** Have students work on solutions to get the bird around the TNT. Depending on your classroom, you might want to either have them fix each mistake one at a time (with demos in between) or students might feel comfortable working together to fix the entire program.\n\n**Share:** Have volunteers come up to help move the blocks into the right location.  \"Run\" the program over and over as a class, fixing bugs, until the bird does what it is supposed to.  Continue to point out experiences that relate to persistence, frustration, and debugging.\n\nWhen your class reaches the pig, celebrate not only their achievements, but their persistence!",
         "name": "Transitioning from Unplugged to Online\r"
       },
       "seeding_key": {
@@ -1885,7 +1885,7 @@
       "key": "f4b09444-109a-4f96-ab6e-1c7ecfbd0a20",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preview Online Puzzle” slide\n\n**Model:** Pull up Puzzle 5 to do in front of the class. This will be the same puzzle that they just saw in the bridging activity. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent.  \n\n**Discuss:** _Does anyone remember how to solve this puzzle?_\n\nAs the teacher, you should decide if you will have the students remind you how to solve it from their seats, or come to the computer to drag the actual blocks in one-by-one.\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom computers."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Preview Online Puzzle” slide\n\n**Model:** Pull up Puzzle 5 to do in front of the class. This will be the same puzzle that they just saw in the bridging activity. While working through this puzzle with the class, remind students that making mistakes is okay and remind them that the only way to be successful is to be persistent.  \n\n**Discuss:** _Does anyone remember how to solve this puzzle?_\n\nAs the teacher, you should decide if you will have the students remind you how to solve it from their seats, or come to the computer to drag the actual blocks in one-by-one.\n\n**Transition:** Now that students have seen an online puzzle in practice, they should be ready to start solving puzzles of their own.  Continue to the lab or bring out their classroom computers."
       },
       "seeding_key": {
         "activity_section.key": "f4b09444-109a-4f96-ab6e-1c7ecfbd0a20",
@@ -1913,7 +1913,7 @@
       "key": "b12bc6f8-bf26-4950-b1bd-5b2ad8427e25",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Maze Intro: Programming with Blocks” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Maze Intro: Programming with Blocks” video",
         "progression_name": "Video: Maze Intro - Programming with Blocks "
       },
       "seeding_key": {
@@ -1925,7 +1925,7 @@
       "key": "d1292ec1-16e7-44e5-8e74-43fe7a5b0e01",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1937,7 +1937,7 @@
       "key": "11a3c828-adcd-4bc7-a2c2-fb5b0c82f046",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -1949,7 +1949,7 @@
       "key": "71c28c90-88c8-49ae-9cf8-add980c31951",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1961,7 +1961,7 @@
       "key": "a43ad9ba-165d-4f0d-87bd-8f5da20e9df1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1973,7 +1973,7 @@
       "key": "c26c1b75-1334-4193-82f8-ec105e98e479",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 11 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1985,7 +1985,7 @@
       "key": "b008d65c-82d3-443c-80f6-781dbd1f08a3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -1997,7 +1997,7 @@
       "key": "6b9e830b-cf3f-41b2-8e5d-1be9fa192e04",
       "position": 9,
       "properties": {
-        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - _Did anyone feel frustrated during any of the puzzles?_\n - _Did anyone notice the need to be persistent?_\n\n**Transition:** Have students take a moment to reflect on the lesson for themselves."
+        "description": "\n**Circulate:** Teachers play a vital role in computer science education and supporting a collaborative and vibrant classroom environment. During online activities, the role of the teacher is primarily one of encouragement and support. Online lessons are meant to be student-centered, so teachers should avoid stepping in when students get stuck. Some ideas on how to do this are: \n\n - Utilize pair programming whenever possible during the activity.\n - Encourage students with questions/challenges to start by asking their partner.\n - Unanswered questions can be escalated to a nearby group, who might already know the solution.\n - Remind students to use the debugging process before you approach.\n - Have students describe the problem that they’re seeing. What is it supposed to do? What does it do? What does that tell you?\n - Remind frustrated students that frustration is a step on the path to learning, and that persistence will pay off.\n - If a student is still stuck after all of this, ask leading questions to get the student to spot an error on their own.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** After providing students with end-of-class warnings, grab everyone's attention and get them to reflect on the experiences that they just had.\n\n - _Did anyone feel frustrated during any of the puzzles?_\n - _Did anyone notice the need to be persistent?_\n\n**Transition:** Have students take a moment to reflect on the lesson for themselves."
       },
       "seeding_key": {
         "activity_section.key": "6b9e830b-cf3f-41b2-8e5d-1be9fa192e04",
@@ -2008,7 +2008,7 @@
       "key": "b7da5cd0-06e6-48d6-8d13-a000542f44e6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n_Why is it important to program your blocks in a specific order?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n_Why is it important to program your blocks in a specific order?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2042,7 +2042,7 @@
       "key": "cd6dfe2c-57db-403d-a755-85c0323ef9a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nAsk students to think about problems they have to solve in everyday life.\n\n**Reflect:**\n - _How do you fix something in your everyday life that isn't working?_\n - _Do you follow a specific series of steps?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\nAsk students to think about problems they have to solve in everyday life.\n\n**Reflect:**\n - _How do you fix something in your everyday life that isn't working?_\n - _Do you follow a specific series of steps?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2054,7 +2054,7 @@
       "key": "f36ee1be-4baa-451b-a8c7-fff275f1f09b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has three new and important vocabulary words:\n\n - **Bug** - Part of a program that does not work correctly.\n\n - **Debugging** - Finding and fixing problems in an algorithm or program.\n\n - **Persistence** - Not giving up. \n\nPersistence works best when you try things many different ways, many different times.\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has three new and important vocabulary words:\n\n - **Bug** - Part of a program that does not work correctly.\n\n - **Debugging** - Finding and fixing problems in an algorithm or program.\n\n - **Persistence** - Not giving up. \n\nPersistence works best when you try things many different ways, many different times.\n\n\n\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2066,7 +2066,7 @@
       "key": "fb0e2be5-7fcc-4c92-a072-6cca14df29a2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging in Maze” slide\n\n \n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Debugging in Maze” slide\n\n \n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2090,7 +2090,7 @@
       "key": "0fc420e1-dc66-4242-8824-8adbe0fcff26",
       "position": 5,
       "properties": {
-        "description": " \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n\n**Say:** _Do you see an error in your program?_\n-  _Work through the program step by step to find the error._ \n- _Try the first step, did it work?_ \n- _Then the second, how about now?_"
+        "description": " \n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n\n**Say:** _Do you see an error in your program?_\n-  _Work through the program step by step to find the error._ \n- _Try the first step, did it work?_ \n- _Then the second, how about now?_"
       },
       "seeding_key": {
         "activity_section.key": "0fc420e1-dc66-4242-8824-8adbe0fcff26",
@@ -2136,7 +2136,7 @@
       "key": "ed9cb068-180a-4703-a5bc-b212c8dee05e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging with the Step Button” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Debugging with the Step Button” video",
         "progression_name": "Video:  Debugging with the Step Button"
       },
       "seeding_key": {
@@ -2148,7 +2148,7 @@
       "key": "4976c18c-cf02-4064-a11b-b310e665a180",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2160,7 +2160,7 @@
       "key": "f53cd13b-38fe-4392-83eb-26a0d6b19213",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2172,7 +2172,7 @@
       "key": "e378afb1-78e3-4bc4-aca1-1b27b326456d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Predict” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Predict” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2184,7 +2184,7 @@
       "key": "87895207-9dcc-4946-bcf2-9454282b5f6f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2196,7 +2196,7 @@
       "key": "a7e7dae4-dca5-405c-8039-3034c898c3e2",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -2219,7 +2219,7 @@
       "key": "c3d85925-4a78-48b9-8fb4-dba5cc0847bd",
       "position": 1,
       "properties": {
-        "description": "**<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Draw a bug you found in one of the puzzles today. What did you do to \"debug\" the program?_",
+        "description": "**<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Draw a bug you found in one of the puzzles today. What did you do to \"debug\" the program?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2254,7 +2254,7 @@
       "key": "767cdc97-f7ad-45bc-8d80-7150d16dbb2e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Programming** - The art of creating a program.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n- **Programming** - The art of creating a program.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2266,7 +2266,7 @@
       "key": "08766b3f-85ce-4412-9f99-7e31d4cf02bc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “New Block” slide\n\n**Say:** _Laurel the Adventurer will need to pick up the treasure that she is standing over. Our new block, `collect`, will allow her to do that._ \n\nThis new block will be discussed more in the bridging activity.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “New Block” slide\n\n**Say:** _Laurel the Adventurer will need to pick up the treasure that she is standing over. Our new block, `collect`, will allow her to do that._ \n\nThis new block will be discussed more in the bridging activity.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2278,7 +2278,7 @@
       "key": "476426ce-8126-4a46-b666-b5a684560ea7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n**Say:** _Describe the algorithm that you think will get Laurel the Adventurer to collect all the treasure._\n\nAsk the students to share. See how many other students had the same answer!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Answer” slide\n\n\n![](https://images.code.org/8e1740662bab87a9e82b3ccd8f44b5ab-code collect.png)",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n**Say:** _Describe the algorithm that you think will get Laurel the Adventurer to collect all the treasure._\n\nAsk the students to share. See how many other students had the same answer!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sample Answer” slide\n\n\n![](https://images.code.org/8e1740662bab87a9e82b3ccd8f44b5ab-code collect.png)",
         "name": "Previewing Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -2302,7 +2302,7 @@
       "key": "afa0d7a2-af27-4881-b584-63f2720b54bc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “The Collector” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “The Collector” video",
         "progression_name": "Video: The Collector"
       },
       "seeding_key": {
@@ -2314,7 +2314,7 @@
       "key": "ee171ea8-bc07-49f1-8142-cb5829299929",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2326,7 +2326,7 @@
       "key": "3907f3e4-2d4a-4de6-b50f-1bf130455519",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2338,7 +2338,7 @@
       "key": "94272e0b-5b40-4ea0-a6da-efb4ffa5c1e8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9-11 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9-11 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2350,7 +2350,7 @@
       "key": "d4a0aa31-6628-418d-b888-5f2032b50dc3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 12 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 12 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2362,7 +2362,7 @@
       "key": "f81a3a87-825c-4d16-98e4-579b8d5e7a84",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2374,7 +2374,7 @@
       "key": "0d8dbbfc-5db3-4cbe-8bb5-6efd99031c1c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -2386,7 +2386,7 @@
       "key": "55eca558-9dc0-4983-a76b-6ed35e9900d3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When did you use persistence in solving the puzzles today?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When did you use persistence in solving the puzzles today?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2398,7 +2398,7 @@
       "key": "3c91a161-5d66-47ca-8805-b0bca5ad4bd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to go through your code, block by block, when debugging?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Why is it important to go through your code, block by block, when debugging?_",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2422,7 +2422,7 @@
       "key": "bc221d65-8ebb-4ff9-beb2-d215f2e07af6",
       "position": 3,
       "properties": {
-        "description": "\n\nShow the students the following video as an introduction to angles:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turns & Angles: Drawing with Degrees” video\n\n[Turns and Angles](https://www.youtube.com/watch?v=sPKXZBL_Yvs) - student video (2 minutes long)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Student Handout” slide\n\nUse ***student handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the shapes from the document.\n\n - _How would you code a computer to draw that shape?_\n - _What order do the instructions need to be in?_\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes.",
+        "description": "\n\nShow the students the following video as an introduction to angles:\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Turns & Angles: Drawing with Degrees” video\n\n[Turns and Angles](https://www.youtube.com/watch?v=sPKXZBL_Yvs) - student video (2 minutes long)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Student Handout” slide\n\nUse ***student handout** to show the students interior versus exterior angles for different shapes. This document can be used as a hand out or you can choose to print it out as a poster for students to refer to.\n\n**Discuss** the shapes from the document.\n\n - _How would you code a computer to draw that shape?_\n - _What order do the instructions need to be in?_\n\nTell the students that in these puzzles they will be moving a character who leaves a line everywhere he goes. The students will be writing code that gets the character to draw various shapes.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2434,7 +2434,7 @@
       "key": "8de8216d-6c81-44de-92cb-36f89b006c00",
       "position": 1,
       "properties": {
-        "description": "In this set of puzzles, the artist will no longer be constrained to 90 degree angles. Having physical protractors available can help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Protractor Online” slide\n\n\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
+        "description": "In this set of puzzles, the artist will no longer be constrained to 90 degree angles. Having physical protractors available can help students better visualize the angles they need. Otherwise, the stage provides images of the angles as the student selects which angle to use. (Please note: Angle choices are limited to two inside of the dropdown menu, reducing the number of options students have to work through.)\n \n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Protractor Online” slide\n\n\nBefore sending the students to the computers to work on the puzzles, it might be beneficial to give a brief presentation of how to use the tools in this level. We recommend puzzle 5 as a good puzzle to show how to use the protractor online.",
         "name": "Creating Art with Code"
       },
       "seeding_key": {
@@ -2446,7 +2446,7 @@
       "key": "a25c46e0-9f06-4fd9-9d8b-b27c6ea351d8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrand” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrand” video",
         "progression_name": "Video: Artist Intro with JR Hildebrand"
       },
       "seeding_key": {
@@ -2458,7 +2458,7 @@
       "key": "bf0ef82a-7b12-47aa-b1ab-a93a7a0f77ab",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2470,7 +2470,7 @@
       "key": "e2e2748e-72be-4925-8fc7-d826e37d2966",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Challenge” slide",
         "progression_name": "Challenge",
         "tips": [
           {
@@ -2488,7 +2488,7 @@
       "key": "c1edc75e-74bc-48a7-bf4d-0ecaeab55682",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Practice” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2500,7 +2500,7 @@
       "key": "ef48667c-c74d-4b1c-9fb2-bba8da35d30c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2512,7 +2512,7 @@
       "key": "ff46502b-8ac2-4c89-9876-d8079acfd83a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -2524,7 +2524,7 @@
       "key": "89234723-5d77-4e48-9cff-1177bfae54d3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Sketch a simple shape on your paper and imagine the code used to draw it. Can you write that code out next to the shape?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2558,7 +2558,7 @@
       "key": "eb05d7c3-c0ca-48f5-8524-d11c8e2e1dab",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _In the previous lesson, which shapes repeated lines of code?_\n_What lines of code did they repeat?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _In the previous lesson, which shapes repeated lines of code?_\n_What lines of code did they repeat?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2570,7 +2570,7 @@
       "key": "86df1541-18fb-4653-8506-8090b8d6b2e9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2582,7 +2582,7 @@
       "key": "a231919d-b214-4f48-aa9c-fec058521026",
       "position": 3,
       "properties": {
-        "description": "####My Robotic Friends Review\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Remember This?” slide\n\n\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the ***Symbol Key** that we used in \"My Robotic Friends\". For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** With the class together as a group, pull an easy puzzle from the ***Cup Stacking Ideas** and program with each other as a reminder of rules and terminology.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Now Try This!” slide\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “One More Time!” slide\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” are often used interchangeably.",
+        "description": "####My Robotic Friends Review\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Remember This?” slide\n\n\n\n**Goal:** This review will refresh the students’ minds about how quickly programs for the \"My Robotic Friends\" activity can get intense. \n\n**Display:** Show the ***Symbol Key** that we used in \"My Robotic Friends\". For each of the four symbols, ask students to show you what it looks like for a robot to follow that instruction.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-13-19.49.03.png\" style=\"max-width: 300px;\">\n\n**Model:** With the class together as a group, pull an easy puzzle from the ***Cup Stacking Ideas** and program with each other as a reminder of rules and terminology.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Now Try This!” slide\n\nNext, pull a puzzle that’s slightly harder, but also requires a lot of steps like the one below.\n\n<img alt=\"\" src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-18.17.12.png\" style=\"max-width: 300px;\">\n\n**Volunteer:** Ask a volunteer (or a group of volunteers) to come forward to help program this one on the board.  If you make them stick strictly to the “no symbols other than those on the key” rule, it will probably take a while!\n \n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “One More Time!” slide\n\n**Display:** Now, bring up this image:\n\n<img src=\"https://curriculum.code.org/media/uploads/Screenshot-2018-03-14-17.59.02.png\" style=\"max-width: 300px;\">\n\nWhat is the reaction of the class?\n\n**Prompt:** Give students the opportunity to brainstorm shorter ways to relay the code that they’re about to create. (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nOnce students have put together the idea of “repeating” code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” are often used interchangeably.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2594,7 +2594,7 @@
       "key": "86dcfa44-be08-43f9-a733-5ff0ddd423c7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "My Loopy Robotic Friends",
         "progression_name": "My Loopy Robotic Friends - Unplugged Activity"
       },
@@ -2618,7 +2618,7 @@
       "key": "f711d935-1d2d-4057-9a72-6595f5dc5e08",
       "position": 1,
       "properties": {
-        "description": "####Introduction and Modeling\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “My Loopy Robotic Friends” slide\n\n**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\n\n\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that repeat uninterrupted (one arrow repeated over and over).\n\n**Pair:** Turn to a neighbor and share one of the repeating patterns you found.\n\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample Answer” slide\n\n**Model:** Using one of the repeating patterns that the class identified, model how to Circle the instruction or pattern that repeats, write the number of loops near that circle, then cross out the rest of the arrows.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\n\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much simpler the resulting instructions are."
+        "description": "####Introduction and Modeling\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “My Loopy Robotic Friends” slide\n\n**Set Up:** Have stacks of cups or cut paper trapezoids available for groups.\n\n\n**Display:** Take the program from one of your previous cup stacks and display it for the class, or use the one below.\n\n![3 cup solution](https://curriculum.code.org/media/uploads/image_xmBkoQZa.png)\n\n**Think:** Ask students to think quietly about where in this program they can find a pattern of instructions that repeat uninterrupted (one arrow repeated over and over).\n\n**Pair:** Turn to a neighbor and share one of the repeating patterns you found.\n\n**Share:** Ask a few students to share out the patterns they identified. Try to pull out different approaches to grouping patterns. For each pattern, ask students to identify how many times the pattern repeats.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sample Answer” slide\n\n**Model:** Using one of the repeating patterns that the class identified, model how to Circle the instruction or pattern that repeats, write the number of loops near that circle, then cross out the rest of the arrows.\n\n![looped code](https://curriculum.code.org/media/uploads/codeloop_EVpjnMz.png)\n\n\nRepeat this until the entire program has been shortened, then re-write the program in a way where students can see how much simpler the resulting instructions are."
       },
       "seeding_key": {
         "activity_section.key": "f711d935-1d2d-4057-9a72-6595f5dc5e08",
@@ -2629,7 +2629,7 @@
       "key": "b1604059-3b9d-4536-8220-d335752a1ea9",
       "position": 2,
       "properties": {
-        "description": "####Looping Your Robots\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Looping Your Robots” slide\n\n**Say:**\n\n- Once you are in your group, divide into partners.\n\n- Look at Cup Stacking Ideas. \n\n\n- With your partner, choose one design for your robot to do.\n\n![](https://images.code.org/ff04a9994e4d65688eb2833e5e4d04e7-cup stack ideas.png)"
+        "description": "####Looping Your Robots\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Looping Your Robots” slide\n\n**Say:**\n\n- Once you are in your group, divide into partners.\n\n- Look at Cup Stacking Ideas. \n\n\n- With your partner, choose one design for your robot to do.\n\n![](https://images.code.org/ff04a9994e4d65688eb2833e5e4d04e7-cup stack ideas.png)"
       },
       "seeding_key": {
         "activity_section.key": "b1604059-3b9d-4536-8220-d335752a1ea9",
@@ -2640,7 +2640,7 @@
       "key": "2e6834a6-e6e8-4455-9d95-c9693f17d3c2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “The “Program”” slide\n\n**Say:**\n\n- *Discuss how the stack should be built, using only arrows.*\n\n- *Write down your algorithm on a piece of paper.*\n\n- *Replace any repeated actions with a loop.*\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “The “Program”” slide\n\n**Say:**\n\n- *Discuss how the stack should be built, using only arrows.*\n\n- *Write down your algorithm on a piece of paper.*\n\n- *Replace any repeated actions with a loop.*\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2657,7 +2657,7 @@
       "key": "786152f5-efd1-42c7-bd12-4c674c4e8094",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Running and Debugging Your Robots” slide\n\n**Say:** \n- _Now it’s time to be a robot!_\n- _Trade algorithms with the other partners in your group._\n- _Be on the lookout for bugs. If you see one, have the robot finish the instructions as best as it can._\n- _Discuss the bug with your partners and come up with a solution._\n- _Keep testing the algorithm until it works!_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** When all of the pairs have had a chance to run their programs, ask a few to share their solutions with the class. Use this opportunity to discuss how groups came up with different solutions to the same puzzle. In particular, you might ask of each program:\n\n* _Did you identify any loops?_\n* _Are there other ways those loops could have been written? How?_\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Running and Debugging Your Robots” slide\n\n**Say:** \n- _Now it’s time to be a robot!_\n- _Trade algorithms with the other partners in your group._\n- _Be on the lookout for bugs. If you see one, have the robot finish the instructions as best as it can._\n- _Discuss the bug with your partners and come up with a solution._\n- _Keep testing the algorithm until it works!_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** When all of the pairs have had a chance to run their programs, ask a few to share their solutions with the class. Use this opportunity to discuss how groups came up with different solutions to the same puzzle. In particular, you might ask of each program:\n\n* _Did you identify any loops?_\n* _Are there other ways those loops could have been written? How?_\n"
       },
       "seeding_key": {
         "activity_section.key": "786152f5-efd1-42c7-bd12-4c674c4e8094",
@@ -2668,7 +2668,7 @@
       "key": "63793719-50ac-4c08-8519-3403352f4fce",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Is it easier to understand programs with loops, or programs written out longhand? Why?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Is it easier to understand programs with loops, or programs written out longhand? Why?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2691,7 +2691,7 @@
       "key": "6829a4ad-10fd-4c53-9846-0e9c8e3a32d0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n- _What are loops?_\n- _Why do we use them?_\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n- _What are loops?_\n- _Why do we use them?_\n\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2703,7 +2703,7 @@
       "key": "86b51bb2-2c68-4941-96db-3e2ee2d10976",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2715,7 +2715,7 @@
       "key": "a69918dc-3844-4525-8c17-3cc88df97893",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Find the Loops” slide\n![](https://images.code.org/17dc6c40c0b81926fc7ed359c2770b4f-find the loops.png)\n\nReview with students the \"My Loopy Robotic Friends\" activity:\n\n\nQuickly show the students a program (with repeated steps) for the rest of the class to do. Ask the rest of the class to find the loops within the program and point them out.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n![](https://images.code.org/5d0240f10a8f3051a384d1029fdcc8b7-loops answers.png)\n\nIf you're comfortable, give an introduction to _BB-8_ from _Star Wars_. Many children may be familiar with the lovable robot, but an introduction will surely build excitement.\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Find the Loops” slide\n![](https://images.code.org/17dc6c40c0b81926fc7ed359c2770b4f-find the loops.png)\n\nReview with students the \"My Loopy Robotic Friends\" activity:\n\n\nQuickly show the students a program (with repeated steps) for the rest of the class to do. Ask the rest of the class to find the loops within the program and point them out.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n![](https://images.code.org/5d0240f10a8f3051a384d1029fdcc8b7-loops answers.png)\n\nIf you're comfortable, give an introduction to _BB-8_ from _Star Wars_. Many children may be familiar with the lovable robot, but an introduction will surely build excitement.\n\n\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2727,7 +2727,7 @@
       "key": "a72e6098-8d61-460c-9476-07e745e9a2e3",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis activity will help bring the unplugged concepts from \"My Loopy Robotic Friends\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis activity will help bring the unplugged concepts from \"My Loopy Robotic Friends\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "a72e6098-8d61-460c-9476-07e745e9a2e3",
@@ -2762,7 +2762,7 @@
       "key": "aaf324cc-ac19-4cbe-ac1e-a227dfa08ffc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Rey and BB-8” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Rey and BB-8” video",
         "name": "Loops with Rey and BB-8",
         "progression_name": "Video: Programming with Rey and BB-8"
       },
@@ -2775,7 +2775,7 @@
       "key": "1202eadf-d8c0-4f22-ad1f-9b2f627deaf8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2787,7 +2787,7 @@
       "key": "0984cd5d-f4bd-4bc3-99b8-545096a94803",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2799,7 +2799,7 @@
       "key": "9aab40c5-f948-4606-957f-94dc946c09f9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Repeat Blocks with BB-8” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 4 - Repeat Blocks with BB-8” video",
         "progression_name": "Video: Repeat Blocks with BB-8"
       },
       "seeding_key": {
@@ -2811,7 +2811,7 @@
       "key": "719377bd-f719-48e1-ae5a-019bb6f7cb9e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2823,7 +2823,7 @@
       "key": "c62a85f3-4c42-499c-870f-ad525e59d48a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2835,7 +2835,7 @@
       "key": "8219b437-7cee-4e3c-9f08-8700b1b686dc",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-12 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-12 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2847,7 +2847,7 @@
       "key": "182e7db7-3fb8-4830-8979-84d2e5d2a9c2",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -2859,7 +2859,7 @@
       "key": "e08ef534-d7db-4593-ab42-6259f95b599a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2871,7 +2871,7 @@
       "key": "cc42abbc-5e6a-4862-970e-0a411ab60d2d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -2917,7 +2917,7 @@
       "key": "aa8325c1-c320-4a12-b34f-f751d0d788be",
       "position": 1,
       "properties": {
-        "description": "At this point, students have only used loops in the Maze puzzles. Those puzzles focused on looping movement instructions. This stage will use loops to pick up multiple items in the same spot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _Today we will be harvesting crops with code._\n\n_Harvester puzzles can have lots of items in one spot._ \n\n_How can we use loops to pick up any number of them with just two blocks?_\n",
+        "description": "At this point, students have only used loops in the Maze puzzles. Those puzzles focused on looping movement instructions. This stage will use loops to pick up multiple items in the same spot.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _Today we will be harvesting crops with code._\n\n_Harvester puzzles can have lots of items in one spot._ \n\n_How can we use loops to pick up any number of them with just two blocks?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -2929,7 +2929,7 @@
       "key": "d306b9bc-0af8-47cd-80c0-28890f7e8ece",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -2941,7 +2941,7 @@
       "key": "f72ae0b1-7832-4a0d-981f-c9987ca8ccf7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “The Harvester” video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “The Harvester” video",
         "name": "Harvesting Crops with Loops",
         "progression_name": "Video: The Harvester"
       },
@@ -2954,7 +2954,7 @@
       "key": "fd7186b5-6566-4241-b2dd-e8960c52de2c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8 - Skill Building” slide\n\nWhen students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8 - Skill Building” slide\n\nWhen students are using loops to repeat an action (such as harvesting pumpkins), encourage them to think about the movements before and after that action. Could those actions be brought into the loop as well?",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2966,7 +2966,7 @@
       "key": "63cf0e56-6919-40d3-99e6-684bdc641f8a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Challenge” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2978,7 +2978,7 @@
       "key": "2c7cf1e1-38a1-467c-a48a-b477e37b39fe",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12 - Practice” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2990,7 +2990,7 @@
       "key": "51e99196-28f0-40be-8972-c6f333e05367",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Prediction” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Prediction” slide",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -3002,7 +3002,7 @@
       "key": "51aacfe0-7e6b-482d-a6f8-f0324eb63a91",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -3014,7 +3014,7 @@
       "key": "b9690bff-f355-4577-b843-92bb2d31cf5c",
       "position": 1,
       "properties": {
-        "description": " \n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Give two examples of when you used loops in your code._\n\n\n",
+        "description": " \n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Give two examples of when you used loops in your code._\n\n\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3048,7 +3048,7 @@
       "key": "c814d01c-7880-4e4b-a59e-f2b0d4adf8c7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _If you were making art, using only stickers, what would your design look like?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**  _If you were making art, using only stickers, what would your design look like?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3060,7 +3060,7 @@
       "key": "73ee86f6-22d9-48ac-b8ba-4b157f04d461",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n\n- **Repeat** - To do something again.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3072,7 +3072,7 @@
       "key": "9cae08a1-93e2-48ef-ba4b-c09eb84b5172",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\nStudents should have had plenty of introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a new dance with loops just like in \"Getting Loopy\".\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Programming in Artist\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review loops or the artist, which will help prepare your class for fun with the online puzzles!",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Review” slide\n\nStudents should have had plenty of introduction to loops at this point. Based on what you think your class could benefit from, we recommend:\n\n - Create a new dance with loops just like in \"Getting Loopy\".\n - As a class, play through a puzzle from the last lesson, \"Loops with Rey and BB-8\".\n - Review how to use Artist by playing through a puzzle from \"Programming in Artist\".\n - Preview a puzzle from this lesson.\n\nAll of these options will either review loops or the artist, which will help prepare your class for fun with the online puzzles!",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3102,7 +3102,7 @@
       "key": "73c26d19-870e-40bd-8a1e-95de8b1dc27c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-8 - Mini-Project: Sticker Art” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-8 - Mini-Project: Sticker Art” slide\n",
         "progression_name": "Mini-Project: Sticker Art"
       },
       "seeding_key": {
@@ -3114,7 +3114,7 @@
       "key": "a605bc3d-6416-416a-b846-a8d5831a2cc5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Say:**\n- *Make your own Sticker Art.*\n- *Plan out your design.*\n- *Program your design.*\n- *Share your design at the end of the lesson.*\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n\n**Say:**\n- *Make your own Sticker Art.*\n- *Plan out your design.*\n- *Program your design.*\n- *Share your design at the end of the lesson.*\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3137,7 +3137,7 @@
       "key": "5e77bc9c-b2b5-4e04-8053-ed19d4c298f0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect:** _What is a shape or figure you would like to program? Can you come up with the code to create it?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect:** _What is a shape or figure you would like to program? Can you come up with the code to create it?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3160,7 +3160,7 @@
       "key": "2e4b1caf-5075-43c5-88ab-0fc3983d1890",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took?_\n_For example, you flipped a switch, the lights turned on._\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took?_\n_For example, you flipped a switch, the lights turned on._\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3172,7 +3172,7 @@
       "key": "c314ba15-97b5-4203-848c-9d12bf7da728",
       "position": 2,
       "properties": {
-        "description": "\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s see if we can find a pattern here” slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Next” slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*\n",
+        "description": "\n####A Series of Events\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let’s see if we can find a pattern here” slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Next” slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3184,7 +3184,7 @@
       "key": "9aaf23d6-e483-4a14-a595-1ef2fc8bdc26",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - An event is an action that causes something to happen.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important vocabulary word:\n\n**Event** - An event is an action that causes something to happen.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3219,7 +3219,7 @@
       "key": "21f3cab4-9309-4001-8719-43813460739a",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Remember This?” slide\n\n**Say:** _Do you remember guiding *Red* from \"Angry Birds\" to the pig in the Maze puzzles? You wrote a program that took Red from start to finish without any interruptions._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Giving the User Options” slide\n\n**Say:** _In most real programs we want more options._\n_What if I only want my character to move when my finger is on the screen of my phone?_\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Controlling the Game” slide\n\n**Say:** _I need to program the character to only move when my finger is on the screen of my phone._\n_Putting my finger on the screen would then become an event that tells my character to move._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “When Do We Use Events” slide\n\n**Say:** _In earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time._ \n\n_It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance?_ \n\n_This is where events come in!_\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Remember This?” slide\n\n**Say:** _Do you remember guiding *Red* from \"Angry Birds\" to the pig in the Maze puzzles? You wrote a program that took Red from start to finish without any interruptions._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Giving the User Options” slide\n\n**Say:** _In most real programs we want more options._\n_What if I only want my character to move when my finger is on the screen of my phone?_\n\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Controlling the Game” slide\n\n**Say:** _I need to program the character to only move when my finger is on the screen of my phone._\n_Putting my finger on the screen would then become an event that tells my character to move._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “When Do We Use Events” slide\n\n**Say:** _In earlier lessons, we created algorithms that allowed us to control a friend or other character for several steps at a time._ \n\n_It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance?_ \n\n_This is where events come in!_\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3236,7 +3236,7 @@
       "key": "020939b4-ea90-4735-9a3b-9c1e74154d7b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](/blockly/media/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Event Controller” slide\n\n\n**Directions:**\n\n- Project the ***Event Controller** onto your classroom screen.\n\n![](/blockly/media/curriculum/docs/csf/c2_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Green Star -> Clap\n\t- Orange Triangle -> Hands in the air\n\t- Blue Hexagon -> Hands on hips\n\t- Purple Circle -> Twist\n\t- Pink Rectangle -> Stomp\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their actions.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n    - What buttons would you need to press to get \"Twist, Twist, Clap, Stomp\"?\n- To make things more challenging, get the class started on a separate task, then begin interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Practice until students seem comfortable with the idea that each button press causes them to perform an action."
       },
       "seeding_key": {
         "activity_section.key": "020939b4-ea90-4735-9a3b-9c1e74154d7b",
@@ -3247,7 +3247,7 @@
       "key": "edd27571-4996-4ebd-9ef3-ad6dbaae3f95",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n- Hand out ***Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n- Hand out ***Assessment** and allow students to complete the activity independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
         "name": "Optional Assessment (5 minutes)"
       },
       "seeding_key": {
@@ -3259,7 +3259,7 @@
       "key": "99fa5f81-ac25-47cf-ab58-094ca239199b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What are some examples of events?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What are some examples of events?_",
         "duration": "10",
         "name": "Reflection",
         "tips": [
@@ -3305,7 +3305,7 @@
       "key": "a12f24da-34da-4036-b5be-4d5393f3a2de",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you seen a character touch another object as an event in a game?_\n\n\n_For example: Your character hits something with a tool and it breaks._\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you seen a character touch another object as an event in a game?_\n\n\n_For example: Your character hits something with a tool and it breaks._\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3317,7 +3317,7 @@
       "key": "e7cdf3e9-68b1-4b5d-8da6-e5ab9c9cb39a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Event** - An event is an action that causes something to happen.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Event** - An event is an action that causes something to happen.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3329,7 +3329,7 @@
       "key": "e3cb2f78-08dd-4fd5-b9f2-644462f0dcd3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Quick Review” slide\n\n\n**Say:** _What did we \"program\" the button click events to do?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events to Coding” slide\n\n**Say:** _Now we're going to add events to our coding. We're going to create an event for clicking the mouse and one for when the bird hits an object - like the ground or an obstacle._",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Quick Review” slide\n\n\n**Say:** _What did we \"program\" the button click events to do?_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add Events to Coding” slide\n\n**Say:** _Now we're going to add events to our coding. We're going to create an event for clicking the mouse and one for when the bird hits an object - like the ground or an obstacle._",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3364,7 +3364,7 @@
       "key": "0ad3b3ce-70c4-4e74-8fe6-031b88df0974",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n\nPull a lesson from the corresponding online stage, we recommend puzzle 4. \n\n**Say:** _What should happen when the \"Flappy Bird\" runs into something like the ground or an obstacle?_\n\nExplain that \"Flappy\" in this game will move forward with a click of the mouse and the game will end if \"Flappy\" runs into anything. \n\nComplete the puzzle with the class and allow time for a quick discussion on what was and wasn't an event. For every event, ask the students what the action corresponding to this event is.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n\nPull a lesson from the corresponding online stage, we recommend puzzle 4. \n\n**Say:** _What should happen when the \"Flappy Bird\" runs into something like the ground or an obstacle?_\n\nExplain that \"Flappy\" in this game will move forward with a click of the mouse and the game will end if \"Flappy\" runs into anything. \n\nComplete the puzzle with the class and allow time for a quick discussion on what was and wasn't an event. For every event, ask the students what the action corresponding to this event is.",
         "name": "Preview of Online Puzzles as a Class\r"
       },
       "seeding_key": {
@@ -3376,7 +3376,7 @@
       "key": "8b0a54ca-ff34-4e95-be09-fd7069f54776",
       "position": 1,
       "properties": {
-        "description": "####Online Puzzles and Free Play\n\nThis entire lesson builds towards students creating their own Flappy game, but the second half of the levels are all linked. This means students will see their own code as they move between bubbles 6-10, allowing for more personal customization that will carry all the way to the final product.\n\nIn the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided. If the class doesn't use pair programming, then tell students to go around and look at other student's games. Otherwise, have students discuss and try out different ways to set up their game with their partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Flappy Game” video\n",
+        "description": "####Online Puzzles and Free Play\n\nThis entire lesson builds towards students creating their own Flappy game, but the second half of the levels are all linked. This means students will see their own code as they move between bubbles 6-10, allowing for more personal customization that will carry all the way to the final product.\n\nIn the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided. If the class doesn't use pair programming, then tell students to go around and look at other student's games. Otherwise, have students discuss and try out different ways to set up their game with their partner.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Code Your Own Flappy Game” video\n",
         "name": "Build a Flappy Game",
         "progression_name": "Video: Code Your Own Flappy Game"
       },
@@ -3389,7 +3389,7 @@
       "key": "d72f441a-f3e3-44e5-a1f6-be80e85e35dc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3401,7 +3401,7 @@
       "key": "df350a58-750c-4bc3-835f-0352e2be9fba",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-11 - Mini-Project: Flappy Game” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-11 - Mini-Project: Flappy Game” slide",
         "progression_name": "Mini-project: Flappy Game"
       },
       "seeding_key": {
@@ -3429,7 +3429,7 @@
       "key": "14f67e62-0cae-40e9-bcae-aae37406a595",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n \n**Reflect:** _What did you do to make your game unique?_",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n \n**Reflect:** _What did you do to make your game unique?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3463,7 +3463,7 @@
       "key": "0a0e2ae1-a069-405f-94aa-4580c2023861",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect slide\n\n**Reflect:** _What events did the \"Flappy Game\" use?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect slide\n\n**Reflect:** _What events did the \"Flappy Game\" use?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3475,7 +3475,7 @@
       "key": "f1b5af84-f7ff-4be7-9743-d99a969c0fde",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n \n- **Event** - An event is an action that causes something to happen.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n \n- **Event** - An event is an action that causes something to happen.\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3487,7 +3487,7 @@
       "key": "6d5f0ac4-29ba-4354-9fb7-93304f0a3f28",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Chart” slide\n\nBriefly discuss the *Flappy Bird* game from the last lesson. Using the chart provided on the slide, ask students to come up with the various events in the game and record their responses on the chart. Events include:\n \n - *Flappy* hitting the ground\n - *Flappy* hitting an obstacle\n - A player clicking the screen\n - *Flappy* passing an obstacle\n\nNow discuss the actions that correspond to these events. *Flappy* running into something ends the game, but *Flappy* passing an obstacle wins a point. A player clicking makes *Flappy* flap his wings. Record student responses on the chart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n\n![](https://images.code.org/7b1f494f111ed3b1cea6d7b0c52bb149-flappy table.png)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** _Think about the different events used in the \"Flappy Game.\" What other kinds of games could be built using those events and actions?_\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Chart” slide\n\nBriefly discuss the *Flappy Bird* game from the last lesson. Using the chart provided on the slide, ask students to come up with the various events in the game and record their responses on the chart. Events include:\n \n - *Flappy* hitting the ground\n - *Flappy* hitting an obstacle\n - A player clicking the screen\n - *Flappy* passing an obstacle\n\nNow discuss the actions that correspond to these events. *Flappy* running into something ends the game, but *Flappy* passing an obstacle wins a point. A player clicking makes *Flappy* flap his wings. Record student responses on the chart.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Answer Key” slide\n\n![](https://images.code.org/7b1f494f111ed3b1cea6d7b0c52bb149-flappy table.png)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:** _Think about the different events used in the \"Flappy Game.\" What other kinds of games could be built using those events and actions?_\n\n\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -3516,7 +3516,7 @@
       "key": "d2488594-0e2f-4ed0-ab32-a9b5f3b41452",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “ Introduction to Play Lab” video\n",
+        "description": "This is the most free-form online activity of the course. At the final stage students have the freedom to create a game of their own. You may want to provide structured guidelines around what kind of game to make, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “ Introduction to Play Lab” video\n",
         "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
@@ -3528,7 +3528,7 @@
       "key": "f3dbf7fa-df05-4a53-9b3f-bac168262404",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-6 - Skill Building” slide",
         "progression_name": "Skill-Building"
       },
       "seeding_key": {
@@ -3540,7 +3540,7 @@
       "key": "e9e6e923-2525-40e3-8d96-05f558e7d685",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Mini-Project: Chase Game” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Mini-Project: Chase Game” slide",
         "progression_name": "Mini-project: Chase Game"
       },
       "seeding_key": {
@@ -3552,7 +3552,7 @@
       "key": "b0000a3e-0521-4cdf-8ee6-ddada97ceb2c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 13 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -3564,7 +3564,7 @@
       "key": "6e96e360-94eb-4135-aadc-1d38a6d902be",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -3576,7 +3576,7 @@
       "key": "bf84684f-3297-40f1-9b3a-d0ef54565c50",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect:** _What events did you use in your program today?_\n\n_What did you enjoy most about today’s activity?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n \n**Reflect:** _What events did you use in your program today?_\n\n_What did you enjoy most about today’s activity?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3599,7 +3599,7 @@
       "key": "bf104535-6238-444f-ab5e-02b38a0e7532",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Let’s say you want to find out the most popular ice cream flavors among your classmates. How would you figure this information out?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Let’s say you want to find out the most popular ice cream flavors among your classmates. How would you figure this information out?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3611,7 +3611,7 @@
       "key": "2fa24a50-63fa-4fbf-b9eb-0d3cb36455e1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Data** - A collection of information\n- **Graph** - A picture or a diagram that represents data or values in an organized manner",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Data** - A collection of information\n- **Graph** - A picture or a diagram that represents data or values in an organized manner",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3623,7 +3623,7 @@
       "key": "b09c48cc-4ca4-4cb7-8d29-8b653d90fd28",
       "position": 3,
       "properties": {
-        "description": "####The Need for Visualization\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Favorite Season” slide\n\n  **Say:** _On the count of 3, tell me your favorite season. 1, 2, 3_ \n\n**Goal:** Students should all answer at once. Students should see first-hand how this is an inefficient, or even inaccurate way of collecting data.\n\n\n",
+        "description": "####The Need for Visualization\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Favorite Season” slide\n\n  **Say:** _On the count of 3, tell me your favorite season. 1, 2, 3_ \n\n**Goal:** Students should all answer at once. Students should see first-hand how this is an inefficient, or even inaccurate way of collecting data.\n\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3635,7 +3635,7 @@
       "key": "db558e82-a77c-4015-94e5-21e1a5244ee7",
       "position": 4,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- *Can we tell which season most of the class likes?* \n\n- *Why do you believe that?*\n\n\n- *What could we do to be more certain?* \n\nTake ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- *Can we tell which season most of the class likes?* \n\n- *Why do you believe that?*\n\n\n- *What could we do to be more certain?* \n\nTake ideas from the class, but lead them towards writing the data down using tally marks on a board or chart paper."
       },
       "seeding_key": {
         "activity_section.key": "db558e82-a77c-4015-94e5-21e1a5244ee7",
@@ -3646,7 +3646,7 @@
       "key": "507e569c-1f35-4eb1-af0f-b813dfc0033d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Tally Marks” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Tally Marks” slide"
       },
       "seeding_key": {
         "activity_section.key": "507e569c-1f35-4eb1-af0f-b813dfc0033d",
@@ -3669,7 +3669,7 @@
       "key": "7e3e6efe-642b-438e-9a62-d9e277e60864",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Picturing Data” slide\n.\n\n**Distribute:** Pass out the ***handout** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Picturing Data” slide\n.\n\n**Distribute:** Pass out the ***handout** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.",
         "name": "Picturing Data",
         "progression_name": "Picturing Data"
       },
@@ -3698,7 +3698,7 @@
       "key": "14daa173-c83a-4fdb-a6eb-9687492c7c1e",
       "position": 2,
       "properties": {
-        "description": "This activity is broken into two parts. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Counting Data” slide\n\nOn the first page students use tally marks to keep track of how many times each pet appears in the program. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Graphing Data” slide\n\nOn the second page they use a variety of graphs to visualize the data they collected.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share” slide\n\n**Share**: After finishing, encourage students can share their results with a neighbor and look for similarities and differences. When the whole class is ready, bring everyone together."
+        "description": "This activity is broken into two parts. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Counting Data” slide\n\nOn the first page students use tally marks to keep track of how many times each pet appears in the program. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Graphing Data” slide\n\nOn the second page they use a variety of graphs to visualize the data they collected.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share” slide\n\n**Share**: After finishing, encourage students can share their results with a neighbor and look for similarities and differences. When the whole class is ready, bring everyone together."
       },
       "seeding_key": {
         "activity_section.key": "14daa173-c83a-4fdb-a6eb-9687492c7c1e",
@@ -3709,7 +3709,7 @@
       "key": "1cd5c09f-9fce-49af-8407-f6e0a58ab132",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n\n\n**Discuss**: Ask the class to discuss some of the following questions  (Bolded questions appear in the slides. Feel free to add any others that would work for you):"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n\n\n**Discuss**: Ask the class to discuss some of the following questions  (Bolded questions appear in the slides. Feel free to add any others that would work for you):"
       },
       "seeding_key": {
         "activity_section.key": "1cd5c09f-9fce-49af-8407-f6e0a58ab132",
@@ -3731,7 +3731,7 @@
       "key": "c6c10f86-5ef2-49d4-bb7f-246281d5ffc7",
       "position": 5,
       "properties": {
-        "description": "####Summary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Summary” slide"
+        "description": "####Summary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Summary” slide"
       },
       "seeding_key": {
         "activity_section.key": "c6c10f86-5ef2-49d4-bb7f-246281d5ffc7",
@@ -3754,7 +3754,7 @@
       "key": "fd0b246a-0f90-41bc-86e9-dfa6b8df66cc",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What is one question that you would like to answer? What data would you want to collect to answer it?_",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What is one question that you would like to answer? What data would you want to collect to answer it?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3766,7 +3766,7 @@
       "key": "d8007309-2325-479a-abd9-324c8e27e88f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Which one doesn’t belong?\n\n**Discussion Goal:** Students discuss the attributes of the object in each square. The teacher labels each square with its shape, color and what it is. Students form opinions about which one doesn’t belong. There is no right answer. The focus is on students explaining their thinking and justifying their choice.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Which one doesn’t belong?\n\n**Discussion Goal:** Students discuss the attributes of the object in each square. The teacher labels each square with its shape, color and what it is. Students form opinions about which one doesn’t belong. There is no right answer. The focus is on students explaining their thinking and justifying their choice.",
         "duration": "10",
         "name": "Which one doesn’t belong?"
       },
@@ -3956,7 +3956,7 @@
       "key": "3722084a-4692-4ff6-836a-4c73da619b0f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What is inside a computer?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What is inside a computer?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -3968,7 +3968,7 @@
       "key": "4c59df71-b45c-4ba1-9545-01414e67cb7c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:** _This lesson has one new and important word:_\n\n- **Binary** - A way of representing information using only two options\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:** _This lesson has one new and important word:_\n\n- **Binary** - A way of representing information using only two options\n\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -3980,7 +3980,7 @@
       "key": "2cb04734-093a-4c9b-8371-6ab5701a6aef",
       "position": 3,
       "properties": {
-        "description": "####Off and On\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message” slide\n\n**Do This:** If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\n![](https://images.code.org/49e32f1270f21f04ee75cbeb84645d3b-binary message.png)\n\tPut the message aside and move on to prepping for the activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s in here?” slide\n\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n\n\n",
+        "description": "####Off and On\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message” slide\n\n**Do This:** If you've written a short message on the board in binary, call the students' attention to it and ask if anyone knows what it is or what it means.\n\n![](https://images.code.org/49e32f1270f21f04ee75cbeb84645d3b-binary message.png)\n\tPut the message aside and move on to prepping for the activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “What’s in here?” slide\n\n- You can start by asking the class if they have ever seen inside a computer.\n\t- What's in there?\n\t- This is a good place to actually show them the inside of a computer (or pictures of the inside of a computer).\n\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/wikimediacomputer.jpg)\n\n\n\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3992,7 +3992,7 @@
       "key": "2066bba2-9f58-4750-a4c4-02029d24b96d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Off and On” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Off and On” slide"
       },
       "seeding_key": {
         "activity_section.key": "2066bba2-9f58-4750-a4c4-02029d24b96d",
@@ -4015,7 +4015,7 @@
       "key": "dc2e70bd-8e42-47f8-a621-16716717f486",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Computer Storage” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Computer Storage” slide"
       },
       "seeding_key": {
         "activity_section.key": "dc2e70bd-8e42-47f8-a621-16716717f486",
@@ -4038,7 +4038,7 @@
       "key": "cf7d125a-cc5b-45a1-80b3-3dd0ac294e59",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Binary” slide"
       },
       "seeding_key": {
         "activity_section.key": "cf7d125a-cc5b-45a1-80b3-3dd0ac294e59",
@@ -4061,7 +4061,7 @@
       "key": "336ab1d7-1538-412d-952c-fd1c10fb7af1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Letters in Binary” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Letters in Binary” slide"
       },
       "seeding_key": {
         "activity_section.key": "336ab1d7-1538-412d-952c-fd1c10fb7af1",
@@ -4093,7 +4093,7 @@
       "key": "a48996d5-cfc0-49c6-8da1-497cc1f9f61d",
       "position": 13,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n**Do This:** Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\n**Do This:**\nDrag the blocks on the slide to make different letters. Show students how to break down the 8-bit sequence into the first 4 bits and the last 4 bits to read it more easily. Within each 4 bit sequence, have students break it down further by looking at the bits from left to right to determine if the bit is on or off.\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bits Versus Bytes” video\n\n**Do This:** Watch the ***Bits Versus Bytes - Student Video** (~1 minute)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “What Letter is This?” slide\n\n**Do This:**\nDrag the blocks on the slide to make different letters. Show students how to break down the 8-bit sequence into the first 4 bits and the last 4 bits to read it more easily. Within each 4 bit sequence, have students break it down further by looking at the bits from left to right to determine if the bit is on or off.\n\t\t\n- Go over a few examples of converting letters into binary, then back.\n- Afterward, write an encoded letter and give the class a few seconds to figure out what it is.\n- When the class can figure out that encoded letter on their own, you can move on to the activity."
       },
       "seeding_key": {
         "activity_section.key": "a48996d5-cfc0-49c6-8da1-497cc1f9f61d",
@@ -4114,7 +4114,7 @@
       "key": "739e6afa-63eb-4a64-846b-6261ccd3784f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "Binary Bracelets",
         "progression_name": "Binary Bracelets - Unplugged Activity"
       },
@@ -4154,7 +4154,7 @@
       "key": "752a3a58-19b7-4bc9-b5ba-78c8dae0dc0b",
       "position": 2,
       "properties": {
-        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](/blockly/media/curriculum/course2/14/key.png)"
+        "description": "\n####Binary Bracelets - Worksheet\nYou do not need to cover the whole of binary, like counting and converting numbers back and forth from decimal. This lesson is intended to be a fun introduction to how computers store information, not a frustrating lesson in bases.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Binary Bracelets” slide\n\n\nDirections:\n\n- _Find the first letter of your first name on the activity sheet._\n- _Fill in the squares of a bracelet to match the pattern of the squares next to the letter that you selected._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show next slide\n- _Cut the bracelet out._\n- _Tape the bracelet around your wrist to wear it!_\n- _Share your bracelet with your classmates to see if they can figure out your letter._\n\n![](/blockly/media/curriculum/course2/14/key.png)"
       },
       "seeding_key": {
         "activity_section.key": "752a3a58-19b7-4bc9-b5ba-78c8dae0dc0b",
@@ -4181,7 +4181,7 @@
       "key": "aba8ad28-38b8-42c0-be49-fde4a886b6e5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message now?” slide\n\nAfter the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Can you read this message now?” slide\n\nAfter the activity, revisit the message that was on the board and see if your class can decypher it using what they've learned."
       },
       "seeding_key": {
         "activity_section.key": "aba8ad28-38b8-42c0-be49-fde4a886b6e5",
@@ -4192,7 +4192,7 @@
       "key": "25277b41-5eaf-4649-9d93-e34eee0bb120",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide\n\nWalk students through the steps needed to read the message."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide\n\nWalk students through the steps needed to read the message."
       },
       "seeding_key": {
         "activity_section.key": "25277b41-5eaf-4649-9d93-e34eee0bb120",
@@ -4203,7 +4203,7 @@
       "key": "b30a30b9-42d8-4269-ac2f-cb156cc0a667",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n\n- Hand out the ***assessment** and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\n\n- Hand out the ***assessment** and allow students to complete it independently after the instructions have been well explained.\n- This should feel familiar, thanks to the previous activities.",
         "name": "Optional Assessment (15 minutes)"
       },
       "seeding_key": {
@@ -4215,7 +4215,7 @@
       "key": "b74c228a-aaa1-43f8-859e-c2599e2a84b7",
       "position": 1,
       "properties": {
-        "description": "####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide\n- What else do you think is represented as binary inside of a computer?\n- How else might you represent binary instead of boxes that are filled or not filled?\n- What was your favorite part about that activity?",
+        "description": "####Flash Chat: What did we learn?\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Flash Chat” slide\n- What else do you think is represented as binary inside of a computer?\n- How else might you represent binary instead of boxes that are filled or not filled?\n- What was your favorite part about that activity?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -4227,7 +4227,7 @@
       "key": "71f8731f-4208-4f70-887d-34e6cf813541",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Use the activity worksheet to write out the rest of your name or your favorite word in binary._\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Use the activity worksheet to write out the rest of your name or your favorite word in binary._\n\n"
       },
       "seeding_key": {
         "activity_section.key": "71f8731f-4208-4f70-887d-34e6cf813541",
@@ -4249,7 +4249,7 @@
       "key": "3105364b-d1ae-4783-be6d-c8b5a2956597",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Today, you’ll start the final lesson of the unit in which you will design and code your own project in Play Lab._\n_Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _Today, you’ll start the final lesson of the unit in which you will design and code your own project in Play Lab._\n_Before you start, what are three skills or qualities that you think will be important as you complete this project?_\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -4261,7 +4261,7 @@
       "key": "51d6d76e-ee11-44b6-92ad-183c966181ce",
       "position": 2,
       "properties": {
-        "description": "Get students excited and ready for today's activity!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Planning” slide\n",
+        "description": "Get students excited and ready for today's activity!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Planning” slide\n",
         "name": "Planning\r"
       },
       "seeding_key": {
@@ -4285,7 +4285,7 @@
       "key": "99f0f139-f072-494b-9c5c-4cdad36bcccb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Planning Guide” slide\n\n\n**Distribute**: Distribute one ***Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Planning Guide” slide\n\n\n**Distribute**: Distribute one ***Project Planning Guide** to each student or pair. With students, go over the steps listed on the guide, then allow them to complete it. Refer to the included exemplar if needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4320,7 +4320,7 @@
       "key": "86e1ce27-658e-45b7-b2b7-cbc92115c4a6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide",
         "progression_name": "Exploration: Sample Project"
       },
       "seeding_key": {
@@ -4332,7 +4332,7 @@
       "key": "8fda3704-be15-43cf-a4ab-225a03d30d5b",
       "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Create Your Project” slide",
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-7 - Create Your Project” slide",
         "progression_name": "Project"
       },
       "seeding_key": {
@@ -4344,7 +4344,7 @@
       "key": "78c72072-a904-443d-a9d5-e73d88f0a924",
       "position": 4,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide\n**Lesson Extras**",
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide\n**Lesson Extras**",
         "progression_name": "Lesson Extra"
       },
       "seeding_key": {
@@ -4356,7 +4356,7 @@
       "key": "98101265-a165-4469-a22e-787b1c2e17c0",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\nTo celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement. \n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and playtest the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Showcase” slide\n\nTo celebrate students' work, spend the last 10 minutes or so allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them, including ideas they'd still like to implement. \n* **Pair Playtesting**: Have students or groups pair up and playtest each other's projects. As they do, ask them to provide positive and constructive feedback to each other. The benefit here is that students will have the opportunity to provide and respond to feedback in a smaller setting. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and playtest the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
         "name": "Showcase\r"
       },
       "seeding_key": {
@@ -4368,7 +4368,7 @@
       "key": "4f5977a4-e9ed-4e01-81cb-492bf75d7e61",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What did you learn in creating this project?_\n\n_What was the most challenging part about this experience? How did you overcome that challenge?_\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _What did you learn in creating this project?_\n\n_What was the most challenging part about this experience? How did you overcome that challenge?_\n",
         "name": "Reflection"
       },
       "seeding_key": {

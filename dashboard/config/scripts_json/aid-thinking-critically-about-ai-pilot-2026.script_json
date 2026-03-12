@@ -752,7 +752,7 @@
       "key": "833e9fee-0c3a-4434-a72e-2c0d8bed56dc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Play the \"Mix and Move with AI\" video.\n\n**Questions to consider with the video:** \n- What is AI?\n\n**Discussion Goal:** Students should recognize that artificial intelligence is a type of technology that learns patterns from data to generate outputs or make predictions, and that people may have different reactions to it based on how they have seen it used. The goal is to surface students' initial ideas about what AI is and begin building a shared understanding before they start testing it themselves.",
+        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:** Play the \"Mix and Move with AI\" video.\n\n**Questions to consider with the video:** \n- What is AI?\n\n**Discussion Goal:** Students should recognize that artificial intelligence is a type of technology that learns patterns from data to generate outputs or make predictions, and that people may have different reactions to it based on how they have seen it used. The goal is to surface students' initial ideas about what AI is and begin building a shared understanding before they start testing it themselves.",
         "tips": [
           {
             "type": "teachingTip",
@@ -779,7 +779,7 @@
       "key": "533fe4d7-34e6-450e-998e-7254a0163391",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence (AI)*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *artificial intelligence (AI)*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *prompt*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "533fe4d7-34e6-450e-998e-7254a0163391",
@@ -790,7 +790,7 @@
       "key": "bc15e707-bda1-48f7-8bce-0f290c160dbd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the AI Dancer generation tool."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the purpose of the AI Dancer generation tool."
       },
       "seeding_key": {
         "activity_section.key": "bc15e707-bda1-48f7-8bce-0f290c160dbd",
@@ -813,7 +813,7 @@
       "key": "8e6dff87-c9be-4321-9897-89968b33aa02",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 2.\n- Level 1: Generate a dancer with a basic prompt\n- Level 2: Modify the slightly more detailed prompt to see how the output changes\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students experimenting with descriptive words. Ask: \"What happened when you added more detail to the prompt?\" Common misconception: Students may think the AI \"understands\" the prompt like a human. Remind them it is looking for patterns in data.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 2.\n- Level 1: Generate a dancer with a basic prompt\n- Level 2: Modify the slightly more detailed prompt to see how the output changes\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students experimenting with descriptive words. Ask: \"What happened when you added more detail to the prompt?\" Common misconception: Students may think the AI \"understands\" the prompt like a human. Remind them it is looking for patterns in data.",
         "progression_name": "Generating Dancers"
       },
       "seeding_key": {
@@ -825,7 +825,7 @@
       "key": "11c380fb-bb11-4957-9755-573bb32aafcc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Milestone 1 Learning Log.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the questions in the Snap Judgments section of their Milestone 1 Learning Log."
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Milestone 1 Learning Log.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the questions in the Snap Judgments section of their Milestone 1 Learning Log."
       },
       "seeding_key": {
         "activity_section.key": "11c380fb-bb11-4957-9755-573bb32aafcc",
@@ -848,7 +848,7 @@
       "key": "8642c013-8078-42e7-9f7d-d146f73caf24",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three-step process of how AI models function."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the three-step process of how AI models function."
       },
       "seeding_key": {
         "activity_section.key": "8642c013-8078-42e7-9f7d-d146f73caf24",
@@ -870,7 +870,7 @@
       "key": "5579cf0b-473f-4ea8-b0f6-689b60d32325",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete Levels 3 and 4.\n- Level 3: Students explore how AI models work and make predictions.\n- Level 4: Students systematically test the generator.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students: \"What data do you think this model was trained on to know how to draw a dancer?\" Use Level 3 to demystify AI – it is just math and patterns, not magic. On Level 4, check that students are changing one thing at a time in their prompts to see the specific effect. Ask: \"How did that specific word change the result?\"",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete Levels 3 and 4.\n- Level 3: Students explore how AI models work and make predictions.\n- Level 4: Students systematically test the generator.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students: \"What data do you think this model was trained on to know how to draw a dancer?\" Use Level 3 to demystify AI – it is just math and patterns, not magic. On Level 4, check that students are changing one thing at a time in their prompts to see the specific effect. Ask: \"How did that specific word change the result?\"",
         "progression_name": "How AI Models Work"
       },
       "seeding_key": {
@@ -924,7 +924,7 @@
       "key": "244bf643-6a78-41c9-b88c-79a5d7d1f890",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down everything they know or believe about AI using the provided sentence starters in the K column of their KWL Chart. Encourage them to write specific claims.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write down everything they know or believe about AI using the provided sentence starters in the K column of their KWL Chart. Encourage them to write specific claims.",
         "tips": [
           {
             "type": "teachingTip",
@@ -951,7 +951,7 @@
       "key": "d7542019-2a9f-4c54-99d0-39198e6a472a",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write down questions they have about AI in the W column of their KWL Chart."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write down questions they have about AI in the W column of their KWL Chart."
       },
       "seeding_key": {
         "activity_section.key": "d7542019-2a9f-4c54-99d0-39198e6a472a",
@@ -974,7 +974,7 @@
       "key": "85f4d125-b89b-42bc-8713-b55dbb6f07bc",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Is AI \"good\" or \"bad\"?*\n- *How does evidence change your judgment?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI is not simply good or bad; it depends on how it is tested and used. The goal is to move from opinions to evidence-based critical thinking.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station. They should write at least one question in the AI in Your World section of their Learning Log\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to look carefully at examples they haven't seen before. Ask: \"How does this AI system work? What data do you think this system was trained on?\"",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Is AI \"good\" or \"bad\"?*\n- *How does evidence change your judgment?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI is not simply good or bad; it depends on how it is tested and used. The goal is to move from opinions to evidence-based critical thinking.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to visit each station. They should write at least one question in the AI in Your World section of their Learning Log\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to look carefully at examples they haven't seen before. Ask: \"How does this AI system work? What data do you think this system was trained on?\"",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -991,7 +991,7 @@
       "key": "7387d06a-a5c9-4e94-ad95-ae2195d28916",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students revisit their KWL charts. Encourage them to see if any of their Want to Know questions were answered or if their What I Know claims changed after testing the image generator.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students revisit their KWL charts. Encourage them to see if any of their Want to Know questions were answered or if their What I Know claims changed after testing the image generator.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "7387d06a-a5c9-4e94-ad95-ae2195d28916",
@@ -1002,7 +1002,7 @@
       "key": "72ac46e3-563b-4533-813e-79231d629c02",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1051,7 +1051,7 @@
       "key": "a826c34d-13b1-4ee4-8958-54546930c55c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Do This: Acting as Data Creators, each pair uses their secret pattern to create 4 samples that follow their chosen rule and exchanges them with the other pair."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> Do This: Acting as Data Creators, each pair uses their secret pattern to create 4 samples that follow their chosen rule and exchanges them with the other pair."
       },
       "seeding_key": {
         "activity_section.key": "a826c34d-13b1-4ee4-8958-54546930c55c",
@@ -1074,7 +1074,7 @@
       "key": "aa111446-d003-4b3f-b0cb-64ac6c1013ff",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> Do This: Acting as an AI-in-Training, each pair studies the interchanged samples to find the hidden pattern. They should create a 5th sample that follows the same logic and confirm it with the other pair.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students if the AI was faster or more accurate than their human partners. Remind them that the AI is just looking for patterns in the text they provide.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> Do This: Acting as an AI-in-Training, each pair studies the interchanged samples to find the hidden pattern. They should create a 5th sample that follows the same logic and confirm it with the other pair.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 1.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students if the AI was faster or more accurate than their human partners. Remind them that the AI is just looking for patterns in the text they provide.",
         "progression_name": "AI Under the Hood"
       },
       "seeding_key": {
@@ -1086,7 +1086,7 @@
       "key": "d0fe529c-5583-4a9d-aadc-fc04fc8e4d43",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How accurate was the AI's prediction?*\n- *Did it find a \"False Pattern\"?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the accuracy of the simulation. They should realize that if the AI identifies a 'False Pattern,' it means the training data might have been too limited or the logic was misunderstood.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how AI trains on data in the real world.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain how AI gives output and emphasize that it's making predictions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *training data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *pattern recognition*."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How accurate was the AI's prediction?*\n- *Did it find a \"False Pattern\"?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on the accuracy of the simulation. They should realize that if the AI identifies a 'False Pattern,' it means the training data might have been too limited or the logic was misunderstood.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain how AI trains on data in the real world.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain how AI gives output and emphasize that it's making predictions.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *training data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *pattern recognition*."
       },
       "seeding_key": {
         "activity_section.key": "d0fe529c-5583-4a9d-aadc-fc04fc8e4d43",
@@ -1122,7 +1122,7 @@
       "key": "0a8d38d4-e372-4f40-a9eb-41e1f6206c09",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Where have you seen guides before?*\n- *What makes a guide helpful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect guides to real-world examples like wikis, TikTok tutorials, or server rules. They should identify that helpful guides use clear visuals and simple instructions.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2. Students will do virtual gallery walk of various guide types (Discord rules, TikToks, Sports Playbooks). Students should note visual styles and formatting they like, such as cards with icons or clear images, in their Milestone 1 Learning Logs.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Where have you seen guides before?*\n- *What makes a guide helpful?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect guides to real-world examples like wikis, TikTok tutorials, or server rules. They should identify that helpful guides use clear visuals and simple instructions.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2. Students will do virtual gallery walk of various guide types (Discord rules, TikToks, Sports Playbooks). Students should note visual styles and formatting they like, such as cards with icons or clear images, in their Milestone 1 Learning Logs.",
         "progression_name": "Digital Gallery Walk"
       },
       "seeding_key": {
@@ -1146,7 +1146,7 @@
       "key": "e718b610-2620-4bbd-97ab-4b333de51849",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why is testing necessary for new tools like AI?*\n- *How does testing help others?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that testing is a critical step in development to ensure safety and helpfulness for non-experts.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Why is testing necessary for new tools like AI?*\n- *How does testing help others?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that testing is a critical step in development to ensure safety and helpfulness for non-experts.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1174,7 +1174,7 @@
       "key": "4d61f63f-347b-4921-9571-5446bd10b6f5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1187,7 +1187,7 @@
       "key": "1b7c2ce3-140b-41f0-ad55-c8a124d6e400",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Pilot/Co-Pilot metaphor for human-AI collaboration."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Pilot/Co-Pilot metaphor for human-AI collaboration."
       },
       "seeding_key": {
         "activity_section.key": "1b7c2ce3-140b-41f0-ad55-c8a124d6e400",
@@ -1210,7 +1210,7 @@
       "key": "dfa984e8-2b2c-4d9b-8652-f3d12b4dc82f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students vote who they trust in the scenario by standing (pilot) or sitting (co-pilot): The Pilot sees a dark cloud ahead that usually signifies a dangerous storm. The Co-Pilot's data says it's just a thick mist. Who do you trust?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students vote who they trust in the scenario by standing (pilot) or sitting (co-pilot): If the Co-Pilot's data finds a path that saves $10,000 in fuel but the route feels \"shaky\" to the Pilot, who makes the final call?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you look at AI's patterns today, will the Co-Pilot fly the plane, or will you stay in command as the Pilot?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that while AI provides powerful data patterns, the human must remain the 'Pilot' making final ethical and creative calls.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students vote who they trust in the scenario by standing (pilot) or sitting (co-pilot): The Pilot sees a dark cloud ahead that usually signifies a dangerous storm. The Co-Pilot's data says it's just a thick mist. Who do you trust?\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students vote who they trust in the scenario by standing (pilot) or sitting (co-pilot): If the Co-Pilot's data finds a path that saves $10,000 in fuel but the route feels \"shaky\" to the Pilot, who makes the final call?\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When you look at AI's patterns today, will the Co-Pilot fly the plane, or will you stay in command as the Pilot?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students understand that while AI provides powerful data patterns, the human must remain the 'Pilot' making final ethical and creative calls.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "dfa984e8-2b2c-4d9b-8652-f3d12b4dc82f",
@@ -1246,7 +1246,7 @@
       "key": "060d2bab-6cca-4e77-8ce3-79d2dd466b0a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *co-creation*.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *co-creation*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1273,7 +1273,7 @@
       "key": "d3910a68-ba2b-48a7-be5e-c14491d7bd34",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to take out their Learning Logs and to turn to Milestone 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose a station and follow the instructions in Part 1 of the station Exploration Guide. They will record their ideas in the Collaborative Brainstorm section of the Milestone 2 Learning Log.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Prompt students to take out their Learning Logs and to turn to Milestone 2.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students choose a station and follow the instructions in Part 1 of the station Exploration Guide. They will record their ideas in the Collaborative Brainstorm section of the Milestone 2 Learning Log.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1300,7 +1300,7 @@
       "key": "fcd58049-6437-4c86-b810-2b0d1a4435ef",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways that you can use your brainstorming to assist when testing AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can quickly share some ideas that they have for how to use brainstorming work to directly inform their AI testing in the next step of the Exploration."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways that you can use your brainstorming to assist when testing AI?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can quickly share some ideas that they have for how to use brainstorming work to directly inform their AI testing in the next step of the Exploration."
       },
       "seeding_key": {
         "activity_section.key": "fcd58049-6437-4c86-b810-2b0d1a4435ef",
@@ -1383,7 +1383,7 @@
       "key": "2fcaf125-4a92-44df-b4ac-92182c92e507",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3. Students select between a mini-lesson to explore a topic of their choice.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what surprised them. For the environment lesson, check if they understood the cooling requirements for server farms. For the skill lesson, ask them to define \"atrophy\" in their own words. For artist rights, ask how they would feel if an AI learned from their work.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 3. Students select between a mini-lesson to explore a topic of their choice.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students what surprised them. For the environment lesson, check if they understood the cooling requirements for server farms. For the skill lesson, ask them to define \"atrophy\" in their own words. For artist rights, ask how they would feel if an AI learned from their work.",
         "progression_name": "Mini-Lessons: Co-Creation with AI",
         "tips": [
           {
@@ -1401,7 +1401,7 @@
       "key": "996157ad-a723-41a9-bf87-77f575ff73d5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Reflection in the Project Work section of their Milestone 2 Learning Log."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Reflection in the Project Work section of their Milestone 2 Learning Log."
       },
       "seeding_key": {
         "activity_section.key": "996157ad-a723-41a9-bf87-77f575ff73d5",
@@ -1440,7 +1440,7 @@
       "key": "85897eae-2ad8-432e-aad7-f731ef451eb8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "85897eae-2ad8-432e-aad7-f731ef451eb8",
@@ -1451,7 +1451,7 @@
       "key": "2ac9d249-bbce-4d30-b139-5dc72b939348",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1464,7 +1464,7 @@
       "key": "79997f08-333b-451d-abdb-43af70441ab7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of the explorations and mini-lessons did you complete in the previous lesson?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Briefly recap the three explorations (AI as Campaign Manager; AI in Creative Writing ; and AI in Content Creation) and mini-lessons (Impact on Environment, Human Skills, and Artists) from the previous lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which of the explorations and mini-lessons did you complete in the previous lesson?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Briefly recap the three explorations (AI as Campaign Manager; AI in Creative Writing ; and AI in Content Creation) and mini-lessons (Impact on Environment, Human Skills, and Artists) from the previous lesson.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "79997f08-333b-451d-abdb-43af70441ab7",
@@ -1500,7 +1500,7 @@
       "key": "d4a07a2b-f6f2-467e-911e-58dd3ada42c7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their experiences with the previous exploration and consider one of the following questions:\n- At what point did the product become \"mostly AI\"?\n- When did it lose your personal \"voice\" or \"values\"?\n- What human input mattered most?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reform groups with members from different Explorations and Mini-Lessons. Explain expectations for sharing and note-taking using the Co-Pilot Debrief organizer."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their experiences with the previous exploration and consider one of the following questions:\n- At what point did the product become \"mostly AI\"?\n- When did it lose your personal \"voice\" or \"values\"?\n- What human input mattered most?\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Reform groups with members from different Explorations and Mini-Lessons. Explain expectations for sharing and note-taking using the Co-Pilot Debrief organizer."
       },
       "seeding_key": {
         "activity_section.key": "d4a07a2b-f6f2-467e-911e-58dd3ada42c7",
@@ -1543,7 +1543,7 @@
       "key": "91c4fab7-ea94-4185-80d7-0e73eda64965",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students update their KWL Chart."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students update their KWL Chart."
       },
       "seeding_key": {
         "activity_section.key": "91c4fab7-ea94-4185-80d7-0e73eda64965",
@@ -1566,7 +1566,7 @@
       "key": "e423e3ef-ddb5-4816-b7de-47975d36a13a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who give very general answers and prompt them to add a specific example (for instance, a skill they'd keep vs. one they'd offload). For students who need support, offer a sentence stem from the organizer."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who give very general answers and prompt them to add a specific example (for instance, a skill they'd keep vs. one they'd offload). For students who need support, offer a sentence stem from the organizer."
       },
       "seeding_key": {
         "activity_section.key": "e423e3ef-ddb5-4816-b7de-47975d36a13a",
@@ -1602,7 +1602,7 @@
       "key": "0075644a-5db3-4053-80e0-9dd6ca926d4b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students draft their Co-Creation with AI guidance, making choices about medium and selecting layouts from their Digital Gallery Walk (Lesson 2).",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students draft their Co-Creation with AI guidance, making choices about medium and selecting layouts from their Digital Gallery Walk (Lesson 2).",
         "tips": [
           {
             "type": "teachingTip",
@@ -1633,7 +1633,7 @@
       "key": "3d570c8c-9a52-4a73-85af-77f4d9915236",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students will begin drafting the Co-Creation with AI portion of their project.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students will begin drafting the Co-Creation with AI portion of their project.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
         "progression_name": "Project Work - Milestone 2"
       },
       "seeding_key": {
@@ -1645,7 +1645,7 @@
       "key": "9b457a09-8fbb-42a1-945c-f2792931f5a8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students add one new question that came up while working on the project to the Want to Know column of the KWL Chart.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who write superficial questions (for example, \"What is AI?\") and prompt them to make the question more specific (for example, \"How might AI change our community's creative work?\"). For students who are stuck, suggest they check their Co-Pilot Debrief notes for something that surprised them. For students who finish early, invite them to draft a brief action step they'd take to test their question.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students add one new question that came up while working on the project to the Want to Know column of the KWL Chart.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who write superficial questions (for example, \"What is AI?\") and prompt them to make the question more specific (for example, \"How might AI change our community's creative work?\"). For students who are stuck, suggest they check their Co-Pilot Debrief notes for something that surprised them. For students who finish early, invite them to draft a brief action step they'd take to test their question.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1672,7 +1672,7 @@
       "key": "ce04f12d-428e-4acc-9a26-8ef3ab5b4f70",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1712,7 +1712,7 @@
       "key": "c15e74b3-c84c-4e73-bd1f-4bc885b4c8a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *credible*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *bias*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *credible*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *bias*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "c15e74b3-c84c-4e73-bd1f-4bc885b4c8a0",
@@ -1723,7 +1723,7 @@
       "key": "5e26ed6f-65d8-4139-a39d-482b414e36d0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Milestone 3 Learning Log.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students choose a station and follow the instructions in Part 1 of the station Exploration Guide. They will record their ideas in the Collaborative Brainstorm section of the Milestone 3 Learning Log.",
+        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Milestone 3 Learning Log.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students choose a station and follow the instructions in Part 1 of the station Exploration Guide. They will record their ideas in the Collaborative Brainstorm section of the Milestone 3 Learning Log.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1750,7 +1750,7 @@
       "key": "0f0b18e4-b918-4532-bbf0-eef4439fe594",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is sounding confident the same as being correct?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between confidence and accuracy, recognizing that the way information is presented — including by AI — can create a false sense of credibility even when the content is incomplete or wrong.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to choose a question they are interested in investigating.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist student in following the station Exploration Guide.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is sounding confident the same as being correct?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between confidence and accuracy, recognizing that the way information is presented — including by AI — can create a false sense of credibility even when the content is incomplete or wrong.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to choose a question they are interested in investigating.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist student in following the station Exploration Guide.",
         "progression_name": "Testing Truth and Credibility",
         "tips": [
           {
@@ -1778,7 +1778,7 @@
       "key": "25168b78-4782-4306-b4bf-ae38782ad50e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do most of the responses AI gives you have in common?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to recognize that AI consistently generates answers and images that sound confident and complete, even when information is missing or uncertain. They notice that confidence is part of the pattern AI produces — not proof of accuracy or understanding.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use Sketch Lab to design their own 5-level Trust Meter that ranges from \"Highly Trustworthy\" to \"Falls Apart.\" Each level should include a short description explaining what makes an AI output land there (e.g., evidence included, missing details, assumptions, real-world accuracy).\n- Level 3: Students select between 'AI's Environmental Footprint,' 'Human Skill & AI Symbiosis,' or 'Training Data & Artist Rights.'\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with using Sketch Lab as needed. Push their thinking with questions such as:\n- What makes something move from Level 4 to Level 3?\n- How would you know if it’s missing important details?\n\nFor Level 3, ask students what surprised them. For the environment lesson, check if they understood the cooling requirements for server farms. For the skill lesson, ask them to define 'atrophy' in their own words. For artist rights, ask how they would feel if an AI learned from their work.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do most of the responses AI gives you have in common?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students begin to recognize that AI consistently generates answers and images that sound confident and complete, even when information is missing or uncertain. They notice that confidence is part of the pattern AI produces — not proof of accuracy or understanding.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 2 to complete Levels 2 and 3.\n- Level 2: Students use Sketch Lab to design their own 5-level Trust Meter that ranges from \"Highly Trustworthy\" to \"Falls Apart.\" Each level should include a short description explaining what makes an AI output land there (e.g., evidence included, missing details, assumptions, real-world accuracy).\n- Level 3: Students select between 'AI's Environmental Footprint,' 'Human Skill & AI Symbiosis,' or 'Training Data & Artist Rights.'\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist students with using Sketch Lab as needed. Push their thinking with questions such as:\n- What makes something move from Level 4 to Level 3?\n- How would you know if it’s missing important details?\n\nFor Level 3, ask students what surprised them. For the environment lesson, check if they understood the cooling requirements for server farms. For the skill lesson, ask them to define 'atrophy' in their own words. For artist rights, ask how they would feel if an AI learned from their work.",
         "progression_name": "Judge Truth and Credibility"
       },
       "seeding_key": {
@@ -1833,7 +1833,7 @@
       "key": "a989a1d6-aaf2-4e7c-9f9d-3aa2d80fb657",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students document a learning, observation or question  from their mini-lesson in the class KWL Chart.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students document a learning, observation or question  from their mini-lesson in the class KWL Chart.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1873,7 +1873,7 @@
       "key": "4a7b4aba-b100-4c91-b112-ee49bc6403c8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to draft their personal \"Truth and Credibility Guidelines\" in their Milestone 3 Learning Log using the provided sentence stem.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to draft their personal \"Truth and Credibility Guidelines\" in their Milestone 3 Learning Log using the provided sentence stem.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1900,7 +1900,7 @@
       "key": "6bb61bea-4dba-4238-a555-023a15049fca",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "6bb61bea-4dba-4238-a555-023a15049fca",
@@ -1911,7 +1911,7 @@
       "key": "9e55798f-5e9a-452d-940b-69c2dcc9b1b8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1959,7 +1959,7 @@
       "key": "b990b5e2-02d5-4e17-b481-c6dafc5f1123",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Reform groups with members from different Explorations and Mini-Lessons."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Reform groups with members from different Explorations and Mini-Lessons."
       },
       "seeding_key": {
         "activity_section.key": "b990b5e2-02d5-4e17-b481-c6dafc5f1123",
@@ -2027,7 +2027,7 @@
       "key": "40672210-8902-4e66-ab09-2528f7187507",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students create and add a Trust Meter visual to their project.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students create and add a Trust Meter visual to their project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2058,7 +2058,7 @@
       "key": "8e8bcaa6-7442-4139-b989-213784b5f4dd",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students will add to the project they started in Lesson 3.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Push students past vague advice (\"just check it\") by asking what specifically someone should look for, what detail lowered their trust during testing, and what patterns kept showing up encourage conditional thinking instead of absolute rules.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1. Students will add to the project they started in Lesson 3.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Push students past vague advice (\"just check it\") by asking what specifically someone should look for, what detail lowered their trust during testing, and what patterns kept showing up encourage conditional thinking instead of absolute rules.",
         "progression_name": "Project Work - Milestone 3 "
       },
       "seeding_key": {
@@ -2087,7 +2087,7 @@
       "key": "f46d2cc7-3d07-46b9-b5de-cd1295b77bb6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If AI is trained on lots of examples, what happens if most of those examples come from the same type of person?*\n- *What happens if certain groups, ideas, or experiences show up less in the data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI outputs reflect the data they were trained on, and that when that data is unrepresentative, the result is a system with built-in bias that can misrepresent or exclude certain groups and perspectives."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If AI is trained on lots of examples, what happens if most of those examples come from the same type of person?*\n- *What happens if certain groups, ideas, or experiences show up less in the data?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI outputs reflect the data they were trained on, and that when that data is unrepresentative, the result is a system with built-in bias that can misrepresent or exclude certain groups and perspectives."
       },
       "seeding_key": {
         "activity_section.key": "f46d2cc7-3d07-46b9-b5de-cd1295b77bb6",
@@ -2098,7 +2098,7 @@
       "key": "629baf7a-3f25-4314-aea7-9f2e69a6075b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2134,7 +2134,7 @@
       "key": "0e748f84-2c6f-4378-9641-56c23f0d6359",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students examine the selfie to find three specific details in the background that could be used to pinpoint Z-Tech's location.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are looking past the person in the photo and at the background. Ask: \"What does that bus number tell you about the school district?\" or \"How many stores in this city carry that specific soda flavor?\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** With a partner, students examine the selfie to find three specific details in the background that could be used to pinpoint Z-Tech's location.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are looking past the person in the photo and at the background. Ask: \"What does that bus number tell you about the school district?\" or \"How many stores in this city carry that specific soda flavor?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -2151,7 +2151,7 @@
       "key": "3cac812f-6768-48d4-baee-0ff885a034ac",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What could you determine from what you saw in the image?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that small, seemingly \"public\" details (weather, a soda brand) can be combined by a motivated person—or an AI—to reveal \"private\" or \"sensitive\" information like a home address.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What could you determine from what you saw in the image?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should realize that small, seemingly \"public\" details (weather, a soda brand) can be combined by a motivated person—or an AI—to reveal \"private\" or \"sensitive\" information like a home address.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2178,7 +2178,7 @@
       "key": "fff0950c-f3c2-473b-a196-580aed2143cf",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fff0950c-f3c2-473b-a196-580aed2143cf",
@@ -2214,7 +2214,7 @@
       "key": "34bc1fbe-fa0d-4d51-9ade-1093dd2b0037",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *public data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *private data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *sensitive data*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> Transition: Direct students to Lesson 7, Level 1. Students work with a partner at their station to complete a data classification activity in which they are asked to analyze different types of data, with differing contexts, and to sort it into public, private, and sensitive categories.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are choosing different explorations. Ask: \"Why did you pick this specific topic?\" Have students justify their inclusion of certain pieces of data into the various categories."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *public data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *private data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *sensitive data*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the explorations by reading the inquiry question.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> Transition: Direct students to Lesson 7, Level 1. Students work with a partner at their station to complete a data classification activity in which they are asked to analyze different types of data, with differing contexts, and to sort it into public, private, and sensitive categories.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are choosing different explorations. Ask: \"Why did you pick this specific topic?\" Have students justify their inclusion of certain pieces of data into the various categories."
       },
       "seeding_key": {
         "activity_section.key": "34bc1fbe-fa0d-4d51-9ade-1093dd2b0037",
@@ -2252,7 +2252,7 @@
       "key": "2d1a0aeb-742e-4a2c-adba-29a970902d84",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What patterns did you recognize that separate public, private, and sensitive data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can quickly share some ways that they classified data and how they chose to differentiate. Some sample patterns that they might identify include:\n- Public data: General preferences, fandoms, or regional pride that help you connect with others but don't put your safety at risk.  (gaming handle, social media likes, t-shirt style)\n- Private data: Information that is unique to you but doesn't necessarily reveal your location. It’s often used for security questions or official records (legal name, birth year, allergies)\n- Sensitive data: Data that reveals exactly where you are, where you live, or your daily routine (house number, wi-fi name)\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2. Students test the AI Chat by providing the AI with different combinations of Public and Private Data and exploring the outputs in terms of privacy and safety.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what combinations of data that they are providing to the AI and to explain the different results that they have received.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How much data did the AI need to feel \"personal\" and to provide good output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary; however, students should realize that while more data leads to better personalization, it also increases the risk of revealing sensitive patterns.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3. Students will practice the strategy of anonymizing data and making judgments about the line between safety and security and good AI output.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with using Sketch Lab as needed. Ask questions about why they anonymized certain details, but did not change others.",
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What patterns did you recognize that separate public, private, and sensitive data?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students can quickly share some ways that they classified data and how they chose to differentiate. Some sample patterns that they might identify include:\n- Public data: General preferences, fandoms, or regional pride that help you connect with others but don't put your safety at risk.  (gaming handle, social media likes, t-shirt style)\n- Private data: Information that is unique to you but doesn't necessarily reveal your location. It’s often used for security questions or official records (legal name, birth year, allergies)\n- Sensitive data: Data that reveals exactly where you are, where you live, or your daily routine (house number, wi-fi name)\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 2. Students test the AI Chat by providing the AI with different combinations of Public and Private Data and exploring the outputs in terms of privacy and safety.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students what combinations of data that they are providing to the AI and to explain the different results that they have received.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How much data did the AI need to feel \"personal\" and to provide good output?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Answers will vary; however, students should realize that while more data leads to better personalization, it also increases the risk of revealing sensitive patterns.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 3. Students will practice the strategy of anonymizing data and making judgments about the line between safety and security and good AI output.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist students with using Sketch Lab as needed. Ask questions about why they anonymized certain details, but did not change others.",
         "progression_name": "Safety and Privacy"
       },
       "seeding_key": {
@@ -2264,7 +2264,7 @@
       "key": "58e89648-975e-4c3a-92f6-6e7762e501c8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4. Students select between a mini-lesson to explore a topic of their choice.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students what surprised them.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 4. Students select between a mini-lesson to explore a topic of their choice.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students what surprised them.",
         "duration": "10",
         "name": "Mini-Lessons",
         "progression_name": "Mini-Lessons: Safety and Privacy",
@@ -2294,7 +2294,7 @@
       "key": "f1e9d2ae-e464-4ba4-a8fd-15ac8c370fd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "f1e9d2ae-e464-4ba4-a8fd-15ac8c370fd1",
@@ -2317,7 +2317,7 @@
       "key": "6cf79f5c-3ec7-4ae5-9dd8-10b36dc8570e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students document Red Flags (such as oversharing) and Green Flags (best practices) in their Learning Logs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students document Red Flags (such as oversharing) and Green Flags (best practices) in their Learning Logs.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "6cf79f5c-3ec7-4ae5-9dd8-10b36dc8570e",
@@ -2328,7 +2328,7 @@
       "key": "adf5b020-8df7-4af8-960d-b5f7ac231281",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 2 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2377,7 +2377,7 @@
       "key": "8a18afdd-019c-42e0-ae1c-f7a59828c800",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their experiences with the previous exploration and consider one of the following questions:\n- What are some common patterns you noticed?\n- What are some risks?\n- What insights and strategies can you share?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Help students reorganize so each group has a representative from all three explorations. Explain expectations for sharing and note-taking using the Safety and Security Debrief organizer."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on their experiences with the previous exploration and consider one of the following questions:\n- What are some common patterns you noticed?\n- What are some risks?\n- What insights and strategies can you share?\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Help students reorganize so each group has a representative from all three explorations. Explain expectations for sharing and note-taking using the Safety and Security Debrief organizer."
       },
       "seeding_key": {
         "activity_section.key": "8a18afdd-019c-42e0-ae1c-f7a59828c800",
@@ -2420,7 +2420,7 @@
       "key": "ed5d0513-fb80-4df5-a595-615f2675744d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students update their KWL Chart."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students update their KWL Chart."
       },
       "seeding_key": {
         "activity_section.key": "ed5d0513-fb80-4df5-a595-615f2675744d",
@@ -2443,7 +2443,7 @@
       "key": "11b65f56-3f31-44c4-aec9-d896bd306244",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who give very general answers and prompt them to add a specific example (for instance, a skill they'd keep vs. one they'd offload). For students who need support, offer a sentence stem from the organizer."
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who give very general answers and prompt them to add a specific example (for instance, a skill they'd keep vs. one they'd offload). For students who need support, offer a sentence stem from the organizer."
       },
       "seeding_key": {
         "activity_section.key": "11b65f56-3f31-44c4-aec9-d896bd306244",
@@ -2479,7 +2479,7 @@
       "key": "4cc532af-2e0b-4c6b-a61c-dd53a7f7b912",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Project Checklist under the Project Work section in the Learning Log. Emphasize that they should aim for realistic strategies that allow for AI use while maintaining safety.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Project Checklist under the Project Work section in the Learning Log. Emphasize that they should aim for realistic strategies that allow for AI use while maintaining safety.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2510,7 +2510,7 @@
       "key": "56171a20-d8e4-4ea4-b65f-9db4c39c228d",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1. Students will begin drafting the Safety and Security portion of their project.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 1. Students will begin drafting the Safety and Security portion of their project.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for drafts that include (a) a clear evidence from explorations and mini-lessons, (b) rules, guidance, and advice that comes from those sources, and (c) a connections to specific conversations from the jigsaw. Prompt students who miss any of these to add one concrete example or check.",
         "progression_name": "Project Work - Milestone 4"
       },
       "seeding_key": {
@@ -2539,7 +2539,7 @@
       "key": "606e9624-7d05-492d-9b9f-11db8f570b66",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Add one new question that came up while working on the project to the 'Want to Know' section of the KWL Chart."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Add one new question that came up while working on the project to the 'Want to Know' section of the KWL Chart."
       },
       "seeding_key": {
         "activity_section.key": "606e9624-7d05-492d-9b9f-11db8f570b66",
@@ -2562,7 +2562,7 @@
       "key": "23820978-c7fa-4634-9ea9-c1b59745a281",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who write superficial questions (for example, \"What is AI?\") and prompt them to make the question more specific (for example, \"How might AI change our community's creative work?\"). For students who are stuck, suggest they check their Co-Pilot Debrief notes for something that surprised them. For students who finish early, invite them to draft a brief action step they'd take to test their question.",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who write superficial questions (for example, \"What is AI?\") and prompt them to make the question more specific (for example, \"How might AI change our community's creative work?\"). For students who are stuck, suggest they check their Co-Pilot Debrief notes for something that surprised them. For students who finish early, invite them to draft a brief action step they'd take to test their question.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2579,7 +2579,7 @@
       "key": "cb4df0e0-d470-44ae-870b-f862fb1336f8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 3 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2592,7 +2592,7 @@
       "key": "4e662817-c54d-43c6-b0a5-d761de7cdf3b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students mark their current stance on a spectrum (1–5 scale of AI helpfulness/safety). This visually documents how their opinion has evolved through testing. Then, on their other hand, ask students to rate their stance when they started the unit."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Students mark their current stance on a spectrum (1–5 scale of AI helpfulness/safety). This visually documents how their opinion has evolved through testing. Then, on their other hand, ask students to rate their stance when they started the unit."
       },
       "seeding_key": {
         "activity_section.key": "4e662817-c54d-43c6-b0a5-d761de7cdf3b",
@@ -2615,7 +2615,7 @@
       "key": "a90421a9-0f4f-4804-a4a2-55be3209e760",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How has your perspective towards AI evolved throughout the unit?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate why their position shifted. A student moving from a 2 to a 4 because they learned about specific guardrails shows strong conceptual growth. Encourage students to pick a rule that came from a surprising result in their testing. These often make for the most defensible guidelines.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How has your perspective towards AI evolved throughout the unit?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate why their position shifted. A student moving from a 2 to a 4 because they learned about specific guardrails shows strong conceptual growth. Encourage students to pick a rule that came from a surprising result in their testing. These often make for the most defensible guidelines.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "a90421a9-0f4f-4804-a4a2-55be3209e760",
@@ -2626,7 +2626,7 @@
       "key": "a250cd27-0fc0-4633-9cf5-5ddd2e163f73",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to take out their Learning Logs and to turn to Milestone 5."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Prompt students to take out their Learning Logs and to turn to Milestone 5."
       },
       "seeding_key": {
         "activity_section.key": "a250cd27-0fc0-4633-9cf5-5ddd2e163f73",
@@ -2649,7 +2649,7 @@
       "key": "e4e6b5c1-0637-4a48-a026-b649b01392b7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the three bot personas to the class.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the three bot personas to the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2676,7 +2676,7 @@
       "key": "f9d731b2-4df4-45b3-ba4e-0f30ebe342e4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 and 2.\n- Level 1: The Sketch Lab level where students have been building their project\n- Level 2: A choice level where students will select one of the AI personas in order to get feedback on their guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are getting frustrated by the bot's pushback. Remind them that the bot is supposed to be difficult. Ask: \"What specific rule is the bot questioning? How can you rephrase it or add evidence to make it harder to argue with?\" Watch for students who are just agreeing with the bot—challenge them to defend their original stance if they still believe in it.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1 to complete Levels 1 and 2.\n- Level 1: The Sketch Lab level where students have been building their project\n- Level 2: A choice level where students will select one of the AI personas in order to get feedback on their guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are getting frustrated by the bot's pushback. Remind them that the bot is supposed to be difficult. Ask: \"What specific rule is the bot questioning? How can you rephrase it or add evidence to make it harder to argue with?\" Watch for students who are just agreeing with the bot—challenge them to defend their original stance if they still believe in it.",
         "progression_name": "Project Work - Milestone 5"
       },
       "seeding_key": {
@@ -2715,7 +2715,7 @@
       "key": "be5674e9-687f-4351-a8e9-1a4e8fafe349",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What was one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that while AI is good at logic, it often lacks \"human nuance\"—the ability to understand tone, social context, or what actually resonates with people their age. This sets the stage for the peer review activity."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What was one suggestion from the AI bot that was logically correct but felt \"fake\" or wrong for a middle school audience?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that while AI is good at logic, it often lacks \"human nuance\"—the ability to understand tone, social context, or what actually resonates with people their age. This sets the stage for the peer review activity."
       },
       "seeding_key": {
         "activity_section.key": "be5674e9-687f-4351-a8e9-1a4e8fafe349",
@@ -2751,7 +2751,7 @@
       "key": "22553639-e52e-412e-be30-39bedda5aeed",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Assign students into groups of three and explain the roles.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students rotate between guides that are displayed on student computers so everyone gets feedback from a Reader, a Skeptic, and a Designer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for specific feedback. Are the \"Skeptics\" actually looking at the evidence from previous lessons? Are \"Readers\" identifying jargon that needs to be simplified? Probing question: \"How does this peer feedback differ from what the chatbot told you?\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Assign students into groups of three and explain the roles.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students rotate between guides that are displayed on student computers so everyone gets feedback from a Reader, a Skeptic, and a Designer.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen for specific feedback. Are the \"Skeptics\" actually looking at the evidence from previous lessons? Are \"Readers\" identifying jargon that needs to be simplified? Probing question: \"How does this peer feedback differ from what the chatbot told you?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -2778,7 +2778,7 @@
       "key": "a12e1f09-901a-418f-b08c-2755ab87afcb",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In what ways can a human peer understand your reasoning differently than AI can?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that humans understand intent, shared experiences, and emotional resonance. A peer knows what a middle schooler finds funny or confusing in a way a LLM cannot truly replicate."
+        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *In what ways can a human peer understand your reasoning differently than AI can?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify that humans understand intent, shared experiences, and emotional resonance. A peer knows what a middle schooler finds funny or confusing in a way a LLM cannot truly replicate."
       },
       "seeding_key": {
         "activity_section.key": "a12e1f09-901a-418f-b08c-2755ab87afcb",
@@ -2814,7 +2814,7 @@
       "key": "5f0b16f6-41d3-47b9-849c-bc5d6a87aeb7",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3. Students work independently to finish their guides. Using AI Chat, they can create icons to support visually communicating their guidance and advice.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students with composing prompts in order to get better image outputs.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 3. Students work independently to finish their guides. Using AI Chat, they can create icons to support visually communicating their guidance and advice.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Assist students with composing prompts in order to get better image outputs.",
         "progression_name": "Project Work - Image Generation",
         "tips": [
           {
@@ -2836,7 +2836,7 @@
       "key": "b33a4708-cebc-4f29-b69f-1614a8a41f81",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "b33a4708-cebc-4f29-b69f-1614a8a41f81",
@@ -2859,7 +2859,7 @@
       "key": "c1dd028a-e8cb-4da2-8b6d-aff7d1827847",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt in their learning logs: AI vs. Human: Which feedback was harder to hear: the AI's logical pushback or your peer's skepticism? Why?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are reflecting on the 'nuance' of human feedback vs. the 'logic' of AI. Some may find the AI easier to handle because it lacks emotion, while others may find peer skepticism more helpful because it feels more authentic.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt in their learning logs: AI vs. Human: Which feedback was harder to hear: the AI's logical pushback or your peer's skepticism? Why?\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are reflecting on the 'nuance' of human feedback vs. the 'logic' of AI. Some may find the AI easier to handle because it lacks emotion, while others may find peer skepticism more helpful because it feels more authentic.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2886,7 +2886,7 @@
       "key": "c1c3c2aa-f99b-4a68-8868-77748fdb6b94",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey"
       },
       "seeding_key": {
@@ -2921,7 +2921,7 @@
       "key": "73753156-62f5-4a7c-ac66-8caac90caca2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students to complete these three steps:\n1. Open their AI guidance project in Lesson 10 Level 1.\n1. Review the project checklist and apply any missing elements.\n1. Use the rubric to make final edits, then save for final submission\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who (a) clearly cite evidence from prior investigations, (b) explain AI limitations (bias, hallucinations, missing context), and (c) provide concrete, actionable guidance for users. Common misconception: students may claim AI understands content—prompt them to reword this as pattern-based predictions. Ask probing questions: \"Which investigation supports this claim?\" \"How would a user apply this guidance in a real situation?\" Support strategies: suggest one high-impact edit (clarify a claim, add a citation, or add a limitation-and-mitigation note). For fast finishers: ask them to add a counterargument and brief rebuttal or to run a quick peer review with a partner.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Ask students to complete these three steps:\n1. Open their AI guidance project in Lesson 10 Level 1.\n1. Review the project checklist and apply any missing elements.\n1. Use the rubric to make final edits, then save for final submission\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who (a) clearly cite evidence from prior investigations, (b) explain AI limitations (bias, hallucinations, missing context), and (c) provide concrete, actionable guidance for users. Common misconception: students may claim AI understands content—prompt them to reword this as pattern-based predictions. Ask probing questions: \"Which investigation supports this claim?\" \"How would a user apply this guidance in a real situation?\" Support strategies: suggest one high-impact edit (clarify a claim, add a citation, or add a limitation-and-mitigation note). For fast finishers: ask them to add a counterargument and brief rebuttal or to run a quick peer review with a partner.",
         "progression_name": "Final Project",
         "tips": [
           {
@@ -2953,7 +2953,7 @@
       "key": "444f0082-8956-4d3c-aeda-8d07e2875df4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "444f0082-8956-4d3c-aeda-8d07e2875df4",
@@ -2976,7 +2976,7 @@
       "key": "a4ced7a9-85ee-419d-a816-9aec7a251564",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain each position and give a short classroom example (e.g., using AI to draft a quick email vs. editing AI-drafted email for accuracy and tone).",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain each position and give a short classroom example (e.g., using AI to draft a quick email vs. editing AI-drafted email for accuracy and tone).",
         "progression_name": "Final Project",
         "tips": [
           {
@@ -3004,7 +3004,7 @@
       "key": "0f3d91c6-0e99-4457-a375-2eea0d06c7c2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define human oversight.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Final Verdict activity guide."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define human oversight.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of The Final Verdict activity guide."
       },
       "seeding_key": {
         "activity_section.key": "0f3d91c6-0e99-4457-a375-2eea0d06c7c2",
@@ -3027,7 +3027,7 @@
       "key": "2d8ea50d-3e03-40d1-b1ec-2aaebd3bd5a8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the slide aloud and confirm students understand the trial flow and time constraints.",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the slide aloud and confirm students understand the trial flow and time constraints.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3070,7 +3070,7 @@
       "key": "2ea8179e-fb96-45dc-8f99-485d7bf35246",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through each stage and show timing expectations (for example: 1 minute opening, 1 minute per evidence, 1 minute cross-exam, 5 minute jury).",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk students through each stage and show timing expectations (for example: 1 minute opening, 1 minute per evidence, 1 minute cross-exam, 5 minute jury).",
         "tips": [
           {
             "type": "teachingTip",
@@ -3097,7 +3097,7 @@
       "key": "bffbd1ba-faed-4660-9542-f2ab1cec31c3",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Summarize the class verdict and highlight examples that show why human judgment matters (bias, hallucination, data inference, credibility checks).",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Summarize the class verdict and highlight examples that show why human judgment matters (bias, hallucination, data inference, credibility checks).",
         "tips": [
           {
             "type": "teachingTip",
@@ -3118,7 +3118,7 @@
       "key": "b41a503a-0439-441a-be84-e749c872ba2e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did your thinking about AI's capabilities, limitations, or risks change during this unit?*\n- *What uncertainties or questions do you still have about when humans should rely on AI?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface how students' views shifted from simple judgments (AI is good/bad) to more nuanced positions that weigh benefits and risks. Listen for responses that reference specific investigations (bias, hallucinations, data privacy, co-creation). If discussion stalls, prompt: \"Which investigation surprised you most, and why?\" or \"What would make you trust an AI recommendation more?\"",
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How did your thinking about AI's capabilities, limitations, or risks change during this unit?*\n- *What uncertainties or questions do you still have about when humans should rely on AI?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Surface how students' views shifted from simple judgments (AI is good/bad) to more nuanced positions that weigh benefits and risks. Listen for responses that reference specific investigations (bias, hallucinations, data privacy, co-creation). If discussion stalls, prompt: \"Which investigation surprised you most, and why?\" or \"What would make you trust an AI recommendation more?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -3145,7 +3145,7 @@
       "key": "67c97c9c-e07a-4773-89f8-5dcb6b711c98",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write a short exit ticket (two to three sentences): first state their claim about how humans should interact with AI, then cite one piece of evidence from the unit that supports that claim."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students write a short exit ticket (two to three sentences): first state their claim about how humans should interact with AI, then cite one piece of evidence from the unit that supports that claim."
       },
       "seeding_key": {
         "activity_section.key": "67c97c9c-e07a-4773-89f8-5dcb6b711c98",
@@ -3168,11 +3168,11 @@
       "key": "8007261f-6359-4c48-9ed3-344aebcb9d3f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for clear claims and a connected piece of evidence. Common issues: students may restate an opinion without evidence, or they may cite vague evidence (e.g., \"we did experiments\"). Ask probing questions: \"Which investigation are you referencing? What did it show?\" Support strategies: for students who struggle, prompt them with examples (bias exploration, hallucination examples, privacy test, co-creation demo). For advanced students, ask them to add a brief qualifier (e.g., \"usually\" or \"in cases where...\").",
+        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for clear claims and a connected piece of evidence. Common issues: students may restate an opinion without evidence, or they may cite vague evidence (e.g., \"we did experiments\"). Ask probing questions: \"Which investigation are you referencing? What did it show?\" Support strategies: for students who struggle, prompt them with examples (bias exploration, hallucination examples, privacy test, co-creation demo). For advanced students, ask them to add a brief qualifier (e.g., \"usually\" or \"in cases where...\").",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for clear claims and a connected piece of evidence. Common issues: students may restate an opinion without evidence, or they may cite vague evidence (e.g., \"we did experiments\"). Ask probing questions: \"Which investigation are you referencing? What did it show?\" Support strategies: for students who struggle, prompt them with examples (bias exploration, hallucination examples, privacy test, co-creation demo). For advanced students, ask them to add a brief qualifier (e.g., \"usually\" or \"in cases where...\")."
+            "markdown": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for clear claims and a connected piece of evidence. Common issues: students may restate an opinion without evidence, or they may cite vague evidence (e.g., \"we did experiments\"). Ask probing questions: \"Which investigation are you referencing? What did it show?\" Support strategies: for students who struggle, prompt them with examples (bias exploration, hallucination examples, privacy test, co-creation demo). For advanced students, ask them to add a brief qualifier (e.g., \"usually\" or \"in cases where...\")."
           },
           {
             "type": "teachingTip",
@@ -3199,7 +3199,7 @@
       "key": "0074a2d5-9df7-40ce-a8c1-1d9c4a159058",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "0074a2d5-9df7-40ce-a8c1-1d9c4a159058",
@@ -3210,7 +3210,7 @@
       "key": "81eef1db-efff-4fca-a5bc-07e95abc4577",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },

@@ -62,7 +62,7 @@ export default class DesignModeHeaders extends React.Component {
         style={[commonStyles.hidden, this.chevronStyle(!this.props.isRtl)]}
         onClick={this.onToggleToolbox}
       >
-        <i className="fa fa-chevron-circle-right" />
+        <i className="fa-solid fa-circle-chevron-right" />
       </button>
     );
   }
@@ -74,7 +74,7 @@ export default class DesignModeHeaders extends React.Component {
         style={[commonStyles.hidden, this.chevronStyle(this.props.isRtl)]}
         className="show-toolbox-icon"
       >
-        <i className="fa fa-chevron-circle-right" />
+        <i className="fa-solid fa-circle-chevron-right" />
       </button>
     );
   }
@@ -169,7 +169,7 @@ export default class DesignModeHeaders extends React.Component {
         <PaneButton
           id="design-mode-versions-header"
           style={this.props.isRunning ? styles.runningVersionHistoryButton : {}}
-          iconClass="fa fa-clock-o"
+          iconClass="fa-solid fa-clock"
           label={msg.showVersionsHeader()}
           headerHasFocus={hasFocus}
           isRtl={this.props.isRtl}

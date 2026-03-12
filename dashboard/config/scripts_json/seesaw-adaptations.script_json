@@ -102,7 +102,7 @@
       "key": "07ccba05-c1ee-4e3b-9da8-bf99503d4a40",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Think About It” slide",
         "duration": "5",
         "name": "Think About It"
       },
@@ -127,7 +127,7 @@
       "key": "8eb9e1ed-8da3-4b98-88b6-2e3c6e3ed9a0",
       "position": 3,
       "properties": {
-        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
+        "description": "**Discuss**: _What do these animals have in common? Frog, duck, otter, penguin, alligator._ \n\n**Discussion Goal**: Students should discuss similarities and differences between the animals listed. Let them start with very broad answers to the questions such as: \n\n- _They’re all alive._ \n- _They live on Earth._ \n- _They all have a body._ \n- _They all have a head._\n- _They all have legs._ \n- _They live near or in water._\n\nThen when students start on the right track, help them get more specific:\n\n- _They all have feet._ \n- _Their feet help them swim._\n\nReveal one hint at a time on the slides to help students reach the answer: \n- _They all have webbed feet._\n\nUse the example of webbed feet to help students understand that animals have developed body parts which help them in their specific environments. This will be a great introduction to other animal adaptations. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show next slide\n"
       },
       "seeding_key": {
         "activity_section.key": "8eb9e1ed-8da3-4b98-88b6-2e3c6e3ed9a0",
@@ -150,7 +150,7 @@
       "key": "e31241bd-75f5-41ae-9ee4-909ff8a6873a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discussion:**\n* _Why do only some animals have webbed feet?_\n* _Did these animals always have webbed feet?_\n\n**Discussion Goal**: Students should understand that webbed feet are an adaptation that helps animals swim in water. Certain animals don’t have webbed feet because they do not live in water or do not need to swim well. They should also understand that adaptations also happen over many generations. In order for animals to survive in their environment, they need to develop certain physical adaptations such as webbed feet.",
         "duration": "5",
         "name": "Discuss"
       },
@@ -179,7 +179,7 @@
       "key": "9cdc871d-e7e4-40dc-ae63-be1ef97f496e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Science + Coding” slide\n\n\n_**Adaptations**_\n \n_Animals change over many generations so that they have a better chance of survival._ \n\n_**Build a Model**_\n\n_Today you will use computer science and code to build models that show animal adaptations._\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9cdc871d-e7e4-40dc-ae63-be1ef97f496e",
@@ -190,7 +190,7 @@
       "key": "81c8a49a-1d24-48fc-a65c-4786dc7ea5c9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Intro” video\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Intro” video\n",
         "duration": "20",
         "name": "Animal Adaptations - Skill Building"
       },
@@ -215,7 +215,7 @@
       "key": "99179b1f-37e4-447a-86a9-7d1f828f80a9",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n**Adaptations:** Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators. \n"
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Adaptations” slide\n\n**Adaptations:** Some animals have adapted features to help them survive in different environments. Rabbits have adapted the color of their fur to blend into their environment and hide from predators. \n"
       },
       "seeding_key": {
         "activity_section.key": "99179b1f-37e4-447a-86a9-7d1f828f80a9",
@@ -242,7 +242,7 @@
       "key": "429aa98a-4407-4637-840a-0ccb01ee323e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Animal Adaptations Introduction\" video",
         "progression_name": "Video: Animal Adaptations Introduction"
       },
       "seeding_key": {
@@ -254,7 +254,7 @@
       "key": "d22c9ce9-6026-4b7f-a404-7fb09cf4e6fa",
       "position": 6,
       "properties": {
-        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Leve 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
+        "description": "**Do This**: Preview levels 2-5 with the whole class, then allow students to complete levels at their own pace. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Adaptations - Leve 2-3\" slide\n\n**Levels 2-3:** Bunny Adaptations - Students will add code to switch the background and sprite location. This simulates how bunnies have adapted the color of their fur to blend into their environment. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 4\" slide\n\n**Level 4:** Bird Beak Evolution - Students will add code to explain that birds have different beaks to do different things.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Evolution - Level 5\" slide\n\n\n**Level 5:** Elephant Size Adaptations - Students will model how elephants have evolved to be very large animals. \n\n**Do This**: Circulate as students work at their own pace using the instructions to learn and code programs on each level. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d22c9ce9-6026-4b7f-a404-7fb09cf4e6fa",
@@ -276,7 +276,7 @@
       "key": "b201dcd3-0b8b-4329-ab3c-c73158ef0562",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Hello World: Programming with Events” video\n\n**Level 6**: Video introduction of events in computer science\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Hello World: Programming with Events” video\n\n**Level 6**: Video introduction of events in computer science\n",
         "duration": "5",
         "name": "Events Video",
         "progression_name": "Video: Hello World: Programming with Events"
@@ -290,7 +290,7 @@
       "key": "ebf79f65-343b-42ba-b872-c24d87b0330e",
       "position": 9,
       "properties": {
-        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. = When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing.This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
+        "description": "**Do This:** Preview levels 7-10 with the whole class then allow students to complete levels at their own pace. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Evolution - Level 7-8” slide\n\n**Level 7:** Try It: Students test the new code to see how it works. Click the Run button, then click the up arrow on the keyboard or near the Run button. = When the up arrow key is pressed, the giraffe’s costume will change to model how it adapted to have a longer neck.\n\n**Level 8:** Code It: Students will use an event to code the giraffe’s costume changing from short neck to long neck. This models how giraffes have evolved over time to to reach the leaves high in the trees. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Evolution - Level 9” slide\n\n**Level 9:**  Students will use an event block to code the fireflies’ costume changing from regular to glowing.This models how fireflies evolved over time to become bioluminescent when it is dark outside.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Camouflage - Level 10” slide\n\n**Level 10:** Students will use an event block to code the octopus’ costume changing color. This models how octopuses evolved over time to be able to camouflage. ",
         "duration": "10",
         "name": "Animal Adaptations - Skill Building",
         "progression_name": "Skill Building"
@@ -304,7 +304,7 @@
       "key": "ef468a5d-a646-426a-ae24-b23f6d573bb0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n- _Name some animals that live in our state._ \n- _What challenges do they have in their current environment?_ \n- _If we had a time machine and visited these animals 1000 years from now, how might they have adapted to survive those threats?_\n\n**Discussion Goal**: The goal of this short discussion is to draw a connection to animals students have seen in their local environment. Through this discussion, students will be able to explain that animals change in order to survive. Survival may mean growing a longer neck to reach the food, changing fur colors to escape predators, moving to more hospitable climates, or gathering in groups. ",
         "duration": "5",
         "name": "Discuss"
       },

@@ -101,7 +101,7 @@
       "key": "65600ba3-a65e-4dd4-b7c2-abdf084829f7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students notice several syntax errors in this code that will prevent the code from running. Students identify each error and what strategies they used to help them find errors.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students notice several syntax errors in this code that will prevent the code from running. Students identify each error and what strategies they used to help them find errors.",
         "name": "Identifying Bugs"
       },
       "seeding_key": {
@@ -113,7 +113,7 @@
       "key": "8d41fa93-3200-4ddd-ab06-eab2de599560",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> These errors you saw in that code segment are also referred to as bugs.\n\nAs we work through the activities today, you’ll likely encounter bugs of your own. While you work, make note of any bugs you encounter and the strategies you use to fix your code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> These errors you saw in that code segment are also referred to as bugs.\n\nAs we work through the activities today, you’ll likely encounter bugs of your own. While you work, make note of any bugs you encounter and the strategies you use to fix your code.",
         "remarks": true
       },
       "seeding_key": {
@@ -138,7 +138,7 @@
       "key": "2ae501f1-d9da-46c7-95d8-b784e4d34753",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the new methods and explain that the methods are named to sound like yes/no questions."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the new methods and explain that the methods are named to sound like yes/no questions."
       },
       "seeding_key": {
         "activity_section.key": "2ae501f1-d9da-46c7-95d8-b784e4d34753",
@@ -161,7 +161,7 @@
       "key": "d2613912-4b83-4703-9852-01daa8d8140f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditionals video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the structure of an `if` statement."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Conditionals video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the structure of an `if` statement."
       },
       "seeding_key": {
         "activity_section.key": "d2613912-4b83-4703-9852-01daa8d8140f",
@@ -215,7 +215,7 @@
       "key": "6c320540-b230-475f-bc15-aca3a8eb8300",
       "position": 8,
       "properties": {
-        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio using Pair Programming. Remind them that they should use an `if` statement in each level in addition to the appropriate Boolean method. ",
+        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio using Pair Programming. Remind them that they should use an `if` statement in each level in addition to the appropriate Boolean method. ",
         "progression_name": "Boolean Methods"
       },
       "seeding_key": {
@@ -239,7 +239,7 @@
       "key": "b8580131-1e60-4ffb-8e10-fcb94d7e3ac0",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Introduce the `canMove()` method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove()` method gives a `true` value if there is not a barrier in the point directly in front of the `Painter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove(String direction)` method gives a `true` value if there is not a barrier in the direction specified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue to use Pair Programming to complete Level 3 on Code Studio.",
+        "description": "**Do This:** Introduce the `canMove()` method.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `canMove()` method gives a `true` value if there is not a barrier in the point directly in front of the `Painter`.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `canMove(String direction)` method gives a `true` value if there is not a barrier in the direction specified.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue to use Pair Programming to complete Level 3 on Code Studio.",
         "progression_name": "Checking for Barriers"
       },
       "seeding_key": {
@@ -265,7 +265,7 @@
       "key": "d7fb3f1a-8fd7-48e0-bdb9-9d07ef298f40",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term debugging.\n\n**Distribute:** Give each pair of students one to two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Debugging Wall. Have students think about a bug they encountered today and write down a strategy they used to fix the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to add their sticky notes to the Debugging Wall under the appropriate category and take a moment to read over other strategies.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define the term debugging.\n\n**Distribute:** Give each pair of students one to two sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Debugging Wall. Have students think about a bug they encountered today and write down a strategy they used to fix the error.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to add their sticky notes to the Debugging Wall under the appropriate category and take a moment to read over other strategies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -294,7 +294,7 @@
       "key": "0acc6208-b073-4197-b62c-04aead27cda2",
       "position": 14,
       "properties": {
-        "description": "**Do This:** Introduce syntax and logic errors.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to describe an example of a logic error they may have encountered.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 4 on Code Studio using Pair Programming. There are two options for them to choose from, and each contains both logic and syntax errors.",
+        "description": "**Do This:** Introduce syntax and logic errors.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to describe an example of a logic error they may have encountered.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 4 on Code Studio using Pair Programming. There are two options for them to choose from, and each contains both logic and syntax errors.",
         "progression_name": "Debugging Challenge",
         "tips": [
           {
@@ -312,7 +312,7 @@
       "key": "9957a8f2-c9ac-402c-902c-d2a303935a64",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think back to the warm-up and your experience today with our new methods. What errors did you run into?*\n* *What are some strategies you used to identify bugs?*\n* *How did you fix them?*\n\n**Discussion Goal:** Students share bugs they encountered and ways that they debugged their code. Students should realize that everyone encounters bugs when writing code and that debugging is a normal part of software engineering."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think back to the warm-up and your experience today with our new methods. What errors did you run into?*\n* *What are some strategies you used to identify bugs?*\n* *How did you fix them?*\n\n**Discussion Goal:** Students share bugs they encountered and ways that they debugged their code. Students should realize that everyone encounters bugs when writing code and that debugging is a normal part of software engineering."
       },
       "seeding_key": {
         "activity_section.key": "9957a8f2-c9ac-402c-902c-d2a303935a64",
@@ -323,7 +323,7 @@
       "key": "475e839c-3352-488c-816c-2eec22a53307",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?",
         "name": "Closing the Loops",
         "tips": [
           {
@@ -341,7 +341,7 @@
       "key": "9559d4c3-eab0-47cc-80e8-2aefee3dba57",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "9559d4c3-eab0-47cc-80e8-2aefee3dba57",

@@ -158,11 +158,11 @@ function iconFor(stepStatus) {
       );
     case Status.CELEBRATING:
       return (
-        <FontAwesome icon="thumbs-o-up" className="fa-fw" style={iconStyle} />
+        <FontAwesome icon="thumbs-up" className="fa-fw" style={iconStyle} />
       );
     case Status.FAILED:
       return (
-        <FontAwesome icon="times-circle" className="fa-fw" style={iconStyle} />
+        <FontAwesome icon="circle-xmark" className="fa-fw" style={iconStyle} />
       );
     case Status.UNKNOWN:
       return (

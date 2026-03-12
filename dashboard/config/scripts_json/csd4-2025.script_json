@@ -4146,7 +4146,7 @@
       "key": "4b9815d5-ad64-445b-bb73-bbc901c2ae70",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd/2025] video in the slides. This gives a model for what the testing process should look like.",
+        "description": "**Distribute:** Give each team one copy of the Paper Prototype User Testing Activity Guide. Also give each team a copy of the User Test Cases Activity Guide - one copy for each user the team plans to test with.\n\n\n\n#### Paper Prototype User Testing\n\n**Overview:** Read through the (1) Overview section of the activity guide together. This gives an overview of today’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r what_s_for_lunch_testing/csd/2025] video in the slides. This gives a model for what the testing process should look like.",
         "name": "Preparing for Testing\r",
         "tips": [
           {
@@ -4329,7 +4329,7 @@
       "key": "fea7d10f-af5e-41da-a7a6-c511af1c54b9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd/2025] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_design_mode/csd/2025] video in the slides. This video introduces the design mode interface that students will use for the rest of the unit. Today’s lesson focuses just on the drag-and-drop design elements; the Events in AppLab lesson focuses on the coding elements\n",
         "progression_name": "Video: Intro to Design Mode",
         "tips": [
           {
@@ -4722,7 +4722,7 @@
       "key": "613f96e1-d2f3-469a-8fc7-6e4289da2e2b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab/csd/2025] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r events_in_app_lab/csd/2025] video in the slides.\n",
         "progression_name": "Video: Events in App Lab",
         "tips": [
           {

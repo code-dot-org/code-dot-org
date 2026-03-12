@@ -1565,7 +1565,7 @@
       "key": "fde62bf5-708c-4df5-8c1c-c2c24344c06c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What is the problem you are trying to solve when you do a word search?*\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What are the different strategies that someone could use for finding words. What are the pros and cons of each strategy?*\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *What is the problem you are trying to solve when you do a word search?*\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *What are the different strategies that someone could use for finding words. What are the pros and cons of each strategy?*\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down"
       },
       "seeding_key": {
         "activity_section.key": "fde62bf5-708c-4df5-8c1c-c2c24344c06c",
@@ -1576,7 +1576,7 @@
       "key": "607143e6-0de5-4f84-a4c9-7875f17080af",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1593,7 +1593,7 @@
       "key": "3588118d-e464-4376-a544-6fe5655981cd",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts: \n1) Were you successful in solving this word search problem? How do you know? \n2) What strategy did you pick and how did it work for you?\n3) Did anyone change strategies at any point … why or why not?\n",
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts: \n1) Were you successful in solving this word search problem? How do you know? \n2) What strategy did you pick and how did it work for you?\n3) Did anyone change strategies at any point … why or why not?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1621,7 +1621,7 @@
       "key": "203f55c1-954d-46e8-a871-1991ed83b333",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/6-12-dev-playground/unversioned]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/6-12-dev-playground/unversioned]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?\n\n",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1699,7 +1699,7 @@
       "key": "4b4a910b-8b98-451a-ba42-e1d812119395",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use, or sketching out the website\n- **Try:** Creating a basic version of the website that may not have all of the features\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use, or sketching out the website\n- **Try:** Creating a basic version of the website that may not have all of the features\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "4b4a910b-8b98-451a-ba42-e1d812119395",
@@ -1908,7 +1908,7 @@
       "key": "a3764e23-4f8c-41f2-984c-fa2cec46732f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _How could you explain to someone over the phone how to draw the following web page?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _How could you explain to someone over the phone how to draw the following web page?_"
       },
       "seeding_key": {
         "activity_section.key": "a3764e23-4f8c-41f2-984c-fa2cec46732f",
@@ -1964,7 +1964,7 @@
       "key": "13efc285-2cab-41da-b427-348107f27b5c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Put students into pairs.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Put students into pairs.",
         "name": "Pair Programming"
       },
       "seeding_key": {
@@ -1988,7 +1988,7 @@
       "key": "562af183-3820-4eae-8c8b-4955de8c1618",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/6-12-dev-playground/unversioned] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/6-12-dev-playground/unversioned] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2042,7 +2042,7 @@
       "key": "040b5c01-c00d-4409-a7cb-9f258f2ec0c7",
       "position": 7,
       "properties": {
-        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide to guide your students on how to connect Pair Programming in Code Studio. \n\n* Choose one partner to log into Code Studio.\n* Click on your name, and choose \"Pair Programming from the menu.\n* Choose your partner's name from the list.\n* Start coding as a team!\n\n**Do This:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
+        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide to guide your students on how to connect Pair Programming in Code Studio. \n\n* Choose one partner to log into Code Studio.\n* Click on your name, and choose \"Pair Programming from the menu.\n* Choose your partner's name from the list.\n* Start coding as a team!\n\n**Do This:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
         "name": "Exploring HTML ",
         "progression_name": "Exploration",
         "tips": [
@@ -2089,7 +2089,7 @@
       "key": "438703b3-5243-41f7-973e-b16fef62f12e",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
         "progression_name": "Exploration",
         "tips": [
           {
@@ -2118,7 +2118,7 @@
       "key": "f601e535-0277-42b5-9d11-85f5fa72c4ad",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/6-12-dev-playground/unversioned] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/6-12-dev-playground/unversioned] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
         "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
@@ -2130,7 +2130,7 @@
       "key": "f3b50f88-1088-496a-9a83-18153aab6f5f",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -2291,7 +2291,7 @@
       "key": "4afbfc87-20b9-4870-bddb-4bcecf3e76e0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Yesterday, you learned about HTML, the language of the World Wide Web. HTML uses tags to structure content on web pages.  Individually, think of as many tags as you remember and what they do.\n    \nGive students a few minutes to think of as many tags as they can."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Yesterday, you learned about HTML, the language of the World Wide Web. HTML uses tags to structure content on web pages.  Individually, think of as many tags as you remember and what they do.\n    \nGive students a few minutes to think of as many tags as they can."
       },
       "seeding_key": {
         "activity_section.key": "4afbfc87-20b9-4870-bddb-4bcecf3e76e0",
@@ -2314,7 +2314,7 @@
       "key": "65e0aa38-2a7d-42d2-a9ac-c80d0a0e2656",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Pairs should discuss and share with one another the HTML tags they can remember and start record their ideas on the HTML Tag Chart. \n\n**Discussion Goal:** The goal of this discussion is to review the tags that students saw in the previous lesson. These include:\n\n* `<!DOCTYPE html>`\n* `<html>`\n* `<head>`\n* `<body>`\n* `<p>`\n\nAfterward, ask students to share the tags they came up with along with each tag's description. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide with the HTML Tag Chart table to help students ensure they documented all tags needed at this point along with their descriptions. \n\n`<!DOCTYPE html>` - Tells the computer that this is a document written in HTML - No closing tag\n\n`<html>` - Indicates the beginning of your code written in HTML - `</html>`\n\n`<head>` - Contains information (sometimes called \"metadata\") about your web page - `</head>`\n\n`<body>` - Contains all the main content of your web page - `</body>`\n\n`<p>` - Defines a paragraph - `</p>`\n\nAs you go through the tags, highlight how working together allowed the students to make their lists more comprehensive.",
+        "description": "**Discuss:** Pairs should discuss and share with one another the HTML tags they can remember and start record their ideas on the HTML Tag Chart. \n\n**Discussion Goal:** The goal of this discussion is to review the tags that students saw in the previous lesson. These include:\n\n* `<!DOCTYPE html>`\n* `<html>`\n* `<head>`\n* `<body>`\n* `<p>`\n\nAfterward, ask students to share the tags they came up with along with each tag's description. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide with the HTML Tag Chart table to help students ensure they documented all tags needed at this point along with their descriptions. \n\n`<!DOCTYPE html>` - Tells the computer that this is a document written in HTML - No closing tag\n\n`<html>` - Indicates the beginning of your code written in HTML - `</html>`\n\n`<head>` - Contains information (sometimes called \"metadata\") about your web page - `</head>`\n\n`<body>` - Contains all the main content of your web page - `</body>`\n\n`<p>` - Defines a paragraph - `</p>`\n\nAs you go through the tags, highlight how working together allowed the students to make their lists more comprehensive.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2427,7 +2427,7 @@
       "key": "6cdb17fa-ca33-4e16-98a1-6a74bb3badd7",
       "position": 6,
       "properties": {
-        "description": "**Transition:** Have your students pause programming and bring the class back together at this point in order to add heading tags to their HTML Tag Chart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different heading tags? Which one would we use for web page titles? What are the others for?\n\n**Discussion Goal:** Students should be able to identify six different heading tags, from `<h1>` to `<h6>`. In addition, students should understand that the `<h1>` tag is the largest heading tag, typically used for the main web page title while the others are used for subtitles throughout a web page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to help students add heading tags to their HTML Tag Chart.\n\n`<h1>` - Largest heading tag, typically used for web page titles - `</h1>`\n\n`<h2>` to `<h6>` - Heading tags, typically used for subtitles - `</h2>` to `</h6>`"
+        "description": "**Transition:** Have your students pause programming and bring the class back together at this point in order to add heading tags to their HTML Tag Chart.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What are the different heading tags? Which one would we use for web page titles? What are the others for?\n\n**Discussion Goal:** Students should be able to identify six different heading tags, from `<h1>` to `<h6>`. In addition, students should understand that the `<h1>` tag is the largest heading tag, typically used for the main web page title while the others are used for subtitles throughout a web page.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to help students add heading tags to their HTML Tag Chart.\n\n`<h1>` - Largest heading tag, typically used for web page titles - `</h1>`\n\n`<h2>` to `<h6>` - Heading tags, typically used for subtitles - `</h2>` to `</h6>`"
       },
       "seeding_key": {
         "activity_section.key": "6cdb17fa-ca33-4e16-98a1-6a74bb3badd7",
@@ -2438,7 +2438,7 @@
       "key": "0a93a92f-3648-443e-a4fa-18ab9f0dcfcf",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> It is important to remember and get down in our HTML chart that heading tags, `<h1>` through `<h6>` are used any time we have a title or a subtitle. `<h1>` is normally used for the webpage title, while `<h2>` to `<h6>` are used for subtitles on webpages. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> It is important to remember and get down in our HTML chart that heading tags, `<h1>` through `<h6>` are used any time we have a title or a subtitle. `<h1>` is normally used for the webpage title, while `<h2>` to `<h6>` are used for subtitles on webpages. ",
         "remarks": true
       },
       "seeding_key": {
@@ -2450,7 +2450,7 @@
       "key": "e1bf71a5-defa-4d1a-a3bb-69c5eff60a33",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n* *The `<li>` tags are indented*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* *What do \"ul\" and \"li\" mean?*\n* *Why are there multiple `<li>` elements?*\n* *Why does the `<ul>` tag not seem to do anything?*\n* *Why are the `<li>` tags indented?*\n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* *The `<li>` tag is being used again*\n* *`<ol>` is being used instead of `<ul>`*\n* *This time a numbered list was made*\n* *There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example*\n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, *What do you wonder*, for the second example may again vary but could include: \n\n* *What does \"ol\" mean?*\n* *Why did this example make a numbered list?*\n* *Why are both examples using the `<li>` tag?*\n* *Why does making a list involve two different HTML tags?*\n\n**Discussion Goal:** Use student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* To make an HTML list, they need both tags - the first tag indicating the **type** of list they want and the second tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* We use indentation, or *whitespace*, in front of the `<li>` tags to indicate that they are \"children\" nested within the type of list tag.  \n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n* *The `<li>` tags are indented*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* *What do \"ul\" and \"li\" mean?*\n* *Why are there multiple `<li>` elements?*\n* *Why does the `<ul>` tag not seem to do anything?*\n* *Why are the `<li>` tags indented?*\n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* *The `<li>` tag is being used again*\n* *`<ol>` is being used instead of `<ul>`*\n* *This time a numbered list was made*\n* *There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example*\n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, *What do you wonder*, for the second example may again vary but could include: \n\n* *What does \"ol\" mean?*\n* *Why did this example make a numbered list?*\n* *Why are both examples using the `<li>` tag?*\n* *Why does making a list involve two different HTML tags?*\n\n**Discussion Goal:** Use student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* To make an HTML list, they need both tags - the first tag indicating the **type** of list they want and the second tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* We use indentation, or *whitespace*, in front of the `<li>` tags to indicate that they are \"children\" nested within the type of list tag.  \n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
         "name": "Web Lab: Lists",
         "progression_name": "Skill Building"
       },
@@ -2463,7 +2463,7 @@
       "key": "650e1c0c-4176-444f-be79-ec4834de57ac",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide to help students add list tags to their HTML Tag Chart. \n\n`<ol>` - Starts an **O**rdered **L**ist - `</ol>`\n\n`<ul>` - Starts an **U**nordered **L**ist - `</ul>`\n\n`<li>` - Actually creates the **l**ist **i**tem - `</li>`\n\n\nHave students continue Pair Programming through the List Skill Building levels. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide to help students add list tags to their HTML Tag Chart. \n\n`<ol>` - Starts an **O**rdered **L**ist - `</ol>`\n\n`<ul>` - Starts an **U**nordered **L**ist - `</ul>`\n\n`<li>` - Actually creates the **l**ist **i**tem - `</li>`\n\n\nHave students continue Pair Programming through the List Skill Building levels. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2475,7 +2475,7 @@
       "key": "d9536640-1774-47e2-a1b0-27a4af891d4a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/6-12-dev-playground/unversioned] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/6-12-dev-playground/unversioned] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
         "progression_name": "Video: Debugging",
         "tips": [
           {
@@ -2549,7 +2549,7 @@
       "key": "4d9a24a0-c391-4cd4-a452-35a5135074f6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Today, you learned a lot about debugging, which is an important skill for programmers.  What is one way working with a partner helped you to debug today?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Today, you learned a lot about debugging, which is an important skill for programmers.  What is one way working with a partner helped you to debug today?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2566,7 +2566,7 @@
       "key": "2af37681-7f5b-4278-b2e5-4c14ed9be3f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think of 2-3 websites you have accounts on. What kind of information could someone learn about you by looking on these websites?_\n\nHave students silently brainstorm or journal, then share with a partner, and finally share as a full class. \n\n**Discussion Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves. Based on their responses, create a list of all of the websites that may have their personal information.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think of 2-3 websites you have accounts on. What kind of information could someone learn about you by looking on these websites?_\n\nHave students silently brainstorm or journal, then share with a partner, and finally share as a full class. \n\n**Discussion Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves. Based on their responses, create a list of all of the websites that may have their personal information.",
         "name": "Your Digital Footprint\r",
         "tips": [
           {
@@ -2596,7 +2596,7 @@
       "key": "a0ae48ec-cd16-42d8-bf67-800f4d25412c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: How can you make sure that your private information stays private?**"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day: How can you make sure that your private information stays private?**"
       },
       "seeding_key": {
         "activity_section.key": "a0ae48ec-cd16-42d8-bf67-800f4d25412c",
@@ -2607,7 +2607,7 @@
       "key": "c38ed937-7a12-470d-a9c1-50300bd0774d",
       "position": 1,
       "properties": {
-        "description": "**Group:** Decide if you would like to have students complete this activity individually or in groups of 2-3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Social Sleuth activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the overview of the activity guide. Have students read the Sleuthing Online section out loud to get an overview of the activity they are about to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.\n\n",
+        "description": "**Group:** Decide if you would like to have students complete this activity individually or in groups of 2-3\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Social Sleuth activity guide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the overview of the activity guide. Have students read the Sleuthing Online section out loud to get an overview of the activity they are about to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.\n\n",
         "name": "Investigating Social Profiles",
         "progression_name": "Social Sleuth"
       },
@@ -2620,7 +2620,7 @@
       "key": "4483bc78-ec3b-4361-b34a-754c5a5e3e51",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look through all of the provided social media pages on Code Studio. The pages represent three unique individuals, each of whom has an account on three social media platforms. Then have students choose two users they want to investigate.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students look through all of the provided social media pages on Code Studio. The pages represent three unique individuals, each of whom has an account on three social media platforms. Then have students choose two users they want to investigate.",
         "progression_name": "Social Sleuth",
         "tips": [
           {
@@ -2638,7 +2638,7 @@
       "key": "4fc16367-b799-4230-990e-32d7536019c1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the different social media pages and record the information they find in the table on their activity guide.\n\n[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Circulate:**  Students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\nMake sure students have dedicated time before the end of class to answer the questions at the end of the activity guide, even if they don’t finish completely sleuthing on the social media websites.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students explore the different social media pages and record the information they find in the table on their activity guide.\n\n[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Circulate:**  Students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\nMake sure students have dedicated time before the end of class to answer the questions at the end of the activity guide, even if they don’t finish completely sleuthing on the social media websites.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2655,7 +2655,7 @@
       "key": "1ffddd8b-b4c8-4689-846c-9e2bd6dea300",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share some of their answers to the last questions on the activity guide\n- What was one piece of information about either of your users that they probably did not want to share?  How was it accidentally shared?\n- Which of the two users do you think was more successful in protecting their privacy?  What made them successful?\n\n**Discussion Goal:** Student answers will vary, and it’s okay to not have a class consensus. Instead, focus on the reasoning and justification students use when explaining their answers. These thoughts will segue into the wrap-up activity where students consider a “checklist” of what should or shouldn’t be shared online."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share some of their answers to the last questions on the activity guide\n- What was one piece of information about either of your users that they probably did not want to share?  How was it accidentally shared?\n- Which of the two users do you think was more successful in protecting their privacy?  What made them successful?\n\n**Discussion Goal:** Student answers will vary, and it’s okay to not have a class consensus. Instead, focus on the reasoning and justification students use when explaining their answers. These thoughts will segue into the wrap-up activity where students consider a “checklist” of what should or shouldn’t be shared online."
       },
       "seeding_key": {
         "activity_section.key": "1ffddd8b-b4c8-4689-846c-9e2bd6dea300",
@@ -2678,7 +2678,7 @@
       "key": "6b176335-c27d-4b6e-8a36-ad871ce46073",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online._\n\n**Discussion Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\n\n* Could someone identify me with this information?: for example name, address, phone number, etc.\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\n\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online._\n\n**Discussion Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\n\n* Could someone identify me with this information?: for example name, address, phone number, etc.\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\n\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson."
       },
       "seeding_key": {
         "activity_section.key": "6b176335-c27d-4b6e-8a36-ad871ce46073",
@@ -2723,7 +2723,7 @@
       "key": "18a64be8-1aa9-4bfd-ad3e-e3e2600ca10c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *As a web developer, you will most likely create web pages for various users. Why might it be useful to have a process, such as the Problem Solving Process, that we follow when designing and creating websites for our users?*\n\n**Discussion Goal:** This quick discussion allows students to recall the steps of the Problem Solving Process and think about how each step is helpful when creating websites for others. Make sure to point out that having a process, such as the Problem Solving Process, will help ensure that you keep your user in mind and meet their needs.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *As a web developer, you will most likely create web pages for various users. Why might it be useful to have a process, such as the Problem Solving Process, that we follow when designing and creating websites for our users?*\n\n**Discussion Goal:** This quick discussion allows students to recall the steps of the Problem Solving Process and think about how each step is helpful when creating websites for others. Make sure to point out that having a process, such as the Problem Solving Process, will help ensure that you keep your user in mind and meet their needs.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2769,7 +2769,7 @@
       "key": "e3775d9d-b70f-40b0-be5f-66eb8bd88450",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Use HTML to structure a site\n* Write readable code\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Use HTML to structure a site\n* Write readable code\n"
       },
       "seeding_key": {
         "activity_section.key": "e3775d9d-b70f-40b0-be5f-66eb8bd88450",
@@ -2793,7 +2793,7 @@
       "key": "eb29e20b-e568-4a47-990c-121e55d755df",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick a user based on the short user descriptions on the first page of the HTML Web Page Project Guide. Once they pick a user, they should turn to the project guide's last pages to find their user’s detailed description. This includes information about what the user would like included in the web page that students will build for them. \n\n**Circulate:** As you move around the classroom, encourage students to number their main topics directly on their user descriptions. This might make it easier for students to list out the topic headings on the first page of the project guide that they need to include on the web page.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick a user based on the short user descriptions on the first page of the HTML Web Page Project Guide. Once they pick a user, they should turn to the project guide's last pages to find their user’s detailed description. This includes information about what the user would like included in the web page that students will build for them. \n\n**Circulate:** As you move around the classroom, encourage students to number their main topics directly on their user descriptions. This might make it easier for students to list out the topic headings on the first page of the project guide that they need to include on the web page.",
         "name": "Step 1: Define - Pick a User and Define Their Needs",
         "tips": [
           {
@@ -2811,7 +2811,7 @@
       "key": "9844fd79-b5a7-48fc-b273-a622b54c2c03",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a sketch of their designs on the second page of the project guide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the HTML Web Page Rubric as they are planning the layout and tags they will use so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, encourage students to add numbers in the margins and within the user’s description for the information they think needs to be included in each numbered topic on page 1. This might make it easier for students to list the content on the second page of the project guide that they need to include on the web page. Also, ensure your students identify which tags will be needed for different text on the web page. They are given a quick example of this in their project guide. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a sketch of their designs on the second page of the project guide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the HTML Web Page Rubric as they are planning the layout and tags they will use so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, encourage students to add numbers in the margins and within the user’s description for the information they think needs to be included in each numbered topic on page 1. This might make it easier for students to list the content on the second page of the project guide that they need to include on the web page. Also, ensure your students identify which tags will be needed for different text on the web page. They are given a quick example of this in their project guide. ",
         "name": "Step 2: Prepare - Design the Page Layout",
         "tips": [
           {
@@ -2842,7 +2842,7 @@
       "key": "ad01a2c2-27de-4f57-9a8f-28daf2604283",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/6-12-dev-playground/unversioned] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:**  Hand out a copy of the [r problem_solving_process_with_programming/6-12-dev-playground/unversioned] to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic\n"
       },
       "seeding_key": {
         "activity_section.key": "ad01a2c2-27de-4f57-9a8f-28daf2604283",
@@ -2865,7 +2865,7 @@
       "key": "8d56946c-0f54-4d72-a20d-473be0333d95",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to start building the web page for their users. Let students know that if they would like to review the tags they have learned so far before they start on their web pages, they can go to Level 1 to complete these review activities or use them as resources while they work on their projects.\n\n**Transition:** Send students to Code Studio Lesson 5, Level 2 to build their pages. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to start building the web page for their users. Let students know that if they would like to review the tags they have learned so far before they start on their web pages, they can go to Level 1 to complete these review activities or use them as resources while they work on their projects.\n\n**Transition:** Send students to Code Studio Lesson 5, Level 2 to build their pages. ",
         "progression_name": "Review: HTML"
       },
       "seeding_key": {
@@ -2928,7 +2928,7 @@
       "key": "c05ce748-4ece-4167-bff3-4e7bd06777af",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they built for their users. They should use Level 3 to ensure they have included everything their user needs and met the requirements of the project by consulting the project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they built for their users. They should use Level 3 to ensure they have included everything their user needs and met the requirements of the project by consulting the project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. "
       },
       "seeding_key": {
         "activity_section.key": "c05ce748-4ece-4167-bff3-4e7bd06777af",
@@ -2939,7 +2939,7 @@
       "key": "4f620850-8ad0-4ed6-a7e2-b6d9a5830ed0",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.",
         "name": "Step 4: Reflect\r",
         "tips": [
           {
@@ -3004,7 +3004,7 @@
       "key": "b1e8529e-1c55-403e-868a-2dfd2593057b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Check out the web page on Code Studio. If you wanted to create a page like this, what do you already know how to do? What do you still need to learn how to do?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Check out the web page on Code Studio. If you wanted to create a page like this, what do you already know how to do? What do you still need to learn how to do?"
       },
       "seeding_key": {
         "activity_section.key": "b1e8529e-1c55-403e-868a-2dfd2593057b",
@@ -3085,7 +3085,7 @@
       "key": "8f5575c0-5d15-43be-8b73-f64834641813",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/6-12-dev-playground/unversioned] video in the slides and discuss the CSS video as a class.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/6-12-dev-playground/unversioned] video in the slides and discuss the CSS video as a class.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3119,7 +3119,7 @@
       "key": "d0c3a442-bd0a-4aba-b7dd-17d502a8e1a2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
       },
       "seeding_key": {
         "activity_section.key": "d0c3a442-bd0a-4aba-b7dd-17d502a8e1a2",
@@ -3147,7 +3147,7 @@
       "key": "c0007282-e589-4cd7-bb4e-65eefeb113ae",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/6-12-dev-playground/unversioned] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/6-12-dev-playground/unversioned] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
@@ -3216,7 +3216,7 @@
       "key": "b7247a2b-d140-4d81-ab1e-455e4d252b14",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3262,7 +3262,7 @@
       "key": "9544ebeb-6426-4acf-80ee-0ca6f81e5bca",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "9544ebeb-6426-4acf-80ee-0ca6f81e5bca",
@@ -3361,7 +3361,7 @@
       "key": "7601c33b-03c8-4131-a068-2e66996cd15b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r creative_commons_overview/6-12-dev-playground/unversioned] video. This video is from the McLaughlin Library at the University of Guelph. \n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the [r creative_commons_overview/6-12-dev-playground/unversioned] video. This video is from the McLaughlin Library at the University of Guelph. \n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3576,7 +3576,7 @@
       "key": "7f246c71-612e-4bda-a059-8cfdbf6a275d",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
+        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3650,7 +3650,7 @@
       "key": "d8befe75-51e7-474b-965c-583c243e628c",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -3798,7 +3798,7 @@
       "key": "8d2a0548-53e5-46a9-8a5c-e892cf36df52",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
+        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
       },
       "seeding_key": {
         "activity_section.key": "8d2a0548-53e5-46a9-8a5c-e892cf36df52",
@@ -3821,7 +3821,7 @@
       "key": "763a9a53-4f0b-4326-af7a-e3711c2bb6db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r adding_style_to_a_webpage_-_project_guide/6-12-dev-playground/unversioned]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Add images to a web page\n* Use CSS to style a web page \n* Write readable code\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the [r adding_style_to_a_webpage_-_project_guide/6-12-dev-playground/unversioned]\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the slide to go over the goals of this project\n* Design a page to meet a user’s needs\n* Add images to a web page\n* Use CSS to style a web page \n* Write readable code\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3862,7 +3862,7 @@
       "key": "d48671b2-33de-47d1-ae5c-5de25c4f1d8c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to read over their Lesson 5 user’s style requests (or NEW User for those that did not complete Lesson 5) and fill in the chart on page 1 of their project guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to read over their Lesson 5 user’s style requests (or NEW User for those that did not complete Lesson 5) and fill in the chart on page 1 of their project guide.",
         "name": "Step 1: Define - Define Your User’s Needs"
       },
       "seeding_key": {
@@ -3874,7 +3874,7 @@
       "key": "00f37d20-6099-4d7f-b547-8c673245c587",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in the information on page 2 to help them plan out the style for each element. When finished with page 2, direct students to go to Code Studio, Lesson 10, Level 2 to see the images provided for them. Based on the images provided, they should sketch out a plan for where the best place to add each image is on page 3 of their project guide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Adding Style to a Webpage Rubric as they are planning the style so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, ensure your students complete pages 2 and 3 of their project guide. An example of how to complete the page 3 sketch can be found in the slides. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in the information on page 2 to help them plan out the style for each element. When finished with page 2, direct students to go to Code Studio, Lesson 10, Level 2 to see the images provided for them. Based on the images provided, they should sketch out a plan for where the best place to add each image is on page 3 of their project guide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Adding Style to a Webpage Rubric as they are planning the style so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, ensure your students complete pages 2 and 3 of their project guide. An example of how to complete the page 3 sketch can be found in the slides. ",
         "name": "Step 2: Prepare - Design the Style",
         "tips": [
           {
@@ -3911,7 +3911,7 @@
       "key": "5b897238-d2b8-44d4-b7e5-185b3fdc11cc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy (or ask students to pull out their copy if they were given one during the previous mini-project) of the Problem-Solving Process with Programming to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy (or ask students to pull out their copy if they were given one during the previous mini-project) of the Problem-Solving Process with Programming to pairs of students. Encourage students to look over the guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic"
       },
       "seeding_key": {
         "activity_section.key": "5b897238-d2b8-44d4-b7e5-185b3fdc11cc",
@@ -3934,7 +3934,7 @@
       "key": "5e013ea8-83c5-4e6e-a876-7ad6c61cf79d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to start styling the web page for their user. Let students know that if they would like to review the tags they have learned so far before they start on their web pages, they can go to Level 1 to complete these review activities or use them as resources while they work on their projects.\n\n**Transition:** Send students to Code Studio Lesson 10, Level 2 to style their pages.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to start styling the web page for their user. Let students know that if they would like to review the tags they have learned so far before they start on their web pages, they can go to Level 1 to complete these review activities or use them as resources while they work on their projects.\n\n**Transition:** Send students to Code Studio Lesson 10, Level 2 to style their pages.",
         "progression_name": "Review: CSS"
       },
       "seeding_key": {
@@ -3988,7 +3988,7 @@
       "key": "a65c4a77-1083-4b07-87b6-7c7878041c3d",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they styled for their user. They should use Level 4 to ensure they have included everything their user needs and met the project's requirements by consulting the project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. \n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they styled for their user. They should use Level 4 to ensure they have included everything their user needs and met the project's requirements by consulting the project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. \n\n",
         "progression_name": "Review Your Page"
       },
       "seeding_key": {
@@ -4000,7 +4000,7 @@
       "key": "983e9e21-d519-47db-9392-69dd0d82dd1f",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.",
         "name": "Step 4: Reflect",
         "tips": [
           {
@@ -4029,7 +4029,7 @@
       "key": "305151b6-bb17-4407-83f8-b755f95dca77",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What's one thing that would make your user’s web page better that you don't know how to do yet?*\n\nAs students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.\n\n**Discussion Goal:** Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them. For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *What's one thing that would make your user’s web page better that you don't know how to do yet?*\n\nAs students share out their ideas, put them on the board or a poster, and try to call out any skills that they will be learning in the next few lessons.\n\n**Discussion Goal:** Use this share out to get students excited about the things that they will learn in upcoming lessons. If you create a poster, you may also want to cross off topics as you teach them. For topics that are not covered in the curriculum, you can point students to similar topics that are covered or, if appropriate, direct them to outside resources that will guide them in learning those skills.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -4202,7 +4202,7 @@
       "key": "38c7ed6c-82b2-4a67-9685-1a0db63ec4d3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Imagine you are designing a webpage for your favorite hobby, club, pet, animal, food, or something else you love. How would you arrange the following elements:\n* Title\n* Paragraph of information\n* 6-8 images of the topic\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Give students 2 minutes to sketch how they would like to arrange these elements quickly. Encourage creativity and personal expression. After 2 minutes, allow students to quickly share their sketches with a partner before inviting a few volunteers to share their sketches. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Imagine you are designing a webpage for your favorite hobby, club, pet, animal, food, or something else you love. How would you arrange the following elements:\n* Title\n* Paragraph of information\n* 6-8 images of the topic\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Give students 2 minutes to sketch how they would like to arrange these elements quickly. Encourage creativity and personal expression. After 2 minutes, allow students to quickly share their sketches with a partner before inviting a few volunteers to share their sketches. "
       },
       "seeding_key": {
         "activity_section.key": "38c7ed6c-82b2-4a67-9685-1a0db63ec4d3",
@@ -4225,7 +4225,7 @@
       "key": "b56d493d-ebb8-4d70-a9fe-ab20e6b755f5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: Display the following discussion prompts and quickly discuss one at a time:\n* Did you notice any common themes in how we arranged our content? What were they?\n* What made you decide to place your title/images/text in that particular spot on the page?\n\n**Discussion Goal**: The discussion should reveal that organizing webpage content is a crucial part of web design. The tools they will learn today are essential for creating effective layouts, so use examples from the students’ sketches to segue into the concepts of div tags and Flexbox. Mention how these tools will help them achieve the layouts they’ve envisioned. Students should also recognize that there is no “right” way to design a webpage and that different layouts ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: Display the following discussion prompts and quickly discuss one at a time:\n* Did you notice any common themes in how we arranged our content? What were they?\n* What made you decide to place your title/images/text in that particular spot on the page?\n\n**Discussion Goal**: The discussion should reveal that organizing webpage content is a crucial part of web design. The tools they will learn today are essential for creating effective layouts, so use examples from the students’ sketches to segue into the concepts of div tags and Flexbox. Mention how these tools will help them achieve the layouts they’ve envisioned. Students should also recognize that there is no “right” way to design a webpage and that different layouts ",
         "tips": [
           {
             "type": "teachingTip",
@@ -4265,7 +4265,7 @@
       "key": "244517fa-cd3b-43f7-be6c-e2f654c5e528",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to introduce students to the the `div` tag.  Use the Speak Notes below as a guide to explaining what a `div` tag is, what it does, and why use it. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/917a555a78245dc37a92bb15a3827e33-div1.png) |  **Say:** <br> A `div` tag defines a division or a section in an html document. <br><br>It allows developers like you to split their webpage into distinct sections, each capable of taking on unique styles through CSS. <br><br>Think of a `div` tag as a **container** for different sections of your html code on your page.  |\n| ![](https://images.code.org/aff0fd5a04813e2c800108687009fd0c-div2.png) | **Say:** <br>Divs go in the body section of an html file. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** <br>To create a `div`, you need to use an open and close tag, just as you would for a heading or paragraph tag.   |\n| ![](https://images.code.org/9ffa022f796efcdb467c87c5e07003ce-div8.png) |  **Say:** <br>Now, the `div` tag doesn’t technically do anything. <br><br>It can help organize an HTML file into sections, but that won’t affect how those sections display on our screen.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>Notice how content in a `<div>` looks the same as the heading and paragraph not in a `<div>`. | \n| ![](https://images.code.org/d618e67574d2ce3684873591dfbc9c03-div4.png)|**Say:** <br>Now that you know a `div` element doesn’t do anything on its own, you might wonder why you’d even use one! |\n| ![](https://images.code.org/c89a6f91b1371049db175ebcb032410d-div5.png) | **Say:** <br>You’ll use the div container to group sections of code that you want to target with CSS |\n| ![](https://images.code.org/69dfcc006777e6ad01be720a56a8f2b1-div6.png) | **Say:** <br>You can style items in a div to look different from other sections on the page …. |\n| ![](https://images.code.org/86a4becfc05ca526a47a0b2f81011567-div7.png) | **Say:** <br>… or to position them in a specific way.<br><br>Here we have the same HTML code in a div being displayed in two different layouts.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to show the same HTML code with two different positioning results** |  ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to introduce students to the the `div` tag.  Use the Speak Notes below as a guide to explaining what a `div` tag is, what it does, and why use it. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/917a555a78245dc37a92bb15a3827e33-div1.png) |  **Say:** <br> A `div` tag defines a division or a section in an html document. <br><br>It allows developers like you to split their webpage into distinct sections, each capable of taking on unique styles through CSS. <br><br>Think of a `div` tag as a **container** for different sections of your html code on your page.  |\n| ![](https://images.code.org/aff0fd5a04813e2c800108687009fd0c-div2.png) | **Say:** <br>Divs go in the body section of an html file. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** <br>To create a `div`, you need to use an open and close tag, just as you would for a heading or paragraph tag.   |\n| ![](https://images.code.org/9ffa022f796efcdb467c87c5e07003ce-div8.png) |  **Say:** <br>Now, the `div` tag doesn’t technically do anything. <br><br>It can help organize an HTML file into sections, but that won’t affect how those sections display on our screen.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>Notice how content in a `<div>` looks the same as the heading and paragraph not in a `<div>`. | \n| ![](https://images.code.org/d618e67574d2ce3684873591dfbc9c03-div4.png)|**Say:** <br>Now that you know a `div` element doesn’t do anything on its own, you might wonder why you’d even use one! |\n| ![](https://images.code.org/c89a6f91b1371049db175ebcb032410d-div5.png) | **Say:** <br>You’ll use the div container to group sections of code that you want to target with CSS |\n| ![](https://images.code.org/69dfcc006777e6ad01be720a56a8f2b1-div6.png) | **Say:** <br>You can style items in a div to look different from other sections on the page …. |\n| ![](https://images.code.org/86a4becfc05ca526a47a0b2f81011567-div7.png) | **Say:** <br>… or to position them in a specific way.<br><br>Here we have the same HTML code in a div being displayed in two different layouts.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to show the same HTML code with two different positioning results** |  ",
         "duration": "10",
         "name": "Introduction to Div and Flex"
       },
@@ -4278,7 +4278,7 @@
       "key": "6b431b31-a8fe-41ee-b24d-c16eae35d985",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the two “Self Check” slides to gauge student understanding. Answer any questions the students may have.\n\n \n\n\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Use the two “Self Check” slides to gauge student understanding. Answer any questions the students may have.\n\n \n\n\n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4295,7 +4295,7 @@
       "key": "a52a3c9f-4b73-46c3-8c84-ba9da718eb0a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Continue to use the activity slides for this lesson to introduce students to Flexbox. Use the Speaker Notes below as a guide to explaining what Flexbox is.\n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/4ea4e068ec8a04ddfc8d4fd8002aac82-flex1.png) |  **Say:** <br>Now that we know we can use `div` tags to position the code inside of it in different ways, you are probably wondering how do we do that??  |\n| ![](https://images.code.org/b8e4d8cc7a0f4124de2462f9ee26b94a-flex2.png) | **Say:** <br>Flexbox, or Flex for short, is how! <br><br>Flex provides a more efficient way to lay out, align, and distribute space among items in a container.   |\n| ![](https://images.code.org/a299fa66bd2cea7abbcfa4eb9fd7c5e3-flex3.png) |**Say:** <br>The main idea behind flex is to allow the container to alter its items’ width or height and even order to fill the available space best. |\n| ![](https://images.code.org/328b15babfd06e1a24bef19ab4e32c21-flex4.png) | **Say:** <br>As you can see in this animation, a flex container expands the items in it to fill available free space or shrinks them to prevent overflow.<br><br>Pretty handy right? |\n| ![](https://images.code.org/16d174b8ce6e3984b29b9feb555e1c85-flex5.png) | **Say:**<br> So, how do we use Flex?<br><br>Flex is the term used to refer to a whole set of CSS properties.<br><br>Some are applied to the container and some are applied to the items in a container.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>Today, we'll start with the flex properties for the `div` container.<br><br>Who's ready to jump in and get started?! |\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Continue to use the activity slides for this lesson to introduce students to Flexbox. Use the Speaker Notes below as a guide to explaining what Flexbox is.\n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://images.code.org/4ea4e068ec8a04ddfc8d4fd8002aac82-flex1.png) |  **Say:** <br>Now that we know we can use `div` tags to position the code inside of it in different ways, you are probably wondering how do we do that??  |\n| ![](https://images.code.org/b8e4d8cc7a0f4124de2462f9ee26b94a-flex2.png) | **Say:** <br>Flexbox, or Flex for short, is how! <br><br>Flex provides a more efficient way to lay out, align, and distribute space among items in a container.   |\n| ![](https://images.code.org/a299fa66bd2cea7abbcfa4eb9fd7c5e3-flex3.png) |**Say:** <br>The main idea behind flex is to allow the container to alter its items’ width or height and even order to fill the available space best. |\n| ![](https://images.code.org/328b15babfd06e1a24bef19ab4e32c21-flex4.png) | **Say:** <br>As you can see in this animation, a flex container expands the items in it to fill available free space or shrinks them to prevent overflow.<br><br>Pretty handy right? |\n| ![](https://images.code.org/16d174b8ce6e3984b29b9feb555e1c85-flex5.png) | **Say:**<br> So, how do we use Flex?<br><br>Flex is the term used to refer to a whole set of CSS properties.<br><br>Some are applied to the container and some are applied to the items in a container.<br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br>Today, we'll start with the flex properties for the `div` container.<br><br>Who's ready to jump in and get started?! |\n"
       },
       "seeding_key": {
         "activity_section.key": "a52a3c9f-4b73-46c3-8c84-ba9da718eb0a",
@@ -4306,7 +4306,7 @@
       "key": "63541976-a7dc-4dc9-b117-81356eae146a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r flexbox_cheat_sheet/6-12-dev-playground/unversioned] handout to the students. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r flexbox_cheat_sheet/6-12-dev-playground/unversioned] handout to the students. \n",
         "duration": "25",
         "name": "Div and Flex Practice",
         "tips": [
@@ -4337,7 +4337,7 @@
       "key": "01a59edb-b561-4127-b315-c34ad8fbc353",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the flex properties in the CSS file?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they figured out or what they noticed about the properties. It is okay if they didn’t figure out exactly what each property does as they will learn in the next skill-building levels. Some possible discoveries might include:\n* Without `display: flex;` the images change position\n* Without `flex-direction: row-reverse;` the order of the images change\n* Without `flex-wrap: wrap;` the images try to fit in a single row\n* Without `justify-content: center;` the alignment of items within the container will change\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the flex properties in the CSS file?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they figured out or what they noticed about the properties. It is okay if they didn’t figure out exactly what each property does as they will learn in the next skill-building levels. Some possible discoveries might include:\n* Without `display: flex;` the images change position\n* Without `flex-direction: row-reverse;` the order of the images change\n* Without `flex-wrap: wrap;` the images try to fit in a single row\n* Without `justify-content: center;` the alignment of items within the container will change\n"
       },
       "seeding_key": {
         "activity_section.key": "01a59edb-b561-4127-b315-c34ad8fbc353",
@@ -4360,7 +4360,7 @@
       "key": "390099b6-3997-4387-b42d-c8680f6dae23",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “4 Basic Flex Properties” slide to explain the 3 steps they will typically follow when applying flex properties to their containers.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Use the “4 Basic Flex Properties” slide to explain the 3 steps they will typically follow when applying flex properties to their containers.",
         "progression_name": "Sample Personal Websites",
         "tips": [
           {
@@ -4378,7 +4378,7 @@
       "key": "db23146b-33d4-4f15-8fb5-c370ebff93c9",
       "position": 9,
       "properties": {
-        "description": "**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room.",
+        "description": "**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room.",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -4453,7 +4453,7 @@
       "key": "c0b180a2-88e8-46c2-85a7-1da080916fe8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference Cheat Sheet in their notebooks if they haven’t done so already. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Reference Cheat Sheet in their notebooks if they haven’t done so already. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal Prompt**: In your own words, how do div tags and Flexbox help solve page design and layout issues?\n\n**Discussion Goal**: The goal of this quick reflection is to ensure students grasp the fundamental roles of div tags (structuring and grouping HTML content in a container) and Flexbox (styling and positioning elements within containers). Student responses may vary but might include design and layout issues like alignment, spacing, and organization. \n"
       },
       "seeding_key": {
         "activity_section.key": "c0b180a2-88e8-46c2-85a7-1da080916fe8",
@@ -4464,7 +4464,7 @@
       "key": "bbea250a-0ead-424f-af29-0f77596445b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r layout_prediction/6-12-dev-playground/unversioned] Activity Guide to the students.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute**: Pass out the [r layout_prediction/6-12-dev-playground/unversioned] Activity Guide to the students.\n",
         "name": "Predict the Layout"
       },
       "seeding_key": {
@@ -4488,7 +4488,7 @@
       "key": "622c841f-d156-41e1-b862-705098568245",
       "position": 3,
       "properties": {
-        "description": "**Group**: Group students into pairs so they have someone to discuss and share their thought processes and reasoning with. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Give students 3-4 minutes to work on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the slides to go over the answers. Ask students for volunteer answers. ",
+        "description": "**Group**: Group students into pairs so they have someone to discuss and share their thought processes and reasoning with. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Give students 3-4 minutes to work on the activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Use the slides to go over the answers. Ask students for volunteer answers. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -4528,7 +4528,7 @@
       "key": "9794b62e-6f79-401c-b27a-1ddca9ad92cf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Use the activity slides for this lesson to introduce students to the concept of Flexbox Children. Use the Speaker Notes below as a guide to explaining what Flex Children are and why you would use them. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Use the activity slides for this lesson to introduce students to the concept of Flexbox Children. Use the Speaker Notes below as a guide to explaining what Flex Children are and why you would use them. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "duration": "5",
         "name": "Introduction to Flex Children"
       },
@@ -4552,7 +4552,7 @@
       "key": "9fc89e43-e4b4-4ca9-955c-3073d1bcbc1b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r flexbox_children_cheat_sheet/6-12-dev-playground/unversioned] handout to the students.\n\n**Transition:** Send students to Code Studio, Lesson 13, Level 1 and have students explore the code.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out the [r flexbox_children_cheat_sheet/6-12-dev-playground/unversioned] handout to the students.\n\n**Transition:** Send students to Code Studio, Lesson 13, Level 1 and have students explore the code.",
         "duration": "25",
         "name": "Div and Flex Practice"
       },
@@ -4576,7 +4576,7 @@
       "key": "e3b546f0-c5fd-4362-9918-daf74845cf31",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the new flex properties?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they noticed or what they noticed about the properties. It is okay if they didn’t figure out exactly what each new property does, as they will learn in the next skill building levels. Some possible discoveries might include:\n* `flex-grow` seems to increase the size of an element\n* `flex-shrink` appears to decrease the size of an element\n* `order` rearranged the items\n   * Students may also wonder why a `-1` put the item at the front while a `1` put the item at the end. This is because the default order value of all items is 0. A negative number will put that to the left of items with a \"0\" value and an item with an order value greater than 0 will be placed to the right of items with a 0 value. This information is already noted in their Cheat Sheet but it may be helpful for students to highlight or circle the information.\n* `align-self` changes the vertical alignment for that one item"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: What did you discover about the new flex properties?\n\n**Discussion Goal**: The goal of this quick discussion is to allow students to share what they noticed or what they noticed about the properties. It is okay if they didn’t figure out exactly what each new property does, as they will learn in the next skill building levels. Some possible discoveries might include:\n* `flex-grow` seems to increase the size of an element\n* `flex-shrink` appears to decrease the size of an element\n* `order` rearranged the items\n   * Students may also wonder why a `-1` put the item at the front while a `1` put the item at the end. This is because the default order value of all items is 0. A negative number will put that to the left of items with a \"0\" value and an item with an order value greater than 0 will be placed to the right of items with a 0 value. This information is already noted in their Cheat Sheet but it may be helpful for students to highlight or circle the information.\n* `align-self` changes the vertical alignment for that one item"
       },
       "seeding_key": {
         "activity_section.key": "e3b546f0-c5fd-4362-9918-daf74845cf31",
@@ -4599,7 +4599,7 @@
       "key": "c4cb672d-d39c-4fc6-b5b7-f061a8b07177",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the “Flex Children Steps” slide to stress establishing a Flex layout in the container before applying Flex Children properties. \n\n**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the “Flex Children Steps” slide to stress establishing a Flex layout in the container before applying Flex Children properties. \n\n**Group**: Group students into pairs for Pair Programming.\n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room."
       },
       "seeding_key": {
         "activity_section.key": "c4cb672d-d39c-4fc6-b5b7-f061a8b07177",
@@ -4666,7 +4666,7 @@
       "key": "1bc75b7f-6656-45ba-8fdc-6bcff2fb9102",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How do Flexbox child properties affect the layout and organization of elements within a webpage?**\n\n**Group:** Place students into groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Pictionary Terms slips already cut up and in containers, blank pieces of paper, and a few markers to each group.",
+        "description": "**Question of the Day: How do Flexbox child properties affect the layout and organization of elements within a webpage?**\n\n**Group:** Place students into groups of 3-4.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Pictionary Terms slips already cut up and in containers, blank pieces of paper, and a few markers to each group.",
         "name": "Flex Property Pictionary",
         "tips": [
           {
@@ -4684,7 +4684,7 @@
       "key": "4f1f3c32-9bae-4ce2-931a-e40fcfcdb7c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “Flex Property Pictionary” slide to help you quickly review the activity's instructions.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Direct students to play the Pictionary activity until the time is up or they go through all of their slips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal Prompt**: How did playing this game with your group help you understand Flexbox properties better?\n\n**Discussion Goal**: This quick reflection aims to highlight the value of collaborative learning and peer interaction. This reflection aims to inform students of how sharing ideas, discussing concepts, and working together (even by playing a game) can enhance their comprehension and problem-solving skills, especially in complex subjects like web design. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Children Cheat Sheet Reference handout in their notebooks if they haven’t done so already. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Use the “Flex Property Pictionary” slide to help you quickly review the activity's instructions.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Direct students to play the Pictionary activity until the time is up or they go through all of their slips.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal Prompt**: How did playing this game with your group help you understand Flexbox properties better?\n\n**Discussion Goal**: This quick reflection aims to highlight the value of collaborative learning and peer interaction. This reflection aims to inform students of how sharing ideas, discussing concepts, and working together (even by playing a game) can enhance their comprehension and problem-solving skills, especially in complex subjects like web design. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Have students include the Flexbox Children Cheat Sheet Reference handout in their notebooks if they haven’t done so already. "
       },
       "seeding_key": {
         "activity_section.key": "4f1f3c32-9bae-4ce2-931a-e40fcfcdb7c6",
@@ -4725,7 +4725,7 @@
       "key": "8cd675ca-528f-4d4d-9681-9ac0d1e8b28a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Use the slide to display the 3 discussion questions:\n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?\n\n**Discussion Goal:** The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug. The following are possible student responses:\n\n* **Common bugs** they may have seen might include:\n  * Spelling errors\n  * Forgetting to link the style sheet\n  * Syntax errors such as forgetting the \".\" in the stylesheet when styling a class\n  * *This will vary from class to class, but most students will have encountered multiple bugs in the chapter.*\n* Things they can do while coding to **make bugs easier to find and fix** might include:\n  * Use proper formatting to help them to read their code\n  * Code small bits at a time and check as they go\n  * Use good naming conventions\n  * *Again, this will vary from class to class.*\n* For **debugging advice**, students may give the following types of advice:\n  * Dispositional advice (\"Don't give up!\", \"Remember that it's normal\")\n  * Recommended resources (\"Ask a friend to look at it\", \"look at the map levels\")\n  * Process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\")\n  * Tools based advice (\"look above where the pink is\", \"use the inspector tool\"). \n  * *Give students time to share their advice, and make sure that they are referencing the Debugging Process.*"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Use the slide to display the 3 discussion questions:\n- What are the top **3** bugs you have seen so far when making web pages? \n- What are **2** things you can do while coding to make bugs easier to find and fix? \n- What is the **1** piece of advice you'd give someone who has a bug?\n\n**Discussion Goal:** The purpose of this discussion is both to normalize debugging and to make sure students start the coding part of the project with some good strategies that will help them to debug. The following are possible student responses:\n\n* **Common bugs** they may have seen might include:\n  * Spelling errors\n  * Forgetting to link the style sheet\n  * Syntax errors such as forgetting the \".\" in the stylesheet when styling a class\n  * *This will vary from class to class, but most students will have encountered multiple bugs in the chapter.*\n* Things they can do while coding to **make bugs easier to find and fix** might include:\n  * Use proper formatting to help them to read their code\n  * Code small bits at a time and check as they go\n  * Use good naming conventions\n  * *Again, this will vary from class to class.*\n* For **debugging advice**, students may give the following types of advice:\n  * Dispositional advice (\"Don't give up!\", \"Remember that it's normal\")\n  * Recommended resources (\"Ask a friend to look at it\", \"look at the map levels\")\n  * Process-based advice (\"describe the bug first, then look for it before you change stuff\", \"look at what's messed up and check the spelling in that part\")\n  * Tools based advice (\"look above where the pink is\", \"use the inspector tool\"). \n  * *Give students time to share their advice, and make sure that they are referencing the Debugging Process.*"
       },
       "seeding_key": {
         "activity_section.key": "8cd675ca-528f-4d4d-9681-9ac0d1e8b28a",
@@ -4747,7 +4747,7 @@
       "key": "6209d882-91ba-4e07-8811-71c1a008b2f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute** Give each student a copy of the Chapter 1 Project Guide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute** Give each student a copy of the Chapter 1 Project Guide.",
         "name": "Final Product for Users ",
         "tips": [
           {
@@ -4765,7 +4765,7 @@
       "key": "7e62f6d7-1080-435a-9192-7e2a8e6d95de",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Project Goals\" slide to go over the goals of this project\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the \"Project Goals\" slide to go over the goals of this project\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4782,7 +4782,7 @@
       "key": "49fd60be-46a8-4f8f-80e5-361ecc1c3840",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></I> **Do This:** Direct students to read over and follow the **Define** step instructions on their project guide, which will be somewhat different depending on the project level you chose. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></I> **Do This:** Direct students to read over and follow the **Define** step instructions on their project guide, which will be somewhat different depending on the project level you chose. \n",
         "name": "Step 1: Define - Define Your User’s Needs"
       },
       "seeding_key": {
@@ -4794,7 +4794,7 @@
       "key": "8de548b0-d958-42f9-8c38-f0b040a5ed0d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in the **Prepare** section information on the project guide to help them plan out the task ahead. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Chpater 1 Project Rubric that corresponds to the project option they are working on. They should have this resource as they are planning so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, ensure that your students are referring to the rubric as they are completing the Prepare section of their project guide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in the **Prepare** section information on the project guide to help them plan out the task ahead. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Chpater 1 Project Rubric that corresponds to the project option they are working on. They should have this resource as they are planning so that they can make sure they meet the requirements of the project.\n\n**Circulate:** As you move around the classroom, ensure that your students are referring to the rubric as they are completing the Prepare section of their project guide",
         "name": "Step 2: Prepare - Design the Page",
         "tips": [
           {
@@ -4825,7 +4825,7 @@
       "key": "ba56a35b-0a86-4194-a762-80ba8293873c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy (or ask students to pull out their copy if they were given one during the previous mini-project) of the Problem-Solving Process with Programming to students. Encourage students to look over the guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Hand out a copy (or ask students to pull out their copy if they were given one during the previous mini-project) of the Problem-Solving Process with Programming to students. Encourage students to look over the guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process graphic"
       },
       "seeding_key": {
         "activity_section.key": "ba56a35b-0a86-4194-a762-80ba8293873c",
@@ -4848,7 +4848,7 @@
       "key": "008fc752-70e2-429a-8170-3768f9a34a59",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to start working on the web page for their user. \n\n**Transition:** Send students to Code Studio Lesson 14. The level they will work on will correspond to the project option you chose for them. \n* If your students are doing project option 1, they will go to Level 1 and pick the option for the user they chose.\n* If your students are doing project option 2, they will go to Level 2 and pick the option for the user they've been working with in previous mini-projects.\n* If your students are doing project option 3, they will go to Level 3  and _complete each_ level a-e.\n\nEnsure students are selecting the correct level for the project option they are working on, Option 1 - Easy, Option 2 - Intermediate, or Option 3 - Challenging. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to start working on the web page for their user. \n\n**Transition:** Send students to Code Studio Lesson 14. The level they will work on will correspond to the project option you chose for them. \n* If your students are doing project option 1, they will go to Level 1 and pick the option for the user they chose.\n* If your students are doing project option 2, they will go to Level 2 and pick the option for the user they've been working with in previous mini-projects.\n* If your students are doing project option 3, they will go to Level 3  and _complete each_ level a-e.\n\nEnsure students are selecting the correct level for the project option they are working on, Option 1 - Easy, Option 2 - Intermediate, or Option 3 - Challenging. ",
         "progression_name": "Chapter 1 Project"
       },
       "seeding_key": {
@@ -4901,7 +4901,7 @@
       "key": "d13c49c2-a549-4654-a3ac-dedf7c0e27ea",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they worked on for their user. They should make sure they have included everything their user needs as well as met the requirements of the project by consulting the project guide and project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to review the page they worked on for their user. They should make sure they have included everything their user needs as well as met the requirements of the project by consulting the project guide and project rubric one last time.\n\n**Circulate:** As you walk around the class, encourage students to refer to the project rubric to ensure they have met all the requirements at a level they are happy with. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -4918,7 +4918,7 @@
       "key": "8973824f-e613-464e-8d71-3e5e3cbb8ba7",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the reflection questions on their project guide. These questions allow students to think about what they liked best about their pages, what was challenging, and what they would do differently next time. You may also want to allow students to formally or informally present their work to the rest of the class.\n",
         "name": "Step 4: Reflect",
         "tips": [
           {
@@ -4947,7 +4947,7 @@
       "key": "3cce9365-5e04-475b-8ba4-40ec62b7c5b0",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/6-12-dev-playground/unversioned] video in the slides.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/6-12-dev-playground/unversioned] video in the slides.\n\n",
         "name": "[OPTIONAL] Publishing Your Website",
         "tips": [
           {
@@ -5085,7 +5085,7 @@
       "key": "73c6d4fe-d9e5-49a4-ab3f-4facead97acc",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r video_teamwork/6-12-dev-playground/unversioned] video in the slides.\n",
+        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the [r video_teamwork/6-12-dev-playground/unversioned] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -5185,7 +5185,7 @@
       "key": "e2534831-4b41-40d3-ad0b-edd3e363e105",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/6-12-dev-playground/unversioned] video in the slides.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/6-12-dev-playground/unversioned] video in the slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "e2534831-4b41-40d3-ad0b-edd3e363e105",
@@ -5415,7 +5415,7 @@
       "key": "85821e62-e4ba-4dd7-8228-4ae5bc72e918",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_search_works/6-12-dev-playground/unversioned] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_search_works/6-12-dev-playground/unversioned] video in the slides.\n",
         "name": " How Search Works\r",
         "progression_name": "Video: How Search Works",
         "tips": [
@@ -5604,7 +5604,7 @@
       "key": "7c72acbb-b98c-46c8-8c17-2cb45056e02b",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -5662,7 +5662,7 @@
       "key": "ed2c335b-3396-4322-af95-49a01700214a",
       "position": 4,
       "properties": {
-        "description": "**Circulate**: As students are exploring the code, walk around to ensure students are discussing with their neighbor. Listen for and give positive affirmations to what students are noticing about the selector of the `<a>` tag. This could include the fact that there is a colon after the `<a>` selector, there are multiple selectors for the `<a>` tag, or noticing what effects different rule sets are having on the hyperlink. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: How can adding these styles impact a user’s experience on a website? \n\n**Discussion Goal**: This quick discussion aims to foster an understanding of how CSS pseudo-classes can enhance user experience and website usability. It aims to make students aware of the practical implications of styling links for aesthetic purposes and improving navigation, accessibility, and overall user engagement on a web page. "
+        "description": "**Circulate**: As students are exploring the code, walk around to ensure students are discussing with their neighbor. Listen for and give positive affirmations to what students are noticing about the selector of the `<a>` tag. This could include the fact that there is a colon after the `<a>` selector, there are multiple selectors for the `<a>` tag, or noticing what effects different rule sets are having on the hyperlink. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: How can adding these styles impact a user’s experience on a website? \n\n**Discussion Goal**: This quick discussion aims to foster an understanding of how CSS pseudo-classes can enhance user experience and website usability. It aims to make students aware of the practical implications of styling links for aesthetic purposes and improving navigation, accessibility, and overall user engagement on a web page. "
       },
       "seeding_key": {
         "activity_section.key": "ed2c335b-3396-4322-af95-49a01700214a",
@@ -5673,7 +5673,7 @@
       "key": "5b448d41-2ad6-414f-8b67-8bdd401327d6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**"
       },
       "seeding_key": {
         "activity_section.key": "5b448d41-2ad6-414f-8b67-8bdd401327d6",
@@ -5697,7 +5697,7 @@
       "key": "369d4744-0e97-4966-b636-26769d11963c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Use the “Link Pseudo-classes” slides to explain the order in which those pseudo-classes must be applied for anchor tags.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Use the “Link Pseudo-classes” slides to explain the order in which those pseudo-classes must be applied for anchor tags.\n",
         "progression_name": "Top Websites",
         "tips": [
           {
@@ -5715,7 +5715,7 @@
       "key": "cd9ae8a4-7414-4f46-80cb-6b77095299d2",
       "position": 3,
       "properties": {
-        "description": "**Group**: Group students into pairs for Pair Programming. \n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room"
+        "description": "**Group**: Group students into pairs for Pair Programming. \n\n**Transition**: Send students back to Code Studio and have students connect with their partner using the “Pair Programming” feature to complete the Skill Building and Practice levels.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Remind students to switch driver and navigator every 3 minutes. You may want to project a digital timer at the front of the room"
       },
       "seeding_key": {
         "activity_section.key": "cd9ae8a4-7414-4f46-80cb-6b77095299d2",
@@ -5782,7 +5782,7 @@
       "key": "23d71cba-4c2d-43f1-afcd-57cc50ca2125",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their CSS Charts in their journals to include the pseudo-classes. \n"
+        "description": "**Question of the Day: What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?**\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Have students update their CSS Charts in their journals to include the pseudo-classes. \n"
       },
       "seeding_key": {
         "activity_section.key": "23d71cba-4c2d-43f1-afcd-57cc50ca2125",
@@ -5793,7 +5793,7 @@
       "key": "cf140876-99a9-4712-84e2-b5f170b90ffe",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: How might you use pseudo-classes in your group’s project to enhance the aesthetics and functionality of your website? \n\n**Discussion Goal**: This quick reflection encourages students to think about the practical application of the concepts they’ve learned. By considering how to incorporate pseudo-classes into their projects, students move from theoretical understanding to practical usage, which is crucial for deep learning and skill retention. It also considers how different pseudo-classes can enhance the aesthetics and functionality of their project, leading to a more engaging and user-friendly end product. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: How might you use pseudo-classes in your group’s project to enhance the aesthetics and functionality of your website? \n\n**Discussion Goal**: This quick reflection encourages students to think about the practical application of the concepts they’ve learned. By considering how to incorporate pseudo-classes into their projects, students move from theoretical understanding to practical usage, which is crucial for deep learning and skill retention. It also considers how different pseudo-classes can enhance the aesthetics and functionality of their project, leading to a more engaging and user-friendly end product. "
       },
       "seeding_key": {
         "activity_section.key": "cf140876-99a9-4712-84e2-b5f170b90ffe",

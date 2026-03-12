@@ -689,7 +689,7 @@
       "key": "00dd6e4f-c617-47b7-8397-93ee7513ec75",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n\n- Why do we write poetry? \n- What are some of your favorite poems from the last lesson? \n- What makes a good poem?\n\n**Discussion Goal:** Encourage students to come up with answers like “poetry is making art with words” or “we write poetry to express a feeling.” While discussing what students like about certain poems, encourage students to talk about the way the poem made them feel or what images came to mind while they read the poem. While discussing what makes a good poem, ask students if poems need to rhyme or be a certain length. Can a good poem make you laugh? Look for answers like “a good poem is one that uses your imagination” or “a good poem makes you feel something.”\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:**\n\n- Why do we write poetry? \n- What are some of your favorite poems from the last lesson? \n- What makes a good poem?\n\n**Discussion Goal:** Encourage students to come up with answers like “poetry is making art with words” or “we write poetry to express a feeling.” While discussing what students like about certain poems, encourage students to talk about the way the poem made them feel or what images came to mind while they read the poem. While discussing what makes a good poem, ask students if poems need to rhyme or be a certain length. Can a good poem make you laugh? Look for answers like “a good poem is one that uses your imagination” or “a good poem makes you feel something.”\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -706,7 +706,7 @@
       "key": "f0f7fe53-cf73-43ad-9105-85adbefa09bd",
       "position": 1,
       "properties": {
-        "description": "###Write Your Own Poem (10 minutes)\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure students have something to write on, like a piece of paper or a document to type into. ",
+        "description": "###Write Your Own Poem (10 minutes)\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Make sure students have something to write on, like a piece of paper or a document to type into. ",
         "name": "Code Your Own Poem",
         "progression_name": "Code Your Own Poem",
         "tips": [
@@ -765,7 +765,7 @@
       "key": "12f1637e-ff75-4a30-b4a0-1489d79c81cd",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 2.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `animate text` block in the last line of code. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 2 and press “Run” to observe what happens. Encourage students to modify parts of the code and press “Run” again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n- What did you notice? \n- What if you change something in the code and press “Run” again?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n\n\n\n",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 2.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `animate text` block in the last line of code. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 2 and press “Run” to observe what happens. Encourage students to modify parts of the code and press “Run” again.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n\n- What did you notice? \n- What if you change something in the code and press “Run” again?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n\n\n\n",
         "progression_name": "Pause"
       },
       "seeding_key": {
@@ -788,7 +788,7 @@
       "key": "7d66b82b-3d10-461e-b79b-c0eeb170215d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the slides for Levels 3 and 4. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the slides for Levels 3 and 4. "
       },
       "seeding_key": {
         "activity_section.key": "7d66b82b-3d10-461e-b79b-c0eeb170215d",
@@ -890,7 +890,7 @@
       "key": "172c1577-869d-4808-be4a-2ffc715316df",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Agenda slide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Agenda slide.",
         "name": "Fill-in-the-Blank Game"
       },
       "seeding_key": {
@@ -914,7 +914,7 @@
       "key": "7409251a-abb5-4b41-a78b-f7e60f3af3f9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Fill-in-the-Blank Game slide. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Fill-in-the-Blank Game slide. "
       },
       "seeding_key": {
         "activity_section.key": "7409251a-abb5-4b41-a78b-f7e60f3af3f9",
@@ -937,7 +937,7 @@
       "key": "6ab857f3-2850-4d90-aab0-a3e1cd25429d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Write students’ responses on the board. Go to the next slide. Write in the nouns above their corresponding labels. Read the new poem together. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would you say is the mood of this poem? What do you notice about how “Noun1” and “Noun2” were used in the new poem?* "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Write students’ responses on the board. Go to the next slide. Write in the nouns above their corresponding labels. Read the new poem together. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What would you say is the mood of this poem? What do you notice about how “Noun1” and “Noun2” were used in the new poem?* "
       },
       "seeding_key": {
         "activity_section.key": "6ab857f3-2850-4d90-aab0-a3e1cd25429d",
@@ -971,7 +971,7 @@
       "key": "8f2ba81d-c2a9-45dd-bc85-4fbd6b28c01d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 1 slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `prompt user` block under `when run` and the variable labeled `word1`. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens. Encourage students to run the code multiple times, choosing different words each time.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- What did you notice? \n- What if you change the word you typed?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Level 1 slide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `prompt user` block under `when run` and the variable labeled `word1`. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens. Encourage students to run the code multiple times, choosing different words each time.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n- What did you notice? \n- What if you change the word you typed?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n",
         "duration": "10",
         "name": "Open-Ended Prompts",
         "progression_name": "Example"
@@ -985,7 +985,7 @@
       "key": "598bbfd7-3125-4aa7-b00a-2160b9a1589d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Variables video and play through the animated slide “How a Variable is Stored.” ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Variables video and play through the animated slide “How a Variable is Stored.” ",
         "duration": "15",
         "name": "Explore Variables",
         "tips": [
@@ -1004,7 +1004,7 @@
       "key": "52d8300a-d571-4d74-a6a5-d25021c5a6cf",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3 and 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. ",
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3 and 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1034,7 +1034,7 @@
       "key": "ad6f4e6e-ab39-4620-8274-9ea7a3c3ffd8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Combining Text & Variables\" video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Combining Text & Variables\" video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
       },
       "seeding_key": {
         "activity_section.key": "ad6f4e6e-ab39-4620-8274-9ea7a3c3ffd8",
@@ -1057,7 +1057,7 @@
       "key": "c2aa08dc-1eef-4658-aec4-8a2c1f10710a",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Walk around the room to help students who are feeling stuck writing their stories. Refer back to the story prompts and have students pick one, then talk out what might happen in that scenario between the two characters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. \n"
+        "description": "**Circulate:** Walk around the room to help students who are feeling stuck writing their stories. Refer back to the story prompts and have students pick one, then talk out what might happen in that scenario between the two characters. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. \n"
       },
       "seeding_key": {
         "activity_section.key": "c2aa08dc-1eef-4658-aec4-8a2c1f10710a",
@@ -1080,7 +1080,7 @@
       "key": "d4171b1a-12d2-4896-8c47-04946948f610",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Make sure students are circling and drawing a box around the correct animals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. "
+        "description": "**Circulate:** Make sure students are circling and drawing a box around the correct animals. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. "
       },
       "seeding_key": {
         "activity_section.key": "d4171b1a-12d2-4896-8c47-04946948f610",
@@ -1114,7 +1114,7 @@
       "key": "7031fbca-0425-4a37-8b3e-4111d2ad290f",
       "position": 12,
       "properties": {
-        "description": "[Optional] \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Share Your App with a Partner” slide. \n\n**Discuss:** Did the user’s new input change the meaning of your story? \n\n**Discussion Goal:** Have students share how the user’s new input might have changed the meaning or mood of their story. If it didn’t, why does the student think that is? \n"
+        "description": "[Optional] \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Share Your App with a Partner” slide. \n\n**Discuss:** Did the user’s new input change the meaning of your story? \n\n**Discussion Goal:** Have students share how the user’s new input might have changed the meaning or mood of their story. If it didn’t, why does the student think that is? \n"
       },
       "seeding_key": {
         "activity_section.key": "7031fbca-0425-4a37-8b3e-4111d2ad290f",
@@ -1125,7 +1125,7 @@
       "key": "292f92f3-b88e-4905-b477-aeffc6647ee4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Wrap Up slide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Wrap Up slide."
       },
       "seeding_key": {
         "activity_section.key": "292f92f3-b88e-4905-b477-aeffc6647ee4",
@@ -1148,7 +1148,7 @@
       "key": "7a15df46-ea99-43a5-969e-eacbb429f001",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Today’s Agenda\" slide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Today’s Agenda\" slide.",
         "name": "Variables Recap"
       },
       "seeding_key": {
@@ -1172,7 +1172,7 @@
       "key": "2d7b0df5-37c8-4a98-af7c-4ecc333e3c98",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Vocabulary Refresh” slide. \n\n**Do This:** Ask for a volunteer to read the vocabulary words on the slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Variables\" slide.\n\n**Do This:** Ask for a volunteer to read the variables slide and play the animation while the student is reading. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *How is a variable like a container? How is a variable like something else we have in class?* \n\n**Discussion Goal:** Students should say that a variable is like a container because variables can store information like a name or a number. Encourage students to make connections between variables and other everyday objects that can be found in class. Perhaps you have a homework collection tray. The tray is like a variable and the homework is the information stored in the variable. Perhaps you have a place on your board that you put each day’s agenda. The word “Agenda” is the variable label and the description of today’s agenda is the information stored inside the variable. The name of the variable matters; it should reflect what type of information is stored in the variable. \n\n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Vocabulary Refresh” slide. \n\n**Do This:** Ask for a volunteer to read the vocabulary words on the slide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Variables\" slide.\n\n**Do This:** Ask for a volunteer to read the variables slide and play the animation while the student is reading. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:**  *How is a variable like a container? How is a variable like something else we have in class?* \n\n**Discussion Goal:** Students should say that a variable is like a container because variables can store information like a name or a number. Encourage students to make connections between variables and other everyday objects that can be found in class. Perhaps you have a homework collection tray. The tray is like a variable and the homework is the information stored in the variable. Perhaps you have a place on your board that you put each day’s agenda. The word “Agenda” is the variable label and the description of today’s agenda is the information stored inside the variable. The name of the variable matters; it should reflect what type of information is stored in the variable. \n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1189,7 +1189,7 @@
       "key": "c9eec257-c8a8-4e23-bd35-68ec46098450",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Distribute one handout per student. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Plan Your Poem Generator” slide. \n",
+        "description": "**Do This:** Distribute one handout per student. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Plan Your Poem Generator” slide. \n",
         "duration": "8",
         "name": "Plan Your Poem Generator"
       },
@@ -1214,7 +1214,7 @@
       "key": "1a152574-efa4-40db-a789-178257929e7b",
       "position": 3,
       "properties": {
-        "description": "**Circulate:** Walk around the room to check that students are choosing any word that is not a conjunction or article. Encourage students to imagine what a user might replace their blank space. If students are happy with the scenario, they can move on to the next word. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show the “Part 2: Plan your Poem Generator” slide. \n"
+        "description": "**Circulate:** Walk around the room to check that students are choosing any word that is not a conjunction or article. Encourage students to imagine what a user might replace their blank space. If students are happy with the scenario, they can move on to the next word. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** Show the “Part 2: Plan your Poem Generator” slide. \n"
       },
       "seeding_key": {
         "activity_section.key": "1a152574-efa4-40db-a789-178257929e7b",
@@ -1248,7 +1248,7 @@
       "key": "b9d993b2-45d5-48af-9fc5-a64caa1196ab",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show Level 2 alongside the “Level 2 - Example Program” slide. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** Show Level 2 alongside the “Level 2 - Example Program” slide. ",
         "duration": "5",
         "name": "Example Program"
       },
@@ -1273,7 +1273,7 @@
       "key": "141cd404-becc-4e8f-a3ad-1db6eb0b41db",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Ask students to look at the code on the slide and answer the following question:\n- *What do you predict will happen in this program when it is run?*\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the variable labels and where the variable is used throughout the example. Write students’ predictions on the board.\n\n**Do This:** Press “Run” and ask for volunteers to give answers to each prompt. Play the example program 2-3 times as a class and read each new iteration of the poem out loud. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** Ask students to look at the code on the slide and answer the following question:\n- *What do you predict will happen in this program when it is run?*\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the variable labels and where the variable is used throughout the example. Write students’ predictions on the board.\n\n**Do This:** Press “Run” and ask for volunteers to give answers to each prompt. Play the example program 2-3 times as a class and read each new iteration of the poem out loud. \n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1285,7 +1285,7 @@
       "key": "ea6fb562-19ae-4240-9336-d9bafccec32d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** “Planning Your Poem Generator Video” slide to the class and show the video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the “Levels 3, 4, 5, 6  - Your Turn” slide. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** “Planning Your Poem Generator Video” slide to the class and show the video. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Show the “Levels 3, 4, 5, 6  - Your Turn” slide. \n",
         "duration": "17",
         "name": "Your Turn"
       },
@@ -1310,7 +1310,7 @@
       "key": "e29310fe-b756-479c-85f8-21fd7ddfcd45",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n**Circulate:** As you walk around the room, ask students to check off tasks as they complete them. Encourage students to check their code by clicking “Run” and interacting with their program. \n\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n**Circulate:** As you walk around the room, ask students to check off tasks as they complete them. Encourage students to check their code by clicking “Run” and interacting with their program. \n\n\n",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -1346,7 +1346,7 @@
       "key": "d36280b4-0bec-4778-afe9-221bc5ffa8c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Share Out” slide. \n\n**Do This:** Ask for a volunteer to share their program with the class. Pull up their project and play through it as a whole class, asking other students to answer each prompt. \n\n**Discuss:** *What did you notice about the words the user chose?*\n\n**Discussion Goal:** Encourage students to talk about the feeling or mood the new poem has with the random words scattered throughout the poem. *Does the poem make sense? What feeling did you have after reading that poem?* \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 2: Share Out” slide. \n\n**Do This:** Ask the poem’s author to read the original poem. \n\n**Discuss:** Compare and contrast the mood of the original poem with the new version of the poem. \n\n**Discussion Goal:** Students should come to the conclusion that the new version of the poem might be very different from the original poem. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Share Out” slide. \n\n**Do This:** Ask for a volunteer to share their program with the class. Pull up their project and play through it as a whole class, asking other students to answer each prompt. \n\n**Discuss:** *What did you notice about the words the user chose?*\n\n**Discussion Goal:** Encourage students to talk about the feeling or mood the new poem has with the random words scattered throughout the poem. *Does the poem make sense? What feeling did you have after reading that poem?* \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Part 2: Share Out” slide. \n\n**Do This:** Ask the poem’s author to read the original poem. \n\n**Discuss:** Compare and contrast the mood of the original poem with the new version of the poem. \n\n**Discussion Goal:** Students should come to the conclusion that the new version of the poem might be very different from the original poem. "
       },
       "seeding_key": {
         "activity_section.key": "d36280b4-0bec-4778-afe9-221bc5ffa8c6",
@@ -1369,7 +1369,7 @@
       "key": "7a2f1bb2-7756-4757-aebd-5d1e530e50d6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Final slide",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Final slide",
         "duration": "1",
         "name": "Closing"
       },
@@ -1406,7 +1406,7 @@
       "key": "69bddf9b-be08-4faf-af38-d58a5968ce2c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n\n <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -1418,7 +1418,7 @@
       "key": "53fcdc41-f084-4128-90f1-cae5910ff63b",
       "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n- *What did you notice?* \n- *Why would we want to use a prompt like this one?* \n\n**Discussion Goal:** After playing through the app, encourage students to compare and contrast what they predicted would happen and what actually happened. \n"
+        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:**\n- *What did you notice?* \n- *Why would we want to use a prompt like this one?* \n\n**Discussion Goal:** After playing through the app, encourage students to compare and contrast what they predicted would happen and what actually happened. \n"
       },
       "seeding_key": {
         "activity_section.key": "53fcdc41-f084-4128-90f1-cae5910ff63b",
@@ -1447,7 +1447,7 @@
       "key": "c48d1a6d-dca3-455e-9fba-0082827bc212",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Your Turn\" slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the handout for this lesson. Show the “Plan Your Program” slide on the board."
+        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Your Turn\" slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Distribute the handout for this lesson. Show the “Plan Your Program” slide on the board."
       },
       "seeding_key": {
         "activity_section.key": "c48d1a6d-dca3-455e-9fba-0082827bc212",
@@ -1470,7 +1470,7 @@
       "key": "05f4175b-788a-4a3b-81c7-b6a8995ac940",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 1: Plan Your Program\" slide.\n\n**Do This:** Read the definition of each term. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 1: Plan Your Program\" slide.\n\n**Do This:** Read the definition of each term. "
       },
       "seeding_key": {
         "activity_section.key": "05f4175b-788a-4a3b-81c7-b6a8995ac940",
@@ -1493,7 +1493,7 @@
       "key": "8730c428-dc4b-4ea7-a3e8-c81ee41344e3",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** *Let’s look at the columns right now.* \n- *Do you think the “Option 1” column has words that are synonyms, antonyms, or random words in relation to the words they chose from their poem?*\n- *What about the column labeled “Option 2”?*\n- *What about the column labeled “Option 3”?*\n\n**Discussion Goal:** Have students raise their hands to answer which column has which type of word. They should identify that Option 1 contains antonyms, Option 2 contains synonyms, and Option 3 contains random words. As you go through the columns, reinforce the meaning of “synonym” and “antonym”. For example, you might ask students if they can think of another word that might be a synonym, antonym, or random word for “small”.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 2: Plan Your Program\" slide. Let students double check their work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 3: Plan your Program” slide.\n"
+        "description": "**Discuss:** *Let’s look at the columns right now.* \n- *Do you think the “Option 1” column has words that are synonyms, antonyms, or random words in relation to the words they chose from their poem?*\n- *What about the column labeled “Option 2”?*\n- *What about the column labeled “Option 3”?*\n\n**Discussion Goal:** Have students raise their hands to answer which column has which type of word. They should identify that Option 1 contains antonyms, Option 2 contains synonyms, and Option 3 contains random words. As you go through the columns, reinforce the meaning of “synonym” and “antonym”. For example, you might ask students if they can think of another word that might be a synonym, antonym, or random word for “small”.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 2: Plan Your Program\" slide. Let students double check their work.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 3: Plan your Program” slide.\n"
       },
       "seeding_key": {
         "activity_section.key": "8730c428-dc4b-4ea7-a3e8-c81ee41344e3",
@@ -1547,7 +1547,7 @@
       "key": "3f6f8cb6-b1ac-428f-a0c1-575488a739b5",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Watch the Multiple Choice Prompts video together. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Play through the animated slide titled: How a Variable is Stored. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Watch the Multiple Choice Prompts video together. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Play through the animated slide titled: How a Variable is Stored. "
       },
       "seeding_key": {
         "activity_section.key": "3f6f8cb6-b1ac-428f-a0c1-575488a739b5",
@@ -1570,7 +1570,7 @@
       "key": "b02c9ef2-cfeb-44bf-a7b1-b8dcb66874b7",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete levels 2-4 on their own. Remind students to use their handouts as a guide for level 4. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete levels 2-4 on their own. Remind students to use their handouts as a guide for level 4. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1599,7 +1599,7 @@
       "key": "6828d9cd-bd14-4dc9-a55f-21b518460927",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Level 5\" slide. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Level 5\" slide. \n",
         "duration": "10",
         "name": "Illustrating Your Poem"
       },
@@ -1625,7 +1625,7 @@
       "key": "f10656ac-b10b-4fc6-a663-58262229c4f5",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Circulate:** Have students run their code with you to see where they are in their app development. Encourage students to find key words in their poems that will remain static and to build their illustrations around those key words. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Circulate:** Have students run their code with you to see where they are in their app development. Encourage students to find key words in their poems that will remain static and to build their illustrations around those key words. \n"
       },
       "seeding_key": {
         "activity_section.key": "f10656ac-b10b-4fc6-a663-58262229c4f5",
@@ -1661,7 +1661,7 @@
       "key": "a74b90e1-dd93-4648-b48f-622b150eff50",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Level 1 in Code Studio.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Level 1 in Code Studio.",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -1690,7 +1690,7 @@
       "key": "b735d87b-2eb9-41a0-bd12-b7772667e2f0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Program” slide.\n\n**Discuss:**\n \n- *Read this code out loud.* \n- *How does this code work?* \n- *What does it do in the program?*\n\n**Discussion Goal:** Point out to students the construction of the conditional. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Program” slide.\n\n**Discuss:**\n \n- *Read this code out loud.* \n- *How does this code work?* \n- *What does it do in the program?*\n\n**Discussion Goal:** Point out to students the construction of the conditional. \n"
       },
       "seeding_key": {
         "activity_section.key": "b735d87b-2eb9-41a0-bd12-b7772667e2f0",
@@ -1713,7 +1713,7 @@
       "key": "dd93db98-0118-4985-b971-6f893bd8eeb1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Watch the \"Conditionals\" video together.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Watch the \"Conditionals\" video together.",
         "name": "Conditionals"
       },
       "seeding_key": {
@@ -1737,7 +1737,7 @@
       "key": "05e2e8a1-12b6-4304-9891-4102e85185a4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. ",
         "progression_name": "Practice",
         "tips": [
           {
@@ -1806,7 +1806,7 @@
       "key": "2fe172bb-044f-4b4f-bab5-e41cc6663af9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Today’s Agenda” slide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Today’s Agenda” slide.",
         "name": "Get Ready"
       },
       "seeding_key": {
@@ -1830,7 +1830,7 @@
       "key": "7c73c5df-54ce-42fd-b47d-4f4a7d0c3ca7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -1862,7 +1862,7 @@
       "key": "b4546fa9-1e87-4863-809f-8a4c2c888996",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “What is Constructive Feedback” slide.\n\n**Discuss:**\n- *What is constructive feedback?* \n- *Why is it important to present our poems and get feedback?*\n- *How do you show respect when someone is presenting?*\n\n**Discussion Goal:**  Make sure students understand that constructive feedback is respectful, helpful, and specific. Encourage students to discuss how opportunities for feedback gives them space to reflect on and improve both their poem and their code. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “What is Constructive Feedback” slide.\n\n**Discuss:**\n- *What is constructive feedback?* \n- *Why is it important to present our poems and get feedback?*\n- *How do you show respect when someone is presenting?*\n\n**Discussion Goal:**  Make sure students understand that constructive feedback is respectful, helpful, and specific. Encourage students to discuss how opportunities for feedback gives them space to reflect on and improve both their poem and their code. \n"
       },
       "seeding_key": {
         "activity_section.key": "b4546fa9-1e87-4863-809f-8a4c2c888996",
@@ -1873,7 +1873,7 @@
       "key": "5c2f3ccf-e3a1-4f94-b8e5-cb949816c303",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Modeling Constructive Feedback” slide.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Modeling Constructive Feedback” slide.",
         "duration": "5",
         "name": "Modeling Constructive Feedback"
       },
@@ -1898,7 +1898,7 @@
       "key": "0722b791-464f-44af-9812-93e4740eb876",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the “Level 2 - Example App” slide and open Code Studio - Lesson 7: Level 2 in another window. Keep a copy of the “Share Your App” handout nearby to gesture to where students should fill out their glow, grow, and question.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the “Level 2 - Example App” slide and open Code Studio - Lesson 7: Level 2 in another window. Keep a copy of the “Share Your App” handout nearby to gesture to where students should fill out their glow, grow, and question.",
         "progression_name": "Example"
       },
       "seeding_key": {
@@ -1928,7 +1928,7 @@
       "key": "c815ddde-ab4f-488d-8525-b287d1e0fa2a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” handout per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” handout per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
         "duration": "10",
         "name": "Poetry Pair-Share"
       },
@@ -1982,7 +1982,7 @@
       "key": "4620c3d4-e05b-41e1-98ad-57100cbf8e24",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Poetry Circle” slide\n\n**Do This:** Read the Poetry Circle slide aloud. Ask one student to volunteer to share their poem app with the class. \n\n**Display:** Project the student volunteer’s poem app \n\n**Do This:** Have the rest of the class vote on options to create a new \"class generated\" poem. Have the volunteer student read their original poem aloud. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Class Discussion\" slide.\n\n**Discuss:**\n\n- For the Class Discussion:\n  -  *Which word changed the meaning or feeling of the poem the most?* \n  -  *How did the visuals or the audio contribute to the poem’s mood?* \n\n- For the poet/programmer\n  - *Did the class interact with your app in the way you predicted?*\n  - *Is there anything you still need to debug or change?*\n\n**Discussion Goal:** This is a final wrap-up of the Computer Science and Poetry Unit. Students should understand how specific word choices shape the meaning or tone of a poem. They should also be able to make connections between the content of the poem and the visual and audio effects used.  \n\n[Optional] **Do This:** If you have time, ask for more student volunteers to share their apps and repeat the class discussion. \n\n\n"
+        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Poetry Circle” slide\n\n**Do This:** Read the Poetry Circle slide aloud. Ask one student to volunteer to share their poem app with the class. \n\n**Display:** Project the student volunteer’s poem app \n\n**Do This:** Have the rest of the class vote on options to create a new \"class generated\" poem. Have the volunteer student read their original poem aloud. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the \"Class Discussion\" slide.\n\n**Discuss:**\n\n- For the Class Discussion:\n  -  *Which word changed the meaning or feeling of the poem the most?* \n  -  *How did the visuals or the audio contribute to the poem’s mood?* \n\n- For the poet/programmer\n  - *Did the class interact with your app in the way you predicted?*\n  - *Is there anything you still need to debug or change?*\n\n**Discussion Goal:** This is a final wrap-up of the Computer Science and Poetry Unit. Students should understand how specific word choices shape the meaning or tone of a poem. They should also be able to make connections between the content of the poem and the visual and audio effects used.  \n\n[Optional] **Do This:** If you have time, ask for more student volunteers to share their apps and repeat the class discussion. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4620c3d4-e05b-41e1-98ad-57100cbf8e24",
@@ -1993,7 +1993,7 @@
       "key": "e14ec6d5-f132-4b87-85fc-9ecac1506661",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Celebrate” slide\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the “Celebrate” slide\n",
         "duration": "1",
         "name": "Celebrate"
       },

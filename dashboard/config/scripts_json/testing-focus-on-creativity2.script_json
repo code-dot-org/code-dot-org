@@ -1489,7 +1489,7 @@
       "key": "66e41859-ca3d-4d04-871e-b00181c055d7",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What is the problem you are trying to solve when you do a word search?*\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *What are the different strategies that someone could use for finding words. What are the pros and cons of each strategy?*\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *What is the problem you are trying to solve when you do a word search?*\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *What are the different strategies that someone could use for finding words. What are the pros and cons of each strategy?*\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down"
       },
       "seeding_key": {
         "activity_section.key": "66e41859-ca3d-4d04-871e-b00181c055d7",
@@ -1500,7 +1500,7 @@
       "key": "599f8dcc-f96f-4c7a-9468-baba8a014dd3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1517,7 +1517,7 @@
       "key": "ba02643c-d483-4db9-a746-409b5eb2c29f",
       "position": 8,
       "properties": {
-        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts: \n1) Were you successful in solving this word search problem? How do you know? \n2) What strategy did you pick and how did it work for you?\n3) Did anyone change strategies at any point … why or why not?\n",
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts: \n1) Were you successful in solving this word search problem? How do you know? \n2) What strategy did you pick and how did it work for you?\n3) Did anyone change strategies at any point … why or why not?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1545,7 +1545,7 @@
       "key": "b6d708fd-672c-43cc-b96e-2ad307a9fde7",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n- **Define:** when we put into our own words what the problem of a word search is and what the goal is\n- **Prepare:** the brainstorming of different strategies that could be used to solve a word search\n- **Try:** when we picked a strategy and tried to find the words\n- **Reflect:** when we reflected on how they did at the end",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show [r the_problem_solving_process/csd/2023]  video.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem Solving Process?\n\n**Discuss and Display:** Briefly discuss with students what parts of the warm-up activity they felt fell into each step of the problem-solving process before displaying the example answers in the slides:\n- **Define:** when we put into our own words what the problem of a word search is and what the goal is\n- **Prepare:** the brainstorming of different strategies that could be used to solve a word search\n- **Try:** when we picked a strategy and tried to find the words\n- **Reflect:** when we reflected on how they did at the end",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1606,7 +1606,7 @@
       "key": "441276f1-9eae-4624-9163-c92427c47a53",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use, or sketching out the website\n- **Try:** Creating a basic version of the website that may not have all of the features\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** *Based on what you know about the Problem-Solving Process, what do you think each step could look like when creating a website?*\n\n**Discussion Goal:** Even though students haven't made websites yet, guide students to imagine the steps involved from having the first inspiration for a website to having it created. Some ideas may include:\n- **Define:** Deciding what you want to make a website about or who you want to make it for\n- **Prepare:** Looking at similar websites and deciding what kinds of colors or images you want to use, or sketching out the website\n- **Try:** Creating a basic version of the website that may not have all of the features\n- **Reflect:** Showing it to friends to get feedback\n\nAs students finish discussing, transition to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "441276f1-9eae-4624-9163-c92427c47a53",
@@ -1802,7 +1802,7 @@
       "key": "96cfc16b-6687-4273-bba2-8b8fb0c2f332",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _How could you explain to someone over the phone how to draw the following web page?_"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _How could you explain to someone over the phone how to draw the following web page?_"
       },
       "seeding_key": {
         "activity_section.key": "96cfc16b-6687-4273-bba2-8b8fb0c2f332",
@@ -1858,7 +1858,7 @@
       "key": "fcc486bd-1d35-4c18-8874-a456d67cdbec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Put students into pairs.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Put students into pairs.",
         "name": "Pair Programming"
       },
       "seeding_key": {
@@ -1882,7 +1882,7 @@
       "key": "2b915c79-863a-428b-9232-9a4f23b4911d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r pair_programming/csd/2023] video in the slides.\n\n**Questions to consider with the video:**\n- Why do you think professional programmers use pair programming?\n- How do you think pair programming will help you to program better?\n\n**Discussion Goal:** The goals of this discussion center less around particular answers to this question and more around promoting positive attitudes toward pair programming. As students discuss its potential benefits, make sure they understand that this is an industry-standard practice, not just something fun to do.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2b915c79-863a-428b-9232-9a4f23b4911d",
@@ -1930,7 +1930,7 @@
       "key": "6152fd2f-d4f0-4db9-ab38-9c4a91d5958c",
       "position": 7,
       "properties": {
-        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide to guide your students on how to connect Pair Programming in Code Studio. \n\n* Choose one partner to log into Code Studio.\n* Click on your name, and choose \"Pair Programming from the menu.\n* Choose your partner's name from the list.\n* Start coding as a team!\n\n**Do This:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
+        "description": "**Transition:** Have pairs go to Code Studio and both log in using the \"Pair Programming\" feature. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide to guide your students on how to connect Pair Programming in Code Studio. \n\n* Choose one partner to log into Code Studio.\n* Click on your name, and choose \"Pair Programming from the menu.\n* Choose your partner's name from the list.\n* Start coding as a team!\n\n**Do This:** Remind students to switch driver and navigator every three minutes.  You may want to project a digital timer at the front of the room.",
         "name": "Exploring HTML ",
         "progression_name": "Exploration",
         "tips": [
@@ -1960,7 +1960,7 @@
       "key": "f44b9ff6-6241-4155-8c0f-8e36fffa6dd0",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/tess-testing-focus-on-creativity/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_intro_to_web_lab_part_1/tess-testing-focus-on-creativity/2023] video in the slides.\n\n**Question to consider with the video:**\n- What are the different parts of Web Lab, and what are they used for?\n\n**Discussion Goals:**\nWhile there are no broad learning goals for this video, students should understand that the instructions for Web Lab levels appear in the wide panel at the top, and the bottom three panels, from left to right, include the list of files that they are working on, the area where they type in their code, and the area where they see the results of their code. For now, they do not need to worry about every button, as they will be explained later, but they should understand that the inspector tool helps them to link parts of the web page with code that created them, and the refresh and save button allows them to update their webpage if it does not automatically update when they change the code.\n",
         "progression_name": "Video: Intro to Web Lab - Part 1"
       },
       "seeding_key": {
@@ -1972,7 +1972,7 @@
       "key": "e6729135-e5c9-4be1-9b47-7000bb52dfaf",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
         "progression_name": "Exploration",
         "tips": [
           {
@@ -2001,7 +2001,7 @@
       "key": "829c8d7b-a5f6-4b17-be03-b4d0ec1aaab3",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/tess-testing-focus-on-creativity/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_web_lab_part_2/tess-testing-focus-on-creativity/2023] video in the slides\n\n**Questions to consider with the video:**\n- Why are HTML tags useful?\n- What does the paragraph tag do?\n\n**Discussion Goals**: As students discuss HTML tags, make sure they understand that HTML tags are used to structure, or organize, content on the screen. Talking about the organization, structure, or role of the content in the page (heading, paragraph, list, etc.) is more accurate than talking about specific aspects of its appearance (such as size or spacing).\n\nFor the second prompt, there's a direct answer: the paragraph tag separates text into paragraphs. You may want to follow up this question by asking students how they think a web browser for the blind might deal with paragraphs. For example, while sighted people may use spacing and new lines to separate out paragraphs, what should a screen reader do?\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n- HTML - Hypertext Markup Language, a language used to create web pages\n- HTML Element - A piece of a website, marked by a start tag and often closed with an end tag\n- HTML Tag - The special set of characters that indicates the start and end of an HTML element and that element's type\n",
         "progression_name": "Video: Intro to Web Lab - Part 2"
       },
       "seeding_key": {
@@ -2013,7 +2013,7 @@
       "key": "d02b5ade-ab7b-464c-939b-0c4ca750e446",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio",
         "progression_name": "Skill Building",
         "tips": [
           {
@@ -2178,7 +2178,7 @@
       "key": "b8895683-34b0-44bc-a7a8-d1941f792822",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Yesterday, you learned about HTML, the language of the World Wide Web. HTML uses tags to structure content on web pages.  Individually, think of as many tags as you remember and what they do.\n    \nGive students a few minutes to think of as many tags as they can."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Yesterday, you learned about HTML, the language of the World Wide Web. HTML uses tags to structure content on web pages.  Individually, think of as many tags as you remember and what they do.\n    \nGive students a few minutes to think of as many tags as they can."
       },
       "seeding_key": {
         "activity_section.key": "b8895683-34b0-44bc-a7a8-d1941f792822",
@@ -2201,7 +2201,7 @@
       "key": "915070c4-033c-4e61-8c00-61b63fc2690f",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** Pairs should discuss and share with one another the HTML tags they can remember and start record their ideas on the HTML Tag Chart. \n\n**Discussion Goal:** The goal of this discussion is to review the tags that students saw in the previous lesson. These include:\n\n* `<!DOCTYPE html>`\n* `<html>`\n* `<head>`\n* `<body>`\n* `<p>`\n\nAfterward, ask students to share the tags they came up with along with each tag's description. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide with the HTML Tag Chart table to help students ensure they documented all tags needed at this point along with their descriptions. \n\n`<!DOCTYPE html>` - Tells the computer that this is a document written in HTML - No closing tag\n\n`<html>` - Indicates the beginning of your code written in HTML - `</html>`\n\n`<head>` - Contains information (sometimes called \"metadata\") about your web page - `</head>`\n\n`<body>` - Contains all the main content of your web page - `</body>`\n\n`<p>` - Defines a paragraph - `</p>`\n\nAs you go through the tags, highlight how working together allowed the students to make their lists more comprehensive.",
+        "description": "**Discuss:** Pairs should discuss and share with one another the HTML tags they can remember and start record their ideas on the HTML Tag Chart. \n\n**Discussion Goal:** The goal of this discussion is to review the tags that students saw in the previous lesson. These include:\n\n* `<!DOCTYPE html>`\n* `<html>`\n* `<head>`\n* `<body>`\n* `<p>`\n\nAfterward, ask students to share the tags they came up with along with each tag's description. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide with the HTML Tag Chart table to help students ensure they documented all tags needed at this point along with their descriptions. \n\n`<!DOCTYPE html>` - Tells the computer that this is a document written in HTML - No closing tag\n\n`<html>` - Indicates the beginning of your code written in HTML - `</html>`\n\n`<head>` - Contains information (sometimes called \"metadata\") about your web page - `</head>`\n\n`<body>` - Contains all the main content of your web page - `</body>`\n\n`<p>` - Defines a paragraph - `</p>`\n\nAs you go through the tags, highlight how working together allowed the students to make their lists more comprehensive.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2314,7 +2314,7 @@
       "key": "badfd076-4082-4a7c-80f0-4464112427b0",
       "position": 6,
       "properties": {
-        "description": "**Transition:** Have your students pause programming and bring the class back together at this point in order to add heading tags to their HTML Tag Chart.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different heading tags? Which one would we use for web page titles? What are the others for?\n\n**Discussion Goal:** Students should be able to identify six different heading tags, from `<h1>` to `<h6>`. In addition, students should understand that the `<h1>` tag is the largest heading tag, typically used for the main web page title while the others are used for subtitles throughout a web page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to help students add heading tags to their HTML Tag Chart.\n\n`<h1>` - Largest heading tag, typically used for web page titles - `</h1>`\n\n`<h2>` to `<h6>` - Heading tags, typically used for subtitles - `</h2>` to `</h6>`"
+        "description": "**Transition:** Have your students pause programming and bring the class back together at this point in order to add heading tags to their HTML Tag Chart.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What are the different heading tags? Which one would we use for web page titles? What are the others for?\n\n**Discussion Goal:** Students should be able to identify six different heading tags, from `<h1>` to `<h6>`. In addition, students should understand that the `<h1>` tag is the largest heading tag, typically used for the main web page title while the others are used for subtitles throughout a web page.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slides and the remarks below to help students add heading tags to their HTML Tag Chart.\n\n`<h1>` - Largest heading tag, typically used for web page titles - `</h1>`\n\n`<h2>` to `<h6>` - Heading tags, typically used for subtitles - `</h2>` to `</h6>`"
       },
       "seeding_key": {
         "activity_section.key": "badfd076-4082-4a7c-80f0-4464112427b0",
@@ -2325,7 +2325,7 @@
       "key": "e18454a5-7b15-454c-afeb-6b97ccd2dc07",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> It is important to remember and get down in our HTML chart that heading tags, `<h1>` through `<h6>` are used any time we have a title or a subtitle. `<h1>` is normally used for the webpage title, while `<h2>` to `<h6>` are used for subtitles on webpages. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> It is important to remember and get down in our HTML chart that heading tags, `<h1>` through `<h6>` are used any time we have a title or a subtitle. `<h1>` is normally used for the webpage title, while `<h2>` to `<h6>` are used for subtitles on webpages. ",
         "remarks": true
       },
       "seeding_key": {
@@ -2337,7 +2337,7 @@
       "key": "c65e3df4-d35b-4ebc-b5b2-b300abed3a55",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* What do \"ul\" and \"li\" mean?\n* Why are there multiple `<li>` elements?\n* Why does the `<ul>` tag not seem to do anything? \n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* The `<li>` tag is being used again\n* `<ol>` is being used instead of `<ul>`\n* This time a numbered list was made\n* There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example \n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, *What do you wonder*, for the second example may again vary but could include: \n\n* What does \"ol\" mean?\n* Why did this example make a numbered list?\n* Why are both examples using the `<li>` tag?\n* Why does making a list involve two different HTML tags? \n\n**Discussion Goal:** Use student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* To make an HTML list, they need both tags - the tag indicating the type of list they want and the tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** When might someone use a list?\n\n  - *Think about times when you have made lists ... Why did you make the list? What was the list for? What type of stuff was in your list(s)?*\n\nKeep track of the different types of lists students identify.\n\n**Discussion Goal:** There are many possible answers. Examples could include a **bulleted** list used to make a grocery list and a **numbered** list used to list your favorite movies or the steps in a recipe.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the first example of an HTML list and the result. Ask the students *\"What do you notice? What do you wonder?\"* \n\n**Discussion Goals:** Student responses to the first prompt, *What do you notice,* may vary but could include: \n\n* *There are two new tags - `<ul>` and `<li>`*\n* *The result is a bulleted list*\n* *The closing `<ul>` tag comes after all of the `<li>` tags*\n\nStudent responses to the second prompt, *What do you wonder,* may also vary but could include: \n\n* What do \"ul\" and \"li\" mean?\n* Why are there multiple `<li>` elements?\n* Why does the `<ul>` tag not seem to do anything? \n\n*It is important to note that this prompt is purposefully open-ended which could result in unexpected student responses, which is okay.*\n\n**Do This:** Move on to the second example before answering any questions. Allow their *What do you wonder* questions to linger. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the second example of an HTML list and the result. Again, ask the students *What do you notice? What do you wonder?*\n\n**Discussion Goals:** Student responses for the first prompt, *What do you notice*, may again vary but could include:\n\n* The `<li>` tag is being used again\n* `<ol>` is being used instead of `<ul>`\n* This time a numbered list was made\n* There is no content next to the starting `<ol>` tag, similar to the `<ul>` start tag in the first example \n  * This last observation is important to draw out of your students. You may consider sharing with students that it is something *you* noticed if there are no students who volunteer that information. \n\nStudent responses to the second prompt, *What do you wonder*, for the second example may again vary but could include: \n\n* What does \"ol\" mean?\n* Why did this example make a numbered list?\n* Why are both examples using the `<li>` tag?\n* Why does making a list involve two different HTML tags? \n\n**Discussion Goal:** Use student responses from both rounds of *What do you notice? What do you wonder* to guide your discussion, making sure to cover the following key points:\n\n* To make an HTML list, they need both tags - the tag indicating the type of list they want and the tag indicating a list item.\n* The structure of the HTML list element is unlike other HTML elements they have used so far since there is no content that goes right next to the start `<ul>` or `<ol>` tag.\n* Once they have finished listing their items using the `<li>` tag, that is when they will finally use the closing `</ul>` or `</ol>` tag.\n* If they want their list to have a title, they need to use one of the heading tags they just learned about. ",
         "name": "Web Lab: Lists",
         "progression_name": "Skill Building"
       },
@@ -2350,7 +2350,7 @@
       "key": "850fa730-63f6-4e9f-875c-ec2c5117aba0",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the slide to help students add list tags to their HTML Tag Chart. \n\n`<ol>` - Starts an **O**rdered **L**ist - `</ol>`\n\n`<ul>` - Starts an **U**nordered **L**ist - `</ul>`\n\n`<li>` - Actually creates the **l**ist **i**tem - `</li>`\n\n\nHave students continue Pair Programming through the List Skill Building levels. ",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the slide to help students add list tags to their HTML Tag Chart. \n\n`<ol>` - Starts an **O**rdered **L**ist - `</ol>`\n\n`<ul>` - Starts an **U**nordered **L**ist - `</ul>`\n\n`<li>` - Actually creates the **l**ist **i**tem - `</li>`\n\n\nHave students continue Pair Programming through the List Skill Building levels. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2362,7 +2362,7 @@
       "key": "d49dc013-7d1a-419f-9ecf-3186c96baecd",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/tess-testing-focus-on-creativity/2023] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Have your students pause programming and bring the class back together at this point in order to watch the [r video_debugging/tess-testing-focus-on-creativity/2023] video together.\n\n**Questions to consider with the video:**\n- What is debugging?\n- What are the four steps to debugging?\n\n**Discussion Goal:** Students should identify debugging as the process of finding and fixing problems in their code. The four steps of the debugging process are describing the bug, hunting for the bug, trying out small solutions (or changing your code), and documenting what you have learned.\n",
         "progression_name": "Video: Debugging",
         "tips": [
           {
@@ -2432,7 +2432,7 @@
       "key": "4b11edd2-c129-42cd-90dd-f83595bbb4c7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Today, you learned a lot about debugging, which is an important skill for programmers.  What is one way working with a partner helped you to debug today?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Today, you learned a lot about debugging, which is an important skill for programmers.  What is one way working with a partner helped you to debug today?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2704,7 +2704,7 @@
       "key": "b51aef17-8599-4d3a-9f5e-4f48f6ec669f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think of 2-3 websites you have accounts on. What kind of information could someone learn about you by looking on these websites?_\n\nHave students silently brainstorm or journal, then share with a partner, and finally share as a full class. \n\n**Discussion Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves. Based on their responses, create a list of all of the websites that may have their personal information.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think of 2-3 websites you have accounts on. What kind of information could someone learn about you by looking on these websites?_\n\nHave students silently brainstorm or journal, then share with a partner, and finally share as a full class. \n\n**Discussion Goal:** This discussion is not about coming up with a comprehensive list of personal information students may have shared with websites, nor is it to frighten them out of sharing information. The goal is for students to start thinking more critically about when and where they share information about themselves. Based on their responses, create a list of all of the websites that may have their personal information.",
         "name": "Your Digital Footprint\r",
         "tips": [
           {
@@ -2734,7 +2734,7 @@
       "key": "dbce4232-30dd-4726-b445-0f615c0e81c7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day: How can you make sure that your private information stays private?**"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n\n* **Digital Footprint** - The collected information about an individual across multiple websites on the Internet.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day: How can you make sure that your private information stays private?**"
       },
       "seeding_key": {
         "activity_section.key": "dbce4232-30dd-4726-b445-0f615c0e81c7",
@@ -2745,7 +2745,7 @@
       "key": "0772e7e2-85b2-4b9d-8689-32854ba939ed",
       "position": 1,
       "properties": {
-        "description": "**Group:** Decide if you would like to have students complete this activity individually or in groups of 2-3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Social Sleuth activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the overview of the activity guide. Have students read the Sleuthing Online section out loud to get an overview of the activity they are about to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.\n\n",
+        "description": "**Group:** Decide if you would like to have students complete this activity individually or in groups of 2-3\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Social Sleuth activity guide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the overview of the activity guide. Have students read the Sleuthing Online section out loud to get an overview of the activity they are about to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Transition:** Send students to Code Studio.\n\n",
         "name": "Investigating Social Profiles",
         "progression_name": "Social Sleuth"
       },
@@ -2758,7 +2758,7 @@
       "key": "a5512482-24b4-40b1-b9b8-5308575b4e11",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look through all of the provided social media pages on Code Studio. The pages represent three unique individuals, each of whom has an account on three social media platforms. Then have students choose two users they want to investigate.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students look through all of the provided social media pages on Code Studio. The pages represent three unique individuals, each of whom has an account on three social media platforms. Then have students choose two users they want to investigate.",
         "progression_name": "Social Sleuth",
         "tips": [
           {
@@ -2776,7 +2776,7 @@
       "key": "d8986c98-f95f-4d62-8ea6-83533e3c9249",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the different social media pages and record the information they find in the table on their activity guide.\n\n[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Circulate:**  Students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\nMake sure students have dedicated time before the end of class to answer the questions at the end of the activity guide, even if they don’t finish completely sleuthing on the social media websites.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students explore the different social media pages and record the information they find in the table on their activity guide.\n\n[pull-right]\n\n![](https://images.code.org/32b1b49c75fd138d75e8901b68f309ca-socialSleuth.png)\n\n[/pull-right]\n\n**Circulate:**  Students will attempt to figure out who the two users are and answer some detailed questions about them. The footprint questions are designed to push students towards combining details from multiple social platforms and understanding that together the profiles represent more detailed information than the users probably intend to reveal about themselves. Some questions may not be answerable for all users or may have different levels of details (full street address for one user, but only a city and state for another).\n\nMake sure students have dedicated time before the end of class to answer the questions at the end of the activity guide, even if they don’t finish completely sleuthing on the social media websites.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2793,7 +2793,7 @@
       "key": "57fe684f-799c-4a01-a98d-2bf9471d70fb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share some of their answers to the last questions on the activity guide\n- What was one piece of information about either of your users that they probably did not want to share?  How was it accidentally shared?\n- Which of the two users do you think was more successful in protecting their privacy?  What made them successful?\n\n**Discussion Goal:** Student answers will vary, and it’s okay to not have a class consensus. Instead, focus on the reasoning and justification students use when explaining their answers. These thoughts will segue into the wrap-up activity where students consider a “checklist” of what should or shouldn’t be shared online."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share some of their answers to the last questions on the activity guide\n- What was one piece of information about either of your users that they probably did not want to share?  How was it accidentally shared?\n- Which of the two users do you think was more successful in protecting their privacy?  What made them successful?\n\n**Discussion Goal:** Student answers will vary, and it’s okay to not have a class consensus. Instead, focus on the reasoning and justification students use when explaining their answers. These thoughts will segue into the wrap-up activity where students consider a “checklist” of what should or shouldn’t be shared online."
       },
       "seeding_key": {
         "activity_section.key": "57fe684f-799c-4a01-a98d-2bf9471d70fb",
@@ -2816,7 +2816,7 @@
       "key": "8aaf8d56-3375-4216-b733-dff9a4ea35d0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online._\n\n**Discussion Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\n\n* Could someone identify me with this information?: for example name, address, phone number, etc.\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\n\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _With your elbow partner, come up with a checklist that you can use to determine what should, and shouldn't, be posted online._\n\n**Discussion Goal:** Use this discussion to create a lasting checklist of best practices for when publishing information online. Possible checks include:\n\n* Could someone identify me with this information?: for example name, address, phone number, etc.\n* Do I want everyone to see this?: Don't publish anything you don't want to possibly be published to the world.\n* Do I want this to be permanent?: You lose control of information once it's published and it could be around for your entire life.\n\nStudents' lists may be different but should cover these principles and additional ones they saw in today's lesson."
       },
       "seeding_key": {
         "activity_section.key": "8aaf8d56-3375-4216-b733-dff9a4ea35d0",
@@ -2851,7 +2851,7 @@
       "key": "9c593868-cf94-494c-a1ae-f539ae5b96a6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Check out the web page on Code Studio. If you wanted to create a page like this, what do you already know how to do? What do you still need to learn how to do?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Check out the web page on Code Studio. If you wanted to create a page like this, what do you already know how to do? What do you still need to learn how to do?"
       },
       "seeding_key": {
         "activity_section.key": "9c593868-cf94-494c-a1ae-f539ae5b96a6",
@@ -2932,7 +2932,7 @@
       "key": "66ddf9b2-2206-4023-a613-81b01af3eb57",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/tess-testing-focus-on-creativity/2023] video in the slides and discuss the CSS video as a class.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/tess-testing-focus-on-creativity/2023] video in the slides and discuss the CSS video as a class.\n"
       },
       "seeding_key": {
         "activity_section.key": "66ddf9b2-2206-4023-a613-81b01af3eb57",
@@ -2960,7 +2960,7 @@
       "key": "e9081f02-d639-46b1-a017-4c4f934edb42",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
       },
       "seeding_key": {
         "activity_section.key": "e9081f02-d639-46b1-a017-4c4f934edb42",
@@ -2988,7 +2988,7 @@
       "key": "c1fe24d2-f1cd-4176-bcf0-bf878c7846ce",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/tess-testing-focus-on-creativity/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/tess-testing-focus-on-creativity/2023] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.\n",
         "progression_name": "Video: Intro to CSS - Part 2"
       },
       "seeding_key": {
@@ -3057,7 +3057,7 @@
       "key": "dfb0b598-8b19-4506-9f45-4384ce092bd9",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -3103,7 +3103,7 @@
       "key": "426a9ac9-e19c-4181-ad97-44bebb9213a2",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their journals or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
       },
       "seeding_key": {
         "activity_section.key": "426a9ac9-e19c-4181-ad97-44bebb9213a2",
@@ -3698,7 +3698,7 @@
       "key": "99b8ae0c-5ddd-4359-994b-1786cc05861f",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -4080,7 +4080,7 @@
       "key": "062c8a2c-6897-4997-9bb9-b9045de56f58",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
+        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
       },
       "seeding_key": {
         "activity_section.key": "062c8a2c-6897-4997-9bb9-b9045de56f58",
@@ -4310,7 +4310,7 @@
       "key": "a5061107-e696-481b-a8b5-8b6ec776621e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/tess-testing-focus-on-creativity/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r publishing_your_website/tess-testing-focus-on-creativity/2023] video in the slides.\n\n**Questions to Consider with Video:**\n- What do you think your responsibilities are as a website publisher?\n- Why might you want to see the code or remix someone else's site?\n\n**Discussion Goal:** The video content is fairly straightforward, but this is your last check-in with students before they publish, so it's a good time to make sure they have fully thought through the implications of publishing to the entire world. They should make sure that they are not sharing any sensitive information, and that they have the rights to use all the content on the page.\n\nIn addition, as they began to share, they should also think about how they respect the work of other website publishers, in particular their classmates. You may want to take some time to establish classroom norms around how they talk about and give feedback on their classmates' sites, as well as guidelines for using code that others have written.\n",
         "name": "Video: Publishing Your Website"
       },
       "seeding_key": {
@@ -4723,7 +4723,7 @@
       "key": "8caa5073-b497-46cf-bea0-7c23a7c27bc0",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_teamwork/tess-testing-focus-on-creativity/2023] video in the slides.\n"
+        "description": "**Group:** Place students in their project groups.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_teamwork/tess-testing-focus-on-creativity/2023] video in the slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "8caa5073-b497-46cf-bea0-7c23a7c27bc0",
@@ -4817,7 +4817,7 @@
       "key": "cbbfcaef-c3ee-4435-8f02-3116dce6ffc6",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/tess-testing-focus-on-creativity/2023] video in the slides.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_managing_disagreement/tess-testing-focus-on-creativity/2023] video in the slides.\n"
       },
       "seeding_key": {
         "activity_section.key": "cbbfcaef-c3ee-4435-8f02-3116dce6ffc6",
@@ -5047,7 +5047,7 @@
       "key": "963bd69c-1eef-4d74-a201-fee9b2ffa94d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_search_works/tess-testing-focus-on-creativity/2023] video in the slides.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r how_search_works/tess-testing-focus-on-creativity/2023] video in the slides.\n",
         "name": " How Search Works\r",
         "progression_name": "Video: How Search Works"
       },
@@ -5553,7 +5553,7 @@
       "key": "cb327301-ff10-461c-965b-2818f6318e9a",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
+        "description": "**Question of the Day: How can we combine several different web pages into one website?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This**: Have students update their HTML Tags chart in their journals to include the hyperlink tag and its attribute.\n\n**Prompt:**  Today, you learned how to link pages, which will help your team work together to build one website.  Besides all linking to each other, what else will help all your pages feel like a single site?",
         "name": "Journal\r"
       },
       "seeding_key": {

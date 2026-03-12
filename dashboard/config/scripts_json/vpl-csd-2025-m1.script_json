@@ -381,7 +381,7 @@
       "key": "d9c20013-5fd9-43dc-ba97-f0c1e76752df",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
+        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -455,7 +455,7 @@
       "key": "f0841501-7aaf-494b-9fc8-2f19f6548d30",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
+        "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
@@ -529,7 +529,7 @@
       "key": "0c85d9fb-9e43-44db-9839-f0e914efc9c5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_1/vpl-csd/2025] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_1/vpl-csd/2025] video in the slides.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
         "tips": [
           {
             "type": "teachingTip",

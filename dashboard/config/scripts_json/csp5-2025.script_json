@@ -701,7 +701,7 @@
       "key": "406605a9-f799-452e-8559-e8bdbfb7fd1f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What types of data visualizations do you know of? Why do we visualize data?*\n\n**Discussion Goal:** Use this discussion to gauge some of the prior knowledge your students hold about data visualizations. Push students to think about how data visualizations help people answer questions, observe patterns, and generate new ideas and questions."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What types of data visualizations do you know of? Why do we visualize data?*\n\n**Discussion Goal:** Use this discussion to gauge some of the prior knowledge your students hold about data visualizations. Push students to think about how data visualizations help people answer questions, observe patterns, and generate new ideas and questions."
       },
       "seeding_key": {
         "activity_section.key": "406605a9-f799-452e-8559-e8bdbfb7fd1f",
@@ -726,7 +726,7 @@
       "key": "18340af3-ebc1-45fb-8e92-3c1fea79cea8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** The graph showing Fast-food restaurants Population 16-19, and Teenage Employment. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder? What might be going on in this graph?*\n\n**Discussion Goal:** Use this discussion to help point out features of the graph like the scale used on the y-axis and the fact that the percentage change is compared with the year 2000. Also, use this discussion to get students started thinking about what is shown in the graph and what outside knowledge they might be bringing in to try and understand what might be going on in this graph."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** The graph showing Fast-food restaurants Population 16-19, and Teenage Employment. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder? What might be going on in this graph?*\n\n**Discussion Goal:** Use this discussion to help point out features of the graph like the scale used on the y-axis and the fact that the percentage change is compared with the year 2000. Also, use this discussion to get students started thinking about what is shown in the graph and what outside knowledge they might be bringing in to try and understand what might be going on in this graph."
       },
       "seeding_key": {
         "activity_section.key": "18340af3-ebc1-45fb-8e92-3c1fea79cea8",
@@ -737,7 +737,7 @@
       "key": "ca0c3377-65ec-4941-9460-803eb6032320",
       "position": 3,
       "properties": {
-        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\n\n* What does the data show?\n* Why might that be the case?\n\nThe \"what\" is the facts of the matter. The percentage of teenagers in the workforce has decreased since 2000. The \"why\" is an informed opinion. Fewer teenagers are working because more are focused on their education and earning scholarships.",
+        "description": "This chart gives us information: a collection of facts and patterns extracted from data. We can use this information to identify trends, make connections and address problems. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> There are two distinctions we need to make when looking at a chart or visualization:\n\n* What does the data show?\n* Why might that be the case?\n\nThe \"what\" is the facts of the matter. The percentage of teenagers in the workforce has decreased since 2000. The \"why\" is an informed opinion. Fewer teenagers are working because more are focused on their education and earning scholarships.",
         "remarks": true,
         "tips": [
           {
@@ -755,7 +755,7 @@
       "key": "99e586ef-d5a4-481b-8f55-d6f3defac57b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Demo:** Demonstrate how to navigate the “What’s Going On in This Graph?” website in front of the class. Show your students the two ways the graphs are sorted (by topic and by type). Then, show them the page for the [“A Fast-Food Problem: Where Have All the Teenagers Gone?”](https://www.nytimes.com/2018/10/09/learning/whats-going-on-in-this-graph-oct-10-2018.html) and walk them through the structure of the page and instruct them just focus on the questions for now. If time allows, you may choose to demo another graph and model stating the What and the Why as you make look at the charts with the class.\n \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In pairs, have students use the “What’s Going On in This Graph?” site to look for “data stories” and have them complete the Activity Guide. Depending on class time, allow students to share their data stories with another group or with the class as a whole.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Demo:** Demonstrate how to navigate the “What’s Going On in This Graph?” website in front of the class. Show your students the two ways the graphs are sorted (by topic and by type). Then, show them the page for the [“A Fast-Food Problem: Where Have All the Teenagers Gone?”](https://www.nytimes.com/2018/10/09/learning/whats-going-on-in-this-graph-oct-10-2018.html) and walk them through the structure of the page and instruct them just focus on the questions for now. If time allows, you may choose to demo another graph and model stating the What and the Why as you make look at the charts with the class.\n \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** In pairs, have students use the “What’s Going On in This Graph?” site to look for “data stories” and have them complete the Activity Guide. Depending on class time, allow students to share their data stories with another group or with the class as a whole.",
         "tips": [
           {
             "type": "teachingTip",
@@ -772,7 +772,7 @@
       "key": "4841416d-2490-4209-beda-b66617861668",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> These two graphs show examples of visualizations that show a correlation between two factors, but it would be pretty hard to make the case that either of these things caused the other. These are some examples that are meant to be silly, but also they show us the importance of separating out the \"What\" from the \"Why\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In this unit we will be making charts to help answer questions:\n\n* *\"I think this visualization tells me this…\"*\n\t* Something is more popular than something else\n\t* Something is more important than something else\n\t* Something has become more or less searched over time\n\n* *\"... but I'm not sure because…\"*\n\t* I don't know exactly how the data was collected\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\n\t* We need more data!\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> As you were determining the **Why** in your data stories, you may have been tempted to draw concrete connections. However, it's important to remember that correlation (similarities, patterns) does not equal causation (this thing caused that thing). There can be any number of reasons why a pattern or interesting data point may appear in a chart - and our job is to make an informed decision while recognizing that there may be multiple factors at play.  Usually additional research with several data sets is necessary to understand the exact nature of the relationship between data. Did this one thing cause another thing to happen? Do more people search for chocolate because they want to give it as a gift, or could there perhaps be another reason?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> These two graphs show examples of visualizations that show a correlation between two factors, but it would be pretty hard to make the case that either of these things caused the other. These are some examples that are meant to be silly, but also they show us the importance of separating out the \"What\" from the \"Why\".\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> In this unit we will be making charts to help answer questions:\n\n* *\"I think this visualization tells me this…\"*\n\t* Something is more popular than something else\n\t* Something is more important than something else\n\t* Something has become more or less searched over time\n\n* *\"... but I'm not sure because…\"*\n\t* I don't know exactly how the data was collected\n\t* This might tell me people searched for green more than red, but it doesn't tell me why they do that or that green is a better color\n\t* We need more data!\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -784,7 +784,7 @@
       "key": "bd0af524-a79d-4e9e-845f-71ae03798959",
       "position": 6,
       "properties": {
-        "description": "When we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\n\nAll of this information is considered **metadata** which is defined as \"data about data\". \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
+        "description": "When we consider datasets, it's helpful to know as much about those datasets as possible. Where did the data come from? How much data is included? When was it collected?\n\nAll of this information is considered **metadata** which is defined as \"data about data\". \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> We can have metadata about any digital data. For example, this picture contains metatdata that tells us the when the picture was created, what the resolution is, and how many people have downloaded it. Datasets can also have metadata that explains more about the information in the dataset. You've seen this in App Lab!",
         "duration": "10",
         "name": "Exploring Metadata",
         "remarks": true
@@ -798,7 +798,7 @@
       "key": "32755470-383a-490c-bf22-48de90dfc06b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is the metadata for the graph you picked for your data story?*\n\n**Discussion Goal:** If students haven’t already found it, point them to the bottom of the page where they found their graph where the source of the data and some other information about it can be found. If students want to dig deeper, most of the graphs have an article associated with them they could read for more context. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What is the metadata for the graph you picked for your data story?*\n\n**Discussion Goal:** If students haven’t already found it, point them to the bottom of the page where they found their graph where the source of the data and some other information about it can be found. If students want to dig deeper, most of the graphs have an article associated with them they could read for more context. \n"
       },
       "seeding_key": {
         "activity_section.key": "32755470-383a-490c-bf22-48de90dfc06b",
@@ -821,7 +821,7 @@
       "key": "e52bfa43-51d0-4ea1-84b7-7fa15cf6a416",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 4 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students navigate to Level 4 on Code Studio where they open the data tab and look at the metadata for a table. Then they should share with a partner where the data comes from and what they can learn from the metadata.",
         "progression_name": "Exploring Metadata",
         "tips": [
           {
@@ -839,7 +839,7 @@
       "key": "14d37737-d346-4f63-b467-09ff0b229507",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following word and definition to their journal: metadata. \n\n---\n\n## Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Google Trends which is a tool that allows you to visualize data about search history across different times and locations.\n\nBelow is an image from Google Trends that plots Cats and Dogs.\nChoose the most accurate description of what this data is actually showing based on what you know about how Google Trends works.\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slide. Students may want to jot down notes in their journals. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Students add the following word and definition to their journal: metadata. \n\n---\n\n## Assessment: Check For Understanding\n    \n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** Google Trends which is a tool that allows you to visualize data about search history across different times and locations.\n\nBelow is an image from Google Trends that plots Cats and Dogs.\nChoose the most accurate description of what this data is actually showing based on what you know about how Google Trends works.\n"
       },
       "seeding_key": {
         "activity_section.key": "14d37737-d346-4f63-b467-09ff0b229507",
@@ -872,7 +872,7 @@
       "key": "c1a22059-085e-4a94-be23-665bf70f45ca",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why do people make visualizations out of data?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should be quick to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Why do people make visualizations out of data?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should be quick to kick off today's activity. Students spent the previous class making visualizations and looking at data sets, but they didn't think about how to make visualizations with the data. Try to quickly guide conversation towards some of the takeaways on the following slide, then move on to the day's activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "c1a22059-085e-4a94-be23-665bf70f45ca",
@@ -893,7 +893,7 @@
       "key": "0496b81a-c43e-4c20-ac3e-8604278020ad",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When looking at the datasets on App Lab, the table format may be familiar to you. You may have seen data layed out and organized in a spreadsheet. Once the data is organized, we can now find trends and patterns. This is where visualizations are useful!\r\n\r\nPeople make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we're going to learn how to make two new types of visualizations.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When looking at the datasets on App Lab, the table format may be familiar to you. You may have seen data layed out and organized in a spreadsheet. Once the data is organized, we can now find trends and patterns. This is where visualizations are useful!\r\n\r\nPeople make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we're going to learn how to make two new types of visualizations.",
         "remarks": true
       },
       "seeding_key": {
@@ -905,7 +905,7 @@
       "key": "57cf8a6e-cb9c-41be-bc2b-56181e9cb169",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide showing the Data Analysis Process. Students will continue to refer to this throughout the unit, including at the end of today's lesson. Simply make students aware of it as a framework and then quickly move on to the main activity."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide showing the Data Analysis Process. Students will continue to refer to this throughout the unit, including at the end of today's lesson. Simply make students aware of it as a framework and then quickly move on to the main activity."
       },
       "seeding_key": {
         "activity_section.key": "57cf8a6e-cb9c-41be-bc2b-56181e9cb169",
@@ -916,7 +916,7 @@
       "key": "f261e80c-e3e6-41b2-9edc-45740258395f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**Watch the video [r data_analysis_process/csp/2025]"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:**Watch the video [r data_analysis_process/csp/2025]"
       },
       "seeding_key": {
         "activity_section.key": "f261e80c-e3e6-41b2-9edc-45740258395f",
@@ -927,7 +927,7 @@
       "key": "70e6ac99-a97b-40bf-9216-2ccdc35db4b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions does this chart answer? Be ready to discuss with a classmate.*\n\nRun a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\n\n* Only question 1 and 3 could be answered by the chart\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing bar charts and how they are used",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which of these questions does this chart answer? Be ready to discuss with a classmate.*\n\nRun a short discussion, asking students to share which of the five questions they believe could be answered with the chart. Students should hopefully notice:\n\n* Only question 1 and 3 could be answered by the chart\n* They may have additional questions about how the chart was created or what it means. Hold those questions for the following slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing bar charts and how they are used",
         "name": "Reading a Bar Chart\r"
       },
       "seeding_key": {
@@ -939,7 +939,7 @@
       "key": "6fb857ae-c139-42e9-a4da-0279d203406f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**Watch the video [r data_visualizer_in_app_lab_-_part_1/csp/2025]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_one_column/csp/2025] ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:**Watch the video [r data_visualizer_in_app_lab_-_part_1/csp/2025]\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_one_column/csp/2025] ideally in digital form.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and recreate the chart they just examined together. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete side one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart they find is useful and answer a pair of discusssions.",
         "name": "Making Bar Charts\r",
         "tips": [
           {
@@ -979,7 +979,7 @@
       "key": "236bc440-7609-49f5-9ea4-657e32256f68",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.*\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.*\n\n* Which of these makes it easier to understand the data? \n* What do you think the \"histogram\" is doing to visualize the data differently?",
         "name": "Reading a Histogram\r"
       },
       "seeding_key": {
@@ -1002,7 +1002,7 @@
       "key": "0df9ae41-5a4b-4769-a32e-fe5f60ec569a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining what a histogram is useful for\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Have students complete side 2 of their activity guide.*"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining what a histogram is useful for\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Have students complete side 2 of their activity guide.*"
       },
       "seeding_key": {
         "activity_section.key": "0df9ae41-5a4b-4769-a32e-fe5f60ec569a",
@@ -1024,7 +1024,7 @@
       "key": "4d2d3117-aa72-4ecd-9138-8d9936e34319",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?*"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which steps of the Data Analysis Process did you see in today's activity? Where did you see them?*"
       },
       "seeding_key": {
         "activity_section.key": "4d2d3117-aa72-4ecd-9138-8d9936e34319",
@@ -1046,7 +1046,7 @@
       "key": "44b84ee6-7ded-419b-a47d-894dd3dae5c6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why would someone make a histogram instead of a bar chart?",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review the key takeaways from the lesson\r\n\r\n---\r\n\r\n## Assessment: Check For Understanding\r\n    \r\n*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** Why would someone make a histogram instead of a bar chart?",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1070,7 +1070,7 @@
       "key": "e305e01f-184c-493a-9496-dac325b2f915",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Set the scene for the first activity."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Set the scene for the first activity."
       },
       "seeding_key": {
         "activity_section.key": "e305e01f-184c-493a-9496-dac325b2f915",
@@ -1104,7 +1104,7 @@
       "key": "67038556-765b-411e-a9f1-700a10a904fe",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With partners, students discuss the following prompts:*\n\n* What problems came up when trying to create these charts?\n* What problems do you see in the data?\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *With partners, students discuss the following prompts:*\n\n* What problems came up when trying to create these charts?\n* What problems do you see in the data?\n\n**Discussion Goal:** Students should point out some issues like `4` and `\"four\"` being charted as different values. \n",
         "progression_name": "Cleaning Data"
       },
       "seeding_key": {
@@ -1126,7 +1126,7 @@
       "key": "bbe3547e-ea36-40db-80da-874db8f7f7a8",
       "position": 4,
       "properties": {
-        "description": "Datasets can bring about challenges, no matter what their size. There can be incomplete data and invalid data. You might want to combine two tables, with inconsistent data. All of this requires data to be cleaned. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When does data need to be cleaned?\n\n* Data is incomplete\n* Data is invalid\n* Multiple tables combined into one\n\nWhat leads to \"messy data\"?\n\n* Users enter in different types of data (\"two\", 2)\n* Users use different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n* Data may have different spellings (\"color\", \"colour\") or inconsistent capitalization (\"spring\", \"Spring\")\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When we clean data, the goal is to make it uniform without changing meaning. \n\nFor example: \"two\" can be changed to 2",
+        "description": "Datasets can bring about challenges, no matter what their size. There can be incomplete data and invalid data. You might want to combine two tables, with inconsistent data. All of this requires data to be cleaned. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When does data need to be cleaned?\n\n* Data is incomplete\n* Data is invalid\n* Multiple tables combined into one\n\nWhat leads to \"messy data\"?\n\n* Users enter in different types of data (\"two\", 2)\n* Users use different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n* Data may have different spellings (\"color\", \"colour\") or inconsistent capitalization (\"spring\", \"Spring\")\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When we clean data, the goal is to make it uniform without changing meaning. \n\nFor example: \"two\" can be changed to 2",
         "remarks": true
       },
       "seeding_key": {
@@ -1138,7 +1138,7 @@
       "key": "275d1de4-f79b-499f-92f8-d070cedaad71",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** With a partner:\n\n* Clean the Student Info table\n* Look for:\n\t* Different types of data (\"two\", 2)\n\t* Different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n\t* Different spellings (\"color\", \"colour\") \n\t* Inconsistent capitalization (\"spring\", \"Spring\")\n* Manually update cells with messy data so they are consistent with other cells, while not changing the meaning of the data. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Once students have finished cleaning their data, they should remake the original charts and compare with others."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** With a partner:\n\n* Clean the Student Info table\n* Look for:\n\t* Different types of data (\"two\", 2)\n\t* Different abbreviations to represent the same information (\"February\", \"Feb\", \"Febr\")\n\t* Different spellings (\"color\", \"colour\") \n\t* Inconsistent capitalization (\"spring\", \"Spring\")\n* Manually update cells with messy data so they are consistent with other cells, while not changing the meaning of the data. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Once students have finished cleaning their data, they should remake the original charts and compare with others."
       },
       "seeding_key": {
         "activity_section.key": "275d1de4-f79b-499f-92f8-d070cedaad71",
@@ -1161,7 +1161,7 @@
       "key": "433e9aab-a835-4585-adef-70939d23382b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data.\n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What if I only wanted to look at a subset of my data? How could I do this? For example: I only want to investigate dogs with long lifespans.*\n\nDiscussion Goal: We are building towards the idea of filtering data.\n\nIn the discussion, students may suggest deleting unwanted rows or creating new tables. Challenge students by asking what they would do if they wanted to look at several different subsets in the same data? Is it reasonable to create a new table for each subset?\n"
       },
       "seeding_key": {
         "activity_section.key": "433e9aab-a835-4585-adef-70939d23382b",
@@ -1185,7 +1185,7 @@
       "key": "c24e8b69-121b-48ce-a43c-1580110e7933",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 2.\n2. Discuss that you want to find out about the peak level of female representation in your state's legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your state's history.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to filter data for the class. \n\n1. Open up Level 2.\n2. Discuss that you want to find out about the peak level of female representation in your state's legislature. What will you filter by? Percentage of Females in Legislature or State? \n3. We will filter by state. This means the data for female state legislators who are from your home state are the only data that will be shown. \n4. Select \"Bar Chart\" and \"Percentage of Females in Legislators\" from the dropdowns. \n5. Discuss what the chart displays: the bar farthest to the right represents the year(s) when female representation in the legislature was at its highest in your state's history.",
         "progression_name": "Filtering Data"
       },
       "seeding_key": {
@@ -1209,7 +1209,7 @@
       "key": "f26f0d2c-b496-4e86-91fc-292119f7c9fe",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Share the Activity Guide with students. Alternatively, they can click on the link in Level 1. This Activity Guide is designed to be used digitally - do not print. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** For the rest of the activity time, students work through the Activity Guide filtering two datasets and answering questions. Students need to copy/paste their charts into the Activity Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Share the Activity Guide with students. Alternatively, they can click on the link in Level 1. This Activity Guide is designed to be used digitally - do not print. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** For the rest of the activity time, students work through the Activity Guide filtering two datasets and answering questions. Students need to copy/paste their charts into the Activity Guide."
       },
       "seeding_key": {
         "activity_section.key": "f26f0d2c-b496-4e86-91fc-292119f7c9fe",
@@ -1231,7 +1231,7 @@
       "key": "2d8bf5c5-a642-4e72-8bd2-0087edf3dcc8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?*\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Why is \"Clean and/or Filter\" an important part of the Data Analysis Process? What are situations when you would filter vs. clean your data?*\n\n**Discussion Goal:** Messy data can lead to confusing charts that could be misinterpreted. Data should be filtered when you want to focus on a subset of the data. Filtering allows you to return to the full dataset if you have unanswered questions. \n"
       },
       "seeding_key": {
         "activity_section.key": "2d8bf5c5-a642-4e72-8bd2-0087edf3dcc8",
@@ -1287,7 +1287,7 @@
       "key": "be75ba36-e9d7-41c9-9d18-b7c71bbebedf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you wanted to know which hour of the day you and your classmates are happiest. What kind of data would you collect? How do you think you'd analyze it?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** This discussion should preview the idea that students will need to collect multiple pieces of information about both the time of day and how happy people are. Beyond highlighting that fact there's no particular direction this conversation needs to go. \n"
       },
       "seeding_key": {
         "activity_section.key": "be75ba36-e9d7-41c9-9d18-b7c71bbebedf",
@@ -1308,7 +1308,7 @@
       "key": "fa13d28f-4b85-49c9-9e86-c47d38005aa0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We just heard a lot of really interesting ideas here and they should make for some fascinating analysis. The main thing I noticed though, is that we need at least two different pieces of information. The time of day, and how happy people are. That means we're going to need to start thinking about ways to analyze more than one column of data. Today we're going to start looking at two different ways to do that",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> We just heard a lot of really interesting ideas here and they should make for some fascinating analysis. The main thing I noticed though, is that we need at least two different pieces of information. The time of day, and how happy people are. That means we're going to need to start thinking about ways to analyze more than one column of data. Today we're going to start looking at two different ways to do that",
         "remarks": true
       },
       "seeding_key": {
@@ -1320,7 +1320,7 @@
       "key": "a50a21cf-e396-48cb-bb98-8cc13eb05d3a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How many \"Herding\" breeds live a maximum of 12 years? What is the most common maximum life span for \"Working\" breeds? Which breed group lives the shortest? Which breed group lives the longest? How do you know? How confident are you in your answers?*",
         "name": "Reading Crosstab Charts"
       },
       "seeding_key": {
@@ -1344,7 +1344,7 @@
       "key": "93054d0a-13f2-410f-9c4b-f6858ad51a8d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the following slide introducing cross tab charts and how they work.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Show the following slide introducing cross tab charts and how they work.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1361,7 +1361,7 @@
       "key": "b960cb35-1b64-4bc4-b644-831e3d058eb8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/RspulOZZTtM)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2025], ideally in digital form.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the video [Data Visualizer in App Lab - Part 2](https://youtu.be/RspulOZZTtM)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** Give students access to [r exploring_two_columns/csp/2025], ideally in digital form.",
         "name": "Making Crosstab Charts",
         "tips": [
           {
@@ -1379,7 +1379,7 @@
       "key": "335be2ec-e75d-47dd-a031-284313aba9a5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and use both the \"Words\" and the \"Favorite Classes\" data sets to complete page 1 of the Activity Guide.\n\n**Discuss:** Optionally have students share their progress and discuss the conclusions they reached on side one of the activity guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and use both the \"Words\" and the \"Favorite Classes\" data sets to complete page 1 of the Activity Guide.\n\n**Discuss:** Optionally have students share their progress and discuss the conclusions they reached on side one of the activity guide."
       },
       "seeding_key": {
         "activity_section.key": "335be2ec-e75d-47dd-a031-284313aba9a5",
@@ -1390,7 +1390,7 @@
       "key": "9f02c106-f333-4391-aae3-1a197fc930c9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Is there a pattern? How can you tell?*",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Is there a pattern? How can you tell?*",
         "name": "Reading Scatter Charts"
       },
       "seeding_key": {
@@ -1413,7 +1413,7 @@
       "key": "405a926f-0b09-429c-9fd8-d47c4cd39d4d",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing scatter charts and how they work."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the following slide introducing scatter charts and how they work."
       },
       "seeding_key": {
         "activity_section.key": "405a926f-0b09-429c-9fd8-d47c4cd39d4d",
@@ -1454,7 +1454,7 @@
       "key": "1bbb1fed-718f-48af-832c-f926cb5cfdff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the three slides of the key takeaways and hit on the following points.\n\n* Students know a lot of different ways to find patterns in data\n* Review the chart showing how the can decide the type of visualization to create\n* Have students record key takeaways in their journal\n\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review the three slides of the key takeaways and hit on the following points.\n\n* Students know a lot of different ways to find patterns in data\n* Review the chart showing how the can decide the type of visualization to create\n* Have students record key takeaways in their journal\n\n",
         "progression_name": "Which Type of Chart?"
       },
       "seeding_key": {
@@ -1478,7 +1478,7 @@
       "key": "0995a051-6cf4-4100-b64d-471d8f3baa44",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner review the data analysis process and for each step talk through:*\n\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *With a partner review the data analysis process and for each step talk through:*\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0995a051-6cf4-4100-b64d-471d8f3baa44",
@@ -1540,7 +1540,7 @@
       "key": "a817c19a-5c3e-49a8-a116-733629a9df8f",
       "position": 3,
       "properties": {
-        "description": "With a partner:\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share*\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
+        "description": "With a partner:\n\n* Choose one of the topics\n* Watch the related videos / listen to the podcasts\n* Take notes and be ready to share responses to the questions on your activity guide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Have members from each topic share the conclusions from their watching and research. Make sure that students from each group have time to share*\n\n* What the topic is\n* The key vocabulary they were responsible for researching\n* How this concept uses or modifies the data analysis process\n* Examples of the problems this technique is being used to solve"
       },
       "seeding_key": {
         "activity_section.key": "a817c19a-5c3e-49a8-a116-733629a9df8f",
@@ -1551,7 +1551,7 @@
       "key": "87c23df9-f77f-4919-8358-01eb4fa5e9ec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review key takeaways on the slides\r\n\r\n---\r\n\r\n## Assessment\r\n    \r\n**Assess:** You can collect and evaluate students' activity guides",
         "progression_name": "Check For Understanding"
       },
       "seeding_key": {
@@ -1563,7 +1563,7 @@
       "key": "e9c9f9f7-5f50-49bd-88fa-bc606ea118ed",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Steer the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How can machines \"learn\"?*\n\nHave students brainstorm silently on their own, then have them share with neighbors, and finally have them share out with the room.\n\n**Discussion Goal:** Based on yesterdays conversations, answers may vary. Steer the discussion towards conversations around the role that humans play in machines learning. It's ok if the discussion here is short - you are setting the stage for the upcoming activity. \n"
       },
       "seeding_key": {
         "activity_section.key": "e9c9f9f7-5f50-49bd-88fa-bc606ea118ed",
@@ -1596,7 +1596,7 @@
       "key": "78c26767-3587-4655-87d7-297f68a27611",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Video:** Play the video \"What is Machine Learning\".",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Video:** Play the video \"What is Machine Learning\".",
         "tips": [
           {
             "type": "teachingTip",
@@ -1625,7 +1625,7 @@
       "key": "3aad0e22-552c-427f-948f-921f76ce3b42",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Levels 2-4 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Levels 2-4 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.",
         "tips": [
           {
             "type": "contentCorner",
@@ -1642,7 +1642,7 @@
       "key": "b0da5d72-b777-451d-bffd-e9268aaf2e0f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How well did A.I. do? How do you think it decided what to include in the ocean?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play the video \"Training Data & Bias\"."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How well did A.I. do? How do you think it decided what to include in the ocean?*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Play the video \"Training Data & Bias\"."
       },
       "seeding_key": {
         "activity_section.key": "b0da5d72-b777-451d-bffd-e9268aaf2e0f",
@@ -1653,7 +1653,7 @@
       "key": "545f451e-baaa-431f-b23e-23fc29a0d9c5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How do you think your training data influenced the results that A.I. produced?*\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How do you think your training data influenced the results that A.I. produced?*\n\n**Discussion Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n"
       },
       "seeding_key": {
         "activity_section.key": "545f451e-baaa-431f-b23e-23fc29a0d9c5",
@@ -1682,7 +1682,7 @@
       "key": "222c5fde-59f4-40f6-b209-c919f00e9216",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 6-7 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Levels 6-7 on Code Studio. Students should spend around five minutes total on these levels. Prompt their thinking with the \"Consider\" on the slide. Here, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed."
       },
       "seeding_key": {
         "activity_section.key": "222c5fde-59f4-40f6-b209-c919f00e9216",
@@ -1693,7 +1693,7 @@
       "key": "8c9e01f4-19c3-498d-bd57-b8272b5194d5",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How could biased data result in problems for artificial intelligence? What are ways to address this?*\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How could biased data result in problems for artificial intelligence? What are ways to address this?*\n\n**Discussion Goal:** At this point, students should have some preliminary thoughts on how biased data leads to problems for artificial intelligence. They may bring up that if the data sets are trained incorrectly, there will be incorrect or misinterpreted conclusions. It can be addressed through diverse training sets. The following video dives into this subject further. \n"
       },
       "seeding_key": {
         "activity_section.key": "8c9e01f4-19c3-498d-bd57-b8272b5194d5",
@@ -1704,7 +1704,7 @@
       "key": "7062cecd-1089-41c4-9d52-0b3edd68227a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussions:** \n\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\n* How could it be used to discriminate against groups of individuals?\n* How can that bias be minimized?"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Play the video \"How I'm fighting bias in algorithms\" with Joy Buolamwini. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discussions:** \n\n* How can computing innovations which make use of Machine Learning reflect existing human bias?\n* How could it be used to discriminate against groups of individuals?\n* How can that bias be minimized?"
       },
       "seeding_key": {
         "activity_section.key": "7062cecd-1089-41c4-9d52-0b3edd68227a",
@@ -1727,7 +1727,7 @@
       "key": "fabdc1a2-2912-426d-8ff4-a8629f4c0671",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Play the video \"Impact on Society\" which recaps the concepts discussed today."
       },
       "seeding_key": {
         "activity_section.key": "fabdc1a2-2912-426d-8ff4-a8629f4c0671",
@@ -1749,7 +1749,7 @@
       "key": "2f0e760c-0c1c-471f-a3ff-16bf1c2f63af",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process do you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Which steps of this process do you think have to be done by humans? Would you be concerned if any of them were automated?*\n\nTime may be running short at this point in the class. Encourage students to share with a neighbor or share out with the room. The conversation should focus around bias.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1800,7 +1800,7 @@
       "key": "fad0ebc5-1861-480b-b05c-948732b593e0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n**Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Think about a time when you shared a picture with your friends or on social media. Have you ever had to crop a photo you shared? How did you decide what to crop out of the picture?*\n\n**Discussion Goal:** Use this discussion to show that users usually have a reason for sharing photos and the focus depends on that reason.  Students will most likely bring up a wide range of examples that can be used to highlight how there isn’t a one size fits all approach to sharing photos and cropping them. "
       },
       "seeding_key": {
         "activity_section.key": "fad0ebc5-1861-480b-b05c-948732b593e0",
@@ -1823,7 +1823,7 @@
       "key": "0e51bdb9-75eb-43b6-88c0-38d871da6255",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n**Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Tell students to use the widget to crop the images as if they were uploading them to a social media account. They can also upload their own images and crop them as well.\n\nPair students up for the discussion. Have them go through the images together and discuss their responses to the questions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Which images were challenging for you to decide how to crop? Which images did you and your partner crop the same? Which images did you and your partner crop differently?\n\n**Discussion Goal:** Use this discussion to highlight the different experiences and perspectives everyone brings to deciding how to crop an image. Direct students to consider not only what they decided to keep in the picture, but also what they decided to crop out of the picture. What happens when we crop something out of a picture? It never gets seen by the audience. Look back at the photos you cropped. What or who got left out? You may choose to guide the class toward describing general characteristics of images that were challenging to crop.\n",
         "duration": "10",
         "name": "Cropping Widget"
       },
@@ -1848,7 +1848,7 @@
       "key": "9ab4b127-20d2-4696-b04d-ade4c97d7598",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** How might the cropping data from our classroom be biased? What are some ways we could address the biases in our data?\n\n**Discussion Goal:** Help students see if this were indeed training a model, bias could arise from a few different places.\n* The limited set of pictures included in the app that are most likely not representative of the photos being shared on social media.\n* The bias of the students themselves. Are teenagers more likely to focus on certain things when cropping? Is this representative of the whole population of social media users?\n",
         "progression_name": "Cropping Widget",
         "tips": [
           {
@@ -1880,7 +1880,7 @@
       "key": "dc692dbd-15dc-4780-8b14-37be92bdf72a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Watch the video [“Are We Automating Racism?”](https://youtu.be/Ok5sKLXqynQ) Watch from 0:00-4:05 and 9:30-13:46."
       },
       "seeding_key": {
         "activity_section.key": "dc692dbd-15dc-4780-8b14-37be92bdf72a",
@@ -1891,7 +1891,7 @@
       "key": "811a5621-51d5-462b-9c39-70750fe99ebd",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> In the video, the primary reporter Jos asks her two colleagues, “So do you think this machine is racist?” We might all have different definitions of the term racism, but for the purposes of this discussion we are going to use this definition of racism - prejudice, discrimination, or antagonism directed against a person or people on the basis of their membership in a particular racial or ethnic group, typically one that is a minority or marginalized.",
         "remarks": true
       },
       "seeding_key": {
@@ -1903,7 +1903,7 @@
       "key": "ba69f8cb-f2f3-43ea-8858-1472622cf9f9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n**Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Using this definition of racism, what aspect(s) of racism did the Twitter cropping algorithm do: prejudice, discrimination, or antagonism?\n\n**Discussion Goal:** Use this discussion to highlight the evidence brought up in the video both from the reporters and the tweets they mention from other users showing how the algorithm was biased or prejudiced towards lighter faces compared with darker faces. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1920,7 +1920,7 @@
       "key": "219c0f37-9b98-4e37-8a82-e0aa24d6e282",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n**Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** How was the Twitter cropping algorithm trained? According to the video, where is a potential source of bias when training similar cropping algorithms?\n\n**Discussion Goal:** The most important thing for students to come away from this discussion with is the fact that the machine is not racist. The algorithm that the programmers wrote is biased towards lighter faces. Use this discussion to ensure students understand how the model used the saliency datasets discussed in the video and how some of those datasets were trained on photo libraries containing images that do not represent the population as a whole.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1937,7 +1937,7 @@
       "key": "e8082376-cc1a-489a-829b-69c34de6c1c0",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** If you were the CEO of Twitter and found evidence of this bias in your cropping algorithm, how would you respond? What steps would you take?\n\nYou may choose to have students share their responses if there is time, otherwise move to reading the article."
       },
       "seeding_key": {
         "activity_section.key": "e8082376-cc1a-489a-829b-69c34de6c1c0",
@@ -1960,7 +1960,7 @@
       "key": "135095b0-db84-4c52-90a6-10ef4b590dc4",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students read the article [“Twitter says its image-cropping algorithm was biased, so it’s ditching it (CNN)”](https://drive.google.com/file/d/1D27tKtB6cE0qbVKh5mcJI7QOQld0Jc0B/view?usp=sharing). After they are finished reading they should mark up the text with the following:\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1977,7 +1977,7 @@
       "key": "d89dffde-e719-4bc4-9eb3-554f165a6b1a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdhry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Have students discuss their reactions to the quotes pulled out from Rumman Chowdhry, a software engineering director for Twitter’s machine learning ethics, transparency, and accountability team. \n* Do you think Twitter’s response was appropriate?\n* What are the risks and potential harms of systems, such as social media platforms like Twitter, becoming too dependent on machine learning?\n"
       },
       "seeding_key": {
         "activity_section.key": "d89dffde-e719-4bc4-9eb3-554f165a6b1a",
@@ -2039,7 +2039,7 @@
       "key": "d2238df8-21d8-4199-8683-6089634c6a1e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Read through the Project Guide as a class. Students are focusing on Page 1 of the guide today, which covers the first three parts of the Data Analysis Process.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Read through the Project Guide as a class. Students are focusing on Page 1 of the guide today, which covers the first three parts of the Data Analysis Process.",
         "progression_name": "Data Story Workspace",
         "tips": [
           {
@@ -2081,7 +2081,7 @@
       "key": "58720329-03b1-4b1b-9d46-be21dcd5e194",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work on Page 2 of the Project Guide that covers the \"New Information\" step of the Data Analysis Process. Encourage students to be thorough in their answers. If they are struggling to answer the prompts, they may want to reconsider their visualization.",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students work on Page 2 of the Project Guide that covers the \"New Information\" step of the Data Analysis Process. Encourage students to be thorough in their answers. If they are struggling to answer the prompts, they may want to reconsider their visualization.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Data Story Workspace"
@@ -2109,7 +2109,7 @@
       "key": "f180eb37-62ce-426e-b8f3-cf0f06003850",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Five in order to generate clues for the students.\n\n---"
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Five in order to generate clues for the students.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "f180eb37-62ce-426e-b8f3-cf0f06003850",
@@ -2120,7 +2120,7 @@
       "key": "736d30c4-6a3e-42e7-aae6-f0b6de37030a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide."
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Review:** Review the rubric\n\n**Do This:** Collected completed Project Guides from students. \n\n---\n\n## Assessment: Project\n    \nAssess using the rubric on the final page of the Project Guide."
       },
       "seeding_key": {
         "activity_section.key": "736d30c4-6a3e-42e7-aae6-f0b6de37030a",
@@ -2142,7 +2142,7 @@
       "key": "5f7bc044-f2c6-40f0-9faa-bd717806e8e6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Administer the Unit 9 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
+        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Administer the Unit 9 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)",
         "progression_name": "Unit Assessment - Data",
         "tips": [
           {
