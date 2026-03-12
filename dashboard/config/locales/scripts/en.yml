@@ -27051,7 +27051,9 @@ en:
           description: ''
           student_description: ''
         self-paced-pl-ai-101-v2-mod4:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Bringing AI to the Classroom
           lesson_groups: {}
           name: self-paced-pl-ai-101-v2-mod4
           title: Module 4, Bringing AI to the Classroom
