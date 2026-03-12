@@ -19,16 +19,16 @@ const generateActionBlocks = tileCount => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent eget risus vitae massa semper aliquam quis mattis quam. Morbi vitae tortor tempus, placerat leo et, suscipit.',
       buttons: [
         {
-          color: 'purple',
+          color: 'primary',
           url: '#',
           text: 'Primary button',
           ariaLabel: 'Aria label goes here',
         },
         {
-          color: 'black',
+          color: 'secondary',
+          variant: 'outlined',
           url: '#',
           text: 'Secondary button',
-          type: 'secondary',
         },
       ],
     });
