@@ -93,11 +93,7 @@ module AichatSafetyHelper
     end
 
     private def client
-      AichatOpenaiResponsesHelper::Client.new(api_key, MODEL)
-    end
-
-    private def api_key
-      @api_key ||= CDO.openai_student_learning_api_key
+      AichatOpenaiResponsesHelper::Client.new(CDO.openai_student_learning_api_key, MODEL)
     end
 
     private def get_safety_system_prompt(level_id)
