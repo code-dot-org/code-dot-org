@@ -3995,21 +3995,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-activities@npm:^0.1.1":
-  version: 0.1.1
-  resolution: "@code-dot-org/ml-activities@npm:0.1.1"
+"@code-dot-org/ml-activities@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@code-dot-org/ml-activities@npm:0.1.2"
   dependencies:
     "@fortawesome/fontawesome-svg-core": "npm:^1.2.25"
     "@fortawesome/free-solid-svg-icons": "npm:^5.11.2"
     "@fortawesome/react-fontawesome": "npm:^0.1.7"
-    messageformat: "npm:^1.1.0"
+    messageformat: "npm:2.3.0"
     react-typist: "npm:^2.0.5"
   peerDependencies:
     lodash: ^4.17.5
     radium: ^0.25.2
     react: ~16.14.0
     react-dom: ~16.14.0
-  checksum: 10/2edc163d0438392b7a86ffafdd927cdc80031f514af0a086ecd49d868c010ccf32085b0debe5b44675a45bf7295192fdf675eab54b5e432874c12348b7a32271
+  checksum: 10/69421679f2ea179eef7d7b993d13ae7a0bf3afe132d1dee6c4dbcd023023517c7150b364b37b7b30c2cc0aa1f07912f7215de7246eb1db7e295318f32233c289
   languageName: node
   linkType: hard
 
@@ -11409,7 +11409,7 @@ __metadata:
     "@code-dot-org/js-interpreter": "npm:1.3.13"
     "@code-dot-org/js-numbers": "npm:0.1.0-cdo.0"
     "@code-dot-org/maze": "npm:2.16.0"
-    "@code-dot-org/ml-activities": "npm:^0.1.1"
+    "@code-dot-org/ml-activities": "npm:0.1.2"
     "@code-dot-org/ml-playground": "npm:0.0.47"
     "@code-dot-org/p5.play": "npm:1.3.21-cdo"
     "@code-dot-org/piskel": "npm:0.13.0-cdo.13"
@@ -17648,20 +17648,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"glob@npm:~7.0.6":
-  version: 7.0.6
-  resolution: "glob@npm:7.0.6"
-  dependencies:
-    fs.realpath: "npm:^1.0.0"
-    inflight: "npm:^1.0.4"
-    inherits: "npm:2"
-    minimatch: "npm:^3.0.2"
-    once: "npm:^1.3.0"
-    path-is-absolute: "npm:^1.0.0"
-  checksum: 10/0c2be5fa9f68b8a15ec409ecf6ada56ff5c681f8957b031010708a490fe4f052ac2721c8817219cccfc86a1964433e46c0cdc16c0e9a4709503cd32c01ba3d4e
-  languageName: node
-  linkType: hard
-
 "glob@npm:~7.1.6":
   version: 7.1.7
   resolution: "glob@npm:7.1.7"
@@ -21945,7 +21931,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"make-plural@npm:^4.1.1, make-plural@npm:^4.3.0":
+"make-plural@npm:^4.3.0":
   version: 4.3.0
   resolution: "make-plural@npm:4.3.0"
   dependencies:
@@ -22280,13 +22266,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"messageformat-parser@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "messageformat-parser@npm:1.1.0"
-  checksum: 10/2db03776d575ae2c9ec566dc2a475352d2bb88478f33ec42cfa62742e3cbd1f83daf37e9d115fa2985e314f04635bb997a32169223dec5ecdfde61399c3f82f7
-  languageName: node
-  linkType: hard
-
 "messageformat-parser@npm:^4.1.2":
   version: 4.1.3
   resolution: "messageformat-parser@npm:4.1.3"
@@ -22302,21 +22281,6 @@ canvg@gabelerner/canvg:
     messageformat-formatters: "npm:^2.0.1"
     messageformat-parser: "npm:^4.1.2"
   checksum: 10/dc13aa63894e5b3b7ed2774de73134abebdbc115b7699c1c68ecae3ad761748498c23f90faf9d199dd80ea96b9f040e60240dd3cc079ec6bcd8dcc1dfffba5bc
-  languageName: node
-  linkType: hard
-
-"messageformat@npm:^1.1.0":
-  version: 1.1.1
-  resolution: "messageformat@npm:1.1.1"
-  dependencies:
-    glob: "npm:~7.0.6"
-    make-plural: "npm:^4.1.1"
-    messageformat-parser: "npm:^1.1.0"
-    nopt: "npm:~3.0.6"
-    reserved-words: "npm:^0.1.2"
-  bin:
-    messageformat: ./bin/messageformat.js
-  checksum: 10/12acf2b043d12de95f9aa012f270a6b8bd2674b4732a015c5bbec769f2507e3ef74595e09cdc323a0946b41bc68005811827a88d2b7a60595a1a3f62924c0000
   languageName: node
   linkType: hard
 
@@ -27222,13 +27186,6 @@ canvg@gabelerner/canvg:
   version: 4.1.7
   resolution: "reselect@npm:4.1.7"
   checksum: 10/2b3b231cb3ec90bf980a51f2af403328b41d9111d089944c13a69461dc23b80ccc3f5f8913bccf1b5a25a1a978925d5fc4f9b66c0463643d8f0a20669cb4a4b6
-  languageName: node
-  linkType: hard
-
-"reserved-words@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "reserved-words@npm:0.1.2"
-  checksum: 10/72e80f71dcde1e2d697e102473ad6d597e1659118836092c63cc4db68a64857f07f509176d239c8675b24f7f03574336bf202a780cc1adb39574e2884d1fd1fa
   languageName: node
   linkType: hard
 
