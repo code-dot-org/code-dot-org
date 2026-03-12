@@ -90,8 +90,8 @@ export const createSketchlabTourSteps = (tour: Tour): StepOptions[] => [
     text: toElement(
       <>
         <p>
-          Choose the PNG option to save your canvas as an image. You'&apos;'ll
-          use this later to share with the AI Tutor.
+          Choose the PNG option to save your canvas as an image. You'll use this
+          later to share with the AI Tutor.
         </p>
         <img
           src="/blockly/media/sketchlab/export-image-dialog.png"

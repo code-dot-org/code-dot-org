@@ -1,11 +1,12 @@
 import {offset} from '@floating-ui/dom';
-import {useEffect, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import experiments from '@cdo/apps/util/experiments';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {createSketchlabTourSteps} from './sketchlabShepherdTourSteps';
 
@@ -37,6 +38,13 @@ const useSketchlabShepherdTour = () => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
+    const tourSeen = tryGetLocalStorage(
+      SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
+      'no'
+    );
+    if (tourSeen === 'yes' || !showShepherdProductTours) {
+      return;
+    }
     const checkToolbarReady = () => {
       const toolbarElements = document.querySelectorAll('label.ToolIcon');
       if (toolbarElements.length > 0) {
@@ -60,7 +68,16 @@ const useSketchlabShepherdTour = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [showShepherdProductTours]);
+
+  const additionalStepOptions = useMemo(
+    () => ({
+      floatingUIOptions: {
+        middleware: [offset(12)],
+      },
+    }),
+    []
+  );
 
   const {tour} = useProductTour({
     getSteps: createSketchlabTourSteps,
@@ -69,11 +86,7 @@ const useSketchlabShepherdTour = () => {
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,
-    additionalStepOptions: {
-      floatingUIOptions: {
-        middleware: [offset(12)],
-      },
-    },
+    additionalStepOptions: additionalStepOptions,
   });
 
   useStartTourWhenAvailable(tour);
