@@ -46,7 +46,7 @@
         "layout": "text-bottom-right"
       },
       {
-        "text": "## Update the JavaScript \n\nThe next step is to make the changes in JavaScript. The old id of `condA` needs to be changed to `orderTotalOver50`.\n",
+        "text": "## Update the JavaScript \n\nThe next step is to make the changes in JavaScript. The old ID of `condA` needs to be changed to `orderTotalOver50`.\n",
         "imageUrl": "https://images.code.org/2dd4f50dd1489413feafbf10bafa2d93-logic check (6).png",
         "key": "pl-aif-2-U5-logic-code-panel-8cc8fc10-86e9-44a8-ab4c-ac51f3e70252",
         "layout": "text-bottom-right"
@@ -84,6 +84,6 @@
     ],
     "name_suffix": "_2025-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-10T19:13:15.270+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-10 19:35:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10T19:13:15.270+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U5-API-Calll-POkemon-panel\\\"\"],\"cloned_from\":\"pl-aif-2-U5-API-Calll-POkemon-panel\"},{\"changed_at\":\"2026-03-10 19:35:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-11 14:23:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>

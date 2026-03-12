@@ -52,7 +52,7 @@ This is the core logic behind interactivity in web apps:
 </div>
 
 <p style="font-size:14pt; clear:both;">
-In other words: <strong>users interact</strong>, the program <strong>updates its internal “memory”</strong>, and the app <strong>shows the result</strong>.
+In other words: <strong>users interact</strong>, the program <strong>updates its internal “memory”</strong>, and the app <strong>shows the result</strong>.<br>
 That loop is what makes a web app feel responsive and “alive.”
 </p>
 
