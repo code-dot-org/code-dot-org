@@ -18,7 +18,6 @@ interface FileIconProps extends AssetData {
   onSelect?: (selected: boolean) => void;
   selected?: boolean;
   canSelect?: boolean;
-  onDelete?: (filename: string) => void;
   showWarnings?: boolean;
 }
 
@@ -31,13 +30,14 @@ const FileIcon: React.FC<FileIconProps> = ({
   onSelect,
   canSelect = true,
   selected,
-  onDelete,
   showWarnings = false,
 }) => {
   const url = `${getFileUrl(filename, levelName)}?${timestamp}`;
   const [pageCount, setPageCount] = useState<number>();
   const [dimensions, setDimensions] = useState<[number, number]>();
-  const [loadingMetadata, setLoadingMetadata] = useState(true);
+  const [loadingMetadata, setLoadingMetadata] = useState(
+    category === 'image' || category === 'pdf'
+  );
 
   useEffect(() => {
     if (filename.endsWith('.pdf')) {
