@@ -19,14 +19,14 @@ async function asyncFetchCustomResources(
   lessonId: number,
   sectionId: number
 ): Promise<Resource[]> {
-  const pararms: Record<string, number> = {
-    unitId: unitId,
-    lessonId: lessonId,
-    sectionId: sectionId,
+  const params: Record<string, string> = {
+    unit_id: unitId.toString(),
+    lesson_id: lessonId.toString(),
+    section_id: sectionId.toString(),
   };
+  const urlParams = new URLSearchParams(params);
   const response = await HttpClient.fetchJson<Resource[]>(
-    `/aidiff_artifacts`,
-    pararms
+    `/aidiff_artifacts?${urlParams}`
   );
   return response.value;
 }
