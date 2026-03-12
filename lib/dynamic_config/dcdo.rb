@@ -66,8 +66,9 @@ class DCDOBase < DynamicConfigBase
       'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
-      'studio-brand-update-enabled': DCDO.get('studio-brand-update-enabled', false),
-      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true)
+      'brand-router-enabled': DCDO.get('brand-router-enabled', false),
+      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      'datadog-enabled': DCDO.get('datadog-enabled', false)
     }
   end
 end

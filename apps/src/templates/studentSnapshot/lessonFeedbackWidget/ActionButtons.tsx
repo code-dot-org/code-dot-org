@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import styles from './lessonFeeedback.module.scss';
@@ -16,21 +16,26 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
 }) => {
   return (
     <div className={styles.actionButtons}>
-      <Button
-        text={'Save as draft'}
-        type="secondary"
-        size="xs"
-        color="gray"
+      <MuiButton
+        variant="outlined"
+        color="tertiary"
+        size="extraSmall"
+        disabled={isSaving}
         onClick={onSaveAsDraft}
+        type="button"
+      >
+        {'Save as draft'}
+      </MuiButton>
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="extraSmall"
         disabled={isSaving}
-      />
-      <Button
-        text="Send feedback to student"
-        size="xs"
-        type="primary"
         onClick={onSendToStudent}
-        disabled={isSaving}
-      />
+        type="button"
+      >
+        {'Send feedback to student'}
+      </MuiButton>
     </div>
   );
 };

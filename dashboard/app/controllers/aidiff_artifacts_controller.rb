@@ -39,7 +39,15 @@ class AidiffArtifactsController <ApplicationController
   end
 
   def index
-    render json: @aidiff_artifacts&.map(&:summarize)
+    if [:lesson_id, :unit_id, :section_id,].any? {|key| params[key].present?}
+      render json: @aidiff_artifacts.joins(:aidiff_artifact_associations).where(aidiff_artifact_associations: search_params.to_hash)&.map(&:summarize)
+    else
+      render json: @aidiff_artifacts&.map(&:summarize)
+    end
+  end
+
+  private def search_params
+    params.permit(:lesson_id, :unit_id, :section_id).compact_blank!
   end
 
   private def validate_params

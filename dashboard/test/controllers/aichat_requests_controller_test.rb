@@ -34,6 +34,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   setup do
     AichatAiHelper.stubs(:project_id_from_context).returns(@project_id)
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)

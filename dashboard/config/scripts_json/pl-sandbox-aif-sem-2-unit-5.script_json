@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-06 17:16:03 UTC",
+    "serialized_at": "2026-03-10 19:13:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -40,6 +40,8 @@
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
+        "overview": "\n#### **By the end of this professional learning module, you will be able to:**\n\n* #### Use JavaScript to get data from an external API and show it in a web app.\n\n* #### Write asynchronous code with `async/await` to load data without freezing the page.\n\n* #### Compare using local data versus API data and explain when each makes sense.",
+        "student_overview": "\n#### **By the end of this professional learning module, you will be able to:**\n\n* #### Use JavaScript to get data from an external API and show it in a web app.\n\n* #### Write asynchronous code with `async/await` to load data without freezing the page.\n\n* #### Compare using local data versus API data and explain when each makes sense."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -80,7 +82,7 @@
       "key": "4d771bdd-4b14-497d-8242-18db5bb3efbc",
       "position": 2,
       "properties": {
-        "progression_name": "What is an API?"
+        "progression_name": "What is an API? (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "4d771bdd-4b14-497d-8242-18db5bb3efbc",
@@ -91,7 +93,7 @@
       "key": "bf61b007-61d0-4778-90fc-930cbec114bc",
       "position": 3,
       "properties": {
-        "progression_name": "Getting Data Online"
+        "progression_name": "Getting Data Online (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "bf61b007-61d0-4778-90fc-930cbec114bc",
@@ -102,7 +104,7 @@
       "key": "f75738cd-ac40-478a-aade-eca00a07dac0",
       "position": 4,
       "properties": {
-        "progression_name": "Making Sense of Data"
+        "progression_name": "Making Sense of Data (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "f75738cd-ac40-478a-aade-eca00a07dac0",
@@ -113,7 +115,7 @@
       "key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
       "position": 5,
       "properties": {
-        "progression_name": "Displaying Data "
+        "progression_name": "Displaying Data (15 min)"
       },
       "seeding_key": {
         "activity_section.key": "a259e062-4bdd-43ac-ad2f-676a806ef188",
@@ -124,7 +126,7 @@
       "key": "034d1f92-6e99-4959-b13c-1184aafc69b7",
       "position": 6,
       "properties": {
-        "progression_name": "Catching Problems"
+        "progression_name": "Catching Problems (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "034d1f92-6e99-4959-b13c-1184aafc69b7",
@@ -135,10 +137,21 @@
       "key": "83febae5-1619-47b6-ad18-17eaf24b1a84",
       "position": 7,
       "properties": {
-        "progression_name": "Local and Live Data "
+        "progression_name": "Local and Live Data (10 min)"
       },
       "seeding_key": {
         "activity_section.key": "83febae5-1619-47b6-ad18-17eaf24b1a84",
+        "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
+      }
+    },
+    {
+      "key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b",
+      "position": 8,
+      "properties": {
+        "progression_name": "Wrapping Up (5 min)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b",
         "lesson_activity.key": "6cb0d829-446a-42be-ad42-ec07a58a64cd"
       }
     }
@@ -253,7 +266,7 @@
         "level_keys": [
           "pl-aif-2-U4-API-JSON-intro"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -278,7 +291,7 @@
         "level_keys": [
           "pl-aif-2-U5-JSON"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -303,7 +316,7 @@
         "level_keys": [
           "pl-aif-2-U5-JSON-weblab-scavhunt"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -328,7 +341,7 @@
         "level_keys": [
           "pl-aif-U5-api-documentation-chat-lab"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -353,7 +366,7 @@
         "level_keys": [
           "pl-aif-2-U5-pokemon-api-weblab"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -378,7 +391,7 @@
         "level_keys": [
           "pl-aif-2-U5-API-Calll-POkemon-panel"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -403,7 +416,7 @@
         "level_keys": [
           "pl-aif-2-U5-sync-async-programming"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -428,7 +441,7 @@
         "level_keys": [
           "pl-aif-2-U5-sync-async-code-chef"
         ],
-        "progression": "What is an API?"
+        "progression": "What is an API? (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -453,7 +466,7 @@
         "level_keys": [
           "pl-aif-2-U5-mailbox-promise"
         ],
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -478,7 +491,7 @@
         "level_keys": [
           "pl-aif-2-U5-fetch"
         ],
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -503,7 +516,7 @@
         "level_keys": [
           "pl-aif-2-U5-promise-chain"
         ],
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -528,7 +541,7 @@
         "level_keys": [
           "pl-aif-2-U5-trace-a-promise-weblab"
         ],
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -553,7 +566,7 @@
         "level_keys": [
           "pl-aif-2-U5-making-steps-clear-L4"
         ],
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -575,7 +588,7 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -597,7 +610,7 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Getting Data Online"
+        "progression": "Getting Data Online (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -619,7 +632,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Making Sense of Data"
+        "progression": "Making Sense of Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -641,7 +654,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Making Sense of Data"
+        "progression": "Making Sense of Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -663,7 +676,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Making Sense of Data"
+        "progression": "Making Sense of Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -685,7 +698,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Making Sense of Data"
+        "progression": "Making Sense of Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -707,7 +720,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Displaying Data "
+        "progression": "Displaying Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -729,7 +742,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Displaying Data "
+        "progression": "Displaying Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -751,7 +764,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Displaying Data "
+        "progression": "Displaying Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -773,7 +786,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Displaying Data "
+        "progression": "Displaying Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -795,7 +808,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Displaying Data "
+        "progression": "Displaying Data (15 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -817,7 +830,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Catching Problems"
+        "progression": "Catching Problems (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -839,7 +852,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Catching Problems"
+        "progression": "Catching Problems (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -861,7 +874,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Catching Problems"
+        "progression": "Catching Problems (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -883,7 +896,7 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Catching Problems"
+        "progression": "Catching Problems (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -905,7 +918,7 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Catching Problems"
+        "progression": "Catching Problems (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -927,7 +940,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Local and Live Data "
+        "progression": "Local and Live Data (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -949,7 +962,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Local and Live Data "
+        "progression": "Local and Live Data (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -971,7 +984,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Local and Live Data "
+        "progression": "Local and Live Data (10 min)"
       },
       "bonus": false,
       "seeding_key": {
@@ -985,6 +998,72 @@
       },
       "level_keys": [
         "pl-aif-2-U5-app-shell-weblab"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reflect-wrap-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      },
+      "level_keys": [
+        "pl-aif-2-U4-reflect-wrap-1"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-lesson-resources-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-lesson-resources-2"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrapping Up (5 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U5-final-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      },
+      "level_keys": [
+        "pl-aif-2-U5-final-level"
       ]
     }
   ],
@@ -1419,6 +1498,42 @@
         "lesson_group.key": "",
         "script.name": "pl-sandbox-aif-sem-2-unit-5",
         "activity_section.key": "83febae5-1619-47b6-ad18-17eaf24b1a84"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U4-reflect-wrap-1",
+        "script_level.level_keys": [
+          "pl-aif-2-U4-reflect-wrap-1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-lesson-resources-2",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-lesson-resources-2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U5-final-level",
+        "script_level.level_keys": [
+          "pl-aif-2-U5-final-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-5",
+        "activity_section.key": "f559dc70-5bb7-462b-bc01-e21bf3dc674b"
       }
     }
   ],

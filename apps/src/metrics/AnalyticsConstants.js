@@ -295,6 +295,13 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  // AI TA Lesson Summary Podcasts
+  TA_PODCAST_OPEN_TRANSCRIPT: 'TA podcast transcript opened',
+  TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
+  TA_PODCAST_PLAYED: 'TA podcast played',
+  TA_PODCAST_STOPPED: 'TA podcast stopped',
+  TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
+
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
@@ -649,6 +656,11 @@ const EVENTS = {
   INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
   INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
   INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
+
+  // Generic Intro flow events
+  INTRO_FLOW_STARTED: 'Intro Flow Started',
+  INTRO_FLOW_EXIT: 'Intro Flow Exited',
+  INTRO_FLOW_COMPLETED: 'Intro Flow Completed',
 
   // AI Teaching Assistant - Differentiation
   // Just In Time Professional Learning

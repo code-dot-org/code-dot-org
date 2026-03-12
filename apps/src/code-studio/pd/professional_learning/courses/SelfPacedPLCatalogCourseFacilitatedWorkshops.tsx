@@ -1,8 +1,7 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
 import Image from '@code-dot-org/component-library/image';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {CourseOfferingFacilitatedWorkshop} from '@cdo/apps/templates/courseOfferings/types';
@@ -116,14 +115,15 @@ const SelfPacedPLCatalogCourseFacilitatedWorkshops: React.FC<
               />
             </div>
 
-            <LinkButton
-              size="xs"
-              type="secondary"
-              color="black"
-              text="Learn more"
-              href={link}
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="extraSmall"
               className={moduleStyles.facilitatedWorkshopLearnMoreButton}
-            />
+              href={link}
+            >
+              {'Learn more'}
+            </MuiButton>
           </div>
         )
       )}
