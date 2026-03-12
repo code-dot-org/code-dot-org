@@ -190,6 +190,8 @@ With `0.0.29` replaced by the new version number that should be published. Gener
 
 Note: make sure you are logged into `npm` first. If not, the command may fail with a misleading `E404` error. You can see if you're logged in with `npm whoami`, and if not logged in, can can use `npm login`.
 
+Note: this command makes a commit and pushes it to the remote branch, so it's probably good to first locally create and switch to a new branch for this task.
+
 ## Adding new fish components
 
 All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
