@@ -161,6 +161,9 @@ class ChannelsApi < Sinatra::Base
     # type is then determined by client-side logic when the project is updated.
     project_type = value["projectType"]
 
+    # Only process a reasonable number of subprojects.
+    value["subprojects"] = value["subprojects"]&.first(3)
+
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
     rescue ArgumentError, OpenSSL::Cipher::CipherError, ProfanityPrivacyError, Projects::ValidationError => exception

@@ -527,7 +527,8 @@ class ProjectsController < ApplicationController
     src_project = project.get(src_channel_id)
     # If this project has subprojects, remix each subproject and update the parent channel.
     if src_project["subprojects"]
-      new_subprojects = src_project["subprojects"].map do |entry|
+      # Only process a reasonable number of subprojects.
+      new_subprojects = src_project["subprojects"].first(3).map do |entry|
         subproject_src_channel_id = entry['channel_id']
         subproject = project.get(subproject_src_channel_id)
         subproject_type = subproject["projectType"]
