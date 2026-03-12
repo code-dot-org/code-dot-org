@@ -2,6 +2,7 @@ import {type FilePart, type GeneratedFile} from 'ai';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 const extensionMap: Record<string, string> = {
   // Images
@@ -45,12 +46,11 @@ export async function assetToFilePart(
 /**
  * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
  */
-export async function fileToAsset(
-  filename: string,
-  fileBuffer: ArrayBuffer,
-  mediaType: string,
+export async function generatedFileToAsset(
+  file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string
 ): Promise<ChatAsset> {
+  const {filename, fileBuffer} = prepareGeneratedFile(file);
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
@@ -59,39 +59,25 @@ export async function fileToAsset(
 
   // Upload file contents to assetUrl
   await HttpClient.put(assetUrl, fileBuffer, true, {
-    'Content-Type': mediaType,
+    'Content-Type': file.mediaType,
   });
 
   return asset;
 }
 
-export function fileToImage(
-  filename: string,
-  fileBuffer: ArrayBuffer,
-  mediaType: string
-): File {
-  const blob = new Blob([fileBuffer], {type: mediaType});
-  return new File([blob], filename, {type: mediaType});
-}
-
-export interface PreparedFile {
+interface PreparedFile {
   filename: string;
-  fileBuffer: ArrayBuffer;
+  fileBuffer: Uint8Array<ArrayBuffer>;
   mediaType: string;
   extension: string;
 }
 
 /**
- * Extracts the buffer and derives filename/extension from a model-generated file,
- * ready to be passed to fileToAsset or fileToImage.
+ * Extracts the buffer and derives filename/extension from a model-generated file.
  */
 export function prepareGeneratedFile(file: GeneratedFile): PreparedFile {
-  const fileBuffer = file.uint8Array.buffer.slice(
-    file.uint8Array.byteOffset,
-    file.uint8Array.byteOffset + file.uint8Array.byteLength
-  ) as ArrayBuffer;
-  const {mediaType} = file;
-  const extension = mediaType.split('/')[1];
-  const filename = `generated-file-${crypto.randomUUID()}.${extension}`;
-  return {filename, fileBuffer, mediaType, extension};
+  const fileBuffer = file.uint8Array.slice();
+  const extension = file.mediaType.split('/')[1];
+  const filename = `generated-file-${createUuid()}.${extension}`;
+  return {filename, fileBuffer, mediaType: file.mediaType, extension};
 }

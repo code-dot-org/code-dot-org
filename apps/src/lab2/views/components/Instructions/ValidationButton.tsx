@@ -6,6 +6,8 @@ import React from 'react';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {instructionsValidateButtonElementId} from './ResourcePanel/constants';
+
 import moduleStyles from './validation-results.module.scss';
 
 interface ValidationButtonProps {
@@ -53,7 +55,7 @@ const ValidationButton: React.FunctionComponent<ValidationButtonProps> = ({
         moduleStyles.buttonInstruction,
         moduleStyles.validationButton
       )}
-      id="uitest-validate-button"
+      id={instructionsValidateButtonElementId}
       onClick={onValidate}
       type="button"
       startIcon={

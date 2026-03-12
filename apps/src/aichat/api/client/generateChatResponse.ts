@@ -1,6 +1,6 @@
 import {type ModelMessage} from 'ai';
 
-import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {generateText} from '@cdo/apps/aiGateway';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -12,17 +12,13 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {
-  fileToAsset,
-  fileToImage,
-  prepareGeneratedFile,
-} from './helpers/fileHelpers';
+import {generatedFileToAsset} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe, isModelOutputImageSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -67,7 +63,7 @@ export async function generateChatResponse(
   });
 
   if (['content-filter', 'other'].includes(finishReason)) {
-    // response.body is expected to be an object with a "candidates" array
+    // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const candidate = (response.body as any)?.candidates?.[0];
 
@@ -87,22 +83,13 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
-    const {filename, fileBuffer, mediaType, extension} =
-      prepareGeneratedFile(file);
-
-    const asset = await fileToAsset(
-      filename,
-      fileBuffer,
-      mediaType,
-      buildAssetUrl
-    );
+    const asset = await generatedFileToAsset(file, buildAssetUrl);
     assets.push(asset);
-
-    if (mediaType.startsWith('image/')) {
+    if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
-      const imageFile = fileToImage(filename, fileBuffer, mediaType);
-      const modelImageSafe = await isModelOutputImageSafe(imageFile, extension);
-      if (!modelImageSafe) {
+      // Check generated images for safety.
+      const imageSafe = await isImageSafe(file);
+      if (!imageSafe) {
         return {
           response: text,
           status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,

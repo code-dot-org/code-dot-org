@@ -86,7 +86,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       <div
         id="instructions-panel"
         aria-live="polite"
-        className={classNames(moduleStyles.item, moduleStyles.itemVertical)}
+        className={classNames(moduleStyles.item)}
       >
         <div
           key={longInstructions}

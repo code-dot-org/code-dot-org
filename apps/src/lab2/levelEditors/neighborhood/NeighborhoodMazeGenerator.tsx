@@ -157,6 +157,7 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
                   selectedCell[1] === columnIndex) ||
                 false;
               return (
+                /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
                 <img
                   src={imageTiles[cell.assetId]}
                   alt="neighborhood cell"
@@ -186,6 +187,7 @@ const NeighborhoodMazeGenerator: React.FunctionComponent<
             }}
           >
             {categoryTiles.map((tile, index) => (
+              /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
               <img
                 src={imageTiles[tile]}
                 alt="neighborhood tile"

@@ -23,13 +23,18 @@ agent_ipc:
   port: 5009
   config_refresh_interval: 60
 
-# Process monitoring (disabled by default)
+# Process monitoring
 process_config:
-  enabled: false
+  process_collection:
+    enabled: true
+  container_collection:
+    enabled: true
+  process_discovery:
+    enabled: true
 
-# Network monitoring (disabled by default) 
+# Network monitoring
 network_config:
-  enabled: false
+  enabled: true
 
 # Enable DogStatsD for metric collection
 dogstatsd_config:
@@ -48,5 +53,6 @@ logs_enabled: <%= @logs_enabled %>
 logs_config:
   logs_dd_url: https://http-intake.logs.<%= @site %>
 
-# Enable additional integrations as needed
-# Additional configuration will be placed here by other recipes/cookbooks
+# System Probe
+system_probe_config:
+  enabled: true

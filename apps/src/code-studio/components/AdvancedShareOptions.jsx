@@ -180,6 +180,7 @@ class AdvancedShareOptions extends React.Component {
 
   renderAdvancedListItem = (option, name) => {
     return (
+      /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
       <li
         className={classNames(styles.navItem, {
           [styles.navItemSelected]: this.state.selectedOption === option,

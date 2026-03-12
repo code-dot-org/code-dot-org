@@ -9,6 +9,8 @@ module "eks" {
   name               = var.cluster_name
   kubernetes_version = var.kubernetes_version
 
+  kms_key_administrators = var.cluster_admin_role_arns
+
   # See: ./eks-cluster-networking.tf
   vpc_id = var.vpc_id
   subnet_ids = [
@@ -25,41 +27,26 @@ module "eks" {
   #=============================================================
   # Map AWS IAM roles to cluster permissions (affects kubectl)
   #=============================================================
-  access_entries = {
-    engineering_read_only = {
-      principal_arn = "arn:aws:iam::475661607190:role/Engineering_ReadOnly"
+  access_entries = merge(
+    { for arn in var.cluster_readonly_role_arns : arn => {
+      principal_arn = arn
       policy_associations = {
         cluster_view = {
-          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy"
-          access_scope = {
-            type = "cluster"
-          }
+          policy_arn   = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy"
+          access_scope = { type = "cluster" }
         }
       }
-    }
-    engineering_full_access = {
-      principal_arn = "arn:aws:iam::475661607190:role/Engineering_FullAccess"
+    } },
+    { for arn in var.cluster_admin_role_arns : arn => {
+      principal_arn = arn
       policy_associations = {
         cluster_admin = {
-          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-          access_scope = {
-            type = "cluster"
-          }
+          policy_arn   = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
+          access_scope = { type = "cluster" }
         }
       }
-    }
-    google_signin_admin = {
-      principal_arn = "arn:aws:iam::475661607190:role/GoogleSignInAdmin"
-      policy_associations = {
-        cluster_admin = {
-          policy_arn = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
-          access_scope = {
-            type = "cluster"
-          }
-        }
-      }
-    }
-  }
+    } }
+  )
 
   #=============================================================
   # Core EKS managed addons
