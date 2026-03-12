@@ -1,5 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import i18n from '@cdo/locale';
@@ -43,13 +42,17 @@ export const LtiIframePage = ({logoUrl, authUrl}: LtiIframePageProps) => {
           {textContent}
         </Typography>
         <div>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="large"
             disabled={callToActionDisabled}
             className={styles.callToAction}
             onClick={handleCallToAction}
-            size="l"
-            text={i18n.ltiIframeCallToAction()}
-          />
+            type="button"
+          >
+            {i18n.ltiIframeCallToAction()}
+          </MuiButton>
         </div>
       </div>
     </main>

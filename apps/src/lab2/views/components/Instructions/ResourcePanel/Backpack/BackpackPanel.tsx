@@ -1,6 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -245,14 +245,16 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
         title="An error occurred"
         message="Your Backpack failed to load, please try again."
         BottomComponent={
-          <Button
-            iconLeft={{iconName: 'refresh'}}
-            text="Retry"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="small"
             onClick={() => loadBackpackFiles(true)}
-            size="s"
-            type="secondary"
-            color="gray"
-          />
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="refresh" />}
+          >
+            {'Retry'}
+          </MuiButton>
         }
       />
     );
@@ -347,18 +349,20 @@ const BackpackPanel: React.FC<BackpackPanelProps> = ({
           : undefined}
       </div>
       {saveToBackpackButton && (
-        <Button
-          text={saveToBackpackButton.text}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          className={moduleStyles.saveButton}
           onClick={() =>
             saveToBackpackButton.onClick(fileList || [], (error: string) =>
               addAlert('danger', error)
             )
           }
-          size="s"
-          type="secondary"
-          color="gray"
-          className={moduleStyles.saveButton}
-        />
+          type="button"
+        >
+          {saveToBackpackButton.text}
+        </MuiButton>
       )}
     </div>
   );
