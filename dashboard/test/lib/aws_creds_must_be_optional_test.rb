@@ -26,9 +26,6 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
       openai_lesson_summaries_api_key
       elevenlabs_api_key
       openai_student_learning_api_key
-      langfuse_secret_key
-      langfuse_public_key
-      openai_measures_of_learning_api_key
     ).map {|secret| "CDO_#{secret}"}.index_with('')
 
     # Start a new `rails runner` process and make sure it boots w/o AWS access
