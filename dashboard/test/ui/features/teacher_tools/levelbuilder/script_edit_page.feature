@@ -36,7 +36,7 @@ Scenario: Save changes to a unit
   And element ".uitest-lesson-token-contents:last" contains text "Temp Lesson Without Lesson Plan"
 
   # delete one lesson. this didn't work with jquery click or mousedown for some reason
-  And I press the child number 1 of class ".fa-times"
+  And I press the child number 1 of class ".fa-xmark"
   And I wait until element ".modal-body" is visible
   And element ".modal-body button:last" contains text "Delete"
   And I click selector ".modal-body button:last"
