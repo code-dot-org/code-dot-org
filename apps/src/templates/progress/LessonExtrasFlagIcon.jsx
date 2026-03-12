@@ -10,17 +10,32 @@ class LessonExtrasFlagIcon extends React.PureComponent {
     size: PropTypes.number,
   };
 
+  state = {
+    isHovering: false,
+  };
+
   render() {
     const {isPerfect, isSelected, size} = this.props;
     const sizeStyle = {...styles.smallStack, fontSize: size};
-    const colorStyle = {
-      ...styles.default,
-      ...(isSelected && styles.selected),
-      ...(isPerfect && styles.perfect),
-    };
+
+    let colorStyle = {...styles.default};
+    if (isSelected) {
+      colorStyle = {...colorStyle, ...styles.selected};
+    }
+    if (isPerfect) {
+      colorStyle = {...colorStyle, ...styles.perfect};
+    }
+    if (this.state.isHovering) {
+      colorStyle = {...colorStyle, ...styles.hover};
+    }
 
     return (
-      <span className="fa-stack fa-1x" style={sizeStyle}>
+      <span
+        className="fa-stack fa-1x"
+        style={sizeStyle}
+        onMouseEnter={() => this.setState({isHovering: true})}
+        onMouseLeave={() => this.setState({isHovering: false})}
+      >
         <i className="fa fa-flag fa-stack-1x fa-inverse" />
         <i className="fa fa-flag-checkered fa-stack-1x" style={colorStyle} />
       </span>
@@ -39,6 +54,9 @@ const styles = {
   },
   perfect: {
     color: color.level_perfect,
+  },
+  hover: {
+    color: color.orange,
   },
   smallStack: {
     width: '1em',
