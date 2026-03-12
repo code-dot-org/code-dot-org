@@ -126,3 +126,11 @@ $card-gap: 16px;
     flex: 1;
   }
 }
+
+.modalActionsRow {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 8px 0 4px;
+  width: 100%;
+}

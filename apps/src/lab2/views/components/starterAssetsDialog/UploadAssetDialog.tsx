@@ -1,3 +1,4 @@
+import {Button} from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
 import React, {ChangeEvent, useCallback, useState} from 'react';
 
@@ -47,6 +48,7 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
   const [requestInProgress, setRequestInProgress] = useState<
     'upload' | 'delete'
   >();
+  const [selectedFiles, setSelectedFiles] = useState<string[]>([]);
 
   const onFilesSelected = async (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -102,24 +104,28 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
     ACCEPTED_FILE_TYPES.join(',')
   );
 
-  const onDelete = useCallback(
-    async (filename: string) => {
-      clearAlert();
-      setRequestInProgress('delete');
-      try {
-        await deleteFile(filename, levelName);
-        removeAsset(filename);
-      } catch (error) {
-        updateAlert(
-          'Error deleting file. Please try again',
-          'danger',
-          error as Error
-        );
-      }
-      setRequestInProgress(undefined);
-    },
-    [clearAlert, levelName, removeAsset, updateAlert]
-  );
+  const onSelectAsset = useCallback((selected: boolean, filename: string) => {
+    setSelectedFiles(prev =>
+      selected ? [...prev, filename] : prev.filter(f => f !== filename)
+    );
+  }, []);
+
+  const onDeleteSelected = useCallback(async () => {
+    clearAlert();
+    setRequestInProgress('delete');
+    try {
+      await Promise.all(selectedFiles.map(f => deleteFile(f, levelName)));
+      selectedFiles.forEach(f => removeAsset(f));
+      setSelectedFiles([]);
+    } catch (error) {
+      updateAlert(
+        'Error deleting file. Please try again',
+        'danger',
+        error as Error
+      );
+    }
+    setRequestInProgress(undefined);
+  }, [clearAlert, levelName, removeAsset, selectedFiles, updateAlert]);
 
   const buttonText =
     requestInProgress === 'upload'
@@ -135,18 +141,10 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
       title={'Manage Starter Assets'}
       className={styles.starterAssetsModal}
       primaryButtonProps={{
-        text: buttonText,
-        onClick: () => {
-          clearAlert();
-          openFileInput();
-        },
-        iconLeft: {
-          iconName: requestInProgress ? 'spinner' : 'upload',
-          animationType: requestInProgress ? 'spin' : undefined,
-        },
-        disabled: loading || !!requestInProgress,
+        text: 'Upload',
+        onClick: () => {},
+        style: {display: 'none'},
       }}
-      secondaryButtonProps={{text: 'Cancel', onClick: onClose}}
       customContent={
         loading ? (
           <Loading />
@@ -159,7 +157,8 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
                   {...asset}
                   key={asset.filename}
                   levelName={levelName}
-                  onDelete={onDelete}
+                  onSelect={selected => onSelectAsset(selected, asset.filename)}
+                  selected={selectedFiles.includes(asset.filename)}
                   showWarnings={true}
                 />
               ))}
@@ -167,7 +166,45 @@ const UploadAssetDialog: React.FC<UploadDialogProps & UploadProps> = ({
           </>
         )
       }
-      customBottomContent={alert && <DialogAlert {...alert} />}
+      customBottomContent={
+        <>
+          <div className={styles.modalActionsRow}>
+            <Button
+              type="secondary"
+              color="black"
+              text="Cancel"
+              onClick={onClose}
+            />
+            {selectedFiles.length > 0 && (
+              <Button
+                type="primary"
+                color="destructive"
+                text={`Delete ${selectedFiles.length} ${
+                  selectedFiles.length === 1 ? 'file' : 'files'
+                }`}
+                onClick={onDeleteSelected}
+                disabled={!!requestInProgress}
+                iconLeft={{iconName: 'trash'}}
+              />
+            )}
+            <Button
+              type="primary"
+              color="purple"
+              text={buttonText}
+              onClick={() => {
+                clearAlert();
+                openFileInput();
+              }}
+              iconLeft={{
+                iconName: requestInProgress ? 'spinner' : 'upload',
+                animationType: requestInProgress ? 'spin' : undefined,
+              }}
+              disabled={loading || !!requestInProgress}
+            />
+          </div>
+          {alert && <DialogAlert {...alert} />}
+        </>
+      }
     />
   );
 };
