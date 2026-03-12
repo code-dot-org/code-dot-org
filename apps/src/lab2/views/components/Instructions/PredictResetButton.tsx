@@ -1,5 +1,6 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
@@ -42,16 +43,19 @@ const PredictResetButton: React.FunctionComponent = () => {
   return (
     <>
       <div className={moduleStyles.resetButtonRow}>
-        <Button
-          text={i18n.deleteAnswer()}
-          onClick={handleResetClick}
-          size={'s'}
+        <MuiButton
+          variant="outlined"
+          color="error"
+          size="small"
+          loadingPosition="start"
           disabled={!hasSubmitted}
-          iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
-          type={'secondary'}
-          color={'destructive'}
           className={moduleStyles.resetButton}
-        />
+          onClick={handleResetClick}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="trash" />}
+        >
+          {i18n.deleteAnswer()}
+        </MuiButton>
         <span className={moduleStyles.resetButtonRowSpace}>
           <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
         </span>

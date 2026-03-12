@@ -26853,8 +26853,14 @@ en:
           title: 'Teaching Unit 5: Designing Reliable Apps with AI and APIs'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            #### This professional learning module prepares you to teach a **Unit 5: Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            #### **Suggested Time: 90 minutes**
+          student_description: |-
+            #### This professional learning module prepares you to teach a **Unit 5: Designing Reliable Apps with AI and APIs** where students expand their understanding of web apps by connecting them to external data sources through APIs.
+
+            #### **Suggested Time: 90 minutes**
         self-paced-pl-ai-101-v2-mod2:
           lessons:
             lesson-1:
@@ -26945,13 +26951,13 @@ en:
             lesson-2:
               name: Milestone 1
             lesson-3:
-              name: Milestone 2
+              name: 'Milestone 2: Responsible Creation & Impact'
             lesson-4:
-              name: Milestone 3
+              name: 'Milestone 3: Truth & Credibility'
             lesson-5:
-              name: Final Project
+              name: 'Milestone 4: Safety & Privacy'
             lesson-6:
-              name: 'Milestone 5: Synthesis & Sharing (Lessons 9-10)'
+              name: 'Milestone 5: Sythesis & Sharing'
           lesson_groups: {}
           name: self-paced-pl-thinkingcriticallywithai-unit1
           title: 'Educator Module: Thinking Critically About AI'
@@ -26996,11 +27002,15 @@ en:
           lessons:
             lesson-1:
               name: Pre-Assessmen
+            lesson-2:
+              name: Post-Assessment
           lesson_groups:
             lessonGroup-2:
               display_name: Pre-Assessment
             lessonGroup-3:
               display_name: Content
+            lessonGroup-4:
+              display_name: Post-Assessment
           name: aid-thinking-critically-about-ai-pilot-2026
           title: 'AI Discoveries: Thinking Critically About AI'
           description_audience: ''
@@ -27036,6 +27046,17 @@ en:
           lesson_groups: {}
           name: hoai-web-lab-intro-test
           title: HoAI Web Lab Intro
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-ai-101-v2-mod4:
+          lessons:
+            lesson-1:
+              name: Bringing AI to the Classroom
+          lesson_groups: {}
+          name: self-paced-pl-ai-101-v2-mod4
+          title: Module 4, Bringing AI to the Classroom
           description_audience: ''
           description_short: ''
           description: ''

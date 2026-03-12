@@ -8,6 +8,7 @@ import {
   getFileExtension,
   getNextFileId,
 } from '@cdo/apps/lab2/utils/multiFileSourceUtils';
+import {AI_TUTOR_ANSWER_TYPES} from '@cdo/apps/weblab2/types';
 
 const getAnswerJsonSchema = (): JsonObjectSchema => {
   return {
@@ -15,21 +16,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
     properties: {
       tutorMode: {
         type: 'string',
-        enum: [
-          'Build HTML',
-          'Build CSS',
-          'Build JavaScript',
-          'Ask',
-          'Hint',
-          'Debug',
-          'Explain Code',
-          'Example',
-          'Pseudocode',
-          'Documentation',
-          'Test Case',
-          'Refusal JavaScript Snippet',
-          'Refusal',
-        ],
+        enum: [...AI_TUTOR_ANSWER_TYPES],
       },
       goal: {
         type: 'string',
@@ -54,7 +41,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`html`, `css`, or `js` fences. Limit to one language (html, css, or js) across the entire list. ' +
+          '`text`, `html`, `css`, or `js` fences. Limit to one language (text, html, css, or js) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -95,9 +82,9 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
 // for which we format the model response with formatAcceptRejectResponse. Otherwise, we format
 // the model response with formatCopyPasteResponse.
 export const acceptRejectAnswerTypes = [
-  'Build HTML',
-  'Build CSS',
-  'Build JavaScript',
+  'buildHTML',
+  'buildCSS',
+  'buildJavaScript',
 ];
 
 const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
@@ -136,7 +123,7 @@ const formatSection = (title: string, content?: string): string => {
   return content ? `**${title}**\n\n${content}\n\n` : '';
 };
 
-// This is used when the AI Tutor response's tutorMode is not 'Build HTML', 'Build CSS', nor 'Build JavaScript'.
+// This is used when the AI Tutor response's tutorMode is not 'buildHTML', 'buildCSS', nor 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in getAnswerJsonSchemaAcceptReject().
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const formatCopyPasteResponse = (response: any): string => {
@@ -170,7 +157,7 @@ type AcceptRejectFormattedResponse = {
   answerType: string;
 };
 
-// This is used when the AI Tutor response's tutorMode is 'Build HTML', 'Build CSS', or 'Build JavaScript'.
+// This is used when the AI Tutor response's tutorMode is 'buildHTML', 'buildCSS', or 'buildJavaScript'.
 // Parsed json comes in as 'any', but it follows the structure defined in acceptRejectJsonSchema.
 export const formatAcceptRejectResponse = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
