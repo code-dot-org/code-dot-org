@@ -957,7 +957,7 @@
       "key": "452d09d8-49e3-435e-8c19-2f76bc1b7df5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 2-4 - Skill Building\" slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 2-4 - Skill Building\" slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -969,7 +969,7 @@
       "key": "16458dff-6c81-405a-b49e-b8086d03c58b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Repeat Until\" video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Repeat Until\" video",
         "progression_name": "Video: Minecraft: Voyage Aquatic Repeat Until"
       },
       "seeding_key": {
@@ -981,7 +981,7 @@
       "key": "98eeaa53-240b-4dfc-8c70-d6245f556a7a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 6-8 - Skill Building\" slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 6-8 - Skill Building\" slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -993,7 +993,7 @@
       "key": "f3fa8307-8e52-4397-b726-6b591615a539",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Conditionals\" video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Minecraft: Voyage Aquatic Conditionals\" video",
         "progression_name": "Video: Minecraft: Voyage Aquatic Conditionals"
       },
       "seeding_key": {
@@ -1005,7 +1005,7 @@
       "key": "575397b5-1bbd-4c89-b26e-27119251d815",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 10-14 - Skill Building\" slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the \"Level 10-14 - Skill Building\" slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {

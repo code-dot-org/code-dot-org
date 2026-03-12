@@ -428,7 +428,7 @@
       "key": "b4e79596-c27e-4a75-bfa6-fd6d6e2606ba",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Give students 3-5 minutes to explore sample apps that they'll find on Code.org at the beginning of this lesson (in Levels 1-3). Students can explore one or more depending on time.",
         "name": "Sample Apps",
         "progression_name": "Sample Apps"
       },
@@ -441,7 +441,7 @@
       "key": "29574f11-f112-46fc-afd0-496fd9b958f2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *These are samples of the kinds of apps you'll be able to build by the end of this unit. As you go through them, write down at least two examples where the app seems to be keeping track of a piece of information or using it to make decisions.*\n\n**Discussion Goal:** Have volunteers share what they noticed with the room. Some ideas include:\n\n* The Pet Rock App keeps track of clicks and uses it to decide when the pet rock will \"evolve\"\n* The Poem App keeps track of the poem as you write it\n* The Thermostat App keeps track of temperature and uses it to change the color of the text\n\n"
       },
       "seeding_key": {
         "activity_section.key": "29574f11-f112-46fc-afd0-496fd9b958f2",
@@ -504,7 +504,7 @@
       "key": "b8dfb96b-4d5f-4ded-a595-9d29e6cec404",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Use the activity slides for this lesson to guide the unplugged activity on Variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -532,7 +532,7 @@
       "key": "cbbecaf0-4ebf-43a6-b802-6cfdee9d94ee",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \r\n **Journal:** Have students add the following words to their journals: Expression, Variable, Assignment Operator.  \r\n\r\n* **Expression:** a combination of operators and values that evaluates to a single value.\r\n* **Variable** an abstraction inside the program that can hold a value.  Each variable has associated data storage that represents one value at a time.\r\n* **Assignment operator:** allows a program to change the value represented by a variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \r\n **Journal:** Have students add the following words to their journals: Expression, Variable, Assignment Operator.  \r\n\r\n* **Expression:** a combination of operators and values that evaluates to a single value.\r\n* **Variable** an abstraction inside the program that can hold a value.  Each variable has associated data storage that represents one value at a time.\r\n* **Assignment operator:** allows a program to change the value represented by a variable."
       },
       "seeding_key": {
         "activity_section.key": "cbbecaf0-4ebf-43a6-b802-6cfdee9d94ee",
@@ -614,7 +614,7 @@
       "key": "2a68d813-cc63-467f-b26b-7c7301fa33c5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's do a quick review. How does a baggy represent a variable?*\n\n**Discussion Goal:** The baggy represents a variable by storing one item: a value on a sticky note placed in a named baggy. The value in the baggy can be changed at any time, just like a variable's value can change. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "2a68d813-cc63-467f-b26b-7c7301fa33c5",
@@ -625,7 +625,7 @@
       "key": "22c403cb-da73-4146-a65b-ca6e54102d75",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. One student per group should navigate to the lesson on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "22c403cb-da73-4146-a65b-ca6e54102d75",
@@ -636,7 +636,7 @@
       "key": "44b3a49a-039c-4b9c-84d5-96124129f325",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 1: Thermostat App v.1:** This level introduces a new app for students to investigate. It represents a Thermostat App where the temperature can be changed up and down. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2: Thermostat App v.1 Code:**  \n\n* Assign Code Sections: Assign half the pairs to investigate the first section on lines 1-12. The other half investigates the second half on lines 14-21. \n* Read Code: Groups should carefully read the code for their section making sure they understand how it works. Give them 3 minutes to do so. \n* Explain Your Section: Have partners make a group with members of the other section and carefully explain how their section works line by line.",
         "duration": "10",
         "name": "Investigation #1: Thermostat App v.1",
         "progression_name": "Investigation #1: Thermostat App v.1 "
@@ -661,7 +661,7 @@
       "key": "9ed07b7e-9114-4f54-80dd-d97116e5e997",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Modify:** have groups return to their original seats. Give them a couple of minutes to work on modifying the app to change the degrees by two when the up and down arrows are clicked."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide showing students how to add a watcher in the debugging panel to track the value a variable stores. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Modify:** have groups return to their original seats. Give them a couple of minutes to work on modifying the app to change the degrees by two when the up and down arrows are clicked."
       },
       "seeding_key": {
         "activity_section.key": "9ed07b7e-9114-4f54-80dd-d97116e5e997",
@@ -672,7 +672,7 @@
       "key": "a56870b8-338b-4474-bae1-0faa4f5162c1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 3:** This program is an updated version of the Thermostat app. This time students should continue to work in partners but do not need to work with other groups. They will need to:\n\n* Run the app: Let students run the app for a few minutes.\n* Discuss Changes: Talk through how the app is different than the first version. \n* Find the [`Math.round`(#FFB74D)](/docs/applab/mathRound/) command: Discuss with a partner how this command might work. Try deleting [`Math.round`(#FFB74D)](/docs/applab/mathRound/) in lines 3, 15, and 28. What happens? Add it back in.",
         "duration": "10",
         "name": "Investigation #2: Thermostat App v.2",
         "progression_name": "Investigation #2: Thermostat App v.2"
@@ -697,7 +697,7 @@
       "key": "84e3c442-b642-4e99-9948-e8497c9b0601",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 4:** This program is again an updated version of the Thermostat app with a login screen. \n\n* Run the app: Let students run the app for a few minutes.\n* Predict: Students predict the information that is being stored in variables. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 5:** The code for Thermostat App v.3 is displayed.\n\n* Read Code: Give students a few minutes to read and discuss the code with their partners. What has changed? What has stayed the same?",
         "duration": "8",
         "name": "Investigation #3: Thermostat App v.3",
         "progression_name": "Investigation #3: Thermostat App v.3"
@@ -736,7 +736,7 @@
       "key": "3367a163-78fc-47a9-b00b-c58b070300d2",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Talk through the pattern with students."
       },
       "seeding_key": {
         "activity_section.key": "3367a163-78fc-47a9-b00b-c58b070300d2",
@@ -781,7 +781,7 @@
       "key": "5d4c5935-5baf-46b5-80a3-c8c2ea2ed2dc",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Talk through the pattern with students.\n\n**Discuss:** *Explain to a partner how the \"Variable with String Concatenation Pattern\" works.*\n\n**Discussion Goal:** Students should be able to verbally explain how the **Variable with String Concatenation Pattern** works. \n\n* myString gets the value \"rock\"\n* myOtherStrings gets the value \"roll\"\n* myStory gets the value that is stored in myString (\"rock\") and combines that with a string \"and\" and the value stored in myOtherString (\"roll\")\n* myStory now stores the value: \"rock and roll\"\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5d4c5935-5baf-46b5-80a3-c8c2ea2ed2dc",
@@ -804,7 +804,7 @@
       "key": "5de8b646-25e7-4801-8952-70b60db9d31c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Discussion Goal:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Let's review. What can be stored in a variable? Why is using a meaningful name for the variable important?*\n\n**Discussion Goal:** \n\nWhat can be stored in a variable?\n\n* At this point, students should know that these two things can be stored in variables. Students will learn about other data types that can be stored in variables in later lessons. \n\t* Numbers\n\t* Strings\n\t\t* Including concatenated strings (`temp + \" F\"`)\n\nWhy is using a meaningful name for the variable important?\n\n* When you write code, you are not just writing for the computer, you are also writing for people. Using meaningful names help people be able to read your code easier.\n* It also helps readers predict what values may be stored in the variables."
       },
       "seeding_key": {
         "activity_section.key": "5de8b646-25e7-4801-8952-70b60db9d31c",
@@ -815,7 +815,7 @@
       "key": "ad5d36dd-5b09-4776-bb22-8d0b25cf5bc2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Add to your journal the definition for variable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Add to your journal the definition for variable."
       },
       "seeding_key": {
         "activity_section.key": "ad5d36dd-5b09-4776-bb22-8d0b25cf5bc2",
@@ -904,7 +904,7 @@
       "key": "c9f37f6a-c5ec-4a54-b77a-e43db4a26ed3",
       "position": 2,
       "properties": {
-        "description": "Today you're mostly going to practice what we've learned about programming with variables. As always you should be using the debugging process to help you as you work on issues. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Let's review the debugging process first. Debugging is the process of finding and fixing problems in code. We previously talked about these four steps: Describe, Hunt, Try, and Document. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Today we're going to also focus on three particular debugging skills\r\n\r\n1. Slowing down code with the speed slider\r\n2. Using console.log to get output\r\n3. Using the Watch area to watch your variables change values",
+        "description": "Today you're mostly going to practice what we've learned about programming with variables. As always you should be using the debugging process to help you as you work on issues. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Let's review the debugging process first. Debugging is the process of finding and fixing problems in code. We previously talked about these four steps: Describe, Hunt, Try, and Document. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we're going to also focus on three particular debugging skills\r\n\r\n1. Slowing down code with the speed slider\r\n2. Using console.log to get output\r\n3. Using the Watch area to watch your variables change values",
         "remarks": true
       },
       "seeding_key": {
@@ -916,7 +916,7 @@
       "key": "4c46fb0f-6611-40e2-b585-983f302baa87",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 3 Level 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Direct students to Code Studio, Lesson 3 Level 2.",
         "tips": [
           {
             "type": "teachingTip",
@@ -959,7 +959,7 @@
       "key": "039cb28b-cc40-4db1-bbe3-ae46865507c2",
       "position": 6,
       "properties": {
-        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
+        "description": "**Regroup:** Bring the class back together to watch the Scope Practice Video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Scope Practice video. This video is located on the slides and on Level 9. You may opt to have students watch it alone or as a class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss debugging scope issues with the next three slides before directing students back to Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -976,7 +976,7 @@
       "key": "545060db-73a9-4603-a169-c08100940a8c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Levels 8-9 Debugging Scope Issues:** These levels identify a common bug that can come up when working with variables. While students should be aware of this bug, they don't quite have the background they'd need to fully understand it. For now support students in following the three main takeaways.\n\n* Create variables once\n* Create variables at the top of your program\n* Don't create variables inside [`onEvent()`(#fff176)](/docs/applab/onEvent/) or `function()` blocks",
         "name": "Debugging Scope Issues",
         "progression_name": "Debugging Scope Issues"
       },
@@ -989,7 +989,7 @@
       "key": "1e94d73f-38df-4dd9-bf02-570ba331a332",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** These levels ask students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.\n * **Level 10a:** - Students practice using code from one button to make others work.\n * **Level 10b:** - Students add code to keep track of different variables depending on the event.\n * **Level 10c:** - Students practice using string concatenation to add captions to a photo.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 10 Putting It All Together:** These levels ask students to put together many of the concepts they've seen so far. This is an opportunity to have a bit more of a \"blank screen moment\" while still being able to use some starter code as a guide.\n * **Level 10a:** - Students practice using code from one button to make others work.\n * **Level 10b:** - Students add code to keep track of different variables depending on the event.\n * **Level 10c:** - Students practice using string concatenation to add captions to a photo.",
         "name": "Putting it Together",
         "progression_name": "Putting it Together",
         "tips": [
@@ -1008,7 +1008,7 @@
       "key": "e935df08-64c3-4116-8e2e-1a38e747b2a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with variables do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n",
         "name": "Synthesizing Discussion\r"
       },
       "seeding_key": {
@@ -1118,7 +1118,7 @@
       "key": "3449135a-21f4-408d-bcd7-7dac44a9d53c",
       "position": 1,
       "properties": {
-        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
+        "description": "**Group:** Make a determination as to whether this project will be completed in pairs or individually. You may even choose to let students decide.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students explore the working Photo Maker App in Level 1.\n\n",
         "name": "Build the Photo Liker\r"
       },
       "seeding_key": {
@@ -1141,7 +1141,7 @@
       "key": "c8d6c396-a8c3-4712-9853-359bf4e1c5f4",
       "position": 3,
       "properties": {
-        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
+        "description": "\nIf students are not working in pairs they should still discuss with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does this app do?*\n  * It lets a user \"like\" an image and add comments to it. \n* *What are the inputs?*\n  * The thumbs up and thumbs down button, the text input for adding a new comment, and the button to add the comment.\n* *What are the outputs?*\n  * The number showing how many thumbs up the image has.\n* *What's one piece of information that might be stored in a variable?*\n  * The number of likes and all the comments added so far. "
       },
       "seeding_key": {
         "activity_section.key": "c8d6c396-a8c3-4712-9853-359bf4e1c5f4",
@@ -1180,7 +1180,7 @@
       "key": "3996b184-d9e2-47f2-94c2-4845b81e5c75",
       "position": 6,
       "properties": {
-        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
+        "description": "**Distribute:** Give students copies of [CSP Variables Make - Photo Liker App - Activity Guide](https://docs.google.com/document/d/1q13ZBiTwSUuE2zG5nSIvYv7QASLS784LjmpJis9vzQY/edit) if you will be using it during the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to level three where they complete the Photo Liker App. Given this is students first Make project, it is highly recommended that students practice with this guide the first time. In future Make lessons they may opt not to use this guide. For students who need more detailed guidance once they've started programming, Step 3 includes step by step instructions that the student can follow.\n\nBased on the needs of your classroom decide whether you will collectively go through the activity guide or have students complete it individually.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submit:** Encourage students to check the rubric on the last page of the Activity Guide before submitting.",
         "progression_name": "Make the Photo Liker app"
       },
       "seeding_key": {
@@ -1225,7 +1225,7 @@
       "key": "6500e34d-a442-4760-8fe5-8190a18b0569",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Awesome work today! Make sure to submit your project when you're done with it!",
         "tips": [
           {
             "type": "teachingTip",

@@ -1246,7 +1246,7 @@
       "key": "fba12056-a7c6-40dd-afb8-91bb948ffc1f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: _How can we safely present ourselves online?_\n\n**Do this**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflect\" slide\n\n**Reflect**: _How can we safely present ourselves online?_\n\n**Do this**: Ask students to reflect on previous two lessons. Students should know the difference between personal and private information. Students should also understand how to be an upstander.\n\n",
         "name": "Introduction\r",
         "tips": [
           {
@@ -1264,7 +1264,7 @@
       "key": "a8028459-21a6-4877-93db-6fb8756ea317",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.\n- **Behavior** - An action that a sprite performs continuously until it’s told to stop.\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\nBefore heading into the Main Activity, introduce or review today's lesson vocabulary.\n- **Behavior** - An action that a sprite performs continuously until it’s told to stop.\n\n- **Sprite** - A graphic on the screen with a location, size, and appearance.\n"
       },
       "seeding_key": {
         "activity_section.key": "a8028459-21a6-4877-93db-6fb8756ea317",
@@ -1275,7 +1275,7 @@
       "key": "ff2b91df-03ee-4374-8fd1-03d4a2d78253",
       "position": 1,
       "properties": {
-        "description": "Today students will learn how to work with sprites in Sprite Lab.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n**Discuss**: Let the students know that this character on the screen is a sprite. It is a graphic that is controlled by a program. In this lesson, students will have the opportunity to choose their own sprites to control.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
+        "description": "Today students will learn how to work with sprites in Sprite Lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\n**Discuss**: Let the students know that this character on the screen is a sprite. It is a graphic that is controlled by a program. In this lesson, students will have the opportunity to choose their own sprites to control.\n\n####[Swimming Fish Teacher Sandbox](https://studio.code.org/levels/18623)\n\nUsing a projector, show the sandbox level to your students. The goal is to make connections to the previous lesson and show them some of the unique ways that Sprite Lab works. Model writing a few programs and ask students to share their observations.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1303,7 +1303,7 @@
       "key": "fa6083a5-2969-4679-be27-a8ce16116c98",
       "position": 1,
       "properties": {
-        "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Introducing Sprite Lab” video\n",
+        "description": "**Goal:** Today, students will be programming their own Fish Tank. They’ll begin by learning how to put some sprites on the screen, then they will make them move. Finally, they’ll customize their fish tank to add whatever creatures and objects they want.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Introducing Sprite Lab” video\n",
         "name": "Swimming Fish with Sprite Lab"
       },
       "seeding_key": {
@@ -1343,7 +1343,7 @@
       "key": "6e291c19-c4c3-428a-ad87-bca57051e66b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2 - Predict” slide\n",
         "progression_name": "Prediction"
       },
       "seeding_key": {
@@ -1355,7 +1355,7 @@
       "key": "3800bc2a-df7d-4cca-97af-3e972b08ba0b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-5 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1367,7 +1367,7 @@
       "key": "83f72f3b-5161-4847-99ee-46dc79c63fe0",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How to Make a Sprite” video \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How to Make a Sprite” video \n",
         "progression_name": "Video: How to Make a Sprite"
       },
       "seeding_key": {
@@ -1379,7 +1379,7 @@
       "key": "254ac6bd-7a6d-4654-bd1f-59b51c2ea1b8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Practice” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Practice” slide\n",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1391,7 +1391,7 @@
       "key": "0d4a8bca-26eb-4134-8845-2c1e83431def",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1403,7 +1403,7 @@
       "key": "a23e9349-2a6d-4123-b92c-2c76edb7edd5",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Was it difficult to finish a lesson where there was no clear \"right\" and \"wrong\"?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1415,7 +1415,7 @@
       "key": "b5dad76b-f867-4187-a1a0-88effd2eccc5",
       "position": 1,
       "properties": {
-        "description": "\n&nbsp\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took? For example, you flipped a switch, the light turned on._",
+        "description": "\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** _When have you caused something to happen because of an action you took? For example, you flipped a switch, the light turned on._",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1427,7 +1427,7 @@
       "key": "9e6c7fe0-7a65-42c7-8433-2465ebea4629",
       "position": 2,
       "properties": {
-        "description": "\n&nbsp\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the ball goes in the net, score a point.*\n- *When (event)*, *(action)*.\n\n\n&nbsp\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*"
+        "description": "\n&nbsp\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Let’s see if we can find a pattern here:*\n\n- *When you tap on a device, an app starts.*\n- *When the ball goes in the net, score a point.*\n- *When (event)*, *(action)*.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide\n\n**Say:** *Normally when we hear “event” we think of:*\n- *Field trip*\n- *Competition*\n- *Birthday Party*\n\n*We’re learning a new meaning for the word \"event\" today.*"
       },
       "seeding_key": {
         "activity_section.key": "9e6c7fe0-7a65-42c7-8433-2465ebea4629",
@@ -1438,7 +1438,7 @@
       "key": "9f001c0a-0704-41fb-8209-e45d68e58dd2",
       "position": 3,
       "properties": {
-        "description": "###Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:** *In Computer Science, events cause other actions to happen.*\n\n*This lesson has one new and important vocabulary word:*\n\n- **Event** - An event is an action that causes something to happen."
+        "description": "###Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:** *In Computer Science, events cause other actions to happen.*\n\n*This lesson has one new and important vocabulary word:*\n\n- **Event** - An event is an action that causes something to happen."
       },
       "seeding_key": {
         "activity_section.key": "9f001c0a-0704-41fb-8209-e45d68e58dd2",
@@ -1449,7 +1449,7 @@
       "key": "2f75d2e3-7ec0-4d6b-9dec-d18adef93942",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-7 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-7 - Skill Building” slide",
         "name": "Events in Bounce",
         "progression_name": "Skill-Building"
       },
@@ -1462,7 +1462,7 @@
       "key": "aae5173e-5590-4fa3-b979-3f9ff74116aa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1491,7 +1491,7 @@
       "key": "c99e1044-001a-4f1a-a75a-19c9cc1b8559",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the “Events in Bounce” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the “List these events” slide\n\nHave students record the correct order of events shown on this slide. Call on a few students to share their answers before revealing the \"Answer\" slide. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the “Answer” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the “How do events work?” slide\n\n\nDiscuss the correct sequence with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “Events in Bounce” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “List these events” slide\n\nHave students record the correct order of events shown on this slide. Call on a few students to share their answers before revealing the \"Answer\" slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “Answer” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the “How do events work?” slide\n\n\nDiscuss the correct sequence with the class.",
         "name": "How Events Happen",
         "tips": [
           {
@@ -1531,7 +1531,7 @@
       "key": "cdcc151f-2085-4483-a454-5462045b5c76",
       "position": 1,
       "properties": {
-        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_\n\n",
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How do we use sprites in our programs?_\n\n",
         "name": "Setting the Stage"
       },
       "seeding_key": {
@@ -1543,7 +1543,7 @@
       "key": "02bc5060-5b84-49e8-ac20-240bb759e5fd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n####Vocabulary\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn Computer Science, events cause other actions to happen.\n\n- **Event** - An action that causes something to happen",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\nLet’s see if we can find a pattern here:\n* When you flip a switch, the lights turn on.\n* When you tap on a device, an app starts.\n* When the alarm goes off, you get out of bed.\n* When (event), (action).\n\nIn computer science, events cause other actions to happen. Our new vocabulary word today is event. Normally when we hear “event” we think of:\n* Field trip\n* Competition\n* Birthday Party\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nIn Computer Science, events cause other actions to happen.\n\n- **Event** - An action that causes something to happen",
         "name": "A Series of Events"
       },
       "seeding_key": {
@@ -1602,7 +1602,7 @@
       "key": "5fca5b45-0ca0-4ba0-ad3b-22a881de777d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Welcome to Sprite Lab” video",
         "name": "Hello World",
         "progression_name": "Video: Hello World: Welcome to Sprite Lab"
       },
@@ -1615,7 +1615,7 @@
       "key": "1d28df74-3b6a-4e02-8f5d-b203175c75c7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-5 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1627,7 +1627,7 @@
       "key": "7ac8fa8a-2b6f-47d9-9139-2eefe9c8cf3d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Programming with Events” video",
         "progression_name": "Video: Hello World: Programming with Events"
       },
       "seeding_key": {
@@ -1639,7 +1639,7 @@
       "key": "cac26359-832d-42f7-add2-a2cda8e1ab94",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-12 - Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1651,7 +1651,7 @@
       "key": "d0b47e02-4703-4e5f-8e8b-9b37dc7e5326",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do What You Want” video",
         "progression_name": "Video: Hello World: Do What You Want"
       },
       "seeding_key": {
@@ -1663,7 +1663,7 @@
       "key": "6c80a2d2-9530-449c-9920-680d913d4877",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 14 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1686,7 +1686,7 @@
       "key": "a35cad71-7b0f-4e00-b5bf-27947beca4ca",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What did you learn today about sprites?_ \n* _How do events work in your code?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1709,7 +1709,7 @@
       "key": "dad93453-4a06-4770-b1c9-06e939d998ab",
       "position": 1,
       "properties": {
-        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How does this puzzle work?_",
+        "description": "Students may have different levels of experience with both the Artist tool and the concept of loops. Based on what you think your class could benefit from, we recommend finding a puzzle or two to preview with the class. Whether this lesson is an introduction or a review, it's important to prepare students for what is coming next!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _How does this puzzle work?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1721,7 +1721,7 @@
       "key": "d7baafae-3484-4811-be3e-fac783666e53",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again."
       },
       "seeding_key": {
         "activity_section.key": "d7baafae-3484-4811-be3e-fac783666e53",
@@ -1732,7 +1732,7 @@
       "key": "d60429ec-9252-43e6-8b3c-afe33e2f1401",
       "position": 1,
       "properties": {
-        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrande” video",
+        "description": "Some students may discover where to add \"repeat\" loops by writing out the program without loops then circling sections of repetitions. If the students in your class seem like they could benefit from this, have them keep paper and pencils beside them at their machines. Students might also enjoy drawing some of the shapes and figures on paper before they program it online.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Artist Intro with JR Hildebrande” video",
         "name": "Drawing with Loops",
         "progression_name": "Video: Artist Intro with JR Hildebrande"
       },
@@ -1745,7 +1745,7 @@
       "key": "cf3b58b0-24ff-42f5-b6d9-826666233a15",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1757,7 +1757,7 @@
       "key": "e377d852-4114-43d7-8a1f-4e26092c8422",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Loops with the Artist” video\n",
         "progression_name": "Video: Loops with the Artist"
       },
       "seeding_key": {
@@ -1769,7 +1769,7 @@
       "key": "44617a58-27a5-43a0-8c14-5e67c9c0369e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-7 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1781,7 +1781,7 @@
       "key": "7a3b9095-e9e1-48af-82eb-f913447628a6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1804,7 +1804,7 @@
       "key": "80347a1c-6363-4517-b5eb-975c2c7c1649",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What was the coolest shape or figure you programmed today? Draw it out!_\n* _Can you write the code you used to create it?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What was the coolest shape or figure you programmed today? Draw it out!_\n* _Can you write the code you used to create it?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1827,7 +1827,7 @@
       "key": "95994d74-6c9e-40b1-8c45-ac0f2c75e9bc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\n**Do this**: Tell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect**: Ask the students how they felt about nested loops. \n\n* _What did they like and dislike about them?_ \n* _What are some advantages of using nested loops?_\n\n**Do this**: Tell the students that they will be using nested loops again, but in Artist this time. They will be making amazing projects today!",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1839,7 +1839,7 @@
       "key": "d0323dfd-53fe-4370-b210-a5ac5a98d3b0",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide.\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide.\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d0323dfd-53fe-4370-b210-a5ac5a98d3b0",
@@ -1850,7 +1850,7 @@
       "key": "46c2aadd-d6d5-4f77-b978-3381df91b628",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nStudents might benefit from having a puzzle done as a class.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Pause & Think Online” video\n\nWe highly recommend ***Pause and Think Online** Video in this lesson. This may not be an easy topic for the majority of your students. Working with a partner and discussing potential solutions to the puzzles might ease the students' minds.\n\nStudents might benefit from having a puzzle done as a class.\n\nBe sure to have paper and pencils nearby for students to write out their plan before coding. Some puzzles have a limit on the number of certain blocks, so paper can be helpful if students like to write out the long answer before searching for repeating patterns.",
         "name": "Fancy Shapes Using Nested Loops",
         "tips": [
           {
@@ -1868,7 +1868,7 @@
       "key": "cd14ea8b-bd74-41aa-83e0-9d1b4052c576",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-2 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-2 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1880,7 +1880,7 @@
       "key": "eca856c1-e6cd-4ceb-a874-08d77a1c18fe",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Nested Loops” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Nested Loops” video\n",
         "progression_name": "Video: Nested Loops"
       },
       "seeding_key": {
@@ -1892,7 +1892,7 @@
       "key": "210838c0-3479-46a6-88f3-b615a1f1fcaf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-6 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 4-6 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1904,7 +1904,7 @@
       "key": "229349f7-8b9f-42fa-aa3e-355dc0c208e1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -1916,7 +1916,7 @@
       "key": "367a897f-cbe1-472b-a0ff-56fb6beba8c8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1939,7 +1939,7 @@
       "key": "80cf08d4-092a-486d-be6f-c57f72525f24",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide.\n\n**Discuss**: *What did you make today?*\n\n**Do This**: Get the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide.\n\n**Discuss**: *What did you make today?*\n\n**Do This**: Get the class together and allow time for students to show off their Artist drawings! Make sure everyone feels included by checking that every student is done with their Artist drawing before starting the presentations. Discuss how each drawing was made and what was in the student's nested loop.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1951,7 +1951,7 @@
       "key": "11819201-018a-4044-83f3-a0d3c0a91f81",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide.\n\n**Reflect:**\n\n* _Draw something you used nested loops to make._\n* _How do nested loops help you code complex images?_"
       },
       "seeding_key": {
         "activity_section.key": "11819201-018a-4044-83f3-a0d3c0a91f81",
@@ -1973,7 +1973,7 @@
       "key": "040aca4c-f85e-4632-82b2-33010b97081c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the previous lesson: \nFancy Shapes Using Nested Loops_\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the previous lesson: \nFancy Shapes Using Nested Loops_\n* _If you were to teach nested loops to a friend, what would you say to help them understand?_\n\n",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -1985,7 +1985,7 @@
       "key": "a43b6b96-ab60-4295-952f-bc5d985104a9",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Loop** - The action of doing something over and over again.\n- **Repeat** - To do something again.\n\n**Do This**: If there's time, give an introduction to the main characters of today's puzzles, _Anna_ and _Elsa_ from _\"Frozen\"_. Give the class the sisters' backstory if the class doesn't already know it. To build excitement, tell the class they will be using nested loops to make some fantastic drawings with _Anna_ and _Elsa's_ ice skates!"
       },
       "seeding_key": {
         "activity_section.key": "a43b6b96-ab60-4295-952f-bc5d985104a9",
@@ -1996,7 +1996,7 @@
       "key": "855066e0-d8a7-4d91-bb14-1a5797dbcc5f",
       "position": 1,
       "properties": {
-        "description": "This lesson consists of two separate snowflake projects. In each project, code carries through levels with the student, allowing them to continuously make small and simple changes to code they have already written.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-5 - Mini-Project: Snowflake #1” slide",
+        "description": "This lesson consists of two separate snowflake projects. In each project, code carries through levels with the student, allowing them to continuously make small and simple changes to code they have already written.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-5 - Mini-Project: Snowflake #1” slide",
         "name": "Nested Loops with Frozen",
         "progression_name": "Mini-Project: Snowflake #1"
       },
@@ -2009,7 +2009,7 @@
       "key": "2fd91815-86fa-45d7-964e-0331774d1e23",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-9 - Mini-Project: Snowflake #2” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-9 - Mini-Project: Snowflake #2” slide\n",
         "progression_name": "Mini-Project: Snowflake #2"
       },
       "seeding_key": {
@@ -2021,7 +2021,7 @@
       "key": "33855a46-798e-46c8-893c-5b6ca65108a1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When do you use a nested loop?_\n* _How would the code for your snowflake look different if you only used one loop? No loops?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _When do you use a nested loop?_\n* _How would the code for your snowflake look different if you only used one loop? No loops?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2044,7 +2044,7 @@
       "key": "f474f3ff-ca2f-43dd-abfd-8cb707317f78",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important word:\n\n - **Function** - A piece of code that you can call over and over again.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is the chorus to your favorite song?_\n\n####Vocabulary\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\nThis lesson has one new and important word:\n\n - **Function** - A piece of code that you can call over and over again.\n\n\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2056,7 +2056,7 @@
       "key": "91eba835-8baf-4db2-a262-2e59932f204a",
       "position": 2,
       "properties": {
-        "description": "####Sing a Song\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Baby Shark” slide\n\n- Let the class know that today is song day!\n- We're going to learn a song together.\n\t- Start with a simple song, either written out or projected on the screen.\n\t- Point to the chorus and be sure that the class knows how it goes before you begin on the song.\n\t- Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus."
+        "description": "####Sing a Song\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Baby Shark” slide\n\n- Let the class know that today is song day!\n- We're going to learn a song together.\n\t- Start with a simple song, either written out or projected on the screen.\n\t- Point to the chorus and be sure that the class knows how it goes before you begin on the song.\n\t- Blast through the song, singing it with them in the beginning, then see what happens when you get to the part where it calls the chorus."
       },
       "seeding_key": {
         "activity_section.key": "91eba835-8baf-4db2-a262-2e59932f204a",
@@ -2083,7 +2083,7 @@
       "key": "cbbc7f79-b11e-4274-8145-7a809ba574f0",
       "position": 4,
       "properties": {
-        "description": "***Chorus:***\n\n*doo doo, doo doo doo doo*\n\n***Song:***\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n(Continuing on, if time permits, with \"Grandma shark\", \"Grandpa shark\", \"Hungry shark\", \"Little fish\", \"Swim away\", \"Swim faster\", \"Safe at last\".)\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
+        "description": "***Chorus:***\n\n*doo doo, doo doo doo doo*\n\n***Song:***\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Chorus*\n\n*Baby Shark*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Chorus*\n\n*Mommy Shark*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n*Chorus*\n\n*Daddy Shark*\n\n(Continuing on, if time permits, with \"Grandma shark\", \"Grandpa shark\", \"Hungry shark\", \"Little fish\", \"Swim away\", \"Swim faster\", \"Safe at last\".)\n\n- It's quite likely that the majority of the class will sing the lyrics for the chorus when you point to that bit.\n\t- Stop the song once that happens, and explicitly highlight what just happened.\n\t\t- You defined the chorus.\n\t\t- You called the chorus.\n\t\t- They sang the chorus.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n- Ask the class why they suppose you only wrote the chorus once at the top of the paper instead of writing it over and over in each place where it is supposed to be sung.\n\t- What are other benefits of only writing the chorus once when you sing it many times?"
       },
       "seeding_key": {
         "activity_section.key": "cbbc7f79-b11e-4274-8145-7a809ba574f0",
@@ -2150,7 +2150,7 @@
       "key": "6307a084-f942-4340-a140-3eb737c4bfa5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Songwriting” slide\n\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the ***Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Songwriting” slide\n\n**Directions:**\n\n- Divide into groups of 4, 5, or 6.\n- Give each group several copies of the ***Songwriting Worksheet**.\n- Play a short song for the class that contains a clear chorus that does not change from verse to verse.\n- Challenge the class to identify (and write down) the chorus.\n- Compare results from each group.\n\nDid everyone get the same thing?\nSing your choruses together to find out!\nPlay this game over and over until the class has little trouble identifying the choruses.\n\n- It is often easier just to have the class listen to (or watch) the song, then vote on what the chorus is by singing it together, rather than writing the whole thing down. If you choose this method, consider having the class do a written chorus for the final song selection to be sure that the visual learners get proper reinforcement."
       },
       "seeding_key": {
         "activity_section.key": "6307a084-f942-4340-a140-3eb737c4bfa5",
@@ -2161,7 +2161,7 @@
       "key": "651fbde7-9152-4e89-9678-f4c59a01bc6c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n",
         "name": "Reflection",
         "tips": [
           {
@@ -2179,7 +2179,7 @@
       "key": "565eb1a2-1b66-4045-a73f-1218f582750c",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n\n- Would you rather write lyrics over and over again or define a chorus?\n- Do you think it's possible to make multiple choruses for the same song?\n- Does it make sense to make a new chorus for every time it's needed in a song?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide"
+        "description": "\n####Flash Chat: What did we learn?\n\n- Would you rather write lyrics over and over again or define a chorus?\n- Do you think it's possible to make multiple choruses for the same song?\n- Does it make sense to make a new chorus for every time it's needed in a song?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide"
       },
       "seeding_key": {
         "activity_section.key": "565eb1a2-1b66-4045-a73f-1218f582750c",
@@ -2201,7 +2201,7 @@
       "key": "33140864-3075-4080-98b8-658066d03627",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** “Songwriting Assessment” slide.\n\nHand out the ***Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Songwriting Assessment” slide.\n\nHand out the ***Songwriting Assessment worksheet** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "33140864-3075-4080-98b8-658066d03627",
@@ -2234,7 +2234,7 @@
       "key": "3df6417f-62d5-41e3-b840-fbc80ecbc2a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is a function and how do you use it?_\n\n**Discussion Goal**: Make sure students understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What is a function and how do you use it?_\n\n**Discussion Goal**: Make sure students understand that functions are simply a chunk of code that has a name.  Once defined, you can use that name over and over in your program to tell the computer to run the chunk of code that you assigned to it.",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -2246,7 +2246,7 @@
       "key": "dcd51018-acc1-46a7-be7b-92fa07330478",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again."
       },
       "seeding_key": {
         "activity_section.key": "dcd51018-acc1-46a7-be7b-92fa07330478",
@@ -2257,7 +2257,7 @@
       "key": "8fbd194d-6e39-4a48-be5f-b0a3ded7b832",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis activity will help bring the unplugged concepts from \"Functions Unplugged: Songwriting\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Bridging Activity” slide\n\nThis activity will help bring the unplugged concepts from \"Functions Unplugged: Songwriting\" into the online world that the students are moving into. Choose _one_ of the following to do with your class:"
       },
       "seeding_key": {
         "activity_section.key": "8fbd194d-6e39-4a48-be5f-b0a3ded7b832",
@@ -2309,7 +2309,7 @@
       "key": "2b3285de-d1be-4c25-8ac9-1e27422a649e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - The Agent” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - The Agent” video\n",
         "name": "Functions in Minecraft",
         "progression_name": "Video: Minecraft - The Agent",
         "tips": [
@@ -2328,7 +2328,7 @@
       "key": "6c03cef3-7997-4e64-9cca-9156eebe5567",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-3 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2340,7 +2340,7 @@
       "key": "1662901f-a87e-43ee-b269-ac8aaabdb345",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Repeat Loops” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Repeat Loops” video\n",
         "progression_name": "Video: Minecraft - Repeat Loops"
       },
       "seeding_key": {
@@ -2352,7 +2352,7 @@
       "key": "c42ed462-fb57-4fd0-aed0-658b1918d4cb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5-9 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2364,7 +2364,7 @@
       "key": "83152128-51fb-44fb-8d63-5ea36ebf7f48",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Functions” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Functions” video\n",
         "progression_name": "Video: Minecraft - Functions"
       },
       "seeding_key": {
@@ -2376,7 +2376,7 @@
       "key": "2232e60a-7bfb-4602-9d79-402e2251e0f2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-14 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 11-14 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2388,7 +2388,7 @@
       "key": "87f7b88c-6934-43a4-a608-c6b231b2ab3f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Congratulations” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Minecraft - Congratulations” video\n",
         "progression_name": "Video: Minecraft - Congratulations"
       },
       "seeding_key": {
@@ -2400,7 +2400,7 @@
       "key": "12fd095f-6395-4fb0-880e-8138253f1afb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 16 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -2412,7 +2412,7 @@
       "key": "9f37a75c-3943-4409-acd7-5e17fdddf968",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What did your functions do in the programs you wrote today? How did that help you?_\n * _When should you use a function instead of a loop?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n* _What did your functions do in the programs you wrote today? How did that help you?_\n * _When should you use a function instead of a loop?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2424,7 +2424,7 @@
       "key": "0cfe952d-4234-40be-ab3a-5c7b61ed65ad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the Songwriting lesson: When writing a song, when should you use a function?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Think back to the Songwriting lesson: When writing a song, when should you use a function?_",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2436,7 +2436,7 @@
       "key": "581ad7e8-eafd-4afe-9f80-7b9dfcfacb86",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again.\n\n- **Declare a Function** - Fill in a function with code and give the function a name.\n\n- **Call a Function** - Using the name of the function to tell the computer to run the code written in the function.\n"
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Function** - A piece of code that you can call over and over again.\n\n- **Declare a Function** - Fill in a function with code and give the function a name.\n\n- **Call a Function** - Using the name of the function to tell the computer to run the code written in the function.\n"
       },
       "seeding_key": {
         "activity_section.key": "581ad7e8-eafd-4afe-9f80-7b9dfcfacb86",
@@ -2447,7 +2447,7 @@
       "key": "58c40b16-57d0-47c7-bf88-f5f37b543689",
       "position": 3,
       "properties": {
-        "description": "\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles."
+        "description": "\n\nAsk the class to think back to \"Functions Unplugged: Songwriting\" and recall what a function is. Open a discussion about when to use a function when writing a song.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using Functions” slide\n\nTell the class that there are two main components to using functions.\n\n1. **The Declaration**: Function declarations are what create a function. In a function declaration, you fill in the function with code and you give the function a name. You must declare a function before you can use it.\n\n2. **The Call**:\n\tFunction calls are what makes the program run the code in the function. To call a function, you place the name of the function in your program. Make sure your function is properly defined before calling it in your program.\n    \nThe class can use songwriting as an example to understand these two components. In the unplugged activity, the function containing the lyrics to the chorus was named \"chorus\". When we first made this function, we circled the lyrics that would go in the function. Once we named the function, we could read through the lyrics and replace the repeated chorus lyrics with a function call to \"chorus\".\n\nContinue the conversation until students have a basic understanding of functions being declared and called. If students don't get to this point, make sure to do one of the bridging activities before moving into the Code.org puzzles."
       },
       "seeding_key": {
         "activity_section.key": "58c40b16-57d0-47c7-bf88-f5f37b543689",
@@ -2458,7 +2458,7 @@
       "key": "6f7c5faa-3d3a-41d8-bb68-db6397828054",
       "position": 1,
       "properties": {
-        "description": "####Online Puzzles\n\nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction” slide",
+        "description": "####Online Puzzles\n\nStudents may benefit from writing code without functions then creating functions from the repeated code. If students don't enjoy doing this in the Code.org workspace, we recommend providing paper and pencils for students to write (or draw) out their ideas.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Prediction” slide",
         "name": "Functions with Artist",
         "progression_name": "Prediction"
       },
@@ -2471,7 +2471,7 @@
       "key": "5c93cda4-8cdb-4e56-93d3-6d9b23ddc81d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-9 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-9 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2483,7 +2483,7 @@
       "key": "8f3dd380-2026-4553-a6ed-c46138822f23",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10 - Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -2506,7 +2506,7 @@
       "key": "6b17c5e3-e4e9-41bb-ab8e-cd9fd10e4e03",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect**:\n* _What are some differences between functions and loops?_\n* _Sketch out a drawing you made today. Can you write the code needed to create this?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect**:\n* _What are some differences between functions and loops?_\n* _Sketch out a drawing you made today. Can you write the code needed to create this?_",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -2529,7 +2529,7 @@
       "key": "eda510e7-5a50-46ce-9e27-dfc165ed96bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:  _If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life?_ \n\nEncourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:  _If you were a scientist, when might you want to simulate an experiment on a computer instead of in real life?_ \n\nEncourage students to consider experiments that might be dangerous or difficult to reproduce in real life.\n\n**Say**: _Today we're going to run a simulation to gather data about an experiment, just like scientists do._",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2541,7 +2541,7 @@
       "key": "d7f4f973-ec3e-4957-b138-e9c2e00bb2cd",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life."
       },
       "seeding_key": {
         "activity_section.key": "d7f4f973-ec3e-4957-b138-e9c2e00bb2cd",
@@ -2552,7 +2552,7 @@
       "key": "a83fc1f1-0c4f-448a-9fab-15b9080cf316",
       "position": 1,
       "properties": {
-        "description": "**Distribute**: Pass out the lesson ***worksheet** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Step 1 - Collecting Data” slide\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Step 2 - Line Graph” slide\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* _Are the graphs the same or different? Why do you think that is?_\n* _What do you think you'd see if you ran this simulation 5 more times?_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Step 3 - Modify and Predict” slide\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Step 4 - Collecting More Data” slide\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Step 5 - Visualize Your Data” slide\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
+        "description": "**Distribute**: Pass out the lesson ***worksheet** along with pencils and coloring instruments of some kind. Direct students to Code Studio or project the level on the board.\n\n\n\n#### Running Simulations\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 1 - Collecting Data” slide\n\n**Step 1 Gather Data**: The first bubble is a simple simulation of an elephant and a hippo collecting apples. Students will run the simulation at least 5 times, recording the number of apples collected by each animal and the total time it took to run the simulation.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 2 - Line Graph” slide\n\n**Step 2 Line Graph**: Using the data collected in the previous step, students will plot a double line graph. Encourage students to share their graphs with neighbors and discuss the following questions:\n\n* _Are the graphs the same or different? Why do you think that is?_\n* _What do you think you'd see if you ran this simulation 5 more times?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 3 - Modify and Predict” slide\n\n**Step 3 Modify and Predict**: In the second bubble students will be able to modify some of the variables that control this simulation. Each student will choose a variable to modify, predict how that change will impact the simulation. Potential variables to modify include:\n\n* Number of elephants\n* Number of hippos\n* Number of apples\n* Speed of elephants\n* Speed of hippos\n\n*Note that students can change the sprites in their simulation to other animals and food if they wish.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 4 - Collecting More Data” slide\n\n**Step 4 Collecting More Data**: With the modifications students decided on in the last step, they'll run the simulation five more times and collect the data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Step 5 - Visualize Your Data” slide\n\n**Step 5 Visualize Your Data**: This step is purposefully left open to allow students to explore any visual representation of their data that they'd like. The goal of this visual should be to prove or disprove their prediction.\n\n\n\n**Share**: After finishing, students can share their results with a neighbor. When the whole class is ready, bring everyone together.",
         "name": "Simulation Experiments",
         "progression_name": "Run a simulation"
       },
@@ -2576,7 +2576,7 @@
       "key": "760b73c9-10ed-4d2e-8adb-b05cd13c7387",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss**: \n* _How did your modification and prediction turn out?_\n* _What modifications did you make and why did you choose those?_ \n* _How did this change connect to your predictions?_ \n\n**Discussion Goal:** The simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss**: \n* _How did your modification and prediction turn out?_\n* _What modifications did you make and why did you choose those?_ \n* _How did this change connect to your predictions?_ \n\n**Discussion Goal:** The simulation used in this lesson is purposefully broad and kind of silly. Through this discussion, students should start to connect the predictions and variable changes with actual scientific hypotheses. From there you can encourage students to think about computational modeling or more authentic scenarios or experiments.",
         "name": "Reflection\r"
       },
       "seeding_key": {
@@ -2588,7 +2588,7 @@
       "key": "a3fa5f57-5f34-4480-8024-102e3564ba70",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What is one interesting thing that you might simulate using a computer?_\n* _What kinds of variables would you want to control in that experiment?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What is one interesting thing that you might simulate using a computer?_\n* _What kinds of variables would you want to control in that experiment?_"
       },
       "seeding_key": {
         "activity_section.key": "a3fa5f57-5f34-4480-8024-102e3564ba70",
@@ -2599,7 +2599,7 @@
       "key": "cc78fcf0-91f5-495b-a1a0-a9c72d3ef7a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Extension - Customize” slide\n\nThroughout the main activity of this lesson, students are running and modifying a simulation that they did not program from scratch themselves. Students can actually program the simulation with blocks of code that they have seen in previous lessons.\n\nIn the last level of the lesson, students can explore this code and begin thinking about how to program a simulation themselves.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Extension - Customize” slide\n\nThroughout the main activity of this lesson, students are running and modifying a simulation that they did not program from scratch themselves. Students can actually program the simulation with blocks of code that they have seen in previous lessons.\n\nIn the last level of the lesson, students can explore this code and begin thinking about how to program a simulation themselves.",
         "name": "Customize the simulation",
         "progression_name": "Customize"
       },
@@ -2612,7 +2612,7 @@
       "key": "da6e810d-8507-443d-a751-dda08b841c66",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What can cause a virus to spread through a town more quickly?_\n* _What can help slow the spread of a virus down?_\n\nThe goal of this discussion is for students to have an opportunity to activate prior knowledge and see their ideas on the board. This is also an opportunity to investigate some misconceptions about how viruses spread.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _What can cause a virus to spread through a town more quickly?_\n* _What can help slow the spread of a virus down?_\n\nThe goal of this discussion is for students to have an opportunity to activate prior knowledge and see their ideas on the board. This is also an opportunity to investigate some misconceptions about how viruses spread.\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -2624,7 +2624,7 @@
       "key": "81061d84-4610-42e7-90da-c108178cdf65",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life. \n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system."
+        "description": "####Vocabulary\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n\n- **Event** - An action that causes something to happen.\n\n- **Models and Simulations** - a program which replicates or mimics key features of a real world event in order to investigate its behavior without the cost, time, or danger of running an experiment in real life. \n\n**Do This:** Review the vocabulary, **models and simulations** with students, by building off of the previous lesson. A simulation is a computer model of a process or system."
       },
       "seeding_key": {
         "activity_section.key": "81061d84-4610-42e7-90da-c108178cdf65",
@@ -2635,7 +2635,7 @@
       "key": "5602ea2d-680b-479b-8d91-3a5dfb5ab1aa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Welcome to Monster Town” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Welcome to Monster Town” slide",
         "name": "Outbreak"
       },
       "seeding_key": {
@@ -2671,7 +2671,7 @@
       "key": "3d50b046-7f09-49af-b331-76f01f9a9c24",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Welcome to Monster Town” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Welcome to Monster Town” slide"
       },
       "seeding_key": {
         "activity_section.key": "3d50b046-7f09-49af-b331-76f01f9a9c24",
@@ -2694,7 +2694,7 @@
       "key": "b03cc3ab-818d-49c3-9255-b6a63beb559c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show next “Welcome to Monster Town” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next “Welcome to Monster Town” slide"
       },
       "seeding_key": {
         "activity_section.key": "b03cc3ab-818d-49c3-9255-b6a63beb559c",
@@ -2717,7 +2717,7 @@
       "key": "7ebb2c45-5033-4191-9b8b-30ed2ed875d3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Stopping the Spread” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Stopping the Spread” slide"
       },
       "seeding_key": {
         "activity_section.key": "7ebb2c45-5033-4191-9b8b-30ed2ed875d3",
@@ -2740,7 +2740,7 @@
       "key": "8f6c21bc-bce9-41a0-b55d-67c2d9b3e21d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “What Will Happen Next?” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “What Will Happen Next?” slide"
       },
       "seeding_key": {
         "activity_section.key": "8f6c21bc-bce9-41a0-b55d-67c2d9b3e21d",
@@ -2763,7 +2763,7 @@
       "key": "be5c1984-c239-4994-8d33-a32775694d8c",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show next “What Will Happen Next?” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show next “What Will Happen Next?” slide"
       },
       "seeding_key": {
         "activity_section.key": "be5c1984-c239-4994-8d33-a32775694d8c",
@@ -2820,7 +2820,7 @@
       "key": "b99f9a10-8ef1-4ca4-b0e2-89dfa30263dc",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Introduction” video\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Introduction” video\n\n",
         "progression_name": "Video: Outbreak Simulator: Introduction",
         "tips": [
           {
@@ -2838,7 +2838,7 @@
       "key": "8548ca19-d444-45ac-b132-50973b680b1c",
       "position": 18,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 3 - Creating a Simulation” slide\n\n**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 7 until the class is ready to move on.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 3 - Creating a Simulation” slide\n\n**Do This:** Transition students to their computers, and have them begin following the instructions for each level in the skill building section. If students finish this section early, they can continue experimenting with their code in Level 7 until the class is ready to move on.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2850,7 +2850,7 @@
       "key": "4a06780e-af8f-41e3-a354-4dee0a88c249",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Events” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Events” video",
         "progression_name": "Video: Outbreak Simulator: Events"
       },
       "seeding_key": {
@@ -2862,7 +2862,7 @@
       "key": "52b4b6af-0a48-4bbd-8883-203a9ef3a469",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 5-7 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 5-7 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2874,7 +2874,7 @@
       "key": "c24a0a7a-1fcd-4f12-82c7-a9eafb3046cc",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Think Like a Scientist” video\n\n**Do This:** Bring the class back together to watch *Outbreak Simulator: Thinking Like a Scientist.* Use the ideas in level 9 to discuss the video and help frame the rest of the lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Think Like a Scientist” video\n\n**Do This:** Bring the class back together to watch *Outbreak Simulator: Thinking Like a Scientist.* Use the ideas in level 9 to discuss the video and help frame the rest of the lesson.",
         "progression_name": "Video: Outbreak Simulator: Thinking Like a Scientist"
       },
       "seeding_key": {
@@ -2886,7 +2886,7 @@
       "key": "7b8d7c19-9bdf-4f62-a8a4-49ba6fe78418",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 9 - Reset and Replay!” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 9 - Reset and Replay!” slide"
       },
       "seeding_key": {
         "activity_section.key": "7b8d7c19-9bdf-4f62-a8a4-49ba6fe78418",
@@ -2909,7 +2909,7 @@
       "key": "fcaadb5b-c290-4841-a2c3-183699af6a3f",
       "position": 24,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Collecting Data” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Collecting Data” slide"
       },
       "seeding_key": {
         "activity_section.key": "fcaadb5b-c290-4841-a2c3-183699af6a3f",
@@ -2932,7 +2932,7 @@
       "key": "3eaa0b1f-f776-4cab-bf58-508b00664f4e",
       "position": 26,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Making Predictions” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Making Predictions” slide"
       },
       "seeding_key": {
         "activity_section.key": "3eaa0b1f-f776-4cab-bf58-508b00664f4e",
@@ -2955,7 +2955,7 @@
       "key": "8725674b-00d6-4e6e-9c53-1b0772ef9084",
       "position": 28,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Is Monster Town like the real world?” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Is Monster Town like the real world?” slide"
       },
       "seeding_key": {
         "activity_section.key": "8725674b-00d6-4e6e-9c53-1b0772ef9084",
@@ -2978,7 +2978,7 @@
       "key": "142e42e6-8a17-4092-8b78-53e7f54dee60",
       "position": 30,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “What else can we model?” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “What else can we model?” slide"
       },
       "seeding_key": {
         "activity_section.key": "142e42e6-8a17-4092-8b78-53e7f54dee60",
@@ -3012,7 +3012,7 @@
       "key": "b4e5177f-8640-4861-827e-66f6e0e200b1",
       "position": 33,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 10-12 - Mini-Project” slide\n\n**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 10-12 - Mini-Project” slide\n\n**Do this:** Transition students back to their computers, and have them work through the remaining levels. Some of these levels offer optional challenges. Encourage students to read the instructions carefully and to experiment with their simulations.",
         "progression_name": "Mini-Project: Outbreak Simulator"
       },
       "seeding_key": {
@@ -3024,7 +3024,7 @@
       "key": "590430e0-ee47-46cf-bb1d-b7042adeb7f7",
       "position": 34,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Free Play” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Outbreak Simulator: Free Play” video\n",
         "progression_name": "Video: Outbreak Simulator: Free Play"
       },
       "seeding_key": {
@@ -3036,7 +3036,7 @@
       "key": "de39f020-f9d8-4f9a-8a7e-2225aba60901",
       "position": 35,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 14 - Mini-Project” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 14 - Mini-Project” slide",
         "progression_name": "Mini-Project: Outbreak Simulator"
       },
       "seeding_key": {
@@ -3060,7 +3060,7 @@
       "key": "d0bf5d59-c215-44e5-a68b-15cd29b3b293",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:**\n- _How can simulations be helpful in the real world?_ \n- _How can simulations improve the way we test out ideas?_ \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:**\n- _How can simulations be helpful in the real world?_ \n- _How can simulations improve the way we test out ideas?_ \n\nThe goal of the discussion is for students to understand that simulations are a way to model complex systems in an interactive way. They should also see how simulations let people test out ideas quickly, cheaply and safely. "
       },
       "seeding_key": {
         "activity_section.key": "d0bf5d59-c215-44e5-a68b-15cd29b3b293",
@@ -3071,7 +3071,7 @@
       "key": "36996561-f942-496c-abf2-e8937669460c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How is this simulation like the real world? How is it different?_\n* _What would you want to change/add to your simulation?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**:\n* _How is this simulation like the real world? How is it different?_\n* _What would you want to change/add to your simulation?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3083,7 +3083,7 @@
       "key": "36c3fd60-b2a0-4b61-8272-3b6126694d84",
       "position": 1,
       "properties": {
-        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Do you think technology can predict your actions or interests? Explain why or why not._\n",
+        "description": "**Motivate:** Explain to students the goals of today's activity. They are going to start using a new tool that will let them train a real machine learning model, a form of artificial intelligence. \n\n**Video:** The first level of this activity is a video that gives important context around artificial intelligence and machine learning. Watch ***AI: Machine Learning** as a class and debrief afterwards to help students build connections to the content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _Do you think technology can predict your actions or interests? Explain why or why not._\n",
         "name": "Build Excitement!\r"
       },
       "seeding_key": {
@@ -3095,7 +3095,7 @@
       "key": "9f425104-5e39-4c42-917f-b46d74dc70bf",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Machine Learning** - How computers recognize patterns and make decisions without being explicitly programmed."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Vocabulary” slide\n- **Machine Learning** - How computers recognize patterns and make decisions without being explicitly programmed."
       },
       "seeding_key": {
         "activity_section.key": "9f425104-5e39-4c42-917f-b46d74dc70bf",
@@ -3106,7 +3106,7 @@
       "key": "bb31c7b3-4368-42ce-9d58-db224a82ae61",
       "position": 1,
       "properties": {
-        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “AI: What is Machine Learning?” video\n",
+        "description": "**General Support:** As a teacher your role is primarily to support students as they make their way through the tutorial. Here are a few tips that should help students regardless of the level they're working on.\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor to discuss what they are experiencing. Since this tutorial includes videos and students may be wearing headphones it can get easy to \"go into a bubble\". Help break those barriers by actively pairing students.\n* **Read the Instructions:** The instructions usually provide helpful information about what is happening behind the scenes. \n* **Go back and try different things:** If students finish quickly, encourage them to go back to \"Train More\". In the last part of the activity, students can also go back and choose a \"New Word\". More training data tends to make the machine learning model more accurate and consistent. Students can also learn by purposefully training their model incorrectly, or not training it at all.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “AI: What is Machine Learning?” video\n",
         "name": "AI For Oceans",
         "progression_name": "Video: AI: What is Machine Learning?",
         "tips": [
@@ -3125,7 +3125,7 @@
       "key": "1b54dc10-c1db-4d4a-bc3d-b30ceba5b5fa",
       "position": 2,
       "properties": {
-        "description": "### Training AI\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 2-4 - Train AI to Clean the Ocean” slide",
+        "description": "### Training AI\nStudents can work through the first three levels on their own or with a partner. To program A.I., use the buttons to label an image as either \"fish\" or \"not fish\". Each image and label becomes part of the data used to train A.I. to do it on its own. Once trained, A.I. will attempt to label 100 new images on its own, then present a selection that it determined have the highest probability of being \"fish\" based on its training. Students who consistently label things correctly should see an ocean full of different types of sea creatures, without much (or any) other objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 2-4 - Train AI to Clean the Ocean” slide",
         "progression_name": "Train AI to Clean the Ocean",
         "tips": [
           {
@@ -3143,7 +3143,7 @@
       "key": "1c0fc799-cb10-4764-a080-4683ab5c769d",
       "position": 3,
       "properties": {
-        "description": "**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n### Using Training Data\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:** _How do you think your training data influences the results that A.I. produced?_\n\nIn small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Training Data & Bias” video",
+        "description": "**Quick Share-out:** _How well did A.I. do? How do you think it decided what to include in the ocean?_\n\n### Using Training Data\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Discuss” slide\n\n**Discuss:** _How do you think your training data influences the results that A.I. produced?_\n\nIn small groups, students share their responses. Circulate the room and listen to student ideas. This can be followed with full class discussion, or students can jump right back into the tutorial.\n\n**Goal:** Get students to reflect on their experience so far. It is important at this point that they realize the labeling they are doing is actually programming the computer. The examples they show A.I. are the \"training data\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Training Data & Bias” video",
         "progression_name": "Video: Training Data & Bias"
       },
       "seeding_key": {
@@ -3155,7 +3155,7 @@
       "key": "20eb43c5-40fb-40f0-be70-3fb8d0ff80f5",
       "position": 4,
       "properties": {
-        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 6 - Using Training Data” slide",
+        "description": "In the second half of the activity, students will teach A.I. about a word of their choosing by showing it examples of that type of fish.  As before, A.I. doesn't start with any training data about these labels. Even though the words in this level are fairly objective, it's possible that students will end up with different results based on their training data. Some students may even intentionally train A.I. incorrectly to see what happens. If students are reflecting on how **machine learning** works, it should be encouraged!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6 - Using Training Data” slide",
         "progression_name": "Using Training Data",
         "tips": [
           {
@@ -3173,7 +3173,7 @@
       "key": "23242dda-5e4e-4022-b0b8-e3bbb9f9b420",
       "position": 5,
       "properties": {
-        "description": "### Impacts on Society\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Social Impact of AI” video\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n*Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n\n",
+        "description": "### Impacts on Society\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Social Impact of AI” video\n\n**Say:** *Artificial intelligence systems learn from the data we give it, but sometimes we might not give it enough data or we might give it data that makes it act strangely.*\n\n*Think back to the examples of artificial intelligence we discussed at the beginning. Think of a time where machine learning might have got something wrong in the real world? (For example, voice recognition fails to understand you.)*\n\n\n",
         "progression_name": "Video: Impacts on Society"
       },
       "seeding_key": {
@@ -3185,7 +3185,7 @@
       "key": "811ffd0a-2cd0-4166-945a-888c47c4367d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _Could training data actually create problems? How?_\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n### Teach A.I. a new word\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 8 - Teach A.I. a New Word” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: \n* _Could training data actually create problems? How?_\n\n**Discuss:** Beginning in small groups then moving to whole class, students share their responses.\n\n**Goal:** The goal of this discussion is to bring students back to the context of artificial intelligence in the real world. \n\n**Say:** *Some ways to fix this are by using a lot of training data, and making sure we understand the problem well ourselves so we give the right kinds of data. \nIn the final part of the activity you’re going to teach A.I. a word that could be interpreted in different ways.*\n\n### Teach A.I. a new word\nHere, as before, students will use training data to teach A.I. to recognize different types of fish. The words in this list are intentionally more subjective than what students will have seen so far. Encourage students to decide for themselves what makes a fish look \"angry\" or \"fun\". Two students may choose the same label and get a very different set of results based on which fish traits were their focus. Encourage students to discuss their findings with each other or go back and choose new words. Each student will rely on their own opinions to train A.I. which means that A.I. will learn with the same biases held by the students. As students begin to see the role their opinion is playing, ask them to reflect on whether this is good or bad, and how it might be addressed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 8 - Teach A.I. a New Word” slide\n",
         "progression_name": "Teach A.I. a new word"
       },
       "seeding_key": {
@@ -3213,7 +3213,7 @@
       "key": "8e7383ee-cee0-4841-bf28-67d443d10fec",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Share Out” slide\n\n**Quick Share-out:** _Where have you seen or experienced artificial intelligence in your lives?_\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** _Based on what you saw in the video, what is **machine learning**?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Share Out” slide\n\n**Quick Share-out:** _Where have you seen or experienced artificial intelligence in your lives?_\nExamples from the video include: \n\n* email filters\n* auto-complete text\n* video recommendation systems\n* voice recognition\n* translation apps\n* digital assistants\n* image recognition\n\n**Prompt:** _Based on what you saw in the video, what is **machine learning**?_"
       },
       "seeding_key": {
         "activity_section.key": "8e7383ee-cee0-4841-bf28-67d443d10fec",
@@ -3246,7 +3246,7 @@
       "key": "982676f5-5d91-4c8a-8d7a-814c932f6b0b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _How could artificial intelligence be used to solve a problem in the world?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _How could artificial intelligence be used to solve a problem in the world?_\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -3270,7 +3270,7 @@
       "key": "e7eba71f-f4d5-4e58-a278-035b2b920e70",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: _How does the Internet help connect us to other people?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect**: _How does the Internet help connect us to other people?_\n\n",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -3282,7 +3282,7 @@
       "key": "a39d6e7f-d016-4b9a-a5ed-e36fff06a654",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary:\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n"
+        "description": "####Vocabulary:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Key Vocabulary” slide\n"
       },
       "seeding_key": {
         "activity_section.key": "a39d6e7f-d016-4b9a-a5ed-e36fff06a654",
@@ -3336,7 +3336,7 @@
       "key": "195a7edf-ca26-4ac3-bcf6-e02d8a675f09",
       "position": 6,
       "properties": {
-        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Packets” slide\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Servers” slide\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses” slide \n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “DSL, Cable, Fiber Optic, or WiFi” slide\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
+        "description": "\n####Getting the Message\n\n- It's quite likely that your students are aware of what the internet is, but they may not really understand what the internet does.\n\t- **Ask:** _What is the internet?_\n\t- _Is the internet a public place or a private place?_\n\t- (Truthfully, many people think it can be both, but it should be viewed as a public space no matter what settings you think you've mastered.)\n\t- _How does information get from place to place?_\n- _Let's say that I want to look at the webpage for Code.org. What do you suppose the process would be like for me to send a message to request that page?_\n\t- _What do I do as a user?_\n\t- _What do you think happens inside the internet?_\n\nSending a message over the internet is a lot like sending a message through the mail...if every letter we sent required thousands of envelopes!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Packets” slide\n\nEvery message we send through the internet gets chopped up and each piece is wrapped in its own version of an envelope. We call those packets. Packets are specially formed chunks of information that are able to easily flow through any of the internet's channels.\n\nSometimes, a few of those packets will get lost, because the internet is a crazy place. In that case, the packets need to be resent, and the whole message has to get put on hold until they arrive.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Servers” slide\n\n_Where do you think those packets are headed?_\n\n- Even if you're sending messages to another person, they first have to go to at least one server.\n\t- A server is a special computer that is supposed to be always on and ready to send and receive information.\n\t- Every website has a server.\n\t- Even email goes through servers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses” slide \n\nServers don't have names like you and I do. They're actually addressed using numbers. These numbers are called IP addresses, and they look a little strange.\n\n- For example: One of Code.org's IP addresses used to be 54.243.71.82\n\t- (Please be sure to check this out in advance. Most IP addresses change from time to time and they are then reused for other sites.)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “DSL, Cable, Fiber Optic, or WiFi” slide\n\nThere are many ways to reach the internet from your house, school, or place of business.\n\n- You can connect directly using a cable (that might be DSL, Cable, or Fiber Optic)\n- Or you can connect using radio waves over the air through Wi-Fi.\n\nDirect connections are most reliable, but they can be inconvenient.\n\n- *Can you figure out why?*\n\t- (You have to be attached to a cable!)\n\nWi-Fi connections are super convenient, but the aren't always reliable.\n\n- *Can you figure out why not?*\n\t- (Radio waves bounce all over the place and can get lost.)"
       },
       "seeding_key": {
         "activity_section.key": "195a7edf-ca26-4ac3-bcf6-e02d8a675f09",
@@ -3363,7 +3363,7 @@
       "key": "f2352c83-d3b8-4f6e-855c-7c8b93171b01",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses & DNS” video\n\nSo, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Create a DNS Table” slide\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “IP Addresses & DNS” video\n\nSo, if you're used to sending information to URLs (like www.code.org) and the servers actually have IP addresses for names (like 54.243.71.82) how does the Internet change from one to the other? That's what the DNS is for. The DNS (Domain Name Server) has tables that allow the system to go back and forth between URLs and IP addresses. If the Domain Name Servers ever stopped working, it would shut down the internet as we know it!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Create a DNS Table” slide\n\nWith that said, let's try to understand what the DNS does by making a little DNS table ourselves.\n\nPull out a piece of paper and draw a grid similar to that in the internet activity:\n\nSample of DNS Table:\n\n| #  | URL  | IP Address |\n| ------------- | ------------- | ------------- |\n| 1  | &nbsp;&nbsp;&nbsp;code.org&nbsp;&nbsp;&nbsp;  | &nbsp;&nbsp;54.243.71.82&nbsp;&nbsp;  |\n| 2  |   |   |\n| 3  |   |   |\n| 4  |   |   |\n| 5  |   |   |\n\n\n<br/>First, we need to fill in this table.\n\n- Survey the class for their favorite websites and write the URLs in the left column\n- Use a site like ***get-site-ip.com** to find the IP addresses for those sites and write them in the corresponding rows of the right column.\n\nNow let's take this DNS Table and pretend to send messages through the internet!"
       },
       "seeding_key": {
         "activity_section.key": "f2352c83-d3b8-4f6e-855c-7c8b93171b01",
@@ -3374,7 +3374,7 @@
       "key": "810115c6-b143-468f-956f-e53ae2821984",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Internet” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Internet” video\n",
         "name": "The Internet",
         "progression_name": "The Internet - Unplugged Activity"
       },
@@ -3387,7 +3387,7 @@
       "key": "a43169e0-5e29-4c7b-81e3-ef76af5f3fd1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “The Internet Activity” slide\n\n**The Internet Activity:**\n\n- Create your own DNS table, similar to what is shown above.\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.get-site-ip.com.\n- Divide into groups of 3 to 5.\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\n\t- The Message Writer\n\t- The Internet\n\t- The Server (carries the IP address)\n\t- The Return Internet (optional)\n\t- The Message Receiver (optional)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Directions” slide\n\n**Directions:**\n\n- Each group will draw an ***IP Address Cards and Delivery Type Card** to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\n- The Message Writer will craft a note to send to the server.\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Rules” slide\n\n**Rules:**\n\n- The Internet must rip the message into exactly four packets.\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Info” slide\n\n**Info:**\n\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “The Internet Activity” slide\n\n**The Internet Activity:**\n\n- Create your own DNS table, similar to what is shown above.\n- Have the class help you fill in the blank spots in the table. Pick your favorite URLs and find their IP addresses using a site like www.get-site-ip.com.\n- Divide into groups of 3 to 5.\n- Assign each group an IP address from the newly created table, and assign each person in the group a position:\n\t- The Message Writer\n\t- The Internet\n\t- The Server (carries the IP address)\n\t- The Return Internet (optional)\n\t- The Message Receiver (optional)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Directions” slide\n\n**Directions:**\n\n- Each group will draw an ***IP Address Cards and Delivery Type Card** to find out where their message is going and what their method of message delivery (Wi-Fi, Cable/DSL, or Fiber Optic Cable) will be.\n- The Message Writer will craft a note to send to the server.\n- The Internet will rip the message up into 4 small pieces called packets, then deliver each packet one at a time to the Server with the IP address that was drawn from the IP Address Card stack.\n- The Server will make sure that the message arrives in order, then will send each packet off one at a time with the Return Internet (can be the same person or different person than the original Internet).\n- The Return Internet will deliver each piece back to the Message Receiver (can be the same person or different person than the Message Writer) and put it back together.\n- The Message Receiver will wait for all of the pieces to arrive, then read the message to be sure it arrived correctly!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Rules” slide\n\n**Rules:**\n\n- The Internet must rip the message into exactly four packets.\n- If the Internet drops a packet, they have to pick it up and go back to the start to deliver it again.\n- The server has to wait for all of the message pieces to arrive before it can begin to send the message along.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Info” slide\n\n**Info:**\n\n- Wi-Fi: Convenient, but spotty. Wi-Fi doesn’t require cables, but since the signal bounces all over the place, packets can get lost pretty easily.\n\t- Simulation: Internet must carry each packet on their shoulder (no hands).\n- Cable/DSL: Fairly good at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet must carry each packet on the back of one hand and must keep the other hand touching a wall, desk, chair or the floor at all times.\n-  Fiber Optic Cable: The best at delivering messages, but you must be connected to a wire.\n\t- Simulation: Internet can carry packets in hand, but must keep the other hand touching a wall, desk, chair or the floor at all times."
       },
       "seeding_key": {
         "activity_section.key": "a43169e0-5e29-4c7b-81e3-ef76af5f3fd1",
@@ -3414,7 +3414,7 @@
       "key": "4ce094b1-8caf-4445-97c3-e03f02cb50e1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show Student Materials slide\n\nTo play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](/blockly/media/curriculum/course3/18/layout.png)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Student Materials slide\n\nTo play this game, you can have your groups cluster anywhere, but for the first time it can be less confusing to have groups play in a line.\n\n- Line up the \"Servers\" on one end of the room (holding their IP addresses). The Return Internet players can be over there as well (if you have that many people in each group).\n- Have the everyone else line up across from their server at the other side of the room.\n- The Message Senders will likely be sending their messages to a server other than their own, so the Internet players will likely cross over from group to group. It may look something like the diagram below:\n\n![](/blockly/media/curriculum/course3/18/layout.png)"
       },
       "seeding_key": {
         "activity_section.key": "4ce094b1-8caf-4445-97c3-e03f02cb50e1",
@@ -3442,7 +3442,7 @@
       "key": "6f839088-6361-4c5c-918a-0d0de9c15498",
       "position": 2,
       "properties": {
-        "description": "\n####Flash Chat: What did we learn?\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Flash Chat” slide\n\n\n- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\n- Why might it take your message a long time to get somewhere?"
+        "description": "\n####Flash Chat: What did we learn?\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Flash Chat” slide\n\n\n- What kind of connection would you rather have (Wi-Fi, DSL/Cable, or Fiber Optic)? Why?\n- Why might it take your message a long time to get somewhere?"
       },
       "seeding_key": {
         "activity_section.key": "6f839088-6361-4c5c-918a-0d0de9c15498",
@@ -3453,7 +3453,7 @@
       "key": "03610369-0dd8-4123-b4ea-045a6bb6ddb8",
       "position": 3,
       "properties": {
-        "description": "\n####Reflect\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _What's something you learned about the internet today?_\n"
+        "description": "\n####Reflect\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Reflect” slide\n\n**Reflect:** _What's something you learned about the internet today?_\n"
       },
       "seeding_key": {
         "activity_section.key": "03610369-0dd8-4123-b4ea-045a6bb6ddb8",
@@ -3464,7 +3464,7 @@
       "key": "0da9d9ee-b9f4-449c-b19d-9d8a4f5109e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Internet Assessment” slide\n\nHand out the ***assessment** worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Internet Assessment” slide\n\nHand out the ***assessment** worksheet and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities."
       },
       "seeding_key": {
         "activity_section.key": "0da9d9ee-b9f4-449c-b19d-9d8a4f5109e1",
@@ -3475,7 +3475,7 @@
       "key": "c9b9435d-9a74-48b2-9b39-f501e2e9e413",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: \n* _Today, you'll start the final lesson of the unit, in which you will design and code your own project._\n* _Before you start, what are three skills or qualities that you think will be important as you complete this project?_",
         "name": "Explore"
       },
       "seeding_key": {
@@ -3487,7 +3487,7 @@
       "key": "1fb92641-0c03-458f-81fb-f18b88434098",
       "position": 2,
       "properties": {
-        "description": "####Vocabulary\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something."
+        "description": "####Vocabulary\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Define** - Figure out the details of the problems that you are trying to solve.\n- **Prepare** - Research, plan, and acquire materials for the activity you are about to do.\n- **Reflect** - Carefully think back on something with the intention of improving the outcome in the future.\n- **Try** - Attempt to do something."
       },
       "seeding_key": {
         "activity_section.key": "1fb92641-0c03-458f-81fb-f18b88434098",
@@ -3498,7 +3498,7 @@
       "key": "f6dfa02d-d9e7-4953-8c83-c59a9a697b4c",
       "position": 3,
       "properties": {
-        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “End of Course” slide\n\n**Say**: You’re going to be designing a project using Sprite Lab, Artist, or Frozen. If you choose Sprite Lab, you will show that you know: sprites, behaviors, and events. If you choose Artist or Frozen, you will show that you know: loops, nested loops, and functions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Day 1: Explore” slide\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use."
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “End of Course” slide\n\n**Say**: You’re going to be designing a project using Sprite Lab, Artist, or Frozen. If you choose Sprite Lab, you will show that you know: sprites, behaviors, and events. If you choose Artist or Frozen, you will show that you know: loops, nested loops, and functions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 1: Explore” slide\n\nGoal: This part of the process is an exploration.  Students will sit down with a stage full of example projects to remix and learn.  Not only will this give students an idea of what is possible, it will also help them see the limitations of the tool.\n\nGive students a day to play with and remix the example projects found in the lesson. Have them use their journals (or notebook paper) to keep track of thoughts and ideas as they go.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Example Projects” slide\n\nThis activity should be done in the same pairs/groups that will be working on projects together over the next several lessons.\n\nMake sure your class understands that they will be working with projects of their own, so they should pay close attention to how these programs were written, as well as the concepts that they use."
       },
       "seeding_key": {
         "activity_section.key": "f6dfa02d-d9e7-4953-8c83-c59a9a697b4c",
@@ -3531,7 +3531,7 @@
       "key": "14577ec4-bd51-4f4c-a9fa-0948d1e0b0d7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Day 2: Define and Prepare” slide\n\nStudents will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “End of Course Project Rubric” slide\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Worksheet** and the ***Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 2: Define and Prepare” slide\n\nStudents will come up with a project and plan their strategy for programming that project in a single day.  Students should have a project sketch and a description by the time the day is done.\n\n#### Preparing Students for the Process:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “End of Course Project Rubric” slide\n\nThe most important responsibility you have in kicking off this segment is to help your class understand the scope of this project. Students should be clear about the various expectations over the coming weeks so that they can prepare for their presentations appropriately.  \n\nTo help your class manage this multi-stage undertaking, they should be given both the ***Worksheet** and the ***Project Rubric** on the first day of planning. Students will then be able to follow the rubric each step of the way to predict what their project grade will be in the end.  \n\nThe project guide will provide a place for students to capture relevant thoughts and processes as they go, so they are more prepared for their presentations in the end.  \n\nAs the teacher, you should decide which elements of these documents are important to you and be sure to edit or remove anything that you do not intend to draw student focus.",
         "name": "Define and Prepare\r"
       },
       "seeding_key": {
@@ -3559,7 +3559,7 @@
       "key": "6649c3f1-ff8c-486f-aaa7-f3e053a367fa",
       "position": 3,
       "properties": {
-        "description": "#### Handout: Define and Prepare:\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their project guide in hand, they should start filling out the questions under the **Define** and **Prepare** sections.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 2, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
+        "description": "#### Handout: Define and Prepare:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Define and Prepare” slide\n\nNow that the class has their project guide in hand, they should start filling out the questions under the **Define** and **Prepare** sections.\n\nStudents will likely need to refer back to their notes from playing with the example projects, especially if they don’t have access to online Artist or Play Lab project levels while they plan. \n\nStudents should focus on defining and planning their project during Day 2, and not cross over into building until their ideas have been written up and/or drawn out.\n\nIf students get stuck, help them work through ideas by asking questions and recalling examples, rather than offering solutions."
       },
       "seeding_key": {
         "activity_section.key": "6649c3f1-ff8c-486f-aaa7-f3e053a367fa",
@@ -3570,7 +3570,7 @@
       "key": "37153094-6b2c-4242-9acf-9f5edcfdbab1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 3: Try” slide\n\nStudents will use this day to build an initial version of their project.\n\nEquipped with their ***Project Guide**, students should head to the computers to start bringing their projects to life. \n\nThis process will come complete with plenty of trial and error. Projects are likely to become truncated versions of the original scope (if not morphed altogether).  Remind students that this kind of compromise is common in software design, but they need to be sure to document the reasons for the changes in their product.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Handout: Try” slide\n\nDon’t let the class forget to fill out the **Try** section of their project guide as they go.  It might be helpful to suggest that pairs/groups take a worksheet break to begin discussing these questions about halfway through their lab time.  Alternatively, the navigator can keep their eyes open for pertinent answers while the driver codes.  \n\nBe sure that each team member has their own ***Project Guide**, as there are questions about each student’s own individual thoughts and behaviors that need to get captured along the way.",
         "name": "Try\r"
       },
       "seeding_key": {
@@ -3582,7 +3582,7 @@
       "key": "58f87768-60c0-462e-9a8f-f07220d00e41",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n#### Introduction (5 minutes)\n\n**Do This**: Explain to students that they will try out their classmates' projects and give them feedback. Then students will review the feedback they have received and use it to revise their own projects.\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback (25 minutes)\n\nFor feedback, have each group pair up with another group to try each other’s projects for about 10 minutes. Then have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 4: Feedback and Edits” slide\n\n#### Introduction (5 minutes)\n\n**Do This**: Explain to students that they will try out their classmates' projects and give them feedback. Then students will review the feedback they have received and use it to revise their own projects.\n\n**Goal:** Students will work with another group to give and receive feedback in an effort to make each other’s projects stronger.\n\n#### Feedback (25 minutes)\n\nFor feedback, have each group pair up with another group to try each other’s projects for about 10 minutes. Then have the groups discuss the questions in the ***Final Project Design Worksheet**.  \n\nEncourage students to ask the questions on the ***Final Project Design Worksheet** and write down feedback provided by their reviewing teams so that they can refer back to it later.  This portion should take approximately 15 more minutes.",
         "name": "Feedback and Edits"
       },
       "seeding_key": {
@@ -3632,7 +3632,7 @@
       "key": "25695eea-35af-4236-83a7-98dff7f496e4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Day 5 & 6: Present and Reflect” slide\n\nStudents will create and present their projects in an approved manner (written, oral, or using multimedia).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Day 5 & 6: Present and Reflect” slide\n\nStudents will create and present their projects in an approved manner (written, oral, or using multimedia).",
         "name": "Presentations - Day 5"
       },
       "seeding_key": {
@@ -3683,7 +3683,7 @@
       "key": "8e7639a4-df56-4205-bb78-6f9a07b58e0e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What did you learn in creating this project?_\n* _What was the most challenging part about this experience? How did you overcome that challenge?_\n\nStudents will reflect on their work by completing the final **Reflect** section of their ***Final Project Guide** packets.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:** \n* _What did you learn in creating this project?_\n* _What was the most challenging part about this experience? How did you overcome that challenge?_\n\nStudents will reflect on their work by completing the final **Reflect** section of their ***Final Project Guide** packets.",
         "name": "Reflect"
       },
       "seeding_key": {

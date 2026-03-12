@@ -113,7 +113,7 @@
       "key": "df234b2e-a06f-463e-b6f6-1846e3185658",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students identify the base and recursive case for the problem. Have students share with another pair then as a class.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases.\n[r u7l8_extra_practice/tesstesting/2022]"
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify the base and recursive case for the problem. Have students share with another pair then as a class.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases.\n[r u7l8_extra_practice/tesstesting/2022]"
       },
       "seeding_key": {
         "activity_section.key": "df234b2e-a06f-463e-b6f6-1846e3185658",
@@ -138,7 +138,7 @@
       "key": "f90b5e73-f474-4be6-ae6c-1c3a0e32dbe5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the start is greater than or equal to end. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students write a recursive method to make a `Painter` object complete a specific task. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the start is greater than or equal to end. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students write a recursive method to make a `Painter` object complete a specific task. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Recursive Painting"
       },
       "seeding_key": {
@@ -162,7 +162,7 @@
       "key": "655f9dd7-cb63-405f-b9b7-1ce5c67f97e1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an example recursive drawing in The Theater. Have students work with a partner to identify the base case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an example recursive drawing in The Theater. Have students work with a partner to identify the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
       },
       "seeding_key": {
         "activity_section.key": "655f9dd7-cb63-405f-b9b7-1ce5c67f97e1",
@@ -187,7 +187,7 @@
       "key": "512fff24-c30b-49d6-bb67-908eb92ea910",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
         "progression_name": "Title Sequence Project",
         "tips": [
           {
@@ -205,7 +205,7 @@
       "key": "cf3a2a71-e5cb-4ecb-a717-99883ca879aa",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "cf3a2a71-e5cb-4ecb-a717-99883ca879aa",
@@ -229,7 +229,7 @@
       "key": "1bbedf3b-624f-4b36-991d-607b460aa30a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -246,7 +246,7 @@
       "key": "283e4959-cdda-477c-bd06-48355d954d84",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "283e4959-cdda-477c-bd06-48355d954d84",

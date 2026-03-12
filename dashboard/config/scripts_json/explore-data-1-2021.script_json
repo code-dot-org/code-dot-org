@@ -107,7 +107,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces prior knowledge around reading bar charts or histograms. \n\n**Slides:** The slide icon <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces prior knowledge around reading bar charts or histograms. \n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
           }
         ]
       },
@@ -131,7 +131,7 @@
       "key": "e4e436bc-e5be-43ce-907c-e01f896db61b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> People make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we’re going to use a program called App Lab to create our own charts from real-world data. We’ll learn how to use this program to create charts, then we’ll be able to pick our own data and create our own charts that explain patterns or trends in the data.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> People make visualizations for a number of reasons. They help humans see lots of data at once and help us find patterns that might otherwise be \"invisible\". Today we’re going to use a program called App Lab to create our own charts from real-world data. We’ll learn how to use this program to create charts, then we’ll be able to pick our own data and create our own charts that explain patterns or trends in the data.\n\n\n",
         "remarks": true
       },
       "seeding_key": {
@@ -143,7 +143,7 @@
       "key": "d691bd3d-9a9b-40a7-b7c6-f3b87744365f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/2021]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/2021]",
         "name": "Making Bar Charts and Histograms",
         "progression_name": "Video: Data Visualizer in App Lab Part 1"
       },
@@ -156,7 +156,7 @@
       "key": "1ded8c46-8629-44a5-942f-897144a152c8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_1/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_1/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.\n\n\n",
         "progression_name": "Data Visualizer",
         "tips": [
           {
@@ -174,7 +174,7 @@
       "key": "76d9d166-cf5e-4605-869e-f88a94d49478",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and follow the steps on the slide to examine the Dogs dataset and view the Maximum Life Span column. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side-one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart that they find is useful and answer a pair of discussion questions.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students go to the data visualizer and follow the steps on the slide to examine the Dogs dataset and view the Maximum Life Span column. Use this as an opportunity to make sure every student understands how to use the visualizer.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side-one of the activity guide, making a bar chart for each column in the Dogs table and deciding if it is useful or not. They will also need to paste in one chart that they find is useful and answer a pair of discussion questions.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -202,7 +202,7 @@
       "key": "c31e9ef5-45c8-4e68-9823-154637a44d40",
       "position": 5,
       "properties": {
-        "description": "####Reading a Histogram\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.\n- Which of these makes it easier to understand the data?\n\n- How is data in the “histogram” arranged to cause the data to be visualized differently?\n\n**Discuss** how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer, but wider\" bars in the histogram. They should also notice how the values are sorted. This makes the chart, overall, easier to read.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Show the slide explaining what a histogram is useful for.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side 2 of their activity guide.\n"
+        "description": "####Reading a Histogram\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide explaining why some bar charts are not useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** In the Visualizer make a \"Histogram\" for \"Max Weight\" with a \"Bucket Size\" of 20.\n- Which of these makes it easier to understand the data?\n\n- How is data in the “histogram” arranged to cause the data to be visualized differently?\n\n**Discuss** how the histogram seems to be displaying the data differently from the bar chart.\n\n**Discussion Goal:** Use this discussion to start exploring the differences between a bar chart and a histogram. For example, students should note that there seem to be \"fewer, but wider\" bars in the histogram. They should also notice how the values are sorted. This makes the chart, overall, easier to read.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the slide explaining what a histogram is useful for.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete side 2 of their activity guide.\n"
       },
       "seeding_key": {
         "activity_section.key": "c31e9ef5-45c8-4e68-9823-154637a44d40",
@@ -213,7 +213,7 @@
       "key": "14a16fa5-dcab-4a5b-99b0-827429879a7e",
       "position": 6,
       "properties": {
-        "description": "####Investigate Your Own Data\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Have students complete the third page of their activity guide, where they can choose their own dataset to investigate and create bar charts and histograms.\n"
+        "description": "####Investigate Your Own Data\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students complete the third page of their activity guide, where they can choose their own dataset to investigate and create bar charts and histograms.\n"
       },
       "seeding_key": {
         "activity_section.key": "14a16fa5-dcab-4a5b-99b0-827429879a7e",
@@ -224,7 +224,7 @@
       "key": "2911d160-d753-4e6a-97b5-a05b95dc648b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share out the datasets they selected, the charts they created, and the information that can be learned from the chart. Here are a few options for how students might complete this:\n\n-  Gallery Walk: Have students keep the third page of their activity guide open, then allow students to walk around the room to explore the charts that their peers created. Students can use post-it notes to leave comments on the charts they visit.\n\n- Speed Networking: Set a timer and have students pair up with a peer close by. Each person has a set amount of time to share the chart they created. Once the timer is over, they find a new partner. This can be repeated several times.\n\n- Digital Bulletin Board: Create a shared digital space for students to paste their charts, then encourage students to leave comments on each other’s charts describing the piece of information they notice most about each chart.\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share Out:** Invite students to share out the datasets they selected, the charts they created, and the information that can be learned from the chart. Here are a few options for how students might complete this:\n\n-  Gallery Walk: Have students keep the third page of their activity guide open, then allow students to walk around the room to explore the charts that their peers created. Students can use post-it notes to leave comments on the charts they visit.\n\n- Speed Networking: Set a timer and have students pair up with a peer close by. Each person has a set amount of time to share the chart they created. Once the timer is over, they find a new partner. This can be repeated several times.\n\n- Digital Bulletin Board: Create a shared digital space for students to paste their charts, then encourage students to leave comments on each other’s charts describing the piece of information they notice most about each chart.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "2911d160-d753-4e6a-97b5-a05b95dc648b",
@@ -235,7 +235,7 @@
       "key": "479efae0-12a6-444a-ad4a-5e2e78b1c3ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Reflection:** Review the key takeaways from the lesson"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Reflection:** Review the key takeaways from the lesson"
       },
       "seeding_key": {
         "activity_section.key": "479efae0-12a6-444a-ad4a-5e2e78b1c3ee",

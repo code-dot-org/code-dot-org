@@ -293,7 +293,7 @@
       "key": "bbecd3bf-f7e2-41da-948a-a766446dff1e",
       "position": 1,
       "properties": {
-        "description": "Discussion \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Space Ice Cream” slide\n\n\n**Say:** In 1968, when astronauts on the Apollo 7 mission went to space they took a special type of ice cream with them! This is known as “space ice cream.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How to Make Space Ice Cream” slide\n\n**Say:** You put regular ice cream into a machine, something happens inside the machine and space ice cream comes out! What is going on in that machine?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Machine Explanation” slide\n\n**Say:** The machine freeze dries the ice cream. It makes the ice cream soooooooo cold that all of the water in it evaporates and it becomes lightweight, dried and ready for space travel. \n\n\n**Discussion Goal:** Students should understand that a function machine takes in an input, does something to it, and computes the output. The space ice cream machine doesn’t input or output any numbers but rather takes in a food and outputs a variation of that food. This is done intentionally to indicate that in computer science a function has a purpose other than just solving mathematical problems.\n\n**Do This:** Go through the slides and read them aloud, or have a student volunteer read the text aloud. Make sure that students understand that a process is taking place in the machine that we cannot see. \n\n",
+        "description": "Discussion \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Space Ice Cream” slide\n\n\n**Say:** In 1968, when astronauts on the Apollo 7 mission went to space they took a special type of ice cream with them! This is known as “space ice cream.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How to Make Space Ice Cream” slide\n\n**Say:** You put regular ice cream into a machine, something happens inside the machine and space ice cream comes out! What is going on in that machine?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Machine Explanation” slide\n\n**Say:** The machine freeze dries the ice cream. It makes the ice cream soooooooo cold that all of the water in it evaporates and it becomes lightweight, dried and ready for space travel. \n\n\n**Discussion Goal:** Students should understand that a function machine takes in an input, does something to it, and computes the output. The space ice cream machine doesn’t input or output any numbers but rather takes in a food and outputs a variation of that food. This is done intentionally to indicate that in computer science a function has a purpose other than just solving mathematical problems.\n\n**Do This:** Go through the slides and read them aloud, or have a student volunteer read the text aloud. Make sure that students understand that a process is taking place in the machine that we cannot see. \n\n",
         "name": "Discussion"
       },
       "seeding_key": {
@@ -305,7 +305,7 @@
       "key": "70a0fb66-3209-4ee1-8593-93249a4cfb2f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Input and Output” slide\n\n- **Input** - Information that is “put in” to a function.\n- **Output** - information that “comes out” of a function.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “What is a function?” slide\n\n- **Function** - A piece of code that you can call over and over again.\n\n\n\n**Discuss:** \n_Have you ever used a machine that takes in one input and produces a different output? Give an example._\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Input and Output” slide\n\n- **Input** - Information that is “put in” to a function.\n- **Output** - information that “comes out” of a function.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What is a function?” slide\n\n- **Function** - A piece of code that you can call over and over again.\n\n\n\n**Discuss:** \n_Have you ever used a machine that takes in one input and produces a different output? Give an example._\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -317,7 +317,7 @@
       "key": "52ff2b91-d4cb-45b7-8824-8e8a2f3928f8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -345,7 +345,7 @@
       "key": "b173deec-f1c0-4f2a-b131-c2c171b7c238",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Alien Invasion!” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Alien Invasion!” slide",
         "name": "Alien Invasion"
       },
       "seeding_key": {
@@ -369,7 +369,7 @@
       "key": "d4bf7db8-7f6c-4e9b-9c86-0e051a49df77",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Check Out the Code” slide\n\nTo regain control of our ship, we first need to understand our function machines. Let’s predict what each line of code does:\n\n- What does `set input to zero` do?\n- What will happen when you click the function machine?\n- What does `sprite say input` and `sprite say output` mean?\n\n**Discussion Goal:** These questions are designed to get students thinking about the code blocks they will see later on in the lesson. If they don’t understand what each line of code does yet that’s okay! They should be able to start asking questions and recognizing repeated instructions. Tell students that their answers are predictions which they will test out as they play through the levels.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Check Out the Code” slide\n\nTo regain control of our ship, we first need to understand our function machines. Let’s predict what each line of code does:\n\n- What does `set input to zero` do?\n- What will happen when you click the function machine?\n- What does `sprite say input` and `sprite say output` mean?\n\n**Discussion Goal:** These questions are designed to get students thinking about the code blocks they will see later on in the lesson. If they don’t understand what each line of code does yet that’s okay! They should be able to start asking questions and recognizing repeated instructions. Tell students that their answers are predictions which they will test out as they play through the levels.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d4bf7db8-7f6c-4e9b-9c86-0e051a49df77",
@@ -380,7 +380,7 @@
       "key": "8cf9edde-530e-4a54-a90e-fe6cabdc492b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Functions at NASA” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Functions at NASA” video",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -392,7 +392,7 @@
       "key": "763d6832-236f-4fbf-8dbc-1ce2fa8b05a8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Step 1: Observe” slide\n\n**Do This:** Handout out a [notecatcher](https://docs.google.com/document/d/1B30rMArFTCEcj6EKiMiBnWfo7-1LdIq7sQUC-R1_Ol4/template/preview\t\n) to each student. Explain to students that they will be using this handout as they move through the lessons."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1: Observe” slide\n\n**Do This:** Handout out a [notecatcher](https://docs.google.com/document/d/1B30rMArFTCEcj6EKiMiBnWfo7-1LdIq7sQUC-R1_Ol4/template/preview\t\n) to each student. Explain to students that they will be using this handout as they move through the lessons."
       },
       "seeding_key": {
         "activity_section.key": "763d6832-236f-4fbf-8dbc-1ce2fa8b05a8",
@@ -441,7 +441,7 @@
       "key": "3a1adaec-363a-4c27-ba64-15d588d7ee62",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Introducing Sprite Lab” video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Introducing Sprite Lab” video\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -453,7 +453,7 @@
       "key": "db95b38b-3586-41df-82b4-69cc05546908",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Your Workspace” slide\n\n**Level 6:** In this level, you can interact with the function machine _and_ check out the code. See if your predictions about each line of code were correct.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6 - Your Workspace” slide\n\n**Level 6:** In this level, you can interact with the function machine _and_ check out the code. See if your predictions about each line of code were correct.\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -465,7 +465,7 @@
       "key": "5bf5049f-19da-4a20-bb01-9e34e6c427d4",
       "position": 11,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Sprites In Action” video\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Sprites In Action” video\n",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -477,7 +477,7 @@
       "key": "0ac4d82a-0d07-4553-9e51-e36d83905e55",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Step 2: Tinker” slide\n\n**Levels 8 - 10:** Now check out the code for your math machine and tinker with it. \n_Challenge: Can you make the machine add 2 and say the new output?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2: Tinker” slide\n\n**Levels 8 - 10:** Now check out the code for your math machine and tinker with it. \n_Challenge: Can you make the machine add 2 and say the new output?_\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -489,7 +489,7 @@
       "key": "fefbc6ec-557b-49ef-9e17-a91d3eed6881",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Step 3: Build Your Own” slide\n\n**Level 11:** Time to show off your knowledge of function machines! Choose your own function for your machine to compute.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 3: Build Your Own” slide\n\n**Level 11:** Time to show off your knowledge of function machines! Choose your own function for your machine to compute.\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -501,7 +501,7 @@
       "key": "66b24bee-a2a2-4009-be61-9ff073482306",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Alien Riddles” slide\n\n\n**Level 12:** The aliens have agreed to give us a clue for what they want!\n\nUnscramble the letters to reveal the clue:\n\nP C E A S \t\tC I E\t\tM R E C A",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Alien Riddles” slide\n\n\n**Level 12:** The aliens have agreed to give us a clue for what they want!\n\nUnscramble the letters to reveal the clue:\n\nP C E A S \t\tC I E\t\tM R E C A",
         "progression_name": "Congratulations!"
       },
       "seeding_key": {
@@ -524,7 +524,7 @@
       "key": "32b71551-da6c-4780-bd9c-535962eca4b7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide\n\n**Say:** The aliens want space ice cream! Once we give the aliens what they want, they’ll be much friendlier. In the next lesson, our new alien friends will teach us how to create our own function machines\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Space Ice Cream” slide\n\nWe mostly explored functions that complete mathematical operations, but remember a function can do pretty much anything you can dream of in programming. You could even write a function to add sprinkles to your alien sundae! .\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Answer” slide\n\n**Say:** The aliens want space ice cream! Once we give the aliens what they want, they’ll be much friendlier. In the next lesson, our new alien friends will teach us how to create our own function machines\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Space Ice Cream” slide\n\nWe mostly explored functions that complete mathematical operations, but remember a function can do pretty much anything you can dream of in programming. You could even write a function to add sprinkles to your alien sundae! .\n",
         "name": "Answer"
       },
       "seeding_key": {
@@ -536,7 +536,7 @@
       "key": "bedabb12-e9cd-42fb-be57-a301f0a7991f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** How would you explain a function to someone who had never used one before?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** How would you explain a function to someone who had never used one before?",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -548,7 +548,7 @@
       "key": "e237bfd9-c3a5-46b9-9e9d-45a6b88ad84b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Train an Alien” slide\n\n**Do This:** Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** _Now that the aliens had their space ice cream they have become so much friendlier! You are going to train one of the aliens to do math._\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Train an Alien” slide\n\n**Do This:** Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** _Now that the aliens had their space ice cream they have become so much friendlier! You are going to train one of the aliens to do math._\n\n\n",
         "name": "Plan Your Function Machine"
       },
       "seeding_key": {
@@ -576,7 +576,7 @@
       "key": "29b3fe86-c01b-4306-8ec7-ef859a3dda47",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Make a Plan” slide\n\n**Do This:** Read the slide and explain the note catcher to students. \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Make a Plan” slide\n\n**Do This:** Read the slide and explain the note catcher to students. \n\n"
       },
       "seeding_key": {
         "activity_section.key": "29b3fe86-c01b-4306-8ec7-ef859a3dda47",
@@ -599,7 +599,7 @@
       "key": "0d0f3053-29a9-48ac-8905-3a7b40b23fa5",
       "position": 5,
       "properties": {
-        "description": "**Discuss:** How can you predict the expected outputs?\n\n**Discussion Goal:** Students name different multiplication strategies. These should mostly be mental math strategies.\n- Skip counting\n- Repeated addition\n- Commutative property \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Functions in Code.org” slide\n\n"
+        "description": "**Discuss:** How can you predict the expected outputs?\n\n**Discussion Goal:** Students name different multiplication strategies. These should mostly be mental math strategies.\n- Skip counting\n- Repeated addition\n- Commutative property \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Functions in Code.org” slide\n\n"
       },
       "seeding_key": {
         "activity_section.key": "0d0f3053-29a9-48ac-8905-3a7b40b23fa5",
@@ -671,7 +671,7 @@
       "key": "b5fe5038-7682-4358-974c-2f6128c58707",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Levels 1-2: Start Your Alien Function Machine” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-2:** Students select a background and alien sprite.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 1-2: Start Your Alien Function Machine” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-2:** Students select a background and alien sprite.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -683,7 +683,7 @@
       "key": "9de73aeb-7945-451a-a186-24729abfd276",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Levels 3-4:Prompt For User Input” slide\n\n**Level 3-4:** Students set up a prompt user block.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Levels 3-4:Prompt For User Input” slide\n\n**Level 3-4:** Students set up a prompt user block.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -695,7 +695,7 @@
       "key": "2ac879fc-5b4f-4536-9731-a3055de14858",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:** Show “Level 5: Add an Event” slide\n\n**Level 5:** Students set up an event block.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show “Level 5: Add an Event” slide\n\n**Level 5:** Students set up an event block.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -707,7 +707,7 @@
       "key": "b72d5e74-ad97-4d59-8ac7-2e2fc6b7c86c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 6: Let’s Keep Coding” slide\n\n**Level 6:** From now on, your code will follow you from level to level. You will see any sprites you choose, or other design choices you make, as you go through each level. This way you can build the program you want!\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 6: Let’s Keep Coding” slide\n\n**Level 6:** From now on, your code will follow you from level to level. You will see any sprites you choose, or other design choices you make, as you go through each level. This way you can build the program you want!\n\n",
         "progression_name": "Let's Keep Coding!"
       },
       "seeding_key": {
@@ -719,7 +719,7 @@
       "key": "9d3b547b-9065-4750-b023-f4d62e82033c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 7: Say Output” slide\n\n**Level 7:** Students add to the event block and have the alien say the output.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 7: Say Output” slide\n\n**Level 7:** Students add to the event block and have the alien say the output.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -731,7 +731,7 @@
       "key": "9f716ff5-0075-40b6-97f6-2a4527738e69",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show “Level 8-10 Add Your Function” slide\n\n**Level 8-10:** Students set up their function machine.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 8-10 Add Your Function” slide\n\n**Level 8-10:** Students set up their function machine.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -743,7 +743,7 @@
       "key": "9fbd74ba-b952-41ae-9702-ff1e95faf004",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show Level 11 Congratulations!” slide\n\n**Level 11:** Celebrate your hard work with a well earned ice cream cone!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show Level 11 Congratulations!” slide\n\n**Level 11:** Celebrate your hard work with a well earned ice cream cone!",
         "progression_name": "Congratulations!"
       },
       "seeding_key": {
@@ -772,7 +772,7 @@
       "key": "401c6e64-0387-4b95-bc32-3ee83e8dd262",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Actual Outputs” slide\n\n**Do This:** Read the slide and explain that students will now be checking their function machine using the last column on the note catcher.  \n\n**Say:** _Try inputs 0-10 on your function machine. Record the outputs in the last column of your note catcher. Check to see if your expected outcomes match the actual outcomes. If not, it is time to put your debugging skills to use!_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Actual Outputs” slide\n\n**Do This:** Read the slide and explain that students will now be checking their function machine using the last column on the note catcher.  \n\n**Say:** _Try inputs 0-10 on your function machine. Record the outputs in the last column of your note catcher. Check to see if your expected outcomes match the actual outcomes. If not, it is time to put your debugging skills to use!_\n",
         "name": "Check Your Function Machine"
       },
       "seeding_key": {
@@ -784,7 +784,7 @@
       "key": "b06e1fbe-3c6c-4ca1-94f5-a5ed4c69508f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Glows, Grows, Want to Knows” slide\n\n**Say:** _You now have a function machine that can compute anything you want! AND it will always compute it correctly! If you wanted to compute a different math function all you would need to do is customize the operation (+, -, x, ÷) and number. You can put in any input and receive outputs. That is one of the benefits of computer science; you can easily make changes and it is always accurate. Today you coded a calculator!_\n\n**Do This:** Students will partner-share reflections. Guide students in answering each of the questions: \n- _What did you like most about writing your own code?_\n- _What is one action you can take to improve your code?_ \n- _What questions do you still have?_ \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Glows, Grows, Want to Knows” slide\n\n**Say:** _You now have a function machine that can compute anything you want! AND it will always compute it correctly! If you wanted to compute a different math function all you would need to do is customize the operation (+, -, x, ÷) and number. You can put in any input and receive outputs. That is one of the benefits of computer science; you can easily make changes and it is always accurate. Today you coded a calculator!_\n\n**Do This:** Students will partner-share reflections. Guide students in answering each of the questions: \n- _What did you like most about writing your own code?_\n- _What is one action you can take to improve your code?_ \n- _What questions do you still have?_ \n\n"
       },
       "seeding_key": {
         "activity_section.key": "b06e1fbe-3c6c-4ca1-94f5-a5ed4c69508f",
@@ -811,7 +811,7 @@
       "key": "e0fe80db-c56d-4c23-b0c2-11dea05e7897",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Computer Science Functions” slide\n\n**Do This:** Read the definition aloud, or have a student volunteer read the text aloud. \n\n**Say:** In computer science, a **function** is a piece of code that you can call over and over again.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let’s Try a Computer Science Function” slide\n\n**Say:** Now let’s try out a computer science function!\n\n**Do This:** Click the image on the slide to open up the **[Freeze Dry Machine](https://studio.code.org/projects/spritelab/gI_omUMR_Xhe2vcCK2u1jpowVf40PUJAdijWG8a6c-k)** project in code.org. Type in “ice cream” and show how the machine produces “space ice cream.” Next, ask students to share what foods they would like to take to space. Type in 3-5 foods and turn them into space food. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “What foods would you like to take to space?” slide\n\n**Do This:**  Fill in the table with some of the inputs (foods) and outputs (space foods) that you tried on the freeze dry function machine.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How Did the Code Work?” slide\n\n**Discuss:** \n- _What do you notice?_\n- _What do you wonder?_\n\n**Discussion Goal:** Students discuss the name of the function and the description of the function. Students should note the use of the word “input”. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Computer Science Functions” slide\n\n**Do This:** Read the definition aloud, or have a student volunteer read the text aloud. \n\n**Say:** In computer science, a **function** is a piece of code that you can call over and over again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s Try a Computer Science Function” slide\n\n**Say:** Now let’s try out a computer science function!\n\n**Do This:** Click the image on the slide to open up the **[Freeze Dry Machine](https://studio.code.org/projects/spritelab/gI_omUMR_Xhe2vcCK2u1jpowVf40PUJAdijWG8a6c-k)** project in code.org. Type in “ice cream” and show how the machine produces “space ice cream.” Next, ask students to share what foods they would like to take to space. Type in 3-5 foods and turn them into space food. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What foods would you like to take to space?” slide\n\n**Do This:**  Fill in the table with some of the inputs (foods) and outputs (space foods) that you tried on the freeze dry function machine.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How Did the Code Work?” slide\n\n**Discuss:** \n- _What do you notice?_\n- _What do you wonder?_\n\n**Discussion Goal:** Students discuss the name of the function and the description of the function. Students should note the use of the word “input”. \n\n",
         "name": "Compare and Contrast"
       },
       "seeding_key": {
@@ -823,7 +823,7 @@
       "key": "8f9a8767-31f1-42f9-9c9b-e27553a4db44",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Math Functions” slide\n\n**Do This:** Read the definition aloud, or have a student volunteer read the text aloud. \n\n**Say:** In math, a **function** is the relationship between a set of inputs and a set of outputs. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let’s Try Out a Math Function” slide\n\n**Say:** Now let’s try out a math function!\n\n**Do This:** Talk about the first row of the table. (1x5=5) Then, ask students to select another input and fill in the second row together. For the third row, ask students to share an input and an output with a partner. Listen in to conversations and select a response to type into the third row for the whole class to view.\n\n**Do This:** Fill in the table with some of the inputs and ouputs that you tried with the x5 function machine.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Compare and Contrast” slide\n\n**Discuss:**\n- _How are computer science functions and math functions similar?_\n- _How are computer science and math functions different?_\n\n**Discussion Goal:** Students should tie their experiences with the freezeDry and x5 function machines to the definitions that they read earlier in class. They should understand that each function takes in an input, applies a function to it, and produces a new output.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Math Functions” slide\n\n**Do This:** Read the definition aloud, or have a student volunteer read the text aloud. \n\n**Say:** In math, a **function** is the relationship between a set of inputs and a set of outputs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s Try Out a Math Function” slide\n\n**Say:** Now let’s try out a math function!\n\n**Do This:** Talk about the first row of the table. (1x5=5) Then, ask students to select another input and fill in the second row together. For the third row, ask students to share an input and an output with a partner. Listen in to conversations and select a response to type into the third row for the whole class to view.\n\n**Do This:** Fill in the table with some of the inputs and ouputs that you tried with the x5 function machine.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Compare and Contrast” slide\n\n**Discuss:**\n- _How are computer science functions and math functions similar?_\n- _How are computer science and math functions different?_\n\n**Discussion Goal:** Students should tie their experiences with the freezeDry and x5 function machines to the definitions that they read earlier in class. They should understand that each function takes in an input, applies a function to it, and produces a new output.\n"
       },
       "seeding_key": {
         "activity_section.key": "8f9a8767-31f1-42f9-9c9b-e27553a4db44",
@@ -834,7 +834,7 @@
       "key": "c063bfb4-134d-4ab4-ae5c-acbee3f6db89",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “BEEP BEEP BEEP” slide\n\n**Do This:**  Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** All of the alarm bells are going off on our spaceship. We can’t figure out what’s going on. Is it the aliens again? Our function machines aren’t working. HELP!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Detective” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-5:** Students debug various function machines. \n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “BEEP BEEP BEEP” slide\n\n**Do This:**  Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** All of the alarm bells are going off on our spaceship. We can’t figure out what’s going on. Is it the aliens again? Our function machines aren’t working. HELP!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Detective” slide\n\n**Transition:** Have students move to their computers and sign in. All students should complete all levels in this section in order.\n\n**Level 1-5:** Students debug various function machines. \n\n\n",
         "name": "Detective",
         "progression_name": "Skill Building"
       },
@@ -898,7 +898,7 @@
       "key": "799267b4-5398-46c3-a1eb-b4bda4e11632",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Caught!” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Caught!” slide\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -922,7 +922,7 @@
       "key": "bd89ae69-6099-44f7-9167-1d6917172e18",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Do This:**  Students form two circles, one inside circle and one outside circle. Each student on the inside is paired with a student on the outside; they face each other. The teacher poses the first question to the whole group and pairs discuss their responses with each other. \n\nThen the teacher signals students to rotate. Students on the outside circle move one space to the right so they are standing in front of a new person. Now the teacher poses the second question, and the process is repeated. Do this one last time and have students answer the third question.\n\n**Discuss:** \n- _**Red:** What challenged you today?_\n- _**Yellow:** What is a new question, idea or perspective that you considered today?_ \n- _**Green:** What is something you understood and learned today?_\n\n**Discussion Goal:** Students reflect on their experiences with function machines so far. Their reflections can include ideas from Lessons 1-3.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Do This:**  Students form two circles, one inside circle and one outside circle. Each student on the inside is paired with a student on the outside; they face each other. The teacher poses the first question to the whole group and pairs discuss their responses with each other. \n\nThen the teacher signals students to rotate. Students on the outside circle move one space to the right so they are standing in front of a new person. Now the teacher poses the second question, and the process is repeated. Do this one last time and have students answer the third question.\n\n**Discuss:** \n- _**Red:** What challenged you today?_\n- _**Yellow:** What is a new question, idea or perspective that you considered today?_ \n- _**Green:** What is something you understood and learned today?_\n\n**Discussion Goal:** Students reflect on their experiences with function machines so far. Their reflections can include ideas from Lessons 1-3.\n"
       },
       "seeding_key": {
         "activity_section.key": "bd89ae69-6099-44f7-9167-1d6917172e18",
@@ -933,7 +933,7 @@
       "key": "b3e040d7-dd09-4529-96fa-4978dd82ad46",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Not Again!” slide\n\n**Do This:** Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** _The aliens are still acting up! We can’t figure out why… Can you help? Once again, the aliens are willing to give us hints but we are going to have to solve a puzzle._\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Not Again!” slide\n\n**Do This:** Read the slide and introduce the context for today’s lesson. Build excitement for today’s activity. \n\n**Say:** _The aliens are still acting up! We can’t figure out why… Can you help? Once again, the aliens are willing to give us hints but we are going to have to solve a puzzle._\n\n",
         "name": "Another Riddle; Not Again! "
       },
       "seeding_key": {
@@ -945,7 +945,7 @@
       "key": "cd74842e-cf2a-4d61-a742-e26f16eaffdf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Function Machines” slide\n\n\n**Do This:** Read the slide, begin introducing today’s activity and discuss. \n\n**Say:** Today we will be using each others’ function machines. Each student will have a different input to use. You will try this input over and over on lots of function machines. \n\n**Discuss:** Would it be productive for someone to be assigned input: 0? \n\n**Discussion Goal:** Explanation of zero property of multiplication. Students should respond that it would not be productive to input 0 over and over because you would never color in anything on the 100’s chart. A number times 0 is always 0!\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Function Machines” slide\n\n\n**Do This:** Read the slide, begin introducing today’s activity and discuss. \n\n**Say:** Today we will be using each others’ function machines. Each student will have a different input to use. You will try this input over and over on lots of function machines. \n\n**Discuss:** Would it be productive for someone to be assigned input: 0? \n\n**Discussion Goal:** Explanation of zero property of multiplication. Students should respond that it would not be productive to input 0 over and over because you would never color in anything on the 100’s chart. A number times 0 is always 0!\n"
       },
       "seeding_key": {
         "activity_section.key": "cd74842e-cf2a-4d61-a742-e26f16eaffdf",
@@ -956,7 +956,7 @@
       "key": "c08f5517-857e-4080-8590-79f6643fd213",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Step 1” slide\n\n**Do This:**  Show students the worksheet and explain the instructions. Students have two tasks to do each time they use a function machine. Task 1 is to fill in the table. Students should write in their assigned input, write the output they get from the machine, and then figure out what function the machine was computing. \n\n**Discuss:** \n- _How can you figure out what function a machine is computing?_ \n- _What is the function in the table computing?_\n\n**Discussion Goal:** Figuring out the math of the function machine will require algebraic thinking. Talk about different strategies to figure out the math function:\nThink of it like division\nUse skip counting\nUse repeated addition\nUse fact families\nUse a multiplication table\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Step 2” slide\n\n**Do This:**  Continue showing students the worksheet and explaining the instructions. Step 2 is to fill in the 100’s chart. Each time students get an output they should color it in the 100’s chart. Ask students to search for patterns in the numbers that are colored in and not colored in.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Time to Start Calculating!” slide\n\n**Do This:** **Assign each student an input between 2 - 10.** Write the input at the top of each student’s worksheet. Then, have students go around the classroom and start trying out their input on all the function machines. Circulate while students try out their inputs on the machines to offer support.\n\n**Do This:**  Have students open up their function machine from Lesson 2 - Level 10 on their computer. Ensure all students have their projects ready for presenting before moving on. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 1” slide\n\n**Do This:**  Show students the worksheet and explain the instructions. Students have two tasks to do each time they use a function machine. Task 1 is to fill in the table. Students should write in their assigned input, write the output they get from the machine, and then figure out what function the machine was computing. \n\n**Discuss:** \n- _How can you figure out what function a machine is computing?_ \n- _What is the function in the table computing?_\n\n**Discussion Goal:** Figuring out the math of the function machine will require algebraic thinking. Talk about different strategies to figure out the math function:\nThink of it like division\nUse skip counting\nUse repeated addition\nUse fact families\nUse a multiplication table\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Step 2” slide\n\n**Do This:**  Continue showing students the worksheet and explaining the instructions. Step 2 is to fill in the 100’s chart. Each time students get an output they should color it in the 100’s chart. Ask students to search for patterns in the numbers that are colored in and not colored in.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time to Start Calculating!” slide\n\n**Do This:** **Assign each student an input between 2 - 10.** Write the input at the top of each student’s worksheet. Then, have students go around the classroom and start trying out their input on all the function machines. Circulate while students try out their inputs on the machines to offer support.\n\n**Do This:**  Have students open up their function machine from Lesson 2 - Level 10 on their computer. Ensure all students have their projects ready for presenting before moving on. \n\n",
         "duration": "15",
         "name": "Using Your Input"
       },
@@ -969,7 +969,7 @@
       "key": "44414ef6-e49a-4141-b2d9-74c77dba1a2b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Group Up by Input” slide\n\n**Do This:** Have students group up with other students that were using the same input. \n\n**Discuss:** \n_What patterns do you notice in the 100’s chart?_\n_What comes next in the pattern?_\n\n**Do This:** Have students color in the rest of the pattern until they reach the end of the 100’s chart. The group should select one student to share their findings with the class. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Group Up by Input” slide\n\n**Do This:** Have students group up with other students that were using the same input. \n\n**Discuss:** \n_What patterns do you notice in the 100’s chart?_\n_What comes next in the pattern?_\n\n**Do This:** Have students color in the rest of the pattern until they reach the end of the 100’s chart. The group should select one student to share their findings with the class. ",
         "duration": "10",
         "name": "Group Work"
       },
@@ -982,7 +982,7 @@
       "key": "9feb48d3-23d4-4195-96a3-dc180b5fe3e5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Let’s figure out what the aliens want!” slide\n\n**Say:** Those tricky aliens said they wrote a secret code using all of the numbers they never output in their machines! I was able to convince them to only use numbers 1-40 at least. \n\n**Do This:** Have the class see which numbers were output and then deduce which numbers were not output. Have each group’s representative share out which numbers their group colored in.\n\n**Discuss:** _Which numbers did each group color in?_\n\n**Discussion Goal:** Each input group should share a pattern they discovered and color in their pattern on a class 100’s chart. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display [Optional]**: Show “Prime Numbers” slide\n\n**Do This [Optional]:** Discuss prime numbers. Prime numbers are the outputs that were never colored in!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Crack the Code” slide\n\n**Do This:** Record all of the numbers that were never output in the left column. Write the numbers in numerical order! (The numbers should be: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)\n\nCrack the code! Each number corresponds to a letter. Fill in each letter until you figure out the secret message! (The message is: We want real ice cream!!) The aliens want real ice cream, because it turns out that space ice is not very yummy!\n\n\nOptional: <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sundae addScoop Machine” slide\n\n**Do This:** Click the image on the slide to open up the **[Sundae addScoop Machine](https://studio.code.org/projects/spritelab/ad4T5RjLzVPCWbhHNuL25VAyDkd6MVtOaRA5OkewlAI)** project in code.org. Add scoops until you make your perfect ice cream sundae! Then, click “how it works” to view the code that created the addScoop Machine. Discuss the blocks that were used. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let’s figure out what the aliens want!” slide\n\n**Say:** Those tricky aliens said they wrote a secret code using all of the numbers they never output in their machines! I was able to convince them to only use numbers 1-40 at least. \n\n**Do This:** Have the class see which numbers were output and then deduce which numbers were not output. Have each group’s representative share out which numbers their group colored in.\n\n**Discuss:** _Which numbers did each group color in?_\n\n**Discussion Goal:** Each input group should share a pattern they discovered and color in their pattern on a class 100’s chart. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display [Optional]**: Show “Prime Numbers” slide\n\n**Do This [Optional]:** Discuss prime numbers. Prime numbers are the outputs that were never colored in!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Crack the Code” slide\n\n**Do This:** Record all of the numbers that were never output in the left column. Write the numbers in numerical order! (The numbers should be: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37)\n\nCrack the code! Each number corresponds to a letter. Fill in each letter until you figure out the secret message! (The message is: We want real ice cream!!) The aliens want real ice cream, because it turns out that space ice is not very yummy!\n\n\nOptional: <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sundae addScoop Machine” slide\n\n**Do This:** Click the image on the slide to open up the **[Sundae addScoop Machine](https://studio.code.org/projects/spritelab/ad4T5RjLzVPCWbhHNuL25VAyDkd6MVtOaRA5OkewlAI)** project in code.org. Add scoops until you make your perfect ice cream sundae! Then, click “how it works” to view the code that created the addScoop Machine. Discuss the blocks that were used. \n",
         "duration": "10",
         "name": "Solving the Riddle"
       },
@@ -995,7 +995,7 @@
       "key": "38df8612-dfd9-4ab9-8611-74157de10c23",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** _If your calculator could only compute 3 functions, which would you pick? Why?_\n\n**Discussion Goal:** Students may respond in a variety of ways and this is an opportunity to highlight multiplication properties and math patterns. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** _If your calculator could only compute 3 functions, which would you pick? Why?_\n\n**Discussion Goal:** Students may respond in a variety of ways and this is an opportunity to highlight multiplication properties and math patterns. \n",
         "name": "Reflect"
       },
       "seeding_key": {

@@ -349,7 +349,7 @@
       "key": "dcecca1e-e0a1-4374-9b50-a098d7cb298f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Task Instructions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students should each get printed or digital copies of the Task Instructions.",
         "name": "Review Create PT Submission Requirements"
       },
       "seeding_key": {
@@ -361,7 +361,7 @@
       "key": "14ce85d6-5045-4130-9e96-8cf665244c7f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Task Instructions.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* Video of their code running\n* PDF of program code\n* Personalized Program Reference including code snippets from their programs\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read and then discuss with a partner the Task Instructions.*\n\n**Discussion Goal: Aim to keep this discussion relatively short.** Assure students you're intending to log their questions and they will be addressed through the lesson.\n\nStudents should leave this discussion knowing they will submit:\n\n* Video of their code running\n* PDF of program code\n* Personalized Program Reference including code snippets from their programs\n\nStudents are not, however, expected to fully understand the nuances of the task or scoring.\n"
       },
       "seeding_key": {
         "activity_section.key": "14ce85d6-5045-4130-9e96-8cf665244c7f",
@@ -383,7 +383,7 @@
       "key": "483d9df9-6d9c-407b-a7ad-54fdac4c909f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Hopefully in your reading you concluded that for the Create PT you'll need to submit:\n\n* Video showing your programs main functionality, including input and output\n* A PDF of your program code\n* Personalize Program Reference\n\nI'm sure that right now you have a lot of questions about what this task will look like and how it will be scored. Before we answer them, let's look at some examples first.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Hopefully in your reading you concluded that for the Create PT you'll need to submit:\n\n* Video showing your programs main functionality, including input and output\n* A PDF of your program code\n* Personalize Program Reference\n\nI'm sure that right now you have a lot of questions about what this task will look like and how it will be scored. Before we answer them, let's look at some examples first.",
         "remarks": true
       },
       "seeding_key": {
@@ -408,7 +408,7 @@
       "key": "c6041eee-190c-4353-9c94-bdb23d54c4d2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute**: Create PT Survival Guide. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Create PT Survival Guide. "
       },
       "seeding_key": {
         "activity_section.key": "c6041eee-190c-4353-9c94-bdb23d54c4d2",
@@ -419,7 +419,7 @@
       "key": "e9f698af-c3da-4223-9b34-3d20f028c606",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high-level questions that come up.\n    \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students quickly review the information on page 1 which summarizes components of the task and the role of the guide. Answer any high-level questions that come up.\n    \n",
         "duration": "5",
         "name": "Task Overview"
       },
@@ -432,7 +432,7 @@
       "key": "e697cf9c-45bd-4783-b164-36ef1bffecde",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Have students read the summary of the program requirements on page 2. The goal of this section should be to highlight the four takeaways in the Survival Guide. ",
         "duration": "5",
         "name": "What is Required of My Program?"
       },
@@ -457,7 +457,7 @@
       "key": "ac184b1b-7fc9-48f5-a37b-4b0fcc91028c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Ask students to complete the activity on page 3. For each of the provided algorithms they need to decide whether the function would earn each row. Give students roughly 10 minutes to score each of the functions and then take 5 minutes to discuss their work and the main takeaways from this activity.",
         "duration": "15",
         "name": "Function Requirement Activity 1: Does It Count?"
       },
@@ -481,7 +481,7 @@
       "key": "6fb644a5-334b-4723-ac4f-2a9870b17e08",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of writing functions for the Create PT do you feel clicked today? What do you still have questions about?*\n\nHave students share with one another before sharing with the whole class.\n\n**Dicsussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of writing functions for the Create PT do you feel clicked today? What do you still have questions about?*\n\nHave students share with one another before sharing with the whole class.\n\n**Dicsussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
       },
       "seeding_key": {
         "activity_section.key": "6fb644a5-334b-4723-ac4f-2a9870b17e08",
@@ -516,7 +516,7 @@
       "key": "ded75cf6-b76a-4921-9f46-1f1bc92d4475",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Identify the parameter, if-statement, and loop in this function.*\n\n**Discussion Goal:** Listen for students to point out the parameter `list` on line 01, the for-loop on line 03, and the if-statement on line 04."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Identify the parameter, if-statement, and loop in this function.*\n\n**Discussion Goal:** Listen for students to point out the parameter `list` on line 01, the for-loop on line 03, and the if-statement on line 04."
       },
       "seeding_key": {
         "activity_section.key": "ded75cf6-b76a-4921-9f46-1f1bc92d4475",
@@ -539,7 +539,7 @@
       "key": "22edf043-450b-4963-bdcf-39873b774d5f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 4) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> As a class read the \"Narrow It Down\" section (page 4) of your survival guide. The most important points to note:\n\n* The written responses are the most important part of the Create PT.\n* It's OK to submit a small or even incomplete project so long as it has a working feature you can show in your video and has a list and function that meets the requirements.\n* Most ideas can and should be narrowed down before you start.\n* You shouldn't be doing a lot of work in Design Mode or worrying about how your app looks until the end.\n\n",
         "duration": "5",
         "name": "Narrow It Down"
       },
@@ -552,7 +552,7 @@
       "key": "2162d721-8be9-49ea-8289-08c92fc392cd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** *Lead a discussion about how to narrow down project ideas.*\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students go through one of the three project ideas and practice helping the example student narrow down their project. Give students roughly 5 minutes to discuss ideas with a partner. Then have a couple volunteers from each project idea share how they helped narrow down the project idea.\n\n**Discuss:** *Lead a discussion about how to narrow down project ideas.*\n* Many projects have sub parts, each of which could stand on its own as a PT\n* You should be able to easily see a list and function opportunity within at least one of the sub parts -- if you can't, not a good choice.\n* For any project idea it should be relatively easy to scope it down to one or two things that will be totally acceptable for the Create PT\n\n**Discussion Goal:** Understand it doesn't have to be a big project; The create PT is about demonstrating something you already know how to do.  \n\nThe biggest thing we're trying to guard against is students' eyes being bigger than their stomachs.  We want to encourage students to be creative and start build whatever they want, but temper that with the realities of the Create PT...\n\n* It doesn't need to be a big project\n* Your job is to demonstrate that you know how to program something and identify certain aspects of it.\n* There are no points for coolness or prettiness\n* If you want to do something big, just get it started for the Create PT and come back to it afterward.\n",
         "duration": "10",
         "name": "Practice Narrowing It Down"
       },
@@ -565,7 +565,7 @@
       "key": "3aa05580-5a78-435d-9dc6-70c679248b3e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Quickly read this section (page 6) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Quickly read this section (page 6) with students and review and high level questions as a class. The main takeaways are below.\n\n* You don't actually have that much time to work!\n* When you start, you should have an idea about what your list and function will be.\n* Start with a narrowly scoped project, start working right away on the core parts of it.\n* Don't try to learn new programming skills during the PT - do something you know how to do now.\n* Get to the written responses as quickly as you can.",
         "duration": "5",
         "name": "Choosing a Project Idea "
       },
@@ -578,7 +578,7 @@
       "key": "41237178-12eb-4a90-86d9-7b9f24aa1775",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students use page 6 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students use page 6 to brainstorm project ideas. They should come up with two different ideas and fill in information about both. These can be first draft ideas but emphasize to students that they're starting to think through what they're actually going to do on their projects.",
         "duration": "10",
         "name": "Brainstorm Ideas"
       },
@@ -602,7 +602,7 @@
       "key": "eeadc5fb-2afc-4c4d-89f9-ec7c61fe32f4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 7):**",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Create PT Completion Timeline (page 7):**",
         "name": "Make a Plan\r"
       },
       "seeding_key": {
@@ -667,7 +667,7 @@
       "key": "d1625d9e-29c4-452d-a4e4-c5e8f60c3ee4",
       "position": 2,
       "properties": {
-        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Read page 8-9: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 6: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
+        "description": "Before we start let's review the AP CSP Create Task Instructions.\n\n---\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Read page 8-9: Preparing for the Performance Task. This is a general checklist of things you should do to prepare for the AP Performance Task.  Let's see how we did. With a partner - one person reading from the top down, the other reading from bottom up - check off things we've done to prepare so far.  Identify anything we haven't done. Discuss together before discussing as a class. Also, Read Page 6: AP Computer Science Principles Policy on Plagiarism. With a partner carefully read this section. Discuss together before discussing as a class.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Make sure everyone understands expectations.\n\n* For example: if you use a library that someone else created, you need to include a comment citing this source as code you yourself did not write\n* If using images, media or other copyrighted material found on the web, you should cite those sources in comments in your program code - usually at the top.  Something like:\n\n```\n// The images used in this app came from:\n// [1] bird image - http://name-of-site.com/path/to/image.jpg\n// [2] flower image - http://site.com/path/to/flower.jpg\n```",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -679,7 +679,7 @@
       "key": "bbed3899-fdd1-4378-a73b-7add733e4ecd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 10-11: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Read Pages 10-11: Guidelines for Completing the Create Performance Task. This is a final list of Do's and Don'ts for the Create PT.  With your partner, read the* **You must**, **You may not**, *and* **You may** *sections of this page. Then with you partner summarize: what kinds of things can your teacher help you with?*\n\n**Discussion Goal:**\n\n* Discuss specifically how you (teacher) are allowed to help and not.  Short version: you *can* help students with the *process* of completing the task, you *cannot* help by evaluating their work or ideas in any way.\n* If you modify an existing project for the Create PT **make sure** that the purpose is also new, or modified to fit the changes and updates you are making.  For example: \"The purpose was to add a login feature to a game I made previously\".\n",
         "progression_name": "Tech Setup and Tools for Create PT"
       },
       "seeding_key": {
@@ -691,7 +691,7 @@
       "key": "1b4df5e4-8a40-446e-aad1-4870a7f5291d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* Take out your Create PT timeline that we developed and reviewed.\n* Ask and answer any remaining questions.\n* Remind students of the overall timeline and that the official PT time is about to start.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Take out your Create PT timeline that we developed and reviewed.\n* Ask and answer any remaining questions.\n* Remind students of the overall timeline and that the official PT time is about to start.",
         "name": "Set",
         "progression_name": "Create PT Coding Workspace"
       },
@@ -704,7 +704,7 @@
       "key": "da556841-0254-42c3-8953-be0f0db24eaf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Links in Code Studio:**\n\n* Students can find links to AP resources on the student page in code studio associated with this lesson. Students will need to be signed into to AP Classroom to view these resources.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Links in Code Studio:**\n\n* Students can find links to AP resources on the student page in code studio associated with this lesson. Students will need to be signed into to AP Classroom to view these resources.\n",
         "name": "GO! Complete Create Performance Task"
       },
       "seeding_key": {
@@ -732,7 +732,7 @@
       "key": "bc55dd21-4014-46dd-8dbe-7043241b271a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Submitting:**\n\n* You are encouraged to submit and save work in the AP digital portfolio as you go!\n* At the designated end of the Task administration (having allowed for at least 12 hours of class time for work) students should submit their video of the program running,  written responses, and program code to their [AP Digital Portfolio](https://apstudents.collegeboard.org/digital-submission/submit-ap-csp-work). You can find more instructions as well by using the [AP Digital Portfolio: Student User Guide](https://apcentral.collegeboard.org/pdf/digital-portfolio-student-user-guide-ap-csp.pdf).\n\nBefore they submit their final work:\n\n * Encourage students to check over the Survival Guide checklists one more time to make sure they met the requirements.\n * Make sure they have all the components necessary for the Create Performance Task.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Submitting:**\n\n* You are encouraged to submit and save work in the AP digital portfolio as you go!\n* At the designated end of the Task administration (having allowed for at least 12 hours of class time for work) students should submit their video of the program running,  written responses, and program code to their [AP Digital Portfolio](https://apstudents.collegeboard.org/digital-submission/submit-ap-csp-work). You can find more instructions as well by using the [AP Digital Portfolio: Student User Guide](https://apcentral.collegeboard.org/pdf/digital-portfolio-student-user-guide-ap-csp.pdf).\n\nBefore they submit their final work:\n\n * Encourage students to check over the Survival Guide checklists one more time to make sure they met the requirements.\n * Make sure they have all the components necessary for the Create Performance Task.",
         "name": "Students submit completed Create Performance Task"
       },
       "seeding_key": {
@@ -786,7 +786,7 @@
       "key": "21d08463-21be-4ab4-aebf-e594ef7eec30",
       "position": 3,
       "properties": {
-        "description": "**Distribute**:  Create PT Mock Exam Description\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Instructions on the Quick Annotations Slide.\n\n**Do This**: Ask students to circle key terms and underline anything unclear. Encourage brief notes or questions in the margins.\n\n**Distribute**:  Sticky notes for Parking Lot\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Instructions on the Parking Lot slide\n\n**Do This**: Ask students to jot down any questions or points of confusion, and place them in the \"Want to Know\" area."
+        "description": "**Distribute**:  Create PT Mock Exam Description\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Instructions on the Quick Annotations Slide.\n\n**Do This**: Ask students to circle key terms and underline anything unclear. Encourage brief notes or questions in the margins.\n\n**Distribute**:  Sticky notes for Parking Lot\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Instructions on the Parking Lot slide\n\n**Do This**: Ask students to jot down any questions or points of confusion, and place them in the \"Want to Know\" area."
       },
       "seeding_key": {
         "activity_section.key": "21d08463-21be-4ab4-aebf-e594ef7eec30",
@@ -837,7 +837,7 @@
       "key": "768ced8e-2b9b-4386-9f43-b2936cf473e4",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What strategies have you used before to help you plan and write your answers to free-response questions?*\n\n**Discussion Goal:** Use this discussion to allow students to share any strategies they have used in the past, even from other subjects. You may also push students to think about things they wish they had done in approaching the practice they've encountered throughout the year."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What strategies have you used before to help you plan and write your answers to free-response questions?*\n\n**Discussion Goal:** Use this discussion to allow students to share any strategies they have used in the past, even from other subjects. You may also push students to think about things they wish they had done in approaching the practice they've encountered throughout the year."
       },
       "seeding_key": {
         "activity_section.key": "768ced8e-2b9b-4386-9f43-b2936cf473e4",
@@ -894,7 +894,7 @@
       "key": "cdbefaaa-8db8-4109-837f-df6257d3e730",
       "position": 11,
       "properties": {
-        "description": "####Planning\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: \"Planning\" section instructions slide."
+        "description": "####Planning\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: \"Planning\" section instructions slide."
       },
       "seeding_key": {
         "activity_section.key": "cdbefaaa-8db8-4109-837f-df6257d3e730",
@@ -934,7 +934,7 @@
       "key": "54e4cd16-2ed4-4443-a121-14a9f08f148b",
       "position": 14,
       "properties": {
-        "description": "####Annotating and Writing\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: The \"Annotating and Writing\" instructions slide.\n\n*Version A and B of this activity are presented below. Teachers may choose one or both options depending on the needs of the learners.*\n\n::: details [**Version A: Streamlined Approach**]\n</br>\nThis straightforward strategy provides a quick and efficient approach for those who prefer a more streamlined process. This strategy also mirrors the practice exercises students may have engaged in throughout the curriculum. \n\n1. **Annotating**: Circle key terms: Identify and circle key terms to focus your response.\n2. **Create a Rough Outline**: Organize your main points in a logical order and ensure that your outline aligns with the main points from your annotations. Write responses and cross off key terms: Following the outline you created. As you address each numbered key term in your response, visually cross it off on your annotated plan.\n3. **Reflect**: Reflect on your experience so that you can grow your written response skills.\n:::\n\n</br>\n\n::: details [**Version B: Detail-Oriented Approach**]\n</br>\nThis comprehensive strategy provides multiple opportunities for students to engage with the prompts, organize their thoughts, brainstorm ideas, and write their responses. \n\nReview and practice annotation strategies with students using sample Create Performance Task Question #1 and Question #2(a).\n\n1. **Circle Key Terms**: Identify and circle key terms in the question to ensure a focused response on critical elements.\n2. **Number Key Terms**: Organize thoughts by numbering the key terms, and then use those numbers in outlining the response\n3. **Snapshot Your Thoughts**: Capture your thoughts about each key term in a snapshot. Make it quick and straightforward – this isn't about writing a lot, just enough to jog your memory when answering.\n4. **Freewrite / Annotate each key term with example ideas**:  Jot down potential examples or ideas related to the question to stimulate creativity and provide content for the response.\n:::"
+        "description": "####Annotating and Writing\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The \"Annotating and Writing\" instructions slide.\n\n*Version A and B of this activity are presented below. Teachers may choose one or both options depending on the needs of the learners.*\n\n::: details [**Version A: Streamlined Approach**]\n</br>\nThis straightforward strategy provides a quick and efficient approach for those who prefer a more streamlined process. This strategy also mirrors the practice exercises students may have engaged in throughout the curriculum. \n\n1. **Annotating**: Circle key terms: Identify and circle key terms to focus your response.\n2. **Create a Rough Outline**: Organize your main points in a logical order and ensure that your outline aligns with the main points from your annotations. Write responses and cross off key terms: Following the outline you created. As you address each numbered key term in your response, visually cross it off on your annotated plan.\n3. **Reflect**: Reflect on your experience so that you can grow your written response skills.\n:::\n\n</br>\n\n::: details [**Version B: Detail-Oriented Approach**]\n</br>\nThis comprehensive strategy provides multiple opportunities for students to engage with the prompts, organize their thoughts, brainstorm ideas, and write their responses. \n\nReview and practice annotation strategies with students using sample Create Performance Task Question #1 and Question #2(a).\n\n1. **Circle Key Terms**: Identify and circle key terms in the question to ensure a focused response on critical elements.\n2. **Number Key Terms**: Organize thoughts by numbering the key terms, and then use those numbers in outlining the response\n3. **Snapshot Your Thoughts**: Capture your thoughts about each key term in a snapshot. Make it quick and straightforward – this isn't about writing a lot, just enough to jog your memory when answering.\n4. **Freewrite / Annotate each key term with example ideas**:  Jot down potential examples or ideas related to the question to stimulate creativity and provide content for the response.\n:::"
       },
       "seeding_key": {
         "activity_section.key": "54e4cd16-2ed4-4443-a121-14a9f08f148b",
@@ -999,7 +999,7 @@
       "key": "3ac0a94b-809c-4174-91c9-9b487ef88127",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: the \"Retrieve-Pair-Share\" instructions slide.\n\n**Do This**: After the practice session, provide time for students to reflect on their annotation and response strategies.\n\n####Revisit Parking Lot (3 min)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: the \"Parking Lot Want to Know\" instructions slide.\n\n**Do This**:  Revisit the Parking Lot from the warm up and facilitate a discussion around the “want to knows” students had. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: the \"Retrieve-Pair-Share\" instructions slide.\n\n**Do This**: After the practice session, provide time for students to reflect on their annotation and response strategies.\n\n####Revisit Parking Lot (3 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: the \"Parking Lot Want to Know\" instructions slide.\n\n**Do This**:  Revisit the Parking Lot from the warm up and facilitate a discussion around the “want to knows” students had. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1034,7 +1034,7 @@
       "key": "73650188-edb7-49ed-94e5-234a1877ff40",
       "position": 2,
       "properties": {
-        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: FRQ Annotation Strategies slide\n\n**Model**: Use the next three slides to help students visualize the annotation and writing process they will use to answer the free response questions. ",
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: FRQ Annotation Strategies slide\n\n**Model**: Use the next three slides to help students visualize the annotation and writing process they will use to answer the free response questions. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1051,7 +1051,7 @@
       "key": "c359e409-f3f0-40de-9372-f80f0ed80f34",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: The \"You Should Have\" slide.\n\n**Distribute**: If collected last class, redistribute the PPR and activity guide. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The \"You Should Have\" slide.\n\n**Distribute**: If collected last class, redistribute the PPR and activity guide. ",
         "duration": "30",
         "name": "Activity ",
         "tips": [
@@ -1081,7 +1081,7 @@
       "key": "d16ba6ce-3e33-4e05-901a-bc668389c7c0",
       "position": 5,
       "properties": {
-        "description": "####Reflection (5 min)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n",
+        "description": "####Reflection (5 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n",
         "duration": "10",
         "name": "Wrap Up"
       },
@@ -1112,7 +1112,7 @@
       "key": "58dfeb58-a583-4542-8898-720447eeb30f",
       "position": 7,
       "properties": {
-        "description": "####Glows, Grows, Want to Knows\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n\n**Discuss**: *The areas students felt went well (\"Glows\"), areas to improve upon (\"Grows\"), and areas of confusion (\"Want to Knows\")*\n\n**Discussion Goal**: Help guide students towards understanding the purpose of these practice exams, to give them an opportunity to prepare for the actual exam, and celebrate successes students had.",
+        "description": "####Glows, Grows, Want to Knows\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: The reflections instructions slide.\n\n**Discuss**: *The areas students felt went well (\"Glows\"), areas to improve upon (\"Grows\"), and areas of confusion (\"Want to Knows\")*\n\n**Discussion Goal**: Help guide students towards understanding the purpose of these practice exams, to give them an opportunity to prepare for the actual exam, and celebrate successes students had.",
         "tips": [
           {
             "type": "teachingTip",

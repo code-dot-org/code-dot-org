@@ -369,7 +369,7 @@
       "key": "dd3b64c1-8c3c-4ecc-b928-c22f09f097b2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “What do you notice? What do you wonder?” Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “What do you notice? What do you wonder?” Slide",
         "duration": "10",
         "name": "Maps as Stories"
       },
@@ -417,7 +417,7 @@
       "key": "27e5bf5c-9482-4a58-8872-556de57dc6e5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Map Components\" Slide\n\n**Do This:** Review basic map vocabulary listed on this slide: Compass Rose, Landmark, Country, Continent, State borders, and Ocean. Write any additional ideas students have on the board. You can use this during the Wrap Up. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map Components\" Slide\n\n**Do This:** Review basic map vocabulary listed on this slide: Compass Rose, Landmark, Country, Continent, State borders, and Ocean. Write any additional ideas students have on the board. You can use this during the Wrap Up. "
       },
       "seeding_key": {
         "activity_section.key": "27e5bf5c-9482-4a58-8872-556de57dc6e5",
@@ -440,7 +440,7 @@
       "key": "dc800beb-af36-48d6-a87a-bb5d5f72c569",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Map 1: Coaster Road Trip Map\" Slide\n\n**Discuss:** \n- What is this map’s purpose?\n- Who do you think made this map?\n- If you were planning a road trip, would you choose the same stops?\n\n**Discussion Goal:** Help students recognize that maps have a variety of purposes. Sometimes maps are solely factual (rivers, mountains, boundaries), while at other times they’re opinions (best amusement parks or tacos) or unique to the mapmaker (Grandma’s house, my elementary school).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Map 2: The Oregon Trail\" Slide\n\n**Discuss:** \n- What is different about this map? \n- Is there anything missing from this map? \n- Why do you think that is?\n\n**Discussion Goal:** Students will notice that this map's lack of color and the overall feel is different. They might infer that this is a map in a video game based on the style and “Press Spacebar to Continue” sign. There are no boundaries; instead, the map has a Start and Finish point with town names along the route. Explain to students that this depicts a map made during the USA’s “westward expansion” and before there were state boundaries. \n\n_Note: This map is from the popular 1990s video game “The Oregon Trail” in which players travel a 2,000-mile overland route through current-day Idaho and Oregon with their families, wagons, and animals. The game is set between 1840-1860._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Map 3: Exploring Maps\" Slide\n\n**Discuss:** \n- What do the colors mean in this map? \n- Why are there both color boundaries and state boundaries? \n- What does the mapmaker want to teach us about this part of North America?\n\n**Discussion Goal:** Students will start to recognize that map makers have much to consider when designing a new map. The use of color can help distinguish different boundaries and provide focus. The colors in this map indicate different Native American tribal regions pre-colonization. The mapmaker overlapped current state boundaries to show the change of “borders” over time between two groups of people. Maps change over time as new features are discovered, as geography or boundaries change, and as the purpose of the map changes. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map 1: Coaster Road Trip Map\" Slide\n\n**Discuss:** \n- What is this map’s purpose?\n- Who do you think made this map?\n- If you were planning a road trip, would you choose the same stops?\n\n**Discussion Goal:** Help students recognize that maps have a variety of purposes. Sometimes maps are solely factual (rivers, mountains, boundaries), while at other times they’re opinions (best amusement parks or tacos) or unique to the mapmaker (Grandma’s house, my elementary school).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map 2: The Oregon Trail\" Slide\n\n**Discuss:** \n- What is different about this map? \n- Is there anything missing from this map? \n- Why do you think that is?\n\n**Discussion Goal:** Students will notice that this map's lack of color and the overall feel is different. They might infer that this is a map in a video game based on the style and “Press Spacebar to Continue” sign. There are no boundaries; instead, the map has a Start and Finish point with town names along the route. Explain to students that this depicts a map made during the USA’s “westward expansion” and before there were state boundaries. \n\n_Note: This map is from the popular 1990s video game “The Oregon Trail” in which players travel a 2,000-mile overland route through current-day Idaho and Oregon with their families, wagons, and animals. The game is set between 1840-1860._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Map 3: Exploring Maps\" Slide\n\n**Discuss:** \n- What do the colors mean in this map? \n- Why are there both color boundaries and state boundaries? \n- What does the mapmaker want to teach us about this part of North America?\n\n**Discussion Goal:** Students will start to recognize that map makers have much to consider when designing a new map. The use of color can help distinguish different boundaries and provide focus. The colors in this map indicate different Native American tribal regions pre-colonization. The mapmaker overlapped current state boundaries to show the change of “borders” over time between two groups of people. Maps change over time as new features are discovered, as geography or boundaries change, and as the purpose of the map changes. \n"
       },
       "seeding_key": {
         "activity_section.key": "dc800beb-af36-48d6-a87a-bb5d5f72c569",
@@ -451,7 +451,7 @@
       "key": "95866eea-2687-48a3-a7b4-1f2bac608159",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Mapmakers\" video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Mapmakers\" video",
         "duration": "25",
         "name": "Code a Map"
       },
@@ -538,7 +538,7 @@
       "key": "4af6a0a5-abd6-4989-b92e-388088ca88a1",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Level 9 - Free Play” Slide\n\n**Do This:** Encourage students to make their projects their own. They can upload their own sprite costumes and backgrounds, change the size of their sprites, and use the `when touching` event to make their tour guide say something different about each sprite. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 9 - Free Play” Slide\n\n**Do This:** Encourage students to make their projects their own. They can upload their own sprite costumes and backgrounds, change the size of their sprites, and use the `when touching` event to make their tour guide say something different about each sprite. ",
         "progression_name": "Free Play - Landmarks"
       },
       "seeding_key": {
@@ -567,7 +567,7 @@
       "key": "1943ab7a-b76f-422b-a8c2-95de70803b77",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Campfire Discussion” Slide\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Campfire Discussion” Slide\n\n\n",
         "duration": "10",
         "name": "Campfire Discussion"
       },
@@ -620,7 +620,7 @@
       "key": "4275a2bd-e02f-4117-89f1-876831439048",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Time to be a Mapmaker\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Time to be a Mapmaker\" Slide",
         "name": "Time to Be Mapmakers"
       },
       "seeding_key": {
@@ -655,7 +655,7 @@
       "key": "f305ce27-e748-4c98-b1d0-979044edebf4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"What is a landmark?\" Slide\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"What is a landmark?\" Slide\n\n"
       },
       "seeding_key": {
         "activity_section.key": "f305ce27-e748-4c98-b1d0-979044edebf4",
@@ -678,7 +678,7 @@
       "key": "4d888942-1da5-4dd6-8d43-7849f1909e47",
       "position": 6,
       "properties": {
-        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “What are the important landmarks in the area?” slide"
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “What are the important landmarks in the area?” slide"
       },
       "seeding_key": {
         "activity_section.key": "4d888942-1da5-4dd6-8d43-7849f1909e47",
@@ -701,7 +701,7 @@
       "key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Give students 2-3 minutes to independently start a list of landmarks on their own.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
+        "description": "**Do This:** Give students 2-3 minutes to independently start a list of landmarks on their own.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"GoGoMo\" Slide"
       },
       "seeding_key": {
         "activity_section.key": "23c87c16-112f-48d3-bd8a-daf1d43c2fae",
@@ -749,7 +749,7 @@
       "key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">Project Plan</a>. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Project Planning\" Slide\n\n**Distribute:** Give each student a copy of the <a href=\"https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview\" target=\"_blank\">Project Plan</a>. \n"
       },
       "seeding_key": {
         "activity_section.key": "8d57510b-9d48-4ff4-b3fe-024c9e7d48cb",
@@ -815,7 +815,7 @@
       "key": "cb6f50e7-196f-4f13-b051-cae1bf20541d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Tour Guide Practice\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Tour Guide Practice\" Slide",
         "name": "Tour Guide Practice"
       },
       "seeding_key": {
@@ -850,7 +850,7 @@
       "key": "f5745ebd-7214-4ebc-9d66-6c8e1eeba2bd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Discussion\" Slide\n\n**Do This:** If you have time, answer some of the questions on the board: \n- What is different about your maps? \n- Does your map include any opinions? \n\n**Discussion Goal:** Students should be able to compare and contrast their maps with each other. They should understand that even if they both make a map of the same region, they might choose to highlight different landmarks or have their tour guide say something different about the landmarks. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Discussion\" Slide\n\n**Do This:** If you have time, answer some of the questions on the board: \n- What is different about your maps? \n- Does your map include any opinions? \n\n**Discussion Goal:** Students should be able to compare and contrast their maps with each other. They should understand that even if they both make a map of the same region, they might choose to highlight different landmarks or have their tour guide say something different about the landmarks. "
       },
       "seeding_key": {
         "activity_section.key": "f5745ebd-7214-4ebc-9d66-6c8e1eeba2bd",
@@ -891,7 +891,7 @@
       "key": "2653bd3b-c45a-4b37-8c4c-539f5f753c6a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Check In\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Check In\" Slide",
         "duration": "5",
         "name": "Check In"
       },
@@ -922,7 +922,7 @@
       "key": "6f9028e9-b332-442e-aa41-bb849d96241a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Debugging Strategies\" Slide\n\n**Discuss:** What do we do if we have a bug or a challenge in our code?\n\n**Discussion Goal:** Discussing how to face challenges normalizes the struggle students will encounter when working on a new, creative project. Students will create/review a list of strategies to try when they are feeling stuck."
       },
       "seeding_key": {
         "activity_section.key": "6f9028e9-b332-442e-aa41-bb849d96241a",
@@ -945,7 +945,7 @@
       "key": "39209eb8-f15b-43af-a55f-3fb99c7fe4b8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning guide if they were collected in the previous lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 1-6\" Slide\n\n**Distribute:** Return student’s Mapmakers Planning guide if they were collected in the previous lesson.",
         "duration": "10",
         "name": "Map Set Up",
         "progression_name": "Skill Building"
@@ -981,7 +981,7 @@
       "key": "0704b38e-a65a-4dff-9840-26f5b831a040",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Stop, Show, and Support\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Stop, Show, and Support\" Slide",
         "duration": "15",
         "name": "Stop, Show, and Support"
       },
@@ -1035,7 +1035,7 @@
       "key": "61029c87-095e-46cf-8cd6-f6f4d8146372",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Level 7\" Slide\n\n**Do This:** Have students return to their own project and resume the progression.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Level 7\" Slide\n\n**Do This:** Have students return to their own project and resume the progression.",
         "duration": "10",
         "name": "Landmarks & Events",
         "progression_name": "Landmarks & Events"
@@ -1076,7 +1076,7 @@
       "key": "3f90277d-7951-428b-9655-728af3ec0bec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Gallery Walk\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Gallery Walk\" Slide",
         "name": "Gallery Walk"
       },
       "seeding_key": {
@@ -1134,7 +1134,7 @@
       "key": "e2aedfe4-331c-4ac2-bb34-3b220ecffd1e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the ***<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">Coding Interactive Maps Reflections & Observations</a>** handout.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Reflect\" Slide\n\n**Distribute:** Give each student a copy of the ***<a href=\"https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview\" target=\"_blank\">Coding Interactive Maps Reflections & Observations</a>** handout.\n",
         "name": "Reflect"
       },
       "seeding_key": {
@@ -1175,7 +1175,7 @@
       "key": "66f09c0e-cef1-4baa-b000-532f81154bad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n**Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) **Be prepared:** Is your code complete?  Is your project ready?\n2) **Explain everything:** Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) **Ask for questions & comments:** Allow the audience to participate in your presentation.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Presentations\" Slide\n\n**Discuss:** What are the aspects of an effective presentation?\n\n**Discussion Goal:** Students will feel prepared and confident to stand in front of the class to present their project.  Identify the tips listed on the slide: \n1) **Be prepared:** Is your code complete?  Is your project ready?\n2) **Explain everything:** Be very descriptive in explaining how the code works, your design choices, and the challenges you faced.\n3) **Ask for questions & comments:** Allow the audience to participate in your presentation.\n",
         "duration": "25",
         "name": "Presentations"
       },
@@ -1200,7 +1200,7 @@
       "key": "408f3007-4f27-42cc-be7a-e69c67bf3a06",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show \"Observe\" Slide\n\n**Do This:** Gather students and facilitate one full group presentation at a time. After the first presentation, pause to explain the observation table and give students time to complete the first row. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Observe\" Slide\n\n**Do This:** Gather students and facilitate one full group presentation at a time. After the first presentation, pause to explain the observation table and give students time to complete the first row. \n"
       },
       "seeding_key": {
         "activity_section.key": "408f3007-4f27-42cc-be7a-e69c67bf3a06",
@@ -1240,7 +1240,7 @@
       "key": "7ea9d97e-c167-4390-8b1e-86803a4cd30f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** \"Glows, Grows, Want-to-Knows\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** \"Glows, Grows, Want-to-Knows\" Slide",
         "name": "Glows, Grows, Want-To-Knows"
       },
       "seeding_key": {

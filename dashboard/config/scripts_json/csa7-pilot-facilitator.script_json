@@ -1201,7 +1201,7 @@
       "key": "535fea79-2a52-4973-bc93-f383af32fc97",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Computer-Generated Graphics (CGI) video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that TV shows and movies often use CGI to create scenes and effects more easily or more dramatically than what is possible in real-life. Students may wonder how programming influences or contributes to CGI and computer science career possibilities in the entertainment industry.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Computer-Generated Graphics (CGI) video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that TV shows and movies often use CGI to create scenes and effects more easily or more dramatically than what is possible in real-life. Students may wonder how programming influences or contributes to CGI and computer science career possibilities in the entertainment industry.",
         "name": "Computer-Generated Graphics"
       },
       "seeding_key": {
@@ -1225,7 +1225,7 @@
       "key": "9327fd0d-a8d0-45d7-89bf-b9c9db8be535",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you develop a program that creates a simple version of a title sequence like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for writing a program that creates a title sequence. Students realize that they know how to write code to achieve most of the required elements of a title sequence but might need to know how to create a program more efficiently.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you develop a program that creates a simple version of a title sequence like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for writing a program that creates a title sequence. Students realize that they know how to write code to achieve most of the required elements of a title sequence but might need to know how to create a program more efficiently.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1256,7 +1256,7 @@
       "key": "7f5e6440-6d47-4307-a61f-1f9e4a3a0f2c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Unit 7 Guide to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why do we write methods?*\n\n**Discussion Goal:** Students share different reasons, such as not having to repeat code, readability and maintainability, and methods with parameters that make the code more flexible for different inputs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define procedural abstraction.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Unit 7 Guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do we write methods?*\n\n**Discussion Goal:** Students share different reasons, such as not having to repeat code, readability and maintainability, and methods with parameters that make the code more flexible for different inputs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define procedural abstraction.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1273,7 +1273,7 @@
       "key": "5745dd1b-36f6-4e40-aab7-551ee19a5c93",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do we decide what methods to write?*\n\n**Discussion Goal:** Students share different reasons, such as identifying the need to reuse the same code multiple times.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define method decomposition."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do we decide what methods to write?*\n\n**Discussion Goal:** Students share different reasons, such as identifying the need to reuse the same code multiple times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define method decomposition."
       },
       "seeding_key": {
         "activity_section.key": "5745dd1b-36f6-4e40-aab7-551ee19a5c93",
@@ -1296,7 +1296,7 @@
       "key": "0c207bd6-c727-40fe-b091-7d9a4df60589",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
       },
       "seeding_key": {
         "activity_section.key": "0c207bd6-c727-40fe-b091-7d9a4df60589",
@@ -1307,7 +1307,7 @@
       "key": "750e1562-34a3-47f6-ab77-6f18f8e0832c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define title sequence.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Title Sequence Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define title sequence.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Title Sequence Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric.",
         "duration": "15",
         "name": "Project Introduction"
       },
@@ -1332,7 +1332,7 @@
       "key": "d7d05679-5a1e-4180-8f89-e735c45017a4",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1361,7 +1361,7 @@
       "key": "81b48034-aab8-4a34-927c-39b51ab1be82",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students work with a partner to analyze the exemplars to generate a list of common characteristics and key features on page three of the Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students work with a partner to analyze the exemplars to generate a list of common characteristics and key features on page three of the Project Planning Guide.",
         "progression_name": "Title Sequence Project Exemplars",
         "tips": [
           {
@@ -1379,7 +1379,7 @@
       "key": "9737a8c6-f7c8-4f1d-a723-5ca1d9350f8a",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the exemplars that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the exemplars that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement."
       },
       "seeding_key": {
         "activity_section.key": "9737a8c6-f7c8-4f1d-a723-5ca1d9350f8a",
@@ -1402,7 +1402,7 @@
       "key": "425eb499-7c19-40bb-86c8-3ec7de56852b",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about with the project or documenting program code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about with the project or documenting program code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Gots and Needs"
       },
       "seeding_key": {
@@ -1451,7 +1451,7 @@
       "key": "5b990fe9-04e0-4544-b8bd-25e93cb9ba22",
       "position": 2,
       "properties": {
-        "description": "**Do This:** Have students identify the missing component before clicking through the animation to reveal the answer.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> This method is missing the parameter list. Even if the method does not need any parameters, it must include empty parentheses. Students share this is a `void` and mutator method.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> This method is missing the method name. Without the method name, there is no way to call it. Students share this as an accessor method.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> This method is missing the actual parameters. The actual parameters `item` and `size` must be passed in arguments when calling the method `order()`."
+        "description": "**Do This:** Have students identify the missing component before clicking through the animation to reveal the answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the parameter list. Even if the method does not need any parameters, it must include empty parentheses. Students share this is a `void` and mutator method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the method name. Without the method name, there is no way to call it. Students share this as an accessor method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the actual parameters. The actual parameters `item` and `size` must be passed in arguments when calling the method `order()`."
       },
       "seeding_key": {
         "activity_section.key": "5b990fe9-04e0-4544-b8bd-25e93cb9ba22",
@@ -1476,7 +1476,7 @@
       "key": "ebf7e21b-ce46-469e-9572-73dd11a9d411",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to review actual and formal parameters:\n* *What is the structure of the signature and call of this constructor?*\n* *How do the signature and the call to the constructor function?*\n\n**Discussion Goal:** Students identify the actual and formal parameters. Students share the signature and the call to the constructor function by defining the values to pass to the constructor to create the object. The values passed to the formal parameters can then be assigned to the instance variables to set the object's initial state and have access to the values outside of the constructor.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the actual and formal parameters."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to review actual and formal parameters:\n* *What is the structure of the signature and call of this constructor?*\n* *How do the signature and the call to the constructor function?*\n\n**Discussion Goal:** Students identify the actual and formal parameters. Students share the signature and the call to the constructor function by defining the values to pass to the constructor to create the object. The values passed to the formal parameters can then be assigned to the instance variables to set the object's initial state and have access to the values outside of the constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the actual and formal parameters."
       },
       "seeding_key": {
         "activity_section.key": "ebf7e21b-ce46-469e-9572-73dd11a9d411",
@@ -1499,7 +1499,7 @@
       "key": "aeaf5c1d-94ec-4424-a54b-ef21a449e8a3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students answer the questions and predict the output for actual and formal parameters.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students answer the questions and predict the output for actual and formal parameters.",
         "progression_name": "Predict: Actual and Formal Parameters"
       },
       "seeding_key": {
@@ -1511,7 +1511,7 @@
       "key": "ec55c372-ebf5-4fdd-a9d5-ba999fcc20a4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *What is the relationship between the actual and formal parameters?*\n* *What was the output of the method call `myShow.display(5,7)`?*\n\n**Discussion Goal:** Students share the actual parameters are the values passed when invoking the method. The formal parameters are the variables defined by the method that receives values when calling the method. The output of the method call is `5 people purchased 7 tickets for the show`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *What is the relationship between the actual and formal parameters?*\n* *What was the output of the method call `myShow.display(5,7)`?*\n\n**Discussion Goal:** Students share the actual parameters are the values passed when invoking the method. The formal parameters are the variables defined by the method that receives values when calling the method. The output of the method call is `5 people purchased 7 tickets for the show`."
       },
       "seeding_key": {
         "activity_section.key": "ec55c372-ebf5-4fdd-a9d5-ba999fcc20a4",
@@ -1536,7 +1536,7 @@
       "key": "79cc3718-f1dd-46c5-ae06-008276b5b737",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods."
       },
       "seeding_key": {
         "activity_section.key": "79cc3718-f1dd-46c5-ae06-008276b5b737",
@@ -1559,7 +1559,7 @@
       "key": "9074a8de-4f7b-451f-af26-d93b381781cb",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types.",
         "progression_name": "Void and Non-Void Methods"
       },
       "seeding_key": {
@@ -1585,7 +1585,7 @@
       "key": "2fc0d439-ee24-43fa-be09-07cae69bc93f",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1602,7 +1602,7 @@
       "key": "9ef8bd8a-475e-4ae7-80d3-77acbfc77085",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "9ef8bd8a-475e-4ae7-80d3-77acbfc77085",
@@ -1613,7 +1613,7 @@
       "key": "afba934e-f999-46ca-bc51-355a43722188",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Title Sequence Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Title Sequence Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Project Brainstorming"
       },
       "seeding_key": {
@@ -1663,7 +1663,7 @@
       "key": "1f3b9c94-a05b-4a34-8c3b-9d12189d0aa7",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the parameterized song problem. Assign pairs to solve the problem with primitives and with objects as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1680,7 +1680,7 @@
       "key": "aa15f239-e9e7-4c16-a776-3a7d9a4b0a88",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to write pseudocode to outline their solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs with the primitives as parameters compare their solutions with pairs with objects as parameters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you notice about each solution?*\n* *What do you wonder about each solution?*\n\n**Discussion Goal:** Students identify similarities and differences between passing primitives and passing object references as parameters. Students may wonder about the impact on original variables and objects when passed as parameters.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1728,7 +1728,7 @@
       "key": "43d6f184-e886-44ba-aee7-8b86c2325213",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Object References as Parameters handout and a set of Object References Manipulatives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the code segments and classes on the activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the first object in the code segment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the second object in the code segment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about how the instance variable is initialized?*\n* *What do you wonder about how the instance variable is initialized?*\n\n**Discussion Goal:** Students notice that the instance variable is initialized with a copy of the referenced object. Students realize that the instance variable is not an alias of the original object, so the original object is not modified."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Object References as Parameters handout and a set of Object References Manipulatives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the code segments and classes on the activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the first object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate initializing the second object in the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about how the instance variable is initialized?*\n* *What do you wonder about how the instance variable is initialized?*\n\n**Discussion Goal:** Students notice that the instance variable is initialized with a copy of the referenced object. Students realize that the instance variable is not an alias of the original object, so the original object is not modified."
       },
       "seeding_key": {
         "activity_section.key": "43d6f184-e886-44ba-aee7-8b86c2325213",
@@ -1739,7 +1739,7 @@
       "key": "3240b989-6f8b-4d9c-ab17-4914206400eb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.\n\nAdditionally, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.\n\nAdditionally, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.",
         "remarks": true
       },
       "seeding_key": {
@@ -1751,7 +1751,7 @@
       "key": "4a4a0d04-0ad3-41a1-ad05-ad3f635df4cf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object References as Parameters handout with their partner."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object References as Parameters handout with their partner."
       },
       "seeding_key": {
         "activity_section.key": "4a4a0d04-0ad3-41a1-ad05-ad3f635df4cf",
@@ -1776,7 +1776,7 @@
       "key": "319d8576-ea58-4efc-abed-cf4ca728daaf",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Define end user and user story.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: User Stories video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Title Sequence Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Define end user and user story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: User Stories video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate example user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Title Sequence Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "319d8576-ea58-4efc-abed-cf4ca728daaf",
@@ -1800,7 +1800,7 @@
       "key": "8e7c45b3-6c4d-4c05-9f06-61dbc4ee405f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1817,7 +1817,7 @@
       "key": "14f20b08-3597-447a-b69c-e21e4f50c8a7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "14f20b08-3597-447a-b69c-e21e4f50c8a7",
@@ -1865,7 +1865,7 @@
       "key": "37858930-04ec-49b4-a131-0a5ed4adb38a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can we retrieve a club member's first and last name from their username?*\n\n**Discussion Goal:** Students suggest using `indexOf()` to find the location of the dot. Students note that they can then use the two-parameter version of `substring()` to find the first name and then use the one-parameter version of `substring()` to find the last name. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss the possible solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n* *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students share that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Java can differentiate between the two by the method signature. The methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we retrieve a club member's first and last name from their username?*\n\n**Discussion Goal:** Students suggest using `indexOf()` to find the location of the dot. Students note that they can then use the two-parameter version of `substring()` to find the first name and then use the one-parameter version of `substring()` to find the last name. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the possible solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the difference between the two versions of `substring()`?*\n* *How does Java know which one to use?*\n* *Why do you think the designers of Java decided to give the two versions the same name?*\n\n**Discussion Goal:** Students share that the one-parameter `substring()` only specifies where to start and goes to the end, whereas the two-parameter version can specify both the start and end. Java can differentiate between the two by the method signature. The methods have the same name since they perform the same task but just give the user different options on the information required to perform the task."
       },
       "seeding_key": {
         "activity_section.key": "37858930-04ec-49b4-a131-0a5ed4adb38a",
@@ -1890,7 +1890,7 @@
       "key": "97f94bcc-1f48-4698-a4b6-2699ac22b751",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Overloading methods make code more flexible for program requirements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review overloading.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Why did we use overloading with constructors?*\n* *How might overloading be helpful with methods?*\n\n**Discussion Goal:** Students recall that orders can vary with the Project Mercury Pastries food truck. Some customers want to order just a standard dessert, while other customers want to customize their dessert. Overloading methods make code more flexible for program requirements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Overloaded Methods"
       },
       "seeding_key": {
@@ -1902,7 +1902,7 @@
       "key": "b5a9e02b-ce3f-46d9-b4c2-2a94702648bf",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods in the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What is the difference between each version of the overloaded method?*\n* *Why do you think the different methods exist?*\n\n**Discussion Goal:** Students note that the different versions of the methods take in different combinations of parameters. Students share that the methods all perform the same task but give the user different options for performing the task. Students realize that overloaded methods can also call another version of the method by passing in default values to keep things DRY (Don't Repeat Yourself).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. Students complete a choice level by writing overloaded methods in the console, The Neighborhood, or The Theater. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Writing Overloaded Methods"
       },
       "seeding_key": {
@@ -1928,7 +1928,7 @@
       "key": "08601809-af57-4c9d-bb98-15ad9c1d1fae",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Title Sequence Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Title Sequence Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1945,7 +1945,7 @@
       "key": "7ee5767a-33f6-475a-bbc1-216d213defba",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "7ee5767a-33f6-475a-bbc1-216d213defba",
@@ -1969,7 +1969,7 @@
       "key": "ba3f9045-142f-455a-b837-d744448523b9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write the answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1986,7 +1986,7 @@
       "key": "dce28f88-4ef0-493b-a540-d8d05ebcd599",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "dce28f88-4ef0-493b-a540-d8d05ebcd599",
@@ -2034,7 +2034,7 @@
       "key": "d4ce719c-0883-4f51-905a-06762551e8a5",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student one Quiz, Quiz, Trade card. Make sure students keep the definition side hidden.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for Quiz, Quiz, Trade. Students should find a partner, complete their Quiz, Quiz, Trade, and then raise their hand to find a new partner. They will repeat this process for ten minutes."
+        "description": "**Distribute:** Give each student one Quiz, Quiz, Trade card. Make sure students keep the definition side hidden.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for Quiz, Quiz, Trade. Students should find a partner, complete their Quiz, Quiz, Trade, and then raise their hand to find a new partner. They will repeat this process for ten minutes."
       },
       "seeding_key": {
         "activity_section.key": "d4ce719c-0883-4f51-905a-06762551e8a5",
@@ -2059,7 +2059,7 @@
       "key": "1a69f2c2-b519-4c1f-955a-a31353fff4f9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define object-oriented design.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the object-oriented design process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the components of a UML diagram and introduce the arrows used to identify relationships.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss the example UML diagram for the `Dessert` class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define object-oriented design.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the object-oriented design process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the components of a UML diagram and introduce the arrows used to identify relationships.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the example UML diagram for the `Dessert` class."
       },
       "seeding_key": {
         "activity_section.key": "1a69f2c2-b519-4c1f-955a-a31353fff4f9",
@@ -2082,7 +2082,7 @@
       "key": "43f4aac5-9b32-41cd-a09c-540ecc06823b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you think the minus sign means? What do you think the plus sign means?*\n\n**Discussion Goal:** Students share their predictions for what the minus and plus sign convention represents. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Private Methods video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the accessibility of methods will change if they were changed from `public` to `private`?*\n\n**Discussion Goal:** Students share predictions of different ways the accessibility of methods change when made `private`. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, 3, and 4 on Code Studio. In Levels 1 through 3, students explore the effects of attempting to access `private` methods. After exploring all three examples, students move on Level 4 to complete a free response question to explain their findings.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think the minus sign means? What do you think the plus sign means?*\n\n**Discussion Goal:** Students share their predictions for what the minus and plus sign convention represents. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Private Methods video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think the accessibility of methods will change if they were changed from `public` to `private`?*\n\n**Discussion Goal:** Students share predictions of different ways the accessibility of methods change when made `private`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, 3, and 4 on Code Studio. In Levels 1 through 3, students explore the effects of attempting to access `private` methods. After exploring all three examples, students move on Level 4 to complete a free response question to explain their findings.",
         "progression_name": "Predict: Accessing Private Methods"
       },
       "seeding_key": {
@@ -2108,7 +2108,7 @@
       "key": "72cb617b-b477-40d6-806e-97e3eacf508d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Title Sequence Project.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Title Sequence Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "72cb617b-b477-40d6-806e-97e3eacf508d",
@@ -2132,7 +2132,7 @@
       "key": "aadae087-5644-4ade-a246-5852e32b9ab7",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Planning Feedback handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Planning Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "aadae087-5644-4ade-a246-5852e32b9ab7",
@@ -2167,7 +2167,7 @@
       "key": "832f874d-b3ce-48fa-82db-621bc32abf0b",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to create a UML diagram to illustrate their solution. Have pairs share their solution with another pair, then have groups share as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the potential solution.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to create a UML diagram to illustrate their solution. Have pairs share their solution with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the potential solution.",
         "name": "Custom Notifications"
       },
       "seeding_key": {
@@ -2191,7 +2191,7 @@
       "key": "4ede0436-d2c8-4960-b959-c3d3428db8ac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students predict the program's outcome, then run the program to compare the results to their predictions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students predict the program's outcome, then run the program to compare the results to their predictions.",
         "duration": "15",
         "name": "Overriding Methods",
         "progression_name": "Predict: Calling Overridden Methods"
@@ -2205,7 +2205,7 @@
       "key": "bd72ff44-2aea-418a-9826-61339fbec9e8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students predict that each class has a different version of the method used while traversing the array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to override methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2, 3, and 4 on Code Studio. On Level 2, students debug code attempting to override a method. On Level 3, students complete a choice level to write an overridden method, then continue to Level 4 to complete a Check for Understanding.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened when you ran the program?*\n* *Why do you think this happened?*\n\n**Discussion Goal:** Students note that the program traverses an array of the parent class type, and each child class outputs different information when calling the method. Students predict that each class has a different version of the method used while traversing the array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define overriding and review overriding `toString()` and `equals()`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why would we want to override methods?*\n\n**Discussion Goal:** Students suggest that the parent class might have a generic version of the method, but each child class might need more specific versions of a method. Students realize that overriding makes it possible to create lists of the parent class type and call the method but get the overridden versions in each subclass.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain and demonstrate rules for overriding methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2, 3, and 4 on Code Studio. On Level 2, students debug code attempting to override a method. On Level 3, students complete a choice level to write an overridden method, then continue to Level 4 to complete a Check for Understanding.",
         "progression_name": "Overriding Methods"
       },
       "seeding_key": {
@@ -2231,7 +2231,7 @@
       "key": "8750d812-064c-4723-8ae8-fee392bf3ea2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How would the program know when to stop accepting input?*\n\n**Discussion Goal:** Students hypothesize different solutions, such as using conditionals to avoid accepting an unreasonable input value. Students should recognize that the `while` loop will stop based on a Boolean expression and that they need to make this Boolean dependent upon the input from the user.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would the program know when to stop accepting input?*\n\n**Discussion Goal:** Students hypothesize different solutions, such as using conditionals to avoid accepting an unreasonable input value. Students should recognize that the `while` loop will stop based on a Boolean expression and that they need to make this Boolean dependent upon the input from the user.  ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2248,7 +2248,7 @@
       "key": "01af59ff-3b90-4011-8422-ad7ebb2126eb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable pastry name and could indicate that the user finished entering pastries.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentinel value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would be a reasonable sentinel value for this algorithm? How could the user indicate they finished entering values?*\n\n**Discussion Goal:** Students share that an empty `String` is not a reasonable pastry name and could indicate that the user finished entering pastries.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 5 and 6 on Code Studio. On Level 5, students translate the pseudocode into Java to accept user input. On Level 6, students complete a choice level by combining sentinel values and overridden methods to solve the given problems.",
         "progression_name": "Sentinel Values"
       },
       "seeding_key": {
@@ -2273,7 +2273,7 @@
       "key": "58b0b6af-52fa-4fbb-aed3-f65f2c7e58da",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2290,7 +2290,7 @@
       "key": "c36ab6f1-1b51-4f56-b0be-8c0cdfd8b5a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c36ab6f1-1b51-4f56-b0be-8c0cdfd8b5a0",
@@ -2325,7 +2325,7 @@
       "key": "94a73ee8-cd08-4aba-970d-997d9710e0bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate fractal art.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** How is repetition used in fractal art?\n\n**Discussion Goal:** Students identify that fractal art is created by repeating patterns over and over again.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate fractal art.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How is repetition used in fractal art?\n\n**Discussion Goal:** Students identify that fractal art is created by repeating patterns over and over again.",
         "name": "Fractal Art"
       },
       "seeding_key": {
@@ -2374,7 +2374,7 @@
       "key": "a5d7d9e3-77c2-4238-a423-ce02c1e6ff7b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have pairs choose which challenge to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Recursion Unplugged handout to each pair.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give students the materials for the challenge they chose.\n* Wall Walking: one set of Wall Walking method cards\n* Cup Stacking: ten disposable cups, one set of Cup Stacking method cards\n* Coloring: one coloring sheet, one marker or colored pencil, one set of Coloring method cards\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the instructions. Have students complete their activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened in your activity?*\n* *How is this type of algorithm different from any other type of algorithm you’ve seen?*\n\n**Discussion Goal:** Students describe the activity they completed. Students note that the code repeated until a certain point and then did something different before ending, which seems to be a combination of loops and if-else statements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have pairs choose which challenge to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Recursion Unplugged handout to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students the materials for the challenge they chose.\n* Wall Walking: one set of Wall Walking method cards\n* Cup Stacking: ten disposable cups, one set of Cup Stacking method cards\n* Coloring: one coloring sheet, one marker or colored pencil, one set of Coloring method cards\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the instructions. Have students complete their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What happened in your activity?*\n* *How is this type of algorithm different from any other type of algorithm you’ve seen?*\n\n**Discussion Goal:** Students describe the activity they completed. Students note that the code repeated until a certain point and then did something different before ending, which seems to be a combination of loops and if-else statements."
       },
       "seeding_key": {
         "activity_section.key": "a5d7d9e3-77c2-4238-a423-ce02c1e6ff7b",
@@ -2399,7 +2399,7 @@
       "key": "de889f4d-41ac-4f38-84cb-34abb0fbf403",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define recursion, base case, and the recursive case.\n\n**Group:** Place students in groups of four consisting of two sets of pairs from the previous activity. The pairs should have completed different activities.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define recursion, base case, and the recursive case.\n\n**Group:** Place students in groups of four consisting of two sets of pairs from the previous activity. The pairs should have completed different activities.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part A of the Recursion Unplugged handout by identifying the recursive call and base case for their activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate expanding recursive code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part B of the Recursion Unplugged handout by expanding the recursive sample code into individual lines of code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the solution and the trace table. Have students copy the trace table onto Part C of the Recursion Unplugged handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose one of the code segments on the Recursion Unplugged handout and complete a trace table to find the output of the code."
       },
       "seeding_key": {
         "activity_section.key": "de889f4d-41ac-4f38-84cb-34abb0fbf403",
@@ -2424,7 +2424,7 @@
       "key": "5348ec3e-ce73-4ff8-afb3-3e6f8d41a887",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
         "progression_name": "Title Sequence Project",
         "tips": [
           {
@@ -2442,7 +2442,7 @@
       "key": "bd6163dc-fae2-4c0f-8edc-808cf9e018b7",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "bd6163dc-fae2-4c0f-8edc-808cf9e018b7",
@@ -2466,7 +2466,7 @@
       "key": "94666e9a-ad6c-4d04-965c-fd78312cac1b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Neighborhood Lit Fest Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Neighborhood Lit Fest Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2483,7 +2483,7 @@
       "key": "e75bdbe8-3293-4070-ad9d-237a66b5be3f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "e75bdbe8-3293-4070-ad9d-237a66b5be3f",
@@ -2531,7 +2531,7 @@
       "key": "69594bfc-3b63-49c5-a895-3bcb7bae9eb0",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students identify the base and recursive case for the problem. Have students share with another pair then as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify the base and recursive case for the problem. Have students share with another pair then as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
       },
       "seeding_key": {
         "activity_section.key": "69594bfc-3b63-49c5-a895-3bcb7bae9eb0",
@@ -2556,7 +2556,7 @@
       "key": "0ec976a6-1480-4cbe-aedb-e50e553d2d5a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the index reaches 0. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students write a recursive method to make a `Painter` object complete a specific task. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the base case for reversing an array?*\n* *Which parts of the iterative solution represent this base case?*\n\n**Discussion Goal:** Students identify the base case as when the index reaches 0. Students note that the condition in the loop represents the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the base case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the repetitive process in the iterative solution?*\n* *On what lines does this occur?*\n* *How could we make this process occur recursively?*\n\n**Discussion Goal:** Students notice that recursive and iterative solutions have similar structures and can identify which portions of the iterative method need to repeat in the recursive case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate translating the recursive case from the iterative version of the algorithm to the recursive version.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 on Code Studio. On Level 1, students translate an iterative method to reverse an array to a recursive method. On Level 2, students write a recursive method to make a `Painter` object complete a specific task. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Recursive Painting"
       },
       "seeding_key": {
@@ -2580,7 +2580,7 @@
       "key": "699f5bbb-93ae-4a5e-9855-6ca26f61c331",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an example recursive drawing in The Theater. Have students work with a partner to identify the base case.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate an example recursive drawing in The Theater. Have students work with a partner to identify the base case.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases."
       },
       "seeding_key": {
         "activity_section.key": "699f5bbb-93ae-4a5e-9855-6ca26f61c331",
@@ -2605,7 +2605,7 @@
       "key": "b4bb79cd-bab8-45cf-ae77-410ee51a1206",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
         "progression_name": "Title Sequence Project",
         "tips": [
           {
@@ -2623,7 +2623,7 @@
       "key": "0d31c473-dee6-414b-88b7-02471d5c6201",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "0d31c473-dee6-414b-88b7-02471d5c6201",
@@ -2647,7 +2647,7 @@
       "key": "37fe1b3e-f22c-4a32-b2ef-904c03bb9669",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2664,7 +2664,7 @@
       "key": "266f0841-9800-484b-b4b3-53ab1457f0a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "266f0841-9800-484b-b4b3-53ab1457f0a0",
@@ -2712,7 +2712,7 @@
       "key": "03d506ce-d123-41b7-ba64-ba13cd3892a2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How could we solve this problem recursively?*\n\n**Discussion Goal:** Students share that they can translate the iterative solution to a recursive solution by identifying the base and recursive case. Students realize that the base case is when there is either one letter or no letters left. The recursive case is to compare the first and last letter of the word, then remove them to examine the next letters.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases for a recursive palindrome solution."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could we solve this problem recursively?*\n\n**Discussion Goal:** Students share that they can translate the iterative solution to a recursive solution by identifying the base and recursive case. Students realize that the base case is when there is either one letter or no letters left. The recursive case is to compare the first and last letter of the word, then remove them to examine the next letters.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the base and recursive cases for a recursive palindrome solution."
       },
       "seeding_key": {
         "activity_section.key": "03d506ce-d123-41b7-ba64-ba13cd3892a2",
@@ -2737,7 +2737,7 @@
       "key": "11f803b9-b84e-4192-a540-0fc47641d70d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Recursive Strings"
       },
       "seeding_key": {
@@ -2749,7 +2749,7 @@
       "key": "c5ef1d65-88ed-4805-b740-6bb75604b252",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about the recursive solution?*\n* *What do you wonder about the recursive solution?*\n\n**Discussion Goal:** Students notice that the recursive solution has the same results as the iterative solution. Students may also notice that the recursive solution is easier to read and identify the base and recursive cases in both solutions. Students may wonder if one approach is faster or why they might choose one approach over another.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts.\n* *What do you notice about the recursive solution?*\n* *What do you wonder about the recursive solution?*\n\n**Discussion Goal:** Students notice that the recursive solution has the same results as the iterative solution. Students may also notice that the recursive solution is easier to read and identify the base and recursive cases in both solutions. Students may wonder if one approach is faster or why they might choose one approach over another.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2766,7 +2766,7 @@
       "key": "8d88ebe0-9287-4f82-a20d-8b1ab999d40d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Recursion video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Recursion video."
       },
       "seeding_key": {
         "activity_section.key": "8d88ebe0-9287-4f82-a20d-8b1ab999d40d",
@@ -2789,7 +2789,7 @@
       "key": "bf4cb40c-0aa8-4279-aa46-f55acb90195e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s. Students continue to complete a Check for Understanding on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s. Students continue to complete a Check for Understanding on Level 3.",
         "progression_name": "Predict: Tracing Recursive Methods"
       },
       "seeding_key": {
@@ -2815,7 +2815,7 @@
       "key": "26e086ae-edb0-4e8b-b532-6a0149ddd086",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "26e086ae-edb0-4e8b-b532-6a0149ddd086",
@@ -2839,7 +2839,7 @@
       "key": "dd0c07c8-a31d-4904-ad82-186b07124512",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Title Sequence Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2880,7 +2880,7 @@
       "key": "ac9bcaad-c240-40e1-b54e-698f5e7512a9",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of six or seven. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a piece of chart paper and a marker.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Simple List Vocabulary with the class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students play Simple List Vocabulary.",
+        "description": "**Group:** Place students in groups of six or seven. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a piece of chart paper and a marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Simple List Vocabulary with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students play Simple List Vocabulary.",
         "name": "Simple List Vocabulary",
         "tips": [
           {
@@ -2912,7 +2912,7 @@
       "key": "ba1fe229-aec8-4d94-9560-774006d0194f",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Testing Software handout to each pair.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students select a choice level to explore and test using the guided questions on the Testing Software handout.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Testing Software handout to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students select a choice level to explore and test using the guided questions on the Testing Software handout.",
         "progression_name": "Exploring and Testing Software",
         "tips": [
           {
@@ -2942,7 +2942,7 @@
       "key": "90f08e6b-4901-47e1-b797-00aaf127ce97",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define system reliability.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *As software engineers, what strategies can we use to maximize system reliability?*\n\n**Discussion Goal:** Students suggest various strategies they used when exploring the programs. These strategies include considering the different ways an end user will use the program to test their user stories, identifying and testing edge cases, and using code reviews to obtain a fresh perspective to discover possible bugs and issues.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define system reliability.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As software engineers, what strategies can we use to maximize system reliability?*\n\n**Discussion Goal:** Students suggest various strategies they used when exploring the programs. These strategies include considering the different ways an end user will use the program to test their user stories, identifying and testing edge cases, and using code reviews to obtain a fresh perspective to discover possible bugs and issues.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2985,7 +2985,7 @@
       "key": "c456eb20-4b6d-40a0-8f10-a5b4ba7c20db",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
         "progression_name": "Title Sequence Project",
         "tips": [
           {
@@ -3016,7 +3016,7 @@
       "key": "27971a87-3198-47df-9159-c5a733b4346a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "27971a87-3198-47df-9159-c5a733b4346a",
@@ -3075,7 +3075,7 @@
       "key": "71489f27-cbb0-4bf0-9cde-bbab61b99f8b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Title Sequence Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Title Sequence Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3092,7 +3092,7 @@
       "key": "abeb064c-e927-4d84-ac5c-5e4fdfa4fa8d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "abeb064c-e927-4d84-ac5c-5e4fdfa4fa8d",
@@ -3117,7 +3117,7 @@
       "key": "254a00f8-5d1b-4179-8485-cb948194d419",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Acceptance Testing video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define acceptance testing, alpha testing, and beta testing."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Acceptance Testing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define acceptance testing, alpha testing, and beta testing."
       },
       "seeding_key": {
         "activity_section.key": "254a00f8-5d1b-4179-8485-cb948194d419",
@@ -3140,7 +3140,7 @@
       "key": "b2c8a06d-de9b-44ab-9bef-812c737696ed",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to conduct acceptance testing on each other's projects. Students note the results of their testing on page thirteen of their Title Sequence Project Planning Guide.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to conduct acceptance testing on each other's projects. Students note the results of their testing on page thirteen of their Title Sequence Project Planning Guide.",
         "progression_name": "Title Sequence Project"
       },
       "seeding_key": {
@@ -3166,7 +3166,7 @@
       "key": "f891b8e1-e02b-4109-9412-db8d8160f2f8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to work on the Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to work on the Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "f891b8e1-e02b-4109-9412-db8d8160f2f8",
@@ -3177,7 +3177,7 @@
       "key": "838e8b92-34fb-4e6b-ac7d-e96d228291a9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
         "name": "Project Planning Board"
       },
       "seeding_key": {
@@ -3215,7 +3215,7 @@
       "key": "04221491-da4e-439a-bb84-13c70eacfc7d",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and sharing feedback. Students should take notes on their Project Development Feedback handout."
       },
       "seeding_key": {
         "activity_section.key": "04221491-da4e-439a-bb84-13c70eacfc7d",
@@ -3240,7 +3240,7 @@
       "key": "4ba8a228-f075-4005-be9a-7c1f911bcb2e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
         "progression_name": "Title Sequence Project"
       },
       "seeding_key": {
@@ -3252,7 +3252,7 @@
       "key": "ec413195-2593-4ff2-86b6-3a32c930bda7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
         "name": "Project Planning Board"
       },
       "seeding_key": {
@@ -3290,7 +3290,7 @@
       "key": "1de20bd2-665f-48a3-b228-c56d75be445f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
         "progression_name": "Title Sequence Project",
         "tips": [
           {
@@ -3322,7 +3322,7 @@
       "key": "4a8ab4ed-93c3-4aae-a69e-82ec87cef81e",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in small groups of three to four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students take turns demonstrating their program to their group."
+        "description": "**Group:** Place students in small groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns demonstrating their program to their group."
       },
       "seeding_key": {
         "activity_section.key": "4a8ab4ed-93c3-4aae-a69e-82ec87cef81e",
@@ -3346,7 +3346,7 @@
       "key": "3f37449a-c64f-46a9-b47b-f95f082d1762",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page fourteen of the Title Sequence Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page fourteen of the Title Sequence Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3389,7 +3389,7 @@
       "key": "cfa317ad-ff73-4ecb-aa04-c40eefad253a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
       },
       "seeding_key": {
         "activity_section.key": "cfa317ad-ff73-4ecb-aa04-c40eefad253a",
@@ -3414,7 +3414,7 @@
       "key": "09aeac1e-474d-47c6-ad4e-d954f1b49651",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "09aeac1e-474d-47c6-ad4e-d954f1b49651",
@@ -3437,7 +3437,7 @@
       "key": "97b0ef34-0f61-479f-a619-de5532d75089",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Writing handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Writing handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "97b0ef34-0f61-479f-a619-de5532d75089",
@@ -3460,7 +3460,7 @@
       "key": "1ddc834b-4a8e-4198-b8c9-9af2b00dd8e8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "1ddc834b-4a8e-4198-b8c9-9af2b00dd8e8",
@@ -3483,7 +3483,7 @@
       "key": "b3c55bcb-a8c3-4bc4-9e27-bccbbaf5a309",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the FRQ Writing handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the FRQ Writing handout."
       },
       "seeding_key": {
         "activity_section.key": "b3c55bcb-a8c3-4bc4-9e27-bccbbaf5a309",
@@ -3508,7 +3508,7 @@
       "key": "bb549f95-8412-43db-ba39-1ef76231fac1",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the FRQ Writing activity guide. On the board, write the start and end times.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the FRQ Writing activity guide. On the board, write the start and end times.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3538,7 +3538,7 @@
       "key": "63a8cebc-7045-4c58-a960-8fcb8b409cb4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Writing handout, Java Quick Reference, and scrap paper from each student."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Writing handout, Java Quick Reference, and scrap paper from each student."
       },
       "seeding_key": {
         "activity_section.key": "63a8cebc-7045-4c58-a960-8fcb8b409cb4",
@@ -3561,7 +3561,7 @@
       "key": "1a4b2c21-a8c0-4355-89eb-4413ae71625f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through Level 6 on Code Studio to complete the post-FRQ survey.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through Level 6 on Code Studio to complete the post-FRQ survey.",
         "progression_name": "Post-FRQ Survey"
       },
       "seeding_key": {
@@ -3586,7 +3586,7 @@
       "key": "86ef6bcf-3521-4988-8e03-cb1ace635caa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 7 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 7 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
       },
       "seeding_key": {
         "activity_section.key": "86ef6bcf-3521-4988-8e03-cb1ace635caa",
@@ -3597,7 +3597,7 @@
       "key": "0e5ebb5a-41d6-46bf-951c-98157a35fc0c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {

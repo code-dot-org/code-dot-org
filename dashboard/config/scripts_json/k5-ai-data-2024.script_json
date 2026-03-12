@@ -408,7 +408,7 @@
       "key": "2095a381-fb69-4306-b621-d675bba8ee7f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “What is AI?” slide\n\n**Do This:** As an optional general introduction to AI, show students this short video. \n\n**Goal:** Some important and relevant points to clarify before beginning this module include: AI stands for Artificial Intelligence. An AI machine is simply a computer that can make decisions after learning from data given to it by humans. A few real world examples of AI include: voice assistants like Siri or Alexa, self driving cars, and robots. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:**\n* _What is this AI robot doing?_\n* _How do you think it learned how to do this?_\n* _What do you think would happen if you put a red block on the table?_\n* _What are some things this robot probably can not do?_\n\n**Discussion Goal:** Students should notice that this robot has likely been trained how to sort between blue and green blocks. If it has not been taught how to sort red blocks it might incorrectly sort them into the blue or green items or leave it on the table. This robot likely cannot perform tasks unless they involve human-like motor skills. For example, this robot likely cannot generate text, speak, or see. This is a simple example of AI that directly relates to the activities students will be doing in upcoming lessons. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What is AI?” slide\n\n**Do This:** As an optional general introduction to AI, show students this short video. \n\n**Goal:** Some important and relevant points to clarify before beginning this module include: AI stands for Artificial Intelligence. An AI machine is simply a computer that can make decisions after learning from data given to it by humans. A few real world examples of AI include: voice assistants like Siri or Alexa, self driving cars, and robots. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:**\n* _What is this AI robot doing?_\n* _How do you think it learned how to do this?_\n* _What do you think would happen if you put a red block on the table?_\n* _What are some things this robot probably can not do?_\n\n**Discussion Goal:** Students should notice that this robot has likely been trained how to sort between blue and green blocks. If it has not been taught how to sort red blocks it might incorrectly sort them into the blue or green items or leave it on the table. This robot likely cannot perform tasks unless they involve human-like motor skills. For example, this robot likely cannot generate text, speak, or see. This is a simple example of AI that directly relates to the activities students will be doing in upcoming lessons. \n"
       },
       "seeding_key": {
         "activity_section.key": "2095a381-fb69-4306-b621-d675bba8ee7f",
@@ -435,7 +435,7 @@
       "key": "b3dcdec6-5c4e-4d42-9b22-ecd685db25bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Data**: Information that we collect about the world.\n* **Sort**:  To put items into groups based on their features. \n* **Feature**: Something that an item is or has. A feature of a triangle is that it has 3 sides.\n* **Predict**: To make a guess based on patterns in the data.\n* **Training data**: Information that has been sorted, then given to a computer so it can make predictions\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Data**: Information that we collect about the world.\n* **Sort**:  To put items into groups based on their features. \n* **Feature**: Something that an item is or has. A feature of a triangle is that it has 3 sides.\n* **Predict**: To make a guess based on patterns in the data.\n* **Training data**: Information that has been sorted, then given to a computer so it can make predictions\n",
         "name": "Vocabulary "
       },
       "seeding_key": {
@@ -447,7 +447,7 @@
       "key": "b7cc9136-ce5e-4950-b0f6-4b5958e83630",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain different ways to sort the same set of items_\n* _Explain how having more data can lead to more accurate predictions_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain different ways to sort the same set of items_\n* _Explain how having more data can lead to more accurate predictions_\n",
         "name": "Lesson Objectives"
       },
       "seeding_key": {
@@ -459,7 +459,7 @@
       "key": "9950b18e-d502-4d88-9c46-32b8e794c6fc",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _What features help us decide how to sort a group of objects?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _What features help us decide how to sort a group of objects?_\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -471,7 +471,7 @@
       "key": "1e310eab-3841-4412-8f80-8df878488756",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Discuss:** Which of these doesn’t belong? Why? Explain what feature makes it different.\n\n**Do This:** Have students discuss different ways of grouping these items in groups of 3 and to explain their reasoning. Some examples are by: shape, color, photo orientation, and toppings. You can also get students thinking like a computer. Ask them “How would a computer tell the difference between these four items? What would it need to know about each pastry?”\n\n**Discussion Goal:** Students should understand that there are different ways of grouping and sorting the same items based on their features. Challenge them to come up with as many different ways of sorting these 4 items as they can.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Discuss:** Which of these doesn’t belong? Why? Explain what feature makes it different.\n\n**Do This:** Have students discuss different ways of grouping these items in groups of 3 and to explain their reasoning. Some examples are by: shape, color, photo orientation, and toppings. You can also get students thinking like a computer. Ask them “How would a computer tell the difference between these four items? What would it need to know about each pastry?”\n\n**Discussion Goal:** Students should understand that there are different ways of grouping and sorting the same items based on their features. Challenge them to come up with as many different ways of sorting these 4 items as they can.\n",
         "name": "Warm Up "
       },
       "seeding_key": {
@@ -483,7 +483,7 @@
       "key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:** Today you are going to act as the computer. Someone has already sorted the items behind the scenes. You have to predict what the pattern is for each level and sort the items into their correct box.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:** Today you are going to act as the computer. Someone has already sorted the items behind the scenes. You have to predict what the pattern is for each level and sort the items into their correct box.\n",
         "duration": "3",
         "name": "How Do Computers Learn "
       },
@@ -496,7 +496,7 @@
       "key": "f90b50d9-4db9-4535-a2bd-9b1f832fa3af",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-6: Predict the Pattern” slide\n\n**Do This:** Transition students to their devices. Have them go to Level 1 and answer the multiple choice question. \n\n**Goal:** In Levels 1-6, students get to act as if they were AI, and make predictions about where the items should go. Levels 1 and 2 are examples of supervised machine learning. The inputs have been labeled, by color and by wings, which means that students will sort the items according to their label. Levels 3-5 are examples of reinforcement learning. The data is unlabeled and students have to classify it by receiving feedback on whether or not their prediction was correct. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-6: Predict the Pattern” slide\n\n**Do This:** Transition students to their devices. Have them go to Level 1 and answer the multiple choice question. \n\n**Goal:** In Levels 1-6, students get to act as if they were AI, and make predictions about where the items should go. Levels 1 and 2 are examples of supervised machine learning. The inputs have been labeled, by color and by wings, which means that students will sort the items according to their label. Levels 3-5 are examples of reinforcement learning. The data is unlabeled and students have to classify it by receiving feedback on whether or not their prediction was correct. \n",
         "duration": "25",
         "name": "Sorting Data ",
         "progression_name": "How is it Sorted?",
@@ -549,7 +549,7 @@
       "key": "e5b0e9d8-a9af-4ebe-aea8-1ed630257a0d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7: Your Turn!” slide\n\n**Do This:** Once students have finished Levels 1-6, have them choose one of the sublevels in Level 7 Choice Level and pair them up with a partner. One student will sort the items in the level while the other partner has to guess the pattern. Then have them switch roles.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7: Your Turn!” slide\n\n**Do This:** Once students have finished Levels 1-6, have them choose one of the sublevels in Level 7 Choice Level and pair them up with a partner. One student will sort the items in the level while the other partner has to guess the pattern. Then have them switch roles.\n",
         "progression_name": "Your Turn!"
       },
       "seeding_key": {
@@ -561,7 +561,7 @@
       "key": "3da4724a-4edf-454e-ae97-eba47fbccf99",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** Ask students “Which level was the easiest for you to sort? Why?”\n\n**Discussion Goal:** Have students reflect on patterns they noticed in the data. They should be able to articulate that having more sorted data leads to better, more accurate predictions. A level in which items are not initially sorted becomes easier to sort as students begin to place items in the correct boxes.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** Ask students “Which level was the easiest for you to sort? Why?”\n\n**Discussion Goal:** Have students reflect on patterns they noticed in the data. They should be able to articulate that having more sorted data leads to better, more accurate predictions. A level in which items are not initially sorted becomes easier to sort as students begin to place items in the correct boxes.\n",
         "duration": "2",
         "name": "Turn and Talk "
       },
@@ -574,7 +574,7 @@
       "key": "9b7cec58-a4c3-474e-b55e-34d0d670c8e2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** What features help us decide how to sort a group of objects?\n\n**Discussion Goal:** Students should recognize that it depends on the items. For example, they can’t always group items by shape if all the items are the same shape. Students should first figure out what features these items have in common and then determine how to sort them into multiple groups by a shared feature. \n\nIf students need an example, choose one of the options in Lesson 1, Level 7. Ask students how they might sort the items on screen. What features do they notice the items have in common?\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** What features help us decide how to sort a group of objects?\n\n**Discussion Goal:** Students should recognize that it depends on the items. For example, they can’t always group items by shape if all the items are the same shape. Students should first figure out what features these items have in common and then determine how to sort them into multiple groups by a shared feature. \n\nIf students need an example, choose one of the options in Lesson 1, Level 7. Ask students how they might sort the items on screen. What features do they notice the items have in common?\n",
         "name": "Question of the Day",
         "tips": [
           {
@@ -592,7 +592,7 @@
       "key": "07ddabf3-82fe-45d1-bb22-356d1f946f5e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** Here are two real world examples that use AI to sort data. Can you think of more?\n\n**Discussion Goal:** Discuss the two examples in this slide. [Optional: Show students the short (1 min) video about BakeryScan AI]. Then, see if students can come up with additional examples of how a sorting algorithm could be used in the real world. \n\nSome hypothetical examples: sorting between dogs and cats, laundry sorter that sorts pants/shirts/socks, sorting out M&Ms from the rest of the trail mix. \n\nSome real world examples: self-driving cars detecting empty crosswalks vs. a pedestrian crossing, sorting by trash/compost/recycling, Roomba vacuums determining if there is an obstacle or not, detecting if an email/text/call is spam or not. \n\n\nHere are some additional news examples:\n- **<a href=\"https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/\" target=\"_blank\">Food Waste Is a Serious Problem. AI Is Trying to Solve It</a>**\n- **<a href=\"https://seas.harvard.edu/news/2020/06/preventing-poaching\" target=\"_blank\">AI system used to create a patrol route for conservationists to help prevent poaching attacks</a>**\n- **<a href=\"https://mashable.com/video/ai-identify-genetic-disorders-photo/?\" target=\"_blank\">AI tech can identify genetic disorders from a person's face</a>**\n- **<a href=\"https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/?\" target=\"_blank\">MIT AI tool can predict breast cancer up to 5 years early</a>**\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** Here are two real world examples that use AI to sort data. Can you think of more?\n\n**Discussion Goal:** Discuss the two examples in this slide. [Optional: Show students the short (1 min) video about BakeryScan AI]. Then, see if students can come up with additional examples of how a sorting algorithm could be used in the real world. \n\nSome hypothetical examples: sorting between dogs and cats, laundry sorter that sorts pants/shirts/socks, sorting out M&Ms from the rest of the trail mix. \n\nSome real world examples: self-driving cars detecting empty crosswalks vs. a pedestrian crossing, sorting by trash/compost/recycling, Roomba vacuums determining if there is an obstacle or not, detecting if an email/text/call is spam or not. \n\n\nHere are some additional news examples:\n- **<a href=\"https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/\" target=\"_blank\">Food Waste Is a Serious Problem. AI Is Trying to Solve It</a>**\n- **<a href=\"https://seas.harvard.edu/news/2020/06/preventing-poaching\" target=\"_blank\">AI system used to create a patrol route for conservationists to help prevent poaching attacks</a>**\n- **<a href=\"https://mashable.com/video/ai-identify-genetic-disorders-photo/?\" target=\"_blank\">AI tech can identify genetic disorders from a person's face</a>**\n- **<a href=\"https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/?\" target=\"_blank\">MIT AI tool can predict breast cancer up to 5 years early</a>**\n"
       },
       "seeding_key": {
         "activity_section.key": "07ddabf3-82fe-45d1-bb22-356d1f946f5e",
@@ -603,7 +603,7 @@
       "key": "e22c08fb-2186-4500-8696-b8f024447a5a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Read Aloud Extensions” slide\n\n**Do This:** Here are two additional read aloud extensions to show students. \n- **<a href=\"https://www.youtube.com/watch?v=veeGj6oJlpo\" target=\"_blank\">Are You My Mother?</a>** by P.D. Eastman\n- **<a href=\"https://www.youtube.com/watch?v=dh-VtSNK5Ag\" target=\"_blank\">Grandma’s Button Box</a>** by Linda Aber\n\nWhile these books were not designed for teaching about machine learning or sorting algorithms, their content can be used to start a discussion about features that the different characters or buttons have. Encourage students to start noticing patterns around them in the classroom and beyond where items might be sorted by their features.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read Aloud Extensions” slide\n\n**Do This:** Here are two additional read aloud extensions to show students. \n- **<a href=\"https://www.youtube.com/watch?v=veeGj6oJlpo\" target=\"_blank\">Are You My Mother?</a>** by P.D. Eastman\n- **<a href=\"https://www.youtube.com/watch?v=dh-VtSNK5Ag\" target=\"_blank\">Grandma’s Button Box</a>** by Linda Aber\n\nWhile these books were not designed for teaching about machine learning or sorting algorithms, their content can be used to start a discussion about features that the different characters or buttons have. Encourage students to start noticing patterns around them in the classroom and beyond where items might be sorted by their features.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "e22c08fb-2186-4500-8696-b8f024447a5a",
@@ -624,7 +624,7 @@
       "key": "bb2ea938-fae1-40f2-87d4-1fe57a4cffe8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n* **Machine Learning** - How computers recognize patterns and make decisions\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Accurate** - Another way to say “correct”\n* **Bias** - Favoring some things but not others, which can lead to an unfair decision\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n* **Machine Learning** - How computers recognize patterns and make decisions\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Accurate** - Another way to say “correct”\n* **Bias** - Favoring some things but not others, which can lead to an unfair decision\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -636,7 +636,7 @@
       "key": "029be753-29da-4596-aa48-dd9ae1827eb8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain the difference between a random prediction and an AI prediction_\n* _Train a machine learning algorithm on chosen features_ \n* _Explain how training a model can look different based on someone’s opinion_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain the difference between a random prediction and an AI prediction_\n* _Train a machine learning algorithm on chosen features_ \n* _Explain how training a model can look different based on someone’s opinion_",
         "name": "Lesson Objectives"
       },
       "seeding_key": {
@@ -648,7 +648,7 @@
       "key": "eb154232-5ab2-425b-a527-c7c9e8fe80d2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do computers become more accurate at making predictions?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do computers become more accurate at making predictions?_\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -660,7 +660,7 @@
       "key": "f2c37b0b-b17d-4299-bc09-5383489c033f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Generate a selection of random books using the Random Books Generator site. Show students the 6 books that were generated, and explain that these recommendations are randomly selected from an existing list of books. Then, search for a student’s favorite book on Amazon and scroll down to look at Items to \"Explore.\" For example, check out \"More items\" to explore on this search for _Diary of a Wimpy Kid._ If students aren’t familiar with Amazon, ask them what types of videos are recommended for them when they finish watching a video on YouTube.\n\n**Discuss:** \n* _How did each site decide which books to feature?_\n* _Which set of books are you more likely to read?_\n* _How do you think these book recommendations might be different from ones given to your friend, parent, teacher, or librarian?_\n\n**Discussion Goal:** Students should be able to explain that the Random Book Generator site generates books randomly from an unsorted/untagged list of books. If you were to keep clicking “Generate,” it would pick 6 books randomly from the list each time. \n\n**Context:** Amazon collects data associated with each book. For example, it tracks what other books were bought by people who bought the book that the user searched for. It also uses a recommendation algorithm to look for similar books (author, grade level, content) to the book being searched for. Searching for _Diary of a Wimpy Kid_ on Amazon results in recommendations for other books in the Wimpy Kid series.\n\nStudents will likely find books in the random book generator that are not at the right reading level for them or that they don’t find interesting. In comparison, Amazon might recommend more familiar or relevant books. They should understand that if their parent/friend/teacher/librarian clicks “Generate” on the random book generator they are equally likely to get the same book recommendations. However, if their parent/friend/teacher/librarian were to type in their own favorite book into Amazon’s search, they would get more customized recommendations.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Generate a selection of random books using the Random Books Generator site. Show students the 6 books that were generated, and explain that these recommendations are randomly selected from an existing list of books. Then, search for a student’s favorite book on Amazon and scroll down to look at Items to \"Explore.\" For example, check out \"More items\" to explore on this search for _Diary of a Wimpy Kid._ If students aren’t familiar with Amazon, ask them what types of videos are recommended for them when they finish watching a video on YouTube.\n\n**Discuss:** \n* _How did each site decide which books to feature?_\n* _Which set of books are you more likely to read?_\n* _How do you think these book recommendations might be different from ones given to your friend, parent, teacher, or librarian?_\n\n**Discussion Goal:** Students should be able to explain that the Random Book Generator site generates books randomly from an unsorted/untagged list of books. If you were to keep clicking “Generate,” it would pick 6 books randomly from the list each time. \n\n**Context:** Amazon collects data associated with each book. For example, it tracks what other books were bought by people who bought the book that the user searched for. It also uses a recommendation algorithm to look for similar books (author, grade level, content) to the book being searched for. Searching for _Diary of a Wimpy Kid_ on Amazon results in recommendations for other books in the Wimpy Kid series.\n\nStudents will likely find books in the random book generator that are not at the right reading level for them or that they don’t find interesting. In comparison, Amazon might recommend more familiar or relevant books. They should understand that if their parent/friend/teacher/librarian clicks “Generate” on the random book generator they are equally likely to get the same book recommendations. However, if their parent/friend/teacher/librarian were to type in their own favorite book into Amazon’s search, they would get more customized recommendations.\n",
         "name": "Warm Up ",
         "tips": [
           {
@@ -678,7 +678,7 @@
       "key": "6da31799-aded-4ea1-b1e3-68e320db0613",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Machine Learning” video \n\n**Discuss:** \n_What does the speaker mean when she says computers learn through “trial and error” and “lots of practice”?_\n\n**Discussion Goal:** Have students reflect on the previous lesson. Sometimes they made a guess about what box to put an item in and they were incorrect. They received feedback, then corrected their guess, and moved on to make a prediction about the next item. This is an example of “trial and error” or reinforcement learning. A machine learning model gets fed data, makes predictions, and then gets feedback based on how accurate those predictions were in order to make better predictions in the future.\n\n**Discuss:** \n_How do you think this Bot is able to tell the difference between cars and bikes?_ \n\n**Discussion Goal:** Students should be able to explain that this bot was trained on many different images which were tagged as either a bicycle or a car. Some features that it might be looking for: 2 or 4 wheels, how much of the background is visible behind the image, windows or no windows, handlebars or no handlebars.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Machine Learning” video \n\n**Discuss:** \n_What does the speaker mean when she says computers learn through “trial and error” and “lots of practice”?_\n\n**Discussion Goal:** Have students reflect on the previous lesson. Sometimes they made a guess about what box to put an item in and they were incorrect. They received feedback, then corrected their guess, and moved on to make a prediction about the next item. This is an example of “trial and error” or reinforcement learning. A machine learning model gets fed data, makes predictions, and then gets feedback based on how accurate those predictions were in order to make better predictions in the future.\n\n**Discuss:** \n_How do you think this Bot is able to tell the difference between cars and bikes?_ \n\n**Discussion Goal:** Students should be able to explain that this bot was trained on many different images which were tagged as either a bicycle or a car. Some features that it might be looking for: 2 or 4 wheels, how much of the background is visible behind the image, windows or no windows, handlebars or no handlebars.\n",
         "duration": "20",
         "name": "AI for Oceans",
         "progression_name": "Machine Learning Video"
@@ -692,7 +692,7 @@
       "key": "192e94aa-81c1-4545-ac92-106352698434",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide \n\n**Do this:** Transition students to their devices. Have them go to Level 2 and sort the items, training the algorithm to distinguish between fish and trash. Have students keep track of the counter in the top right corner to see how many images they have trained AI on. See if they can guess how many images AI will need in order to make accurate predictions.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide \n\n**Do this:** Transition students to their devices. Have them go to Level 2 and sort the items, training the algorithm to distinguish between fish and trash. Have students keep track of the counter in the top right corner to see how many images they have trained AI on. See if they can guess how many images AI will need in order to make accurate predictions.\n",
         "progression_name": "Train AI on Fish",
         "tips": [
           {
@@ -710,7 +710,7 @@
       "key": "3010ea81-3cf5-4b9f-9702-85006796b328",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-4” slide \n\nHave students complete Levels 3 and 4 on their own devices. Level 3 introduces the idea that “AI only learns what we teach it.” Students should be aware that we want to train our model to recognize all creatures that belong in the water. In Level 4, students will retrain the model to recognize fish, otters, dolphins, and other sea creatures.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-4” slide \n\nHave students complete Levels 3 and 4 on their own devices. Level 3 introduces the idea that “AI only learns what we teach it.” Students should be aware that we want to train our model to recognize all creatures that belong in the water. In Level 4, students will retrain the model to recognize fish, otters, dolphins, and other sea creatures.\n",
         "progression_name": "Train AI on Sea Creatures"
       },
       "seeding_key": {
@@ -722,7 +722,7 @@
       "key": "4265bd49-223e-42d0-bb55-9d6a4b81ffd5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5” slide \n\nHave students complete Level 5 by choosing a word to teach A.I. Group students by the word they chose and have them compare their results. Students should start to notice that even though they chose the same word as a classmate, they may have labeled the fish training data differently and, as a result, their AI made different predictions about which fish to include.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5” slide \n\nHave students complete Level 5 by choosing a word to teach A.I. Group students by the word they chose and have them compare their results. Students should start to notice that even though they chose the same word as a classmate, they may have labeled the fish training data differently and, as a result, their AI made different predictions about which fish to include.\n",
         "progression_name": "Teach AI a New Word"
       },
       "seeding_key": {
@@ -734,7 +734,7 @@
       "key": "212d70a6-53b5-43af-a2bd-2879ba725ced",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** \n* _Why might your AI predictions look different from your classmate’s AI predictions even though you trained AI on the same word?_ \n* _What features were most important to you when you were labeling fish?_\n\n**Discussion Goal:** Students should be able to explain that their training dataset reflects their own opinions. Students might have different opinions about which fish looks “Fast” or “Happy” because these words are subjective, meaning they could be different for each person. Additionally, students might have chosen to look at certain features of a fish and not others, such as if it was showing its teeth or if its eyebrows were raised. AI makes predictions based on its training data, so students with different training datasets will likely notice different AI predictions.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** \n* _Why might your AI predictions look different from your classmate’s AI predictions even though you trained AI on the same word?_ \n* _What features were most important to you when you were labeling fish?_\n\n**Discussion Goal:** Students should be able to explain that their training dataset reflects their own opinions. Students might have different opinions about which fish looks “Fast” or “Happy” because these words are subjective, meaning they could be different for each person. Additionally, students might have chosen to look at certain features of a fish and not others, such as if it was showing its teeth or if its eyebrows were raised. AI makes predictions based on its training data, so students with different training datasets will likely notice different AI predictions.\n",
         "duration": "5",
         "name": "Turn and Talk "
       },
@@ -747,7 +747,7 @@
       "key": "f4ede2c3-960e-4947-9f28-3a5e7e3c46c2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** \n* _What would happen if all the fish labeled 'Angry' were blue and all the fish labeled 'Awesome' were red?_ \n* _What issues might that cause in the long run?_\n\n**Discussion Goal:** If students were to label only blue fish as “angry” and only red fish as “awesome”, the computer would learn that biased pattern and might start labeling all blue fish as “angry” or all the red fish as “awesome” even when they're not. These inaccurate and unfair predictions, also called bias, could cause issues in the future if the computer learns something untrue about a particular type of fish. We can help solve this problem, by giving the computer training data collected from a variety of sources and making sure the data represents all types of fish.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** \n* _What would happen if all the fish labeled 'Angry' were blue and all the fish labeled 'Awesome' were red?_ \n* _What issues might that cause in the long run?_\n\n**Discussion Goal:** If students were to label only blue fish as “angry” and only red fish as “awesome”, the computer would learn that biased pattern and might start labeling all blue fish as “angry” or all the red fish as “awesome” even when they're not. These inaccurate and unfair predictions, also called bias, could cause issues in the future if the computer learns something untrue about a particular type of fish. We can help solve this problem, by giving the computer training data collected from a variety of sources and making sure the data represents all types of fish.\n",
         "duration": "5",
         "name": "Reflect"
       },
@@ -760,7 +760,7 @@
       "key": "c4606d17-396f-4cc6-9ac7-e1f53f4b8723",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do computers become more accurate at making predictions?_\n\n**Discussion Goal:** Students should understand that the more data they give AI, the more accurate its predictions are: \nThey should understand that tagging data can be subjective. For example, students might have different opinions about which fish look “silly”. Getting data from all the students in the class helps eliminate bias when using training data that might be based on opinions.\nStudents should consider multiple scenarios and not make any assumptions about what AI knows. For example, AI doesn’t know that otters and dolphins belong in the ocean if it was only trained on fish. Students will get more practice doing this in the Wrap Up question.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do computers become more accurate at making predictions?_\n\n**Discussion Goal:** Students should understand that the more data they give AI, the more accurate its predictions are: \nThey should understand that tagging data can be subjective. For example, students might have different opinions about which fish look “silly”. Getting data from all the students in the class helps eliminate bias when using training data that might be based on opinions.\nStudents should consider multiple scenarios and not make any assumptions about what AI knows. For example, AI doesn’t know that otters and dolphins belong in the ocean if it was only trained on fish. Students will get more practice doing this in the Wrap Up question.\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -772,7 +772,7 @@
       "key": "210000aa-ee53-489f-9e31-1e2882b5c54a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\nPretend your school is using Attendance Bot, an AI device that scans the classroom and checks if a student is present or absent.\n\nIf a student is sitting in their seat at 9:00 am, they are marked Present. Otherwise, they are marked Absent and their teacher, principal, and parent is notified.\n* What are the pros and cons of using Attendance Bot?\n* What could cause Attendance Bot to mark a Present student as Absent?\n* What should the makers of Attendance Bot consider when training their AI?\n\n**Discussion Goal:** Have students consider that this AI device may not always be more accurate than a teacher taking attendance because it can only see the class at one specific moment in time (con). On the flip side, it might make a teacher’s life easier because it automates a task that a teacher would have to do by hand (pro). Students might also consider how the AI tool can’t ask questions or see nuanced scenarios, such as a student who is present but not in their seat. Have students consider examples of when Attendance Bot might be wrong where a human would not be.\n\nExamples of when Attendance Bot might mark a present student as absent:\n* If the student is present but somewhere else in the classroom, e.g. at the teacher’s desk, passing out papers, in another seat\n* If the student is kneeling in their chair or bending down to pick something off the floor\n* If a student is in the bathroom\n* If the student is in a wheelchair or uses a mobility device that prevents them from being able to sit in the school chair\n\nThe makers of Attendance Bot should consider the different scenarios above when training their AI. They might also want to have the Bot take attendance throughout the day to make sure that it is more accurate.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\nPretend your school is using Attendance Bot, an AI device that scans the classroom and checks if a student is present or absent.\n\nIf a student is sitting in their seat at 9:00 am, they are marked Present. Otherwise, they are marked Absent and their teacher, principal, and parent is notified.\n* What are the pros and cons of using Attendance Bot?\n* What could cause Attendance Bot to mark a Present student as Absent?\n* What should the makers of Attendance Bot consider when training their AI?\n\n**Discussion Goal:** Have students consider that this AI device may not always be more accurate than a teacher taking attendance because it can only see the class at one specific moment in time (con). On the flip side, it might make a teacher’s life easier because it automates a task that a teacher would have to do by hand (pro). Students might also consider how the AI tool can’t ask questions or see nuanced scenarios, such as a student who is present but not in their seat. Have students consider examples of when Attendance Bot might be wrong where a human would not be.\n\nExamples of when Attendance Bot might mark a present student as absent:\n* If the student is present but somewhere else in the classroom, e.g. at the teacher’s desk, passing out papers, in another seat\n* If the student is kneeling in their chair or bending down to pick something off the floor\n* If a student is in the bathroom\n* If the student is in a wheelchair or uses a mobility device that prevents them from being able to sit in the school chair\n\nThe makers of Attendance Bot should consider the different scenarios above when training their AI. They might also want to have the Bot take attendance throughout the day to make sure that it is more accurate.\n",
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -784,7 +784,7 @@
       "key": "a532ae2e-a5d3-419e-9eb5-fb10eab0f848",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n- **Feature Vector** - Assigning a number value to certain features of an object so that a machine can find patterns between multiple objects in the data \n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n- **Feature Vector** - Assigning a number value to certain features of an object so that a machine can find patterns between multiple objects in the data \n\n\n",
         "name": "Vocabulary "
       },
       "seeding_key": {
@@ -796,7 +796,7 @@
       "key": "3909488b-0b3e-4dfd-80ab-f3a8f64c24dc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Build out your own feature vector_\n* _Experience how AI can make tasks more efficient_ \n* _Explain why AI may make different predictions when asked the same question_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Build out your own feature vector_\n* _Experience how AI can make tasks more efficient_ \n* _Explain why AI may make different predictions when asked the same question_",
         "name": "Lesson Objectives"
       },
       "seeding_key": {
@@ -808,7 +808,7 @@
       "key": "2e026f78-52c1-432b-bf06-bf26c07b6b2a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** Why might AI give different answers to the same question? For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI, it said, “Purple and pink.”\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** Why might AI give different answers to the same question? For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI, it said, “Purple and pink.”\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -820,7 +820,7 @@
       "key": "c4e3ba79-3976-483c-853f-b5e4ff1bacb6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Read the slide aloud.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Preparing the data for AI” slide\n\n**Do This:** Help students look at each animal’s number line. Ask if they can figure out how many employees were surveyed. Point out that each animal was rated by each employee on a scale from 1-10 in terms of how cute it is and its size. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “A.I.’s Training Data” slide\n\n**Say:** Where each animal has been placed on the graph represents the average, or “middle”, of all pet shop employees' opinions of that animal. We can see that all the pet store employees agreed that lizards and rats are small and horses are big. Most employees thought that puppies and rats were cute.\n\n**Discuss:** \n_Why did AI pet picker choose a rat_ \n_What else might AI pet picker choose if you asked for a house pet again?_\n\n**Discussion Goal:** AI pet picker chose a rat because it is in the “house pet” section of the chart along with the other “small” and “cute” animals. If asked again, AI pet picker might respond with “puppy” or even “lizard”. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “[Optional] Extension: Class Results for favorite pet” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Read the slide aloud.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preparing the data for AI” slide\n\n**Do This:** Help students look at each animal’s number line. Ask if they can figure out how many employees were surveyed. Point out that each animal was rated by each employee on a scale from 1-10 in terms of how cute it is and its size. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A.I.’s Training Data” slide\n\n**Say:** Where each animal has been placed on the graph represents the average, or “middle”, of all pet shop employees' opinions of that animal. We can see that all the pet store employees agreed that lizards and rats are small and horses are big. Most employees thought that puppies and rats were cute.\n\n**Discuss:** \n_Why did AI pet picker choose a rat_ \n_What else might AI pet picker choose if you asked for a house pet again?_\n\n**Discussion Goal:** AI pet picker chose a rat because it is in the “house pet” section of the chart along with the other “small” and “cute” animals. If asked again, AI pet picker might respond with “puppy” or even “lizard”. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “[Optional] Extension: Class Results for favorite pet” slide\n",
         "name": "Warm Up ",
         "tips": [
           {
@@ -838,7 +838,7 @@
       "key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party: AI Edition - How AI Works” video\n\n**Discuss:** What information was this AI Bot trained on?\n\n**Discussion Goal:** AI is learning to recognize different emojis and associate words with them. It’s using information taken from the internet to determine what words fit with each emoji.\n\n**Discuss:** What 3 emojis did the user choose?\n\n**Discussion Goal:** This is a check for understanding to make sure students understand how they will select 3 different emojis for AI Bot.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How does AI make associations?” slide\n\n**Say:** AI only knows the information that we give it. Before we use AI Bot in Dance Party, let’s teach AI by making some associations of our own:\n1. First you’ll make a feature vector of food by its **sweetness** and how much you **like to eat it**\n2. Then you’ll make a feature vector of emojis by how **colorful** and **happy** they are.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party: AI Edition - How AI Works” video\n\n**Discuss:** What information was this AI Bot trained on?\n\n**Discussion Goal:** AI is learning to recognize different emojis and associate words with them. It’s using information taken from the internet to determine what words fit with each emoji.\n\n**Discuss:** What 3 emojis did the user choose?\n\n**Discussion Goal:** This is a check for understanding to make sure students understand how they will select 3 different emojis for AI Bot.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How does AI make associations?” slide\n\n**Say:** AI only knows the information that we give it. Before we use AI Bot in Dance Party, let’s teach AI by making some associations of our own:\n1. First you’ll make a feature vector of food by its **sweetness** and how much you **like to eat it**\n2. Then you’ll make a feature vector of emojis by how **colorful** and **happy** they are.\n",
         "duration": "3",
         "name": "Introduction to AI Dance Party ",
         "progression_name": "Let AI Bot Choose Your Effects"
@@ -852,7 +852,7 @@
       "key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Food Feature Vector” slide\n\n**Do this:** Do This: Transition students to their devices. Have them go to Level 1. Tell students to click the orange Run button under the playspace and choose a food item at the top of the screen. Have students store each food item in their feature vector by clicking and dragging it into the box. \n\nFirst, have students move the item along the horizontal “Sweetness” axis, from Not Sweet to Really Sweet. Then, have students move the item up the vertical “Like to eat” axis depending on how much they like the food, from Not for me! To Love it! \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Food Feature Vector” slide\n\n**Do this:** Do This: Transition students to their devices. Have them go to Level 1. Tell students to click the orange Run button under the playspace and choose a food item at the top of the screen. Have students store each food item in their feature vector by clicking and dragging it into the box. \n\nFirst, have students move the item along the horizontal “Sweetness” axis, from Not Sweet to Really Sweet. Then, have students move the item up the vertical “Like to eat” axis depending on how much they like the food, from Not for me! To Love it! \n",
         "duration": "5",
         "name": "Food Feature Vector",
         "progression_name": "Food Feature Vector",
@@ -872,7 +872,7 @@
       "key": "af504c40-7ffd-40eb-97f2-b3ccaac066a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide\n\n**Do this:** Have students complete Levels 2-5 independently. In Level 5, students have the option to re-watch the “Dance Party: AI Edition - How AI Works” video on their own.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide\n\n**Do this:** Have students complete Levels 2-5 independently. In Level 5, students have the option to re-watch the “Dance Party: AI Edition - How AI Works” video on their own.\n",
         "duration": "10",
         "name": "Independent Work Time ",
         "progression_name": "Check For Understanding: Food"
@@ -908,7 +908,7 @@
       "key": "4f674c1b-eb38-45b6-a423-cccaae897f15",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Picking a Dance Party Stage” slide\n\n**Do This:** Read the slide aloud for students. This slide is designed to set up how AI can help us be more efficient with our tasks.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “AI is here to help!” slide\n\n**Say:** In Level 6, you will use a block to make AI Bot generate foreground and background effects for your dance. You choose 3 emojis and AI Bot will choose the effects that best match those emojis.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How does AI choose effects?” slides\n\n**Do This:** Read the slides aloud. Have students choose the three palettes that they believe best represent the smiley face emoji or the words “happy”, “sunny”, and “bright”. Then compare their choices to AI’s choices on the next slide.\n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Picking a Dance Party Stage” slide\n\n**Do This:** Read the slide aloud for students. This slide is designed to set up how AI can help us be more efficient with our tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “AI is here to help!” slide\n\n**Say:** In Level 6, you will use a block to make AI Bot generate foreground and background effects for your dance. You choose 3 emojis and AI Bot will choose the effects that best match those emojis.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How does AI choose effects?” slides\n\n**Do This:** Read the slides aloud. Have students choose the three palettes that they believe best represent the smiley face emoji or the words “happy”, “sunny”, and “bright”. Then compare their choices to AI’s choices on the next slide.\n\n\n\n",
         "duration": "10",
         "name": "AI Dance Party",
         "progression_name": "Video: How AI Works"
@@ -933,7 +933,7 @@
       "key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6: Coding with AI” slide \n\n**Do This:** Open Level 6 on your screen and display it to the whole class. Model how the AI block works:\nChoose one of the songs from the level and click Play.\nSurvey students to see what emojis they would choose based on the song.\nPoint out how choosing an emoji to match the mood of the song is subjective and students can have different answers. Based on which 3 emojis are chosen, AI Bot might recommend different background effects for the same song.\n\nClick “Generate” and see what effects get chosen. Explain that if students don’t like the effects, they can Regenerate effects using the same 3 emojis, Use the code and update the dropdown fields themselves, or Start over with 3 new emojis.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6: Coding with AI” slide \n\n**Do This:** Open Level 6 on your screen and display it to the whole class. Model how the AI block works:\nChoose one of the songs from the level and click Play.\nSurvey students to see what emojis they would choose based on the song.\nPoint out how choosing an emoji to match the mood of the song is subjective and students can have different answers. Based on which 3 emojis are chosen, AI Bot might recommend different background effects for the same song.\n\nClick “Generate” and see what effects get chosen. Explain that if students don’t like the effects, they can Regenerate effects using the same 3 emojis, Use the code and update the dropdown fields themselves, or Start over with 3 new emojis.\n",
         "progression_name": "Coding with AI "
       },
       "seeding_key": {
@@ -945,7 +945,7 @@
       "key": "d490e436-e812-4238-a92a-11f108a8853a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Do you prefer selecting the effects or having AI select the effects for your dancer’s stage? Why?” slide\n\n**Discussion Goal:** Have students reflect on the pros and cons of each option. By selecting the effects themselves, they can create any combination they want but it’s often tedious to click each option from the dropdown menu. Having AI select the effects based on 3 emojis is easier, but may not yield the exact results that students want. One potential solution is for students to work with AI by having it create a first draft and having students edit the results. In this case, students can have AI generate the effects and then they can click “Use code” and make any adjustments. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do you prefer selecting the effects or having AI select the effects for your dancer’s stage? Why?” slide\n\n**Discussion Goal:** Have students reflect on the pros and cons of each option. By selecting the effects themselves, they can create any combination they want but it’s often tedious to click each option from the dropdown menu. Having AI select the effects based on 3 emojis is easier, but may not yield the exact results that students want. One potential solution is for students to work with AI by having it create a first draft and having students edit the results. In this case, students can have AI generate the effects and then they can click “Use code” and make any adjustments. \n",
         "duration": "2",
         "name": "Reflect "
       },
@@ -958,7 +958,7 @@
       "key": "4c7077a6-111a-4d15-9f55-604b96742f21",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Additional Context” slides\nThese slides are optional. They provide a more detailed explanation of how AI Bot makes its decisions. You may want to encourage students to click on the bar graph to see how AI Bot chose effects based on their emoji selection.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Additional Context” slides\nThese slides are optional. They provide a more detailed explanation of how AI Bot makes its decisions. You may want to encourage students to click on the bar graph to see how AI Bot chose effects based on their emoji selection.\n\n",
         "name": "[Optional] Additional Context Slides"
       },
       "seeding_key": {
@@ -970,7 +970,7 @@
       "key": "664d8640-527d-4493-89aa-ceedddc8172f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _Why might AI give different answers to the same question?_ \n\n_For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI it said, “Purple and pink”._\n\n**Discussion Goal:** Make sure students understand that AI is trained on billions of data points representing many different opinions. Since not everyone agrees on for example, what colors are in a sunset, AI will make a prediction based on the probabilities of different responses. If most people say that a sunset contains the colors orange and red, then AI will usually say “orange and red”. But since sometimes people see purple and pink in a sunset, AI will occasionally say “purple and pink.” Just as asking different people what colors are present in a sunset will yield different answers, asking AI the same question may result in different responses.\n\n\nHave students reflect on the Warm Up activity in which AI Pet Picker chose a rat, when we were expecting it to choose a puppy. Point out how each Pet Shop employee had different opinions about how cute each animal is and how big it is. Sometimes conflicting opinions in the training data can lead to conflicting AI predictions. If AI Pet Picker was trained on the opinions of everyone in the world, it might not pick the pet that you or I had in mind, but it would certainly reflect someone’s opinion from the training data.\n\nAdditionally, you can point out that there can be small and large effects of AI making a different or even incorrect prediction. In the previous lesson, if AI couldn’t correctly predict that a starfish belonged in the ocean, it would assume that it was trash which needed to be removed. In the real world, this could cause large negative environmental impacts.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _Why might AI give different answers to the same question?_ \n\n_For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI it said, “Purple and pink”._\n\n**Discussion Goal:** Make sure students understand that AI is trained on billions of data points representing many different opinions. Since not everyone agrees on for example, what colors are in a sunset, AI will make a prediction based on the probabilities of different responses. If most people say that a sunset contains the colors orange and red, then AI will usually say “orange and red”. But since sometimes people see purple and pink in a sunset, AI will occasionally say “purple and pink.” Just as asking different people what colors are present in a sunset will yield different answers, asking AI the same question may result in different responses.\n\n\nHave students reflect on the Warm Up activity in which AI Pet Picker chose a rat, when we were expecting it to choose a puppy. Point out how each Pet Shop employee had different opinions about how cute each animal is and how big it is. Sometimes conflicting opinions in the training data can lead to conflicting AI predictions. If AI Pet Picker was trained on the opinions of everyone in the world, it might not pick the pet that you or I had in mind, but it would certainly reflect someone’s opinion from the training data.\n\nAdditionally, you can point out that there can be small and large effects of AI making a different or even incorrect prediction. In the previous lesson, if AI couldn’t correctly predict that a starfish belonged in the ocean, it would assume that it was trash which needed to be removed. In the real world, this could cause large negative environmental impacts.\n\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -982,7 +982,7 @@
       "key": "d1fa7c06-a927-42bb-8949-8c00660164ce",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _Choose one of the following jobs:_ Veterinarian, Teacher, Bus Driver, Artist. \n\n_Now, imagine if the person doing this job were replaced by an AI robot._\n\n- _Would you want AI to replace a human in this job? Why or why not?_\n- _What would happen if this AI got something wrong?_\n\n**Discussion Goal:** Students should be able to give examples of what might happen if this AI got something wrong: misdiagnosis, misinformation, taking a wrong turn, etc. The takeaway here should be that AI can help us automate tasks so we can do them faster, e.g. pick out background effects, but AI needs oversight. There should be a partnership between humans and AI so that we are not entrusting AI to make the final decision or to operate unchecked. \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _Choose one of the following jobs:_ Veterinarian, Teacher, Bus Driver, Artist. \n\n_Now, imagine if the person doing this job were replaced by an AI robot._\n\n- _Would you want AI to replace a human in this job? Why or why not?_\n- _What would happen if this AI got something wrong?_\n\n**Discussion Goal:** Students should be able to give examples of what might happen if this AI got something wrong: misdiagnosis, misinformation, taking a wrong turn, etc. The takeaway here should be that AI can help us automate tasks so we can do them faster, e.g. pick out background effects, but AI needs oversight. There should be a partnership between humans and AI so that we are not entrusting AI to make the final decision or to operate unchecked. \n\n",
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -994,7 +994,7 @@
       "key": "c0a70206-48fa-4b08-8edd-2512e6ceb87d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Training data** - Information that has been sorted, then given to a computer so it can make predictions\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Training data** - Information that has been sorted, then given to a computer so it can make predictions\n",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -1006,7 +1006,7 @@
       "key": "e32327b9-f252-4389-b979-0180337557b7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Read a sample student dataset and notice patterns_\n* _Explain what data makes sense to give an AI tool that is making a decision in school_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Read a sample student dataset and notice patterns_\n* _Explain what data makes sense to give an AI tool that is making a decision in school_\n",
         "name": "Lesson Objectives"
       },
       "seeding_key": {
@@ -1018,7 +1018,7 @@
       "key": "8c1623fe-9301-4577-a5f4-b409165745eb",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How can you prevent bias in your training data?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How can you prevent bias in your training data?_\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -1030,7 +1030,7 @@
       "key": "ad67c9eb-9be8-4870-ba70-ac0e42ed36d7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n",
         "duration": "10",
         "name": "Warm Up",
         "tips": [
@@ -1060,7 +1060,7 @@
       "key": "54ef70f1-7caa-4500-8fcb-10faa747ec75",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:**  Today you are going to act as the human training the computer. It is up to you to decide what information to give the computer (and what information to leave out) so that it can make the best predictions possible.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:**  Today you are going to act as the human training the computer. It is up to you to decide what information to give the computer (and what information to leave out) so that it can make the best predictions possible.\n",
         "duration": "3",
         "name": "How Do Computers Learn ",
         "progression_name": "Student Survey"
@@ -1074,7 +1074,7 @@
       "key": "77e408bb-19be-47f8-9f0f-000093decae7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Using AI Tools in School” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using AI Tools in School” slide\n",
         "duration": "27",
         "name": "Using AI Tools In School ",
         "progression_name": "Using AI Tools in School (Online Version)",
@@ -1111,7 +1111,7 @@
       "key": "164d2ac2-29d8-4a9c-b057-5545575e2cc6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How can you prevent bias in your training data?_\n\n**Discussion Goal:** Students should understand that training data can be subjective, for example what an “angry” fish looks like or someone’s favorite ice cream flavor. It is important to consider what data should and should not be collected. When having AI decide where to seat people in the cafeteria, including what languages they speak is very helpful. On the flip side, certain data which may seem irrelevant, such as the number of detentions a student received, and could even lead AI to make a biased decision. If this is the case, this data should likely be left out of the training dataset and/or AI’s predictions should be evaluated by a human.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How can you prevent bias in your training data?_\n\n**Discussion Goal:** Students should understand that training data can be subjective, for example what an “angry” fish looks like or someone’s favorite ice cream flavor. It is important to consider what data should and should not be collected. When having AI decide where to seat people in the cafeteria, including what languages they speak is very helpful. On the flip side, certain data which may seem irrelevant, such as the number of detentions a student received, and could even lead AI to make a biased decision. If this is the case, this data should likely be left out of the training dataset and/or AI’s predictions should be evaluated by a human.\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -1123,7 +1123,7 @@
       "key": "a0a0e569-8a61-4a29-9c4e-ab39f80eb4c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _AI Activity Picker recommends activities for kids but it keeps recommending only beach activities and other outdoor activities._ \n* _Why is that a problem?_ \n* _What data can we collect to solve the problem?_\n\n**Discussion Goal:** Students should understand that this AI shows a bias towards beach and outdoor activities due to the data it was provided. It is a problem because kids might be looking for indoor activities and / or not live near the beach. In order to make this AI tool useful for all kids, we should train it on more data that includes indoor activities and activities that aren’t location-specific.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _AI Activity Picker recommends activities for kids but it keeps recommending only beach activities and other outdoor activities._ \n* _Why is that a problem?_ \n* _What data can we collect to solve the problem?_\n\n**Discussion Goal:** Students should understand that this AI shows a bias towards beach and outdoor activities due to the data it was provided. It is a problem because kids might be looking for indoor activities and / or not live near the beach. In order to make this AI tool useful for all kids, we should train it on more data that includes indoor activities and activities that aren’t location-specific.\n",
         "duration": "5",
         "name": "Wrap Up"
       },
@@ -1136,7 +1136,7 @@
       "key": "f2cf38ee-c39d-4b54-99dd-af0f903d85af",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Bias** - When a decision favors some things and not others\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Bias** - When a decision favors some things and not others\n",
         "name": "Vocabulary "
       },
       "seeding_key": {
@@ -1148,7 +1148,7 @@
       "key": "396438d7-550a-4452-8380-82b4cdefaed3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Consider the pros and cons of AI tools_\n* _Explain your opinion on AI tools to your classmates and teachers_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Consider the pros and cons of AI tools_\n* _Explain your opinion on AI tools to your classmates and teachers_\n",
         "name": "Lesson Objectives"
       },
       "seeding_key": {
@@ -1160,7 +1160,7 @@
       "key": "f115d03f-67e8-42fe-b78c-8a95daffd69e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do we decide if a task should use AI or not?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do we decide if a task should use AI or not?_\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -1172,7 +1172,7 @@
       "key": "26777bc2-73aa-40c3-95ba-897d82b623d6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Consider one of the AI tools from the last lesson that chose:\n* Seats in the cafeteria\n* Teams for gym class\n* Student of the Month \n\n_What are the pros and cons of using AI tools to make these decisions, instead of letting a human decide?_\n\n**Discussion Goal:** Have students think about the different AI tools from the previous lesson. While using AI could save time, it may lead to outcomes that are undesirable, such as placing students who don’t get along next to each other in the cafeteria. Also, AI might make decisions that a human wouldn’t make. Depending on the situation this may or may not be a positive outcome.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Consider one of the AI tools from the last lesson that chose:\n* Seats in the cafeteria\n* Teams for gym class\n* Student of the Month \n\n_What are the pros and cons of using AI tools to make these decisions, instead of letting a human decide?_\n\n**Discussion Goal:** Have students think about the different AI tools from the previous lesson. While using AI could save time, it may lead to outcomes that are undesirable, such as placing students who don’t get along next to each other in the cafeteria. Also, AI might make decisions that a human wouldn’t make. Depending on the situation this may or may not be a positive outcome.\n",
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1184,7 +1184,7 @@
       "key": "3b801ef9-b730-4043-9b20-8211f99aca43",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Share Your Voice” slide\n\n**Say:** Today, you'll get a chance to share your opinion on AI by writing a letter to your principal, creating a poster, or expressing yourself in another way. You’ll share whether or not you think AI tools should be used to help make a decision in school. Take a minute to decide which of these options you would like to choose.\n\nThe number of chili peppers next to the option shows how difficult it is. So make sure you choose an option that you’ll be able to finish in class today. When you’re ready, go to Level 1 and get started.\n\n**Do This:** Have students choose from one of the following options:\n* Write a letter to the principal\n* Make a speech, song, or rap \n* Design a poster\n* Create a project in Sprite Lab \n* Code a poem\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Share Your Voice” slide\n\n**Say:** Today, you'll get a chance to share your opinion on AI by writing a letter to your principal, creating a poster, or expressing yourself in another way. You’ll share whether or not you think AI tools should be used to help make a decision in school. Take a minute to decide which of these options you would like to choose.\n\nThe number of chili peppers next to the option shows how difficult it is. So make sure you choose an option that you’ll be able to finish in class today. When you’re ready, go to Level 1 and get started.\n\n**Do This:** Have students choose from one of the following options:\n* Write a letter to the principal\n* Make a speech, song, or rap \n* Design a poster\n* Create a project in Sprite Lab \n* Code a poem\n",
         "duration": "30",
         "name": "Share Your Voice ",
         "progression_name": "Choice Level: Share Your Voice"
@@ -1198,7 +1198,7 @@
       "key": "9b5ac733-bd2f-47b4-a11f-d1bb4775e8ff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -1210,7 +1210,7 @@
       "key": "a800b543-6290-4fd9-997a-b6311f9648d7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do we decide if a task should use AI or not?_\n\n**Discussion Goal:** Have students think about the different examples that they learned about in the previous lessons: BakeryScan and machine learning sorting algorithms, Amazon’s recommendation algorithm, AI for Oceans, AI Bot to pick background effects, and hypothetical scenarios involving AI tools. They should understand that there are pros and cons to using AI tools and the decision is not “one size fits all”. Even in scenarios where they determine it makes sense to use AI, there should still be human involvement in making sure the outcome is fair and correct.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do we decide if a task should use AI or not?_\n\n**Discussion Goal:** Have students think about the different examples that they learned about in the previous lessons: BakeryScan and machine learning sorting algorithms, Amazon’s recommendation algorithm, AI for Oceans, AI Bot to pick background effects, and hypothetical scenarios involving AI tools. They should understand that there are pros and cons to using AI tools and the decision is not “one size fits all”. Even in scenarios where they determine it makes sense to use AI, there should still be human involvement in making sure the outcome is fair and correct.\n",
         "name": "Question of the Day"
       },
       "seeding_key": {
@@ -1222,7 +1222,7 @@
       "key": "e47549eb-b04b-461a-8b2a-3e24446ac5e3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Glows, Grows, Want-to-Knows” slide\n\n**Discuss:** Have students discuss their letters, posters, and songs they made today and have them reflect on something they learned about AI in the previous lessons.\n\n**Discussion Goal:** Students should share what they have learned and any questions they still have about AI. This is an ongoing opportunity for students to continue learning and developing opinions about AI. Encourage students to keep coming up with questions they have about how AI works and where it shows up around them.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Glows, Grows, Want-to-Knows” slide\n\n**Discuss:** Have students discuss their letters, posters, and songs they made today and have them reflect on something they learned about AI in the previous lessons.\n\n**Discussion Goal:** Students should share what they have learned and any questions they still have about AI. This is an ongoing opportunity for students to continue learning and developing opinions about AI. Encourage students to keep coming up with questions they have about how AI works and where it shows up around them.\n\n",
         "name": "Wrap Up"
       },
       "seeding_key": {

@@ -1134,7 +1134,7 @@
       "key": "6181e680-b5b0-4fae-944b-01a39449eb1c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What’s your favorite thing—an app, game, book, or something you use every day?*\n- *Who might work to create your favorite thing? What skills might they need?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight how computing skills and emerging technologies contribute to everyday tools and innovations students enjoy.*\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be stuck. Ask questions like: *\"Do you have a favorite app or game you use every day?\" or \"What’s something you’ve enjoyed recently—like a book, movie, or a hobby?\"",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n- *What’s your favorite thing—an app, game, book, or something you use every day?*\n- *Who might work to create your favorite thing? What skills might they need?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight how computing skills and emerging technologies contribute to everyday tools and innovations students enjoy.*\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be stuck. Ask questions like: *\"Do you have a favorite app or game you use every day?\" or \"What’s something you’ve enjoyed recently—like a book, movie, or a hobby?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1161,7 +1161,7 @@
       "key": "44abeaaa-c6b8-4a61-a98f-6d546a7494da",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define **emerging technology** and explain some examples of emerging technologies, such as AI and Generative AI, robotics, the Internet of Things, Quantum Computing, augmented reality and virtual reality, and automation.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define **emerging technology** and explain some examples of emerging technologies, such as AI and Generative AI, robotics, the Internet of Things, Quantum Computing, augmented reality and virtual reality, and automation.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1188,7 +1188,7 @@
       "key": "7c93ad0e-a169-4244-9fc4-6f8f3de2cbf4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways that emerging technologies might be involved with one of your favorite things?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the connection between emerging technologies and real-world things that they use everyday. Guide students to see that technology plays a role in creating and improving everyday things that they already use. For example, if a student says they love TikTok, you could connect it to a person working in software development (creating the app) and using AI (personalized recommendations). If a student mentions books, you could connect how robotics or automation could be used to make and ship the books or computer vision could be used to take inventory. ",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What are some ways that emerging technologies might be involved with one of your favorite things?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the connection between emerging technologies and real-world things that they use everyday. Guide students to see that technology plays a role in creating and improving everyday things that they already use. For example, if a student says they love TikTok, you could connect it to a person working in software development (creating the app) and using AI (personalized recommendations). If a student mentions books, you could connect how robotics or automation could be used to make and ship the books or computer vision could be used to take inventory. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1215,7 +1215,7 @@
       "key": "935322f5-a59b-4edb-ad76-17f95394034a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "935322f5-a59b-4edb-ad76-17f95394034a",
@@ -1226,7 +1226,7 @@
       "key": "43e89a3b-eb36-4c85-a939-2f9841d0a174",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Career Exploration activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Before students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll use these categories throughout the activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the activity. Explain that students analyze a fictional persona’s social media to determine their interests and skills in order to match them to computing careers that might align with that persona’s skills and interests. For example, a persona might enjoy doing escape rooms which could mean they enjoy working with others or that they enjoy problem solving. Students then get help from a chatbot to brainstorm ways that emerging technologies could be used with that career.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. \n- **Level 1:** Students choose one of the four personas and analyze the traits and match them to careers in Part 1 of their activity guide. \n- **Level 2:** Students use the information on the level to match their persona from Level 1 to a category, potential careers, and emerging technologies. \n- **Level 3:** Students use an AI Chatbot to explore more emerging technologies for their persona’s matched career. \n- **Level 4:** Students complete a Check for Understanding.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Career Exploration activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Before students start working, explain that careers can often be grouped based on the kind of work involved: working with People, working with Ideas, or working with Things. Explain to students that they'll use these categories throughout the activity to explore different computing careers and make connections to necessary skills and technologies.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the activity. Explain that students analyze a fictional persona’s social media to determine their interests and skills in order to match them to computing careers that might align with that persona’s skills and interests. For example, a persona might enjoy doing escape rooms which could mean they enjoy working with others or that they enjoy problem solving. Students then get help from a chatbot to brainstorm ways that emerging technologies could be used with that career.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students into groups of two.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1. \n- **Level 1:** Students choose one of the four personas and analyze the traits and match them to careers in Part 1 of their activity guide. \n- **Level 2:** Students use the information on the level to match their persona from Level 1 to a category, potential careers, and emerging technologies. \n- **Level 3:** Students use an AI Chatbot to explore more emerging technologies for their persona’s matched career. \n- **Level 4:** Students complete a Check for Understanding.",
         "duration": "25",
         "name": "Career Persona Exploration",
         "progression_name": "Career Persona Exploration"
@@ -1240,7 +1240,7 @@
       "key": "dbff2208-d4cb-4d99-814c-60abf0bb08bf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to make connections between skills/interests and potential careers. Ask students probing questions such as, \"What traits or skills stand out about this persona?\" or \"What careers involve working with people (ideas … things)?\" As you walk around the room, ensure students are using the activity guide to document the traits they notice about their persona and writing a justification for their skill/interest and career matches. Reassure students that there is no one “right” answer! For example, \"Maya might enjoy being an AI Engineer or a Game Developer because she’s creative, loves puzzles, and enjoys solving big challenges, and both AI Engineers and Game Developers use creativity and logic to build systems that solve complex problems.\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students struggling to make connections between skills/interests and potential careers. Ask students probing questions such as, \"What traits or skills stand out about this persona?\" or \"What careers involve working with people (ideas … things)?\" As you walk around the room, ensure students are using the activity guide to document the traits they notice about their persona and writing a justification for their skill/interest and career matches. Reassure students that there is no one “right” answer! For example, \"Maya might enjoy being an AI Engineer or a Game Developer because she’s creative, loves puzzles, and enjoys solving big challenges, and both AI Engineers and Game Developers use creativity and logic to build systems that solve complex problems.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1271,7 +1271,7 @@
       "key": "9a81da5d-dd89-4b21-ad84-094f2f807b86",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Programming Fundamentals Unit Guide.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Programming Fundamentals Unit Guide.",
         "duration": "5",
         "name": "Career Persona Self-Reflection",
         "tips": [
@@ -1300,7 +1300,7 @@
       "key": "e3b3e687-eb9a-4feb-bb5c-ca09ca0495c3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Self-Reflection Activity and explain that students will now reflect on their own skills and interests. Direct students to complete the Career Self-Reflection section on page one of their Unit Guide so that they can refer back to this self-reflection throughout the unit. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are highlighting or circling their top 3 self-identified skills or interests from the list. There is a spot for them to write in additional skills or interests that are not listed. If students do not identify with any of the listed skills or interests, encourage them to add ones that they do identify with. Encourage students to prompt the chatbot on Level 3 more than once to see if they get different suggestions and to only record those that they are most interested in. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Self-Reflection Activity and explain that students will now reflect on their own skills and interests. Direct students to complete the Career Self-Reflection section on page one of their Unit Guide so that they can refer back to this self-reflection throughout the unit. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are highlighting or circling their top 3 self-identified skills or interests from the list. There is a spot for them to write in additional skills or interests that are not listed. If students do not identify with any of the listed skills or interests, encourage them to add ones that they do identify with. Encourage students to prompt the chatbot on Level 3 more than once to see if they get different suggestions and to only record those that they are most interested in. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1332,7 +1332,7 @@
       "key": "75b31730-610e-4eca-99cd-82d956d6d34f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their Unit Guide before they share with a partner. If time allows, have students share with a second person not seated near them.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: *\"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"*",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their Unit Guide before they share with a partner. If time allows, have students share with a second person not seated near them.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance: *\"Think about a skill or interest you rated yourself highly on earlier. How did it connect to one of the careers we explored?\"*",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1353,7 +1353,7 @@
       "key": "48d70c05-dfaf-4171-8c9b-0daa8606c866",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What process do you take to clean up your room? How do you go about this task?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the varied approaches that students suggest for accomplishing this common task. Point out any of the following if mentioned by students: the importance of breaking tasks into smaller steps (decomposition), the benefit of recognizing repeated steps (pattern recognition), the need to focus only on key information (abstraction).",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What process do you take to clean up your room? How do you go about this task?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight the varied approaches that students suggest for accomplishing this common task. Point out any of the following if mentioned by students: the importance of breaking tasks into smaller steps (decomposition), the benefit of recognizing repeated steps (pattern recognition), the need to focus only on key information (abstraction).",
         "tips": [
           {
             "type": "teachingTip",
@@ -1380,7 +1380,7 @@
       "key": "07bc1c55-38c1-4bb0-aefa-db304efa1767",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "07bc1c55-38c1-4bb0-aefa-db304efa1767",
@@ -1391,7 +1391,7 @@
       "key": "9900f185-c301-4281-8970-84732f665a62",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *computational thinking*. Explain that computational thinking is like cooking a recipe:\n- You break down the recipe into steps – prepping ingredients, cooking, plating.\n- You notice similarities with other recipes you've made – chopping vegetables, boiling water.\n- You focus on essential steps and ignore unnecessary details – you don't need to know how the oven works, just how to set the temperature.\n- You follow or create a step-by-step process to cook the dish.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that computational thinking consists of four pillars: decomposition, pattern recognition, abstraction, and algorithm design. Emphasize that computational thinking isn't just for coding – these pillars are useful for solving all kinds of real-world problems.",
         "name": "School Event Planning Challenge",
         "tips": [
           {
@@ -1419,7 +1419,7 @@
       "key": "aff65823-1326-4cdc-9e1b-040250db3c3b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *decomposition*."
       },
       "seeding_key": {
         "activity_section.key": "aff65823-1326-4cdc-9e1b-040250db3c3b",
@@ -1442,7 +1442,7 @@
       "key": "6b5145e2-fed5-448c-ae30-0aa8cc50862d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction*."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *abstraction*."
       },
       "seeding_key": {
         "activity_section.key": "6b5145e2-fed5-448c-ae30-0aa8cc50862d",
@@ -1465,7 +1465,7 @@
       "key": "c48003af-ebab-4877-8ed6-52bfc02ded82",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Planning a School Event activity guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Planning a School Event activity guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1492,7 +1492,7 @@
       "key": "075277d8-b249-4b38-81ee-7728c0f75236",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will work with their partner to plan a school event (e.g., fundraiser, dance, talent show). Allow students to either select from a provided list or come up with their own school or community-related event.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2 Level 1. Students will use the AI chatbot to assist with completing the Decomposition section of the Planning a School Event activity guide.",
         "progression_name": "Decomposition"
       },
       "seeding_key": {
@@ -1504,7 +1504,7 @@
       "key": "5152df3c-54f2-43bc-a3ba-13ec2d11037c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they work on their activity guide. Ask guiding questions like, \"What’s something you would need to buy for this type of event?\" and \"What types of tasks are similar to each other?\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they work on their activity guide. Ask guiding questions like, \"What’s something you would need to buy for this type of event?\" and \"What types of tasks are similar to each other?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1531,7 +1531,7 @@
       "key": "97cd211f-2644-4153-8253-40b51a766e61",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Once students have finished brainstorming their task list, have students pair up with another pair who chose the same (or a similar) event. Direct each pair to read through the other pair’s tasks before providing feedback.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they give each other feedback. Ask guiding questions like, \"What tasks might you want to add to your own list\" and \"What tasks should be broken up into separate tasks?\"\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did breaking the event into smaller tasks make it easier to plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that planning the event became easier because they were able to see all of the tasks that they would need to accomplish.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 and Level 3. \n- **Level 2**: Students will use the AI chatbot to assist with completing the Abstraction section of the Planning a School Event activity guide.\n- **Level 3:** Check for Understanding",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Once students have finished brainstorming their task list, have students pair up with another pair who chose the same (or a similar) event. Direct each pair to read through the other pair’s tasks before providing feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Walk around and observe students as they give each other feedback. Ask guiding questions like, \"What tasks might you want to add to your own list\" and \"What tasks should be broken up into separate tasks?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did breaking the event into smaller tasks make it easier to plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that planning the event became easier because they were able to see all of the tasks that they would need to accomplish.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 and Level 3. \n- **Level 2**: Students will use the AI chatbot to assist with completing the Abstraction section of the Planning a School Event activity guide.\n- **Level 3:** Check for Understanding",
         "progression_name": "Abstraction",
         "tips": [
           {
@@ -1559,7 +1559,7 @@
       "key": "b5d4304d-f65e-46ca-aafa-628663e137b6",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did abstraction help simplify your plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that abstraction helped them eliminate unnecessary details and see the big picture of what tasks they would need to complete.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you use the skills of decomposition and abstraction in the real world?*\n- Use the Raise a Righteous Hand protocol to facilitate this discussion.\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students make connections to ways they might already be using decomposition and abstraction in the real world. Figuring out which classes have assigned homework due the next day is an example of decomposition. Using the internet is an example of abstraction, since you don’t need to know exactly how it works in order to use it. See if students can make connections to ways engineers might use decomposition and abstraction in their jobs."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did abstraction help simplify your plan?*\n- Use Think-Pair-Share to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to articulate that abstraction helped them eliminate unnecessary details and see the big picture of what tasks they would need to complete.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How can you use the skills of decomposition and abstraction in the real world?*\n- Use the Raise a Righteous Hand protocol to facilitate this discussion.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students make connections to ways they might already be using decomposition and abstraction in the real world. Figuring out which classes have assigned homework due the next day is an example of decomposition. Using the internet is an example of abstraction, since you don’t need to know exactly how it works in order to use it. See if students can make connections to ways engineers might use decomposition and abstraction in their jobs."
       },
       "seeding_key": {
         "activity_section.key": "b5d4304d-f65e-46ca-aafa-628663e137b6",
@@ -1581,7 +1581,7 @@
       "key": "2f147657-6166-4594-b6c8-6f1f22891930",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up question “*What process do you take to clean up your room? How do you go about this task?*” Have students consider how decomposition and abstraction help solve this task. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Question of the Day aloud for students. Give students a moment to think about and record their answer individually in their unit guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might be unsure of their response and provide guidance. Have them think back to the Warm Up question “*What process do you take to clean up your room? How do you go about this task?*” Have students consider how decomposition and abstraction help solve this task. ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1608,7 +1608,7 @@
       "key": "7799be62-44ca-452f-9b4c-5a593bff3bb8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain the Round Robin protocol. Guide students through the process of getting into small groups and designating who will share first."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three or four.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain the Round Robin protocol. Guide students through the process of getting into small groups and designating who will share first."
       },
       "seeding_key": {
         "activity_section.key": "7799be62-44ca-452f-9b4c-5a593bff3bb8",
@@ -1619,7 +1619,7 @@
       "key": "53e71293-416d-4248-894a-fd2340e4bdbb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 on Code Studio to answer the warm-up question.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 on Code Studio to answer the warm-up question.",
         "progression_name": "Steps to Create a Playlist"
       },
       "seeding_key": {
@@ -1631,7 +1631,7 @@
       "key": "d6258422-a779-48f1-b313-1b2681c4832c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might need help getting started. Ask: *\"What’s the first thing you’d do to if you wanted to create playlists for different events?\" or \"What categories might help organize the playlist?\"* Encourage students to think about the order of actions and any decisions they would need to make along the way.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses for the class. Use their answers to lead the class in a discussion about what steps were identified and what decisions were made. ",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who might need help getting started. Ask: *\"What’s the first thing you’d do to if you wanted to create playlists for different events?\" or \"What categories might help organize the playlist?\"* Encourage students to think about the order of actions and any decisions they would need to make along the way.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display students’ anonymous responses for the class. Use their answers to lead the class in a discussion about what steps were identified and what decisions were made. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1658,7 +1658,7 @@
       "key": "28272817-2364-420f-8ffe-912aad1391f2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice?*\n- *What do you wonder?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the responses. Look for student responses that break down the problem into steps and responses that identify decisions points to help drive the discussion towards the idea of an algorithm.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What did you notice?*\n- *What do you wonder?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should share what they notice and wonder about the responses. Look for student responses that break down the problem into steps and responses that identify decisions points to help drive the discussion towards the idea of an algorithm.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1685,7 +1685,7 @@
       "key": "a132bd77-aa76-494e-abd4-35310d888c94",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that an algorithm is a set of step-by-step instructions to solve a problem. Algorithms often include sequencing (steps in order), selection (making decisions), and iteration (repeating steps). \n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to add the vocabulary term to their Unit Guide.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that an algorithm is a set of step-by-step instructions to solve a problem. Algorithms often include sequencing (steps in order), selection (making decisions), and iteration (repeating steps). \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to add the vocabulary term to their Unit Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1712,7 +1712,7 @@
       "key": "0cf807aa-5504-4cff-8cae-421d2178778b",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "0cf807aa-5504-4cff-8cae-421d2178778b",
@@ -1723,7 +1723,7 @@
       "key": "de29d020-0d51-4be8-8462-43b2377bd994",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps for designing an algorithm. Explain that we follow these steps to make the process structured and logical. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the steps for designing an algorithm. Explain that we follow these steps to make the process structured and logical. ",
         "name": "Designing an Algorithm",
         "tips": [
           {
@@ -1751,7 +1751,7 @@
       "key": "28cb3848-ae99-4bad-a31f-4fca28d286df",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to turn and talk to their elbow partner and discuss how they would go through the first three steps to decide what to wear. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to turn and talk to their elbow partner and discuss how they would go through the first three steps to decide what to wear. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1778,7 +1778,7 @@
       "key": "e34941ab-946c-45f1-89a0-3d38ba37416f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Record students' responses on the board, and note any common answers.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Take a moment and look at what was shared together. Point out any similarities from each step. Highlight the different decisions students mentioned and connect them to how we approach problem-solving. Click through the animated slide to explain that everyday decisions, like deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Point out how the flowchart visually connects actions and decisions to guide the process.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the information on the slide to explain to students the \"Shout Out, Share Out\" protocol. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Record students' responses on the board, and note any common answers.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a moment and look at what was shared together. Point out any similarities from each step. Highlight the different decisions students mentioned and connect them to how we approach problem-solving. Click through the animated slide to explain that everyday decisions, like deciding what to wear, can be broken into simple steps. Algorithms help us solve more complex problems by organizing tasks and guiding decision-making efficiently.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Go over the final step of designing an algorithm: organizing steps and decisions into a logical sequence using a flowchart. Point out how the flowchart visually connects actions and decisions to guide the process.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a handful of two different color sticky notes. Students will also need some space near their computers to arrange their sticky notes into a flowchart.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1805,7 +1805,7 @@
       "key": "74fa27a1-798d-4419-8e6e-6ba5cd6c06cd",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that their task is to design an algorithm using the algorithm design steps. Let students know that they will use sticky notes for their steps and decisions points - one color for the steps or processes and one color for decision points.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Levels 2 through 6 to pick one of the scenarios to work with and design an algorithm for. ",
         "progression_name": "Scenario Choices"
       },
       "seeding_key": {
@@ -1817,7 +1817,7 @@
       "key": "37f3715e-9ee5-467d-86a5-0fc1aeea8466",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are clearly identifying steps and decision points in their algorithms. Ask questions like: \"What is the goal of your algorithm?\" or \"Does your flowchart account for all possible outcomes?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1848,7 +1848,7 @@
       "key": "48aaffaf-4c56-4633-a256-bdf5b56db277",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pair up with another group to share their flowcharts, use the questions on the slide to provide constructive feedback, and then revise their flowcharts based on that feedback. Emphasize that the goal is to make their algorithms clearer and more complete.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are giving meaningful feedback and incorporating it into their revisions. Ask questions like: *\"What feedback are you using to improve your flowchart?\"* or *\"How does your revision address missing steps or outcomes?\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to pair up with another group to share their flowcharts, use the questions on the slide to provide constructive feedback, and then revise their flowcharts based on that feedback. Emphasize that the goal is to make their algorithms clearer and more complete.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are giving meaningful feedback and incorporating it into their revisions. Ask questions like: *\"What feedback are you using to improve your flowchart?\"* or *\"How does your revision address missing steps or outcomes?\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1875,7 +1875,7 @@
       "key": "2673b10b-e3df-47e0-bab8-03441c2ea3c5",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 on Code Studio to answer the Check for Understanding questions.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 7 on Code Studio to answer the Check for Understanding questions.",
         "progression_name": "Check for Understanding",
         "tips": [
           {
@@ -1903,7 +1903,7 @@
       "key": "dc6df0f4-9a91-48bb-a2e2-5fd3e5132623",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges did you face when deciding what to keep, delete, or highlight?*\n- *How might AI handle similar challenges?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on the challenges they faced when designing their algorithms, such as balancing fairness or handling multiple outcomes. Encourage them to connect these challenges to how AI might tackle similar problems, highlighting both its strengths (e.g., efficiency) and limitations (e.g., bias or lack of context). The goal is for students to recognize the importance of thoughtful algorithm design in addressing complex, real-world issues.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges did you face when deciding what to keep, delete, or highlight?*\n- *How might AI handle similar challenges?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students reflect on the challenges they faced when designing their algorithms, such as balancing fairness or handling multiple outcomes. Encourage them to connect these challenges to how AI might tackle similar problems, highlighting both its strengths (e.g., efficiency) and limitations (e.g., bias or lack of context). The goal is for students to recognize the importance of thoughtful algorithm design in addressing complex, real-world issues.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1931,7 +1931,7 @@
       "key": "9a16ba9e-5953-4a75-a4c2-987821148565",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to write their responses in their Unit Guide. After two or three minutes, facilitate a quick sharing activity (e.g., Whip Around or Popcorn Share), calling on a few students to share their ideas.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to write their responses in their Unit Guide. After two or three minutes, facilitate a quick sharing activity (e.g., Whip Around or Popcorn Share), calling on a few students to share their ideas.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2336,7 +2336,7 @@
       "key": "ba763dd7-67a2-47cb-8e1b-e408733932a4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What apps do you use every day?*\n- *What kind of general algorithms do they use to solve problems for you?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that many apps rely on algorithms to solve problems and make decisions, often without users realizing it. They should begin making connections between common apps and the types of algorithms they use, such as recommendation systems, search ranking, and navigation. Listen for examples that show an understanding of how algorithms influence daily experiences, such as streaming services suggesting content, navigation apps calculating routes, or shopping apps recommending products.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that they have been writing algorithms to navigate our Painter around the Neighborhood, but today, they are going to explore how algorithms work in real-world apps and how their design can impact users like you and me.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What apps do you use every day?*\n- *What kind of general algorithms do they use to solve problems for you?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that many apps rely on algorithms to solve problems and make decisions, often without users realizing it. They should begin making connections between common apps and the types of algorithms they use, such as recommendation systems, search ranking, and navigation. Listen for examples that show an understanding of how algorithms influence daily experiences, such as streaming services suggesting content, navigation apps calculating routes, or shopping apps recommending products.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that they have been writing algorithms to navigate our Painter around the Neighborhood, but today, they are going to explore how algorithms work in real-world apps and how their design can impact users like you and me.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "ba763dd7-67a2-47cb-8e1b-e408733932a4",
@@ -2347,7 +2347,7 @@
       "key": "5eeb3fe7-39c1-4652-9ab2-ba13a243f681",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students the Algorithm Decision-Making activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of their activity guide where they analyze a flawed music selection algorithm using a flowchart, identify what the algorithm currently does, its limitations, and possible improvements. Guide them to focus on how the algorithm makes recommendations and whether it considers diverse user preferences. Clarify that this is an analysis activity, not about finding a single correct answer.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s behavior, such as only recommending songs from the first selected genre. Look for students recognizing limitations like lack of diversity or bias toward initial choices. Encourage creative improvement ideas, such as incorporating recent searches or expanding recommendations over time. ",
         "duration": "15",
         "name": "Debugging a Music Selection Algorithm",
         "tips": [
@@ -2376,7 +2376,7 @@
       "key": "2d2c6fdb-c569-42a0-8457-2a26978f6a91",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas for proposed solutions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One to share their ideas for proposed solutions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2403,7 +2403,7 @@
       "key": "922b8845-4b31-4e41-8e66-7ac11fa6c1d3",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What similarities do you see across these suggestions?*\n- *What challenges might arise when implementing these improvements?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize common themes in their proposed improvements, such as increasing variety in recommendations or considering user feedback. They should also discuss challenges like balancing personalization with diversity or ensuring the algorithm adapts over time. "
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What similarities do you see across these suggestions?*\n- *What challenges might arise when implementing these improvements?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize common themes in their proposed improvements, such as increasing variety in recommendations or considering user feedback. They should also discuss challenges like balancing personalization with diversity or ensuring the algorithm adapts over time. "
       },
       "seeding_key": {
         "activity_section.key": "922b8845-4b31-4e41-8e66-7ac11fa6c1d3",
@@ -2414,7 +2414,7 @@
       "key": "9ac9f7f1-da80-4cfd-8053-2a9aae0d9429",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *bias*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the key term *ethics*. Have students add an example, an image, or a connection that would help them makes sense of the work in their unit guide.  \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 2 of their activity guide where they analyze the self-driving car decision-making algorithm by identifying what it does, the factors it considers, the trade-offs involved, and who benefits or is harmed. Encourage them to think critically about the algorithm’s priorities and limitations. Remind them that real-world algorithms must balance multiple factors, often leading to ethical dilemmas.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for discussions identifying the algorithm’s steps, such as detecting obstacles, assessing risks, and making a decision. Look for students recognizing the factors considered, like pedestrian safety, passenger safety, and legal concerns. Encourage analysis of trade-offs, such as whether avoiding one accident increases the risk of another. Pay attention to conversations about ethical implications, including who benefits, who is at risk, and what makes a decision \"fair.\" ",
         "duration": "20",
         "name": "Ethical Exploration of Autonomous Vehicle Algorithms",
         "tips": [
@@ -2443,7 +2443,7 @@
       "key": "92fb34aa-de6e-4053-819d-5cbc205932b7",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges arise when designing algorithms that make critical decisions affecting people’s lives?*\n- *How does public trust in autonomous systems depend on ethical decision-making?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the challenges of designing decision-making algorithms that balance fairness, ethics, and functionality, and how these challenges impact public trust in autonomous systems. Listen for students identifying trade-offs in algorithmic decisions, such as prioritizing safety vs. efficiency, and discussing how bias, transparency, or accountability affect trust in AI systems.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What challenges arise when designing algorithms that make critical decisions affecting people’s lives?*\n- *How does public trust in autonomous systems depend on ethical decision-making?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the challenges of designing decision-making algorithms that balance fairness, ethics, and functionality, and how these challenges impact public trust in autonomous systems. Listen for students identifying trade-offs in algorithmic decisions, such as prioritizing safety vs. efficiency, and discussing how bias, transparency, or accountability affect trust in AI systems.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2475,7 +2475,7 @@
       "key": "05f6f38a-1b87-46fd-980f-51645b57c7a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to write their responses to the question of the day in their Unit Guide. After a moment, click the slide to display a helpful hint for how students can think about this question in the context of their experiences today. After 2–3 minutes, facilitate a quick sharing activity (e.g., Whip Around or Popcorn Share), calling on a few students to share their ideas.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to write their responses to the question of the day in their Unit Guide. After a moment, click the slide to display a helpful hint for how students can think about this question in the context of their experiences today. After 2–3 minutes, facilitate a quick sharing activity (e.g., Whip Around or Popcorn Share), calling on a few students to share their ideas.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2492,7 +2492,7 @@
       "key": "9f646049-eeea-4660-ac54-f0f385233c58",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Remind students that earlier in the unit, they explored the pillars of computational thinking—Decomposition, Pattern Recognition, Abstraction, and Algorithm Design—to solve programming challenges. Explain that today's lesson focuses on decomposition, breaking a problem into smaller steps to make it easier to solve. Ask students what they remember about these pillars and encourage them to share examples of when they used them in previous lessons. \n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How have you used decomposition - breaking problems down into smaller steps - throughout your work in this unit or outside of school?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize how decomposition helps break down complex tasks into smaller, more manageable steps, both in programming and everyday problem-solving. Listen for responses that describe breaking tasks into steps, such as planning a coding project, organizing a school assignment, or learning a new skill.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that earlier in the unit, they explored the pillars of computational thinking—Decomposition, Pattern Recognition, Abstraction, and Algorithm Design—to solve programming challenges. Explain that today's lesson focuses on decomposition, breaking a problem into smaller steps to make it easier to solve. Ask students what they remember about these pillars and encourage them to share examples of when they used them in previous lessons. \n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How have you used decomposition - breaking problems down into smaller steps - throughout your work in this unit or outside of school?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize how decomposition helps break down complex tasks into smaller, more manageable steps, both in programming and everyday problem-solving. Listen for responses that describe breaking tasks into steps, such as planning a coding project, organizing a school assignment, or learning a new skill.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the learning objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9f646049-eeea-4660-ac54-f0f385233c58",
@@ -2503,7 +2503,7 @@
       "key": "12302e09-a221-433f-bd42-524af704208d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. \n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Decomposing a Pixel Image activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through the tasks in their activity guide. Explain that they will first choose a pixel image to recreate, then identify patterns and define functions to break the image into smaller, manageable pieces. Next, they will write pseudocode to describe how they will code the image before sharing their plan with another group for T.A.G. feedback (Tell, Ask, Give). Encourage students to focus on decomposition and efficiency as they plan. Leave this slide up while students work so they can refer back to the steps.",
         "name": "Decomposing a Pixel Image",
         "tips": [
           {
@@ -2531,7 +2531,7 @@
       "key": "58b015c9-118d-40d3-99e3-b679f4bf6333",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the visual for the TAG feedback protocol. Remind them that their job is to Tell the group something they like about their code, Ask a question about the code, and Give a suggestion for improvement. Encourage them to focus on clarity, efficiency, and organization in the pseudocode.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the visual for the TAG feedback protocol. Remind them that their job is to Tell the group something they like about their code, Ask a question about the code, and Give a suggestion for improvement. Encourage them to focus on clarity, efficiency, and organization in the pseudocode.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2558,7 +2558,7 @@
       "key": "1b69efba-0319-4c6a-8897-b609bac22cd4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in this activity, the focus is on designing algorithms to recreate a pixel image, rather than collecting paint. Since the exact amount of paint needed is unknown, there are no paint buckets in this level. Instead, students will use `painter.set_paint(amount)` to set the amount of paint directly in their programs, ensuring they have enough to complete their image efficiently.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1 to convert their pseudocode into Python and create their pixel image.",
         "progression_name": "My Pixel Image"
       },
       "seeding_key": {
@@ -2570,7 +2570,7 @@
       "key": "b81b9096-61ae-4fec-88b7-37b3c3b716c8",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are defining and calling functions correctly and using consistent function names. Listen for debugging discussions and prompt students to compare their code to their pseudocode when they get stuck. Encourage them to test in small steps instead of writing everything at once.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they are defining and calling functions correctly and using consistent function names. Listen for debugging discussions and prompt students to compare their code to their pseudocode when they get stuck. Encourage them to test in small steps instead of writing everything at once.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2602,7 +2602,7 @@
       "key": "93da0a12-c590-47ae-bd5c-383287d6ec2c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students answer today’s Question of the Day by ranking themselves on the scales in their Unit Guide. Encourage them to reflect on their approach to problem-solving, collaboration, and focus while coding their pixel image.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with students who seem unsure how to rank themselves. Ask guiding questions like, \"Did you follow a structured plan or experiment with new ideas?\" or \"Did you work through challenges independently or with a partner?\" Encourage them to use the scale to self-assess their coding process.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students answer today’s Question of the Day by ranking themselves on the scales in their Unit Guide. Encourage them to reflect on their approach to problem-solving, collaboration, and focus while coding their pixel image.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students who seem unsure how to rank themselves. Ask guiding questions like, \"Did you follow a structured plan or experiment with new ideas?\" or \"Did you work through challenges independently or with a partner?\" Encourage them to use the scale to self-assess their coding process.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2633,7 +2633,7 @@
       "key": "caaf33aa-73a7-433f-84c0-b5fad8c0326b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students pair up and share how they rated themselves on the scales in their Unit Guide. Encourage them to discuss which characteristic helped them the most and whether their approach was different from their partner’s.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen for students discussing how their problem-solving, collaboration, or focus impacted their coding process. Encourage them to provide specific examples from their work. If students struggle to compare approaches, ask guiding questions like, “Did you focus more on structure or creativity?” or “How did working independently or collaboratively affect your efficiency?”",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up and share how they rated themselves on the scales in their Unit Guide. Encourage them to discuss which characteristic helped them the most and whether their approach was different from their partner’s.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students discussing how their problem-solving, collaboration, or focus impacted their coding process. Encourage them to provide specific examples from their work. If students struggle to compare approaches, ask guiding questions like, “Did you focus more on structure or creativity?” or “How did working independently or collaboratively affect your efficiency?”",
         "tips": [
           {
             "type": "teachingTip",
@@ -2713,7 +2713,7 @@
       "key": "5a89bf12-1c56-42ec-92b1-7491fe16dad7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Pixels of Me Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students use the first box in their Planning Guide to brainstorm hobbies or interests they have and any careers that might be associated with them. Allow students to share their lists, idea webs, or sketches with an elbow partner as this may give them more ideas that they had not thought of themselves.  ",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Pixels of Me Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use the first box in their Planning Guide to brainstorm hobbies or interests they have and any careers that might be associated with them. Allow students to share their lists, idea webs, or sketches with an elbow partner as this may give them more ideas that they had not thought of themselves.  ",
         "duration": "10",
         "name": "Warm Up",
         "tips": [
@@ -2742,7 +2742,7 @@
       "key": "722672fb-dec0-480a-8edc-7adc7bba13c3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students use the second box in their Planning Guide to brainstorm ideas for how they could represent any their ideas or interests visually. Again, allow students to share their ideas with a partner as this might give them more ideas beyond than what they had thought of themselves.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills have you learned in this unit that could help you create this pixel image?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain how they can use the Neighborhood grid, Painter object and Python code such as functions, loops, and conditionals to “paint” their image. They should also explain how they can use computational thinking skills (decomposition, pattern recognition, abstraction, and algorithms) as well as skills and characteristics such as creativity, problem-solving, team work, detail-oriented, and others discussed throughout the unit to create their algorithms.  "
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use the second box in their Planning Guide to brainstorm ideas for how they could represent any their ideas or interests visually. Again, allow students to share their ideas with a partner as this might give them more ideas beyond than what they had thought of themselves.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What skills have you learned in this unit that could help you create this pixel image?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain how they can use the Neighborhood grid, Painter object and Python code such as functions, loops, and conditionals to “paint” their image. They should also explain how they can use computational thinking skills (decomposition, pattern recognition, abstraction, and algorithms) as well as skills and characteristics such as creativity, problem-solving, team work, detail-oriented, and others discussed throughout the unit to create their algorithms.  "
       },
       "seeding_key": {
         "activity_section.key": "722672fb-dec0-480a-8edc-7adc7bba13c3",
@@ -2753,7 +2753,7 @@
       "key": "abc03c74-3550-4dde-b29f-664d4e99615c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the remaining project requirements.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the first part of the project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the remaining project requirements.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What barriers do you anticipate to achieving success on this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify barriers they anticipate and share any questions they have about the project.",
         "duration": "30",
         "name": "Activity",
         "tips": [
@@ -2782,7 +2782,7 @@
       "key": "3782699a-3f8b-430a-81b2-0ff75904407c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 1 to complete the project:\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 2 to complete the project:\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 3 to complete the project:\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Inform students that they will have the AI Chatbot on Level 2 to use for whatever support they need throughout the process. They can use AI to help them brainstorm, decompose their image, write pseudocode, or help debug any errors.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their pixels of me design, identify the repeated patterns in the image, the functions they should define to create those patterns, and write pseudocode for their functions to plan their project on the Pixels of Me Planning Guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Help students who might be struggling with any of the decomposition steps or with writing their pseudocode for their functions. Encourage students to use the AI chatbot if they need help getting started.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 1 to complete the project:\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 2 to complete the project:\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the tasks students should complete on Day 3 to complete the project:\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Inform students that they will have the AI Chatbot on Level 2 to use for whatever support they need throughout the process. They can use AI to help them brainstorm, decompose their image, write pseudocode, or help debug any errors.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to sketch their pixels of me design, identify the repeated patterns in the image, the functions they should define to create those patterns, and write pseudocode for their functions to plan their project on the Pixels of Me Planning Guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students who might be struggling with any of the decomposition steps or with writing their pseudocode for their functions. Encourage students to use the AI chatbot if they need help getting started.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2809,7 +2809,7 @@
       "key": "65857446-066d-4004-bd7d-c0c09c2f86df",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to select the corresponding grid size that they selected in their project planning guide.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to select the corresponding grid size that they selected in their project planning guide.",
         "progression_name": "Pixels of Me Project"
       },
       "seeding_key": {
@@ -2821,7 +2821,7 @@
       "key": "f0bc93f6-7358-4633-83fc-eaf7f581f6f3",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their functions with a thought partner while working. As you move around the room, engage students with questions about their image, its repeated parts, the functions they plan on creating, and how they might use the AI chatbot."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Encourage students to share and discuss their functions with a thought partner while working. As you move around the room, engage students with questions about their image, its repeated parts, the functions they plan on creating, and how they might use the AI chatbot."
       },
       "seeding_key": {
         "activity_section.key": "f0bc93f6-7358-4633-83fc-eaf7f581f6f3",
@@ -2842,7 +2842,7 @@
       "key": "4df17556-f478-47e6-9829-8a8fbcebe8ce",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection section in their project planning guide. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection section in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -2861,7 +2861,7 @@
       "key": "1597fa14-bfcb-4522-a6c1-d5c69cd5f054",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which function did you write first? Why?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain why they chose to start with writing the function they did. Perhaps they chose to start with that function because it was the quickest to test. Or perhaps they knew that it would hit the most rows in the rubric by utilizing various algorithmic concepts and organized code.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which function did you write first? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain why they chose to start with writing the function they did. Perhaps they chose to start with that function because it was the quickest to test. Or perhaps they knew that it would hit the most rows in the rubric by utilizing various algorithmic concepts and organized code.",
         "duration": "5",
         "name": "Warm Up",
         "tips": [
@@ -2890,7 +2890,7 @@
       "key": "e39f0638-6ae2-4e95-8d13-ae106ff9e258",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to continue developing their projects.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 13, Level 1 to continue developing their projects.",
         "duration": "35",
         "name": "Activity"
       },
@@ -2903,7 +2903,7 @@
       "key": "7befe06d-dca2-4ff8-bc2f-ec1fc82b86d4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. As you move around the room, encourage students to test their functions incrementally (e.g., one function at a time). \n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to TAG one to two peers' programs. As they have done previously, students will leave this TAG feedback on sticky notes at their peer’s computer. ",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. As you move around the room, encourage students to test their functions incrementally (e.g., one function at a time). \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to TAG one to two peers' programs. As they have done previously, students will leave this TAG feedback on sticky notes at their peer’s computer. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2930,7 +2930,7 @@
       "key": "db48dc4e-6b62-4401-bc44-423ce7999d6b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 2 Reflection section in their project planning guide. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 2 Reflection section in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -2964,7 +2964,7 @@
       "key": "d9895f1d-54fb-42c9-b31d-b95939b3e9a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *What are you most proud of about your project so far?*\n- *What challenges do you still need to overcome before submitting your project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they are proud of about their project and any challenges they still need to overcome before they submit their project. ",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the discussion prompts.\n- *What are you most proud of about your project so far?*\n- *What challenges do you still need to overcome before submitting your project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they are proud of about their project and any challenges they still need to overcome before they submit their project. ",
         "duration": "5",
         "name": "Warm Up",
         "tips": [
@@ -2993,7 +2993,7 @@
       "key": "cb25743a-6c5f-4ad9-a403-432350cd7d80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the rubric on the Pixels of Me Project Planning Guide.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to finish developing their Pixels of Me projects.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the rubric on the Pixels of Me Project Planning Guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to finish developing their Pixels of Me projects.",
         "duration": "30",
         "name": "Activity"
       },
@@ -3006,7 +3006,7 @@
       "key": "72629568-453d-4edf-9c99-8cabf55ee9f8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Pixels of Me project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.\n\n<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the Gallery Walk by displaying their project and then going around the room to view classmate’s projects and leave sticky notes with kudos, questions or observations.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Prompt them to consider how the pixel images represent their classmates’ identities. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Pixels of Me project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in the Gallery Walk by displaying their project and then going around the room to view classmate’s projects and leave sticky notes with kudos, questions or observations.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage students to leave a note about what they find interesting or insightful about their peers' work. Prompt them to consider how the pixel images represent their classmates’ identities. Ensure that students are thoughtfully engaging with a variety of projects, not just those of their closest peers."
       },
       "seeding_key": {
         "activity_section.key": "72629568-453d-4edf-9c99-8cabf55ee9f8",
@@ -3017,7 +3017,7 @@
       "key": "872ace58-70fe-43bb-a38c-acdc1ba79875",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Reflection section in their project planning guide. \n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Reflection section in their project planning guide. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner. ",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [

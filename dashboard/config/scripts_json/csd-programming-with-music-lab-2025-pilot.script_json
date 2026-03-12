@@ -1204,7 +1204,7 @@
       "key": "37e82e83-60a0-4717-a844-9a33e4b006f5",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What is the problem you are trying to solve when you do a word search?\n\n**Discuss:** Allow students to discuss their ideas with a classmate before sharing them with the entire class.\n\n**Discussion Goal:** Guide students to the idea that the problem of a word search is that there are hidden words throughout the grid of letters and thus the goal of a word search is to find all the words in the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What are the different strategies that someone could use for finding words? What are the pros and cons of each strategy?\n\n**Discuss:** Allow students to silently record their ideas in writing for a minute. Afterward, invite them to share what they wrote with a neighbor and then finally bring the whole class together to develop a classwide list of strategies.\n\n**Discussion Goal:** This is a quick, low-stakes brainstorm that asks students to bring in their own experiences with word searches and identify strategies they may have used or could use. Student responses may vary but may include the following strategies:\n* Scan each row from left to right followed by scanning each column from top to bottom.\n* Check surrounding letters. Once you found the first letter or a key letter in a word you’re searching for, check the letters around it to see if you should keep going. For example, if you have a word with Q in it, if there’s no U next to it, then you need to keep searching.\n* Look for words that have less-common letters in them such as words with a Q, X, J, or Z\n* Look for words with letter pairs, such as double letters or QU\n* Look for more than one word at a time.\n* Turn the puzzle upside down\n\n**Do This:** Direct students to pick ONE strategy from the list that they want to try and put a “#1” next to it in their journals to indicate it was their first strategy used. Once they pick a strategy, direct students to use that strategy in their word search.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1221,7 +1221,7 @@
       "key": "e13470ca-d351-4561-a562-fb370e59b19d",
       "position": 7,
       "properties": {
-        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
+        "description": "**Circulate:** Give students a few minutes to find as many words as possible. It is okay if they don’t find every word. You may bring everyone back together once everyone has found at least several of the words on the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Display and have students reflect on each of the following prompts:\n* Were you successful in solving this word search problem? How do you know?\n* What strategy did you pick and how did it work for you?\n* Did anyone change strategies at any point … why or why not?\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1249,7 +1249,7 @@
       "key": "e865dfd5-ab2e-4d4a-a2bb-d180b0ad9094",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd-programming-with-music-lab-2025-pilot/unversioned] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the [r the_problem_solving_process/csd-programming-with-music-lab-2025-pilot/unversioned] video in the slides.\n\n**Questions to Consider with Video:**\n* What are the 4 steps to the Problem-Solving Process?",
         "duration": "5",
         "name": "The Problem Solving Process",
         "tips": [
@@ -1327,7 +1327,7 @@
       "key": "5fb87c4a-13da-4a7e-b07d-1e9af3ac4130",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an song?\n\n**Discussion Goal:** Even though students haven't designed music yet, guide students to imagine the steps involved from having the first inspiration for a song to having it created. Some ideas may include:\n* Define: Deciding what you want the mood of the song to be or who you want to make it for\n* Prepare: Listening to other songs and deciding what kinds of sounds, effects, and patterns you want to use or thinking about how the user might interact with the music.\n* Try: Creating a basic version of the song (even if it doesn’t have all of the features)\n* Reflect: Showing it to friends to get feedback and improving the song\n\nAs students finish discussing, transition to the main activity.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What do you remember about the Problem-Solving Process?\n\n**Discussion Goal:** Based on student responses, the teacher should lead students through a discussion about the four steps of the Problem-Solving Process and what they remember to be involved in each step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Based on what you know about the Problem-Solving Process, what do you think each step could look like when designing an song?\n\n**Discussion Goal:** Even though students haven't designed music yet, guide students to imagine the steps involved from having the first inspiration for a song to having it created. Some ideas may include:\n* Define: Deciding what you want the mood of the song to be or who you want to make it for\n* Prepare: Listening to other songs and deciding what kinds of sounds, effects, and patterns you want to use or thinking about how the user might interact with the music.\n* Try: Creating a basic version of the song (even if it doesn’t have all of the features)\n* Reflect: Showing it to friends to get feedback and improving the song\n\nAs students finish discussing, transition to the main activity.\n"
       },
       "seeding_key": {
         "activity_section.key": "5fb87c4a-13da-4a7e-b07d-1e9af3ac4130",
@@ -1483,7 +1483,7 @@
       "key": "fe928a52-2b84-45cb-8f36-7e9625c00baa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Reflect - What was one thing that you think your design does well to meet the needs of the user? What’s an area that you think can still be improved to meet the needs of your user?\n\n**Circulate:** Students can answer these prompts on their activity guide in the Reflect section of the Problem Solving Process.\n\n**Share Out:** Have students share their responses, highlighting similarities between responses even when the users were different.\n"
       },
       "seeding_key": {
         "activity_section.key": "fe928a52-2b84-45cb-8f36-7e9625c00baa",
@@ -1494,7 +1494,7 @@
       "key": "18c98b22-3882-4ca9-bc84-f2d4595c72c7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "name": "Reflection",
         "progression_name": "Student Survey"
       },
@@ -1530,7 +1530,7 @@
       "key": "f8457824-762e-409e-8881-5a80ac2b1c31",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's one example from the video of how music pairs with technology?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Show the [Make Music, Learn Code](https://www.youtube.com/watch?v=GqlP5s7KTl4) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's one example from the video of how music pairs with technology?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this prompt to surface observations from the video about how music and technology are interconnected, such as designing songs fully \"within the box\". Extend the discussion to highlight areas that students may be excited by as they learn more about music lab.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the four aspects of computational thinking:\n- **Algorithmic Thinking:** Going step-by-step to solve a problem\n- **Pattern Recognition:** Using similarities and patterns to solve a problem\n- **Abstraction:** Breaking down a problem into smaller pieces\n- **Decomposition:** Focusing on important details to solve a problem\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> There are many ways music and technology are connected in real-life, but another important aspect is how musicians and computer scientists think about creating songs or solving problems. Throughout this unit, we're going to explore four key computational mindsets for how to create songs with code. Be on the lookout for these as we learn more about Music Lab today!",
         "progression_name": "Make Music, Learn Code Video"
       },
       "seeding_key": {
@@ -1542,7 +1542,7 @@
       "key": "9ac1d7a0-0474-43cb-b2cd-791a27c69828",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students open the Explore level and read the instructions. Students are asked to complete a series of tasks to help them become familiar with navigating Music Lab. Give students time to explore and experiment on their own.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students open the Explore level and read the instructions. Students are asked to complete a series of tasks to help them become familiar with navigating Music Lab. Give students time to explore and experiment on their own.",
         "progression_name": "Explore",
         "tips": [
           {
@@ -1571,7 +1571,7 @@
       "key": "642100fe-ebac-480f-b62a-85eddbc3cae5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1599,7 +1599,7 @@
       "key": "3943702d-64cc-43f4-bd52-bc8949dbf36b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `play together` block works, and that since the Bass track is on the outside it will play afterwards. Ensure students understand why the code behaves the way it does before continuing. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `play together` block works, and that since the Bass track is on the outside it will play afterwards. Ensure students understand why the code behaves the way it does before continuing. "
       },
       "seeding_key": {
         "activity_section.key": "3943702d-64cc-43f4-bd52-bc8949dbf36b",
@@ -1610,7 +1610,7 @@
       "key": "0aa3cbdd-b64f-4418-9cda-24858cc8fd21",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -1639,7 +1639,7 @@
       "key": "b0dc769d-72d9-40fe-9ee6-f09a25d13716",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace."
       },
       "seeding_key": {
         "activity_section.key": "b0dc769d-72d9-40fe-9ee6-f09a25d13716",
@@ -1667,7 +1667,7 @@
       "key": "078cb9c3-a468-44f1-966f-000dabb30989",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways."
       },
       "seeding_key": {
         "activity_section.key": "078cb9c3-a468-44f1-966f-000dabb30989",
@@ -1695,7 +1695,7 @@
       "key": "54f501c4-7ec4-48be-8ac4-dd595d846c3a",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
         "progression_name": "Assessment",
         "tips": [
           {
@@ -1713,7 +1713,7 @@
       "key": "ce2f9704-c436-4605-9a73-98837e5777b3",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
         "tips": [
           {
@@ -1731,7 +1731,7 @@
       "key": "5e685e17-9421-4f73-ad4e-824d11bba621",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
       },
       "seeding_key": {
         "activity_section.key": "5e685e17-9421-4f73-ad4e-824d11bba621",
@@ -1742,7 +1742,7 @@
       "key": "c506ec96-16e4-4f05-809c-9aa5bd805dbb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -1790,7 +1790,7 @@
       "key": "042f14a8-82b4-4a9c-a38d-779a87a3c9a9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
         "name": "Differentiated Warm-Up"
       },
       "seeding_key": {
@@ -1802,7 +1802,7 @@
       "key": "57857a4e-0ee5-475b-95c6-d1a4835b8996",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
         "name": "Pair Programming",
         "tips": [
           {
@@ -1820,7 +1820,7 @@
       "key": "a2299a48-5771-4569-a050-cdda120648bb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1904,7 +1904,7 @@
       "key": "8c5edcd4-c183-41d6-99c4-4c0eef768581",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
         "tips": [
           {
@@ -1922,7 +1922,7 @@
       "key": "8c2f8e3f-92ed-47f1-8605-a1e1763f2f92",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
         "tips": [
           {
@@ -1951,7 +1951,7 @@
       "key": "b761d626-b433-497a-bc5c-5c29eef88e37",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -1974,7 +1974,7 @@
       "key": "ee59639d-a169-4af0-9b0d-3a8c6ae73d74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the [Spotlight: Henny Tha Bizness](https://www.youtube.com/watch?v=OrrZPzgWPII) video\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one example from the video of how Henny combines music and technology?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how Henny uses an editing machine to combine the tracks for songs, similar to how students use music lab. They may also notice how Henny applies effects to track using this technology.\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A record producer is just one example of someone who combines music and technology similar to what we've been doing in music lab. Today, we're going to apply what we've been learning similar to how a record producer works with tracks and artists."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [Spotlight: Henny Tha Bizness](https://www.youtube.com/watch?v=OrrZPzgWPII) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one example from the video of how Henny combines music and technology?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify how Henny uses an editing machine to combine the tracks for songs, similar to how students use music lab. They may also notice how Henny applies effects to track using this technology.\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> A record producer is just one example of someone who combines music and technology similar to what we've been doing in music lab. Today, we're going to apply what we've been learning similar to how a record producer works with tracks and artists."
       },
       "seeding_key": {
         "activity_section.key": "ee59639d-a169-4af0-9b0d-3a8c6ae73d74",
@@ -1985,7 +1985,7 @@
       "key": "d6827ff1-6012-4ca6-8e5b-9c978264ee7c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Henny and how he uses effects.\n\n",
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Henny and how he uses effects.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2002,7 +2002,7 @@
       "key": "d0de8363-1dbc-473d-9e7a-c24ee37b4690",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
         "progression_name": "Skill Review"
       },
       "seeding_key": {
@@ -2014,7 +2014,7 @@
       "key": "614c6a0d-f3b3-41b7-a4e8-c9cf13c0a794",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
         "progression_name": "Check-in",
         "tips": [
           {
@@ -2032,7 +2032,7 @@
       "key": "4059fccd-9d79-410f-901f-fdc2af15a979",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students read through the spotlight on Henny Tha Bizness",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read through the spotlight on Henny Tha Bizness",
         "progression_name": "Spotlight: Henny Tha Bizness, Record Producer"
       },
       "seeding_key": {
@@ -2044,7 +2044,7 @@
       "key": "b0edcef0-7d12-4eba-aff4-58187adaeb4f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue through the remaining levels in the lesson. Students will learn about the Effect blocks and how to apply them to songs.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue through the remaining levels in the lesson. Students will learn about the Effect blocks and how to apply them to songs.",
         "progression_name": "Effects"
       },
       "seeding_key": {
@@ -2106,7 +2106,7 @@
       "key": "efb316b1-be65-40a2-ab24-25af3f58e240",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2142,7 +2142,7 @@
       "key": "76c6f196-6c9c-4f9c-bdfb-757ace4e5810",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who is a character in a movie or show who has a distinctive musical theme? Where every time you hear the music, you think of that character?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** It may take some time for students to think of examples here, but once they hear a few they may be more likely to come up with additional examples. Another way to frame this question is: if you were walking by a room and heard this musical theme, you'd know what movie or show someone was watching Some examples you could supply are:\n- [Bluey](https://www.youtube.com/watch?v=8nv1m-aTCZI) has a very distinctive theme song\n- [Harry Potter](https://www.youtube.com/watch?v=wtHra9tFISY) has a distinctive theme\n- Baseball players or wrestlers have distinctive music for when they enter an arena\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we're going to apply everything we've learned so far to create Walk-Up songs for different characters in books or TV shows! In order to make these songs, we're going to learn about a new feature in music lab: Triggers!"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Who is a character in a movie or show who has a distinctive musical theme? Where every time you hear the music, you think of that character?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** It may take some time for students to think of examples here, but once they hear a few they may be more likely to come up with additional examples. Another way to frame this question is: if you were walking by a room and heard this musical theme, you'd know what movie or show someone was watching Some examples you could supply are:\n- [Bluey](https://www.youtube.com/watch?v=8nv1m-aTCZI) has a very distinctive theme song\n- [Harry Potter](https://www.youtube.com/watch?v=wtHra9tFISY) has a distinctive theme\n- Baseball players or wrestlers have distinctive music for when they enter an arena\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we're going to apply everything we've learned so far to create Walk-Up songs for different characters in books or TV shows! In order to make these songs, we're going to learn about a new feature in music lab: Triggers!"
       },
       "seeding_key": {
         "activity_section.key": "76c6f196-6c9c-4f9c-bdfb-757ace4e5810",
@@ -2153,7 +2153,7 @@
       "key": "7ebb4d49-3ce2-4011-b4d3-4869b540cdcf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Trigger levels and the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Walk Up Songs Activity Guide](https://docs.google.com/document/d/1-NOQXuyOA4TXy2X4oACt97K0f64h2TlkP2tc3-YQKRI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Trigger levels and the Prepare portion of the activity guide",
         "progression_name": "Triggers"
       },
       "seeding_key": {
@@ -2176,7 +2176,7 @@
       "key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) for students to use while coding. Then they can continue to the next levels."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Walk Up Songs Rubric](https://docs.google.com/document/d/1poW9kQYsXnBX2w7jCKhN9qjTbJ52qRDrn8jZf62S3-g/edit?tab=t.0) for students to use while coding. Then they can continue to the next levels."
       },
       "seeding_key": {
         "activity_section.key": "185e350d-e4ba-4689-9e0f-e2b78df65ded",
@@ -2198,7 +2198,7 @@
       "key": "7e54404f-6dd8-4f1a-bc92-f8a316f07b08",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Students who finish their walk-up songs can participate in this Partner Game:\n- Tell your partners who your three characters are and describe the character's personalities.\n- Play one of your Walk-Up songs without saying which character it belongs to.\n- Allow your partner to match the song to a character.\n- Ask them to explain their choice.\n- If they guess wrong, listen to their explanation and adjust your code to make the song fit the character better.\n- Repeat with new partners until someone guesses all three correctly!",
         "progression_name": "(Optional) Partner Game"
       },
       "seeding_key": {
@@ -2232,7 +2232,7 @@
       "key": "f3bdb519-d21e-4d10-bcfa-f5f5e40cb211",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2267,7 +2267,7 @@
       "key": "193bca1f-b27d-405e-8111-1e22d24e631d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallett - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Choose from one of the following videos to show the class:\n- [Owen Pallett - Live on KEXP](https://youtu.be/kz4KASHRsT4?t=1440) (start at 24:00 - This is The Dream of Win and Regine)\n- [Carolina Eyck - Ennio Morricone cover with Theramin and Voice](https://www.youtube.com/watch?v=ajM4vYCZMZk)\n- [Hailey Knox - New Guitar Loop](https://www.youtube.com/watch?v=j4iqfYEx23c)\n- [Reggie Watts - I Just Want To](https://www.youtube.com/watch?v=344OpaQCAQI)\n\nEach video features an artist who uses a loop pedal to construct the backing tracks for their songs live as the song is being performed. You may decide to only show part of the video (usually up a minute) during a sequence that highlights this feature.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2284,7 +2284,7 @@
       "key": "7afbae50-1e21-47ed-a7ed-d2fa2ee9ef5a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is unique about how this artist is making the backing track under their vocals?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** This question has a straightforward answer - the artist is 'looping' sounds from their voice or instrument to create the backing track - but the discussion can be open-ended and highlight aspects of the performance that students find intriguing. For example, Reggie Watts and Kishi Bashi use effects as part of their performance and students may connect this to the previous lesson. Or students may be intrigued by the live element of the performance and how the sounds are created \"on the fly\".\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This performance highlights a new concept we'll explore today: how to create loops in our code. By using loops, we can easily repeat certain tracks to play underneath our main vocals or other tracks."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is unique about how this artist is making the backing track under their vocals?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This question has a straightforward answer - the artist is 'looping' sounds from their voice or instrument to create the backing track - but the discussion can be open-ended and highlight aspects of the performance that students find intriguing. For example, Reggie Watts and Kishi Bashi use effects as part of their performance and students may connect this to the previous lesson. Or students may be intrigued by the live element of the performance and how the sounds are created \"on the fly\".\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This performance highlights a new concept we'll explore today: how to create loops in our code. By using loops, we can easily repeat certain tracks to play underneath our main vocals or other tracks."
       },
       "seeding_key": {
         "activity_section.key": "7afbae50-1e21-47ed-a7ed-d2fa2ee9ef5a",
@@ -2295,7 +2295,7 @@
       "key": "09d1f1f6-2bc5-4f8d-ba86-924d7705f9a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
         "progression_name": "Predict",
         "tips": [
           {
@@ -2313,7 +2313,7 @@
       "key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `repeat` block works and ensure students understand why the code behaves the way it does before continuing. "
       },
       "seeding_key": {
         "activity_section.key": "d26f0865-798d-4304-9d25-ea06d3f216c6",
@@ -2324,7 +2324,7 @@
       "key": "b53475a7-0a77-4d5b-ab02-79454103847b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate",
         "tips": [
           {
@@ -2353,7 +2353,7 @@
       "key": "d7d37c51-e673-43a7-852a-7ba84024cd87",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace.",
         "progression_name": "Check-in",
         "tips": [
           {
@@ -2371,7 +2371,7 @@
       "key": "f660339d-512b-45c3-948d-cf0ff78d5834",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways.",
         "progression_name": "Practice",
         "tips": [
           {
@@ -2389,7 +2389,7 @@
       "key": "b6eee070-9480-45da-ae44-320f3776de26",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
         "progression_name": "Assessment",
         "tips": [
           {
@@ -2407,7 +2407,7 @@
       "key": "9c14ea97-3d6b-44d4-8e2d-9634a8301f94",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
         "tips": [
           {
@@ -2425,7 +2425,7 @@
       "key": "89725022-adae-4419-a015-ab16c26706bc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
       },
       "seeding_key": {
         "activity_section.key": "89725022-adae-4419-a015-ab16c26706bc",
@@ -2436,7 +2436,7 @@
       "key": "f29d84da-93f6-42bb-936b-3e7656e30d62",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2484,7 +2484,7 @@
       "key": "8f283b1c-0adf-4e1c-ba46-bd2d3085685f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
         "name": "Differentiated Warm-Up"
       },
       "seeding_key": {
@@ -2496,7 +2496,7 @@
       "key": "31704f5c-3358-497f-b39f-61bb654fd15d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
         "name": "Pair Programming",
         "tips": [
           {
@@ -2514,7 +2514,7 @@
       "key": "5a8eb623-15e9-4a41-a450-193aa7ccc878",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2592,7 +2592,7 @@
       "key": "37783e65-abb5-488f-b0e5-7ba1a48aa229",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Make sure students split up from pair programming and go back to working independently for the Assessment level.",
         "progression_name": "Assessment",
         "tips": [
           {
@@ -2610,7 +2610,7 @@
       "key": "c2c62d2a-0ef8-4a37-9407-a263bd828d5a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -2622,7 +2622,7 @@
       "key": "82224a4c-3bfd-4e42-9fe4-624536112757",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2645,7 +2645,7 @@
       "key": "83ed11bb-2791-43ad-b708-988e4292a203",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-video\" aria-hidden=\"true\"></i> **Video:**  Watch the [Spotlight: Roxanne Harris, Creative Coder](https://www.youtube.com/watch?v=MDtQjObQ8yY) video\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one example from the video of how Roxanne combines music and technology?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** There are many examples from the video, such as how Roxanne uses code to create music as well as how she structures her live performances. Students may also notice the ways Roxanne describes how her process is creative and personal, invoking her personal passions for music and code.\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Roxanne is an artist who combines music and code for her performances, which is one example of how to combine music and technology beyond what we've been learning in music lab. Today, we're going to apply what we've been learning similar to how Roxanne creates her live performances."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:**  Watch the [Spotlight: Roxanne Harris, Creative Coder](https://www.youtube.com/watch?v=MDtQjObQ8yY) video\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What is one example from the video of how Roxanne combines music and technology?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There are many examples from the video, such as how Roxanne uses code to create music as well as how she structures her live performances. Students may also notice the ways Roxanne describes how her process is creative and personal, invoking her personal passions for music and code.\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Roxanne is an artist who combines music and code for her performances, which is one example of how to combine music and technology beyond what we've been learning in music lab. Today, we're going to apply what we've been learning similar to how Roxanne creates her live performances."
       },
       "seeding_key": {
         "activity_section.key": "83ed11bb-2791-43ad-b708-988e4292a203",
@@ -2656,7 +2656,7 @@
       "key": "7e32930d-0dc5-4076-ad6a-57430cf5498d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Roxanne and how she does live coding.",
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Roxanne and how she does live coding.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2673,7 +2673,7 @@
       "key": "7a4ad474-0a67-4626-a9f6-a970eb28f9e0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
         "progression_name": "Skill Review"
       },
       "seeding_key": {
@@ -2685,7 +2685,7 @@
       "key": "73185e6c-facc-4c16-b310-bba7d1b1abed",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
         "progression_name": "Check-In",
         "tips": [
           {
@@ -2703,7 +2703,7 @@
       "key": "cb4a919f-e1b1-4c95-b693-d2ddfcadc80b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students read through the spotlight on Roxanne Harris",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read through the spotlight on Roxanne Harris",
         "progression_name": "Spotlight: Roxanne Harris, Creative Coder"
       },
       "seeding_key": {
@@ -2715,7 +2715,7 @@
       "key": "6898a8ac-48b5-479f-909b-d60f9fbef2fb",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue through the remaining levels in the lesson. Students will learn about how to interact with Music Lab to perform \"live performances\".",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue through the remaining levels in the lesson. Students will learn about how to interact with Music Lab to perform \"live performances\".",
         "tips": [
           {
             "type": "teachingTip",
@@ -2793,7 +2793,7 @@
       "key": "7a695e4b-2f8b-4b51-85a7-ff265a79dc1b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2829,7 +2829,7 @@
       "key": "b6fa22e8-e5f4-4ee8-a081-552811ef9342",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of something visual that you've seen loop forever? What are those visuals usually trying to communicate?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** It may take some time for students to think of examples here, but once they hear a few they may be more likely to come up with additional examples. Once clear example are gifs or memes, which usually try to communicate something silly or funny but can also provide satire or social commentary. Students may also think of public safety animations, such as a crossing-guard animation saying it is okay to cross or you need to stop. These types of visuals communicate safety information. When it seems like students have surfaced several examples, continue with the discussion\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with several cat GIFs on it\n\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we're going to combine visual loops and sound loops by adding a looped backing track to a cat GIF of your choice. You will need to determine the mood or vibe of your particular gif and create a song that matches this mood. To make things more interesting, we're also going to learn how we can randomize tracks in a song to add to make our song more unexpected."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of something visual that you've seen loop forever? What are those visuals usually trying to communicate?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** It may take some time for students to think of examples here, but once they hear a few they may be more likely to come up with additional examples. Once clear example are gifs or memes, which usually try to communicate something silly or funny but can also provide satire or social commentary. Students may also think of public safety animations, such as a crossing-guard animation saying it is okay to cross or you need to stop. These types of visuals communicate safety information. When it seems like students have surfaced several examples, continue with the discussion\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with several cat GIFs on it\n\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we're going to combine visual loops and sound loops by adding a looped backing track to a cat GIF of your choice. You will need to determine the mood or vibe of your particular gif and create a song that matches this mood. To make things more interesting, we're also going to learn how we can randomize tracks in a song to add to make our song more unexpected."
       },
       "seeding_key": {
         "activity_section.key": "b6fa22e8-e5f4-4ee8-a081-552811ef9342",
@@ -2840,7 +2840,7 @@
       "key": "963171d2-09c2-485a-9374-29dc7cfd8753",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Play Random levels and the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Cat GIFs Activity Guide](https://docs.google.com/document/d/1JQWXQ39-DKoE2gbwLi7v-BdV0Dcn3Z9IMY0515-pKVI/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Play Random levels and the Prepare portion of the activity guide",
         "progression_name": "Play Random"
       },
       "seeding_key": {
@@ -2863,7 +2863,7 @@
       "key": "2671e45f-3a29-49b0-a0dd-42f66fd70a68",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Trigger levels and the Prepare steps. They should check in with you before continuing to try and code their walk-up songs.\n\nOnce you've approved students progress so far, hand out a copy of the [Cat GIF Loops Rubric](https://docs.google.com/document/d/1ZW8gD3eA3lXAur9_PSC8nL2h6VJrcW2fBC3rxwm8Moc/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Musical Cat GIFs"
       },
       "seeding_key": {
@@ -2886,7 +2886,7 @@
       "key": "43cb3bf3-4ce3-4bf3-a0f7-493b93c31700",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -2932,7 +2932,7 @@
       "key": "3531fdbf-bfd5-4b2f-93df-e89cec5d5896",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Predict level. Have students respond to the two questions within the level:\n- Write down anything you **notice** about the code\n- Make a **prediction** - what do you think will happen when you press Run?\n\nOnce students have made a prediction, they can press Run to see the result.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2960,7 +2960,7 @@
       "key": "daf4427a-73cc-43d2-b288-eb66b73909f9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `function` block works. Ensure students understand why the code behaves the way it does before continuing. "
+        "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Once the class has seen the code, lead a discussion about what went as expected and what was surprising. Explicitly explain how the `function` block works. Ensure students understand why the code behaves the way it does before continuing. "
       },
       "seeding_key": {
         "activity_section.key": "daf4427a-73cc-43d2-b288-eb66b73909f9",
@@ -2971,7 +2971,7 @@
       "key": "36b61d68-b2fd-4ac8-8067-4c9739cb2431",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide how you would like students to continue through the investigate levels. Here are some options:\n\n- **Complete as a Class:** Guide students through completing these levels, modeling how to interact with the workspace and the new code blocks. The class can feel like a communal Pair Programming experience, with you acting as the driver and the class acting as the navigator providing suggestions and steps for how to solve each level. Once the Investigate levels are completed as a class, students can skip to the Check-In to complete independently\n- **Independent First, Check as a Class**: Set a timer and allow students to start the levels independently or with partners. Once the timer is up, go over the levels as a class. Students can choose whether or not to pause and listen, or quietly continue in the lessons. This allows students who have been to quietly continue through the levels, while students who may be struggling are able to follow along as a class and compare their work to the correct answers\n- **Independently with Support:** Students work through the Investigate levels with structured supports for if they get stuck, such as providing red, yellow, and green \"stop signs\" for students to self-reflect on how they're feeling about the lesson so far and invite intervention if needed.",
         "progression_name": "Investigate"
       },
       "seeding_key": {
@@ -2994,7 +2994,7 @@
       "key": "bf341d58-2916-4181-8ccf-83387e5e1e2f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to the Check-In level. The remaining levels can be completed independently at students' own pace.",
         "progression_name": "Check-In",
         "tips": [
           {
@@ -3012,7 +3012,7 @@
       "key": "9fc4c990-b11f-413a-be82-58674c3a5c5f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete at least 2 practice levels. Practice levels are designed to be around the same level of difficulty, but may ask students to apply skills in different ways.",
         "progression_name": "Practice",
         "tips": [
           {
@@ -3030,7 +3030,7 @@
       "key": "e2259ccb-abfb-4798-a304-67d2bba3a048",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the assessment independently",
         "progression_name": "Assessment",
         "tips": [
           {
@@ -3048,7 +3048,7 @@
       "key": "ffbc1174-9440-4bb2-af8c-40c5616a0eb9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge",
         "tips": [
           {
@@ -3066,7 +3066,7 @@
       "key": "f1f511c6-3c08-4edd-b92f-7d7a71cb040f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's an example of how you used computational thinking in one of the levels today?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should refer back to the Practice levels they completed and the strategies highlighted in each level. By sharing out, students get to hear about choice levels they may have skipped and get new ideas for how computational thinking is tied to building songs with code. Consider having students complete this discussion using the speed pair protocol or another strategy where students can hear many different perspectives quickly"
       },
       "seeding_key": {
         "activity_section.key": "f1f511c6-3c08-4edd-b92f-7d7a71cb040f",
@@ -3077,7 +3077,7 @@
       "key": "45a59ccc-06f5-48d3-86e6-50c818741280",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3125,7 +3125,7 @@
       "key": "7beec2f2-ed25-4f29-8a39-1850a2bccb9a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Decide on how you want to start class based on your analysis of the Assessment level from the previous day:\n- If many students did not reach the Assessment or do well on it: **Whole-Class Reteach** -  go over one of the Practice levels as a class, then have students complete an Assessment or Challenge level\n- If some students did not reach the Assessment or do well: **Targeted Intervention** - have the class complete a challenge level from yesterday while you do targeted interventions with students who may have struggled\n- If most students completed the assessment and did well: **Start the lesson** - you can jump straight into today's lesson to give students more time to practice and reach the challenge levels.",
         "name": "Differentiated Warm Up"
       },
       "seeding_key": {
@@ -3137,7 +3137,7 @@
       "key": "46571490-c461-46d1-928b-2d5934224e28",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get into pairs for Pair Programming, where one student is the driver and the other is the navigator. This process is highlighted in [this video](https://www.youtube.com/watch?v=q7d_JtyCq1A), which you can show to the class. You can have students switch roles based on a timer, or switch every time they complete a level. Students can pair program through the Practice levels, and then split back up for the Assessment level. ",
         "name": "Pair Programming"
       },
       "seeding_key": {
@@ -3149,7 +3149,7 @@
       "key": "63a69b06-d79a-4b76-a992-b9f5a2465847",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work through the levels in class. Students can use their pair programming partners for support, along with the callout icons in instructions and the example music players.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete levels. Most of class is spent within levels, providing lots of opportunity to check-in individually with students as needed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3244,7 +3244,7 @@
       "key": "400864d9-b068-4e0f-b223-dceb66e2706a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **(Optional) Do This:** Have students complete as many Challenge levels as they can.",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -3267,7 +3267,7 @@
       "key": "9285f61e-e18d-4aa5-b667-bdd92036fc1d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3317,7 +3317,7 @@
       "key": "9e6fb753-8792-4ff2-b640-40c2ed208d43",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Altrice and how he creates remixes.",
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We're going to start with a quick review of some skills from this week and a check-in level. Once you've passed the check-in, we'll continue to learn more about Altrice and how he creates remixes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3334,7 +3334,7 @@
       "key": "a54cd61f-1e05-4a3c-9e47-71d3f2fd2f58",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students log into the Skill Review level. These levels are a review of all of the skills students have seen in the last two lessons. \n- If students feel confident in what they've been learning, have them continue to the Check-In level.\n- If students have been absent or need a review, have them review the sublevels before continuing to the Check-In",
         "progression_name": "Skill Review"
       },
       "seeding_key": {
@@ -3346,7 +3346,7 @@
       "key": "4ab2df96-e5f2-4b8e-b4f4-6d487e7f771f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Check-In",
         "progression_name": "Check-In",
         "tips": [
           {
@@ -3436,7 +3436,7 @@
       "key": "f97c9623-868b-4d3e-9b4a-44160824aaf2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -3472,7 +3472,7 @@
       "key": "c265b450-b548-49ca-a11e-0a05b78c7a56",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Try to create a definitive list of the different genres that the songs in Music Lab fall into. For example: Fireworks by Katy Perry and Espresso by Sabrina Carpenter are pop songs, but Karma by Denzel Kennedy is a hip-hop song and Beethoven's Symphony is a classical song. Try to come up with as many genres as you can!\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Have students share their ideas as a class. If students struggle coming up with genres, consider sharing the [list of genres and categories used by the Grammy's](https://en.wikipedia.org/wiki/List_of_Grammy_Award_categories). Don't aim for consensus amongst the class, but instead surface the idea that there are many different genres that a song can fall into and these genres can have distinct styles or feelings. Once a large list has been generated, transition to the next activity"
       },
       "seeding_key": {
         "activity_section.key": "c265b450-b548-49ca-a11e-0a05b78c7a56",
@@ -3483,7 +3483,7 @@
       "key": "dd70f5f9-0714-495f-8487-e100a3c0100b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Every song has a genre or two that it belongs to, and one exciting thing a musical artist can do is remix or re-record a song in a different genre. This is the focus of our next project - taking an existing song and remixing it to a different genre. For example: taking a pop song and making it sound like a heavy rock song, or taking a hip-hop song and making it sound like an indie song.",
+        "description": "<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Every song has a genre or two that it belongs to, and one exciting thing a musical artist can do is remix or re-record a song in a different genre. This is the focus of our next project - taking an existing song and remixing it to a different genre. For example: taking a pop song and making it sound like a heavy rock song, or taking a hip-hop song and making it sound like an indie song.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3500,7 +3500,7 @@
       "key": "79336cfe-aee9-4c6e-b8e8-ddfa66422deb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the [Genre Mashup Activity Guide](https://docs.google.com/document/d/12HPEKHdaWP7EG4m84TnoNppAu1eqeYBF6rUEmIFcyLU/edit) to each student\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the Overview as a class\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Define portion of the activity guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students login to Music Lab to complete the Prepare portion of the activity guide",
         "progression_name": "Prepare"
       },
       "seeding_key": {
@@ -3512,7 +3512,7 @@
       "key": "ef8b24c9-d31f-470d-af4a-bcf15fd34c69",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check in with students as they complete the Prepare steps. They should check in with you before continuing to try and code their genre mashups.\n\nOnce you've approved students progress so far, pass out the [Genre Mashup Rubric](https://docs.google.com/document/d/1FQAtWffIufswEhLG6LwZnyKSfnP7KG1nhthJi5w65bM/edit?tab=t.0). Then they can continue to the next levels.",
         "progression_name": "Genre Mashup"
       },
       "seeding_key": {
@@ -3535,7 +3535,7 @@
       "key": "a8c5b4f2-b76b-4b3d-832a-7ca2d6c326b7",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete the survey on the last level of the lesson. ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {

@@ -879,7 +879,7 @@
       "key": "cba85ce9-abd5-4b33-bb5d-9dec81e844ce",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "cba85ce9-abd5-4b33-bb5d-9dec81e844ce",
@@ -917,7 +917,7 @@
       "key": "375be062-3e48-4e6a-8f0e-6a1bb84f6ac6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students repeat the toss exactly five times, whether they make or miss the basket. Have them record their W/L sequence for all five tosses.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students stop after exactly five tosses, and that they record a clear sequence of W and L.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students repeat the toss exactly five times, whether they make or miss the basket. Have them record their W/L sequence for all five tosses.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students stop after exactly five tosses, and that they record a clear sequence of W and L.",
         "tips": [
           {
             "type": "teachingTip",
@@ -944,7 +944,7 @@
       "key": "bd49a347-e7e9-473a-a1bf-714b4e5de696",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students keep tossing until they make basket. Once they make it, have them note how many tosses it took.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Watch that students stop right after their first W. Ask questions like: How did you know when to stop? Did everyone need the same number of tosses? Help students notice that the number of repetitions varies from person to person.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students keep tossing until they make basket. Once they make it, have them note how many tosses it took.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch that students stop right after their first W. Ask questions like: How did you know when to stop? Did everyone need the same number of tosses? Help students notice that the number of repetitions varies from person to person.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -988,7 +988,7 @@
       "key": "54f7074b-d95f-4ef9-a8f5-6c663f7ba5da",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *iteration*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 2.\n- Level 1: Read the definition and laundry example of iteration.\n- Level 2: Write your own definition of iteration and include a real-world example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check students' Level 2 responses for a clear sense of \"repeating a set of steps,\" not just \"repeating something.\" Ask probing questions like \"What steps get repeated? How many times?\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *iteration*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1 to complete Levels 1 through 2.\n- Level 1: Read the definition and laundry example of iteration.\n- Level 2: Write your own definition of iteration and include a real-world example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check students' Level 2 responses for a clear sense of \"repeating a set of steps,\" not just \"repeating something.\" Ask probing questions like \"What steps get repeated? How many times?\"",
         "progression_name": "Vocab: Iteration",
         "tips": [
           {
@@ -1043,7 +1043,7 @@
       "key": "0f735fb9-486c-45a3-9bfd-ce584db8cf58",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete Levels 3 through 5. Tell them they will explore a model for loop flowchart, then design their own representing something meaningful to them. Optional - Direct students to complete the Flowcharting Loops activity guide on paper and sketch out their flowchart by hand. Remind students to pick a task with a known number of repeats (for example, ten shots, three sets of an exercise, five questions). Emphasize labeling start, stop, and step.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students' flowcharts include an initialization (start value), a clear stopping point, and a step that changes the counter. Ask questions like \"Where does your loop start?\" \"How do you know when it stops?\" and \"What changes each time?\" Redirect any tasks that do not have a fixed number of repetitions.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to complete Levels 3 through 5. Tell them they will explore a model for loop flowchart, then design their own representing something meaningful to them. Optional - Direct students to complete the Flowcharting Loops activity guide on paper and sketch out their flowchart by hand. Remind students to pick a task with a known number of repeats (for example, ten shots, three sets of an exercise, five questions). Emphasize labeling start, stop, and step.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students' flowcharts include an initialization (start value), a clear stopping point, and a step that changes the counter. Ask questions like \"Where does your loop start?\" \"How do you know when it stops?\" and \"What changes each time?\" Redirect any tasks that do not have a fixed number of repetitions.",
         "progression_name": "For Loop Flowchart"
       },
       "seeding_key": {
@@ -1082,7 +1082,7 @@
       "key": "5ce36921-6916-4afe-89f9-9cfd2530d0a2",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *for loop*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that in condition-controlled loops, the number of repetitions is not fixed ahead of time. The loop continues as long as some condition is true, such as \"while light is green\" or \"while light is red.\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *for loop*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that in condition-controlled loops, the number of repetitions is not fixed ahead of time. The loop continues as long as some condition is true, such as \"while light is green\" or \"while light is red.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1109,7 +1109,7 @@
       "key": "0b27a3b8-398e-4c85-b94f-4a28461ced65",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 6 to complete Levels 6 through 8. Explain that they will explore a model while loop flowchart and then create one of their own where repetition depends on a condition. Emphasize choosing a situation where you do not know the exact number of repeats ahead of time. For example, studying until you feel ready, checking messages until inbox is empty, playing until someone wins.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for a clear condition in the decision diamond and a path that updates something so the loop can eventually end. Ask, \"What has to change for this loop to stop?\" and \"Where in your flowchart does that change happen?\" Help students avoid infinite loops where the condition never becomes false.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 6 to complete Levels 6 through 8. Explain that they will explore a model while loop flowchart and then create one of their own where repetition depends on a condition. Emphasize choosing a situation where you do not know the exact number of repeats ahead of time. For example, studying until you feel ready, checking messages until inbox is empty, playing until someone wins.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for a clear condition in the decision diamond and a path that updates something so the loop can eventually end. Ask, \"What has to change for this loop to stop?\" and \"Where in your flowchart does that change happen?\" Help students avoid infinite loops where the condition never becomes false.",
         "progression_name": "While Loop Flowchart"
       },
       "seeding_key": {
@@ -1148,7 +1148,7 @@
       "key": "f516f052-940a-40e3-8100-7c8e484ab3cc",
       "position": 20,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *while loop*.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When would you use a for loop? When would you use a while loop?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that you would use a for loop for a known count with a clear stop value and step value. And you would use a while loop for evaluating a condition.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *while loop*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *When would you use a for loop? When would you use a while loop?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students articulate that you would use a for loop for a known count with a clear stop value and step value. And you would use a while loop for evaluating a condition.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1175,7 +1175,7 @@
       "key": "a3b6969a-af3b-42ad-8ec8-bdb7df5374b9",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 9. Explain that they will upload a screenshot of one of their flowcharts to AI to translate it into pseudocode. Have students rewrite their flowcharts in plain language (pseudocode). Emphasize that getting the logic right matters more than exact coding syntax right now. Encourage students to edit the AI's suggestion so it accurately matches their diagrams.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are uploading an image of their flowchart to AI and reading over the resulting pseudocode. Ask questions like \"Where is your start value here?\" \"How do you know when this loop stops?\" Support students in correcting AI output that is inaccurate or incomplete.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 9. Explain that they will upload a screenshot of one of their flowcharts to AI to translate it into pseudocode. Have students rewrite their flowcharts in plain language (pseudocode). Emphasize that getting the logic right matters more than exact coding syntax right now. Encourage students to edit the AI's suggestion so it accurately matches their diagrams.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are uploading an image of their flowchart to AI and reading over the resulting pseudocode. Ask questions like \"Where is your start value here?\" \"How do you know when this loop stops?\" Support students in correcting AI output that is inaccurate or incomplete.",
         "progression_name": "Loops in Pseudocode",
         "tips": [
           {
@@ -1193,7 +1193,7 @@
       "key": "70c82acf-881d-4cb3-8791-9b5e68834269",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term."
       },
       "seeding_key": {
         "activity_section.key": "70c82acf-881d-4cb3-8791-9b5e68834269",
@@ -1204,7 +1204,7 @@
       "key": "c32b13e4-8dde-40ea-a885-33f45974c721",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 10 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 10 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1228,7 +1228,7 @@
       "key": "faceb37a-8397-4df7-9507-a139f153312c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *loop variable*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *start value*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *stop value*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *step value*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 2.\n- Level 1: Read the definition and visual for \"loop variable.\"\n- Level 2: Explain \"loop variable\" in their own words with an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen to how students describe the loop variable. Prompt them to connect it to the counting they did in the warm up and to i in a for loop. Ask, \"What does this variable keep track of?\" and \"How does changing it affect the loop?\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *loop variable*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *start value*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *stop value*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *step value*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to complete Levels 1 through 2.\n- Level 1: Read the definition and visual for \"loop variable.\"\n- Level 2: Explain \"loop variable\" in their own words with an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to how students describe the loop variable. Prompt them to connect it to the counting they did in the warm up and to i in a for loop. Ask, \"What does this variable keep track of?\" and \"How does changing it affect the loop?\"",
         "progression_name": "Vocab: Loop Variable",
         "tips": [
           {
@@ -1256,7 +1256,7 @@
       "key": "82ee7703-bcce-4ce5-a44a-a9f09c18b711",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce Quality Assurance (QA) teams."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce Quality Assurance (QA) teams."
       },
       "seeding_key": {
         "activity_section.key": "82ee7703-bcce-4ce5-a44a-a9f09c18b711",
@@ -1279,7 +1279,7 @@
       "key": "145ea16f-01cd-4367-adb8-a4c6f5803818",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3 to complete Levels 3 through 5. Frame students as the QA (Quality Assurance) team testing a password generator. Ask them to run the code multiple times with different requested lengths and pay attention to how many characters they actually get.\n- Level 3: Debug the Broken Password Generator so that the generated password has the same number of characters entered.\n- Level 4: Read the definition and visual for \"off-by-one error.\"\n- Level 5: Explain \"off-by-one error\" in their own words with an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to look specifically at the loop that builds the password. Ask, \"What is the loop variable here?\" and \"How many times does this loop run compared to the number the user asks for?\" Support them in trying small changes like adjusting < vs <= or the loop value start value (e.g. let i = 0;), and testing after each change.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3 to complete Levels 3 through 5. Frame students as the QA (Quality Assurance) team testing a password generator. Ask them to run the code multiple times with different requested lengths and pay attention to how many characters they actually get.\n- Level 3: Debug the Broken Password Generator so that the generated password has the same number of characters entered.\n- Level 4: Read the definition and visual for \"off-by-one error.\"\n- Level 5: Explain \"off-by-one error\" in their own words with an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to look specifically at the loop that builds the password. Ask, \"What is the loop variable here?\" and \"How many times does this loop run compared to the number the user asks for?\" Support them in trying small changes like adjusting < vs <= or the loop value start value (e.g. let i = 0;), and testing after each change.",
         "progression_name": "Broken Password Generator"
       },
       "seeding_key": {
@@ -1322,7 +1322,7 @@
       "key": "d04a7767-1570-47d6-967b-c713dec69db3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *off-by-one error*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide demonstrate the exact mechanics of a for-loop and identify an off-by-one error when the count runs one time too many.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *To prevent off-by-one errors, why is testing the loop's start value, last value, and the stop condition more critical than testing a number in the middle of the loop's range?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that off-by-one errors happen at the boundaries. They should connect testing the start and stop conditions to checking the edges where a single change, like using < instead of <=, determines whether the loop runs one time too many or one time too few.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 6.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Read students' AI prompts and push them to be specific: \"From what number to what number?\" \"Should it go up or down?\" \"How much should it change each time?\" Watch their tests and ask, \"Did it stop exactly where you wanted?\" to surface off-by-one errors.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *off-by-one error*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide demonstrate the exact mechanics of a for-loop and identify an off-by-one error when the count runs one time too many.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *To prevent off-by-one errors, why is testing the loop's start value, last value, and the stop condition more critical than testing a number in the middle of the loop's range?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that off-by-one errors happen at the boundaries. They should connect testing the start and stop conditions to checking the edges where a single change, like using < instead of <=, determines whether the loop runs one time too many or one time too few.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 2, Level 6.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Read students' AI prompts and push them to be specific: \"From what number to what number?\" \"Should it go up or down?\" \"How much should it change each time?\" Watch their tests and ask, \"Did it stop exactly where you wanted?\" to surface off-by-one errors.",
         "progression_name": "Add Counted Repetition",
         "tips": [
           {
@@ -1340,7 +1340,7 @@
       "key": "81eb52b5-7418-4f6d-94d0-7bf0252acfec",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term and its definition."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term and its definition."
       },
       "seeding_key": {
         "activity_section.key": "81eb52b5-7418-4f6d-94d0-7bf0252acfec",
@@ -1351,7 +1351,7 @@
       "key": "323b9273-2ba8-45cc-a619-ce086b09bb61",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 9 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 9 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1391,7 +1391,7 @@
       "key": "38080632-14a1-4269-a8ed-b0929d95ee6a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does this represent a for loop or a while loop? How do you know?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that this scenario doesn’t repeat a fixed number of times, but rather represents a condition. It makes sense to use a while loop to represent \"While glass is not full, keep pouring water\".\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Does this represent a for loop or a while loop? How do you know?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that this scenario doesn’t repeat a fixed number of times, but rather represents a condition. It makes sense to use a while loop to represent \"While glass is not full, keep pouring water\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "38080632-14a1-4269-a8ed-b0929d95ee6a",
@@ -1441,7 +1441,7 @@
       "key": "be0fac1f-05c1-43ce-ba3d-57132a4905aa",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *state variable*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to complete Levels 4 and 5.\n- Level 4: Read the definition and example of an infinite loop.\n- Level 5: Explain infinite loop in your own words and share an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for explanations that mention both the condition and the update. If students only focus on the condition, ask, \"What is supposed to change inside the loop to make that condition false?\"",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *state variable*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to complete Levels 4 and 5.\n- Level 4: Read the definition and example of an infinite loop.\n- Level 5: Explain infinite loop in your own words and share an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for explanations that mention both the condition and the update. If students only focus on the condition, ask, \"What is supposed to change inside the loop to make that condition false?\"",
         "progression_name": "Vocab: Infinite Loop"
       },
       "seeding_key": {
@@ -1463,7 +1463,7 @@
       "key": "ec5b6c1e-4d14-41e4-af18-d1c9a62586b3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *infinite loop*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 6 to complete Levels 6 and 7.\n- Level 6: Run the web page, observe the bug caused by the while loop, identify whether the problem is the condition or the missing update, then fix the code so the loop stops appropriately.\n- Level 7: Write a while loop that keeps rolling the die, displays each result, and stops when the target (6) is rolled.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who change many lines at once. Encourage them to change one thing at a time and re-run. Ask, \"Does the condition ever become false?\" and \"Where does the state variable change?\" Support students whose pages freeze by pointing out the Stop button in Web Lab. Check that students' while conditions use roll !== target (or an equivalent) and that roll is updated inside the loop. Ask, \"What is the state variable here?\" and \"How do you know this loop will eventually stop?\" Watch for infinite loops caused by never updating roll.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *infinite loop*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 6 to complete Levels 6 and 7.\n- Level 6: Run the web page, observe the bug caused by the while loop, identify whether the problem is the condition or the missing update, then fix the code so the loop stops appropriately.\n- Level 7: Write a while loop that keeps rolling the die, displays each result, and stops when the target (6) is rolled.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students who change many lines at once. Encourage them to change one thing at a time and re-run. Ask, \"Does the condition ever become false?\" and \"Where does the state variable change?\" Support students whose pages freeze by pointing out the Stop button in Web Lab. Check that students' while conditions use roll !== target (or an equivalent) and that roll is updated inside the loop. Ask, \"What is the state variable here?\" and \"How do you know this loop will eventually stop?\" Watch for infinite loops caused by never updating roll.",
         "progression_name": "Debugging While Loops"
       },
       "seeding_key": {
@@ -1502,7 +1502,7 @@
       "key": "c87c6e53-6623-4fa0-968d-a2bea46c2f02",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you make sure your while loops stopped safely instead of running forever?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that they made sure to update a state variable toward a stopping condition. They should recognize the real-world impacts (like frozen pages or security issues) when loops are not safely controlled."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you make sure your while loops stopped safely instead of running forever?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that they made sure to update a state variable toward a stopping condition. They should recognize the real-world impacts (like frozen pages or security issues) when loops are not safely controlled."
       },
       "seeding_key": {
         "activity_section.key": "c87c6e53-6623-4fa0-968d-a2bea46c2f02",
@@ -1513,7 +1513,7 @@
       "key": "22d33b52-2829-4b12-b82f-0d5290b37212",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "22d33b52-2829-4b12-b82f-0d5290b37212",
@@ -1524,7 +1524,7 @@
       "key": "fbf1baad-86b5-4caf-b9a5-b5212115523f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1560,7 +1560,7 @@
       "key": "ecdfef2a-789b-478c-a316-cc38b105def1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "ecdfef2a-789b-478c-a316-cc38b105def1",
@@ -1610,7 +1610,7 @@
       "key": "185c8c12-864e-4eba-9a57-8faaae987e8c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which transparency cue in your app makes the biggest difference for users? How do your messages change when the list is empty versus full?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their specific count messages, filter labels, and empty states to user trust and clarity. Listen for comments about feeling \"less broken\" or \"more honest\" when the app explains itself. Highlight examples where students carefully matched their messages to what the loop is doing with the data.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the second activity, emphasizing the three stages: read, transform, render. Connect back to earlier work where they already used loops to go through arrays, and explain that now they will make purposeful choices at each stage."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which transparency cue in your app makes the biggest difference for users? How do your messages change when the list is empty versus full?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their specific count messages, filter labels, and empty states to user trust and clarity. Listen for comments about feeling \"less broken\" or \"more honest\" when the app explains itself. Highlight examples where students carefully matched their messages to what the loop is doing with the data.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the second activity, emphasizing the three stages: read, transform, render. Connect back to earlier work where they already used loops to go through arrays, and explain that now they will make purposeful choices at each stage."
       },
       "seeding_key": {
         "activity_section.key": "185c8c12-864e-4eba-9a57-8faaae987e8c",
@@ -1633,7 +1633,7 @@
       "key": "41e19335-ce8c-42cc-811a-f0961f1dfc3a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Transition: Direct students to Lesson 4, Level 4 to complete Levels 4 through 6.\n- Level 4: Build a simple read → transform → render pipeline for community events\n- Level 5: Review the definition for \"pipeline.\"\n- Level 6: Write the definition in their own words.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Watch for students correctly looping over the array, applying conditional checks in the loop, and updating the page with only the selected items. Ask: Where in your code are you reading from the array? Where are you deciding which items to keep? Where are you actually writing to the page?"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Transition: Direct students to Lesson 4, Level 4 to complete Levels 4 through 6.\n- Level 4: Build a simple read → transform → render pipeline for community events\n- Level 5: Review the definition for \"pipeline.\"\n- Level 6: Write the definition in their own words.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for students correctly looping over the array, applying conditional checks in the loop, and updating the page with only the selected items. Ask: Where in your code are you reading from the array? Where are you deciding which items to keep? Where are you actually writing to the page?"
       },
       "seeding_key": {
         "activity_section.key": "41e19335-ce8c-42cc-811a-f0961f1dfc3a",
@@ -1676,7 +1676,7 @@
       "key": "3924a936-7ca2-4afc-9620-9aeca67ff17d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *pipeline*.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 7 to write a reflection about transparency and trust in their apps."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *pipeline*.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 7 to write a reflection about transparency and trust in their apps."
       },
       "seeding_key": {
         "activity_section.key": "3924a936-7ca2-4afc-9620-9aeca67ff17d",
@@ -1698,7 +1698,7 @@
       "key": "bdd50760-b56b-4cc1-b2cb-c6e9bc83a323",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "bdd50760-b56b-4cc1-b2cb-c6e9bc83a323",
@@ -1709,7 +1709,7 @@
       "key": "a6be9739-ce0d-4a62-a773-dccf3b97e9ca",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -1749,7 +1749,7 @@
       "key": "69a0da55-ca67-4eb6-b6a8-e7ff55bccad0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Display the sample cards, Card A and Card B, which represent employees in a company directory. For each empty field in Card B, have students brainstorm a fallback idea, for example, \"Email: Unlisted\" or an idea for a placeholder image. Have students share their answers with a partner. Then call on a few students to share with the class.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Help students understand that fallbacks should make missing data clear rather than hiding it. Listen for ideas about readability, user trust, and why hiding missing info can be misleading. Ask probing questions like: If this field is missing, what would you want to see as a user? and How can hiding information lead to mistrust from users?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display the sample cards, Card A and Card B, which represent employees in a company directory. For each empty field in Card B, have students brainstorm a fallback idea, for example, \"Email: Unlisted\" or an idea for a placeholder image. Have students share their answers with a partner. Then call on a few students to share with the class.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students understand that fallbacks should make missing data clear rather than hiding it. Listen for ideas about readability, user trust, and why hiding missing info can be misleading. Ask probing questions like: If this field is missing, what would you want to see as a user? and How can hiding information lead to mistrust from users?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1776,7 +1776,7 @@
       "key": "d531ed26-c3c4-4b8d-8d90-2e3ceb2cff7f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is important to consider when displaying information on cards?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that it is important to make cards readable by choosing and organizing appropriate fields. Websites can build user trust through honest, transparent design and by handling missing info with clear fallback choices."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What is important to consider when displaying information on cards?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to explain that it is important to make cards readable by choosing and organizing appropriate fields. Websites can build user trust through honest, transparent design and by handling missing info with clear fallback choices."
       },
       "seeding_key": {
         "activity_section.key": "d531ed26-c3c4-4b8d-8d90-2e3ceb2cff7f",
@@ -1799,7 +1799,7 @@
       "key": "bb306e71-dc0c-4970-a789-598cfd270dc1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "bb306e71-dc0c-4970-a789-598cfd270dc1",
@@ -1833,7 +1833,7 @@
       "key": "de03d621-adb5-46c5-a64f-1c96c696cd58",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 through 3 or (optional) hand out the Data Schema activity guide:\n- Level 1: Students map dataset fields (title, genre, runtime, rating, imageURL, summary) onto a card design using arrows and combinations.\n- Level 2: Students read the definition of fallback value.\n- Level 3: Students explain fallback values in their own words and give an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, look for designs that prioritize readability and make thoughtful use of combinations and fallbacks. For any students struggling to get started, walk them through the following steps:\n- Review the dataset fields on the schema.\n- Choose which fields to include on the card.\n- Draw arrows from each selected field to the place on the card where it should appear.\n- Allow and encourage combining or renaming fields to make them clearer (for example, merging runtime and rating into one line).",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to complete Levels 1 through 3 or (optional) hand out the Data Schema activity guide:\n- Level 1: Students map dataset fields (title, genre, runtime, rating, imageURL, summary) onto a card design using arrows and combinations.\n- Level 2: Students read the definition of fallback value.\n- Level 3: Students explain fallback values in their own words and give an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** In Level 1, look for designs that prioritize readability and make thoughtful use of combinations and fallbacks. For any students struggling to get started, walk them through the following steps:\n- Review the dataset fields on the schema.\n- Choose which fields to include on the card.\n- Draw arrows from each selected field to the place on the card where it should appear.\n- Allow and encourage combining or renaming fields to make them clearer (for example, merging runtime and rating into one line).",
         "progression_name": "From Schema to Layout"
       },
       "seeding_key": {
@@ -1915,7 +1915,7 @@
       "key": "5529dcbd-cb29-468c-bebe-1ecf8545fe60",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete Levels 4 and 5. Remind students to refer back to their diagrams on Level 1 when deciding which fields belong in the card.\n- Level 4: Students use a loop to render each record in the dataset as a card and add simple fallbacks.\n- Level 5: Students analyze three sample cards and respond to prompts about bias and transparency. Encourage students to be specific in their written responses about what feels biased or unclear, and to write a transparency label that would help a user understand how the cards are ordered or selected.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students:\n- Place field values in the intended card areas.\n- Use conditionals or checks when a value is missing or null.\n- Use fallback values for missing data. Ask: What should this card show if rating is null? and How could you make that clear to the user?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete Levels 4 and 5. Remind students to refer back to their diagrams on Level 1 when deciding which fields belong in the card.\n- Level 4: Students use a loop to render each record in the dataset as a card and add simple fallbacks.\n- Level 5: Students analyze three sample cards and respond to prompts about bias and transparency. Encourage students to be specific in their written responses about what feels biased or unclear, and to write a transparency label that would help a user understand how the cards are ordered or selected.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students:\n- Place field values in the intended card areas.\n- Use conditionals or checks when a value is missing or null.\n- Use fallback values for missing data. Ask: What should this card show if rating is null? and How could you make that clear to the user?",
         "progression_name": "Displaying a Schema with Cards"
       },
       "seeding_key": {
@@ -1954,7 +1954,7 @@
       "key": "192fa5d4-7932-453d-805d-06ecb3629d31",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does each version of the card influence your perception?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the difference between the three versions:\n- Version 1: Neutral: shows a plain rating (for example, \"Rating: 2.5/5 stars\").\n- Version 2: Biased: uses hype language (for example, \"Top Value Pick!\").\n- Version 3: Hidden Info: leaves the rating off.\n\nHelp students recognize that tone, label choice (like \"Top Value Pick!\"), and hiding information (like leaving off a low rating) can bias user perception.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How does each version of the card influence your perception?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize the difference between the three versions:\n- Version 1: Neutral: shows a plain rating (for example, \"Rating: 2.5/5 stars\").\n- Version 2: Biased: uses hype language (for example, \"Top Value Pick!\").\n- Version 3: Hidden Info: leaves the rating off.\n\nHelp students recognize that tone, label choice (like \"Top Value Pick!\"), and hiding information (like leaving off a low rating) can bias user perception.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1971,7 +1971,7 @@
       "key": "85c8e567-854d-4b92-8efc-e26189ca0bac",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Prompt students to share brief examples from their diagrams, code, or written reflection.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day. Prompt students to share brief examples from their diagrams, code, or written reflection.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "85c8e567-854d-4b92-8efc-e26189ca0bac",
@@ -1982,7 +1982,7 @@
       "key": "4798275a-5ac3-4c5c-9003-c877b3926f47",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2022,7 +2022,7 @@
       "key": "dcbd7164-8f85-4a94-943d-f9aa03df289e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What effect do these filters have on what you see (or don't see)? Who decides what gets filtered out?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that filters are everywhere in their digital lives, that filters both include and exclude information, and that people (designers and companies) make decisions about what gets filtered."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What effect do these filters have on what you see (or don't see)? Who decides what gets filtered out?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that filters are everywhere in their digital lives, that filters both include and exclude information, and that people (designers and companies) make decisions about what gets filtered."
       },
       "seeding_key": {
         "activity_section.key": "dcbd7164-8f85-4a94-943d-f9aa03df289e",
@@ -2045,7 +2045,7 @@
       "key": "e4386b52-5aa8-484d-989c-3897033ba2d4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "e4386b52-5aa8-484d-989c-3897033ba2d4",
@@ -2084,7 +2084,7 @@
       "key": "67bfe4a3-76c3-498d-869f-dd688c405cb9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is the Job Finder app actually \"broken\"? How can code work correctly but the design still be unfair?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between \"no bugs\" and \"good design\" and articulate that working code can still create unfair outcomes when filters hide opportunities from some groups.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *active filter*."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is the Job Finder app actually \"broken\"? How can code work correctly but the design still be unfair?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students distinguish between \"no bugs\" and \"good design\" and articulate that working code can still create unfair outcomes when filters hide opportunities from some groups.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *active filter*."
       },
       "seeding_key": {
         "activity_section.key": "67bfe4a3-76c3-498d-869f-dd688c405cb9",
@@ -2107,7 +2107,7 @@
       "key": "cf2fe409-448a-4b2f-a28a-3eca003ac1d0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2 to complete Levels 2 through 3.\n- Level 2: Students read the definition and visual explanation of \"active filter\".\n- Level 3: Students write an explanation of \"active filter\" in your own words and provide a real-world example.\n- Level 4:  Students write code to filter volunteer roles by category AND age suitability and update the on-screen text to describe the filter.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that matchesCategory correctly compares the dropdown value to each role's category and that matchesAge correctly checks whether the role is suitable for teens. Watch for students misusing && (for example, using || instead). Ask: When would this function return true? Who might be excluded if your age check is wrong?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 2 to complete Levels 2 through 3.\n- Level 2: Students read the definition and visual explanation of \"active filter\".\n- Level 3: Students write an explanation of \"active filter\" in your own words and provide a real-world example.\n- Level 4:  Students write code to filter volunteer roles by category AND age suitability and update the on-screen text to describe the filter.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that matchesCategory correctly compares the dropdown value to each role's category and that matchesAge correctly checks whether the role is suitable for teens. Watch for students misusing && (for example, using || instead). Ask: When would this function return true? Who might be excluded if your age check is wrong?",
         "progression_name": "Vocab: Active Filter"
       },
       "seeding_key": {
@@ -2150,7 +2150,7 @@
       "key": "1b6900b1-a069-4899-b26f-786cdfb623fe",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *filter bubble*.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How could the active filters you coded in the Volunteer Finder create a filter bubble if users do not know they are there?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their specific code (active filters and && logic) to the broader idea that hidden filters can limit what users see, reducing diverse options or perspectives.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to complete Levels 5 through 6.\n- Level 5: Read the definition and visual for \"Filter Bubble\".\n- Level 6: Explain filter bubbles in your own words and give an example, ideally linked to the Volunteer Finder or another app.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who understand that personalized or hidden filters can narrow what users see over time. Ask: If someone always chooses the same category, what opportunities might they miss? How could more transparent filters help avoid a filter bubble?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *filter bubble*.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How could the active filters you coded in the Volunteer Finder create a filter bubble if users do not know they are there?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect their specific code (active filters and && logic) to the broader idea that hidden filters can limit what users see, reducing diverse options or perspectives.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 5 to complete Levels 5 through 6.\n- Level 5: Read the definition and visual for \"Filter Bubble\".\n- Level 6: Explain filter bubbles in your own words and give an example, ideally linked to the Volunteer Finder or another app.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who understand that personalized or hidden filters can narrow what users see over time. Ask: If someone always chooses the same category, what opportunities might they miss? How could more transparent filters help avoid a filter bubble?",
         "progression_name": "Vocab: Filter Bubble",
         "tips": [
           {
@@ -2168,7 +2168,7 @@
       "key": "78dd42e3-58fa-42e6-8d25-0f8920fe7c31",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term and definition, asking students for a quick example for each from today's activities."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review each vocabulary term and definition, asking students for a quick example for each from today's activities."
       },
       "seeding_key": {
         "activity_section.key": "78dd42e3-58fa-42e6-8d25-0f8920fe7c31",
@@ -2179,7 +2179,7 @@
       "key": "e72ba260-f2df-4165-965f-ae26439f3408",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 6 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 6 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2238,7 +2238,7 @@
       "key": "48c8e6f6-5eea-4cfb-9198-4cf53a3088ef",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "48c8e6f6-5eea-4cfb-9198-4cf53a3088ef",
@@ -2249,7 +2249,7 @@
       "key": "d9e09c76-bf85-4e3e-a4e4-a664b595b559",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the Method Investigator section of their activity guide.\n- Level 1: Investigate Pure Methods and Mutating Methods\n- Level 2: Read the definition of \"pure function.\"\n- Level 3: Write a short explanation in their own words and include an example.\n- Level 4: Read the definition of \"side effect.\"\n- Level 5: Write a short explanation in their own words and include an example.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are only clicking buttons without comparing the two arrays. Prompt them to describe out loud what changed, if anything, in the original array. Ask questions like: What stayed the same? What is different? What happens if you click the same method button again?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 1 to complete the Method Investigator section of their activity guide.\n- Level 1: Investigate Pure Methods and Mutating Methods\n- Level 2: Read the definition of \"pure function.\"\n- Level 3: Write a short explanation in their own words and include an example.\n- Level 4: Read the definition of \"side effect.\"\n- Level 5: Write a short explanation in their own words and include an example.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students who are only clicking buttons without comparing the two arrays. Prompt them to describe out loud what changed, if anything, in the original array. Ask questions like: What stayed the same? What is different? What happens if you click the same method button again?",
         "progression_name": "Comparing Methods"
       },
       "seeding_key": {
@@ -2299,7 +2299,7 @@
       "key": "18f96ffe-a38b-470d-8b45-2f93af9ecb53",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *pure function*.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *pure function*.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2326,7 +2326,7 @@
       "key": "eb97349d-a298-4ef8-9ee8-d0def3ae2c86",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *side effect*.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *side effect*.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2353,7 +2353,7 @@
       "key": "e11e3d1a-478e-4e87-b2c6-182457013a4b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to complete the Check for Understanding on pure vs side-effect methods.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Remind students to think about: Do you want a method that returns new data or changes something that already exists?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 6 to complete the Check for Understanding on pure vs side-effect methods.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind students to think about: Do you want a method that returns new data or changes something that already exists?",
         "progression_name": "Check For Understanding",
         "tips": [
           {
@@ -2404,7 +2404,7 @@
       "key": "f93216b8-6bd8-4740-9322-c211d91ba3f6",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 7, Level 7.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students to show you where they see mutation in the original code and how the AI version resolves it. Probe with questions like: What happens when you click Reset Data? Is the original array reassigned or modified?",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 7, Level 7.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students to show you where they see mutation in the original code and how the AI version resolves it. Probe with questions like: What happens when you click Reset Data? Is the original array reassigned or modified?",
         "progression_name": "Debugging Challenge"
       },
       "seeding_key": {
@@ -2426,7 +2426,7 @@
       "key": "a436bdac-38c7-4fc0-a0b0-722bcb809159",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you use AI to refactor the code and get rid of any side effects?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that AI suggestions are not automatically correct and that understanding pure functions and side effects helps students critically evaluate and improve AI-generated code."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you use AI to refactor the code and get rid of any side effects?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Highlight that AI suggestions are not automatically correct and that understanding pure functions and side effects helps students critically evaluate and improve AI-generated code."
       },
       "seeding_key": {
         "activity_section.key": "a436bdac-38c7-4fc0-a0b0-722bcb809159",
@@ -2437,7 +2437,7 @@
       "key": "141173c8-a36d-4e52-9c38-52255cc41776",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2464,7 +2464,7 @@
       "key": "d44ea892-1f06-4f71-8481-a84505aa360e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "d44ea892-1f06-4f71-8481-a84505aa360e",
@@ -2475,7 +2475,7 @@
       "key": "809d6f16-941b-4689-ba4e-1403a88540bd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 7, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2511,7 +2511,7 @@
       "key": "a81a6d25-6c81-4076-adbc-d988bcc14239",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "a81a6d25-6c81-4076-adbc-d988bcc14239",
@@ -2550,7 +2550,7 @@
       "key": "307cfef5-f1df-4f73-abc9-7a2c790c7634",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What changes in the user interface (UI) when a filter is applied to the product list?*\n- *What pieces of information need to be saved to enable a \"Reset\" feature?*\n- *What pieces of information need to be saved to enable an \"Undo\" feature?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will observe and list all UI elements that change, such as the product list itself, the active filters shown, the transparency cues, and the state of relevant buttons or dropdowns. They should identify that a true \"Reset\" requires a separate, permanent copy of the original, untouched data set that is never mutated. Students should identify that the current product list (modified data) and the active filter settings are the critical pieces of state that must be copied and saved to the history stack.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What changes in the user interface (UI) when a filter is applied to the product list?*\n- *What pieces of information need to be saved to enable a \"Reset\" feature?*\n- *What pieces of information need to be saved to enable an \"Undo\" feature?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students will observe and list all UI elements that change, such as the product list itself, the active filters shown, the transparency cues, and the state of relevant buttons or dropdowns. They should identify that a true \"Reset\" requires a separate, permanent copy of the original, untouched data set that is never mutated. Students should identify that the current product list (modified data) and the active filter settings are the critical pieces of state that must be copied and saved to the history stack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2577,7 +2577,7 @@
       "key": "64953739-9c41-4d43-94bc-55ee8660bc35",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 4.\n- Level 2: Students investigate a broken \"Reset\" button and fix the code to ensure the original, unchanged data is properly copied back to the current view.\n- Level 3: Students build a Undo History Stack by ensuring a copy of the current state is saved to the stack before filtering, and the Undo button pops the last state to restore the product and filter data.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask, Which array should never be changed? Check that students are not mutating originalProducts. Help them set up a correct loop and assign values properly. Check that students push before filtering, not after. Verify that their copies are real copies, not just references to the same array. Ask, What happens to the stack each time you click Undo? Help students trace through one or two Undo clicks.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 2 to complete Levels 2 through 4.\n- Level 2: Students investigate a broken \"Reset\" button and fix the code to ensure the original, unchanged data is properly copied back to the current view.\n- Level 3: Students build a Undo History Stack by ensuring a copy of the current state is saved to the stack before filtering, and the Undo button pops the last state to restore the product and filter data.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask, Which array should never be changed? Check that students are not mutating originalProducts. Help them set up a correct loop and assign values properly. Check that students push before filtering, not after. Verify that their copies are real copies, not just references to the same array. Ask, What happens to the stack each time you click Undo? Help students trace through one or two Undo clicks.",
         "progression_name": "Fix the Reset Button"
       },
       "seeding_key": {
@@ -2617,7 +2617,7 @@
       "key": "6d3a3f52-b15d-4807-8094-c32be3beb3bd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "6d3a3f52-b15d-4807-8094-c32be3beb3bd",
@@ -2628,7 +2628,7 @@
       "key": "1abf79d6-dcef-4879-8328-b5d552228c50",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 8, Level 5 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2664,7 +2664,7 @@
       "key": "04c0ddef-4754-4b8b-b7d5-9ca82c12cf04",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "04c0ddef-4754-4b8b-b7d5-9ca82c12cf04",
@@ -2709,7 +2709,7 @@
       "key": "741a78e0-7bfe-4703-904e-aa0ff5678ac6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n- *Which artists benefited from a high threshold on likes?*\n- *Which artists were left out?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that high like thresholds favor already popular and established artists and can push newer or niche artists out of view.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *threshold*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Define *fallback value*.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Pause the class for a quick planning step before students redesign the filter. Have students plan out their pseudocode in their activity guide before using AI to help them write the code.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Help students identify that high like count thresholds can hide new, niche, or marginalized creators, and that adding different filters (like genre, location, or \"emerging artist\") can improve inclusion.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete Levels 6 and 7.\n- Level 6: Students redesign the filter and thresholds for the musical artists homepage to minimize bias.\n- Level 7: Students examine a set of entries, analyze how the current \"Top Candidates\" filter behaves, and redesign the filter criteria to feature high-quality entries.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ask students to explain why they picked certain thresholds or properties to include in their filter. Prompt them: Who appears on your homepage now? How do your changes make the platform fairer or more transparent? Encourage notes about specific stakeholder groups (for example, emerging artists, artists with niche styles). Ask: What patterns do you see in strong entries? How will your filters avoid hiding them? Encourage students to consider how different stakeholders (entrants, judges, users) are affected.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n- *Which artists benefited from a high threshold on likes?*\n- *Which artists were left out?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that high like thresholds favor already popular and established artists and can push newer or niche artists out of view.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *threshold*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *fallback value*.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Pause the class for a quick planning step before students redesign the filter. Have students plan out their pseudocode in their activity guide before using AI to help them write the code.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Help students identify that high like count thresholds can hide new, niche, or marginalized creators, and that adding different filters (like genre, location, or \"emerging artist\") can improve inclusion.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 6 to complete Levels 6 and 7.\n- Level 6: Students redesign the filter and thresholds for the musical artists homepage to minimize bias.\n- Level 7: Students examine a set of entries, analyze how the current \"Top Candidates\" filter behaves, and redesign the filter criteria to feature high-quality entries.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask students to explain why they picked certain thresholds or properties to include in their filter. Prompt them: Who appears on your homepage now? How do your changes make the platform fairer or more transparent? Encourage notes about specific stakeholder groups (for example, emerging artists, artists with niche styles). Ask: What patterns do you see in strong entries? How will your filters avoid hiding them? Encourage students to consider how different stakeholders (entrants, judges, users) are affected.",
         "progression_name": "Redesign the Filters"
       },
       "seeding_key": {
@@ -2748,7 +2748,7 @@
       "key": "da781494-4e9f-4e83-b6d5-1971ed69264a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share one change you made to the Top Artists or Top Candidates filter. Who is now surfaced because of your change?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect students' concrete design choices back to visibility, transparency, and fairness for different stakeholders, reinforcing the Question of the Day."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Share one change you made to the Top Artists or Top Candidates filter. Who is now surfaced because of your change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Connect students' concrete design choices back to visibility, transparency, and fairness for different stakeholders, reinforcing the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "da781494-4e9f-4e83-b6d5-1971ed69264a",
@@ -2759,7 +2759,7 @@
       "key": "046d4aab-bfcb-4ff3-b228-249e64d2b838",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2786,7 +2786,7 @@
       "key": "44fc7e37-7deb-4f56-b9c2-315984d5f613",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the key vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "44fc7e37-7deb-4f56-b9c2-315984d5f613",
@@ -2797,7 +2797,7 @@
       "key": "19d4073e-274d-4d3f-a124-3f077cf38d15",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 8 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 8 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -2833,7 +2833,7 @@
       "key": "9ad23068-e05d-4928-9f12-042b8471a858",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "9ad23068-e05d-4928-9f12-042b8471a858",
@@ -2867,7 +2867,7 @@
       "key": "3d45a55d-a1e4-4501-af6e-fa649edd15bf",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 10, Level 1. Have students review the data and use AI to spot inconsistent field names and data types.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for students identifying issues like vague labels (\"stars\" vs \"rating\"), mixed types (\"3\" as a string vs 3 as a number), or missing values. Ask probing questions like: What do you want this field to mean? How could you rename it to make that obvious to both a person and an AI? Encourage students to test their changes by rerunning the AI check.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 10, Level 1. Have students review the data and use AI to spot inconsistent field names and data types.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for students identifying issues like vague labels (\"stars\" vs \"rating\"), mixed types (\"3\" as a string vs 3 as a number), or missing values. Ask probing questions like: What do you want this field to mean? How could you rename it to make that obvious to both a person and an AI? Encourage students to test their changes by rerunning the AI check.",
         "progression_name": "Investigate Misleading Fields",
         "tips": [
           {
@@ -2895,7 +2895,7 @@
       "key": "e7d5dc9e-84e4-47c5-a16c-15651738755e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did changing field names or types change what the AI concluded about the data?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect specific schema changes (like renaming \"stars\" to \"rating_1_to_5\" or changing a string \"3\" to a number 3) to changes in AI behavior, seeing that clearer schemas lead to more accurate reasoning."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did changing field names or types change what the AI concluded about the data?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students connect specific schema changes (like renaming \"stars\" to \"rating_1_to_5\" or changing a string \"3\" to a number 3) to changes in AI behavior, seeing that clearer schemas lead to more accurate reasoning."
       },
       "seeding_key": {
         "activity_section.key": "e7d5dc9e-84e4-47c5-a16c-15651738755e",
@@ -2918,7 +2918,7 @@
       "key": "5e499c11-44e7-4f67-b60d-0b6b04de2061",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 10, Level 2. Have students design and clean a schema so the app's features work reliably.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students write loops that touch every object and actually modify keys and values. Ask: What fields will every project need? What should the type of this field be? How are you handling missing or extreme values? Support students in testing edge cases like empty lists or unusual values.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 10, Level 2. Have students design and clean a schema so the app's features work reliably.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students write loops that touch every object and actually modify keys and values. Ask: What fields will every project need? What should the type of this field be? How are you handling missing or extreme values? Support students in testing edge cases like empty lists or unusual values.",
         "progression_name": "Data Architect Challenge",
         "tips": [
           {
@@ -2946,7 +2946,7 @@
       "key": "5f2f2002-99ad-4578-a66b-45d45f51983c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were a QA tester, what edge cases would you test to make sure the schema really works?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students see that QA testers and data architects work together: QA uses edge cases to find weaknesses in the schema and constraints, and good schemas make apps more robust and fair.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to extend their Level 2 work by adding constraint checks and running edge-case tests.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for clear conditionals that enforce constraints and for students who actually try unusual inputs. Ask: What happens if there are no projects? What if a project is missing a grade? How would your AI teammate react to these cases?",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you were a QA tester, what edge cases would you test to make sure the schema really works?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students see that QA testers and data architects work together: QA uses edge cases to find weaknesses in the schema and constraints, and good schemas make apps more robust and fair.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 2 to extend their Level 2 work by adding constraint checks and running edge-case tests.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for clear conditionals that enforce constraints and for students who actually try unusual inputs. Ask: What happens if there are no projects? What if a project is missing a grade? How would your AI teammate react to these cases?",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2963,7 +2963,7 @@
       "key": "f95bda43-3c39-41f7-9ff1-b7a75ad4bb29",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students turn and talk for one minute to connect a concrete schema decision to the Question of the Day.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who mention specific field names, data types, or constraints. Nudge them to link their decisions to user experience or fairness (for example, not mislabeling projects or excluding edge cases).\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3 to complete a short written reflection.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Look for explanations that mention both the original schema problem and the updated field name or type. Prompt students to be precise: What exactly did the AI assume before? What does it assume now?",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students turn and talk for one minute to connect a concrete schema decision to the Question of the Day.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for students who mention specific field names, data types, or constraints. Nudge them to link their decisions to user experience or fairness (for example, not mislabeling projects or excluding edge cases).\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 3 to complete a short written reflection.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Look for explanations that mention both the original schema problem and the updated field name or type. Prompt students to be precise: What exactly did the AI assume before? What does it assume now?",
         "progression_name": "Reflection: Justify Your Design Choice",
         "tips": [
           {
@@ -2981,7 +2981,7 @@
       "key": "fd52e618-573d-4335-b200-8341b6eb04c2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fd52e618-573d-4335-b200-8341b6eb04c2",
@@ -2992,7 +2992,7 @@
       "key": "7f74335a-e789-45a7-90e2-fd421c344f09",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 4 to complete the End of Lesson Survey.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 4 to complete the End of Lesson Survey.",
         "name": "End of Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
@@ -3005,7 +3005,7 @@
       "key": "4dd97114-7eea-4855-a6d9-297139d434ca",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *When you're trying to find information in an app or website, what makes it easy or hard to explore the data?*\n- *What is one thing you wish more apps did to help you find what you're looking for?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on real experiences with findability, data clarity, and user control, setting up the project's focus on schema design, transparency, and meaningful filtering.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts.\n- *When you're trying to find information in an app or website, what makes it easy or hard to explore the data?*\n- *What is one thing you wish more apps did to help you find what you're looking for?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on real experiences with findability, data clarity, and user control, setting up the project's focus on schema design, transparency, and meaningful filtering.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3018,7 +3018,7 @@
       "key": "5faaeb45-73c9-4d9a-aae4-4853f522ffa4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Interactive Data Dashboard Project Planning Guide.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Walk students through these simplified project goals. These summarize what their dashboard must do: display data clearly, support user control through filters and sorting, and communicate choices transparently. Emphasize that fairness and visibility—like which items get surfaced or hidden—will be part of their design thinking throughout the project.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Listen for students noticing themes like transparency, fairness, active filter displays, loop-driven rendering, and Reset/Undo—these are central to the project and will guide their design decisions.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Interactive Data Dashboard Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing and refining their dataset to building and showcasing their interactive dashboard.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Interactive Data Dashboard Project Planning Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Walk students through these simplified project goals. These summarize what their dashboard must do: display data clearly, support user control through filters and sorting, and communicate choices transparently. Emphasize that fairness and visibility—like which items get surfaced or hidden—will be part of their design thinking throughout the project.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to read the rubric on the last two pages of the project planning guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about the project requirements and rubric? What does success look like for this project?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Listen for students noticing themes like transparency, fairness, active filter displays, loop-driven rendering, and Reset/Undo—these are central to the project and will guide their design decisions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the milestone structure of the project. Explain that the Interactive Data Dashboard Project is divided into four milestones, each with its own goals and deliverables. Use the visual roadmap to preview the journey students will take — from choosing and refining their dataset to building and showcasing their interactive dashboard.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3047,7 +3047,7 @@
       "key": "68288898-4e8f-4552-b73c-cc900f2a7017",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Choose a Dataset & Define Your Schema, where students select a dataset, narrow it to meaningful fields, and examine it for bias, clarity, and findability. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that today's focus is Milestone 1: Choose a Dataset & Define Your Schema, where students select a dataset, narrow it to meaningful fields, and examine it for bias, clarity, and findability. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 section. Have them read through the Goals and Deliverables so they understand what needs to be completed by the end of this milestone.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3074,7 +3074,7 @@
       "key": "e23f1a67-2e24-461b-aeba-f5646d621b5a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Choose a Dataset & Define Your Schema. Students can choose the tool that best supports their current task: exploring datasets, organizing their plan, identifying filter-relevant fields, sketching their schema, or reviewing their data choices for visibility and fairness.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “Which dataset does your project focus on?”\n- “What fields will be included in your filters and why?”\n- “Are there any missing groups or unclear categories in your filters or labels?”\n- “Who might not be visible due to your filter choices right now?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to begin Milestone 1: Choose a Dataset & Define Your Schema. Students can choose the tool that best supports their current task: exploring datasets, organizing their plan, identifying filter-relevant fields, sketching their schema, or reviewing their data choices for visibility and fairness.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students explore the hub, ask guiding questions such as:\n- “Which dataset does your project focus on?”\n- “What fields will be included in your filters and why?”\n- “Are there any missing groups or unclear categories in your filters or labels?”\n- “Who might not be visible due to your filter choices right now?”\n\nUse these check-ins to confirm students are moving from idea to planning, rather than jumping straight into code.",
         "progression_name": "Milestone One",
         "tips": [
           {
@@ -3106,7 +3106,7 @@
       "key": "730646f5-7ce3-4955-b130-960dad32c04a",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 1 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are discussing and sharing these reflection questions with a thought partner.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3125,7 +3125,7 @@
       "key": "fc89be17-74f9-4e84-a3a2-4161a34401fd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *When you look at a page full of information (menus, playlists, search results, etc.), what helps you understand it quickly?*\n- *What kinds of layouts or labels make information easier—or harder—to scan?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface real-world examples of clear labeling, visual grouping, and layout logic, preparing them for dashboard wireframing and schema → UI decisions.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts:\n- *When you look at a page full of information (menus, playlists, search results, etc.), what helps you understand it quickly?*\n- *What kinds of layouts or labels make information easier—or harder—to scan?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students surface real-world examples of clear labeling, visual grouping, and layout logic, preparing them for dashboard wireframing and schema → UI decisions.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3138,7 +3138,7 @@
       "key": "9aaae265-aede-428f-ae2c-be9d562cc300",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to use Level 1 if they still need to complete any Milestone 1 work or would benefit from one of the support tools, and move to Level 2 to begin Milestone 2, where they will shift from exploring and refining a dataset and outlining their schema, to planning and building their dashboard. Explain that today’s focus is creating clear wireframes and building their static UI that displays all items using loop-driven rendering. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Which schema fields will appear on your card and where will they go?\n- Where will users look first when they open your dashboard?\n- Does your wireframe show clear labels for each field and for any future filters?\n- How will your layout make the data easy to scan and compare (e.g., grouping, order, or emphasis)?\n- Where will transparency cues like “Showing X results” or active filter labels appear?\n\nRemind students that their wireframes should clearly map schema fields to card UI elements and show where labels and transparency cues (like “Showing X results”) will go. Provide quick support if students get stuck — redirect them to the Filter & Threshold Planner Bot or Project Support Bot for troubleshooting help before intervening directly.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 2 of the project. Explain that today students will focus on completing Milestone 1 and starting work on Milestone 2. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 1 and 2 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to use Level 1 if they still need to complete any Milestone 1 work or would benefit from one of the support tools, and move to Level 2 to begin Milestone 2, where they will shift from exploring and refining a dataset and outlining their schema, to planning and building their dashboard. Explain that today’s focus is creating clear wireframes and building their static UI that displays all items using loop-driven rendering. Emphasize that students should aim for clarity rather than polish—simple layouts that show where cards will go and how each schema field will be labeled. Encourage students to begin with one clean card layout and build from there, mirroring how developers prototype simple, testable pieces before adding complexity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task and progressing toward a complete first draft. Ask check-in questions like:\n- Which schema fields will appear on your card and where will they go?\n- Where will users look first when they open your dashboard?\n- Does your wireframe show clear labels for each field and for any future filters?\n- How will your layout make the data easy to scan and compare (e.g., grouping, order, or emphasis)?\n- Where will transparency cues like “Showing X results” or active filter labels appear?\n\nRemind students that their wireframes should clearly map schema fields to card UI elements and show where labels and transparency cues (like “Showing X results”) will go. Provide quick support if students get stuck — redirect them to the Filter & Threshold Planner Bot or Project Support Bot for troubleshooting help before intervening directly.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone Two"
@@ -3152,7 +3152,7 @@
       "key": "786e8603-983a-4e53-87a0-2f769093089c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help (or fail to help) users scan, compare, and find items quickly and clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 2 Reflection section in their project planning guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write and discuss, listen for reflections that describe how their page layout and card design help (or fail to help) users scan, compare, and find items quickly and clearly. Encourage students to notice whether their labels, headings, and visual structure make the dataset easy to scan, and to capture specific ideas about what they might refine next time.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3171,7 +3171,7 @@
       "key": "58d522ea-cc73-4fe5-a668-db27e17ffbd0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your dashboard so far, what's one thing you want users to be able to find easily — and what’s one thing that might still be hard to find?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how their current dashboard layout supports or challenges visibility and findability. This prepares them to design filters, sorting, and transparency features in ways that help users explore the dataset meaningfully.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Looking at your dashboard so far, what's one thing you want users to be able to find easily — and what’s one thing that might still be hard to find?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how their current dashboard layout supports or challenges visibility and findability. This prepares them to design filters, sorting, and transparency features in ways that help users explore the dataset meaningfully.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3184,7 +3184,7 @@
       "key": "c3128d13-53ed-44f8-aea3-2df902f58aef",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 3 of the project. Explain that today students will focus on Milestones 2 and 3. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 2 and 3 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3211,7 +3211,7 @@
       "key": "22215e2a-6c02-472d-9329-f0850be59cfe",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like filter accuracy, sort behavior, active label updates, and Reset/Undo function. This helps them gather early insights before debugging more deeply.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like filter accuracy, sort behavior, active label updates, and Reset/Undo function. This helps them gather early insights before debugging more deeply.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3238,7 +3238,7 @@
       "key": "8c3982df-0643-49a7-aff9-cd3bc01884fc",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Milestone 3 Reflection section in their project planning guide. Let students know they can continue to add on to this reflection as they continue to make progress on Milestone 3 and conduct more testing.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3257,7 +3257,7 @@
       "key": "13414bd8-7a54-45de-8db1-2e23a49d7f44",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one part of your dashboard that you think might break or behave unexpectedly if someone tried an unusual filter or sorting choice? Why that part?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate potential weaknesses or edge cases in their current filtering and sorting logic, preparing them for systematic debugging and refinement in Milestone 4.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one part of your dashboard that you think might break or behave unexpectedly if someone tried an unusual filter or sorting choice? Why that part?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students anticipate potential weaknesses or edge cases in their current filtering and sorting logic, preparing them for systematic debugging and refinement in Milestone 4.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3270,7 +3270,7 @@
       "key": "c01796f5-e8c5-4d54-b8bf-4bcf0c418b03",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like: filter accuracy, sort behavior, active filter labels, Rest/Undo, or fairness issues.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 4 of the project. Explain that today students will focus on Milestones 3 and 4. Direct students to open their Interactive Data Dashboard Project Guide and locate the Milestone 3 and 4 sections. Have them review the Goals and Deliverables for each milestone so they understand what to prioritize during work time.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up or form small groups and TAG one to two peers' projects. They can leave feedback on sticky notes (digital or paper) directly at their peer's workspace or comment within the project guide if using shared docs. Emphasize that this is not a final critique — it's a chance to gather early insights as part of Milestone 3. Encourage students to TAG areas like: filter accuracy, sort behavior, active filter labels, Rest/Undo, or fairness issues.",
         "duration": "35",
         "name": "Activity",
         "progression_name": "Milestone Three",
@@ -3300,7 +3300,7 @@
       "key": "d290a95e-a699-4135-99c4-9d9263281ecb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period. They should update their Fixes + Features List, record any new debugging insights, and reflect on how their filter and sort choices influence which items users see first.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to revisit the Milestone 3 Reflection section in their project planning guide and add on to what they wrote the previous class period. They should update their Fixes + Features List, record any new debugging insights, and reflect on how their filter and sort choices influence which items users see first.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3319,7 +3319,7 @@
       "key": "1e661b54-59c6-44c1-a6c0-16a9119084a3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one edge case, label, or detail you want to check today to make sure your dashboard is clear, fair, and ready to share?*\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement opportunities tied to clarity, transparency, fairness, or reliability, setting a concrete intention for their last work session.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What's one edge case, label, or detail you want to check today to make sure your dashboard is clear, fair, and ready to share?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify final improvement opportunities tied to clarity, transparency, fairness, or reliability, setting a concrete intention for their last work session.",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -3332,7 +3332,7 @@
       "key": "ebd9e881-f28c-4e04-9032-7d9ef64a842f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4: Handle Edge Cases & Finalize Your Dashboard, where students test their dashboard with tricky cases, polish their UI and logic, refine for clarity and inclusivity, and make it ready for showcasing. Remind students to check their Interactive Data Dashboard Project Guide for the Milestone 4 deliverables.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the tasks to complete for Day 5 of the project. Explain that today is focused on Milestone 4: Handle Edge Cases & Finalize Your Dashboard, where students test their dashboard with tricky cases, polish their UI and logic, refine for clarity and inclusivity, and make it ready for showcasing. Remind students to check their Interactive Data Dashboard Project Guide for the Milestone 4 deliverables.",
         "duration": "30",
         "name": "Activity",
         "tips": [
@@ -3361,7 +3361,7 @@
       "key": "0811109d-b9e3-40c0-abb6-824156c8b497",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Interactive Data Dashboard Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion. Encourage students to examine the Ethical Reasoning: Transparency & Fairness row carefully — this project’s dashboard focuses heavily on ensuring filters do not unintentionally hide important items or groups. Under Algorithmic Features, remind students to check whether their Reset/Undo is reliable and whether active filter counts update correctly.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to the last two pages of their Interactive Data Dashboard Project Guide, where the project rubric is located. Have students review each category carefully and mark where they believe their project currently falls. Encourage honesty — the goal is to identify strengths and areas for continued growth as intentional designers.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students are engaging thoughtfully with each rubric criterion, not rushing to completion. Encourage students to examine the Ethical Reasoning: Transparency & Fairness row carefully — this project’s dashboard focuses heavily on ensuring filters do not unintentionally hide important items or groups. Under Algorithmic Features, remind students to check whether their Reset/Undo is reliable and whether active filter counts update correctly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3388,7 +3388,7 @@
       "key": "2e3c82b7-513e-4820-be0c-1fec33bd9460",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Interactive Data Dashboard Projects. Explain that this is their final dedicated work session for Milestone 4: Handle Edge Cases & Finalize Your Dashboard. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Interactive Data Dashboard Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence. Check that students are recording changes in their Milestone 4 Evidence + Iteration Log. Their documentation should show how they tested edge cases, revised filters/labels/thresholds, refined UI clarity, and used AI in their debugging.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4 to finish developing their Interactive Data Dashboard Projects. Explain that this is their final dedicated work session for Milestone 4: Handle Edge Cases & Finalize Your Dashboard. Reinforce that today's goal is to prioritize improvements based on their self-assessment and TAG peer feedback, rather than trying to fix everything at once. Instruct students to use the feedback they received from their TAG review and self-assessment to finalize their Interactive Data Dashboard Project. Have students submit their projects at the end of the allotted time.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ensure students are on task. Remind students to comment their code with meaningful descriptions. Have students review their rubric and prioritize work on any rows where they do not yet show extensive evidence. Check that students are recording changes in their Milestone 4 Evidence + Iteration Log. Their documentation should show how they tested edge cases, revised filters/labels/thresholds, refined UI clarity, and used AI in their debugging.",
         "progression_name": "Milestone Four",
         "tips": [
           {
@@ -3416,7 +3416,7 @@
       "key": "3975c4bc-c331-4ce9-a078-08d84a20b788",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-file-lines\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Interactive Data Dashboard Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage feedback on clarity, fairness, and transparency. For example:\n- Is it clear what filters are active?\n- Are any items consistently hidden or hard to surface?\n- Does Reset/Undo behave predictably?\n- Is the dataset easy to scan visually?\n- Do labels accurately reflect the data shown?",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Distribute several sticky notes to each student for the gallery walk.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students begin the Gallery Walk by displaying their Interactive Data Dashboard Apps on their computers, then moving around the room to explore classmates' projects. As they visit each one, students should use their sticky notes to leave feedback, kudos, or questions following the TAG approach (Tell, Ask, Give). Encourage them to engage with a range of projects—not just those of close friends.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room to observe how students are engaging with the displayed projects. Encourage feedback on clarity, fairness, and transparency. For example:\n- Is it clear what filters are active?\n- Are any items consistently hidden or hard to surface?\n- Does Reset/Undo behave predictably?\n- Is the dataset easy to scan visually?\n- Do labels accurately reflect the data shown?",
         "tips": [
           {
             "type": "teachingTip",
@@ -3457,7 +3457,7 @@
       "key": "863e409a-715b-42e8-bf13-b4b9549b6181",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Interactive Data Dashboard Project Guide. Explain that this final step helps them consolidate what they learned about: designing clear, user-friendly dashboards, making filtering and sorting transparent and fair, handling edge cases and improving reliability, and using AI intentionally and evaluating its impact. Emphasize that their answers should include specific examples from their own dashboards.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project:\n- an edge case that revealed a bug\n- a filter or sorting choice they revised for fairness or clarity\n- how transparency cues (“Showing X results,” active filter labels) improved user control\n- how they evaluated, modified, or rejected AI suggestions\n\nProbe with questions like:\n- “What changed in your dashboard between Milestone 1 and Milestone 4?”\n- “How did your Reset/Undo or active filter labels improve over time?”\n- “How did AI help you understand or debug your logic?”\n\nIf students finish early, prompt them to help a peer reflect or revisit the rubric one more time.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Final Reflection and Final Self-Check sections in their Interactive Data Dashboard Project Guide. Explain that this final step helps them consolidate what they learned about: designing clear, user-friendly dashboards, making filtering and sorting transparent and fair, handling edge cases and improving reliability, and using AI intentionally and evaluating its impact. Emphasize that their answers should include specific examples from their own dashboards.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students write, encourage them to reference concrete moments from their project:\n- an edge case that revealed a bug\n- a filter or sorting choice they revised for fairness or clarity\n- how transparency cues (“Showing X results,” active filter labels) improved user control\n- how they evaluated, modified, or rejected AI suggestions\n\nProbe with questions like:\n- “What changed in your dashboard between Milestone 1 and Milestone 4?”\n- “How did your Reset/Undo or active filter labels improve over time?”\n- “How did AI help you understand or debug your logic?”\n\nIf students finish early, prompt them to help a peer reflect or revisit the rubric one more time.",
         "tips": [
           {
             "type": "assessmentOpportunity",

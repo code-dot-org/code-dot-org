@@ -149,7 +149,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument.\n\n**Slides:** The slide icon <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
+            "markdown": "**Deciding on a Warm Up:** We’ve provided a quick warm up activity for this lesson, but you may decide to replace it with an activity that more closely aligns with the lessons students have recently completed. If so, it may be helpful to focus on a task that reinforces summarizing an article or determining how an article could be used as evidence in an argument.\n\n**Slides:** The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  indicates that there is a slide in the slide deck that corresponds to this activity or prompt. It can be helpful to have the slides open while reading the lesson plan, as there are sometimes visuals or videos that are not included in the lesson plan"
           }
         ]
       },
@@ -162,7 +162,7 @@
       "key": "690085f5-caca-416a-ae88-38761d678f80",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _What comes to mind when you hear the term artificial intelligence? What are examples of artificial intelligence you've seen either in real life or in fiction, like movies or music or television?_\n\nHave students record their responses in their journals, then share with a neighbor. Before having a full-group discussion, transition to the next prompt.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Can you think of times when these examples were used for good? Can you think of times when these examples were used for bad, even if unintended? Are there things they do we might consider \"right\" or \"wrong\"?_\n\nHave students think to themselves first, then discuss with a neighbor before asking students to share as a full group. Have students share the example they thought of, then the situation they thought of that could be used for good or bad.",
         "name": "Journal"
       },
       "seeding_key": {
@@ -185,7 +185,7 @@
       "key": "cbd38062-3d0b-4f85-859b-ad0da41f3922",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary**: \n\n- **Ethics:** guidelines for good behavior."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary**: \n\n- **Ethics:** guidelines for good behavior."
       },
       "seeding_key": {
         "activity_section.key": "cbd38062-3d0b-4f85-859b-ad0da41f3922",
@@ -208,7 +208,7 @@
       "key": "fd4b350c-f002-4b2d-a51a-3c56bfdecb04",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-ethics/2021] video to setup the activity they will complete today.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-ethics/2021] video to setup the activity they will complete today.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fd4b350c-f002-4b2d-a51a-3c56bfdecb04",
@@ -243,7 +243,7 @@
       "key": "6bd7055f-82ec-4dcd-8002-7f800bd6190e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-ethics/2021] document with each group. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-ethics/2021] handout. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-ethics/2021] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-ethics/2021] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6bd7055f-82ec-4dcd-8002-7f800bd6190e",
@@ -254,7 +254,7 @@
       "key": "27322a17-32f6-4b0f-8166-0ea0bf64d32a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Once students have completed their research, share an example of an AI code of ethics, such as those by [Microsoft](https://www.microsoft.com/en-us/ai/responsible-ai?activetab=pivot1%3Aprimaryr6) and [Google](https://ai.google/principles/).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss**: _Your next task is to create a similar resource, an “AI Code of Ethics”. Based on what you’ve read and discussed, what are the most important ethical principles (rules) you believe all current and future AI must follow?_\n\nHave students discuss in their groups to brainstorm some initial ideas before regrouping to give a more specific task\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students will write at least one principle for the class code of ethics. Ideally, their principles should be written as a sentence followed by a short paragraph that provides more context to the reader (see Google’s page).",
         "name": "Draft “Our AI Code of Ethics” Resource ",
         "tips": [
           {

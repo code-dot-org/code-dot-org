@@ -1517,7 +1517,7 @@
       "key": "223380a0-e4a4-4096-9132-e6aa66535e21",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
+        "description": "**Group:** Place students in groups of two or three.\n\n**Distribute:** Give each group a copy of the activity guide and a set of animal shapes. If possible, try to have them cut beforehand to save time - otherwise, have the group cut their own set.\n    \n\n\n#### Activity Guide - Representing Information\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Review the rules of the activity with the class. Students are asked to create rules that let you represent any word you want using a single row of cards. Another person should be able to use the rules you write on the activity guide to read the words represented by your row of cards without talking to you."
       },
       "seeding_key": {
         "activity_section.key": "223380a0-e4a4-4096-9132-e6aa66535e21",
@@ -2212,7 +2212,7 @@
       "key": "ebc3bc11-14d5-4f55-a724-de6c0985e1e3",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/data-society/2024] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r binary_and_data/data-society/2024] video in the slides.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3983,7 +3983,7 @@
       "key": "f192fdb3-cf87-406d-8ee8-bf855a5f208b",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/data-society/2024] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r netflix_and_data/data-society/2024] video in the slides.\n",
         "progression_name": "Video: Netflix and Data",
         "tips": [
           {
@@ -4012,7 +4012,7 @@
       "key": "41079cca-7788-4579-9187-7e16763c046e",
       "position": 6,
       "properties": {
-        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/data-society/2024] video in the slides.\n",
+        "description": "**Routz:** Ask students to move on to the Routz problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Waze video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r waze_and_data/data-society/2024] video in the slides.\n",
         "name": "Routz\r",
         "progression_name": "Video: Waze and Data"
       },
@@ -4036,7 +4036,7 @@
       "key": "3a349be4-b051-4282-b445-843250ccb6e4",
       "position": 8,
       "properties": {
-        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/data-society/2024] video in the slides.\n",
+        "description": "**Nyle:** Ask students to move on to the Nyle problem.  Again, they should take a few minutes to work individually or in pairs on the first two problems.  \n\n**Share Out:** Allow students to quickly share out some ideas, then introduce the Amazon video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r amazon_and_data/data-society/2024] video in the slides.\n",
         "name": "Nyle\r",
         "progression_name": "Video: Amazon and Data"
       },
@@ -4171,7 +4171,7 @@
       "key": "e060cbdb-6ba3-43b6-be79-efbac23dea2c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/data-society/2024] video in the slides.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_machine_learning/data-society/2024] video in the slides.\n",
         "progression_name": "Video: What is Machine Learning?",
         "tips": [
           {
@@ -4225,7 +4225,7 @@
       "key": "388dba94-6c0c-4e2c-98f0-49f7cc448d40",
       "position": 4,
       "properties": {
-        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/data-society/2024] video in the slides.\n",
+        "description": "**Discuss:** How well did A.I. do? How do you think it decided what to include in the ocean?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_training_data_and_bias/data-society/2024] video in the slides.\n",
         "progression_name": "Video: Training Data and Bias"
       },
       "seeding_key": {
@@ -4312,7 +4312,7 @@
       "key": "6426a584-5dd3-4344-96b9-2a96fdf26881",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/data-society/2024] video in the slides which recaps the concepts discussed today.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r video_impact_on_society/data-society/2024] video in the slides which recaps the concepts discussed today.\n",
         "progression_name": "Video: Impact on Society"
       },
       "seeding_key": {

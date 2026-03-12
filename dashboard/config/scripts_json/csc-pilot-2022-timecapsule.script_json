@@ -294,7 +294,7 @@
       "key": "4e626245-ad07-4497-83c5-18757bd19640",
       "position": 1,
       "properties": {
-        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide \n\n**Discuss**:\n* _What is a curator?_\n* _How do you think a curator selects which content to use?_\n* _How can we use images and sound to help represent the meaning of a story?_\n"
+        "description": "####Setting the Stage\nWelcome students to class and introduce the day’s activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide \n\n**Discuss**:\n* _What is a curator?_\n* _How do you think a curator selects which content to use?_\n* _How can we use images and sound to help represent the meaning of a story?_\n"
       },
       "seeding_key": {
         "activity_section.key": "4e626245-ad07-4497-83c5-18757bd19640",
@@ -351,7 +351,7 @@
       "key": "9b2a9bb9-b6b1-4fc3-8d0d-85c59a5748d0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Meaning with Images and Sounds\" video\n",
         "name": "Poem Art",
         "progression_name": "Video"
       },
@@ -375,7 +375,7 @@
       "key": "45e15f48-7c01-40ba-95fe-8bb6c9c8a160",
       "position": 3,
       "properties": {
-        "description": "####Level-by-Level Support (40 minutes)\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “All Levels\" slide\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
+        "description": "####Level-by-Level Support (40 minutes)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “All Levels\" slide\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -459,7 +459,7 @@
       "key": "4f2ab4a8-68ea-4533-a667-58eedf2edcba",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Great work! What’s next?\" slide\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Great work! What’s next?\" slide\n"
       },
       "seeding_key": {
         "activity_section.key": "4f2ab4a8-68ea-4533-a667-58eedf2edcba",
@@ -482,7 +482,7 @@
       "key": "23e61b7f-4e0e-4c9a-91b2-44425c19c235",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect\" slide\n\n* _What decisions did you make when you curated the image effects and sounds to go with the words of the poem you chose?_\n* _Do you think curating different images and effects would have made your poem feel different? How?_\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect\" slide\n\n* _What decisions did you make when you curated the image effects and sounds to go with the words of the poem you chose?_\n* _Do you think curating different images and effects would have made your poem feel different? How?_\n"
       },
       "seeding_key": {
         "activity_section.key": "23e61b7f-4e0e-4c9a-91b2-44425c19c235",
@@ -516,7 +516,7 @@
       "key": "ef20adeb-af85-4ba2-a0cd-032ed4e2a054",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n- **Time Capsule** - A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. \n- **Curator** - A person who selects content for presentation, such as in a museum \n- **Enhance** -  To increase or improve the quality of something",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Vocabulary**:\n- **Time Capsule** - A place to hold memories and everyday items which represent a day in the life of someone living during a specific time period. \n- **Curator** - A person who selects content for presentation, such as in a museum \n- **Enhance** -  To increase or improve the quality of something",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -528,7 +528,7 @@
       "key": "60bbadaa-4eb7-4555-bcf7-65671b869008",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Example” slide \n\n**Do This**: Show students the [time capsule example app](https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo) provided in the slides.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**:\n- _What words stood out to you?_\n- _How were the words enhanced by the sounds and images in the project?_\n- _What decisions did the author make to curate their app?_\n- _What can you tell about the person who made this project?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to an example time capsule app. Students should understand how sounds and images can be used to visually represent and enhance a story. Students should also begin noticing how each author of a story has their own way of curating and personalizing the content they wish to use.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Example” slide \n\n**Do This**: Show students the [time capsule example app](https://studio.code.org/projects/poetry_hoc/GQIx_bn2YCfP7z892faOmnGVbrXb9CUG41_vp66vWFo) provided in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**:\n- _What words stood out to you?_\n- _How were the words enhanced by the sounds and images in the project?_\n- _What decisions did the author make to curate their app?_\n- _What can you tell about the person who made this project?_\n\n**Discussion Goal**: The purpose of this warm up is to introduce students to an example time capsule app. Students should understand how sounds and images can be used to visually represent and enhance a story. Students should also begin noticing how each author of a story has their own way of curating and personalizing the content they wish to use.\n",
         "name": "Time Capsule Example"
       },
       "seeding_key": {
@@ -556,7 +556,7 @@
       "key": "6b167d83-08a3-44ca-91fa-31c59a774378",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Your Task” slide\n\n**Say**: _Today you will plan out your time capsule app before coding it next class. As you plan, think about what someone in the future would want to learn about your life._\n\n_Imagine your future grandchildren ask you what it was like when you were young. They want to see life through your eyes._\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Discuss**: \n- _What do you do when you go home?_\n- _What are your favorite subjects?_\n- _Who are your best friends?_\n- _What does your family do on weekends?_\n- _What are your favorite foods?_\n- _What are your favorite shows, videos or books_ \n- _Who is your favorite streamer or YouTuber?_\n- _What else would you want to share about your life?_\n\n**Do This**: Hand out the Plan Your Time Capsule Questions sheet to students. Have them pair up with a partner and answer the questions about their own lives.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Your Task” slide\n\n**Say**: _Today you will plan out your time capsule app before coding it next class. As you plan, think about what someone in the future would want to learn about your life._\n\n_Imagine your future grandchildren ask you what it was like when you were young. They want to see life through your eyes._\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Plan Your Time Capsule” slide\n\n**Discuss**: \n- _What do you do when you go home?_\n- _What are your favorite subjects?_\n- _Who are your best friends?_\n- _What does your family do on weekends?_\n- _What are your favorite foods?_\n- _What are your favorite shows, videos or books_ \n- _Who is your favorite streamer or YouTuber?_\n- _What else would you want to share about your life?_\n\n**Do This**: Hand out the Plan Your Time Capsule Questions sheet to students. Have them pair up with a partner and answer the questions about their own lives.",
         "duration": "10",
         "name": "Plan Your Time Capsule"
       },
@@ -585,7 +585,7 @@
       "key": "bdf5951b-6c1f-48b9-80b6-6f33accb8a6d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to guide your writing as you craft an original time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes_\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story: Example” slide\n\n**Say**: _Before you begin writing your time capsule story, we are going to look at an example. This is the same story we saw at the beginning of class. Just like this student, before you begin coding, you are going to write out each line of your story._\n\n_Title: A New World_\n\n_By: Nate M._ \n\n_1. When our school closed its doors_\n\n_2. And we went home to learn_ \n\n_3. I felt very alone_\n\n_4. But then I got really into Minecraft_ \n\n_5. And played Roblox with my friends!_\n\n_6. And now I'm back in school_\n\n_7. Where other people like games, too_\n\n_8. And I have so many more friends now!_\n\n**Do This**: Read the example time capsule story aloud to students. Make sure students recognize that it is the same story from the example app at the beginning of class. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Write Your Story” slide\n\n**Say**: _Now you will take what you said to your partner and use it to guide your writing as you craft an original time capsule story. Your story should have 5-8 lines, at least three different pieces of information about you, and clear details that describe life through your eyes_\n\n**Do This**: Hand out the Write Your Own Story worksheet and have students complete it independently for the next 15 minutes. Make sure students can see the connection between their responses to the seven questions and their time capsule story.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Visualize Your Story” slide\n\n**Say**: _Now that we’ve finished writing our stories, it is time to plan out what our apps will look like. You are going to circle words or phrases from your story that you can enhance using visual effects, sounds, or images._ \n\n_What words or phrases did this student circle? How did he represent those words or phrases in his time capsule app?_\n",
         "duration": "20",
         "name": "Write Your Time Capsule"
       },
@@ -636,7 +636,7 @@
       "key": "02f78081-ff6d-497b-8e8d-fd450daa7b08",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Look at the words you circled._ \n\n_How might someone else interpret those words?_ \n\n_What feelings or thoughts do you hope the viewer gets from reading your story?_\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Look at the words you circled._ \n\n_How might someone else interpret those words?_ \n\n_What feelings or thoughts do you hope the viewer gets from reading your story?_\n\n**Discussion Goal**: Students should be able to name specific emotions or thoughts that the viewer will be left with after reading their time capsule story. Students should also understand the power of curation and how every person can interpret the same content differently.",
         "duration": "10",
         "name": "Reflection"
       },
@@ -649,7 +649,7 @@
       "key": "b0b01ec7-2eb0-46c3-b4d7-bd84fe913b42",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Life in a Pandemic” slide\n\n***Life in a Pandemic*** \\\n*No school in two years. \\\nMy friends wear masks. \\\nSome parents hate them but we like them. \\\nI’m sad I can’t play with my friends. \\\nWe can’t visit grandma, could get her sick. \\\nBut we get to video call her a lot.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Life in a Pandemic” slide\n\n***Life in a Pandemic*** \\\n*No school in two years. \\\nMy friends wear masks. \\\nSome parents hate them but we like them. \\\nI’m sad I can’t play with my friends. \\\nWe can’t visit grandma, could get her sick. \\\nBut we get to video call her a lot.*",
         "duration": "5",
         "name": "Read Time Capsule Examples"
       },
@@ -662,7 +662,7 @@
       "key": "2657dcf5-22f0-4819-8701-61510c9f0692",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Cafeteria Lunches” slide\n\n**Cafeteria Lunches** \\\n*The menu for this week: \\\nMonday - Chicken Patty with Gravy \\\nTuesday - Spaghetti \\\nWednesday - Pepperoni Pizza \\\nThursday - Chicken Patty (again!?) \\\nFriday - Salisbury Steak (AKA mystery meat) \\\nI heard in other countries \\\nThey get fresh fruit \\\nSure sounds nice* \n\n**Do This**: Read the time capsule stories aloud as a class. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Time Capsule Stories: Cafeteria Lunches” slide\n\n**Cafeteria Lunches** \\\n*The menu for this week: \\\nMonday - Chicken Patty with Gravy \\\nTuesday - Spaghetti \\\nWednesday - Pepperoni Pizza \\\nThursday - Chicken Patty (again!?) \\\nFriday - Salisbury Steak (AKA mystery meat) \\\nI heard in other countries \\\nThey get fresh fruit \\\nSure sounds nice* \n\n**Do This**: Read the time capsule stories aloud as a class. "
       },
       "seeding_key": {
         "activity_section.key": "2657dcf5-22f0-4819-8701-61510c9f0692",
@@ -673,7 +673,7 @@
       "key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: Discuss with a partner what images you visualize and what sounds you hear when you read the stories.  How would you curate these stories? How is your idea similar to or different from your partner’s idea? \n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized.  The warm-up discussion is a review for students to practice visualizing stories and understand how curating content is often dependent upon the creator."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read and Imagine” slide\n\n**Discuss**: Discuss with a partner what images you visualize and what sounds you hear when you read the stories.  How would you curate these stories? How is your idea similar to or different from your partner’s idea? \n\n**Discussion Goal**: The purpose of this warm up is to show students two examples of short time capsule stories that can easily be visualized.  The warm-up discussion is a review for students to practice visualizing stories and understand how curating content is often dependent upon the creator."
       },
       "seeding_key": {
         "activity_section.key": "56b2543a-d826-4e16-b3b6-0ec0591b2aac",
@@ -700,7 +700,7 @@
       "key": "586b3f3d-2a24-4ff1-b604-7f15be178d9c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Free Play” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Free Play” slide\n",
         "name": "Code Your Own Time Capsule",
         "progression_name": "Free Play "
       },
@@ -725,7 +725,7 @@
       "key": "2c69632d-7711-4931-9173-490311397a7a",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add Your Story” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add a Background” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add Sprites” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add Effects and Sounds” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Add Events” slide\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Final Review” slide\n\n**Do This**: Have students move to their computers and sign in. Students will now code their time capsule apps in Poem Art. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from Poem Art tutorial to enhance their time capsule stories. Circulate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story."
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Your Story” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add a Background” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Sprites” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Effects and Sounds” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Add Events” slide\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Review” slide\n\n**Do This**: Have students move to their computers and sign in. Students will now code their time capsule apps in Poem Art. Students should follow the instructions on the slides as they add in their text, backgrounds, effects, sounds, and events. They will use the skills they learned from Poem Art tutorial to enhance their time capsule stories. Circulate the room to support students. Encourage them to press Run each time they add a block and note if they need to add any other effects, sprites, or events to best match their story."
       },
       "seeding_key": {
         "activity_section.key": "2c69632d-7711-4931-9173-490311397a7a",
@@ -763,7 +763,7 @@
       "key": "c256844c-82d7-4583-95e4-f15ad43b3877",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Watch your program run again._\n\n_What do you hope a future historian might learn from your program?_ \n\n_What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _Watch your program run again._\n\n_What do you hope a future historian might learn from your program?_ \n\n_What visual or sound effects does your program use to accomplish that goal?_ \n\n**Discussion Goal**: The reflection question should help the students think about how their programs run and if the visual effects best represent the mood and feeling of their story. They should understand that the decisions they make as a creator can affect the experience of the viewer.  ",
         "duration": "10",
         "name": "Reflection"
       },
@@ -776,7 +776,7 @@
       "key": "57c785aa-e992-4191-83b7-e379a156bdd8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule story from last class. Imagine if someone else told the story of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discussion” slide\n\n**Discuss**: *Reread your time capsule story from last class. Imagine if someone else told the story of your life without your input:*\n\n- _How would that make you feel?_ \n- _How might they tell it differently?_\n- _Do you think it is important for everyone to have a voice in telling their side of history?_\n\n**Do This**: Have students pair up and answer the Discussion questions.\n\n**Discussion Goal**: The purpose of this discussion is for students to understand how history is written. Stories can be told from multiple perspectives, but they are not always told from the perspective of the group of people experiencing the event. The goal is for students to understand the power of being able to tell their own stories from their own perspective.\n",
         "duration": "5",
         "name": "Discussion"
       },
@@ -789,7 +789,7 @@
       "key": "03cca277-b34e-4ad5-a4a7-9e9be102ddea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Your App” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Your App” slide\n\n**Display**: *Follow the directions on the slide:*\n\n_1. At the top of your app, click the “Share” Button._ \\\n_2. Click the “Copy Link to Project” button._ \\\n_3. Open a new tab and paste your link there._\n\n**Do This**: Have students open up their project in a new tab on their computer.  Ensure all students have their projects ready for testing before moving on.\n",
         "duration": "20",
         "name": "Share Your Time Capsule"
       },
@@ -818,7 +818,7 @@
       "key": "d9779437-50ef-406a-943e-3d645e545303",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *We both wrote about ___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *I liked your decision to ________.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Gallery Walk” slide\n\n**Say**: _Now it is time to show off our hard work! As you look at your classmates’ apps, think about the images and sounds they used. Did they discuss the same stories that you did or did they choose different ones? How did their images and sounds make you feel?_\n\n_Leave a note for each of your classmates using one of the sentence starters on the slide:_\n- *We both wrote about ___________!*\n- *Your images made me feel ________.*\n- *Your sounds made me feel ________.*\n- *I liked your decision to ________.*\n\n**Do This**: Hand out a stack of post it notes to each student. Have students move \"musical chairs\"-style to another computer and play test the project there for a few minutes, until they receive a signal from you to move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible. As students go around the room, they should be writing a note for each classmate whose project they test out. \n"
       },
       "seeding_key": {
         "activity_section.key": "d9779437-50ef-406a-943e-3d645e545303",
@@ -845,7 +845,7 @@
       "key": "c95f2acd-ebe7-4eb8-9a2f-eca98b4cd23e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see on your classmates’ apps?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss**: \n\n*1. What images and sounds did you see on your classmates’ apps?* \\\n*2. How were their stories different from yours?* \\\n*3. How were their stories similar to yours?* \\\n*4. How did their images make you feel?*\n\n**Do This**: Have students return to their seats for a discussion. In pairs or as a class, ask students to share a note that they left for one of their classmates. \n\n**Discussion Goal**:  The goal is for students to understand how their stories and visual effects are similar to or different from their classmates stories. They should also note how different images and sounds made them feel.",
         "duration": "10",
         "name": "Discuss Your Time Capsule"
       },
@@ -858,7 +858,7 @@
       "key": "b721e6b5-c5df-4caa-ba47-385e56ef98e0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Final Thoughts” slide\n\n**Say**: _Imagine you are a museum curator and want to tell the story of now from the perspective of your class as a whole (not just through your own eyes):_\n\n* _What elements would you make sure to include and which would you leave out?_\n* _What happens when you include certain things?_ \n* _What happens when you leave those things out?_ \n\n**Do This**: Have students discuss the reflection question in small groups, then bring the class together for a larger class discussion.\n\n**Discussion Goal**: These final questions should help students reflect on the experience of curating content and writing their own stories. They should be aware of the impact of being able to tell a story through their own lens and should see how a story might change if told by a different person or group of people.\n",
         "duration": "10",
         "name": "Reflection"
       },

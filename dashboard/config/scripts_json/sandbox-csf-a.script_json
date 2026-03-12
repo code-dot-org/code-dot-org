@@ -616,7 +616,7 @@
       "key": "b8e11b7a-e88f-40ea-a7ff-6cf76fad7615",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Video: Programming with Rey and BB-8” slide\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to try coding one block at a time. Make sure they press “Run” frequently in order to break the following challenges down into small steps. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Programming with Rey and BB-8” slide\n\n\n",
         "name": "Programming with Rey and BB-8",
         "progression_name": "Video: Programming with Rey and BB-8"
       },
@@ -629,7 +629,7 @@
       "key": "90c0f329-7895-483d-9423-f19bd4d8d518",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8: Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-8: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -641,7 +641,7 @@
       "key": "fd18520a-7555-4e44-95e5-2774d8d1726c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -653,7 +653,7 @@
       "key": "21e29498-ee4d-41bb-9ba6-da1c9b738ed5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12: Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 10-12: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -696,7 +696,7 @@
       "key": "ab7a047c-3818-44f9-a362-cf2a1ef5b4d9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: The Artist in Code Studio” slide",
         "progression_name": "Video: The Artist in Code Studio"
       },
       "seeding_key": {
@@ -708,7 +708,7 @@
       "key": "89f41da1-b720-4055-99ab-c4de7d8c1489",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 2-4: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -720,7 +720,7 @@
       "key": "fea5ab0f-dadc-47b1-b50e-84214afb8114",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Video: Loops in Artist” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Loops in Artist” slide",
         "progression_name": "Video: Loops in Artist"
       },
       "seeding_key": {
@@ -732,7 +732,7 @@
       "key": "33b7d8b3-a000-48f2-897f-bc9566fe9eba",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-10: Skill Building” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 6-10: Skill Building” slide",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -744,7 +744,7 @@
       "key": "c6ccd72a-cdad-4ccf-b4dc-cd9268f3267b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11: Challenge” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 11: Challenge” slide",
         "progression_name": "Challenge"
       },
       "seeding_key": {
@@ -756,7 +756,7 @@
       "key": "00d5e2d0-5230-4932-a57b-3a30a7eaa588",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 12-13: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -768,7 +768,7 @@
       "key": "46427e7b-0665-44a0-a93d-46f2a1bf4321",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 14: Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 14: Free Play” slide",
         "progression_name": "Free Play",
         "tips": [
           {
@@ -786,7 +786,7 @@
       "key": "d187ae18-118a-4e4c-9f3e-2588cc6fe039",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Extras” slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -818,7 +818,7 @@
       "key": "d2ffd8f4-33f9-4771-a53e-a6e7e1504856",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Event** - An event is an action that causes something to happen.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Event** - An event is an action that causes something to happen.\n"
       },
       "seeding_key": {
         "activity_section.key": "d2ffd8f4-33f9-4771-a53e-a6e7e1504856",
@@ -829,7 +829,7 @@
       "key": "e1fbd88f-a6d2-472f-b0a6-d6b96eef4ece",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\nReview \"The Big Event\" activity with students:\n\n - _What did we \"program\" the button events to do?_\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Gaming\" slide\n\n_Now we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other._\n\n - _When have you seen two characters touch each other as an event in games?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\nReview \"The Big Event\" activity with students:\n\n - _What did we \"program\" the button events to do?_\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Gaming\" slide\n\n_Now we're going to add events to our code. Specifically, we're going to have an event for when two characters touch each other._\n\n - _When have you seen two characters touch each other as an event in games?_",
         "name": "Introduction\r"
       },
       "seeding_key": {
@@ -868,7 +868,7 @@
       "key": "d3516c53-bba3-4c54-a30e-c7efb27c8da9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Option 1: Paper Blocks\" slide\n\nUsing the remote from the ***Controller Image** and blocks from ***Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class _when the teal button is pushed, what do we do?_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Option 1: Paper Blocks\" slide\n\nUsing the remote from the ***Controller Image** and blocks from ***Manipulatives**, gather your class to reprise the activity from the previous lesson. Ask the class _when the teal button is pushed, what do we do?_ then fill in one of the `when` event blocks and one of the blue action blocks accordingly.  Make sure that the students understand that the `when` blocks need to be on top of the blue block and they need to touch in order for the program to run.\n\n####-Or-",
         "name": "Unplugged Activity Using Paper Blocks"
       },
       "seeding_key": {
@@ -880,7 +880,7 @@
       "key": "9cfbbbff-c024-4e5b-aee4-cb66558d30d2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Option 2: Previewing Puzzles as a Class\" slide\n\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7.  Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Option 2: Previewing Puzzles as a Class\" slide\n\nPull a puzzle from the corresponding puzzles online. We recommend puzzle 7.  Call on different students to make a funny noise when you click on Jorge. Explain this is an event that they are reacting to and Jorge can be coded to make noise when you click on him.",
         "name": "Previewing Online Puzzles as a Class"
       },
       "seeding_key": {
@@ -902,7 +902,7 @@
       "key": "70023d77-7be5-4008-9b33-80702403a741",
       "position": 2,
       "properties": {
-        "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.",
+        "description": "This is the most free-form plugged activity of the course. At the final stage students have the freedom to create a story of their own. You may want to provide structured guidelines around what kind of story to write, particularly for students who are overwhelmed by too many options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.",
         "name": "On the Move with Events"
       },
       "seeding_key": {
@@ -914,7 +914,7 @@
       "key": "9ca91b78-53ba-4a69-a8ad-307575e77d43",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Video: Introduction to Play Lab” slide",
         "progression_name": "Video: Introduction to Play Lab"
       },
       "seeding_key": {
@@ -926,7 +926,7 @@
       "key": "20176a9f-25fd-461f-821b-13e147d66c69",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2: Free Play” slide",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -938,7 +938,7 @@
       "key": "7e255e69-1054-4774-87d5-0e04632408ce",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3: Practice” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3: Practice” slide",
         "progression_name": "Practice"
       },
       "seeding_key": {
@@ -950,7 +950,7 @@
       "key": "dd50a7e2-663d-41db-8e89-cdeac81348c6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Mini-project” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own projects we find inspiration from other people’s projects. \n\nIf you have gotten permission to remix a project, make sure to give credit to the original coder.\n\n_**If you remix a Code.org project:**_\n 1. Add a comment block that explains where you remixed from.\n 2. You might also keep the word “Remix” in the title of your project to tell others that this project originally came from someone else.\n\n_**If you want to remix a friend’s project:**_\n\nMake sure you get their permission first. Once you get permission, follow the steps above to give them credit.\n\nWhen you don’t have direct permission to remix someone’s project or upload their images into your project, look for publicly available materials instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 4-8: Mini-project” slide",
         "progression_name": "Mini-project: Jorge the Dog"
       },
       "seeding_key": {
@@ -962,7 +962,7 @@
       "key": "11b949ab-f8e4-413b-84b7-6cba4e240f46",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Lesson Extras\" slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Lesson Extras\" slide",
         "progression_name": "Lesson Extras"
       },
       "seeding_key": {
@@ -974,7 +974,7 @@
       "key": "7aa1041f-1eb4-45aa-951a-aeb431f36305",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Reflection” slide\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of a face that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote-controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Reflection” slide\n\n**Prompts:**\n\n - What was today’s lesson about?\n - Draw one of a face that shows how you felt about today's lesson in the corner of your journal page.\n - Draw an event you used in your program today.\n - Imagine that you have a remote-controlled robot. What would the remote look like? Draw a picture of what you think you could make the robot do.",
         "name": "Reflection"
       },
       "seeding_key": {
@@ -997,7 +997,7 @@
       "key": "f4655c64-28b5-40a6-965d-e9c51cbdba84",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\n**Do this:**\n* Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in the earlier lesson using the Artist tools.\n* Review the vocabulary word **loop**.\n* If you created your own project example, share it now.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Review\" slide\n\n**Do this:**\n* Get students excited and ready for today's activity. Begin by asking students to remember what they have already done in the earlier lesson using the Artist tools.\n* Review the vocabulary word **loop**.\n* If you created your own project example, share it now.",
         "name": "Review",
         "progression_name": "Project"
       },
@@ -1010,7 +1010,7 @@
       "key": "c05be240-2876-4ecb-b9db-21875e5938db",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Loop** - The action of doing something over and over again.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Vocabulary\" slide\n\n**Say:**\n- **Loop** - The action of doing something over and over again.",
         "name": "Vocabulary"
       },
       "seeding_key": {
@@ -1047,7 +1047,7 @@
       "key": "c1c1489e-6506-49c0-91cc-57037b7c4f17",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Planning\" slide\n\n**Do this:** Distribute the **planning guide** handout and review it with students.\nStudents will pick *at least one* place for the artist. They should then draw the path that the artist will follow. (It's like a dot-to-dot puzzle, but without the numbers!)\nNext to the image, students should write their stories. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Planning\" slide\n\n**Do this:** Distribute the **planning guide** handout and review it with students.\nStudents will pick *at least one* place for the artist. They should then draw the path that the artist will follow. (It's like a dot-to-dot puzzle, but without the numbers!)\nNext to the image, students should write their stories. ",
         "name": "Planning",
         "tips": [
           {
@@ -1065,7 +1065,7 @@
       "key": "68639f93-6bbb-4e80-af8e-8a460a555918",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Telling a Story with the Artist\" slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Telling a Story with the Artist\" slide",
         "name": "Project"
       },
       "seeding_key": {
@@ -1107,7 +1107,7 @@
       "key": "d998ac66-523c-4318-a01b-943e29f13945",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show \"Showcase\" slide\n\nTo celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Showcase\" slide\n\nTo celebrate students' work, spend the last 10 minutes or so, allowing them to showcase their projects. This can be done in many ways, but here are a few:\n\n* **Public Demo**: Select a few exemplary volunteers to briefly demo their projects and tell their story in front of the class. As they do so, have them touch on what the planning-to-coding experience was like for them. \n* **Pair Storytelling**: If you have a big class or are shorter on time, have students or groups pair up and demo their projects that way. \n* **Gallery Walk**: Ensure all students have their projects ready for testing. Have students move \"musical chairs\"-style to another computer and run the project there and read the story. When they receive a signal from you, they should move to another computer. Repeat this every few minutes. While there is less opportunity for structured communication here, this ensures students get to demo as many of their peers' projects as possible.",
         "name": "Showcase"
       },
       "seeding_key": {

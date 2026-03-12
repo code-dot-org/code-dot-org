@@ -1138,7 +1138,7 @@
       "key": "afcec2fb-ae78-45bc-b469-24ce8d498e1c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n*  *What do you think a chatbot is?*\n\n**Group:** Place students in groups of 4.\n\n**Distribute:** Give each student 2-3 sticky notes. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a generic answer on each sticky note. Encourage students to be creative and think beyond simple \"yes\" or \"no\" answers. Once they have at least 2 sticky notes, have students fold their sticky notes and place them in a pile in the middle of their group *(you can also choose to provide containers for each group to hold their sticky notes)*.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to take turns asking a question out loud and then selecting a sticky note at random for their answer *(example: \"Are we running the mile in PE today?\" or \"Will I have homework in CSA today?\")*.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n*  *What do you think a chatbot is?*\n\n**Group:** Place students in groups of 4.\n\n**Distribute:** Give each student 2-3 sticky notes. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a generic answer on each sticky note. Encourage students to be creative and think beyond simple \"yes\" or \"no\" answers. Once they have at least 2 sticky notes, have students fold their sticky notes and place them in a pile in the middle of their group *(you can also choose to provide containers for each group to hold their sticky notes)*.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to take turns asking a question out loud and then selecting a sticky note at random for their answer *(example: \"Are we running the mile in PE today?\" or \"Will I have homework in CSA today?\")*.  ",
         "name": "Exploring the Nature of Chatbots"
       },
       "seeding_key": {
@@ -1162,7 +1162,7 @@
       "key": "31cf9ced-4d0e-4b74-8d15-993ff10743bf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to go to one of the chatbot links provided. Give students time to try out several of the chatbots and find one to use for this activity. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to go to one of the chatbot links provided. Give students time to try out several of the chatbots and find one to use for this activity. ",
         "duration": "10",
         "name": "Finding Your Chatbot",
         "tips": [
@@ -1181,7 +1181,7 @@
       "key": "e73b37ef-16d3-446f-96aa-b5e035540d9c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to have several converstaions with their chatbot. Click through the animated slide to display the prompts that students will discuss/answer about their experience.\n* *How does it respond to \"where do you come from?\"*\n* *What is the most interesting response?*\n* *What is the most peculiar response?*\n* *How does it respond to \"asdfghkl;\"?* \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to have several converstaions with their chatbot. Click through the animated slide to display the prompts that students will discuss/answer about their experience.\n* *How does it respond to \"where do you come from?\"*\n* *What is the most interesting response?*\n* *What is the most peculiar response?*\n* *How does it respond to \"asdfghkl;\"?* \n",
         "duration": "10",
         "name": "Interrogating the Chatbot"
       },
@@ -1194,7 +1194,7 @@
       "key": "e87f37e1-8079-4fbd-8e44-d4616a03bbcc",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Work with a partner and have your two chatbots converse with each other. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **For example:** Partner A will seed the conversation with a simple statement such as \"Hi\" to their chatbot, which responds with \"Howdy!\"\n\nPartner B will type partner A chatbot's response (\"Howdy!\") into their chatbot. Partner B's chatbot responds with \"How are you?\". This response will be typed into Partner A's chatbot and so on. \n\nStudents are relaying messages between the two chatbots, rather than having their own conversation with their chatbots. \n",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Work with a partner and have your two chatbots converse with each other. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **For example:** Partner A will seed the conversation with a simple statement such as \"Hi\" to their chatbot, which responds with \"Howdy!\"\n\nPartner B will type partner A chatbot's response (\"Howdy!\") into their chatbot. Partner B's chatbot responds with \"How are you?\". This response will be typed into Partner A's chatbot and so on. \n\nStudents are relaying messages between the two chatbots, rather than having their own conversation with their chatbots. \n",
         "duration": "10",
         "name": "Working With Another Group"
       },
@@ -1221,7 +1221,7 @@
       "key": "505fa39a-01e0-4fe6-85c4-49f6e2730bcc",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt."
       },
       "seeding_key": {
         "activity_section.key": "505fa39a-01e0-4fe6-85c4-49f6e2730bcc",
@@ -1232,7 +1232,7 @@
       "key": "602e6642-d656-4a05-9b6a-c1acb1a4743a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n* *Based on the keywords you identified and your experience with the chatbot today, can you predict the CS concept being used?*\n\n* *Write an algorithm using pseudo-code that would create an output of one of your interactions with the chatbot.*\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n* *Based on the keywords you identified and your experience with the chatbot today, can you predict the CS concept being used?*\n\n* *Write an algorithm using pseudo-code that would create an output of one of your interactions with the chatbot.*\n",
         "name": "Making a Prediction"
       },
       "seeding_key": {
@@ -1256,7 +1256,7 @@
       "key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What programming concept(s) do you think may be involved in causing the chatbot to look for key words or phrases and respond accordingly?*\n\n**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What programming concept(s) do you think may be involved in causing the chatbot to look for key words or phrases and respond accordingly?*\n\n**Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt"
       },
       "seeding_key": {
         "activity_section.key": "f29b07ba-ae81-4a80-b082-cc82fa3153a0",
@@ -1286,7 +1286,7 @@
       "key": "08a60207-7743-4c62-82b3-5136f69b014d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 2 to complete levels 1-4. Bring the class back together after level 4 for a discussion before completing level 5. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 2 to complete levels 1-4. Bring the class back together after level 4 for a discussion before completing level 5. ",
         "progression_name": "Exploration"
       },
       "seeding_key": {
@@ -1298,7 +1298,7 @@
       "key": "65c9e6ec-9d70-4683-a6f6-2f7e8ed46a9d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the `trim()` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter something. For example, a possible statement and response would be:\n\n***Statement:***\n\n***Response:*** *Say something, please.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the slide to guide your discussion before moving on to the next levels. \n\n* *How could we check that a statement has at least one character?*\n\n* *If there are no characters, what would be a good output?* \n\nStudents will go through the next levels and have the code check that the statement has at least one character. They can do this by using the `trim()` method to remove spaces from the beginning and end, and then checking the length of\nthe trimmed string. If there are no characters, the response should tell the user to enter something. For example, a possible statement and response would be:\n\n***Statement:***\n\n***Response:*** *Say something, please.*",
         "name": "Checking for Characters",
         "progression_name": "More responses!"
       },
@@ -1324,7 +1324,7 @@
       "key": "f80e30aa-77bf-461f-bf9c-36623b5934c2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts\n* *What knowledge and skills did you use that you have already learned?*\n\n* *What were you confident about?* \n\n* *What would you like to practice?*\n\n* *What questions do you have about today?*\n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts\n* *What knowledge and skills did you use that you have already learned?*\n\n* *What were you confident about?* \n\n* *What would you like to practice?*\n\n* *What questions do you have about today?*\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "f80e30aa-77bf-461f-bf9c-36623b5934c2",
@@ -1348,7 +1348,7 @@
       "key": "c4ab2b79-6212-449b-a731-db49acdd863e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompt.\n\n*Searching for collections of letters in a string does\nnot always work as intended. For example, the word “cat” is in the string “Let's play catch!,” but the\nstring has nothing to do with the animal.*\n* *What is a possible solution to this problem?* "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompt.\n\n*Searching for collections of letters in a string does\nnot always work as intended. For example, the word “cat” is in the string “Let's play catch!,” but the\nstring has nothing to do with the animal.*\n* *What is a possible solution to this problem?* "
       },
       "seeding_key": {
         "activity_section.key": "c4ab2b79-6212-449b-a731-db49acdd863e",
@@ -1390,7 +1390,7 @@
       "key": "886d09b0-7613-40a2-a05b-43657bbcd19f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 3, Level 1. Students should see the `StringExplorer` class. It currently has code to illustrate the use of the `indexOf` and `toLowerCase` methods.\n\nStudents will follow the instruction in Level 1 to investigate the `indexOf()` method. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Magpie Lab Lesson 3, Level 1. Students should see the `StringExplorer` class. It currently has code to illustrate the use of the `indexOf` and `toLowerCase` methods.\n\nStudents will follow the instruction in Level 1 to investigate the `indexOf()` method. ",
         "progression_name": "Investigate indexOf() Method"
       },
       "seeding_key": {
@@ -1402,7 +1402,7 @@
       "key": "b2f66d89-1f74-4eb4-8f7e-68677dc1fcc8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** As students are investigating the code in level 1, bring them together for a class discussion to ensure understanding of the `indexOf()` method. \n\n* *What value is returned by `indexOf()` if the substring does not occur in the string?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** As students are investigating the code in level 1, bring them together for a class discussion to ensure understanding of the `indexOf()` method. \n\n* *What value is returned by `indexOf()` if the substring does not occur in the string?*"
       },
       "seeding_key": {
         "activity_section.key": "b2f66d89-1f74-4eb4-8f7e-68677dc1fcc8",
@@ -1413,7 +1413,7 @@
       "key": "0a6707fe-56b8-4bae-a876-da9e5bc2da1c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the directions on Level 2 to add code to `StringExplorer` in order to see that `indexOf()` behaves as specified.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the directions on Level 2 to add code to `StringExplorer` in order to see that `indexOf()` behaves as specified.",
         "progression_name": "Test indexOf method"
       },
       "seeding_key": {
@@ -1451,7 +1451,7 @@
       "key": "731f6f02-8b4d-4d18-b36f-d609f3f7ae9f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** give each student the [r findkeyword_trace_table_activity_guide/csa-labs/unversioned]. Have students work with a partner to complete the worksheet before moving on to Level 3. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** give each student the [r findkeyword_trace_table_activity_guide/csa-labs/unversioned]. Have students work with a partner to complete the worksheet before moving on to Level 3. \n",
         "progression_name": "findKeyword Investigation"
       },
       "seeding_key": {
@@ -1463,7 +1463,7 @@
       "key": "ee68fe21-01a3-4a3a-9bf4-53d2ebbf8a51",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the instructions in Level 3 where they will repeat the modifications made in Lesson 2, this time using this new method to detect keywords. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to follow the instructions in Level 3 where they will repeat the modifications made in Lesson 2, this time using this new method to detect keywords. ",
         "name": "Implementation: Use the new method",
         "progression_name": "Use findKeyword()"
       },
@@ -1476,7 +1476,7 @@
       "key": "5144ff9c-3cff-4b01-9ec1-51f9b117c928",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompt.\n\n*Single keywords are interesting, but better chatbots look for groups of words. Consider statements like “I\nlike cats,” “I like math class,” and “I like Spain.” All of these have the form “I like something.” The\nresponse could be “What do you like about something?”*\n* *Write pseudocode for the above statement and response* "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompt.\n\n*Single keywords are interesting, but better chatbots look for groups of words. Consider statements like “I\nlike cats,” “I like math class,” and “I like Spain.” All of these have the form “I like something.” The\nresponse could be “What do you like about something?”*\n* *Write pseudocode for the above statement and response* "
       },
       "seeding_key": {
         "activity_section.key": "5144ff9c-3cff-4b01-9ec1-51f9b117c928",
@@ -2091,7 +2091,7 @@
       "key": "28878e82-c5f0-4e47-aaf8-7a380093938c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out post-its to your students. Each student will need five post-its. \n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *Write down the name of five celebrities on the post its (one name per post-it).*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** For the sake of time, it’s best to try and split the class into groups of six (which will be three teams of two) to play a round of \"*Celebrity*\".\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out post-its to your students. Each student will need five post-its. \n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *Write down the name of five celebrities on the post its (one name per post-it).*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** For the sake of time, it’s best to try and split the class into groups of six (which will be three teams of two) to play a round of \"*Celebrity*\".\n",
         "name": "Prepare for the Celebrity game",
         "tips": [
           {
@@ -2109,7 +2109,7 @@
       "key": "09958d25-2090-4c2e-a449-e431449313ce",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to help you explain how to play \"*Celebrity*\". \n\n**How to Play *Celebrity*:** \n* On each team one person is the designated reader and the other(s) the guesser. \n\n* Team 1 will go first, they have one minute. \n\n* The reader picks a paper at random and can say anything **but** the celebrity’s name to get the guesser(s) to say the name of the celebrity. \n\n* If the guesser(s) gets the name right a point is earned, and another paper is selected. \n\n* If the reader reveals any part of the celebrity’s name **or** passes, a point is lost, and another paper is selected. \n\n* This continues until the minute is up. \n\n* The papers are not added back to the pool.\n\n* At this point it’s Team 2's turn, and the process is repeated with a new reader and guesser(s). \n\n* Each team takes turns this way until all of the papers have been used.\n\n\n* The team with the highest total number of correct guesses wins.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slides to help you explain how to play \"*Celebrity*\". \n\n**How to Play *Celebrity*:** \n* On each team one person is the designated reader and the other(s) the guesser. \n\n* Team 1 will go first, they have one minute. \n\n* The reader picks a paper at random and can say anything **but** the celebrity’s name to get the guesser(s) to say the name of the celebrity. \n\n* If the guesser(s) gets the name right a point is earned, and another paper is selected. \n\n* If the reader reveals any part of the celebrity’s name **or** passes, a point is lost, and another paper is selected. \n\n* This continues until the minute is up. \n\n* The papers are not added back to the pool.\n\n* At this point it’s Team 2's turn, and the process is repeated with a new reader and guesser(s). \n\n* Each team takes turns this way until all of the papers have been used.\n\n\n* The team with the highest total number of correct guesses wins.\n\n",
         "name": "Play a round of Celebrity",
         "tips": [
           {
@@ -2145,7 +2145,7 @@
       "key": "dee9dbd4-b1f4-4b69-abe0-cda839fe91d1",
       "position": 2,
       "properties": {
-        "description": "**Note:** When describing the play method, students might add a lot of detail or very little. At this point either is fine. Encourage them to start thinking about what needs to happen and explain that the details will become clearer as they work through the remaining activities.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** When students have completed the questions, create a UML diagram for the provided `CelebrityGame` class in the [r student_starter_code_-_celebritygame_java/csa-labs/unversioned] with the students and then discuss how the provided class is similar to and different from what they came up with.\n",
+        "description": "**Note:** When describing the play method, students might add a lot of detail or very little. At this point either is fine. Encourage them to start thinking about what needs to happen and explain that the details will become clearer as they work through the remaining activities.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** When students have completed the questions, create a UML diagram for the provided `CelebrityGame` class in the [r student_starter_code_-_celebritygame_java/csa-labs/unversioned] with the students and then discuss how the provided class is similar to and different from what they came up with.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2162,7 +2162,7 @@
       "key": "55319368-f673-431b-b1b7-8ee6c1b2e41a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part 3 of the activity guide. \n\nThe goal of Part 3 is to provide students with multiple opportunities to model real-world objects which will help them understand the type of data associated with the objects, and also what data is essential to store in instance variables. \n\n**Note:** Students are given no constraints on the objects that they can discuss, however variety is helpful for discussions. In order to ensure variety, one option would be to divide the class into 4 or 5 groups and give each group a distinct category of items. *If you do this, it would be helpful to have students partner up with someone from a different group.*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete Part 3 of the activity guide. \n\nThe goal of Part 3 is to provide students with multiple opportunities to model real-world objects which will help them understand the type of data associated with the objects, and also what data is essential to store in instance variables. \n\n**Note:** Students are given no constraints on the objects that they can discuss, however variety is helpful for discussions. In order to ensure variety, one option would be to divide the class into 4 or 5 groups and give each group a distinct category of items. *If you do this, it would be helpful to have students partner up with someone from a different group.*",
         "name": "Check for Understanding",
         "tips": [
           {
@@ -2180,7 +2180,7 @@
       "key": "cbda0a0d-b2aa-4081-88ec-7a7f1daead1f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What is the difference between a constructor and a method?*\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What is the difference between a constructor and a method?*\n\n",
         "tips": [
           {
             "type": "discussionGoal",
@@ -2197,7 +2197,7 @@
       "key": "17c46f7f-3ea4-4e38-8965-175420c138a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Distribute the [r csa_celebrity_class_lesson_7_activity_guide/csa-labs/unversioned]. Direct students to also take out the activity guide from the previous lesson. They will need that activity guide to look at their `play` method and the `Game` class in order to answer question 4 in today's activity guide.\n\n Students should work on Part 1 of the activity guide. Once students have completed question 4, complete a UML diagram with the class and the code provided in `Celebrity.java` class.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the [r csa_celebrity_class_lesson_7_activity_guide/csa-labs/unversioned]. Direct students to also take out the activity guide from the previous lesson. They will need that activity guide to look at their `play` method and the `Game` class in order to answer question 4 in today's activity guide.\n\n Students should work on Part 1 of the activity guide. Once students have completed question 4, complete a UML diagram with the class and the code provided in `Celebrity.java` class.\n\n\n",
         "name": "Simple Celebrity Class Activity Guide",
         "tips": [
           {
@@ -2215,7 +2215,7 @@
       "key": "4a4c96a0-f0f9-4c44-9182-043391836d81",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Based on Part 1 and the creation of the UML diagram, direct students to move on to Part 2 of the activity guide where they will complete the `Celebrity` class as well as code to test the `Celebrity` class. You may decide to have students complete this part in Java or in pseudocode. \n\n**Do This:** When students have completed Part 2 of their activity guide, direct students to go to Lesson 8, Level 1 to complete the `Celebrity` class based on their answers to part 1 of the activity guide. Students should also be directed to write code to test their `Celebrity` class. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Based on Part 1 and the creation of the UML diagram, direct students to move on to Part 2 of the activity guide where they will complete the `Celebrity` class as well as code to test the `Celebrity` class. You may decide to have students complete this part in Java or in pseudocode. \n\n**Do This:** When students have completed Part 2 of their activity guide, direct students to go to Lesson 8, Level 1 to complete the `Celebrity` class based on their answers to part 1 of the activity guide. Students should also be directed to write code to test their `Celebrity` class. \n",
         "name": "Complete and Test the Celebrity Class",
         "progression_name": "Celebrity Class",
         "tips": [
@@ -2234,7 +2234,7 @@
       "key": "97848207-c834-4cb2-a59d-31526323af84",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 3 of today's activity guide individually before discussing constructors as a class. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 3 of today's activity guide individually before discussing constructors as a class. \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2251,7 +2251,7 @@
       "key": "e903365c-fc8e-4aed-9968-bd27ed482750",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of the activity guide where they will investigate Java GUI swing components. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 1 of the activity guide where they will investigate Java GUI swing components. \n",
         "name": "Investigate Java GUI",
         "tips": [
           {
@@ -2283,7 +2283,7 @@
       "key": "df44679c-e195-4e8a-86d6-ea378ec7e232",
       "position": 1,
       "properties": {
-        "description": "---\n##IMPORTANT DISCLAIMER\n\n*This activity requires the use of a GUI. Unfortunately, you will not be able to use our platform for this activity as the GUI is not supported by our platform.*\n\n*To run the Celebrity program, you will need to direct your students to use another IDE such as Replit. Here is a video of a replit Java Swing GUI example for your reference: \n[r replit_java_swing_gui_example/csa-labs/unversioned].*\n\n---\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Parts 2-5 of the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\nIn this activity, students will be completing the implementation required to make the GUI function. Each question in the activity guide provides short, explicit direction for students.\n\nEnsure students have access to the Student Starter Code files for each of the classes needed. \n\n*If you’re interested in learning more about how this GUI works, or having your students learn more about this GUI, please see the [r gui_appendix/csa-labs/unversioned] for more detailed information.*",
+        "description": "---\n##IMPORTANT DISCLAIMER\n\n*This activity requires the use of a GUI. Unfortunately, you will not be able to use our platform for this activity as the GUI is not supported by our platform.*\n\n*To run the Celebrity program, you will need to direct your students to use another IDE such as Replit. Here is a video of a replit Java Swing GUI example for your reference: \n[r replit_java_swing_gui_example/csa-labs/unversioned].*\n\n---\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Parts 2-5 of the [r csa_celebrity_lab_-_putting_it_all_together_activity_guide/csa-labs/unversioned]. \n\nIn this activity, students will be completing the implementation required to make the GUI function. Each question in the activity guide provides short, explicit direction for students.\n\nEnsure students have access to the Student Starter Code files for each of the classes needed. \n\n*If you’re interested in learning more about how this GUI works, or having your students learn more about this GUI, please see the [r gui_appendix/csa-labs/unversioned] for more detailed information.*",
         "tips": [
           {
             "type": "teachingTip",
@@ -2304,7 +2304,7 @@
       "key": "28db7f98-f094-4fbb-977d-3a74233f5504",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 6 of their activity guide. \n\nIn addition, now that students have created, interacted with, and modified a few different classes responsible for the Celebrity game, you may choose to have them discuss some of what they have observed. Either in groups or as a class, you can choose to spend a few minutes discussing the relationship between classes, specifically the separation of roles within the program.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Part 6 of their activity guide. \n\nIn addition, now that students have created, interacted with, and modified a few different classes responsible for the Celebrity game, you may choose to have them discuss some of what they have observed. Either in groups or as a class, you can choose to spend a few minutes discussing the relationship between classes, specifically the separation of roles within the program.",
         "name": "Check for Understanding"
       },
       "seeding_key": {
@@ -2316,7 +2316,7 @@
       "key": "2a0f1272-b05b-4869-b056-fdd39f0dd392",
       "position": 1,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What if you wanted to create a more specific type of Celebrity? One that had additional attributes and behaviors apart from what all Celebrity objects have? How could we do this?*",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *What if you wanted to create a more specific type of Celebrity? One that had additional attributes and behaviors apart from what all Celebrity objects have? How could we do this?*",
         "tips": [
           {
             "type": "discussionGoal",
@@ -2333,7 +2333,7 @@
       "key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *With a partner, think about a subset or certain classification of celebrities that would have additional attributes or behaviors.*\n\n* *If you were to incorporate a different type of celebrity into the Celebrity game, what kind of celebrity would you want to make?*\n "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts.\n\n* *With a partner, think about a subset or certain classification of celebrities that would have additional attributes or behaviors.*\n\n* *If you were to incorporate a different type of celebrity into the Celebrity game, what kind of celebrity would you want to make?*\n "
       },
       "seeding_key": {
         "activity_section.key": "4433fb86-fab0-4473-8c78-113c15fab9b4",
@@ -2344,7 +2344,7 @@
       "key": "697017e6-25c6-43ca-afe7-ac9721930327",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned]. \n\nOnce students have thought about the design of their sublcass to `Celebrity`, it will be helpful for them to review the `LiteratureCelebrity` class. Give them access to this class at this point in the lesson and ensure students can access the [r student_code_-_literaturecelebrity_java/csa-labs/unversioned] student resource. \n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out the [r csa_celebrity_lab_extending_the_celebrity_class_1/csa-labs/unversioned]. \n\nOnce students have thought about the design of their sublcass to `Celebrity`, it will be helpful for them to review the `LiteratureCelebrity` class. Give them access to this class at this point in the lesson and ensure students can access the [r student_code_-_literaturecelebrity_java/csa-labs/unversioned] student resource. \n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "697017e6-25c6-43ca-afe7-ac9721930327",

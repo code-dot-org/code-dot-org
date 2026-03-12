@@ -592,7 +592,7 @@
       "key": "922aecce-5830-492c-8d36-a38e0710a58e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Today we begin a unit on Artificial Intelligence, or AI. What’s an example of AI either in your personal life or that you’ve seen in a movie or book?_",
         "name": "Journal",
         "tips": [
           {
@@ -632,7 +632,7 @@
       "key": "747e884a-4ff2-44e5-9007-f1c0f06c73c6",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the slide with the large venn diagram that includes AI and many applications."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the large venn diagram that includes AI and many applications."
       },
       "seeding_key": {
         "activity_section.key": "747e884a-4ff2-44e5-9007-f1c0f06c73c6",
@@ -655,7 +655,7 @@
       "key": "1a1ada47-9229-43e9-a1ff-8159241c5f87",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the AI: What is Machine Learning? video in the slides\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the AI: What is Machine Learning? video in the slides\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the following vocabulary\n\n- **Machine Learning:** How computers recognize patterns and make decisions without being explicitly programmed"
       },
       "seeding_key": {
         "activity_section.key": "1a1ada47-9229-43e9-a1ff-8159241c5f87",
@@ -678,7 +678,7 @@
       "key": "f1d44f92-8d4e-4b3c-b039-800badf63444",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the Problem Solving Process. Read through the additional lines that represent how the process connects to Machine Learning.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of The Day:** How can we use the Problem Solving Process to solve a problem with machine learning?"
       },
       "seeding_key": {
         "activity_section.key": "f1d44f92-8d4e-4b3c-b039-800badf63444",
@@ -701,7 +701,7 @@
       "key": "a842bd1c-7ad9-4fea-b9e4-2ded168efd57",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out the Activity Guide for this lesson"
       },
       "seeding_key": {
         "activity_section.key": "a842bd1c-7ad9-4fea-b9e4-2ded168efd57",
@@ -712,7 +712,7 @@
       "key": "e528ccc9-8d1a-4bea-a6f0-1435a96b7246",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** In front of the classroom, navigate to Level 1 in Code Studio - Recognizing Fish.",
         "name": "Level 1 - Recognizing Fish",
         "progression_name": "Recognizing Fish"
       },
@@ -742,7 +742,7 @@
       "key": "876c43c3-4dd8-4238-900b-e2e20bc14331",
       "position": 5,
       "properties": {
-        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
+        "description": "**Training Screen:**\n\n- Informational text will frequently pop up on the screen. Consider asking students to read the prompts aloud to the class, possibly in their best robot voice, for a little fun\n- Ask students to use thumbs up / thumbs down to decide as a class whether something is a fish\n- At 30 images, the level will ask if you would like to continue or keep training. Ask students to help with this decision and follow their lead - either continue training, or go to the next screen.\n- Before continuing, have students record on their activity guide how many images they used to train A.I. Bot.\n\n**Testing Screen:**\n\n- A.I. Bot will probably misidentify a few objects. Make sure students notice this, and ask them to individually consider why they think this might be happening. This ties in to the discussion at the end of this level.\n\n**Evaluation Screen:**\n\n- Have students count the number of fish that it identified correctly. Record this on the activity guide.\n- It’s okay if A.I. Bot misidentifies some trash as fish - this sets the stage for the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If we wanted A.I. Bot to become better at recognizing fish, how do you think we could help it do that?_"
       },
       "seeding_key": {
         "activity_section.key": "876c43c3-4dd8-4238-900b-e2e20bc14331",
@@ -776,7 +776,7 @@
       "key": "ffe3310d-97b5-404a-a172-ee639f2a3ff6",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 2 - Recognizing Fish Features. This level lets students train A.I. Bot to recognize a fish by its color or body type. ",
         "name": "Level 2 - Recognizing Fish Features",
         "progression_name": "Recognizing Fish Features"
       },
@@ -789,7 +789,7 @@
       "key": "77add894-8b95-43ab-978d-c06e9b569e34",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Have students choose a word that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. After briefly checking in with each student, complete this stage yourself in front of the room and pause at the last screen.",
         "tips": [
           {
             "type": "teachingTip",
@@ -806,7 +806,7 @@
       "key": "3d67a054-f90c-4fc1-8c11-4339fd08f8de",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** As students reach the final stage, have them press the white Information icon in the upper-right corner. This displays the features that A.I. Bot is using to help make its decision. In the example here, A.I. Bot has learned that the color matters the most when making a decision and the eyes matter the least.\n\nHave students record the most important and least important features on their activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What features did A.I. Bot think were the most important? Are those the features you were expecting to be most important?_"
       },
       "seeding_key": {
         "activity_section.key": "3d67a054-f90c-4fc1-8c11-4339fd08f8de",
@@ -840,7 +840,7 @@
       "key": "5086e593-985b-4c65-9455-f96987ae71c6",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students navigate to Code Studio Level 3 - Recognizing Fish Expressions. This level lets students train A.I. Bot to recognize a fish by its expression, such as “silly” or “serious” or “angry”.",
         "name": "Level 3 - Recognizing Fish Expressions",
         "progression_name": "Recognizing Expressions"
       },
@@ -853,7 +853,7 @@
       "key": "747f7a99-61c6-492e-8dae-99d37b789a1c",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n **Discussion Goal:** Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students choose an expression that they want to train A.I. Bot to recognize, and record this information on their Activity Guide. Students should progress through the level on their own, recording information on their activity guide. On the final screen, have students press the information icon and record the features that A.I. Bot learned were most important.\n\n**Circulate:** Check that students are filling in their activity guide as they complete the stages. Ask students what features they’re looking at to determine if a fish meets their criteria. Students will probably say they primarily use eyes and mouth to help determine expression, but when they click the Information icon on the final screen, A.I. Bot may be using additional features such as color and body to make its decision. Prompt students to think about how they feel about this and compare it to their personal experience - For example, if someone thought they were “silly” or “angry” primarily based on their clothing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide of A.I. Bot learning how to identify fish as “Angry”. Have students discuss the prompt on the screen: _Looking at this screen, why do you think color appeared as the second most important feature?_\n\n **Discussion Goal:** Students should notice that even though the eyes and mouth tend to appear “angry” on every fish, there also appears to be a lot of purple fish on the screen. As a result, A.I. Bot may start to think that the color “purple” is another way to tell if a fish is angry or not.\n"
       },
       "seeding_key": {
         "activity_section.key": "747f7a99-61c6-492e-8dae-99d37b789a1c",
@@ -864,7 +864,7 @@
       "key": "a898829b-37d9-4976-a982-5febc72e8806",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Do you think it’s okay to consider a fish “angry” by its color?_"
       },
       "seeding_key": {
         "activity_section.key": "a898829b-37d9-4976-a982-5febc72e8806",
@@ -928,7 +928,7 @@
       "key": "b7118d45-0984-4f44-8c0e-0eb24d30e06f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is something new you learned about machine learning today? What is a new question you have about machine learning?_\n\nEncourage students to choose one of these to share with you on the way out the door, or to write their responses on a post-it note that can be displayed in the classroom. If possible, keep track of these items throughout the unit and refer back to them in later lessons when they are addressed.",
         "name": "Journal"
       },
       "seeding_key": {

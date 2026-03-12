@@ -233,7 +233,7 @@
       "key": "9969e395-87d9-4224-8715-b63b1987db92",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** ‘Different | Same’ Slide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** ‘Different | Same’ Slide.",
         "name": "Compare & Contrast"
       },
       "seeding_key": {
@@ -257,7 +257,7 @@
       "key": "e0c6b2db-6e3a-4212-b5d0-2161c7d759d3",
       "position": 3,
       "properties": {
-        "description": "**Do This:** Draw a T-Chart on the board with “Same” on one side and “Different” on the other. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What is the same about these three examples of matter (ice cubes, water, and steam)? What is different about them? \n\n**Discussion goal**: Review states of matter and what causes matter to change. This is also an opportunity to gain an understanding of students’ prior knowledge of matter, liquid, solid, and gas.  \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** ‘Looking Closer’ Slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What do you think they would look like under a microscope?   \n\n**Discussion goal:** Review states of matter and what causes matter to change. This is also an opportunity to gain an understanding of students’ previous knowledge of matter, liquid, solid, and gas.  \n",
+        "description": "**Do This:** Draw a T-Chart on the board with “Same” on one side and “Different” on the other. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What is the same about these three examples of matter (ice cubes, water, and steam)? What is different about them? \n\n**Discussion goal**: Review states of matter and what causes matter to change. This is also an opportunity to gain an understanding of students’ prior knowledge of matter, liquid, solid, and gas.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** ‘Looking Closer’ Slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do you think they would look like under a microscope?   \n\n**Discussion goal:** Review states of matter and what causes matter to change. This is also an opportunity to gain an understanding of students’ previous knowledge of matter, liquid, solid, and gas.  \n",
         "tips": [
           {
             "type": "teachingTip",
@@ -274,7 +274,7 @@
       "key": "d8dc5155-b800-4a79-bf0d-d4ccdf480732",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** States of Matter\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** States of Matter\n",
         "duration": "10",
         "name": "Predict & Learn"
       },
@@ -300,7 +300,7 @@
       "key": "671c6171-ba4b-4413-9964-8cea4e2e5e87",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Predict & Learn\n\n**Do This:** Read out loud the “Predict & Learn” slide to prepare students for what they will do on computers. Decide whether you will teach this whole group or allow students to go through the first 6 levels independently (only recommended for strong readers). See the “Teaching Tip” below for whole class suggestions. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Predict & Learn\n\n**Do This:** Read out loud the “Predict & Learn” slide to prepare students for what they will do on computers. Decide whether you will teach this whole group or allow students to go through the first 6 levels independently (only recommended for strong readers). See the “Teaching Tip” below for whole class suggestions. \n",
         "progression_name": "Matching States of Matter",
         "tips": [
           {
@@ -407,7 +407,7 @@
       "key": "ae09c990-ffc5-4ca9-8b05-5a4d5a2a9611",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** 'Lesson 1 Wrap Up' Slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** How might code help us understand the particles around us? What else do you wonder about particles?\n\n**Discussion Goal:** Help students understand that working with models can build a deeper, more detailed understanding of events in nature and science. Models give us the opportunity to make changes quickly and see results immediately. They’re often used by scientists in the real world too! ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** 'Lesson 1 Wrap Up' Slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** How might code help us understand the particles around us? What else do you wonder about particles?\n\n**Discussion Goal:** Help students understand that working with models can build a deeper, more detailed understanding of events in nature and science. Models give us the opportunity to make changes quickly and see results immediately. They’re often used by scientists in the real world too! ",
         "tips": [
           {
             "type": "teachingTip",
@@ -424,7 +424,7 @@
       "key": "a892003a-a66e-453c-a779-0c893fcde9f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** ‘Vanishing Act Part 1 & 2’ Slides",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Vanishing Act Part 1 & 2’ Slides",
         "name": "Physical Changes",
         "progression_name": "Physical Changes"
       },
@@ -460,7 +460,7 @@
       "key": "993e4173-5c05-4bb9-b9bc-828d59da98f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** “Level 1: Physical Changes” Slide\n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** “Level 1: Physical Changes” Slide\n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples. ",
         "duration": "15",
         "name": "Physical Changes",
         "progression_name": "Physical Changes Information"
@@ -474,7 +474,7 @@
       "key": "6aca8b54-2485-41b2-be88-7aa65f237fcf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after chopping it smaller with the saw.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after chopping it smaller with the saw.",
         "progression_name": "Physical Changes Wood Experiment "
       },
       "seeding_key": {
@@ -486,7 +486,7 @@
       "key": "6a213db2-1c3e-4e7f-9c1d-4e672ee54179",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindling (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The log and kindling are still solid matter under the microscope. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1)  There was a physical change when the log was cut up into kindling (the wood got smaller) **but** \n2) the state of matter didn’t change at all. The log and kindling are still solid matter under the microscope. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -503,7 +503,7 @@
       "key": "27f2f4b2-4590-4d35-8061-f64384de3079",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** ‘Level 3: Vanishing Act' Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** ‘Level 3: Vanishing Act' Slide",
         "name": "Vanishing Act 1 - Disappearing Water",
         "progression_name": "Vanishing Act"
       },
@@ -516,7 +516,7 @@
       "key": "c4769ee8-0a2b-4e7a-bef9-93263e2485cf",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole group observation. This is an finished example of the project students will be coding in Levels 5-10.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole group observation. This is an finished example of the project students will be coding in Levels 5-10.",
         "name": "Code Your Own Experiment",
         "progression_name": "Investigate: Water Experiment"
       },
@@ -529,7 +529,7 @@
       "key": "448593d5-3a87-49b0-b42d-fca37b030fb3",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change in the water when it heat was applied (the water disappeared) **and**\n2) the state of matter changed when heat was applied (liquid to gas). "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change in the water when it heat was applied (the water disappeared) **and**\n2) the state of matter changed when heat was applied (liquid to gas). "
       },
       "seeding_key": {
         "activity_section.key": "448593d5-3a87-49b0-b42d-fca37b030fb3",
@@ -540,7 +540,7 @@
       "key": "bb313eea-95ea-4b93-bed6-57c6eaf51297",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Functions” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Functions” slide",
         "progression_name": "Lab Setup"
       },
       "seeding_key": {
@@ -603,7 +603,7 @@
       "key": "639e496c-184b-475d-8b26-857ebefbc8d1",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model Slide” \n\n**Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Create Your Own Model Slide” \n\n**Do This:** Read the directions on the slide and allow students independent time or pair programming time to complete the rest of the level progression. \n"
       },
       "seeding_key": {
         "activity_section.key": "639e496c-184b-475d-8b26-857ebefbc8d1",
@@ -671,7 +671,7 @@
       "key": "6f3ed225-69d1-4b4c-8dfa-3d8736bd9ff5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Is it magic? Is it science?” Slide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Is it magic? Is it science?” Slide."
       },
       "seeding_key": {
         "activity_section.key": "6f3ed225-69d1-4b4c-8dfa-3d8736bd9ff5",
@@ -682,7 +682,7 @@
       "key": "04799153-b823-41a2-b571-8d47051b3bba",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Turn to a partner and explain what happens in the “magic box.” When you’re ready, raise your hand to volunteer your explanation. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Turn to a partner and explain what happens in the “magic box.” When you’re ready, raise your hand to volunteer your explanation. "
       },
       "seeding_key": {
         "activity_section.key": "04799153-b823-41a2-b571-8d47051b3bba",
@@ -704,7 +704,7 @@
       "key": "24d1ae62-dab7-4eba-8c30-88f6b36682b1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** Slides ‘Vanishing Act Part 1 & 2’, or display Level 1 on Code Studio to the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slides ‘Vanishing Act Part 1 & 2’, or display Level 1 on Code Studio to the class.",
         "name": "Vanishing Act",
         "progression_name": "Vanishing Act Part 2"
       },
@@ -740,7 +740,7 @@
       "key": "851165bd-0ccc-49ab-b758-fbd606d5a3ad",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** Slide “Level 1: Chemical Changes” \n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Slide “Level 1: Chemical Changes” \n\n**Do This:** Show Level 1 to the class and discuss the examples listed and ask for ideas for additional examples.",
         "duration": "10",
         "name": "Chemical Changes Intro",
         "progression_name": "Chemical Changes Information"
@@ -754,7 +754,7 @@
       "key": "5976c055-ed3a-4a70-8cb8-587f422a65ee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after burning it with the flame.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** ‘Level 2: Investigate Wood Experiment’ Slide. Test out the experiment by dragging the wood to the microscope before and after burning it with the flame.",
         "progression_name": "Chemical Changes Wood Experiment"
       },
       "seeding_key": {
@@ -766,7 +766,7 @@
       "key": "076faf94-e7d2-436e-b574-4e3848c584be",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change when the wood touches the fire (the wood turned black) **and** \n2) The wood particles went through a chemical change that is **irreversible**. The color of the wood particle changes irreversibly to black.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice two major things: \n1) There was a physical change when the wood touches the fire (the wood turned black) **and** \n2) The wood particles went through a chemical change that is **irreversible**. The color of the wood particle changes irreversibly to black.\n\n",
         "progression_name": "Chemical Changes",
         "tips": [
           {
@@ -784,7 +784,7 @@
       "key": "33196e43-e209-4a30-acfa-403edb6b0f7f",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display** Level 3: Vanishing Act' Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display** Level 3: Vanishing Act' Slide",
         "name": "Vanishing Act 2 - Magic Bubbles",
         "progression_name": "Vanishing Act 2"
       },
@@ -797,7 +797,7 @@
       "key": "666a757e-acfa-4242-9c20-ec6a16c26d35",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide.\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole-group observation. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 4 - Experiment Preview” Slide.\n\n**Do This:** Show Level 4 on the board and follow the directions. Have students either follow along with you on their own devices or engage in whole-group observation. ",
         "duration": "25",
         "name": "Code Your Own Experiment",
         "progression_name": "Investigate: Lemon Juice & Baking Soda"
@@ -811,7 +811,7 @@
       "key": "df6b436d-fa74-4e9a-a82c-28f74be9cada",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice three major things: \n1) There was a **chemical** change when the lemon juice touched the baking soda (the interaction created a white, bubbly substance)\n2) The combination of the two items caused gas to be created, so we had two states of matter for our new substance - liquid and gas\n3) The change in the state of matter is irreversible. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What did you notice? What do you wonder?\n\n**Discussion Goal:** Students should notice three major things: \n1) There was a **chemical** change when the lemon juice touched the baking soda (the interaction created a white, bubbly substance)\n2) The combination of the two items caused gas to be created, so we had two states of matter for our new substance - liquid and gas\n3) The change in the state of matter is irreversible. "
       },
       "seeding_key": {
         "activity_section.key": "df6b436d-fa74-4e9a-a82c-28f74be9cada",
@@ -822,7 +822,7 @@
       "key": "ca4fbdd5-4ea8-4c02-9391-a0dc5ceef2b7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Level 5: Functions\" Slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Level 5: Functions\" Slide",
         "duration": "0",
         "progression_name": "Lab Setup"
       },
@@ -864,7 +864,7 @@
       "key": "adb4aee3-00b2-4920-99a5-17222be3e17a",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Allow students independent time or pair programming time to complete the rest of the level progression. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students independent time or pair programming time to complete the rest of the level progression. ",
         "progression_name": "Create Your Experiment"
       },
       "seeding_key": {
@@ -933,7 +933,7 @@
       "key": "a7d94298-341a-40b1-a6e1-f38929a03c42",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** “Is it magic? Is it science?” "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** “Is it magic? Is it science?” "
       },
       "seeding_key": {
         "activity_section.key": "a7d94298-341a-40b1-a6e1-f38929a03c42",
@@ -944,7 +944,7 @@
       "key": "17b338a4-2075-4eac-8aff-90151b1d44c1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Turn to a partner and explain what happens in the “magic box.” When you’re ready, raise your hand to volunteer your explanation. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Turn to a partner and explain what happens in the “magic box.” When you’re ready, raise your hand to volunteer your explanation. "
       },
       "seeding_key": {
         "activity_section.key": "17b338a4-2075-4eac-8aff-90151b1d44c1",

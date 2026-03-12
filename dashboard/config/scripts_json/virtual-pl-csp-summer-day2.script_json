@@ -475,7 +475,7 @@
       "key": "fd4d414c-94d7-4a0a-8f5f-209d986b2d24",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
       },
       "seeding_key": {
         "activity_section.key": "fd4d414c-94d7-4a0a-8f5f-209d986b2d24",
@@ -515,7 +515,7 @@
       "key": "c05927fd-1e90-4c25-a061-947ee50e588c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
         "duration": "10",
         "name": "Intro to the Pixelation Widget",
         "progression_name": "Video: Intro to Pixelation Encoding B&W",
@@ -535,7 +535,7 @@
       "key": "28592f49-6047-4531-848e-fbea454f5e06",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "28592f49-6047-4531-848e-fbea454f5e06",
@@ -599,7 +599,7 @@
       "key": "509abfeb-268f-4e98-824b-9a506f5e33b5",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
         "name": "Challenges A & B\r",
         "progression_name": "Sampling an Analog Image: Challenges A&B",
         "tips": [
@@ -636,7 +636,7 @@
       "key": "42fe85b2-64d4-4bb5-98e0-fae6fedbd39a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r",
         "progression_name": "Sampling an Analog Image: Challenge C",
         "tips": [
@@ -655,7 +655,7 @@
       "key": "ead2bcea-af03-4c29-b370-e29416f802de",
       "position": 1,
       "properties": {
-        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ead2bcea-af03-4c29-b370-e29416f802de",
@@ -678,7 +678,7 @@
       "key": "8d6e9e5f-2ef6-4fd5-9129-6afbd53eabd7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "8d6e9e5f-2ef6-4fd5-9129-6afbd53eabd7",
@@ -712,7 +712,7 @@
       "key": "62bb912f-9976-4548-9426-0162289c963a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
       },
       "seeding_key": {
         "activity_section.key": "62bb912f-9976-4548-9426-0162289c963a",
@@ -723,7 +723,7 @@
       "key": "1e45afa5-8d64-4db5-bcf0-dbb359f0af50",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
       },
       "seeding_key": {
         "activity_section.key": "1e45afa5-8d64-4db5-bcf0-dbb359f0af50",
@@ -734,7 +734,7 @@
       "key": "33d2de56-a22c-4ccb-8543-03fe537c8fbe",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> I want to send this message to a friend, but their phone can only accept 80 characters of text at a time. I notice this pattern has some repetition in it, so rather than sending the whole message, I send this instead:",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> I want to send this message to a friend, but their phone can only accept 80 characters of text at a time. I notice this pattern has some repetition in it, so rather than sending the whole message, I send this instead:",
         "name": "Introduction to Compression (5 Minutes)\r",
         "remarks": true
       },
@@ -747,7 +747,7 @@
       "key": "1007adc9-4272-4895-b784-ab7c46fdaa4e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click to show next slide with message highlighted in red."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click to show next slide with message highlighted in red."
       },
       "seeding_key": {
         "activity_section.key": "1007adc9-4272-4895-b784-ab7c46fdaa4e",
@@ -758,7 +758,7 @@
       "key": "b467b363-b430-4af1-bfe9-af9ef6ffa58f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
       },
       "seeding_key": {
         "activity_section.key": "b467b363-b430-4af1-bfe9-af9ef6ffa58f",
@@ -781,7 +781,7 @@
       "key": "c7db5b4b-ada0-4524-8401-8b09b31f797a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
         "name": "Text Compression Widget (15 Minutes)\r",
         "progression_name": "Widget: Text Compression"
       },
@@ -817,7 +817,7 @@
       "key": "ea6fb520-7fdb-4269-ab33-6bed29f55488",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** Gather the class back together. Emphasize the black box at the bottom of the widget, which has their current compression rating. Have students make a note of their current Compression Percentage at the bottom of the box"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Gather the class back together. Emphasize the black box at the bottom of the widget, which has their current compression rating. Have students make a note of their current Compression Percentage at the bottom of the box"
       },
       "seeding_key": {
         "activity_section.key": "ea6fb520-7fdb-4269-ab33-6bed29f55488",
@@ -828,7 +828,7 @@
       "key": "097ee046-1ad2-47fa-a349-484abd26d80a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
         "tips": [
           {
             "type": "teachingTip",
@@ -845,7 +845,7 @@
       "key": "285ba936-4f78-4fda-bdc9-7026698a6990",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/virtual-pl-csp-summer/2024] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/virtual-pl-csp-summer/2024] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
         "progression_name": "Video: Text Compression Widget with Aloe Blacc",
         "tips": [
           {
@@ -863,7 +863,7 @@
       "key": "aa212c4e-6e4a-46ee-9db2-974e9e524080",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
       },
       "seeding_key": {
         "activity_section.key": "aa212c4e-6e4a-46ee-9db2-974e9e524080",
@@ -903,7 +903,7 @@
       "key": "ddbc78f8-71b5-4779-a30d-56a2ecdd32ce",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Click the Drop-Down Menu to explore other texts to compress. Be looking for texts you predict will be ‘easy’ to compress and texts you predict will be ‘difficult’",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click the Drop-Down Menu to explore other texts to compress. Be looking for texts you predict will be ‘easy’ to compress and texts you predict will be ‘difficult’",
         "name": "Comparing Compressions (10 Minutes)\r",
         "remarks": true
       },
@@ -916,7 +916,7 @@
       "key": "c1d69bfb-668a-4f81-b44c-59155850e560",
       "position": 15,
       "properties": {
-        "description": "**Group:** Have students work with their neighbor for this activity. Place students in groups of 2 with at most one group of 3.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students work together to compress an 'easy' text and a 'difficult' text."
+        "description": "**Group:** Have students work with their neighbor for this activity. Place students in groups of 2 with at most one group of 3.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work together to compress an 'easy' text and a 'difficult' text."
       },
       "seeding_key": {
         "activity_section.key": "c1d69bfb-668a-4f81-b44c-59155850e560",
@@ -944,7 +944,7 @@
       "key": "be9edabb-6b96-4f8c-8727-7cd0d117cc23",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -968,7 +968,7 @@
       "key": "6e805f5e-6b65-48f5-b58d-59a308329de2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal**: Have students add the definition of **lossless compression** to their journal\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal**: Have students add the definition of **lossless compression** to their journal\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "6e805f5e-6b65-48f5-b58d-59a308329de2",
@@ -1034,7 +1034,7 @@
       "key": "d27c02f3-dc05-4229-9f2b-664842ba0324",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> This widget claims you can keep the first letter of a word then remove all of the vowels and the result will still be readable. Let’s test this out - what are some other sentences we should try with this widget?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This widget claims you can keep the first letter of a word then remove all of the vowels and the result will still be readable. Let’s test this out - what are some other sentences we should try with this widget?",
         "remarks": true
       },
       "seeding_key": {
@@ -1080,7 +1080,7 @@
       "key": "18786c52-5399-4eca-a9ae-fb67265e1ecc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1097,7 +1097,7 @@
       "key": "f83de4f5-9597-4cba-a59a-27b2617b3f3a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Level 1:** Have students adjust the slider to see different lossy compressions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:** Have students adjust the slider to see different lossy compressions.",
         "name": "Lossy Image v1 (5 minutes)\r",
         "progression_name": "Lossy Compression Widget"
       },
@@ -1127,7 +1127,7 @@
       "key": "c418fae2-e00f-4481-a799-3ae9ec08bdd7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
         "name": "Lossy Image v2 (15 minutes)\r"
       },
       "seeding_key": {
@@ -1150,7 +1150,7 @@
       "key": "c8d4338d-26c5-4f34-8a5b-d194abab50c3",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
       },
       "seeding_key": {
         "activity_section.key": "c8d4338d-26c5-4f34-8a5b-d194abab50c3",
@@ -1190,7 +1190,7 @@
       "key": "2d8844ab-142f-4897-bd09-5f8fce9773c8",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
         "name": "Compression Decisions (10 minutes)\r"
       },
       "seeding_key": {
@@ -1202,7 +1202,7 @@
       "key": "80cfe029-534f-4c03-bf4c-bff87b84caf1",
       "position": 11,
       "properties": {
-        "description": "* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
         "tips": [
           {
             "type": "teachingTip",
@@ -1219,7 +1219,7 @@
       "key": "3373752a-3f5a-431e-88a7-baab2c06339e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
       },
       "seeding_key": {
         "activity_section.key": "3373752a-3f5a-431e-88a7-baab2c06339e",
@@ -1242,7 +1242,7 @@
       "key": "c77d1d93-e9b2-4d70-8382-886edfffc3d7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "c77d1d93-e9b2-4d70-8382-886edfffc3d7",

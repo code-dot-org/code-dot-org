@@ -236,7 +236,7 @@
       "key": "1dfcfa0f-0d3d-480c-bd6d-71d3e593d49d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo). Start the video at 1:30 seconds. Stop the video at 2:26 seconds.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Read” slide\n \n**Do This**: Read the article [“Under a Blanket of Stars”](https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view). While you read, elaborate on any just-in-time vocabulary words that come up. You have the option to elaborate on rhombuses with the rhombus sort activity on slide 9.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What stands out to you about Star Quilts?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Star Quilt” video\n \n**Do This**: Watch the [Star Quilt Video](https://www.youtube.com/watch?v=Q210ko41yqo). Start the video at 1:30 seconds. Stop the video at 2:26 seconds.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read” slide\n \n**Do This**: Read the article [“Under a Blanket of Stars”](https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view). While you read, elaborate on any just-in-time vocabulary words that come up. You have the option to elaborate on rhombuses with the rhombus sort activity on slide 9.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**: _What stands out to you about Star Quilts?_"
       },
       "seeding_key": {
         "activity_section.key": "1dfcfa0f-0d3d-480c-bd6d-71d3e593d49d",
@@ -263,7 +263,7 @@
       "key": "b205ff78-189a-4f9f-ba03-5db4b39a3ec6",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Pattern** - Something that happens or appears in a regular and repeated way\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Rhombus Sort” slide\n\n**Do This**: Have students share whether each shape below fits into the \"Rhombus\" or \"Not a rhombus\" category. As students answer, drag the images to the correct column on the slide.\n\n"
+        "description": "**Discussion Goal**: Student response will vary and can refer to either the introduction passage or the video. Some anticipated responses are:\n- Star Quilts are a Native American tradition from the Great Plains\n- The Great Plains is an area of the United States\n- Star Quilts can be a special gift\n- Star Quilts are intricate, complicated designs\n- Star Quilts are made of rhombus shapes\n- Star Quilts can be made with different colors\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Pattern** - Something that happens or appears in a regular and repeated way\n- **Rhombus** - A polygon with four equal sides, opposite sides are parallel, opposite angles are equal\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Rhombus Sort” slide\n\n**Do This**: Have students share whether each shape below fits into the \"Rhombus\" or \"Not a rhombus\" category. As students answer, drag the images to the correct column on the slide.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "b205ff78-189a-4f9f-ba03-5db4b39a3ec6",
@@ -274,7 +274,7 @@
       "key": "d40c9a6b-4d02-46f7-a788-e827cb03515d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Task One” and \"Task Two\" slides\n\n**Do This**: Read the instructions out loud for the [worksheet](https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview). Then, hand out the worksheets and coloring utensils. Once students are starting to finish up, have students share their work with their partner. Students should explain the different patterns that they found to their partner."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task One” and \"Task Two\" slides\n\n**Do This**: Read the instructions out loud for the [worksheet](https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview). Then, hand out the worksheets and coloring utensils. Once students are starting to finish up, have students share their work with their partner. Students should explain the different patterns that they found to their partner."
       },
       "seeding_key": {
         "activity_section.key": "d40c9a6b-4d02-46f7-a788-e827cb03515d",
@@ -301,7 +301,7 @@
       "key": "a0a4e67a-ee31-4b86-bf65-574caba92661",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slide\n \n**Discuss**: _What patterns do you notice in this star?_\n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slide\n\n**Discuss**: _How would you describe just one point of the star? What patterns do you see?_\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then smaller again.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the first “Debrief” slide\n \n**Discuss**: _What patterns do you notice in this star?_\n\n**Discussion Goal**: Students will have a variety of answers, but try to focus on responses that emphasize when something is growing or repeating. For example: the central design grows outward in different layers. Or each tip of the star is repeated 6 times. These types of observations will prime students for the second part of the discussion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the second “Debrief” slide\n\n**Discuss**: _How would you describe just one point of the star? What patterns do you see?_\n\n**Discussion Goal**: Help students notice that this point of the star is also a rhombus, made up of smaller rhombuses - in other words, a small rhombus has grown into the larger point. Students may not notice this initially, but help them to describe the rhombus in terms of rows of rhombuses - for example, the bottom tip of the star is a single rhombus, then a row of 2 rhombuses, continuing for a total of 5 rows that get wider and then smaller again.\n"
       },
       "seeding_key": {
         "activity_section.key": "a0a4e67a-ee31-4b86-bf65-574caba92661",
@@ -340,7 +340,7 @@
       "key": "870af641-e996-4aba-b602-eb6203c2f60d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show first “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are fewer petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show second “Share Out” slide\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Artist** - You can write code to make him draw almost anything\n- **Loop** - a sequence of code that is repeated\n- **Point** - one part of the star shape\n- **Row** - in this case, a orderly line of rhombuses\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show first “Share Out” slide\n \n**Discuss**: \n* _What patterns do you see in the flower?_ \n* _What patterns do you see in the turtle shell?_\n\n**Discussion Goal**: Students will have a variety of answers, but emphasize how both natural patterns include repetitions and “growing out” patterns similar to the star quilt designs from yesterday. Other responses may include:\n* All of the petals are the same shape\n* All of the petals perfectly fit together\n* Petals start in the middle and extend out\n* There are fewer petals in the middle of the flower compared to the outer rows of the flower\n* The same turtle shape is repeated over and over\n* There are smaller turtle shapes within the bigger shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show second “Share Out” slide\n\n**Discuss**: _What other visual patterns can you think of that you’ve seen before?_\n\n**Discussion Goal**:  \nHere are some examples of visual patterns out in the world:\n* Tree trunks\n* Honeycomb\n* Snake scales\n* Corn on the cob\n* Pineapple\n* Brick wall\n* Tile floors\n* Soccer balls\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slides\n\n- **Artist** - You can write code to make him draw almost anything\n- **Loop** - a sequence of code that is repeated\n- **Point** - one part of the star shape\n- **Row** - in this case, a orderly line of rhombuses\n"
       },
       "seeding_key": {
         "activity_section.key": "870af641-e996-4aba-b602-eb6203c2f60d",
@@ -363,7 +363,7 @@
       "key": "1c6022c5-ba41-4456-a8d7-4b4200f316e8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introducing the Artist” video",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 - Introducing the Artist” video",
         "progression_name": "Video"
       },
       "seeding_key": {
@@ -391,7 +391,7 @@
       "key": "b61c5a27-7f2a-4284-b831-fb161aafe98e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to draw a 6-pointed star. It is a very simple shape that looks like an asterisk. Students will draw a line, jump back to the middle, turn the artist and draw another line. Then they learn how to loop the Artist to repeat a chunk of the code. \n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students will need to repeat the code until they have a 6 point star. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2-4 - Skill Building” slide\n\n**Do This**: Transition students to their computers, and have them follow the instructions for each level in the skill building section.\n\n**Goal**: In the first few levels of this lesson, students will be programming the Artist to draw a 6-pointed star. It is a very simple shape that looks like an asterisk. Students will draw a line, jump back to the middle, turn the artist and draw another line. Then they learn how to loop the Artist to repeat a chunk of the code. \n\n- **Level 2**: Show students how to drag & drop. Explain that the blocks are like puzzle pieces that must fit together to run. Students may select which color rhombus to use. When finished, students can test their code by pressing “Run.”\n\n- **Level 3**: The Artist must turn 60 degrees before stamping the next rhombus. Explain to students that 60 degrees is the measure of the angle of the rhombus. Students may start anticipating the next lines of code, prompt them to look for patterns.\n\n- **Level 4**: Students will need to repeat the code until they have a 6 point star. This includes turning and stamping the rhombus. Prompt students to notice the patterns in the code.\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -403,7 +403,7 @@
       "key": "7a919955-778a-4227-9dbf-81003f5223f0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Repeat Blocks” video\n\n- **Level 5**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5 - Repeat Blocks” video\n\n- **Level 5**: Students will be watching a video about looping here. The video is also provided in the slides. Decide if you would like to have students watch the video independently, or regroup the class and watch the video together.\n",
         "progression_name": "Video - Repeat Blocks"
       },
       "seeding_key": {
@@ -426,7 +426,7 @@
       "key": "cd37c7fa-ef01-4d7e-976f-e8c27219d0b5",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. \n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6-7 - Skill Building” slide\n\n**Goal:** The next few levels mirror the first levels but with increased complexity. \n\n**Debugging Tips:**\n\n**Level 6**: Show students how to use the angle menu to modify the measurement. Students should select 90 degrees. Remind students to also alter the loop to only repeat 4 times.\n\n**Level 7**: Students should modify the angle measurement to 30 degrees. Remind students to also alter the loop to repeat 12 times.\n\n\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -438,7 +438,7 @@
       "key": "3d7bdc6b-47e3-4abe-92e2-1d262b893dd7",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Free Play” slide\n\n**Debugging Tips**:\n\n**Level 8**: This is a free play level for students to make their very own star creation. Students will apply the skills they’ve learned in the previous levels. Students can experiment with colors, angles and loops to make a unique star shape.\n\n\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -466,7 +466,7 @@
       "key": "5de1c23c-de41-4096-bcb7-387b93c9e54d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: _What patterns do you notice?_\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create fewer points in a star.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: _What patterns do you notice?_\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create fewer points in a star.",
         "duration": "10",
         "name": "Wrap Up"
       },
@@ -491,7 +491,7 @@
       "key": "3a2a14db-0db1-4f42-9538-e43ba0be80a6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-pointed star shape and an 8-point Star Quilt?_\n\n**Discussion Goal**: The class will look at an image of a 6-pointed star shape, just like they created in Lesson 2. Students should compare the image to a 8-pointed Star Quilt, which they will create today. \n\nStudents should notice:\n- The star shape has 6 points and the Star Quilt has 8 points\n- The Star Quilt has more rows \n\nAnticipated student responses (similarities):\n- They are both stars\n- They are both made out of rhombus shapes\n- The rhombus shapes are in a pattern\n- The rhombus shapes fit together perfectly\n- The Artist can be used to create both of these shapes\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Share Out” slide\n \n**Discuss**: _What is the difference between a 6-pointed star shape and an 8-point Star Quilt?_\n\n**Discussion Goal**: The class will look at an image of a 6-pointed star shape, just like they created in Lesson 2. Students should compare the image to a 8-pointed Star Quilt, which they will create today. \n\nStudents should notice:\n- The star shape has 6 points and the Star Quilt has 8 points\n- The Star Quilt has more rows \n\nAnticipated student responses (similarities):\n- They are both stars\n- They are both made out of rhombus shapes\n- The rhombus shapes are in a pattern\n- The rhombus shapes fit together perfectly\n- The Artist can be used to create both of these shapes\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show next “Share Out” slide\n\n**Discuss**: _What is the difference between these two rhombuses?_\n\n**Discussion Goal**: The class looks at images of two rhombuses, one for a 6-pointed star and the other for an 8-pointed star. They should recognize that the rhombus for the 6-pointed star is wider than the rhombus for the 8-pointed star. However, their side lengths are the same. \n\n \n\n",
         "duration": "5",
         "name": "Warm Up"
       },
@@ -504,7 +504,7 @@
       "key": "331f9a6d-b501-4843-bd10-a9e4c9342811",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Adding Comments” slide",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Adding Comments” slide",
         "name": "Star Quilts - Skill Building"
       },
       "seeding_key": {
@@ -528,7 +528,7 @@
       "key": "86f30342-9d84-4738-a14f-cc6372b546b4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-6 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1-6 - Skill Building” slide\n \n**Do This**: Transition students to their computers, and have them begin following the instructions for each level in the skill building section."
       },
       "seeding_key": {
         "activity_section.key": "86f30342-9d84-4738-a14f-cc6372b546b4",
@@ -551,7 +551,7 @@
       "key": "83fa7e91-cd8e-4777-bc1d-8507666d2c85",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Repeat Blocks\" video\n\n**Overview**: Students have finished making one point of their star. Now they need the Artist to repeat this point several times to create the other points in the star. Students will be re-watching a video about looping. This will be familiar from Lesson 2. Stop and discuss looping as a class.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7 - Repeat Blocks\" video\n\n**Overview**: Students have finished making one point of their star. Now they need the Artist to repeat this point several times to create the other points in the star. Students will be re-watching a video about looping. This will be familiar from Lesson 2. Stop and discuss looping as a class.\n",
         "progression_name": "Video - Repeat Blocks"
       },
       "seeding_key": {
@@ -563,7 +563,7 @@
       "key": "229bcb31-29c4-48f6-b18b-44fd2ef14eac",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 8 - Skill Building\" slide\n\n**Level 8**: Before the Artist can repeat the point it needs to turn. Set the loop to repeat 8 times. ",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -575,7 +575,7 @@
       "key": "b5ad76d1-2fe5-4e4e-b889-32cb0a9b2348",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: This is a free play level for students to apply the skills they’ve learned in the previous levels and make an awesome Star Quilt. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play\" slide\n\n**Level 9**: This is a free play level for students to apply the skills they’ve learned in the previous levels and make an awesome Star Quilt. ",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -603,7 +603,7 @@
       "key": "0bfa2d26-6cbc-4e5a-be38-7b3873c6e026",
       "position": 1,
       "properties": {
-        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Task” slide\n\n**Discuss**: Star Quilts are valuable, meaningful gifts. Students will share their Star Quilt with someone special. There are a couple options for how you might choose to do this:\n\n1. **Code.org share button**: \n   - Students can enter a phone number to send their project to a family member. \n   - Students can select publish to share their project with the world. \n   - Students can select print and later hand a paper copy of their Star Quilt to someone else. \n   - Students can select print and tape all of their projects together to make a larger Star Quilt.\n\n2. **Classroom gallery walk:** Each student leaves their Star Quilt open on their laptop. Students walk around viewing each other’s work. Have students leave sticky notes for each other with positive comments. \n\n3. **Jamboard or Flipgrid:** Use an online software to create a virtual collection of everyone’s work.\n",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Task” slide\n\n**Discuss**: Star Quilts are valuable, meaningful gifts. Students will share their Star Quilt with someone special. There are a couple options for how you might choose to do this:\n\n1. **Code.org share button**: \n   - Students can enter a phone number to send their project to a family member. \n   - Students can select publish to share their project with the world. \n   - Students can select print and later hand a paper copy of their Star Quilt to someone else. \n   - Students can select print and tape all of their projects together to make a larger Star Quilt.\n\n2. **Classroom gallery walk:** Each student leaves their Star Quilt open on their laptop. Students walk around viewing each other’s work. Have students leave sticky notes for each other with positive comments. \n\n3. **Jamboard or Flipgrid:** Use an online software to create a virtual collection of everyone’s work.\n",
         "duration": "10",
         "name": "Wrap Up"
       },

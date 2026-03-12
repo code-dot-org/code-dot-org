@@ -1118,7 +1118,7 @@
       "key": "6169507a-b6d3-4075-af85-301d8e7ac5e7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _How do we use sprites in our programs?_\n\n",
         "name": "Introduction\r",
         "tips": [
           {
@@ -1136,7 +1136,7 @@
       "key": "3d8b6f93-6d11-4b3b-9428-ae66d6dd6b77",
       "position": 2,
       "properties": {
-        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other."
+        "description": "Today students will visit events in programming.\n\n####A Series of Events\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A Series of Events” slide\n\n*Let’s see if we can find a pattern here:*\n\n- *When you flip a switch, the lights turn on.*\n- *When you tap on a device, an app starts.*\n- *When the alarm goes off, you get out of bed.*\n- *When (event)*, *(action)*.\n\n*In computer science, events cause other actions to happen. Our new vocabulary word today is* **event**.    *Normally when we hear “event” we think of:*\n- Field trip\n- Competition\n- Birthday Party\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n*We’re learning a new meaning for the word \"event\" today. Let's focus on events that cause other actions to happen like when flipping a switch causes the lights to turn on or pressing a button to make a character in a game move.*\n\nToday, students will work in Sprite Lab, but the events they will be working on will be more like the video games they are used to playing. **Events** will take the form of actions, such as clicking the screen or two characters running into each other."
       },
       "seeding_key": {
         "activity_section.key": "3d8b6f93-6d11-4b3b-9428-ae66d6dd6b77",
@@ -1165,7 +1165,7 @@
       "key": "ac6927ff-2a81-42c5-8e4e-92ce739a99a9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 – Predict” slide\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1 – Predict” slide\n\n**Transition:** Move students to their machines. Encourage students to follow the instructions for each puzzle.  Help them realize that this is a creative activity, intended to help them learn Sprite Lab.  It is not an assessment activity of any sort.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "ac6927ff-2a81-42c5-8e4e-92ce739a99a9",
@@ -1187,7 +1187,7 @@
       "key": "cf95c5ae-8833-47a8-a134-edc80bb3d8c2",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Sprites in Action” video \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sprites in Action” video \n",
         "progression_name": "Video: Sprites in Action"
       },
       "seeding_key": {
@@ -1199,7 +1199,7 @@
       "key": "b88c5d6b-d058-443b-8d04-d855bb836069",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-6 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 3-6 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1211,7 +1211,7 @@
       "key": "2ef70f40-2c26-453e-a878-c10b20cf1952",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Skill Building” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7-8 - Skill Building” slide\n",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -1223,7 +1223,7 @@
       "key": "0b81cb53-5ebb-488b-9513-4450d869b58e",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 9 - Free Play” slide\n",
         "progression_name": "Free Play"
       },
       "seeding_key": {
@@ -1235,7 +1235,7 @@
       "key": "6a8091a2-9463-4b55-bd36-c8def279d2ff",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Did you change the program in any way to make it feel more like your own?_\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect**:\n* _What was today's lesson about?_\n* _Did you change the program in any way to make it feel more like your own?_\n",
         "name": "Reflection"
       },
       "seeding_key": {

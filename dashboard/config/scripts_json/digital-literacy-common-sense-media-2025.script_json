@@ -710,7 +710,7 @@
       "key": "2e114733-c02a-4943-8e23-1b657a914797",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?*\n\n**Discussion Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?*\n\n**Discussion Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?"
       },
       "seeding_key": {
         "activity_section.key": "2e114733-c02a-4943-8e23-1b657a914797",
@@ -733,7 +733,7 @@
       "key": "a68cc7e3-6b6d-46f8-8930-833cc50dddf9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/idaho-digital-literacy/2025]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/idaho-digital-literacy/2025]",
         "duration": "10",
         "name": "Activity Part 1: Read the Article",
         "tips": [
@@ -752,7 +752,7 @@
       "key": "8e3008d1-d294-46dd-b906-a566e255eaa1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:\n\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:\n\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article",
         "tips": [
           {
             "type": "teachingTip",
@@ -779,7 +779,7 @@
       "key": "1d6b5aa3-8f8e-400d-b2b7-8a75eda5d098",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
       },
       "seeding_key": {
         "activity_section.key": "1d6b5aa3-8f8e-400d-b2b7-8a75eda5d098",
@@ -790,7 +790,7 @@
       "key": "30924af1-ced2-41ff-9adc-fda39e63c133",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
         "tips": [
           {
             "type": "teachingTip",
@@ -821,7 +821,7 @@
       "key": "1ade3bbb-7a9a-47d9-baf6-1b3e52c8b41f",
       "position": 7,
       "properties": {
-        "description": "* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
         "tips": [
           {
             "type": "teachingTip",
@@ -863,7 +863,7 @@
       "key": "866db70e-609e-40af-ad38-ec501e546485",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students re-read the article in order to answer these questions:"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students re-read the article in order to answer these questions:"
       },
       "seeding_key": {
         "activity_section.key": "866db70e-609e-40af-ad38-ec501e546485",
@@ -874,7 +874,7 @@
       "key": "9175d2f8-1d2d-47b2-815e-1bd47947425c",
       "position": 11,
       "properties": {
-        "description": "* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate the article by adding the following symbols:\n\n* Add a + next to sentences that show benefit\n* Add a - next to sentences that show harm\n* Add a face next to sentences that show impact\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Share some of the sentences you annotated. Did everyone identify the same areas?*\n\n**Discussion Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n",
+        "description": "* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate the article by adding the following symbols:\n\n* Add a + next to sentences that show benefit\n* Add a - next to sentences that show harm\n* Add a face next to sentences that show impact\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Share some of the sentences you annotated. Did everyone identify the same areas?*\n\n**Discussion Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -903,7 +903,7 @@
       "key": "c48a56c5-5a28-41fc-8e93-d3319e650815",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**"
       },
       "seeding_key": {
         "activity_section.key": "c48a56c5-5a28-41fc-8e93-d3319e650815",

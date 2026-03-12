@@ -1063,7 +1063,7 @@
       "key": "1e766ada-3d24-4229-aa09-727ce6fae528",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How did the strategies we used in the previous unit to plan and develop our projects help us manage and track our work?*\n\n**Discussion Goal:** Students share how using these strategies helped them manage and track their work, such as how reviewing examples helped them decompose the project or how using the Project Planning Board helped them keep track of the tasks they need to complete.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How did the strategies we used in the previous unit to plan and develop our projects help us manage and track our work?*\n\n**Discussion Goal:** Students share how using these strategies helped them manage and track their work, such as how reviewing examples helped them decompose the project or how using the Project Planning Board helped them keep track of the tasks they need to complete.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1080,7 +1080,7 @@
       "key": "c525313f-1794-4759-abc5-1a970d98e71b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1104,7 +1104,7 @@
       "key": "2953452d-a427-4361-8004-1614aa00fb0b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Creative Coding with the Console Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1121,7 +1121,7 @@
       "key": "a0294b2d-2180-482f-b4ff-ba1db81e01b1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric."
       },
       "seeding_key": {
         "activity_section.key": "a0294b2d-2180-482f-b4ff-ba1db81e01b1",
@@ -1144,7 +1144,7 @@
       "key": "d63ea91f-4a7d-4578-924f-01101e066dc1",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1173,7 +1173,7 @@
       "key": "c1ebc927-a684-4025-83d6-c4308201d3fe",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Creative Coding with the Console Project Planning Guide.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Creative Coding with the Console Project Planning Guide.",
         "progression_name": "Creative Coding with the Console Example Projects",
         "tips": [
           {
@@ -1191,7 +1191,7 @@
       "key": "7a5ab749-4dc5-4c3f-86f3-0f000d17448a",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1222,7 +1222,7 @@
       "key": "0670dfe4-d7d2-4c21-a8aa-9c590c857e44",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n**Do This:** Explain the key benchmarks and deadlines for the project:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #1\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #2\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Benchmark #3\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n**Do This:** Explain the key benchmarks and deadlines for the project:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #1\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #2\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Benchmark #3\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1239,7 +1239,7 @@
       "key": "acfa08cc-4b19-42ea-9492-ab098abbf152",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Creative Coding with the Console Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Creative Coding with the Console Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "acfa08cc-4b19-42ea-9492-ab098abbf152",
@@ -1250,7 +1250,7 @@
       "key": "99aba884-0938-4a5e-b2ae-42cda566d158",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create a project backlog. Students make predictions about how they will use their Project Planning Board to keep track of the tasks they need to complete for their project and share some of the steps they need to complete.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create a project backlog. Students make predictions about how they will use their Project Planning Board to keep track of the tasks they need to complete for their project and share some of the steps they need to complete.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Three W's",
         "tips": [
           {
@@ -1292,7 +1292,7 @@
       "key": "6b240632-17f8-4bb7-9077-2a6a230e4309",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate the activity by acting as the magician.\n1. Ask students to choose a card.\n2. Shuffle the cards.\n3. Reveal a card and ask if that was the card. Add one to the number of guesses.\n4. Put the revealed card into a pile of checked cards until the next round.\n5. Repeat steps 2 through 4 until the revealed card is the one the student chose.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate the activity by acting as the magician.\n1. Ask students to choose a card.\n2. Shuffle the cards.\n3. Reveal a card and ask if that was the card. Add one to the number of guesses.\n4. Put the revealed card into a pile of checked cards until the next round.\n5. Repeat steps 2 through 4 until the revealed card is the one the student chose.",
         "name": "World's Worst Magician",
         "tips": [
           {
@@ -1310,7 +1310,7 @@
       "key": "534e4478-f59e-48ab-a2ca-956e6be7c377",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Am I the world’s worst magician?*\n* *How many guesses would the world’s best magician take?*\n* *How many guesses would the real world’s worst magician take?*\n\n**Discussion Goal:** Students suggest that the world's best magician always finds the correct card on the first try. Students share that the world’s worst magician would guess the correct card on their very last attempt.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Am I the world’s worst magician?*\n* *How many guesses would the world’s best magician take?*\n* *How many guesses would the real world’s worst magician take?*\n\n**Discussion Goal:** Students suggest that the world's best magician always finds the correct card on the first try. Students share that the world’s worst magician would guess the correct card on their very last attempt.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1327,7 +1327,7 @@
       "key": "e19a7f74-32ae-4b35-adb3-cfdbd4f368eb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Linear Search"
       },
@@ -1352,7 +1352,7 @@
       "key": "5ff21707-5ea3-4019-b200-55504f93895f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Linear Search"
       },
       "seeding_key": {
@@ -1364,7 +1364,7 @@
       "key": "64f2aec3-22e9-484e-a0b6-81d1bf9e0c81",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method traverses each array one element at a time from first to last. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there is a faster way to search for data.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***linear search*** and demonstrate using the algorithm with a 1D array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the algorithm with a 2D array.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the ***best case***, ***average case***, and ***worst case***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the best case for the World's Worst Magician?*\n* *What is the average case for the World's Worst Magician?*\n* *What is the worst case for the World's Worst Magician?*\n\n**Discussion Goal:** Students identify the best case as guessing the card on the first try, and the worst case as the total number of cards. Students suggest values for the average case based on their experience in the warm up activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the method traverses each array one element at a time from first to last. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there is a faster way to search for data.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***linear search*** and demonstrate using the algorithm with a 1D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the algorithm with a 2D array.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define the ***best case***, ***average case***, and ***worst case***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the best case for the World's Worst Magician?*\n* *What is the average case for the World's Worst Magician?*\n* *What is the worst case for the World's Worst Magician?*\n\n**Discussion Goal:** Students identify the best case as guessing the card on the first try, and the worst case as the total number of cards. Students suggest values for the average case based on their experience in the warm up activity.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1395,7 +1395,7 @@
       "key": "f6ad1b85-7205-4eec-bb2e-d43db825218e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***execution count***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Counting Executions with Code handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Counting Executions with Code handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their findings with a partner."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***execution count***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Counting Executions with Code handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Counting Executions with Code handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their findings with a partner."
       },
       "seeding_key": {
         "activity_section.key": "f6ad1b85-7205-4eec-bb2e-d43db825218e",
@@ -1419,7 +1419,7 @@
       "key": "08a4c072-6c5e-4c50-93e7-b7027e9cdfa5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review user stories.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with the Console Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review user stories.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write user stories for their project on page five of their Creative Coding with the Console Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1436,7 +1436,7 @@
       "key": "d2ee4b7a-3e14-4cc1-b41f-08b668847fb4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "d2ee4b7a-3e14-4cc1-b41f-08b668847fb4",
@@ -1484,7 +1484,7 @@
       "key": "3f87a1c0-3acb-4d99-8b78-f35e1f197e05",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What would the worst case execution count be if we used a linear search to find a specific card?*\n\n**Discussion Goal:** Students recall that the worst case execution count is the same as the number of cards to search.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would the worst case execution count be if we used a linear search to find a specific card?*\n\n**Discussion Goal:** Students recall that the worst case execution count is the same as the number of cards to search.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1501,7 +1501,7 @@
       "key": "698e686c-6765-46b4-bf4d-db3d2fbe0081",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What if this was the deck we needed to search?*\n\n**Discussion Goal:** Students suggest checking the middle of the deck first since the cards are sorted, then focusing on either the left or right side of the deck. Students share that the magician can repeat the process until the card is found.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What if this was the deck we needed to search?*\n\n**Discussion Goal:** Students suggest checking the middle of the deck first since the cards are sorted, then focusing on either the left or right side of the deck. Students share that the magician can repeat the process until the card is found.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1518,7 +1518,7 @@
       "key": "6f0eebc6-606a-4d85-94c5-d06bfd8009b4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a solution."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a solution."
       },
       "seeding_key": {
         "activity_section.key": "6f0eebc6-606a-4d85-94c5-d06bfd8009b4",
@@ -1529,7 +1529,7 @@
       "key": "b70e2d15-3436-4a03-9036-412892e8f688",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "5",
         "name": "Introduction"
       },
@@ -1554,7 +1554,7 @@
       "key": "047f1d44-eef5-4bec-a64f-41f3a4cec061",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Binary Search"
       },
       "seeding_key": {
@@ -1566,7 +1566,7 @@
       "key": "365e2c32-ecb0-42b7-9dc7-eb6f5effda36",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program uses variables to keep track of the low, middle, and high values in each iteration. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder how the binary search algorithm compares to a linear search."
       },
       "seeding_key": {
         "activity_section.key": "365e2c32-ecb0-42b7-9dc7-eb6f5effda36",
@@ -1591,7 +1591,7 @@
       "key": "5e8cb057-25e5-43ba-b0a1-eb7d3906acb4",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***binary search*** and demonstrate the example.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***binary search*** and demonstrate the example.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Binary Search handout and five cards. Assign each pair an option (A, B, C) for the trace tables on pages 4, 5, and 6 of the handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Binary Search handout with their partners by completing pages 1, 2, and 3 and the trace table option they were assigned."
       },
       "seeding_key": {
         "activity_section.key": "5e8cb057-25e5-43ba-b0a1-eb7d3906acb4",
@@ -1614,7 +1614,7 @@
       "key": "61806cd6-586a-4120-a656-82b5cee12c80",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How does increasing the length of the array impact the execution count?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the execution counts for their trace table option as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does increasing the length of the array impact the execution count?*\n\n**Discussion Goal:** Students share that the length of the array did not significantly increase the execution count for the binary search.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1631,7 +1631,7 @@
       "key": "bc73edb2-982f-46a3-9f4d-95f50a7cdaa9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students realize that the binary search algorithm is more efficient than the linear search algorithm because it takes less execution counts."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How does the execution counts for the binary search algorithm compare to the execution counts for the linear search algorithm?*\n\n**Discussion Goal:** Students realize that the binary search algorithm is more efficient than the linear search algorithm because it takes less execution counts."
       },
       "seeding_key": {
         "activity_section.key": "bc73edb2-982f-46a3-9f4d-95f50a7cdaa9",
@@ -1656,7 +1656,7 @@
       "key": "5b64341f-82f5-4759-996c-d5b97e88dbbe",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review recursion.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review recursion.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Recursive Binary Search"
       },
       "seeding_key": {
@@ -1668,7 +1668,7 @@
       "key": "3ca7fa50-b19c-4bf8-855e-de6747d16018",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. Students may wonder if the recursive approach impacts the efficiency of the algorithm or the program.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters, base cases, and recursive calls in the recursive binary search method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students identify the different parts of the recursive binary search method, including its parameters, conditional statements, return value, and recursive calls. They notice the difference in how binary search is implemented iteratively and recursively. Students may wonder if the recursive approach impacts the efficiency of the algorithm or the program.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the parameters, base cases, and recursive calls in the recursive binary search method."
       },
       "seeding_key": {
         "activity_section.key": "3ca7fa50-b19c-4bf8-855e-de6747d16018",
@@ -1692,7 +1692,7 @@
       "key": "cf162722-9d3f-4860-ae36-913d78883476",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1709,7 +1709,7 @@
       "key": "4e1d87bf-a7e1-4554-bab5-4276bc5bc132",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1726,7 +1726,7 @@
       "key": "bf30f027-ba9a-4cd1-bb9b-bf9a2ca4629a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "bf30f027-ba9a-4cd1-bb9b-bf9a2ca4629a",
@@ -1774,7 +1774,7 @@
       "key": "b34a5d43-6150-4e2c-8a22-c33b04a965b8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the \"Sort By\" feature on an e-commerce site like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think websites like Amazon perform these sorts?*\n\n**Discussion Goal:** Students suggest algorithms for sorting products, such as comparing pairs of values and performing swaps until they are in the correct order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you use the \"Sort By\" feature on an e-commerce site like Amazon? What are some of the different options offered to sort the products?*\n\n**Discussion Goal:** Students note that they use the \"Sort By\" feature to find products quickly. Students share that they can sort by size, color, weight, delivery time, price, and other options.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think websites like Amazon perform these sorts?*\n\n**Discussion Goal:** Students suggest algorithms for sorting products, such as comparing pairs of values and performing swaps until they are in the correct order.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1791,7 +1791,7 @@
       "key": "56b0dded-13a3-4f56-aec6-f800ffb0169b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "name": "Introduction"
       },
       "seeding_key": {
@@ -1815,7 +1815,7 @@
       "key": "143c7c08-afc8-4ff4-b644-d6fa1b7b5952",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Selection Sort"
       },
       "seeding_key": {
@@ -1827,7 +1827,7 @@
       "key": "d91cc990-67e1-4971-8a80-610bf2055799",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the selection sort combines standard algorithms they have used to find the minimum value and to swap elements to place the values in the correct order. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there are faster ways to sort the data."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the selection sort combines standard algorithms they have used to find the minimum value and to swap elements to place the values in the correct order. Students also notice that the program displays each element it checks and keeps a count of how many checks it executes. Students may wonder if there are faster ways to sort the data."
       },
       "seeding_key": {
         "activity_section.key": "d91cc990-67e1-4971-8a80-610bf2055799",
@@ -1852,7 +1852,7 @@
       "key": "792240b9-e8a7-4138-9f67-985acab04b75",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to define ***selection sort*** and demonstrate the example:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> First swap\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Second swap\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Third swap\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Final check\n\n**Group:** Place students in groups of four to six.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Selection Sort handout.",
+        "description": "**Do This:** Click through the animated slides to define ***selection sort*** and demonstrate the example:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Third swap\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Final check\n\n**Group:** Place students in groups of four to six.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Selection Sort handout and five cups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Selection Sort activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Selection Sort handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1869,7 +1869,7 @@
       "key": "51025112-969e-43c2-9357-48ad3054dbc8",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their findings with a partner.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the pseudocode for the selection sort algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their findings with a partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the pseudocode for the selection sort algorithm."
       },
       "seeding_key": {
         "activity_section.key": "51025112-969e-43c2-9357-48ad3054dbc8",
@@ -1892,7 +1892,7 @@
       "key": "7df06cc5-2c53-4044-8117-06c32df9d09c",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *When would the selection sort algorithm be useful in our programs?*\n\n**Discussion Goal:** Students realize that larger lists might make this approach less efficient and suggest using the selection sort algorithm to sort small sets of data.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would the selection sort algorithm be useful in our programs?*\n\n**Discussion Goal:** Students realize that larger lists might make this approach less efficient and suggest using the selection sort algorithm to sort small sets of data.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1909,7 +1909,7 @@
       "key": "36f5dcd6-a994-40e2-aee9-03a2026e5955",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations or issues with using the selection sort algorithm?*\n\n**Discussion Goal:** Students identify limitations to the selection sort, such as that the size of the list impacts the efficiency of the algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some limitations or issues with using the selection sort algorithm?*\n\n**Discussion Goal:** Students identify limitations to the selection sort, such as that the size of the list impacts the efficiency of the algorithm."
       },
       "seeding_key": {
         "activity_section.key": "36f5dcd6-a994-40e2-aee9-03a2026e5955",
@@ -1933,7 +1933,7 @@
       "key": "7a11f34a-66b5-42fa-b459-e1043416a380",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1950,7 +1950,7 @@
       "key": "4769d1e9-52ad-4183-b9f0-bd694def0dd1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1967,7 +1967,7 @@
       "key": "6c964eee-ad01-49df-9c1d-1ec152a5dd04",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6c964eee-ad01-49df-9c1d-1ec152a5dd04",
@@ -2015,7 +2015,7 @@
       "key": "1adce9bc-0c91-4ac1-90c3-9109be5baef8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the first benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2032,7 +2032,7 @@
       "key": "bc0111ee-c3d5-42a9-86c8-848c477a836f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "bc0111ee-c3d5-42a9-86c8-848c477a836f",
@@ -2043,7 +2043,7 @@
       "key": "4665241e-af8c-43f6-823d-7cb1baa77c74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "10",
         "name": "Insertion Sort"
       },
@@ -2068,7 +2068,7 @@
       "key": "2943f8b7-bba9-43e0-ab44-c114bc80362e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Insertion Sort"
       },
       "seeding_key": {
@@ -2080,7 +2080,7 @@
       "key": "50764286-cc3d-4b01-be82-04ff7c12ad9e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the insertion sort method traverses the array and compares the current element to the element before it. Students identify that if the current element is smaller than the element before it, it continues to check the elements before until it finds the correct position to insert the current element. Students may wonder why the insertion sort is more efficient than the selection sort.\n\n**Do This:** Click through the animated slides to define ***insertion sort*** and demonstrate the algorithm:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> First comparison\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Second comparison\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Third comparison\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Updating current\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the pseudocode."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the insertion sort method traverses the array and compares the current element to the element before it. Students identify that if the current element is smaller than the element before it, it continues to check the elements before until it finds the correct position to insert the current element. Students may wonder why the insertion sort is more efficient than the selection sort.\n\n**Do This:** Click through the animated slides to define ***insertion sort*** and demonstrate the algorithm:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> First comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Second comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Third comparison\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Updating current\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the pseudocode."
       },
       "seeding_key": {
         "activity_section.key": "50764286-cc3d-4b01-be82-04ff7c12ad9e",
@@ -2103,7 +2103,7 @@
       "key": "ed1e2c61-e015-400d-8186-f9989c7fa947",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What qualities are important when deciding whether one algorithm is better than another?*\n\n**Discussion Goal:** Students share possible pros and cons of different algorithms and how these are used to choose a specific algorithm for a particular scenario.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What qualities are important when deciding whether one algorithm is better than another?*\n\n**Discussion Goal:** Students share possible pros and cons of different algorithms and how these are used to choose a specific algorithm for a particular scenario.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2134,7 +2134,7 @@
       "key": "9961e3fa-0afc-427a-830f-1925a7ef0446",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Sorting Comparison handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Sorting Comparison handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share the number of comparisons made as a class. Create a table of the number of comparisons for each initial condition on the board.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Sorting Comparison handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the number of comparisons made as a class. Create a table of the number of comparisons for each initial condition on the board.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2151,7 +2151,7 @@
       "key": "b5e90a76-c813-40f9-a1c9-3e0b498c3bd5",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which algorithm is best when we consider efficiency?*\n* *Which algorithm is best when we consider readability?*\n* *Which algorithm is best when we consider ease of programming?*\n\n**Discussion Goal:** Students notice that insertion sort works faster on a sorted list, while selection sort works faster on an inverted list. Both algorithms perform similarly on randomly sorted elements. Students realize that one algorithm may be better than the other in specific circumstances, but both are generally similar.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which algorithm is best when we consider efficiency?*\n* *Which algorithm is best when we consider readability?*\n* *Which algorithm is best when we consider ease of programming?*\n\n**Discussion Goal:** Students notice that insertion sort works faster on a sorted list, while selection sort works faster on an inverted list. Both algorithms perform similarly on randomly sorted elements. Students realize that one algorithm may be better than the other in specific circumstances, but both are generally similar.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2181,7 +2181,7 @@
       "key": "9d33c7ec-307d-4a86-a4ce-7ce366ae05bb",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Planning Feedback handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students ask their framing questions and share feedback. Students should take notes on their Project Planning Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Planning Feedback, identify the user stories that will make up their second benchmark, and post tasks they want to complete for the second benchmark in the \"To Do\" column of their Project Planning Board.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2198,7 +2198,7 @@
       "key": "fd1f752e-aa7f-486a-bb17-f6b009efdb14",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "fd1f752e-aa7f-486a-bb17-f6b009efdb14",
@@ -2246,7 +2246,7 @@
       "key": "b3087f05-c9ca-4c61-90e1-ea06dddc3e36",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an algorithm for counting loose change.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an algorithm for counting loose change.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2263,7 +2263,7 @@
       "key": "0c77c70a-0841-46d9-9293-fd789fbb8ffd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the divide-and-conquer approach to counting loose change."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the divide-and-conquer approach to counting loose change."
       },
       "seeding_key": {
         "activity_section.key": "0c77c70a-0841-46d9-9293-fd789fbb8ffd",
@@ -2286,7 +2286,7 @@
       "key": "519c1046-3bb1-4f62-8fb9-ee0c8f011b90",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***divide-and-conquer***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How do you think sorting algorithms can use a divide-and-conquer approach?*\n\n**Discussion Goal:** Students suggest that sorting algorithms can employ the divide-and-conquer strategy by dividing a list of unsorted values into subproblems and then combining them to create a sorted list.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***divide-and-conquer***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do you think sorting algorithms can use a divide-and-conquer approach?*\n\n**Discussion Goal:** Students suggest that sorting algorithms can employ the divide-and-conquer strategy by dividing a list of unsorted values into subproblems and then combining them to create a sorted list.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2303,7 +2303,7 @@
       "key": "a4623e38-ec03-4f9f-970a-2a5fa7932b80",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Introduction"
       },
@@ -2328,7 +2328,7 @@
       "key": "27dc7444-0e4b-43b0-84ac-f1f523aa7d15",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Merge Sort"
       },
       "seeding_key": {
@@ -2340,7 +2340,7 @@
       "key": "bf54dbd1-b9d2-491c-9e12-3f2e0570c8fa",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students observe different parts of the recursive merge sort algorithm, including its parameters, conditional statements, return value, and recursive calls. They notice that three methods contribute to the overall merge sort algorithm."
       },
       "seeding_key": {
         "activity_section.key": "bf54dbd1-b9d2-491c-9e12-3f2e0570c8fa",
@@ -2351,7 +2351,7 @@
       "key": "1c97e3ef-d572-441f-a87a-3325d82230df",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***merge sort***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define ***helper method***.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the base cases?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is the recursive call?*\n\n**Discussion Goal:** Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***merge sort***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***helper method***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the base cases?*\n\n**Discussion Goal:** Students identify two base cases in the merge sort algorithm. The first base case is if the list is empty, and the second base case is if a list contains one item.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the recursive call?*\n\n**Discussion Goal:** Students realize that the merge sort algorithm recursively divides the list in half until the size of the list is one element.",
         "duration": "15",
         "name": "Merge Sort",
         "tips": [
@@ -2370,7 +2370,7 @@
       "key": "0d7587b8-7a58-4334-b936-5d3754395419",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Merge Sort handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge Sort handout."
       },
       "seeding_key": {
         "activity_section.key": "0d7587b8-7a58-4334-b936-5d3754395419",
@@ -2394,7 +2394,7 @@
       "key": "7abb9d3b-8f2b-45d7-88c4-70974a3d70b4",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Creative Coding with the Console Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2411,7 +2411,7 @@
       "key": "de5cabeb-544f-4896-bbac-51deb6c0a42d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2428,7 +2428,7 @@
       "key": "744ea93a-9843-49ab-9dd3-b8d340aeff86",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "744ea93a-9843-49ab-9dd3-b8d340aeff86",
@@ -2476,7 +2476,7 @@
       "key": "30acaffd-b5c2-4c99-8901-5762df54b496",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the scenario.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an algorithm for the scenario. Have students share their algorithms with another group to compare solutions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the scenario.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm an algorithm for the scenario. Have students share their algorithms with another group to compare solutions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2493,7 +2493,7 @@
       "key": "5eac9078-1bc3-443a-8c88-ba465f521cc8",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your algorithm?*\n* *What characteristics were common in your algorithms?*\n\n**Discussion Goal:** Students share the algorithms they developed and identify common characteristics, such as creating an `ArrayList` to combine the two lists or traversing both lists simultaneously to retrieve the data."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is your algorithm?*\n* *What characteristics were common in your algorithms?*\n\n**Discussion Goal:** Students share the algorithms they developed and identify common characteristics, such as creating an `ArrayList` to combine the two lists or traversing both lists simultaneously to retrieve the data."
       },
       "seeding_key": {
         "activity_section.key": "5eac9078-1bc3-443a-8c88-ba465f521cc8",
@@ -2504,7 +2504,7 @@
       "key": "676a8b64-a808-447e-ae9b-a1a675438b15",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Searching Algorithms"
       },
@@ -2529,7 +2529,7 @@
       "key": "1b6f1679-3d9b-4402-8cc8-c1ee451dbebd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How does the linear search algorithm work?*\n* *How does the binary search algorithm work?*\n\n**Discussion Goal:** Students recall that the linear search algorithm checks each element in the data structure from first to last until the target is found, while the binary search algorithm splits the list in half repeatedly until the target is found.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How does the linear search algorithm work?*\n* *How does the binary search algorithm work?*\n\n**Discussion Goal:** Students recall that the linear search algorithm checks each element in the data structure from first to last until the target is found, while the binary search algorithm splits the list in half repeatedly until the target is found.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2546,7 +2546,7 @@
       "key": "9f4fc80a-0c62-4789-8780-3085af0a4fbb",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which is more efficient? Why?*\n* *When is the binary search algorithm not the most efficient?*\n\n**Discussion Goal:** Students note that the binary search is more efficient because it has fewer execution counts but only works when the list is sorted.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Searching Algorithms*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which is more efficient? Why?*\n* *When is the binary search algorithm not the most efficient?*\n\n**Discussion Goal:** Students note that the binary search is more efficient because it has fewer execution counts but only works when the list is sorted.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Searching Algorithms*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2577,7 +2577,7 @@
       "key": "7a64d9f0-b12c-45f8-8a5f-36e1f9349d8a",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How does the selection sort algorithm work?*\n* *How does the insertion sort algorithm work?*\n* *How does the merge sort algorithm work?*\n\n**Discussion Goal:** Students recall that the selection sort algorithm finds the minimum value in the list and swaps with the previous element and repeats this process until the list is in order. Students recall that the insertion sort algorithm inserts the element into the correct position and shifts the rest of the elements over. Students note that the merge sort algorithm is a recursive algorithm that repeatedly divides the list into smaller lists until each list contains only one value and then merges the elements back together into one list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which is more efficient? Why?*\n\n**Discussion Goal:** Students also note that each algorithm is fairly comparable in efficiency but one might be best depending on the size of the list.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Sorting Algorithms*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How does the selection sort algorithm work?*\n* *How does the insertion sort algorithm work?*\n* *How does the merge sort algorithm work?*\n\n**Discussion Goal:** Students recall that the selection sort algorithm finds the minimum value in the list and swaps with the previous element and repeats this process until the list is in order. Students recall that the insertion sort algorithm inserts the element into the correct position and shifts the rest of the elements over. Students note that the merge sort algorithm is a recursive algorithm that repeatedly divides the list into smaller lists until each list contains only one value and then merges the elements back together into one list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which is more efficient? Why?*\n\n**Discussion Goal:** Students also note that each algorithm is fairly comparable in efficiency but one might be best depending on the size of the list.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Sorting Algorithms*."
       },
       "seeding_key": {
         "activity_section.key": "7a64d9f0-b12c-45f8-8a5f-36e1f9349d8a",
@@ -2602,7 +2602,7 @@
       "key": "7dbd4bec-d93e-4d29-abd5-973ca9b1ff55",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict and Run: Multiple Lists"
       },
       "seeding_key": {
@@ -2614,7 +2614,7 @@
       "key": "3a5bc61e-183c-47ab-824f-6714526662f6",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program has multiple lists and that there are methods to find information and combine the lists into one list without any duplicate values. Students may wonder about other scenarios where these algorithms might be useful, other scenarios requiring multiple lists, or other problems that could be solved involving multiple lists."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program has multiple lists and that there are methods to find information and combine the lists into one list without any duplicate values. Students may wonder about other scenarios where these algorithms might be useful, other scenarios requiring multiple lists, or other problems that could be solved involving multiple lists."
       },
       "seeding_key": {
         "activity_section.key": "3a5bc61e-183c-47ab-824f-6714526662f6",
@@ -2637,7 +2637,7 @@
       "key": "7ea96e04-e196-4c62-9e57-7e652eb06f90",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Multiple Lists"
       },
       "seeding_key": {
@@ -2649,7 +2649,7 @@
       "key": "2fce614c-8b43-43e8-ad66-66701f471aa4",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code."
       },
       "seeding_key": {
         "activity_section.key": "2fce614c-8b43-43e8-ad66-66701f471aa4",
@@ -2674,7 +2674,7 @@
       "key": "122b1705-ad84-4228-b701-998b21acbedc",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6, 7, and 8 to practice working with multiple lists and using searching and sorting algorithms.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 through 8. Students complete a Check for Understanding on Level 5, then continue to complete choice levels on Levels 6, 7, and 8 to practice working with multiple lists and using searching and sorting algorithms.",
         "progression_name": "Practice: Searching and Sorting",
         "tips": [
           {
@@ -2709,7 +2709,7 @@
       "key": "40948a92-e2a4-4459-bfff-a86367e87af0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share their achievements and aspects of their program that they are proud of as well as challenges they overcame and how they solved them. Students may suggest ways they can improve their program, such as decomposing the problem down further or identifying additional preconditions for their algorithms.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share their achievements and aspects of their program that they are proud of as well as challenges they overcame and how they solved them. Students may suggest ways they can improve their program, such as decomposing the problem down further or identifying additional preconditions for their algorithms.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2726,7 +2726,7 @@
       "key": "05720b2e-4525-4554-84c1-0268ea701e89",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2780,7 +2780,7 @@
       "key": "e0f9474a-89c1-474a-8697-65c47f502d6e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the second benchmark.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with the tasks they need to complete."
       },
       "seeding_key": {
         "activity_section.key": "e0f9474a-89c1-474a-8697-65c47f502d6e",
@@ -2805,7 +2805,7 @@
       "key": "23a5f387-4fd2-454b-be01-c341d0626ea5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to begin development on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to begin development on their Creative Coding with the Console Project.",
         "progression_name": "Creative Coding with the Console Project"
       },
       "seeding_key": {
@@ -2831,7 +2831,7 @@
       "key": "ac071492-9ef3-4b71-93a3-d325b94fcf48",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2860,7 +2860,7 @@
       "key": "90be2e93-9165-43c3-9050-0286f1932b55",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2877,7 +2877,7 @@
       "key": "b1c75d23-e9cf-483a-8ce4-39ffdb30db11",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down one word that summarizes their experience working on their Creative Coding with the Console Project so far.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share their word with a partner and briefly explain why they chose it.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write down one word that summarizes their experience working on their Creative Coding with the Console Project so far.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their word with a partner and briefly explain why they chose it.",
         "name": "One Word Summary",
         "tips": [
           {
@@ -2932,7 +2932,7 @@
       "key": "220c5989-984c-4d1b-9e41-97c35d140315",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What data is being collected by the apps and programs you use at home? What about at school or related to your hobbies?*\n\n**Discussion Goal:** Students share examples of data collected by apps they use, such as TV shows they watch at home or their name and student ID at school.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What data is being collected by the apps and programs you use at home? What about at school or related to your hobbies?*\n\n**Discussion Goal:** Students share examples of data collected by apps they use, such as TV shows they watch at home or their name and student ID at school.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2949,7 +2949,7 @@
       "key": "b3d03576-edda-4700-8dcd-cb4867e0d0fd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
         "duration": "15",
         "name": "Introduction"
       },
@@ -2974,7 +2974,7 @@
       "key": "ab77bbf2-b676-4e19-ac8a-af98dbe8b2db",
       "position": 3,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data, Privacy, and Security handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data, Privacy, and Security activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Data, Privacy, and Security handout."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Data, Privacy, and Security handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data, Privacy, and Security activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Data, Privacy, and Security handout."
       },
       "seeding_key": {
         "activity_section.key": "ab77bbf2-b676-4e19-ac8a-af98dbe8b2db",
@@ -2999,7 +2999,7 @@
       "key": "cf57c729-c3aa-475b-89a5-13cef3c73ff4",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection vs Privacy and Security activity.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is more important: the utility of data collection or safeguarding privacy and security?*\n\n**Discussion Goal:** Students share tradeoffs between collecting more data and the risk of impacts on privacy and security, such as an unauthorized individual gaining access to their information or companies sharing their information with another company without their knowledge."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for the Data Collection vs Privacy and Security activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think is more important: the utility of data collection or safeguarding privacy and security?*\n\n**Discussion Goal:** Students share tradeoffs between collecting more data and the risk of impacts on privacy and security, such as an unauthorized individual gaining access to their information or companies sharing their information with another company without their knowledge."
       },
       "seeding_key": {
         "activity_section.key": "cf57c729-c3aa-475b-89a5-13cef3c73ff4",
@@ -3010,7 +3010,7 @@
       "key": "7bef0caf-1137-4d19-b611-8dade96e3a6c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
         "name": "Show What You Know Week",
         "tips": [
           {
@@ -3040,7 +3040,7 @@
       "key": "7456d1ca-dbff-4aed-a750-e68426e16b9a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 7 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know Week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
       },
       "seeding_key": {
         "activity_section.key": "7456d1ca-dbff-4aed-a750-e68426e16b9a",
@@ -3100,7 +3100,7 @@
       "key": "224992fe-b34f-496c-8a51-09ee688fd645",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3117,7 +3117,7 @@
       "key": "7fd1cd1e-da3c-4d56-8cfc-ed6c59d3c00f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "7fd1cd1e-da3c-4d56-8cfc-ed6c59d3c00f",
@@ -3142,7 +3142,7 @@
       "key": "686690b1-29be-4f97-9e54-68603b554e63",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
         "progression_name": "Creative Coding with the Console Project",
         "tips": [
           {
@@ -3173,7 +3173,7 @@
       "key": "f547d614-71a5-4594-b97d-27d11bb8f5d9",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review acceptance testing."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review acceptance testing."
       },
       "seeding_key": {
         "activity_section.key": "f547d614-71a5-4594-b97d-27d11bb8f5d9",
@@ -3196,7 +3196,7 @@
       "key": "1f7856ed-f937-4531-a31e-99d3e48ff612",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project. Have students write a code review request that includes acceptance criteria for their user stories. Afterward, students review their peer’s code and determine if the acceptance criteria are met.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3213,7 +3213,7 @@
       "key": "cbf184a3-b1ce-41cb-9516-34407e83859b",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3246,7 +3246,7 @@
       "key": "5db74e06-e2cd-4930-b5cf-b43f14fa2af3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Creative Coding with the Console Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3277,7 +3277,7 @@
       "key": "d64f3221-bf62-4997-86c8-ca2b5ca0f10d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3308,7 +3308,7 @@
       "key": "8efb3fc8-96bc-43df-ab8a-bd0d7376b357",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their new subclass to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3337,7 +3337,7 @@
       "key": "bf66a2fc-60f8-475e-97f2-153fb638f7ec",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to conduct a code review on their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3354,7 +3354,7 @@
       "key": "0297802f-68cf-4d1d-8731-27a652fa38a9",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.",
         "duration": "5",
         "name": "Wrap Up",
         "tips": [
@@ -3387,7 +3387,7 @@
       "key": "d7502cad-2b28-440f-9d12-833b8ca32dee",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "d7502cad-2b28-440f-9d12-833b8ca32dee",
@@ -3412,7 +3412,7 @@
       "key": "48eb1b71-08c7-407f-a9c3-0c89c68bd104",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Creative Coding with the Console Project.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3443,7 +3443,7 @@
       "key": "714b9b30-88c6-4b34-be98-3a284b54b709",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "714b9b30-88c6-4b34-be98-3a284b54b709",
@@ -3454,7 +3454,7 @@
       "key": "61295eb7-519a-40e8-9d4e-c5e791f8d144",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
         "duration": "10",
         "name": "Wrap Up",
         "tips": [
@@ -3521,7 +3521,7 @@
       "key": "d4d1c22d-8d50-4555-b852-821e2f5fb888",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Creative Coding with the Console Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3538,7 +3538,7 @@
       "key": "c1443792-fe72-4c37-8708-d70950069e5c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
       },
       "seeding_key": {
         "activity_section.key": "c1443792-fe72-4c37-8708-d70950069e5c",
@@ -3562,7 +3562,7 @@
       "key": "1f86d477-0835-4964-882b-174916fdab1e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on the Creative Coding with the Console Project.",
         "progression_name": "Creative Coding with the Console Project",
         "tips": [
           {
@@ -3592,7 +3592,7 @@
       "key": "b11e8457-13f4-450f-833d-1173ac3114b9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3609,7 +3609,7 @@
       "key": "ccb5c6f6-e384-4fe5-98e7-28b7d5f9909a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Creative Coding with the Console Project Planning Guide.",
         "name": "End of Project Reflection",
         "tips": [
           {
@@ -3650,7 +3650,7 @@
       "key": "cca34327-8901-42e2-a89c-a74def15001e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete a short end-of-unit survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.\n",
         "name": "End of Unit Survey",
         "progression_name": "End of Unit Survey"
       },
@@ -3676,7 +3676,7 @@
       "key": "f52e7011-8574-4332-a836-3b1f05571cfb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to review the exam structure. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to review the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
       },
       "seeding_key": {
         "activity_section.key": "f52e7011-8574-4332-a836-3b1f05571cfb",
@@ -3701,7 +3701,7 @@
       "key": "c2491fbf-fa94-435b-9f5e-65f1628d810b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "c2491fbf-fa94-435b-9f5e-65f1628d810b",
@@ -3724,7 +3724,7 @@
       "key": "4a2ed98c-b417-4aec-82d4-2579773f4548",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the SeatingChart FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the SeatingChart FRQ handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
       },
       "seeding_key": {
         "activity_section.key": "4a2ed98c-b417-4aec-82d4-2579773f4548",
@@ -3747,7 +3747,7 @@
       "key": "f2c723c5-add5-4a83-809f-f27359eaa602",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
       },
       "seeding_key": {
         "activity_section.key": "f2c723c5-add5-4a83-809f-f27359eaa602",
@@ -3770,7 +3770,7 @@
       "key": "b33df1f6-0677-4896-a62e-b23949b48456",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the SeatingChart FRQ handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the SeatingChart FRQ handout."
       },
       "seeding_key": {
         "activity_section.key": "b33df1f6-0677-4896-a62e-b23949b48456",
@@ -3795,7 +3795,7 @@
       "key": "03878dce-ff01-432d-a302-fb224db20301",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the SeatingChart FRQ handout. On the board, write the start and end times.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the SeatingChart FRQ handout. On the board, write the start and end times.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3825,7 +3825,7 @@
       "key": "9e1b6bf6-e0f8-446b-9863-b6e121103fba",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Collect the SeatingChart FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SeatingChart FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the SeatingChart FRQ handout, Java Quick Reference, and scrap paper from each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the SeatingChart FRQ Scoring Guidelines and one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One."
       },
       "seeding_key": {
         "activity_section.key": "9e1b6bf6-e0f8-446b-9863-b6e121103fba",
@@ -3872,7 +3872,7 @@
       "key": "79eed1ad-4c2c-479b-a220-cf6dbc646635",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 8 Assessment on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 8 Assessment on Code Studio.",
         "progression_name": "Unit 8 Assessment"
       },
       "seeding_key": {
@@ -3884,7 +3884,7 @@
       "key": "db938463-15d2-4fb5-964d-40e0f711963d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {

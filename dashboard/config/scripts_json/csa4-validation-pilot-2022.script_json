@@ -1066,7 +1066,7 @@
       "key": "7f81d73c-dbc0-499c-bb42-e3025cb0611b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 4 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt, then have students note their goals on the Unit 4 Guide.\n* *What software engineering characteristics do you want to work on in this unit?*\n* *How will you know you grew in this area by the end of the unit?*\n\n**Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1097,7 +1097,7 @@
       "key": "b7a8ddaf-513e-42a6-be7d-34ce73b23d39",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Welcome to The Theater*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Welcome to The Theater*.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: The Theater"
       },
       "seeding_key": {
@@ -1109,7 +1109,7 @@
       "key": "e00046a2-46c6-40dd-a749-1e9b0dd638f7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program creates a `Scene` object and calls methods to draw shapes and images and play sounds. Students may wonder if they can extend the `Scene` class like they extended the `Painter` class or what types of programs they could create using The Theater.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating The Theater handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Theater` and `Scene` classes.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program creates a `Scene` object and calls methods to draw shapes and images and play sounds. Students may wonder if they can extend the `Scene` class like they extended the `Painter` class or what types of programs they could create using The Theater.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating The Theater handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the `Theater` and `Scene` classes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1126,7 +1126,7 @@
       "key": "6dde2444-51fb-4008-878f-1145bdf79fef",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to access the documentation for The Theater and complete the Investigating The Theater handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to access the documentation for The Theater and complete the Investigating The Theater handout.",
         "progression_name": "The Theater Classes and Methods"
       },
       "seeding_key": {
@@ -1138,7 +1138,7 @@
       "key": "1a36d736-1e09-4eb6-bcbd-d22b86e91960",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
+        "description": "**Do This:** Click through the animated slides to introduce the classes and methods in The Theater:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Scene` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `drawImage()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The methods to draw shapes\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `playSound()` and `playNote()` methods\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `pause()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `Theater.playScenes()` method"
       },
       "seeding_key": {
         "activity_section.key": "1a36d736-1e09-4eb6-bcbd-d22b86e91960",
@@ -1163,7 +1163,7 @@
       "key": "2d2508aa-0e4e-4584-bcdb-983c4e5f1f81",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete choice levels to draw images, draw shapes, and play sounds.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3, 4, and 5. Students complete choice levels to draw images, draw shapes, and play sounds.",
         "progression_name": "Exploring The Theater"
       },
       "seeding_key": {
@@ -1188,7 +1188,7 @@
       "key": "596f76ce-2e09-41e6-b106-daffbd9b94dc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things you could make using The Theater?*\n* *How could you use The Theater to create visuals of the data you worked with in the previous unit?*\n\n**Discussion Goal:** Students share ideas about visuals and animations they want to make using The Theater. Students suggest ways to visualize the data they worked with in the previous unit, such as creating drawings and images or animating the data to demonstrate patterns and information.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things you could make using The Theater?*\n* *How could you use The Theater to create visuals of the data you worked with in the previous unit?*\n\n**Discussion Goal:** Students share ideas about visuals and animations they want to make using The Theater. Students suggest ways to visualize the data they worked with in the previous unit, such as creating drawings and images or animating the data to demonstrate patterns and information.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1205,7 +1205,7 @@
       "key": "ea8ea570-e119-4d12-bc66-edbf864d3b27",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
       },
       "seeding_key": {
         "activity_section.key": "ea8ea570-e119-4d12-bc66-edbf864d3b27",
@@ -1253,7 +1253,7 @@
       "key": "9793b2f7-e173-4af1-b548-c5d16dbcc08e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What does it mean to you for two objects to be considered equal?*\n* *Do we consider these two objects to be equal? Why or why not?*\n* *How about different names for the same object? Do we consider these to be equal? Why or why not?*\n\n**Discussion Goal:** Students suggest that two objects are considered equal if they have the same values for their attributes. Students share whether they consider the example objects equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they share the same values for their attributes or that they are not equivalent because they are two separate objects. Students also share whether they consider different names for the same object as equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they both refer to one object or are not equivalent because they are two different references.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What does it mean to you for two objects to be considered equal?*\n* *Do we consider these two objects to be equal? Why or why not?*\n* *How about different names for the same object? Do we consider these to be equal? Why or why not?*\n\n**Discussion Goal:** Students suggest that two objects are considered equal if they have the same values for their attributes. Students share whether they consider the example objects equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they share the same values for their attributes or that they are not equivalent because they are two separate objects. Students also share whether they consider different names for the same object as equivalent and provide their reasoning. For example, students may suggest that they are equivalent because they both refer to one object or are not equivalent because they are two different references.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1284,7 +1284,7 @@
       "key": "e5b838d2-c223-434e-83d7-efc4bae5be73",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Comparing Objects"
       },
       "seeding_key": {
@@ -1296,7 +1296,7 @@
       "key": "f58f6174-c7e5-45e0-9412-d477da7da636",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that some object comparisons returned `true` while others returned `false`. Students realize that the reference variables assigned to another reference variable return `true`, but the reference variables pointing to new objects return `false`. Students may wonder why these comparisons return `false` when the values for the instance variables are the same and how they might check these values for equality."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that some object comparisons returned `true` while others returned `false`. Students realize that the reference variables assigned to another reference variable return `true`, but the reference variables pointing to new objects return `false`. Students may wonder why these comparisons return `false` when the values for the instance variables are the same and how they might check these values for equality."
       },
       "seeding_key": {
         "activity_section.key": "f58f6174-c7e5-45e0-9412-d477da7da636",
@@ -1319,7 +1319,7 @@
       "key": "dbac5f0d-d0f0-44ba-9a43-3fe71aec3332",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Aliasing*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *alias* and demonstrate the example."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Aliasing*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *alias* and demonstrate the example."
       },
       "seeding_key": {
         "activity_section.key": "dbac5f0d-d0f0-44ba-9a43-3fe71aec3332",
@@ -1330,7 +1330,7 @@
       "key": "cc9847f7-c309-4d82-923e-28c01c109d45",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *When would it be useful to use the `==` or `!=` operators with objects?*\n* *When would it not be useful to use the `==` or `!=` operators with objects?*\n\n**Discussion Goal:** Students suggest using the equality operators to check if two reference variables are aliases or if an object is `null`. Students note that the equality operators are not useful when checking if two objects have the same values for the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *When would it be useful to use the `==` or `!=` operators with objects?*\n* *When would it not be useful to use the `==` or `!=` operators with objects?*\n\n**Discussion Goal:** Students suggest using the equality operators to check if two reference variables are aliases or if an object is `null`. Students note that the equality operators are not useful when checking if two objects have the same values for the instance variables.",
         "duration": "10",
         "name": "Revisiting the Object Class"
       },
@@ -1355,7 +1355,7 @@
       "key": "de09f897-484b-4195-b8c4-d4f630e54404",
       "position": 8,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Object Equality"
       },
       "seeding_key": {
@@ -1381,7 +1381,7 @@
       "key": "63f7a251-7e44-40b4-a21d-cf9743d4f000",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce the `equals()` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Object` class and introduce the `equals()` method.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1398,7 +1398,7 @@
       "key": "683cb31e-e983-49c4-8fcd-9798790f18ea",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n**Do This:** Click through the animated slides to explain comparing `String` objects for equality:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Using the `==` operator to compare two string literals\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> How Java stores string literals in the Java String Pool\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Comparing using the `==` operator to compare string literals and `String` objects\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Comparing `String` objects for equality using the `equals()` method\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The equals() Method*.\n\n**Do This:** Click through the animated slides to explain comparing `String` objects for equality:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Using the `==` operator to compare two string literals\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> How Java stores string literals in the Java String Pool\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing using the `==` operator to compare string literals and `String` objects\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Comparing `String` objects for equality using the `equals()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How could we use the `equals()` method to check if these two `Dessert` objects are equal?*\n* *What if the other `Dessert` object is `null`?*\n\n**Discussion Goal:** Students suggest overriding the `equals()` method to use `if` statements to check if the values for the instance variables are the same to determine if the two objects are equal. If the values are the same, the method should return `true`. Otherwise, it would return `false`. Students note that the method should first check if the other `Dessert` object is `null` before checking the values of the instance variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1415,7 +1415,7 @@
       "key": "bd394bb7-41a0-4a8a-8f44-38e805c967c3",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then complete a choice level on Level 4 to override and use the `equals()` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete a Check for Understanding on Level 3, then complete a choice level on Level 4 to override and use the `equals()` method.",
         "progression_name": "Overriding the equals() Method"
       },
       "seeding_key": {
@@ -1427,7 +1427,7 @@
       "key": "053df8be-4d84-40dd-a5c7-17454b5d6796",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
         "name": "But, Because, So",
         "tips": [
           {
@@ -1445,7 +1445,7 @@
       "key": "15f63ab8-b43c-4d15-a52a-f4f981a71782",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "15f63ab8-b43c-4d15-a52a-f4f981a71782",
@@ -1505,7 +1505,7 @@
       "key": "8f5e6960-5d5f-40e4-8ff1-0ffa1a580207",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What story do you think this data visualization is trying to tell?*\n* *Why do you think the creator chose to visualize the data in this way?*\n\n**Discussion Goal:** Students share opinions and ideas about what they think the data visualization is trying to convey and why the creator chose this visual.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What story do you think this data visualization is trying to tell?*\n* *Why do you think the creator chose to visualize the data in this way?*\n\n**Discussion Goal:** Students share opinions and ideas about what they think the data visualization is trying to convey and why the creator chose this visual.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1536,7 +1536,7 @@
       "key": "9115ecdf-9263-460e-9c8e-4498d9bfaff9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Nested if Statements"
       },
       "seeding_key": {
@@ -1548,7 +1548,7 @@
       "key": "130e6b9d-fcd4-4147-b438-5604ffb1d351",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the nested `if` statements and that both the outer and inner `if` statements have to be `true` for the code to execute. Students may wonder if they can also nest `if` statements inside the `else` statement or if there are other ways to check multiple conditions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a nested `if` statement and the flowchart for the code segment.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Why would we have an `if` statement in the body of another `if` statement?*\n\n**Discussion Goal:** Students suggested using nested `if` statements to allow the program to check conditions within other conditions. Students may share scenarios where they would want to do this, such as checking if someone has enough money for a movie ticket and an available movie time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice the nested `if` statements and that both the outer and inner `if` statements have to be `true` for the code to execute. Students may wonder if they can also nest `if` statements inside the `else` statement or if there are other ways to check multiple conditions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate a nested `if` statement and the flowchart for the code segment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Why would we have an `if` statement in the body of another `if` statement?*\n\n**Discussion Goal:** Students suggested using nested `if` statements to allow the program to check conditions within other conditions. Students may share scenarios where they would want to do this, such as checking if someone has enough money for a movie ticket and an available movie time.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1596,7 +1596,7 @@
       "key": "a3d03f0e-bb48-41b5-8f35-584073baa734",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to decide which image to draw based on the given conditions using nested `if` statements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students implement their algorithm on Level 2, then complete a choice level on Level 3 to use nested `if` statements in different scenarios.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for an algorithm to decide which image to draw based on the given conditions using nested `if` statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students implement their algorithm on Level 2, then complete a choice level on Level 3 to use nested `if` statements in different scenarios.",
         "progression_name": "Using Nested if Statements"
       },
       "seeding_key": {
@@ -1621,7 +1621,7 @@
       "key": "00581857-ab3b-4d83-a350-3149fedcd623",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How might you tell the story behind the data you worked with in the previous unit as a visualization?*\n\n**Discussion Goal:** Students share ideas about how they might visualize the data they worked with in the previous unit, such as displaying shapes in different sizes to correlate with the number of values that meet specific criteria or convey the largest and smallest values in a dataset.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How might you tell the story behind the data you worked with in the previous unit as a visualization?*\n\n**Discussion Goal:** Students share ideas about how they might visualize the data they worked with in the previous unit, such as displaying shapes in different sizes to correlate with the number of values that meet specific criteria or convey the largest and smallest values in a dataset.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1638,7 +1638,7 @@
       "key": "ae54128b-2a0f-4400-863d-227726d5076b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ae54128b-2a0f-4400-863d-227726d5076b",
@@ -1698,7 +1698,7 @@
       "key": "f169da57-d9fa-4ca3-9a0d-493140b98b71",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1729,7 +1729,7 @@
       "key": "2d1c434f-6604-4e17-bae7-33a09b542629",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Logical Operators"
       },
       "seeding_key": {
@@ -1741,7 +1741,7 @@
       "key": "5e68a988-8138-47d7-b14e-279e085c53f0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the logical operators.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate compound Boolean expressions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How might logical operators help us simplify the use of conditional statements?*\n* *In the previous lesson, we used nested `if` statements to solve this scenario. How would this solution change using logical operators?*\n\n**Discussion Goal:** Students suggest using logical operators instead of multiple or nested `if` statements to check whether multiple conditions are `true` or if at least one of two conditions are `true`. Students share examples of how they would rewrite the code they wrote in the previous lesson to use logical operators instead of nested `if` statements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the example conditional statement using a logical operator."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the logical operators.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define and demonstrate compound Boolean expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *How might logical operators help us simplify the use of conditional statements?*\n* *In the previous lesson, we used nested `if` statements to solve this scenario. How would this solution change using logical operators?*\n\n**Discussion Goal:** Students suggest using logical operators instead of multiple or nested `if` statements to check whether multiple conditions are `true` or if at least one of two conditions are `true`. Students share examples of how they would rewrite the code they wrote in the previous lesson to use logical operators instead of nested `if` statements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the example conditional statement using a logical operator."
       },
       "seeding_key": {
         "activity_section.key": "5e68a988-8138-47d7-b14e-279e085c53f0",
@@ -1766,7 +1766,7 @@
       "key": "f1381b0d-ece8-4d67-9e3d-1ef8f9ea413f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *truth table*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *truth table*."
       },
       "seeding_key": {
         "activity_section.key": "f1381b0d-ece8-4d67-9e3d-1ef8f9ea413f",
@@ -1789,7 +1789,7 @@
       "key": "c71673f2-f260-4cc1-b207-be202ae13166",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth table for `A || !B`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *short-circuited evaluation*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Truth Tables handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth table for `A || !B`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *short-circuited evaluation*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Truth Tables handout."
       },
       "seeding_key": {
         "activity_section.key": "c71673f2-f260-4cc1-b207-be202ae13166",
@@ -1813,7 +1813,7 @@
       "key": "360be27b-6866-4848-a80e-1bb55549c312",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the reflection prompts on the Unit 4 Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the reflection prompts on the Unit 4 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "360be27b-6866-4848-a80e-1bb55549c312",
@@ -1873,7 +1873,7 @@
       "key": "12078046-e040-41c9-83e6-f8107f39e16c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things you now know how to do that you didn't know at the beginning of the year?*\n* *What are you looking forward to learning more about?*\n\n**Discussion Goal:** Students share the concepts and skills they have learned so far and any concepts they want to learn more about.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things you now know how to do that you didn't know at the beginning of the year?*\n* *What are you looking forward to learning more about?*\n\n**Discussion Goal:** Students share the concepts and skills they have learned so far and any concepts they want to learn more about.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1904,7 +1904,7 @@
       "key": "bbec2409-e9cc-4cbf-83de-1c916c556890",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth tables for `!(A && B)` and `!A || !B`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How can truth tables help us determine if two Boolean expressions are equivalent?*\n\n**Discussion Goal:** Students realize that since the last column of the truth table shows the resulting Boolean values for the expression, they could compare the last column of both truth tables to check for equivalence.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *De Morgan's Laws* and explain how to find equivalent expressions.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the truth tables for `!(A && B)` and `!A || !B`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How can truth tables help us determine if two Boolean expressions are equivalent?*\n\n**Discussion Goal:** Students realize that since the last column of the truth table shows the resulting Boolean values for the expression, they could compare the last column of both truth tables to check for equivalence.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *De Morgan's Laws* and explain how to find equivalent expressions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how to use truth tables to prove the Boolean expressions `!(A || B)` and `!A && !B` are equivalent."
       },
       "seeding_key": {
         "activity_section.key": "bbec2409-e9cc-4cbf-83de-1c916c556890",
@@ -1927,7 +1927,7 @@
       "key": "da38631b-af79-42f2-bd39-f8b7baed6e5c",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate simplifying the Boolean expressions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate simplifying the Boolean expressions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1958,7 +1958,7 @@
       "key": "d8f49d01-c097-4c4d-990b-51989e4fed68",
       "position": 6,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the De Morgan's Laws handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the Around the World activity.\n1. Students find a station (they do not need to go in order).\n2. Students follow the instructions at that station and complete the corresponding section of the De Morgan's Laws handout.\n3. Students find another group who has completed the same station and explain their completed truth table to that group. The second group initials their handout if they agree with their solution. If they believe there is an error, the groups revise the truth table together before the second group signs off.\n4. Students answer the question(s) in each section before moving to the next station.\n5. Pairs repeat steps 1 through 4 for each station (or until the time is up).",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the De Morgan's Laws handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the instructions for the Around the World activity.\n1. Students find a station (they do not need to go in order).\n2. Students follow the instructions at that station and complete the corresponding section of the De Morgan's Laws handout.\n3. Students find another group who has completed the same station and explain their completed truth table to that group. The second group initials their handout if they agree with their solution. If they believe there is an error, the groups revise the truth table together before the second group signs off.\n4. Students answer the question(s) in each section before moving to the next station.\n5. Pairs repeat steps 1 through 4 for each station (or until the time is up).",
         "tips": [
           {
             "type": "teachingTip",
@@ -1975,7 +1975,7 @@
       "key": "00a5ac8b-34a5-46f6-a075-2d65eaa4f2ee",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for Station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both Stations A and B because their resulting truth tables had the same final truth values.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Look at your solution for Station A or B. Were the two expressions equivalent? How do you know?*\n\n**Discussion Goal:** Students note that the two expressions were equivalent at both Stations A and B because their resulting truth tables had the same final truth values.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2005,7 +2005,7 @@
       "key": "dd8f3b0d-0ba6-490a-b335-e3abcd28e5bb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some differences between using nested `if` statements and using logical operators? What are some similarities?*\n* *What are some scenarios you have encountered before where logical operators would have been useful?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students identify similarities and differences between nested `if` statements and logical operators. Both nested `if` statements and logical operators can be used to evaluate multiple conditions before executing a block of code. Logical operators make the process simpler and easier to read and maintain. Students suggest using logical operators to evaluate multiple conditions when analyzing data and making decisions about visualizations. Students share concepts from the lesson and the unit they are confident about and concepts they might be confused about.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What are some differences between using nested `if` statements and using logical operators? What are some similarities?*\n* *What are some scenarios you have encountered before where logical operators would have been useful?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students identify similarities and differences between nested `if` statements and logical operators. Both nested `if` statements and logical operators can be used to evaluate multiple conditions before executing a block of code. Logical operators make the process simpler and easier to read and maintain. Students suggest using logical operators to evaluate multiple conditions when analyzing data and making decisions about visualizations. Students share concepts from the lesson and the unit they are confident about and concepts they might be confused about.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "dd8f3b0d-0ba6-490a-b335-e3abcd28e5bb",
@@ -2065,7 +2065,7 @@
       "key": "d6e59b2c-f3e9-41f0-8475-8a616bae6f6e",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Dataset Summaries handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to review the datasets and identify one they want to use for their unit project. Direct students to individually respond to the prompts on the Dataset Summaries handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Which dataset did you choose? What story would you like to communicate visually with your dataset?*\n\n**Discussion Goal:** Students share the datasets they chose to work with for their unit project and the story they want to visually portray about the dataset using The Theater."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Dataset Summaries handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partners to review the datasets and identify one they want to use for their unit project. Direct students to individually respond to the prompts on the Dataset Summaries handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *Which dataset did you choose? What story would you like to communicate visually with your dataset?*\n\n**Discussion Goal:** Students share the datasets they chose to work with for their unit project and the story they want to visually portray about the dataset using The Theater."
       },
       "seeding_key": {
         "activity_section.key": "d6e59b2c-f3e9-41f0-8475-8a616bae6f6e",
@@ -2090,7 +2090,7 @@
       "key": "d749503b-124a-4892-859f-9e0d23582e76",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:* Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What do you recall about the `static` keyword?*\n\n**Discussion Goal:** Students recall using the `static` keyword to create static variables and constants. Students note they accessed the static variables and constants through the class instead of with an object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the `static` keyword and static variables.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:* Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What do you recall about the `static` keyword?*\n\n**Discussion Goal:** Students recall using the `static` keyword to create static variables and constants. Students note they accessed the static variables and constants through the class instead of with an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `static` keyword and static variables.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Static Methods"
       },
       "seeding_key": {
@@ -2102,7 +2102,7 @@
       "key": "e461d2c9-036c-4367-bcf9-23910f16a899",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `static` keyword is used in the method signature and that the method is called through the class instead of on an object. Students may wonder about scenarios where they would use a static method instead of methods they call on an object.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *instance method* and *static method*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `static` keyword is used in the method signature and that the method is called through the class instead of on an object. Students may wonder about scenarios where they would use a static method instead of methods they call on an object.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Static Methods*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *instance method* and *static method*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the rules and syntax for a static method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate calling a static method."
       },
       "seeding_key": {
         "activity_section.key": "e461d2c9-036c-4367-bcf9-23910f16a899",
@@ -2127,7 +2127,7 @@
       "key": "746841a5-a7da-4589-943e-aedad643f725",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Introduce the classes in the `org.code.media` package.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Explain the functionality of the `read()` method in the `SoundLoader` class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the components of sound.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Explain the range of values that stored in the `double` array."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Introduce the classes in the `org.code.media` package.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the functionality of the `read()` method in the `SoundLoader` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Click through the animated slide to explain the components of sound.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Explain the range of values that stored in the `double` array."
       },
       "seeding_key": {
         "activity_section.key": "746841a5-a7da-4589-943e-aedad643f725",
@@ -2138,7 +2138,7 @@
       "key": "a952cabd-6ecb-4e4b-aeab-24bfab761a66",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then write and call a static method on Level 3. Students then complete a choice level on Level 4.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then write and call a static method on Level 3. Students then complete a choice level on Level 4.",
         "progression_name": "Using Static Methods"
       },
       "seeding_key": {
@@ -2150,7 +2150,7 @@
       "key": "54bf6eca-3a2c-4888-9eaf-59ac8a212235",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
         "progression_name": "Code Review: Using Static Methods"
       },
       "seeding_key": {
@@ -2175,7 +2175,7 @@
       "key": "8c60bff6-6440-417f-bbb9-a3cce54c8c54",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students generate questions they want to answer about their dataset on the Dataset Summaries handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share the questions they generated with a neighbor.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students generate questions they want to answer about their dataset on the Dataset Summaries handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share the questions they generated with a neighbor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "8c60bff6-6440-417f-bbb9-a3cce54c8c54",
@@ -2235,7 +2235,7 @@
       "key": "70b4c5cc-19f2-44b5-95ef-ef3869d39bcb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What patterns or relationships do you see in this dataset?*\n* *What type of visualization might you create to represent these patterns and relationships?*\n\n**Discussion Goal:** Students share patterns and relationships they notice in the dataset and suggest ways to visualize the data, such as charts or graphs or more abstract visualizations or animations that represent the patterns."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What patterns or relationships do you see in this dataset?*\n* *What type of visualization might you create to represent these patterns and relationships?*\n\n**Discussion Goal:** Students share patterns and relationships they notice in the dataset and suggest ways to visualize the data, such as charts or graphs or more abstract visualizations or animations that represent the patterns."
       },
       "seeding_key": {
         "activity_section.key": "70b4c5cc-19f2-44b5-95ef-ef3869d39bcb",
@@ -2260,7 +2260,7 @@
       "key": "f70ff352-c5f4-4ef0-ac23-ff4d366e2a26",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of The Math Class handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to access the `Math` class documentation and complete The Math Class handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of The Math Class handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to access the `Math` class documentation and complete The Math Class handout.",
         "progression_name": "Investigate: The Math Class"
       },
       "seeding_key": {
@@ -2272,7 +2272,7 @@
       "key": "51942b99-58ae-4ebd-95e4-5d2ac4fbc390",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found in the documentation and in the example program, as well as any questions they may have."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you find most interesting about the `Math` class?*\n* *What questions do you have?*\n\n**Discussion Goal:** Students share what they found in the documentation and in the example program, as well as any questions they may have."
       },
       "seeding_key": {
         "activity_section.key": "51942b99-58ae-4ebd-95e4-5d2ac4fbc390",
@@ -2295,7 +2295,7 @@
       "key": "7f2429b6-79fe-48db-bdab-7cd96c860947",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define `final` *class*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Why do you think the `Math` class is `final` with all static methods?*\n\n**Discussion Goal:** Students identify that mathematical operations or constant values should function the same way, regardless of the input. Students note that a `Math` object does not need to be created to use its methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `final` *class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *Why do you think the `Math` class is `final` with all static methods?*\n\n**Discussion Goal:** Students identify that mathematical operations or constant values should function the same way, regardless of the input. Students note that a `Math` object does not need to be created to use its methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2326,7 +2326,7 @@
       "key": "47984a24-befa-4454-aadf-caeb9f8d2b7b",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to demonstrate the `Math` class methods:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `Math.abs(double a)`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `Math.sqrt(double a)`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `Math.pow(double a, double b)`",
+        "description": "**Do This:** Click through the animated slides to demonstrate the `Math` class methods:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.abs(double a)`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.sqrt(double a)`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `Math.pow(double a, double b)`",
         "tips": [
           {
             "type": "teachingTip",
@@ -2355,7 +2355,7 @@
       "key": "4604a73f-da08-405e-8193-acc66391aca8",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students use the `Math` class methods on Levels 2, 3, and 4, then complete a choice level on Level 5.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 through 5. Students use the `Math` class methods on Levels 2, 3, and 4, then complete a choice level on Level 5.",
         "progression_name": "Using Math Class Methods"
       },
       "seeding_key": {
@@ -2380,7 +2380,7 @@
       "key": "a6266bae-a972-4db8-83bf-d8df0bde01ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a6266bae-a972-4db8-83bf-d8df0bde01ac",
@@ -2440,7 +2440,7 @@
       "key": "8e9e7fe8-793d-47e6-b559-41a820bf1bdc",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How could the owner change the prices of all the desserts they sell so that the prices are all whole numbers?*\n\n**Discussion Goal:** Students share that the owner could round the price to the nearest dollar. They could always round down or always round up.",
+        "description": "**Group:** Place students in groups of three or four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How could the owner change the prices of all the desserts they sell so that the prices are all whole numbers?*\n\n**Discussion Goal:** Students share that the owner could round the price to the nearest dollar. They could always round down or always round up.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2471,7 +2471,7 @@
       "key": "910ee37a-9086-4f3a-aca8-d375ba0a8c68",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating Casting handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students work with their partners to explore the program on Level 1 and complete the first page of the Investigating Casting handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students work with their partners to explore the program on Level 1 and complete the first page of the Investigating Casting handout.",
         "progression_name": "Investigate: Casting"
       },
       "seeding_key": {
@@ -2495,7 +2495,7 @@
       "key": "4c6270cf-3585-437a-a2f5-038f7052c601",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Casting*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What does casting mean?*\n* *Look at the Food Truck question in your activity guide. How did you round down?*\n\n**Discussion Goal:** Students share their definitions for casting and explain how they used casting to answer the Food Truck question on the Investigating Casting handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Casting*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *cast* and *widen*."
       },
       "seeding_key": {
         "activity_section.key": "4c6270cf-3585-437a-a2f5-038f7052c601",
@@ -2520,7 +2520,7 @@
       "key": "924e8788-cfe5-4d9a-8555-9a8e9933ef39",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students try different ways to get an expression dividing two `int` values to evaluate to a `double`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Have students try different ways to get an expression dividing two `int` values to evaluate to a `double`.",
         "progression_name": "Investigate: Division and Printing",
         "tips": [
           {
@@ -2538,7 +2538,7 @@
       "key": "060b35a9-b305-43f1-b1f7-a48a9297b313",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is one way that you wrote your expression to evaluate to a `double` value?*\n\n**Discussion Goal:** Students share ways to use the `(double)` operator to cast the numerator or denominator as a `double`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 2 on Code Studio. Students work with their partners to complete the Division and Printing sections of the Investigating Casting handout."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is one way that you wrote your expression to evaluate to a `double` value?*\n\n**Discussion Goal:** Students share ways to use the `(double)` operator to cast the numerator or denominator as a `double`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 2 on Code Studio. Students work with their partners to complete the Division and Printing sections of the Investigating Casting handout."
       },
       "seeding_key": {
         "activity_section.key": "060b35a9-b305-43f1-b1f7-a48a9297b313",
@@ -2563,7 +2563,7 @@
       "key": "b31cd764-93d6-451b-8b41-059a7be94aee",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students work with their partners to complete the Rounding section of the Investigating Casting handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio. Students work with their partners to complete the Rounding section of the Investigating Casting handout.",
         "progression_name": "Investigate: Rounding"
       },
       "seeding_key": {
@@ -2575,7 +2575,7 @@
       "key": "c7f0dd08-9a10-40ab-9a56-e8824432863d",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How were you able to round a value to the nearest integer?*\n\n**Discussion Goal:** Students share that they could add 0.5 to the value and cast the result as an `int` to round the number to the nearest integer. If the number is negative, they could subtract 0.5 from the value to achieve the result."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How were you able to round a value to the nearest integer?*\n\n**Discussion Goal:** Students share that they could add 0.5 to the value and cast the result as an `int` to round the number to the nearest integer. If the number is negative, they could subtract 0.5 from the value to achieve the result."
       },
       "seeding_key": {
         "activity_section.key": "c7f0dd08-9a10-40ab-9a56-e8824432863d",
@@ -2586,7 +2586,7 @@
       "key": "a4b699cb-2652-4cff-b4db-09930d9c3e96",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including using casting operators to temporarily convert a value to a different type and round a value to the nearest integer. Students suggest problems where they might use these operators and strategies and make predictions about upcoming lessons or problems.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including using casting operators to temporarily convert a value to a different type and round a value to the nearest integer. Students suggest problems where they might use these operators and strategies and make predictions about upcoming lessons or problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Three W's"
       },
       "seeding_key": {
@@ -2647,7 +2647,7 @@
       "key": "d54c29ee-4eb4-4739-a27d-e139c22f3d16",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
       },
       "seeding_key": {
         "activity_section.key": "d54c29ee-4eb4-4739-a27d-e139c22f3d16",
@@ -2672,7 +2672,7 @@
       "key": "04062f9e-d292-4919-8836-1576bc04f8ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to predict the program's outcome, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Random Numbers"
       },
       "seeding_key": {
@@ -2684,7 +2684,7 @@
       "key": "42fd23d6-f3b2-443b-988a-34161e07b99e",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program displays a different number each time they run it and that the random number is always a `double` value. Students may wonder how to generate a random number within a specific range or how they could use random numbers in their programs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the `Math` class and introduce `Math.random()`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the program displays a different number each time they run it and that the random number is always a `double` value. Students may wonder how to generate a random number within a specific range or how they could use random numbers in their programs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `Math` class and introduce `Math.random()`."
       },
       "seeding_key": {
         "activity_section.key": "42fd23d6-f3b2-443b-988a-34161e07b99e",
@@ -2707,7 +2707,7 @@
       "key": "bac06963-0fbb-43e4-8ba6-ad4bf4b85b8f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How could we write an expression using `Math.random()` to generate a random number within a specific range?*\n\n**Discussion Goal:** Students suggest using casting operators to convert the value returned to an `int` value. Students recall adding 0.5 to round a number to the nearest integer and may suggest adding a value to the number generated to get a number within a specific range.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How could we write an expression using `Math.random()` to generate a random number within a specific range?*\n\n**Discussion Goal:** Students suggest using casting operators to convert the value returned to an `int` value. Students recall adding 0.5 to round a number to the nearest integer and may suggest adding a value to the number generated to get a number within a specific range.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2724,7 +2724,7 @@
       "key": "72a417d1-9b94-48ab-b387-f16d11eac418",
       "position": 6,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Generating Random Numbers"
       },
       "seeding_key": {
@@ -2736,7 +2736,7 @@
       "key": "e121ca36-a0ad-48c0-a45e-311bb9b3987d",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Random Numbers*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate generating a random number within a specific range using `Math.random()`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Random Numbers*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate generating a random number within a specific range using `Math.random()`."
       },
       "seeding_key": {
         "activity_section.key": "e121ca36-a0ad-48c0-a45e-311bb9b3987d",
@@ -2761,7 +2761,7 @@
       "key": "5af20793-88cc-4fb1-8890-a949ae8ae931",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What are programs that you use that have a random component?*\n\n**Discussion Goal:** Students share programs that they use that have a random component, such as enemies appearing in different locations in games or playing a music playlist on shuffle.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students use `Math.random()` to generate a random number within a specific range on Level 3, then continue to Level 4 to complete a choice level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What are programs that you use that have a random component?*\n\n**Discussion Goal:** Students share programs that they use that have a random component, such as enemies appearing in different locations in games or playing a music playlist on shuffle.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students use `Math.random()` to generate a random number within a specific range on Level 3, then continue to Level 4 to complete a choice level.",
         "progression_name": "Using Random Numbers"
       },
       "seeding_key": {
@@ -2773,7 +2773,7 @@
       "key": "472c2c9f-4957-44c7-8b29-748b99189589",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 5.",
         "progression_name": "Code Review: Using Random Numbers"
       },
       "seeding_key": {
@@ -2798,7 +2798,7 @@
       "key": "d35b8cbb-e3ae-49fa-98df-e4a38ad5b9e8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
       },
       "seeding_key": {
         "activity_section.key": "d35b8cbb-e3ae-49fa-98df-e4a38ad5b9e8",
@@ -2845,7 +2845,7 @@
       "key": "2b45762d-cf60-430b-b2ee-da63bcd527cc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *The owner of the Project Mercury Pastries Food Truck business wants to find all orders with quantities that are multiples of 12. How would we write the condition to find these orders?*\n\n**Discussion Goal:** Students suggest using the mod operator to check if there is a remainder from dividing the quantity by 12. If there is no remainder, they can return that order or add it to an array to keep track of all orders found.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *The owner of the Project Mercury Pastries Food Truck business wants to find all orders with quantities that are multiples of 12. How would we write the condition to find these orders?*\n\n**Discussion Goal:** Students suggest using the mod operator to check if there is a remainder from dividing the quantity by 12. If there is no remainder, they can return that order or add it to an array to keep track of all orders found.",
         "name": "Evenly Divisible",
         "tips": [
           {
@@ -2877,7 +2877,7 @@
       "key": "9ebf7466-a2cf-4696-bd9a-fe1991d4ea29",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Multi-Selection Statements"
       },
       "seeding_key": {
@@ -2889,7 +2889,7 @@
       "key": "24367026-e322-4354-88f5-957eed1aac59",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Multi-Selection Statements*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *multi-selection statement*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the flowchart for a multi-selection statement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Multi-Selection Statements*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *multi-selection statement*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the flowchart for a multi-selection statement."
       },
       "seeding_key": {
         "activity_section.key": "24367026-e322-4354-88f5-957eed1aac59",
@@ -2914,7 +2914,7 @@
       "key": "fd254a7e-d3fe-48a3-8308-963a22d48749",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for identifying if a value is or is not evenly divisible by another value.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students implement their algorithm on Level 2, then complete a choice level on Level 3.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for identifying if a value is or is not evenly divisible by another value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students implement their algorithm on Level 2, then complete a choice level on Level 3.",
         "progression_name": "Using Multi-Selection Statements"
       },
       "seeding_key": {
@@ -2940,7 +2940,7 @@
       "key": "69720783-64b2-4a2d-a85e-c6e350bc6752",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Finding Patterns handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students review their selected dataset and complete the Finding Patterns handout to identify the patterns and relationships they notice in the data.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Finding Patterns handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio. Students review their selected dataset and complete the Finding Patterns handout to identify the patterns and relationships they notice in the data.",
         "progression_name": "Finding Patterns in Data"
       },
       "seeding_key": {
@@ -2965,7 +2965,7 @@
       "key": "6ce330f2-4439-4b6b-b6bc-d4dcadee075b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Study Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Abstract Data Art Project.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 4 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Abstract Data Art Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6ce330f2-4439-4b6b-b6bc-d4dcadee075b",
@@ -3036,7 +3036,7 @@
       "key": "413b8817-115b-4bd0-a3fa-6069c247facd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of data visualizations.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a visual or animation of your data?*\n\n**Discussion Goal:** Students share ideas about visuals or animations they might make to convey the patterns or meaning of their data. Students might wonder about how more complex visuals might be created or about the design choices the creators made about their visuals.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3067,7 +3067,7 @@
       "key": "c85f8580-3899-4ece-9f99-0afb78499663",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Abstract Data Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What do you notice about the project requirements and rubric?*\n* *What does success look like for this project?*\n* *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Students share any questions they have about the project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Abstract Data Art Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What do you notice about the project requirements and rubric?*\n* *What does success look like for this project?*\n* *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Students share any questions they have about the project."
       },
       "seeding_key": {
         "activity_section.key": "c85f8580-3899-4ece-9f99-0afb78499663",
@@ -3090,7 +3090,7 @@
       "key": "b6991063-b9ae-466e-8f92-056c8ef7de47",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their visuals, create UML diagrams for their classes, and identify the algorithms they need to develop on the Abstract Data Art Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "b6991063-b9ae-466e-8f92-056c8ef7de47",
@@ -3101,7 +3101,7 @@
       "key": "6cce1016-ee4c-4ca7-a449-04c66b007e57",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Abstract Data Art Good Project.",
         "duration": "15",
         "name": "Development",
         "progression_name": "Abstract Data Art Project"
@@ -3115,7 +3115,7 @@
       "key": "6f28ad0a-25a5-4eba-8667-114ac7f93dea",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack."
       },
       "seeding_key": {
         "activity_section.key": "6f28ad0a-25a5-4eba-8667-114ac7f93dea",
@@ -3139,7 +3139,7 @@
       "key": "b18148f3-775b-4ce9-9fd8-f86526b3a34f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Abstract Data Art Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Abstract Data Art Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "b18148f3-775b-4ce9-9fd8-f86526b3a34f",
@@ -3186,7 +3186,7 @@
       "key": "ab3abcad-0f0b-4822-ac2e-2601394119ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Abstract Data Art Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Abstract Data Art Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3217,7 +3217,7 @@
       "key": "ce020fd7-6f33-4e22-9805-73419de23bd9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects.",
         "progression_name": "Abstract Data Art Project"
       },
       "seeding_key": {
@@ -3229,7 +3229,7 @@
       "key": "189b0ef7-5a86-4e46-b968-b133456dd6ef",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 2.",
         "duration": "10",
         "name": "Code Review",
         "progression_name": "Code Review: Abstract Data Art Project"
@@ -3257,7 +3257,7 @@
       "key": "4dd8a2e0-867d-41ba-9ee2-100e91f8c509",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Abstract Data Art Project Planning Guide based on the feedback they received from the code review and their rubric self-assessment.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Abstract Data Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Abstract Data Art Project Planning Guide based on the feedback they received from the code review and their rubric self-assessment.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3287,7 +3287,7 @@
       "key": "dfe32905-4f70-4dc9-b211-315edc059799",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Abstract Data Art Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Abstract Data Art Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3340,7 +3340,7 @@
       "key": "69a57dd4-9f19-4f36-adb4-b7facfeb8cfa",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "69a57dd4-9f19-4f36-adb4-b7facfeb8cfa",
@@ -3365,7 +3365,7 @@
       "key": "e67d675f-9218-4e96-a8a2-c76fe1f3e3c1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Abstract Data Art Project. Have students submit their projects at the end of the allotted time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Abstract Data Art Project. Have students submit their projects at the end of the allotted time.",
         "progression_name": "Abstract Data Art Project"
       },
       "seeding_key": {
@@ -3391,7 +3391,7 @@
       "key": "7c71f419-b034-47be-a517-12cc1e5ff966",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "7c71f419-b034-47be-a517-12cc1e5ff966",
@@ -3402,7 +3402,7 @@
       "key": "bc449d51-71cb-4dd6-9694-312b00e040ae",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Abstract Data Art Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Abstract Data Art Project Planning Guide.",
         "name": "Project Reflection",
         "tips": [
           {
@@ -3468,7 +3468,7 @@
       "key": "398056f1-c1aa-486f-9e83-7fdf09405383",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the annotation strategies.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the BingoCaller FRQ handout and a sheet of scratch paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ. \n\n**Group:** Place students in groups of two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their annotations with their partners.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this free response question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the annotation strategies.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the BingoCaller FRQ handout and a sheet of scratch paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to individually annotate the FRQ. \n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their annotations with their partners.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you have about approaching this free response question?*\n\n**Discussion Goal:** Students share any misunderstandings or points of confusion they have about the FRQ.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3499,7 +3499,7 @@
       "key": "1be0c5ec-633f-4e00-967b-d9e90c96eb78",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their solutions for parts A and B using pseudocode on their scratch paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to plan their solutions for parts A and B using pseudocode on their scratch paper.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3530,7 +3530,7 @@
       "key": "83d68f5a-4d57-405c-ab97-df84880ea7ab",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to convert their pseudocode into Java on the BingoCaller FRQ handout.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to convert their pseudocode into Java on the BingoCaller FRQ handout.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3547,7 +3547,7 @@
       "key": "5d8679e0-b63a-466a-9cd5-274f04f28328",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the BingoCaller FRQ Scoring Guidelines.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Ask students to assess their work with their partners using the BingoCaller FRQ Scoring Guidelines.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the BingoCaller FRQ Scoring Guidelines.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students to assess their work with their partners using the BingoCaller FRQ Scoring Guidelines.",
         "duration": "10",
         "name": "Scoring and Review"
       },
@@ -3572,7 +3572,7 @@
       "key": "12e39e0d-ce88-44a3-9014-19e83cfdbba9",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Click through the animated slides to discuss the possible solutions to the FRQ. For each solution, reference each row of the BingoCaller FRQ Scoring Guidelines and point out how the solution met those requirements. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation for  `hasBeenCalled()` method (Part (a))\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)"
+        "description": "**Do This:** Click through the animated slides to discuss the possible solutions to the FRQ. For each solution, reference each row of the BingoCaller FRQ Scoring Guidelines and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for  `hasBeenCalled()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `makeCall()` method (Part (b) continued)"
       },
       "seeding_key": {
         "activity_section.key": "12e39e0d-ce88-44a3-9014-19e83cfdbba9",
@@ -3583,7 +3583,7 @@
       "key": "c137849f-ba1b-4367-b5d9-9a7eb5596323",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "name": "Give One, Get One"
       },
       "seeding_key": {
@@ -3631,7 +3631,7 @@
       "key": "21246f4b-c2bd-4f82-a1f3-06986233fbe8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 4 Assessment on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 4 Assessment on Code Studio.",
         "progression_name": "Unit 4 Assessment"
       },
       "seeding_key": {
@@ -3643,7 +3643,7 @@
       "key": "df1126e9-639c-4c6c-8402-bb8e2d5ccbbb",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {

@@ -1079,7 +1079,7 @@
       "key": "7f119082-4267-4940-bf34-9c38187f37c5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *natural language processing (NLP)*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Natural Language Processing*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are some other examples of where you have seen or experienced NLP?*\n* *What are some examples of where you think NLP could be useful?*\n\n**Discussion Goal:** Students share examples that they have seen or experienced, such as chatbots on websites or virtual assistants. Students suggest applications of NLP that they feel could be useful."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *natural language processing (NLP)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Natural Language Processing*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are some other examples of where you have seen or experienced NLP?*\n* *What are some examples of where you think NLP could be useful?*\n\n**Discussion Goal:** Students share examples that they have seen or experienced, such as chatbots on websites or virtual assistants. Students suggest applications of NLP that they feel could be useful."
       },
       "seeding_key": {
         "activity_section.key": "7f119082-4267-4940-bf34-9c38187f37c5",
@@ -1090,7 +1090,7 @@
       "key": "1654296b-c102-4bd6-9e2e-36334e37256f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.",
         "duration": "15",
         "name": "Project Introduction"
       },
@@ -1115,7 +1115,7 @@
       "key": "602fce3b-e536-4f80-bd9e-83af6c6ff8be",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the project requirements and rubric.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things in the project requirements and rubric that we already know?*\n* *What are some things we need to know?*\n\n**Discussion Goal:** Students identify concepts they already know in the project requirements and the rubric, such as file and user input. Students suggest things they need to know, such as how to write algorithms using natural language processing techniques, `ArrayList`s, and `String` manipulations."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the project requirements and rubric.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are things in the project requirements and rubric that we already know?*\n* *What are some things we need to know?*\n\n**Discussion Goal:** Students identify concepts they already know in the project requirements and the rubric, such as file and user input. Students suggest things they need to know, such as how to write algorithms using natural language processing techniques, `ArrayList`s, and `String` manipulations."
       },
       "seeding_key": {
         "activity_section.key": "602fce3b-e536-4f80-bd9e-83af6c6ff8be",
@@ -1138,7 +1138,7 @@
       "key": "6c58a062-ec85-4030-aa6d-3dff7a45cb24",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Project Characteristics handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Project Characteristics handout.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Project Characteristics handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students analyze the example projects and generate a list of common characteristics and key features on the Project Characteristics handout.",
         "progression_name": "Natural Language Processing Project Examples",
         "tips": [
           {
@@ -1156,7 +1156,7 @@
       "key": "6aeab881-ee89-414a-8a6b-eb13d6e90ead",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the example projects that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement."
       },
       "seeding_key": {
         "activity_section.key": "6aeab881-ee89-414a-8a6b-eb13d6e90ead",
@@ -1181,7 +1181,7 @@
       "key": "489acbc8-228e-4093-be2f-86af634c2ff3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Based on our experiences with writing and reading each other's code, what are some best practices we should follow when writing and documenting code?*\n\n**Discussion Goal:** Students share strategies to write and document code, such as naming conventions for variables and methods, using white space and indentation to make code easily readable, and writing comments to explain the purpose of individual lines or blocks of code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *Based on our experiences with writing and reading each other's code, what are some best practices we should follow when writing and documenting code?*\n\n**Discussion Goal:** Students share strategies to write and document code, such as naming conventions for variables and methods, using white space and indentation to make code easily readable, and writing comments to explain the purpose of individual lines or blocks of code.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1198,7 +1198,7 @@
       "key": "aee857f5-27f4-4533-bbb9-dc3da6290649",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *documentation*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *documentation*."
       },
       "seeding_key": {
         "activity_section.key": "aee857f5-27f4-4533-bbb9-dc3da6290649",
@@ -1221,7 +1221,7 @@
       "key": "f9f36159-c74c-4bd2-b6fd-c185982b3a22",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the types of documentation in the open-source code example and introduce Javadocs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students connect the comments shown in the open-source code example to comments they have seen or written in previous programs. Students identify the `@` tags and might wonder if there are other tags, the purpose of the tags, or if the tags are used somewhere else in the program.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to identify the types of documentation in the open-source code example and introduce Javadocs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students connect the comments shown in the open-source code example to comments they have seen or written in previous programs. Students identify the `@` tags and might wonder if there are other tags, the purpose of the tags, or if the tags are used somewhere else in the program.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1238,7 +1238,7 @@
       "key": "a33df513-89b7-4851-8350-66ed58d5c564",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that Javadocs generates an HTML document from comments written inside `/** */` and formatted using `@` tags and to define HTML.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Javadocs tags for specifying parameters and returns.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to add Javadocs comments to their `Dessert` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that Javadocs generates an HTML document from comments written inside `/** */` and formatted using `@` tags and to define HTML.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the Javadocs tags for specifying parameters and returns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to add Javadocs comments to their `Dessert` class. Have students share their documentation with a neighbor for feedback regarding the clarity and structure of their comments.",
         "progression_name": "Documenting Program Code",
         "tips": [
           {
@@ -1256,7 +1256,7 @@
       "key": "03ab4b37-0745-4667-ace5-bc19e2b469b6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create Javadocs documentation. Students suggest problems where they might use these natural language processing strategies and Javadocs documentation and make predictions about upcoming lessons or problems.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students share the concepts they learned from the lesson, including how to identify project requirements and characteristics from examples and create Javadocs documentation. Students suggest problems where they might use these natural language processing strategies and Javadocs documentation and make predictions about upcoming lessons or problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Three W's"
       },
       "seeding_key": {
@@ -1317,7 +1317,7 @@
       "key": "e13a29cc-50dc-4170-ab34-d618b81c3faf",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What are some differences between primitive and reference types?*\n\n**Discussion Goal:** Students recall differences between primitive and reference types, which may include how they are declared and initialized, stored and accessed in memory, and composed of data types internally and contain methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the differences between primitive and reference types."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *What are some differences between primitive and reference types?*\n\n**Discussion Goal:** Students recall differences between primitive and reference types, which may include how they are declared and initialized, stored and accessed in memory, and composed of data types internally and contain methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the differences between primitive and reference types."
       },
       "seeding_key": {
         "activity_section.key": "e13a29cc-50dc-4170-ab34-d618b81c3faf",
@@ -1342,7 +1342,7 @@
       "key": "ea404726-91cf-408c-96ab-e9d89a8f7645",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: Integer and Double Objects"
       },
       "seeding_key": {
@@ -1354,7 +1354,7 @@
       "key": "2689da87-15a3-44d1-968d-f389bf33a0f5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that `Integer` and `Double` objects are instantiated to store integer and decimal values. Students also notice that `Integer` and `Double` objects can be created using both the `new` keyword and the assignment operator. Students may wonder why they would use `Integer` and `Double` objects instead of `int` and `double` values.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1371,7 +1371,7 @@
       "key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 1*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 1*."
       },
       "seeding_key": {
         "activity_section.key": "7f809389-24ed-45a1-b8cb-7df9afd51670",
@@ -1396,7 +1396,7 @@
       "key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 2*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Integer` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `Double` class and its methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the Integer and Double constructors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Wrapper Classes - Part 2*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *parsing*."
       },
       "seeding_key": {
         "activity_section.key": "d6e8606b-4d5c-4ced-b83f-8707efd352d9",
@@ -1419,7 +1419,7 @@
       "key": "03056206-b674-4ff0-994f-7153bccab613",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did you notice about the maximum and minimum values for an `int`?*\n* *What happens when you add or subtract one from the maximum or minimum values?*\n\n**Discussion Goal:** Students share the maximum and minimum values and their findings from adding to the maximum value or subtracting from the minimum value.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the minimum and maximum values for integers.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *overflow* and *underflow*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What did you notice about the maximum and minimum values for an `int`?*\n* *What happens when you add or subtract one from the maximum or minimum values?*\n\n**Discussion Goal:** Students share the maximum and minimum values and their findings from adding to the maximum value or subtracting from the minimum value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the minimum and maximum values for integers.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *overflow* and *underflow*."
       },
       "seeding_key": {
         "activity_section.key": "03056206-b674-4ff0-994f-7153bccab613",
@@ -1444,7 +1444,7 @@
       "key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate autoboxing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate unboxing."
       },
       "seeding_key": {
         "activity_section.key": "a758c24a-5530-4bb2-bc30-fe2a40a8faa0",
@@ -1467,7 +1467,7 @@
       "key": "2e5d5104-fdcb-4d7c-89ad-574618a8ca2b",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students debug the program on Level 2, then continue to complete Levels 3 and 4 to use `Integer` and `Double` objects and their methods.",
         "progression_name": "Using Wrapper Classes"
       },
       "seeding_key": {
@@ -1479,7 +1479,7 @@
       "key": "bc66bff3-7a3c-4892-ad00-be3c6241896e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on the sticky note or scrap piece of paper.",
         "name": "But, Because, So",
         "tips": [
           {
@@ -1497,7 +1497,7 @@
       "key": "4771fe32-e14d-4710-b3b2-ce15fa0ecaea",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "4771fe32-e14d-4710-b3b2-ce15fa0ecaea",
@@ -1557,7 +1557,7 @@
       "key": "e2f57b84-7752-465c-b715-ed44e48e5d35",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for the problem.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What if we don't know how many orders the owner needs to enter into the program? What would we need to change in our solution?*\n\n**Discussion Goal:** Students share ideas for modifications, such as asking how many items they are entering first and using that value to initialize the array. Students realize that since the size of 1D and 2D arrays cannot change after initialization, they need to get the number of items from the user first."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What if we don't know how many orders the owner needs to enter into the program? What would we need to change in our solution?*\n\n**Discussion Goal:** Students share ideas for modifications, such as asking how many items they are entering first and using that value to initialize the array. Students realize that since the size of 1D and 2D arrays cannot change after initialization, they need to get the number of items from the user first."
       },
       "seeding_key": {
         "activity_section.key": "e2f57b84-7752-465c-b715-ed44e48e5d35",
@@ -1582,7 +1582,7 @@
       "key": "40cf6b9a-9b48-4e65-a84c-a92a5ca5a692",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted. ",
         "progression_name": "Investigate: ArrayLists"
       },
       "seeding_key": {
@@ -1594,7 +1594,7 @@
       "key": "4ad47ec3-8e20-4f7b-bbdb-ee4f9ad7a689",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` stores a list of values and that the type is `Integer` instead of `int`. Students also notice that the syntax is different for an `ArrayList` than a 1D or 2D array and that the `add()` methods add elements to either the end of or at a specific location in the `ArrayList`. Students may wonder why they would use an `ArrayList` instead of a 1D array.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1611,7 +1611,7 @@
       "key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the constructor for an `ArrayList`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *The ArrayList Class*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *dynamic data structure* and *static data structure*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define `ArrayList` and mutable and identify the package that contains the `ArrayList` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the constructor for an `ArrayList`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `add()` and `size()` methods."
       },
       "seeding_key": {
         "activity_section.key": "3917e1f0-c7bc-4f6f-82b2-a3b8532667c7",
@@ -1634,7 +1634,7 @@
       "key": "9b2d6b34-88e0-48f9-99c4-8c829a06949c",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the purpose of each instance variable?*\n* *What is the relationship between an array and an `ArrayList`?*\n\n**Discussion Goal:** Students identify that the `DEFAULT_CAPACITY` instance variable is the default size of an `ArrayList`, the `size` instance variable is the number of elements in the `ArrayList`, and the `data` instance variable is a 1D array. Students suggest that the relationship between an `ArrayList` and an array is a has-a relationship and an `ArrayList` stores data in the array instance variable.\n\n**Do This:** Explain the purpose of each instance variable:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `DEFAULT_CAPACITY` constant\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `size` instance variable\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `data` instance variable",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to discuss the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is the purpose of each instance variable?*\n* *What is the relationship between an array and an `ArrayList`?*\n\n**Discussion Goal:** Students identify that the `DEFAULT_CAPACITY` instance variable is the default size of an `ArrayList`, the `size` instance variable is the number of elements in the `ArrayList`, and the `data` instance variable is a 1D array. Students suggest that the relationship between an `ArrayList` and an array is a has-a relationship and an `ArrayList` stores data in the array instance variable.\n\n**Do This:** Explain the purpose of each instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `DEFAULT_CAPACITY` constant\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `size` instance variable\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `data` instance variable",
         "tips": [
           {
             "type": "teachingTip",
@@ -1664,7 +1664,7 @@
       "key": "7329cb11-a543-405f-909c-43c65783eb4e",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to declare and initialize an `ArrayList`. On Level 4, students complete a choice level to add elements to an `ArrayList`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to declare and initialize an `ArrayList`. On Level 4, students complete a choice level to add elements to an `ArrayList`.",
         "progression_name": "Using ArrayLists"
       },
       "seeding_key": {
@@ -1676,7 +1676,7 @@
       "key": "68670386-8c68-4a28-9027-993119a200d3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How could we use an `ArrayList` to solve this problem?*\n\n**Discussion Goal:** Students suggest using an `ArrayList` to store the user input and using the `add()` method to add each input to the end of the list. Students may also suggest asking the user for a specific location to add the input to the list at a given index.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How could we use an `ArrayList` to solve this problem?*\n\n**Discussion Goal:** Students suggest using an `ArrayList` to store the user input and using the `add()` method to add each input to the end of the list. Students may also suggest asking the user for a specific location to add the input to the list at a given index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Revisiting Storing User Input"
       },
       "seeding_key": {
@@ -1737,7 +1737,7 @@
       "key": "eeabdccf-77d4-4da4-bdf0-c19efbc0e889",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a unique CS Bingo Card.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Bingo.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Bingo activity. Choose a random definition and read it aloud to the class. Give students a moment to check their bingo card for the correct term, then state the correct term. Repeat until a student yells \"Java.\"",
         "tips": [
           {
             "type": "teachingTip",
@@ -1768,7 +1768,7 @@
       "key": "e72ffb47-87e6-454c-b169-1f61bc4cfe27",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How do we get an individual element from an array?*\n* *How can we do this with an `ArrayList` based on what we know about its structure?*\n\n**Discussion Goal:** Students recall accessing the array element by referring to the index number. Students guess that the `ArrayList` class has methods they can use to access an element.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *How do we get an individual element from an array?*\n* *How can we do this with an `ArrayList` based on what we know about its structure?*\n\n**Discussion Goal:** Students recall accessing the array element by referring to the index number. Students guess that the `ArrayList` class has methods they can use to access an element.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Working with ArrayList Data"
       },
       "seeding_key": {
@@ -1780,7 +1780,7 @@
       "key": "5779d908-c45a-4821-b965-fb61df0d1596",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `get()` method retrieves items from the `ArrayList` and the `set()` method sets the value at a specific index to a specified value Students also notice that both methods are similar to indexing arrays because they retrieve a value or assign a new value at a specified index. Students may wonder if there is a method to change an element to a new value or how they might use these methods inside of a loop to obtain or change multiple elements.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with ArrayList Data*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `get()` and `set()` methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `get()` method retrieves items from the `ArrayList` and the `set()` method sets the value at a specific index to a specified value Students also notice that both methods are similar to indexing arrays because they retrieve a value or assign a new value at a specified index. Students may wonder if there is a method to change an element to a new value or how they might use these methods inside of a loop to obtain or change multiple elements.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Working with ArrayList Data*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `get()` and `set()` methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1809,7 +1809,7 @@
       "key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate traversing an `ArrayList` and review the `ArrayIndexOutofBoundsException`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate traversing an `ArrayList` and review the `ArrayIndexOutofBoundsException`."
       },
       "seeding_key": {
         "activity_section.key": "3af9240c-ed70-4c2c-84ce-8f5737bc22cf",
@@ -1834,7 +1834,7 @@
       "key": "2256bbd7-afa0-40ff-bef9-d8b7fba5f854",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `atlanta` and 9 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `length()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How many characters will `atlanta.length()` return?*\n* *How many characters will `tennessee.length()` return?*\n* *Why does the `length()` method not return the last index in the `String`?*\n\n**Discussion Goal:** Students note the code segments return 7 for `atlanta` and 9 for `tennessee`. Students recall that the last index of an array is one less than its size, so the value for `length()` is one more than the last index.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a choice level to obtain the length of a `String` on Level 2, then continue to Level 3 to complete a choice level to apply standard algorithms to obtain and modify elements in an `ArrayList`.",
         "progression_name": "Working with ArrayLists"
       },
       "seeding_key": {
@@ -1859,7 +1859,7 @@
       "key": "ad5e3ae3-95c9-488d-bae1-c1e6ea53a3fb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson."
       },
       "seeding_key": {
         "activity_section.key": "ad5e3ae3-95c9-488d-bae1-c1e6ea53a3fb",
@@ -1919,7 +1919,7 @@
       "key": "30edb985-c0c3-4822-af05-82f0232cda68",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is unique about the syntax of an `ArrayList`?*\n* *What do you think is the purpose of the angle brackets `< >`?*\n\n**Discussion Goal:** Students note that the angle brackets `< >` are unique to `ArrayList`s. Students recall that the type of data the `ArrayList` can store is specified inside the angle brackets and guess that the purpose of the angle brackets is to specify the reference type."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What is unique about the syntax of an `ArrayList`?*\n* *What do you think is the purpose of the angle brackets `< >`?*\n\n**Discussion Goal:** Students note that the angle brackets `< >` are unique to `ArrayList`s. Students recall that the type of data the `ArrayList` can store is specified inside the angle brackets and guess that the purpose of the angle brackets is to specify the reference type."
       },
       "seeding_key": {
         "activity_section.key": "30edb985-c0c3-4822-af05-82f0232cda68",
@@ -1944,7 +1944,7 @@
       "key": "2086bd88-9f9f-4b0f-8dd0-1eba45d00c8c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: ArrayList of Objects"
       },
       "seeding_key": {
@@ -1956,7 +1956,7 @@
       "key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that an `ArrayList` can store objects like a 1D and 2D array. Students also notice that an `ArrayList` can be declared and initialized without the `< >` but doing so allows the `ArrayList` to store objects of different and unrelated types. Students may wonder why the `< >` are used instead of the `[ ]` and why omitting the `< >` allows the `ArrayList` to store different and unrelated objects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define generic type and explain the functionality of `ArrayList<E>`."
       },
       "seeding_key": {
         "activity_section.key": "e30f3a1a-83d0-4fe4-88a8-c399a67131d2",
@@ -1981,7 +1981,7 @@
       "key": "b4920d1d-b2f0-43f2-816c-7cb73504ce83",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. On Level 2, students translate the given code with a 1D array to an `ArrayList`. On Level 3, students complete a choice level to apply standard algorithms to an `ArrayList`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. On Level 2, students translate the given code with a 1D array to an `ArrayList`. On Level 3, students complete a choice level to apply standard algorithms to an `ArrayList`.",
         "progression_name": "ArrayList Algorithms"
       },
       "seeding_key": {
@@ -1993,7 +1993,7 @@
       "key": "91c82164-a515-4d04-b4f9-e97712efedeb",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: ArrayList Algorithms"
       },
       "seeding_key": {
@@ -2018,7 +2018,7 @@
       "key": "e56010d8-4643-411c-ae16-ddbe37fdf478",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *When is it best to use an `ArrayList` instead of a 1D array?*\n* *How is applying standard algorithms to an `ArrayList` similar to a 1D array? How is it different?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students share scenarios where an `ArrayList` is best, such as when the size of the list is unknown and may change. Students identify similarities and differences between applying standard algorithms to an `ArrayList` and a 1D array, such as using the same steps but different syntax. Students share concepts they are confident about and that they need more practice.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *When is it best to use an `ArrayList` instead of a 1D array?*\n* *How is applying standard algorithms to an `ArrayList` similar to a 1D array? How is it different?*\n* *What were you confident about in this lesson? What would you like to practice?*\n\n**Discussion Goal:** Students share scenarios where an `ArrayList` is best, such as when the size of the list is unknown and may change. Students identify similarities and differences between applying standard algorithms to an `ArrayList` and a 1D array, such as using the same steps but different syntax. Students share concepts they are confident about and that they need more practice.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "e56010d8-4643-411c-ae16-ddbe37fdf478",
@@ -2078,7 +2078,7 @@
       "key": "1f2fe958-4d1b-4d31-8086-5c12a552bf65",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students develop a solution to the Social Media Dilemma.",
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students develop a solution to the Social Media Dilemma.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2095,7 +2095,7 @@
       "key": "a8c03b6e-81cb-42a6-a8b2-c45108ba0504",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What challenges did you run into with using an array for this problem?*\n* *What would you like to be able to do that an array doesn’t allow?*\n* *Given what you know about the `add()` method for an `ArrayList`, how do you think an `ArrayList` handles removing items?*\n\n**Discussion Goal:** Students identify that they cannot easily remove elements directly from the same array, as arrays are immutable. Students note that they would like to remove items from the array without leaving any empty locations. Students guess there might be a `remove()` method in the `ArrayList` class to remove items from a list and resize it accordingly.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What challenges did you run into with using an array for this problem?*\n* *What would you like to be able to do that an array doesn’t allow?*\n* *Given what you know about the `add()` method for an `ArrayList`, how do you think an `ArrayList` handles removing items?*\n\n**Discussion Goal:** Students identify that they cannot easily remove elements directly from the same array, as arrays are immutable. Students note that they would like to remove items from the array without leaving any empty locations. Students guess there might be a `remove()` method in the `ArrayList` class to remove items from a list and resize it accordingly.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2126,7 +2126,7 @@
       "key": "a73415e7-d3cb-4c8b-bd9d-8396d0ee270f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Removing Values"
       },
       "seeding_key": {
@@ -2138,7 +2138,7 @@
       "key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `remove()` method removes items from the `ArrayList` and updates the size accordingly. Students may wonder how they could use this method in other algorithms or scenarios."
       },
       "seeding_key": {
         "activity_section.key": "e8de4dff-bdc6-4c68-bc32-306659c7b397",
@@ -2161,7 +2161,7 @@
       "key": "97e37f93-627e-4655-a0f8-db615469e388",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *How is the `remove()` method different from how we would remove items from an array?*\n\n**Discussion Goal:** Students identify that since arrays are immutable, they would need to set the item's index to remove to `null` to remove it and then shift the other items in the array. Doing so would leave an empty index. In an `ArrayList`, using `remove()` allows the item to be completely removed, shifting the rest of the items up in the `ArrayList`. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Removing Data from an ArrayList*."
       },
       "seeding_key": {
         "activity_section.key": "97e37f93-627e-4655-a0f8-db615469e388",
@@ -2184,7 +2184,7 @@
       "key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate using `remove()` with a `for` loop and how to avoid skipping elements."
       },
       "seeding_key": {
         "activity_section.key": "b563e131-eeb6-42aa-9d10-b4e2fdaf285f",
@@ -2209,7 +2209,7 @@
       "key": "bc0c1a29-0bc3-4516-b92f-7ed8e6e0b345",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to predict the outcome of the program, then run the program to compare their predictions to the actual outcome.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to predict the outcome of the program, then run the program to compare their predictions to the actual outcome.",
         "progression_name": "Predict: Using an Enhanced For Loop"
       },
       "seeding_key": {
@@ -2221,7 +2221,7 @@
       "key": "ff74cd10-914a-4947-92c2-0bdbb5a7cb27",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What differences do you notice between these two pieces of code?*\n\n**Discussion Goal:** Students notice that while the structures look similar, the enhanced `for` loop used with an array uses a primitive data type (`int`) whereas the enhanced `for` loop with an `ArrayList` uses an object (`Integer`).\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What differences do you notice between these two pieces of code?*\n\n**Discussion Goal:** Students notice that while the structures look similar, the enhanced `for` loop used with an array uses a primitive data type (`int`) whereas the enhanced `for` loop with an `ArrayList` uses an object (`Integer`).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Removing with an Enhanced For Loop"
       },
       "seeding_key": {
@@ -2233,7 +2233,7 @@
       "key": "bc091993-f59c-4cb0-82fb-c2fb116a7ec3",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain `ConcurrentModificationException` and how to avoid it."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain `ConcurrentModificationException` and how to avoid it."
       },
       "seeding_key": {
         "activity_section.key": "bc091993-f59c-4cb0-82fb-c2fb116a7ec3",
@@ -2244,7 +2244,7 @@
       "key": "5dac9d95-0de7-4926-ad73-8a7102fd1327",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word* and *stop word removal* and demonstrate how it is applied in natural language processing.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define *stop word* and *stop word removal* and demonstrate how it is applied in natural language processing.",
         "duration": "10",
         "name": "Stop Word Removal"
       },
@@ -2269,7 +2269,7 @@
       "key": "a542134b-6cc3-4cf9-853c-8bcb6f8d90f2",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students debug code that results in a `ConcurrentModificationException`. On Level 5, students complete a choice level to use the `remove()` method to remove values from an `ArrayList`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 on Code Studio to complete Levels 4 and 5. On Level 4, students debug code that results in a `ConcurrentModificationException`. On Level 5, students complete a choice level to use the `remove()` method to remove values from an `ArrayList`.",
         "progression_name": "Removing Values from an ArrayList"
       },
       "seeding_key": {
@@ -2281,7 +2281,7 @@
       "key": "5eff5dc5-e833-407a-b557-855821cb68d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How would we solve our Social Media Dilemma using `ArrayList` instead of an array? Is this problem easier to solve with an array or `ArrayList`? Why?*\n\n**Discussion Goal:** Students describe using a loop to traverse an `ArrayList` of friends and removing friends to be unfollowed. Students note that this problem is much easier with an `ArrayList` because the `remove()` takes out the element and shifts the items in the list in one step.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompt.\n* *How would we solve our Social Media Dilemma using `ArrayList` instead of an array? Is this problem easier to solve with an array or `ArrayList`? Why?*\n\n**Discussion Goal:** Students describe using a loop to traverse an `ArrayList` of friends and removing friends to be unfollowed. Students note that this problem is much easier with an `ArrayList` because the `remove()` takes out the element and shifts the items in the list in one step.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Revisiting the Social Media Dilemma"
       },
       "seeding_key": {
@@ -2342,7 +2342,7 @@
       "key": "9ebe7334-21be-48ce-9d2f-5248790722c3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define text segmentation and introduce segmentation problems.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What separates the end of one word from the beginning of the next?*\n* *What separates the end of one sentence from the beginning of the next?*\n* *What steps would our programs need to take to obtain a word from a sentence?*\n* *What about a sentence from a paragraph?*\n\n**Discussion Goal:** Students note that spaces separate words, and punctuation, such as periods, question marks, and exclamation points, separate sentences. Students suggest taking the characters between the spaces and punctuation marks to obtain individual words or sentences."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define text segmentation and introduce segmentation problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What separates the end of one word from the beginning of the next?*\n* *What separates the end of one sentence from the beginning of the next?*\n* *What steps would our programs need to take to obtain a word from a sentence?*\n* *What about a sentence from a paragraph?*\n\n**Discussion Goal:** Students note that spaces separate words, and punctuation, such as periods, question marks, and exclamation points, separate sentences. Students suggest taking the characters between the spaces and punctuation marks to obtain individual words or sentences."
       },
       "seeding_key": {
         "activity_section.key": "9ebe7334-21be-48ce-9d2f-5248790722c3",
@@ -2367,7 +2367,7 @@
       "key": "de2a24fc-b346-4839-8ca1-b8a583bf1afd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: String Methods"
       },
       "seeding_key": {
@@ -2379,7 +2379,7 @@
       "key": "95a0886e-48ca-45f9-aee0-4f0a04c2feab",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `indexOf()` method returns the index of the substring within the given `String` and that there are two versions of the `substring()` method. Students also notice that the `indexOf()` method returns `-1` if the substring is not found within the given `String`. Students realize that the two-parameter version of the `substring()` method returns the characters between the specified index values and that the one-parameter version returns the characters starting at the specified index values to the end of the `String`. Students may wonder if the `IndexOutOfBoundsException` is similar to the `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how `String`s are indexed and demonstrate the `IndexOutOfBoundsException`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `indexOf()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `substring()` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `substring()` method to obtain a single element in a String.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain that `String` objects are immutable and that `String` methods do not change the `String` object."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the `indexOf()` method returns the index of the substring within the given `String` and that there are two versions of the `substring()` method. Students also notice that the `indexOf()` method returns `-1` if the substring is not found within the given `String`. Students realize that the two-parameter version of the `substring()` method returns the characters between the specified index values and that the one-parameter version returns the characters starting at the specified index values to the end of the `String`. Students may wonder if the `IndexOutOfBoundsException` is similar to the `ArrayIndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain how `String`s are indexed and demonstrate the `IndexOutOfBoundsException`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `indexOf()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `substring()` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate using the `substring()` method to obtain a single element in a String.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that `String` objects are immutable and that `String` methods do not change the `String` object."
       },
       "seeding_key": {
         "activity_section.key": "95a0886e-48ca-45f9-aee0-4f0a04c2feab",
@@ -2404,7 +2404,7 @@
       "key": "f96bd7c0-e240-4629-9c9c-8b6639a696dd",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce keyword extraction and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce part-of-speech tagging and how it is used.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for obtaining individual words from text.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2, 3, and 4. Students complete a Check for Understanding on Level 2, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `indexOf()` and `substring()` methods. ",
         "progression_name": "Keywords and Parts-of-Speech"
       },
       "seeding_key": {
@@ -2429,7 +2429,7 @@
       "key": "8bc13886-7bc9-4924-ac7a-c441f86a57a5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "8bc13886-7bc9-4924-ac7a-c441f86a57a5",
@@ -2489,7 +2489,7 @@
       "key": "e8b03bd0-59dd-4118-a388-a40795691755",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the instructions for playing CS Pyramid.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the CS Pyramid activity, and direct students to play CS Pyramid. Click through the animated slide to display each pyramid, and direct students to switch roles with each new pyramid."
       },
       "seeding_key": {
         "activity_section.key": "e8b03bd0-59dd-4118-a388-a40795691755",
@@ -2514,7 +2514,7 @@
       "key": "2b7150af-1b32-46d1-9b59-8ec5dfdd8c18",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Comparing Strings"
       },
       "seeding_key": {
@@ -2526,7 +2526,7 @@
       "key": "476a0fe1-fa60-4bf4-8d4b-e4a06bddf2a0",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students note that the `compareTo()` method returns a numerical value. Students also notice that the number correlates with whether the `String` comes before or after the other `String`. Students may wonder why the method doesn't return a `boolean` value instead of a number.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define *lexicographical order*.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `compareTo()` method."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students note that the `compareTo()` method returns a numerical value. Students also notice that the number correlates with whether the `String` comes before or after the other `String`. Students may wonder why the method doesn't return a `boolean` value instead of a number.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define *lexicographical order*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the `compareTo()` method."
       },
       "seeding_key": {
         "activity_section.key": "476a0fe1-fa60-4bf4-8d4b-e4a06bddf2a0",
@@ -2551,7 +2551,7 @@
       "key": "9059bf17-e8b8-49e7-874b-1b940929ebbc",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to sort a list of `String`s in lexicographical order.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `compareTo()` method.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to sort a list of `String`s in lexicographical order.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to complete Levels 2 and 3. Students complete a Check for Understanding, then continue to Level 3 to implement their algorithm. On Level 4, students complete a choice level to use the `compareTo()` method.",
         "progression_name": "Sorting Strings"
       },
       "seeding_key": {
@@ -2576,7 +2576,7 @@
       "key": "ba6d7e97-8527-48fe-b233-b4e60d556d1a",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How has your perception of software engineering changed in this unit?*\n* *How have your software engineering skills improved in this unit?*\n\n**Discussion Goal:** Students share how their perception of software engineering has changed, including how computer science influences different industries and decisions. Students identify the software engineering skills and characteristics they feel they improved in this unit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ba6d7e97-8527-48fe-b233-b4e60d556d1a",
@@ -2623,7 +2623,7 @@
       "key": "817568e7-a96f-4ca4-ba56-937efa106de7",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you notice about these dates?*\n\n**Discussion Goal:** Students notice the dates are the same when reading forwards and backward. Students also realize that these dates are in a row.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to define palindrome and display the prompt. Use the Hold That Thought strategy to discuss the prompt.\n* *Every year from 2011 to 2021 has ten consecutive palindromic dates. Can you figure those out?*\n\n**Discussion Goal:** Students notice that 1-10-11 to 1-19-11 are palindromic dates, along with 2-10-12 to 2-19-21, etc.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Hold That Thought strategy to discuss the prompt.\n* *What do you notice about these dates?*\n\n**Discussion Goal:** Students notice the dates are the same when reading forwards and backward. Students also realize that these dates are in a row.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to define palindrome and display the prompt. Use the Hold That Thought strategy to discuss the prompt.\n* *Every year from 2011 to 2021 has ten consecutive palindromic dates. Can you figure those out?*\n\n**Discussion Goal:** Students notice that 1-10-11 to 1-19-11 are palindromic dates, along with 2-10-12 to 2-19-21, etc.",
         "name": "Palindromic Dates",
         "tips": [
           {
@@ -2655,7 +2655,7 @@
       "key": "d7f37001-6403-4a0f-991c-b9196b0feb76",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are some different ways we can check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm to check if a `String` is equal to the reverse of the `String`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Use the Retrieve-Pair-Share strategy to discuss the prompts.\n* *What are some different ways we can check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm to check if a `String` is equal to the reverse of the `String`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their algorithms with another group and make revisions as needed."
       },
       "seeding_key": {
         "activity_section.key": "d7f37001-6403-4a0f-991c-b9196b0feb76",
@@ -2679,7 +2679,7 @@
       "key": "7d0925a7-eb4f-4710-8362-139aa86019b0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then implement an algorithm to create a new `String` with the characters reversed and compare it to the original `String` on Level 2. On Level 3, students complete a choice level to implement an algorithm to find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to complete Levels 1, 2, and 3. Students complete a Check for Understanding on Level 1, then implement an algorithm to create a new `String` with the characters reversed and compare it to the original `String` on Level 2. On Level 3, students complete a choice level to implement an algorithm to find if one or more substrings has a particular property or to determine the number of substrings that meet specific criteria.",
         "progression_name": "String Algorithms"
       },
       "seeding_key": {
@@ -2691,7 +2691,7 @@
       "key": "6bf2e012-2111-4cf9-9a2e-ab280273f326",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: String Algorithms"
       },
       "seeding_key": {
@@ -2716,7 +2716,7 @@
       "key": "c0896779-e0ba-426e-ae78-22792ac0460e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What was awesome about writing your code?*\n* *What is one action you can take to improve your code?*\n* *What questions do you have about today?*\n\n**Discussion Goal:** Students share aspects of their program they enjoyed or strengths of writing algorithms and identify areas of improvement to strengthen their programming skills. Students also share any questions or misconceptions they may have.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c0896779-e0ba-426e-ae78-22792ac0460e",
@@ -2763,7 +2763,7 @@
       "key": "b590e69b-3745-46d6-9ce5-9a27820085a9",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to solve the problem, then compare their solutions with another group.",
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode to solve the problem, then compare their solutions with another group.",
         "name": "Breaking Up a Number"
       },
       "seeding_key": {
@@ -2789,7 +2789,7 @@
       "key": "0db16726-5417-4dc0-8e48-f14465b19ee3",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to investigate the program with a partner. Students make the changes to the program as prompted.",
         "progression_name": "Investigate: Obtaining Individual Digits"
       },
       "seeding_key": {
@@ -2801,7 +2801,7 @@
       "key": "77b57f4e-75fa-4bed-baa6-800329179398",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the method obtains the last digit of the original number using the mod operator then divides the number by ten to remove the last digit from the number. Students may wonder about scenarios where this algorithm might be useful.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the algorithm."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice about the code in this program?*\n* *What do you wonder about the code in this program?*\n\n**Discussion Goal:** Students notice that the method obtains the last digit of the original number using the mod operator then divides the number by ten to remove the last digit from the number. Students may wonder about scenarios where this algorithm might be useful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the algorithm."
       },
       "seeding_key": {
         "activity_section.key": "77b57f4e-75fa-4bed-baa6-800329179398",
@@ -2826,7 +2826,7 @@
       "key": "23ea32a1-0950-45cc-8e24-90148c2dc1b6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define sentiment value.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm to find the sentiment value of a word.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students write a method to find the sentiment value of a word. On Level 3, students complete a choice level to find the sentiment value of text.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define sentiment value.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write an algorithm to find the sentiment value of a word.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students write a method to find the sentiment value of a word. On Level 3, students complete a choice level to find the sentiment value of text.",
         "progression_name": "Finding the Sentiment Value"
       },
       "seeding_key": {
@@ -2838,7 +2838,7 @@
       "key": "39814cda-8641-4ec0-97f9-529b160984a2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on Level 4.",
         "progression_name": "Code Review: Finding the Sentiment Value"
       },
       "seeding_key": {
@@ -2863,7 +2863,7 @@
       "key": "8d5d1d2f-d5f2-44d8-b1cc-323f0478acd5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Study Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Natural Language Processing Project.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Unit 6 Study Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Show What You Know week.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Natural Language Processing Project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "8d5d1d2f-d5f2-44d8-b1cc-323f0478acd5",
@@ -2934,7 +2934,7 @@
       "key": "df61b689-1e3e-445f-8e20-7686ea0674b5",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show examples of different types of programs and devices that use natural language processing.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create a program that uses natural language processing to analyze, manipulate, or generate text?*\n\n**Discussion Goal:** Students share ideas about programs they might make using natural language processing, such as chatbots, story generators, or social media analyzers."
       },
       "seeding_key": {
         "activity_section.key": "df61b689-1e3e-445f-8e20-7686ea0674b5",
@@ -2959,7 +2959,7 @@
       "key": "0173c2e2-68b2-45c3-8cb6-f205acc1867e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Natural Language Processing Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What do you notice about the project requirements and rubric?*\n* *What does success look like for this project?*\n* *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Students share any questions they have about the project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a class, read through the Project Description on the first page of the Natural Language Processing Project Planning Guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts. Use the Hold That Thought strategy to discuss the prompts.\n* *What do you notice about the project requirements and rubric?*\n* *What does success look like for this project?*\n* *What barriers do you anticipate to achieving success on this project?*\n\n**Discussion Goal:** Students share what they notice about the project requirements and rubric and identify the components to implement in their program. Students share any questions they have about the project."
       },
       "seeding_key": {
         "activity_section.key": "0173c2e2-68b2-45c3-8cb6-f205acc1867e",
@@ -2982,7 +2982,7 @@
       "key": "1f798de1-c79c-4b1b-b6ec-7cb1c35f6c63",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm the program they will create, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to brainstorm the program they will create, create UML diagrams for their classes, and identify the algorithms they need to develop on the Natural Language Processing Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "1f798de1-c79c-4b1b-b6ec-7cb1c35f6c63",
@@ -2993,7 +2993,7 @@
       "key": "b5afb55d-cca1-4788-b672-51f52a5b065b",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their Natural Language Processing Good Project.",
         "duration": "15",
         "name": "Development",
         "progression_name": "Natural Language Processing Project"
@@ -3007,7 +3007,7 @@
       "key": "0de20373-ed65-476b-955a-4c6cd61e0587",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack."
       },
       "seeding_key": {
         "activity_section.key": "0de20373-ed65-476b-955a-4c6cd61e0587",
@@ -3031,7 +3031,7 @@
       "key": "302c90df-c1dc-47ac-af97-e6f4057d472d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Natural Language Processing Project Planning Guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 1 Reflection prompt on the Natural Language Processing Project Planning Guide."
       },
       "seeding_key": {
         "activity_section.key": "302c90df-c1dc-47ac-af97-e6f4057d472d",
@@ -3078,7 +3078,7 @@
       "key": "80ac0fd9-3f59-4074-aa61-d779e9119053",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the prompt on the Natural Language Processing Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3109,7 +3109,7 @@
       "key": "e12fdbaf-b9c7-4395-be77-7976a12dde17",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to continue developing their projects.",
         "progression_name": "Natural Language Processing Project"
       },
       "seeding_key": {
@@ -3121,7 +3121,7 @@
       "key": "bbd8d649-e86e-4ffb-9e90-0d1e15ecd083",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 2.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue committing their code and saving their classes to the Backpack.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to have students participate in the Code Review Call and Response.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete a code review on their program on Level 2.",
         "duration": "10",
         "name": "Code Review",
         "progression_name": "Code Review: Natural Language Processing Project"
@@ -3149,7 +3149,7 @@
       "key": "3a9d646f-46b1-46d2-a91d-b561d9e30ae7",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Natural Language Processing Project Planning Guide based on the feedback they received from the code review and their rubric self-assessment.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students self-assess their project using the program requirements and rubric on the Natural Language Processing Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students create a prioritized list of upgrades, changes, and things they still need to complete on the Natural Language Processing Project Planning Guide based on the feedback they received from the code review and their rubric self-assessment.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3179,7 +3179,7 @@
       "key": "f732da4c-2437-43e9-9e82-7ff8f94cbd32",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Natural Language Processing Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the Day 2 Reflection prompt on the Natural Language Processing Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3232,7 +3232,7 @@
       "key": "fa83a323-9fac-47d5-8f05-c46b709b0133",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are you most proud of about your project so far?*\n\n**Discussion Goal:** Students share what they are proud of about their project."
       },
       "seeding_key": {
         "activity_section.key": "fa83a323-9fac-47d5-8f05-c46b709b0133",
@@ -3257,7 +3257,7 @@
       "key": "f5ac847a-aedf-4405-8c59-86c9e5c27ea6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Natural Language Processing Project. Have students submit their projects at the end of the allotted time.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish developing their Natural Language Processing Project. Have students submit their projects at the end of the allotted time.",
         "progression_name": "Natural Language Processing Project"
       },
       "seeding_key": {
@@ -3282,7 +3282,7 @@
       "key": "d69763c2-111d-4dd8-a75f-9d7ef20a7236",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student several sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to view each other's programs and leave sticky notes noting what they like about the program."
       },
       "seeding_key": {
         "activity_section.key": "d69763c2-111d-4dd8-a75f-9d7ef20a7236",
@@ -3293,7 +3293,7 @@
       "key": "0e10b809-c3c8-40bf-bee6-2e21504c2271",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Natural Language Processing Project Planning Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to respond to the End of Project Reflection prompt on the Natural Language Processing Project Planning Guide.",
         "name": "Project Reflection",
         "tips": [
           {
@@ -3359,7 +3359,7 @@
       "key": "66cd8e1d-a7d7-49b3-87e8-6a7dc55a8046",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
       },
       "seeding_key": {
         "activity_section.key": "66cd8e1d-a7d7-49b3-87e8-6a7dc55a8046",
@@ -3382,7 +3382,7 @@
       "key": "4b993972-6bcf-4d56-9838-d382fafd82e7",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
       },
       "seeding_key": {
         "activity_section.key": "4b993972-6bcf-4d56-9838-d382fafd82e7",
@@ -3393,7 +3393,7 @@
       "key": "987b6221-8dd2-49fc-8802-914a95f7e8e4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ handout and Java Quick Reference.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ handout and Java Quick Reference.",
         "duration": "25",
         "name": "Writing"
       },
@@ -3418,7 +3418,7 @@
       "key": "bd47da75-f64d-4ea5-ac02-d180cc90bc6a",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question."
       },
       "seeding_key": {
         "activity_section.key": "bd47da75-f64d-4ea5-ac02-d180cc90bc6a",
@@ -3429,7 +3429,7 @@
       "key": "e53d6e27-14db-407b-912f-fabef2759d8d",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ Scoring Guidelines.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the TemperatureAction FRQ Scoring Guidelines.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the TemperatureAction FRQ Scoring Guidelines.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the TemperatureAction FRQ Scoring Guidelines.",
         "duration": "10",
         "name": "Scoring and Review"
       },
@@ -3454,7 +3454,7 @@
       "key": "57c2f45e-57cf-4348-99a4-d20e68d996b7",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `addTemperatureAction()` method (Part (a))\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Implementation of the `removeTemperatureAction()` method (Part (b))"
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, walk through each row of the FRQ Scoring Guide and point out how the solution met those requirements. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `addTemperatureAction()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `removeTemperatureAction()` method (Part (b))"
       },
       "seeding_key": {
         "activity_section.key": "57c2f45e-57cf-4348-99a4-d20e68d996b7",
@@ -3465,7 +3465,7 @@
       "key": "882fc836-aba9-41b4-841d-d4b74ffb332e",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
+        "description": "**Distribute:** Give each student one sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompt on their sticky note or scrap piece of paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "name": "Give One, Get One"
       },
       "seeding_key": {
@@ -3513,7 +3513,7 @@
       "key": "8d1c826e-7ac3-4078-8c28-cf72baef091c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 6 Assessment on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 6 Assessment on Code Studio.",
         "progression_name": "Unit 6 Assessment"
       },
       "seeding_key": {
@@ -3525,7 +3525,7 @@
       "key": "56c4bb8e-8eba-4355-bde1-cf8c234931dc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
         "name": "Assessment Review",
         "tips": [
           {

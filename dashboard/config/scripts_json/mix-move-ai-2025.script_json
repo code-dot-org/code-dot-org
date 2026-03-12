@@ -190,7 +190,7 @@
       "key": "ed196ddd-d230-4c5d-aeff-382e33502524",
       "position": 1,
       "properties": {
-        "description": "  <i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Begin with a discussion opportunity to help students activate prior knowledge and to set the tone for this fun, exploratory lesson.\n\n <i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What would you ask AI to create if it could make anything? \n\n***Or***  If AI could help you create a song, what would you want it to sound like?",
+        "description": "  <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Begin with a discussion opportunity to help students activate prior knowledge and to set the tone for this fun, exploratory lesson.\n\n <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What would you ask AI to create if it could make anything? \n\n***Or***  If AI could help you create a song, what would you want it to sound like?",
         "tips": [
           {
             "type": "teachingTip",
@@ -207,7 +207,7 @@
       "key": "898a3460-793e-4acf-a17f-c7b717558a9f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives and the Question of the Day: How can we create with AI?\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Introduce the lesson objectives and the Question of the Day: How can we create with AI?\n"
       },
       "seeding_key": {
         "activity_section.key": "898a3460-793e-4acf-a17f-c7b717558a9f",
@@ -218,7 +218,7 @@
       "key": "da6547ed-29ef-4288-b18b-86a7bad73bb8",
       "position": 1,
       "properties": {
-        "description": "\n\n<i class=\"fa-solid fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re taking part in a global movement to learn more about AI. The Hour of AI is an event that helps students of all ages across the whole world take their first step from watchers to creators.\n\nIn the next hour, you will explore how you can work with AI to generate images and code for music and dance moves.\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Preview or review the key vocabulary:\n- **artificial intelligence (AI):** a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions\n- **prompt:** the instruction or question you give to AI that tell it what to do\n- **generate:** to make or create something\n- **code:** a set of instructions that tells a computer what to do\n\n<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on the first level as a class. \n",
+        "description": "\n\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re taking part in a global movement to learn more about AI. The Hour of AI is an event that helps students of all ages across the whole world take their first step from watchers to creators.\n\nIn the next hour, you will explore how you can work with AI to generate images and code for music and dance moves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Preview or review the key vocabulary:\n- **artificial intelligence (AI):** a technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions\n- **prompt:** the instruction or question you give to AI that tell it what to do\n- **generate:** to make or create something\n- **code:** a set of instructions that tells a computer what to do\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Watch the video on the first level as a class. \n",
         "name": "Intro to Mix & Move with AI",
         "progression_name": "Intro"
       },
@@ -231,7 +231,7 @@
       "key": "27e3b1ec-e707-4d18-a72f-27749025d8a8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to work at their own pace through the activity.\n\n<i class=\"fa-solid fa-arrows-rotate\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> During the activity you can circulate and ask students some of the following questions:\n- What are you changing in the prompt and how does it affect what the AI generates?\n- What have you done to change or modify what the code the AI generated?\n- What choices are you making as the creator right now?\n- If you could make the output different, what would you change?\n\nWhile students are working through the activity, encourage them to share what they’re making with each other."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to work at their own pace through the activity.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> During the activity you can circulate and ask students some of the following questions:\n- What are you changing in the prompt and how does it affect what the AI generates?\n- What have you done to change or modify what the code the AI generated?\n- What choices are you making as the creator right now?\n- If you could make the output different, what would you change?\n\nWhile students are working through the activity, encourage them to share what they’re making with each other."
       },
       "seeding_key": {
         "activity_section.key": "27e3b1ec-e707-4d18-a72f-27749025d8a8",
@@ -254,7 +254,7 @@
       "key": "0e414a55-426e-43d3-a6bf-aa350ce8b9cf",
       "position": 4,
       "properties": {
-        "description": " <i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This is a great time to engage students in a discussion about how AI creates images and what influences its results. \n- What did you notice about the AI-generated animals? \n- Did they always look the way you expected based on your prompt?\n- Since AI mostly learns from certain kinds of pictures or ideas, how might that affect the images it creates? \n- What could people do to help AI be fairer or show a wider variety of things?\n\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:**  Help students recognize that AI doesn’t “think” like people do and that its surprising or “weird” results can reveal how it interprets prompts differently. Guide students to consider how gaps or patterns in AI’s training data might lead to results that seem unusual, incomplete, or even unfair."
+        "description": " <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This is a great time to engage students in a discussion about how AI creates images and what influences its results. \n- What did you notice about the AI-generated animals? \n- Did they always look the way you expected based on your prompt?\n- Since AI mostly learns from certain kinds of pictures or ideas, how might that affect the images it creates? \n- What could people do to help AI be fairer or show a wider variety of things?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Help students recognize that AI doesn’t “think” like people do and that its surprising or “weird” results can reveal how it interprets prompts differently. Guide students to consider how gaps or patterns in AI’s training data might lead to results that seem unusual, incomplete, or even unfair."
       },
       "seeding_key": {
         "activity_section.key": "0e414a55-426e-43d3-a6bf-aa350ce8b9cf",
@@ -277,7 +277,7 @@
       "key": "c2dd109b-ef8a-416a-8f00-3d55ec0e6bc8",
       "position": 6,
       "properties": {
-        "description": " <i class=\"fa-solid fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  This is an opportunity to pause and lead a class discussion about how AI can support creativity and efficiency, but also the importance of thinking critically about its limitations.\n- AI can help people write code or create things more quickly. \n- What are some good things about that? \n- What might the downsides of AI be? \n- What should people be careful of when using AI to do part of the work?\n\n\n<i class=\"fa-regular fa-lightbulb\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that while AI can make coding and creative work faster and easier, it can also make mistakes or miss the creator’s intent. Encourage them to think critically about when it’s helpful to use AI and when human creativity, problem-solving, and judgment are still essential."
+        "description": " <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong>  This is an opportunity to pause and lead a class discussion about how AI can support creativity and efficiency, but also the importance of thinking critically about its limitations.\n- AI can help people write code or create things more quickly. \n- What are some good things about that? \n- What might the downsides of AI be? \n- What should people be careful of when using AI to do part of the work?\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that while AI can make coding and creative work faster and easier, it can also make mistakes or miss the creator’s intent. Encourage them to think critically about when it’s helpful to use AI and when human creativity, problem-solving, and judgment are still essential."
       },
       "seeding_key": {
         "activity_section.key": "c2dd109b-ef8a-416a-8f00-3d55ec0e6bc8",
@@ -300,7 +300,7 @@
       "key": "57ea666f-c9f4-40f6-9b35-52c19de90ea4",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-regular fa-square-check\" aria-hidden=\"true\"></i> <strong>Do This:</strong>  Encourage students to click Finish when they’re done with their dance to get a link to share their projects.\n\nClicking Finish again will take students to their certificate of completion.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong>  Encourage students to click Finish when they’re done with their dance to get a link to share their projects.\n\nClicking Finish again will take students to their certificate of completion.",
         "tips": [
           {
             "type": "contentCorner",

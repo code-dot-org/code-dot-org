@@ -307,7 +307,7 @@
       "key": "541b909e-8297-48bc-997f-c1bcf5a75cd8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Think of a skill you commonly use, like speaking, tying your shoes, cooking, or playing a game. How did you learn this skill?_\r\n\r\nAllow students a minute or two to write their responses, then ask for volunteers to share their ideas with the class. As students share, keep a list of themes that emerge in the front of the room.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think of a skill you commonly use, like speaking, tying your shoes, cooking, or playing a game. How did you learn this skill?_\r\n\r\nAllow students a minute or two to write their responses, then ask for volunteers to share their ideas with the class. As students share, keep a list of themes that emerge in the front of the room.",
         "name": "Journal Prompt\r"
       },
       "seeding_key": {
@@ -353,7 +353,7 @@
       "key": "93e185ae-c89e-4e84-9c97-c2df95fc02f6",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:**  What are different types of machine learning?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  What are different types of machine learning?"
       },
       "seeding_key": {
         "activity_section.key": "93e185ae-c89e-4e84-9c97-c2df95fc02f6",
@@ -406,7 +406,7 @@
       "key": "4c6676db-e665-4f10-a4a5-bc5d2a30c8b8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Model:** a computer program designed to make a decision"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Model:** a computer program designed to make a decision"
       },
       "seeding_key": {
         "activity_section.key": "4c6676db-e665-4f10-a4a5-bc5d2a30c8b8",
@@ -429,7 +429,7 @@
       "key": "a7cb0b45-c2ce-4413-ba22-e3013b5a0faf",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Types of Machine Learning Activity Guide to each student. Students will use this activity guide while working through levels in Code Studio.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Types of Machine Learning Activity Guide to each student. Students will use this activity guide while working through levels in Code Studio.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -446,7 +446,7 @@
       "key": "991f1cda-b396-43bb-8a7d-da9da102017d",
       "position": 7,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.",
         "progression_name": "Looking for Patterns",
         "tips": [
           {
@@ -464,7 +464,7 @@
       "key": "b83ef272-5f63-443d-b7f0-72e913dcf00d",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
       },
       "seeding_key": {
         "activity_section.key": "b83ef272-5f63-443d-b7f0-72e913dcf00d",
@@ -475,7 +475,7 @@
       "key": "2c344f59-b171-4cbe-aa40-91a3e8e7d162",
       "position": 9,
       "properties": {
-        "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** Finding patterns in data that doesn't have any labels\n- **Features:** The inputs that a model uses to make decisions"
+        "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** Finding patterns in data that doesn't have any labels\n- **Features:** The inputs that a model uses to make decisions"
       },
       "seeding_key": {
         "activity_section.key": "2c344f59-b171-4cbe-aa40-91a3e8e7d162",
@@ -498,7 +498,7 @@
       "key": "8eeca9af-d542-4910-b391-944d99e4ab20",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are similar to unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Try to identify situations where students were noticing patterns without clear directions, such as the unspoken rules of their home or community. They will likely think of situations from when they were much younger, especially when they thought they learned something from observation, but it didn't actually end up being true."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are similar to unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Try to identify situations where students were noticing patterns without clear directions, such as the unspoken rules of their home or community. They will likely think of situations from when they were much younger, especially when they thought they learned something from observation, but it didn't actually end up being true."
       },
       "seeding_key": {
         "activity_section.key": "8eeca9af-d542-4910-b391-944d99e4ab20",
@@ -523,7 +523,7 @@
       "key": "68bb78de-8f34-46ef-9e27-70fa7b8c42af",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where they will play a game called the Green Glass Door. The goal is to notice patterns in different types of words to try and get words accepted through the door."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where they will play a game called the Green Glass Door. The goal is to notice patterns in different types of words to try and get words accepted through the door."
       },
       "seeding_key": {
         "activity_section.key": "68bb78de-8f34-46ef-9e27-70fa7b8c42af",
@@ -562,7 +562,7 @@
       "key": "e4ac2ec8-f64a-4373-9532-7cb356dadf41",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _What’s the secret - which words are accepted or rejected? How did you figure it out?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What’s the secret - which words are accepted or rejected? How did you figure it out?_"
       },
       "seeding_key": {
         "activity_section.key": "e4ac2ec8-f64a-4373-9532-7cb356dadf41",
@@ -573,7 +573,7 @@
       "key": "3d887927-a778-457e-8fa8-8734ad0de92d",
       "position": 17,
       "properties": {
-        "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
+        "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
       },
       "seeding_key": {
         "activity_section.key": "3d887927-a778-457e-8fa8-8734ad0de92d",
@@ -596,7 +596,7 @@
       "key": "43839879-5508-4de7-9879-379bd01e41a2",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm up are supervised learning?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm up are supervised learning?_"
       },
       "seeding_key": {
         "activity_section.key": "43839879-5508-4de7-9879-379bd01e41a2",
@@ -618,7 +618,7 @@
       "key": "1ce3f8ea-4094-4c0f-b6ba-dc7b18e5e1a6",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** On the second page of the activity guide, students are given several scenarios to identify as supervised or unsupervised learning. Have students read through the scenarios and complete the task individually, then have students pair-up to compare answers and talk through their reasoning.\n\n**Circulate:** Monitor students as they complete this activity, checking that they can reason through the differences between supervised and unsupervised learning. An answer key is provided to help check student responses.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the second page of the activity guide, students are given several scenarios to identify as supervised or unsupervised learning. Have students read through the scenarios and complete the task individually, then have students pair-up to compare answers and talk through their reasoning.\n\n**Circulate:** Monitor students as they complete this activity, checking that they can reason through the differences between supervised and unsupervised learning. An answer key is provided to help check student responses.",
         "duration": "15",
         "name": "Supervised and Unsupervised Learning",
         "tips": [
@@ -637,7 +637,7 @@
       "key": "8d53e5a3-ea3d-4571-bc7e-d9d15e413b17",
       "position": 22,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Cycle through the next several slides and invite students to share their responses. This is an opportunity to have a discussion about each scenario and hear why students think certain scenarios are similar to supervised or unsupervised learning.\n\n**Discussion Goal:** These discussion are less about being absolutely right or wrong, and more about the reasoning being used to compare why certain situations are supervised or unsupervised. Encourage students to discuss with each other, especially if they disagree about a certain scenario. Students may be unsure about some scenarios, which is a good opportunity to clarify the differences between supervised and unsupervised learning as a full class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cycle through the next several slides and invite students to share their responses. This is an opportunity to have a discussion about each scenario and hear why students think certain scenarios are similar to supervised or unsupervised learning.\n\n**Discussion Goal:** These discussion are less about being absolutely right or wrong, and more about the reasoning being used to compare why certain situations are supervised or unsupervised. Encourage students to discuss with each other, especially if they disagree about a certain scenario. Students may be unsure about some scenarios, which is a good opportunity to clarify the differences between supervised and unsupervised learning as a full class."
       },
       "seeding_key": {
         "activity_section.key": "8d53e5a3-ea3d-4571-bc7e-d9d15e413b17",
@@ -660,7 +660,7 @@
       "key": "76be7c93-5dbd-466a-b14f-7b11d15da210",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _How are human learning and machine learning similar? How are they different?_\n\n**Discussion Goal:** This is an opportunity to summarize the learning from today and apply vocabulary correctly. While discussing, try to have students use the vocabulary from the lesson (feature, label, training, etc) correctly.\n\nHave students record their thoughts in their journals, and invite a few students to share their examples with the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How are human learning and machine learning similar? How are they different?_\n\n**Discussion Goal:** This is an opportunity to summarize the learning from today and apply vocabulary correctly. While discussing, try to have students use the vocabulary from the lesson (feature, label, training, etc) correctly.\n\nHave students record their thoughts in their journals, and invite a few students to share their examples with the class.",
         "name": "Journal\r",
         "tips": [
           {
@@ -678,7 +678,7 @@
       "key": "315f1e8d-bc3c-458c-91da-13f60c4a9887",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: _What are some examples we’ve seen so far in class of how AI is being used to solve problems? Or, what are some examples you might know of from outside of class?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _What are some examples we’ve seen so far in class of how AI is being used to solve problems? Or, what are some examples you might know of from outside of class?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -724,7 +724,7 @@
       "key": "90d03f67-0d11-41a2-8869-090488996b6e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day**:  How is AI helping to solve problems around the world?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day**:  How is AI helping to solve problems around the world?"
       },
       "seeding_key": {
         "activity_section.key": "90d03f67-0d11-41a2-8869-090488996b6e",
@@ -735,7 +735,7 @@
       "key": "da87f8e9-76da-44a0-8272-53149aad0e74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Problem Solving Process"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Problem Solving Process"
       },
       "seeding_key": {
         "activity_section.key": "da87f8e9-76da-44a0-8272-53149aad0e74",
@@ -758,7 +758,7 @@
       "key": "d9aa4779-198c-4d25-a6cd-cc8ccd984696",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Display the [r seeing_ai/csd-summer-puertorico-2024/unversioned]. Prompt students with the Questions to Consider before starting the video."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Display the [r seeing_ai/csd-summer-puertorico-2024/unversioned]. Prompt students with the Questions to Consider before starting the video."
       },
       "seeding_key": {
         "activity_section.key": "d9aa4779-198c-4d25-a6cd-cc8ccd984696",
@@ -769,7 +769,7 @@
       "key": "5ff68d3c-e924-45dd-b6d0-54a356c749a3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n\n* _What problems does this app help Andre solve?_\n* _What data does it use?_\n* _How does Andre interact with the app?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* _What problems does this app help Andre solve?_\n* _What data does it use?_\n* _How does Andre interact with the app?_"
       },
       "seeding_key": {
         "activity_section.key": "5ff68d3c-e924-45dd-b6d0-54a356c749a3",
@@ -791,7 +791,7 @@
       "key": "2387a05e-c15b-455d-985e-50e13112d837",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _What could be an unintended consequence of this app? For example, maybe it could be helpful and used in a different way to solve another problem. Or, maybe it could have unintended consequences that could be harmful for users?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What could be an unintended consequence of this app? For example, maybe it could be helpful and used in a different way to solve another problem. Or, maybe it could have unintended consequences that could be harmful for users?_"
       },
       "seeding_key": {
         "activity_section.key": "2387a05e-c15b-455d-985e-50e13112d837",
@@ -847,7 +847,7 @@
       "key": "5ea263ea-5f8c-4665-a82b-024efab1d486",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Display the instructions for the activity guide. Have students choose a topic they would like to research. They can change topics during class, but selecting one initially is helpful when starting their research."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the instructions for the activity guide. Have students choose a topic they would like to research. They can change topics during class, but selecting one initially is helpful when starting their research."
       },
       "seeding_key": {
         "activity_section.key": "5ea263ea-5f8c-4665-a82b-024efab1d486",
@@ -858,7 +858,7 @@
       "key": "e2836a51-cacd-4f46-97fd-47038234bf49",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/csd-summer-puertorico-2024/unversioned] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/csd-summer-puertorico-2024/unversioned] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
       },
       "seeding_key": {
         "activity_section.key": "e2836a51-cacd-4f46-97fd-47038234bf49",
@@ -880,7 +880,7 @@
       "key": "d6433507-71cd-459f-a2d4-a0bf51c759ab",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Have students begin filling out the back of their activity guide, where they will describe the innovation that they found. Remind students that the final question is their opinion based on their imagination or other experiences - it does not have to come from a video or news article."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students begin filling out the back of their activity guide, where they will describe the innovation that they found. Remind students that the final question is their opinion based on their imagination or other experiences - it does not have to come from a video or news article."
       },
       "seeding_key": {
         "activity_section.key": "d6433507-71cd-459f-a2d4-a0bf51c759ab",
@@ -902,7 +902,7 @@
       "key": "2e82421c-1e3f-4c6b-ae1f-2b834a65ed64",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Pair-Share:** Have students find one other person in the class. Each person takes turns describing the innovation that they found, summarizing their responses to the activity guide. This activity can be repeated several times, but students should have at least one other example of an AI innovation that isn’t their own."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pair-Share:** Have students find one other person in the class. Each person takes turns describing the innovation that they found, summarizing their responses to the activity guide. This activity can be repeated several times, but students should have at least one other example of an AI innovation that isn’t their own."
       },
       "seeding_key": {
         "activity_section.key": "2e82421c-1e3f-4c6b-ae1f-2b834a65ed64",
@@ -913,7 +913,7 @@
       "key": "d761f008-cf2b-4b4f-89c1-fd886f95833f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt**: _Describe one other AI innovation you heard about during today’s lesson. What problem was it solving? What data did it use?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _Describe one other AI innovation you heard about during today’s lesson. What problem was it solving? What data did it use?_"
       },
       "seeding_key": {
         "activity_section.key": "d761f008-cf2b-4b4f-89c1-fd886f95833f",
@@ -941,7 +941,7 @@
       "key": "ec9a2a55-7ab4-4696-ae7f-e74e36d9bb69",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we compared fruits based on how sweet they were and how easy they were to eat. What is another feature we could have used to compare foods?_\n\nHave students journal individually, then share with a neighbor before having several students share with the class",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we compared fruits based on how sweet they were and how easy they were to eat. What is another feature we could have used to compare foods?_\n\nHave students journal individually, then share with a neighbor before having several students share with the class",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -964,7 +964,7 @@
       "key": "ab9ebde7-2631-4445-8c24-f6e52c889dae",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first level has a Fruit Explorer widget, which recreates some of the experience students had yesterday classifying fruits and veggies by hand."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first level has a Fruit Explorer widget, which recreates some of the experience students had yesterday classifying fruits and veggies by hand."
       },
       "seeding_key": {
         "activity_section.key": "ab9ebde7-2631-4445-8c24-f6e52c889dae",
@@ -1003,7 +1003,7 @@
       "key": "e94fa8aa-185c-4f8a-bcdf-e0eda546012f",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Using the dropdowns to adjust the features, draw a line that creates a model that correctly classifies at least 80% of the fruits and 80% of the veggies. An example is provided of what this can look like.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the dropdowns to adjust the features, draw a line that creates a model that correctly classifies at least 80% of the fruits and 80% of the veggies. An example is provided of what this can look like.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1043,7 +1043,7 @@
       "key": "410d9292-a9ab-41f5-829b-259327ed29b6",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:** How can you use AI Lab to create an accurate machine learning model?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can you use AI Lab to create an accurate machine learning model?"
       },
       "seeding_key": {
         "activity_section.key": "410d9292-a9ab-41f5-829b-259327ed29b6",
@@ -1054,7 +1054,7 @@
       "key": "218c81de-be8f-4509-9917-d208adf4a965",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the the slide with the grid of 100 images",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the the slide with the grid of 100 images",
         "duration": "20",
         "name": "Recognizing Shapes"
       },
@@ -1089,7 +1089,7 @@
       "key": "f44975e5-261d-48b0-b494-1cee0585d051",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd-summer-puertorico-2024/unversioned]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd-summer-puertorico-2024/unversioned]",
         "tips": [
           {
             "type": "teachingTip",
@@ -1106,7 +1106,7 @@
       "key": "f6346ea8-a95a-4a2a-b01e-3112681c7937",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which has the shapes dataset preloaded. Point out the features that are included in the dataset especially if they match the predictions from the earlier discussion. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which has the shapes dataset preloaded. Point out the features that are included in the dataset especially if they match the predictions from the earlier discussion. ",
         "progression_name": "Recognizing Shapes"
       },
       "seeding_key": {
@@ -1118,7 +1118,7 @@
       "key": "509ba294-1ec4-432e-a73d-9d0de9226ef4",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd-summer-puertorico-2024/unversioned] (3:59) video as a class.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd-summer-puertorico-2024/unversioned] to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd-summer-puertorico-2024/unversioned] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd-summer-puertorico-2024/unversioned] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
         "tips": [
           {
             "type": "teachingTip",
@@ -1135,7 +1135,7 @@
       "key": "c669e865-4e7b-4959-839c-7db4d862ba7a",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
       },
       "seeding_key": {
         "activity_section.key": "c669e865-4e7b-4959-839c-7db4d862ba7a",
@@ -1163,7 +1163,7 @@
       "key": "6657d3d7-3565-4011-85ec-8d50c54fec2b",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _Training with all possible features created a model that was less accurate than just training on one feature. Why do you think this happened?_\n\n**Discussion Goal:** Students may have a hard time articulating this particular phenomenon, and it's okay to keep this discussion short and not come to a firm conclusions. Instead, use this brief brainstorm to transition to the next slide where it will be easier to explain how this happened.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Training with all possible features created a model that was less accurate than just training on one feature. Why do you think this happened?_\n\n**Discussion Goal:** Students may have a hard time articulating this particular phenomenon, and it's okay to keep this discussion short and not come to a firm conclusions. Instead, use this brief brainstorm to transition to the next slide where it will be easier to explain how this happened.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1180,7 +1180,7 @@
       "key": "9ed40c55-3530-42e4-9b56-43bb910a265f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the following slide, which has a picture of the shape that AI Bot identified incorrectly and a picture of the shape grid that was used to train AI Bot.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Looking at the training data, why did AI Bot think this small brown shape with a red border was a triangle?_\n\n**Discussion Goal:** Encourage students to refer to the training data and see patterns with each of these features individually. For example: \n- most small shapes in the training data were triangles with very few squares\n- most shapes with a red outline in the training data were triangles with very few squares\n- there aren't a lot of brown squares in the training data\n\nIf students don't notice these patterns explicitly, that's okay - you can summarize these observations in the remarks below."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide, which has a picture of the shape that AI Bot identified incorrectly and a picture of the shape grid that was used to train AI Bot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Looking at the training data, why did AI Bot think this small brown shape with a red border was a triangle?_\n\n**Discussion Goal:** Encourage students to refer to the training data and see patterns with each of these features individually. For example: \n- most small shapes in the training data were triangles with very few squares\n- most shapes with a red outline in the training data were triangles with very few squares\n- there aren't a lot of brown squares in the training data\n\nIf students don't notice these patterns explicitly, that's okay - you can summarize these observations in the remarks below."
       },
       "seeding_key": {
         "activity_section.key": "9ed40c55-3530-42e4-9b56-43bb910a265f",
@@ -1203,7 +1203,7 @@
       "key": "50ea5182-759f-469c-bf6e-65874494eedb",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the next slide, which introduces a new problem of creating recommendations based on user survey data. The class has been hired by a pizza restaurant to help figure out what customers like best based on the toppings they pick.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the next slide, which introduces a new problem of creating recommendations based on user survey data. The class has been hired by a pizza restaurant to help figure out what customers like best based on the toppings they pick.",
         "duration": "15",
         "name": "Restaurant Recommendations"
       },
@@ -1216,7 +1216,7 @@
       "key": "b6e7cbac-1695-4240-8b57-af5e8261a2a8",
       "position": 13,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. If they are on a different panel in AI Lab, they can use the bubbles at the top of their screen and click the next bubble to jump straight to the level.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. If they are on a different panel in AI Lab, they can use the bubbles at the top of their screen and click the next bubble to jump straight to the level.",
         "progression_name": "Pizza Recommendations"
       },
       "seeding_key": {
@@ -1228,7 +1228,7 @@
       "key": "931cc5b3-4a93-450e-aa19-25394345054f",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students train a model to with at least 80% accuracy using the pizza data. They should record their results on their activity guide."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students train a model to with at least 80% accuracy using the pizza data. They should record their results on their activity guide."
       },
       "seeding_key": {
         "activity_section.key": "931cc5b3-4a93-450e-aa19-25394345054f",
@@ -1256,7 +1256,7 @@
       "key": "b4267481-aae6-43db-a006-05e63334f156",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>   **Do This:** The final level has several choices for datasets that students can investigate. All of them are similar to the ones we just investigated, with different foods available that they can make recommendations for. Students should select a dataset, then investigate how they can train a recommendation model for their situation. They should also keep track of their model on their Activity Guide.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Do This:** The final level has several choices for datasets that students can investigate. All of them are similar to the ones we just investigated, with different foods available that they can make recommendations for. Students should select a dataset, then investigate how they can train a recommendation model for their situation. They should also keep track of their model on their Activity Guide.",
         "progression_name": "You Choose: Restaurant Recommendations",
         "tips": [
           {
@@ -1274,7 +1274,7 @@
       "key": "1a93f186-9bc5-40d2-8244-83f04928c75c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {
@@ -1297,7 +1297,7 @@
       "key": "190b8127-ccab-4816-9bce-cb38a94a01e3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _How many colors are in the image below? Try finding “yellow”. Where does it start? Where does it end?_\r\n\r\nAllow students to share their ideas with a neighbor before sharing with the class. Students will probably have different opinions about where yellow “starts” and “stops” - encourage several students to share their descriptions. It’s okay to not come to a consensus - the main purpose of the discussion is to motivate the following prompt.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _If you could teach a computer to separate the colors, how would you do it?_\r\n\r\nHave a few students share their ideas with the class, building off of the language they used in the last prompt. There is no right answer here - it’s more important for students to generate ideas and practice describing a process to a computer.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with today’s vocabulary on it:\r\n\r\n- **Classification:** predicting a category based on other features.\r\n- **Categorical Data:** data that can be separated into groups.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _How many colors are in the image below? Try finding “yellow”. Where does it start? Where does it end?_\r\n\r\nAllow students to share their ideas with a neighbor before sharing with the class. Students will probably have different opinions about where yellow “starts” and “stops” - encourage several students to share their descriptions. It’s okay to not come to a consensus - the main purpose of the discussion is to motivate the following prompt.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If you could teach a computer to separate the colors, how would you do it?_\r\n\r\nHave a few students share their ideas with the class, building off of the language they used in the last prompt. There is no right answer here - it’s more important for students to generate ideas and practice describing a process to a computer.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with today’s vocabulary on it:\r\n\r\n- **Classification:** predicting a category based on other features.\r\n- **Categorical Data:** data that can be separated into groups.",
         "name": "Journal\r"
       },
       "seeding_key": {
@@ -1321,7 +1321,7 @@
       "key": "70442fd7-b8da-455f-9850-c38b2f89e40f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Question of the Day:**  How do computers learn to classify data?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  How do computers learn to classify data?"
       },
       "seeding_key": {
         "activity_section.key": "70442fd7-b8da-455f-9850-c38b2f89e40f",
@@ -1332,7 +1332,7 @@
       "key": "222e1140-8b0b-45f5-af03-a3c4c9090c61",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Let’s say you go to a friend’s house and they make a meal that you’ve never eaten before, so you’re not sure if you’ll like it or dislike it. What are some qualities you look for in foods that you think help decide whether you’ll like it or dislike it?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Let’s say you go to a friend’s house and they make a meal that you’ve never eaten before, so you’re not sure if you’ll like it or dislike it. What are some qualities you look for in foods that you think help decide whether you’ll like it or dislike it?",
         "name": "Creating Our Model\r"
       },
       "seeding_key": {
@@ -1378,7 +1378,7 @@
       "key": "11a27318-c05a-48b4-a7e9-773592a5b4de",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** Pass out a copy of the Fruit or Veggie Worksheet to each student. Pass out a set of Fruit and Veggies Cards to each group of students. If possible, have the cards cut-out ahead of time to make it easier to share between students in the same group.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out a copy of the Fruit or Veggie Worksheet to each student. Pass out a set of Fruit and Veggies Cards to each group of students. If possible, have the cards cut-out ahead of time to make it easier to share between students in the same group.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1395,7 +1395,7 @@
       "key": "b224355d-6661-4cf2-8094-630360d3252e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show students the directions for this task and walk through them with students. Point out that students will need to use the food cards to create the points on their graphs."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the directions for this task and walk through them with students. Point out that students will need to use the food cards to create the points on their graphs."
       },
       "seeding_key": {
         "activity_section.key": "b224355d-6661-4cf2-8094-630360d3252e",
@@ -1444,7 +1444,7 @@
       "key": "2d24cf03-3f1c-48fb-b5e2-24d4e93a2e10",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>   **Display:** Show students the example graph that you get when using only the recommended values. Point out that it appears that fruits and veggies seem to naturally group together. Ask students to raise their hands if their graphs also have fruits and vegetables clustered together.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** Show students the example graph that you get when using only the recommended values. Point out that it appears that fruits and veggies seem to naturally group together. Ask students to raise their hands if their graphs also have fruits and vegetables clustered together.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1473,7 +1473,7 @@
       "key": "5d2efcba-d72a-4aa8-9a6a-0522af3fc466",
       "position": 12,
       "properties": {
-        "description": "**Model:** Demonstrate on the slide how there are many different lines you could draw that separate the graph into a fruit-side and a veggie side. The most important factors to consider are that you have as many fruits as you can on one side, and as many vegetables as you can on the other. As a class, decide on a line you want to use to divide the example graph on the slides and draw it in.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students draw their own line to split the graph into a fruits side and a veggies side."
+        "description": "**Model:** Demonstrate on the slide how there are many different lines you could draw that separate the graph into a fruit-side and a veggie side. The most important factors to consider are that you have as many fruits as you can on one side, and as many vegetables as you can on the other. As a class, decide on a line you want to use to divide the example graph on the slides and draw it in.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students draw their own line to split the graph into a fruits side and a veggies side."
       },
       "seeding_key": {
         "activity_section.key": "5d2efcba-d72a-4aa8-9a6a-0522af3fc466",
@@ -1502,7 +1502,7 @@
       "key": "a95e535a-30fe-4ab1-809a-e4987cbaab07",
       "position": 14,
       "properties": {
-        "description": "**Display:** The next several slides have different foods to test against the model. These examples have been designed to motivate certain conversations. Have students keep track of how many examples their models get correct and incorrect.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display - Raspberry & Pumpkin:** These two examples are designed to match the expectations of the model. Most students’ models should correctly identify the Raspberry as a fruit and the pumpkin as a vegetable.",
+        "description": "**Display:** The next several slides have different foods to test against the model. These examples have been designed to motivate certain conversations. Have students keep track of how many examples their models get correct and incorrect.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Raspberry & Pumpkin:** These two examples are designed to match the expectations of the model. Most students’ models should correctly identify the Raspberry as a fruit and the pumpkin as a vegetable.",
         "name": "Testing Our Model\r"
       },
       "seeding_key": {
@@ -1524,7 +1524,7 @@
       "key": "7be6fff1-7067-4b05-a3de-cb6e810e12e8",
       "position": 16,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>   **Display - Tomato and Cucumber:** These two examples are more ambiguous and, even within your classroom, students may not know whether these are fruits or vegetables. Both of these items are technically fruits because they contain seeds, but are usually used as vegetables when making foods. Ask the class to share how their models classified these items, noting that students may have different answers depending on how they drew their lines.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display - Tomato and Cucumber:** These two examples are more ambiguous and, even within your classroom, students may not know whether these are fruits or vegetables. Both of these items are technically fruits because they contain seeds, but are usually used as vegetables when making foods. Ask the class to share how their models classified these items, noting that students may have different answers depending on how they drew their lines.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1541,7 +1541,7 @@
       "key": "be06804b-dc7a-4795-afb4-903860e57df1",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** _Without looking at anyone else’s paper, why do you think some people got different answers than others?_"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Without looking at anyone else’s paper, why do you think some people got different answers than others?_"
       },
       "seeding_key": {
         "activity_section.key": "be06804b-dc7a-4795-afb4-903860e57df1",
@@ -1563,7 +1563,7 @@
       "key": "aca4e05f-bdda-4bac-aa30-f12ba6b5ce19",
       "position": 19,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display - Lemon and Sweet Potato:** These two examples are intentionally designed to be incorrect. Students will likely misclassify these two items - their model will think a lemon is a vegetable and that a sweet potato is a fruit."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Lemon and Sweet Potato:** These two examples are intentionally designed to be incorrect. Students will likely misclassify these two items - their model will think a lemon is a vegetable and that a sweet potato is a fruit."
       },
       "seeding_key": {
         "activity_section.key": "aca4e05f-bdda-4bac-aa30-f12ba6b5ce19",
@@ -1586,7 +1586,7 @@
       "key": "3847af6f-5959-41fe-b4cd-fcc6551f714f",
       "position": 21,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display - Ice Cream and Flaming Hot Cheetos:** These two examples are deliberately silly and fun, and you should lean-in to how the model will likely classify Ice Cream as a fruit and Flaming Hot Cheetos as a vegetable."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Ice Cream and Flaming Hot Cheetos:** These two examples are deliberately silly and fun, and you should lean-in to how the model will likely classify Ice Cream as a fruit and Flaming Hot Cheetos as a vegetable."
       },
       "seeding_key": {
         "activity_section.key": "3847af6f-5959-41fe-b4cd-fcc6551f714f",
@@ -1609,7 +1609,7 @@
       "key": "0d42bcae-5132-4368-9d95-84433e73585b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down the process we went through today to create a model and use it into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down the process we went through today to create a model and use it into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
         "name": "Journal\r"
       },
       "seeding_key": {

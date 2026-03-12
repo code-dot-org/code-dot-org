@@ -946,7 +946,7 @@
       "key": "b6414fba-eaf2-44ae-b558-d7fbcc9d8b56",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Share the section Join URL with students and tell them to navigate to it to join your section.  It will look something like what's shown at right.\n\n* You can confirm that a student successfully joined your section by having the section progress page on the Teacher Home Page open and hitting refresh as students join."
       },
       "seeding_key": {
         "activity_section.key": "b6414fba-eaf2-44ae-b558-d7fbcc9d8b56",
@@ -961,7 +961,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The slide icon <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \n"
+            "markdown": "The slide icon <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> indicates that there is a slide in the unit slide deck that corresponds to this activity or prompt. \n"
           }
         ]
       },
@@ -1027,7 +1027,7 @@
       "key": "c251fa8a-239a-4ad6-8550-8823d6c69285",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\""
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** What’s something that you know a lot about? Something that you could teach somebody?\""
       },
       "seeding_key": {
         "activity_section.key": "c251fa8a-239a-4ad6-8550-8823d6c69285",
@@ -1076,7 +1076,7 @@
       "key": "ab22da6e-0498-41d8-bd63-15d78ecbae9a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Place students in small groups."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in small groups."
       },
       "seeding_key": {
         "activity_section.key": "ab22da6e-0498-41d8-bd63-15d78ecbae9a",
@@ -1100,7 +1100,7 @@
       "key": "d244cf6c-dc48-4ab1-87f3-bd25c7c39e02",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Go around the group, and for each individual's area of interest:\r\n\r\n1. Identify some way that technology is used with, or affects that thing\r\n\r\n2. Make a suggestion for either:\r\n\r\n\t* a way that technology might be improved to make it better, faster, easier to use \r\n\t* a creative or innovative new technology that might help solve some problem within that area, or at least make better\r\n\r\nEveryone in the group should make suggestions for any of the areas of interest in your group.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Go around the group, and for each individual's area of interest:\r\n\r\n1. Identify some way that technology is used with, or affects that thing\r\n\r\n2. Make a suggestion for either:\r\n\r\n\t* a way that technology might be improved to make it better, faster, easier to use \r\n\t* a creative or innovative new technology that might help solve some problem within that area, or at least make better\r\n\r\nEveryone in the group should make suggestions for any of the areas of interest in your group.",
         "name": "Brainstorm Technological Innovation\r"
       },
       "seeding_key": {
@@ -1141,7 +1141,7 @@
       "key": "1de38e7c-1b1d-4bdf-b81c-eb1aef195a1e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** As a group, nominate the idea you've discussed that you think would be the most interesting to everyone else in the class. Start to sketch out that idea on a poster. Make a visual representation of your ideas."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** As a group, nominate the idea you've discussed that you think would be the most interesting to everyone else in the class. Start to sketch out that idea on a poster. Make a visual representation of your ideas."
       },
       "seeding_key": {
         "activity_section.key": "1de38e7c-1b1d-4bdf-b81c-eb1aef195a1e",
@@ -1152,7 +1152,7 @@
       "key": "df8a816e-641f-4d1f-a71c-b2bdd0c01fda",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Share:** Do a \"Gallery Walk\" or a whip around so that each student can see all of the other students' work.\r\n\r\n* Put prototype posters on the wall\r\n* Give students time to survey the various posters",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Do a \"Gallery Walk\" or a whip around so that each student can see all of the other students' work.\r\n\r\n* Put prototype posters on the wall\r\n* Give students time to survey the various posters",
         "name": "Share Prototypes\r"
       },
       "seeding_key": {
@@ -1193,7 +1193,7 @@
       "key": "891dfbe2-f206-49a5-a17f-aec122865555",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Play [Computer Science is Changing Everything](https://www.youtube.com/watch?v=QvyTEx1wyOY)",
         "progression_name": "Computer Science is Changing Everything"
       },
       "seeding_key": {
@@ -1205,7 +1205,7 @@
       "key": "1930ad12-0142-4924-96a8-f9ab49be4ae5",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What are you excited to learn about in this course?*\n\n**Discussion Goal:** Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What are you excited to learn about in this course?*\n\n**Discussion Goal:** Students can discuss in small groups and then share out with the whole class. It's ok if at this point students don't have an answer to this prompt. \n"
       },
       "seeding_key": {
         "activity_section.key": "1930ad12-0142-4924-96a8-f9ab49be4ae5",
@@ -1269,7 +1269,7 @@
       "key": "83f61af8-6f33-4b8f-be96-08f712195775",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** What is your definition of information?\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** What is your definition of information?\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1315,7 +1315,7 @@
       "key": "9acd1632-1b07-453c-abd4-e9a2e4c54c76",
       "position": 1,
       "properties": {
-        "description": "**Group:** Place students in groups of two.\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Materials for students to build their binary message devices (straws, scissors, etc.).",
+        "description": "**Group:** Place students in groups of two.\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Materials for students to build their binary message devices (straws, scissors, etc.).",
         "name": "Information Sending Devices\r"
       },
       "seeding_key": {
@@ -1339,7 +1339,7 @@
       "key": "f1e87fb8-e7a1-48a8-b8c9-cc3f2554dd13",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Journal:** Write down a question that has two possible answers.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Write down a question that has two possible answers.",
         "name": "Challenge #1:\r"
       },
       "seeding_key": {
@@ -1351,7 +1351,7 @@
       "key": "5b709bfb-a476-4c94-ac6a-966c2ce0b691",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Build a device out of classroom supplies to communicate the answer to your question. \r\n\r\n* Rules: \r\n\t* No projectiles.\r\n\t* No language can be used.\r\n\t\t* For example: If my question is \"Is your favorite color blue or green?\" I can't write the words blue and green on my device.  \t \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** After students have completed their devices, choose a few groups to demonstrate their device in action. Students stand on opposite sides of the classroom. One student asks the agreed upon question. The other student uses the device to communicate the answer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Build a device out of classroom supplies to communicate the answer to your question. \r\n\r\n* Rules: \r\n\t* No projectiles.\r\n\t* No language can be used.\r\n\t\t* For example: If my question is \"Is your favorite color blue or green?\" I can't write the words blue and green on my device.  \t \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** After students have completed their devices, choose a few groups to demonstrate their device in action. Students stand on opposite sides of the classroom. One student asks the agreed upon question. The other student uses the device to communicate the answer."
       },
       "seeding_key": {
         "activity_section.key": "5b709bfb-a476-4c94-ac6a-966c2ce0b691",
@@ -1362,7 +1362,7 @@
       "key": "a409f54e-cafd-4968-a074-7ee66eaf2e9e",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Modify the answer to your question so there are now four possible answers. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Update your device to communicate one of four possible answers to your question. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Again, choose groups to demonstrate their updated devices.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Modify the answer to your question so there are now four possible answers. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Update your device to communicate one of four possible answers to your question. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Again, choose groups to demonstrate their updated devices.",
         "name": "Challenge #2:\r"
       },
       "seeding_key": {
@@ -1374,7 +1374,7 @@
       "key": "d0f39be7-740e-43b1-a77e-3d407bbd8322",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Modify the answers to your question so there are now eight possible choices. \r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Update your device to communicate one of eight possible answers to your question.\r\n\r\n* Consider: \r\n\r\n\t* Should you modify your device?\r\n\t* Can you use it in a different way?\r\n\t* Should you make a new device?\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Demo:** Do a final demonstration of devices before ending the activity.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Modify the answers to your question so there are now eight possible choices. \r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Update your device to communicate one of eight possible answers to your question.\r\n\r\n* Consider: \r\n\r\n\t* Should you modify your device?\r\n\t* Can you use it in a different way?\r\n\t* Should you make a new device?\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Demo:** Do a final demonstration of devices before ending the activity.",
         "name": "Challenge #3:\r",
         "tips": [
           {
@@ -1404,7 +1404,7 @@
       "key": "d77a6213-8bd0-4773-aa1e-d8cf1c53f0e6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Think back to your simple two-option device from Challenge #1. Instead of changing your device and adding more options every time you added more answers, how could you simply modify the way you use your device with only two options?*\n\n**Discussion Goal:** Focus the discussion on why some groups created devices using unique options for each additional message, while other groups devised plans in which they reused the same device to create new combinations of the original two options. \n\nUltimately, groups begin to notice that, for example: instead of bending a straw in four different directions, they could simply bend the straw the same two ways multiple times.\n\n* Sample Question: Do you like strawberry, chocolate, vanilla, or peanut butter ice cream?\n* Answers: strawberry (bend straw forward once), chocolate (bend straw forward twice), vanilla (bend straw backwards once), peanut butter (bend straw backwards twice)\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Think back to your simple two-option device from Challenge #1. Instead of changing your device and adding more options every time you added more answers, how could you simply modify the way you use your device with only two options?*\n\n**Discussion Goal:** Focus the discussion on why some groups created devices using unique options for each additional message, while other groups devised plans in which they reused the same device to create new combinations of the original two options. \n\nUltimately, groups begin to notice that, for example: instead of bending a straw in four different directions, they could simply bend the straw the same two ways multiple times.\n\n* Sample Question: Do you like strawberry, chocolate, vanilla, or peanut butter ice cream?\n* Answers: strawberry (bend straw forward once), chocolate (bend straw forward twice), vanilla (bend straw backwards once), peanut butter (bend straw backwards twice)\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d77a6213-8bd0-4773-aa1e-d8cf1c53f0e6",
@@ -1439,7 +1439,7 @@
       "key": "b51f1190-485e-4f1f-8f27-f810daf6bb09",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How many ways can you represent 7?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How many ways can you represent 7?*"
       },
       "seeding_key": {
         "activity_section.key": "b51f1190-485e-4f1f-8f27-f810daf6bb09",
@@ -1486,7 +1486,7 @@
       "key": "c7834364-2374-4b8a-a4cb-4d7ddcc27c4c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** With a partner, work out how many different pieces of information (made of up of circles and squares) you can represent with three place values. For example: `circle-circle-circle` and `circle-square-circle` can represent two different pieces of information. \r\n\r\n**Discuss:** Give students time to work individually, then have them share with their neighbor and fill in any patterns they may have missed.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Confirm with the class that there are 8 possible patterns, but don't list all of them out. Ask students to share the 7th pattern in their list. Students will likely have different answers for this."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** With a partner, work out how many different pieces of information (made of up of circles and squares) you can represent with three place values. For example: `circle-circle-circle` and `circle-square-circle` can represent two different pieces of information. \r\n\r\n**Discuss:** Give students time to work individually, then have them share with their neighbor and fill in any patterns they may have missed.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Confirm with the class that there are 8 possible patterns, but don't list all of them out. Ask students to share the 7th pattern in their list. Students will likely have different answers for this."
       },
       "seeding_key": {
         "activity_section.key": "c7834364-2374-4b8a-a4cb-4d7ddcc27c4c",
@@ -1509,7 +1509,7 @@
       "key": "b70e5b58-1a5b-4770-b5f9-76de7458bf5e",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:**  [r circle_square_patterns/csp/2025] - one for each group. Each group also gets the [r shape_cutouts/csp/2025] to use during the activity.\r\n\r\n\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
+        "description": "**Group:** Place students in groups of 2, making one group of 3 if necessary\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:**  [r circle_square_patterns/csp/2025] - one for each group. Each group also gets the [r shape_cutouts/csp/2025] to use during the activity.\r\n\r\n\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Challenge #1:** Students again list all possible three place value patterns, but with an added focus on the order of their patterns.",
         "name": "Circle Square Activity (25 minutes) \r"
       },
       "seeding_key": {
@@ -1549,7 +1549,7 @@
       "key": "aa95dd7f-aef8-40cb-82b2-7b8de5913280",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Select a few groups to share out their rules, highlighting groups with different strategies and rules they used for their lists. Emphasize the 7th item in each list, connecting it back to the warm-up activity as another way to represent the number 7.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1578,7 +1578,7 @@
       "key": "0b3be35c-d2c8-4bcc-b842-96c7d7c731bb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How is counting in this circle/square system similar to how we count in our regular lives? How is it different?*\n\n**Discussion Goal:** \n* Similar: It follows agreed-upon rules\n* Different: Uses shapes rather than numbers\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How is counting in this circle/square system similar to how we count in our regular lives? How is it different?*\n\n**Discussion Goal:** \n* Similar: It follows agreed-upon rules\n* Different: Uses shapes rather than numbers\n"
       },
       "seeding_key": {
         "activity_section.key": "0b3be35c-d2c8-4bcc-b842-96c7d7c731bb",
@@ -1613,7 +1613,7 @@
       "key": "696673ca-4703-45a7-a154-c0f3bc20b086",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Yesterday, you created your own number system using circles and squares. What can we communicate using only two symbols?  Is there a limit?*\n\nStudents should quietly write an answer, then share with a partner, then discuss with the whole class.\n\n**Discussion Goal:**  In previous lessons, students represented information using two options.  This is a quick-thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Yesterday, you created your own number system using circles and squares. What can we communicate using only two symbols?  Is there a limit?*\n\nStudents should quietly write an answer, then share with a partner, then discuss with the whole class.\n\n**Discussion Goal:**  In previous lessons, students represented information using two options.  This is a quick-thinking question to tap into students’ prior knowledge and experiences.  Once students have mentioned a few of the points below, they can move on.\n\n* The answer to a yes/no or true/false question\n* Flipping a switch on/off\n* Combinations of yes/no answers by using multiple symbols in a row\n* We can keep adding more of the same symbols, so the only limit is how much space we have to write or store those symbols\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1630,7 +1630,7 @@
       "key": "2cf24ec9-7152-4c84-972d-02db19266296",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) |![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](https://images.code.org/b5bd1b6994a0a376858cfd8231ed8260-CSP-Unit-1-1.png) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>   \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Use the activity slides for this lesson to introduce students to the binary number system.  Use the presenter notes as a guide to explaining how the shapes we used in the previous lesson relate to binary numbers. These slides use a lot of animations. \n\nLook for this symbol on the slides to show when animation plays when presenting the slides: ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png). Make sure to preview the slides before class. \n\n| Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Speaker Notes |\n|---|---|\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information0_ZTRvGAG.svg) |  **Say:** Today we are going to explore how Binary Numbers work.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-01_D8Nnv9y.svg) | **Say:** With only one place value, we only have two possible patterns: circle or square. <br><br> ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation**<br><br> **Say:** I started with circle, but we could have easily started with square instead.   |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information2.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** With two place values, we can make two sets of the previous patterns. Then, insert circles in front of the first set and squares in front of the second set. This makes four possible patterns.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information3.svg) |![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** For three place value patterns, we can make two copies of the two place value patterns. Then, just like we did before, fill in the first set with circles in front and the second set with squares in front. This makes 8 arrangements. <br><br> **Note:** Computer scientists like to start counting at 0! |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information4.svg) | **Say:** Instead of two shapes, what if we had 10 shapes? |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information-00.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** We could use more geometric shapes, or we could use letters, but the shapes we are used to are the numbers 0 through 9. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information6.svg) | **Say:** With two places, we have one hundred 2-shape patterns. These are the numbers 00 through 99. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** | \n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information7.svg) | **Say:** What happens when we count up to the last shape? <br><br> **Do This:** Quick quiz! What comes after this number? |\n| ![](https://images.code.org/b5bd1b6994a0a376858cfd8231ed8260-CSP-Unit-1-1.png) | **Say:** 100! When we run up to the last shape, 9, we roll over back to 0 and add one in the next place to the left. This is the place value that we have used all our lives. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information9.svg) | **Say:** Where is this heading? ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information10.svg) | **Say:** Binary is a number system with two shapes. ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information11.svg) | ![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation** <br><br> **Say:** Instead of shapes, we use 0's and 1's. In this example, each pattern maps to a decimal number from 0 to 7.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information12.svg) | **Say:** For today's activity, you will be creating your own Flippy Do. This is a tool that will allow you to quickly and easily translate between the decimal number base we are used to as humans and the binary number base that computers use. <br><br> **Distribute:** Hand out the Flippy Do templates - one per student. <br><br> **Do This:** Lead students through completing their Flippy Do's using the slide as a guide.  |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information16.svg) | **Say:** Each place value represents one \"bit\" which is short for \"binary digit\". A binary digit can be a zero or a one. Your flippy do has eight \"bits\". <br><br>![](https://curriculum.code.org/media/uploads/animation.png) **Click through animation** <br><br> **Say:** Together, eight place values, or \"bits\", makes up one \"byte\". Since computers represent information digitally, the lowest level components of information are bits. |\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information14.svg) | **Do This:** Use your Flippy Do to try out these six problems. <br><br> **Note:** It may be necessary to demonstrate how values can be calculated by flipping up a “1” for each value required to arrive at the sum of values equal to the decimal number.<br><br>For example, To convert the decimal number 10, I would flip up a one in the 8's position, because eight can fit in 10 (The next bit to the left is 16, which is too big). Then I have 2 left. I flip up a one in the 2's position. This gives me the binary number \"1010\", which means 10 in decimal.<br><br>If students are having a difficult time understanding the rules of the system, remind them of the concept of place value and relate to base 10. <br><br>| ![]![](https://images.code.org/579606a15f67ab8ce3b77bff7d594495-circle_new.png) **Click through animation to see answers.**\n| ![](https://curriculum.code.org/media/uploads/CSP-Unit-1---Digital-Information15.svg) | **Say:** Let's continue to practice with our own two number bases, decimal and binary. After you finish each of the four parts of the Activity Guide, I want you to check your work with your partner. Feel free to use your Flippy Do as you work. <br><br>**Distribute:** Activity Guide <br><br>**Note:** Encourage students to use their Flippy Do as a resource. <br><br><ul><li> **Challenge 1 - All 4-bit Numbers:** Students should produce all binary numbers with a length of 4 bits, from 0000 to 1111. They should see that all odd numbers end in 1 and even numbers end in 0. Students may also notice that the binary digits increasingly “roll-over” to 1’s (from right to left) as numbers become larger and larger.</li><li> **Challenge 2 - Binary Numbers with Exactly One 1:**  The goal here is for students to systematically find all binary numbers that have all zeros, except for one bit. Students should notice that the resulting decimal values are all powers of 2.</li><li>**Challenge 3 - Conversion Practice:** This section gives students more practice converting between number bases. The last two decimal numbers, 256 and 513, are too big to represent using the Flippy Do, however students should make the connection that more bits could be added to the left of the Flippy Do using increasing powers of 2.</li><li> **Challenge 4 - Putting it all Together:**   The last four questions on the Activity Guide ask students to apply their understanding to new situations. The first two questions ask students to describe what happens to the value when 0’s are added to the left or right of a binary number. The last two questions ask students to think about how many bits are required to represent specific values in binary.</li></ul> <br><br> **Note:** As you circulate, take an opportunity to be a Lead Learner. Help students discover the items below using the suggested questions:<br><br><ul><li>**Reading a number vs. Placing a Number:** Do we fill in the places on the Flippy Do starting on the left or right? Does it matter? (Yes. If we have a 5-bit number, we actually use the 5 bits on the far right. If we were to use the bits on the far left, this changes the value of the number. This is similar to adding more zeros to a decimal number.)</li><li>**Highest value possible with a given number of bits:** What is the largest number we can make with 4 bits? Is the last number we can make always odd? (A meaningful pattern is that we can count as high as one less than the next bit on the left. If we have four bits, we can count up to the number 15, because the next bit has a value of 16.) </li><li>**Number of numbers we can make:** How many total unique numbers are possible with 4 bits? (This is a base 2 number system. With each new bit, we double the amount of unique numbers we can make. With four bits, we can make the decimal numbers 0 to 15 (0000 to 1111), for a total of 16 unique numbers.)</li></ul>   \n"
       },
       "seeding_key": {
         "activity_section.key": "2cf24ec9-7152-4c84-972d-02db19266296",
@@ -1660,7 +1660,7 @@
       "key": "7c4fffac-394b-4f2e-9950-096dc1cdb7bc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  It's important to know the differences between binary and decimal number systems. As a review, the decimal number system is base-10. There are ten different symbols used to represent numbers (0-9). The binary numbers system is base-2. There are two different symbols used to represent numbers (0-1). Using our Flippy Do, we can convert between Binary and Decimal number systems.While it is easier for humans to use the decimal number system in our everyday lives, we will see later in this unit how electrical signals inside computers can be best represented by using the the binary number system.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  It's important to know the differences between binary and decimal number systems. As a review, the decimal number system is base-10. There are ten different symbols used to represent numbers (0-9). The binary numbers system is base-2. There are two different symbols used to represent numbers (0-1). Using our Flippy Do, we can convert between Binary and Decimal number systems.While it is easier for humans to use the decimal number system in our everyday lives, we will see later in this unit how electrical signals inside computers can be best represented by using the the binary number system.",
         "remarks": true,
         "tips": [
           {
@@ -1678,7 +1678,7 @@
       "key": "bf14e100-701d-47f7-9eab-7ec4aa55fa30",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Vocabulary Canvas:** Use the slides to walk your class through how to add to the Vocabulary Canvas pages in their journals. The slides include examples taken from this lesson.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary Canvas:** Use the slides to walk your class through how to add to the Vocabulary Canvas pages in their journals. The slides include examples taken from this lesson.\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1736,7 +1736,7 @@
       "key": "5804e6da-dfe1-4ad0-8018-86c9ca1b078e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.*\n\n* *What’s the largest amount of change that you can give someone?* \n* *What’s the least?* \n* *What would you do if someone needed 7 cents in change?*\n\n**Discussion Goal:** Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in-between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you work at a local store. In the register all you have are nine $10 bills, nine $1 bills, and nine dimes.*\n\n* *What’s the largest amount of change that you can give someone?* \n* *What’s the least?* \n* *What would you do if someone needed 7 cents in change?*\n\n**Discussion Goal:** Today we’re going to explore what happens when you don’t have the right “places” to store information. This can happen when you try to store very large numbers, very small ones, and everything in-between! The goal of the prompt is to understand the very real problem of making sure that enough place values are available to represent numbers. \n\n* The largest amount of change you can give someone is $99.90. \n* The least change you can give is $0.10. \n* You can’t give someone $0.07. You also can’t give someone $1.25 in change (because you have no nickels!) \n \nAt both extremes of the number range, large and small -- and in-between numbers -- you are unable to build some numbers because you don’t have the place values to do so.\n"
       },
       "seeding_key": {
         "activity_section.key": "5804e6da-dfe1-4ad0-8018-86c9ca1b078e",
@@ -1747,7 +1747,7 @@
       "key": "2eb1d8c2-0e4e-424f-a95a-ebb41618f2d1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Place students in groups of two. Groups will need one computer per group."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in groups of two. Groups will need one computer per group."
       },
       "seeding_key": {
         "activity_section.key": "2eb1d8c2-0e4e-424f-a95a-ebb41618f2d1",
@@ -1778,7 +1778,7 @@
       "key": "5e947f13-b183-463c-af26-9d89be80cb5f",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to Level 1 and play with the odometer to figure out how it works. \n\n**Circulate:** Give students two to three minutes to explore the odometer.",
         "progression_name": "Widget: Binary Odometer"
       },
       "seeding_key": {
@@ -1802,7 +1802,7 @@
       "key": "74189083-c48a-49b2-b850-febadf4a41b5",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Instruct students to set the binary odometer to the highest number possible. Then let it run!"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to set the binary odometer to the highest number possible. Then let it run!"
       },
       "seeding_key": {
         "activity_section.key": "74189083-c48a-49b2-b850-febadf4a41b5",
@@ -1813,7 +1813,7 @@
       "key": "a84657e7-e164-42ee-8958-7f8531dc3df2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n* *What happens to the odometer reading?*\n* *Does the odometer still show the distance driven by the car?*\n\n\n**Discussion Goal:** When the odometer turns over -- exceeds the number of place values it can physically display -- the odometer reading correctly shows all but one number in its place value positions. \n\nFor example: \n\n![](https://curriculum.code.org/media/uploads/binary1.png)\n\nAfter the odometer turns over:\n\n![](https://curriculum.code.org/media/uploads/binary3.png)\n\nAs you can see, all the numbers should flip to 0 and the one of the left should flip to 1. But we are out of place values! So the numbers flip to 0, but nothing flips to 1. The number we are trying to represent does not fit in the number of bits we have available to accurately display it.\n\nLike a bathtub that has reached its maximum capacity for holding water and is now overflowing, the odometer has reached its maximum capacity and has reached **overflow**. \n",
         "progression_name": "Check For Understanding - Overflow",
         "tips": [
           {
@@ -1845,7 +1845,7 @@
       "key": "b9395886-3d16-4bbf-a2e6-edd23ccf5f5f",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Use this conversation to show that we can always add bits to represent more numbers but when working with a set number of bits, at some point we will run into overflow if we try to represent large enough values.\n* Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s. \n* With the Flippy Do, trying to represent the number 256 will cause an overflow. One common adaptation students will come up with is adding an additional column/bit to the Flippy Do to be able to represent that number. For a 9-bit Flippy Do, the first number that will cause overflow is 512. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What value would cause your Flippy Do to overflow?*\n\n* *What adaptation could you make to the Flippy Do to represent that value?*\n\n* *Using your newly adapted Flippy Do, how many total numbers can be represented?*\n\n**Discussion Goal:** Use this conversation to show that we can always add bits to represent more numbers but when working with a set number of bits, at some point we will run into overflow if we try to represent large enough values.\n* Look for students to physically model overflow using the Flippy Do, going from when all of the 1s are flipped up to the next number causing all the 1s to reset to 0s. \n* With the Flippy Do, trying to represent the number 256 will cause an overflow. One common adaptation students will come up with is adding an additional column/bit to the Flippy Do to be able to represent that number. For a 9-bit Flippy Do, the first number that will cause overflow is 512. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1876,7 +1876,7 @@
       "key": "e604772c-64f4-4355-bfea-086736a34a1b",
       "position": 10,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop. \n\n**Note**: _There is an optional half-page activity guide with this chart that you can provide to students, if desired._\n\n\n",
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students work in pairs on setting the four prices for their candy shop. \n\n**Note**: _There is an optional half-page activity guide with this chart that you can provide to students, if desired._\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1893,7 +1893,7 @@
       "key": "bf02e5b1-3d3c-4ee3-aa7d-8bad97dc0c05",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systems.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n* *How did you go about deciding which binary number to use for each price?*\n\n* *In your system, who pays the difference between the true price and the value stored in your computer system: the shop owner or the customer?*\n\n**Discussion Goal:** Use this discussion to highlight that the Flippy Do doesn't have the precision needed to represent these fractional values and in that case, decisions must be made on how to represent those values. In this case, those decisions impact who ends up benefitting when it comes to the price of each candy. You could ask you students to compare different systems.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1910,7 +1910,7 @@
       "key": "639d4af4-69a5-4c54-a71f-1c1f20d74771",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What problems could come from having both of these two types of scales in single one of your stores?* \n\n**Discussion Goal:** Use this discussion to highlight the importance of precision. The customers and shop owners are depending on a given amount of candy always having the same price. Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.   "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What problems could come from having both of these two types of scales in single one of your stores?* \n\n**Discussion Goal:** Use this discussion to highlight the importance of precision. The customers and shop owners are depending on a given amount of candy always having the same price. Computers rely on precision. Think of a calculator. We depend on 1+1 always equaling 2. Rounding is necessary because of the limits of bits, but can lead to errors.   "
       },
       "seeding_key": {
         "activity_section.key": "639d4af4-69a5-4c54-a71f-1c1f20d74771",
@@ -1921,7 +1921,7 @@
       "key": "92358472-3b4b-4ff1-a4fe-9f57eb2f3c5d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the information on the first wrapup slide showing how binary can be used to precisely represent some fractional values from the decimal number system. Students do not need to understand how to convert fractional amounts from decimal to binary.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the information on the first wrapup slide showing how binary can be used to precisely represent some fractional values from the decimal number system. Students do not need to understand how to convert fractional amounts from decimal to binary.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1950,7 +1950,7 @@
       "key": "19ce50b4-7b54-41b1-8171-3fdd41203255",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does the binary odometer show about representing large numbers?*\n* *If we had a big enough odometer or Flippy Do, could we represent every possible number?*\n\n**Discussion Goal:** As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* *What does the binary odometer show about representing large numbers?*\n* *If we had a big enough odometer or Flippy Do, could we represent every possible number?*\n\n**Discussion Goal:** As students have seen, you can make “any number” in your head, but the tool you use to represent a number has limitations. It has a fixed number of place values it can show. The odometer keeps running after you move beyond its upper limit, but the largest place values cannot be displayed due to overflow error. \n \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add to their journals the definitions for: Overflow Error and Round-off Error. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "19ce50b4-7b54-41b1-8171-3fdd41203255",
@@ -1986,7 +1986,7 @@
       "key": "32e6e48a-ec45-4e52-939f-404b429672ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.*\n\n* 1 1\n* 2 14\n* 7 4\n* 10 31\n\n**Discussion Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Brainstorm with your neighbor what you think this list represents. When you think you have an idea, come up with another item to add to this list and be ready to explain why it belongs.*\n\n* 1 1\n* 2 14\n* 7 4\n* 10 31\n\n**Discussion Goal:** Each item in the list represents a non-denominational holiday - New Years Day, Valentine’s Day, Independence Day, and Halloween. Students should be initially puzzled by what this list represents - it may be helpful to point out the format of the list (two numbers) and that this list happens throughout the year.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2015,7 +2015,7 @@
       "key": "e3ec2ad9-7acd-40ee-8077-7f0e352a1780",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. Assign students to \"Partner A\" or \"Partner B\".\n\n**Distribute:** Give each pair a few sticky notes."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in pairs. Assign students to \"Partner A\" or \"Partner B\".\n\n**Distribute:** Give each pair a few sticky notes."
       },
       "seeding_key": {
         "activity_section.key": "e3ec2ad9-7acd-40ee-8077-7f0e352a1780",
@@ -2026,7 +2026,7 @@
       "key": "5b7c305e-a779-4a46-965a-03637cd9b1ff",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Look at the samples on the screen. Using only numbers, you will need to communicate these samples to a partner. No letters or other characters (including spaces) allowed! Come up with a system that allows you to do this.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Look at the samples on the screen. Using only numbers, you will need to communicate these samples to a partner. No letters or other characters (including spaces) allowed! Come up with a system that allows you to do this.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2043,7 +2043,7 @@
       "key": "6d4bc43b-7058-4e77-8075-d99d25dd2c7e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:**",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**",
         "name": "Challenge #1 - Spaces"
       },
       "seeding_key": {
@@ -2055,7 +2055,7 @@
       "key": "6e18e4f1-a267-4b2b-a05a-1945103e87a0",
       "position": 5,
       "properties": {
-        "description": "* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: oh no\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n* **Partner A:** Heads down!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed."
+        "description": "* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: oh no\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n* **Partner A:** Heads down!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed."
       },
       "seeding_key": {
         "activity_section.key": "6e18e4f1-a267-4b2b-a05a-1945103e87a0",
@@ -2066,7 +2066,7 @@
       "key": "0d4822ef-65d1-4ce8-92f6-1a6fd603ae8b",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Great!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Great!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed",
         "name": "Challenge #2 - Punctuation"
       },
       "seeding_key": {
@@ -2078,7 +2078,7 @@
       "key": "5a661ad2-d5a2-4242-a9fc-b76510fba157",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Free at 5?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Free at 5?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed",
         "name": "Challenge #3 - Capitals and Numbers"
       },
       "seeding_key": {
@@ -2090,7 +2090,7 @@
       "key": "13ce2831-45bf-4f05-8fa2-0bf6d8daac6e",
       "position": 8,
       "properties": {
-        "description": "!<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Cya 2nite!\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed.",
+        "description": "!<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** On a sticky note, use your system to write the message: Cya 2nite!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* **Partner A:** Heads down!\n* **Partner B:** Heads Up! Translate the message on the sticky note using your system.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Heads up! Check your answers. After students have checked, allow them time to update their system as needed.",
         "name": "Challenge #4 - Review all symbols"
       },
       "seeding_key": {
@@ -2102,7 +2102,7 @@
       "key": "25532fab-22a5-486b-aedb-6e1070451b73",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Prompt:** Find another group. Discuss with them the following prompts\n\n* Compare your systems. How are they the same? How are they different?\n* What's the minimum number of bits each of your system would need per character? How do you know?\n\t* Hint: Convert your largest number in your system into binary. How many bits does this number require?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Find another group. Discuss with them the following prompts\n\n* Compare your systems. How are they the same? How are they different?\n* What's the minimum number of bits each of your system would need per character? How do you know?\n\t* Hint: Convert your largest number in your system into binary. How many bits does this number require?"
       },
       "seeding_key": {
         "activity_section.key": "25532fab-22a5-486b-aedb-6e1070451b73",
@@ -2143,7 +2143,7 @@
       "key": "39af5fc7-125f-46df-9e82-9e77e91a3a87",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** Hand out copies of the [r ascii_reference_sheet/csp/2025] or project it. Quickly read the overview text at the beginning of the sheet."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Hand out copies of the [r ascii_reference_sheet/csp/2025] or project it. Quickly read the overview text at the beginning of the sheet."
       },
       "seeding_key": {
         "activity_section.key": "39af5fc7-125f-46df-9e82-9e77e91a3a87",
@@ -2183,7 +2183,7 @@
       "key": "2d59b91f-0ab5-417b-b9e1-e379bb1e29ad",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**\n* *What problem were we trying to solve today?*\n* *What detail from the last few lessons was hidden or out of focus?*\n\n**Discussion Goal:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n* *What problem were we trying to solve today?*\n* *What detail from the last few lessons was hidden or out of focus?*\n\n**Discussion Goal:** \n\n* Students should identify they were trying to send text messages.\n\n* Students were using decimal numbers instead of binary numbers or AB patterns\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2200,7 +2200,7 @@
       "key": "05ae3e7f-eb30-4afc-b572-79615ff147b9",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Sending text messages is an example of **abstraction**. For a computer, each character is really just a number, which itself is really a binary number. It all comes back to zeroes and ones!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Sending text messages is an example of **abstraction**. For a computer, each character is really just a number, which itself is really a binary number. It all comes back to zeroes and ones!",
         "remarks": true
       },
       "seeding_key": {
@@ -2212,7 +2212,7 @@
       "key": "ca44aba6-178c-419c-9fef-4501b0cb28cd",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What is another example of an abstraction in your everyday life? Something where you don’t completely understand how it works but you can still use it with confidence?*\n\nStudent answers will vary. Examples: driving a car, turning on the lights in your room, riding in an elevator, etc."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is another example of an abstraction in your everyday life? Something where you don’t completely understand how it works but you can still use it with confidence?*\n\nStudent answers will vary. Examples: driving a car, turning on the lights in your room, riding in an elevator, etc."
       },
       "seeding_key": {
         "activity_section.key": "ca44aba6-178c-419c-9fef-4501b0cb28cd",
@@ -2247,7 +2247,7 @@
       "key": "6fc85938-975f-435a-b6b6-4829df6717b4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *You recently did some online shopping and are expecting a package to arrive in about a month.  The delivery service has a tracking system which reads the location of the package.*\n* *How often would you want the location read?  Every week?  Every day?  Every hour?  Every minute? Be ready to explain your answer.*\n"
       },
       "seeding_key": {
         "activity_section.key": "6fc85938-975f-435a-b6b6-4829df6717b4",
@@ -2287,7 +2287,7 @@
       "key": "47c664de-c043-42dc-9efe-aa23c00eb5cd",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:**  Watch the [pixelation widget video](https://www.youtube.com/watch?v=rJOa5Q5a1WM&feature=youtu.be).",
         "duration": "10",
         "name": "Intro to the Pixelation Widget",
         "progression_name": "Video: Intro to Pixelation Encoding B&W",
@@ -2307,7 +2307,7 @@
       "key": "5253de4e-595f-41b8-9aec-93ff4ef3c87c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:**  Students will recreate the letter A using the black and white Pixelation Widget.  They must first enter the correct binary numbers to represent the width and height of the image.  Then, they will type the appropriate bit for each portion of the image (“0” for black, “1” for white).\n\n"
       },
       "seeding_key": {
         "activity_section.key": "5253de4e-595f-41b8-9aec-93ff4ef3c87c",
@@ -2371,7 +2371,7 @@
       "key": "b037dfa2-e8de-4383-9c2b-b2d2ff6a5a34",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\n* Read values from Challenge A (black or white for each square) and input the values into the widget.\n* After Challenge A, answer the questions on the activity guide\n* Repeat for Challenge B.\n* Answer the questions in the activity guide after each challenge.\n\n",
         "name": "Challenges A & B\r",
         "progression_name": "Sampling an Analog Image: Challenges A&B",
         "tips": [
@@ -2408,7 +2408,7 @@
       "key": "269fd5dd-46ac-4bc7-b540-19d421ce3651",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  \n\n* Select your favorite company logo.\n* Decide how you are going to sample this logo - use one of the grids in your Activity Guide. Draw the logo.\n* Recreate the logo in the Pixelation Widget on Level 5.\n* Show it to a classmate. Do they recognize the logo? Make adjustments if needed. For example: You may need to increase the sampling.",
         "name": "Challenge C\r",
         "progression_name": "Sampling an Analog Image: Challenge C",
         "tips": [
@@ -2427,7 +2427,7 @@
       "key": "8486f655-e500-449f-8890-2cd04fab1447",
       "position": 1,
       "properties": {
-        "description": "\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *What are the pros and cons of sampling an image more frequently?*\n\nAllow students time to think, then have them share in pairs or groups of four.  Call on a few students to share with the whole class.\n\n**Discussion Goal:** We want students to start seeing that there are advantages and disadvantages as a result of decisions we make when we represent data digitally.  Some key points to draw out from students:\n\n* **Pros:**  We get a much more smooth/clearer/accurate representation of the analog image.  A little easier to decide whether to make a square black or white.\n* **Cons:**  More bits are needed.  Took longer to enter in the widget.  Still doesn’t look exactly like the analog image.  Still had many squares that contained both black and white, so decisions had to be made to choose one over the other.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "8486f655-e500-449f-8890-2cd04fab1447",
@@ -2450,7 +2450,7 @@
       "key": "576c99b4-b955-4371-a43e-a2d921eaac80",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students add definitions to their journals for: analog data, digital data, and sampling. \r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "576c99b4-b955-4371-a43e-a2d921eaac80",
@@ -2474,7 +2474,7 @@
       "key": "1618b47a-d3a7-4113-a628-11a849522423",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *How many different shades of the color blue can you name?  How many do you think there are in total?*\n\nHave students share with a partner.  Then, invite a few students to share what their partner said.\n\n**Discussion Goal:** Start with having students name shades, but quickly transition to how many they think exist altogether.  The goal here is to have students begin to wonder if computers can represent all of the vast shades of colors in our world.  This should be a quick discussion.  You can move on as soon as this point is made.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *How many different shades of the color blue can you name?  How many do you think there are in total?*\n\nHave students share with a partner.  Then, invite a few students to share what their partner said.\n\n**Discussion Goal:** Start with having students name shades, but quickly transition to how many they think exist altogether.  The goal here is to have students begin to wonder if computers can represent all of the vast shades of colors in our world.  This should be a quick discussion.  You can move on as soon as this point is made.\n"
       },
       "seeding_key": {
         "activity_section.key": "1618b47a-d3a7-4113-a628-11a849522423",
@@ -2543,7 +2543,7 @@
       "key": "18cc7dc4-d511-4b90-9664-d0cbb8587ccc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Levels 1-2:** Students should type in a unique 3-bit code for each pixel, producing 8 different colors.  ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Levels 1-2:** Students should type in a unique 3-bit code for each pixel, producing 8 different colors.  ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2619,7 +2619,7 @@
       "key": "14b49942-9899-4d6a-a937-7beebf59ea06",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Regroup the class for levels 6-7 and direct everyone to the images on the slides. \n\n**Levels 6-7:**  Level 6 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling using the widget on level 6 as a support, and attempt to reproduce the sample gradient as best they can on Level 7."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Regroup the class for levels 6-7 and direct everyone to the images on the slides. \n\n**Levels 6-7:**  Level 6 contains samples of various color gradients. Students should choose a section from one of the images, try to take a sampling using the widget on level 6 as a support, and attempt to reproduce the sample gradient as best they can on Level 7."
       },
       "seeding_key": {
         "activity_section.key": "14b49942-9899-4d6a-a937-7beebf59ea06",
@@ -2672,7 +2672,7 @@
       "key": "4870e203-9ef8-41cc-8518-c11f41262592",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What happens at each level of creating a digital color image?*\n\n**Discussion Goal:** Students should understand how sampling, pixels, and binary work together to make a digital approximation of an analog image.  They should also understand that while analog images are able to change color values smoothly and continuously, digital images rely on pixels to change from a fixed number of color values discretely using squares of equal size.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What happens at each level of creating a digital color image?*\n\n**Discussion Goal:** Students should understand how sampling, pixels, and binary work together to make a digital approximation of an analog image.  They should also understand that while analog images are able to change color values smoothly and continuously, digital images rely on pixels to change from a fixed number of color values discretely using squares of equal size.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2689,7 +2689,7 @@
       "key": "ddd426e9-5386-484d-861e-db7cc9fa62a4",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Students record the layers of abstraction in their journals. Click through the animation."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students record the layers of abstraction in their journals. Click through the animation."
       },
       "seeding_key": {
         "activity_section.key": "ddd426e9-5386-484d-861e-db7cc9fa62a4",
@@ -2712,7 +2712,7 @@
       "key": "e4b6a25a-cbe3-4c79-8944-393868420104",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** [How Computers Work](https://www.youtube.com/watch?v=USCBCmwMCDA) Video\n\n",
         "progression_name": "How Computers Work: Binary and Data",
         "tips": [
           {
@@ -2754,7 +2754,7 @@
       "key": "329a7187-2db0-4a4f-97b3-3e3777b08223",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list additional abbreviations they might use in their daily lives."
       },
       "seeding_key": {
         "activity_section.key": "329a7187-2db0-4a4f-97b3-3e3777b08223",
@@ -2765,7 +2765,7 @@
       "key": "a7794b35-dd5c-4493-8120-819e894daa57",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Why might we use abbreviations when sending messages? What are the advantages?*\n\n**Discussion Goal:** There are many possible responses to this - to talk in code, to hide information, to be clever - but an important response to highlight is that abbreviations save time & space when communicating. If a student suggested an abbreviation that not everyone knew, this is a great moment to bring up that both the sender and the receiver need to understand what the abbreviation stands for in order for it to make sense. Both of these points foreshadow today’s activity on compression.\n"
       },
       "seeding_key": {
         "activity_section.key": "a7794b35-dd5c-4493-8120-819e894daa57",
@@ -2776,7 +2776,7 @@
       "key": "1d732fbd-7257-4e23-9708-366b1165c4af",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> I want to send this message to a friend, but their phone can only accept 80 characters of text at a time. I notice this pattern has some repetition in it, so rather than sending the whole message, I send this instead:",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> I want to send this message to a friend, but their phone can only accept 80 characters of text at a time. I notice this pattern has some repetition in it, so rather than sending the whole message, I send this instead:",
         "name": "Introduction to Compression (5 Minutes)\r",
         "remarks": true
       },
@@ -2789,7 +2789,7 @@
       "key": "ef97c234-87cc-44f7-89cc-b13bb58d58e0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click to show next slide with message highlighted in red."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click to show next slide with message highlighted in red."
       },
       "seeding_key": {
         "activity_section.key": "ef97c234-87cc-44f7-89cc-b13bb58d58e0",
@@ -2800,7 +2800,7 @@
       "key": "e8321a0d-7b65-4eda-a6f1-a523f2f8b221",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **DIscuss:** *How is this message the same as the first? What actually gets sent to my friend?*\n\n**Discussion Goal:** Students should notice that each symbol represents other snippets of text. By substituting each symbol for the text it represents, we can re-create the original message.\n\nStudents may need some guidance to see that the entire sent message is really two parts - the text with symbols and the key that shows what each symbol represents. Students should see that both need to be sent in order for the original message to be recreated - if only the text is sent, the receiver won’t know how what each symbol represents to recreate the message."
       },
       "seeding_key": {
         "activity_section.key": "e8321a0d-7b65-4eda-a6f1-a523f2f8b221",
@@ -2823,7 +2823,7 @@
       "key": "422e912d-cbb7-4a6d-83a3-6b6556fc85ef",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students log into Code Studio and open Level 1 of this lesson - the Text Compression Widget.",
         "name": "Text Compression Widget (15 Minutes)\r",
         "progression_name": "Widget: Text Compression"
       },
@@ -2865,7 +2865,7 @@
       "key": "d962716f-b22d-4c8f-9b80-9172069dd633",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Regroup:** Gather the class back together. Emphasize the black box at the bottom of the widget, which has their current compression rating. Have students make a note of their current Compression Percentage at the bottom of the box"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Gather the class back together. Emphasize the black box at the bottom of the widget, which has their current compression rating. Have students make a note of their current Compression Percentage at the bottom of the box"
       },
       "seeding_key": {
         "activity_section.key": "d962716f-b22d-4c8f-9b80-9172069dd633",
@@ -2876,7 +2876,7 @@
       "key": "90002730-0557-4d34-a5c1-d913f2207776",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What strategies are you using to compress your sample text? Which ones seem most successful?*\n\n**Discussion Goal:** Students will have encountered a variety of strategies, but there are a few worth emphasizing for the full class:\n\n* Look for repeated words, sentences, or even parts of words (like -ing or -th).\n* The widget lets you copy-and-paste to embed symbols within symbols. This was demonstrated in the pitter-patter example where some symbols were ‘unpacked’ to include other symbols.\n* The order of the dictionary matters and trying to rearrange the dictionary once it’s made can lead to problems\n\nIt’s okay if not all of these points are highlighted - the upcoming video will emphasize these same points for students.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2893,7 +2893,7 @@
       "key": "a88ff95e-1dea-4646-99bc-5dcbd5c40200",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/csp/2025] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show [r text_compression_widget_tutorial_/csp/2025] (feel free to skip from 2:30-5:00 if your students are comfortable with how the widget works, but don't miss 5:00+). After the video, be sure to emphasize two things: \n\n* The widget we are using is an example of **lossless compression**\n* The compression percentage at the bottom of the screen is calculated by comparing the number of **bytes** in the original message and the number of **bytes** in the compressed message.\n\n\n",
         "progression_name": "Video: Text Compression Widget with Aloe Blacc",
         "tips": [
           {
@@ -2911,7 +2911,7 @@
       "key": "0fbaae6c-dde0-49e5-8103-a195b35898a9",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Give students another 4 minutes to apply the strategies they’ve just seen to continue to raise their compression percentage."
       },
       "seeding_key": {
         "activity_section.key": "0fbaae6c-dde0-49e5-8103-a195b35898a9",
@@ -2951,7 +2951,7 @@
       "key": "b9533aa6-c28c-4358-b1c4-d913b31897a4",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Click the Drop-Down Menu to explore other texts to compress. Be looking for texts you predict will be ‘easy’ to compress and texts you predict will be ‘difficult’",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click the Drop-Down Menu to explore other texts to compress. Be looking for texts you predict will be ‘easy’ to compress and texts you predict will be ‘difficult’",
         "name": "Comparing Compressions (10 Minutes)\r",
         "remarks": true
       },
@@ -2964,7 +2964,7 @@
       "key": "f5304df5-749d-4c9b-9e9e-faaf16390e11",
       "position": 15,
       "properties": {
-        "description": "**Group:** Have students work with their neighbor for this activity. Place students in groups of 2 with at most one group of 3.\r\n\r\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students work together to compress an 'easy' text and a 'difficult' text."
+        "description": "**Group:** Have students work with their neighbor for this activity. Place students in groups of 2 with at most one group of 3.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students work together to compress an 'easy' text and a 'difficult' text."
       },
       "seeding_key": {
         "activity_section.key": "f5304df5-749d-4c9b-9e9e-faaf16390e11",
@@ -2992,7 +2992,7 @@
       "key": "ec5c1d4c-c413-443b-86ee-1963f3bb3cbc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What made some messages \"easier\" to compress than others? What made some messages more \"difficult\" to compress than others?*\n\n**Discussion Goal:**\n\n* ‘Easier’ texts usually had lots of repetition - repeated words or phrases or syllables. A useful strategy is to use this repetition to create the compression.\n* ‘Difficult’ texts usually have less repetition, making it less likely to apply this particular method of compression. Some strategies may actually make compression worse, which can be counter-intuitive\n\n\n",
         "name": "Synthesis\r"
       },
       "seeding_key": {
@@ -3016,7 +3016,7 @@
       "key": "968726c1-ba92-481c-bb76-6bd4e1438f79",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal**: Have students add the definition of **lossless compression** to their journal\r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal**: Have students add the definition of **lossless compression** to their journal\r\n\r\n---"
       },
       "seeding_key": {
         "activity_section.key": "968726c1-ba92-481c-bb76-6bd4e1438f79",
@@ -3040,7 +3040,7 @@
       "key": "e7130385-362c-48f8-b863-5c5c367e1caa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> This widget claims you can keep the first letter of a word then remove all of the vowels and the result will still be readable. Let’s test this out - what are some other sentences we should try with this widget?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This widget claims you can keep the first letter of a word then remove all of the vowels and the result will still be readable. Let’s test this out - what are some other sentences we should try with this widget?",
         "remarks": true
       },
       "seeding_key": {
@@ -3086,7 +3086,7 @@
       "key": "f886bb02-9edf-48a7-8a1e-e4a5f02c037b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students open Code Studio - they will use several widgets throughout today's lesson.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3103,7 +3103,7 @@
       "key": "7a922800-8a32-4d2a-bd2d-457d1534dc6b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Level 1:** Have students adjust the slider to see different lossy compressions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Level 1:** Have students adjust the slider to see different lossy compressions.",
         "name": "Lossy Image v1 (5 minutes)\r",
         "progression_name": "Lossy Compression Widget"
       },
@@ -3133,7 +3133,7 @@
       "key": "dba89084-ff72-4aba-8db9-d30676b456aa",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Level 2:** Have students pick a new image. Encourage students to settle on a compression that they think still represents the original image while maintaining a high compression rate (low number of bytes).",
         "name": "Lossy Image v2 (15 minutes)\r"
       },
       "seeding_key": {
@@ -3156,7 +3156,7 @@
       "key": "a27beaa1-3215-450e-82d7-3eeaa0263ed1",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Share Out:** Have class share out the compressions they have made with students nearby. Encourage students to try and guess\n\n**Discussion Goal:** Guide the conversation towards these two observations:\n\n* The larger the sample size, the smaller the file size but the image looks worse\n* The smaller the sample size, the better the image looks but the file size is larger\n\nUltimately, students should be aware that there are tradeoffs with compression - highly compressed images may not look as good as lower compressed images, but will have a smaller file size.\n the image."
       },
       "seeding_key": {
         "activity_section.key": "a27beaa1-3215-450e-82d7-3eeaa0263ed1",
@@ -3196,7 +3196,7 @@
       "key": "6aafd76f-731a-4bae-ab30-447bd0750696",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** Let’s imagine we are trying to use this image for a particular purpose, and we need to decide which level of compression we want to use. We will look at a series of scenarios and we will vote on how much compression is appropriate.",
         "name": "Compression Decisions (10 minutes)\r"
       },
       "seeding_key": {
@@ -3208,7 +3208,7 @@
       "key": "24736cbb-4997-415b-b34d-496cb2be4407",
       "position": 11,
       "properties": {
-        "description": "* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 1:** You are sending this as a text message to a friend but you’ve almost run out of data on your phone plan\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 2:** You are a crime-scene photographer and this image is part of a crime-scene photo\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 3:** This image is part of a satellite imaging assignment for the military, being used for intelligence gathering\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 4:** You are a Social Media manager posting this to an Instagram story for an event happening right now\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 5:** This image will be part of a collage where 100 copies will be stitched together to make a larger image\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Scenario 6:** You are a professional photographer submitting to a design competition where your submission will be carefully judged for color & composition",
         "tips": [
           {
             "type": "teachingTip",
@@ -3225,7 +3225,7 @@
       "key": "551f102f-e4ef-412f-8b1a-30838523e617",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**\n\n1. *When is it a good idea to use lossless compression?* \n2. *When should you use lossy compression?* \n3. *What are the important factors in making that decision?*\n\n**Discussion Goal:** This discussion should draw out two key points:\n\n* Lossless compression is useful when the accuracy of the original item is most important\n\t* Examples: Bank records, text files, some images\n* Lossy compression is useful when file size is a concern or when it needs to be sent in a reasonable amount of time. \n\t* Examples: Multimedia - especially streaming media (images, video, audio)"
       },
       "seeding_key": {
         "activity_section.key": "551f102f-e4ef-412f-8b1a-30838523e617",
@@ -3248,7 +3248,7 @@
       "key": "21003418-8a22-4cf3-8f1e-99b4d71183ec",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Have students take out their journals and add the definition for lossy compression.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "21003418-8a22-4cf3-8f1e-99b4d71183ec",
@@ -3283,7 +3283,7 @@
       "key": "9e5f330f-6de0-4024-9fc9-6353b1101f1d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?*\n\n**Discussion Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Imagine you were using some of our pixelation tools to create an image and you posted it online for your friends to see - but, a week later you find out someone took that image and put it on a T-shirt that they’re selling for $10 each. How would you feel in this situation?*\n\n**Discussion Goal:** This discussion doesn’t need to come to a definite conclusion - it should generate more questions than answers. You can complicate this discussion by asking: \n\n* What if the owner gives you credit for the drawing on the T-shirt - does that make it more or less okay? \n* If we use the pixelation widget, then our image is just a binary number that’s been transformed into an image - can we really ‘own’ a number?\n* What if, instead of this happening a week later, it happened 20 years later. Does that change anything?"
       },
       "seeding_key": {
         "activity_section.key": "9e5f330f-6de0-4024-9fc9-6353b1101f1d",
@@ -3306,7 +3306,7 @@
       "key": "96bfe95d-a9d6-4843-8ed8-30f5ffd0833d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/csp/2025]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** \n[r article_-_fortnite_stealing_dance_moves/csp/2025]",
         "duration": "10",
         "name": "Activity Part 1: Read the Article",
         "tips": [
@@ -3325,7 +3325,7 @@
       "key": "cebaa203-5c45-4c01-aa5b-0174c2144bb9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:\n\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Students read the article. After they are finished reading they should mark up the text with the following:\n\n* **Highlight / Underline:** Any information in this article that you want to know more about\n* **At The End:** Write a 10-word summary of the article",
         "tips": [
           {
             "type": "teachingTip",
@@ -3352,7 +3352,7 @@
       "key": "eae406a5-c0e9-4c3f-b564-67ab2ca71c9e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Prompt:** This article brings up issues around copyright. Based on what you’ve read and your own experiences, what questions do you have about copyright?"
       },
       "seeding_key": {
         "activity_section.key": "eae406a5-c0e9-4c3f-b564-67ab2ca71c9e",
@@ -3363,7 +3363,7 @@
       "key": "af5978d5-6238-4004-bbcc-ca159ee6bb77",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Today’s central question: Are our current copyright policies helping society or hurting society?",
         "tips": [
           {
             "type": "teachingTip",
@@ -3394,7 +3394,7 @@
       "key": "7e137443-7a5a-457e-8db7-b2d1b47975b0",
       "position": 7,
       "properties": {
-        "description": "* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
+        "description": "* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  Video #1: [Copyright Overview](https://www.youtube.com/watch?v=GPNWvU_IphU) (2 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #2: [Copyright in Practice](https://www.youtube.com/watch?v=ITASCSxnBqw) (4 minutes)\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Video #3: [Creative Commons Copyright](https://www.youtube.com/watch?v=wC-m23T7cPM) (3 minutes)",
         "tips": [
           {
             "type": "teachingTip",
@@ -3436,7 +3436,7 @@
       "key": "97b1fd42-f50d-4bb3-8bc8-6d7c05ece133",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students re-read the article in order to answer these questions:"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students re-read the article in order to answer these questions:"
       },
       "seeding_key": {
         "activity_section.key": "97b1fd42-f50d-4bb3-8bc8-6d7c05ece133",
@@ -3447,7 +3447,7 @@
       "key": "c6184522-b0a4-4c41-b4a7-9a5f409b755c",
       "position": 11,
       "properties": {
-        "description": "* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate the article by adding the following symbols:\n\n* Add a + next to sentences that show benefit\n* Add a - next to sentences that show harm\n* Add a face next to sentences that show impact\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Share some of the sentences you annotated. Did everyone identify the same areas?*\n\n**Discussion Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n",
+        "description": "* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate the article by adding the following symbols:\n\n* Add a + next to sentences that show benefit\n* Add a - next to sentences that show harm\n* Add a face next to sentences that show impact\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Share some of the sentences you annotated. Did everyone identify the same areas?*\n\n**Discussion Goal:** This discussion continues to generate questions and spark student curiosity based on the article. Ultimately we will present students with a focused question to continue the lesson, but this lets students voice their ideas and concerns with the class. It can be helpful to keep these questions & concerns in mind as the lesson continues and return to them when you can.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3476,7 +3476,7 @@
       "key": "adf656c8-f18a-41a6-9182-be24372fbbbd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**"
       },
       "seeding_key": {
         "activity_section.key": "adf656c8-f18a-41a6-9182-be24372fbbbd",
@@ -3554,7 +3554,7 @@
       "key": "1b190c53-6c04-4312-9221-540411a94449",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Is our world better or worse because of digital representation? Place a sticky note (or draw an X) on the board at the place on the line that feels right to you right now.*\n\n**Discussion Goal:** This activity is supposed to be open-ended and something that students come back to at the end of this lesson and the following one. Don't enforce too many rules and don't spend too much time. Just ask them to make a decision and let them know they'll have a chance to make a change to their choice at the end of the next two lessons.\n\nWhen students have filled in the spectrum it will look something like the drawing below. \n\n![](https://images.code.org/8ce9e193210753e29ae826918ab92b0c-image-1611866479179.jpg)\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Is our world better or worse because of digital representation? Place a sticky note (or draw an X) on the board at the place on the line that feels right to you right now.*\n\n**Discussion Goal:** This activity is supposed to be open-ended and something that students come back to at the end of this lesson and the following one. Don't enforce too many rules and don't spend too much time. Just ask them to make a decision and let them know they'll have a chance to make a change to their choice at the end of the next two lessons.\n\nWhen students have filled in the spectrum it will look something like the drawing below. \n\n![](https://images.code.org/8ce9e193210753e29ae826918ab92b0c-image-1611866479179.jpg)\n"
       },
       "seeding_key": {
         "activity_section.key": "1b190c53-6c04-4312-9221-540411a94449",
@@ -3597,7 +3597,7 @@
       "key": "9bb290eb-e42e-484d-b118-d9f6ee265595",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Students pick one of the articles below.\n\n* [r the_ethics_of_computer-generated_actors/csp/2025]\n* [r dna_testing_kits_the_security_risks_in_digitized_dna/csp/2025]\n* [r judge_rules_in_favor_of_nba_2k_creators_in_case_brought_by_tattoo_artists/csp/2025] \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Instructions on lesson slides.\n\n* **Highlight/Underline:** Any information in this article that you want to learn more about. \n* **At The End:** Write a 10 word summary of the article. \n\n**Group:** Create groups of students who read the same article. You may need to have more than one group for a single article."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Students pick one of the articles below.\n\n* [r the_ethics_of_computer-generated_actors/csp/2025]\n* [r dna_testing_kits_the_security_risks_in_digitized_dna/csp/2025]\n* [r judge_rules_in_favor_of_nba_2k_creators_in_case_brought_by_tattoo_artists/csp/2025] \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Instructions on lesson slides.\n\n* **Highlight/Underline:** Any information in this article that you want to learn more about. \n* **At The End:** Write a 10 word summary of the article. \n\n**Group:** Create groups of students who read the same article. You may need to have more than one group for a single article."
       },
       "seeding_key": {
         "activity_section.key": "9bb290eb-e42e-484d-b118-d9f6ee265595",
@@ -3608,7 +3608,7 @@
       "key": "fb0bc018-90a6-41b7-998d-cf9a3e8e6f43",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Share your 10 word summary with the group and discuss the main content in the articles. Together look up any unfamiliar words or concepts.*\n\n**Discussion Goal:** At the end of this time, students should feel comfortable with the content of their articles. Opinions will be shared later. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Share your 10 word summary with the group and discuss the main content in the articles. Together look up any unfamiliar words or concepts.*\n\n**Discussion Goal:** At the end of this time, students should feel comfortable with the content of their articles. Opinions will be shared later. "
       },
       "seeding_key": {
         "activity_section.key": "fb0bc018-90a6-41b7-998d-cf9a3e8e6f43",
@@ -3631,7 +3631,7 @@
       "key": "303df993-fe52-4598-a3c7-8040706af4cf",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Is our world in a better or worse place because of digital representation?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** \n\nHave students re-read their article in order to answer these questions. Students leave comments in the margins and text of the article. \n\n* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate their article by adding the following symbols:\n\n* Add a + next to the sentences that show benefit.\n* Add a - next to sentences that show harm.\n* Add a face next to sentences that show impact. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Check back in with your group. Share some of the sentences you annotated. Did everyone identify the same areas?*"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Is our world in a better or worse place because of digital representation?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** \n\nHave students re-read their article in order to answer these questions. Students leave comments in the margins and text of the article. \n\n* What was digitized?\n* What was the goal or purpose of digitizing this thing?\n* Is someone benefiting from this situation? If so, who?\n* Is someone being harmed in this situation? If so, who?\n* Are these impacts intended or unintended? How do you know?\n\nStudents should continue to annotate their article by adding the following symbols:\n\n* Add a + next to the sentences that show benefit.\n* Add a - next to sentences that show harm.\n* Add a face next to sentences that show impact. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Check back in with your group. Share some of the sentences you annotated. Did everyone identify the same areas?*"
       },
       "seeding_key": {
         "activity_section.key": "303df993-fe52-4598-a3c7-8040706af4cf",
@@ -3654,7 +3654,7 @@
       "key": "06a2d11c-56e8-413b-9b4e-4249dabd8ba9",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to create posters by following instructions on the lesson slides. Students will divide a sheet of paper into four quadrants and write information in each of the quadrants. For this lesson, students will complete the top two quadrants. In the next lesson, they will finish the bottom two."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create posters by following instructions on the lesson slides. Students will divide a sheet of paper into four quadrants and write information in each of the quadrants. For this lesson, students will complete the top two quadrants. In the next lesson, they will finish the bottom two."
       },
       "seeding_key": {
         "activity_section.key": "06a2d11c-56e8-413b-9b4e-4249dabd8ba9",
@@ -3665,7 +3665,7 @@
       "key": "9f86bb3f-186f-4448-b407-fcf46dbaf2e3",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Complete the top two quadrants.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Complete the top two quadrants.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3707,7 +3707,7 @@
       "key": "d7a07275-c469-4f4f-b627-db327af19180",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Discuss:** *Do you think there is always both a benefit and a harm to digitizing analog content? Why or why not?*\n\n**Discussion Goal:** Answers will vary. The goal here is for students to start thinking about the tradeoffs when it comes to digitizing the world. \n\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Do you think there is always both a benefit and a harm to digitizing analog content? Why or why not?*\n\n**Discussion Goal:** Answers will vary. The goal here is for students to start thinking about the tradeoffs when it comes to digitizing the world. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "d7a07275-c469-4f4f-b627-db327af19180",
@@ -3751,7 +3751,7 @@
       "key": "a2dc7612-936b-475f-a970-ad1c09ae5357",
       "position": 2,
       "properties": {
-        "description": "####Position Posters\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Use the lesson slides to guide students through completing their position posters.",
+        "description": "####Position Posters\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Use the lesson slides to guide students through completing their position posters.",
         "duration": "35",
         "name": "Activity",
         "tips": [
@@ -3770,7 +3770,7 @@
       "key": "d94b9772-cbbb-4221-a171-0393158b1f76",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Complete quadrants 3 & 4.\n\n* **Quadrant 3:** What are the benefits and harms of digitizing this content?\n\n* **Quadrant 4:** Is our world better or worse because of digital representation? Explain why, giving examples from the article."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Complete quadrants 3 & 4.\n\n* **Quadrant 3:** What are the benefits and harms of digitizing this content?\n\n* **Quadrant 4:** Is our world better or worse because of digital representation? Explain why, giving examples from the article."
       },
       "seeding_key": {
         "activity_section.key": "d94b9772-cbbb-4221-a171-0393158b1f76",
@@ -3781,7 +3781,7 @@
       "key": "567cdbb9-33b5-4c24-9c99-20ad99250b42",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Group:** Place students in groups with one representative for each article. \n\n**Discuss:** Students share their position papers and discuss the articles they read with their groups.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Group:** Place students in groups with one representative for each article. \n\n**Discuss:** Students share their position papers and discuss the articles they read with their groups.",
         "name": "Jigsaw"
       },
       "seeding_key": {
@@ -3793,7 +3793,7 @@
       "key": "9dddac2e-fd3f-494e-8117-562c71239d5f",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> In the last class, we started the lesson by placing a sticky note on a spectrum. Based on your jigsaw discussions, put a sticky note back on the board. Has your position changed since yesterday?\n\nWhere do you stand?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the last class, we started the lesson by placing a sticky note on a spectrum. Based on your jigsaw discussions, put a sticky note back on the board. Has your position changed since yesterday?\n\nWhere do you stand?",
         "name": "Digital Dilemma Debate",
         "remarks": true
       },
@@ -3817,7 +3817,7 @@
       "key": "1bff11b0-24be-403f-9402-e141b6f3c9d2",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Now, where does our class stand? Where do the majority of our sticky notes fall on the spectrum?  Let's consider our group position.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Now, where does our class stand? Where do the majority of our sticky notes fall on the spectrum?  Let's consider our group position.",
         "remarks": true
       },
       "seeding_key": {
@@ -3829,7 +3829,7 @@
       "key": "5058b5a7-cec4-4537-b700-c9099b2289a3",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Debate:** *Is our world better or worse because of digital representation?*\n\n**Discussion Goal:** At this point, open the floor for general discussion. Students should state their case for the group position, referencing the articles and sharing from their own experiences.  \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Debate:** *Is our world better or worse because of digital representation?*\n\n**Discussion Goal:** At this point, open the floor for general discussion. Students should state their case for the group position, referencing the articles and sharing from their own experiences.  \n"
       },
       "seeding_key": {
         "activity_section.key": "5058b5a7-cec4-4537-b700-c9099b2289a3",
@@ -3865,7 +3865,7 @@
       "key": "138238d7-d1a7-4584-9d13-63b5e6b6d8fb",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit One in order to generate clues for the students."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit One in order to generate clues for the students."
       },
       "seeding_key": {
         "activity_section.key": "138238d7-d1a7-4584-9d13-63b5e6b6d8fb",
@@ -3911,7 +3911,7 @@
       "key": "bb224a88-73ad-4afc-9858-cfdaae63f7ee",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i>  **Do This:** Administer the Unit 1 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:** Administer the Unit 1 Assessment, found on Code Studio. Make sure to unlock the assessment following instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys).",
         "progression_name": "Unit 1 Exam",
         "tips": [
           {

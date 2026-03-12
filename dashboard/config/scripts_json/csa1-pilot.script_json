@@ -1431,7 +1431,7 @@
       "key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Change the Face of Computer Science video."
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Change the Face of Computer Science video."
       },
       "seeding_key": {
         "activity_section.key": "0a7ff55a-9ebd-4d27-8759-0ddde67a22f3",
@@ -1442,7 +1442,7 @@
       "key": "a66ecc6b-8fa7-4e20-9f48-9ffc7aa5d61e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Hand out at least 20 sticky notes to each student.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Hand out at least 20 sticky notes to each student.",
         "duration": "8",
         "name": "Design Thinking: Group Brainstorm"
       },
@@ -1467,7 +1467,7 @@
       "key": "e96ab6c2-383c-4ed6-891f-ad71bc003437",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Direct students to write a word or phrase on each sticky note about the phrase \"software engineering.\" Remind students to write down as many as they can think of and that there are no wrong answers.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the prompts. Direct students to write a word or phrase on each sticky note about the phrase \"software engineering.\" Remind students to write down as many as they can think of and that there are no wrong answers.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1496,7 +1496,7 @@
       "key": "905708b2-54ce-4515-8741-3f7e4509d270",
       "position": 5,
       "properties": {
-        "description": "**Group:** Place students in groups of three or four.\n\n**Do This:** Have students group their sticky notes based on similar themes and display their results to share with their peers. Students should:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Share the ideas they wrote on their sticky notes in their group.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Group similar words and phrases.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Place their sticky notes on the designated wall space, keeping similar notes together.",
+        "description": "**Group:** Place students in groups of three or four.\n\n**Do This:** Have students group their sticky notes based on similar themes and display their results to share with their peers. Students should:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share the ideas they wrote on their sticky notes in their group.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Group similar words and phrases.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Place their sticky notes on the designated wall space, keeping similar notes together.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1513,7 +1513,7 @@
       "key": "40cf077d-90c3-477d-894e-0d8b67f123e2",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to explore their classmates' sticky notes. Students write down what they notice and wonder on a new sticky note.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in a Gallery Walk to explore their classmates' sticky notes. Students write down what they notice and wonder on a new sticky note.",
         "duration": "13",
         "name": "Design Thinking: Gallery Walk and Discussion",
         "tips": [
@@ -1532,7 +1532,7 @@
       "key": "91abf8be-0e83-43b5-882f-431f39cc7434",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share their perceptions about who is a software engineer or what they do.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Where do we get our perceptions from?*\n* *Why?*\n* *What message do we get from these?*\n\n**Discussion Goal:** Students share how their perceptions about software engineers are influenced by popular culture and media. Students share examples of how software engineers are presented in movies, TV shows, or on social media.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you notice?*\n* *What do you wonder?*\n\n**Discussion Goal:** Students share their perceptions about who is a software engineer or what they do.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Where do we get our perceptions from?*\n* *Why?*\n* *What message do we get from these?*\n\n**Discussion Goal:** Students share how their perceptions about software engineers are influenced by popular culture and media. Students share examples of how software engineers are presented in movies, TV shows, or on social media.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1549,7 +1549,7 @@
       "key": "a8a7755f-9721-4d18-85c6-da9264159671",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Read the definition of a software engineer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the definition of a software engineer."
       },
       "seeding_key": {
         "activity_section.key": "a8a7755f-9721-4d18-85c6-da9264159671",
@@ -1574,7 +1574,7 @@
       "key": "c7bea2da-5244-42c8-a28a-ff19436c01d0",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers video. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students recall characteristics discussed by the software engineers in the video, such as problem solving, collaboration, creativity, and curiosity. Students share their ideas about why these characteristics are important for software engineering.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** When have you shown these characteristics, inside or outside of school? How?\n\n**Discussion Goal:** Students realize they have already displayed many of the characteristics of a software engineer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students recall characteristics discussed by the software engineers in the video, such as problem solving, collaboration, creativity, and curiosity. Students share their ideas about why these characteristics are important for software engineering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** When have you shown these characteristics, inside or outside of school? How?\n\n**Discussion Goal:** Students realize they have already displayed many of the characteristics of a software engineer."
       },
       "seeding_key": {
         "activity_section.key": "c7bea2da-5244-42c8-a28a-ff19436c01d0",
@@ -1597,7 +1597,7 @@
       "key": "d91d7ecf-cb6c-49d9-b415-c259a243ffef",
       "position": 12,
       "properties": {
-        "description": "You have shared examples of how you have characteristics of software engineers, and we’re going to affirm our identities as software engineers together. This year, we are going to focus on these four characteristics.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When I say, “I am a”, you say “problem solver”\n“I am a”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When I say “I am”, you say “creative”\n“I am”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When I say “I am a”, you say “collaborator”\n“I am a”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When I say “I am a”, you say “learner”\n“I am a”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When I say “I am a”, you say “software engineer”\n“I am a” ",
+        "description": "You have shared examples of how you have characteristics of software engineers, and we’re going to affirm our identities as software engineers together. This year, we are going to focus on these four characteristics.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say, “I am a”, you say “problem solver”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am”, you say “creative”\n“I am”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “collaborator”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “learner”\n“I am a”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a”, you say “software engineer”\n“I am a” ",
         "duration": "2",
         "name": "Call and Response",
         "tips": [
@@ -1616,7 +1616,7 @@
       "key": "16d15350-6abe-4011-8a94-d471b4538e5a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Software Engineering Characteristics handout to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students choose a software engineering characteristic that they feel is their strongest and which one they have the most room for growth.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Software Engineering Characteristics handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students choose a software engineering characteristic that they feel is their strongest and which one they have the most room for growth.",
         "name": "Software Engineering Characteristics",
         "tips": [
           {
@@ -1646,7 +1646,7 @@
       "key": "2a424b68-f7e5-4035-984f-50e8d507e125",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "2a424b68-f7e5-4035-984f-50e8d507e125",
@@ -1682,7 +1682,7 @@
       "key": "fb6de4b3-d519-4817-8855-fa3945f7eb1b",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were some of the apps or video games that were shared in the video that use Java?*\n* *What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.",
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the What is Java video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were some of the apps or video games that were shared in the video that use Java?*\n* *What is the purpose of Java?*\n\n**Discussion Goal:** Students identify apps or video games that use Java that were either presented in the video or that they personally use. Students explain that Java is an object-oriented language that is used in software worldwide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1699,7 +1699,7 @@
       "key": "2ef60748-1492-4396-a549-c80e92230a67",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking on the right side of the slide, you can see what commands in Java look like. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Java is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In previous courses, you may have seen commands in App Lab, JavaScript, App Inventor, or Python. Looking on the right side of the slide, you can see what commands in Java look like. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java is an object-oriented language. Object-oriented programming is a powerful tool, which involves creating and using models of physical or imagined objects.",
         "progression_name": "TEST ",
         "remarks": true,
         "tips": [
@@ -1718,7 +1718,7 @@
       "key": "e049a429-1bd6-484a-b254-31b24f76bf0d",
       "position": 1,
       "properties": {
-        "description": "**NOTE:** This will take some time if your students do not already have Code Studio accounts, so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a personal email account *or*\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Google Classroom account *or*\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Clever account.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students navigate to the course on the Code.org home page. From the Code.org home page, students should see a tile for CSA.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students click \"View Course,\" then choose Unit 1. Direct students to navigate to Lesson 2.\n",
+        "description": "**NOTE:** This will take some time if your students do not already have Code Studio accounts, so you may need to modify your pacing in the lesson. \n\n**Do This:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a personal email account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Google Classroom account *or*\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Walk students through joining Code.org with a Clever account.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students navigate to the course on the Code.org home page. From the Code.org home page, students should see a tile for CSA.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students click \"View Course,\" then choose Unit 1. Direct students to navigate to Lesson 2.\n",
         "duration": "10",
         "name": "Adding Students to Your Section ",
         "tips": [
@@ -1751,7 +1751,7 @@
       "key": "0d067f5a-5038-42e4-9ed7-fbf0d29ea3dd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Explain the main sections of Java Lab - the Instructions panel, the Editor, the Preview window, the Console window, and the Run and Test buttons.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students look at the starter code in the editor and run the program.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Explain the main sections of Java Lab - the Instructions panel, the Editor, the Preview window, the Console window, and the Run and Test buttons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students look at the starter code in the editor and run the program.",
         "progression_name": "Exploring The Neighborhood"
       },
       "seeding_key": {
@@ -1763,7 +1763,7 @@
       "key": "3bb18019-8702-4e1a-901a-1aee2b523691",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program?*\n\n**Discussion Goal:** Students talk through the code out loud to explain how the `Painter` moved and painted some squares."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you ran the program?*\n\n**Discussion Goal:** Students talk through the code out loud to explain how the `Painter` moved and painted some squares."
       },
       "seeding_key": {
         "activity_section.key": "3bb18019-8702-4e1a-901a-1aee2b523691",
@@ -1786,7 +1786,7 @@
       "key": "715495f6-09e1-4576-817c-ca92554d0b07",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Students now modify the code to change the paint color and have the `Painter` move one or more squares.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students now modify the code to change the paint color and have the `Painter` move one or more squares.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1803,7 +1803,7 @@
       "key": "cad944cd-119a-44d2-ac46-1cdb629fb880",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What modifications did you make in the editor?*\n* *How did that change the output when you ran your code?*\n\n**Discussion Goal:** Students share the modifications they made, such as changing the color and moving forward. Students share what the `Painter` did as a result of the modifications they made.   ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What modifications did you make in the editor?*\n* *How did that change the output when you ran your code?*\n\n**Discussion Goal:** Students share the modifications they made, such as changing the color and moving forward. Students share what the `Painter` did as a result of the modifications they made.   ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1820,7 +1820,7 @@
       "key": "57104c47-f420-49dd-9271-370ae3d82c57",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Welcome to The Neighborhood video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What feature did you use to make modifications to your code?*\n* *What does compile mean?*\n* *What is the relationship between the Run button and compiling the code?*\n\n**Discussion Goal:** Students discuss using the Editor window to make changes to their code and share what it means to compile. Students make the connection between using the Run button and compiling their code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Objects and Classes video. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is a class?*\n* *What is an object?*\n* *What is the relationship between the two?*\n\n**Discussion Goal:** Students recap the definitions of class and object from the video. Students explain the relationship between a class and object as an object being an instance of a class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Welcome to The Neighborhood video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What feature did you use to make modifications to your code?*\n* *What does compile mean?*\n* *What is the relationship between the Run button and compiling the code?*\n\n**Discussion Goal:** Students discuss using the Editor window to make changes to their code and share what it means to compile. Students make the connection between using the Run button and compiling their code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Objects and Classes video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is a class?*\n* *What is an object?*\n* *What is the relationship between the two?*\n\n**Discussion Goal:** Students recap the definitions of class and object from the video. Students explain the relationship between a class and object as an object being an instance of a class.",
         "duration": "15",
         "name": "Classes and Objects"
       },
@@ -1833,7 +1833,7 @@
       "key": "ed165f83-65f6-4502-8f86-eed948a20fb1",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When software engineers talk about objects and classes, they say an object is an instance of the class. An object has attributes and behaviors.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> An instance of a class means that it is a copy of the class with its own unique set of information. Without the class, you cannot create an object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Based on the video, we know a class is like a blueprint or template of an object. The object is created from the blueprint. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When software engineers talk about objects and classes, they say an object is an instance of the class. An object has attributes and behaviors.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> An instance of a class means that it is a copy of the class with its own unique set of information. Without the class, you cannot create an object.",
         "remarks": true
       },
       "seeding_key": {
@@ -1845,7 +1845,7 @@
       "key": "4d7b2824-624c-46cb-b0aa-42db5bc867cb",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of the relationship between a class and object?*\n\n**Discussion Goal:** Students share real-world examples of a class and objects that can be created from the class. Students identify attributes and behaviors that would be defined in the class and examples of specific information that would be used to create the object.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some other examples of the relationship between a class and object?*\n\n**Discussion Goal:** Students share real-world examples of a class and objects that can be created from the class. Students identify attributes and behaviors that would be defined in the class and examples of specific information that would be used to create the object.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1862,7 +1862,7 @@
       "key": "13138459-80d1-42f0-aa1b-03a0522411a6",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Walk students through the starter code to identify the class, then have students run the code without the object. Talk through the error messages that are displayed in the Console window.",
         "progression_name": "Investigate the Painter",
         "tips": [
           {
@@ -1892,7 +1892,7 @@
       "key": "2fd3865f-dced-4e89-89e2-2dea868aa2db",
       "position": 13,
       "properties": {
-        "description": "**Do This:** Return students to Level 2 on Code Studio to create the missing `Painter` object where specified in the starter code and run the code again.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the solution. Have students identify the class name and the object name."
+        "description": "**Do This:** Return students to Level 2 on Code Studio to create the missing `Painter` object where specified in the starter code and run the code again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the solution. Have students identify the class name and the object name."
       },
       "seeding_key": {
         "activity_section.key": "2fd3865f-dced-4e89-89e2-2dea868aa2db",
@@ -1903,7 +1903,7 @@
       "key": "e5f08458-b7d0-4522-8609-ed0f23ec921d",
       "position": 14,
       "properties": {
-        "description": "You cannot create an object without a class. There is a relationship between the two.  \n\nWhen I say, “No”, you say “class”.\n\nWhen I say, “No”, you say “object”.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “No” ____, “No” _____\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “No” ____, “No” _____",
+        "description": "You cannot create an object without a class. There is a relationship between the two.  \n\nWhen I say, “No”, you say “class”.\n\nWhen I say, “No”, you say “object”.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, “No” _____\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, “No” _____",
         "remarks": true,
         "tips": [
           {
@@ -1921,7 +1921,7 @@
       "key": "35abfbbc-983e-49d2-a92d-f60326cbe4d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Describe an object.*\n* *Describe a class.*\n* *Which of your software engineering characteristics did you use today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students share which software engineering characteristics they used today.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Describe an object.*\n* *Describe a class.*\n* *Which of your software engineering characteristics did you use today?*\n\n**Discussion Goal:** Students describe the relationship between an object and class. Students share which software engineering characteristics they used today.",
         "name": "Classes and Objects"
       },
       "seeding_key": {
@@ -1933,7 +1933,7 @@
       "key": "c22b38b1-eeb6-4e4c-9d11-00887b9565f7",
       "position": 2,
       "properties": {
-        "description": "Looking ahead, classes and objects will be essential as you continue to build your `Painter` class. So remember...\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____",
+        "description": "Looking ahead, classes and objects will be essential as you continue to build your `Painter` class. So remember...\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “No” ____, repeat, “No” _____",
         "remarks": true
       },
       "seeding_key": {
@@ -1945,7 +1945,7 @@
       "key": "c0b38bbe-e1f2-4d11-b539-663f4fd03acd",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c0b38bbe-e1f2-4d11-b539-663f4fd03acd",
@@ -1969,7 +1969,7 @@
       "key": "d89dbdce-92dd-4b56-b297-666d033198a4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Software is a set of specific instructions that enables a computer to perform a task.\n\nFor example, GPS apps are software designed to give users specific instructions to navigate to a destination.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Software is a set of specific instructions that enables a computer to perform a task.\n\nFor example, GPS apps are software designed to give users specific instructions to navigate to a destination.",
         "name": "Instructions for Computers",
         "remarks": true
       },
@@ -1982,7 +1982,7 @@
       "key": "f6afd428-9b60-42b7-b333-2dc44e216d62",
       "position": 2,
       "properties": {
-        "description": "**Do This:** \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
+        "description": "**Do This:** \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a pizza driver to move from 1st Street and 1st avenue to the customer located at 5th Street and 5th Avenue.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students list the specific instruction that a GPS could use to direct a bus driver to pick up riders from two bus stops, 5th Street and 5th Avenue and 5th Street and 3rd Avenue, and transport them to the library located at 2nd Street and 3rd Avenue.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -1999,7 +1999,7 @@
       "key": "4b75ad8d-22d5-41ab-82cc-39888b46edc9",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce The Neighborhood by discussing:\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The x-axis and y-axis of the grid\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Finding points and the origin on the grid",
+        "description": "**Do This:** Introduce The Neighborhood by discussing:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The x-axis and y-axis of the grid\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Finding points and the origin on the grid",
         "duration": "5",
         "name": "Understanding the Grid"
       },
@@ -2026,7 +2026,7 @@
       "key": "1feece08-4c4b-4182-a78f-a5f83a9d9846",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the term \"method\" and explain that methods are used to move the `Painter` and perform tasks.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce methods for the `Painter`."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the term \"method\" and explain that methods are used to move the `Painter` and perform tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce methods for the `Painter`."
       },
       "seeding_key": {
         "activity_section.key": "1feece08-4c4b-4182-a78f-a5f83a9d9846",
@@ -2049,7 +2049,7 @@
       "key": "530cb15b-fe45-4575-b46c-e942b4778d4a",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to call methods in Java.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate how to call methods in Java.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2066,7 +2066,7 @@
       "key": "4c888cab-5339-4a81-973a-6fc42fdbc3e6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss Java syntax rules.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?*\n\n**Discussion Goal:** Students identify the errors in the incorrect syntax. Students note that the method name does not have the correct capitalization, should be followed by parentheses, and that the statement should end with a semicolon.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What error do you think we would get if we tried to run this line of code?*\n\n**Discussion Goal:** Students recall the errors from the previous lesson and make connections to potential errors resulting from the invalid syntax. Students guess that Java would not know what `Paint` is because of the invalid syntax and not be able to compile."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss Java syntax rules.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Compare the correct syntax to the incorrect syntax. The code looks similar but it does not follow Java syntax. Which syntax rules did the incorrect solution fail to follow?*\n\n**Discussion Goal:** Students identify the errors in the incorrect syntax. Students note that the method name does not have the correct capitalization, should be followed by parentheses, and that the statement should end with a semicolon.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What error do you think we would get if we tried to run this line of code?*\n\n**Discussion Goal:** Students recall the errors from the previous lesson and make connections to potential errors resulting from the invalid syntax. Students guess that Java would not know what `Paint` is because of the invalid syntax and not be able to compile."
       },
       "seeding_key": {
         "activity_section.key": "4c888cab-5339-4a81-973a-6fc42fdbc3e6",
@@ -2077,7 +2077,7 @@
       "key": "07a4741a-44c8-4595-abc0-e62432e5bc93",
       "position": 7,
       "properties": {
-        "description": "**Group:** Place students in pairs.\n\n**Display:** Show the Pair Programming video.\n\n**Do This:** Introduce methods for moving the `Painter` one at a time. After each method is introduced, have students use Pair Programming to complete the associated level(s).\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `move()` method instructs the `Painter` to move forward in the direction that they are facing.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Direct students to complete Level 1 on Code Studio.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `turnLeft()` method instructs the `Painter` to turn 90 degrees to the left. The `Painter` can only face North, South, East, or West.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-3 on Code Studio.",
+        "description": "**Group:** Place students in pairs.\n\n**Display:** Show the Pair Programming video.\n\n**Do This:** Introduce methods for moving the `Painter` one at a time. After each method is introduced, have students use Pair Programming to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `move()` method instructs the `Painter` to move forward in the direction that they are facing.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 1 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `turnLeft()` method instructs the `Painter` to turn 90 degrees to the left. The `Painter` can only face North, South, East, or West.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Levels 2-3 on Code Studio.",
         "duration": "10",
         "name": "Methods to Move",
         "progression_name": "Methods to Move",
@@ -2097,7 +2097,7 @@
       "key": "ad675442-165b-40e9-8553-56c1c89727ef",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Introduce painting methods one at a time. After each method is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `takePaint()` method instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Direct students to complete Level 4 on Code Studio.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `paint(String color)` method instructs the `Painter` to apply one unit of paint from their tray onto the point they are currently standing on.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Share with students that they can change the color the `Painter` paints by adding the name of a color in quotations inside the parentheses. Refer students to the Color Names resource for color names to choose from.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Direct students to complete Level 5 on Code Studio.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `scrapePaint()` command instructs the `Painter` to remove paint from the point that they are currently standing on.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Direct students to complete Level 6 on Code Studio.",
+        "description": "**Do This:** Introduce painting methods one at a time. After each method is introduced, instruct students to complete the associated level(s).\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `takePaint()` method instructs the `Painter` to collect one unit of paint from the paint bucket that they are currently standing on and adds it to their tray.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 4 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `paint(String color)` method instructs the `Painter` to apply one unit of paint from their tray onto the point they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Share with students that they can change the color the `Painter` paints by adding the name of a color in quotations inside the parentheses. Refer students to the Color Names resource for color names to choose from.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 5 on Code Studio.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `scrapePaint()` command instructs the `Painter` to remove paint from the point that they are currently standing on.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Direct students to complete Level 6 on Code Studio.",
         "duration": "10",
         "name": "Painting Methods",
         "progression_name": "Painting Methods",
@@ -2130,7 +2130,7 @@
       "key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Painter` methods. Before moving to the next method, have students share their understanding of the method. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the `Painter` methods. Before moving to the next method, have students share their understanding of the method. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ed838d8d-6552-4f49-8770-66fcc8b7d8ba",
@@ -2154,7 +2154,7 @@
       "key": "62b20439-8e72-482f-ae6c-b65aba049d53",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students notice several syntax errors in this code that will prevent the code from running. Students identify each error and what strategies they used to help them find errors.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *With a partner, determine whether the solution on the screen will create the goal mural. If not, how might you want to modify the code to produce the mural we want?* \n\n**Discussion Goal:** Students notice several syntax errors in this code that will prevent the code from running. Students identify each error and what strategies they used to help them find errors.",
         "name": "Identifying Bugs"
       },
       "seeding_key": {
@@ -2166,7 +2166,7 @@
       "key": "e31974ac-b8d4-4765-9cd6-f76d12652ee1",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> These errors you saw in that code segment are also referred to as bugs.\n\nAs we work through the activities today, you’ll likely encounter bugs of your own. While you work, make note of any bugs you encounter and the strategies you use to fix your code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> These errors you saw in that code segment are also referred to as bugs.\n\nAs we work through the activities today, you’ll likely encounter bugs of your own. While you work, make note of any bugs you encounter and the strategies you use to fix your code.",
         "remarks": true
       },
       "seeding_key": {
@@ -2191,7 +2191,7 @@
       "key": "c9700c23-1966-4b44-be83-5335c09afe65",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the new methods and explain that the methods are named to sound like yes/no questions."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the new methods and explain that the methods are named to sound like yes/no questions."
       },
       "seeding_key": {
         "activity_section.key": "c9700c23-1966-4b44-be83-5335c09afe65",
@@ -2214,7 +2214,7 @@
       "key": "282f7114-ba13-4ff5-8150-7616c9829cdc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Conditionals video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the structure of an `if` statement."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Conditionals video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the structure of an `if` statement."
       },
       "seeding_key": {
         "activity_section.key": "282f7114-ba13-4ff5-8150-7616c9829cdc",
@@ -2268,7 +2268,7 @@
       "key": "16c4e0f1-e9fe-4a0c-8d3c-7a6aa4b92f8f",
       "position": 8,
       "properties": {
-        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio using Pair Programming. Remind them that they should use an `if` statement in each level in addition to the appropriate Boolean method. ",
+        "description": "**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Instruct students to complete Levels 1 and 2 on Code Studio using Pair Programming. Remind them that they should use an `if` statement in each level in addition to the appropriate Boolean method. ",
         "progression_name": "Boolean Methods"
       },
       "seeding_key": {
@@ -2292,7 +2292,7 @@
       "key": "0525161e-82cf-4658-b588-c374fe247db4",
       "position": 10,
       "properties": {
-        "description": "**Do This:** Introduce the `canMove()` method.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `canMove()` method gives a `true` value if there is not a barrier in the point directly in front of the `Painter`.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The `canMove(String direction)` method gives a `true` value if there is not a barrier in the direction specified.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue to use Pair Programming to complete Level 3 on Code Studio.",
+        "description": "**Do This:** Introduce the `canMove()` method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove()` method gives a `true` value if there is not a barrier in the point directly in front of the `Painter`.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `canMove(String direction)` method gives a `true` value if there is not a barrier in the direction specified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to continue to use Pair Programming to complete Level 3 on Code Studio.",
         "progression_name": "Checking for Barriers"
       },
       "seeding_key": {
@@ -2318,7 +2318,7 @@
       "key": "a09b77f4-acc6-4374-aacf-6d4d1edd9307",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define the term debugging.\n\n**Distribute:** Give each pair of students one to two sticky notes.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the Debugging Wall. Have students think about a bug they encountered today and write down a strategy they used to fix the error.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to add their sticky notes to the Debugging Wall under the appropriate category and take a moment to read over other strategies.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term debugging.\n\n**Distribute:** Give each pair of students one to two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Debugging Wall. Have students think about a bug they encountered today and write down a strategy they used to fix the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to add their sticky notes to the Debugging Wall under the appropriate category and take a moment to read over other strategies.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2347,7 +2347,7 @@
       "key": "3ae1bd30-b76c-4c81-a900-2509edbccec5",
       "position": 14,
       "properties": {
-        "description": "**Do This:** Introduce syntax and logic errors.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to describe an example of a logic error they may have encountered.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 4 on Code Studio using Pair Programming. There are two options for them to choose from, and each contains both logic and syntax errors.",
+        "description": "**Do This:** Introduce syntax and logic errors.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the examples of syntax errors on the slide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the definition of logic errors on the slide. Ask students to describe an example of a logic error they may have encountered.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 4 on Code Studio using Pair Programming. There are two options for them to choose from, and each contains both logic and syntax errors.",
         "progression_name": "Debugging Challenge",
         "tips": [
           {
@@ -2365,7 +2365,7 @@
       "key": "c0fd5582-a19e-412a-af97-0bae2a86c705",
       "position": 15,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think back to the warm-up and your experience today with our new methods. What errors did you run into?*\n* *What are some strategies you used to identify bugs?*\n* *How did you fix them?*\n\n**Discussion Goal:** Students share bugs they encountered and ways that they debugged their code. Students should realize that everyone encounters bugs when writing code and that debugging is a normal part of software engineering."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think back to the warm-up and your experience today with our new methods. What errors did you run into?*\n* *What are some strategies you used to identify bugs?*\n* *How did you fix them?*\n\n**Discussion Goal:** Students share bugs they encountered and ways that they debugged their code. Students should realize that everyone encounters bugs when writing code and that debugging is a normal part of software engineering."
       },
       "seeding_key": {
         "activity_section.key": "c0fd5582-a19e-412a-af97-0bae2a86c705",
@@ -2376,7 +2376,7 @@
       "key": "7bffb895-ac72-4c57-b754-6f801d98dbc9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** The main goal of this discussion is to normalize the confusion that students are experiencing. Highlight that for many students, this is all new information, and that throughout the course, there may be times where they feel lost or confused. Share your own experience learning Java for the first time. Consider asking students to share strategies for when they are confused -- what resources do they have?",
         "name": "Closing the Loops",
         "tips": [
           {
@@ -2394,7 +2394,7 @@
       "key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "a6316612-c56f-4b0d-86fb-6c844658b93d",
@@ -2418,7 +2418,7 @@
       "key": "d37c089c-aa3b-4657-83d9-09b8ce847745",
       "position": 1,
       "properties": {
-        "description": "So far, we’ve talked about a class as a blueprint or a template for creating an object. Many different objects can be created from a single class definition. \n\nBut if there’s no class?\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \"No\" ______, \n\nRight - no object! Today it’s going to be important for us to leverage that relationship. We will be using the blueprint of a class to create objects.\n",
+        "description": "So far, we’ve talked about a class as a blueprint or a template for creating an object. Many different objects can be created from a single class definition. \n\nBut if there’s no class?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"No\" ______, \n\nRight - no object! Today it’s going to be important for us to leverage that relationship. We will be using the blueprint of a class to create objects.\n",
         "name": "Classes and Objects Review",
         "remarks": true
       },
@@ -2431,7 +2431,7 @@
       "key": "7ac9f14f-64a8-4370-b202-ca11bd32f252",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the diagram used to outline the `Superhero` class and explain:\n* The class name is at the top and is capitalized.\n* The items in the section below are the attributes of the `Superhero` class.\n* To create an object, give it a name and specific values for each attribute. \n\n**Do This:** Direct students to complete the task independently. Students select specific values for each attribute listed.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the connection between your object and the `Superhero` class?*\n* *What are some features of this relationship that are visible in your diagram?*\n\n**Discussion Goal:** Students note that the objects have the same attributes as the class and are given specific values. Students should refer to their objects as instances of the `Superhero` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the diagram used to outline the `Superhero` class and explain:\n* The class name is at the top and is capitalized.\n* The items in the section below are the attributes of the `Superhero` class.\n* To create an object, give it a name and specific values for each attribute. \n\n**Do This:** Direct students to complete the task independently. Students select specific values for each attribute listed.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the connection between your object and the `Superhero` class?*\n* *What are some features of this relationship that are visible in your diagram?*\n\n**Discussion Goal:** Students note that the objects have the same attributes as the class and are given specific values. Students should refer to their objects as instances of the `Superhero` class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2462,7 +2462,7 @@
       "key": "9e7bd284-1e8d-4c0a-a28a-2b758c5f5616",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Creating Objects video. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question. Give students a minute to consider the question on their own, then ask students to share their answer either with a partner or as a whole group. Click through the animated slide to display the solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the solution.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Creating Objects video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question. Give students a minute to consider the question on their own, then ask students to share their answer either with a partner or as a whole group. Click through the animated slide to display the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the solution.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2479,7 +2479,7 @@
       "key": "9cef0694-e12c-439d-ac02-46affb1bc3ba",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio individually or using Pair Programming.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Level 1 on Code Studio individually or using Pair Programming.",
         "progression_name": "No-Argument Constructors"
       },
       "seeding_key": {
@@ -2505,7 +2505,7 @@
       "key": "9a0c6577-d486-4aa8-b33a-1b58fdd65def",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Parameterized Constructors video. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Parameterized Constructors video. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -2522,7 +2522,7 @@
       "key": "cedf23e0-0100-4c29-8ed5-4c404649bf7d",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 5 on Code Studio. If students finish early, encourage them to try multiple challenges on Level 4 or to help their peers debug.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2 through 5 on Code Studio. If students finish early, encourage them to try multiple challenges on Level 4 or to help their peers debug.",
         "progression_name": "Parameterized Constructors"
       },
       "seeding_key": {
@@ -2548,7 +2548,7 @@
       "key": "331a0d35-b259-4387-b45b-155ae8c5f40c",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *We could use a no-argument constructor to initialize a `Painter` object and then create this design. Why might we choose to use the parameterized constructor?*\n \n**Discussion Goal:** Students realize that the parameterized constructor allows them to initialize a `Painter` object at the specific location and with the amount of paint they need. Students share that they can write less code to create the design than if they had to start at the origin."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *We could use a no-argument constructor to initialize a `Painter` object and then create this design. Why might we choose to use the parameterized constructor?*\n \n**Discussion Goal:** Students realize that the parameterized constructor allows them to initialize a `Painter` object at the specific location and with the amount of paint they need. Students share that they can write less code to create the design than if they had to start at the origin."
       },
       "seeding_key": {
         "activity_section.key": "331a0d35-b259-4387-b45b-155ae8c5f40c",
@@ -2559,7 +2559,7 @@
       "key": "c4935fe4-b8c5-4621-858f-aa9d2656184e",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> One of the elements of writing \"good code\" is writing \"efficient\" code. Today, we’re going to define efficiency as getting the best outcome with the least amount of waste. We will do this by reducing unnecessary code or writing our solutions with fewer lines of code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> One of the elements of writing \"good code\" is writing \"efficient\" code. Today, we’re going to define efficiency as getting the best outcome with the least amount of waste. We will do this by reducing unnecessary code or writing our solutions with fewer lines of code.",
         "remarks": true
       },
       "seeding_key": {
@@ -2571,7 +2571,7 @@
       "key": "1b717642-2b6d-4709-a4e5-8e6cac7da9c5",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Do This: Direct students to Level 6 on Code Studio. Students should choose a challenge and complete it as efficiently as possible. Have students share their solutions with a partner and brainstorm additional solutions.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to Level 6 on Code Studio. Students should choose a challenge and complete it as efficiently as possible. Have students share their solutions with a partner and brainstorm additional solutions.",
         "progression_name": "Efficient Solutions"
       },
       "seeding_key": {
@@ -2583,7 +2583,7 @@
       "key": "242ecbec-c9d5-49aa-b4b7-8062c26ab815",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *There are many ways to write code to solve a single problem. As software engineers, why might we value efficient code?*\n\n**Discussion Goal:** Students realize the value of spending the time to write good code rather than writing the first thing that solves a problem. Students note the differences between the no-argument constructor and parameterized constructor and make connections with how the parameterized constructor can be used to create more efficient code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students copy the code segment and then annotate it with the given symbols.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *There are many ways to write code to solve a single problem. As software engineers, why might we value efficient code?*\n\n**Discussion Goal:** Students realize the value of spending the time to write good code rather than writing the first thing that solves a problem. Students note the differences between the no-argument constructor and parameterized constructor and make connections with how the parameterized constructor can be used to create more efficient code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students copy the code segment and then annotate it with the given symbols.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "The Importance of Efficiency"
       },
       "seeding_key": {
@@ -2622,7 +2622,7 @@
       "key": "71031814-4c77-4818-9eb7-c6bc8ae62953",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Vocabulary Draw handout which includes the rules, a vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are distributing the handout, students should cut out their set of vocabulary strips.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess.",
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Vocabulary Draw handout which includes the rules, a vocabulary bank, and a set of vocabulary strips. Distribute a pair of scissors and blank paper to each group. As you are distributing the handout, students should cut out their set of vocabulary strips.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** In their groups, students take turns choosing a random vocabulary slip and drawing it out. Other group members try to guess the vocabulary word while consulting the vocabulary bank. The student who guesses successfully keeps the slip of paper. The artist role rotates after each word so that all students have a chance to both draw and guess.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2639,7 +2639,7 @@
       "key": "14bb3844-50e4-4faf-a18c-bdd39fea9592",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which words were most difficult to remember?*\n* *What additional clarity do you need?*\n\n**Discussion Goal:** Students share any terms that they struggled with or need clarification.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which words were most difficult to remember?*\n* *What additional clarity do you need?*\n\n**Discussion Goal:** Students share any terms that they struggled with or need clarification.",
         "duration": "2",
         "name": "Debrief"
       },
@@ -2666,7 +2666,7 @@
       "key": "be5aceff-ae21-4a7e-bd3f-fe3fbce607ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the repetitive code and display the prompt.\n*Suppose we wanted to move our `Painter` from `(0,0)` to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Introduce the purpose and syntax for a `while` loop.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the flow of a `while` loop.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that the `Painter` continues to move forward as long as `canMove()` gives a `true` value.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n**Discussion Goal:** Students identify benefits of using a `while` loop, including that it reduces redundancy and makes code more efficient."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the repetitive code and display the prompt.\n*Suppose we wanted to move our `Painter` from `(0,0)` to the edge of The Neighborhood. Why might we want to reduce repetition?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the purpose and syntax for a `while` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the flow of a `while` loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate that the `Painter` continues to move forward as long as `canMove()` gives a `true` value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of using `while` loops in our code?*\n\n**Discussion Goal:** Students identify benefits of using a `while` loop, including that it reduces redundancy and makes code more efficient."
       },
       "seeding_key": {
         "activity_section.key": "be5aceff-ae21-4a7e-bd3f-fe3fbce607ac",
@@ -2691,7 +2691,7 @@
       "key": "7d30af72-389e-48b5-821c-ba9180b48ecf",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the `hasPaint()` method.\n\n**Do This:** Click through the animated slides to introduce the methods to check if the `Painter` is facing a specific direction.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `facingNorth()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `facingEast()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `facingWest()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `facingSouth()`\n\n**Group:** Group students into pairs. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the `hasPaint()` method.\n\n**Do This:** Click through the animated slides to introduce the methods to check if the `Painter` is facing a specific direction.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingNorth()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingEast()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingWest()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `facingSouth()`\n\n**Group:** Group students into pairs. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
         "progression_name": "while Loops with New Boolean Methods",
         "tips": [
           {
@@ -2709,7 +2709,7 @@
       "key": "43b898eb-e7f2-40c2-82e0-8157b4a55843",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What went well?*\n* *What would you do differently next time?*\n\n**Discussion Goal:** Students share their experiences in solving the problems and may even share bugs they encountered as they wrote their code. Students share strategies to use for future problems involving `while` loops."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What went well?*\n* *What would you do differently next time?*\n\n**Discussion Goal:** Students share their experiences in solving the problems and may even share bugs they encountered as they wrote their code. Students share strategies to use for future problems involving `while` loops."
       },
       "seeding_key": {
         "activity_section.key": "43b898eb-e7f2-40c2-82e0-8157b4a55843",
@@ -2720,7 +2720,7 @@
       "key": "2cb23a10-3e23-4583-9858-7959d8ef6080",
       "position": 6,
       "properties": {
-        "description": "We have a lot of tools in our `Painter`’s toolbox! Now, you’re going to have the chance to use all of the methods, constructors, and control structures to solve more complex challenges.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When we say control structures, we’re referring to the `while` loops and `if` statements that give us more control over what the `Painter` does. Control structures affect the flow of a program using conditional statements or loops.",
+        "description": "We have a lot of tools in our `Painter`’s toolbox! Now, you’re going to have the chance to use all of the methods, constructors, and control structures to solve more complex challenges.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When we say control structures, we’re referring to the `while` loops and `if` statements that give us more control over what the `Painter` does. Control structures affect the flow of a program using conditional statements or loops.",
         "duration": "10",
         "name": "Using Your Toolbox",
         "remarks": true
@@ -2734,7 +2734,7 @@
       "key": "eb60bf1d-0cc9-48d5-8e6d-bb9af99ca1bf",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the methods, constructors, and control structures. Leave this up for students to reference throughout their work on these levels.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the methods, constructors, and control structures. Leave this up for students to reference throughout their work on these levels.",
         "progression_name": "Using Your Toolbox"
       },
       "seeding_key": {
@@ -2746,7 +2746,7 @@
       "key": "5c7dc049-6e09-490f-920f-f9ee2872d72f",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider any bugs they encountered and write down a strategy they used to fix the error.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the Debugging Wall. If time permits, students should read over other strategies that are posted on the wall.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "**Distribute:** Give each student a sticky note.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Prompt students to consider any bugs they encountered and write down a strategy they used to fix the error.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add their sticky notes to the Debugging Wall. If time permits, students should read over other strategies that are posted on the wall.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Debugging Wall"
       },
       "seeding_key": {
@@ -2784,7 +2784,7 @@
       "key": "a74c2d34-d79f-489a-be2f-58da8a41294c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Using the Painter Says reference, lead the activity to practice conditionals. If time permits, have students take turns giving commands to the class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the Painter Says reference, lead the activity to practice conditionals. If time permits, have students take turns giving commands to the class.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2801,7 +2801,7 @@
       "key": "463d6012-ba1d-47ea-85c9-5533c37344e9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> When programming, it is necessary to establish when something is true or false. In an earlier lesson, we defined `true` and `false` as Boolean values. We will look at some scenarios where you will see the output if the Boolean method gives a `true` value, else if the method gives a `false` value, you will see an alternative output.\n\nWe can use the `Painter`'s Boolean methods to determine if something is `true` or `false`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When programming, it is necessary to establish when something is true or false. In an earlier lesson, we defined `true` and `false` as Boolean values. We will look at some scenarios where you will see the output if the Boolean method gives a `true` value, else if the method gives a `false` value, you will see an alternative output.\n\nWe can use the `Painter`'s Boolean methods to determine if something is `true` or `false`.",
         "duration": "15",
         "name": "Introducing if-else Statements",
         "remarks": true
@@ -2815,7 +2815,7 @@
       "key": "8f6ff299-108f-42b6-9c28-f9b6641dbe79",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the if-else Statements video. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What are the advantages of using `if-else` statements vs. just using `if` statements?*\n\n**Discussion Goal:** Students explain the benefits of using an `if-else` statement. Students identify that an `if-else` statement provides two alternate actions based on the Boolean value.\n\nDo This: Introduce the syntax and functionality of an `if-else` statement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the flow of an `if` statement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Review the syntax of an `if` statement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Introduce the flow of an `if-else` statement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Introduce the syntax of an `if-else` statement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Have students indicate the correct order for the program code segments to create the program described.\n\nAnswer:\n```\nif (art.facingNorth()) {\n   art.move();\n} else {\n   art.turnLeft();\n}\n```\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the if-else Statements video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the advantages of using `if-else` statements vs. just using `if` statements?*\n\n**Discussion Goal:** Students explain the benefits of using an `if-else` statement. Students identify that an `if-else` statement provides two alternate actions based on the Boolean value.\n\nDo This: Introduce the syntax and functionality of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the flow of an `if` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Review the syntax of an `if` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the flow of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the syntax of an `if-else` statement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Have students indicate the correct order for the program code segments to create the program described.\n\nAnswer:\n```\nif (art.facingNorth()) {\n   art.move();\n} else {\n   art.turnLeft();\n}\n```\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1-3 on Code Studio.",
         "progression_name": "Navigating Using if-else"
       },
       "seeding_key": {
@@ -2846,7 +2846,7 @@
       "key": "608c91b9-8fb1-4fff-a748-40ae84dfb0e1",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Explain the use of `!` (not) to a partner. When would you use it in a conditional statement?*\n\n**Discussion Goal:** Students explain their understanding of the use of `!` (not). Students discuss when to use a `!` (not) in a conditional statement. \n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Painter's Toolbox for students to reference as they work.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Explain the use of `!` (not) to a partner. When would you use it in a conditional statement?*\n\n**Discussion Goal:** Students explain their understanding of the use of `!` (not). Students discuss when to use a `!` (not) in a conditional statement. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 4-6 on Code Studio.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Painter's Toolbox for students to reference as they work.",
         "progression_name": "Logical Operator ! (not)",
         "tips": [
           {
@@ -2901,7 +2901,7 @@
       "key": "f371aebf-a5d9-46ca-ab7d-9b378eae3892",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Read the got sticky notes, then read the need sticky notes. Clarify any misconceptions and answer the questions as you read each sticky note."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Read the got sticky notes, then read the need sticky notes. Clarify any misconceptions and answer the questions as you read each sticky note."
       },
       "seeding_key": {
         "activity_section.key": "f371aebf-a5d9-46ca-ab7d-9b378eae3892",
@@ -2924,7 +2924,7 @@
       "key": "e62504c7-fa38-4db3-b998-bbe74850e02a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the visual and prompts.\n* *What surprises you about this visualization? What do you want to know more about?*\n* *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They identify how to minimize time spent on bad code and suggest strategies such as spending time planning and reviewing and testing code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *In your own words, describe what a reviewer gains from a code review. How about the code author?*\n\n**Discussion Goal:** Students identify the benefits of a code review and the different roles involved in a code review."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the visual and prompts.\n* *What surprises you about this visualization? What do you want to know more about?*\n* *Each year ~$85 billion in Global GDP is lost from developer time spent on bad code. How can software engineers work to minimize this time?*\n\n**Discussion Goal:** Students consider the broader role of a software engineer and the different types of programming that they do. They identify how to minimize time spent on bad code and suggest strategies such as spending time planning and reviewing and testing code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineers Share video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In your own words, describe what a reviewer gains from a code review. How about the code author?*\n\n**Discussion Goal:** Students identify the benefits of a code review and the different roles involved in a code review."
       },
       "seeding_key": {
         "activity_section.key": "e62504c7-fa38-4db3-b998-bbe74850e02a",
@@ -2947,7 +2947,7 @@
       "key": "e46e7546-9029-4ad0-82ef-4dabb8b764d4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss the steps of the code review process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the steps of the code review process.",
         "duration": "10",
         "name": "Committing Code",
         "tips": [
@@ -2978,7 +2978,7 @@
       "key": "368829e3-daea-484a-abf1-c6d8a169ce40",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce when to commit code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to commit code on Code Studio.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce when to commit code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate how to commit code on Code Studio.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2995,7 +2995,7 @@
       "key": "bc5b2c9b-4ea9-4309-91bc-b9a55e575971",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of commenting code.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the purpose of commenting code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to add comments to their code and commit the changes. ",
         "progression_name": "The Code Review Cycle"
       },
       "seeding_key": {
@@ -3021,7 +3021,7 @@
       "key": "fad4bcb9-0ae9-4516-8419-ac9461cc9995",
       "position": 6,
       "properties": {
-        "description": "**Do This:** Introduce review requests. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Describe the process of requesting feedback.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students write a message to their group and request feedback."
+        "description": "**Do This:** Introduce review requests. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce scenarios for when to create a review request. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Describe the process of requesting feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students write a message to their group and request feedback."
       },
       "seeding_key": {
         "activity_section.key": "fad4bcb9-0ae9-4516-8419-ac9461cc9995",
@@ -3046,7 +3046,7 @@
       "key": "46e87755-691e-4e96-a588-88a99674ef64",
       "position": 8,
       "properties": {
-        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group."
+        "description": "**Do This:** Discuss strategies for giving good feedback.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Explain how to focus code reviews by looking at functionality, design, comments, and naming choices.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the ART (ask questions, raise flags about confusing code, and tag awesome code) mnemonic to help structure feedback.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Code Review Practice activity guide to each review group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display the comments. Have students decide whether the feedback is valuable for the author.\n* Feedback 1: Not a good example. It is ambiguous whether the reviewer means in this location in the code or in The Neighborhood. It also does not follow ART.\n* Feedback 2: A good example. It identifies a section of code and asks a question to prompt the developer to consider alternative options.\n* Feedback 3: A good example. It flags a potential issue and suggests a way to solve the problem.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What additional feedback might you give to the developer?*\n* *Why is this feedback useful?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with their review groups to write additional comments for the developer on their Code Review Practice activity guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to review the work of one member of their review group."
       },
       "seeding_key": {
         "activity_section.key": "46e87755-691e-4e96-a588-88a99674ef64",
@@ -3057,7 +3057,7 @@
       "key": "d90b044d-d256-485d-a366-26ed70932c63",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss returning feedback to the author.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that code reviews are an iterative process.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss returning feedback to the author.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain that code reviews are an iterative process.",
         "duration": "5",
         "name": "Returning Feedback",
         "tips": [
@@ -3076,7 +3076,7 @@
       "key": "66a9afa2-a045-448a-9a9d-70011314ae41",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio. Have students send their feedback to the code’s original author, then take time to look at the feedback they received. They add +1 comments to help identify valuable feedback from their reviewer."
       },
       "seeding_key": {
         "activity_section.key": "66a9afa2-a045-448a-9a9d-70011314ae41",
@@ -3087,7 +3087,7 @@
       "key": "f0796173-382b-4f5e-837f-f2eed58f7ed1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students a short note to their review group about the types of feedback they find most helpful.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students a short note to their review group about the types of feedback they find most helpful.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Good Feedback"
       },
       "seeding_key": {
@@ -3112,7 +3112,7 @@
       "key": "7c3d694d-042f-4f3c-88f7-e165dbc75e75",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think of a logo that you like. On a sticky note, draw a quick sketch of the logo.*\n* *Can an object of the class `Painter` recreate that logo?*\n* *If not, what other commands does `Painter` need?*\n\n**Discussion Goal:** Students share logos and brainstorm ways that a `Painter` object could recreate the logo.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Think of a logo that you like. On a sticky note, draw a quick sketch of the logo.*\n* *Can an object of the class `Painter` recreate that logo?*\n* *If not, what other commands does `Painter` need?*\n\n**Discussion Goal:** Students share logos and brainstorm ways that a `Painter` object could recreate the logo.",
         "name": "Painting Logos"
       },
       "seeding_key": {
@@ -3136,7 +3136,7 @@
       "key": "6b60cc64-980c-4eb4-88a6-f0e87c7ad5c9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. ",
         "duration": "5",
         "name": "Turning Left",
         "progression_name": "Painter: Turning and Turning",
@@ -3156,7 +3156,7 @@
       "key": "5faeed94-a6ad-4f38-a48e-b53aaefc4545",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the minimum number of calls to `turnLeft()` are needed?*\n* *In order to make your code more efficient, what method would you like to add to the `Painter` class?*\n\n**Discussion Goal:** Students realize that a `turnRight()` method would make the code more efficient. Students might wonder if and how they can decide what methods are available in a class."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is the minimum number of calls to `turnLeft()` are needed?*\n* *In order to make your code more efficient, what method would you like to add to the `Painter` class?*\n\n**Discussion Goal:** Students realize that a `turnRight()` method would make the code more efficient. Students might wonder if and how they can decide what methods are available in a class."
       },
       "seeding_key": {
         "activity_section.key": "5faeed94-a6ad-4f38-a48e-b53aaefc4545",
@@ -3167,7 +3167,7 @@
       "key": "59963a99-0e2c-4c07-a4de-4cca5a7ce49b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> We cannot modify the `Painter` class because it is part of The Neighborhood. We can, however, create a type of `Painter` that can use all of the `Painter`'s methods and add new methods!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> We cannot modify the `Painter` class because it is part of The Neighborhood. We can, however, create a type of `Painter` that can use all of the `Painter`'s methods and add new methods!",
         "duration": "15",
         "name": "Extending the Painter Class"
       },
@@ -3180,7 +3180,7 @@
       "key": "de3d34c0-dee6-4946-bee9-ffa118cab8c4",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Subclasses video.\n\nDo This: Have students respond to the self-check question.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Click through the animated slide to display the solution.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Discuss the solution.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Inheritance and Subclasses video.\n\nDo This: Have students respond to the self-check question.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Click through the animated slide to display the solution.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Discuss the solution.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3197,7 +3197,7 @@
       "key": "c2e994c5-aa95-423f-963e-10b48563f2d0",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the syntax for subclasses and constructors.\n* Review that the header of a subclass uses the `extends` keyword.\n* Review the syntax for a constructor.\n* Review the call to `super` inside of a subclass’s constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 2-4 on Code Studio. Be sure students save their `PainterPlus` class to their Backpack when they commit their code.",
         "progression_name": "Creating PainterPlus",
         "tips": [
           {
@@ -3215,7 +3215,7 @@
       "key": "58f1e7d3-c579-475c-a16b-d87c6514a328",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Notice that the `PainterPlus` object can do everything the `Painter` could do. Why are we doing this if it’s just the same? Remember that we want to add the `turnRight()` method. Let's find out how to write our own methods.",
         "duration": "15",
         "name": "Writing New Methods"
       },
@@ -3228,7 +3228,7 @@
       "key": "f2c4a729-2530-4c94-abbe-f401bb9e3e39",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Methods video.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Methods video.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3245,7 +3245,7 @@
       "key": "b5dc96b2-a7e4-4a8a-81d5-fac6f4328566",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the syntax for writing methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `turnRight()` method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the syntax for writing methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to write the `turnRight()` method.",
         "progression_name": "PainterPlus: turnRight()"
       },
       "seeding_key": {
@@ -3257,7 +3257,7 @@
       "key": "054f35f7-fab7-4d2c-9ddb-7b3f029b8e5d",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.\n\n**Discussion Goal:** Students realize that the `turnRight()` method makes the code more efficient.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What do you think would happen if we tried to call our new `turnRight()` method on a `Painter` object instead of a `PainterPlus` object?\n\n**Discussion Goal:** Students make predictions about the code, including that potential errors they think will happen or they may think that the code will work as intended.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Compare and contrast our solution using `Painter` with `turnLeft()` to our solution using `PainterPlus` with `turnRight()`.\n\n**Discussion Goal:** Students realize that the `turnRight()` method makes the code more efficient.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What do you think would happen if we tried to call our new `turnRight()` method on a `Painter` object instead of a `PainterPlus` object?\n\n**Discussion Goal:** Students make predictions about the code, including that potential errors they think will happen or they may think that the code will work as intended.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 6 on Code Studio. Students test their hypotheses about using a subclass's method on a superclass.",
         "progression_name": "Bug: Calling a Subclass's Method on a Superclass Object"
       },
       "seeding_key": {
@@ -3269,7 +3269,7 @@
       "key": "411e4a6e-11f7-49cc-b438-0b84bc92e61f",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you called `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Students realize that a `Painter` object cannot use the `turnRight()` method because it has not been defined in the `Painter` class. Students note that the only class that can use the `turnRight()` method is `PainterPlus`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to identify and fix errors that occur when an object tries to use a method that is not available to them. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What happened when you called `turnRight()` on a `Painter` object?*\n\n**Discussion Goal:** Students realize that a `Painter` object cannot use the `turnRight()` method because it has not been defined in the `Painter` class. Students note that the only class that can use the `turnRight()` method is `PainterPlus`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask a student volunteer to add a sticky note to the Debugging Wall describing a strategy to identify and fix errors that occur when an object tries to use a method that is not available to them. "
       },
       "seeding_key": {
         "activity_section.key": "411e4a6e-11f7-49cc-b438-0b84bc92e61f",
@@ -3280,7 +3280,7 @@
       "key": "ab6984a5-3901-4230-a5f0-3790634c9af4",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Students share what they remember from the lesson and learned. Students make connections between the new content and previous lessons.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the Closing the Loop process.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Students share what they remember from the lesson and learned. Students make connections between the new content and previous lessons.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -3318,7 +3318,7 @@
       "key": "bc8741bd-0437-4894-81ea-ecfe6076b1ce",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Cell phones inherited the ability to make phone calls from telephones. What are some new features that cell phones have that standard telephones do not have?*\n\n**Discussion Goal:** Students give examples of features of cell phones, such as text messaging, video calling, taking pictures, and using mobile apps. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Cell phones inherited the ability to make phone calls from telephones. What are some new features that cell phones have that standard telephones do not have?*\n\n**Discussion Goal:** Students give examples of features of cell phones, such as text messaging, video calling, taking pictures, and using mobile apps. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -3335,7 +3335,7 @@
       "key": "a35906be-b33d-4634-b0ad-d5f89e1c667c",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Review the `PainterPlus` class. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `PainterPlus` inherits from the `Painter` class.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `PainterPlus` inherits all of the methods of the `Painter` class.\n\n**Do This:** Introduce the methods students will implement.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `turnAround()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `takeAllPaint()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `moveFast()`\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** What should a `PainterPlus` object do if it is instructed to `moveFast()` but there is only one available point to move to?\n\n**Discussion Goal:** Students share alternate actions the `PainterPlus` object could take, such as not moving forward or only moving forward one space.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Define edge case and provide the edge case for `moveFast()` as an example.",
+        "description": "**Do This:** Review the `PainterPlus` class. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits from the `Painter` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `PainterPlus` inherits all of the methods of the `Painter` class.\n\n**Do This:** Introduce the methods students will implement.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `turnAround()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `takeAllPaint()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `moveFast()`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** What should a `PainterPlus` object do if it is instructed to `moveFast()` but there is only one available point to move to?\n\n**Discussion Goal:** Students share alternate actions the `PainterPlus` object could take, such as not moving forward or only moving forward one space.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define edge case and provide the edge case for `moveFast()` as an example.",
         "duration": "9",
         "name": "More PainterPlus Methods"
       },
@@ -3373,7 +3373,7 @@
       "key": "6978ed67-33f0-4c65-8106-07f9a76e9afe",
       "position": 4,
       "properties": {
-        "description": "Before software engineers write new code, they write the algorithm to solve the problem or complete the task in pseudocode.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Pseudocode is a simple way of writing an algorithm in English. It is not an actual programming language, but it makes it easy to translate our algorithm into a programming language like Java.",
+        "description": "Before software engineers write new code, they write the algorithm to solve the problem or complete the task in pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Pseudocode is a simple way of writing an algorithm in English. It is not an actual programming language, but it makes it easy to translate our algorithm into a programming language like Java.",
         "remarks": true
       },
       "seeding_key": {
@@ -3385,7 +3385,7 @@
       "key": "eefae6e8-eeb2-4772-9a13-ff1bec5277b1",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Explain the role of pseudocode and tips for writing pseudocode.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Demonstrate writing pseudocode to solve the example problem."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the role of pseudocode and tips for writing pseudocode.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Demonstrate writing pseudocode to solve the example problem."
       },
       "seeding_key": {
         "activity_section.key": "eefae6e8-eeb2-4772-9a13-ff1bec5277b1",
@@ -3408,7 +3408,7 @@
       "key": "f443b791-e43f-4994-810f-4e4c71ca061b",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Assign one of the methods to each group. Direct each group to write pseudocode for their assigned method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students compare their pseudocode to the example solutions."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Assign one of the methods to each group. Direct each group to write pseudocode for their assigned method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their pseudocode to the example solutions."
       },
       "seeding_key": {
         "activity_section.key": "f443b791-e43f-4994-810f-4e4c71ca061b",
@@ -3419,7 +3419,7 @@
       "key": "24c939ae-5656-4eb8-a7dc-2a4e3dd58093",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students work with their groups to implement a solution to the method they planned.\n* Choice 1: `turnAround()`\n* Choice 2: `takeAllPaint()`\n* Choice 3: `moveFast()`",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students work with their groups to implement a solution to the method they planned.\n* Choice 1: `turnAround()`\n* Choice 2: `takeAllPaint()`\n* Choice 3: `moveFast()`",
         "duration": "18",
         "name": "Using PainterPlus Methods",
         "progression_name": "Using PainterPlus Methods",
@@ -3451,7 +3451,7 @@
       "key": "e35815eb-a292-4bac-9a46-6562d2dd321c",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students compare their solutions to the `turnAround()`, `takeAllPaint()`, and `moveFast()` methods to the solutions provided to them and update their `PainterPlus` class to include all three methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students compare their solutions to the `turnAround()`, `takeAllPaint()`, and `moveFast()` methods to the solutions provided to them and update their `PainterPlus` class to include all three methods.",
         "progression_name": "PainterPlus Methods"
       },
       "seeding_key": {
@@ -3463,7 +3463,7 @@
       "key": "8f6cbe45-07cb-452d-aca0-7dd415afc0e3",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display each method. Before moving onto the next method, have students share their understanding of the method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display each method. Before moving onto the next method, have students share their understanding of the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "name": "PainterPlus Methods Review"
       },
       "seeding_key": {
@@ -3488,7 +3488,7 @@
       "key": "05f51fe3-8f34-4928-9972-d8b0af5b1932",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Today we’re going to continue expanding the `PainterPlus` class, but this time we’re going to add methods that allow the `Painter` to paint as they move in The Neighborhood.\n\nTo get started, we will plan our new methods using pseudocode.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today we’re going to continue expanding the `PainterPlus` class, but this time we’re going to add methods that allow the `Painter` to paint as they move in The Neighborhood.\n\nTo get started, we will plan our new methods using pseudocode.",
         "name": "Pair Pseudocode"
       },
       "seeding_key": {
@@ -3500,7 +3500,7 @@
       "key": "c59878ac-93f3-4759-a5df-d114f1c05f48",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Pseudocode Warmup handout to each student.\n\n**Do This:** Introduce the new methods students will write.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `paintLineSegment()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `paintFullLine()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `paintDiagonalSegment()`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `paintFullDiagonal()`\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss the pseudocode for `paintLineSegment()`. Direct students to write the pseudocode on their Pseudocode Warmup handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode for the remaining three methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Pseudocode Warmup handout to each student.\n\n**Do This:** Introduce the new methods students will write.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `paintLineSegment()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `paintFullLine()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `paintDiagonalSegment()`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `paintFullDiagonal()`\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the pseudocode for `paintLineSegment()`. Direct students to write the pseudocode on their Pseudocode Warmup handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work with a partner to write pseudocode for the remaining three methods.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3531,7 +3531,7 @@
       "key": "f726090c-bdad-468d-988b-47d9e108526b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students translate the pseudocode they wrote on the Pseudocode Warmup handout to Java.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students translate the pseudocode they wrote on the Pseudocode Warmup handout to Java.",
         "progression_name": "Writing Painting Methods"
       },
       "seeding_key": {
@@ -3543,7 +3543,7 @@
       "key": "d905221f-ae30-409f-8b01-3b05253a5555",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can we instruct `PainterPlus` to paint diagonal lines of multiple colors?*\n\n**Discussion Goal:** Students suggest specifying a color similar to the `paint(String color)` method.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to Parameters video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate adding a parameter and how methods handle parameters when they are called.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question then click through the animated slide to display the solution.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to add parameters to their methods. Have students continue to complete Levels 2-5 to test their methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can we instruct `PainterPlus` to paint diagonal lines of multiple colors?*\n\n**Discussion Goal:** Students suggest specifying a color similar to the `paint(String color)` method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Introduction to Parameters video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate adding a parameter and how methods handle parameters when they are called.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students answer the self-check question then click through the animated slide to display the solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to add parameters to their methods. Have students continue to complete Levels 2-5 to test their methods.",
         "progression_name": "Using Painting Methods",
         "tips": [
           {
@@ -3575,7 +3575,7 @@
       "key": "8317a539-861e-470f-8bba-e54230dd03b8",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's methods and design on Level 5 in Code Studio. Students request, receive, and review feedback on their new methods.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to return to their own code and revise it based on at least one piece of feedback.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's methods and design on Level 5 in Code Studio. Students request, receive, and review feedback on their new methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to return to their own code and revise it based on at least one piece of feedback.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3592,7 +3592,7 @@
       "key": "be63ee61-c2c1-46b4-87a4-fe986101c836",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Use this discussion to reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives. This is also a good time to identify larger group misconceptions to address before the end of the unit.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What are the key takeaways of this lesson?*\n* *Which parts of this lesson built off of previous lesson content? What is completely new?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Use this discussion to reinforce the important beats of the lesson, allowing students to check their understanding and support one another in cementing their understanding of the day’s objectives. This is also a good time to identify larger group misconceptions to address before the end of the unit.",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -3617,7 +3617,7 @@
       "key": "c85041eb-af8d-4d30-93cb-20051c7c1924",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** The image to the right shows a `SprayPainter` object after calling `sprayPaint(“red”, “blue”);`. What do you notice? What do you wonder? \n\n**Discussion Goal:** Students share what they notice about the result of the call to the `sprayPaint()` method, including that it creates a circle pattern of two different colors. Students might also notice that the `sprayPaint()` method takes two parameters, which correspond to the colors that are painted."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** The image to the right shows a `SprayPainter` object after calling `sprayPaint(“red”, “blue”);`. What do you notice? What do you wonder? \n\n**Discussion Goal:** Students share what they notice about the result of the call to the `sprayPaint()` method, including that it creates a circle pattern of two different colors. Students might also notice that the `sprayPaint()` method takes two parameters, which correspond to the colors that are painted."
       },
       "seeding_key": {
         "activity_section.key": "c85041eb-af8d-4d30-93cb-20051c7c1924",
@@ -3640,7 +3640,7 @@
       "key": "592ff1a0-574a-44eb-8672-93b8c3156e45",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce the `SprayPainter` class.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `SprayPainter` extends `PainterPlus`\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> The method `sprayPaint()` is part of the `SprayPainter` class\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is the method header for `sprayPaint(String color1, String color2)` similar to the method header for `paintFullLine(String color)`?*\n* *How are they different?*\n\n**Discussion Goal:** Students realize that both methods use parameters. Students notice that the `sprayPaint()` method takes two parameters.",
+        "description": "**Do This:** Introduce the `SprayPainter` class.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `SprayPainter` extends `PainterPlus`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The method `sprayPaint()` is part of the `SprayPainter` class\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *How is the method header for `sprayPaint(String color1, String color2)` similar to the method header for `paintFullLine(String color)`?*\n* *How are they different?*\n\n**Discussion Goal:** Students realize that both methods use parameters. Students notice that the `sprayPaint()` method takes two parameters.",
         "duration": "10",
         "name": "Planning the SprayPainter",
         "tips": [
@@ -3659,7 +3659,7 @@
       "key": "a9968814-defa-40e8-94ac-f4adfae1720d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the SprayPainter Activity Guide and two colored pencils or markers to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Planning section of the SprayPainter Activity Guide. Discuss the requirements of the method.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the SprayPainter Activity Guide and two colored pencils or markers to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Planning section of the SprayPainter Activity Guide. Discuss the requirements of the method.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3676,7 +3676,7 @@
       "key": "a8a61f4e-b10f-4fe7-9a61-791f9deddade",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Next, you will be writing `SprayPainter` from scratch. What different parts of a class will you need to write for the class to be complete?*\n\n**Discussion Goal:** Students recall that `SprayPainter` extends `PainterPlus`. Students identify that the `SprayPainter` constructor should be parameterized and include a call to `super`. Students also note that they need to include the `sprayPaint()` method.\n\n**Group:** Group students into pairs.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Instruct students to write their `SprayPainter` class.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Next, you will be writing `SprayPainter` from scratch. What different parts of a class will you need to write for the class to be complete?*\n\n**Discussion Goal:** Students recall that `SprayPainter` extends `PainterPlus`. Students identify that the `SprayPainter` constructor should be parameterized and include a call to `super`. Students also note that they need to include the `sprayPaint()` method.\n\n**Group:** Group students into pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Instruct students to write their `SprayPainter` class.",
         "duration": "10",
         "name": "Writing the SprayPainter Class",
         "progression_name": "Writing the SprayPainter Class"
@@ -3690,7 +3690,7 @@
       "key": "1a6a7c5b-37f4-41ce-b86a-9699a748eba9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement their newly written class by creating a mural showcasing all of `SprayPainter`’s methods.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students implement their newly written class by creating a mural showcasing all of `SprayPainter`’s methods.",
         "duration": "10",
         "name": "SprayPainter Mural Creation",
         "progression_name": "SprayPainter Mural",
@@ -3710,7 +3710,7 @@
       "key": "aae0ce51-3b6f-4484-b720-e311a2b4914f",
       "position": 1,
       "properties": {
-        "description": "**Distribute:** Distribute sticky notes to students.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to open their final `SprayPainter` mural on their computer screen. Students participate in a Gallery Walk and view their classmates’ murals. They use sticky notes to leave quick feedback on other students’ murals in the form of Glows, Grows, and Want-to-Knows. Encourage students to focus feedback on the code rather than just the appearance of the mural. After the gallery walk, invite students to read through their feedback and share about the murals they viewed with other students near them.",
+        "description": "**Distribute:** Distribute sticky notes to students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to open their final `SprayPainter` mural on their computer screen. Students participate in a Gallery Walk and view their classmates’ murals. They use sticky notes to leave quick feedback on other students’ murals in the form of Glows, Grows, and Want-to-Knows. Encourage students to focus feedback on the code rather than just the appearance of the mural. After the gallery walk, invite students to read through their feedback and share about the murals they viewed with other students near them.",
         "name": "Gallery Walk",
         "tips": [
           {
@@ -3741,7 +3741,7 @@
       "key": "79a2dec7-5d9e-4a63-bc25-e67f36681a52",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce pixels.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Pixel Picture Puzzle to each student.\n\n**Do This:** Direct students to complete the Pixel Picture Puzzle.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce pixels.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Pixel Picture Puzzle to each student.\n\n**Do This:** Direct students to complete the Pixel Picture Puzzle.",
         "duration": "5",
         "name": "Pixel Picture Puzzle"
       },
@@ -3754,7 +3754,7 @@
       "key": "fd5293a3-53cd-494e-832a-5b1ef176cf97",
       "position": 1,
       "properties": {
-        "description": "**Do This:** Introduce the `StampPainter` class. \n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> `StampPainter` inherits from `PainterPlus` and can paint stamps of different shapes and patterns.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Methods in the `StampPainter` class instruct the `StampPainter` to paint customized stamps.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. ",
+        "description": "**Do This:** Introduce the `StampPainter` class. \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> `StampPainter` inherits from `PainterPlus` and can paint stamps of different shapes and patterns.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Methods in the `StampPainter` class instruct the `StampPainter` to paint customized stamps.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to work in pairs on Level 1 on Code Studio. ",
         "duration": "10",
         "name": "Create StampPainter",
         "progression_name": "Create StampPainter"
@@ -3782,7 +3782,7 @@
       "key": "4228dd0b-2ffc-4b97-aa4f-f1ded7bf82db",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Create Your Stamp handout and two colored pencils to each student.\n\n**Do This:** Direct students to design their stamp on the Create Your Stamp handout.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students Level 2 on Code Studio to implement their stamp method. ",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Create Your Stamp handout and two colored pencils to each student.\n\n**Do This:** Direct students to design their stamp on the Create Your Stamp handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students Level 2 on Code Studio to implement their stamp method. ",
         "progression_name": "Create Your Stamp Method"
       },
       "seeding_key": {
@@ -3794,7 +3794,7 @@
       "key": "08030ded-dd0f-47f3-901e-a5626e38566b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Play a game of Guess My Stamp, where student volunteers run their code in front of the class, and the class tries to depict the drawing before the code finishes running. Allow each presenter to explain their design afterward.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play a game of Guess My Stamp, where student volunteers run their code in front of the class, and the class tries to depict the drawing before the code finishes running. Allow each presenter to explain their design afterward.",
         "name": "Guess My Stamp",
         "tips": [
           {
@@ -3812,7 +3812,7 @@
       "key": "55b81395-0ba8-4be7-b7bd-4e8635fb24f2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "55b81395-0ba8-4be7-b7bd-4e8635fb24f2",
@@ -3836,7 +3836,7 @@
       "key": "6ad1d341-6fbb-4422-9647-9364a40f26af",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which one doesn’t belong? Why?*\n\n**Discussion Goal:** Students identify which of the four classes (`Painter`, `PainterPlus`, `SprayPainter`, `StampPainter`) does not belong and explain why. Students make connections between the classes and subclasses and think of their similarities and differences.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which one doesn’t belong? Why?*\n\n**Discussion Goal:** Students identify which of the four classes (`Painter`, `PainterPlus`, `SprayPainter`, `StampPainter`) does not belong and explain why. Students make connections between the classes and subclasses and think of their similarities and differences.",
         "name": "Which One Doesn't Belong",
         "tips": [
           {
@@ -3868,7 +3868,7 @@
       "key": "791ee19b-10ad-46f0-b8f4-ff536fdb2a8e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What is an edge case?*\n\n**Discussion Goal:** Students recall the definition of an edge case and may share examples of edge cases.\n\n**Do This:** Click through the animated slide to display the solution."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is an edge case?*\n\n**Discussion Goal:** Students recall the definition of an edge case and may share examples of edge cases.\n\n**Do This:** Click through the animated slide to display the solution."
       },
       "seeding_key": {
         "activity_section.key": "791ee19b-10ad-46f0-b8f4-ff536fdb2a8e",
@@ -3891,7 +3891,7 @@
       "key": "4b6204d7-0987-4b5a-9704-61cac38a1fd5",
       "position": 4,
       "properties": {
-        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Design The Neighborhood handout and a pair of scissors. Instruct students to cut out the pieces.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to design two Neighborhoods: one that creates an edge case for `SprayPainter` and one that creates an edge case for `StampPainter`.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students share their best Neighborhood designs with the class through a Gallery Walk. Have students share as a class what they noticed.",
+        "description": "**Group:** Place students in groups of 3-4.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of the Design The Neighborhood handout and a pair of scissors. Instruct students to cut out the pieces.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to design two Neighborhoods: one that creates an edge case for `SprayPainter` and one that creates an edge case for `StampPainter`.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their best Neighborhood designs with the class through a Gallery Walk. Have students share as a class what they noticed.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3922,7 +3922,7 @@
       "key": "2c91f1fb-ba77-4f7c-8857-f321e7898173",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *In one of your classes, a teacher assigns this impossible homework: “Do these ten problems: the even-numbered problems from #1-10.” Think of as many possibilities for which problems you would do.*\n\n**Discussion Goal:** Students think through how to handle this edge case. As written, the prompt is impossible, just like how students created Neighborhoods that are impossible for the `Painter`s. The three scenarios students identify are:\n* Do zero problems: The task is impossible, so do not try.\n* Do the even-numbered problems: Complete the task until the point that it is impossible and only complete five problems.\n* Do all of #1-10: Complete part of the task by doing ten problems, even though we’re unsure of what exactly to do.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In one of your classes, a teacher assigns this impossible homework: “Do these ten problems: the even-numbered problems from #1-10.” Think of as many possibilities for which problems you would do.*\n\n**Discussion Goal:** Students think through how to handle this edge case. As written, the prompt is impossible, just like how students created Neighborhoods that are impossible for the `Painter`s. The three scenarios students identify are:\n* Do zero problems: The task is impossible, so do not try.\n* Do the even-numbered problems: Complete the task until the point that it is impossible and only complete five problems.\n* Do all of #1-10: Complete part of the task by doing ten problems, even though we’re unsure of what exactly to do.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -3951,7 +3951,7 @@
       "key": "acb992a5-7a26-4337-a081-504d4cbbed03",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** A `StampPainter` object starts at `(2, 6)`. Think of as many possibilities for what the `stamp()` method should do.\n\n**Discussion Goal:** Students share potential solutions to handle this edge case, including to draw nothing, draw only part of the stamp, or draw the stamp but move along the edge.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** A `StampPainter` object starts at `(2, 6)`. Think of as many possibilities for what the `stamp()` method should do.\n\n**Discussion Goal:** Students share potential solutions to handle this edge case, including to draw nothing, draw only part of the stamp, or draw the stamp but move along the edge.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3968,7 +3968,7 @@
       "key": "b880f7ff-5965-4e86-bd50-d854a6f07bac",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate potential solutions. Have students move to a corner of the room labeled with the scenario number that they believe is the best solution. Students discuss within their corner why they chose that scenario. Groups rotate sharing their reasoning, starting from corner one. Each group shares one reason why they believe their solution is the best. Continue rotating until no more groups have anything to share.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate potential solutions. Have students move to a corner of the room labeled with the scenario number that they believe is the best solution. Students discuss within their corner why they chose that scenario. Groups rotate sharing their reasoning, starting from corner one. Each group shares one reason why they believe their solution is the best. Continue rotating until no more groups have anything to share.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3999,7 +3999,7 @@
       "key": "d181f0b9-8918-4245-a00a-8e6e47c9972b",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What changes do we need to make to the code to implement scenario three?*\n\n**Discussion Goal:** Students note that `if` statements need to be added to check `canMove()` before attempting to `move()`.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What changes do we need to make to the code to implement scenario three?*\n\n**Discussion Goal:** Students note that `if` statements need to be added to check `canMove()` before attempting to `move()`.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4016,7 +4016,7 @@
       "key": "fb2c7731-0c14-4a53-8309-12a95403828d",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Great job, everyone! Here’s what the start of our code could look like.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Great job, everyone! Here’s what the start of our code could look like.",
         "remarks": true
       },
       "seeding_key": {
@@ -4040,7 +4040,7 @@
       "key": "4050c9c9-538c-499c-93c3-ae5fa91e065f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is something you learned about edge cases and test-driven development today?*\n* *What is something you want to learn more about?*\n\n**Discussion Goal:** Students share what they learned about edge cases and test-driven development. They also share what else they want to know more about. While listening to the discussion, students expand their curiosity and desire to learn more about TDD.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What is something you learned about edge cases and test-driven development today?*\n* *What is something you want to learn more about?*\n\n**Discussion Goal:** Students share what they learned about edge cases and test-driven development. They also share what else they want to know more about. While listening to the discussion, students expand their curiosity and desire to learn more about TDD.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4057,7 +4057,7 @@
       "key": "6e10a49c-5962-41ed-afea-3ce1da71ccce",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "6e10a49c-5962-41ed-afea-3ce1da71ccce",
@@ -4081,7 +4081,7 @@
       "key": "a0ab2dad-7ce5-42fa-8dfb-a5f40e522756",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the quote as students enter the classroom. Read the quote to your students.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the quote as students enter the classroom. Read the quote to your students.",
         "name": "Software Engineering Discussion"
       },
       "seeding_key": {
@@ -4105,7 +4105,7 @@
       "key": "b1aa2caa-8c5c-4fe4-94cf-a6f252d503d9",
       "position": 3,
       "properties": {
-        "description": "**Distribute:** Give at least three sticky notes to each student.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write down three words/phrases on each sticky note about the phrase “software engineering.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Discuss the definition of a software engineer.\n\n**Group:** Divide students into groups of four.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show the words and phrases from Lesson 1. Have students share the words/phrases from their sticky notes.",
+        "description": "**Distribute:** Give at least three sticky notes to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write down three words/phrases on each sticky note about the phrase “software engineering.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the definition of a software engineer.\n\n**Group:** Divide students into groups of four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the words and phrases from Lesson 1. Have students share the words/phrases from their sticky notes.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4122,7 +4122,7 @@
       "key": "e2fc8d2e-9811-4a28-b040-112d486ac2dc",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What has changed?*\n* *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students reflect on their growth throughout the unit."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What has changed?*\n* *What characteristics are important for software engineering?*\n\n**Discussion Goal:** Students reflect on their growth throughout the unit."
       },
       "seeding_key": {
         "activity_section.key": "e2fc8d2e-9811-4a28-b040-112d486ac2dc",
@@ -4147,7 +4147,7 @@
       "key": "2c334f3a-52eb-47de-88c7-75b6aae996e6",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Show students the example open source code segment. Have students discuss with a partner the parts of the code that look familiar.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show students the example open source code segment. Have students discuss with a partner the parts of the code that look familiar.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4164,7 +4164,7 @@
       "key": "83dea03c-ca78-4084-8a56-5c582bd57e63",
       "position": 3,
       "properties": {
-        "description": "**Group:** Divide students into groups of four. Divide the four code options evenly among the groups.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of one of the Open Source Code activity guide options. \n\n**Do This:** Discuss the instructions for the activity.",
+        "description": "**Group:** Divide students into groups of four. Divide the four code options evenly among the groups.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of one of the Open Source Code activity guide options. \n\n**Do This:** Discuss the instructions for the activity.",
         "duration": "25",
         "name": "Explore Open Source Code",
         "tips": [
@@ -4183,7 +4183,7 @@
       "key": "1cee1316-2061-4c39-a9bc-55da66fbf317",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the visual representations of each open source code option.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Do you see vocab words from previous lessons in your code?*\n* *What's happening in the program?*\n* *What would you say if you were sending it for a code review?*",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the visual representations of each open source code option.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Do you see vocab words from previous lessons in your code?*\n* *What's happening in the program?*\n* *What would you say if you were sending it for a code review?*",
         "tips": [
           {
             "type": "teachingTip",
@@ -4212,7 +4212,7 @@
       "key": "b8694e2e-1584-40f1-9242-8540e3be2976",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What connections can you make from the open-source code to the code you have written in this unit?*\n\n**Discussion Goal:** Students make connections between the code they have written throughout the unit and the code in the open source examples."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What connections can you make from the open-source code to the code you have written in this unit?*\n\n**Discussion Goal:** Students make connections between the code they have written throughout the unit and the code in the open source examples."
       },
       "seeding_key": {
         "activity_section.key": "b8694e2e-1584-40f1-9242-8540e3be2976",
@@ -4223,7 +4223,7 @@
       "key": "1860caec-bfea-40fe-ad3f-33b889d5bbaa",
       "position": 1,
       "properties": {
-        "description": "In Lesson 1, we affirmed our software identities together. Now that you have the mindset of a software engineer let's reaffirm these identities again. \n\nWhen I say, “I am a,” you say, “problem solver.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am,” you say “creative.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “I am...”\n\nWhen I say “I am a,” you say “collaborator.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am a,” you say “learner.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am a,” you say “software engineer.”\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> “I am a...” \n",
+        "description": "In Lesson 1, we affirmed our software identities together. Now that you have the mindset of a software engineer let's reaffirm these identities again. \n\nWhen I say, “I am a,” you say, “problem solver.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am,” you say “creative.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “I am...”\n\nWhen I say “I am a,” you say “collaborator.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am a,” you say “learner.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “I am a...”\n\nWhen I say “I am a,” you say “software engineer.”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> “I am a...” \n",
         "name": "I Am a Software Engineer",
         "remarks": true
       },
@@ -4236,7 +4236,7 @@
       "key": "cce64166-6516-449a-84e8-fe9a08375b3f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Have students write their name and one characteristic of a software engineer that they most identify with on a sticky note.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write their name and one characteristic of a software engineer that they most identify with on a sticky note.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4295,7 +4295,7 @@
       "key": "cc1de8b2-caaf-4d3c-bbab-7fbd038c1c50",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "cc1de8b2-caaf-4d3c-bbab-7fbd038c1c50",
@@ -4329,7 +4329,7 @@
       "key": "2ca6d32e-b751-4600-aed2-f284f5a79c5f",
       "position": 1,
       "properties": {
-        "description": "**Display:**\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Show the video \"Unity and Safety Through Street Art in Norfolk, VA.\"\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Show the examples of asphalt art.",
+        "description": "**Display:**\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the video \"Unity and Safety Through Street Art in Norfolk, VA.\"\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Show the examples of asphalt art.",
         "name": "Asphalt Art Projects"
       },
       "seeding_key": {
@@ -4353,7 +4353,7 @@
       "key": "7720f923-cf2a-4cfd-96c3-9bb7f90e5fca",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create art in The Neighborhood?*\n\n**Discussion Goal:** Students talk about using `PainterPlus`, `SprayPainter`, and `StampPainter` to create the asphalt art. Students present ideas of different types of `Painter`s they might need to create other elements in the paintings because of limitations of the existing classes or to simplify complex components."
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What does this make you wonder about how you could create art in The Neighborhood?*\n\n**Discussion Goal:** Students talk about using `PainterPlus`, `SprayPainter`, and `StampPainter` to create the asphalt art. Students present ideas of different types of `Painter`s they might need to create other elements in the paintings because of limitations of the existing classes or to simplify complex components."
       },
       "seeding_key": {
         "activity_section.key": "7720f923-cf2a-4cfd-96c3-9bb7f90e5fca",
@@ -4378,7 +4378,7 @@
       "key": "b231842b-acb8-4b40-93df-b5fc4ee044b0",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page."
+        "description": "**Distribute:** Give each student a copy of the Asphalt Art Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  As a class, read through the Project Description on the first page of the Asphalt Art Project Planning Guide and review the rubric on the last page."
       },
       "seeding_key": {
         "activity_section.key": "b231842b-acb8-4b40-93df-b5fc4ee044b0",
@@ -4403,7 +4403,7 @@
       "key": "29da5d69-14ae-4089-ba7a-42c60e9205f6",
       "position": 4,
       "properties": {
-        "description": "**Do This:** Guide students through the planning guide.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Refer students to Step 1 on page 2 of the Asphalt Art Project Planning Guide. Students write down ideas then select one to create. Students explain in a few sentences what their design will represent.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Refer students to Step 2 on page 2 of the Asphalt Art Project Planning Guide. Students explain in a few sentences what their design will represent.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Refer students to Step 3 on page 3 of the Asphalt Art Project Planning Guide. Students create a quick sketch of the design they will create\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Refer students to Step 4 on page 4 of the Asphalt Art Project Planning Guide. Students fill in the table outlining what they already know and have and what they need to create their design.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the slide with the list of methods for `PainterPlus`, `StampPainter`, and `SprayPainter` for students to refer to as they complete Step 4 of the Asphalt Art Project Planning Guide.",
+        "description": "**Do This:** Guide students through the planning guide.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 1 on page 2 of the Asphalt Art Project Planning Guide. Students write down ideas then select one to create. Students explain in a few sentences what their design will represent.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 2 on page 2 of the Asphalt Art Project Planning Guide. Students explain in a few sentences what their design will represent.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 3 on page 3 of the Asphalt Art Project Planning Guide. Students create a quick sketch of the design they will create\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Refer students to Step 4 on page 4 of the Asphalt Art Project Planning Guide. Students fill in the table outlining what they already know and have and what they need to create their design.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the slide with the list of methods for `PainterPlus`, `StampPainter`, and `SprayPainter` for students to refer to as they complete Step 4 of the Asphalt Art Project Planning Guide.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4434,7 +4434,7 @@
       "key": "e52f0d2b-d4e6-4a4c-a642-1af43afdf955",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to develop their program to create their asphalt art. Students use the `PainterPlus`, `SprayPainter`, and/or `StampPainter` classes they wrote in previous lessons and write a new class that extends `PainterPlus` with a new behavior to create their design.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to develop their program to create their asphalt art. Students use the `PainterPlus`, `SprayPainter`, and/or `StampPainter` classes they wrote in previous lessons and write a new class that extends `PainterPlus` with a new behavior to create their design.",
         "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
@@ -4446,7 +4446,7 @@
       "key": "4d3956fe-1a86-4b30-899c-c78b8de7d80d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Briefly explain the new type of Painter you plan to create and the behavior it will perform. Why will you need this type of Painter to create your symbol?*\n\n**Discussion Goal:** Students identify the element(s) of their symbol that requires a behavior that does not exist in the `PainterPlus`, `SprayPainter`, or `StampPainter` classes. Students name the class they are creating, explains the behavior this type of `Painter` has and identifies where they need this behavior to create their design.\n\n---",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Briefly explain the new type of Painter you plan to create and the behavior it will perform. Why will you need this type of Painter to create your symbol?*\n\n**Discussion Goal:** Students identify the element(s) of their symbol that requires a behavior that does not exist in the `PainterPlus`, `SprayPainter`, or `StampPainter` classes. Students name the class they are creating, explains the behavior this type of `Painter` has and identifies where they need this behavior to create their design.\n\n---",
         "name": "Planning Reflection"
       },
       "seeding_key": {
@@ -4470,7 +4470,7 @@
       "key": "e64f3237-3d97-4307-835b-db736d725d6c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Common Grounds artwork and read the quote.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *How can this art contribute to community development? How can we use technology to creatively improve our community?*\n\nDiscussion Goal: Students describe the theme and message conveyed in the image. Students notice the artwork incorporates city department symbols into the theme. Students share ideas for using technology to convey similar themes and messages to improve their community.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Common Grounds artwork and read the quote.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can this art contribute to community development? How can we use technology to creatively improve our community?*\n\nDiscussion Goal: Students describe the theme and message conveyed in the image. Students notice the artwork incorporates city department symbols into the theme. Students share ideas for using technology to convey similar themes and messages to improve their community.",
         "name": "Developing Community"
       },
       "seeding_key": {
@@ -4496,7 +4496,7 @@
       "key": "ef7736fd-4563-4664-8945-3c01e84c8e97",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to continue developing their Asphalt Art Project.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to continue developing their Asphalt Art Project.",
         "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
@@ -4522,7 +4522,7 @@
       "key": "e10c5749-b0d5-4297-813a-e9533e1f1163",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on their Asphalt Art Project."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pair students within a review group to review each other's projects in Code Studio. Students request, receive, and review feedback on their Asphalt Art Project."
       },
       "seeding_key": {
         "activity_section.key": "e10c5749-b0d5-4297-813a-e9533e1f1163",
@@ -4533,7 +4533,7 @@
       "key": "2e58749f-2681-4853-b11d-b267bb73d8aa",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 5 of their Asphalt Art Project Planning Guide. Allow students time to respond to the prompt.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 5 of their Asphalt Art Project Planning Guide. Allow students time to respond to the prompt.\n",
         "name": "Project Feedback"
       },
       "seeding_key": {
@@ -4582,7 +4582,7 @@
       "key": "91e6f182-6214-496a-ada5-c0092537ea90",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 6 of their Asphalt Art Project Planning Guide. Allow students time to respond to the prompt.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to page 6 of their Asphalt Art Project Planning Guide. Allow students time to respond to the prompt.\n"
       },
       "seeding_key": {
         "activity_section.key": "91e6f182-6214-496a-ada5-c0092537ea90",
@@ -4606,7 +4606,7 @@
       "key": "7ef51ce8-0c03-432b-bc8d-e20069d2e01b",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to finish developing their program for their Asphalt Art Project. Have students submit their projects at the end of the allotted time.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio to finish developing their program for their Asphalt Art Project. Have students submit their projects at the end of the allotted time.\n",
         "progression_name": "Asphalt Art Project"
       },
       "seeding_key": {
@@ -4631,7 +4631,7 @@
       "key": "c05f4573-944c-483c-a200-2485022b801e",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Provide students a set of the Asphalt Art Project Peer Interview Cards.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs. Students take turns interviewing their partners about their project using the provided interview question cards.\n\n---"
+        "description": "**Distribute:** Provide students a set of the Asphalt Art Project Peer Interview Cards.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs. Students take turns interviewing their partners about their project using the provided interview question cards.\n\n---"
       },
       "seeding_key": {
         "activity_section.key": "c05f4573-944c-483c-a200-2485022b801e",
@@ -4665,7 +4665,7 @@
       "key": "d2b6a5e5-7b62-4b59-9fbd-27d127909997",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students share the knowledge they have gained so far in the course and successes they have experienced.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Describe one new thing you have learned about Java through this course.*\n\n**Discussion Goal:** Students share the knowledge they have gained so far in the course and successes they have experienced.",
         "name": "Introduction to FRQs"
       },
       "seeding_key": {
@@ -4689,7 +4689,7 @@
       "key": "9d3608f9-e461-4e9c-8325-6e5444bd7230",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of an FRQ.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to explain the structure of an FRQ.",
         "tips": [
           {
             "type": "teachingTip",
@@ -4706,7 +4706,7 @@
       "key": "f310894c-1a3e-4535-888a-90a01166613c",
       "position": 1,
       "properties": {
-        "description": "**Group:** Pair students.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the U1L19 Activity Guide to each pair.\n\n**Do This:** Describe the structure of today’s activity.\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Planning - annotate the FRQ\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> \"Around the World\" - code implementation and review\n* <i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> Reflection - pick up the Scoring Guidelines, check their code and reflect on the process",
+        "description": "**Group:** Pair students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the U1L19 Activity Guide to each pair.\n\n**Do This:** Describe the structure of today’s activity.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Planning - annotate the FRQ\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> \"Around the World\" - code implementation and review\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Reflection - pick up the Scoring Guidelines, check their code and reflect on the process",
         "duration": "3",
         "name": "Activity Setup"
       },
@@ -4719,7 +4719,7 @@
       "key": "76c0596b-9384-4069-9295-206890f905fd",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:**  Direct students to the first page of the activity guide. Students annotate the question at the bottom of the page based on the annotation guide.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share questions they have about the FRQ.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight blue or star? Which parts did you highlight orange or box? How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify pieces of the FRQ they will need to develop their solution.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Direct students to the first page of the activity guide. Students annotate the question at the bottom of the page based on the annotation guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *Which parts of the problem did you highlight pink or underline?*\n* *Can someone help explain these words or concepts?*\n\n**Discussion Goal:** Students share questions they have about the FRQ.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Which parts of the problem did you highlight blue or star? Which parts did you highlight orange or box? How do you expect you will use these pieces of information while coding?*\n\n**Discussion Goal:** Students identify pieces of the FRQ they will need to develop their solution.",
         "duration": "5",
         "name": "FRQ Planning"
       },
@@ -4732,7 +4732,7 @@
       "key": "2e7b772f-3534-41ab-8623-4cb86e4c25b7",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Display:** Show the Around the World video.\n\n<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with a partner.\n1. Students find a station. (Students do not need to go in order.)\n2. Students follow instructions at the station. There is an added page in the Activity Guide for stations B and C where students can write down pseudocode before writing their answers on the \"FRQ Written Response\" page. \n3. Students find another group who has completed the same station and explain their solution to that group.\n\n       a. If the second group agrees that the code segment was written correctly, they sign off on it on the guide. \n       \n    b. If they believe something was not written correctly, the pair revises their work and asks the peer group to review it again.\n\n4. Pairs repeat steps two and three, completing the entire class in their Activity Guide. \n5. Once pairs have all three signatures, they bring their Activity Guide to the teacher to get a copy of the Scoring Guidelines (rubric). They then evaluate their work using the Scoring Guidelines and complete the reflection on the Activity Guide's last page.\n\n**Note:** If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Around the World video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Around the World activity with a partner.\n1. Students find a station. (Students do not need to go in order.)\n2. Students follow instructions at the station. There is an added page in the Activity Guide for stations B and C where students can write down pseudocode before writing their answers on the \"FRQ Written Response\" page. \n3. Students find another group who has completed the same station and explain their solution to that group.\n\n       a. If the second group agrees that the code segment was written correctly, they sign off on it on the guide. \n       \n    b. If they believe something was not written correctly, the pair revises their work and asks the peer group to review it again.\n\n4. Pairs repeat steps two and three, completing the entire class in their Activity Guide. \n5. Once pairs have all three signatures, they bring their Activity Guide to the teacher to get a copy of the Scoring Guidelines (rubric). They then evaluate their work using the Scoring Guidelines and complete the reflection on the Activity Guide's last page.\n\n**Note:** If there are fewer than six pairs, students may need to move on to complete an additional section before finding a group for a signature.",
         "duration": "22",
         "name": "Around the World & Reflection",
         "tips": [
@@ -4751,7 +4751,7 @@
       "key": "44672786-256b-4f8c-a178-88f782556160",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss a potential solution.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss a potential solution.",
         "duration": "5",
         "name": "Solution"
       },
@@ -4764,7 +4764,7 @@
       "key": "7c4b2792-4edd-4893-be09-39a6e3a58d38",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What were you confident about? What would you like to practice?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Help students process FRQ format questions as a whole, not the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations. Today's lesson is the first time they have tried to complete an FRQ — they will get better at it with time and practice!",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to guide students through the process of Closing the Loop.\n* *What is your first impression of an FRQ?*\n* *What were you confident about? What would you like to practice?*\n* *What words would you use to describe our learning as a class today? (Attentive, Collaborative, Unfocused, etc.)*\n\n**Discussion Goal:** Help students process FRQ format questions as a whole, not the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations. Today's lesson is the first time they have tried to complete an FRQ — they will get better at it with time and practice!",
         "name": "Closing the Loop"
       },
       "seeding_key": {
@@ -4789,7 +4789,7 @@
       "key": "279080dd-08d6-4f43-b13a-0536d733ee99",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 1 Assessment on Code Studio. Make sure to unlock the assessment following the instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to the Unit 1 Assessment on Code Studio. Make sure to unlock the assessment following the instructions [here](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
       },
       "seeding_key": {
         "activity_section.key": "279080dd-08d6-4f43-b13a-0536d733ee99",
@@ -4811,7 +4811,7 @@
       "key": "cf98d2d8-0ba1-4fa8-8d9c-b28190210f2a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-rectangle-list\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class. \n",
         "name": "Assessment Review",
         "tips": [
           {
