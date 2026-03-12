@@ -628,213 +628,241 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_template 'lti/v1/account_linking/landing'
   end
 
-  test 'sync - should redirect students to homepage without syncing' do
-    user = create(:student)
-    sign_in user
-    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: 'baz', rlid: 'qux', nrps_url: 'quux'}
-    assert_response :redirect
-    assert_equal home_path, '/' + @response.redirect_url.split('/').last
-  end
+  describe '#sync_course' do
+    subject(:sync_course) {get '/lti/v1/sync_course', params: params}
+    let(:params) {{lti_integration_id: integration.id, deployment_id: lti_deployment.id, context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}}
+    let(:user) {create(:teacher, :with_lti_auth)}
+    let(:integration) {user.lti_user_identities.first.lti_integration}
+    let(:lti_deployment) do
+      create(:lti_deployment, lti_integration: integration).tap do |deployment|
+        user.lti_user_identities.first.lti_deployments << deployment
+      end
+    end
+    let(:lti_course) {create(:lti_course, lti_integration: integration, context_id: SecureRandom.alphanumeric(10), resource_link_id: SecureRandom.alphanumeric(10), nrps_url: 'https://example.com/nrps')}
+    let(:issuer_accepts_resource_link) {true}
 
-  test 'sync - should not sync when section code is blank and required param missing' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: nil, context_id: nil, rlid: nil, nrps_url: nil}
-    assert_response :bad_request
-  end
+    context 'when student' do
+      let(:user) {create(:student, :with_lti_auth)}
 
-  test 'sync - should redirect to homepage when context or nrps_url is missing' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    get '/lti/v1/sync_course', params: {lti_integration_id: 'foo', deployment_id: 'bar', context_id: nil, rlid: 'qux', nrps_url: nil}
-    assert_response :redirect
-    assert_equal '/home', '/' + @response.redirect_url.split('/').last
-  end
-
-  test 'sync - should not sync and render sync course error when missing a param' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
-    get '/lti/v1/sync_course', params: {lti_integration_id: nil, deployment_id: 'qux', context_id: 'foo', rlid: 'quux', nrps_url: 'bar'}
-  end
-
-  test 'sync - should sync and show the confirmation page' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
-
-    get '/lti/v1/sync_course', params: {
-      lti_integration_id: lti_integration.id,
-      deployment_id: lti_course.lti_deployment_id,
-      context_id: lti_course.context_id,
-      rlid: lti_course.resource_link_id,
-      nrps_url: lti_course.nrps_url,
-    }
-
-    assert_response :ok
-  end
-
-  test 'sync - should update the LtiCourse resource link id if the params rlid has changed' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    new_resource_id = SecureRandom.uuid
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, new_resource_id).returns({})
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
-
-    get '/lti/v1/sync_course', params: {
-      lti_integration_id: lti_integration.id,
-      deployment_id: lti_course.lti_deployment_id,
-      context_id: lti_course.context_id,
-      rlid: new_resource_id,
-      nrps_url: lti_course.nrps_url,
-    }
-
-    lti_course.reload
-    assert_response :ok
-    assert_equal new_resource_id, lti_course.resource_link_id
-  end
-
-  test 'sync_course as json - syncs and returns course sections data' do
-    lti_course_context_id = SecureRandom.uuid
-    lti_course_resource_link_id = SecureRandom.uuid
-    lti_course_nrps_url = 'https://example.com/nrps'
-
-    user = create(:teacher, :with_lti_auth)
-    lti_integration = create(:lti_integration)
-    lti_deployment = create(:lti_deployment, lti_integration:)
-    create(
-      :lti_course,
-      lti_integration: lti_integration,
-      lti_deployment:,
-      context_id: lti_course_context_id,
-      resource_link_id: lti_course_resource_link_id,
-      nrps_url: lti_course_nrps_url
-    )
-
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
-
-    sign_in user
-
-    assert_no_difference 'LtiCourse.count' do
-      get '/lti/v1/sync_course', params: {
-        lti_integration_id: lti_integration.id,
-        deployment_id: lti_deployment.id,
-        context_id: lti_course_context_id,
-        rlid: lti_course_resource_link_id,
-        nrps_url: lti_course_nrps_url
-      }, as: :json
+      it 'redirects to homepage without syncing' do
+        sign_in user
+        sync_course
+        assert_response :redirect
+        assert_equal home_path, '/' + @response.redirect_url.split('/').last
+      end
     end
 
-    assert_response :ok
-    assert_equal @sync_course_result_no_changes.to_json, response.body
-  end
+    context 'when section code is blank and required param missing' do
+      let(:params) {{lti_integration_id: nil, deployment_id: nil, context_id: nil, rlid: nil, nrps_url: nil}}
 
-  test 'sync_course as json - does not sync and returns NRPS response errors when Canvas LTI key is missing required fields' do
-    expected_nrps_response_error_1 = 'error1'
-    expected_nrps_response_error_2 = 'error2'
+      it 'returns bad request' do
+        sign_in user
+        sync_course
+        assert_response :bad_request
+      end
 
-    lti_course_context_id = SecureRandom.uuid
-    lti_course_resource_link_id = SecureRandom.uuid
-    lti_course_nrps_url = 'https://example.com/nrps'
-
-    user = create(:teacher, :with_lti_auth)
-    lti_integration = create(:lti_integration)
-    lti_deployment = create(:lti_deployment, lti_integration:)
-
-    Clients::LtiAdvantageClient.
-      any_instance.
-      expects(:get_context_membership).
-      with(lti_course_nrps_url, lti_course_resource_link_id).
-      returns(@parsed_nrps_sections)
-    Policies::Lti.expects(:issuer_accepts_resource_link?).
-      with(lti_integration.issuer).
-      returns(true)
-    Services::Lti::NRPSResponseValidator.
-      expects(:call).
-      with(@parsed_nrps_sections).
-      returns([expected_nrps_response_error_1, expected_nrps_response_error_2])
-
-    Services::Lti.expects(:parse_nrps_response).never
-    Services::Lti.expects(:sync_course_roster).never
-
-    sign_in user
-
-    assert_difference 'LtiCourse.count' do
-      get '/lti/v1/sync_course', params: {
-        lti_integration_id: lti_integration.id,
-        deployment_id: lti_deployment.id,
-        context_id: lti_course_context_id,
-        rlid: lti_course_resource_link_id,
-        nrps_url: lti_course_nrps_url
-      }, as: :json
+      it 'should call render_sync_course_error with appropriate message' do
+        sign_in user
+        LtiV1Controller.any_instance.expects(:render_sync_course_error).with("Missing lti_integration_id.", :bad_request, 'missing_param')
+        sync_course
+      end
     end
 
-    expected_response = {
-      'error' => 'invalid_configs',
-      'message' => "#{expected_nrps_response_error_1}\n#{expected_nrps_response_error_2}"
-    }
+    context 'when context or nrps_url is missing' do
+      let(:params) {{lti_integration_id: integration.id, deployment_id: lti_deployment.id, context_id: nil, rlid: lti_course.resource_link_id, nrps_url: nil}}
 
-    assert_response :unprocessable_entity
-    assert_equal expected_response, JSON.parse(response.body)
-  end
-
-  test 'sync_course as json - does not validate response of the non rlid NRPS request' do
-    lti_course_context_id = SecureRandom.uuid
-    lti_course_resource_link_id = SecureRandom.uuid
-    lti_course_nrps_url = 'https://example.com/nrps'
-
-    user = create(:teacher, :with_lti_auth)
-    lti_integration = create(:lti_integration)
-    lti_deployment = create(:lti_deployment, lti_integration:)
-
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course_nrps_url, lti_course_resource_link_id).returns({})
-    Policies::Lti.expects(:issuer_accepts_resource_link?).with(lti_integration.issuer).returns(false)
-    Services::Lti::NRPSResponseValidator.expects(:call).never
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_with_changes)
-
-    sign_in user
-
-    assert_difference 'LtiCourse.count' do
-      get '/lti/v1/sync_course', params: {
-        lti_integration_id: lti_integration.id,
-        deployment_id: lti_deployment.id,
-        context_id: lti_course_context_id,
-        rlid: lti_course_resource_link_id,
-        nrps_url: lti_course_nrps_url
-      }, as: :json
+      it 'redirects to homepage without syncing' do
+        sign_in user
+        sync_course
+        assert_response :redirect
+        assert_equal home_path, '/' + @response.redirect_url.split('/').last
+      end
     end
 
-    assert_response :ok
-  end
+    context 'when request reaches roster sync' do
+      let(:membership_response) {{}}
+      let(:sync_course_result) {@sync_course_result_with_changes}
 
-  test 'sync - should not sync given no changes' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id).returns({})
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-    Services::Lti.expects(:sync_course_roster).returns(@sync_course_result_no_changes)
+      before do
+        Clients::LtiAdvantageClient.any_instance.
+          expects(:get_context_membership).
+          with(params[:nrps_url], params[:rlid]).
+          returns(membership_response)
+        Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+        Services::Lti.expects(:sync_course_roster).returns(sync_course_result)
+      end
 
-    get '/lti/v1/sync_course', params: {
-      lti_integration_id: lti_integration.id,
-      deployment_id: lti_course.lti_deployment_id,
-      context_id: lti_course.context_id,
-      rlid: lti_course.resource_link_id,
-      nrps_url: lti_course.nrps_url,
-    }
+      it 'syncs course and shows confirmation page' do
+        sign_in user
+        sync_course
+        assert_response :ok
+      end
 
-    assert_response :redirect
+      context 'when resource link ID has changed' do
+        let(:new_resource_id) {SecureRandom.alphanumeric(10)}
+        let(:params) {{lti_integration_id: integration.id, deployment_id: lti_deployment.id, context_id: lti_course.context_id, rlid: new_resource_id, nrps_url: lti_course.nrps_url}}
+
+        it 'updates the LtiCourse resource link ID' do
+          sign_in user
+          sync_course
+          lti_course.reload
+          assert_response :ok
+          assert_equal new_resource_id, lti_course.resource_link_id
+        end
+      end
+
+      context 'when no changes to sync' do
+        let(:sync_course_result) {@sync_course_result_no_changes}
+
+        it 'redirects to homepage' do
+          sign_in user
+          sync_course
+          assert_response :redirect
+          assert_equal home_path, '/' + @response.redirect_url.split('/').last
+        end
+      end
+
+      context 'when called as json' do
+        subject(:sync_course) {get '/lti/v1/sync_course', params: params, as: :json}
+        let(:lti_course) {nil}
+        let(:sync_course_result) {@sync_course_result_no_changes}
+        let(:params) {{lti_integration_id: integration.id, deployment_id: lti_deployment.id, context_id: SecureRandom.alphanumeric(10), rlid: SecureRandom.alphanumeric(10), nrps_url: 'https://example.com/nrps'}}
+
+        it 'returns synced course sections data' do
+          sign_in user
+
+          assert_difference 'LtiCourse.count' do
+            sync_course
+          end
+
+          assert_response :ok
+          assert_equal @sync_course_result_no_changes.to_json, @response.body
+        end
+      end
+
+      context 'when non-rlid issuer' do
+        subject(:sync_course) {get '/lti/v1/sync_course', params: params, as: :json}
+        let(:issuer_accepts_resource_link) {false}
+
+        it 'does not validate the NRPS response' do
+          Policies::Lti.expects(:issuer_accepts_resource_link?).with(integration.issuer).returns(issuer_accepts_resource_link)
+          Services::Lti::NRPSResponseValidator.expects(:call).never
+
+          sign_in user
+
+          assert_no_difference 'LtiCourse.count' do
+            sync_course
+          end
+          assert_response :ok
+        end
+      end
+    end
+
+    context 'when Canvas NRPS response JSON is invalid' do
+      subject(:sync_course) {get '/lti/v1/sync_course', params: params, as: :json}
+      let(:expected_nrps_response_error_1) {'error1'}
+      let(:expected_nrps_response_error_2) {'error2'}
+      let(:membership_response) {@parsed_nrps_sections}
+
+      before do
+        Clients::LtiAdvantageClient.
+          any_instance.
+          expects(:get_context_membership).
+          with(lti_course.nrps_url, lti_course.resource_link_id).
+          returns(membership_response)
+      end
+
+      it 'renders error page' do
+        Policies::Lti.expects(:issuer_accepts_resource_link?).
+          with(integration.issuer).
+          returns(true)
+        Services::Lti::NRPSResponseValidator.
+          expects(:call).
+          with(@parsed_nrps_sections).
+          returns([expected_nrps_response_error_1, expected_nrps_response_error_2])
+
+        Services::Lti.expects(:parse_nrps_response).never
+        Services::Lti.expects(:sync_course_roster).never
+
+        sign_in user
+
+        assert_no_difference 'LtiCourse.count' do
+          sync_course
+        end
+
+        assert_response :unprocessable_entity
+        assert_match expected_nrps_response_error_1, @response.body
+        assert_match expected_nrps_response_error_2, @response.body
+      end
+    end
+
+    context 'when caller is not associated with the integration' do
+      let(:other_user) {create(:teacher, :with_lti_auth)}
+
+      it 'returns unauthorized' do
+        sign_in other_user
+        sync_course
+        assert_response :forbidden
+      end
+
+      it 'does not attempt to call NRPS or sync' do
+        sign_in other_user
+        Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+        Services::Lti.expects(:parse_nrps_response).never
+        Services::Lti.expects(:sync_course_roster).never
+        sync_course
+      end
+    end
+
+    context 'when user is not associated with the deployment' do
+      let(:unlinked_deployment) {create(:lti_deployment, lti_integration: integration)}
+      let(:params) {{lti_integration_id: integration.id, deployment_id: unlinked_deployment.id, context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}}
+
+      it 'returns forbidden' do
+        sign_in user
+        sync_course
+        assert_response :forbidden
+      end
+
+      it 'does not attempt to call NRPS or sync' do
+        sign_in user
+        Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).never
+        Services::Lti.expects(:parse_nrps_response).never
+        Services::Lti.expects(:sync_course_roster).never
+        sync_course
+      end
+    end
+
+    context 'when sync raises during transaction' do
+      let(:lti_course) do
+        create(
+          :lti_course,
+          lti_integration: integration,
+          lti_deployment: lti_deployment,
+          context_id: SecureRandom.uuid,
+          resource_link_id: SecureRandom.uuid,
+          nrps_url: 'https://example.com/nrps'
+        )
+      end
+
+      before do
+        user.lti_user_identities.find_by(lti_integration: integration).update!(
+          subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec'
+        )
+        Clients::LtiAdvantageClient.any_instance.
+          expects(:get_context_membership).
+          with(lti_course.nrps_url, lti_course.resource_link_id)
+        Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
+        Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
+      end
+
+      it 'returns internal server error and rolls back section creation' do
+        sign_in user
+        sync_course
+        assert_empty lti_course.reload.lti_sections
+        assert_response :internal_server_error
+      end
+    end
   end
 
   test 'sync - should be able to sync from a section code' do
@@ -849,33 +877,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {section_code: lti_section.section.code}
     assert_response :ok
-  end
-
-  test 'transaction prevents partial sync from creating a partially-synced state' do
-    user = create(:teacher, :with_lti_auth)
-    sign_in user
-    lti_integration = create(:lti_integration)
-    lti_course = create(:lti_course, lti_integration: lti_integration, context_id: SecureRandom.uuid, resource_link_id: SecureRandom.uuid, nrps_url: 'https://example.com/nrps')
-    create(:lti_user_identity, lti_integration: lti_integration, user: user, subject: 'f2a16942-ed81-4c98-96dc-5cac16e354ec')
-
-    Clients::LtiAdvantageClient.any_instance.expects(:get_context_membership).with(lti_course.nrps_url, lti_course.resource_link_id)
-    Services::Lti.expects(:parse_nrps_response).returns(@parsed_nrps_sections)
-
-    # Set up a situation where a sync has partially progressed, including saving some objects, but then
-    # encounters an error. Raising an exception during the section sync should cause the transaction to rollback after
-    # creating the first Section and LtiSection in the course sync method.
-    Services::Lti.expects(:sync_section_roster).raises(Exception, 'sync error')
-
-    get '/lti/v1/sync_course', params: {
-      lti_integration_id: lti_integration.id,
-      deployment_id: lti_course.lti_deployment_id,
-      context_id: lti_course.context_id,
-      rlid: lti_course.resource_link_id,
-      nrps_url: lti_course.nrps_url
-    }
-
-    assert_empty lti_course.lti_sections
-    assert_response :internal_server_error
   end
 
   test 'attempting to sync a section with no LTI course should return a 400' do

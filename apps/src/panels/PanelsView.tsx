@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
 import React, {
@@ -293,17 +293,22 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         style={{width: width, height: childrenAreaHeight}}
       >
         {showButton && (
-          <Button
-            ref={nextButtonRef}
-            key={`button-${currentPanelIndex}`}
-            id="panels-button"
-            onClick={handleButtonClick}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={classNames(
               styles.button,
               showTyping ? styles.buttonReady : styles.buttonDelay
             )}
-            text={buttonText}
-          />
+            id="panels-button"
+            onClick={handleButtonClick}
+            type="button"
+            ref={nextButtonRef}
+            key={`button-${currentPanelIndex}`}
+          >
+            {buttonText}
+          </MuiButton>
         )}
 
         {panels.length > 1 && (

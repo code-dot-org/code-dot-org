@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
@@ -61,20 +61,25 @@ export default class GDPRDialog extends Component {
           </a>
         </div>
         <DialogFooter>
-          <Button
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             className="ui-test-gdpr-dialog-logout"
-            text={i18n.gdprDialogLogout()}
-            useAsLink={true}
             href={logOutUrl}
-            color={buttonColors.gray}
-            type="secondary"
-            size="m"
-          />
-          <Button
+          >
+            {i18n.gdprDialogLogout()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className="ui-test-gdpr-dialog-accept"
-            text={i18n.gdprDialogYes()}
             onClick={this.handleYesClick}
-          />
+            type="button"
+          >
+            {i18n.gdprDialogYes()}
+          </MuiButton>
         </DialogFooter>
       </BaseDialog>
     );

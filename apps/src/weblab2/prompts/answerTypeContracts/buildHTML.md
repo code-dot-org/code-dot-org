@@ -1,4 +1,4 @@
-### Build-HTML
+### buildHTML
 - **Guarantee**: Output each runnable HTML in an `html` fence with file name.
 - Then list **Assumptions** and **Questions**, if any.
 - Keep HTML plain (basic tags, descriptive IDs/classes). Link `style.css`.

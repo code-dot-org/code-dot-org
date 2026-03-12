@@ -56,17 +56,22 @@ export default class SoundPicker extends React.Component {
 
   render() {
     const isFileMode = this.state.mode === MODE.files;
+    const modeSwitchButtonBase = {
+      fontSize: 16,
+      cursor: 'pointer',
+      background: 'none',
+      border: 'none',
+      padding: 0,
+    };
     const headerStyles = {
       soundModeToggle: {
+        ...modeSwitchButtonBase,
         float: 'left',
         margin: '0 20px 0 0',
-        fontSize: 16,
-        cursor: 'pointer',
       },
       fileModeToggle: {
+        ...modeSwitchButtonBase,
         margin: 0,
-        fontSize: 16,
-        cursor: 'pointer',
       },
     };
 
@@ -96,12 +101,20 @@ export default class SoundPicker extends React.Component {
 
     modeSwitch = (
       <div id="modeSwitch">
-        <p onClick={this.setSoundMode} style={headerStyles.soundModeToggle}>
+        <button
+          type="button"
+          onClick={this.setSoundMode}
+          style={headerStyles.soundModeToggle}
+        >
           {i18n.soundLibrary()}
-        </p>
-        <p onClick={this.setFileMode} style={headerStyles.fileModeToggle}>
+        </button>
+        <button
+          type="button"
+          onClick={this.setFileMode}
+          style={headerStyles.fileModeToggle}
+        >
           {i18n.makeNewSounds()}
-        </p>
+        </button>
       </div>
     );
 

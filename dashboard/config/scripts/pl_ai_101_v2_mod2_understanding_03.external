@@ -16,8 +16,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:14px; color:#0093A4;">Scenario</div>
 <div style="margin-bottom:18px;">Dr. Patel, an assistant principal, asks AI to summarize a newly released district grading policy before a staff meeting.</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px; margin-bottom:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Prompt to AI</div>
-<div style="font-size:16px; font-weight:600;">“Summarize this newly released district grading policy for me to share with staff.”</div>
+<div style="font-size:16px">Summarize this newly released district grading policy for me to share with staff.</div>
 </div>
 <div>The summary states that late work can no longer receive full credit under any circumstances. The language is clear and decisive, so Dr. Patel shares it with the faculty. Later, a teacher points out that the policy actually allows exceptions at teacher discretion. The incorrect summary causes frustration and a follow-up email clarifying the mistake.</div>
 </div>
@@ -31,8 +30,7 @@ markdown <<MARKDOWN
 <div style="font-weight:800; font-size:20px; margin-bottom:12px; color:#0093A4;">Quick Tip</div>
 <div style="margin-bottom:18px;">Confidence in tone does not equal accuracy — always compare AI summaries directly to original documents.</div>
 <div style="background:#F7F8FA; border-left:5px solid #8C52BA; border-radius:14px; padding:18px;">
-<div style="font-size:14px; font-weight:700; color:#8C52BA; margin-bottom:8px;">Safer Prompt Example</div>
-<div style="font-size:16px; font-weight:600;">“Summarize this policy in bullet points and include 3 direct quotes (with section headings) that support each key claim. Also list any sections that are ambiguous or allow exceptions.”</div>
+<div style="font-size:16px">Summarize this policy in bullet points and include 3 direct quotes (with section headings) that support each key claim. Also list any sections that are ambiguous or allow exceptions.</div>
 </div>
 </div>
 </div>

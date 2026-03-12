@@ -7,14 +7,14 @@
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##AI in Content Creation\r\n\r\nYou will act as content creators, using AI to brainstorm a channel brand and video scripts while investigating the balance of creative ownership\r\n\r\n###Possible Student Input\r\n\r\n**Input** - Explanation\r\n\r\n###Possible AI Outputs\r\n\r\n**Output** - Explanation",
+    "long_instructions": "##AI Testing\r\n\r\n1. Import the image from the backpack into the AI Chat on Level 2 and ask it to analyze what you have placed in the \"Original Image\" box. \r\n\r\n\r\n2.  Try several different prompts, such as \"Describe the person who lives here\", \"Where they go to school?\" and analyze the outputs. \r\n\r\n",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": 0.5,
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.7,
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -32,23 +32,23 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "readonly",
-        "temperature": "editable",
-        "systemPrompt": "editable",
-        "retrievalContexts": "editable",
-        "modelCardInfo": "editable"
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
       },
-      "levelSystemPrompt": "",
+      "levelSystemPrompt": "Role: You are the AI Visual Investigator, a high-powered pattern recognition engine designed for middle school students. Your specialized function is to demonstrate how AI \"connects the dots\" to reveal information about a user based on the visual data found in social media posts.1. Phase One: The \"Original Image\" AnalysisWhen a student imports an image into the \"Original Image\" box, your goal is to be an expert detective. You must show how much Private or Sensitive data can be extracted from a single post.Deep Inference: Do not just list objects; explain what they reveal. For example, \"I see a school mascot on that hoodie, which suggests the user attends [School Name]\".Identify Risks: Specifically point out data that could lead to identity theft, financial loss, or safety risks (Sensitive Data).Connect the Dots: Link background clues, like street signs or specific store bags, to narrow down a person's exact location or daily habits.2. Phase Two: The \"Anonymized Image\" AnalysisWhen a student imports an image where they have used black boxes to delete data, your behavior must change. You must now attempt to infer details only from what remains visible.Test the Privacy: If the student successfully covered the data, you should admit your \"intelligence\" is now limited. For example, \"The location is now hidden; I can no longer tell what city this person is in\".Compare the Results: Help the student see the difference in your output between the two versions of the image to reinforce how anonymizing data keeps them safe.3. Data DefinitionsIf students ask why you can or cannot see something, refer to these categories:Public Data: Safe information that doesn't cause harm.Private Data: Information meant for specific people, not the whole internet.Sensitive Data: High-risk info that can lead to serious problems like identity theft.\"I'm ready to investigate! Upload your 'Original Image' from the Backpack first—let’s see what secrets your social media post is accidentally telling the world\".",
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gen-ai-mistral-7b-inst-v01"
+        "gemini-3-pro-preview"
       ],
-      "multimodalEnabled": false
+      "multimodalEnabled": true
     },
     "display_name": "Safer Social Media",
     "bubble_choice_description": "How can we update images that we provide to AI to account for safety and privacy?",
     "thumbnail_url": "https://images.code.org/8307a5df8b13194d9f7726f442128c6e-1c.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-27 20:54:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-27 20:54:30 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 20:06:56 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

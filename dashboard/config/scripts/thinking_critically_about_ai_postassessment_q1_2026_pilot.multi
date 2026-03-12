@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q1_2026-pilot'
+
+question 'A school uses an AI system to predict which students are likely to struggle academically and flags them for extra support. A teacher notices the system flags students from lower-income neighborhoods at much higher rates. What is the most likely explanation?'
+
+wrong 'The AI system is working correctly because income is the best predictor of academic struggle.'
+wrong 'The AI system has a glitch that can be fixed by restarting it.'
+right 'The AI was likely trained on historical data that reflected existing inequalities, so it learned and is now reproducing those biases.'
+wrong 'The AI system is intentionally discriminating against students from lower-income neighborhoods.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 2, 6
+MARKDOWN

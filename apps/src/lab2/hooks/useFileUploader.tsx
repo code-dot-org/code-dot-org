@@ -30,7 +30,7 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  appName?: string;
+  appName: string;
   isBlockedAbuse?: boolean;
   onImageFlagged?: (
     file: File,
@@ -180,7 +180,9 @@ export const useFileUploader = ({
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
-            const moderationStatus = await moderateImage(file, ext, appName);
+            const moderationStatus = await moderateImage(file, ext, appName, {
+              uploaderType: 'Lab2FileUploader',
+            });
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
                 const url = await uploadExternalFile(file);

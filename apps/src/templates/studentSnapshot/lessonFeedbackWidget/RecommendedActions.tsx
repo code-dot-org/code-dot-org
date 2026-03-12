@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -132,19 +132,23 @@ const RecommendedActions: React.FC<RecommendedActionsProps> = ({
           onChange={handleRecommendedActionInputChange}
         />
         <div className={styles.resourceRow}>
-          <Button
-            text={'Add resource link'}
-            size="xs"
-            type="secondary"
-            color="gray"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="extraSmall"
             disabled={!!resourceData[0]?.resource_name}
-            iconLeft={{
-              iconStyle: 'solid',
-              iconName: 'plus',
-              title: 'Add Resource',
-            }}
             onClick={handleAddResourceClick}
-          />
+            type="button"
+            startIcon={
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName="plus"
+                title="Add Resource"
+              />
+            }
+          >
+            {'Add resource link'}
+          </MuiButton>
           {resourceData[0]?.resource_name && resourceData[0]?.resource_link && (
             <UrlTab
               urlName={resourceData[0]?.resource_name}

@@ -1,5 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -140,13 +140,17 @@ class AdvancedShareOptions extends React.Component {
           </a>
           .
         </p>
-        <Button
-          color={buttonColors.black}
-          isPending={this.state.exporting}
-          text={i18n.exportForWeb()}
-          onClick={this.downloadExport}
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="medium"
+          loading={this.state.exporting}
           className={styles.exportButton}
-        />
+          onClick={this.downloadExport}
+          type="button"
+        >
+          {i18n.exportForWeb()}
+        </MuiButton>
         {alert}
       </div>
     );
@@ -160,18 +164,23 @@ class AdvancedShareOptions extends React.Component {
     return (
       <div>
         <p className={styles.paragraph}>{i18n.shareLibraryWithClassmate()}</p>
-        <Button
-          color={buttonColors.black}
-          onClick={this.props.openLibraryCreationDialog}
+        <MuiButton
+          variant="contained"
+          color="secondary"
+          size="medium"
           className={styles.shareLibraryButton}
-          text={i18n.shareLibrary()}
-        />
+          onClick={this.props.openLibraryCreationDialog}
+          type="button"
+        >
+          {i18n.shareLibrary()}
+        </MuiButton>
       </div>
     );
   };
 
   renderAdvancedListItem = (option, name) => {
     return (
+      /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */
       <li
         className={classNames(styles.navItem, {
           [styles.navItemSelected]: this.state.selectedOption === option,

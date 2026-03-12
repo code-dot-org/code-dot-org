@@ -1,0 +1,5842 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-03-10T21:47:30.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Brand Analysis\r\n\r\n**Do This:**\r\n1. Compare each pair of websites shown here.\r\n2. In the boxes below each brand, record what you notice about color, topography, layout, and overall tone.\r\n3. Then explain who each brand seems to target.\r\n   -   Use specific evidence from the design (colors, fonts, imagry, layout) to support your thinking about the intended audience.",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "type": "rectangle",
+            "version": 1393,
+            "versionNonce": 284192366,
+            "isDeleted": false,
+            "id": "FbKwV7eDGo3BzwfoYGICJ",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 1254.669230106185,
+            "y": 95.43991786529136,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 990.2067988092057,
+            "height": 401.7916062104527,
+            "seed": 1512254830,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "image",
+            "version": 380,
+            "versionNonce": 1971597614,
+            "isDeleted": false,
+            "id": "Jjl_hBqlVCE56_xJ8TDaJ",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 272.23884412977435,
+            "y": -328.3999786376953,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 760.8888888888888,
+            "height": 428,
+            "seed": 824104622,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198361,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 449,
+            "versionNonce": 1643409582,
+            "isDeleted": false,
+            "id": "8tFutogCi2IeMRMwylP9R",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1351.9761429709943,
+            "y": -350.4571104503809,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 759.0147783251232,
+            "height": 428,
+            "seed": 278418418,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 372,
+            "versionNonce": 1076477678,
+            "isDeleted": false,
+            "id": "UqKNp2WOYTFv-Jnz72XKd",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 266.3259672734154,
+            "y": 606.7047998337523,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 762.7722772277228,
+            "height": 428,
+            "seed": 1944405298,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 585,
+            "versionNonce": 2001866482,
+            "isDeleted": false,
+            "id": "ze3jTv-xTUYqSsh2zZsxz",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1352.4867166186132,
+            "y": 609.3522331601112,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 760.8888888888888,
+            "height": 428,
+            "seed": 1125226094,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "text",
+            "version": 81,
+            "versionNonce": 47201710,
+            "isDeleted": false,
+            "id": "a_EOz32pq49R-ru81sxLC",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 406.68328857421875,
+            "y": -373.59999389648436,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 71.89583587646484,
+            "height": 41.4,
+            "seed": 2079470514,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Nike",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Nike",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 172,
+            "versionNonce": 2141076530,
+            "isDeleted": false,
+            "id": "DrFl_3o70c7pRmctU9jsG",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 829.7354927062988,
+            "y": -376.7,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.875,
+            "height": 41.4,
+            "seed": 691244530,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Adidas",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Adidas",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "line",
+            "version": 134,
+            "versionNonce": 2059936174,
+            "isDeleted": false,
+            "id": "2zpT-m3OhaSCc83KVEWVV",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 661.2010846819196,
+            "y": 103.19278826032365,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 617244910,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 100,
+            "versionNonce": 243701810,
+            "isDeleted": false,
+            "id": "jExsjARL5Edv1CFCBSq6s",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 192.6296561104911,
+            "y": 140.90710885184154,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 270220274,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 192,
+            "versionNonce": 1962130414,
+            "isDeleted": false,
+            "id": "2jzBHDUU7yUsb1PEeMkP2",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 681.9141620275162,
+            "y": 145.76200192998363,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 706924850,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 146,
+            "versionNonce": 1378402802,
+            "isDeleted": false,
+            "id": "qCpjIcl9Xg8N93jx0vkvV",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 203.91419690474868,
+            "y": 324.61916222574257,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 678792178,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 160,
+            "versionNonce": 1395789358,
+            "isDeleted": false,
+            "id": "qRWSyOHQo5wyVPBXknxld",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 690.7713223232754,
+            "y": 326.9048416342247,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 831632946,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 318,
+            "versionNonce": 996127666,
+            "isDeleted": false,
+            "id": "So7wGpAe5_74PkxTPYlPn",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 261.9853581019811,
+            "y": 284.4071262904576,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 301.6875,
+            "height": 25,
+            "seed": 1807618414,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Nike's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Nike's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 435,
+            "versionNonce": 1919686766,
+            "isDeleted": false,
+            "id": "TNs69QJMM4iK7qc03NNEQ",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 733.7859409877227,
+            "y": 286.9785374232701,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 328.1875,
+            "height": 25,
+            "seed": 1241446514,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Adidas's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Adidas's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 148,
+            "versionNonce": 1280470386,
+            "isDeleted": false,
+            "id": "JcBMNJTb25Wjy_NtnWc6C",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 206.3439069475446,
+            "y": 107.8214294433593,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 420.1458435058594,
+            "height": 25,
+            "seed": 1219792370,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Nike brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Nike brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 255,
+            "versionNonce": 711645870,
+            "isDeleted": false,
+            "id": "NtlCHeMCHdeMC8iRTBlvV",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 669.9854104178289,
+            "y": 107.83573259626104,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 446.6458435058594,
+            "height": 25,
+            "seed": 1005821422,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Adidas brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Adidas brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "rectangle",
+            "version": 979,
+            "versionNonce": 709357362,
+            "isDeleted": false,
+            "id": "9hXhv2Om3Btx2LYuOt7Yl",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 177.240350595397,
+            "y": 96.86840936687196,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 970.7782622578663,
+            "height": 401.7916062104527,
+            "seed": 1855078894,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181198362,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "text",
+            "version": 155,
+            "versionNonce": 1162582920,
+            "isDeleted": false,
+            "id": "2dClnZpU5c5RPyx667PlV",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 208.85818045479914,
+            "y": 169.09088007394746,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 146.7708282470703,
+            "height": 20,
+            "seed": 1982755502,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182929913,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Nike brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Nike brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 149,
+            "versionNonce": 192780168,
+            "isDeleted": false,
+            "id": "Dga-oAwEV1PL89-2JCnc1",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 693.3126918247767,
+            "y": 169.11213191994787,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 167.875,
+            "height": 20,
+            "seed": 1747269682,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182931947,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Adidas brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Adidas brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 147,
+            "versionNonce": 1050453752,
+            "isDeleted": false,
+            "id": "2mU_9mW7YrC0gvuKZfwo3",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 203.31269182477672,
+            "y": 348.8356628417968,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 336.1458435058594,
+            "height": 40,
+            "seed": 1664768370,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182934000,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Nike's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Nike's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 224,
+            "versionNonce": 1391815416,
+            "isDeleted": false,
+            "id": "RsYFXTHAGk-ckIuFlzFBy",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 682.7572195870538,
+            "y": 354.6213596888951,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 357.25,
+            "height": 40,
+            "seed": 1904023278,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182936191,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Adidas's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Adidas's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "line",
+            "version": 522,
+            "versionNonce": 1874733806,
+            "isDeleted": false,
+            "id": "yzwqC2kfyz8BCENj1WwRC",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1737.4871244884666,
+            "y": 101.76429675874306,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 1989038382,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 488,
+            "versionNonce": 148282670,
+            "isDeleted": false,
+            "id": "F2WOc11bH6KxMlAnAtyHo",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1268.9156959170382,
+            "y": 139.47861735026095,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 122157934,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 603,
+            "versionNonce": 1118226286,
+            "isDeleted": false,
+            "id": "tKe21QweyEvBepKQ3oxS6",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1758.2002018340631,
+            "y": 144.3335104284031,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 533880238,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 534,
+            "versionNonce": 494381486,
+            "isDeleted": false,
+            "id": "NaqCUsBRjj947qgoS83I8",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1280.2002367112957,
+            "y": 323.1906707241619,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1968601070,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 548,
+            "versionNonce": 678577134,
+            "isDeleted": false,
+            "id": "J2uEwOboTrO2WH8GROwYy",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1767.0573621298222,
+            "y": 325.47635013264426,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 803031598,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 715,
+            "versionNonce": 631215662,
+            "isDeleted": false,
+            "id": "utpPyGY-oRfyNaVx2pnZk",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1335.9856313069656,
+            "y": 282.9786347888771,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 331.625,
+            "height": 25,
+            "seed": 240112750,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Spotify's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Spotify's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 833,
+            "versionNonce": 770220142,
+            "isDeleted": false,
+            "id": "U4rrU0waivyHCgrO7eYHQ",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1810.0719807942696,
+            "y": 285.5500459216896,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 371,
+            "height": 25,
+            "seed": 175576750,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is SoundCloud's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is SoundCloud's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 548,
+            "versionNonce": 1427530414,
+            "isDeleted": false,
+            "id": "szzHusomO0r-RUcWOl8Fa",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1282.6299467540916,
+            "y": 106.39293794177865,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 450.0833435058594,
+            "height": 25,
+            "seed": 2096894190,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Spotify brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Spotify brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 654,
+            "versionNonce": 1305599214,
+            "isDeleted": false,
+            "id": "N3F26hO-NwU2MMF8HFg8q",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1746.2714502243757,
+            "y": 106.40724109468056,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 489.4583435058594,
+            "height": 25,
+            "seed": 1097319214,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the SoundCloud brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the SoundCloud brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 550,
+            "versionNonce": 1757175432,
+            "isDeleted": false,
+            "id": "xupR7oxkNQPxZgeu6llMm",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1288.3442324683774,
+            "y": 167.66238857236692,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 170.625,
+            "height": 20,
+            "seed": 343363502,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182938087,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Spotify brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Spotify brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 547,
+            "versionNonce": 1568134136,
+            "isDeleted": false,
+            "id": "tA5-zYPotEz6czDDwnQdC",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1769.5987316313235,
+            "y": 166.08360379727367,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 202.0208282470703,
+            "height": 20,
+            "seed": 747448814,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182942332,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The SoundCloud brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The SoundCloud brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 543,
+            "versionNonce": 1257560712,
+            "isDeleted": false,
+            "id": "xnp0gakObvQF02pHRVPqt",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1277.9987560453862,
+            "y": 347.40717134021634,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 360,
+            "height": 40,
+            "seed": 1903017006,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182940037,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Spotify's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Spotify's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 621,
+            "versionNonce": 1458783624,
+            "isDeleted": false,
+            "id": "hXi9d90xELesvTLJCPUTe",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1760.6433570498507,
+            "y": 353.1928681873146,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 391.3958435058594,
+            "height": 40,
+            "seed": 1761740398,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182944636,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like SoundCloud's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like SoundCloud's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 385,
+            "versionNonce": 119801902,
+            "isDeleted": false,
+            "id": "2F91zIG2tVAC1rl1y5tI8",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1490.3962796529127,
+            "y": -389.5071012951074,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.85416412353516,
+            "height": 41.4,
+            "seed": 1318875762,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Spotify",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Spotify",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 502,
+            "versionNonce": 168743534,
+            "isDeleted": false,
+            "id": "vvQSz2B50l1JvUfn41GZb",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1841.131296611967,
+            "y": -385.50720592680375,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 197.7708282470703,
+            "height": 41.4,
+            "seed": 1949775154,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181390272,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "SoundCloud",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "SoundCloud",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 560,
+            "versionNonce": 1857007918,
+            "isDeleted": false,
+            "id": "gBs-PJuWZoowvPR9CHCqm",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 416.0301829746794,
+            "y": 567.2547148204994,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 99.83333587646484,
+            "height": 41.4,
+            "seed": 1172323502,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Netflix",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Netflix",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 612,
+            "versionNonce": 876436334,
+            "isDeleted": false,
+            "id": "dOzyb7XtzGlzC9kWTTa3-",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 779.8560197012765,
+            "y": 566.1119187127979,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.85416412353516,
+            "height": 41.4,
+            "seed": 676748786,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Disney",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Disney",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "rectangle",
+            "version": 1333,
+            "versionNonce": 1141625480,
+            "isDeleted": false,
+            "id": "twFBlYwDL2ADdQffOzU59",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 157.79999358731902,
+            "y": 1040.4875180210756,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 1002.7782099420182,
+            "height": 401.7916062104527,
+            "seed": 1499897138,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773182948485,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "line",
+            "version": 449,
+            "versionNonce": 745789422,
+            "isDeleted": false,
+            "id": "M9Xi38SoJbmKNHswEsUEr",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 656.3893723446007,
+            "y": 1046.811896914527,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 750790386,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 415,
+            "versionNonce": 1548659246,
+            "isDeleted": false,
+            "id": "a75yDmk3cKWn4r7l54X7_",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 187.81794377317215,
+            "y": 1084.5262175060452,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 2009233586,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 530,
+            "versionNonce": 1704277102,
+            "isDeleted": false,
+            "id": "LJGAEOF_32UW13rCI1TFj",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 677.1024496901972,
+            "y": 1089.3811105841874,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 1511297650,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 461,
+            "versionNonce": 303068846,
+            "isDeleted": false,
+            "id": "OrWQw_JkmDED5IPR_iiJp",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 199.10248456742966,
+            "y": 1268.238270879946,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1719497778,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 475,
+            "versionNonce": 174682350,
+            "isDeleted": false,
+            "id": "aZi19SNcTp52CnpvTaoo0",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 685.9596099859563,
+            "y": 1270.5239502884288,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1055137266,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 649,
+            "versionNonce": 2049516334,
+            "isDeleted": false,
+            "id": "Bdj3EPVvBMTENdYjfKNBa",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 254.88787916309957,
+            "y": 1228.0262349446612,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 329.4583435058594,
+            "height": 25,
+            "seed": 810520498,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Netflix's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Netflix's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 766,
+            "versionNonce": 867732846,
+            "isDeleted": false,
+            "id": "2ERs7TNekJlVz6d_qmza4",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 728.9742286504037,
+            "y": 1230.5976460774737,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 324.2291564941406,
+            "height": 25,
+            "seed": 1323747698,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Disney's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Disney's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 498,
+            "versionNonce": 1415622574,
+            "isDeleted": false,
+            "id": "uwMJLmYStbKdpIPxSH-L9",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 184.38933746736836,
+            "y": 1052.5834213983444,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 447.9166564941406,
+            "height": 25,
+            "seed": 300993330,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Netflix brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Netflix brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 611,
+            "versionNonce": 1749715438,
+            "isDeleted": false,
+            "id": "rAgXh-MoErVaYWB6AfQk-",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 688.0308409376527,
+            "y": 1054.8834039597282,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 442.6875,
+            "height": 25,
+            "seed": 1876202738,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181402324,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Disney brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Disney brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 485,
+            "versionNonce": 1836285832,
+            "isDeleted": false,
+            "id": "MnezZ2f5vbxSZteYVMdmb",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 207.24648032451137,
+            "y": 1112.709988728151,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 168.8958282470703,
+            "height": 20,
+            "seed": 2048468658,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182950772,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Netflix brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Netflix brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 481,
+            "versionNonce": 1225998072,
+            "isDeleted": false,
+            "id": "yiwXMT4Z6r_f-ss9W7ocG",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 688.5009794874576,
+            "y": 1111.131203953058,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 164.7291717529297,
+            "height": 20,
+            "seed": 2036695154,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182953042,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Disney brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Disney brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 476,
+            "versionNonce": 2091567752,
+            "isDeleted": false,
+            "id": "EzU0VaH8KRpEu-MgYBOzM",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 198.5009794874577,
+            "y": 1292.4547714960008,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 358.2708435058594,
+            "height": 40,
+            "seed": 159425074,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182955368,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Netflix's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Netflix's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 554,
+            "versionNonce": 626320376,
+            "isDeleted": false,
+            "id": "xd2Kry6iit6Um9wZe2COP",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 679.5456049059848,
+            "y": 1298.2404683430987,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 354.1041564941406,
+            "height": 40,
+            "seed": 894536690,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182957109,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Disney's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Disney's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 806,
+            "versionNonce": 1742168242,
+            "isDeleted": false,
+            "id": "QteU4ALXZc70vXyWnpcsq",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1863.32195009504,
+            "y": 572.5879304431737,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 132.3958282470703,
+            "height": 41.4,
+            "seed": 776141170,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Walmart",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Walmart",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 913,
+            "versionNonce": 1196194418,
+            "isDeleted": false,
+            "id": "YM5EDzEpsYbx62B-AuNs5",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1486.6223896571564,
+            "y": 571.4450035458522,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 99.85416412353516,
+            "height": 41.4,
+            "seed": 2034110002,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Target",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Target",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "rectangle",
+            "version": 1520,
+            "versionNonce": 880303154,
+            "isDeleted": false,
+            "id": "EFW_UqI6eXjOjNt15BVrA",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 1230.5741344263115,
+            "y": 1037.5349496035728,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 1011.9210147690271,
+            "height": 401.7916062104527,
+            "seed": 1099311922,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "line",
+            "version": 618,
+            "versionNonce": 1564607986,
+            "isDeleted": false,
+            "id": "Wd0x3PLJ_UNGxr0ArbN-X",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1735.1062447684149,
+            "y": 1043.8593284970243,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 1170076914,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 584,
+            "versionNonce": 447772594,
+            "isDeleted": false,
+            "id": "KZg3n1bf4bjSeSdN_AEkz",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1266.5348161969864,
+            "y": 1081.5736490885424,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 198608562,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 699,
+            "versionNonce": 216707442,
+            "isDeleted": false,
+            "id": "BjEjMpwsXtdifsCD5dnBW",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1755.8193221140114,
+            "y": 1086.428542166684,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 745988210,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 630,
+            "versionNonce": 926397234,
+            "isDeleted": false,
+            "id": "Jng0Fe63hqw7XOsMy-pQ3",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1277.8193569912437,
+            "y": 1265.2857024624432,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 325452338,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 644,
+            "versionNonce": 469662962,
+            "isDeleted": false,
+            "id": "88afH5ayjLnO6HmXyYaUd",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1764.6764824097704,
+            "y": 1267.571381870926,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 462089202,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 824,
+            "versionNonce": 1489374898,
+            "isDeleted": false,
+            "id": "HkT_UR03QyzhjMgcBy4nQ",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1333.6047515869136,
+            "y": 1225.0736665271584,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 334.0208435058594,
+            "height": 25,
+            "seed": 720149938,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Target's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Target's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 942,
+            "versionNonce": 1110796402,
+            "isDeleted": false,
+            "id": "HcKfsqWH9h9d_TQYII9rL",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1807.6911010742178,
+            "y": 1227.6450776599709,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 343.1458435058594,
+            "height": 25,
+            "seed": 1320294258,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Walmart's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Walmart's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 681,
+            "versionNonce": 1280562,
+            "isDeleted": false,
+            "id": "pJdJJt__z0ejBIozHH6h-",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1257.3920113699771,
+            "y": 1049.6308529808416,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 452.4791564941406,
+            "height": 25,
+            "seed": 1461868850,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Target brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Target brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 791,
+            "versionNonce": 692548594,
+            "isDeleted": false,
+            "id": "FW_5_NYk1EXr4BbVtDn3z",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1759.8906751360205,
+            "y": 1055.3593982514885,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 461.6041564941406,
+            "height": 25,
+            "seed": 1940153074,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181413763,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Walmart brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Walmart brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 662,
+            "versionNonce": 150156680,
+            "isDeleted": false,
+            "id": "_pY0UyRbqn_sUPQgTKAIx",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1284.820425851004,
+            "y": 1109.7574203106483,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 172.5,
+            "height": 20,
+            "seed": 1321153714,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182959178,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Target brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Target brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 660,
+            "versionNonce": 597213320,
+            "isDeleted": false,
+            "id": "GMAKdtQCMKwxHKaUrLoe2",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1767.2178519112717,
+            "y": 1108.1786355355553,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 179.7916717529297,
+            "height": 20,
+            "seed": 706334322,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182963695,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Walmart brand ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Walmart brand ... ",
+            "lineHeight": 1.25,
+            "baseline": 14
+          },
+          {
+            "type": "text",
+            "version": 651,
+            "versionNonce": 183462136,
+            "isDeleted": false,
+            "id": "g2GBRW9sjcdo9kVhrZTkg",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1277.2178519112717,
+            "y": 1289.502203078498,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 361.875,
+            "height": 40,
+            "seed": 2054893618,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182961226,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Target's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Target's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          },
+          {
+            "type": "text",
+            "version": 730,
+            "versionNonce": 643223032,
+            "isDeleted": false,
+            "id": "IJgPbAuXytvSAm2wLLAWj",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 1758.262477329799,
+            "y": 1295.2878999255959,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 369.1666564941406,
+            "height": 40,
+            "seed": 63592946,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182966498,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Walmart's target audience is ... \nbecause ... ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Walmart's target audience is ... \nbecause ... ",
+            "lineHeight": 1.25,
+            "baseline": 34
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 77.875,
+          "scrollY": 541.769112723214,
+          "zoom": {
+            "value": 0.5000000000000001
+          }
+        },
+        "files": {
+          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
+            "mimeType": "image/png",
+            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "created": 1773179548070,
+            "lastRetrieved": 1773179548070
+          },
+          "03a165a881326e55084ba496c979aafa6c4ca35f": {
+            "mimeType": "image/png",
+            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "created": 1773179560085,
+            "lastRetrieved": 1773179560085
+          },
+          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
+            "mimeType": "image/png",
+            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "created": 1773179570690,
+            "lastRetrieved": 1773179570690
+          },
+          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
+            "mimeType": "image/png",
+            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "created": 1773179586031,
+            "lastRetrieved": 1773179586031
+          }
+        },
+        "externalFiles": {
+          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
+            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+            "starterAsset": true,
+            "filenameWithExtension": "5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+            "uploaded": true
+          },
+          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
+            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+            "starterAsset": true,
+            "filenameWithExtension": "5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+            "uploaded": true
+          },
+          "03a165a881326e55084ba496c979aafa6c4ca35f": {
+            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
+            "starterAsset": true,
+            "filenameWithExtension": "03a165a881326e55084ba496c979aafa6c4ca35f.png",
+            "uploaded": true
+          },
+          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
+            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+            "starterAsset": true,
+            "filenameWithExtension": "c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+            "uploaded": true
+          }
+        }
+      }
+    },
+    "exemplar_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "type": "rectangle",
+            "version": 1397,
+            "versionNonce": 748651594,
+            "isDeleted": false,
+            "id": "4oNh-C2N_P4lFiKtuWBSO",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 344.4308311547877,
+            "y": -55.74609665467699,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 990.2067988092057,
+            "height": 401.7916062104527,
+            "seed": 1612783882,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "image",
+            "version": 384,
+            "versionNonce": 306265430,
+            "isDeleted": false,
+            "id": "TzD1VrecN-CFxHJSueqlv",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -637.999554821623,
+            "y": -479.58599315766367,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 760.8888888888888,
+            "height": 428,
+            "seed": 1311535050,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 453,
+            "versionNonce": 461138698,
+            "isDeleted": false,
+            "id": "3j3Fp3ZW0idfwsLOy4-Bd",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 441.7377440195969,
+            "y": -501.6431249703493,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 759.0147783251232,
+            "height": 428,
+            "seed": 1667229322,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 376,
+            "versionNonce": 958079638,
+            "isDeleted": false,
+            "id": "OOyNVdKGGs5JYLzOrEK2j",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -643.9124316779819,
+            "y": 455.51878531378395,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 762.7722772277228,
+            "height": 428,
+            "seed": 1484162378,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "image",
+            "version": 589,
+            "versionNonce": 1401846218,
+            "isDeleted": false,
+            "id": "uXykPAdmuDtb5s_zoLG4X",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 442.2483176672158,
+            "y": 458.1662186401428,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "width": 760.8888888888888,
+            "height": 428,
+            "seed": 382422026,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "type": "text",
+            "version": 85,
+            "versionNonce": 1309040598,
+            "isDeleted": false,
+            "id": "-umSvFGXoIfwMBccPJS4s",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -503.5551103771786,
+            "y": -524.7860084164528,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 71.89583587646484,
+            "height": 41.4,
+            "seed": 609827530,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Nike",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Nike",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 176,
+            "versionNonce": 1139847306,
+            "isDeleted": false,
+            "id": "auZO7UEQ0SClT8DpRU1IW",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -80.50290624509853,
+            "y": -527.8860145199684,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.875,
+            "height": 41.4,
+            "seed": 263934346,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Adidas",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Adidas",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "line",
+            "version": 138,
+            "versionNonce": 890762518,
+            "isDeleted": false,
+            "id": "au6Z3rHdjIvxal9QOWEnt",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -249.03731426947775,
+            "y": -47.9932262596447,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 1546424394,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 104,
+            "versionNonce": 1079906122,
+            "isDeleted": false,
+            "id": "R9QHnRij_b7OOMonnaXih",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -717.6087428409062,
+            "y": -10.27890566812681,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1837627146,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 196,
+            "versionNonce": 130343510,
+            "isDeleted": false,
+            "id": "w6eJ_GdRRjEdsdvb7jM6R",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -228.32423692388113,
+            "y": -5.424012589984727,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1950909898,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 150,
+            "versionNonce": 1831966218,
+            "isDeleted": false,
+            "id": "7SA-S886gCE2pxQEa3CHC",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -706.3242020466487,
+            "y": 173.43314770577422,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1502166154,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 164,
+            "versionNonce": 1759651734,
+            "isDeleted": false,
+            "id": "js10i9_ayX3fVew1eLPLj",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -219.46707662812196,
+            "y": 175.71882711425633,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 721754954,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 322,
+            "versionNonce": 728122570,
+            "isDeleted": false,
+            "id": "8vje3mG75SGT0bOgEVi77",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -648.2530408494163,
+            "y": 133.22111177048924,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 301.6875,
+            "height": 25,
+            "seed": 118956554,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Nike's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Nike's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 439,
+            "versionNonce": 1487193302,
+            "isDeleted": false,
+            "id": "w3m3AwBiQ6Rl3sBSsxBVb",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -176.45245796367465,
+            "y": 135.79252290330174,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 328.1875,
+            "height": 25,
+            "seed": 146428106,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Adidas's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Adidas's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 152,
+            "versionNonce": 77011850,
+            "isDeleted": false,
+            "id": "3oIuTdex4qNvS536GnmBs",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -703.8944920038527,
+            "y": -43.364585076609046,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 420.1458435058594,
+            "height": 25,
+            "seed": 864659338,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Nike brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Nike brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 259,
+            "versionNonce": 144816662,
+            "isDeleted": false,
+            "id": "62BhzLNmf-O6fEobbr2wN",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -240.25298853356844,
+            "y": -43.350281923707314,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 446.6458435058594,
+            "height": 25,
+            "seed": 1606428234,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Adidas brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Adidas brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "rectangle",
+            "version": 983,
+            "versionNonce": 385817162,
+            "isDeleted": false,
+            "id": "aQoavinT8-kmUmjwVQQNR",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -732.9980483560004,
+            "y": -54.317605153096395,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 970.7782622578663,
+            "height": 401.7916062104527,
+            "seed": 641256714,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "text",
+            "version": 229,
+            "versionNonce": 802031446,
+            "isDeleted": false,
+            "id": "AadnWbe7M6rHHVGykvKZY",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -716.4659031366651,
+            "y": 6.639335927839781,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 469.3125,
+            "height": 71.99999128069196,
+            "seed": 1282317258,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 14.399998256138392,
+            "fontFamily": 1,
+            "text": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Nike brand ...\n- Uses powerful, confident fonts and close-up images of athletes.\n- Bold black and white theme with strong contrast.\n- Clean layout with rounded buttons and simple icons.",
+            "lineHeight": 1.25,
+            "baseline": 67
+          },
+          {
+            "type": "text",
+            "version": 161,
+            "versionNonce": 24723722,
+            "isDeleted": false,
+            "id": "-5kjzrcIgvps80ww-5LLj",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -216.92570712662064,
+            "y": 16.32608077888575,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 505.9791564941406,
+            "height": 80,
+            "seed": 813470346,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Adidas brand ...\n- Bright, energetic colors (yellow and red).\n- Urban, sporty look with focus on pop culture events like FIFA.\n- Bold text and sharp graphic design. ",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 228,
+            "versionNonce": 1442798666,
+            "isDeleted": false,
+            "id": "l9aWkiCku0LGYK4vmH27l",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -706.9257071266206,
+            "y": 202.64964832182847,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 394.9583435058594,
+            "height": 80,
+            "seed": 891138378,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182722810,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Nike's target audience is \nTeens and young adults who are into sports and \ncompetition. The dark colors and intense athlete\n images make it feel serious and powerful.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 271,
+            "versionNonce": 192047050,
+            "isDeleted": false,
+            "id": "jQG1PEfO0DYdKJ7PMpI2_",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -224.73815481077224,
+            "y": 205.93534516892674,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 442.5625,
+            "height": 80,
+            "seed": 766310410,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182770380,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Adidas's target audience is \nTeens and young adults who like sports and big events \nlike soccer. The bright colors and bold graphics feel \nenergetic and trendy.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "line",
+            "version": 526,
+            "versionNonce": 1382590934,
+            "isDeleted": false,
+            "id": "Mmh3MXlaph9TXtPV1hJdt",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 827.2487255370693,
+            "y": -49.421717761225295,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 1243965130,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 492,
+            "versionNonce": 1697646218,
+            "isDeleted": false,
+            "id": "VmhTb539vuzyGyMkuAX9F",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 358.67729696564083,
+            "y": -11.707397169707406,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 52559242,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 607,
+            "versionNonce": 1252065046,
+            "isDeleted": false,
+            "id": "0zhsJXzzmZRaMsGefNSza",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 847.9618028826658,
+            "y": -6.852504091565265,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 98417738,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 538,
+            "versionNonce": 1799529802,
+            "isDeleted": false,
+            "id": "0IzCpxPPAttYdfieFbgG6",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 369.96183775989834,
+            "y": 172.00465620419357,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 540254986,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 552,
+            "versionNonce": 1536994390,
+            "isDeleted": false,
+            "id": "DRLQwkuLk-83GrTCUFuYd",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 856.8189631784248,
+            "y": 174.2903356126759,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 748597706,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 719,
+            "versionNonce": 991128586,
+            "isDeleted": false,
+            "id": "qQ8kjJ_AZHbQqKGJGa4kt",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 425.74723235556826,
+            "y": 131.79262026890876,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 331.625,
+            "height": 25,
+            "seed": 2117724298,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Spotify's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Spotify's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 837,
+            "versionNonce": 1127264662,
+            "isDeleted": false,
+            "id": "ykZPol0WcxySurZ4SWcAp",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 899.8335818428723,
+            "y": 134.36403140172126,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 371,
+            "height": 25,
+            "seed": 1287669578,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is SoundCloud's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is SoundCloud's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 552,
+            "versionNonce": 1251826378,
+            "isDeleted": false,
+            "id": "PVCNlpnxpZgHGmQxBOWhL",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 372.3915478026943,
+            "y": -44.7930765781897,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 450.0833435058594,
+            "height": 25,
+            "seed": 546098698,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Spotify brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Spotify brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 658,
+            "versionNonce": 1016205014,
+            "isDeleted": false,
+            "id": "l8l-BQxTn4D0apGFccmxH",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 836.0330512729784,
+            "y": -44.778773425287795,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 489.4583435058594,
+            "height": 25,
+            "seed": 1050311882,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the SoundCloud brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the SoundCloud brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 563,
+            "versionNonce": 241096854,
+            "isDeleted": false,
+            "id": "GY1VeoIzabITXrZwS3u4m",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 378.10583351698006,
+            "y": 16.47637405239858,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 432.4166564941406,
+            "height": 80,
+            "seed": 344216458,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182018242,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Spotify brand ...\n- Dark mode look with neon-like album covers that pop.\n- Modern, clean, and easy to navigate.\n- Feels chill and music-focused. ",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 561,
+            "versionNonce": 775104662,
+            "isDeleted": false,
+            "id": "lY7vgsdujsthf7z3SWIZm",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 858.2174057826048,
+            "y": 14.897589277305325,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 543.2083129882812,
+            "height": 80,
+            "seed": 612717130,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182081565,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The SoundCloud brand ... \n- Uses gray and black tones with big, bold text.\n- Focuses on creators — “upload” and “create account” stand out.\n- Feels more indie and raw than Spotify.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 600,
+            "versionNonce": 2068081686,
+            "isDeleted": false,
+            "id": "M_urrXCbvN5XA-Ie4RlJV",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 369.3603326799264,
+            "y": 196.22115682024798,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 414.4166564941406,
+            "height": 80,
+            "seed": 1903720714,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182813073,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Spotify's target audience is \nTeens and young adults who listen to music a lot. \nThe dark theme makes the album covers stand out \nand feel modern.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 708,
+            "versionNonce": 407903830,
+            "isDeleted": false,
+            "id": "gFzkrqZo7IzFgD1xBoIBz",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 850.4049580984533,
+            "y": 202.00685366734626,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 494.4166564941406,
+            "height": 80,
+            "seed": 1792591818,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182835258,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like SoundCloud's target audience is \nIndependent artists and people who like discovering new music. \nThe focus on uploading and creators makes it feel more \nfor musicians.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 389,
+            "versionNonce": 482350858,
+            "isDeleted": false,
+            "id": "Bszt2kPlXfCBRUyQ0DANT",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 580.1578807015153,
+            "y": -540.6931158150758,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.85416412353516,
+            "height": 41.4,
+            "seed": 1489059466,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Spotify",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Spotify",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 506,
+            "versionNonce": 540554902,
+            "isDeleted": false,
+            "id": "zXrS5AICIc8e91kCS2-NX",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 930.8928976605696,
+            "y": -536.6932204467721,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 197.7708282470703,
+            "height": 41.4,
+            "seed": 1206705482,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "SoundCloud",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "SoundCloud",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 564,
+            "versionNonce": 1199351242,
+            "isDeleted": false,
+            "id": "D_S4J4UCF0qinm4jGtDIF",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -494.20821597671795,
+            "y": 416.0687003005311,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 99.83333587646484,
+            "height": 41.4,
+            "seed": 1974903818,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Netflix",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Netflix",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 616,
+            "versionNonce": 2019619798,
+            "isDeleted": false,
+            "id": "F0fvMCJ54T41yr-pdXBzP",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -130.38237925012083,
+            "y": 414.92590419282953,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 109.85416412353516,
+            "height": 41.4,
+            "seed": 1008308938,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Disney",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Disney",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "rectangle",
+            "version": 1346,
+            "versionNonce": 1899584650,
+            "isDeleted": false,
+            "id": "owj9MdYH85tJmFTR0pVo6",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": -749.2383321218908,
+            "y": 889.3015035011073,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 1002.7782099420182,
+            "height": 401.7916062104527,
+            "seed": 2108729738,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "line",
+            "version": 453,
+            "versionNonce": 1593837846,
+            "isDeleted": false,
+            "id": "wrIHlnn3F2yFYixj4sMeI",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -253.84902660679666,
+            "y": 895.6258823945587,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 297199690,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 419,
+            "versionNonce": 397491018,
+            "isDeleted": false,
+            "id": "PSNG91i6hSJrxmzBDgmsi",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -722.4204551782252,
+            "y": 933.3402029860769,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 805785354,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 534,
+            "versionNonce": 1670018646,
+            "isDeleted": false,
+            "id": "cwek6QbOAPZvR3Z805N5q",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -233.13594926120015,
+            "y": 938.195096064219,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 1562172874,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 465,
+            "versionNonce": 1228882442,
+            "isDeleted": false,
+            "id": "MUAbJlaChmHPglJKRIlvB",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -711.1359143839677,
+            "y": 1117.0522563599775,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1444058250,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 479,
+            "versionNonce": 1591032726,
+            "isDeleted": false,
+            "id": "6_ntY3QtqFH4bpg9_j4B1",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -224.2787889654411,
+            "y": 1119.3379357684603,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 2091086666,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 653,
+            "versionNonce": 283013322,
+            "isDeleted": false,
+            "id": "S6fyJacKFnplBRMiTy99X",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -655.3505197882978,
+            "y": 1076.8402204246927,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 329.4583435058594,
+            "height": 25,
+            "seed": 1126857226,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Netflix's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Netflix's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 770,
+            "versionNonce": 1192581334,
+            "isDeleted": false,
+            "id": "NBeLfrNmyRYGoNqJNonNj",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -181.26417030099367,
+            "y": 1079.4116315575052,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 324.2291564941406,
+            "height": 25,
+            "seed": 413313226,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Disney's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Disney's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 502,
+            "versionNonce": 1646905226,
+            "isDeleted": false,
+            "id": "4nV3go7-yu6dHmw3d8rKk",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -725.849061484029,
+            "y": 901.397406878376,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 447.9166564941406,
+            "height": 25,
+            "seed": 1420230538,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Netflix brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Netflix brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 615,
+            "versionNonce": 64998934,
+            "isDeleted": false,
+            "id": "r6qE-vSjnhwQPCgKWcEjy",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": -222.2075580137447,
+            "y": 903.6973894397598,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 442.6875,
+            "height": 25,
+            "seed": 594705994,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Disney brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Disney brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 528,
+            "versionNonce": 637473738,
+            "isDeleted": false,
+            "id": "kVmZCYZzoLEjDtkGxHrp7",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -734.9919535041182,
+            "y": 945.5239567695666,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 487.375,
+            "height": 80,
+            "seed": 1910514954,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181846674,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Netflix brand ... \n- Dark background with red buttons and bright movie posters.\n- Bold, clear fonts that feel cinematic.\n- Highlights price and trending shows right away.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 496,
+            "versionNonce": 1298385482,
+            "isDeleted": false,
+            "id": "2rfc_31gr3Lzcgy5CSDyT",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -219.4515656692971,
+            "y": 959.9451894330896,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 445.8333435058594,
+            "height": 80,
+            "seed": 1500181450,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181864896,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Disney brand ... \n- Uses cool blues and organized sections.\n- Clean layout, lots of brand logos (Disney, Hulu, ESPN).\n- Feels family-friendly and professional.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 591,
+            "versionNonce": 1120179146,
+            "isDeleted": false,
+            "id": "CtXrOsQJY_d7i0BamMXpq",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -712.8802591681807,
+            "y": 1141.2687569760324,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 447.9791564941406,
+            "height": 80,
+            "seed": 204335754,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182858939,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Netflix's target audience is \nTeens and adults who watch a lot of shows and movies.\n The dark layout and big show images make it feel \ndramatic and immersive.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 602,
+            "versionNonce": 998394582,
+            "isDeleted": false,
+            "id": "_lGvdRYhBlphJQowl69Mg",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": -231.83572094273393,
+            "y": 1147.0544538231302,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 435.5208435058594,
+            "height": 60,
+            "seed": 1088686410,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182875290,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Disney's target audience is \nFamilies and kids. The clean layout and familiar titles \nmake it feel safe and family-friendly.",
+            "lineHeight": 1.25,
+            "baseline": 54
+          },
+          {
+            "type": "text",
+            "version": 810,
+            "versionNonce": 293780426,
+            "isDeleted": false,
+            "id": "2pEB-YinZcHRPMEjAT0MB",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 953.0835511436426,
+            "y": 421.40191592320537,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 132.3958282470703,
+            "height": 41.4,
+            "seed": 518541322,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Walmart",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Walmart",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "text",
+            "version": 917,
+            "versionNonce": 1240415702,
+            "isDeleted": false,
+            "id": "kB6MkAHqefTfZu_JAtuvn",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 576.3839907057591,
+            "y": 420.2589890258838,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 99.85416412353516,
+            "height": 41.4,
+            "seed": 708165322,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 36,
+            "fontFamily": 2,
+            "text": "Target",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Target",
+            "lineHeight": 1.15,
+            "baseline": 33
+          },
+          {
+            "type": "rectangle",
+            "version": 1525,
+            "versionNonce": 1583176522,
+            "isDeleted": false,
+            "id": "zJs7MwzEfhYfdkIVZ6-K-",
+            "fillStyle": "solid",
+            "strokeWidth": 4,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 10,
+            "angle": 0,
+            "x": 319.19298296375337,
+            "y": 886.3489350836045,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "#a5d8ff",
+            "width": 1011.9210147690271,
+            "height": 401.7916062104527,
+            "seed": 795301258,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 3
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773182153175,
+            "link": null,
+            "locked": false
+          },
+          {
+            "type": "line",
+            "version": 622,
+            "versionNonce": 1010111254,
+            "isDeleted": false,
+            "id": "aKNydPsEe8TQox5PS_kQ1",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 824.8678458170175,
+            "y": 892.673313977056,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 0,
+            "height": 381.71430315290183,
+            "seed": 800592970,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                381.71430315290183
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 588,
+            "versionNonce": 464113994,
+            "isDeleted": false,
+            "id": "PQrugAlOegB0jGp5kFquI",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 356.29641724558905,
+            "y": 930.3876345685741,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1292040970,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 703,
+            "versionNonce": 697188438,
+            "isDeleted": false,
+            "id": "KMrNFzNxpePGRlEHOZs6v",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 845.580923162614,
+            "y": 935.2425276467158,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 456.1438736867693,
+            "height": 0,
+            "seed": 901974474,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                456.1438736867693,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 634,
+            "versionNonce": 766842890,
+            "isDeleted": false,
+            "id": "ZwJsEK8SPuHjnriOL_N7p",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 367.58095803984634,
+            "y": 1114.0996879424747,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 286474378,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "line",
+            "version": 648,
+            "versionNonce": 97502614,
+            "isDeleted": false,
+            "id": "k9Px7MhNwCnbVgTorKlMi",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 854.4380834583731,
+            "y": 1116.3853673509575,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 430.8571079799107,
+            "height": 0,
+            "seed": 1789828938,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": {
+              "type": 2
+            },
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "startBinding": null,
+            "endBinding": null,
+            "lastCommittedPoint": null,
+            "startArrowhead": null,
+            "endArrowhead": null,
+            "points": [
+              [
+                0,
+                0
+              ],
+              [
+                430.8571079799107,
+                0
+              ]
+            ]
+          },
+          {
+            "type": "text",
+            "version": 828,
+            "versionNonce": 1412007626,
+            "isDeleted": false,
+            "id": "Ln0xMO7J7WHG9wSvEsAvp",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 423.36635263551625,
+            "y": 1073.88765200719,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 334.0208435058594,
+            "height": 25,
+            "seed": 519054858,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Target's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Target's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 946,
+            "versionNonce": 36610774,
+            "isDeleted": false,
+            "id": "KzkDjGo_QfUBynHAoGEtt",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 897.4527021228205,
+            "y": 1076.4590631400024,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 343.1458435058594,
+            "height": 25,
+            "seed": 1188222154,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "Who is Walmart's target audience?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Who is Walmart's target audience?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 685,
+            "versionNonce": 2007113098,
+            "isDeleted": false,
+            "id": "-IfLNj63pCDysaUgFN9cu",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 347.15361241857977,
+            "y": 898.4448384608733,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 452.4791564941406,
+            "height": 25,
+            "seed": 603040650,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Target brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Target brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 795,
+            "versionNonce": 1631574038,
+            "isDeleted": false,
+            "id": "UJAuJIngPyOA8Ebhw9UgL",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "angle": 0,
+            "x": 849.6522761846231,
+            "y": 904.1733837315202,
+            "strokeColor": "#1e1e1e",
+            "backgroundColor": "transparent",
+            "width": 461.6041564941406,
+            "height": 25,
+            "seed": 210217546,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773181844022,
+            "link": null,
+            "locked": false,
+            "fontSize": 20,
+            "fontFamily": 1,
+            "text": "What do you notice about the Walmart brand?",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "What do you notice about the Walmart brand?",
+            "lineHeight": 1.25,
+            "baseline": 18
+          },
+          {
+            "type": "text",
+            "version": 713,
+            "versionNonce": 1838904650,
+            "isDeleted": false,
+            "id": "c5HPB3dV0S3XfohmsPSF5",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 327.7249014810799,
+            "y": 942.571431948604,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 523.1041870117188,
+            "height": 80,
+            "seed": 1466945802,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182179984,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Target brand ...\n- Red and white color scheme — bright and cheerful.\n- Uses friendly fonts and playful seasonal themes (like Halloween).\n- Photos look warm and welcoming. ",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 675,
+            "versionNonce": 1707116374,
+            "isDeleted": false,
+            "id": "fLds1FnECckzaU3LMf5vi",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 859.2651323683563,
+            "y": 956.9926210155868,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 436.1458435058594,
+            "height": 80,
+            "seed": 1210392522,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182239805,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "The Walmart brand ... \n- Uses lots of white space and light blue/yellow colors.\n- Organized layout — easy to browse deals.\n- More practical and clean than flashy.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 699,
+            "versionNonce": 2122334026,
+            "isDeleted": false,
+            "id": "45jqO3Yy0VFQ8EOC0E6jJ",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 340.69370379692793,
+            "y": 1130.316223435762,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 422.9375,
+            "height": 80,
+            "seed": 2059572874,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182895796,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Target's target audience is \nFamilies and everyday shoppers who want trendy but \naffordable products. The bright colors and seasonal \nads make it feel fun and welcoming.",
+            "lineHeight": 1.25,
+            "baseline": 74
+          },
+          {
+            "type": "text",
+            "version": 751,
+            "versionNonce": 1698617174,
+            "isDeleted": false,
+            "id": "KEDSwHoEijdlol-1YiOe1",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 0,
+            "opacity": 100,
+            "angle": 0,
+            "x": 850.3099321730442,
+            "y": 1142.9589585083058,
+            "strokeColor": "#e03131",
+            "backgroundColor": "#b2f2bb",
+            "width": 482.6666564941406,
+            "height": 60,
+            "seed": 1342387530,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "boundElements": [
+
+            ],
+            "updated": 1773182908116,
+            "link": null,
+            "locked": false,
+            "fontSize": 16,
+            "fontFamily": 1,
+            "text": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
+            "textAlign": "left",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "It seems like Walmart's target audience is \nFamilies and budget shoppers looking for deals. \nThe simple layout and focus on prices make it feel practical.",
+            "lineHeight": 1.25,
+            "baseline": 54
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 790.4182957240532,
+          "scrollY": 565.7253374372203,
+          "zoom": {
+            "value": 0.6000000000000001
+          }
+        },
+        "files": {
+          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
+            "mimeType": "image/png",
+            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "created": 1773179548070,
+            "lastRetrieved": 1773179548070
+          },
+          "03a165a881326e55084ba496c979aafa6c4ca35f": {
+            "mimeType": "image/png",
+            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "created": 1773179560085,
+            "lastRetrieved": 1773179560085
+          },
+          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
+            "mimeType": "image/png",
+            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "created": 1773179570690,
+            "lastRetrieved": 1773179570690
+          },
+          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
+            "mimeType": "image/png",
+            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "created": 1773179586031,
+            "lastRetrieved": 1773179586031
+          }
+        },
+        "externalFiles": {
+          "5dbf441b0986b0a789838a6feb86b336934ba65b": {
+            "id": "5dbf441b0986b0a789838a6feb86b336934ba65b",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+            "starterAsset": true,
+            "filenameWithExtension": "5dbf441b0986b0a789838a6feb86b336934ba65b.png",
+            "uploaded": true
+          },
+          "03a165a881326e55084ba496c979aafa6c4ca35f": {
+            "id": "03a165a881326e55084ba496c979aafa6c4ca35f",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/03a165a881326e55084ba496c979aafa6c4ca35f.png",
+            "starterAsset": true,
+            "filenameWithExtension": "03a165a881326e55084ba496c979aafa6c4ca35f.png",
+            "uploaded": true
+          },
+          "c4e3a3324d9a6e355b8240e47eed8973c5a65596": {
+            "id": "c4e3a3324d9a6e355b8240e47eed8973c5a65596",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+            "starterAsset": true,
+            "filenameWithExtension": "c4e3a3324d9a6e355b8240e47eed8973c5a65596.png",
+            "uploaded": true
+          },
+          "5ab864d827d59efba1962913809a4f2ae4988ba0": {
+            "id": "5ab864d827d59efba1962913809a4f2ae4988ba0",
+            "url": "/level_starter_assets/ai-generated-design-lesson5-level1_v3_2026/uuid/5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+            "starterAsset": true,
+            "filenameWithExtension": "5ab864d827d59efba1962913809a4f2ae4988ba0.png",
+            "uploaded": true
+          }
+        }
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-10 21:47:34 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:24:02 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:35:42 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:38:13 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:48:37 +0000\",\"changed\":[\"exemplar_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:49:35 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:51:46 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 22:54:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

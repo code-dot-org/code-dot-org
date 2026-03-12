@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-12-19 16:14:58 UTC",
+    "serialized_at": "2026-03-06 19:17:29 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -37,7 +37,7 @@
       "name": "Multi",
       "absolute_position": 1,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -760,6 +760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Happy Maps Multi 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,6 +784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Horizontal Scroll Test_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -802,6 +808,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Submittable Multi_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -823,6 +832,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test questionless single multi_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -844,6 +856,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-single-multi-standalone-retriable_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -865,6 +880,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Choose 2 Test_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -886,6 +904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze Match 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -907,6 +928,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "4-5 Algorithms Match 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -928,6 +952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -949,6 +976,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Strategies O_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -970,6 +1000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test External Markdown_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -991,6 +1024,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test embedded Blockly in instructions_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1012,6 +1048,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test embedded K1 Blockly in instructions_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1033,6 +1072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "K-1 Maze 11_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1054,6 +1096,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Test longassessment levelgroup split new_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1075,6 +1120,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "PS U3 Assessment1 new_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1096,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sample Free Response_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1117,6 +1168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups2022_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1138,6 +1192,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1 Contained_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1159,6 +1216,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-nonretriable-freeresponse-standalone_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,6 +1240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AllTheThings_StandaloneVideo_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,6 +1264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_curriculum_reference_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1222,6 +1288,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_map_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1243,6 +1312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_bubble_choice_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1264,6 +1336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings AI Lab 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1285,6 +1360,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AppLab AI Enabled_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1306,6 +1384,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1327,6 +1408,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1348,6 +1432,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 3_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1369,6 +1456,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 4_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1390,6 +1480,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa widget test2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1411,6 +1504,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 6_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1432,6 +1528,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 7_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1453,6 +1552,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab 8_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1474,6 +1576,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab submittable_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1495,6 +1600,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab Prompter_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1516,6 +1624,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab Validation_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1537,6 +1648,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Java Lab Passing Validation_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1558,6 +1672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Level_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1579,6 +1696,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Level - 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1600,6 +1720,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Template Backed - 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1621,6 +1744,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Template Backed - 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1642,6 +1768,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Template Backed - 3_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1663,6 +1792,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Test Level - gpt-4o-mini multimodal_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1684,6 +1816,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Submittable Level_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1705,6 +1840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1726,6 +1864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1747,6 +1888,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 3_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1768,6 +1912,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 4_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1789,6 +1936,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 5_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1810,6 +1960,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 6_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1831,6 +1984,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 7_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1852,6 +2008,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 8_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1873,6 +2032,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 9_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1894,6 +2056,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 10_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1915,6 +2080,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 11_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1936,6 +2104,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 12_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1957,6 +2128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1978,6 +2152,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1999,6 +2176,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 3_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2020,6 +2200,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 4_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2041,6 +2224,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 5_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2062,6 +2248,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 6_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2083,6 +2272,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 7_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2104,6 +2296,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 8_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2125,6 +2320,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 9_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2146,6 +2344,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 10_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2167,6 +2368,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Weblab2 11_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2188,6 +2392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Music Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2209,6 +2416,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Chat Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2230,6 +2440,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Python Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2251,6 +2464,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Weblab2 Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2272,6 +2488,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2293,6 +2512,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Panels Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2314,6 +2536,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "StandaloneVideo Lab2 Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2335,6 +2560,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lab2 BubbleChoice Showcase_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2356,6 +2584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "test-levelgroup-activityguide_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2377,6 +2608,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "test-levelgroup-activityguide-2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2398,6 +2632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings sketchlab 1_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2419,6 +2656,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings sketchlab 2_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2440,6 +2680,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings sketchlab 3_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2461,6 +2704,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings sketchlab 4_cs50"
+        ]
       },
       "bonus": false,
       "seeding_key": {
