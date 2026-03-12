@@ -7,7 +7,7 @@
 # longer use Varnish and so no longer rely on that logic. We could consider
 # removing our support for Varnish and simplifying this implementation.
 
-# `pegasus` and `dashboard` keys each return a Hash in the following format:
+# `dashboard` keys each return a Hash in the following format:
 
 # - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched
 #    in-order until the first matching `path` is found. If no `path` matches the
@@ -31,13 +31,7 @@
 #   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include
 #     in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all
 #     cookies for the path, pass `'none'`.
-#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
-#      specified origin. (Currently either `'dashboard'` or `'pegasus'`)
-#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc`
-#       configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its
-#       request to `server1-studio.code.org/here/abc`.
-#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly
-#       when passed through to Varnish.)
+#   - `proxy`: proxy all requests matching this path to the specified origin.
 # - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax
 #    as `behaviors` except `path` is not required.
 class HttpCache
@@ -317,12 +311,6 @@ class HttpCache
             path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
             headers: [],
             cookies: 'none'
-          },
-          {
-            path: '/v2/*',
-            proxy: 'pegasus',
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
           },
           {
             path: %w(
