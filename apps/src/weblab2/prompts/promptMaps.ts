@@ -1,3 +1,4 @@
+// CONTRACTS
 import askContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ask.md';
 import buildCSSContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildCSS.md';
 import buildHTMLContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/buildHTML.md';
@@ -12,6 +13,7 @@ import pseudocodeContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/ps
 import refusalContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusal.md';
 import refusalJavaScriptSnippetsContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/refusalJavaScriptSnippets.md';
 import testCaseContract from '@cdo/apps/weblab2/prompts/answerTypeContracts/testCase.md';
+// TRIGGERS
 import askTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/ask.md';
 import buildCSSTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildCSS.md';
 import buildHTMLTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/buildHTML.md';
@@ -26,6 +28,7 @@ import pseudocodeTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/pseu
 import refusalTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusal.md';
 import refusalJavaScriptSnippetsTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/refusalJavaScriptSnippets.md';
 import testCaseTrigger from '@cdo/apps/weblab2/prompts/answerTypeTriggers/testCase.md';
+// TYPES
 import {AiTutorAnswerType} from '@cdo/apps/weblab2/types';
 
 export const ANSWER_TYPE_TRIGGERS: Record<AiTutorAnswerType, string> = {
