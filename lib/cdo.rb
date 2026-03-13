@@ -390,11 +390,12 @@ module Cdo
       servers.merge(self[:app_servers])
     end
 
+    # Parse CDO_* env vars to set the same params as locals.yml
     private def env_vars_to_configuration
       ENV.to_h.
         select {|k, _| k.match?(ENV_PREFIX)}.
         transform_keys {|k| k.sub(ENV_PREFIX, '')}.
-        # Ignore keys like `CDO__*`, e.g. CDO__skip_it
+        # Ignore keys like `CDO__*`, e.g. ignore CDO__skip_it
         reject {|k, _| k.start_with?('_')}.
         # CDO_BUILD_APPS or CDO_build_apps both => build_apps
         transform_keys(&:downcase).
