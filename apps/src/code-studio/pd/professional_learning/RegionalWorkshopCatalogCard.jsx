@@ -1,13 +1,12 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Fragment} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -63,8 +62,7 @@ const RegionalWorkshopCatalogCard = ({
         workshop_course: course,
         workshop_subject: subject,
         workshop_format: format,
-      },
-      PLATFORMS.STATSIG
+      }
     );
     navigateToHref(`/professional-learning/workshops/${id}`);
   };
@@ -171,15 +169,18 @@ const RegionalWorkshopCatalogCard = ({
         </div>
       </div>
       <div className={style.buttonContainer}>
-        <Button
-          aria-label="learnMore"
-          text="Learn more"
-          target="_blank"
-          color="purple"
-          onClick={() => handleClickLearnMore()}
-          className={style.wsCardButton}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={isFull}
-        />
+          className={style.wsCardButton}
+          onClick={() => handleClickLearnMore()}
+          aria-label="learnMore"
+          type="button"
+        >
+          {'Learn more'}
+        </MuiButton>
       </div>
     </div>
   );

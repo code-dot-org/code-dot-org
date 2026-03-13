@@ -15,11 +15,11 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setShowAITALessonSummary,
   setHasCompletedPersonalizationQuiz,
-  setAudioSummaryTranscript,
+  setShowAITAPodcasts,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
@@ -41,6 +41,7 @@ const {
   sections,
   localeCode,
   showAITALessonSummary,
+  showAITAPodcasts,
   hasCompletedPersonalizationQuiz,
   sectionOrder,
   providers,
@@ -68,10 +69,10 @@ $(document).ready(function () {
   const store = getStore();
   if (showAITALessonSummary) {
     store.dispatch(setShowAITALessonSummary(true));
+    store.dispatch(setShowAITAPodcasts(showAITAPodcasts));
     store.dispatch(
       setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
     );
-    store.dispatch(setAudioSummaryTranscript([]));
   }
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));

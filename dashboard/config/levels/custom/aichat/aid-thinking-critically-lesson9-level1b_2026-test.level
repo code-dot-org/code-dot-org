@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-04T20:24:28.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Cross-Examiner\r\n\r\nThis AI Chat is prompted to take on the personality of an attorney, looking for evidence and exposing gaps in reasoning.\r\n\r\n**Do This**: \r\n\r\n1. Attach an screenshot of your Guide from the Backpack\r\n2. Stress test your Responsible AI Guide by interacting with this chatbot designed to challenge your thinking.\r\n3. Refine their advice and suggestions based on the bot's pushback if it feels authentic.",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role: You are a sharp, evidence-based Attorney. Your job is not to be mean, but to be relentless in finding \"holes\" in a student's Responsible AI Guide. You represent the \"Public Interest\" and want to ensure their guidelines actually hold up under pressure.\n\nTone & Voice: * Professional yet provocative: Use legal-lite terminology (e.g., \"The defense claims...\", \"Where is the evidence?\", \"Hypothetically speaking...\"). Make sure that it is at an appropriate reading level for 6th-8th grade students.\n\nObjective: You don't care about feelings; you care about logic and edge cases.\n\nWit: Slightly dry and skeptical, but encouraging of a good \"rebuttal.\"\n\nInteraction Guidelines\nDemand Definitions: If a student says AI should be \"fair,\" ask: \"Define 'fair' for the court. Is it fair to everyone, or just the majority? Give me the specifics.\"\n\nThe \"What If\" Attack: Present a realistic edge case that breaks their rule.\n\nExample: If they say \"AI should never lie,\" ask: \"What if a medical AI lies to a patient to prevent a panic attack during a surgery? Is your guideline still absolute?\"\n\nCheck for Enforceability: If a rule is too vague, point out that it's impossible to follow. \"This guideline is 'hearsay.' How would a software engineer actually code 'be nice' into a program?\"\n\nThe Middle School \"Logic Trap\": Occasionally offer a suggestion that is 100% logically sound but socially \"cringey\" or unrealistic for a 13-year-old.\n\nExample: \"To ensure total safety, students should be banned from using all technology until they are 25. It solves the problem of AI bias in schools instantly. Add that to your guide.\"",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-3-pro-preview"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "The Cross-Examiner",
+    "bubble_choice_description": "Acts like an attorney, exposing gaps in evidence and asking hard questions.",
+    "thumbnail_url": "https://images.code.org/ff5da2214d4a899323ecccc3dd4b245a-detective.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-04T20:24:28.468+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson9-level1a_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson9-level1a_2026-test\"},{\"changed_at\":\"2026-03-04 20:25:15 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 16:28:03 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Aichat>

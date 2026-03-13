@@ -803,6 +803,8 @@ module SharedConstants
     USER_INPUT_TOO_LARGE: 1005,
     # The model took too long to respond.
     MODEL_TIMEOUT: 1006,
+    # Model output image flagged.
+    MODEL_IMAGE_FLAGGED: 1007,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {
@@ -820,11 +822,7 @@ module SharedConstants
   }
 
   AI_CHAT_MODEL_IDS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
     MISTRAL: "gen-ai-mistral-7b-inst-v01",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b",
     CHATGPT: "gpt-4o-mini",
     LEARNLM: "learnlm-2.0-flash-experimental",
     GEMINI_2_0_FLASH: "gemini-2.0-flash",
@@ -832,6 +830,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
+    GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
   AI_CHAT_CLIENT_TYPES = {
@@ -1005,6 +1004,7 @@ module SharedConstants
     'rejseplanen.dk',             # Denmark public transport
     'transitchicago.com',         # Chicago transit - API key required 🔑
     'vpic.nhtsa.dot.gov',         # Vehicle data - Public API
+    'api.congress.gov',           # Congress data - API key required 🔑
 
     # === SPACE ===
     'api.nasa.gov',               # NASA content - API key required 🔑
@@ -1103,7 +1103,8 @@ module SharedConstants
   ].freeze
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos' # Placeholder images - Public API
+    'picsum.photos', # Placeholder images - Public API
+    'images.code.org' # Code.org hosted images - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [

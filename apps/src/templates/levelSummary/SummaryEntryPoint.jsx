@@ -1,4 +1,4 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -29,16 +29,15 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
 
   return (
     <div className={className}>
-      <Button
-        color={buttonColors.black}
-        type={'secondary'}
-        size={'s'}
-        text={i18n.viewStudentResponses()}
-        href={summaryUrl}
-        useAsLink={true}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="small"
         className={styles.button}
-      />
-
+        href={summaryUrl}
+      >
+        {i18n.viewStudentResponses()}
+      </MuiButton>
       {selectedSection && (
         <>
           <div className={styles.responseIcon}>

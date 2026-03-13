@@ -1,10 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyFourText,
-  StrongText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import {isEqual} from 'lodash';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -16,7 +11,7 @@ import SuccessDivider from '@cdo/apps/weblab2/debugPanel/images/Success.svg';
 
 import {NetworkEntry} from '../redux/networkRedux';
 
-import DetailsBox from './DetailsBox';
+import DetailsBox, {DetailsField} from './DetailsBox';
 import EmptyPanelPlaceholder from './EmptyPanelPlaceholder';
 import NetworkRequestChip from './NetworkRequestChip';
 
@@ -125,7 +120,7 @@ const NetworkPanel: React.FC = () => {
   }, [requestSuccess, responseSuccess, responsePending]);
 
   const responseRows = useMemo(() => {
-    const rows = [
+    const rows: DetailsField[][] = [
       [
         {
           label: 'Status',
@@ -145,7 +140,9 @@ const NetworkPanel: React.FC = () => {
     } else if (selectedRequest?.response?.contentType?.startsWith('text')) {
       responseDataValue = selectedRequest.response.body;
     } else if (
-      selectedRequest?.response?.contentType?.startsWith('application/json')
+      /^application\/([\w.-]+\+)?json/.test(
+        selectedRequest?.response?.contentType ?? ''
+      )
     ) {
       try {
         responseDataValue = JSON.stringify(
@@ -162,6 +159,7 @@ const NetworkPanel: React.FC = () => {
       {
         label: 'Response Data',
         value: responseDataValue,
+        copyable: true,
       },
     ]);
     return rows;
@@ -193,17 +191,19 @@ const NetworkPanel: React.FC = () => {
         <div className={moduleStyles.networkPanelContainer}>
           <div className={moduleStyles.networkSummary}>
             <div className={moduleStyles.networkSummaryHeader}>
-              <BodyFourText>
-                <StrongText>Activity</StrongText>
-              </BodyFourText>
-              <Button
+              <Typography variant="body4" gutterBottom>
+                <Typography variant="strong">Activity</Typography>
+              </Typography>
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="extraSmall"
                 onClick={() => setNewestFirst(!newestFirst)}
-                size="xs"
-                type="secondary"
-                iconLeft={{iconName: 'sort'}}
-                text={newestFirst ? 'Newest first' : 'Oldest first'}
-                color={'gray'}
-              />
+                type="button"
+                startIcon={<FontAwesomeV6Icon iconName="sort" />}
+              >
+                {newestFirst ? 'Newest first' : 'Oldest first'}
+              </MuiButton>
             </div>
             <div className={moduleStyles.requestList}>
               {orderedNetworkRequests.map(request => (
@@ -232,7 +232,13 @@ const NetworkPanel: React.FC = () => {
                     value: selectedRequest?.request.startTime,
                   },
                 ],
-                [{label: 'URL', value: selectedRequest?.request.url}],
+                [
+                  {
+                    label: 'URL',
+                    value: selectedRequest?.request.url,
+                    copyable: true,
+                  },
+                ],
               ]}
               errorMessage={requestErrorMessage}
             />
@@ -256,7 +262,9 @@ const NetworkPanel: React.FC = () => {
               />
             ) : (
               <div className={moduleStyles.responsePlaceholder}>
-                <BodyThreeText>Response</BodyThreeText>
+                <Typography variant="body3" gutterBottom>
+                  Response
+                </Typography>
                 <FontAwesomeV6Icon
                   iconName="circle"
                   className={moduleStyles.placeholderIcon}

@@ -10,11 +10,12 @@ import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import SortByNameDropdown from '../SortByNameDropdown';
+
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
-} from '../sectionProgress/sectionProgressRedux';
-import SortByNameDropdown from '../SortByNameDropdown';
+} from './sectionProgressRedux';
 
 import styles from './progress-table-v2.module.scss';
 import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';

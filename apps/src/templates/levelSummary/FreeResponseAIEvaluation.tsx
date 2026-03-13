@@ -6,7 +6,7 @@ import {
   evaluateFreeResponse,
 } from '@cdo/apps/aiEvaluation/aiEvaluationApi';
 import {fetchMostRecentUserLevelEvaluation} from '@cdo/apps/aiEvaluation/studentWorkEvaluationsApi';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {StudentWorkEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 
@@ -98,14 +98,10 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   }, [responses, levelData.levelId, levelData.unitId]);
 
   const getAIEvaluations = async () => {
-    analyticsReporter.sendEvent(
-      EVENTS.CFU_AI_ANALYSIS_BUTTON_CLICKED,
-      {
-        levelId: levelData.levelId,
-        unitId: levelData.unitId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CFU_AI_ANALYSIS_BUTTON_CLICKED, {
+      levelId: levelData.levelId,
+      unitId: levelData.unitId,
+    });
     setEvaluationsPending(true);
     // Filter responses to only those without an existing evaluation or where the prior evaluation is older than the response
     const responsesWithoutUpdatedAiEvaluation = responses.filter(response => {
@@ -168,14 +164,10 @@ const FreeResponseAIEvaluation: React.FunctionComponent<
   };
 
   const openDetailedAnalysisHandler = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.CFU_AI_ANALYSIS_VIEW_DETAILS,
-      {
-        levelId: levelData.levelId,
-        unitId: levelData.unitId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CFU_AI_ANALYSIS_VIEW_DETAILS, {
+      levelId: levelData.levelId,
+      unitId: levelData.unitId,
+    });
     setShowDetailedAnalysis(true);
   };
 

@@ -20,12 +20,22 @@ const InnerHTMLPreview = () => {
   const [source, setSource] = React.useState<MultiFileSource | undefined>(
     undefined
   );
+  const [parameters, setParameters] = React.useState<object | undefined>(
+    undefined
+  );
   const [currentFile, setCurrentFile] = React.useState<string | undefined>(
     undefined
   );
-  // Numerical key used to trigger iframe reloads when we have updates.
-  const [previewKey, setPreviewKey] = useState(0);
   const [serviceWorkerReady, setServiceWorkerReady] = useState(false);
+  // True once we've made a warmup fetch to the Service Worker immediately before showing the iframe.
+  // Safari aggressively idles SWs; if the SW is idle when the iframe navigate happens,
+  // Safari won't intercept it. The warmup fetch ensures the SW is awake.
+  const [swWarmedUp, setSwWarmedUp] = useState(false);
+  // Key to indicate we should re-warmup the SW on source changes.
+  const [previewKey, setPreviewKey] = useState(0);
+  // Numerical key used to force a re-render of the iframe when we need to refresh the iframe, such as
+  // when toggling script permissions or when the source document (or a dependent file) is updated.
+  const [renderKey, setRenderKey] = useState(0);
   const [allowScripts, setAllowScripts] = useState(false);
   const [isLevelLoading, setIsLevelLoading] = useState(false);
 
@@ -40,7 +50,7 @@ const InnerHTMLPreview = () => {
   }, []);
 
   const {serviceWorkerRegistration, serviceWorkerUnavailable} =
-    useProjectServiceWorker(source, parentOrigin);
+    useProjectServiceWorker(source, parentOrigin, allowScripts, parameters);
 
   const handleMessage = useCallback(
     (event: MessageEvent) => {
@@ -51,12 +61,14 @@ const InnerHTMLPreview = () => {
       const {data} = event;
       if (data.type === IframeMessageType.SET_SOURCE) {
         setSource(data.source);
+        setParameters(data.parameters);
       } else if (data.type === IframeMessageType.CHANGE_FILE_URL_BAR) {
         setCurrentFile(data.fileName);
       } else if (data.type === IframeMessageType.SET_ALLOW_SCRIPTS) {
         setAllowScripts(!!data.allow);
+        setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.REFRESH) {
-        iframeRef.current?.contentWindow?.location.reload();
+        setPreviewKey(prevKey => prevKey + 1);
       } else if (data.type === IframeMessageType.LEVEL_LOADING) {
         setIsLevelLoading(data.isLoading);
         if (data.isLoading) {
@@ -118,8 +130,8 @@ const InnerHTMLPreview = () => {
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.RECEIVED_SOURCE
       ) {
-        setServiceWorkerReady(true);
         setPreviewKey(prevKey => prevKey + 1);
+        setServiceWorkerReady(true);
       } else if (
         event.data.type === ProjectServiceWorkerMessageType.NETWORK_REQUEST
       ) {
@@ -158,24 +170,42 @@ const InnerHTMLPreview = () => {
     };
   }, [parentOrigin]);
 
+  // Warm up the Service Worker before the iframe navigates. We fetch the current file from
+  // InnerHTMLPreview (a controlled SW client) to ensure the SW is awake immediately
+  // before the iframe src is set.
+  // This prevents issues on Safari where the Service Worker won't respond to the iframe navigation.
   useEffect(() => {
-    if (iframeRef.current) {
-      iframeRef.current.contentWindow?.location.reload();
+    if (!serviceWorkerReady || !currentFile || isLevelLoading) {
+      setSwWarmedUp(false);
+      return;
     }
-  }, [previewKey]);
+    let cancelled = false;
+    setSwWarmedUp(false);
+    fetch(`${window.location.origin}/${currentFile}`)
+      .catch(() => {
+        // Swallow fetch errors to avoid unhandled promise rejections during Service Worker warmup.
+      })
+      .finally(() => {
+        if (!cancelled) {
+          setSwWarmedUp(true);
+          setRenderKey(prevKey => prevKey + 1);
+        }
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [serviceWorkerReady, isLevelLoading, previewKey, currentFile]);
 
   const getPreview = useCallback(() => {
-    if (serviceWorkerReady && currentFile && !isLevelLoading) {
+    if (swWarmedUp && currentFile && !isLevelLoading) {
       return (
         <iframe
           ref={iframeRef}
-          sandbox={`${
-            allowScripts ? 'allow-scripts ' : ''
-          }allow-same-origin allow-forms`}
+          sandbox="allow-scripts allow-same-origin allow-forms"
           allow="self"
           title="Inner HTML Preview"
           id="inner-preview"
-          key={allowScripts ? 1 : 0} // This forces a re-render when allowScripts changes.
+          key={renderKey} // This forces a re-render when renderKey changes.
           src={`${window.location.origin}/${currentFile}`}
           className={moduleStyles.fileIframe}
         />
@@ -197,11 +227,11 @@ const InnerHTMLPreview = () => {
       );
     }
   }, [
-    allowScripts,
+    swWarmedUp,
     currentFile,
     isLevelLoading,
-    serviceWorkerReady,
     serviceWorkerUnavailable,
+    renderKey,
   ]);
 
   return getPreview();

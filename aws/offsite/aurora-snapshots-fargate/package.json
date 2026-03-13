@@ -1,21 +1,21 @@
 {
   "name": "verify-aurora-backups",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.1.0",
+  "description": "Aurora backup verification task",
   "main": "restore-and-verify-backup.js",
   "scripts": {
     "test": "mocha"
   },
   "author": "",
-  "license": "apache-2.0",
+  "license": "Apache-2.0",
   "dependencies": {
-    "@aws-sdk/client-rds": "^3.725.0",
-    "@aws-sdk/client-s3": "^3.723.0",
-    "honeybadger": "latest",
-    "promise-mysql": "latest"
+    "@aws-sdk/client-rds": "^3.1000.0",
+    "@aws-sdk/client-s3": "^3.1000.0",
+    "@honeybadger-io/js": "^6.12.3",
+    "promise-mysql": "^5.0.0"
   },
   "devDependencies": {
-    "mocha": "^10.2.0",
-    "sinon": "^17.0.1"
+    "mocha": "^11.7.5",
+    "sinon": "^21.0.1"
   }
 }

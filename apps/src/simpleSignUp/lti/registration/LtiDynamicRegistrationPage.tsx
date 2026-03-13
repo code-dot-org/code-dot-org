@@ -1,9 +1,8 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import $ from 'jquery';
 import React, {useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -41,11 +40,9 @@ export const LtiDynamicRegistrationPage = ({
         // Send post message to Canvas parent window
         // https://canvas.instructure.com/doc/api/file.registration.html#registration-response
         window.parent.postMessage({subject: 'org.imsglobal.lti.close'}, '*');
-        analyticsReporter.sendEvent(
-          EVENTS.LTI_DYNAMIC_REGISTRATION_COMPLETED,
-          {lms_name: lmsName},
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.LTI_DYNAMIC_REGISTRATION_COMPLETED, {
+          lms_name: lmsName,
+        });
       },
       error: xhr => {
         setHasError(true);
@@ -82,13 +79,17 @@ export const LtiDynamicRegistrationPage = ({
           </form>
         </div>
         <div>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="large"
             disabled={submitDisable}
             className={styles.callToAction}
             onClick={handleSubmit}
-            size="l"
-            text={i18n.ltiDynamicRegistrationSubmit()}
-          />
+            type="button"
+          >
+            {i18n.ltiDynamicRegistrationSubmit()}
+          </MuiButton>
         </div>
       </div>
     </main>

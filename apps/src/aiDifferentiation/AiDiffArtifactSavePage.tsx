@@ -1,15 +1,27 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
-import {clearPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
+import {
+  addThreadMessage,
+  clearPendingArtifactMessage,
+  setArtifact,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {TeacherSectionState} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AiDiffArtifactType,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
-import {ChatTextMessage} from './types';
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
+
+import {ChatTextMessage, artifactValidatorHelper} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -42,16 +54,57 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const [lessonInfo, setLessonInfo] = useState<LessonList>({});
   const [unitLessons, setUnitLessons] = useState<LessonInfo[]>([]);
   const [toggleValue, setToggleValue] = useState<boolean>(true);
+  const [artifactTitle, setArtifactTitle] = useState<string>('');
 
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+  const threadId = useAppSelector(state => state.aichat.threadId);
+
+  const artifactTitleIsEmpty = useMemo(() => {
+    return artifactTitle.trim() === '';
+  }, [artifactTitle]);
 
   const activeStudentSections = sections.sectionIds
     .map(sectionId => sections.sections[sectionId])
     .filter(section => {
       return !section.hidden && section.participantType === 'student';
     });
+
+  const reportingData = React.useMemo(() => {
+    return {
+      messageId: message.id,
+      artifactType: message.artifactCandidateType,
+      artifactContent: message.chatMessageText,
+      candidateSectionIds: activeStudentSections.map(section => {
+        return section.id;
+      }),
+    };
+  }, [message, activeStudentSections]);
+
+  const sendArtifactEvent = React.useCallback(
+    (event: (typeof EVENTS)[keyof typeof EVENTS], prompt?: string) => {
+      const responseEventData = {
+        ...reportingData,
+        threadId: threadId,
+        url: window.location.href,
+        prompt: prompt,
+        selectedSectionIds,
+        artifactTitle,
+        selectedUnitId,
+        selectedLessonId,
+      };
+      analyticsReporter.sendEvent(event, responseEventData);
+    },
+    [
+      reportingData,
+      threadId,
+      selectedSectionIds,
+      artifactTitle,
+      selectedUnitId,
+      selectedLessonId,
+    ]
+  );
 
   const swapLessonInfo = useCallback(
     async (unitId: string) => {
@@ -94,6 +147,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
   const onSubmit = () => {
     const info = JSON.stringify({
+      title: artifactTitle,
       messageId: message.id,
       sectionIds: Object.keys(selectedSectionIds).filter(
         // Need to filter out the checkboxes that have been selected and then
@@ -106,7 +160,27 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
 
     HttpClient.post('/aidiff_artifacts/', info, true, {
       'Content-Type': 'application/json',
-    }).then(() => dispatch(clearPendingArtifactMessage()));
+    })
+      .then(response => response.json())
+      .then(json => {
+        dispatch(setArtifact(artifactValidatorHelper(json)));
+        dispatch(
+          addThreadMessage({
+            role: Role.ASSISTANT,
+            chatMessageText: `I've created an artifact for this ${
+              json.type === AiDiffArtifactType.EXIT_TICKET
+                ? 'exit ticket'
+                : 'lesson hook'
+            }. Click the button below for a projection view to share with your students.`,
+            status: Status.OK,
+            isArtifact: true,
+          })
+        );
+      })
+      .finally(() => {
+        dispatch(clearPendingArtifactMessage());
+        sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVED);
+      });
   };
 
   const unitMenuList = useMemo(() => {
@@ -167,8 +241,20 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     setToggleValue(oldValue => !oldValue);
   };
 
-  return (
+  return activeStudentSections.length && unitMenuList.length ? (
     <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationTitleSection}>
+        <h3>Title:</h3>
+        <input
+          id="uitest-artifact-titleinput"
+          className={style.artifactTitleInput}
+          maxLength={128}
+          placeholder={'Give this artifact a name...'}
+          aria-label={'Give this artifact a name'}
+          onChange={e => setArtifactTitle(e.target.value)}
+          type="text"
+        />
+      </div>
       <div className={style.artifactConfigurationSection}>
         <h3>Which class sections do you want to save this artifact for?</h3>
         <h4>
@@ -177,9 +263,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         </h4>
         <div className={style.artifactConfigurationSectionHeader}>
           <h6>Class Sections</h6>
-          <a href="#" onClick={toggleAll}>
-            Select All
-          </a>
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
+            onClick={toggleAll}
+            type="button"
+          >
+            {'Select All'}
+          </MuiButton>
         </div>
 
         <div className={style.artifactConfigurationCheckboxes}>
@@ -234,26 +326,54 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
       </a>
       <div className={style.artifactConfigurationSaveButtons}>
-        <Button
-          size="m"
-          type="secondary"
-          color="black"
-          onClick={() => dispatch(clearPendingArtifactMessage())}
-          text="Cancel"
-        />
-        <Button
-          size="m"
-          type="primary"
-          color="purple"
-          onClick={onSubmit}
-          text="Save selections"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          onClick={() => {
+            dispatch(clearPendingArtifactMessage());
+            sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVE_CANCELLED);
+          }}
+          type="button"
+        >
+          {'Cancel'}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={
             Object.values(selectedSectionIds).filter(value => value === true)
               .length === 0 ||
             !selectedUnitId ||
-            !selectedLessonId
+            !selectedLessonId ||
+            artifactTitleIsEmpty
           }
-        />
+          onClick={onSubmit}
+          type="button"
+        >
+          {'Save selections'}
+        </MuiButton>
+      </div>
+    </div>
+  ) : (
+    <div className={style.artifactConfiguration}>
+      <div className={style.artifactConfigurationSection}>
+        You are required to have at least one active section with curriculum
+        assigned in order to create an artifact. Please create a section from
+        your <a href="/teacher_dashboard/home">dashboard</a> and then try to
+        create this artifact again.
+      </div>
+      <div className={style.artifactConfigurationSaveButtons}>
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          onClick={() => dispatch(clearPendingArtifactMessage())}
+          type="button"
+        >
+          {'Cancel'}
+        </MuiButton>
       </div>
     </div>
   );

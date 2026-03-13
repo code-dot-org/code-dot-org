@@ -1,13 +1,12 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
@@ -35,11 +34,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   }, [responses]);
 
   const hideResponse = userId => {
-    analyticsReporter.sendEvent(
-      EVENTS.CFU_RESPONSE_HIDDEN,
-      eventData,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CFU_RESPONSE_HIDDEN, eventData);
     setHiddenResponses(prevHidden => [...prevHidden, userId]);
   };
 
@@ -123,19 +118,21 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
             <Typography variant="h3" gutterBottom>
               {i18n.pinnedResponses()}
             </Typography>
-            <Button
-              text={i18n.unpinAll()}
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="medium"
               onClick={() => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_ALL_UNPINNED,
-                  eventData,
-                  PLATFORMS.STATSIG
+                  eventData
                 );
                 setPinnedResponseIds([]);
               }}
-              color={buttonColors.gray}
-              type="secondary"
-            />
+              type="button"
+            >
+              {i18n.unpinAll()}
+            </MuiButton>
           </div>
           <div className={styles.pinnedResponsesColumns}>
             {pinnedResponses
@@ -148,8 +145,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
                   userId => {
                     analyticsReporter.sendEvent(
                       EVENTS.CFU_RESPONSE_UNPINNED,
-                      eventData,
-                      PLATFORMS.STATSIG
+                      eventData
                     );
                     setPinnedResponseIds(prevPinned =>
                       prevPinned.filter(id => id !== userId)
@@ -174,8 +170,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               userId => {
                 analyticsReporter.sendEvent(
                   EVENTS.CFU_RESPONSE_PINNED,
-                  eventData,
-                  PLATFORMS.STATSIG
+                  eventData
                 );
                 setPinnedResponseIds(prevPinned => [...prevPinned, userId]);
               },
@@ -193,8 +188,7 @@ const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
               e.preventDefault();
               analyticsReporter.sendEvent(
                 EVENTS.CFU_RESPONSE_ALL_UNHID,
-                eventData,
-                PLATFORMS.STATSIG
+                eventData
               );
               setHiddenResponses([]);
             },

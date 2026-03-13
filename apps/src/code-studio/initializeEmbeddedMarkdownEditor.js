@@ -1,8 +1,4 @@
-/**
- * @file Defines a function for initializing an embedded markdown editor using
- *       CodeMirror
- */
-var initializeCodeMirror = require('./initializeCodeMirror');
+import initializeCodeMirror6 from './initializeCodeMirror6';
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into
@@ -33,7 +29,7 @@ module.exports = function (
   var dslElement = embeddedElement;
   var dslText = dslElement.val();
 
-  var mdEditor = initializeCodeMirror(markdownTextArea, 'markdown', {
+  var mdEditor = initializeCodeMirror6(markdownTextArea, 'markdown', {
     callback: function (editor, change) {
       var editorText = editor.getValue();
       var dslText = dslElement.val();

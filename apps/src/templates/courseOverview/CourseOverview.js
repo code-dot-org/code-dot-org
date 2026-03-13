@@ -10,7 +10,7 @@ import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification, {
   NotificationType,
@@ -26,7 +26,6 @@ import {
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import experiments from '@cdo/apps/util/experiments';
 import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -78,24 +77,21 @@ class CourseOverview extends Component {
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit group name': props.name,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     } else if (props.userType === 'student') {
       analyticsReporter.sendEvent(
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
         {
           'unit group name': props.name,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     } else {
       analyticsReporter.sendEvent(
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,
         {
           'unit group name': props.name,
-        },
-        PLATFORMS.STATSIG
+        }
       );
     }
   }
@@ -160,6 +156,12 @@ class CourseOverview extends Component {
     const showNotification =
       viewAsTeacher && !isVerifiedInstructor && hasVerifiedResources;
 
+    const determineUnitDescription = script => {
+      return viewAs === ViewType.Participant
+        ? script.studentDescription
+        : script.description;
+    };
+
     return (
       <div style={styles.main}>
         {redirectToCourseUrl && !dismissedRedirectDialog(name) && (
@@ -218,8 +220,7 @@ class CourseOverview extends Component {
           participantAudience={participantAudience}
           aiChatToolsDependency={aiChatToolsDependency}
         />
-        {experiments.isEnabled(experiments.AI_CHAT_NEW_PERMISSIONS) &&
-          viewAsTeacher &&
+        {viewAsTeacher &&
           aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
             <RequiresAiChatToolsAlert />
           )}
@@ -239,7 +240,7 @@ class CourseOverview extends Component {
             name={script.name}
             id={script.id}
             path={script.scriptPath}
-            description={script.description}
+            description={determineUnitDescription(script)}
             assignedSectionId={script.assigned_section_id}
             courseId={id}
             courseOfferingId={courseOfferingId}

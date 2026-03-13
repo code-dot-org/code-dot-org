@@ -85,9 +85,9 @@ class LtiV1Controller < ApplicationController
     return log_unauthorized('Missing aud or iss from ID token') unless extracted_client_id.present? && extracted_issuer_id.present?
     # set cache key
     integration_cache_key = "#{extracted_issuer_id}/#{extracted_client_id}"
-    # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
-    # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
-    # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
+    # `read_cache` returns a symbolized hash, and a cache miss falls back to an
+    # ActiveRecord object. Use bracket notation, not dot notation because it works for both.
+    # Example: integration[:id] not integration.id
     integration = read_cache(integration_cache_key)
     unless integration
       integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
@@ -199,6 +199,10 @@ class LtiV1Controller < ApplicationController
           metadata: metadata,
           session: session,
         )
+
+        # Ensure the LTI user identity and deployment association exists
+        lti_user_identity = user.lti_user_identities&.find_by(lti_integration_id: integration[:id], subject: decoded_jwt[:sub])
+        deployment.lti_user_identities << lti_user_identity if lti_user_identity && deployment.lti_user_identities.exclude?(lti_user_identity)
 
         # If this is the user's first login, send them into the account linking flow
         unless user.lms_landing_opted_out
@@ -325,12 +329,9 @@ class LtiV1Controller < ApplicationController
 
       lti_deployment = lti_integration.lti_deployments.find_by(id: params[:deployment_id])
       return render_sync_course_error('LTI Deployment not found', :bad_request, 'no_deployment') unless lti_deployment
+      return render_sync_course_error('User not associated with LTI Integration', :forbidden, 'nrps_error') unless validate_integration_membership(lti_integration, lti_deployment, current_user)
 
-      # Temporary lock to prevent concurrent requests from racing past
-      # the ActiveRecord level uniqueness check and creating LtiCourse duplicates.
-      # TODO(P20-1796): Remove the lock once a DB-level unique constraint
-      #                 on (lti_integration_id, context_id) prevents duplicates.
-      lti_deployment.with_lock do
+      Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
         lti_course = lti_integration.lti_courses.find_or_create_by!(context_id: params[:context_id]) do |new_record|
           new_record.assign_attributes(lti_deployment:, nrps_url:, resource_link_id:)
         end
@@ -460,5 +461,9 @@ class LtiV1Controller < ApplicationController
       event_name: 'lti_account_linking_page_visit',
       metadata: metadata,
     )
+  end
+
+  private def validate_integration_membership(lti_integration, lti_deployment, user)
+    lti_deployment.lti_user_identities.exists?(lti_integration:, user:)
   end
 end

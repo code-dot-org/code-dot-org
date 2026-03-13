@@ -1,4 +1,3 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import CloseButton from '@code-dot-org/component-library/closeButton';
 import {
@@ -7,16 +6,12 @@ import {
 } from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import cookies from 'js-cookie';
 import React, {useState, useEffect, useMemo} from 'react';
 
-import {
-  EVENTS,
-  PLATFORMS,
-  EXPERIMENTS,
-} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS, EXPERIMENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
 import {schoolInfoInvalid} from '@cdo/apps/schoolInfo/utils/schoolInfoInvalid';
@@ -140,11 +135,10 @@ const FinishTeacherAccount: React.FunctionComponent<{
     if (prepopulatedGivenName) setGivenName(prepopulatedGivenName);
     if (prepopulatedFamilyName) setFamilyName(prepopulatedFamilyName);
 
-    analyticsReporter.sendEvent(
-      EVENTS.FINISH_ACCOUNT_PAGE_LOADED,
-      {'user type': 'teacher', country: countryCode},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.FINISH_ACCOUNT_PAGE_LOADED, {
+      'user type': 'teacher',
+      country: countryCode,
+    });
 
     const fetchGdprData = async () => {
       const urlParams = new URLSearchParams(window.location.search);
@@ -355,18 +349,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
     // schoolData would be undefined if not valid, and the only
     // school_type sent is 'noSchoolSetting', which is not a school
     const hasSchool = schoolData && !schoolData.school_type;
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_FINISHED_EVENT,
-      {
-        'user type': 'teacher',
-        'has school': hasSchool,
-        'has marketing value selected': true,
-        'has display name': !displayNameErrorMessage,
-        'educator role': educatorRole,
-        country: countryCode,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_FINISHED_EVENT, {
+      'user type': 'teacher',
+      'has school': hasSchool,
+      'has marketing value selected': true,
+      'has display name': !displayNameErrorMessage,
+      'educator role': educatorRole,
+      country: countryCode,
+    });
 
     // Log to Google Analytics
     trackEvent('sign_up', 'sign_up_success', {
@@ -542,20 +532,26 @@ const FinishTeacherAccount: React.FunctionComponent<{
           </div>
         </fieldset>
         <div className={style.finishSignUpButtonContainer}>
-          <Button
-            className={style.finishSignUpButton}
-            color={buttonColors.purple}
-            type="primary"
-            onClick={submitTeacherAccount}
-            text={locale.go_to_my_account()}
-            iconRight={{
-              iconName: 'arrow-right',
-              iconStyle: 'solid',
-              title: 'arrow-right',
-            }}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
+            loadingPosition="end"
             disabled={formDisabled}
-            isPending={isSubmitting}
-          />
+            className={style.finishSignUpButton}
+            onClick={submitTeacherAccount}
+            type="button"
+            endIcon={
+              <FontAwesomeV6Icon
+                iconName="arrow-right"
+                iconStyle="solid"
+                title="arrow-right"
+              />
+            }
+          >
+            {locale.go_to_my_account()}
+          </MuiButton>
         </div>
       </div>
       <SafeMarkdown

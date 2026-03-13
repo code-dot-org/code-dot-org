@@ -20,6 +20,7 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {getActiveFileForSource} from '@cdo/apps/lab2/projects/utils';
 import {saveFileThunk} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -135,9 +136,10 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
       extensions.push(addToAiTutorField);
     }
 
-    if (activeFile?.language && langMapping[activeFile.language]) {
-      extensions.push(langMapping[activeFile.language]);
-      if (activeFile.language === 'js') {
+    const fileExt = activeFile?.name ? getFileExtension(activeFile.name) : '';
+    if (fileExt && langMapping[fileExt]) {
+      extensions.push(langMapping[fileExt]);
+      if (fileExt === 'js') {
         // eslint configuration
         const config = {
           ...js.configs.recommended,
@@ -150,7 +152,7 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
 
         extensions.push(linter(esLint(new eslint.Linter(), config)));
         extensions.push(lintGutter());
-      } else if (activeFile.language === 'css') {
+      } else if (fileExt === 'css') {
         // Add css color picker and remove white outline from color indicator.
         extensions.push(colorPicker);
         extensions.push(
@@ -160,6 +162,9 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
             },
           })
         );
+      } else if (fileExt === 'md') {
+        // Wrap lines for markdown files.
+        extensions.push(EditorView.lineWrapping);
       }
     }
     if (hasUnifiedDiffView) {
@@ -185,7 +190,6 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     return extensions;
   }, [
     dispatch,
-    activeFile?.language,
     activeFile?.name,
     langMapping,
     levelProperties.appName,
@@ -193,16 +197,17 @@ export const Editor = ({langMapping, editableFileTypes}: EditorProps) => {
     codeBeforeAiTutorVersion,
   ]);
 
-  if (activeFile?.url && viewableImageFileType(activeFile.language)) {
+  const activeFileExt = activeFile?.name
+    ? getFileExtension(activeFile.name)
+    : '';
+  if (activeFile?.url && viewableImageFileType(activeFileExt)) {
     // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
     return <img src={activeFile.url} alt={activeFile.name} tabIndex={0} />;
   }
 
-  if (activeFile && !editableFileType(activeFile.language, editableFileTypes)) {
+  if (activeFile && !editableFileType(activeFileExt, editableFileTypes)) {
     return (
-      <div>
-        {codebridgeI18n.cannotEditFile({language: activeFile.language})}
-      </div>
+      <div>{codebridgeI18n.cannotEditFile({language: activeFileExt})}</div>
     );
   }
 

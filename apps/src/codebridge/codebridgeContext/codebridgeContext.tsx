@@ -24,7 +24,6 @@ export type CodebridgeContextType = {
   levelProperties: CodebridgeLevelProperties;
   projectPickerSettings?: ProjectPickerSettings;
   hiddenContextCallback?: () => Promise<string>;
-  AiTutorResponseView?: React.ReactNode;
   onImageFlagged?: (
     file: File,
     fileType: string,
@@ -33,8 +32,8 @@ export type CodebridgeContextType = {
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
-  aiTutorSystemPromptName?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  aiTutorSystemPrompt?: string;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

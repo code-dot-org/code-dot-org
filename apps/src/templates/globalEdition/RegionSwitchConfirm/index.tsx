@@ -1,10 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback, useState, useEffect} from 'react';
 import {Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -28,7 +27,7 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
 
   const reportEvent = useCallback(
     (eventName: string) => {
-      analyticsReporter.sendEvent(eventName, {region: code}, PLATFORMS.STATSIG);
+      analyticsReporter.sendEvent(eventName, {region: code});
     },
     [code]
   );
@@ -77,15 +76,17 @@ const RegionSwitchConfirm: React.FC<RegionSwitchConfirmProps> = ({
 
         <form action={window.location.href} method="post">
           <input type="hidden" name="ge_region" value={code} />
-          <Button
-            id="global-edition-region-switch-confirm-accept"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="large"
             className="no-mc"
-            text={i18n.globalEdition_regionSwitchConfirm_accept({region: name})}
-            buttonTagTypeAttribute="submit"
-            type="primary"
-            size="l"
+            id="global-edition-region-switch-confirm-accept"
             onClick={handleAccept}
-          />
+            type="submit"
+          >
+            {i18n.globalEdition_regionSwitchConfirm_accept({region: name})}
+          </MuiButton>
         </form>
 
         <Link

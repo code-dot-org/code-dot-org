@@ -1,0 +1,23 @@
+{
+  "name": "self-paced-pl-thinkingcriticallywithai-2026",
+  "script_names": [
+    "self-paced-pl-thinkingcriticallywithai-unit1"
+  ],
+  "original_script_names": [
+    "self-paced-pl-thinkingcriticallywithai-unit1"
+  ],
+  "published_state": "preview",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "self-paced-pl-thinkingcriticallywithai",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

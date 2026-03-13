@@ -1,4 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -25,18 +26,21 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
   return (
-    <Button
-      id="uitest-update-customizations"
-      text={aichatI18n.modelCustomization_updateButtonText()}
+    <MuiButton
+      variant="contained"
+      color="primary"
+      size="medium"
       disabled={isDisabledDefault || saveInProgress || !havePropertiesChanged}
-      iconLeft={
-        saveInProgress && currentSaveType === 'updateChatbot'
-          ? {iconName: 'spinner', animationType: 'spin'}
-          : {iconName: 'edit'}
-      }
-      onClick={onUpdate}
       className={styles.updateButton}
-    />
+      id="uitest-update-customizations"
+      onClick={onUpdate}
+      loading={saveInProgress && currentSaveType === 'updateChatbot'}
+      loadingPosition="start"
+      startIcon={<FontAwesomeV6Icon iconName="edit" />}
+      type="button"
+    >
+      {aichatI18n.modelCustomization_updateButtonText()}
+    </MuiButton>
   );
 };
 

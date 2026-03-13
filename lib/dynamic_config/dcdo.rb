@@ -34,7 +34,6 @@ class DCDOBase < DynamicConfigBase
       'curriculum-launch-2024': DCDO.get('curriculum-launch-2024', false),
       'csta-form-extension': DCDO.get('csta-form-extension', false),
       gender: DCDO.get('gender', false),
-      'amplitude-event-sample-rates': DCDO.get('amplitude-event-sample-rates', {}),
       # Whether the scholarship dropdown is locked on the application dashboard.
       'scholarship-dropdown-locked': DCDO.get('scholarship-dropdown-locked', true),
       hoc_mode: DCDO.get('hoc_mode', false),
@@ -64,9 +63,12 @@ class DCDOBase < DynamicConfigBase
       'ai-lesson-summary-podcasts': DCDO.get('ai-lesson-summary-podcasts', false),
       'hoai2025-share-enabled': DCDO.get('hoai2025-share-enabled', true),
       'ai-lesson-summaries-notifications-enabled': DCDO.get('ai-lesson-summaries-notifications-enabled', false),
-      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-properties-by-lesson-id', true),
+      'lab2-fetch-level-properties-by-lesson-id': DCDO.get('lab2-fetch-level-proper0ties-by-lesson-id', true),
       'student-snapshot-feedback-link': DCDO.get('student-snapshot-feedback-link', false),
-      'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true)
+      'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
+      'brand-router-enabled': DCDO.get('brand-router-enabled', false),
+      'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
+      'datadog-enabled': DCDO.get('datadog-enabled', false)
     }
   end
 end

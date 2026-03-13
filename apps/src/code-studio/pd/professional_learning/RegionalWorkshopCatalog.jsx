@@ -1,12 +1,11 @@
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import Modal from '@code-dot-org/component-library/modal';
 import TextField from '@code-dot-org/component-library/textField';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useCallback, useMemo, useState} from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ZIP_REGEX} from '@cdo/apps/signUpFlow/signUpFlowConstants';
 import CalendarEmptyStateIllustration from '@cdo/apps/templates/teacherNavigation/images/CalendarEmptyStateIllustration.svg';
@@ -57,16 +56,12 @@ export default function RegionalWorkshopCatalog({
       handleSubmitZip(prepopulatedZip, true);
     } else {
       // Log page visit event with null info if there's no valid prepopulated zip
-      analyticsReporter.sendEvent(
-        EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED,
-        {
-          'zip code': null,
-          'regional partner': null,
-          'number of regional workshops': 0,
-          'number of national workshops': nationalWorkshops?.length || 0,
-        },
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(EVENTS.REGIONAL_WS_CATALOG_PAGE_VISITED, {
+        'zip code': null,
+        'regional partner': null,
+        'number of regional workshops': 0,
+        'number of national workshops': nationalWorkshops?.length || 0,
+      });
     }
   }, [zipFromSchoolInfo, handleSubmitZip, nationalWorkshops]);
 
@@ -137,8 +132,7 @@ export default function RegionalWorkshopCatalog({
               'number of regional workshops': newRegionalWorkshops?.length || 0,
               'number of national workshops':
                 availableNationalWorkshops?.length || 0,
-            },
-            PLATFORMS.STATSIG
+            }
           );
         }
       } catch (error) {
@@ -207,11 +201,15 @@ export default function RegionalWorkshopCatalog({
                 maxLength={255}
                 placeholder="12345"
               />
-              <Button
-                text="Submit"
-                color="purple"
+              <MuiButton
+                variant="contained"
+                color="primary"
+                size="medium"
                 onClick={() => handleSubmitZip(zipCode, false)}
-              />
+                type="button"
+              >
+                {'Submit'}
+              </MuiButton>
             </div>
           </div>
         </>
@@ -252,12 +250,16 @@ export default function RegionalWorkshopCatalog({
                 workshops.
               </Typography>
             </div>
-            <LinkButton
-              text="Contact regional partner"
-              target="_blank"
-              color="purple"
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
               href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
-            />
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {'Contact regional partner'}
+            </MuiButton>
           </div>
         </>
       );
@@ -349,13 +351,17 @@ export default function RegionalWorkshopCatalog({
               placeholder="12345"
               color="gray"
             />
-            <Button
-              aria-label="submitZip"
-              text="Submit"
-              color="purple"
+            <MuiButton
+              variant="contained"
+              color="primary"
+              size="medium"
+              loading={isSubmitting}
               onClick={() => handleSubmitZip(zipCode, false)}
-              isPending={isSubmitting}
-            />
+              aria-label="submitZip"
+              type="button"
+            >
+              {'Submit'}
+            </MuiButton>
           </div>
           <div className={style.rpInfoContainer}>
             <Typography
@@ -376,25 +382,29 @@ export default function RegionalWorkshopCatalog({
                 {regionalPartnerText}
               </Typography>
               <div className={style.rpInfoButtons}>
-                <Button
-                  aria-label="partnerInfo"
-                  text="Partner info"
-                  color="black"
-                  type="secondary"
-                  size="xs"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
+                  disabled={!regionalPartnerName}
                   onClick={() => setShowRPInfoDialog(true)}
+                  aria-label="partnerInfo"
+                  type="button"
+                >
+                  {'Partner info'}
+                </MuiButton>
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
                   disabled={!regionalPartnerName}
-                />
-                <LinkButton
                   id="rpContactLink"
-                  text="Contact"
-                  target="_blank"
-                  color="black"
-                  type="secondary"
-                  size="xs"
                   href={`/professional-learning/contact-regional-partner?zip=${zipCode}`}
-                  disabled={!regionalPartnerName}
-                />
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {'Contact'}
+                </MuiButton>
               </div>
             </div>
           </div>

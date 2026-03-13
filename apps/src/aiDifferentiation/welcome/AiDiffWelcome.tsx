@@ -1,7 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
@@ -21,7 +20,7 @@ import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
+import {EVENTS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
 import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
@@ -107,7 +106,15 @@ const getStartedPage = (onClick: () => void) => {
             Empowering teachers. Enhancing learning.
           </Typography>
         </div>
-        <Button onClick={onClick} text="Get Started" />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={onClick}
+          type="button"
+        >
+          {'Get Started'}
+        </MuiButton>
       </div>
     </div>
   );
@@ -184,11 +191,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
 
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
-      analyticsReporter.sendEvent(
-        statsigKey,
-        reportingContext,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(statsigKey, reportingContext);
       HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
         setShowWelcomeExperience(false);
       });
@@ -210,11 +213,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         return null;
       })();
       if (statsigKey) {
-        analyticsReporter.sendEvent(
-          statsigKey,
-          reportingContext,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(statsigKey, reportingContext);
       }
 
       setCurrentWelcomeState(nextState);
@@ -226,12 +225,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            disabled={continueDisabled}
             id="uitest_aiDiffWelcomeContinue"
             onClick={() => moveForwardTo(nextState)}
-            text="Continue"
-            disabled={continueDisabled}
-          />
+            type="button"
+          >
+            {'Continue'}
+          </MuiButton>
           <Link
             className={style.skipLink}
             onClick={() =>
@@ -344,11 +348,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={classNames(style.optionRow, style.optionRowWithPic)}
             href="https://code.org/ai/pl/101"
             onClick={() =>
-              analyticsReporter.sendEvent(
-                EVENTS.AI_DIFF_101,
-                reportingContext,
-                PLATFORMS.STATSIG
-              )
+              analyticsReporter.sendEvent(EVENTS.AI_DIFF_101, reportingContext)
             }
           >
             <div className={style.optionWithPicTop}>
@@ -374,12 +374,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={() =>
             updateShowWelcomeExperience(EVENTS.AI_DIFF_CELEBRATION)
           }
-          text="Finish"
-        />
+          type="button"
+        >
+          {'Finish'}
+        </MuiButton>
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive, reportingContext]);

@@ -1,8 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, LinkButton} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Modal from '@code-dot-org/component-library/modal';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import QRCode from 'qrcode.react';
 import React, {useCallback} from 'react';
@@ -12,7 +11,7 @@ import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectType, ShareDialogId} from '@cdo/apps/lab2/types';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {SubmissionStatusType} from '@cdo/apps/templates/projects/submitProjectDialog/submitProjectApi';
@@ -46,20 +45,25 @@ const AfeCareerTourBlock: React.FunctionComponent = () => {
       </Typography>
       <img alt="" src="/shared/images/afe/afe-career-tours-0.jpg" />
       <div className={moduleStyles.afeText}>{i18n.careerTourDescription()}</div>
-      <LinkButton
-        ariaLabel={i18n.careerTourAction()}
-        href={careersUrl}
-        text={i18n.careerTourAction()}
-        type="primary"
-        size="m"
-        target="_blank"
-        iconRight={{
-          iconName: 'arrow-up-right-from-square',
-          iconStyle: 'solid',
-          title: 'arrow-up-right-from-square',
-        }}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="medium"
         className={moduleStyles.shareDialogButton}
-      />
+        aria-label={i18n.careerTourAction()}
+        href={careersUrl}
+        rel="noopener noreferrer"
+        target="_blank"
+        endIcon={
+          <FontAwesomeV6Icon
+            iconName="arrow-up-right-from-square"
+            iconStyle="solid"
+            title="arrow-up-right-from-square"
+          />
+        }
+      >
+        {i18n.careerTourAction()}
+      </MuiButton>
     </div>
   );
 };
@@ -77,15 +81,17 @@ const SubmitButtonInfo: React.FunctionComponent<{
   }
   if (submissionStatus === ProjectSubmissionStatus.CAN_SUBMIT) {
     return (
-      <Button
-        iconLeft={{iconName: 'award'}}
-        text={i18n.submitProjectGallery_header()}
-        type="secondary"
-        color="black"
-        size="m"
-        onClick={onSubmitClick}
+      <MuiButton
+        variant="outlined"
+        color="secondary"
+        size="medium"
         className={moduleStyles.shareDialogButton}
-      />
+        onClick={onSubmitClick}
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="award" />}
+      >
+        {i18n.submitProjectGallery_header()}
+      </MuiButton>
     );
   } else if (submissionStatus === ProjectSubmissionStatus.ALREADY_SUBMITTED) {
     return (
@@ -130,14 +136,10 @@ const ShareDialog: React.FunctionComponent<{
 
   const handleClose = useCallback(() => {
     dispatch(hideShareDialog());
-    analyticsReporter.sendEvent(
-      EVENTS.SHARING_CLOSE_ESCAPE,
-      {
-        lab_type: projectType,
-        channel_id: channelId,
-      },
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SHARING_CLOSE_ESCAPE, {
+      lab_type: projectType,
+      channel_id: channelId,
+    });
   }, [channelId, dispatch, projectType]);
 
   const feedbackLink = useAppSelector(state => {
@@ -245,31 +247,38 @@ const ShareDialog: React.FunctionComponent<{
             <div className={moduleStyles.buttonGroup}>
               {finishUrl ? (
                 <div className={moduleStyles.contents}>
-                  <Button
-                    ariaLabel={i18n.keepPlaying()}
-                    text={i18n.keepPlaying()}
-                    type="secondary"
-                    color="black"
-                    size="m"
-                    onClick={handleClose}
+                  <MuiButton
+                    variant="outlined"
+                    color="secondary"
+                    size="medium"
                     className={moduleStyles.keepPlayingButton}
-                  />
-                  <LinkButton
-                    ariaLabel={i18n.finish()}
+                    onClick={handleClose}
+                    aria-label={i18n.keepPlaying()}
+                    type="button"
+                  >
+                    {i18n.keepPlaying()}
+                  </MuiButton>
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    aria-label={i18n.finish()}
                     href={finishUrl}
-                    text={i18n.finish()}
-                    type="primary"
-                    size="m"
-                  />
+                  >
+                    {i18n.finish()}
+                  </MuiButton>
                 </div>
               ) : (
-                <Button
-                  ariaLabel={i18n.done()}
-                  text={i18n.done()}
-                  type="primary"
-                  size="m"
+                <MuiButton
+                  variant="contained"
+                  color="primary"
+                  size="medium"
                   onClick={handleClose}
-                />
+                  aria-label={i18n.done()}
+                  type="button"
+                >
+                  {i18n.done()}
+                </MuiButton>
               )}
             </div>
           </div>

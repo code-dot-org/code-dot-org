@@ -1,13 +1,13 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {getFolderPath} from '@codebridge/utils';
-import {Typography} from '@mui/material';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
 import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {getFileExtension} from '@cdo/apps/lab2/utils/multiFileSourceUtils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {setAiFilePathToPreview} from '@cdo/apps/weblab2/weblab2Redux';
@@ -40,8 +40,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
   const source = useAppSelector(
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
-  const isHtmlFile =
-    file.language === 'html' || file.name.toLowerCase().endsWith('.html');
+  const isHtmlFile = getFileExtension(file.name) === 'html';
   const dispatch = useAppDispatch();
   const handlePreviewClick = () => {
     const folderPath = getFolderPath(file.folderId, source.folders).substring(
@@ -54,7 +53,7 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
       EVENTS.AI_TUTOR_VERSION_FILE_PREVIEW_BUTTON_CLICKED,
       {
         fileName: file.name,
-        fileType: file.language,
+        fileType: getFileExtension(file.name),
         aiTutorVersionFileUpdated: isUpdatedFile ? 'true' : 'false',
         aiTutorVersionFileCreated: isNewFile ? 'true' : 'false',
       }
@@ -120,15 +119,16 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
               direction: 'onTop',
             }}
           >
-            <Button
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="extraSmall"
               onClick={handlePreviewClick}
               aria-label={`Preview ${file.name}`}
-              size="xs"
-              type="tertiary"
-              color="gray"
-              isIconOnly={true}
-              icon={{iconName: 'eye', iconStyle: 'solid'}}
-            />
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="eye" iconStyle="solid" />
+            </MuiIconButton>
           </WithTooltip>
         </span>
       )}

@@ -29,7 +29,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUserHasAichatAccess} from '../aichatApi';
+import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
@@ -45,7 +45,7 @@ import {
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setViewMode,
   updateAiCustomization,
   initializeAiCustomizations,
@@ -156,15 +156,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   useEffect(() => {
     if (signInState === SignInState.SignedIn) {
-      getUserHasAichatAccess()
-        .then(hasAccess => dispatch(setUserHasAichatAccess(hasAccess)))
+      getUserHasAichatLabAccess()
+        .then(hasAccess => dispatch(setUserHasAichatLabAccess(hasAccess)))
         .catch(error => {
           if (
             !(error instanceof NetworkError && error.response.status === 403)
           ) {
             Lab2Registry.getInstance()
               .getMetricsReporter()
-              .logError('Error in fetching user aichat access', error as Error);
+              .logError(
+                'Error in fetching user aichat lab access',
+                error as Error
+              );
           }
         });
     }

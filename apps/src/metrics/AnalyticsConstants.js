@@ -1,11 +1,6 @@
 // Analytics constants used within the apps directory.
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
-const PLATFORMS = {
-  AMPLITUDE: 'Amplitude',
-  STATSIG: 'Statsig',
-  BOTH: 'Both',
-};
 
 const EVENTS = {
   // Sign-up flow
@@ -75,13 +70,6 @@ const EVENTS = {
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
-  CAP_AGE_GATED_SECTIONS_BANNER_SHOWN: 'CAP Teacher Sections Banner Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_SHOWN:
-    'CAP Teacher Sections Warning Modal Shown',
-  CAP_AGE_GATED_SECTIONS_MODAL_CLOSED:
-    'CAP Teacher Sections Warning Modal Closed',
-  CAP_AGE_GATED_SECTIONS_TABLE_SECTION_NAME_LINK_CLICKED:
-    'CAP Teacher Sections Table Section Name Clicked',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -307,6 +295,13 @@ const EVENTS = {
   TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
   TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
+  // AI TA Lesson Summary Podcasts
+  TA_PODCAST_OPEN_TRANSCRIPT: 'TA podcast transcript opened',
+  TA_PODCAST_CLOSE_TRANSCRIPT: 'TA podcast transcript closed',
+  TA_PODCAST_PLAYED: 'TA podcast played',
+  TA_PODCAST_STOPPED: 'TA podcast stopped',
+  TA_PODCAST_PLAYBACK_SPEED_CHANGED: 'TA podcast playback speed changed',
+
   //AI Differentiation
   AI_DIFF_CHAT_OPENED: 'AI Differentiation Chat Opened',
   AI_DIFF_CHAT_CLOSED: 'AI Differentiation Chat Closed',
@@ -319,6 +314,15 @@ const EVENTS = {
   AI_DIFF_CELEBRATION: 'AI Teaching Assistant Celebration screen',
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
+  AI_ARTIFACT_PROMPT_CLICKED: 'AI Artifact prompt click',
+  AI_ARTIFACT_PROMPT_RESPONDED: 'AI Artifact user responded to artifact thread',
+  AI_ARTIFACT_CREATE_CLICKED: 'AI Artifact user clicked create artifact',
+  AI_ARTIFACT_SAVED: 'AI Artifact saved',
+  AI_ARTIFACT_SAVE_CANCELLED: 'AI Artifact save dialog cancelled',
+  AI_ARTIFACT_THREAD_REOPENED: 'AI Artifact thread reopened',
+  AI_ARTIFACT_OPEN_FROM_THREAD: 'AI Artifact view opened from thread',
+  AI_ARTIFACT_OPEN_FROM_RESOURCES:
+    'AI Artifact view opened from lesson resources',
 
   AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
   AI_DIFF_NOTIFICATION_URL_CLICKED:
@@ -456,6 +460,12 @@ const EVENTS = {
   ACCEPT_FLAGGED_CUSTOM_IMAGE:
     'User accepts and uploads a flagged custom image',
   CANCEL_FLAGGED_CUSTOM_IMAGE: 'User cancels upload of flagged custom image',
+
+  // Moderate model output image
+  MODEL_OUTPUT_IMAGE_CREATED: 'Model output image created',
+  MODERATE_MODEL_OUTPUT_IMAGE_AZURE: 'Model output image moderated by Azure',
+  FLAGGED_MODEL_OUTPUT_IMAGE_AZURE:
+    'Model output image flagged by Azure moderation service',
 
   // Export app
   EXPORT_APP: 'User Exports App From Share Advanced Options',
@@ -647,6 +657,11 @@ const EVENTS = {
   INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
   INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
 
+  // Generic Intro flow events
+  INTRO_FLOW_STARTED: 'Intro Flow Started',
+  INTRO_FLOW_EXIT: 'Intro Flow Exited',
+  INTRO_FLOW_COMPLETED: 'Intro Flow Completed',
+
   // AI Teaching Assistant - Differentiation
   // Just In Time Professional Learning
   PERSONALIZATION_ANSWER_SUBMITTED:
@@ -763,4 +778,4 @@ const EXPERIMENTS = {
   ENABLE_SELECTING_GRADES: 'enable_selecting_grades',
 };
 
-export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, PLATFORMS, EXPERIMENTS};
+export {EVENTS, EVENT_GROUP_NAMES, EVENT_GROUPS, EXPERIMENTS};

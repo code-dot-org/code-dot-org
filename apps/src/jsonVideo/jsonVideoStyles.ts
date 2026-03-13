@@ -25,6 +25,19 @@ iframe {
     pointer-events: none;
 }
 
+/* Poster Image */
+#poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: #000;
+    z-index: 5;
+    pointer-events: auto; /* Ensures clicks register for play/pause */
+}
+
 /* Captions Overlay */
 #closed-caption-overlay {
     position: absolute;
@@ -63,6 +76,7 @@ iframe {
     padding: 0 12px 8px 12px;
     gap: 0;
     transition: opacity 0.2s ease-in-out;
+    z-index: 10; /* Ensures controls stay above the poster */
 }
 
 :host([controls]) #controls-bar {
@@ -77,6 +91,13 @@ iframe {
     display: none;
 }
 
+/* Make controls look disabled on error */
+:host(.has-error) #controls-bar {
+    opacity: 0.5;
+    pointer-events: none; /* Prevents clicking play/volume/scrubber */
+    filter: grayscale(100%);
+}
+    
 .controls-row {
     display: flex;
     align-items: center;
@@ -243,8 +264,6 @@ input[type=range]::-moz-range-thumb {
     opacity: 0;
     pointer-events: none;
 }
-
-
 `;
 
 export default styles;
