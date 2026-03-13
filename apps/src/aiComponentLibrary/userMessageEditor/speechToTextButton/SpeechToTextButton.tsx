@@ -95,7 +95,10 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       )}
       {isRecording && !isTranscribing && (
         <div className={styles.iconContainer}>
-          <FontAwesomeV6Icon iconName={'waveform-lines'} />
+          <FontAwesomeV6Icon
+            className={styles.waveform}
+            iconName={'waveform-lines'}
+          />
         </div>
       )}
       <div className={styles.buttonContainer}>

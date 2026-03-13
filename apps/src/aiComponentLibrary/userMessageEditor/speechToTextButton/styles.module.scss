@@ -8,6 +8,10 @@
     &.error {
       color: var(--text-error-primary);
     }
+
+    &.waveform {
+      color: var(--text-info-primary);
+    }
   }
 }
 
