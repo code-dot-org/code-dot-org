@@ -4,7 +4,7 @@ import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
-interface UseProductTourProps {
+export interface UseProductTourProps {
   getSteps: (tour: Tour) => StepOptions[];
   localStorageKey: string;
   tourAvailable: boolean;
