@@ -50,7 +50,7 @@
 - Our design system lives in `frontend/packages/component-library/` (React components, TypeScript) with shared styles in `frontend/packages/component-library-styles/` (colors, typography, mixins).
 - **Always prefer design system components** over legacy ones in `apps/src/sharedComponents/` or `apps/src/legacySharedComponents/`. Only use legacy components when no design system equivalent exists. Never create custom UI primitives (buttons, modals, alerts, etc.) when a design system component is available.
 - Available components include: Accordion, ActionBlock, Alert, Breadcrumbs, Button/LinkButton, Carousel, Checkbox, Chips, Dialog, Divider, Dropdown (action, checkbox, icon, simple), FontAwesomeV6Icon, Header, HeroBanner, Image, Link, List, Modal, NotificationBanner, Popover, RadioButton, SegmentedButtons, Slider, Snackbar, Tabs, Tags, TextField, Toggle, Tooltip, Typography, Video, and more.
-- Import pattern: `import {Button} from '@code-dot-org/component-library/button';`
+- Import pattern: `import Checkbox from '@code-dot-org/component-library/checkbox';`
 - Each component has a JSDoc status header (`Stable`, `Ready for dev`, `WIP`, `DEPRECATED`) -- check it before using.
 - For full API reference, check the component source or Storybook at https://code-dot-org.github.io/code-dot-org/component-library-storybook
 - Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
