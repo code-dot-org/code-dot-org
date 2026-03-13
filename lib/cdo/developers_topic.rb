@@ -16,11 +16,11 @@ module DevelopersTopic
   DEVELOPERS_ROOM = 'developers'.freeze
   DEPLOY_STATUS_ROOM = 'deploy-status'.freeze
 
-  # @return [String] The DOTD (without the '@' symbol), as per the Slack#developers topic.
+  # @return [String] The DOTD Slack user ID, as per the Slack#developers topic.
   def self.dotd
     current_topic = Slack.get_topic 'developers'
-    dotd = /DOTD: @?([^;]+);/i.match(current_topic)
-    raise 'developers topic not propertly formatted' unless dotd
+    dotd = /DOTD: <@([^>]+)>;/i.match(current_topic)
+    raise 'developers topic not properly formatted' unless dotd
     dotd[1]
   end
 
