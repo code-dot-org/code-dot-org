@@ -1,7 +1,5 @@
 import project from '@cdo/apps/code-studio/initApp/project';
 import logToCloud from '@cdo/apps/logToCloud';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {ConsoleSignalType} from '@cdo/apps/miniApps/neighborhood/constants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import javalabMsg from '@cdo/javalab/locale';
@@ -14,7 +12,6 @@ import {
   AuthorizerSignalType,
   CsaViewMode,
   JavabuilderLockoutType,
-  JavabuilderExceptionType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
 import {onTestResult} from './testResultHandler';
@@ -255,9 +252,6 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.COMPILATION_SUCCESSFUL:
-        analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_SUCCESS, {
-          levelId: this.levelId,
-        });
         message = javalabMsg.compilationSuccess();
         lineBreakCount = 1;
         break;
@@ -354,11 +348,6 @@ export default class JavabuilderConnection {
         }
         break;
       case WebSocketMessageType.EXCEPTION:
-        if (data.value === JavabuilderExceptionType.COMPILER_ERROR) {
-          analyticsReporter.sendEvent(EVENTS.JAVALAB_COMPILATION_ERROR, {
-            levelId: this.levelId,
-          });
-        }
         this.onNewlineMessage();
         handleException(data, this.onOutputMessage, this.miniAppType);
         this.onNewlineMessage();
