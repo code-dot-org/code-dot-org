@@ -95,7 +95,7 @@ export class LibraryListItem extends React.Component {
               >
                 <FontAwesome
                   icon="trash-can"
-                  style="regular"
+                  iconStyle="regular"
                   className={styles.iconPadding}
                 />
               </button>

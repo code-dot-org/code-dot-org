@@ -364,7 +364,7 @@ class ShareAllowedDialog extends React.Component {
                           )}
                           style={styles.socialLink}
                         >
-                          <FontAwesome icon="facebook-f" style="brands" />
+                          <FontAwesome icon="facebook-f" iconStyle="brands" />
                         </a>
                       )}
                       {this.state.isTwitterAvailable && (
@@ -379,7 +379,7 @@ class ShareAllowedDialog extends React.Component {
                           )}
                           style={styles.socialLink}
                         >
-                          <FontAwesome icon="x-twitter" style="brands" />
+                          <FontAwesome icon="x-twitter" iconStyle="brands" />
                         </a>
                       )}
                     </span>
