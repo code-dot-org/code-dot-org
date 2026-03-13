@@ -5,6 +5,7 @@ import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/Us
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {canUseClientApi} from '../api/performClientApiChatCompletion';
 import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
 import {
   AiChatClientType,
@@ -136,6 +137,9 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
+  // Speech to text is only enabled with the client API since it makes use of the AI Gateway.
+  const speechToTextEnabled = canUseClientApi(modelParameters.selectedModelId);
+
   return (
     <>
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
@@ -151,6 +155,7 @@ const UserChatMessageEditor: React.FunctionComponent<
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
+        speechToTextEnabled={speechToTextEnabled}
         ref={inputRef}
       >
         {multimodalAvailable && buildAssetUrl && levelName && (

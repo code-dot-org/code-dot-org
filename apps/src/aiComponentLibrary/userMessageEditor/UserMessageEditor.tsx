@@ -24,6 +24,7 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  speechToTextEnabled?: boolean;
   children?: React.ReactNode;
 }
 
@@ -42,6 +43,7 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      speechToTextEnabled = false,
       children,
     },
     externalInputRef
@@ -126,13 +128,15 @@ const UserMessageEditor = React.forwardRef<
         <div className={moduleStyles.chatActionsContainer}>
           {children}
           <div className={moduleStyles.actionButtons}>
-            <SpeechToTextButton
-              onTranscribed={text => {
-                onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
-                setIsRecording(false);
-              }}
-              onRecordStart={() => setIsRecording(true)}
-            />
+            {speechToTextEnabled && (
+              <SpeechToTextButton
+                onTranscribed={text => {
+                  onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
+                  setIsRecording(false);
+                }}
+                onRecordStart={() => setIsRecording(true)}
+              />
+            )}
             {showSubmitLabel ? (
               <MuiButton
                 {...editorButtonCommonProps}
