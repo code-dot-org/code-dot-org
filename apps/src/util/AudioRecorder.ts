@@ -26,7 +26,9 @@ export class AudioRecorder {
 
   constructor(
     // For testing only
-    private readonly getUserMedia = navigator?.mediaDevices?.getUserMedia,
+    private readonly getUserMedia = navigator?.mediaDevices?.getUserMedia.bind(
+      navigator?.mediaDevices
+    ),
     private readonly MediaRecorderClass = typeof MediaRecorder !== 'undefined'
       ? MediaRecorder
       : undefined
@@ -45,7 +47,7 @@ export class AudioRecorder {
   /**
    * Requests microphone access and starts recording.
    *
-   * @returns StartState corresponding to thåe outcome.
+   * @returns StartState corresponding to the outcome.
    */
   async start(): Promise<StartState> {
     if (!this.canRecord()) {
