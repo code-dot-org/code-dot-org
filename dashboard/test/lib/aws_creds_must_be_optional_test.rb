@@ -25,7 +25,6 @@ class AWSCredsMustBeOptionalTest < ActiveSupport::TestCase
       slack_bot_token
       openai_lesson_summaries_api_key
       elevenlabs_api_key
-      openai_student_learning_api_key
     ).map {|secret| "CDO_#{secret}"}.index_with('')
 
     # Start a new `rails runner` process and make sure it boots w/o AWS access

@@ -11,6 +11,7 @@ interface UseProductTourProps {
   onStart?: () => void;
   onComplete?: () => void;
   onCancel?: (currentStepIndex: number) => void;
+  additionalStepOptions?: Partial<StepOptions>;
 }
 
 // Universal flag to hide any product tour via URL parameter.
@@ -28,6 +29,7 @@ const useProductTour = ({
   onStart,
   onComplete,
   onCancel,
+  additionalStepOptions,
 }: UseProductTourProps) => {
   const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
@@ -44,6 +46,7 @@ const useProductTour = ({
         cancelIcon: {enabled: true},
         scrollTo: true,
         classes: 'custom-shepherd-step-container',
+        ...(additionalStepOptions ?? {}),
       },
     });
     tour.addSteps(getSteps(tour));
@@ -65,7 +68,15 @@ const useProductTour = ({
       onCancel && onCancel(currentIndex);
     });
     return tour;
-  }, [getSteps, localStorageKey, onCancel, onComplete, onStart, tourAvailable]);
+  }, [
+    additionalStepOptions,
+    getSteps,
+    localStorageKey,
+    onCancel,
+    onComplete,
+    onStart,
+    tourAvailable,
+  ]);
 
   return {tour};
 };
