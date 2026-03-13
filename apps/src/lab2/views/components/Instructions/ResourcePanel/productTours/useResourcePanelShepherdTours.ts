@@ -10,7 +10,6 @@ import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/R
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
@@ -44,10 +43,6 @@ const useResourcePanelShepherdTours = ({
   hasValidationConditions,
   validationSettings,
 }: UseResourcePanelShepherdToursParams) => {
-  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
-    experiments.SHEPHERD_PRODUCT_TOURS
-  );
-
   // We track level load state to avoid starting tours while the level is still loading.
   // This can cause multiple tours to show up if we load one for the previous level and
   // then one for the new level.
@@ -62,8 +57,8 @@ const useResourcePanelShepherdTours = ({
 
   // ONBOARDING TOUR
   const showOnboardingTour = useMemo(
-    () => (showShepherdProductTours && isOnboardingTourEnabled) || false,
-    [showShepherdProductTours, isOnboardingTourEnabled]
+    () => isOnboardingTourEnabled || false,
+    [isOnboardingTourEnabled]
   );
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
     () => tryGetLocalStorage(ONBOARDING_TOUR_LOCAL_STORAGE_KEY, 'no') === 'yes'
@@ -93,7 +88,6 @@ const useResourcePanelShepherdTours = ({
   const showValidationTour = useMemo(
     () =>
       (!isLevelLoading &&
-        showShepherdProductTours &&
         isValidationTourEnabled &&
         !!hasValidationConditions &&
         !!validationSettings &&
@@ -101,7 +95,6 @@ const useResourcePanelShepherdTours = ({
       false,
     [
       isLevelLoading,
-      showShepherdProductTours,
       isValidationTourEnabled,
       hasValidationConditions,
       validationSettings,
