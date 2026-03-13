@@ -170,9 +170,9 @@ function StandardsEditor(props) {
           </option>
         ))}
       </select>
-      <div style={styles.sectionLabel}>
+      <label>
         <strong>Select a Standard to add</strong>
-      </div>
+      </label>
       <SearchBox
         // Specify a key in order to force this component to remount when
         // framework changes. Otherwise, it may return stale results when
@@ -217,9 +217,6 @@ StandardsEditor.propTypes = {
 };
 
 const styles = {
-  sectionLabel: {
-    marginBottom: 5,
-  },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',

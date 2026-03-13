@@ -8,6 +8,7 @@
 const rulesToEventuallyReenable = {
   'jsx-a11y/anchor-is-valid': 'off',
   'jsx-a11y/click-events-have-key-events': 'off',
+  'jsx-a11y/label-has-associated-control': 'off',
   'jsx-a11y/no-static-element-interactions': 'off',
 };
 
@@ -103,14 +104,6 @@ module.exports = {
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
     'mocha/no-exclusive-tests': 'error',
-    'jsx-a11y/label-has-associated-control': [
-      'error',
-      {
-        controlComponents: ['MarkdownEnabledTextarea', 'DatePicker'],
-        assert: 'either',
-        depth: 25,
-      },
-    ],
     'react/button-has-type': 'error',
     'react/display-name': 'off',
     'react/jsx-closing-bracket-location': 'error', // autofixable

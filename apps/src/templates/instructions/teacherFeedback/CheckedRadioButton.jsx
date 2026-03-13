@@ -27,12 +27,10 @@ export class CheckedRadioButton extends Component {
           checked={this.props.checked}
           onChange={this.handleChange}
           disabled={this.props.disabledMode}
-          aria-label={this.props.value}
         />
         <label
           htmlFor={this.props.id}
           className="hidden-label-checked-radio-button"
-          aria-label={this.props.value}
         />
       </div>
     );

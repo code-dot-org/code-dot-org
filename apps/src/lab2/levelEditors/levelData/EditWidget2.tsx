@@ -52,7 +52,6 @@ const EditWidget2: React.FunctionComponent<EditWidget2Props> = ({
 
       {widget2 && (
         <>
-          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
           <label>Parameters (JSON)</label>
           <RawJsonEditor
             currentValue={widget2?.parameters}

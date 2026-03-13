@@ -34,7 +34,7 @@ const ModelCardFields: React.FunctionComponent = () => {
           </div>
         );
       })}
-      <p className={moduleStyles.marginBottom}>Example Prompts and Topics</p>
+      <label>Example Prompts and Topics</label>
       <MultiItemInput
         items={exampleTopics || []}
         onAdd={() => {

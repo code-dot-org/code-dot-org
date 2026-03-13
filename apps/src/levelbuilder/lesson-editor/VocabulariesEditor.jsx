@@ -186,9 +186,9 @@ class VocabulariesEditor extends Component {
           />
         )}
         <div style={styles.search}>
-          <div style={styles.sectionLabel}>
+          <label>
             <strong>Select a vocabulary word to add</strong>
-          </div>
+          </label>
           <SearchBox
             onSearchSelect={e => this.props.addVocabulary(e.vocabulary)}
             additionalQueryParams={{
@@ -217,9 +217,6 @@ class VocabulariesEditor extends Component {
 }
 
 const styles = {
-  sectionLabel: {
-    marginBottom: 5,
-  },
   search: {
     paddingBottom: 10,
   },

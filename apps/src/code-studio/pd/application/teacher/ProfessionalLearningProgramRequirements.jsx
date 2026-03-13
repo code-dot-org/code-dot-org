@@ -200,9 +200,7 @@ const ProfessionalLearningProgramRequirements = props => {
           )}
         </div>
 
-        <p className="control-label" style={styles.smallMarginBottom}>
-          Submit your application
-        </p>
+        <label className="control-label">Submit your application</label>
         <LabeledSingleCheckbox
           name="agree"
           label={
