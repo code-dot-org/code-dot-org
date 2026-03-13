@@ -513,15 +513,18 @@ Craft.runButtonClick = function () {
 };
 
 Craft.executeUserCode = function () {
-  if (Craft.initialConfig.level.edit_blocks) {
-    this.reportResult(true);
+  if (
+    Craft.initialConfig.level.edit_blocks ||
+    Craft.initialConfig.level.freePlay
+  ) {
+    this.reportResult(true, true);
     return;
   }
 
   if (studioApp().hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
-    this.reportResult(false);
+    this.reportResult(false, true);
     return;
   }
 
@@ -618,7 +621,7 @@ Craft.executeUserCode = function () {
       if (Craft.level.freePlay) {
         return;
       }
-      this.reportResult(success);
+      this.reportResult(success, true);
     }.bind(this)
   );
 };
@@ -635,7 +638,7 @@ Craft.getTestResultFrom = function (success, studioTestResults) {
   return studioTestResults;
 };
 
-Craft.reportResult = function (success) {
+Craft.reportResult = function (success, suppressDialog) {
   var studioTestResults = studioApp().getTestResults(success);
   var testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
@@ -655,6 +658,10 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      if (suppressDialog) {
+        return;
+      }
+
       const isSignedIn =
         getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({

@@ -670,15 +670,18 @@ export default class Craft {
   }
 
   static executeUserCode() {
-    if (Craft.initialConfig.level.edit_blocks) {
-      Craft.reportResult(true);
+    if (
+      Craft.initialConfig.level.edit_blocks ||
+      Craft.initialConfig.level.freePlay
+    ) {
+      Craft.reportResult(true, true);
       return;
     }
 
     // Fail immediately for empty repeat blocks, etc.
     const initialTestResults = studioApp().getTestResults(false);
     if (Craft.isPreAnimationFailure(initialTestResults)) {
-      Craft.reportResult(false);
+      Craft.reportResult(false, true);
       return;
     }
 
@@ -788,7 +791,10 @@ export default class Craft {
     });
 
     Craft.gameController.codeOrgAPI.startAttempt(success => {
-      Craft.reportResult(success);
+      if (Craft.level.freePlay) {
+        return;
+      }
+      Craft.reportResult(success, true);
     });
   }
 
@@ -804,7 +810,7 @@ export default class Craft {
     return studioTestResults;
   }
 
-  static reportResult(success) {
+  static reportResult(success, suppressDialog) {
     const studioTestResults = studioApp().getTestResults(success);
     const testResultType = Craft.getTestResultFrom(success, studioTestResults);
 
@@ -838,6 +844,10 @@ export default class Craft {
       // typically delay feedback until response back
       // for things like e.g. crowdsourced hints & hint blocks
       onComplete: function (response) {
+        if (suppressDialog) {
+          return;
+        }
+
         const sharing = Craft.initialConfig.level.freePlay;
         if (sharing && response.level_source) {
           trySetLocalStorage('craftHeroShareLink', response.level_source);
