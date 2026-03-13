@@ -280,6 +280,11 @@ Resources:
               - 'bedrock:InvokeModel'
             Resource:
               - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+          # Allow Frontend and Daemon servers to write to AWS Managed Prometheus
+          - Effect: Allow
+            Action:
+              - 'aps:RemoteWrite'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
