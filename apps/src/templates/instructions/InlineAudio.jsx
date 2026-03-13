@@ -277,7 +277,7 @@ class InlineAudio extends React.Component {
           >
             <i
               className={classNames(
-                'fa-solid fa-volume-up',
+                'fa-solid fa-volume-high',
                 moduleStyles.buttonImg,
                 moduleStyles.buttonImgVolume
               )}

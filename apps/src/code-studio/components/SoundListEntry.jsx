@@ -60,8 +60,8 @@ class SoundListEntry extends React.Component {
       ? styles.selected
       : styles.notSelected;
     const playIcon = this.state.isPlaying
-      ? 'fa-pause-circle'
-      : 'fa-play-circle';
+      ? 'fa-circle-pause'
+      : 'fa-circle-play';
 
     return (
       <div

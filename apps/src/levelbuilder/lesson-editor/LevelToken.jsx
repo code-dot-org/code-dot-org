@@ -199,7 +199,7 @@ export class LevelTokenContents extends Component {
             window.open(activeLevel.url, '_blank', 'noopener,noreferrer');
           }}
         >
-          <i className="fa-solid fa-pencil" />
+          <i className="fa-solid fa-pen" />
         </div>
         {allowMajorCurriculumChanges && (
           <div style={styles.remove} onMouseDown={this.handleRemove}>

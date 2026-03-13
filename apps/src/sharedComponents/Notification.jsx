@@ -66,7 +66,7 @@ const Notification = ({
 
   const icons = {
     information: 'circle-info',
-    success: 'check-circle',
+    success: 'circle-check',
     failure: 'triangle-exclamation',
     warning: 'triangle-exclamation',
     bullhorn: 'bullhorn',

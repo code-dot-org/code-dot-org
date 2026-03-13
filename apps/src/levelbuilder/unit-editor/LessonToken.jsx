@@ -138,7 +138,7 @@ export class LessonTokenContents extends Component {
         </span>
         {this.props.lesson.id && (
           <div style={styles.edit} onClick={this.handleEditLesson}>
-            <i className="fa-solid fa-pencil" />
+            <i className="fa-solid fa-pen" />
           </div>
         )}
         {this.props.lesson.id && (

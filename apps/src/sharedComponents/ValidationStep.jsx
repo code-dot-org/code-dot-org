@@ -158,7 +158,12 @@ function iconFor(stepStatus) {
       );
     case Status.CELEBRATING:
       return (
-        <FontAwesome icon="thumbs-up" className="fa-fw" style={iconStyle} />
+        <FontAwesome
+          icon="thumbs-up"
+          iconStyle="regular"
+          className="fa-fw"
+          style={iconStyle}
+        />
       );
     case Status.FAILED:
       return (

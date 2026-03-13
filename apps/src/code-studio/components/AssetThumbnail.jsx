@@ -137,8 +137,8 @@ const AudioThumbnail = class extends React.Component {
 
   render() {
     const playIcon = this.props.isPlaying
-      ? 'fa-pause-circle'
-      : 'fa-play-circle';
+      ? 'fa-circle-pause'
+      : 'fa-circle-play';
 
     return (
       <div style={{...styles.wrapper, ...styles.audioWrapper}}>
