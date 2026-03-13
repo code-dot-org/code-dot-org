@@ -52,11 +52,10 @@ export type LinkProps = LinkWithChildren | LinkWithText;
  * * (see ./__tests__/Link.test.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: Link Component.
- * Used for internal or external links. Shortcut for general <a> HTML tag (with DSCO styles applied).
- * Can be opened in new tab, have custom onClick, also can be disabled.
+ * @deprecated Use MUI `Link` from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/link.ts`.
  */
 const Link: React.FunctionComponent<LinkProps> = ({
   children,

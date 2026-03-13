@@ -33,11 +33,10 @@ export interface CloseButtonProps extends HTMLAttributes<HTMLButtonElement> {
  * * (see apps/test/unit/componentLibrary/CloseButton.test.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: Close Button Component.
- * Used to render a close button. Mostly needed for internal Design System use in Alert, Popover,
- * Modal, Dialog, etc. Can be used in other anywhere else outside Design System as well.
+ * @deprecated Use MUI `IconButton` from `@mui/material` with an `xmark` icon instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/iconButton.tsx`.
  */
 const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   onClick,
