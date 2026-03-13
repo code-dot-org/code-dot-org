@@ -9,10 +9,6 @@ function getSupportedMimeType(mediaRecorderClass: typeof MediaRecorder) {
   );
 }
 
-export interface RecordingResult {
-  file: File;
-}
-
 enum StartState {
   Started = 'Started',
   Unsupported = 'Unsupported',
@@ -31,7 +27,9 @@ export class AudioRecorder {
   constructor(
     // For testing only
     private readonly getUserMedia = navigator?.mediaDevices?.getUserMedia,
-    private readonly MediaRecorderClass = MediaRecorder
+    private readonly MediaRecorderClass = typeof MediaRecorder !== 'undefined'
+      ? MediaRecorder
+      : undefined
   ) {}
 
   get isRecording(): boolean {
@@ -47,7 +45,7 @@ export class AudioRecorder {
   /**
    * Requests microphone access and starts recording.
    *
-   * @returns StartState corresponding to the outcome.
+   * @returns StartState corresponding to thåe outcome.
    */
   async start(): Promise<StartState> {
     if (!this.canRecord()) {
@@ -64,10 +62,10 @@ export class AudioRecorder {
       return StartState.UnknownError;
     }
 
-    const mimeType = getSupportedMimeType(this.MediaRecorderClass);
+    const mimeType = getSupportedMimeType(this.MediaRecorderClass!);
     this.chunks = [];
 
-    this.recorder = new this.MediaRecorderClass(this.stream, {mimeType});
+    this.recorder = new this.MediaRecorderClass!(this.stream, {mimeType});
     this.recorder.ondataavailable = e => {
       if (e.data.size > 0) {
         this.chunks.push(e.data);
@@ -77,7 +75,9 @@ export class AudioRecorder {
     return StartState.Started;
   }
 
-  /** Stops recording and returns the recorded data. */
+  /**
+   * Stops recording and returns the recorded data.
+   */
   async stop(): Promise<Blob> {
     if (!this.recorder) {
       throw new Error('AudioRecorder: call start() before stop()');
