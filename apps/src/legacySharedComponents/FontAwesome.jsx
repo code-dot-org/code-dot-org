@@ -17,7 +17,7 @@ export default function FontAwesome({
   title,
   ...props
 }) {
-  const prefix = iconStyle ? `fa-${iconStyle}` : 'fa';
+  const prefix = iconStyle ? `fa-${iconStyle}` : 'fa-solid';
   const newProps = _.assign({}, props, {
     className: `${prefix} fa-${icon} ${className ? className : ''}`,
   });
@@ -26,7 +26,7 @@ export default function FontAwesome({
 
 FontAwesome.propTypes = {
   icon: PropTypes.string.isRequired,
-  /** Icon style prefix: 'solid', 'regular', 'brands', etc. Defaults to 'fa' (v4 compat). */
+  /** Icon style prefix: 'solid', 'regular', 'brands', etc. Defaults to 'fa-solid'. */
   iconStyle: PropTypes.string,
   className: PropTypes.string,
   title: PropTypes.string,
