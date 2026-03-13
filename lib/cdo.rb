@@ -41,14 +41,14 @@ module Cdo
           transform_keys {|k| k.sub(ENV_PREFIX, '')}.
           reject {|k, _| k.start_with?('_')}.
           transform_keys(&:downcase).
-          transform_values do |v|
-            # Parse CDO_* env vars as YAML, if they can
-            YAML.load(v)
+          transform_values do |env_var_value|
+            # Try to parse CDO_* env vars as YAML
+            YAML.load(env_var_value)
           rescue Psych::Exception
-            # Pass thru parse fails as strings: this allows random ascii password strings
+            # Pass thru yaml parse fails as strings: this allows random ascii password strings
             # that happen to start with { or [, but don't have a matching close bracket:
             # {fj@95randompassword or [#092pass
-            v
+            env_var_value
           end,
         # 2. locals.yml - local configuration
         "#{root}/locals.yml",
