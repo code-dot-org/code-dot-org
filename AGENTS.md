@@ -58,7 +58,7 @@
 - Semantic colors are CSS variables (e.g., `var(--text-neutral-primary)`) that support light/dark theming via the `data-theme` attribute.
 - **Never rely on stylesheet load order** for specificity. Always use CSS selector specificity rules.
 - Override component styles via parent element selectors or component-specific class selectors in SCSS modules.
-- Typography mixins and font variables are in `@code-dot-org/component-library-styles/typography.module.scss` and `fontVariables.css`.
+- For typography, use MUI's `<Typography>` component (DSCO Typography is deprecated). Font variables are in `@code-dot-org/component-library-styles/fontVariables.css`.
 - When building new design system components, see `frontend/packages/component-library/CONTRIBUTING.md` and `README.md` for the full contribution process and best practices.
 
 ### DSCO-to-MUI Migration (in progress):
