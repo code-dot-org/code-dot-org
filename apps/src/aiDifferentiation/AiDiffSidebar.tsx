@@ -132,6 +132,10 @@ const AiDiffSidebar: React.FC<AiDiffSidebarProps> = ({
         curriculumCourses: curriculumCourses,
       })
     );
+    analyticsReporter.sendEvent(EVENTS.AI_ARTIFACT_THREAD_REOPENED, {
+      threadId: chatId,
+      url: window.location.href,
+    });
   };
 
   const todayChats = threads.filter(thread => {

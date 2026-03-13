@@ -1,9 +1,13 @@
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {
+  IconButton as MuiIconButton,
+  IconButtonProps as MuiIconButtonProps,
+} from '@mui/material';
 import React from 'react';
 
-import styles from './styles.module.scss';
+import styles from '../styles.module.scss';
 
 interface ButtonWithDialogProps {
   text: string;
@@ -12,7 +16,7 @@ interface ButtonWithDialogProps {
   Dialog: React.ReactNode;
   iconName: string;
   ariaLabel?: string;
-  buttonSize?: ButtonProps['size'];
+  buttonSize?: MuiIconButtonProps['size'];
   setIsDialogOpen: (isOpen: boolean) => void;
 }
 
@@ -42,17 +46,18 @@ const ButtonWithDialog: React.FunctionComponent<ButtonWithDialogProps> = ({
         hideDelayMs={hideTooltipDelayMs}
         hideOnFirstLeave={true}
       >
-        <Button
+        <MuiIconButton
+          id={`uitest-${id}-button`}
+          variant="text"
+          color="tertiary"
+          size={buttonSize}
           className={styles.bottomButton}
           onClick={() => setIsDialogOpen(true)}
-          id={`uitest-${id}-button`}
-          isIconOnly={true}
-          icon={{iconName: iconName}}
-          color={'gray'}
-          type={'tertiary'}
           aria-label={ariaLabel}
-          size={buttonSize}
-        />
+          type="button"
+        >
+          <FontAwesomeV6Icon iconName={iconName} />
+        </MuiIconButton>
       </WithTooltip>
       {Dialog}
     </>

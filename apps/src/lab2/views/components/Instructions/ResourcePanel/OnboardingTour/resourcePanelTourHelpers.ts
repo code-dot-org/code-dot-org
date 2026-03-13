@@ -5,7 +5,7 @@ import {
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
   resourcePanelNavigationButtonElementId,
-} from './constants';
+} from '../constants';
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {

@@ -1,7 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {ChangeEvent, useCallback, useMemo, useState} from 'react';
 
 import {
@@ -17,6 +17,9 @@ import {
   AiDiffArtifactType,
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
+
+import {EVENTS} from '../metrics/AnalyticsConstants';
+import analyticsReporter from '../metrics/AnalyticsReporter';
 
 import {ChatTextMessage, artifactValidatorHelper} from './types';
 
@@ -56,6 +59,7 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
   const sections: TeacherSectionState = useAppSelector(state => {
     return state.teacherSections || {};
   });
+  const threadId = useAppSelector(state => state.aichat.threadId);
 
   const artifactTitleIsEmpty = useMemo(() => {
     return artifactTitle.trim() === '';
@@ -66,6 +70,41 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
     .filter(section => {
       return !section.hidden && section.participantType === 'student';
     });
+
+  const reportingData = React.useMemo(() => {
+    return {
+      messageId: message.id,
+      artifactType: message.artifactCandidateType,
+      artifactContent: message.chatMessageText,
+      candidateSectionIds: activeStudentSections.map(section => {
+        return section.id;
+      }),
+    };
+  }, [message, activeStudentSections]);
+
+  const sendArtifactEvent = React.useCallback(
+    (event: (typeof EVENTS)[keyof typeof EVENTS], prompt?: string) => {
+      const responseEventData = {
+        ...reportingData,
+        threadId: threadId,
+        url: window.location.href,
+        prompt: prompt,
+        selectedSectionIds,
+        artifactTitle,
+        selectedUnitId,
+        selectedLessonId,
+      };
+      analyticsReporter.sendEvent(event, responseEventData);
+    },
+    [
+      reportingData,
+      threadId,
+      selectedSectionIds,
+      artifactTitle,
+      selectedUnitId,
+      selectedLessonId,
+    ]
+  );
 
   const swapLessonInfo = useCallback(
     async (unitId: string) => {
@@ -138,7 +177,10 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
           })
         );
       })
-      .finally(() => dispatch(clearPendingArtifactMessage()));
+      .finally(() => {
+        dispatch(clearPendingArtifactMessage());
+        sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVED);
+      });
   };
 
   const unitMenuList = useMemo(() => {
@@ -221,13 +263,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         </h4>
         <div className={style.artifactConfigurationSectionHeader}>
           <h6>Class Sections</h6>
-          <Button
-            size="s"
-            type="secondary"
-            color="black"
-            text="Select All"
+          <MuiButton
+            variant="outlined"
+            color="secondary"
+            size="small"
             onClick={toggleAll}
-          />
+            type="button"
+          >
+            {'Select All'}
+          </MuiButton>
         </div>
 
         <div className={style.artifactConfigurationCheckboxes}>
@@ -282,19 +326,22 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         <FontAwesomeV6Icon iconName="arrow-up-right-from-square" />
       </a>
       <div className={style.artifactConfigurationSaveButtons}>
-        <Button
-          size="m"
-          type="secondary"
-          color="black"
-          onClick={() => dispatch(clearPendingArtifactMessage())}
-          text="Cancel"
-        />
-        <Button
-          size="m"
-          type="primary"
-          color="purple"
-          onClick={onSubmit}
-          text="Save selections"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
+          onClick={() => {
+            dispatch(clearPendingArtifactMessage());
+            sendArtifactEvent(EVENTS.AI_ARTIFACT_SAVE_CANCELLED);
+          }}
+          type="button"
+        >
+          {'Cancel'}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={
             Object.values(selectedSectionIds).filter(value => value === true)
               .length === 0 ||
@@ -302,7 +349,11 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
             !selectedLessonId ||
             artifactTitleIsEmpty
           }
-        />
+          onClick={onSubmit}
+          type="button"
+        >
+          {'Save selections'}
+        </MuiButton>
       </div>
     </div>
   ) : (
@@ -314,13 +365,15 @@ const AiDiffArtifactSavePage: React.FC<Props> = ({message}) => {
         create this artifact again.
       </div>
       <div className={style.artifactConfigurationSaveButtons}>
-        <Button
-          size="m"
-          type="secondary"
-          color="black"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
           onClick={() => dispatch(clearPendingArtifactMessage())}
-          text="Cancel"
-        />
+          type="button"
+        >
+          {'Cancel'}
+        </MuiButton>
       </div>
     </div>
   );

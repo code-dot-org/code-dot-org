@@ -1,10 +1,5 @@
-import {
-  LinkButton,
-  Button,
-  ButtonProps,
-} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {
@@ -18,11 +13,11 @@ import {WorkshopInfo, SessionInfo} from './../types';
 
 import moduleStyles from './workshopSessionsList.module.scss';
 
-const commonButtonProps: Partial<ButtonProps> = {
-  type: 'secondary',
-  color: 'gray',
-  size: 'xs',
-};
+const commonButtonProps = {
+  variant: 'outlined',
+  color: 'tertiary',
+  size: 'extraSmall',
+} as const;
 
 const SessionItemVirtualLocationContent = ({
   meetingLink,
@@ -32,13 +27,16 @@ const SessionItemVirtualLocationContent = ({
   isUserEnrolled?: boolean;
 }) =>
   isUserEnrolled ? (
-    <LinkButton
+    <MuiButton
       {...commonButtonProps}
-      href={meetingLink}
+      href={meetingLink ?? ''}
+      disabled={!meetingLink}
       target="_blank"
-      text="Join Meeting"
-      iconLeft={{iconName: 'video'}}
-    />
+      rel="noopener noreferrer"
+      startIcon={<FontAwesomeV6Icon iconName="video" />}
+    >
+      {'Join Meeting'}
+    </MuiButton>
   ) : (
     <>
       <FontAwesomeV6Icon iconName="video" />
@@ -63,12 +61,14 @@ const SessionItemInPersonLocationContent = ({
       {locationLabel}
     </Typography>
     {isUserEnrolled && (
-      <Button
+      <MuiButton
         {...commonButtonProps}
-        text="Copy address"
-        iconLeft={{iconName: 'copy'}}
         onClick={() => copyToClipboard(locationAddress)}
-      />
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="copy" />}
+      >
+        {'Copy address'}
+      </MuiButton>
     )}
   </>
 );

@@ -1,7 +1,11 @@
 import {Typography} from '@mui/material';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {
+  resourcePanelValidationTableElementId,
+  VALIDATION_COMPLETE_EVENT,
+} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {
   getStatusForResult,
   getTranslatedResult,
@@ -21,6 +25,20 @@ const ValidationTable: React.FunctionComponent<ValidationResultsProps> = ({
   const validationResults = useAppSelector(
     state => state.lab.validationState.validationResults
   );
+
+  // Fire an event when validation results are first available.
+  // This is used by the validation intro tour to auto-advance the tour.
+  useEffect(() => {
+    if (validationResults) {
+      document
+        .querySelector(`#${resourcePanelValidationTableElementId}`)
+        ?.dispatchEvent(
+          new CustomEvent(VALIDATION_COMPLETE_EVENT, {
+            bubbles: true,
+          })
+        );
+    }
+  }, [validationResults]);
 
   if (!validationResults) {
     return null;
