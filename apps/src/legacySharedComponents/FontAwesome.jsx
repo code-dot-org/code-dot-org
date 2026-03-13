@@ -12,7 +12,7 @@ import React from 'react';
  */
 export default function FontAwesome({
   icon,
-  iconStyle,
+  iconStyle = undefined,
   className,
   title,
   ...props
