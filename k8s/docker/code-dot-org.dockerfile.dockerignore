@@ -1,5 +1,7 @@
 # don't inject K8S related manifests so skaffold doesn't rebuild/sync
 skaffold.yaml
+**/Tiltfile
+**/.tiltignore
 .github/workflows
 k8s
 !k8s/docker/locals.rake-build.yml
