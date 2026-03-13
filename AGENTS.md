@@ -63,8 +63,9 @@
 
 ### DSCO-to-MUI Migration (in progress):
 - We are gradually migrating from our custom design system (DSCO / `@code-dot-org/component-library`) to MUI (`@mui/material`). Before using a DSCO component, check whether it has been deprecated (look for `@deprecated` or `DEPRECATED` status in its JSDoc header) and whether MUI style overrides already exist for it in `frontend/packages/component-library/src/themes/code.org/styleOverrides/`.
-- **Typography**: fully migrated to MUI. The DSCO Typography component is `@deprecated`. Use MUI's `<Typography variant="...">` instead.
-- **Button**: migration in progress. See `frontend/packages/component-library/src/button/BUTTON_MIGRATION_TO_MUI.md` for the full migration guide, prop mapping, and codemod usage.
+- **Migration status doc**: see `frontend/packages/component-library/MIGRATION_STATUS.md` for the full per-component migration status table.
+- **Already migrated (deprecated)**: Typography, Button/LinkButton/GenericButton, Breadcrumbs. Use MUI equivalents directly.
+- **Button**: codemod available (`yarn codemod:buttons` from component-library/). See `src/button/BUTTON_MIGRATION_TO_MUI.md` for the full migration guide.
 - **MUI theme**: our custom MUI theme (`CdoTheme`) lives in `frontend/packages/component-library/src/themes/code.org/` and is applied via `<ThemeProvider theme={CdoTheme}>`. It defines custom typography variants, button sizes/colors, and uses CSS variables for light/dark theme support.
 - **MUI type augmentation**: custom MUI types (extra button sizes, colors, typography variants, etc.) are declared in `frontend/packages/component-library/types/mui.d.ts` and must be manually synced to `apps/src/types/mui.d.ts`.
 - **Decision guide for which component to use**: if a DSCO component is deprecated or has MUI style overrides in the theme, use the MUI equivalent. Otherwise, continue using the DSCO component until its MUI migration is ready.
