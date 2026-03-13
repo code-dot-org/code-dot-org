@@ -34,7 +34,7 @@ spec:
       - name: REDIS_PASSWORD
         valueFrom:
           secretKeyRef:
-            name: cdo-secrets-local
+            name: cdo-local-secrets
             key: _redis_password
     ports:
     - containerPort: 6379
