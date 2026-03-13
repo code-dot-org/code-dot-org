@@ -20,7 +20,7 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | `button` | **Migrated** | `Button` | `styleOverrides/button.tsx` | Deprecated. Use `Button` from `@mui/material`. Codemod available: `yarn codemod:buttons`. See `src/button/BUTTON_MIGRATION_TO_MUI.md`. |
 | `link` | Not Started | `Link` | `styleOverrides/link.ts` (partial) | Basic overrides exist (variant + font weight) but not complete. Migration not started. |
 | `breadcrumbs` | **Migrated** | `Breadcrumbs` | `styleOverrides/breadcrumbs.ts` | Deprecated. Use `Breadcrumbs` from `@mui/material`. Custom size prop augmented (`xs`, `s`, `m`, `l`). |
-| `closeButton` | In Progress | `IconButton` | `styleOverrides/iconButton.tsx` | Style overrides exist. Migration of consumers not yet complete. |
+| `closeButton` | Not Started | `IconButton` | — | MUI `IconButton` with `xmark` icon can be used. Migration not started. |
 | `notification-banner` | **MUI-native** | — | `styleOverrides/notificationBanner.tsx` | Already built on MUI `Paper`, `Stack`, `Typography`, `IconButton`. No migration needed. |
 | `snackbar` | **MUI-native** | `Snackbar` | — | No DSCO wrapper exported. Use `Snackbar` from `@mui/material` directly. |
 | `accordion` | Not Started | `Accordion` | — | |
@@ -31,7 +31,11 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | `chips` | Not Started | `Chip` | — | |
 | `dialog` | Not Started | `Dialog` | — | |
 | `divider` | Not Started | `Divider` | — | |
-| `dropdown` | Not Started | `Select` / `Menu` | — | Includes actionDropdown, checkboxDropdown, iconDropdown, simpleDropdown variants. |
+| `dropdown` | Not Started | `Select` / `Menu` | — | Base dropdown component. |
+| `actionDropdown` | Not Started | `Menu` / `MenuItem` | — | Dropdown with action items. |
+| `checkboxDropdown` | Not Started | `Select` + `Checkbox` | — | Dropdown with checkbox options. |
+| `iconDropdown` | Not Started | `Menu` / `IconButton` | — | Icon-triggered dropdown. |
+| `simpleDropdown` | Not Started | `Select` | — | Simple select-style dropdown. |
 | `fontAwesomeV6Icon` | N/A | — | — | Icon utility, not a MUI concern. |
 | `formFieldWrapper` | N/A | `FormControl` | — | Utility wrapper. Consider MUI `FormControl` + `FormLabel`. |
 | `header` | N/A | — | — | App-specific layout component. |
