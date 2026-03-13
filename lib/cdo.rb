@@ -36,7 +36,20 @@ module Cdo
       root = File.expand_path('..', __dir__)
       load_configuration(
         # 1. ENV - environment variables (CDO_*)
-        ENV.to_h.select {|k, _| k.match?(ENV_PREFIX)}.transform_keys {|k| k.sub(ENV_PREFIX, '').downcase},
+        ENV.to_h.
+          select {|k, _| k.match?(ENV_PREFIX)}.
+          transform_keys {|k| k.sub(ENV_PREFIX, '')}.
+          reject {|k, _| k.start_with?('_')}.
+          transform_keys(&:downcase).
+          transform_values do |v|
+            # Parse CDO_* env vars as YAML, if they can
+            YAML.load(v)
+          rescue Psych::Exception
+            # Pass thru parse fails as strings: this allows random ascii password strings
+            # that happen to start with { or [, but don't have a matching close bracket:
+            # {fj@95randompassword or [#092pass
+            v
+          end,
         # 2. locals.yml - local configuration
         "#{root}/locals.yml",
         # 3. globals.yml - [Chef-]provisioned configuration
@@ -51,14 +64,16 @@ module Cdo
         "#{root}/config.yml.erb"
       )
 
-      configured_properties = to_h.keys.map(&:to_sym)
-      default_properties = render("#{root}/config.yml.erb").first.keys
-      unknown_properties = configured_properties - default_properties
-      unless unknown_properties.empty?
-        raise <<~ERROR
-          Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
-          Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
-        ERROR
+      unless ENV['PERMIT_UNKNOWN_PROPERTIES_IN_CDO']
+        configured_properties = to_h.keys.map(&:to_sym)
+        default_properties = render("#{root}/config.yml.erb").first.keys
+        unknown_properties = configured_properties - default_properties
+        unless unknown_properties.empty?
+          raise <<~ERROR
+            Property or properties "#{unknown_properties.join(', ')}" defined in the environment without a default specified in `config.yml.erb`.
+            Likely this is a former configuration value which has been removed from `config.yml.erb` but still exists in your `locals.yml`.
+          ERROR
+        end
       end
 
       raise "'#{rack_env}' is not known environment." unless rack_envs.include?(rack_env)
