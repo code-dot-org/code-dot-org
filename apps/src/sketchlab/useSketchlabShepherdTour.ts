@@ -1,7 +1,7 @@
 import {offset} from '@floating-ui/dom';
 import {useEffect, useMemo, useState} from 'react';
 
-import useLab2ProductTour from '@cdo/apps//lab2/hooks/useLab2ProductTour';
+import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
