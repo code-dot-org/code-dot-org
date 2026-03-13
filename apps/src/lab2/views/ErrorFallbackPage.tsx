@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -23,13 +23,17 @@ export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
       {message && (
         <div className={moduleStyles.pageErrorMessage}>({message})</div>
       )}
-      <Button
-        text={commonI18n.reloadPage()}
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
         onClick={() => {
           location.reload();
         }}
-        size="s"
-      />
+        type="button"
+      >
+        {commonI18n.reloadPage()}
+      </MuiButton>
     </div>
   </div>
 );

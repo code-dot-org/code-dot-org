@@ -416,6 +416,24 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
         assert(deployment.lti_user_identities.any? {|identity| identity.subject == payload[:sub]})
       end
     end
+
+    context 'when integration comes from cache as a hash' do
+      let(:user) {create_preexisting_user(payload)}
+      let(:deployment) {create(:lti_deployment, deployment_id: @deployment_id, lti_integration: @integration)}
+
+      # Simulate read_cache, which returns JSON.parse(json_value).symbolize_keys
+      let(:cached_integration) {@integration.attributes.symbolize_keys}
+
+      it 'associates LtiUserIdentity with LtiDeployment' do
+        user
+        deployment
+        LtiV1Controller.any_instance.stubs(:read_cache).with(@state).returns({state: @state, nonce: @nonce})
+        LtiV1Controller.any_instance.stubs(:read_cache).with("#{@integration.issuer}/#{@integration.client_id}").returns(cached_integration)
+
+        authenticate
+        assert_includes deployment.reload.lti_user_identities, user.lti_user_identities.first
+      end
+    end
   end
 
   test 'auth - given no params, return unauthorized' do
