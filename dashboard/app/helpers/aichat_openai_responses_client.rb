@@ -20,7 +20,8 @@ class AichatOpenaiResponsesClient < AichatAiClient
     {
       'prompt_tokens' => response_body.dig('usage', 'input_tokens') || 0,
       'completion_tokens' => response_body.dig('usage', 'output_tokens') || 0,
-      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0
+      'cached_prompt_tokens' => response_body.dig('usage', 'input_tokens_details', 'cached_tokens') || 0,
+      'thought_tokens' => response_body.dig('usage', 'output_tokens_details', 'reasoning_tokens') || 0
     }
   end
 
@@ -56,15 +57,6 @@ class AichatOpenaiResponsesClient < AichatAiClient
     }.compact # Use compact to remove null text
 
     body
-  end
-
-  # Override base headers and merge in Bearer token.
-  private def headers
-    super.merge(
-      {
-        "Authorization" => "Bearer #{api_key}"
-      }
-    )
   end
 
   # Convert role from internal representation to OpenAI's role

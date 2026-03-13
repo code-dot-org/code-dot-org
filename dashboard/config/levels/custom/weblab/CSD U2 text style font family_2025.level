@@ -30,7 +30,8 @@
     "display_name": "Extra Code: Font Family",
     "bubble_choice_description": "Learn to use different font styles.",
     "thumbnail_url": "https://images.code.org/4ec4f43c4c895a7fd115da7d739d4e23-image-1602641905507.png",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

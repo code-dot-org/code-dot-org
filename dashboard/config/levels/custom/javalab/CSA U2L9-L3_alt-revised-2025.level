@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2025-04-23T04:26:57.000Z",
   "level_num": "custom",
@@ -22,11 +21,9 @@
     "project_template_level_name": "CSA U2L9-Mutators PBT_pilot-2025",
     "teacher_markdown": "The `nextInt()` method obtains an `int` value entered by the user.\r\n\r\nThe `nextDouble()` method obtains a `double` value entered by the user.\r\n\r\nThe `nextLine()` method obtains a `String` entered by the user.\r\n\r\nThe code segment prints `\"Enter a new price for your favorite shirt: \"` then allows the user to enter a value. The value entered by the user is assigned to the `newPrice` variable and used when calling the `setPrice()` method to update the value assigned to `price` for the `favShirt` object. The text `\"Shirt Price: \"` followed by the value entered by the user is then printed to the console.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-23T04:26:57.132+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-L3_revised-2025\\\"\"],\"cloned_from\":\"CSA U2L9-L3_revised-2025\"},{\"changed_at\":\"2025-04-23 04:27:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

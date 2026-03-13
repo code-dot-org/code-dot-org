@@ -1,10 +1,6 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {
-  BodyFourText,
-  Heading2,
-  OverlineThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {FC, memo, useCallback} from 'react';
 
 import {SectionProps, WorkshopFormState} from '../../workshops/types';
@@ -20,17 +16,17 @@ export interface EmailsRemindersProps
 export const PreviewEmailLink: FC<{href?: string}> = ({href}) => {
   if (!href) return null;
   return (
-    <LinkButton
+    <MuiButton
+      variant="text"
+      color="secondary"
+      size="small"
       href={href}
-      text="Preview email"
       target="_blank"
-      color="black"
-      type="tertiary"
-      size="s"
-      iconRight={{
-        iconName: 'up-right-from-square',
-      }}
-    />
+      rel="noopener noreferrer"
+      endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
+    >
+      {'Preview email'}
+    </MuiButton>
   );
 };
 
@@ -58,10 +54,14 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
 
   return (
     <section>
-      <Heading2 visualAppearance="heading-sm">Emails & Reminders</Heading2>
+      <Typography component="h2" variant="h5" gutterBottom>
+        Emails & Reminders
+      </Typography>
       <div className={commonStyles.row}>
         <div className={commonStyles.col}>
-          <OverlineThreeText>pre-workshop emails</OverlineThreeText>
+          <Typography variant="overline3" gutterBottom>
+            pre-workshop emails
+          </Typography>
           {fields.suppress_email && (
             <div className={commonStyles.toggleWrapper}>
               <div className={commonStyles.row}>
@@ -79,7 +79,9 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
           )}
         </div>
         <div className={commonStyles.col}>
-          <OverlineThreeText>post-workshop emails</OverlineThreeText>
+          <Typography variant="overline3" gutterBottom>
+            post-workshop emails
+          </Typography>
           <div className={commonStyles.toggleWrapper}>
             <div className={commonStyles.row}>
               <Toggle
@@ -93,9 +95,9 @@ export const EmailsReminders: FC<EmailsRemindersProps> = ({
               {/* TODO: blank href for now until we have mailjet email preview links */}
               <PreviewEmailLink href="" />
             </div>
-            <BodyFourText>
+            <Typography variant="body4" gutterBottom>
               *We require this email for every workshop.
-            </BodyFourText>
+            </Typography>
           </div>
         </div>
       </div>

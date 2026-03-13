@@ -1,0 +1,57 @@
+name 'self-paced-TCaAI-L1-PBL3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson Types
+
+#### In **Thinking Critically with AI**, Milestone 1 is the project launch, while Milestone 5 is the project shareout.
+
+#### Milestones 2, 3, and 4 follow a consistent two-lesson structure. In each milestone, students first build knowledge about a key AI concept, then apply that learning to create or refine a section of their final project.
+
+* #### The first lesson in each milestone is a **Build Knowledge** lesson.  
+* #### The second lesson is a **Develop & Critique** lesson, where students synthesize ideas, draft guidance, learn from feedback, and evaluate their thinking.
+
+<div style="text-align: center; margin: 20px auto;">
+  <img src="https://images.code.org/4559dffca35fd2e13ed96b3f1979ed6c-image-1772838094454.01.21 PM.png" 
+    alt="" 
+    style="width: 80%; border-radius: 10px;">
+  <p style="font-size: 10pt; margin-top: 8px;">
+    Image by PBLWorks
+  </p>
+</div>
+
+## Build Knowledge Lessons
+#### **Lessons 3, 5, and 7**
+
+#### During Build Knowledge lessons, students investigate key concepts and skills. They will have the opportunity to choose from one of three explorations related to the milestone's theme. Students gather insights that will directly inform their evolving project work. 
+
+<!-- Voice & Choice -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
+  <img src="https://images.code.org/b553f8594e621f659863b8fcb8b13c42-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
+  <div>
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Voice &amp; Choice</p>
+    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+      Students make meaningful decisions about how they learn, what they explore, and how they demonstrate understanding.
+    </p>
+  </div>
+</div>
+
+
+## Develop & Critique Lessons 
+#### **Lessons 4, 6, and 8**
+
+#### In the Develop & Critique lessons, students synthesize their learning into a tangible artifact that ladders up to the final project. This work unfolds over multiple cycles of feedback and revision. Structured peer discussions, self-assessment tools, and teacher feedback make revision intentional.
+
+<!-- Critique & Revision -->
+<div style="background-color: #F5F7F8; padding: 15px; border-radius: 10px; margin: 20px 0; display: flex; align-items: flex-start; gap: 12px;">
+  <img src="https://images.code.org/e802f4cab694dd5bb83adb5f3c37f3bf-image-1772670604477.png" alt="" style="width: 40px; height: 40px;">
+  <div>
+    <p style="font-size: 12pt; font-weight: bold; margin: 0;">PBL Design Element: Critique &amp; Revision</p>
+    <p style="font-size: 12pt; font-style: italic; margin: 5px 0 0 0; line-height: 1.3;">
+      Structured feedback cycles help students strengthen their work through revision and collaboration.
+    </p>
+  </div>
+</div>
+
+MARKDOWN

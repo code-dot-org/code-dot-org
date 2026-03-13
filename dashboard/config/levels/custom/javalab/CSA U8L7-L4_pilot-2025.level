@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-01T21:21:43.000Z",
   "level_num": "custom",
@@ -22,11 +21,9 @@
     "project_template_level_name": "CSA U8L7-Multiple Lists PBT_pilot-2025",
     "teacher_markdown": "Students realize that this method returns a new `ArrayList` containing the elements that appear in exactly one of the lists.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T21:21:43.682+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-L4_2025\\\"\"],\"cloned_from\":\"CSA U8L7-L4_2025\"},{\"changed_at\":\"2025-04-14 14:36:26 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

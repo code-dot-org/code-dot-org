@@ -33,7 +33,7 @@
     },
     "video_key": "csa_modifying_values_in_a_1d_array",
     "name_suffix": "_placeholder2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T21:11:19.138+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L7a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L2-L7a_pilot-2025\"}]"

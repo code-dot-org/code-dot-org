@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-05-27 16:21:15 UTC",
+    "serialized_at": "2026-02-23 23:09:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -3399,6 +3399,20 @@
       }
     },
     {
+      "name": "CSP Innovation Simulation Badges - Editable",
+      "url": "https://docs.google.com/presentation/d/1-8qGyoTppuLJHeILYdo72H8FCRc2V1mnnJkNynJSPag/edit?usp=sharing",
+      "key": "csp_innovation_simulation_badges_-_editable",
+      "properties": {
+        "audience": "Teacher",
+        "curriculum_category": "curriculum",
+        "embeddability_type": "resource_dropdown_only",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csp_innovation_simulation_badges_-_editable"
+      }
+    },
+    {
       "name": "CSP Innovation Simulation Character Bios",
       "url": "https://docs.google.com/document/d/1zuGMUs7RjxxgAPf_93C1Cm5bN2TvsQ8fqveGdlzBMrg/",
       "key": "csp_innovation_simulation_character_bios",
@@ -3770,6 +3784,12 @@
       "seeding_key": {
         "lesson.key": "Project - Innovation Simulation Part 1",
         "resource.key": "csp_innovation_simulation_badges"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Innovation Simulation Part 1",
+        "resource.key": "csp_innovation_simulation_badges_-_editable"
       }
     },
     {

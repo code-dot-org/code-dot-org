@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
@@ -52,30 +51,14 @@ function BackgroundMusicMuteButton({
     Depending on the updated value:
       Stop or start the background music immediately
       Set or remove the mute cookie
-      Determine the firehose label
     */
-    var muteLabel;
     if (updatedMuteValue) {
       muteBackgroundMusic();
       setMuteCookie();
-      muteLabel = 'mute';
     } else {
       unmuteBackgroundMusic();
       removeMuteCookie();
-      muteLabel = 'unmute';
     }
-
-    const labType = isMinecraft ? 'Minecraft' : 'Starwars';
-
-    const record = {
-      study: 'mute-music',
-      event: 'mute-toggle',
-      data_json: JSON.stringify({
-        labType: labType,
-        muteLabel: muteLabel,
-      }),
-    };
-    firehoseClient.putRecord(record);
   };
 
   return (

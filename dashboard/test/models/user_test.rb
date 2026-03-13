@@ -6,7 +6,6 @@ require 'timecop'
 class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   include Minitest::RSpecMocks
-  self.use_transactional_test_case = true
 
   class UsStateCodeTest < ActiveSupport::TestCase
     test 'returns student us_state if present' do
@@ -114,23 +113,6 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create(:teacher, birthday: Time.now - 18.years)
     assert_equal '21+', teacher.age
-  end
-
-  test 'creating teacher sets show_progress_table_v2 to true' do
-    teacher = create(:teacher)
-    assert teacher.show_progress_table_v2
-  end
-
-  # Disable this test if and when we do require teachers to complete school data
-  test 'school info should not be validated' do
-    school_attributes = {
-      country: 'US',
-      school_type: SchoolInfo::SCHOOL_TYPE_PUBLIC,
-      state: nil
-    }
-    assert_creates(User) do
-      create(:teacher, school_info_attributes: school_attributes)
-    end
   end
 
   test 'ensure school info values are saved correctly when state and zip are passed in different ways' do
@@ -1372,42 +1354,6 @@ class UserTest < ActiveSupport::TestCase
   test 'can_edit_email? is true for user with at least one authentication option' do
     teacher = create(:teacher)
     assert teacher.can_edit_email?
-  end
-
-  test 'can change own user type as a student with a password' do
-    student = create(:student)
-    refute_empty student.encrypted_password
-    assert student.can_change_own_user_type?
-  end
-
-  test 'can change own user type as an oauth student' do
-    student = create(:student, :google_sso_provider)
-    assert student.can_change_own_user_type?
-  end
-
-  test 'can change own user type as a teacher with a password' do
-    teacher = create(:teacher)
-    refute_empty teacher.encrypted_password
-    assert teacher.can_change_own_user_type?
-  end
-
-  test 'can change own user type as an oauth teacher' do
-    teacher = create(:teacher,
-      encrypted_password: nil,
-      provider: 'facebook',
-      uid: '1111111'
-)
-    assert teacher.can_change_own_user_type?
-  end
-
-  test 'cannot change own user type as a student with a picture or secret words' do
-    student = create(:student_in_picture_section)
-    refute student.can_change_own_user_type?
-  end
-
-  test 'cannot change own user type as a student in a section' do
-    student = create(:follower).student_user
-    refute student.can_change_own_user_type?
   end
 
   test 'sections_instructed omits deleted sections' do
@@ -4029,16 +3975,15 @@ class UserTest < ActiveSupport::TestCase
   test 'find_channel_owner finds channel owner' do
     student = create(:student)
     with_channel_for student do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+      encrypted_channel_id = get_project_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_equal student, result
     end
   end
 
   test 'find_channel_owner returns nil for channel with no owner' do
-    skip # flaky test. see https://github.com/code-dot-org/code-dot-org/pull/66713
     with_anonymous_channel do |project_id, storage_id|
-      encrypted_channel_id = storage_encrypt_channel_id storage_id, project_id
+      encrypted_channel_id = get_project_channel_id storage_id, project_id
       result = User.find_channel_owner encrypted_channel_id
       assert_nil result
     end
@@ -4470,78 +4415,230 @@ class UserTest < ActiveSupport::TestCase
     assert_equal new_us_state, student.reload.us_state
   end
 
-  describe 'Access to AI Chat' do
+  describe 'Access to AI Chat Lab' do
     context 'when user is a teacher with oauth account' do
       let(:teacher) {create(:teacher, :google_sso_provider)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with LTI account' do
       let(:teacher) {create(:teacher, :with_lti_auth)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with AUTHORIZED_TEACHER permissions' do
       let(:teacher) {create(:authorized_teacher)}
 
-      it 'can access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal true
       end
     end
 
     context 'when user is a teacher with email account' do
       let(:teacher) {create(:teacher)}
 
-      it 'cannot access AI Chat' do
-        _(teacher.teacher_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(teacher.teacher_can_access_ai_chat_lab?).must_equal false
       end
     end
 
     context 'when user is a student with email account' do
       let(:student) {create(:student)}
 
-      it 'cannot access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
       end
     end
 
-    context 'when user is a student with verified teacher and in appropriate section' do
-      let(:unit_group) {create(:unit_group, name: 'exploring-gen-ai-2024')}
+    context 'when user is a student with verified teacher in a section with ESSENTIAL_ONLY access' do
       let(:teacher) {create(:authorized_teacher)}
-      let(:section) {create(:section, teacher: teacher, unit_group: unit_group)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])}
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
-      it 'can access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal true
+      it 'can access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal true
       end
     end
 
-    context 'when user is a student with verified teacher but not in appropriate section' do
+    context 'when user is a student with verified teacher in a section with ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'can access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal true
+      end
+    end
+
+    context 'when user is a student with verified teacher in a section with DISABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
+      end
+    end
+
+    context 'when user is a student with verified teacher but no section configured' do
       let(:teacher) {create(:authorized_teacher)}
       let(:section) {create(:section, teacher: teacher)}
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
-      it 'cannot access AI Chat' do
-        _(student.student_can_access_ai_chat?).must_equal false
+      it 'cannot access AI Chat Lab' do
+        _(student.student_can_access_ai_chat_lab?).must_equal false
       end
     end
 
     context 'when user is a student with regular teacher' do
       let(:teacher) {create(:teacher)}
-      let(:section) {create(:section, teacher: teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
       let(:student) {create(:student)}
       let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
 
       it 'does not have access' do
-        _(student.student_can_access_ai_chat?).must_equal false
+        _(student.student_can_access_ai_chat_lab?).must_equal false
+      end
+    end
+  end
+
+  describe '#ai_chat_access_level' do
+    context 'when user is a teacher' do
+      let(:teacher) {create(:teacher)}
+
+      it 'returns ENABLED' do
+        _(teacher.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
+    context 'when user is a student in a section with ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns ENABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+
+    context 'when user is a student in a section with ESSENTIAL_ONLY access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns ESSENTIAL_ONLY' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY]
+      end
+    end
+
+    context 'when user is a student in a section with DISABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:student) {create(:student)}
+      let!(:follower) {create(:follower, section: section, student_user: student, user: teacher)}
+
+      it 'returns DISABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when user is a student with no sections' do
+      let(:student) {create(:student)}
+
+      it 'returns DISABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:DISABLED]
+      end
+    end
+
+    context 'when student is in multiple sections and one has ENABLED access' do
+      let(:teacher) {create(:authorized_teacher)}
+      let(:section_disabled) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:DISABLED])}
+      let(:section_enabled) {create(:section, teacher: teacher, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])}
+      let(:student) {create(:student)}
+      let!(:follower_disabled) {create(:follower, section: section_disabled, student_user: student, user: teacher)}
+      let!(:follower_enabled) {create(:follower, section: section_enabled, student_user: student, user: teacher)}
+
+      it 'returns ENABLED' do
+        _(student.ai_chat_access_level).must_equal Section::AI_CHAT_ACCESS_LEVELS[:ENABLED]
+      end
+    end
+  end
+
+  describe '#can_change_own_user_type?' do
+    subject(:can_change_own_user_type?) {user.can_change_own_user_type?}
+
+    context 'when user is a student' do
+      context 'when user has a personal account' do
+        context 'with password' do
+          let(:user) {create(:student)}
+
+          it 'can change own user type regardless of age' do
+            _can_change_own_user_type?.must_equal true
+          end
+        end
+
+        context 'when user is sponsored (cannot edit email)' do
+          let(:user) {create(:student, :sponsored)}
+
+          it 'cannot change own user type' do
+            expect(Policies::User).not_to receive(:personal_account?)
+            _can_change_own_user_type?.must_equal false
+          end
+        end
+      end
+
+      context 'when user has a school-owned account' do
+        context 'when age is < 21' do
+          let(:user) {create(:student, :in_google_section, birthday: 18.years.ago)}
+
+          it 'cannot change own user type' do
+            expect(Policies::User).to receive(:personal_account?).with(user).and_return(false)
+            _can_change_own_user_type?.must_equal false
+          end
+        end
+
+        context 'when age is >= 21' do
+          let(:user) {create(:student, :in_google_section, birthday: 21.years.ago)}
+
+          it 'can change own user type' do
+            expect(Policies::User).to receive(:personal_account?).with(user).and_return(false)
+            _can_change_own_user_type?.must_equal true
+          end
+        end
+      end
+    end
+
+    context 'when user is a teacher' do
+      context 'with no sections' do
+        let(:user) {create(:teacher)}
+
+        it 'can change own user type' do
+          _can_change_own_user_type?.must_equal true
+        end
+      end
+
+      context 'with sections' do
+        let(:user) {create(:teacher)}
+
+        before do
+          create(:section, user: user)
+        end
+
+        it 'cannot change own user type' do
+          _can_change_own_user_type?.must_equal false
+        end
       end
     end
   end

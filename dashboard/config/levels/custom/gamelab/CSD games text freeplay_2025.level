@@ -90,6 +90,7 @@
     "bubble_choice_description": "Use what you've learned to create a scene that represents your favorite quote or saying. ",
     "validation_enabled": "false",
     "start_blocks": "//1) Add sprites or draw a scene that represents your favorite quote or saying.\r\n//2) Add the text of your quote or saying to your scene.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

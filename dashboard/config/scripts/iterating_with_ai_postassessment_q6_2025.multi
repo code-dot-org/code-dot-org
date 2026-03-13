@@ -1,0 +1,16 @@
+name 'iterating-with-ai-postassessment-q6_2025'
+
+question 'Why is it considered a "trust" issue if a data dashboard shows a completely blank screen when no results match a search?'
+
+right 'The user might assume the app is broken or frozen rather than knowing there are simply no matches.'
+wrong 'Blank screens use more battery power on mobile devices.'
+wrong 'AI tools cannot read blank screens to help the user.'
+wrong 'Horizontal scrolling is impossible on a blank screen.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 4
+
+Transparency builds trust. Showing an "empty state" message (e.g., "0 items found") confirms the app is working and that the user's search was processed correctly.
+MARKDOWN

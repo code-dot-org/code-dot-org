@@ -57,6 +57,7 @@
     "bubble_choice_description": "Add images to each of your feature pages",
     "thumbnail_url": "https://images.code.org/01e79bfe70248a82368f2c145ef0e36f-image-1617977812468.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

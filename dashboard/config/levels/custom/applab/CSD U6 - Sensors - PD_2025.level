@@ -107,6 +107,7 @@
     "thumbnail_url": "https://images.code.org/de73a7386535d1d98703fc3e1b2dbd7c-image-1649455884333.png",
     "start_blocks": "//1) Set the soundSensor scale to match the height of the app screen\r\n\r\n//2) Create an event to continuously check the soundSensor\r\n//3) Update the button's height to match the soundSensor value",
     "encrypted_examples": "6xYUNTFX9BMu8/87mTEa3jVvOlEVHlf7WNaGEfvQbkNTvxhp9XpkCfWNm+Sh\n1COiP0oh3LTgio39uVIiRh4ogA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

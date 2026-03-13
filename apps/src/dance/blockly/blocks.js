@@ -1,8 +1,15 @@
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import FunctionEditor from '@cdo/apps/blockly/addons/functionEditor';
-import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import {BlockStyles} from '@cdo/apps/blockly/constants';
+import {registerCustomProcedureBlocks} from '@cdo/apps/blockly/utils';
 import i18n from '@cdo/locale';
 
 import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
+import {GENERATED_DANCER_STORAGE_KEY} from '../ai/constants';
 import {GENERATED_DANCER} from '../constants';
 import {resolveDancerAssets} from '../lottie/LottieDancerUtils';
 
@@ -26,6 +33,17 @@ const limitedColours = [
   '#00ff88', // LIME
 ];
 
+function getGeneratedDancerHeadUrl() {
+  // We avoid using the head of the default dancer as it a simple gray ellipse
+  // which doesn't "read" as a dancer.
+  let headUrl = '/blockly/media/skins/dance/default_dancer.png';
+  if (sessionStorage.getItem(GENERATED_DANCER_STORAGE_KEY)) {
+    const {urls} = resolveDancerAssets({sourceTag: 'blockly'});
+    headUrl = urls.headUrl;
+  }
+  return headUrl;
+}
+
 const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
@@ -36,7 +54,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldVariable(
+          new CdoFieldVariable(
             null,
             null,
             null,
@@ -58,10 +76,7 @@ const customInputTypes = {
       };
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldColour('#ff0000', undefined, options),
-          'VAL'
-        );
+        .appendField(new CdoFieldColour('#ff0000', undefined, options), 'VAL');
     },
     generateCode(block, arg) {
       return `'${block.getFieldValue(arg.name)}'`;
@@ -88,15 +103,14 @@ const customInputTypes = {
           name = JSON.parse(name);
         } catch {}
         if (name === GENERATED_DANCER) {
-          const {headUrl} = resolveDancerAssets({sourceTag: 'blockly'});
-          return [headUrl, option];
+          return [getGeneratedDancerHeadUrl(), option];
         }
         return [`/blockly/media/skins/dance/${name.toLowerCase()}.png`, option];
       });
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(options, 40, 40),
+          new CdoFieldImageDropdown(options, 40, 40),
           inputConfig.name
         );
     },
@@ -104,12 +118,29 @@ const customInputTypes = {
       return block.getFieldValue(arg.name);
     },
   },
+  generatedDancerImage: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new CdoFieldImage(
+            [[getGeneratedDancerHeadUrl(), GENERATED_DANCER]],
+            40,
+            40
+          ),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      return `"${GENERATED_DANCER}"`;
+    },
+  },
 };
 
 export default {
   customInputTypes,
   install(blockly) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
+    registerCustomProcedureBlocks();
     // Legacy style block definitions :(
     const generator = blockly.getGenerator();
 
@@ -137,7 +168,7 @@ export default {
     Blockly.Blocks.sprite_variables_get = {
       // Variable getter.
       init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
@@ -146,7 +177,7 @@ export default {
           .appendField(
             Blockly.disableVariableEditing
               ? fieldLabel
-              : new Blockly.FieldVariable(
+              : new CdoFieldVariable(
                   Blockly.Msg.VARIABLES_SET_ITEM,
                   null,
                   null,
@@ -156,7 +187,7 @@ export default {
             'VAR'
           )
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       getVars: function () {
@@ -166,7 +197,7 @@ export default {
       },
       renameVar: function (oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
@@ -184,7 +215,7 @@ export default {
 
     Blockly.Blocks.sprite_parameter_get = {
       init() {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
@@ -192,7 +223,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+        this.setOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
       },
       renameVar(oldName, newName) {
@@ -207,22 +238,18 @@ export default {
 
     Blockly.Blocks.gamelab_behavior_get = {
       init() {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+        var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.BEHAVIOR,
-          BlockStyles.BEHAVIOR
-        );
+        this.setStyle(BlockStyles.BEHAVIOR);
         const mainTitle = this.appendDummyInput()
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
 
         if (Blockly.useModalFunctionEditor) {
           var editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-          Blockly.cdoUtils.bindBrowserEvent(
+          Blockly.browserEvents.bind(
             editLabel.fieldGroup_,
             'mousedown',
             this,
@@ -231,7 +258,7 @@ export default {
           mainTitle.appendField(editLabel);
         }
 
-        this.setStrictOutput(true, Blockly.BlockValueType.BEHAVIOR);
+        this.setOutput(true, Blockly.BlockValueType.BEHAVIOR);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
         this.currentParameterNames_ = [];
       },
@@ -249,13 +276,13 @@ export default {
 
       renameVar(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 
       renameProcedure(oldName, newName) {
         if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
+          this.setFieldValue(newName, 'VAR');
         }
       },
 

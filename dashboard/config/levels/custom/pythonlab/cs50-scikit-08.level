@@ -1,0 +1,42 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2026-02-18T16:56:35.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "ai_tutor_available": "true",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "enable_micro_bit": "false",
+    "widget_view": "false",
+    "widget_view_allow_show_code": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "# CIW AI Associate Standards: 3.7 (Search Algorithms) & 3.13 (Informed vs Uninformed Search)\n# Standard Descriptions:\n#   3.7: Explain search algorithms and operators commonly used in AI.\n#   3.13: Identify the differences between informed and uninformed search techniques.\n#\n# Rationale: Training a model is only half the battle. Often, we need to \"tune\" \n# the settings (hyperparameters) to get the best performance. This tutorial \n# introduces GridSearchCV, which performs a systematic search to find the \n# optimal configuration.\n\n\"\"\"\nWelcome! Imagine you are baking a cake. You have a recipe, but you don't know \nthe perfect temperature or baking time. You could guess... or you could try \nevery combination!\n\nIn AI, this is called \"Hyperparameter Tuning\". We test many different settings \nto find the one that gives the best result.\n\"\"\"\n\nfrom sklearn.datasets import load_iris\nfrom sklearn.model_selection import train_test_split, GridSearchCV\nfrom sklearn.neighbors import KNeighborsClassifier\nimport matplotlib.pyplot as plt\n\n# --- LOAD DATA ---\niris = load_iris()\nX, y = iris.data, iris.target\n\nX_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)\n\n# --- PART 1: GUESSING ---\nprint(\"--- Part 1: Guessing Parameters ---\")\n# Let's try k=5 neighbors. Is it the best? Who knows!\nknn = KNeighborsClassifier(n_neighbors=5)\nknn.fit(X_train, y_train)\nscore = knn.score(X_test, y_test)\nprint(f\"Accuracy with k=5: {score:.2%}\")\n\n# --- PART 2: GRID SEARCH (Systematic Search) ---\nprint(\"--- Part 2: Grid Search ---\")\n# Instead of guessing, we define a \"grid\" of options.\n# We want to test 'n_neighbors' from 1 to 30.\n# We also want to test 'weights': 'uniform' vs 'distance'.\nparam_grid = {\n    'n_neighbors': list(range(1, 31)),\n    'weights': ['uniform', 'distance']\n}\n\n# We create a GridSearchCV object.\n# It will train a model for EVERY combination in the grid!\n# cv=5 means it uses 5-fold cross-validation for each setting.\ngrid_search = GridSearchCV(KNeighborsClassifier(), param_grid, cv=5)\n\nprint(\"Searching for the best parameters... (this might take a second)\")\ngrid_search.fit(X_train, y_train)\n\n# --- RESULTS ---\nprint(f\"\\nBest Parameters Found: {grid_search.best_params_}\")\nprint(f\"Best Cross-Validation Score: {grid_search.best_score_:.2%}\")\n\n# We can even use the best model directly to predict!\nbest_model = grid_search.best_estimator_\ntest_score = best_model.score(X_test, y_test)\nprint(f\"Test Set Accuracy with Best Model: {test_score:.2%}\")\n\n\"\"\"\n--- YOUR TURN ---\nWe've set up a Support Vector Machine (SVC) for you. \nSVCs have a parameter called 'C' (Regularization) and 'kernel' (Shape of boundary).\n\n1. Create a parameter grid for 'C': [0.1, 1, 10, 100]\n2. Create a parameter grid for 'kernel': ['linear', 'rbf']\n3. Run a GridSearchCV to find the best combination.\n\"\"\"\n\n# STARTING CODE FOR STUDENT:\nfrom sklearn.svm import SVC\n\n# TODO: Define the parameter grid\n# param_grid_svc = { ... }\n\n# TODO: Create GridSearchCV with SVC() and your grid\n# grid_svc = ...\n\n# TODO: Fit the grid search to X_train and y_train\n# grid_svc.fit(...)\n\n# TODO: Print the best parameters!\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "encrypted_exemplar_sources": "A3vaHWcrNLyiKjVtNgHDFTDG6jyYgtI/CEUE/82dEkG4hlI8OLsdjJD0In8S\n03BB+jPkGgyYB0/9C3zqHMHEFpKeCsugYbpGMxzBNwrd7qASagJaFzMnVUyM\n2TXS7Hau9lj7JpZIHXn9fmxXRRANWVphwnZo6HoNTWDkEs+hEmIfUh2rfXPV\nF4LROGPHpAxX3clHs/DdCFaXrIc1sQJUOve9z2paboR0l5YG7zEzeqOYbBL0\n2VCYga/yxapwAuYF2OV0/1hpIRhCXY8v1QLFmV0ywmWswH+/HhUfd5PwCFbM\ng9B6V0i7qXWgE+jtjHm9H0aAnc3vkcfesAMqR9GsCu6uBPRUnultWJXgFyYj\nV+yM3VbdnlD5wN74L7WFCSL9Ue/pomge5Hdtum/1lHx/k/Eqb0nB2gdw6Dt8\nzGiTLoE2DeYWzb0liMU8zeOD5MXvUgmk0J9VIHW7zvKSOsCGPfZ+zFVJA/zJ\nq8TC/aH1xPjDr0o+BExoVxND9SRAB8xDJgqQqqqT3E+0NC2p4uyY6PVi0Xzq\njZYT51QTQlwmIHZZT0DQfytoSTkgkrcUik/+P0pPg6eJPSjvibhh9wEF8MX1\n/nYW1zzuArIPLttilOvKKeEATVN7Oco/wUlbg3DuEg1Efjhv8yOV+T6pdEWu\n1CSsZaKr/AwjDh5j53wQYPP9qZuZ2gPw/hgV2r/x7wXqfKt9tsJ5T/lNpE37\nlCAu62014mO5Tp8L3ohT9V59Q2is1wTKTd1x7+a+VAU/uSsZT8YKko7Qqi2h\nwTgzBuMv/qpVlUyI+MARlg1S4Ir4PORZAQC8XCCOcZ73YCESgSyin/TlgD2f\nycE95LjNPndSHd/Cn6zdLDnbX4N67RYeH9dfE8kNYJonu6eNXKu9GoA5K3Ri\njPgVvgrKpK12Yi9ChtQsMsNkxp+ZhOAStlbWJf8pyN8SQAySXAk9LIBFm/iM\n0MxDr8QxtBBvkMWbWaLOdNIMoDIYp47+kWObMwcJqSuAEKKdyMTzh5nOhtFP\nXyyvm6WBT39i27ylXdFBOE5B/Se7OzVOLh0NmMy545F8gQDihPmruNqvttXv\nTx/ETuPE2GxBEPrpKnZCSm5Zm8zCcXs4+sBQKT+Wjyn4rPxe/dUqqjTuPMvC\nOTgf7RS1Rr1wyysfdXqakSS4Xwp8tDak6mkArTgs0r+lAkzkEafSdnflMdba\nvnxZ6YzWau4H9zwW2XQI2nHSQT+EXquNwZHRlkktG/wZwT6o6YvNihPH85Gs\nG2jdFV6DBmLd5UQ/pu2pubkDFD93ipfs0zhdQLu+RC1OeELauajaqPfHo/6n\nA3X89ciyR04rnbFDe6x0iY/dPahdS/bmaIeNMx4e2dOhuSnOuyCpQVeQErEV\n3AGv4H1uUTRjyTdURLbX3l4my54vmWBLx9OHTuHdNfjDzNl3/eeOyi+Yn39L\nq3k6Jo3UB24Xf+NljKVYgYxNsp9X8Nxok+7CwyLEzihxugzyeAYhSPA21s1V\nPblWr4m6qBYe4sCjQf+A35J4OzFAbMO4qMNNfPSqj/tQeeDoczDincnS4UY6\nKoySoJXUeyFMDnwl4OxCZQiDfy/EeORmvB8IOx0pKOCtOjX+6v6SNfQdx7XE\nNHxdQYFYgHDuzADDBuDQ0LXz955cbrOQDSfbvoks/6Nm\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-18T16:56:35.057+00:00\",\"changed\":[\"cloned from \\\"cs50-scikit-07\\\"\"],\"cloned_from\":\"cs50-scikit-07\"},{\"changed_at\":\"2026-02-18 16:56:38 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:25:47 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-02-18 17:25:55 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>

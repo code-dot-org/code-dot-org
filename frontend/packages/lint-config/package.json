@@ -28,10 +28,11 @@
   "prettier": "./prettier/index.mjs",
   "devDependencies": {
     "@eslint/js": "^9.15.0",
-    "@tsconfig/node22": "^22.0.0",
+    "@tsconfig/node22": "^22.0.4",
+    "@tsconfig/vite-react": "^7.0.2",
     "eslint": "^9.15.0",
-    "eslint-import-resolver-typescript": "^3.6.3",
-    "eslint-plugin-import-x": "^4.4.3",
+    "eslint-import-resolver-typescript": "^4.4.0",
+    "eslint-plugin-import-x": "^4.16.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.2",
     "globals": "^15.12.0",
@@ -39,6 +40,6 @@
     "prettier-plugin-packagejson": "^2.5.5",
     "stylelint": "^16.14.1",
     "stylelint-config-standard-scss": "^14.0.0",
-    "typescript-eslint": "^8.15.0"
+    "typescript-eslint": "^8.48.1"
   }
 }

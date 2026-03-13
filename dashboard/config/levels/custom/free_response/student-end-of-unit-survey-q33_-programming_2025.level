@@ -15,7 +15,8 @@
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "name_suffix": "_-programming_2025"
+    "name_suffix": "_-programming_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-21T17:07:18.249+00:00\",\"changed\":[\"cloned from \\\"student-end-of-unit-survey-q33\\\"\"],\"cloned_from\":\"student-end-of-unit-survey-q33\"}]",

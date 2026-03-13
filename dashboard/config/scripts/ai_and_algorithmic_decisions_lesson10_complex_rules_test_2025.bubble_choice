@@ -1,0 +1,17 @@
+name 'ai-and-algorithmic-decisions-lesson10-complex-rules-test-2025'
+display_name 'Complex Rules with ! + && + ||'
+description 'Choose a scenario, then **Plan → Code → Test**.
+
+1. **Plan**: Write your rule in plain English and mark where `!`, `&&`, and `||` fit.
+
+2. **Code**: Implement your rule in `eligible()` using all three operators with parentheses.
+
+3. **Test**: Try each row from your table. Fix mismatches and explain any rule changes.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson10-level3a-test-2025'
+level 'ai-and-algorithmic-decisions-lesson10-level3b-test-2025'
+level 'ai-and-algorithmic-decisions-lesson10-level3c-test-2025'
+level 'ai-and-algorithmic-decisions-lesson10-level3d-test-2025'
+
+uses_lab2

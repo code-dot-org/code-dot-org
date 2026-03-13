@@ -128,9 +128,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource, UserLevel, UserScript) do
       assert_does_not_create(Activity) do
         post :milestone, params: @milestone_params
@@ -155,9 +152,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone sets unit_group_id from course_id parameter" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource, UserLevel, UserScript) do
       assert_does_not_create(Activity) do
         post :milestone, params: @milestone_params
@@ -279,9 +273,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with existing userlevel with script" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     UserScript.create(user: @user, script: @script, unit_group: @script.get_original_unit_group)
     UserLevel.create(level: @script_level.level, user: @user, script: @script_level.script)
 
@@ -296,9 +287,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "logged in milestone with too large program does not crash" do
     # the column that we store the program is 20000 bytes, don't crash if we fail to save because the field is too large
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(UserLevel, UserScript) do
       assert_does_not_create(LevelSource, Activity) do
@@ -323,9 +311,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with panda does not crash" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(UserLevel, UserScript, LevelSource) do
       assert_does_not_create(Activity) do
         post :milestone, params: @milestone_params.merge(program: "<hey>#{panda_panda}</hey>")
@@ -334,14 +319,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal_expected_keys build_expected_response, JSON.parse(@response.body)
-  end
-
-  # Expect the controller to invoke "milestone_logger.info()" with a
-  # string that matches given regular expression.
-  def expect_controller_logs_milestone_regexp(regexp)
-    @controller.send(:milestone_logger).expects(:info).with do |log_string|
-      log_string !~ regexp
-    end
   end
 
   test "logged in milestone with messed up email" do
@@ -353,9 +330,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource, UserLevel) do
       assert_does_not_create(Activity) do
         post :milestone,
@@ -368,9 +342,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image not passing" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource, UserLevel) do
       assert_does_not_create(Activity) do
         post :milestone,
@@ -389,9 +360,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with image" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     expect_s3_upload
 
     original_user_level_count = UserLevel.count
@@ -421,9 +389,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   end
 
   test "logged in milestone with existing level source and level source image" do
-    # do all the logging
-    @controller.expects :log_milestone
-
     program = "<whatever>"
 
     level_source = LevelSource.find_identical_or_create(@script_level.level, program)
@@ -557,9 +522,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # catch that exception and just run it again (the second time we
     # will get the 'existing' object)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     # some Mocha shenanigans to simulate throwing a duplicate entry
     # error and then succeeding by returning the existing userlevel
     # (assumes that the only call to first_or_initialize when handling
@@ -637,9 +599,6 @@ class ActivitiesControllerTest < ActionController::TestCase
   test "anonymous milestone starting with empty session saves progress in section" do
     sign_out @user
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
         post :milestone, params: @milestone_params.merge(user_id: 0)
@@ -660,9 +619,6 @@ class ActivitiesControllerTest < ActionController::TestCase
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
 
-    # do all the logging
-    @controller.expects :log_milestone
-
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
         post :milestone, params: @milestone_params.merge(user_id: 0)
@@ -679,9 +635,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
   test "anonymous milestone not passing" do
     sign_out @user
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     assert_creates(LevelSource) do
       assert_does_not_create(Activity, UserLevel) do
@@ -705,9 +658,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     expect_s3_upload
 
@@ -734,9 +684,6 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # set up existing session
     client_state.set_level_progress(@script_level_prev, 50)
-
-    # do all the logging
-    @controller.expects :log_milestone
 
     expect_s3_upload_failure
 

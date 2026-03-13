@@ -32,6 +32,9 @@ Parameters:
   # Typically in the form: `cluster-[random-AWS-assigned-string].[region].rds.amazonaws.com` without leading dot.
   RDSClusterEndpointRootDomain:
     Type: String
+  ProductionAuroraClusterARN:
+    Type: String
+    Description: The ARN of the production Aurora cluster so we can authorize it as a Redshift source for Zero-ETL.
   ReportingCluster:
     Type: String
   RedshiftDatabase:
@@ -71,21 +74,43 @@ Resources:
       MasterUsername: {Ref: RedshiftAdminUsername}
       MasterUserPassword: {Ref: RedshiftAdminPassword}
       NodeType: dc1.large
-      # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
-      # to start at least 1 hour before the export begins (it typically takes 15 minutes).
-      PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
+      # This maintenance can interfere with analytics batch routines that execute a sequence of long duration SQL
+      # statements over an extended period, such as the daily export from MySQL to Redshift by Database Migration
+      # Service or the daily dbt model runs. Currently, those start at 23:00 UTC, so schedule Maintenance to end by then.
+      PreferredMaintenanceWindow: 'Mon:22:30-Mon:23:00'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
+#  Redshift does not yet support configuring a Resource Policy on a Provisioned Cluster. We configure this one policy
+#  manually.
+#  TODO: Move our Redshift datawarehouse to a Serverless and/or implement this via CloudFormation when Provisioned
+#  cluster Resources are supported.
+#  RedshiftZeroETLResourcePolicy:
+#    Type: AWS::RedshiftServerless::ResourcePolicy
+#    Properties:
+#      ResourceArn: !GetAtt Tableau.ClusterNamespaceArn
+#      Policy:
+#        Version: "2012-10-17"
+#        Statement:
+#          - Sid: AllowZeroETLFromProductionAurora
+#            Effect: Allow
+#            Principal:
+#              Service: "redshift.amazonaws.com"
+#            Action:
+#              - "redshift:AuthorizeInboundIntegration"
+#            Resource: !GetAtt Tableau.ClusterNamespaceArn
+#            Condition:
+#              ArnEquals:
+#                "redshift:SourceArn": !Ref ProductionAuroraClusterARN
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
       ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
-      EngineVersion: 3.5.1
+      EngineVersion: 3.6.1
       MultiAZ: true
       PubliclyAccessible: false
-      ReplicationInstanceClass: dms.r4.4xlarge
+      ReplicationInstanceClass: dms.r5.4xlarge
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
       # This maintenance can interfere with the daily export from MySQL to Redshift which starts at 02:00 UTC, so set it
@@ -119,19 +144,21 @@ Resources:
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
       MySqlSettings:
-        # Initialize MySQL client to execute SELECT statements with long execution times that fetch large result sets
-        # without negatively impacting transaction isolation on the cluster and increase several client connection
-        # timeouts to ensure that pauses during the export don't result in prematurely terminated connections.
-        # The first three settings are the same as what the Reporting RDS Proxy uses:
+        # Initialize MySQL client to execute SELECT statements without negatively impacting transaction isolation on the
+        # cluster and increase several client connection timeouts to ensure that pauses during the export don't result
+        # in prematurely terminated connections. The first three settings are the same as what the Reporting RDS Proxy uses:
         # https://github.com/code-dot-org/code-dot-org/blob/5ffbfc6909a6d1b4e97497db247aeb5f1eba0847/aws/cloudformation/components/database.yml.erb#L265
+        # Use extended timeouts (86400s / 24h) to prevent server-side disconnects because the DMS ODBC driver reconnects
+        # without executing the AfterConnectScript.
         AfterConnectScript:  >-
           SET SESSION aurora_read_replica_read_committed=ON;
           SET SESSION transaction_isolation="READ-COMMITTED";
           SET SESSION max_execution_time = 0;
-          SET SESSION net_read_timeout=300;
-          SET SESSION net_write_timeout=300;
-          SET SESSION wait_timeout = 300;
-          SET SESSION interactive_timeout = 300;
+          SET SESSION autocommit=1;
+          SET SESSION net_read_timeout=86400;
+          SET SESSION net_write_timeout=86400;
+          SET SESSION wait_timeout = 86400;
+          SET SESSION interactive_timeout = 86400;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
@@ -733,9 +760,17 @@ Resources:
               Type: string
             - Name: httprequest
               Type: struct<clientip:string,country:string,headers:array<struct<name:string,value:string>>,uri:string,args:string,httpmethod:string,requestid:string>
+            - Name: nonterminatingmatchingrules
+              Type: array<struct<ruleid:string,action:string,rulematchdetails:array<struct<conditiontype:string,sensitivitylevel:string,location:string,matchedelements:array<string>>>,captcharesponse:struct<responsecode:int,solvetimestamp:bigint>,challengeresponse:struct<responsecode:int,solvetimestamp:bigint>>>
             - Name: ja3fingerprint
               Type: string
           OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
           InputFormat: org.apache.hadoop.mapred.TextInputFormat
           SerdeInfo:
             SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
+Outputs:
+  RedshiftClusterNamespace:
+    Value: !GetAtt Tableau.ClusterNamespaceArn
+    Description: "Redshift Cluster Namespace for Zero-ETL targeting."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"

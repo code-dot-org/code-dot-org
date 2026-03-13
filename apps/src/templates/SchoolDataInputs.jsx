@@ -1,10 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyTwoText,
-  Heading2,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
@@ -105,8 +101,10 @@ export default function SchoolDataInputs({
     <div id={SCHOOL_INFO_ID} className={computedStyleClass}>
       {includeHeaders && (
         <div className={style.headerContainer}>
-          <Heading2>{i18n.censusHeading()}</Heading2>
-          <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
+          <Typography variant="h2">{i18n.censusHeading()}</Typography>
+          <Typography variant="body2">
+            {i18n.schoolInfoInterstitialTitle()}
+          </Typography>
         </div>
       )}
       <div className={style.inputContainer}>
@@ -168,17 +166,19 @@ export default function SchoolDataInputs({
               dropdownTextThickness="thin"
             />
             {showNoSchoolSettingButton && (
-              <Button
-                text={i18n.noSchoolSetting()}
+              <MuiButton
+                variant="text"
+                color="primary"
+                size="small"
                 disabled={!schoolZipIsValid}
-                color={'purple'}
-                type={'tertiary'}
-                size={'s'}
                 onClick={e => {
                   e.preventDefault();
                   handleSchoolChange(NonSchoolOptions.NO_SCHOOL_SETTING);
                 }}
-              />
+                type="button"
+              >
+                {i18n.noSchoolSetting()}
+              </MuiButton>
             )}
             {schoolsLoading && (
               <FontAwesomeV6Icon iconName="spinner" animationType="spin" />
@@ -192,15 +192,17 @@ export default function SchoolDataInputs({
               schoolName={schoolName}
               setSchoolName={setSchoolName}
             />
-            <Button
-              text={i18n.returnToResults()}
-              color={'purple'}
-              type={'tertiary'}
-              size={'s'}
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               onClick={() => {
                 handleSchoolChange(NonSchoolOptions.SELECT_A_SCHOOL);
               }}
-            />
+              type="button"
+            >
+              {i18n.returnToResults()}
+            </MuiButton>
           </div>
         )}
       </div>

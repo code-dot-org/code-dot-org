@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Unlocking the Door\r\nBased on this flowchart logic, add to the start code to complete the program. \r\n- If the player has a key, unlock the door.\r\n- If not, ask \"Do you want to search for the key?\"\r\n    - \"yes\" → \"You find the key!\"\r\n    - \"no\" → \"You remain trapped.\"",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

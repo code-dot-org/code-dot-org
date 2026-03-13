@@ -1,0 +1,9 @@
+name 'iterating-with-ai-lesson2-level5-test-2025'
+display_name 'Add Counted Repetition '
+description ''
+
+sublevels
+level 'iterating-with-ai-lesson2-level6b-test-2025'
+level 'iterating-with-ai-lesson2-level6c-test-2025'
+
+uses_lab2

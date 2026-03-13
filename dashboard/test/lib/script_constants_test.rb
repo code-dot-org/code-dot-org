@@ -3,12 +3,6 @@ require 'test_helper'
 class ScriptConstantsTest < ActiveSupport::TestCase
   def test_csf_next_course_recommendation
     {
-      "course1" => "course2",
-      "course2" => "course3",
-      "course3" => "course4",
-      "accelerated" => "course4",
-      "course4" => "applab-intro",
-
       "coursea-2019" => "courseb-2019",
       "courseb-2019" => "coursec-2019",
       "coursec-2019" => "coursed-2019",

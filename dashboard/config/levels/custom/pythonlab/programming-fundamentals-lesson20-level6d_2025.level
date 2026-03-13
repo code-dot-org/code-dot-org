@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do this:\r\nThis code is missing a condition to check for.    \r\n- Read the code carefully and press Run. \r\n- Use the console's error message to hunt for the bug. \r\n- Fix the bug. \r\n",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

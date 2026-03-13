@@ -1,4 +1,10 @@
 #!/usr/bin/env ruby
+
+# This script generates nothing but RestClient::RequestFailed errors when syncing.
+# It should not be run until these errors are fixed.
+# See: https://codedotorg.atlassian.net/browse/ACQ-3158
+exit
+
 # The current version of this script should be run periodically to sync certain
 # JotForm-based forms that don't have placeholders.  That is, it works for forms
 # filled out directly by end-users without seeing them embedded via our site.

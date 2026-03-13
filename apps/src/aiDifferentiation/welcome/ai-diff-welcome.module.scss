@@ -232,6 +232,8 @@
   align-items: center;
   margin: 0 36px 16px 36px;
   text-align: center;
+  overflow: hidden;
+  padding: 0 4px;
 
   & h3 {
     margin-bottom: 4px;

@@ -10,6 +10,13 @@ module ScriptConstants
   ALGEBRA_NAME = 'algebra'.freeze
   AIML_2021_NAME = 'aiml-2021'.freeze
 
+  # Deprecated course constants (kept for deprecated course page rendering)
+  COURSE1_NAME = 'course1'.freeze
+  COURSE2_NAME = 'course2'.freeze
+  COURSE3_NAME = 'course3'.freeze
+  COURSE4_NAME = 'course4'.freeze
+  TWENTY_HOUR_NAME = '20-hour'.freeze
+
   CSP_UNIT1_NAME = 'cspunit1'.freeze
   CSP_UNIT2_NAME = 'cspunit2'.freeze
   CSP_UNIT3_NAME = 'cspunit3'.freeze
@@ -116,6 +123,7 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      MIX_MOVE_AI_2025 = 'mix-move-ai-2025'.freeze, # 2025 hour of ai
       MUSIC_JAM_2024 = 'music-jam-2024'.freeze, # 2024 hour of code
       DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
@@ -135,6 +143,7 @@ module ScriptConstants
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
       MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       MINECRAFT_SHOW_NAME = 'show-must-go-on'.freeze,
+      MINECRAFT_NIGHT_NAME = 'firstnight-mc'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -154,12 +163,6 @@ module ScriptConstants
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
       HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
       AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
-    ],
-    csf_international: [
-      COURSE1_NAME = 'course1'.freeze,
-      COURSE2_NAME = 'course2'.freeze,
-      COURSE3_NAME = 'course3'.freeze,
-      COURSE4_NAME = 'course4'.freeze,
     ],
     csd_2023: [
       CSD1_2023_NAME = 'csd1-2023'.freeze,
@@ -222,9 +225,6 @@ module ScriptConstants
       CSD5_NAME = 'csd5-2017'.freeze,
       CSD6_NAME = 'csd6-2017'.freeze,
     ],
-    twenty_hour: [
-      TWENTY_HOUR_NAME = '20-hour'.freeze,
-    ],
     flappy: [FLAPPY_NAME],
     minecraft: [
       MINECRAFT_NAME,
@@ -233,6 +233,7 @@ module ScriptConstants
       MINECRAFT_AQUATIC_NAME,
       MINECRAFT_AI_NAME,
       MINECRAFT_SHOW_NAME,
+      MINECRAFT_NIGHT_NAME,
     ],
   }.freeze
 
@@ -353,10 +354,8 @@ module ScriptConstants
     *CATEGORIES[:csf_2021],
     *CATEGORIES[:csf_2022],
     *CATEGORIES[:csf_2023],
-    *CATEGORIES[:csf_international],
 
     *CATEGORIES[:hoc],
-    *CATEGORIES[:twenty_hour],
     *ADDITIONAL_I18N_UNITS,
     *TRANSLATEABLE_CSC_UNITS,
     *TRANSLATABLE_PD_PL_UNITS,
@@ -364,17 +363,6 @@ module ScriptConstants
   ].freeze
 
   def self.csf_next_course_recommendation(course_name)
-    # These course names without years in them should be mapped statically to their recommendation.
-    static_mapping = {
-      "course1" => "course2",
-      "course2" => "course3",
-      "course3" => "course4",
-      "accelerated" => "course4",
-      "course4" => "applab-intro"
-    }
-
-    return static_mapping[course_name] if static_mapping.include?(course_name)
-
     # For CSF courses with years in their name, separate into prefix and year. Determine the recommended
     # next prefix based on constant mapping, then add the year to the recommended prefix.
     # Example: coursea-2019 becomes prefix: coursea, year: 2019.

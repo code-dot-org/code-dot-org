@@ -42,14 +42,14 @@ class FilesApi < Sinatra::Base
     return true if owns_channel?(encrypted_channel_id) || admin? || has_permission?('project_validator')
 
     # teachers can see abusive assets of their students
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
 
     teaches_student?(owner_user_id)
   end
 
   def codeprojects_can_view?(encrypted_channel_id)
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
 
     # Attempt to find active project in database. This will raise Projects::NotFound if
     # no active project exists, which is handled below.
@@ -95,7 +95,7 @@ class FilesApi < Sinatra::Base
   def record_event(quota_event_type, quota_type, encrypted_channel_id)
     return unless CDO.newrelic_logging
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     event_details = {
       quota_type: quota_type,
@@ -237,7 +237,13 @@ class FilesApi < Sinatra::Base
     type = File.extname(filename)
     not_found if type.empty?
     unsupported_media_type unless buckets.allowed_file_type?(type)
-    content_type type
+    type_params = {}
+    # Sinatra does not have a content type for markdown files, so we
+    # add it here.
+    if type == '.md'
+      type_params = {default: 'text/markdown'}
+    end
+    content_type(type, type_params)
 
     # Unless this is hosted by codeprojects.org or is a safely viewable file type,
     # serve all files with Content-Disposition set to attachment so browsers
@@ -283,7 +289,7 @@ class FilesApi < Sinatra::Base
   def should_sanitize_for_under_13?(encrypted_channel_id)
     return false if owns_channel?(encrypted_channel_id)
 
-    owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+    owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
     owner_id = user_id_for_storage_id(owner_storage_id)
     under_13?(owner_id)
   end
@@ -685,7 +691,7 @@ class FilesApi < Sinatra::Base
       versions = get_bucket_impl(endpoint).new.list_versions(encrypted_channel_id, filename, with_comments: request.GET['with_comments'])
       return versions.to_json if owns_channel?(encrypted_channel_id)
 
-      owner_storage_id, _ = storage_decrypt_channel_id(encrypted_channel_id)
+      owner_storage_id, _ = get_storage_id_and_project_id(encrypted_channel_id)
       owner_user_id = user_id_for_storage_id(owner_storage_id)
       return versions.to_json if teaches_student?(owner_user_id)
 
@@ -1065,9 +1071,9 @@ class FilesApi < Sinatra::Base
     content_type_header = request.content_type
 
     # Validate allowed content types
-    unless ['image/png', 'image/jpeg'].include?(content_type_header)
+    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
       status 400
-      return {error: 'Unsupported image type. Only PNG and JPEG files are allowed.'}.to_json
+      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
     # Optionally record the URL for metrics, if passed as a query param.

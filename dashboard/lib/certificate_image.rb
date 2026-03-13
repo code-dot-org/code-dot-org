@@ -286,18 +286,12 @@ class CertificateImage
     image
   end
 
-  def self.accelerated_course?(course)
-    [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
-  end
-
   # assume any unrecognized course name is a hoc course
   def self.hoc_course?(course_name)
     course_type(course_name) == CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.course_type(course_name)
-    return CERTIFICATE_COURSE_TYPES[:ACCELERATED] if accelerated_course?(course_name)
-
     unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course_name)
     course_version = unit_or_unit_group&.get_course_version
     return CERTIFICATE_COURSE_TYPES[:HOC] if course_version&.hoc_or_hoai?
@@ -323,6 +317,8 @@ class CertificateImage
         'MC_Hour_Of_Code_Certificate_Generation_Ai.png'
       when ScriptConstants::MINECRAFT_SHOW_NAME
         'MC_Hour_Of_Code_Certificate_Show.png'
+      when ScriptConstants::MINECRAFT_NIGHT_NAME
+        'MC_Hour_Of_AI_Certificate_First_Night.png'
       else
         'MC_Hour_Of_Code_Certificate.png'
       end
@@ -334,16 +330,14 @@ class CertificateImage
       'MC_Hour_Of_Code_Certificate_mee_timecraft.png'
     elsif course == 'mee_estate'
       'MC_Hour_Of_Code_Certificate_mee_estate.png'
+    elsif course == ScriptConstants::MIX_MOVE_AI_2025
+      'mix_move_hour_of_ai_certificate.png'
     elsif course == ScriptConstants::MUSIC_JAM_2024
       'music_hoc_certificate.png'
     elsif course == ScriptConstants::OCEANS_NAME
       'oceans_hoc_certificate.png'
-    elsif accelerated_course?(course)
-      # The 20-hour course is referred to as "accelerated" throughout the
-      # congrats and certificate pages (see csf_finish_url).
-      '20hours_certificate.jpg'
     elsif course_type == 'hoc'
-      'hour_of_code_certificate.jpg'
+      'hour_of_ai_certificate.png'
     elsif course_type == 'pl'
       'self_paced_pl_certificate.png'
     else

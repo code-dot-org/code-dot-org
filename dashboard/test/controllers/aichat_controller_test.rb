@@ -1,13 +1,13 @@
 require 'test_helper'
 
 class AichatControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
+    section = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ENABLED])
+    section2 = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
     @authorized_student1 = create(:follower, section: section).student_user
+    @authorized_student2 = create(:follower, section: section2).student_user
   end
 
   # *****
@@ -40,8 +40,15 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal json_response['userHasAccess'], false
   end
 
-  test 'GET user_has_access returns true for student of authorized teacher' do
+  test 'GET user_has_access returns true for student of authorized teacher with enabled access' do
     sign_in(@authorized_student1)
+    get :user_has_access, format: :json
+    assert_response :success
+    assert_equal json_response['userHasAccess'], true
+  end
+
+  test 'GET user_has_access returns true for student of authorized teacher with essential_only access' do
+    sign_in(@authorized_student2)
     get :user_has_access, format: :json
     assert_response :success
     assert_equal json_response['userHasAccess'], true

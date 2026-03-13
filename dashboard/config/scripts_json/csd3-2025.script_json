@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-09-30 19:29:00 UTC",
+    "serialized_at": "2025-11-12 23:03:08 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -17656,15 +17656,29 @@
       }
     },
     {
-      "name": "Velocity and the Counter Pattern",
+      "name": "Velocity and the Counter Pattern - Unplugged",
       "url": "https://drive.google.com/file/d/1blEk-rMG-vei9DBrOo6Tk9ctt8lQaJx-/view?usp=sharing",
       "key": "velocity_and_the_counter_pattern",
       "properties": {
         "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "velocity_and_the_counter_pattern"
+      }
+    },
+    {
+      "name": "Velocity and the Counter Pattern - Digital Resource",
+      "url": "https://studio.code.org/docs/concepts/game-lab/velocity-and-the-counter-pattern/",
+      "key": "velocity_and_the_counter_pattern_-_digital_resource",
+      "properties": {
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "velocity_and_the_counter_pattern_-_digital_resource"
       }
     }
   ],
@@ -17715,6 +17729,12 @@
       "seeding_key": {
         "lesson.key": "Complex Sprite Movement",
         "resource.key": "velocity_and_the_counter_pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Complex Sprite Movement",
+        "resource.key": "velocity_and_the_counter_pattern_-_digital_resource"
       }
     },
     {

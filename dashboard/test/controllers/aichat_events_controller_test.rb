@@ -1,15 +1,13 @@
 require 'test_helper'
 
 class AichatEventsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     @authorized_teacher2 = create(:authorized_teacher)
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
+    @section = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
     @authorized_student1 = create(:follower, section: @section).student_user
 
     @level = create(:level)
@@ -39,7 +37,7 @@ class AichatEventsControllerTest < ActionController::TestCase
   end
 
   setup do
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    @controller.stubs(:get_storage_id_and_project_id).returns([123, 456])
   end
 
   # *****
@@ -137,7 +135,19 @@ class AichatEventsControllerTest < ActionController::TestCase
 
   test 'Bad request if required params are not included for chat_history' do
     sign_in(@authorized_teacher1)
-    get :chat_history, params: {studentId: @authorized_student1.id}, as: :json
+    get :chat_history, params: {userId: @authorized_student1.id}, as: :json
+    assert_response :bad_request
+  end
+
+  test 'Bad request if scriptId and channelId are both missing' do
+    sign_in(@authorized_teacher1)
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id}, as: :json
+    assert_response :bad_request
+  end
+
+  test 'Bad request if scriptId is included without a levelId' do
+    sign_in(@authorized_teacher1)
+    get :chat_history, params: {userId: @authorized_student1.id, scriptId: @script.id}, as: :json
     assert_response :bad_request
   end
 
@@ -182,6 +192,53 @@ class AichatEventsControllerTest < ActionController::TestCase
 
     assert_equal chat_event1_response["chatMessageText"], chat_event1_stored["chatMessageText"]
     assert_equal chat_event2_response["chatMessageText"], chat_event2_stored["chatMessageText"]
+  end
+
+  test 'chat_history filters by channelId (project_id) when scriptId is absent' do
+    sign_in(@authorized_teacher1)
+
+    matching_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 456, # matches stubbed get_storage_id_and_project_id
+      aichat_event: {role: 'user', chatMessageText: 'project match', status: 'ok', timestamp: Time.now.to_i}
+    )
+    _non_matching_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 999,
+      aichat_event: {role: 'user', chatMessageText: 'project no match', status: 'ok', timestamp: Time.now.to_i}
+    )
+
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id, channelId: 'test'}, as: :json
+    assert_response :success
+    chat_events_array = json_response
+    assert_equal 1, chat_events_array.length
+    assert_equal matching_event.id, chat_events_array.first['id']
+  end
+
+  test 'chat_history prefers scriptId when both scriptId and channelId are provided' do
+    sign_in(@authorized_teacher1)
+
+    # create a project-specific event that should be ignored when scriptId is provided
+    _project_event = create(
+      :aichat_event,
+      user_id: @authorized_student1.id,
+      level_id: @level.id,
+      project_id: 456,
+      aichat_event: {role: 'user', chatMessageText: 'project event', status: 'ok', timestamp: Time.now.to_i}
+    )
+
+    get :chat_history, params: {userId: @authorized_student1.id, levelId: @level.id, scriptId: @script.id, channelId: 'test'}, as: :json
+    assert_response :success
+    chat_events_array = json_response
+    # should return only the two script-scoped events created in setup_all
+    assert_equal 2, chat_events_array.length
+    returned_ids = chat_events_array.map {|e| e['id']}.sort
+    expected_ids = [@student1_aichat_event1.id, @student1_aichat_event2.id].sort
+    assert_equal expected_ids, returned_ids
   end
 
   # *****

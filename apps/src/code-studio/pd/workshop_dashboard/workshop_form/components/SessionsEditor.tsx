@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import moment from 'moment-timezone';
 import React, {Dispatch, FC, memo, useCallback} from 'react';
 
@@ -57,13 +58,17 @@ export const SessionsEditor: FC<{
         />
       ))}
       <div className={commonStyles.row}>
-        <Button
-          onClick={addSession}
-          iconLeft={{iconName: 'plus'}}
-          type="tertiary"
-          text="Add Date"
+        <MuiButton
+          variant="text"
+          color="primary"
+          size="medium"
           className={styles.addDateButton}
-        />
+          onClick={addSession}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="plus" />}
+        >
+          Add Date
+        </MuiButton>
       </div>
     </>
   );

@@ -10,8 +10,13 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
+import {convertProjectTypeToDisplayName} from '@cdo/apps/lab2/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-import {currentLocation} from '@cdo/apps/utils';
+import {
+  currentLocation,
+  getEnvironment,
+  isProductionEnvironment,
+} from '@cdo/apps/utils';
 
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
@@ -57,13 +62,15 @@ export default class ProjectManager {
   private isShareView: boolean | undefined;
   private thumbnailUrl: string | undefined;
   private thumbnailPngBlob: Blob | undefined;
-  private currentVersionHasComment: boolean = false;
+  private forceNewVersion: boolean = false;
+  private isStandaloneProjectLevel: boolean = false;
 
   constructor({
     sourcesStore,
     channelsStore,
     channelId,
     reduceChannelUpdates,
+    isStandaloneProjectLevel,
     isShareView = false,
     metricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
   }: {
@@ -71,6 +78,7 @@ export default class ProjectManager {
     channelsStore: ChannelsStore;
     channelId: string;
     reduceChannelUpdates: boolean;
+    isStandaloneProjectLevel: boolean;
     isShareView?: boolean;
     metricsReporter?: LabMetricsReporter;
   }) {
@@ -82,6 +90,7 @@ export default class ProjectManager {
     this.forceReloading = false;
     this.metricsReporter = metricsReporter;
     this.isShareView = isShareView;
+    this.isStandaloneProjectLevel = isStandaloneProjectLevel;
   }
 
   getChannelId(): string {
@@ -105,13 +114,14 @@ export default class ProjectManager {
     }
 
     this.lastChannel = channel;
-    await this.initializeCurrentVersionCommentState();
+    await this.initializeForceNewVersionState();
     const abuseScore = await this.channelsStore.getAbuseScore(channel);
     const sharingDisabled = await this.channelsStore.getSharingDisabled(
       channel
     );
     const isTeacherOfProjectOwner =
       await this.channelsStore.getIsTeacherOfProjectOwner(channel);
+    this.setTitleFromChannel(channel);
     return {
       sources,
       channel,
@@ -251,6 +261,25 @@ export default class ProjectManager {
       ) as Channel;
     }
     this.channelToSave.name = name;
+    this.setTitleFromChannel(this.channelToSave);
+    return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
+  }
+
+  async updateChannel(channelUpdates: Partial<Channel>, forceSave = false) {
+    if (this.destroyed || !this.lastChannel) {
+      // If we have already been destroyed or the channel does not exist,
+      // don't attempt to update.
+      return this.getNoopResponseAndSendSaveNoopEvent();
+    }
+    if (!this.channelToSave) {
+      this.channelToSave = JSON.parse(
+        JSON.stringify(this.lastChannel)
+      ) as Channel;
+    }
+    this.channelToSave = {
+      ...this.channelToSave,
+      ...channelUpdates,
+    };
     return await this.enqueueSaveOrSave(forceSave, /* forceNewVersion */ false);
   }
 
@@ -345,31 +374,24 @@ export default class ProjectManager {
     return this.sourcesStore.getCurrentVersionId();
   }
 
-  /**
-   * Check if the current version has a comment associated with it.
-   * This is used to determine if we should force a new version during autosave
-   * to prevent overwriting a version that has a comment.
-   * @returns boolean true if current version has a comment
-   */
-  getCurrentVersionHasComment(): boolean {
-    return this.currentVersionHasComment;
+  getForceNewVersion(): boolean {
+    return this.forceNewVersion;
+  }
+
+  setForceNewVersion(value: boolean): void {
+    this.forceNewVersion = value;
   }
 
   /**
-   * Set whether the current version has a comment.
-   * @param hasComment whether the current version has a comment
+   * Initialize the forceNewVersion value by checking if the current version has a comment.
+   * If the current version has a comment, we set forceNewVersion to true.
+   * This is used to prevent overwriting a version that has a comment.
+   * @returns void
    */
-  setCurrentVersionHasComment(hasComment: boolean): void {
-    this.currentVersionHasComment = hasComment;
-  }
-
-  /**
-   * Initialize the comment state by checking if the current version has a comment.
-   */
-  private async initializeCurrentVersionCommentState(): Promise<void> {
+  private async initializeForceNewVersionState(): Promise<void> {
     const currentVersionId = this.getCurrentVersionId();
     if (!currentVersionId) {
-      this.setCurrentVersionHasComment(false);
+      this.setForceNewVersion(false);
       return;
     }
 
@@ -379,13 +401,13 @@ export default class ProjectManager {
         v => v.versionId === currentVersionId
       );
       const hasComment = !!currentVersion?.comment?.trim();
-      this.setCurrentVersionHasComment(hasComment);
+      this.setForceNewVersion(hasComment);
     } catch (error) {
       // If we can't fetch version list, assume no comment.
       this.metricsReporter.logWarning(
         `Failed to initialize comment state because we couldn't fetch the version list: ${error}`
       );
-      this.setCurrentVersionHasComment(false);
+      this.setForceNewVersion(false);
     }
   }
 
@@ -395,6 +417,16 @@ export default class ProjectManager {
 
   setLastSource(lastSource: ProjectSources) {
     this.lastSource = JSON.stringify(lastSource);
+  }
+
+  getLastSource() {
+    return this.lastSource
+      ? (JSON.parse(this.lastSource) as ProjectSources)
+      : undefined;
+  }
+
+  getLastChannel() {
+    return this.lastChannel;
   }
 
   getShouldCaptureThumbnail() {
@@ -468,7 +500,7 @@ export default class ProjectManager {
           this.channelId,
           this.sourcesToSave,
           this.lastChannel.projectType,
-          forceNewVersion || this.getCurrentVersionHasComment() // Force new version if the last saved version has a comment and sources have changed.
+          forceNewVersion || this.getForceNewVersion()
         );
         if (this.thumbnailPngBlob) {
           await this.saveThumbnail();
@@ -481,16 +513,14 @@ export default class ProjectManager {
         } else {
           errorToReport = new Error('Unknown error occurred');
         }
-        this.onSaveFail('Error saving sources', errorToReport);
+        this.onSaveFail('Error saving sources', errorToReport, 'sources');
         return;
       }
       this.lastSource = JSON.stringify(this.sourcesToSave);
 
-      // If we created a new version (not replacing existing), then we reset the new version to not yet have a comment.
-      // If the user manually saves the version, then the comment is added after the project is saved.
-      // See SaveVersionPanel.tsx.
-      if (forceNewVersion || this.getCurrentVersionHasComment()) {
-        this.setCurrentVersionHasComment(false);
+      // If we created a new version (not replacing existing), then we reset the forceNewVersion to false.
+      if (forceNewVersion || this.getForceNewVersion()) {
+        this.setForceNewVersion(false);
       }
     }
 
@@ -530,7 +560,7 @@ export default class ProjectManager {
       try {
         channelResponse = await this.channelsStore.save(this.channelToSave);
       } catch (error) {
-        this.onSaveFail('Error saving channel', error as Error);
+        this.onSaveFail('Error saving channel', error as Error, 'channel');
         return;
       }
       const channelSaveResponse = await channelResponse.json();
@@ -542,9 +572,10 @@ export default class ProjectManager {
     this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
+    this.metricsReporter.publishMetric('Lab2.ProjectSaveSuccess', 1, 'Count');
   }
 
-  private onSaveFail(errorMessage: string, error: Error) {
+  private onSaveFail(errorMessage: string, error: Error, type: string) {
     this.saveInProgress = false;
     this.executeSaveFailListeners(error);
     if (error.message.includes('409') || error.message.includes('401')) {
@@ -554,6 +585,18 @@ export default class ProjectManager {
       // showing the user a dialog before reload.
       this.forceReloading = true;
       this.metricsReporter.logWarning(`${error.message}. Reloading page.`);
+      const errorType = error.message.includes('409')
+        ? 'conflict'
+        : 'unauthorized';
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailureClient',
+        1,
+        'Count',
+        [
+          {name: 'SaveType', value: type},
+          {name: 'ErrorType', value: errorType},
+        ]
+      );
       reload();
     } else if (error.message.includes('413')) {
       // Log 413s as warnings. The save fail listener should handle these errors and labs should
@@ -564,6 +607,12 @@ export default class ProjectManager {
       this.metricsReporter.logError(errorMessage, error, {
         message: error.message,
       });
+      this.metricsReporter.publishMetric(
+        'Lab2.ProjectSaveFailure',
+        1,
+        'Count',
+        [{name: 'SaveType', value: type}]
+      );
     }
   }
 
@@ -693,6 +742,27 @@ export default class ProjectManager {
     const sources = await this.loadSources(versionId);
     this.lastSource = JSON.stringify(sources);
     return sources;
+  }
+
+  /**
+   * Set the title of the page based on the channel name. We only do this for standalone project levels.
+   * The title format is:
+   * {channel.name} - {project type display name} - Code.org [{environment}]. If we are on production,
+   * we omit the environment suffix, and if we don't have a project type display name, we omit that as well.
+   * @param channel
+   */
+  private setTitleFromChannel(channel: Channel) {
+    if (channel.name && this.isStandaloneProjectLevel) {
+      const currentEnvironment = getEnvironment();
+      const environmentSuffix =
+        isProductionEnvironment() || !currentEnvironment
+          ? ''
+          : ` [${currentEnvironment}]`;
+      const projectName = convertProjectTypeToDisplayName(channel.projectType);
+      const projectString = projectName ? `${projectName} - ` : '';
+      document.title = `${channel.name} - ${projectString}Code.org${environmentSuffix}`;
+    }
+    // Otherwise, we will use the default document title from the server.
   }
 
   // LISTENERS

@@ -5,7 +5,7 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
@@ -29,7 +29,6 @@ import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRe
 
 import IncubatorBanner from './IncubatorBanner';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
-import NpsSurveyBlock from './NpsSurveyBlock';
 import RecentCourses from './RecentCourses';
 import shapes from './shapes';
 import TeacherResources from './TeacherResources';
@@ -51,7 +50,6 @@ export const UnconnectedTeacherHomepage = ({
   queryStringOpen,
   schoolYear,
   showCensusBanner,
-  showNpsSurvey,
   specialAnnouncement,
   teacherEmail,
   teacherId,
@@ -160,13 +158,9 @@ export const UnconnectedTeacherHomepage = ({
   ) {
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-    analyticsReporter.sendEvent(
-      EVENTS.TEACHER_LOGIN_EVENT,
-      {
-        'user id': currentUserId,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+      'user id': currentUserId,
+    });
   }
 
   return (
@@ -201,7 +195,6 @@ export const UnconnectedTeacherHomepage = ({
           )}
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
-        {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
           <GlobalEditionWrapper
             component={MarketingAnnouncementBanner}
@@ -320,7 +313,6 @@ UnconnectedTeacherHomepage.propTypes = {
   queryStringOpen: PropTypes.string,
   schoolYear: PropTypes.number,
   showCensusBanner: PropTypes.bool.isRequired,
-  showNpsSurvey: PropTypes.bool,
   specialAnnouncement: shapes.specialAnnouncement,
   teacherEmail: PropTypes.string,
   teacherId: PropTypes.number,

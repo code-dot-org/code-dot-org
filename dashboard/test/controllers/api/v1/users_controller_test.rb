@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::UsersControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     @user = create(:user)
   end
@@ -73,42 +71,12 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal false, !!@user.mute_music
   end
 
-  test 'a post request to show_progress_table_v2 updates show_progress_table_v2' do
-    sign_in(@user)
-    assert_nil @user.show_progress_table_v2
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
-    assert_response :success
-    @user.reload
-    assert_equal 'v2', @user.show_progress_table_v2
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
-    assert_response :success
-    @user.reload
-    assert_equal 'legacy', @user.show_progress_table_v2
-  end
-
-  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
-    sign_in(@user)
-    assert_nil @user.progress_table_v2_timestamp
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'v2'}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert_nil @user.progress_table_v1_timestamp
-
-    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: 'legacy'}
-    assert_response :success
-    @user.reload
-    assert @user.progress_table_v2_timestamp
-    assert @user.progress_table_v1_timestamp
-  end
-
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
     teacher = create(:teacher, lti_roster_sync_enabled: true)
     sign_in(teacher)
 
     assert teacher.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :success
     teacher.reload
     assert_nil teacher.lti_roster_sync_enabled
@@ -118,7 +86,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     sign_in(@user)
 
     assert_nil @user.lti_roster_sync_enabled
-    post :post_disable_lti_roster_sync, params: {user_id: 'me', show_progress_table_v2: true}
+    post :post_disable_lti_roster_sync, params: {user_id: 'me'}
     assert_response :unauthorized
     @user.reload
     assert_nil @user.lti_roster_sync_enabled
@@ -244,16 +212,6 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_response :success
     test_user.reload
     assert_equal "true", test_user.parent_email_banner_dismissed
-  end
-
-  test 'a post request to set_standards_report_info_to_seen' do
-    test_user = create(:user)
-    sign_in(test_user)
-    assert_nil test_user.has_seen_standards_report_info_dialog
-    post :set_standards_report_info_to_seen, params: {user_id: 'me'}
-    assert_response :success
-    test_user.reload
-    assert_equal true, test_user.has_seen_standards_report_info_dialog
   end
 
   test "a get request to get current returns signed out user info" do

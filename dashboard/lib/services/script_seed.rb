@@ -134,17 +134,19 @@ module Services
     #
     # @param [String | File] file_or_path - Can be String representing a path, relative or absolute, to the file
     #   to read from, or it can be a File object to read from.
+    # @param [String] md5 - Optional MD5 hash of the file contents to store in the database.
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_json_file(file_or_path)
-      seed_from_json(File.read(file_or_path))
+    def self.seed_from_json_file(file_or_path, md5: nil)
+      seed_from_json(File.read(file_or_path), md5: md5)
     end
 
     # Convenience wrapper around seed_from_hash. Parses the given content as a json string and then seeds using it.
     #
     # @param [String] json_string
+    # @param [String] md5 - Optional MD5 hash of the file contents to store in the database.
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_json(json_string)
-      seed_from_hash(JSON.parse(json_string))
+    def self.seed_from_json(json_string, md5: nil)
+      seed_from_hash(JSON.parse(json_string), md5: md5)
     end
 
     # Creates / updates the objects in the database described by the input hash.
@@ -188,8 +190,9 @@ module Services
     # - We try to achieve both simplicity and performance.
     #
     # @param [Hash] data - The input data to seed from.
+    # @param [String] md5 - Optional MD5 hash of the file contents to store in the database.
     # @return [Unit] the Unit created/updated from seeding
-    def self.seed_from_hash(data)
+    def self.seed_from_hash(data, md5: nil)
       script_data = data['script']
       lesson_groups_data = data['lesson_groups']
       lessons_data = data['lessons']
@@ -219,11 +222,19 @@ module Services
         # Lesson and Resource, so both Lesson and Resource must be imported
         # before LessonsResource.
 
-        seed_context.script = import_script(script_data)
+        seed_context.script = import_script(script_data, md5: md5)
 
         # Course version must be set before resources and vocabulary are imported. If the
         # script is in a unit group, we must wait and let the next seed step set
         # the course version on the unit group before resources and vocabulary can be imported.
+        #
+        # If this script has resources or vocabulary to import but is missing its
+        # course version, clear the md5 so incremental seeding will retry this
+        # script on the next run (once the course version is established).
+        if md5 && !seed_context.script.get_course_version &&
+            (resources_data&.any? || vocabularies_data&.any?)
+          seed_context.script.update_column(:md5, nil)
+        end
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
@@ -270,10 +281,11 @@ module Services
 
     # Internal methods and classes below
 
-    def self.import_script(script_data)
+    def self.import_script(script_data, md5: nil)
       script_to_import = Unit.new(script_data.except('seeding_key', 'serialized_at'))
       script_to_import.seeded_from = script_data['serialized_at']
       script_to_import.is_migrated = true
+      script_to_import.md5 = md5
       # Needed because we already have some Scripts with invalid names
       script_to_import.skip_name_format_validation = true
       # We don't want to overwrite original_unit_group_id to nil if the unit exists and has an original_unit_group_id.

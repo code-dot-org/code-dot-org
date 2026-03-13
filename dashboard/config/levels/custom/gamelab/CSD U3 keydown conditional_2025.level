@@ -89,6 +89,7 @@
     "mini_rubric": "false",
     "libraries_enabled": "false",
     "start_blocks": "//1) Run the code and try pressing the \"p\" and \"h\" keys.\nvar sprite = createSprite(200, 200);\nsprite.setAnimation(\"giraffe\");\n\nfunction draw() {\n  background(\"white\");\n\n  //2) Look inside the first two conditional statements to see how the code works.\n  if(keyDown(\"h\")) {\n     sprite.setAnimation(\"hippo\");\n  }\n\n  if(keyDown(\"p\")) {\n     sprite.setAnimation(\"pig\");\n  }\n\n  if(keyDown(\"r\")) {\n      //3) Add code to change the sprite to a different animal when the \"r\" key is pressed.\n\n  }\n\n  drawSprites();\n}\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

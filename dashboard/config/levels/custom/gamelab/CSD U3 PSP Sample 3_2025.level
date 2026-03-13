@@ -204,6 +204,7 @@
     "bubble_choice_description": "Interactive push and collect game template.",
     "thumbnail_url": "https://images.code.org/89c7f1468a7e3e5685b1f023ae0181da-template3.png",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

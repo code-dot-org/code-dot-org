@@ -1658,10 +1658,10 @@ When /^I create a student named "([^"]*)" in a CSA section$/ do |student_name|
   GHERKIN
 end
 
-And(/^I navigate to the pegasus certificate share page$/) do
+And(/^I navigate to the certificate share page$/) do
   query_params = @browser.execute_script("return window.location.search;")
   session_id = query_params.match(/\?i=([^&]+)/)[1]
-  url = "http://code.org/certificates/#{session_id}"
+  url = "http://studio.code.org/api/hour/certificates/#{session_id}"
   navigate_to replace_hostname(url)
 end
 

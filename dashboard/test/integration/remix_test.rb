@@ -126,6 +126,30 @@ class RemixTest < ActionDispatch::IntegrationTest
     assert_only_remixes_sources_assets_starter_assets 'javalab'
   end
 
+  test 'music_dance_ai remixes subprojects' do
+    project_type = 'music_dance_ai'
+    stub_project_level project_type
+    original_channel_id = create_a_new_project project_type
+
+    project = Projects.new(get_storage_id)
+    src_subprojects = project.get(original_channel_id)["subprojects"]
+    assert_equal src_subprojects.length, 3
+
+    SourceBucket.any_instance.expects(:remix_source).times(4)
+
+    new_channel_id = remix_a_project project_type, original_channel_id
+    refute_equal original_channel_id, new_channel_id
+
+    assert_is_remix(new_channel_id, original_channel_id)
+
+    remix_subprojects = project.get(new_channel_id)["subprojects"]
+    assert_equal remix_subprojects.length, 3
+    remix_subprojects.each do |entry|
+      src_subproject_channel_id = src_subprojects.find {|sp| sp["level_id"] == entry["level_id"]}["channel_id"]
+      assert_is_remix(entry["channel_id"], src_subproject_channel_id)
+    end
+  end
+
   def assert_only_remixes_sources(project_type)
     stub_project_level project_type
     original_channel_id = create_a_new_project project_type
@@ -207,6 +231,10 @@ class RemixTest < ActionDispatch::IntegrationTest
 
     get "/projects/#{project_type}/#{original_channel_id}/remix"
     assert_response :forbidden
+  end
+
+  def assert_is_remix(new_channel_id, src_channel_id)
+    assert_equal Projects.remix_ancestry(new_channel_id).first, src_channel_id
   end
 
   private def stub_project_level(type)

@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2024-08-02T21:57:01.000Z",
   "level_num": "custom",
@@ -777,11 +776,9 @@
     "thumbnail_url": "https://images.code.org/2ac531cd013fecbd178a1429303f8b0d-u1l10-l4b.gif",
     "video_key": "csa_printing_in_java",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T21:57:01.504+00:00\",\"changed\":[\"cloned from \\\"CSA U1L10-L4b_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L10-L4b_pilot-2025\"},{\"changed_at\":\"2025-04-21 09:14:04 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

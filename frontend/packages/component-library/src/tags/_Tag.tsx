@@ -1,4 +1,13 @@
-import React, {HTMLAttributes, memo, useCallback} from 'react';
+import {
+  FunctionComponent,
+  MouseEvent,
+  KeyboardEvent,
+  Key,
+  HTMLAttributes,
+  memo,
+  useCallback,
+  ReactNode,
+} from 'react';
 
 import CloseButton from '@/closeButton/CloseButton';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -10,9 +19,15 @@ type TagIconProps = FontAwesomeV6IconProps & {
   placement: 'left' | 'right';
 };
 
-const TagIcon: React.FC<TagIconProps> = memo(({iconName, iconStyle, title}) => (
-  <FontAwesomeV6Icon iconName={iconName} iconStyle={iconStyle} title={title} />
-));
+const TagIcon: FunctionComponent<TagIconProps> = memo(
+  ({iconName, iconStyle, title}) => (
+    <FontAwesomeV6Icon
+      iconName={iconName}
+      iconStyle={iconStyle}
+      title={title}
+    />
+  ),
+);
 
 export interface BaseTagProps {
   /** Tag label */
@@ -20,7 +35,7 @@ export interface BaseTagProps {
   /** Tag tooltip content. Can be a simple string or ReactNode (some jsx/html markup/view).
    *  For example - check Tags.story.tsx
    *  Can be null to disable the tooltip */
-  tooltipContent?: string | React.ReactNode;
+  tooltipContent?: string | ReactNode;
   /** Tag tooltip id (required for better accessibility, see ) */
   tooltipId?: string;
   /** aria-label for the tag.
@@ -31,7 +46,7 @@ export interface BaseTagProps {
    *  and the placement of the icon (left or right))*/
   icon?: TagIconProps;
   /** Unique key */
-  key?: React.Key;
+  key?: Key;
 }
 
 export interface DefaultTagProps extends BaseTagProps {
@@ -43,15 +58,13 @@ export interface ClosableTagProps extends BaseTagProps {
   /** onClose callback gives the tag an accessible close button on the
    * right side of the label */
   onClose: (
-    e?:
-      | React.MouseEvent<HTMLButtonElement>
-      | React.KeyboardEvent<HTMLButtonElement>,
+    e?: MouseEvent<HTMLButtonElement> | KeyboardEvent<HTMLButtonElement>,
   ) => void;
 }
 
 export type TagProps = DefaultTagProps | ClosableTagProps;
 
-const Tag: React.FunctionComponent<TagProps> = props => {
+const Tag: FunctionComponent<TagProps> = props => {
   const {
     label,
     ariaLabel,
@@ -61,7 +74,7 @@ const Tag: React.FunctionComponent<TagProps> = props => {
     type = 'default',
   } = props;
   const tooltipWrapper = useCallback(
-    (children: React.ReactNode) =>
+    (children: ReactNode) =>
       tooltipContent && tooltipId ? (
         <WithTooltip
           tooltipProps={{

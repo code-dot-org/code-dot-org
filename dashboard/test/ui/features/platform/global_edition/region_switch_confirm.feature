@@ -14,9 +14,3 @@ Feature: Global Edition - Region Switch Confirm Modal
     And I am in Iran
     And I reload the page
     Then I wait until element "#global-edition-region-switch-confirm.fade.in[role='dialog']" is visible
-
-  Scenario: The modal is not shown on hourofcode.com domain
-    Given I am on "http://hourofcode.com/us"
-    And I am in Iran
-    And I reload the page
-    Then element "#global-edition-region-switch-confirm" is not visible

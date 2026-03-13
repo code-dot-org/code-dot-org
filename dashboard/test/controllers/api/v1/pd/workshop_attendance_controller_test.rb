@@ -3,7 +3,6 @@ require 'test_helper'
 class Api::V1::Pd::WorkshopAttendanceControllerTest < ActionDispatch::IntegrationTest
   freeze_time
 
-  self.use_transactional_test_case = true
   setup_all do
     @organizer = create(:program_manager)
     @workshop_organizer = create(:workshop_organizer)

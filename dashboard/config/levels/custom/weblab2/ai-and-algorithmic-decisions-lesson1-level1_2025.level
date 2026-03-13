@@ -1,0 +1,76 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-12T19:28:56.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>RemindMe — Calendar</title>\n  <link rel=\"stylesheet\" href=\"style.css\"/>\n</head>\n<body>\n  <header>\n    <h1>RemindMe!</h1>\n    <nav>\n      <button class=\"nav-btn\" type=\"button\">🏠</button>\n      <a class=\"nav-btn\" href=\"about.html\">❓</a>  <!-- changed -->\n      <button class=\"nav-btn\" type=\"button\">⚙️</button>\n      <button class=\"nav-btn\" type=\"button\">🔔</button>\n      <button class=\"nav-btn\" type=\"button\">✏️</button>\n    </nav>\n  </header>\n\n  <main>\n    <section class=\"form-area\">\n      <h2 id=\"add-title\">Add Reminder</h2>\n\n      <label>\n        Title:\n        <input type=\"text\" id=\"title\" placeholder=\"Type reminder here…\"/>\n      </label>\n\n      <div class=\"actions\">\n        <button id=\"saveBtn\" title=\"Saves (maybe)\" type=\"button\">Save</button>\n        <button id=\"addBtn\" title=\"Click twice?\" type=\"button\">Add</button>\n        <button id=\"clearBtn\" type=\"button\">Clear</button>\n        <button id=\"shuffleBtn\" type=\"button\">Shuffle</button>\n        <button id=\"helpBtn\" class=\"icon-only\" title=\"\" type=\"button\">❔</button>\n      </div>\n      <p id=\"hint\" class=\"hint\">Tip: Press “Add” to add a reminder. (Or is it “Save”?)</p>\n    </section>\n\n    <section class=\"reminder-list\">\n      <h2>Reminders</h2>\n      <ul id=\"list\" aria-live=\"polite\"></ul>\n    </section>\n  </main>\n\n  <footer>\n    <button id=\"themeToggle\" type=\"button\">Dark Light</button>\n  </footer>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": ":root{\n  --bg-dark:#111;\n  --text-dark:#1a1a1a;      /* almost same as bg -> low contrast */\n  --accent:#ff0066;\n}\n\n*{ box-sizing:border-box; }\n\nbody{\n  background: var(--bg-dark);   /* auto-starts “dark mode” */\n  color: var(--text-dark);      \n  font-family: \"Comic Sans MS\", cursive, sans-serif;\n  text-align:center;\n  margin:0;\n}\n\nheader{\n  background: limegreen;\n  padding: 6px 10px;\n  display:flex;\n  align-items:center;\n  justify-content:space-between;\n}\n\nh1{ margin:0; }\n\nnav{ display:flex; gap:8px; }\n\n.nav-btn{\n  background:none;\n  border:none;\n  font-size: 1.8rem;\n  cursor:pointer;\n  transition: color .2s;\n}\n\n\n.nav-btn:hover{ color: limegreen; }\n\nmain{ padding: 18px 0 10px; }\n\n.form-area{\n  width: 260px;\n  margin: 0 auto 18px;\n  background: #fefefe;\n  padding: 6px;\n  border: 3px dotted red;     /* alarming border */\n  text-align:left;\n}\n\n.form-area label{ display:block; margin-bottom:6px; }\n\ninput{\n  width:100%;\n  padding:6px;\n  margin-top:4px;\n}\n\n\n.actions{\n  display:flex;\n  flex-wrap:wrap;\n  gap:6px;\n  margin-top:8px;\n}\n\n\n#saveBtn{\n  background: var(--accent);\n  color:#fff;\n  border:none;\n  padding:8px 14px;\n  position:relative;\n  transition:left .15s ease, top .15s ease;\n}\n/* Add requires double-click; stylistically same as Cancel */\n#addBtn, #clearBtn{\n  background: var(--accent);\n  color:#fff;\n  border:none;\n  padding:8px 14px;\n}\n\n/* unlabeled help icon that vanishes on hover */\n.icon-only{\n  background:none;\n  border:2px dashed #aaa;\n  font-size:1rem;\n  padding:6px 10px;\n}\n.icon-only:hover{ opacity:0; }   \n\n#shuffleBtn{\n  background:#ffd400;\n  border:1px solid #e6b800;\n  padding:8px 14px;\n}\n\n/* hint text is tiny and low-contrast */\n.hint{\n  margin:6px 0 0;\n  font-size:.75rem;\n  color:#c0c0c0;\n}\n\n.reminder-list{\n  width: 280px;\n  margin: 0 auto;\n  background:#222;\n  color:#fff;\n  padding: 8px 10px;\n  text-align:left;\n  border-radius:8px;\n}\n\n.reminder-list li{\n  list-style: \"🔔 \";\n  margin: 6px 0;\n  padding: 6px 8px;\n  background:#2d2d2d;\n  border-radius:6px;\n  cursor:pointer;\n}\n\n/* “done” state becomes almost invisible */\n.reminder-list li.done{\n  color:#1e1e1e;               /* nearly same as bg */\n  text-decoration: line-through;\n}\n\nfooter{\n  padding:12px 0 22px;\n}\n/* confusing theme toggle label + poor contrast button */\n#themeToggle{\n  background:#333;\n  color:#444;\n  border:1px solid #333;\n  padding:8px 12px;\n  border-radius:6px;\n}\n\n/* --- About Page Styles --- */\n.about-main {\n  width: min(100%, 700px);\n  margin: 30px auto;\n  background: #fefefe;\n  padding: 16px 22px;\n  border: 2px dashed red;      /* still intentionally \"off\" */\n  color: #333;\n  line-height: 1.5;\n  text-align: left;\n}\n.about-main ul {\n  margin: 6px 0 12px 24px;\n}\n.about-main a {\n  color: var(--accent);\n  text-decoration: none;\n}\n.about-main a:hover {\n  text-decoration: underline;\n}\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "console.log(\"📦 script loaded\"); // sanity check at top of script.js\n\nconst titleInput = document.getElementById(\"title\");\nconst list = document.getElementById(\"list\");\n\nconst saveBtn = document.getElementById(\"saveBtn\");     // runs away\nconst addBtn = document.getElementById(\"addBtn\");       // requires double click\nconst clearBtn = document.getElementById(\"clearBtn\");   // now deletes a random item\nconst shuffleBtn = document.getElementById(\"shuffleBtn\");\nconst helpBtn = document.getElementById(\"helpBtn\");\nconst themeToggle = document.getElementById(\"themeToggle\");\nconst hint = document.getElementById(\"hint\");\n\n// Utility\nconst addItem = (text) => {\n  const li = document.createElement(\"li\");\n  li.textContent = text || \"Untitled\";\n  li.addEventListener(\"click\", () => li.classList.toggle(\"done\")); // becomes hard to read\n  list.appendChild(li);\n};\n\n// SAVE BUTTON: jukes away from cursor\nsaveBtn.addEventListener(\"mouseenter\", () => {\n  const dx = Math.random() < 0.5 ? -60 : 60;\n  const dy = Math.random() < 0.5 ? -10 : 10;\n  saveBtn.style.left = (parseInt(saveBtn.style.left || 0) + dx) + \"px\";\n  saveBtn.style.top  = (parseInt(saveBtn.style.top  || 0) + dy) + \"px\";\n});\nsaveBtn.addEventListener(\"click\", () => {\n  // misleading: says saved but doesn't add item\n  alert(\"Saved! (But, uh… nothing actually changed.)\");\n});\n\n// ADD BUTTON: requires double click within 1s\nlet armed = false, armTimer = null;\naddBtn.addEventListener(\"click\", () => {\n  if (!armed) {\n    armed = true;\n    hint.textContent = \"Click Add again quickly to confirm.\";\n    armTimer = setTimeout(() => (armed = false), 1000);\n    return;\n  }\n  clearTimeout(armTimer);\n  armed = false;\n  addItem(titleInput.value.trim());\n  titleInput.value = \"\";\n  hint.textContent = \"Tip: Press “Add” to add a reminder. (Or is it “Save”?)\";\n});\n\n\n// helper: show inline confirm if dialogs are blocked\nfunction inlineConfirm(message, onYes, onNo){\n  // reuse hint as a quick confirm bar\n  hint.innerHTML = `\n    ${message}\n    <button id=\"confirmYes\" type=\"button\">Yes</button>\n    <button id=\"confirmNo\" type=\"button\">No</button>\n  `;\n  const yes = document.getElementById(\"confirmYes\");\n  const no  = document.getElementById(\"confirmNo\");\n  yes.onclick = () => { onYes(); hint.textContent = \"\"; };\n  no.onclick  = () => { onNo?.(); hint.textContent = \"\"; };\n}\n\n// CLEAR: asks to clear all, removes ONE random item, then shows the updated list\nclearBtn.addEventListener(\"click\", () => {\n  console.log(\"🧹 Clear clicked\"); // verify handler fires\n\n  const proceed = () => {\n    const items = Array.from(list.querySelectorAll(\"li\"));\n    if (items.length === 0) {\n      hint.textContent = \"No reminders to clear.\";\n      return;\n    }\n    const idx = Math.floor(Math.random() * items.length);\n    const removedText = items[idx].textContent;\n    items[idx].remove();\n\n    const remaining = Array.from(list.querySelectorAll(\"li\")).map(li => li.textContent);\n    hint.textContent = remaining.length\n      ? `Removed: \"${removedText}\". Remaining: ${remaining.join(\" • \")}`\n      : `Removed: \"${removedText}\". No reminders left.`;\n  };\n\n  // Try native confirm; if blocked or unavailable, do inline confirm\n  try {\n    if (typeof window.confirm === \"function\") {\n      const ok = window.confirm(\"Clear all reminders?\");\n      if (ok) proceed();\n    } else {\n      inlineConfirm(\"Clear all reminders?\", proceed);\n    }\n  } catch {\n    inlineConfirm(\"Clear all reminders?\", proceed);\n  }\n});\n\n\n// SHUFFLE: randomize list order and randomly change page color (unexpected)\nshuffleBtn.addEventListener(\"click\", () => {\n  const items = Array.from(list.children);\n  for (let i = items.length - 1; i > 0; i--) {\n    const j = Math.floor(Math.random() * (i + 1));\n    list.insertBefore(items[j], items[i]);\n  }\n  document.body.style.backgroundColor =\n    `hsl(${Math.floor(Math.random()*360)}, 80%, 50%)`;\n});\n\n// HELP: gives generic, not-helpful tips\nhelpBtn.addEventListener(\"click\", () => {\n  alert(\"Helpful Tip: Organization is important! 👍 (No further details provided.)\");\n});\n\n// Theme toggle: toggles same label text (“Dark Light”) regardless of mode\nthemeToggle.addEventListener(\"click\", () => {\n  const isDark = document.body.style.filter !== \"invert(1)\";\n  document.body.style.filter = isDark ? \"invert(1)\" : \"invert(0)\";\n  themeToggle.textContent = \"Dark Light\"; // never clarifies state\n});\n",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "about.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>About — RemindMe</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header>\n    <h1>RemindMe!</h1>\n    <nav>\n      <!-- only the Home button -->\n      <a href=\"index.html\" class=\"nav-btn\">🏠</a>\n    </nav>\n  </header>\n\n  <main class=\"about-main\">\n    <h2>About This App</h2>\n    <p>\n      Welcome to <strong>RemindMe!</strong> — the ultimate reminder app that helps you \n      remember things… sometimes. Our goal is to make task management as exciting \n      (and unpredictable) as possible.\n    </p>\n\n    <p>\n      RemindMe was built by a team of very enthusiastic developers who value \n      creative chaos over consistency. Each button has its own personality, \n      and you’ll never quite know what it’s going to do next.\n    </p>\n\n    <p>\n      Key features include:\n      <ul>\n        <li>Save buttons that are hard to catch 🏃‍♂️</li>\n        <li>Colorful, low-contrast themes for extra challenge 🎨</li>\n        <li>Surprise interactions you’ll never see coming 💥</li>\n      </ul>\n    </p>\n\n    <p>\n      If you’re looking for a predictable user experience, this may not be the \n      app for you. But if you enjoy mystery and adventure in every click — welcome aboard!\n    </p>\n\n    <p><a href=\"index.html\">Return to the app →</a></p>\n  </main>\n\n  <footer>\n    <p style=\"font-size:0.8rem;color:#777;\">\n      © 2025 RemindMe Inc. — All reminders subject to change.\n    </p>\n  </footer>\n</body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "long_instructions": "## Explore Web Design\r\n\r\nExplore this web app to see how it works. \r\n* Click the nav bar buttons, try to add and save a reminder.\r\n* What is unclear, inconsistent, or frustrating in the design of this app?"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:28:56.139+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-level1-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-level1-test-2025\"},{\"changed_at\":\"2025-11-12 19:32:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:28:39 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

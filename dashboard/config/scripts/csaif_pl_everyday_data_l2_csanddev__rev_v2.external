@@ -1,0 +1,36 @@
+name 'csaif_pl-everyday-data-L2-CSandDev_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding Data
+
+#### Data is all around us, shaping the world we live in. Whether it's the number of steps we take, the likes on a social media post, or the weather forecast. 
+
+#### Everything can be quantified and analyzed to reveal patterns and insights that drive our decisions and innovations.
+<br>
+
+#### 🔎 **Think About:** 
+#### Look at the picture of the street scene below and reflect on: 
+- #### *Can you identify where data might be hiding?*
+- #### *What types of data can be collected?*
+- #### *How do these everyday details turn into data that tells a story?*
+
+<img src="https://images.code.org/41e0217e538fdf1f5f0e8ea33a42d240-image-1742484446527.png" alt="design process graph of the cycle" width="5000px" style="display: block; margin-left: auto; margin-right: auto;">
+
+#### Computers process a wide range of data types to power the applications and technologies we use every day. These data types come from different sources and serve various purposes, from improving user experiences to enabling advanced decision-making.
+
+
+<div style="background-color: #F5F7F8; color: #000000; padding: 15px; border-radius: 10px; width: 90%; margin: 20px auto;">
+<p style = "font-size:14pt;"><strong>Types of Data:</strong></p>
+  <ul style = "font-size:14pt;">
+     <li><strong>Audio data</strong> includes sounds, speech, and music, which can be analyzed for voice recognition or noise filtering.</li><br>
+    <li><strong>Visual data</strong> consists of images and videos, used in everything from facial recognition to medical imaging. Text data includes written language, such as emails, social media posts, and documents, which computers can analyze for sentiment or keyword recognition.</li><br>
+    <li><strong>Location data</strong> captures geographic coordinates from GPS devices, helping with navigation, logistics, and local services.</li><br>
+    <li><strong>Environmental data</strong> comes from sensors that measure temperature, humidity, air quality, and other conditions, supporting applications in weather forecasting and smart home automation.</li><br>
+    <li><strong>Biometric data</strong> includes fingerprints, facial features, and heart rate, commonly used for security authentication and health monitoring.</li>
+</ul>
+</div>
+
+#### By processing and analyzing these diverse data types, computer systems can enhance functionality and improve user experiences in countless ways.
+MARKDOWN

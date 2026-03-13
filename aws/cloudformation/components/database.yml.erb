@@ -228,7 +228,7 @@
 <%   if rack_env?(:production) -%>
         - Name: !Sub "db-reporting.${BaseDomainName}"
 <%   else -%>
-        - Name: !Sub "${PegasusSubdomainName}-db-reporting.${BaseDomainName}"
+        - Name: !Sub "${AWS::StackName}-db-reporting.${BaseDomainName}"
 <%   end -%>
           Type: CNAME
           TTL: <%= DNS_TTL %>
@@ -313,11 +313,27 @@
       # Credentials (username and password) for the SQL User this Resource is provisioning.
       DBCredentialSecret: !Ref DatabaseSecretReader
       Privileges: ['SELECT']
-
-# We don't provision these in production via CloudFormation ... yet!
-<%  unless rack_env?(:production)%>
+<% if rack_env?(:production) || rack_env?(:test) # Provision Zero ETL on managed test server and production. -%>
+  ZeroETLIntegration:
+    Type: AWS::RDS::Integration
+    Properties:
+      IntegrationName: !Sub "${AWS::StackName}-zero-etl"
+      Description: "Export transactional tables from MySQL to Redshift via Zero-ETL integration."
+      SourceArn: !Sub
+        - "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:${ClusterId}"
+        - ClusterId: <%=rack_env?(:production) ? PRODUCTION_DB_CLUSTER_ID : '!Ref AuroraCluster' %>
+      TargetArn: !ImportValue DATA-production-RedshiftClusterNamespace
+      DataFilter: !Sub "include: dashboard_<%=rack_env %>.levels"
+      Tags:
+        - Key: environment
+          Value: "<%=rack_env %>"
+<% end -%>
+<% # We don't provision DB Cluster and Instances in production via CloudFormation ... yet!
+  unless rack_env?(:production)
+-%>
   AuroraCluster:
     Type: AWS::RDS::DBCluster
+    DeletionPolicy: <%= rack_env?(:adhoc) ? "Delete" : "Snapshot" %> # Don't take a final Snapshot when deleting adhoc clusters.
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
       DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
@@ -325,12 +341,13 @@
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 8.0.mysql_aurora.3.08.0
+      EngineVersion: 8.0.mysql_aurora.3.12.0
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
+      CopyTagsToSnapshot: true
       EnableCloudwatchLogsExports:
         - general
         - audit

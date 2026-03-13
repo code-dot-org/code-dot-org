@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're trying to write a reminder app in Python that prints a message to drink water, but something's not quite right. You defined the function, but it's not working the way it should. Can you spot the mistake and fix it?\r\n\r\n1. Look closely at the function definition. Something is missing!\r\n\r\n2. Fix the function so that it runs without errors.\r\n\r\n3. Then, call the function to print the reminder.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nEvery function definition in Python needs:\r\n\r\n* The `def` keyword\r\n\r\n* A name followed by **parentheses**\r\n\r\n* A **colon** at the end of the first line\r\n\r\n* Indented code underneath",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

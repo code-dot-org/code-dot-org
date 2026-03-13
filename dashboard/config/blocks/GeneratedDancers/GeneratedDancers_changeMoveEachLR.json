@@ -2,13 +2,14 @@
   "category": "Groups",
   "config": {
     "func": "changeMoveEachLR",
-    "blockText": "{GROUP} do {MOVE} {DIR} forever",
+    "blockText": "{GROUP} do {MOVE} forever",
     "style": "lab_blocks",
     "args": [
       {
         "name": "GROUP",
         "customInput": "dancerPicker",
         "options": [
+          "sprites",
           "\"GENERATED_DANCER\"",
           "\"ALIEN\"",
           "\"BEAR\"",
@@ -21,8 +22,7 @@
           "\"ROBOT\"",
           "\"SHARK\"",
           "\"SLOTH\"",
-          "\"UNICORN\"",
-          "sprites"
+          "\"UNICORN\""
         ]
       },
       {
@@ -87,19 +87,6 @@
           [
             "None",
             "MOVES.Rest"
-          ]
-        ]
-      },
-      {
-        "name": "DIR",
-        "options": [
-          [
-            "←",
-            "-1"
-          ],
-          [
-            "→",
-            "1"
           ]
         ]
       }

@@ -545,7 +545,7 @@
       }
     },
     "name_suffix": "_placeholder2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T21:10:48.363+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-Arrays PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L2-Arrays PBT_pilot-2025\"}]"

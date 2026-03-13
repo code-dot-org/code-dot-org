@@ -1,13 +1,9 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import TextField from '@code-dot-org/component-library/textField';
-import Typography, {
-  BodyTwoText,
-  OverlineThreeText,
-  OverlineTwoText,
-} from '@code-dot-org/component-library/typography';
 import {
   Table,
   TableBody,
@@ -19,6 +15,9 @@ import {
   Card,
   Box,
   Divider,
+  Typography,
+  Button as MuiButton,
+  IconButton as MuiIconButton,
 } from '@mui/material';
 import classNames from 'classnames';
 import React, {
@@ -40,7 +39,6 @@ import {useWorkshopContext} from '../WorkshopLayout';
 
 import styles from './WorkshopEnrollments.module.scss';
 import commonStyles from '../WorkshopLayout.module.scss';
-
 const pluralize = (length: number): string => (length > 1 ? 's' : '');
 
 const columns: {key: keyof EnrollmentData; label: string}[] = [
@@ -255,28 +253,32 @@ export const WorkshopEnrollments: FC = () => {
   return (
     <>
       <Box className={styles.bulkActionRow}>
-        <Button
-          ariaLabel="Refresh enrollment table data"
-          icon={{
-            iconName: 'refresh',
-            animationType:
-              animateRefreshButton || enrollmentsLoading ? 'spin' : undefined,
-          }}
-          isIconOnly
+        <MuiIconButton
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={handleRefreshClick}
-          size="s"
-        />
-        <Button
-          ariaLabel="Export all enrollment data as csv"
-          iconLeft={{
-            iconName: 'download',
-          }}
+          aria-label="Refresh enrollment table data"
+          type="button"
+        >
+          <FontAwesomeV6Icon
+            iconName="refresh"
+            animationType={
+              animateRefreshButton || enrollmentsLoading ? 'spin' : undefined
+            }
+          />
+        </MuiIconButton>
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
           onClick={handleDownload}
-          size="s"
-          type="secondary"
-          color={buttonColors.gray}
-          text="Export all"
-        />
+          aria-label="Export all enrollment data as csv"
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="download" />}
+        >
+          Export all
+        </MuiButton>
         {selected.length > 0 && (
           <>
             <Divider
@@ -284,25 +286,25 @@ export const WorkshopEnrollments: FC = () => {
               orientation="vertical"
               className={styles.actionDivider}
             />
-            <OverlineTwoText noMargin className={styles.numSelectedText}>
+            <Typography className={styles.numSelectedText} variant="overline2">
               {selected.length} selected
-            </OverlineTwoText>
-            <Button
-              ariaLabel={`Move selected enrollment${s}`}
+            </Typography>
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="small"
               onClick={() => setActiveDialog('move')}
-              size="s"
-              type="secondary"
-              color={buttonColors.gray}
-              text={`Move selected enrollment${s}`}
-            />
-            <Button
-              ariaLabel={`Remove selected enrollment${s}`}
+              aria-label={`Move selected enrollment${s}`}
+              type="button"
+            >{`Move selected enrollment${s}`}</MuiButton>
+            <MuiButton
+              variant="outlined"
+              color="error"
+              size="small"
               onClick={() => setActiveDialog('remove')}
-              size="s"
-              type="secondary"
-              color={buttonColors.destructive}
-              text={`Remove selected enrollment${s}`}
-            />
+              aria-label={`Remove selected enrollment${s}`}
+              type="button"
+            >{`Remove selected enrollment${s}`}</MuiButton>
           </>
         )}
       </Box>
@@ -333,7 +335,7 @@ export const WorkshopEnrollments: FC = () => {
                 </TableCell>
                 {columns.map(({label, key}) => (
                   <TableCell key={key}>
-                    <OverlineThreeText noMargin>{label}</OverlineThreeText>
+                    <Typography variant="overline3">{label}</Typography>
                   </TableCell>
                 ))}
               </TableRow>
@@ -362,9 +364,9 @@ export const WorkshopEnrollments: FC = () => {
                       </TableCell>
                       {columns.map(({key}) => (
                         <TableCell key={key}>
-                          <BodyTwoText noMargin>
+                          <Typography variant="body2">
                             {renderCellValue(row, key)}
-                          </BodyTwoText>
+                          </Typography>
                         </TableCell>
                       ))}
                     </TableRow>
@@ -384,7 +386,6 @@ export const WorkshopEnrollments: FC = () => {
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
       </Card>
-
       {activeDialog === 'remove' && (
         <Dialog
           id="remove-enrollments-dialog"
@@ -395,7 +396,7 @@ export const WorkshopEnrollments: FC = () => {
           title={`Remove Enrollment${s}?`}
           customContent={
             <Box id="dsco-dialog-description">
-              <Typography semanticTag="div" visualAppearance="body-two">
+              <Typography component="div" variant="body2" gutterBottom>
                 {`Are you sure you want to remove the enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
                   {selectedNotAttended.map(
@@ -414,11 +415,7 @@ export const WorkshopEnrollments: FC = () => {
                     type="warning"
                     text={`The following users have already attended a session and cannot be removed.`}
                   />
-                  <Typography
-                    noMargin
-                    semanticTag="div"
-                    visualAppearance="body-two"
-                  >
+                  <Typography component="div" variant="body2">
                     <ul className={styles.enrollmentList}>
                       {selectedAlreadyAttended.map(
                         ({id, givenName, familyName, email}) => (
@@ -459,7 +456,6 @@ export const WorkshopEnrollments: FC = () => {
           }}
         />
       )}
-
       {activeDialog === 'move' && (
         <Dialog
           id="move-enrollments-dialog"
@@ -470,7 +466,7 @@ export const WorkshopEnrollments: FC = () => {
           title={`Move Enrollment${s}?`}
           customContent={
             <Box id="dsco-dialog-description">
-              <Typography semanticTag="div" visualAppearance="body-two">
+              <Typography component="div" variant="body2" gutterBottom>
                 {`You are moving the following enrollment${s} for:`}
                 <ul className={styles.enrollmentList}>
                   {selected.map(({id, givenName, familyName, email}) => (

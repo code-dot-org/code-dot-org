@@ -1,0 +1,72 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-15T17:07:14.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Update and Evolve an Object\r\n1. **Update the Object:** In the \"Update\" section, use dot notation or bracket notation to set update the object properties.\r\n2. **Add a Feature:** Create a new property on the object for an extra feature \r\n3. **Update the Screen:** Use AI to assist with creating a new HTML element to display your new property inside the `render()` function.\r\n4. **Test:** Run the code to verify the card shows the proper updates\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Character Level Up</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n  <div class=\"card\">\n    <h2>Player Profile</h2>\n    <div class=\"avatar\">👾</div>\n    <div class=\"stats\">\n      <p>Tag: <span id=\"display-tag\"></span></p>\n      <p>Lvl: <span id=\"display-level\"></span></p>\n      <p>VIP: <span id=\"display-vip\"></span></p>\n    </div>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Object\nconst player = {\n  gamertag: \"Guest_User\",\n  level: 1,\n  isVip: false\n};\n\n// Update\n\n\n\n// Render function\nfunction render() {\n  document.getElementById(\"display-tag\").textContent = player.gamertag;\n  document.getElementById(\"display-level\").textContent = player.level;  \n  if (player.isVip) {\n    document.getElementById(\"display-vip\").textContent = \"Active\";\n  } else {\n    document.getElementById(\"display-vip\").textContent = \"None\";\n  }\n\n}\n\nrender();",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: 'Courier New', Courier, monospace;\n  background-color: #1a1a1a;\n  color: #0f0; /* Matrix green text */\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  margin: 0;\n}\n\n.card {\n  background-color: #2b2b2b;\n  width: 300px;\n  padding: 20px;\n  border: 2px solid #0f0;\n  border-radius: 4px;\n  box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);\n  text-align: center;\n}\n\nh2 {\n  margin-top: 0;\n  text-transform: uppercase;\n  border-bottom: 1px solid #0f0;\n  padding-bottom: 10px;\n}\n\n.avatar {\n  font-size: 4rem;\n  margin: 10px 0;\n}\n\n.stats p {\n  background: #000;\n  padding: 10px;\n  margin: 10px 0;\n  border-radius: 4px;\n  display: flex;\n  justify-content: space-between;\n  border: 1px solid #333;\n}\n\nspan {\n  font-weight: bold;\n  color: #fff;\n  text-shadow: 0 0 5px #fff;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n",
+    "display_name": "Gamer Tag",
+    "bubble_choice_description": "Explore and update what might constitute a `gamer` object",
+    "thumbnail_url": "https://images.code.org/658f65ab72f0a700a347d4044932e538-gamer.jpg",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-15T17:07:14.811+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson4-level7c-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson4-level7c-test-2025\"}]"
+}]]></config>
+</Weblab2>

@@ -1,0 +1,49 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-01-06T15:07:57.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Debug: Missing Paragraph\r\n\r\nSomeone has submitted a bug report on this web page. Can you fix the bug?\r\n\r\n![](https://images.code.org/4692981592c07e166945a4037b73c680-image-1767512171987.png)\r\n\r\n# Do this\r\n\r\n1) Find and fix the problem that is causing the bug",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html> \n<html>\n  <head>\n  </head>\n  <body>\n    <!-- Title -->\n    <h1>Choosing a Pet</h1>\n    \n    <!-- Information about difference between 3 pets to help you choose -->\n    <p>This page will help you choose between a dog, turtle, or a bird</p>\n    <h2>Dogs</h2>\n    <p>Dogs are the most work, but they are also the most fun.  You have to walk them every day, but they love you and will always play with you.</p>\n    <h2>Turtles</h2>\n    <p.Turtles can also be fun, but they don't play with you.  They will not make a mess of your room and they are quiet.</p>\n    <h2>Birds</h2>\n    <p>Birds kind of play with you, but they are a lot of trouble and might fly away or start flying all around your room and make a mess of it.</p>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMrWt2HFvH/UaEd1Aw6m\nH7NPCh2Lr52063tDqEoStRSedn5LQYmzKopHnMdxEddzMa1ry9pfnBII8zb7\nMD3Gw+QxEX86iJuKhBFDqXvjC26WIR0dnDES221G1n9EocbLnjZp3qxNzkYl\n+8l28QhakIo4Gpn9TLTvSUGVJnDqPyFqeJdVsKv0uU8fbomOd/ecedk7Yqjy\nmyxU5OyuQqlTIPcgoZFX9oi6qJqQXBOchbm83I48StfnkEMARKoSpz2+rd4S\niz7/LKRXKV70Xkq4ACR4vOWUlrqAqu+TYIcphdwlJAlkhnEuYTU9IfxZr3xM\n1LHZFMUt4oGu03UH5iMdIzshfMoFqp8rRR9egtvnSQw3QxfmWlaoOCibrV8G\nAqafUvBS44EShPqo0geR99Q7XYswMwFkYwBhe7vNSSrthvjIDaJIUEjfLeAd\nq4GtU4Oo32ljYyN8w0i4asjv37cAz1SAspQcLLUldMjKhqmo/rOHUkbbnKEw\nwvNRZzczDb9Iv9v36dm4pKbV9ilOwHfPmsAXAf3BjQryotnyzUAsghff1z0S\nVP8lLnQf11qwO958nJKfl/DTft8k6f/pmP4he6Z7T5bRsOwjkXZ5e2RRL1TW\nu/20qZwNJy3R4SMTpLEoVNHCZ4XobEJbRXjycG/mn/TZO3TUvTEPrMGbOioJ\nv5tYaeN81r04qLWHbpVD93MZaqxdEPmxtyoXsdDPRXCELFluvsPTE/EZLdRN\nuS4XkeADPoPtL+05x2YXBNRe8XJELDEiRDTO4fXxdnEb6L5FEZWv8IoR71C8\n/SBceIDWD726YmXkQdCyZ70VOJ7uQ1vJX4y1mcIJXm8buQ6b2uZ5F/64IXIr\noil2EX2t5JM1RuD0ycTqGiFovMcBLwLAi23ydN/tcvLSicAG5PpC0ykf0U/B\nrbMBMR20UU1ceAdUFApvjPzv33yLilV1NqzjuZ2811QFwo+ZU+JYKDj1TyhX\na9hmysMLIKM8DaF4n34+EUctT3rDqe5KWTeDePii7/Smm5NEoOVr2rePYS+I\n+Vi2eyrE/n2ATzBXXfNas2f6VWfR9+r/7eMXrF5+xca+WWpylYpQBRf907Os\ndlMjWHKWPQ7rO7t1KHKrIdhi7i5in0jNsKanQ4ZQJL4dynvy2w7tgrxHWWLN\nCTzvsHQkhCwA4470GUkBOar5ePKWboiL/fdVSK8DepwuIPO1WIrP8J4G3Pi7\n03aos7XNr6Q8FOyv7hf0s4tHevCyef0ux+N+L0DQ+E1wcliP88naI1ysYfrF\n9Dc=\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-01-06T15:07:57.257+00:00\",\"changed\":[\"cloned from \\\"CSD U2L3-L8-2025\\\"\"],\"cloned_from\":\"CSD U2L3-L8-2025\"},{\"changed_at\":\"2026-01-06 15:08:13 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-06 15:08:46 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-06 15:08:53 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-01-06 15:08:56 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Weblab2>

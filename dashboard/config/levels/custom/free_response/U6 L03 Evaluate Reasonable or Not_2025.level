@@ -18,7 +18,8 @@
     "encrypted_solution": "PTmsnox6rVFeRb51k7s8n0KgSLuOIhF0JVjn938+tOfYgulXk8JQKxvY+SmR\nLFrw2+EnCHZ+7RTVX/l9OP2D5rDFm9bcfIAjpQ7moWrcOXmTtt55XvQdL+AE\nakN90dMj1C1WSU75j8imXW15pRDhClLOCTpeetond3loe5vYH8V6sjK41kpb\nKAQF1dxB6L2Z4pQw1gPm/xIihaQ8OrmZrP2iePWM6L6GwjXsmyp72eY=\n",
     "optional": "false",
     "encrypted": "false",
-    "allow_multiple_attempts": "true"
+    "allow_multiple_attempts": "true",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

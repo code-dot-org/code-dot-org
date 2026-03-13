@@ -27,6 +27,7 @@
 #  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
 #
 # Indexes
 #
@@ -87,5 +88,9 @@ class OmniAuthSection < Section
 
   def provider_managed?
     true
+  end
+
+  def self.code_for_section(section_id)
+    "#{self::CODE_PREFIX}#{section_id}"
   end
 end

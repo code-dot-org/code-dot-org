@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
 
 import styles from './edit-child-level-settings.module.scss';
 
@@ -18,9 +18,9 @@ const BubbleChoiceDescriptionEditor = ({
     const elementId = `bubble_choice_description_${index}`;
     const element = document.getElementById(elementId);
     if (element) {
-      initializeCodeMirror(elementId, 'markdown', {
+      initializeCodeMirror6(elementId, 'markdown', {
         callback: codeMirror => {
-          handleDescriptionChange(index, codeMirror.getValue());
+          handleDescriptionChange(codeMirror.getValue());
         },
       });
       isInitialized.current = true;

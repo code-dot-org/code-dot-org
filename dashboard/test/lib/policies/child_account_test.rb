@@ -60,8 +60,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       [[:student], false],
       [[:student, :U13], false],
       [[:student, :U13, :unknown_us_region], false],
-      [[:non_compliant_child, {created_at: '2023-06-29T23:59:59MDT'}], true],
-      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], false],
+      [[:non_compliant_child, {created_at: '2024-06-29T23:59:59MDT'}], true],
       [[:non_compliant_child, {created_at: '2024-07-01T00:00:00MDT'}], false],
       [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2023-06-29T23:59:59MDT'}], false],
       [[:non_compliant_child, :migrated_imported_from_clever, :without_email_auth_option, :without_encrypted_password, {created_at: '2024-06-29T23:59:59MDT'}], false],
@@ -240,9 +239,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_cap_compliant?) {false}
     let(:user_grace_period_end_date) {14.days.since}
     let(:user_predates_cap_policy?) {false}
-    let(:user_state_policy_start_date) {1.year.ago}
     let(:user_state_policy_lockout_date) {1.year.since}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_state_policy_lockout_date}}
+    let(:user_state_policy) {{lockout_date: user_state_policy_lockout_date}}
 
     around do |test|
       Timecop.freeze {test.call}
@@ -255,8 +253,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
       Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
     end
 
-    it 'returns state policy start date' do
-      _(lockout_date).must_equal user_state_policy_start_date
+    it 'returns state policy lockout date' do
+      _(lockout_date).must_equal user_state_policy_lockout_date
     end
 
     context 'when user was created before state policy took effect' do
@@ -421,66 +419,6 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
   end
 
-  test '.personal_account?' do
-    # [User traits, Expected result from personal_account?]
-    test_matrix = [
-      # Personal Accounts
-      [[:student], true], # Has email auth option and password by default
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password], true],
-
-      # School-managed accounts
-      [[:student, :with_clever_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
-      [[:student, :with_lti_authentication_option, :without_email_auth_option, :without_encrypted_password], false],
-
-      # Conditionally school-managed (when in a section or roster synced)
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_google_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
-
-      # School-managed accounts that have email logins or passwords, tainting them as personal accounts
-      [[:student, :with_clever_authentication_option, :without_encrypted_password], true],
-      [[:student, :with_clever_authentication_option, :without_email_auth_option], true],
-      [[:student, :with_lti_authentication_option, :without_encrypted_password], true],
-      [[:student, :with_lti_authentication_option, :without_email_auth_option], true],
-
-      # Conditionally school-managed accounts that have email logins or passwords should still be considered school-managed
-      [[:student, :with_google_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_google_authentication_option, :without_email_auth_option, :in_google_section], false],
-      [[:student, :with_google_authentication_option, :without_encrypted_password, :in_google_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, {roster_synced: true}], false],
-      [[:student, :with_microsoft_authentication_option, :without_email_auth_option, :in_email_section], false],
-      [[:student, :with_microsoft_authentication_option, :without_encrypted_password, :in_email_section], false],
-
-      # Personal accounts in sections or roster synced should still be considered school-managed
-      [[:student, :in_email_section], false],
-      [[:student, {roster_synced: true}], false],
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, :in_email_section], false],
-      [[:student, :with_facebook_authentication_option, :without_email_auth_option, :without_encrypted_password, {roster_synced: true}], false],
-
-      # Unmigrated
-      [[:student, :without_email_auth_option, :demigrated], true],
-      [[:student, :clever_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], false],
-      [[:student, :facebook_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :google_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated, :in_google_section], false],
-      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :demigrated], true],
-      [[:student, :microsoft_v2_sso_provider, :without_email_auth_option, :without_encrypted_password, :in_email_section, :demigrated], false],
-    ]
-    failures = []
-    test_matrix.each do |traits, expected_result|
-      user = create(*traits)
-      actual_result = Policies::ChildAccount.personal_account?(user)
-      failure_msg = "Expected personal_account?(#{traits}) to be #{expected_result} but it was #{actual_result}"
-      failures << failure_msg if actual_result != expected_result
-    end
-    assert failures.empty?, failures.join("\n")
-  end
-
   describe '.parent_permission_required?' do
     let(:parent_permission_required?) {Policies::ChildAccount.parent_permission_required?(user, future: future)}
 
@@ -492,11 +430,9 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user_account_is_personal?) {true}
     let(:user) {build_stubbed(:user, user_type: user_type, birthday: user_age&.year&.ago)}
 
-    # This is the policy: max age of 12 with a lockout date 1 year after the start date
-    let(:user_state_policy_start_date) {1.second.ago}
     let(:user_state_policy_max_age) {12}
-    let(:user_lockout_date) {user_state_policy_start_date + 1.year}
-    let(:user_state_policy) {{start_date: user_state_policy_start_date, lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
+    let(:user_lockout_date) {DateTime.now}
+    let(:user_state_policy) {{lockout_date: user_lockout_date, max_age: user_state_policy_max_age}}
 
     # Use the default `future` flag if we want to know if the student will need
     # parent permission in the future.
@@ -508,7 +444,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     before do
       Policies::ChildAccount::StatePolicies.stubs(:state_policy).with(user).returns(user_state_policy)
-      Policies::ChildAccount.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
+      Policies::User.stubs(:personal_account?).with(user).returns(user_account_is_personal?)
     end
 
     it 'returns true' do
@@ -540,7 +476,7 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     end
 
     context 'when policy has not yet taken effect' do
-      let(:user_state_policy_start_date) {1.second.since}
+      let(:user_lockout_date) {1.second.since}
 
       it 'returns false' do
         _(parent_permission_required?).must_equal false

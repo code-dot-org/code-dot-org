@@ -2,25 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID=poem_art&limit=1&locale=en-US&skip=0
+    uri: https://preview.contentful.com/spaces/27jkibac934d/environments/master/entries?content_type=curriculum&fields.tutorialID=poem_art&limit=1&locale=en-US&order&skip=0
     body:
       encoding: UTF-8
       string: ''
-    headers:
-      X-Contentful-User-Agent:
-      - sdk contentful.rb/2.18.0; platform ruby/3.1.0; os macOS/24;
-      Authorization:
-      - Bearer dnVyQ99x_U7o8ZTUK-4tM-__EENnjBB_nJ7uWCCSL-Q
-      Content-Type:
-      - application/vnd.contentful.delivery.v1+json
-      Accept-Encoding:
-      - gzip
-      Connection:
-      - close
-      Host:
-      - preview.contentful.com
-      User-Agent:
-      - http.rb/5.2.0
   response:
     status:
       code: 200

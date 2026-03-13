@@ -52,7 +52,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     expect_renders_text(mock_image, 'CS Fundamentals')
     expect_renders_text(mock_image, 'Intro Workshop')
     workshop.facilitators.each {|f| expect_renders_text(mock_image, f.name)}
-    workshop_hours = Integer(workshop.effective_num_hours)
+    workshop_hours = Integer(workshop.num_scheduled_session_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
     expect_renders_text(mock_image, workshop.workshop_date_range_string)
 
@@ -71,7 +71,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     expect_renders_text(mock_image, 'CS Discoveries')
     expect_renders_text(mock_image, '5-day Summer Workshop')
     @workshop.facilitators.each {|f| expect_renders_text(mock_image, f.name)}
-    workshop_hours = Integer(@workshop.effective_num_hours)
+    workshop_hours = Integer(@workshop.num_scheduled_session_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
     expect_renders_text(mock_image, @workshop.workshop_date_range_string)
 
@@ -97,7 +97,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     expect_renders_text(mock_image, 'CS Discoveries')
     expect_renders_text(mock_image, 'Code.org TeacherCon')
     expect_renders_text(mock_image, Pd::CertificateRenderer::HARDCODED_CSD_FACILITATOR)
-    workshop_hours = Integer(workshop.effective_num_hours)
+    workshop_hours = Integer(workshop.num_scheduled_session_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
     expect_renders_text(mock_image, workshop.workshop_date_range_string)
 
@@ -123,7 +123,7 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     expect_renders_text(mock_image, 'CS Principles')
     expect_renders_text(mock_image, 'Code.org TeacherCon')
     expect_renders_text(mock_image, Pd::CertificateRenderer::HARDCODED_CSP_FACILITATOR)
-    workshop_hours = Integer(workshop.effective_num_hours)
+    workshop_hours = Integer(workshop.num_scheduled_session_hours)
     expect_renders_text(mock_image, workshop_hours.to_s)
     expect_renders_text(mock_image, workshop.workshop_date_range_string)
 

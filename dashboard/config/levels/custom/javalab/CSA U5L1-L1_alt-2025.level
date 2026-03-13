@@ -18,20 +18,20 @@
         "tabOrder": 0
       },
       "Teacher.java": {
-        "text": "public class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades() {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[0].length; index++) {\n      result += weeklyGrades[0][index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "text": "public class Teacher {\n\n  private int[][] weeklyGrades;\n\n  public Teacher(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int[][] getWeeklyGrades() {\n    return weeklyGrades;\n  }\n\n  public void setWeeklyGrades(int[][] weeklyGrades) {\n    this.weeklyGrades = weeklyGrades;\n  }\n\n  public int getGrade(int row, int col) {\n    return weeklyGrades[row][col];\n  }\n\n  public void setGrade(int row, int col, int newValue) {\n    weeklyGrades[row][col] = newValue;\n  }\n\n  public String getStudentGrades(int week) {\n    String result = \"\";\n    \n    for (int index = 0; index < weeklyGrades[week].length; index++) {\n      result += weeklyGrades[week][index] + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
         "isVisible": true,
         "tabOrder": 1
       }
     },
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ],
+    "ai_tutor_available": "false",
     "contained_level_names": [
       "CSA U5L1-L1 Contained_alt-2025"
+    ],
+    "encrypted_examples": [
+
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:52:48.329+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L1-L1_pilot-2025\"},{\"changed_at\":\"2025-05-22 18:04:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:05:27 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:05:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:52:48.329+00:00\",\"changed\":[\"cloned from \\\"CSA U5L1-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L1-L1_pilot-2025\"},{\"changed_at\":\"2025-05-22 18:04:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:05:27 +0000\",\"changed\":[\"contained_level_names\",\"ai_tutor_available\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-05-22 18:05:44 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-01-23 21:30:48 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:41:36 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:42:31 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:44:12 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:45:37 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 15:45:38 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

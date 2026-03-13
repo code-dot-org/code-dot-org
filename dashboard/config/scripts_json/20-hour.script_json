@@ -19,6 +19,7 @@
       "content_area": "curriculum_k_5",
       "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
+      "is_deprecated": true,
       "is_migrated": true,
       "show_calendar": true,
       "supported_locales": [

@@ -1,3 +1,43 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58c83ce641b4ac663795978815dfc90fe95b247369caaa1658349eae83bab472
-size 2752
+[
+  {
+    "id": "gen-ai-mistral-7b-inst-v01",
+    "name": "Mistral 7B Instruct v01",
+    "overview": "A generative language model pre-trained with 7 billion parameters, designed for following instructions.",
+    "trainingData": "The MistralAI team trained Mistral-7B-v0.1 on datasets taken directly from the openWeb. The v0.1 model took the base model and finetuned it using additional data from several sources, focusing on improving logic and reasoning or recalling trivia or other facts."
+  },
+  {
+    "id": "gpt-4o-mini",
+    "name": "GPT-4o mini",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash-lite",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash-Lite",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-2.5-flash-image",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 2.5 Flash Image",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  },
+  {
+    "id": "gemini-3-pro-preview",
+    "name": "[EXPERIMENTAL, LEVELBUILDER USE ONLY] Gemini 3 Pro Preview",
+    "overview": "...",
+    "trainingData": "...",
+    "multimodal": true
+  }
+]

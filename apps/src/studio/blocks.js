@@ -5,28 +5,39 @@
  *
  */
 
+import {Order} from 'blockly/javascript';
 import _ from 'lodash';
 
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
+import {
+  addSerializationHooksToBlock,
+  interpolateMsg,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
 import commonMsg from '@cdo/locale';
 
-import {BlockColors, BlockStyles} from '../blockly/constants';
+import {BlockStyles} from '../blockly/constants';
 import {singleton as studioApp} from '../StudioApp';
 import {stripQuotes, valueOr} from '../utils';
 
 import {
-  CardinalDirections,
-  Direction,
-  Emotions,
-  Position,
   BEHAVIOR_CHASE,
   BEHAVIOR_FLEE,
   BEHAVIOR_WANDER,
+  CardinalDirections,
   CLICK_VALUE,
+  Direction,
+  Emotions,
   EMPTY_QUOTES,
   HIDDEN_VALUE,
+  IMAGE_SIZES,
+  Position,
   RANDOM_VALUE,
   VISIBLE_VALUE,
-  IMAGE_SIZES,
 } from './constants';
 import i18n from './locale';
 import paramLists from './paramLists';
@@ -130,14 +141,12 @@ function getSpriteOrDropdownIndex(
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
   var generator = blockly.getGenerator();
 
-  // As of v10, Google Blockly has moved generator functions to forBlock.
-  // The fallback is required to maintain functionality with CDO Blockly.
-  const blockGeneratorFunctionDictionary = generator.forBlock || generator;
+  const blockGeneratorFunctionDictionary = generator.forBlock;
 
   blockly.JavaScript = generator;
   msg = {...msg, ...skin.msgOverrides};
@@ -167,15 +176,15 @@ exports.install = function (blockly, blockInstallOptions) {
    * Creates a dropdown with options for each sprite number
    * @param {function} stringGenerator A function that takes a spriteIndex and
    *   creates a string from it.
-   * @returns {Blockly.FieldDropdown}
+   * @returns {CdoFieldDropdown}
    */
   function spriteNumberTextDropdown(stringGenerator) {
-    return new blockly.FieldDropdown(spriteNumberTextArray(stringGenerator));
+    return new CdoFieldDropdown(spriteNumberTextArray(stringGenerator));
   }
 
   /**
    * Creates a dropdown with thumbnails for each starting sprite
-   * @returns {Blockly.FieldImageDropdown}
+   * @returns {CdoFieldImageDropdown}
    */
   function startingSpriteImageDropdown() {
     var spriteNumbers = _.range(0, spriteCount);
@@ -183,7 +192,7 @@ exports.install = function (blockly, blockInstallOptions) {
       var skinId = startAvatars[index];
       return [skin[skinId].dropdownThumbnail, index.toString()];
     });
-    return new blockly.FieldImageDropdown(
+    return new CdoFieldImageDropdown(
       choices,
       skin.dropdownThumbnailWidth,
       skin.dropdownThumbnailHeight
@@ -273,15 +282,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the Left arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenLeft));
+          .appendField(new CdoFieldImage(skin.whenLeft));
       } else {
         this.appendDummyInput().appendField(msg.whenLeft());
       }
@@ -298,15 +303,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the Right arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenRight));
+          .appendField(new CdoFieldImage(skin.whenRight));
       } else {
         this.appendDummyInput().appendField(msg.whenRight());
       }
@@ -323,15 +324,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the Up arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenUp));
+          .appendField(new CdoFieldImage(skin.whenUp));
       } else {
         this.appendDummyInput().appendField(msg.whenUp());
       }
@@ -348,15 +345,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the Down arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new Blockly.FieldImage(skin.whenDown));
+          .appendField(new CdoFieldImage(skin.whenDown));
       } else {
         this.appendDummyInput().appendField(msg.whenDown());
       }
@@ -373,15 +366,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(commonMsg.when());
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_VALUES,
             IMAGE_SIZES.K1_ARROW_KEY.width,
             IMAGE_SIZES.K1_ARROW_KEY.height,
@@ -392,7 +381,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.VALUES),
+          new CdoFieldDropdown(this.VALUES),
           'VALUE'
         );
       }
@@ -400,7 +389,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenArrowTooltip());
-      Blockly.customBlocks.addSerializationHooksToBlock(this);
+      addSerializationHooksToBlock(this);
     },
   };
 
@@ -425,15 +414,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle the repeating tick event while the game is running.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       if (isK1) {
         this.appendDummyInput().appendField(commonMsg.repeat());
         this.appendStatementInput('DO').appendField(
-          new blockly.FieldImage(skin.repeatImage)
+          new CdoFieldImage(skin.repeatImage)
         );
       } else {
         this.appendDummyInput().appendField(msg.repeatForever());
@@ -442,7 +427,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setPreviousStatement(false);
       this.setNextStatement(false);
       this.setTooltip(msg.repeatForeverTooltip());
-      Blockly.customBlocks.addSerializationHooksToBlock(this);
+      addSerializationHooksToBlock(this);
     },
   };
 
@@ -457,16 +442,12 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when sprite is clicked.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
             .appendField(commonMsg.when())
-            .appendField(new blockly.FieldImage(skin.clickIcon))
+            .appendField(new CdoFieldImage(skin.clickIcon))
             .appendField(startingSpriteImageDropdown(), 'SPRITE');
         } else {
           this.appendDummyInput().appendField(
@@ -478,9 +459,9 @@ exports.install = function (blockly, blockInstallOptions) {
         if (isK1) {
           this.appendDummyInput()
             .appendField(commonMsg.when())
-            .appendField(new blockly.FieldImage(skin.clickIcon))
+            .appendField(new CdoFieldImage(skin.clickIcon))
             .appendField(
-              new blockly.FieldImage(
+              new CdoFieldImage(
                 skin[startAvatars[0]].dropdownThumbnail,
                 skin.dropdownThumbnailWidth,
                 skin.dropdownThumbnailHeight
@@ -504,11 +485,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when sprite touches an item.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(msg.whenTouchCharacter());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -523,11 +500,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when sprite touches a wall.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(msg.whenTouchObstacle());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -542,11 +515,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when sprite touches a goal.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(msg.whenTouchGoal());
       this.setPreviousStatement(false);
       this.setNextStatement(true);
@@ -561,13 +530,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets a character.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(false);
@@ -595,11 +560,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets all characters.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(msg.whenGetAllCharacters());
       this.setPreviousStatement(false);
       this.setInputsInline(true);
@@ -615,13 +576,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when the primary sprite gets all characters of a class.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(false);
@@ -650,11 +607,7 @@ exports.install = function (blockly, blockInstallOptions) {
     init: function () {
       var dropdown1;
       var dropdown2;
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
 
       if (isK1) {
         // NOTE: K1 block does not yet support projectile or edge collisions
@@ -662,7 +615,7 @@ exports.install = function (blockly, blockInstallOptions) {
         dropdown2 = startingSpriteImageDropdown();
         this.appendDummyInput()
           .appendField(commonMsg.when())
-          .appendField(new blockly.FieldImage(skin.collide))
+          .appendField(new CdoFieldImage(skin.collide))
           .appendField(dropdown1, 'SPRITE1');
         this.appendDummyInput()
           .appendField(commonMsg.and())
@@ -680,7 +633,7 @@ exports.install = function (blockly, blockInstallOptions) {
         }
         dropdownArray2 = dropdownArray2.concat(this.GROUPINGS.slice(3, 6));
         dropdownArray2 = dropdownArray2.concat(this.EDGES);
-        dropdown2 = new blockly.FieldDropdown(dropdownArray2);
+        dropdown2 = new CdoFieldDropdown(dropdownArray2);
         this.appendDummyInput().appendField(dropdown1, 'SPRITE1');
         this.appendDummyInput().appendField(dropdown2, 'SPRITE2');
       }
@@ -693,7 +646,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteCollidedTooltip());
-      Blockly.customBlocks.addSerializationHooksToBlock(this);
+      addSerializationHooksToBlock(this);
     },
   };
 
@@ -722,13 +675,9 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_allowSpritesOutsidePlayspace = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown([
+        new CdoFieldDropdown([
           [msg.allowActorsToLeaveThePlayspace(), 'true'],
           [msg.dontAllowActorsToLeaveThePlayspace(), 'false'],
         ]),
@@ -753,11 +702,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for stopping the movement of a sprite.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
         this.appendDummyInput().appendField(
           spriteNumberTextDropdown(msg.stopSpriteN),
@@ -777,11 +722,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for stopping the movement of a sprite.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.stopSpriteN({spriteIndex: ''}));
@@ -813,14 +754,10 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding a character to the scene.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.addCharacter());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -849,17 +786,13 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting the activity type on a class of items.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.activityChoices),
+        new CdoFieldDropdown(skin.activityChoices),
         'TYPE'
       );
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -901,19 +834,15 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting item speed
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
 
       this.appendDummyInput().appendField(msg.setItemSpeedSet());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.itemChoices),
+        new CdoFieldDropdown(skin.itemChoices),
         'CLASS'
       );
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to slow
       this.appendDummyInput().appendField(dropdown, 'VALUE');
 
@@ -949,20 +878,16 @@ exports.install = function (blockly, blockInstallOptions) {
   addRegularAndParamsVersions(
     'throw',
     function (actorSelectDropdown) {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       appendActorSelect(this, actorSelectDropdown);
       this.appendDummyInput().appendField(msg.throwSprite());
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(skin.projectileChoices),
+        new CdoFieldDropdown(skin.projectileChoices),
         'VALUE'
       );
       this.appendDummyInput().appendField('\t');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(blockly.Blocks.studio_throw.DIR),
+        new CdoFieldDropdown(blockly.Blocks.studio_throw.DIR),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -1017,18 +942,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for making a projectile bounce or disappear.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.appendDummyInput().appendField('\t');
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.ACTIONS),
+        new CdoFieldDropdown(this.ACTIONS),
         'ACTION'
       );
       this.setPreviousStatement(true);
@@ -1062,19 +983,16 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by dropdown) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
-      var spriteIndexDropdown = new blockly.FieldDropdown(
+      var dropdown = new CdoFieldDropdown(this.VALUES);
+      var spriteIndexDropdown = new CdoFieldDropdown(
         spriteNumberTextArray(s => s.spriteIndex.toString())
       );
 
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setSpritePosition(),
           () => {
             this.appendDummyInput().appendField(spriteIndexDropdown, 'SPRITE');
@@ -1082,15 +1000,16 @@ exports.install = function (blockly, blockInstallOptions) {
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       } else {
-        this.interpolateMsg(
+        interpolateMsg(
+          this,
           msg.setPosition(),
           () => {
             this.appendDummyInput().appendField(dropdown, 'VALUE');
           },
-          blockly.ALIGN_RIGHT
+          blockly.inputs.Align.RIGHT
         );
       }
       this.setPreviousStatement(true);
@@ -1114,14 +1033,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite (selected by block param) to different position.
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(POSITION_VALUES);
+      var dropdown = new CdoFieldDropdown(POSITION_VALUES);
       dropdown.setValue(POSITION_VALUES[1][1]); // default to top-left
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.setSpritePosition(),
         () => {
           this.appendValueInput('SPRITE').setCheck(
@@ -1131,7 +1047,7 @@ exports.install = function (blockly, blockInstallOptions) {
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1153,11 +1069,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping a sprite to specific XY location.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -1207,19 +1119,16 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding a goal flag at a specified position
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.addGoalPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1246,11 +1155,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_addGoalXY = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.addGoal());
       this.appendDummyInput().appendField(msg.to());
       this.appendValueInput('XPOS').setCheck(blockly.BlockValueType.NUMBER);
@@ -1371,14 +1276,10 @@ exports.install = function (blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function () {
-          Blockly.cdoUtils.handleColorAndStyle(
-            this,
-            BlockColors.DEFAULT,
-            BlockStyles.DEFAULT
-          );
+          this.setStyle(BlockStyles.DEFAULT);
           this.appendDummyInput()
             .appendField(msg.moveSprite()) // move
-            .appendField(new blockly.FieldImage(directionConfig.image)) // arrow
+            .appendField(new CdoFieldImage(directionConfig.image)) // arrow
             .appendField(directionConfig.letter); // NESW
 
           if (spriteCount > 1) {
@@ -1390,7 +1291,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
           if (hasLengthInput) {
             this.appendDummyInput().appendField(
-              new blockly.FieldImageDropdown(
+              new CdoFieldImageDropdown(
                 SimpleMove.DISTANCES,
                 IMAGE_SIZES.K1_MOVE_LINE.width,
                 IMAGE_SIZES.K1_MOVE_LINE.height
@@ -1445,11 +1346,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving one frame a time.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
@@ -1468,7 +1365,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_DIR,
             IMAGE_SIZES.K1_DIR.width,
             IMAGE_SIZES.K1_DIR.height,
@@ -1479,7 +1376,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.DIR),
+          new CdoFieldDropdown(this.DIR),
           'DIR'
         );
       }
@@ -1522,11 +1419,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving/gliding a specific distance.
     block.helpUrl = '';
     block.init = function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (options.sprite) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -1549,7 +1442,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
       if (isK1) {
         this.appendDummyInput().appendField(
-          new blockly.FieldImageDropdown(
+          new CdoFieldImageDropdown(
             this.K1_DIR,
             IMAGE_SIZES.K1_DIR.width,
             IMAGE_SIZES.K1_DIR.height,
@@ -1560,7 +1453,7 @@ exports.install = function (blockly, blockInstallOptions) {
         );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.DIR),
+          new CdoFieldDropdown(this.DIR),
           'DIR'
         );
       }
@@ -1574,7 +1467,7 @@ exports.install = function (blockly, blockInstallOptions) {
       } else {
         if (isK1) {
           this.appendDummyInput().appendField(
-            new blockly.FieldImageDropdown(
+            new CdoFieldImageDropdown(
               this.K1_DISTANCE,
               IMAGE_SIZES.K1_MOVE_LINE.width,
               IMAGE_SIZES.K1_MOVE_LINE.height
@@ -1583,7 +1476,7 @@ exports.install = function (blockly, blockInstallOptions) {
           );
         } else {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(this.DISTANCE),
+            new CdoFieldDropdown(this.DISTANCE),
             'DISTANCE'
           );
         }
@@ -1735,13 +1628,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward/backward
     helpUrl: 'http://code.google.com/p/blockly/wiki/Move',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -1765,13 +1654,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -1814,22 +1699,18 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for playing sound.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.play())
-          .appendField(new blockly.FieldImage(skin.soundIcon))
+          .appendField(new CdoFieldImage(skin.soundIcon))
           .appendField(
-            new blockly.FieldDropdown(this.soundChoices(), onSoundSelected),
+            new CdoFieldDropdown(this.soundChoices(), onSoundSelected),
             'SOUND'
           );
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.soundChoices(), onSoundSelected),
+          new CdoFieldDropdown(this.soundChoices(), onSoundSelected),
           'SOUND'
         );
       }
@@ -1867,18 +1748,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for changing the score.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (isK1) {
         this.appendDummyInput()
           .appendField(commonMsg.score())
-          .appendField(new blockly.FieldImage(skin.scoreCard));
+          .appendField(new CdoFieldImage(skin.scoreCard));
       } else {
         this.appendDummyInput().appendField(
-          new blockly.FieldDropdown(this.VALUES),
+          new CdoFieldDropdown(this.VALUES),
           'VALUE'
         );
       }
@@ -1910,13 +1787,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding points.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -1948,13 +1821,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for removing points.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.VALUES),
+        new CdoFieldDropdown(this.VALUES),
         'VALUE'
       );
       this.setPreviousStatement(true);
@@ -1985,11 +1854,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setScore = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('VALUE').appendField(msg.setScore());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -2010,11 +1875,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_getScore = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput().appendField(msg.score());
       this.setOutput(true, Blockly.BlockValueType.NUMBER);
       this.setTooltip(msg.getScoreTooltip());
@@ -2029,11 +1890,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding arbitrary number of points
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('NUM')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.add());
@@ -2060,11 +1917,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for adding arbitrary number of points
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('NUM').appendField(msg.remove());
       this.appendDummyInput().appendField(msg.points());
 
@@ -2089,11 +1942,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting the score text.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('TEXT').appendField(msg.setScoreText());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -2117,11 +1966,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for showing the protagonist's coordinates.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.showCoordinates());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -2139,12 +1984,8 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting droid speed
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      this.setStyle(BlockStyles.DEFAULT);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[2][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2175,11 +2016,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting sprite speed
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
 
       if (spriteCount > 1) {
         if (isK1) {
@@ -2197,7 +2034,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
 
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(
+        var fieldImageDropdown = new CdoFieldImageDropdown(
           this.K1_VALUES,
           IMAGE_SIZES.K1_SPEEDS.width,
           IMAGE_SIZES.K1_SPEEDS.height
@@ -2207,7 +2044,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.speed())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[3][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -2223,11 +2060,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting sprite speed
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setSpriteN({spriteIndex: ''}));
@@ -2288,11 +2121,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting sprite size
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
 
       if (spriteCount > 1) {
         this.appendDummyInput().appendField(
@@ -2303,7 +2132,7 @@ exports.install = function (blockly, blockInstallOptions) {
         this.appendDummyInput().appendField(msg.setSprite());
       }
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[3][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
 
@@ -2318,11 +2147,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting sprite size
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setSpriteN({spriteIndex: ''}));
@@ -2383,7 +2208,7 @@ exports.install = function (blockly, blockInstallOptions) {
         const spriteName = stripQuotes(opt[1]);
         return [createMsg({spriteName: `${msg[spriteName]()}`}), opt[1]];
       });
-    const dropdown = new blockly.FieldDropdown(
+    const dropdown = new CdoFieldDropdown(
       values,
       changeCallback,
       true /* opt_alwaysCallChangeHandler */
@@ -2395,11 +2220,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesWander = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameWander);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2419,11 +2240,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesStop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       const dropdown = createSpriteGroupDropdown(msg.stopEverySpriteName);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -2443,11 +2260,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesChase = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       const dropdown = createSpriteGroupDropdown(
         msg.setEverySpriteNameChaseActor
       );
@@ -2471,11 +2284,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesFlee = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       const dropdown = createSpriteGroupDropdown(
         msg.setEverySpriteNameFleeActor
       );
@@ -2499,11 +2308,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpritesSpeed = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       const dropdown = createSpriteGroupDropdown(msg.setEverySpriteNameSpeed);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.appendValueInput('SPEED').setCheck(blockly.BlockValueType.NUMBER);
@@ -2530,11 +2335,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteBehavior = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.setActor());
       this.appendValueInput('SPRITE').setCheck(blockly.BlockValueType.NUMBER);
       let hasTargetInput = true;
@@ -2543,7 +2344,7 @@ exports.install = function (blockly, blockInstallOptions) {
         [msg.setSpriteFlee(), BEHAVIOR_FLEE],
         [msg.toWander(), BEHAVIOR_WANDER],
       ].map(kv => [kv[0], `"${kv[1]}"`]);
-      const behaviorDropdown = new blockly.FieldDropdown(
+      const behaviorDropdown = new CdoFieldDropdown(
         behaviorValues,
         value => {
           // Strip the quotes before comparing
@@ -2589,14 +2390,10 @@ exports.install = function (blockly, blockInstallOptions) {
     // and sets a variable to the sprite in the group that was touched
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
-      var endLabel = new Blockly.FieldLabel();
+      var endLabel = new CdoFieldLabel();
       var dropdown2 = createSpriteGroupDropdown(
         msg.collidesWithAnySpriteName,
         value =>
@@ -2608,15 +2405,13 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(dropdown1, 'SPRITE')
         .appendField(dropdown2, 'SPRITENAME');
       this.appendDummyInput();
-      this.appendValueInput('GROUPMEMBER')
-        // setInline is a no-op function in Google Blockly.
-        .setInline(true)
-        .appendField(msg.set());
-      this.appendDummyInput().setInline(true).appendField(endLabel);
+      this.appendValueInput('GROUPMEMBER').appendField(msg.set());
+      this.appendDummyInput().appendField(endLabel);
 
       this.setPreviousStatement(false);
       this.setNextStatement(true);
       this.setTooltip(msg.whenSpriteAndGroupCollideTooltip());
+      this.setInputsInline(true);
     },
   };
 
@@ -2636,11 +2431,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when a sprite collides with any sprite in a group
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.EVENT,
-        BlockStyles.EVENT
-      );
+      this.setStyle(BlockStyles.EVENT);
 
       var dropdown1 = spriteNumberTextDropdown(msg.whenSpriteN);
       var dropdown2 = createSpriteGroupDropdown(msg.collidesWithAnySpriteName);
@@ -2663,17 +2454,13 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setBackground = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.VALUES = [];
 
       var dropdown;
       if (isK1) {
         this.VALUES = skin.backgroundChoicesK1;
-        dropdown = new blockly.FieldImageDropdown(
+        dropdown = new CdoFieldImageDropdown(
           skin.backgroundChoicesK1,
           skin.dropdownThumbnailWidth,
           skin.dropdownThumbnailHeight
@@ -2683,7 +2470,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(dropdown, 'VALUE');
       } else {
         this.VALUES = skin.backgroundChoices;
-        dropdown = new blockly.FieldDropdown(skin.backgroundChoices);
+        dropdown = new CdoFieldDropdown(skin.backgroundChoices);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
       dropdown.setValue('"' + skin.defaultBackground + '"');
@@ -2697,11 +2484,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setBackgroundParam = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.VALUES = skin.backgroundChoices;
 
       this.appendDummyInput().appendField(msg.setBackground());
@@ -2737,18 +2520,14 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setMap = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
         opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
@@ -2770,18 +2549,14 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setMapAndColor = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       // 'random' is a special value, don't put it in quotes
       this.VALUES = skin.mapChoices.map(opt => [
         opt[0],
         opt[1] === RANDOM_VALUE ? opt[1] : `"${opt[1]}"`,
       ]);
 
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       // default to first item after random
       dropdown.setValue(skin.mapChoices[1][1]);
@@ -2816,42 +2591,38 @@ exports.install = function (blockly, blockInstallOptions) {
 
     block.helpUrl = '';
     block.init = function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(msg.showTitleScreen());
       if (options.params) {
         this.appendValueInput('TITLE')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenTitle());
         this.appendValueInput('TEXT')
           .setCheck(blockly.BlockValueType.STRING)
-          .setAlign(Blockly.ALIGN_RIGHT)
+          .setAlign(Blockly.inputs.Align.RIGHT)
           .appendField(msg.showTitleScreenText());
       } else {
         this.appendDummyInput()
           .appendField(msg.showTitleScreenTitle())
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(
             new Blockly.FieldTextInput(msg.showTSDefTitle()),
             'TITLE'
           )
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
         this.appendDummyInput()
           .appendField(msg.showTitleScreenText())
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(new Blockly.FieldTextInput(msg.showTSDefText()), 'TEXT')
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
       }
       this.setPreviousStatement(true);
@@ -2911,12 +2682,8 @@ exports.install = function (blockly, blockInstallOptions) {
     blockly.Blocks.studio_setSprite = {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.VARIABLE,
-          BlockStyles.VARIABLE
-        );
-        var visibilityTextDropdown = new blockly.FieldDropdown(this.VALUES);
+        this.setStyle(BlockStyles.VARIABLE);
+        var visibilityTextDropdown = new CdoFieldDropdown(this.VALUES);
         visibilityTextDropdown.setValue(VISIBLE_VALUE); // default to visible
         this.appendDummyInput().appendField(visibilityTextDropdown, 'VALUE');
         if (spriteCount > 1) {
@@ -2945,11 +2712,7 @@ exports.install = function (blockly, blockInstallOptions) {
       init: function () {
         // shallow copy array:
         this.VALUES = [].concat(skin.spriteChoices);
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.VARIABLE,
-          BlockStyles.VARIABLE
-        );
+        this.setStyle(BlockStyles.VARIABLE);
         if (spriteCount > 1) {
           this.appendDummyInput().appendField(
             spriteNumberTextDropdown(msg.setSpriteN),
@@ -2966,7 +2729,7 @@ exports.install = function (blockly, blockInstallOptions) {
             this.VALUES[i][0] = prefix + this.VALUES[i][0];
           }
         }
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         // default to first item after random/hidden
         dropdown.setValue(skin.spriteChoices[2][1]);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -2982,15 +2745,11 @@ exports.install = function (blockly, blockInstallOptions) {
     helpUrl: '',
     init: function () {
       this.VALUES = skin.spriteChoices;
-      var dropdown = new blockly.FieldDropdown(skin.spriteChoices);
+      var dropdown = new CdoFieldDropdown(skin.spriteChoices);
       // default to first item after random/hidden
       dropdown.setValue(skin.spriteChoices[2][1]);
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setSpriteN({spriteIndex: ''}));
@@ -3005,11 +2764,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteParamValue = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       if (spriteCount > 1) {
         this.appendDummyInput().appendField(
           spriteNumberTextDropdown(msg.setSpriteN),
@@ -3063,11 +2818,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteEmotion = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (spriteCount > 1) {
         if (isK1) {
           this.appendDummyInput()
@@ -3084,7 +2835,7 @@ exports.install = function (blockly, blockInstallOptions) {
       }
 
       if (isK1) {
-        var fieldImageDropdown = new blockly.FieldImageDropdown(
+        var fieldImageDropdown = new CdoFieldImageDropdown(
           this.K1_VALUES,
           IMAGE_SIZES.K1_EMOTIONS.width,
           IMAGE_SIZES.K1_EMOTIONS.height
@@ -3094,7 +2845,7 @@ exports.install = function (blockly, blockInstallOptions) {
           .appendField(msg.emotion())
           .appendField(fieldImageDropdown, 'VALUE');
       } else {
-        var dropdown = new blockly.FieldDropdown(this.VALUES);
+        var dropdown = new CdoFieldDropdown(this.VALUES);
         dropdown.setValue(this.VALUES[1][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       }
@@ -3108,15 +2859,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_setSpriteEmotionParams = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setSpriteN({spriteIndex: ''}));
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to normal
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -3165,11 +2912,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (options.time) {
         this.appendValueInput('SPRITE')
           .setCheck(blockly.BlockValueType.NUMBER)
@@ -3197,24 +2940,22 @@ exports.install = function (blockly, blockInstallOptions) {
           var string = msg['saySpriteChoices_' + i]();
           functionElement[0] = functionElement[1] = string;
         }
-        var dropdown = new blockly.FieldDropdown(functionArray);
+        var dropdown = new CdoFieldDropdown(functionArray);
         this.appendDummyInput().appendField(dropdown, 'VALUE');
       } else if (options.params) {
         this.appendValueInput('TEXT');
       } else {
         var quotedTextInput = this.appendDummyInput();
         if (isK1) {
-          quotedTextInput.appendField(
-            new Blockly.FieldImage(skin.speechBubble)
-          );
+          quotedTextInput.appendField(new CdoFieldImage(skin.speechBubble));
         }
         quotedTextInput
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
           )
           .appendField(new Blockly.FieldTextInput(msg.defaultSayText()), 'TEXT')
           .appendField(
-            new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+            new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
           );
       }
       if (options.time) {
@@ -3315,18 +3056,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for waiting a specific amount of time.
     block.helpUrl = '';
     block.init = function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (options.params) {
         this.appendDummyInput().appendField(msg.waitFor());
         this.appendValueInput('VALUE').setCheck(blockly.BlockValueType.NUMBER);
         this.appendDummyInput().appendField(msg.waitSeconds());
       } else {
         if (isK1) {
-          let dropdown = new blockly.FieldDropdown(
+          let dropdown = new CdoFieldDropdown(
             [1, 2, 3, 4, 5].map(val => [
               val.toString(),
               (val * 1000).toString(),
@@ -3335,11 +3072,11 @@ exports.install = function (blockly, blockInstallOptions) {
           dropdown.setValue('1000');
           this.appendDummyInput()
             .appendField(msg.wait())
-            .appendField(new blockly.FieldImage(skin.clockIcon))
+            .appendField(new CdoFieldImage(skin.clockIcon))
             .appendField(dropdown, 'VALUE')
             .appendField(msg.waitSeconds());
         } else {
-          let dropdown = new blockly.FieldDropdown(this.VALUES);
+          let dropdown = new CdoFieldDropdown(this.VALUES);
           dropdown.setValue(this.VALUES[2][1]); // default to half second
 
           this.appendDummyInput().appendField(dropdown, 'VALUE');
@@ -3394,12 +3131,8 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_endGame = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      this.setStyle(BlockStyles.DEFAULT);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[0][1]); // default to win
       this.appendDummyInput().appendField(dropdown, 'VALUE');
       this.setInputsInline(true);
@@ -3428,11 +3161,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_vanishSprite = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('SPRITE')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.vanishActorN({spriteIndex: ''}));
@@ -3454,23 +3183,19 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.studio_ask = {
     helpUrl: '',
     init: function () {
-      var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+      var fieldLabel = new CdoFieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
       // Must be marked EDITABLE so that cloned blocks share the same var name
       fieldLabel.EDITABLE = true;
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput().appendField(msg.ask());
       this.setInputsInline(true);
       this.appendDummyInput()
         .appendField(
-          new Blockly.FieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
+          new CdoFieldImage(Blockly.assetUrl('media/quote0.png'), 12, 12)
         )
         .appendField(new Blockly.FieldTextInput(''), 'TEXT')
         .appendField(
-          new Blockly.FieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
+          new CdoFieldImage(Blockly.assetUrl('media/quote1.png'), 12, 12)
         );
       this.appendDummyInput().appendField(msg.toSet());
       this.appendDummyInput()
@@ -3478,7 +3203,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(
           Blockly.disableVariableEditing
             ? fieldLabel
-            : new Blockly.FieldVariable(Blockly.Msg.VARIABLES_GET_ITEM),
+            : new CdoFieldVariable(Blockly.Msg.VARIABLES_GET_ITEM),
           'VAR'
         )
         .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
@@ -3518,9 +3243,238 @@ exports.install = function (blockly, blockInstallOptions) {
 
   // Overrides the standard generators from Core Blockly.
   // Variable and function names in Playlab include the Globals namespace.
-  Blockly.customBlocks.overrideForLoopGenerator();
-  Blockly.customBlocks.overrideMathChangeGenerator();
-  Blockly.customBlocks.overrideProceduresGenerators();
+
+  // For loop. This code is copied and modified from Core Blockly:
+  // https://github.com/google/blockly/blob/2c29c01b14fd9cec9f7fde82f6c80b6f4f7b7c30/generators/javascript/loops.ts#L85-L178
+  // A custom generator for a "for loop" where variable names should be part
+  // of the Globals namespace (e.g. Globals.counter).
+  Blockly.JavaScript.forBlock.controls_for = function (block, generator) {
+    // Customization: use translateVarName instead of getVariableName
+    const variable0 = generator.translateVarName(
+      block.getFieldValue('VAR') || ''
+    );
+    // End customation.
+
+    const argument0 =
+      generator.valueToCode(block, 'FROM', Order.ASSIGNMENT) || '0';
+    const argument1 =
+      generator.valueToCode(block, 'TO', Order.ASSIGNMENT) || '0';
+    const increment =
+      generator.valueToCode(block, 'BY', Order.ASSIGNMENT) || '1';
+    let branch = generator.statementToCode(block, 'DO');
+    branch = generator.addLoopTrap(branch, block);
+    let code;
+    if (
+      Blockly.utils.string.isNumber(argument0) &&
+      Blockly.utils.string.isNumber(argument1) &&
+      Blockly.utils.string.isNumber(increment)
+    ) {
+      // All arguments are simple numbers.
+      const up = Number(argument0) <= Number(argument1);
+      code =
+        'for (' +
+        variable0 +
+        ' = ' +
+        argument0 +
+        '; ' +
+        variable0 +
+        (up ? ' <= ' : ' >= ') +
+        argument1 +
+        '; ' +
+        variable0;
+      const step = Math.abs(Number(increment));
+      if (step === 1) {
+        code += up ? '++' : '--';
+      } else {
+        code += (up ? ' += ' : ' -= ') + step;
+      }
+      code += ') {\n' + branch + '}\n';
+    } else {
+      code = '';
+      // Cache non-trivial values to variables to prevent repeated look-ups.
+      let startVar = argument0;
+      if (
+        !argument0.match(/^\w+$/) &&
+        !Blockly.utils.string.isNumber(argument0)
+      ) {
+        startVar = generator.nameDB_.getDistinctName(
+          variable0 + '_start',
+          Blockly.Names.NameType.VARIABLE
+        );
+        code += 'var ' + startVar + ' = ' + argument0 + ';\n';
+      }
+      let endVar = argument1;
+      if (
+        !argument1.match(/^\w+$/) &&
+        !Blockly.utils.string.isNumber(argument1)
+      ) {
+        endVar = generator.nameDB_.getDistinctName(
+          variable0 + '_end',
+          Blockly.Names.NameType.VARIABLE
+        );
+        code += 'var ' + endVar + ' = ' + argument1 + ';\n';
+      }
+      // Determine loop direction at start, in case one of the bounds
+      // changes during loop execution.
+      const incVar = generator.nameDB_.getDistinctName(
+        variable0 + '_inc',
+        Blockly.Names.NameType.VARIABLE
+      );
+      code += 'var ' + incVar + ' = ';
+      if (Blockly.utils.string.isNumber(increment)) {
+        code += Math.abs(Number(increment)) + ';\n';
+      } else {
+        code += 'Math.abs(' + increment + ');\n';
+      }
+      code += 'if (' + startVar + ' > ' + endVar + ') {\n';
+      code += generator.INDENT + incVar + ' = -' + incVar + ';\n';
+      code += '}\n';
+      code +=
+        'for (' +
+        variable0 +
+        ' = ' +
+        startVar +
+        '; ' +
+        incVar +
+        ' >= 0 ? ' +
+        variable0 +
+        ' <= ' +
+        endVar +
+        ' : ' +
+        variable0 +
+        ' >= ' +
+        endVar +
+        '; ' +
+        variable0 +
+        ' += ' +
+        incVar +
+        ') {\n' +
+        branch +
+        '}\n';
+    }
+    return code;
+  };
+
+  Blockly.JavaScript.forBlock.math_change = function (block, generator) {
+    // Add to a variable in place.
+    const argument0 =
+      generator.valueToCode(block, 'DELTA', Order.ADDITION) || '0';
+
+    // Customization: use translateVarName instead of getVariableName
+    const varName = generator.translateVarName(block.getFieldValue('VAR'));
+    // End customization
+
+    return (
+      varName +
+      ' = (typeof ' +
+      varName +
+      " === 'number' ? " +
+      varName +
+      ' : 0) + ' +
+      argument0 +
+      ';\n'
+    );
+  };
+
+  // Function definition. This code is copied and modified Core Blockly:
+  // https://github.com/google/blockly/blob/a42c2d15082d3261a643f205bae1c7860ba48416/generators/javascript/procedures.ts#L104-L116
+  // A custom generator for function call where function names should be part
+  // of the Globals namespace (e.g. Globals.jump()).
+  Blockly.JavaScript.forBlock.procedures_callnoreturn = function (
+    block,
+    generator
+  ) {
+    // Call a procedure with no return value.
+    // Generated code is for a function call as a statement is the same as a
+    // function call as a value, with the addition of line ending.
+    const tuple = generator.forBlock['procedures_callreturn'](block, generator);
+    // Customization: Add Globals namespace if needed.
+    const code = (Blockly.varsInGlobals ? 'Globals.' : '') + tuple[0];
+    // End customization
+    return code + ';\n';
+  };
+
+  // Function definition. This code is copied and modified from Core Blockly:
+  // https://github.com/google/blockly/blob/a42c2d15082d3261a643f205bae1c7860ba48416/generators/javascript/procedures.ts#L18-L83
+  // Code Blockly uses the same generator for procedures_defreturn and procedures_defnoreturn.
+  // We never used returns, so we are just directly modifying the former generator.
+  // A custom generator for function call where function names should be part
+  // of the Globals namespace (e.g. Globals.jump = function()).
+  Blockly.JavaScript.forBlock.procedures_defnoreturn = function (
+    block,
+    generator
+  ) {
+    // Define a procedure with a return value.
+    const funcName = generator.getProcedureName(block.getFieldValue('NAME'));
+    let xfix1 = '';
+    if (generator.STATEMENT_PREFIX) {
+      xfix1 += generator.injectId(generator.STATEMENT_PREFIX, block);
+    }
+    if (generator.STATEMENT_SUFFIX) {
+      xfix1 += generator.injectId(generator.STATEMENT_SUFFIX, block);
+    }
+    if (xfix1) {
+      xfix1 = generator.prefixLines(xfix1, generator.INDENT);
+    }
+    let loopTrap = '';
+    if (generator.INFINITE_LOOP_TRAP) {
+      loopTrap = generator.prefixLines(
+        generator.injectId(generator.INFINITE_LOOP_TRAP, block),
+        generator.INDENT
+      );
+    }
+    let branch = '';
+    if (block.getInput('STACK')) {
+      // The 'procedures_defreturn' block might not have a STACK input.
+      branch = generator.statementToCode(block, 'STACK');
+    }
+    let returnValue = '';
+    if (block.getInput('RETURN')) {
+      // The 'procedures_defnoreturn' block (which shares this code)
+      // does not have a RETURN input.
+      returnValue = generator.valueToCode(block, 'RETURN', Order.NONE) || '';
+    }
+    let xfix2 = '';
+    if (branch && returnValue) {
+      // After executing the function body, revisit this block for the return.
+      xfix2 = xfix1;
+    }
+    if (returnValue) {
+      returnValue = generator.INDENT + 'return ' + returnValue + ';\n';
+    }
+    const args = [];
+    const variables = block.getVars();
+    for (let i = 0; i < variables.length; i++) {
+      args[i] = generator.getVariableName(variables[i]);
+    }
+    let code =
+      // Customization: Add Globals namespace if needed.
+      (Blockly.varsInGlobals
+        ? 'Globals.' + funcName + ' = function'
+        : 'function ' + funcName) +
+      // End customization
+      '(' +
+      args.join(', ') +
+      ') {\n' +
+      xfix1 +
+      loopTrap +
+      branch +
+      xfix2 +
+      returnValue +
+      '}';
+    code = generator.scrub_(block, code);
+    // Add % so as not to collide with helper functions in definitions list.
+    // TODO(#7600): find better approach than casting to any to override
+    // CodeGenerator declaring .definitions protected.
+
+    // Code.org Note: The above TODO is copied from the Blockly source code.
+    generator.definitions_[
+      // Customization: Add Globals namespace if needed.
+      (Blockly.varsInGlobals ? 'Globals.' : '%') + funcName
+      // End customization
+    ] = code;
+    return null;
+  };
 
   blockGeneratorFunctionDictionary.studio_ask = function () {
     var blockId = `block_id_${this.id}`;
@@ -3551,16 +3505,12 @@ function installVanish(
   blockly.Blocks.studio_vanish = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       if (blockInstallOptions.isK1) {
         this.appendDummyInput()
           .appendField(msg.vanish())
           .appendField(
-            new blockly.FieldImage(blockInstallOptions.skin.explosionThumbnail)
+            new CdoFieldImage(blockInstallOptions.skin.explosionThumbnail)
           )
           .appendField(startingSpriteImageDropdown(), 'SPRITE');
       } else {
@@ -3639,17 +3589,13 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorHasEmotion',
     function (actorSelectDropdown, includeElseStatement) {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
 
       if (blockInstallOptions.isK1) {
-        const fieldImageDropdown = new blockly.FieldImageDropdown(
+        const fieldImageDropdown = new CdoFieldImageDropdown(
           K1_EMOTION_VALUES,
           IMAGE_SIZES.K1_EMOTIONS.width,
           IMAGE_SIZES.K1_EMOTIONS.height
@@ -3659,7 +3605,7 @@ function installConditionals(
           .appendField(msg.emotion())
           .appendField(fieldImageDropdown, 'EMOTION');
       } else {
-        const dropdown = new blockly.FieldDropdown(EMOTION_VALUES);
+        const dropdown = new CdoFieldDropdown(EMOTION_VALUES);
         dropdown.setValue(EMOTION_VALUES[1][1]); // default to normal
         this.appendDummyInput().appendField(dropdown, 'EMOTION');
       }
@@ -3720,23 +3666,19 @@ function installConditionals(
             ['\u2265', 'GTE'],
           ];
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
 
       this.appendDummyInput().appendField(' ');
 
-      const positionDropdown = new blockly.FieldDropdown(POSITION_VALUES);
+      const positionDropdown = new CdoFieldDropdown(POSITION_VALUES);
       positionDropdown.setValue(POSITION_VALUES[0][1]);
 
       this.appendDummyInput().appendField(positionDropdown, 'POSITION');
 
-      const operatorDropdown = new Blockly.FieldDropdown(OPERATORS);
+      const operatorDropdown = new CdoFieldDropdown(OPERATORS);
       this.appendDummyInput().appendField(operatorDropdown, 'OPERATOR');
 
       this.appendValueInput('COMPARED_VALUE');
@@ -3795,16 +3737,12 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorIsVisible',
     function (actorSelectDropdown, includeElseStatement) {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
 
-      const dropdown = new blockly.FieldDropdown(VISIBILITY_VALUES);
+      const dropdown = new CdoFieldDropdown(VISIBILITY_VALUES);
       dropdown.setValue(VISIBILITY_VALUES[0][1]);
 
       this.appendDummyInput().appendField(dropdown, 'VISIBILITY');
@@ -3851,16 +3789,12 @@ function installConditionals(
   addIfAndIfElseVersions(
     'ifActorIsSprite',
     function (actorSelectDropdown, includeElseStatement) {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(commonMsg.ifCode());
 
       appendActorSelect(this, actorSelectDropdown);
 
-      const dropdown = new blockly.FieldDropdown(SPRITE_VALUES);
+      const dropdown = new CdoFieldDropdown(SPRITE_VALUES);
       dropdown.setValue(SPRITE_VALUES[0][1]);
 
       this.appendDummyInput().appendField(dropdown, 'VALUE');

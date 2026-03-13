@@ -1,17 +1,12 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Tags from '@code-dot-org/component-library/tags';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {
-  BodyOneText,
-  BodyTwoText,
-  OverlineTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Fragment} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
 
@@ -67,8 +62,7 @@ const RegionalWorkshopCatalogCard = ({
         workshop_course: course,
         workshop_subject: subject,
         workshop_format: format,
-      },
-      PLATFORMS.BOTH
+      }
     );
     navigateToHref(`/professional-learning/workshops/${id}`);
   };
@@ -94,14 +88,18 @@ const RegionalWorkshopCatalogCard = ({
               isFull ? style.fullCapacityTag : style.spotsOpenCapacityTag
             )}
           />
-          <BodyOneText className={style.wsTitle}>
+          <Typography className={style.wsTitle} variant="body1" gutterBottom>
             {name ? name : `${course}: ${subject}`}
-          </BodyOneText>
+          </Typography>
           {supportedGradeLevels?.length > 0 && (
             <div className={style.gradeContainer}>
-              <OverlineTwoText className={style.gradeNote}>
+              <Typography
+                className={style.gradeNote}
+                variant="overline2"
+                gutterBottom
+              >
                 FOR TEACHERS OF GRADES:
-              </OverlineTwoText>
+              </Typography>
               <GradeLevelsBarDisplay
                 supportedGradeLevels={supportedGradeLevels}
               />
@@ -128,49 +126,61 @@ const RegionalWorkshopCatalogCard = ({
               <div className={style.infoLineIconContainer}>
                 <FontAwesomeV6Icon iconName={'calendar'} />
               </div>
-              <BodyTwoText>{buildWorkshopStartText(sessions)}</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                {buildWorkshopStartText(sessions)}
+              </Typography>
             </span>
           </WithTooltip>
           <span className={style.infoLine}>
             <div className={style.infoLineIconContainer}>
               <FontAwesomeV6Icon iconName={'screen-users'} />
             </div>
-            <BodyTwoText>{`${format} workshop`}</BodyTwoText>
+            <Typography
+              variant="body2"
+              gutterBottom
+            >{`${format} workshop`}</Typography>
           </span>
           {locationName && (
             <span className={style.infoLine}>
               <div className={style.infoLineIconContainer}>
                 <FontAwesomeV6Icon iconName={'building'} />
               </div>
-              <BodyTwoText>{locationName}</BodyTwoText>
+              <Typography variant="body2" gutterBottom>
+                {locationName}
+              </Typography>
             </span>
           )}
           <span className={style.infoLine}>
             <div className={style.infoLineIconContainer}>
               <FontAwesomeV6Icon iconName={'dollar-circle'} />
             </div>
-            <BodyTwoText>{fee ? fee : 'Free'}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {fee ? fee : 'Free'}
+            </Typography>
           </span>
           <span className={style.infoLine}>
             <div className={style.infoLineIconContainer}>
               <FontAwesomeV6Icon iconName={'arrow-up-wide-short'} />
             </div>
-            <BodyTwoText>
+            <Typography variant="body2" gutterBottom>
               {hasPrereq ? 'Has prerequisites' : 'No prerequisites'}
-            </BodyTwoText>
+            </Typography>
           </span>
         </div>
       </div>
       <div className={style.buttonContainer}>
-        <Button
-          aria-label="learnMore"
-          text="Learn more"
-          target="_blank"
-          color="purple"
-          onClick={() => handleClickLearnMore()}
-          className={style.wsCardButton}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={isFull}
-        />
+          className={style.wsCardButton}
+          onClick={() => handleClickLearnMore()}
+          aria-label="learnMore"
+          type="button"
+        >
+          {'Learn more'}
+        </MuiButton>
       </div>
     </div>
   );

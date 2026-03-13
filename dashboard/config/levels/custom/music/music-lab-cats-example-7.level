@@ -766,6 +766,7 @@
     "display_name": "Tickle Cat",
     "bubble_choice_description": "Explore the backing track as this cat is tickled",
     "thumbnail_url": "https://images.code.org/2ad18fb2d194022ac04ad051a4d98804-image-1749147497545.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -9,11 +9,13 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import {AiChatAccessLevel} from '@cdo/apps/aichat/types/accessControls';
+import DCDO from '@cdo/apps/dcdo';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {
   PlGradeValue,
@@ -33,8 +35,8 @@ import {
   USER_EDITABLE_SECTION_PROPS,
 } from './teacherSectionsReduxSelectors';
 import {
-  AssignmentCourseOffering,
   Classroom,
+  CourseOffering,
   LtiSectionSyncResult,
   OAuthSectionTypeName,
   Section,
@@ -60,6 +62,10 @@ type AssignmentData = {
   unitName?: string | null;
 };
 
+interface CourseOfferingSet {
+  [courseOfferingId: number]: CourseOffering;
+}
+
 export interface TeacherSectionState {
   nextTempId: number;
   studioUrl: string;
@@ -73,10 +79,11 @@ export interface TeacherSectionState {
   sectionOrder: number[];
   selectedSectionId: number | null;
   selectedSectionName: string;
+  selectedSectionUnitName: string;
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
-  courseOfferings: AssignmentCourseOffering[];
+  courseOfferings: CourseOfferingSet;
   courseOfferingsAreLoaded: boolean;
   // The participant types the user can create sections for
   availableParticipantTypes: string[];
@@ -135,6 +142,7 @@ const initialState: TeacherSectionState = {
   sectionOrder: [],
   selectedSectionId: NO_SECTION,
   selectedSectionName: '',
+  selectedSectionUnitName: '',
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -212,13 +220,16 @@ const sectionSlice = createSlice({
         if (state.sectionIds.includes(id)) {
           state.selectedSectionId = id;
           state.selectedSectionName = state.sections[id].name;
+          state.selectedSectionUnitName = state.sections[id].unitName || '';
         } else {
           state.selectedSectionId = NO_SECTION;
           state.selectedSectionName = '';
+          state.selectedSectionUnitName = '';
         }
       } else {
         state.selectedSectionId = NO_SECTION;
         state.selectedSectionName = '';
+        state.selectedSectionUnitName = '';
       }
     },
     updateSelectedSection(state, action: PayloadAction<ServerSection>) {
@@ -371,10 +382,18 @@ const sectionSlice = createSlice({
 
       state.sections[sectionId].aiTutorEnabled = aiTutorEnabled;
     },
-    setCourseOfferings(
+    updateSectionAiChatAccessLevel(
       state,
-      action: PayloadAction<AssignmentCourseOffering[]>
+      action: PayloadAction<{
+        sectionId: number;
+        aiChatAccessLevel: AiChatAccessLevel;
+      }>
     ) {
+      const {sectionId, aiChatAccessLevel} = action.payload;
+
+      state.sections[sectionId].aiChatAccessLevel = aiChatAccessLevel;
+    },
+    setCourseOfferings(state, action: PayloadAction<CourseOfferingSet>) {
       state.courseOfferings = action.payload;
       state.courseOfferingsAreLoaded = true;
     },
@@ -576,22 +595,6 @@ const sectionSlice = createSlice({
         )
         .map(section => section.id);
 
-      if (section.loginType !== state.initialLoginType) {
-        firehoseClient.putRecord(
-          {
-            study: 'teacher-dashboard',
-            study_group: 'edit-section-details',
-            event: 'change-login-type',
-            data_json: JSON.stringify({
-              sectionId: section.id,
-              initialLoginType: state.initialLoginType,
-              updatedLoginType: section.loginType,
-            }),
-          },
-          {includeUserId: true}
-        );
-      }
-
       const assignmentData: AssignmentData = {
         section_id: section.id,
         section_creation_timestamp: section.createdAt,
@@ -611,18 +614,6 @@ const sectionSlice = createSlice({
       }
       if (section.unitName !== state.initialUnitName) {
         assignmentData.unitName = section.unitName;
-      }
-      // If either of these has been set, assignment changed and should be logged
-      if (assignmentData.unit_id || assignmentData.course_id) {
-        firehoseClient.putRecord(
-          {
-            study: 'assignment',
-            study_group: 'v1',
-            event: isNewSection ? 'create_section' : 'edit_section_details',
-            data_json: JSON.stringify(assignmentData),
-          },
-          {includeUserId: true}
-        );
       }
 
       state.sectionBeingEdited = null;
@@ -758,15 +749,6 @@ export const toggleSectionHidden =
     const currentlyHidden = state.sections[sectionId].hidden;
     dispatch(editSectionProperties({hidden: !currentlyHidden}));
 
-    // Track archive/restore section action
-    firehoseClient.putRecord({
-      study: 'teacher_dashboard_actions',
-      study_group: 'toggleSectionHidden',
-      event: currentlyHidden ? 'restoreSection' : 'archiveSection',
-      data_json: JSON.stringify({
-        section_id: sectionId,
-      }),
-    });
     return dispatch(finishEditingSection());
   };
 
@@ -858,7 +840,7 @@ export const asyncLoadTeacherHomepageSectionData =
     dispatch(beginAsyncLoad());
 
     const promises: Promise<object>[] = [
-      HttpClient.fetchJson<AssignmentCourseOffering[]>(
+      HttpClient.fetchJson<CourseOfferingSet>(
         '/dashboardapi/sections/valid_course_offerings'
       ).then(response => dispatch(setCourseOfferings(response.value))),
       HttpClient.fetchJson<ParticipantTypesResponse>(
@@ -903,7 +885,7 @@ export const asyncLoadSectionData =
       ),
       fetchJSON('/dashboardapi/sections/valid_course_offerings').then(
         offerings =>
-          dispatch(setCourseOfferings(offerings as AssignmentCourseOffering[]))
+          dispatch(setCourseOfferings(offerings as CourseOfferingSet))
       ),
       fetchJSON('/dashboardapi/sections/available_participant_types').then(
         participantTypes =>
@@ -998,45 +980,49 @@ export const assignToSection = (
   unitId: number,
   pageType: string
 ): SectionThunkAction => {
-  firehoseClient.putRecord(
-    {
-      study: 'assignment',
-      event: 'course-assigned-to-section',
-      data_json: JSON.stringify(
-        {
-          sectionId,
-          unitId,
-          courseId,
-          date: new Date(),
-        },
-        removeNullValues
-      ),
-    },
-    {includeUserId: true}
-  );
   return (dispatch, getState) => {
     const section = getState().teacherSections.sections[sectionId];
+    // Generate AI lesson summaries
+    if (
+      unitId &&
+      section.unitId !== unitId &&
+      DCDO.get('show-aita-lesson-summaries', false)
+    ) {
+      HttpClient.get(
+        `/ai_lesson_summaries/request_ai_lesson_summaries?unit_id=${unitId}`
+      ).catch(error => {
+        console.error(error);
+      });
+      // Generate AI podcasts
+
+      if (
+        DCDO.get('ai-lesson-summary-podcasts', false) ||
+        experiments.isEnabled('ai-lesson-podcasts')
+      ) {
+        HttpClient.get(
+          `/ai_lesson_summary_podcasts/generate_podcasts_by_unit?unit_id=${unitId}`
+        ).catch(error => {
+          console.error(error);
+        });
+      }
+    }
     // Only log if the assignment is changing.
     if (
       (courseOfferingId && section.courseOfferingId !== courseOfferingId) ||
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(
-        EVENTS.CURRICULUM_ASSIGNED,
-        {
-          sectionName: section.name,
-          sectionId,
-          sectionLoginType: section.loginType,
-          previousUnitId: section.unitId,
-          previousCourseId: section.courseOfferingId,
-          previousCourseVersionId: section.courseVersionId,
-          newUnitId: unitId,
-          newCourseId: courseOfferingId,
-          newCourseVersionId: courseVersionId,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
+        sectionName: section.name,
+        sectionId,
+        sectionLoginType: section.loginType,
+        previousUnitId: section.unitId,
+        previousCourseId: section.courseOfferingId,
+        previousCourseVersionId: section.courseVersionId,
+        newUnitId: unitId,
+        newCourseId: courseOfferingId,
+        newCourseVersionId: courseVersionId,
+      });
     }
 
     dispatch(beginEditingSection(sectionId, true));
@@ -1058,10 +1044,9 @@ export const assignToSection = (
  * @param {number} sectionId
  */
 export const unassignSection =
-  (sectionId: number, location: string): SectionThunkAction =>
+  (sectionId: number): SectionThunkAction =>
   (dispatch, getState) => {
     dispatch(beginEditingSection(sectionId, true));
-    const {initialCourseId, initialUnitId} = getState().teacherSections;
 
     dispatch(
       editSectionProperties({
@@ -1071,35 +1056,8 @@ export const unassignSection =
         unitId: null,
       })
     );
-    firehoseClient.putRecord(
-      {
-        study: 'assignment',
-        event: 'course-unassigned-from-section',
-        data_json: JSON.stringify(
-          {
-            sectionId,
-            scriptId: initialUnitId,
-            courseId: initialCourseId,
-            location: location,
-            date: new Date(),
-          },
-          removeNullValues
-        ),
-      },
-      {includeUserId: true}
-    );
     return dispatch(finishEditingSection());
   };
-
-/**
- * Removes null values from stringified object before sending firehose record
- */
-function removeNullValues(key: string, val?: string | number | null) {
-  if (val === null || typeof val === 'undefined') {
-    return undefined;
-  }
-  return val;
-}
 
 /** @const {Object} Map oauth section type to relative "list rosters" URL. */
 const urlByProvider: {[key: string]: string} = {
@@ -1249,6 +1207,7 @@ export const {
   setAvailableParticipantTypes,
   startLoadingSectionData,
   updateSectionAiTutorEnabled,
+  updateSectionAiChatAccessLevel,
   updateSelectedSection,
   sectionHasNewData,
   sectionDoesNotHaveNewData,

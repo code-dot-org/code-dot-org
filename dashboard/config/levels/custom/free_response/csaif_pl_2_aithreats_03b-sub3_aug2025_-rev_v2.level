@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-19T19:13:46.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#### **Thinks**\r\n#### What is Jordan thinking internally?\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "name_suffix": "_v2",
+    "stay_on_level_after_submit": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T19:13:46.683+00:00\",\"changed\":[\"cloned from \\\"csaif_pl_2_aithreats_03b-sub3_aug2025_-rev\\\"\"],\"cloned_from\":\"csaif_pl_2_aithreats_03b-sub3_aug2025_-rev\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

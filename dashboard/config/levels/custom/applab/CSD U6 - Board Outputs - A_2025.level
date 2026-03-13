@@ -81,6 +81,7 @@
     },
     "start_blocks": "//This is an app that simulates a virtual monster pet\r\n//You control the emotions of the monster with the LEDs and buzzer sound\r\n\r\n//This code is for the Happy button\r\nonEvent(\"happyButton\", \"click\", function() {\r\n  led.on();\r\n  buzzer.frequency(500, 500);\r\n});\r\n\r\n\r\n//Add your code for the Nervous button here\r\n\r\n\r\n\r\n//Add your code for the Sleepy button here\r\n\r\n",
     "encrypted_examples": "xXAnjCnxWGvKmZc76biMJY8icPcHR9BSYAKl0svXdc0gMBKlM7J+ol6w6p8N\ndTot2hEs/+SnxJDSQWjCI5/DtQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

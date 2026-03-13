@@ -38,18 +38,10 @@ class StudentWorkSampleControllerTest < ActionController::TestCase
   params: {level_id: 123, unit_id: 456},
   response: :forbidden
 
-  # Levelbuiilder cannot fetch student code samples
+  # Levelbuilder cannot fetch student code samples
   test_user_gets_response_for :fetch_student_code_samples,
   name: "levelbuilder_no_access_test",
   user: :levelbuilder,
-  method: :get,
-  params: {level_id: 123, unit_id: 456},
-  response: :forbidden
-
-  # AI Tutor Access cannot fetch student code samples
-  test_user_gets_response_for :fetch_student_code_samples,
-  name: "ai_tutor_permissions_no_access_test",
-  user: :ai_tutor_access,
   method: :get,
   params: {level_id: 123, unit_id: 456},
   response: :forbidden

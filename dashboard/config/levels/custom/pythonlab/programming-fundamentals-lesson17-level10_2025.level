@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Use dice rolls to randomly determine how many villagers are healed with each potion.\r\n\r\n## Do This: \r\n- Run the code to see how villagers are healed with each potion.\r\n- Modify the code so that each potion heals between 2 and 5 villagers.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

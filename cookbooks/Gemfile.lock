@@ -375,7 +375,7 @@ GEM
       faraday (~> 1.0)
     fauxhai-ng (9.3.0)
       net-ssh
-    ffi (1.16.3)
+    ffi (1.17.2)
     ffi-libarchive (1.1.14)
       ffi (~> 1.0)
     ffi-yajl (2.6.0)
@@ -449,7 +449,7 @@ GEM
     jwt (2.5.0)
     kitchen-docker (2.13.0)
       test-kitchen (>= 1.0.0)
-    kitchen-dokken (2.17.3)
+    kitchen-dokken (2.20.7)
       docker-api (>= 1.33, < 3)
       lockfile (~> 2.1)
       test-kitchen (>= 1.15, < 4)
@@ -490,8 +490,7 @@ GEM
       mixlib-shellout
       mixlib-versioning
       thor
-    mixlib-log (3.1.1)
-      ffi (< 1.17.0)
+    mixlib-log (3.0.9)
     mixlib-shellout (3.2.8)
       chef-utils
     mixlib-versioning (1.2.12)
@@ -612,7 +611,7 @@ GEM
     strings-ansi (0.2.0)
     strscan (3.1.0)
     syslog-logger (1.6.8)
-    test-kitchen (3.4.0)
+    test-kitchen (3.5.1)
       bcrypt_pbkdf (~> 1.0)
       chef-utils (>= 16.4.35)
       ed25519 (~> 1.2)
@@ -790,6 +789,7 @@ DEPENDENCIES
   berkshelf
   chef (= 17.6.18)
   chefspec
+  ffi (~> 1.17)
   json (>= 2.3.0)
   kitchen-docker
   kitchen-dokken

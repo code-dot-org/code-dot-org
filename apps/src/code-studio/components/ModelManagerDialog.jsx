@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
@@ -76,22 +75,9 @@ export default class ModelManagerDialog extends React.Component {
     return this.state.models.find(model => model.id === id);
   };
 
-  logImport = modelId => {
-    firehoseClient.putRecord(
-      {
-        study: 'ai-ml',
-        study_group: 'trained-models',
-        event: 'import-to-applab',
-        data_json: JSON.stringify({modelId: modelId}),
-      },
-      {includeUserId: true}
-    );
-  };
-
   importMLModel = async () => {
     this.setState({isImportPending: true});
     const modelId = this.root.value;
-    this.logImport(modelId);
     await this.props.autogenerateML(modelId);
     this.setState({isImportPending: false});
     this.closeModelManager();

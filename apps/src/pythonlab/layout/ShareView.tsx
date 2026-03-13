@@ -1,5 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Toggle from '@code-dot-org/component-library/toggle';
+import {Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import {hasPreview} from '@cdo/apps/codebridge';
@@ -28,6 +29,7 @@ const ShareView: React.FunctionComponent = () => {
   const onRemix = () => {
     projectManager?.redirectToRemix();
   };
+
   const [consoleVisible, setConsoleVisible] = useState(false);
 
   const showPreview = hasPreview(miniApp);
@@ -68,22 +70,43 @@ const ShareView: React.FunctionComponent = () => {
             />
           </div>
         )}
-        <Button
-          text={commonI18n.viewCode()}
-          type="tertiary"
-          color="black"
-          size="xs"
-          iconLeft={{iconStyle: 'solid', iconName: 'code'}}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onViewCode}
-        />
-        <Button
-          text={commonI18n.makeMyOwn()}
-          type="tertiary"
-          color="black"
-          size="xs"
-          iconLeft={{iconStyle: 'regular', iconName: 'pen-to-square'}}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="code" />}
+        >
+          {commonI18n.viewCode()}
+        </MuiButton>
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onRemix}
-        />
+          type="button"
+          startIcon={
+            <FontAwesomeV6Icon iconStyle="regular" iconName="pen-to-square" />
+          }
+        >
+          {commonI18n.makeMyOwn()}
+        </MuiButton>
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
+          onClick={() => window.open('/report_abuse', '_blank')}
+          type="button"
+          startIcon={
+            <FontAwesomeV6Icon
+              iconStyle="regular"
+              iconName="message-exclamation"
+            />
+          }
+        >
+          {'Report abuse'}
+        </MuiButton>
       </div>
       <div
         className={moduleStyles.previewContainer}

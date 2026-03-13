@@ -141,6 +141,47 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
     assert_equal 'inline', response.headers['Content-Disposition']
   end
 
+  test 'file_by_uuid: returns file and CORS header for allowed origin' do
+    allowed_origin = "https://test.#{CDO.preview_codeprojects_hostname}"
+    @request.headers['Origin'] = allowed_origin
+
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+
+    level = create(:weblab2)
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    assert_response :success
+    assert_equal 'hello, world!', response.body
+    assert_equal 'image/png', response.headers['Content-Type']
+    assert_equal allowed_origin, response.headers['Access-Control-Allow-Origin']
+  end
+
+  test 'file_by_uuid: no CORS header provided for disallowed origin' do
+    @request.headers['Origin'] = 'https://evil.example'
+
+    LevelStarterAssetsHelper.
+      expects(:get_object).
+      with(@uuid_name).
+      returns(@file_obj)
+    LevelStarterAssetsHelper.
+      expects(:read_file).
+      with(@file_obj).
+      returns('hello, world!')
+
+    level = create(:weblab2)
+    get :file_by_uuid, params: {level_name: level.name, uuid: @uuid, format: 'png'}
+
+    # Expect to see a missing CORS header for the disallowed origin.
+    assert_nil response.headers['Access-Control-Allow-Origin']
+  end
+
   test 'upload: forbidden for non-levelbuilders' do
     sign_in create(:student)
     post :upload, params: {level_name: create(:applab).name, files: []}

@@ -40,6 +40,7 @@ if CDO.has_pegasus_content
   require src_dir 'homepage'
 end
 require 'cdo/hamburger'
+require 'cdo/brand'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
 
@@ -90,7 +91,7 @@ class Documents < Sinatra::Base
   configure do
     dir = pegasus_dir('sites.v3')
     set :launched_at, Time.now
-    set :configs, load_configs_in(dir)
+    set :configs, load_configs_in(pegasus_dir('config/sites'))
     set :views, dir
     set :image_extnames, ['.png', '.jpeg', '.jpg', '.gif']
     set :exclude_extnames, ['.collate']

@@ -6,8 +6,6 @@ module Pd::SurveyPipeline
     include Pd::WorkshopConstants
     include Pd::JotForm::Constants
 
-    self.use_transactional_test_case = true
-
     setup_all do
       @ws_form_id = "11000000000000".to_i
 

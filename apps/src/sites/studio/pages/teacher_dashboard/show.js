@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
@@ -9,17 +8,18 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import progressRedux from '@cdo/apps/code-studio/progressRedux';
 import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import viewAs from '@cdo/apps/code-studio/viewAsRedux';
+import {FlashHandler} from '@cdo/apps/flashes/FlashHandler';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
-  setCurrentUserHasSeenStandardsReportInfo,
+  setShowAITALessonSummary,
+  setHasCompletedPersonalizationQuiz,
+  setShowAITAPodcasts,
 } from '@cdo/apps/templates/currentUserRedux';
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
 import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
@@ -29,6 +29,10 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {setSelectedSectionData} from '@cdo/apps/templates/teacherNavigation/selectedSectionLoader';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
+
+// 6 seconds
+const FLASH_DURATION = 6 * 1000;
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -36,10 +40,12 @@ const {
   section,
   sections,
   localeCode,
-  hasSeenStandardsReportInfo,
-  canEnableAITutor,
+  showAITALessonSummary,
+  showAITAPodcasts,
+  hasCompletedPersonalizationQuiz,
   sectionOrder,
   providers,
+  flash,
 } = scriptData;
 
 $(document).ready(function () {
@@ -47,12 +53,10 @@ $(document).ready(function () {
     teacherSections,
     manageStudents,
     sectionProgress,
-    progressV2Feedback,
     unitSelection,
     stats,
     sectionAssessments,
     currentUser,
-    sectionStandardsProgress,
     locales,
     viewAs,
     hiddenLesson,
@@ -63,9 +67,13 @@ $(document).ready(function () {
   });
 
   const store = getStore();
-  store.dispatch(
-    setCurrentUserHasSeenStandardsReportInfo(hasSeenStandardsReportInfo)
-  );
+  if (showAITALessonSummary) {
+    store.dispatch(setShowAITALessonSummary(true));
+    store.dispatch(setShowAITAPodcasts(showAITAPodcasts));
+    store.dispatch(
+      setHasCompletedPersonalizationQuiz(hasCompletedPersonalizationQuiz)
+    );
+  }
   store.dispatch(setSections(sections, false, sectionOrder));
   store.dispatch(setLocaleCode(localeCode));
   store.dispatch(setAuthProviders(providers));
@@ -83,18 +91,16 @@ $(document).ready(function () {
     setSelectedSectionData(selectedSection);
   }
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       {sections.length === 0 ? (
         // If a teacher has no sections, we will send them directly to the homepage to bypass
         // all of the section loading logic in the TeacherNavigationRouter.
         <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
       ) : (
-        <TeacherNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          canEnableAITutor={canEnableAITutor}
-        />
+        <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
       )}
+      <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
     document.getElementById('teacher-dashboard')
   );

@@ -1,12 +1,6 @@
 import Link from '@code-dot-org/component-library/link';
 import Toggle from '@code-dot-org/component-library/toggle';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading3,
-  Heading4,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classnames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -16,7 +10,7 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
 import {setAiEvalStatusMap} from '@cdo/apps/templates/rubrics/teacherRubricRedux';
@@ -233,15 +227,11 @@ function RubricSettings({
     const url = `/rubrics/${rubricId}/run_ai_evaluations_for_all`;
     const params = {section_id: sectionId};
     const eventName = EVENTS.TA_RUBRIC_SECTION_AI_EVAL;
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        ...(reportingData || {}),
-        rubricId: rubricId,
-        sectionId: sectionId,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(eventName, {
+      ...(reportingData || {}),
+      rubricId: rubricId,
+      sectionId: sectionId,
+    });
     fetch(url, {
       method: 'POST',
       headers: {
@@ -275,25 +265,32 @@ function RubricSettings({
       })}
     >
       <div className={style.studentInfoGroup}>
-        <Heading3>{lesson.title}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {lesson.title}
+        </Typography>
         <div className={style.selectors}>
           <SectionSelector reloadOnChange={true} />
         </div>
       </div>
-
       <div className={style.settingsContent}>
         {teacherHasEnabledAi && (
           <div className={style.settingsGroup}>
-            <Heading4>{i18n.aiAssessment()}</Heading4>
+            <Typography variant="h4" gutterBottom>
+              {i18n.aiAssessment()}
+            </Typography>
             <div className={style.settingsContainers}>
               <div className={style.runAiAllStatuses}>
-                <BodyTwoText>
-                  <StrongText>{summaryText()}</StrongText>
-                </BodyTwoText>
+                <Typography variant="body2" gutterBottom>
+                  <Typography variant="strong">{summaryText()}</Typography>
+                </Typography>
                 {statusAllText() && (
-                  <BodyTwoText className="uitest-eval-status-all-text">
+                  <Typography
+                    className="uitest-eval-status-all-text"
+                    variant="body2"
+                    gutterBottom
+                  >
                     {statusAllText()}
-                  </BodyTwoText>
+                  </Typography>
                 )}
               </div>
               <Button
@@ -309,13 +306,15 @@ function RubricSettings({
                 )}
               </Button>
               <div className={style.detailsGroup}>
-                <BodyTwoText
+                <Typography
                   className={
                     displayDetails ? style.detailsVisible : style.detailsHidden
                   }
+                  variant="body2"
+                  gutterBottom
                 >
                   {i18n.aiEvaluationDetails()}
-                </BodyTwoText>
+                </Typography>
                 <Link onClick={showHideDetails}>
                   {displayDetails ? i18n.hideDetails() : i18n.showDetails()}
                 </Link>
@@ -325,18 +324,22 @@ function RubricSettings({
         )}
 
         <div className={style.settingsGroup}>
-          <Heading4>{i18n.rubricSummaryClassScore()}</Heading4>
+          <Typography variant="h4" gutterBottom>
+            {i18n.rubricSummaryClassScore()}
+          </Typography>
           <div className={style.settingsContainers}>
             <div className={style.runAiAllStatuses}>
               {teacherEvalCount === 0 && (
-                <BodyTwoText>{i18n.rubricNoStudentEvals()}</BodyTwoText>
+                <Typography variant="body2" gutterBottom>
+                  {i18n.rubricNoStudentEvals()}
+                </Typography>
               )}
               {teacherEvalCount > 0 && (
-                <BodyTwoText>
+                <Typography variant="body2" gutterBottom>
                   {i18n.rubricNumberStudentEvals({
                     teacherEvalCount: teacherEvalCount,
                   })}
-                </BodyTwoText>
+                </Typography>
               )}
             </div>
             {teacherEvalCount === 0 && (
@@ -368,7 +371,9 @@ function RubricSettings({
 
         {teacherHasEnabledAi && (
           <div className={style.settingsGroup}>
-            <Heading4>{i18n.aiSettings()}</Heading4>
+            <Typography variant="h4" gutterBottom>
+              {i18n.aiSettings()}
+            </Typography>
             <div
               className={classnames(
                 'uitest-rubric-ai-enable',
@@ -376,9 +381,11 @@ function RubricSettings({
                 style.aiSettingsContainer
               )}
             >
-              <BodyThreeText>
-                <StrongText>{i18n.useAiFeaturesOnCodeOrg()}</StrongText>
-              </BodyThreeText>
+              <Typography variant="body3" gutterBottom>
+                <Typography variant="strong">
+                  {i18n.useAiFeaturesOnCodeOrg()}
+                </Typography>
+              </Typography>
               <Toggle
                 label={i18n.useAiFeatures()}
                 checked={!aiRubricsDisabled}

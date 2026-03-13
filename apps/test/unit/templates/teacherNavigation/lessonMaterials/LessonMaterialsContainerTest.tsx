@@ -4,6 +4,7 @@ import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import {Store} from 'redux';
 
+import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   stubRedux,
@@ -11,12 +12,18 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setShowAITALessonSummary,
+  setShowAITAPodcasts,
+  setHasCompletedPersonalizationQuiz,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import LessonMaterialsContainer from '@cdo/apps/templates/teacherNavigation/lessonMaterials/LessonMaterialsContainer';
 import {RESOURCE_ICONS} from '@cdo/apps/templates/teacherNavigation/lessonMaterials/ResourceIconType';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -87,6 +94,17 @@ const SECTIONS = [
     unitSelection: null,
     course_display_name: null,
   },
+  {
+    id: 13,
+    name: 'Period 13',
+    course_offering_id: 123,
+    courseVersionId: 2023,
+    unitName: 'csd1-2024',
+    unit_id: 100,
+    unitSelection: {
+      unitName: 'csd1-2024',
+    },
+  },
 ];
 
 const COURSES_WITH_PROGRESS = [
@@ -117,6 +135,16 @@ const COURSES_WITH_PROGRESS = [
     ],
   },
 ];
+
+const LESSON_SUMMARY = {
+  lesson_summary: JSON.stringify({
+    learning_objective: 'Sample learning objective info.',
+    lesson_beats: ['Beat 1', 'Beat 2', 'Beat 3'],
+    misconceptions: ['Misconception 1', 'Misconception 2'],
+    tips: ['Tip 1', 'Tip 2', 'Tip 3'],
+  }),
+  script: 'This is a podcast transcript',
+};
 
 describe('LessonMaterialsContainer', () => {
   let store: Store;
@@ -241,9 +269,11 @@ describe('LessonMaterialsContainer', () => {
 
   const renderDefault = async (
     showNoCurriculumAssigned = false,
-    lessonData: object = mockLessonData
+    lessonData: object = mockLessonData,
+    lessonSummary: object = LESSON_SUMMARY,
+    aif = false
   ) => {
-    mockSpy(lessonData);
+    mockSpy(lessonData, lessonSummary, aif);
     await act(async () =>
       render(
         <Provider store={store}>
@@ -254,31 +284,39 @@ describe('LessonMaterialsContainer', () => {
       )
     );
   };
+  const realIsEnabled = experiments.isEnabled;
 
   beforeEach(() => {
+    experiments.isEnabled = jest.fn(() => true);
     stubRedux();
 
     registerReducers({
       unitSelection,
       teacherSections,
+      currentUser,
     });
 
     store = getStore();
 
     store.dispatch(setSections(SECTIONS));
     store.dispatch(selectSection(1));
+    store.dispatch(setShowAITALessonSummary(true));
 
     fetchSpy = jest.spyOn(HttpClient, 'fetchJson');
-    mockSpy(mockLessonData);
   });
 
   afterEach(async () => {
     jest.resetAllMocks();
     restoreRedux();
     fetchSpy.mockReset();
+    experiments.isEnabled = realIsEnabled;
   });
 
-  const mockSpy = (lessonData: object) => {
+  const mockSpy = (
+    lessonData: object,
+    lessonSummary: object,
+    aif_unit: boolean
+  ) => {
     fetchSpy.mockReset();
     fetchSpy.mockImplementation((path: string) => {
       if (path.includes('lesson_materials')) {
@@ -286,10 +324,19 @@ describe('LessonMaterialsContainer', () => {
           value: lessonData,
           response: new Response(),
         });
-      }
-      if (path.includes('section_courses')) {
+      } else if (path.includes('section_courses')) {
         return Promise.resolve({
           value: COURSES_WITH_PROGRESS,
+          response: new Response(),
+        });
+      } else if (path.includes('ai_lesson_summaries')) {
+        return Promise.resolve({
+          value: lessonSummary,
+          response: new Response(),
+        });
+      } else if (path.includes('unit_in_aif')) {
+        return Promise.resolve({
+          value: {aif: true},
           response: new Response(),
         });
       }
@@ -438,6 +485,22 @@ describe('LessonMaterialsContainer', () => {
       screen.queryAllByTestId('resource-icon-' + RESOURCE_ICONS.SLIDES.icon)
         .length === 0
     );
+  });
+
+  it('renders the first lesson for the assigned unit when a new section is selected', async () => {
+    await renderDefault();
+
+    const selectedLessonInput = screen.getByRole('combobox', {
+      name: 'Choose a lesson',
+    });
+
+    fireEvent.change(selectedLessonInput, {target: {value: '2'}});
+
+    screen.getByText('Lesson Plan: Second lesson');
+
+    store.dispatch(selectSection(13));
+    await act(async () => await new Promise(process.nextTick));
+    screen.getByText('Lesson Plan: First lesson');
   });
 
   it('renders will render message when there is no lesson plan', async () => {
@@ -604,6 +667,120 @@ describe('LessonMaterialsContainer', () => {
         'https://videos.code.org/video.mp4',
         '_self'
       );
+    });
+  });
+
+  describe('lesson summary', () => {
+    const summary = JSON.parse(LESSON_SUMMARY.lesson_summary);
+
+    beforeEach(() => {
+      store.dispatch(setShowAITALessonSummary(true));
+    });
+
+    it('does not render lesson summary when showAITALessonSummary is false', async () => {
+      store.dispatch(setShowAITALessonSummary(false));
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(summary.learning_objective)).toBe(null);
+      summary.lesson_beats.forEach((beat: string) =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      summary.misconceptions.forEach((misconception: string) =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      summary.tips.forEach((tip: string) =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('does not render lesson summary when lesson summary has not been generated', async () => {
+      await renderDefault(true, mockLessonData, {});
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+      expect(screen.queryByText(i18n.teachingTips())).toBe(null);
+      expect(screen.queryByText(summary.learning_objective)).toBe(null);
+      summary.lesson_beats.forEach((beat: string) =>
+        expect(screen.queryByText(beat)).toBe(null)
+      );
+      summary.misconceptions.forEach((misconception: string) =>
+        expect(screen.queryByText(misconception)).toBe(null)
+      );
+      summary.tips.forEach((tip: string) =>
+        expect(screen.queryByText(tip)).toBe(null)
+      );
+    });
+
+    it('renders lesson summary when showAITALessonSummary is true and lesson summary has been generated', async () => {
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+      screen.getByText(i18n.teachingTips());
+      screen.getByText(summary.learning_objective);
+      summary.lesson_beats.forEach((beat: string) => screen.getByText(beat));
+      summary.misconceptions.forEach((misconception: string) =>
+        screen.getByText(misconception)
+      );
+      summary.tips.forEach((tip: string) => screen.getByText(tip));
+    });
+
+    it('renders audio summary transcript dialog when transcript data is present', async () => {
+      store.dispatch(setShowAITAPodcasts(true));
+
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+
+      // Audio summary transcript dialog is present as well
+      fireEvent.click(screen.getByText(i18n.transcript()));
+      screen.getByText(LESSON_SUMMARY.script);
+    });
+
+    it('does not render audio component when experiment and DCDO flag are false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      experiments.isEnabled = jest.fn((key: string) => {
+        if (key === 'ai-lesson-podcasts') {
+          return false;
+        } else {
+          return true;
+        }
+      });
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.audioSummary())).toBe(null);
+    });
+
+    it('renders audio component when experiment is true and DCDO flag is false', async () => {
+      DCDO.set('ai-lesson-summary-podcasts', false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('renders audio component when experiment is false and DCDO flag is true', async () => {
+      store.dispatch(setShowAITAPodcasts(true));
+      experiments.isEnabled = jest.fn(() => false);
+      await renderDefault();
+
+      screen.getByText(i18n.audioSummary());
+    });
+
+    it('does not render Personalization Quiz note if user has completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(true));
+      await renderDefault();
+
+      expect(screen.queryByText(i18n.wantToSeeDifferentInformation())).toBe(
+        null
+      );
+    });
+
+    it('renders Personalization Quiz note if user has not completed the quiz', async () => {
+      store.dispatch(setHasCompletedPersonalizationQuiz(false));
+
+      await renderDefault();
+
+      screen.getByText(i18n.wantToSeeDifferentInformation());
     });
   });
 });

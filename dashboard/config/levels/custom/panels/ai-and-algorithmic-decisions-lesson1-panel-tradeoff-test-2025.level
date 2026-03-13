@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-24T20:28:40.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Trade-off\n\nA **trade-off** is a compromise where you give up something to get something else.",
+        "imageUrl": "https://images.code.org/77aef4e546dfb1c21f2e5a3d19e479bd-istockphoto-2187228849-612x612.jpg",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T20:28:40.520+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-panel-interactivity-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-panel-interactivity-test-2025\"},{\"changed_at\":\"2025-10-24 20:29:12 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-24 21:01:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

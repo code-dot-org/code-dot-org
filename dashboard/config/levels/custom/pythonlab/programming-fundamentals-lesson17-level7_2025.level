@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "Now use a loop to make potions with a fixed number of ingredients. \r\n## Do This: \r\n- Run the code to see how many potions you can make with 12 ingredients.\r\n- Modify the code so that each potion costs 3 ingredients instead of 2.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

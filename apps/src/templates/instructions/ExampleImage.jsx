@@ -3,14 +3,15 @@ import React from 'react';
 
 import color from '@cdo/apps/util/color';
 
-export default function ExampleImage({src}) {
+export default function ExampleImage({src, alt}) {
   // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
   // Verify or update this alt-text as necessary
-  return <img style={styles.img} src={src} alt="" />;
+  return <img style={styles.img} src={src} alt={alt ?? ''} />;
 }
 
 ExampleImage.propTypes = {
   src: PropTypes.string.isRequired,
+  alt: PropTypes.string,
 };
 
 const styles = {

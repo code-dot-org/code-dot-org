@@ -221,6 +221,7 @@
     "parent_level_id": 23137,
     "teacher_markdown": "[key]\r\n\r\nThis app uses if/then processing in a few different ways.\r\n\r\n* If the user clicks on a new icon (not the current one), then choose that for the stamp and make it the current color, and make the old icon black.\r\n* If the user clicks on the same icon, then change its color.\r\n* If the user clicks on the notebook paper, then draw a stamp there of the current shape and color.\r\n\r\n[/key]",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

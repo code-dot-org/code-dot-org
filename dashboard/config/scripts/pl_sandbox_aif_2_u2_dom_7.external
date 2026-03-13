@@ -1,0 +1,106 @@
+name 'pl_sandbox_aif_2_U2-DOM-7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+<h1>From Event → State → Response to the DOM</h1>
+
+<p style="font-size:14pt;">
+On the last page, we saw the pattern that powers interactivity:
+<strong>Event → State → Response</strong>.
+</p>
+
+<p style="font-size:14pt;">
+But how does JavaScript actually <em>reach into a webpage</em> to make those changes happen?
+That’s where the <strong>DOM</strong> comes in.
+</p>
+
+<hr>
+
+<h2>From HTML to Interactivity: 3 Steps</h2>
+
+<div style="display:flex; align-items:stretch; justify-content:center; gap:14px; flex-wrap:wrap; margin:18px 0;">
+
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:170px; text-align:center;">
+    <div style="font-size:18pt; font-weight:bold;">1️⃣ Select</div>
+    <div style="font-size:14pt; margin-top:6px;">
+      Choose an element from the page
+    </div>
+  </div>
+
+  <div style="font-size:26pt; font-weight:bold; color:#0093a4; display:flex; align-items:center;">→</div>
+
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:170px; text-align:center;">
+    <div style="font-size:18pt; font-weight:bold;">2️⃣ Listen</div>
+    <div style="font-size:14pt; margin-top:6px;">
+      Wait for a user event (click, type, hover)
+    </div>
+  </div>
+
+  <div style="font-size:26pt; font-weight:bold; color:#0093a4; display:flex; align-items:center;">→</div>
+
+  <div style="background:#0093a4; color:white; border-radius:10px; padding:14px 18px; min-width:170px; text-align:center;">
+    <div style="font-size:18pt; font-weight:bold;">3️⃣ Update</div>
+    <div style="font-size:14pt; margin-top:6px;">
+      Change content, style, or data
+    </div>
+  </div>
+
+</div>
+
+<p style="font-size:14pt;">
+Those three steps are how we turn static HTML into something dynamic.
+</p>
+
+<hr>
+
+<h2>Understanding the DOM</h2>
+
+<p style="font-size:14pt;">
+The <strong>DOM (Document Object Model)</strong> is the system that makes those three steps possible.
+Think of the DOM like a <strong>live blueprint of your webpage</strong>.
+If HTML is the building plan and CSS is the paint and decor, the DOM is the 
+<strong>labeled wiring system inside the walls</strong> that lets JavaScript flip switches and make things happen.
+</p>
+
+<img src="https://images.code.org/d77aa4ddfe768eb2e16d6072e8ac323f-image-1761850949297.png" 
+     alt="simple html map going from head to id of green button" 
+     width="350px" 
+     style="border-radius:10px; float:left; margin: 10px 30px 10px 40px;">
+
+<div style="margin-left:420px;">
+
+  <p style="font-size:14pt;">
+  The DOM turns every HTML element (text, images, buttons) into an <strong>object</strong> that JavaScript can:
+  </p>
+
+  <ul style="padding-left:20px;">
+    <li style="font-size:14pt;">Select</li>
+    <li style="font-size:14pt;">Listen to</li>
+    <li style="font-size:14pt;">Modify</li>
+  </ul>
+
+  <p style="font-size:14pt;">
+  It organizes the page in a tree structure: the document at the top, 
+  then branches like <code>head</code> and <code>body</code>, and finally individual elements inside them.
+  </p>
+
+</div>
+
+<div style="clear:both;"></div>
+
+<br>
+
+<p style="font-size:14pt;">
+When JavaScript interacts with the DOM, <strong>structure (HTML), style (CSS), and behavior (JavaScript)</strong> work together as one unified, dynamic system.
+</p>
+
+<hr>
+
+<h2>Next Up</h2>
+
+<p style="font-size:14pt;">
+Now let’s see what this looks like in actual code.
+</p>
+
+MARKDOWN

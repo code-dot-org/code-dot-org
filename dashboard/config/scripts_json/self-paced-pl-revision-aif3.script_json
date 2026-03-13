@@ -1,0 +1,1369 @@
+{
+  "script": {
+    "name": "self-paced-pl-revision-aif3",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2025-12-19 18:27:43 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-revision-aif3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hardware and Software",
+      "name": "Teaching AI and the Systems that Power It",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "a5a3a014-382c-4b61-9a63-4f219809b499",
+      "position": 1,
+      "properties": {
+        "duration": 60
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499",
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "15e7e144-48bc-4c1a-8caa-7667ce974a78",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "8804c14a-ce19-47e1-8d43-93202f5a49f4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hardware"
+      },
+      "seeding_key": {
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52",
+      "position": 3,
+      "properties": {
+        "progression_name": "Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "0685a82d-d6e7-42dd-ba03-669169e71f1b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Optimizing Software"
+      },
+      "seeding_key": {
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Data in Computer Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0",
+      "position": 6,
+      "properties": {
+        "progression_name": "Preparing for the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    },
+    {
+      "key": "90254e2f-8e52-4530-9d77-081143abe65e",
+      "position": 7,
+      "properties": {
+        "progression_name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e",
+        "lesson_activity.key": "a5a3a014-382c-4b61-9a63-4f219809b499"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_00-new"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_00-new"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_00-new"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_02-new"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02-new"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_02-new"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      },
+      "level_keys": [
+        "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      },
+      "level_keys": [
+        "csaif_pl_ispo-L3-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-procssing-L4-2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+        ],
+        "progression": "Hardware"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      },
+      "level_keys": [
+        "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif_pl_software-L11-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
+        "progression": "Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      },
+      "level_keys": [
+        "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+        ],
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Optimizing Software"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai-new_MC"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      },
+      "level_keys": [
+        "csaif_pl_ai-new_MC"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "csaif_pl-everyday-data-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "computer-systems-lesson8-level2_v3-PL-2025"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2_v3-PL-2025"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "computer-systems-lesson8-level2_v3-PL-2025"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
+        "progression": "Data in Computer Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      },
+      "level_keys": [
+        "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      },
+      "level_keys": [
+        "csaif_pl_project-description-L2-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      },
+      "level_keys": [
+        "csaif_pl_3-day-project-L3-CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
+        "progression": "Preparing for the Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      },
+      "level_keys": [
+        "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif_pl_ai_03_)wrap-up"
+        ],
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
+      },
+      "level_keys": [
+        "csaif_pl_ai_03_)wrap-up"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csaif-pl-nextsteps-systems-rev2"
+        ],
+        "progression": "Wrap-Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-systems-rev2"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
+      },
+      "level_keys": [
+        "csaif-pl-nextsteps-systems-rev2"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_00-new",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_00-new"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_02-new",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_02-new"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-computersystems-video-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-computersystems-video-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ispo-L3-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_ispo-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "15e7e144-48bc-4c1a-8caa-7667ce974a78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-panels-L4-1-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-panels-L4-1-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-procssing-L4-2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-procssing-L4-2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-SNOT-overview-L5-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-SNOT-overview-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-troubleshoot-panels-L6-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshoot-AIbot-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-hardwarelesson-debrief-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-hardware-assess-L8-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-hardware-assess-L8-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "8804c14a-ce19-47e1-8d43-93202f5a49f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_software-L11-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_software-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-matchingsoftware-L12-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-matchingsoftware-L12-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-reflectsoftware-L13-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-reflectsoftware-L13-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_troubleshoot-about-L14-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_troubleshoot-about-L14-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-software-troubleshooting-L15-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-software-troubleshooting-L15-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-troubleshooting-synthesis-L16-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "ee1cff58-62df-4ef1-b474-abaaaf2c7f52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_optimizing-lesson-L18-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_optimizing-lesson-L18-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimize-bot-L19-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-optimize-bot-L19-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-optimization-reflect-L20-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-optimization-reflect-L20-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai-new_MC",
+        "script_level.level_keys": [
+          "csaif_pl_ai-new_MC"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "0685a82d-d6e7-42dd-ba03-669169e71f1b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-everyday-data-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-everyday-data-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-analyzedatea-L4-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-analyzedatea-L4-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-data-library-panels-L5-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-data-library-panels-L5-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computer-systems-lesson8-level2_v3-PL-2025",
+        "script_level.level_keys": [
+          "computer-systems-lesson8-level2_v3-PL-2025"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl-AI-realworld-L7-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl-AI-realworld-L7-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-aiethics-video-L11-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-aiethics-video-L11-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "c791beca-d094-4ac0-a6ea-9370e4e8f40b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_project-description-L2-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_project-description-L2-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_3-day-project-L3-CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif_pl_3-day-project-L3-CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev",
+        "script_level.level_keys": [
+          "csaif-pl-_projectmanage_forum_L5_CSandDev_-rev"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "5101e2ee-8b8b-4ff3-aa73-0411395924e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif_pl_ai_03_)wrap-up",
+        "script_level.level_keys": [
+          "csaif_pl_ai_03_)wrap-up"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csaif-pl-nextsteps-systems-rev2",
+        "script_level.level_keys": [
+          "csaif-pl-nextsteps-systems-rev2"
+        ],
+        "lesson.key": "Hardware and Software",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-revision-aif3",
+        "activity_section.key": "90254e2f-8e52-4530-9d77-081143abe65e"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

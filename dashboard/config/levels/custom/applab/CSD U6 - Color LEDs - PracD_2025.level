@@ -100,6 +100,7 @@
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><button id=\"leftButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 85px; width: 95px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 30px; top: 160px;\">Left</button><button id=\"rightButton\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 85px; width: 95px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 195px; top: 160px;\" class=\"\">Right</button></div></div>",
     "bubble_choice_description": "The app is supposed to turn on the left and right LEDs when the user presses a button, but the app isn't working correctly",
     "encrypted_examples": "4SCqg8HZuIqJV24oqy6Ifrj4ljeeBoMQOS6Ii4Kozbj6QLEp77zonGbdHjjD\nKZmYiAeGKCVDHk3IwCf6fcMN5Q==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

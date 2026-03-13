@@ -1,0 +1,19 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2025-12-22T17:42:23.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-sketchlab-template-test_2025-pilot",
+    "long_instructions": "# **Filter Logic Flowchart**\r\n\r\n**Goal:** Visually plan data flow and filter interactions before coding\r\n  1. Diagram data flow: original dataset → filtered copy → display\r\n  2. Sketch logic for each filter and how they combine (AND/OR logic)\r\n  3. Plan \"Reset/Undo\" functionality showing how it reverts to original data\r\n",
+    "bubble_choice_description": "Diagram how your filters, sorting, and Reset/Undo will work. Use this level to map out data flow and plan clear, reliable filtering logic ***(supports completing Milestone 3 tasks)***.",
+    "display_name": "Filter Logic Flowchart",
+    "thumbnail_url": "https://images.code.org/2502a2f5f6a54f67fd5776ebedbc9898-planning.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:23.902+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone3-sketch-lab-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone3-sketch-lab-test-2025\"}]"
+}]]></config>
+</Sketchlab>

@@ -1,21 +1,18 @@
-import {
-  Button,
-  buttonColors,
-  LinkButton,
-} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyTwoText,
-  Heading3,
-  Heading4,
-} from '@code-dot-org/component-library/typography';
 import {TextLink} from '@dsco_/link';
+import {
+  Button as MuiButton,
+  IconButton as MuiIconButton,
+  Typography,
+} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {AiChatToolsDependency} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {
@@ -38,6 +35,7 @@ const ExpandedCurriculumCatalogCard = ({
   gradeRange,
   subjectsAndTopics,
   deviceCompatibility,
+  aiChatToolsDependency,
   description,
   professionalLearningProgram,
   video,
@@ -127,28 +125,40 @@ const ExpandedCurriculumCatalogCard = ({
         <div className={style.expandedCardContainer}>
           <div className={style.flexDivider}>
             <div className={style.courseOfferingContainer}>
-              <Heading3>{courseDisplayName}</Heading3>
+              <Typography variant="h3" gutterBottom>
+                {courseDisplayName}
+              </Typography>
               <div className={style.infoContainer}>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="user" className="fa-solid" />
-                  <BodyTwoText>{gradeRange}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {gradeRange}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="clock" className="fa-solid" />
-                  <BodyTwoText>{duration}</BodyTwoText>
+                  <Typography variant="body2" gutterBottom>
+                    {duration}
+                  </Typography>
                 </div>
                 <div className={style.iconWithDescription}>
                   <FontAwesome icon="book" className="fa-solid" />
-                  <BodyTwoText className={style.subjectsText}>
+                  <Typography
+                    className={style.subjectsText}
+                    variant="body2"
+                    gutterBottom
+                  >
                     {i18n.topic() + ': ' + subjectsAndTopics.join(', ')}
-                  </BodyTwoText>
+                  </Typography>
                 </div>
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.centerContentContainer}>
                 <div className={style.descriptionVideoContainer}>
                   <div className={style.descriptionContainer}>
-                    <BodyTwoText>{description}</BodyTwoText>
+                    <Typography variant="body2" gutterBottom>
+                      {description}
+                    </Typography>
                   </div>
                   <div className={style.mediaContainer}>
                     {video ? (
@@ -178,17 +188,17 @@ const ExpandedCurriculumCatalogCard = ({
                   <div className={style.resourcesContainer}>
                     {availableResourcesCount > 0 && (
                       <div>
-                        <Heading4 visualAppearance="heading-xs">
+                        <Typography component="h4" variant="h6" gutterBottom>
                           {i18n.availableResources()}
-                        </Heading4>
+                        </Typography>
                         <hr className={style.thickDivider} />
                         {resoucesOrder.map(
                           resource =>
                             availableResources[resource] && (
                               <div key={resource}>
-                                <BodyTwoText>
+                                <Typography variant="body2" gutterBottom>
                                   {translatedAvailableResources[resource]}{' '}
-                                </BodyTwoText>
+                                </Typography>
                                 {displayDivider() && (
                                   <hr className={style.horizontalDivider} />
                                 )}
@@ -203,9 +213,9 @@ const ExpandedCurriculumCatalogCard = ({
                     (professionalLearningProgram ||
                       selfPacedPlCourseOfferingPath) && (
                       <div className={style.professionalLearningContainer}>
-                        <Heading4 visualAppearance="heading-xs">
+                        <Typography component="h4" variant="h6" gutterBottom>
                           {i18n.professionalLearning()}
-                        </Heading4>
+                        </Typography>
                         <hr className={style.thickDivider} />
                         {professionalLearningProgram && (
                           <TextLink
@@ -251,7 +261,7 @@ const ExpandedCurriculumCatalogCard = ({
                             iconData[devices[device]].color
                           }`}
                         />
-                        <BodyTwoText>
+                        <Typography variant="body2" gutterBottom>
                           {device !== 'no_device'
                             ? translatedCourseOfferingDeviceTypes[device]
                                 .charAt(0)
@@ -260,68 +270,85 @@ const ExpandedCurriculumCatalogCard = ({
                                 1
                               )
                             : i18n.offline()}
-                        </BodyTwoText>
+                        </Typography>
                       </div>
                     )
+                )}
+                {aiChatToolsDependency === AiChatToolsDependency.ESSENTIAL && (
+                  <div className={style.iconWithDescription}>
+                    <FontAwesomeV6Icon
+                      iconName="ai-bot-solid"
+                      iconFamily="kit"
+                      className={style.aiBotIcon}
+                    />
+                    <Typography variant="body2" gutterBottom>
+                      Requires AI chat tools
+                    </Typography>
+                  </div>
                 )}
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
                 {isTeacherOrSignedOut ? (
                   <>
-                    <LinkButton
-                      color={buttonColors.black}
-                      type="secondary"
-                      href={pathToCourse}
-                      text={i18n.seeCurriculumDetails()}
+                    <MuiButton
+                      variant="outlined"
+                      color="secondary"
+                      size="medium"
                       className={centererStyle.buttonFlex}
-                      ariaLabel={i18n.quickViewDescription({
+                      aria-label={i18n.quickViewDescription({
                         course_name: courseDisplayName,
                       })}
-                    />
-                    <Button
-                      color={buttonColors.purple}
-                      type="primary"
-                      onClick={() => assignButtonOnClick('expanded-card')}
-                      ariaLabel={assignButtonDescription}
-                      text={i18n.assignToClassSections()}
+                      href={pathToCourse}
+                    >
+                      {i18n.seeCurriculumDetails()}
+                    </MuiButton>
+                    <MuiButton
+                      variant="contained"
+                      color="primary"
+                      size="medium"
                       className={centererStyle.buttonFlex}
-                    />
+                      onClick={() => assignButtonOnClick('expanded-card')}
+                      aria-label={assignButtonDescription}
+                      type="button"
+                    >
+                      {i18n.assignToClassSections()}
+                    </MuiButton>
                   </>
                 ) : (
-                  <LinkButton
-                    color={buttonColors.purple}
-                    type="primary"
-                    href={pathToCourse}
-                    ariaLabel={i18n.tryCourseNow({
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="medium"
+                    className={centererStyle.buttonFlex}
+                    aria-label={i18n.tryCourseNow({
                       course_name: courseDisplayName,
                     })}
-                    text={i18n.tryNow()}
-                    className={centererStyle.buttonFlex}
-                  />
+                    href={pathToCourse}
+                  >
+                    {i18n.tryNow()}
+                  </MuiButton>
                 )}
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
               <div className={style.closeButtonContainer}>
-                <Button
+                <MuiIconButton
                   onClick={onClose}
-                  icon={{
-                    iconName: 'xmark',
-                    iconStyle: 'solid',
-                  }}
-                  ariaLabel="Close Button"
-                  isIconOnly
-                  type="tertiary"
-                  color={buttonColors.black}
+                  variant="text"
+                  color="secondary"
+                  size="medium"
                   className={style.closeButton}
-                />
+                  aria-label="Close Button"
+                >
+                  <FontAwesomeV6Icon iconName="xmark" iconStyle="solid" />
+                </MuiIconButton>
               </div>
               {recommendedSimilarCurriculum && (
                 <div className={style.relatedContainer}>
-                  <Heading4 visualAppearance="heading-xs">
+                  <Typography component="h4" variant="h6" gutterBottom>
                     {i18n.relatedCurricula()}
-                  </Heading4>
+                  </Typography>
                   <hr className={style.thickDivider} />
                   <img
                     id="similarCurriculumImage"
@@ -358,6 +385,7 @@ const ExpandedCurriculumCatalogCard = ({
     </div>
   );
 };
+
 ExpandedCurriculumCatalogCard.propTypes = {
   courseKey: PropTypes.string.isRequired,
   courseDisplayName: PropTypes.string.isRequired,
@@ -365,6 +393,8 @@ ExpandedCurriculumCatalogCard.propTypes = {
   gradeRange: PropTypes.string.isRequired,
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
+  aiChatToolsDependency: PropTypes.oneOf(Object.values(AiChatToolsDependency))
+    .isRequired,
   description: PropTypes.string.isRequired,
   professionalLearningProgram: PropTypes.string,
   video: PropTypes.string,
@@ -384,4 +414,5 @@ ExpandedCurriculumCatalogCard.propTypes = {
   recommendedSimilarCurriculum: PropTypes.object,
   recommendedStretchCurriculum: PropTypes.object,
 };
+
 export default ExpandedCurriculumCatalogCard;

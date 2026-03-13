@@ -6,6 +6,8 @@ import React, {
   useState,
 } from 'react';
 
+import {useLocalization} from '@cdo/apps/localization';
+
 import {
   isTtsAvailable,
   onTtsAvailable,
@@ -21,9 +23,11 @@ const BrowserTextToSpeechWrapper: React.FC<{children: ReactNode}> = ({
 }) => {
   const [ttsReady, setTtsReady] = useState(isTtsAvailable());
 
+  const locale = useLocalization();
+
   useEffect(() => {
     onTtsAvailable(setTtsReady);
-  }, []);
+  }, [locale]);
 
   return (
     <BrowserTtsContext.Provider value={{isTtsAvailable: ttsReady, ...ttsApi}}>

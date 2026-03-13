@@ -104,6 +104,7 @@
     "start_blocks": "onEvent(\"colorDropdown\", \"change\", function() {\r\n  //1) Get the value from the dropdown and store it in a variable\r\n  \r\n  //2) Update the color of each LED\r\n});\r\n",
     "bubble_choice_description": "Create an app that lets the user change the color of the LEDs with a dropdown menu",
     "encrypted_examples": "/2WvaIyzonDwx4LIlnrzFfolsC9ET7J4l7tC3hMwHO1CchGcpGa/IqXL+kHT\nYLbEZDcU7lrowwAt33HZGX44bA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

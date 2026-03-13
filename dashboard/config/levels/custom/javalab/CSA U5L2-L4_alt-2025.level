@@ -26,7 +26,7 @@
     "project_template_level_name": "CSA U5L2-2D Arrays PBT_alt-2025",
     "teacher_markdown": "The `getStudentGrades()` method returns a `String` that contains the grades of the first student in each week.\r\n\r\nThe code `int[] studentGrades = msHamilton.getStudentGrades(1)` will retrieve the grades for the student in row `1` (i.e., the second row, since arrays are zero-indexed) of the `weeklyGrades` array in the `Teacher` class. The `getStudentGrades()` method returns an array of `int` values corresponding to the grades of the specified student across all weeks.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:53:04.098+00:00\",\"changed\":[\"cloned from \\\"CSA U5L2-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L2-L4_pilot-2025\"}]"

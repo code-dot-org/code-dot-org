@@ -764,7 +764,7 @@
       }
     },
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": "true"
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-04-21T09:46:30.107+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-Loops PBT_pilot-2025\\\"\"],\"cloned_from\":\"CSA U1L5-Loops PBT_pilot-2025\"},{\"changed_at\":\"2025-04-21 09:46:38 +0000\",\"changed\":[\"serialized_maze\",\"ai_tutor_available\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-21 09:48:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-04-21 10:05:14 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"

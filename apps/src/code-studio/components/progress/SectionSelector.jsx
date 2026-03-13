@@ -17,16 +17,11 @@ function SectionSelector({
   requireSelection,
   sections,
   selectedSectionId,
-  logToFirehose,
   reloadOnChange,
   selectSection,
 }) {
   const handleSelectChange = event => {
     const newSectionId = event.target.value;
-
-    if (logToFirehose) {
-      logToFirehose();
-    }
 
     updateQueryParam(
       'section_id',
@@ -83,7 +78,6 @@ SectionSelector.propTypes = {
   alwaysShow: PropTypes.bool,
   // If true, changing sections results in us hitting the server
   reloadOnChange: PropTypes.bool,
-  logToFirehose: PropTypes.func,
 
   // redux provided
   sections: PropTypes.arrayOf(

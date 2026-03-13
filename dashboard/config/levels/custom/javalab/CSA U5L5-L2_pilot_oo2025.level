@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U5L5-Enhanced For Loops PBT_pilot_oo2025",
     "teacher_markdown": "In `Numbers.java`, the outer enhanced `for` loop in the `getValuesEnhanced()` method, we create a variable (`row`) that traverses the whole numbers array and saves each row sequentially. This type of enhanced `for` loop will allow us to pull data from the different elements present in the array, but unlike the regular `for` loop, we cannot change the values of elements.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:38.400+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L5-L2_pilot-2025\"}]"

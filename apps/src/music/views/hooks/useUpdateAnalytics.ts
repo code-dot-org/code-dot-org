@@ -7,15 +7,16 @@ import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import AnalyticsReporter from '../../analytics/AnalyticsReporter';
+import MusicAnalyticsReporter from '../../analytics/AnalyticsReporter';
 
 /**
- * A hook for updating the {@link AnalyticsReporter} when relevant redux state changes and attaching callbacks
+ * A hook for updating the {@link MusicAnalyticsReporter} when relevant redux state changes and attaching callbacks
  * to browser and lifecycle events.
  */
 function useUpdateAnalytics(
-  analyticsReporter: AnalyticsReporter,
-  isProjectLevel: boolean
+  analyticsReporter: MusicAnalyticsReporter,
+  isProjectLevel: boolean,
+  channelId?: string
 ) {
   /**
    * Effect that runs on initial mount
@@ -26,7 +27,7 @@ function useUpdateAnalytics(
   useEffect(() => {
     analyticsReporter.startSession();
 
-    const startSession = async (
+    const startSession = (
       levelProperties: LevelProperties,
       channel: Channel | undefined
     ) => {
@@ -34,7 +35,7 @@ function useUpdateAnalytics(
         return;
       }
 
-      await analyticsReporter.startSession();
+      analyticsReporter.startSession();
       analyticsReporter.setProjectProperty(
         'levelType',
         levelProperties.isProjectLevel ? 'Standalone Project' : 'Level'
@@ -88,17 +89,6 @@ function useUpdateAnalytics(
 
   const sessionInProgress = analyticsReporter.isSessionInProgress();
 
-  // Update user and project properties whenever they change.
-
-  const {userId, userType, signInState} = useAppSelector(
-    state => state.currentUser
-  );
-  useEffect(() => {
-    sessionInProgress &&
-      analyticsReporter.setUserProperties(userId, userType, signInState);
-  }, [analyticsReporter, sessionInProgress, userId, userType, signInState]);
-
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   useEffect(() => {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('channelId', channelId);

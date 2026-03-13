@@ -1,0 +1,9 @@
+name 'programming-fundamentals-postassessment-intro_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment'
+markdown <<MARKDOWN
+Now that you've completed the unit, this assessment will measure your understanding of key programming concepts, including computational thinking, algorithms, variables, loops, conditionals, debugging, and ethical considerations in programming.
+
+- Read each question carefully and **apply what you've learned** to choose the best answer.
+- Some questions involve **code snippets**! Make sure to analyze them before selecting your response.
+- This assessment is an opportunity to **show your growth**, so take your time and do your best!
+MARKDOWN

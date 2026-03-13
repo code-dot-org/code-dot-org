@@ -4,12 +4,14 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "content_area": "self_paced_pl_9_12",
+      "curriculum_umbrella": "Self-paced PL - CSA",
       "is_migrated": true,
       "version_year": "2025"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-18 15:27:19 UTC",
+    "serialized_at": "2025-11-12 23:51:21 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -437,6 +439,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-objectives-1_pl"
+        ],
         "progression": "Introduction to Java Basics"
       },
       "bonus": false,
@@ -459,6 +464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-certification-2_pl"
+        ],
         "progression": "Introduction to Java Basics"
       },
       "bonus": false,
@@ -481,6 +489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-module-overview-3_pl"
+        ],
         "progression": "Introduction to Java Basics"
       },
       "bonus": false,
@@ -503,6 +514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-welcome-1_pl"
+        ],
         "progression": "Welcome to Java Lab"
       },
       "bonus": false,
@@ -525,6 +539,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-basics-video-2_pl"
+        ],
         "progression": "Welcome to Java Lab"
       },
       "bonus": false,
@@ -547,6 +564,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-writing-a-program-video-3_pl"
+        ],
         "progression": "Welcome to Java Lab"
       },
       "bonus": false,
@@ -569,6 +589,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-practice-main-4_pl"
+        ],
         "progression": "Welcome to Java Lab"
       },
       "bonus": false,
@@ -591,6 +614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-printing-video-5_pl"
+        ],
         "progression": "Printing in Java"
       },
       "bonus": false,
@@ -613,6 +639,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-practice-print-6_pl"
+        ],
         "progression": "Printing in Java"
       },
       "bonus": false,
@@ -635,6 +664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-debugging-video-7_pl"
+        ],
         "progression": "Debugging in Java Lab"
       },
       "bonus": false,
@@ -657,6 +689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-practice-debugging-8_pl"
+        ],
         "progression": "Debugging in Java Lab"
       },
       "bonus": false,
@@ -679,6 +714,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-practice-error-9_pl"
+        ],
         "progression": "Debugging in Java Lab"
       },
       "bonus": false,
@@ -701,6 +739,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-more-debugging-practice-10_pl"
+        ],
         "progression": "Debugging in Java Lab"
       },
       "bonus": false,
@@ -723,6 +764,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-lab-chk-understanding-11_pl"
+        ],
         "progression": "Debugging in Java Lab"
       },
       "bonus": false,
@@ -745,6 +789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-overview-1_pl"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -767,6 +814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-creating-video-2_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -789,6 +839,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-datatypes-3-1_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -811,6 +864,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-datatypes-3-2_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -833,6 +889,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-chk-understanding-types-3_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -855,6 +914,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-predict-4_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -877,6 +939,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-modify-5_pl"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -899,6 +964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-updating-6_pl"
+        ],
         "progression": "Updating Variables"
       },
       "bonus": false,
@@ -921,6 +989,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-chk-understanding-value-7_pl"
+        ],
         "progression": "Updating Variables"
       },
       "bonus": false,
@@ -943,6 +1014,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-practice-declaring-8_pl"
+        ],
         "progression": "Updating Variables"
       },
       "bonus": false,
@@ -965,6 +1039,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-concatenation-9_pl"
+        ],
         "progression": "Updating Variables"
       },
       "bonus": false,
@@ -987,6 +1064,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-debugging-practice-10_pl"
+        ],
         "progression": "Updating Variables"
       },
       "bonus": false,
@@ -1009,6 +1089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-assignment-op-11_pl"
+        ],
         "progression": "Compound Assignment Operators"
       },
       "bonus": false,
@@ -1031,6 +1114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-chk-understanding-value-12_pl"
+        ],
         "progression": "Compound Assignment Operators"
       },
       "bonus": false,
@@ -1053,6 +1139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-increment-13_pl"
+        ],
         "progression": "Compound Assignment Operators"
       },
       "bonus": false,
@@ -1075,6 +1164,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-practice-numbers-14_pl"
+        ],
         "progression": "Compound Assignment Operators"
       },
       "bonus": false,
@@ -1097,6 +1189,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-chk-understanding-index-15_pl"
+        ],
         "progression": "Compound Assignment Operators"
       },
       "bonus": false,
@@ -1119,6 +1214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-variables-chk-understanding-vocab-16_pl"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1141,6 +1239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-overview-1_pl"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1163,6 +1264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-boolean-2_pl"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1185,6 +1289,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-chk-und-boolean-3_pl"
+        ],
         "progression": "Boolean expressions"
       },
       "bonus": false,
@@ -1207,6 +1314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-statements-video-4_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1229,6 +1339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-5_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1251,6 +1364,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-assignment-comparison-6_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1273,6 +1389,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-predict-7_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1295,6 +1414,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-if-8_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1317,6 +1439,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-chk-und-if-9_pl"
+        ],
         "progression": "If statements"
       },
       "bonus": false,
@@ -1339,6 +1464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-2-way-selct-10_pl"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1361,6 +1489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-if-else-11_pl"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1383,6 +1514,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-12_pl"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1405,6 +1539,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-chk-und-if-else-13_pl"
+        ],
         "progression": "If-else statements"
       },
       "bonus": false,
@@ -1427,6 +1564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-multi-selection-video-14_pl"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1449,6 +1589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-multi-15_pl"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1471,6 +1614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-practice-grad-16_pl"
+        ],
         "progression": "Else-if statements"
       },
       "bonus": false,
@@ -1493,6 +1639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-conditionals-chk-und-vocab-17_pl"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,
@@ -1515,6 +1664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-overview-1_pl"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1537,6 +1689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-for-loops-video-2_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1559,6 +1714,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-chk-und-terms-3_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1581,6 +1739,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-debug-4_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1603,6 +1764,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-hello-5_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1625,6 +1789,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-even-6_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1647,6 +1814,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-divided-7_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1669,6 +1839,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-integers-8_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1691,6 +1864,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-loops-practice-fizzbuzz-9_pl"
+        ],
         "progression": "For loops"
       },
       "bonus": false,
@@ -1713,6 +1889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrays-overview-1_pl"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1735,6 +1914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrrays-1D-video-2_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1757,6 +1939,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-modify-1D-video-3_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1779,6 +1964,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-chk-und-4_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1801,6 +1989,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-index-5_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1823,6 +2014,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-ch-und-length-6_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1845,6 +2039,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-chk-und-element-7_pl"
+        ],
         "progression": "Declaring and initializing arrays"
       },
       "bonus": false,
@@ -1867,6 +2064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-accessing-elements-8_pl"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1889,6 +2089,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-food-9_pl"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1911,6 +2114,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-update-10_pl"
+        ],
         "progression": "Accessing and updating elements in an array"
       },
       "bonus": false,
@@ -1933,6 +2139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-traverse-video-11_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -1955,6 +2164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-chk-und-traverse-12_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -1977,6 +2189,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-debug-traverse-13_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -1999,6 +2214,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-traverse-14_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -2021,6 +2239,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-scores-15_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -2043,6 +2264,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-practice-class-16_pl"
+        ],
         "progression": "Traversing Arrays"
       },
       "bonus": false,
@@ -2065,6 +2289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-arrray-chk-und-vocab-17_pl"
+        ],
         "progression": "Vocabulary"
       },
       "bonus": false,

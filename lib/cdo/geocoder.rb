@@ -1,7 +1,7 @@
 require 'geocoder'
 require 'geocoder/results/mapbox'
-require 'redis'
 require 'geocoder/lookups/freegeoip'
+require "active_support/cache/redis_cache_store"
 
 module Geocoder
   module Result
@@ -190,7 +190,10 @@ def geocoder_config
     timeout: 10,
     units: :km,
   }.tap do |config|
-    config[:cache] = Redis.new(url: CDO.geocoder_redis_url) if CDO.geocoder_redis_url
+    config[:cache] = ActiveSupport::Cache::RedisCacheStore.new(
+      url: CDO.redis_url,
+      expires_in: 1.week,
+    )
     if CDO.mapbox_access_token
       config[:lookup] = :mapbox
       config[:use_https] = true

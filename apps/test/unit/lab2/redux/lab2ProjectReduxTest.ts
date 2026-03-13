@@ -35,7 +35,6 @@ const createMockFile = (
 ): ProjectFile => ({
   id,
   name: `file${id}.txt`,
-  language: 'txt',
   contents: `Content of file ${id}`,
   folderId: DEFAULT_FOLDER_ID,
   active: false,
@@ -59,10 +58,9 @@ const createMockMultiFileSource = (
   files: {
     '1': createMockFile('1', {
       name: 'index.html',
-      language: 'html',
       active: true,
     }),
-    '2': createMockFile('2', {name: 'script.js', language: 'javascript'}),
+    '2': createMockFile('2', {name: 'script.js'}),
   },
   folders: {
     '1': createMockFolder('1'),
@@ -80,11 +78,14 @@ const createMockProjectSources = (
 
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
+  versionDetails: undefined,
   viewingOldVersion: false,
+  projectSourceBeforeAiTutorVersion: undefined,
   restoredOldVersion: false,
   hasEdited: false,
   projectTooLarge: false,
   lastSavedLabConfig: undefined,
+  projectSourceLevelId: undefined,
 };
 
 describe('lab2ProjectRedux', () => {
@@ -134,7 +135,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile).toBeDefined();
       expect(newFile?.folderId).toBe('1');
       expect(newFile?.contents).toBe('print("hello world")');
-      expect(newFile?.language).toBe('py');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -173,7 +173,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe(DEFAULT_FOLDER_ID);
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
-      expect(newFile?.language).toBe('png');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -202,7 +201,6 @@ describe('lab2ProjectRedux', () => {
       expect(newFile?.folderId).toBe('1');
       expect(newFile?.contents).toBe('');
       expect(newFile?.url).toBe(fileUrl);
-      expect(newFile?.language).toBe('png');
       expect(state.hasEdited).toBe(true);
     });
 
@@ -653,15 +651,12 @@ describe('lab2ProjectRedux', () => {
           files: {
             '1': createMockFile('1', {
               name: 'index.html',
-              language: 'html',
             }),
             '2': createMockFile('2', {
               name: 'script.js',
-              language: 'javascript',
             }),
             '3': createMockFile('3', {
               name: 'style.css',
-              language: 'css',
               folderId: '1',
               active: true,
             }),

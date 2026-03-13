@@ -40,7 +40,8 @@
     "rubric_performance_level_2": "There is at least one one working link from one HTML page to another\r\n",
     "rubric_performance_level_3": "There is an `<a>` tag, but syntax errors or problems with the page name may prevent it from working\r\n",
     "rubric_performance_level_4": "No new page was created and there are no links\r\n",
-    "encrypted_examples": "YJO6gW3+HLVIr/uNj4wKYnDB0LD/2NEuOt0n9aTgiO4CwOvJzse5/DLKQ+ys\nJpbZpFHg6qGbzZNFyt/Erx+N8w==\n"
+    "encrypted_examples": "YJO6gW3+HLVIr/uNj4wKYnDB0LD/2NEuOt0n9aTgiO4CwOvJzse5/DLKQ+ys\nJpbZpFHg6qGbzZNFyt/Erx+N8w==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

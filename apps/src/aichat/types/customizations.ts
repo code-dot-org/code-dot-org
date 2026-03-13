@@ -13,6 +13,7 @@ export interface ModelParameters {
   temperature: number;
   systemPrompt: string;
   retrievalContexts: string[];
+  responseJsonSchema?: object;
 }
 
 /**

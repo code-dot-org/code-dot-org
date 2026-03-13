@@ -1,6 +1,5 @@
 /** @file Top-level view for AI Chat Lab */
 
-import ActionDropdown from '@code-dot-org/component-library/dropdown/actionDropdown';
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
@@ -11,27 +10,26 @@ import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarn
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils';
+import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import InstructionsV2 from '@cdo/apps/lab2/views/components/Instructions/InstructionsV2';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
-import {commonI18n} from '@cdo/apps/types/locale';
-import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
-import {getUserHasAichatAccess} from '../aichatApi';
+import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
@@ -42,15 +40,15 @@ import {
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   sendAnalytics,
   setShowModalType,
-  setStartingAiCustomizations,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setViewMode,
   updateAiCustomization,
+  initializeAiCustomizations,
 } from '../redux';
 import {AichatLevelProperties, ModelParameters, ViewMode} from '../types';
 
@@ -70,6 +68,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const isUserTeacher = useAppSelector(state => state.currentUser.isTeacher);
+  const teacherViewingStudent = Boolean(viewAsUserId);
 
   const {
     name: levelName,
@@ -99,14 +98,16 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const channelId = useAppSelector(state => state.lab.channel?.id);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
+  const logLevelActivity = useLevelActivityMetrics(levelProperties);
   const scriptId = useAppSelector(state => state.progress.scriptId);
 
   const isLevelbuilder = useAppSelector(state =>
     state.lab.permissions?.includes(PERMISSIONS.LEVELBUILDER)
   );
 
-  const hasSetStartingCustomizations = useAppSelector(
-    state => state.aichat.hasSetStartingCustomizations
+  const hasSetInitialCustomizations = useAppSelector(
+    state => state.aichat.hasSetInitialCustomizations
   );
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -143,10 +144,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       (initialSources?.source as string) || '{}'
     );
     dispatch(
-      setStartingAiCustomizations({
-        levelAichatSettings,
-        studentAiCustomizations,
-      })
+      initializeAiCustomizations(studentAiCustomizations, levelAichatSettings)
     );
     dispatch(
       addChatEvent({
@@ -158,15 +156,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   useEffect(() => {
     if (signInState === SignInState.SignedIn) {
-      getUserHasAichatAccess()
-        .then(hasAccess => dispatch(setUserHasAichatAccess(hasAccess)))
+      getUserHasAichatLabAccess()
+        .then(hasAccess => dispatch(setUserHasAichatLabAccess(hasAccess)))
         .catch(error => {
           if (
             !(error instanceof NetworkError && error.response.status === 403)
           ) {
             Lab2Registry.getInstance()
               .getMetricsReporter()
-              .logError('Error in fetching user aichat access', error as Error);
+              .logError(
+                'Error in fetching user aichat lab access',
+                error as Error
+              );
           }
         });
     }
@@ -284,7 +285,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [dialogControl, resetProject]);
 
   useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(clearHasSetStartingCustomizations());
+    dispatch(clearHasSetInitialCustomizations());
   });
 
   // Only recreate modelParameters when relevant customizations are updated.
@@ -318,55 +319,26 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             <SegmentedButtons {...viewModeButtonsProps} />
           </div>
         )}
+        {teacherViewingStudent && <TeacherViewingStudentProjectAlert />}
         <div className={moduleStyles.labCoreContainer}>
           {viewMode === ViewMode.EDIT && (
             <>
               <div className={moduleStyles.instructionsArea}>
-                {experiments.isEnabledAllowingQueryString(
-                  experiments.LAB2_RESOURCE_PANEL
-                ) ? (
-                  <ResourcePanel
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                    isRunning={false}
-                    hasRun={hasSentMessage}
-                    hasEdited={hasUpdatedCustomizations}
-                    levelProperties={levelProperties}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  />
-                ) : (
-                  <PanelContainer
-                    id="aichat-instructions-panel"
-                    headerContent={commonI18n.instructions()}
-                    className={moduleStyles.panelContainer}
-                    headerClassName={moduleStyles.panelHeader}
-                    rightHeaderContent={renderInstructionsHeaderRight(
-                      isUserTeacher,
-                      () => {
-                        dispatch(
-                          setShowModalType(ModalTypes.TEACHER_ONBOARDING)
-                        );
-                      }
-                    )}
-                  >
-                    <InstructionsV2
-                      className={moduleStyles.instructions}
-                      /** AI Chat doesn't have a traditional "run" state, so this is always false. */
-                      isRunning={false}
-                      hasRun={hasSentMessage}
-                      hasEdited={hasUpdatedCustomizations}
-                      levelProperties={levelProperties}
-                    />
-                  </PanelContainer>
-                )}
+                <ResourcePanel
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
+                  /** AI Chat doesn't have a traditional "run" state, so this is always false. */
+                  isRunning={false}
+                  hasRun={hasSentMessage}
+                  hasEdited={hasUpdatedCustomizations}
+                  levelProperties={levelProperties}
+                  rightHeaderContent={renderInstructionsHeaderRight(
+                    isUserTeacher,
+                    () => {
+                      dispatch(setShowModalType(ModalTypes.TEACHER_ONBOARDING));
+                    }
+                  )}
+                />
               </div>
               {!allFieldsHidden && (
                 <div className={moduleStyles.customizationArea}>
@@ -379,11 +351,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                       !viewAsUserId &&
                       renderModelCustomizationHeaderRight(() => {
                         onClickStartOver();
-                        dispatch(
-                          sendAnalytics(EVENTS.AICHAT_START_OVER, {
-                            levelPath: window.location.pathname,
-                          })
-                        );
+                        dispatch(sendAnalytics(EVENTS.AICHAT_START_OVER, {}));
                       })
                     }
                   >
@@ -416,7 +384,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
               headerClassName={moduleStyles.panelHeader}
               rightHeaderContent={<AiChatHeaderButtons />}
             >
-              {hasSetStartingCustomizations && (
+              {hasSetInitialCustomizations && (
                 <ChatWorkspace
                   modelParameters={modelParameters}
                   clientType={AiChatClientTypes.AI_CHAT_LAB}
@@ -426,6 +394,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                     starterAssets && Object.keys(starterAssets).length > 0
                   }
                   multimodalEnabled={levelAichatSettings?.multimodalEnabled}
+                  logLevelActivity={logLevelActivity}
                 />
               )}
             </PanelContainer>
@@ -438,20 +407,18 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
 const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
-    <div>
-      <IconButtonWithTooltip
-        id="start-over"
-        label={aichatI18n.aria_startOver()}
-        icon={{iconName: 'refresh', iconStyle: 'solid'}}
-        type="tertiary"
-        color="gray"
-        buttonSize="xs"
-        tooltipSize="xs"
-        tooltipDirection="onBottom"
-        hideTooltipTail={true}
-        onClick={onStartOver}
-      />
-    </div>
+    <IconButtonWithTooltip
+      id="start-over"
+      label={aichatI18n.aria_startOver()}
+      icon={{iconName: 'refresh', iconStyle: 'solid'}}
+      type="tertiary"
+      color="gray"
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={true}
+      onClick={onStartOver}
+    />
   );
 };
 
@@ -460,24 +427,17 @@ const renderInstructionsHeaderRight = (
   onInfoClick: () => void
 ) => {
   return isUserTeacher ? (
-    <ActionDropdown
-      name="instructionsInfoDropdown"
-      labelText={aichatI18n.instructionsHeaderRight()}
-      size="xs"
-      triggerButtonProps={{
-        type: 'tertiary',
-        isIconOnly: true,
-        color: 'black',
-        icon: {iconName: 'ellipsis-vertical', iconStyle: 'solid'},
-      }}
-      options={[
-        {
-          value: 'teacherOnboardingModal',
-          label: aichatI18n.aboutAichatLab(),
-          icon: {iconName: 'circle-info', iconStyle: 'solid'},
-          onClick: onInfoClick,
-        },
-      ]}
+    <IconButtonWithTooltip
+      id="about-aichat-lab"
+      label={aichatI18n.aboutAichatLab()}
+      icon={{iconName: 'message-question', iconStyle: 'solid'}}
+      type="tertiary"
+      color="black"
+      buttonSize="xs"
+      tooltipSize="xs"
+      tooltipDirection="onBottom"
+      hideTooltipTail={true}
+      onClick={onInfoClick}
     />
   ) : null;
 };

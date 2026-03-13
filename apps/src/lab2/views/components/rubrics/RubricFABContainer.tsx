@@ -1,9 +1,10 @@
 import React, {useEffect, useMemo} from 'react';
 
 import {isLabLoading} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
-import {isUsingResourcePanel} from '@cdo/apps/lab2/utils';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {useLevelProperties} from '../../LevelPropertiesWrapper';
 
 import {useRubric} from './RubricWrapper';
 
@@ -14,10 +15,9 @@ import {useRubric} from './RubricWrapper';
  */
 const RubricFABContainer: React.FC = () => {
   const {rubricData, showRubric, isLoading: isLoadingRubric} = useRubric();
+  const {levelProperties} = useLevelProperties();
+  const {name: levelName, appName, parentLevelName, type} = levelProperties;
 
-  const currentLevelName = useAppSelector(
-    state => state.lab.levelProperties?.name
-  );
   const isTeacher = useAppSelector(state => state.currentUser.isTeacher);
   const labLoading = useAppSelector(isLabLoading);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
@@ -29,10 +29,6 @@ const RubricFABContainer: React.FC = () => {
   );
   const courseName = useAppSelector(state => state.progress.courseName);
   const unitName = useAppSelector(state => state.progress.scriptName);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
-  const isProjectLevel = useAppSelector(
-    state => state.lab.levelProperties?.isProjectLevel
-  );
 
   const studentLevelInfo = useMemo(() => {
     const userLevel = levelsWithProgress?.find(
@@ -57,9 +53,9 @@ const RubricFABContainer: React.FC = () => {
     () => ({
       unitName,
       courseName,
-      levelName: currentLevelName,
+      levelName,
     }),
-    [unitName, courseName, currentLevelName]
+    [unitName, courseName, levelName]
   );
 
   const canShow =
@@ -68,9 +64,7 @@ const RubricFABContainer: React.FC = () => {
     showRubric &&
     !labLoading &&
     !isLoadingRubric &&
-    rubricData &&
-    // Only show the rubric FAB is the resource panel is enabled
-    isUsingResourcePanel(appName, isProjectLevel || false);
+    rubricData;
 
   // Temporary hack: show/hide the AI Differentiation FAB based on if the Rubric FAB is showing.
   // Note that currently, the AI Diff FAB will be out of date on Lab2 levels since it relies on
@@ -101,10 +95,12 @@ const RubricFABContainer: React.FC = () => {
         rubric={rubric}
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
-        currentLevelName={currentLevelName}
+        currentLevelName={levelName}
         aiEnabled={rubric.learningGoals?.some(lg => lg?.aiEnabled)}
         canShowTaScoresAlert={canShowTaScoresAlert}
         reloadOnStudentChange={false}
+        parentLevelName={parentLevelName}
+        levelType={type}
       />
     </div>
   );

@@ -35,7 +35,8 @@
         "key": "python-intro-console-lesson7-slides-23cf1a62-4132-452c-a787-8b5e599c09ff"
       }
     ],
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-22T01:57:52.587+00:00\",\"changed\":[\"cloned from \\\"programming-fundamentals-lesson15-level6-2024\\\"\"],\"cloned_from\":\"programming-fundamentals-lesson15-level6-2024\"}]"

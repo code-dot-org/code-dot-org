@@ -908,7 +908,7 @@
     "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">DuckPainter</code> class.\r\n\r\n   * What is the superclass?\r\n   \r\n   * What methods do you notice are in this class?\r\n   \r\n   * What would you say each method is responsible for?",
     "teacher_markdown": "The `DuckPainter` class is a subclass of the `MuralPainter` class. It has methods specific to painting the components of the duck and moving to the starting position for each component.",
     "name_suffix": "_pilot-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-01T20:49:30.955+00:00\",\"changed\":[\"cloned from \\\"CSA U1L11-L1-3_2025\\\"\"],\"cloned_from\":\"CSA U1L11-L1-3_2025\"}]"

@@ -1,0 +1,17 @@
+name 'programming-fundamentals-postassessment-question4_pilot-2025'
+title 'Programming Fundamentals Post-Assessment: Question 4'
+
+wrong '![](https://images.code.org/90a2c54ef5da1aa3bf253dd2e379f13f-image-1740510830622.png)'
+wrong '![](https://images.code.org/f5b7f3a7ee9fee4e42bd88c13f10b669-image-1740510840787.png)'
+right '![](https://images.code.org/7d07a03a0486251a3feb5653c53da008-image-1740510846306.png)'
+wrong '![](https://images.code.org/0a21e637a75c86db5df929b2c2b41341-image-1740510851558.png)'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following function definitions will produce an error?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+Lesson 6: Functions and Parameters
+MARKDOWN

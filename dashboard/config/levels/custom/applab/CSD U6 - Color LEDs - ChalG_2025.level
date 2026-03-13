@@ -100,6 +100,7 @@
     "display_name": "Baby Sleep Light",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype where your circuit playground could be used as a light to help a baby go to sleep",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

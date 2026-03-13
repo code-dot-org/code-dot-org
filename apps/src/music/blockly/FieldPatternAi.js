@@ -1,8 +1,9 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import color from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 
 import {PATTERN_AI_NUM_SEED_EVENTS} from '../constants';
@@ -17,7 +18,7 @@ const FIELD_PADDING = 2;
  * A custom field that renders the pattern editing UI, used in the
  * "play_pattern_ai" block. The UI is rendered by {@link PatternAiPanel}.
  */
-class FieldPatternAi extends GoogleBlockly.Field {
+class FieldPatternAi extends BlocklyCore.Field {
   constructor(options) {
     super(options.currentValue);
 
@@ -50,7 +51,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       this.borderRect_.classList.add('blocklyDropdownRect');
     }
 
-    this.backgroundElement = GoogleBlockly.utils.dom.createSvgElement(
+    this.backgroundElement = BlocklyCore.utils.dom.createSvgElement(
       'g',
       {
         transform: 'translate(1,1)',
@@ -110,7 +111,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    createReactRoot(
       <PatternAiPanel
         initValue={this.getValue()}
         onChange={value => {
@@ -136,7 +137,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       this.backgroundElement.innerHTML = '';
     }
 
-    GoogleBlockly.utils.dom.createSvgElement(
+    BlocklyCore.utils.dom.createSvgElement(
       'rect',
       {
         fill: color.neutral_dark,
@@ -158,7 +159,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
     });
 
     graphNotes.forEach(graphNote => {
-      GoogleBlockly.utils.dom.createSvgElement(
+      BlocklyCore.utils.dom.createSvgElement(
         'rect',
         {
           fill:

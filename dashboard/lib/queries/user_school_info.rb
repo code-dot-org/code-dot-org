@@ -1,5 +1,7 @@
 class Queries::UserSchoolInfo
   def self.last_complete(user)
+    return nil unless user
+
     user.
       user_school_infos.
       includes(:school_info).

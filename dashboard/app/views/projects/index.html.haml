@@ -12,6 +12,7 @@
   projects_data[:recaptchaSiteKey] = CDO.recaptcha_site_key
 
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
 %script{src: webpack_asset_path('js/projects/index.js'), data: {projects: projects_data.to_json}}
 
 %link{href: "/shared/css/2022-rebrand-update.css", rel: "stylesheet"}

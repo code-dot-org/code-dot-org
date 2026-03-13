@@ -1,14 +1,12 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
-  BodyFourText,
-  BodyThreeText,
-  Heading2,
-  Heading3,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
-import {Card, CardContent, Box} from '@mui/material';
+  Card,
+  CardContent,
+  Box,
+  Typography,
+  Button as MuiButton,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useMemo, useState} from 'react';
 
@@ -75,12 +73,12 @@ export const ScoreCard: FC<ScoreCardProps> = ({
       >
         <CardContent className={commonStyles.cardContent}>
           <Box>
-            <Heading2 visualAppearance="overline-two" noMargin>
-              <StrongText>{title}</StrongText>
-            </Heading2>
-            <BodyFourText className={commonStyles.description} noMargin>
+            <Typography component="h2" variant="overline2">
+              <Typography variant="strong">{title}</Typography>
+            </Typography>
+            <Typography className={commonStyles.description} variant="body4">
               {responseBasedDescription}
-            </BodyFourText>
+            </Typography>
           </Box>
 
           <Box
@@ -90,25 +88,28 @@ export const ScoreCard: FC<ScoreCardProps> = ({
             {insufficientData ? (
               <FontAwesomeV6Icon iconName="question" />
             ) : (
-              <BodyThreeText noMargin visualAppearance="heading-lg">
+              <Typography component="p" variant="h3">
                 {score}
-              </BodyThreeText>
+              </Typography>
             )}
           </Box>
         </CardContent>
         <Box className={styles.scoreCardFooter}>
           <Box className={styles.scoreCardFooterText}>
             <FontAwesomeV6Icon iconName="info-circle" />
-            <BodyFourText noMargin>{footer}</BodyFourText>
+            <Typography variant="body4">{footer}</Typography>
           </Box>
           {breakdown && !insufficientData && (
-            <Button
+            <MuiButton
+              variant="text"
+              color="primary"
+              size="small"
               className={styles.breakdownButton}
-              text="See breakdown"
-              type="tertiary"
-              size="s"
               onClick={() => setShowBreakdown(true)}
-            />
+              type="button"
+            >
+              {'See breakdown'}
+            </MuiButton>
           )}
         </Box>
       </Card>
@@ -118,20 +119,18 @@ export const ScoreCard: FC<ScoreCardProps> = ({
           className={commonStyles.customDialog}
           onClose={() => setShowBreakdown(false)}
         >
-          <Heading3 id="response-breakdown" noMargin>
+          <Typography id="response-breakdown" variant="h3">
             Response breakdown
-          </Heading3>
+          </Typography>
           <Box className={styles.breakdownContentContainer}>
             <Box
               id="dsco-dialog-description"
               className={styles.longTitleContainer}
             >
-              <BodyThreeText noMargin>
-                <StrongText>{longTitle}</StrongText>
-              </BodyThreeText>
-              <BodyFourText
-                noMargin
-              >{`${responseCount} responses received`}</BodyFourText>
+              <Typography variant="body3">
+                <Typography variant="strong">{longTitle}</Typography>
+              </Typography>
+              <Typography variant="body4">{`${responseCount} responses received`}</Typography>
             </Box>
             {questionType === 'likert' && (
               <PercentageBarGroup
@@ -158,11 +157,16 @@ export const ScoreCard: FC<ScoreCardProps> = ({
               </Box>
             )}
           </Box>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={styles.breakdownCloseButton}
-            text="Return to dashboard"
             onClick={() => setShowBreakdown(false)}
-          />
+            type="button"
+          >
+            {'Return to dashboard'}
+          </MuiButton>
         </CustomDialog>
       )}
     </>

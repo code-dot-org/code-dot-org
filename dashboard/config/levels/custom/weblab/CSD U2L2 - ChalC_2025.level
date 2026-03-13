@@ -20,7 +20,8 @@
     "display_name": "Debugging: Out of Order",
     "bubble_choice_description": "All of the code is out of order! Can we rearrange the code so it is formatted correctly?",
     "thumbnail_url": "https://images.code.org/42f9b5f495e43bcf9029044d315c27f0-debug3.png",
-    "encrypted_examples": "yx/QakRzk4CAZdq8dFofm4Iqk44ICH17uxfS5w6Rh4lL8QAgJBtYILRTMyki\nUbragW0PdgxSBV7O3NNxAYa2ww==\n"
+    "encrypted_examples": "yx/QakRzk4CAZdq8dFofm4Iqk44ICH17uxfS5w6Rh4lL8QAgJBtYILRTMyki\nUbragW0PdgxSBV7O3NNxAYa2ww==\n",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're tracking your score during game night. The program already prints your score, but you want to compare it to your friend's and calculate the difference.\r\n\r\n1. Inside the function, create a new variable called `rival_score` and assign it a number (for example, `31`).\r\n\r\n   Be sure everything inside the function is indented the same amount.\r\n\r\n2. Create another variable called `score_difference` and calculate the difference between your score and your rival's score.\r\n\r\n3. Add a `print()` line that uses the `score_difference` variable to show how far ahead or behind you are.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nAll the lines inside a function must be indented the same amount. This tells Python what belongs to the function.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

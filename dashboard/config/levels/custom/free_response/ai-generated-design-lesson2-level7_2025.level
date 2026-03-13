@@ -1,0 +1,26 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-10-23T19:08:46.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Check For Understanding",
+    "long_instructions": "Think about one specific change you would make to help your user have a better experience. Write 1-2 sentences explaining how your change supports that user's needs using this sentence frame:\r\n\r\n> If I designed with [insert name of user here], I would change . . .",
+    "stay_on_level_after_submit": "false",
+    "height": "300",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T19:08:46.718+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level2-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level2-test-2025\"},{\"changed_at\":\"2025-10-23 19:10:38 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

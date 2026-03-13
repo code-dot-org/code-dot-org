@@ -1,0 +1,565 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 75,
+  "created_at": "2026-03-07T00:54:27.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Welcome to Sketch Lab!\r\n\r\nOn this page is a **Digital Gallery Walk** that students will complete during the project launch to view examples of guides as inspiration for their **Responsible AI Use Guide**. You can use the buttons at the top of the page to edit the sketch below.\r\n\r\nAny changes to this sketch will be made *only* to your local copy and not the template!\r\n\r\nBelow are the instructions that students will see when they work through the curriculum. Note that you do not have to write anything down in a Learning Log.\r\n___\r\n\r\n## Student Instructions: Digital Gallery Walk\r\n\r\n1. Virtually \"walk\" around the Canvas and observe different guide formats\r\n2. Note visual styles and formatting that you like\r\n3. Record ideas for how you might structure your guide in your Learning Log\r\n\r\n\r\n",
+    "start_sources": {
+      "source": {
+        "type": "excalidraw",
+        "version": 2,
+        "source": "https://levelbuilder-studio.code.org",
+        "elements": [
+          {
+            "id": "LmtZ0MjNgkJ8sv-GmnQd8",
+            "type": "image",
+            "x": -1060.6285574092246,
+            "y": 3582.918569254185,
+            "width": 690.2571148184494,
+            "height": 1070.5814307458143,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 164457542,
+            "version": 149,
+            "versionNonce": 604656538,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553158115,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "12877665782cbbb40e4a1e086ded42f6f176453c",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "YS16P5XavpzHppFU09VwJ",
+            "type": "image",
+            "x": 2349.930143031682,
+            "y": -3268.8654513888887,
+            "width": 713.9730472699697,
+            "height": 983.453125,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 357281478,
+            "version": 84,
+            "versionNonce": 870325894,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553162052,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "e999d9f6a37af5afbffbd4fb51c484a532098540",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "hW708rVcUOMHRNEnVu71_",
+            "type": "image",
+            "x": 4956.566691817572,
+            "y": 2651.134548611111,
+            "width": 680.6999496981891,
+            "height": 983.453125,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 737990278,
+            "version": 75,
+            "versionNonce": 677122118,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553166927,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "29c2621e6b3786b9b2ae81ed247a04336698c892",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "TITbBhCshy5qkqWpt1zUK",
+            "type": "image",
+            "x": 2991.416666666666,
+            "y": -656.8013018819279,
+            "width": 611,
+            "height": 849.1624129930394,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 988207046,
+            "version": 72,
+            "versionNonce": 790267846,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553165330,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "505797b8ebf1102137df3a89187a6cfd3dd68638",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "6lzHTRmxjP1OSWmHFhuRU",
+            "type": "image",
+            "x": 1388.4166666666665,
+            "y": 1915.8611111111109,
+            "width": 1107,
+            "height": 874,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 23310490,
+            "version": 52,
+            "versionNonce": 704812486,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553166205,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "73a8aae0dd928f3862fec01a18604fdcfccca61e",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "ZmuYJ7a7QQAQt2o2SXm0Q",
+            "type": "image",
+            "x": -1345.5833333333335,
+            "y": -3290.6388888888887,
+            "width": 1285,
+            "height": 957,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1983909978,
+            "version": 19,
+            "versionNonce": 1546305734,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553164559,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "748daf564f87e59089defca52b6a180fd4759f4d",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "7RPNhAK6aZqF-1CsCfyE7",
+            "type": "image",
+            "x": -1840.0833333333335,
+            "y": 57.86111111111131,
+            "width": 794,
+            "height": 960,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1588651846,
+            "version": 39,
+            "versionNonce": 2034240710,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553163802,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "1nw8sHcJO3FXE3hsLZnmh",
+            "type": "image",
+            "x": 5687.416666666666,
+            "y": -1491.1388888888887,
+            "width": 939,
+            "height": 958,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 2006367002,
+            "version": 4,
+            "versionNonce": 1696831834,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553095845,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "U_iQTt26TsZzFd3DVFqsS",
+            "type": "image",
+            "x": -4345.083333333334,
+            "y": -2277.6388888888887,
+            "width": 704,
+            "height": 951,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1369745542,
+            "version": 79,
+            "versionNonce": 275540934,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553162823,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "ee01edb2695267c543a583687c4d012f5c3720ab",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "z9Ha4XNn4yaucTkiTfIC1",
+            "type": "image",
+            "x": -4181.083333333334,
+            "y": 1606.8611111111113,
+            "width": 376,
+            "height": 942,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+              "IbAPXRQehhbmLUXW1__EG"
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1459270874,
+            "version": 5,
+            "versionNonce": 130389082,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553142881,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
+            "scale": [
+              1,
+              1
+            ]
+          },
+          {
+            "id": "tVmzz6wuOBfc9MpcrkXJt",
+            "type": "image",
+            "x": -3802.750000000001,
+            "y": 1613.6944444444443,
+            "width": 446,
+            "height": 745,
+            "angle": 0,
+            "strokeColor": "transparent",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "solid",
+            "roughness": 1,
+            "opacity": 100,
+            "groupIds": [
+              "IbAPXRQehhbmLUXW1__EG"
+            ],
+            "frameId": null,
+            "roundness": null,
+            "seed": 1156778694,
+            "version": 99,
+            "versionNonce": 1884288582,
+            "isDeleted": false,
+            "boundElements": null,
+            "updated": 1772553142881,
+            "link": null,
+            "locked": false,
+            "status": "pending",
+            "fileId": "7067ae8fba6a55fda7613446ed671b1713805428",
+            "scale": [
+              1,
+              1
+            ]
+          }
+        ],
+        "appState": {
+          "gridSize": null,
+          "viewBackgroundColor": "#ffffff",
+          "scrollX": 6726.416666666668,
+          "scrollY": 6125.472222222222,
+          "zoom": {
+            "value": 0.1
+          }
+        },
+        "files": {
+          "12877665782cbbb40e4a1e086ded42f6f176453c": {
+            "mimeType": "image/png",
+            "id": "12877665782cbbb40e4a1e086ded42f6f176453c",
+            "created": 1772552869015,
+            "lastRetrieved": 1772552869015
+          },
+          "e999d9f6a37af5afbffbd4fb51c484a532098540": {
+            "mimeType": "image/png",
+            "id": "e999d9f6a37af5afbffbd4fb51c484a532098540",
+            "created": 1772552905175,
+            "lastRetrieved": 1772552905175
+          },
+          "29c2621e6b3786b9b2ae81ed247a04336698c892": {
+            "mimeType": "image/png",
+            "id": "29c2621e6b3786b9b2ae81ed247a04336698c892",
+            "created": 1772552918357,
+            "lastRetrieved": 1772552918357
+          },
+          "505797b8ebf1102137df3a89187a6cfd3dd68638": {
+            "mimeType": "image/png",
+            "id": "505797b8ebf1102137df3a89187a6cfd3dd68638",
+            "created": 1772553035695,
+            "lastRetrieved": 1772553035695
+          },
+          "73a8aae0dd928f3862fec01a18604fdcfccca61e": {
+            "mimeType": "image/png",
+            "id": "73a8aae0dd928f3862fec01a18604fdcfccca61e",
+            "created": 1772553058531,
+            "lastRetrieved": 1772553058531
+          },
+          "748daf564f87e59089defca52b6a180fd4759f4d": {
+            "mimeType": "image/png",
+            "id": "748daf564f87e59089defca52b6a180fd4759f4d",
+            "created": 1772553068630,
+            "lastRetrieved": 1772553068630
+          },
+          "3368c035ebd12d85c73d6428e67c8ea68961bc86": {
+            "mimeType": "image/png",
+            "id": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
+            "created": 1772553079132,
+            "lastRetrieved": 1772553079132
+          },
+          "9b7ef43d2f658bb85d7d7c8e76366473c895126c": {
+            "mimeType": "image/png",
+            "id": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
+            "created": 1772553095834,
+            "lastRetrieved": 1772553095834
+          },
+          "ee01edb2695267c543a583687c4d012f5c3720ab": {
+            "mimeType": "image/png",
+            "id": "ee01edb2695267c543a583687c4d012f5c3720ab",
+            "created": 1772553107793,
+            "lastRetrieved": 1772553107793
+          },
+          "d6415dec44a0fca451c0c442aa76f70cb9b36750": {
+            "mimeType": "image/png",
+            "id": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
+            "created": 1772553128379,
+            "lastRetrieved": 1772553128379
+          },
+          "7067ae8fba6a55fda7613446ed671b1713805428": {
+            "mimeType": "image/png",
+            "id": "7067ae8fba6a55fda7613446ed671b1713805428",
+            "created": 1772553135844,
+            "lastRetrieved": 1772553135844
+          }
+        },
+        "externalFiles": {
+          "12877665782cbbb40e4a1e086ded42f6f176453c": {
+            "id": "12877665782cbbb40e4a1e086ded42f6f176453c",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/12877665782cbbb40e4a1e086ded42f6f176453c.png",
+            "starterAsset": true,
+            "filenameWithExtension": "12877665782cbbb40e4a1e086ded42f6f176453c.png",
+            "uploaded": true
+          },
+          "e999d9f6a37af5afbffbd4fb51c484a532098540": {
+            "id": "e999d9f6a37af5afbffbd4fb51c484a532098540",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/e999d9f6a37af5afbffbd4fb51c484a532098540.png",
+            "starterAsset": true,
+            "filenameWithExtension": "e999d9f6a37af5afbffbd4fb51c484a532098540.png",
+            "uploaded": true
+          },
+          "29c2621e6b3786b9b2ae81ed247a04336698c892": {
+            "id": "29c2621e6b3786b9b2ae81ed247a04336698c892",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/29c2621e6b3786b9b2ae81ed247a04336698c892.png",
+            "starterAsset": true,
+            "filenameWithExtension": "29c2621e6b3786b9b2ae81ed247a04336698c892.png",
+            "uploaded": true
+          },
+          "505797b8ebf1102137df3a89187a6cfd3dd68638": {
+            "id": "505797b8ebf1102137df3a89187a6cfd3dd68638",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/505797b8ebf1102137df3a89187a6cfd3dd68638.png",
+            "starterAsset": true,
+            "filenameWithExtension": "505797b8ebf1102137df3a89187a6cfd3dd68638.png",
+            "uploaded": true
+          },
+          "73a8aae0dd928f3862fec01a18604fdcfccca61e": {
+            "id": "73a8aae0dd928f3862fec01a18604fdcfccca61e",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/73a8aae0dd928f3862fec01a18604fdcfccca61e.png",
+            "starterAsset": true,
+            "filenameWithExtension": "73a8aae0dd928f3862fec01a18604fdcfccca61e.png",
+            "uploaded": true
+          },
+          "748daf564f87e59089defca52b6a180fd4759f4d": {
+            "id": "748daf564f87e59089defca52b6a180fd4759f4d",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/748daf564f87e59089defca52b6a180fd4759f4d.png",
+            "starterAsset": true,
+            "filenameWithExtension": "748daf564f87e59089defca52b6a180fd4759f4d.png",
+            "uploaded": true
+          },
+          "3368c035ebd12d85c73d6428e67c8ea68961bc86": {
+            "id": "3368c035ebd12d85c73d6428e67c8ea68961bc86",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/3368c035ebd12d85c73d6428e67c8ea68961bc86.png",
+            "starterAsset": true,
+            "filenameWithExtension": "3368c035ebd12d85c73d6428e67c8ea68961bc86.png",
+            "uploaded": true
+          },
+          "9b7ef43d2f658bb85d7d7c8e76366473c895126c": {
+            "id": "9b7ef43d2f658bb85d7d7c8e76366473c895126c",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/9b7ef43d2f658bb85d7d7c8e76366473c895126c.png",
+            "starterAsset": true,
+            "filenameWithExtension": "9b7ef43d2f658bb85d7d7c8e76366473c895126c.png",
+            "uploaded": true
+          },
+          "ee01edb2695267c543a583687c4d012f5c3720ab": {
+            "id": "ee01edb2695267c543a583687c4d012f5c3720ab",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/ee01edb2695267c543a583687c4d012f5c3720ab.png",
+            "starterAsset": true,
+            "filenameWithExtension": "ee01edb2695267c543a583687c4d012f5c3720ab.png",
+            "uploaded": true
+          },
+          "d6415dec44a0fca451c0c442aa76f70cb9b36750": {
+            "id": "d6415dec44a0fca451c0c442aa76f70cb9b36750",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/d6415dec44a0fca451c0c442aa76f70cb9b36750.png",
+            "starterAsset": true,
+            "filenameWithExtension": "d6415dec44a0fca451c0c442aa76f70cb9b36750.png",
+            "uploaded": true
+          },
+          "7067ae8fba6a55fda7613446ed671b1713805428": {
+            "id": "7067ae8fba6a55fda7613446ed671b1713805428",
+            "url": "/level_starter_assets/aid-thinking-critically-lesson2-level2_2026-test/uuid/7067ae8fba6a55fda7613446ed671b1713805428.png",
+            "starterAsset": true,
+            "filenameWithExtension": "7067ae8fba6a55fda7613446ed671b1713805428.png",
+            "uploaded": true
+          }
+        }
+      }
+    },
+    "name_suffix": "_2026-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-07T00:54:27.311+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson2-level2_2026-test_2026-pilot\"},{\"changed_at\":\"2026-03-07 01:10:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-03-07 01:11:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
+}]]></config>
+</Sketchlab>

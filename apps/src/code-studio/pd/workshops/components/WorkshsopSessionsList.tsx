@@ -1,14 +1,5 @@
-import {
-  LinkButton,
-  Button,
-  ButtonProps,
-} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  BodyThreeText,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {
@@ -22,11 +13,11 @@ import {WorkshopInfo, SessionInfo} from './../types';
 
 import moduleStyles from './workshopSessionsList.module.scss';
 
-const commonButtonProps: Partial<ButtonProps> = {
-  type: 'secondary',
-  color: 'gray',
-  size: 'xs',
-};
+const commonButtonProps = {
+  variant: 'outlined',
+  color: 'tertiary',
+  size: 'extraSmall',
+} as const;
 
 const SessionItemVirtualLocationContent = ({
   meetingLink,
@@ -36,17 +27,22 @@ const SessionItemVirtualLocationContent = ({
   isUserEnrolled?: boolean;
 }) =>
   isUserEnrolled ? (
-    <LinkButton
+    <MuiButton
       {...commonButtonProps}
-      href={meetingLink}
+      href={meetingLink ?? ''}
+      disabled={!meetingLink}
       target="_blank"
-      text="Join Meeting"
-      iconLeft={{iconName: 'video'}}
-    />
+      rel="noopener noreferrer"
+      startIcon={<FontAwesomeV6Icon iconName="video" />}
+    >
+      {'Join Meeting'}
+    </MuiButton>
   ) : (
     <>
       <FontAwesomeV6Icon iconName="video" />
-      <BodyThreeText>Virtual / Zoom</BodyThreeText>
+      <Typography variant="body3" gutterBottom>
+        Virtual / Zoom
+      </Typography>
     </>
   );
 
@@ -61,14 +57,18 @@ const SessionItemInPersonLocationContent = ({
 }) => (
   <>
     <FontAwesomeV6Icon iconName="location-dot" />
-    <BodyThreeText>{locationLabel}</BodyThreeText>
+    <Typography variant="body3" gutterBottom>
+      {locationLabel}
+    </Typography>
     {isUserEnrolled && (
-      <Button
+      <MuiButton
         {...commonButtonProps}
-        text="Copy address"
-        iconLeft={{iconName: 'copy'}}
         onClick={() => copyToClipboard(locationAddress)}
-      />
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconName="copy" />}
+      >
+        {'Copy address'}
+      </MuiButton>
     )}
   </>
 );
@@ -98,10 +98,12 @@ const renderSessionsListItem = (
   return (
     <li key={session.id}>
       <div className={moduleStyles.sessionItemTime}>
-        <BodyThreeText>
-          <StrongText>{dateLabel}</StrongText>
-        </BodyThreeText>
-        <BodyFourText>{timeRange}</BodyFourText>
+        <Typography variant="body3" gutterBottom>
+          <Typography variant="strong">{dateLabel}</Typography>
+        </Typography>
+        <Typography variant="body4" gutterBottom>
+          {timeRange}
+        </Typography>
       </div>
       <div className={moduleStyles.sessionItemLocation}>
         {isVirtual ? (

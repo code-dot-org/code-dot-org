@@ -1,3 +1,4 @@
+import * as BlocklyCore from 'blockly/core';
 import {EventEmitter} from 'events';
 import $ from 'jquery';
 import _ from 'lodash';
@@ -5,27 +6,33 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-// Make sure polyfills are available in all code studio apps and level tests.
-import './polyfills';
 import {
   Renderers,
   stringIsXml,
   stripUserCreated,
 } from '@cdo/apps/blockly/constants';
+import {
+  appendSharedFunctionsToState,
+  highlightBlock,
+  loadBlocksToWorkspace,
+  processToolboxXml,
+} from '@cdo/apps/blockly/utils';
 import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import localization from '@cdo/apps/localization';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
-  setUserRoleInCourse,
   CourseRoles,
+  setUserRoleInCourse,
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {white, workspace_running_background} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
 
@@ -35,6 +42,7 @@ import getAchievements from './achievements';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import AuthoredHints from './authoredHints';
 import * as blockUtils from './block_utils';
+import * as BlocklyUtils from './blockly/utils';
 import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
@@ -47,10 +55,10 @@ import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import {
   KeyCodes,
-  TestResults,
-  TOOLBOX_EDIT_MODE,
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
+  TestResults,
+  TOOLBOX_EDIT_MODE,
 } from './constants';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
@@ -59,7 +67,8 @@ import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
-import firehoseClient from './metrics/firehose';
+// Make sure polyfills are available in all code studio apps and level tests.
+import './polyfills';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -70,12 +79,12 @@ import {
 } from './redux/feedback';
 import {
   determineInstructionsConstants,
-  setInstructionsConstants,
   setFeedback,
+  setInstructionsConstants,
 } from './redux/instructions';
 import {setVisualizationScale} from './redux/layout';
 import {setPageConstants} from './redux/pageConstants';
-import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {setIsEditWhileRun, setIsRunning, setStepSpeed} from './redux/runState';
 import {
   getIdleTimeSinceLastReport,
   resetIdleTime,
@@ -360,7 +369,7 @@ StudioApp.prototype.init = function (config) {
   this.configureDom(config);
 
   if (!config.level.iframeEmbedAppAndCode) {
-    ReactDOM.render(
+    createReactRoot(
       <Provider store={getStore()}>
         <InstructionsDialog
           title={msg.puzzleTitle({
@@ -537,9 +546,19 @@ StudioApp.prototype.init = function (config) {
 
   // TODO (cpirich): implement block count for droplet (for now, blockly only)
   if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.addUnusedBlocksHelpListener(function (e) {
-      utils.showUnusedBlockQtip(e.target);
-    });
+    // Hook the blockly environment into the localization engine
+    if (experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
+      localization.on('change', info => {
+        const blockDefinitions =
+          BlocklyUtils.getBlockDefinitionsForUpdatedLocale(info.rtl);
+        blockUtils.installCustomBlocks({
+          blockly: Blockly,
+          blockDefinitions,
+          customInputTypes: Blockly.SourceCustomInputTypes,
+        });
+        BlocklyUtils.refreshWorkspacesForUpdatedLocale(info.rtl);
+      });
+    }
     // Store result so that we can cleanup later in tests
     this.changeListener = Blockly.mainBlockSpaceEditor.addChangeListener(
       _.bind(function () {
@@ -597,7 +616,7 @@ StudioApp.prototype.init = function (config) {
     const isComplete =
       progress.levelResults[progress.currentLevelId] >=
       TestResults.MINIMUM_OPTIMAL_RESULT;
-    ReactDOM.render(
+    createReactRoot(
       <ChallengeDialog
         isOpen={true}
         avatar={this.icon || this.skin.staticAvatar}
@@ -610,6 +629,8 @@ StudioApp.prototype.init = function (config) {
         primaryButtonLabel={msg.challengeLevelStart()}
         text={msg.challengeLevelIntro()}
         title={msg.challengeLevelTitle()}
+        levelId={config.serverLevelId}
+        unitId={config.serverScriptId}
       />,
       startDialogDiv
     );
@@ -741,7 +762,7 @@ StudioApp.prototype.getSettingsHandler = function () {
       id: 'settings-modal',
     });
 
-    ReactDOM.render(React.createElement(SettingsModal), contentDiv);
+    createReactRoot(React.createElement(SettingsModal), contentDiv);
     dialog.show();
   };
 };
@@ -754,7 +775,7 @@ StudioApp.prototype.getVersionHistoryHandler = function (config) {
       defaultBtnSelector: 'again-button',
       id: 'showVersionsModal',
     });
-    ReactDOM.render(
+    createReactRoot(
       React.createElement(VersionHistory, {
         handleClearPuzzle: this.handleClearPuzzle.bind(this, config),
         isProjectTemplateLevel: !!config.level.projectTemplateLevelName,
@@ -889,7 +910,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.clearAllStudentWorkspaces();
+    BlocklyUtils.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -1051,7 +1072,7 @@ StudioApp.prototype.renderShareFooter_ = function (container) {
     channel: project.getCurrentId(),
   };
 
-  ReactDOM.render(<SmallFooter {...reactProps} />, footerDiv);
+  createReactRoot(<SmallFooter {...reactProps} />, footerDiv);
 };
 
 /**
@@ -1098,14 +1119,11 @@ StudioApp.prototype.runChangeHandlers = function (e) {
 StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
-    Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    Blockly.mainBlockSpace.addChangeListener(runAllHandlers);
     if (Blockly.getHiddenDefinitionWorkspace()) {
       // If we have a hidden definition workspace, run change listeners on it too.
       // This ensures code changes in the hidden workspace trigger updates.
-      Blockly.addChangeListener(
-        Blockly.getHiddenDefinitionWorkspace(),
-        runAllHandlers
-      );
+      Blockly.getHiddenDefinitionWorkspace().addChangeListener(runAllHandlers);
     }
   } else {
     this.editor.on('change', runAllHandlers);
@@ -1140,20 +1158,19 @@ StudioApp.prototype.toggleRunReset = function (button) {
     lockContainedLevelAnswers();
   }
 
-  var run = document.getElementById('runButton');
-  if (run) {
+  // Toggle all run/reset buttons, including duplicates in the phone frame.
+  document.querySelectorAll('#runButton, #topRunButton').forEach(run => {
     // Note: Checking alwaysHideRunButton is necessary because are some levels where we never
     // want to show the "run" button (e.g., maze levels that are "stepOnly").
     run.style.display =
       showRun && !this.config.alwaysHideRunButton ? 'inline-block' : 'none';
     run.disabled = !showRun;
-  }
+  });
 
-  var reset = document.getElementById('resetButton');
-  if (reset) {
+  document.querySelectorAll('#resetButton, #topResetButton').forEach(reset => {
     reset.style.display = !showRun ? 'inline-block' : 'none';
     reset.disabled = showRun;
-  }
+  });
 
   if (this.isUsingBlockly() && !this.config.readonlyWorkspace) {
     // craft has a darker color scheme than other blockly labs. It needs to
@@ -1269,7 +1286,7 @@ StudioApp.prototype.inject = function (div, options) {
     customSimpleDialog: this.feedback_.showSimpleDialog.bind(this.feedback_),
   };
 
-  // Allows Google Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
+  // Allows Blockly labs to use the Zelos or legacy Geras renderer instead of the default Thrasos.
   if (experiments.isEnabled('zelos')) {
     options.renderer = Renderers.ZELOS;
   } else if (experiments.isEnabled('geras')) {
@@ -1305,7 +1322,7 @@ StudioApp.prototype.initReadonly = function (options) {
  * @param {string} source Text representation of blocks (XML or JSON).
  */
 StudioApp.prototype.loadBlocks = function (source) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
+  loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -1638,7 +1655,7 @@ StudioApp.prototype.resizeToolboxHeader = function () {
       toolboxWidth = categories.getBoundingClientRect().width;
     }
   } else if (this.isUsingBlockly()) {
-    toolboxWidth = Blockly.cdoUtils.getToolboxWidth();
+    toolboxWidth = BlocklyUtils.getToolboxWidth();
   }
   document.getElementById('toolbox-header').style.width = toolboxWidth + 'px';
 };
@@ -1655,7 +1672,7 @@ StudioApp.prototype.highlight = function (id, spotlight) {
       id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.cdoUtils.highlightBlock(id, spotlight);
+    highlightBlock(id, spotlight);
   }
 };
 
@@ -1905,10 +1922,6 @@ StudioApp.prototype.resetButtonClick = function () {
   this.toggleRunReset('run');
   this.clearHighlighting();
   getStore().dispatch(setFeedback(null));
-  if (this.isUsingBlockly()) {
-    Blockly.mainBlockSpaceEditor.setEnableToolbox(true);
-    Blockly.mainBlockSpace.traceOn(false);
-  }
   this.reset(false);
 };
 
@@ -2177,23 +2190,29 @@ StudioApp.prototype.configureDom = function (config) {
       eventName = EVENTS.LEVEL_ACTIVITY;
     }
     if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(
-        eventName,
-        {
-          signedIn: config.isSignedIn,
-          unitName: config.scriptName,
-          levelId: config.serverLevelId,
-          levelName: config.level.name,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(eventName, {
+        signedIn: config.isSignedIn,
+        unitName: config.scriptName,
+        levelId: config.serverLevelId,
+        levelName: config.level.name,
+      });
       runButtonWasClicked = true;
     }
   };
 
+  // Bind click handlers to all run/reset buttons, including duplicates
+  // in the phone frame top bar.
+  var runButtons = container.querySelectorAll('#runButton, #topRunButton');
+  var resetButtons = container.querySelectorAll(
+    '#resetButton, #topResetButton'
+  );
+  runButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(throttledRunClick, this));
+  });
+  resetButtons.forEach(btn => {
+    dom.addClickTouchEvent(btn, _.bind(this.resetButtonClick, this));
+  });
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
-    dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
         this.resetButtonClick();
@@ -2320,7 +2339,7 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         div.className = 'WireframeButtons_containerRight';
         document.body.appendChild(div);
         if (!options.level.iframeEmbed) {
-          ReactDOM.render(
+          createReactRoot(
             React.createElement(WireframeButtons, {
               channelId: project.getCurrentId(),
               appType: project.getStandaloneApp(),
@@ -2775,31 +2794,6 @@ StudioApp.prototype.enableBreakpoints = function () {
       } else {
         this.editor.setBreakpoint(e.line);
       }
-
-      // Log breakpoints usage to firehose. This is part of the work to add
-      // inline teacher comments; we want to get a sense of how much
-      // breakpoints are used and in what scenarios, so we can reason about the
-      // feasibility of repurposing line number clicks for this feature.
-      const currentUser = getStore().getState().currentUser;
-      const userType = currentUser && currentUser.userType;
-      firehoseClient.putRecord(
-        {
-          study: 'droplet-breakpoints',
-          study_group: userType,
-          event: 'guttermousedown',
-          data_json: JSON.stringify({
-            levelId: this.config.serverLevelId,
-            lineNumber: e.line,
-            activeBreakpoint,
-            projectLevelId: this.config.serverProjectLevelId,
-            scriptId: this.config.scriptId,
-            scriptName: this.config.scriptName,
-            studentUserId: queryParams('user_id'),
-            url: window.location.toString(),
-          }),
-        },
-        {includeUserId: true}
-      );
     }.bind(this)
   );
 };
@@ -2857,10 +2851,17 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
 
   // Only used in Sprite Lab.
   if (config.level.sharedFunctions) {
-    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
-      startBlocks,
-      config.level.sharedFunctions
-    );
+    if (stringIsXml(startBlocks)) {
+      startBlocks = blockUtils.appendNewFunctionsXml(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    } else {
+      startBlocks = appendSharedFunctionsToState(
+        startBlocks,
+        config.level.sharedFunctions
+      );
+    }
   }
   let isXml = stringIsXml(startBlocks);
 
@@ -2884,7 +2885,7 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.clearAllStudentWorkspaces();
+        BlocklyUtils.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -2925,13 +2926,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
   // behavior. We want a way to specify no toolbox, which is <xml></xml>.
-  // Google Blockly may also add a xmlns attribute to this xml.
+  // Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // Update legacy Blockly XML so it is compatible with mainline Blockly
     // (Nothing is changed if we are using CDO Blockly.)
-    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
-      config.level.toolbox
-    );
+    config.level.toolbox = processToolboxXml(config.level.toolbox);
 
     const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
     const emptyToolboxOptionsWithoutWhitespace = [
@@ -3032,7 +3031,12 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   // https://openradar.appspot.com/31725316
   // Resize the Blockly workspace after 500ms when clientWidth/Height
   // should be correct.
-  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
+  window.setTimeout(() => {
+    const workspace = BlocklyCore.getMainWorkspace();
+    if (workspace) {
+      BlocklyCore.svgResize(workspace);
+    }
+  }, 500);
 };
 
 /**
@@ -3149,7 +3153,7 @@ StudioApp.prototype.displayWorkspaceAlert = function (
     },
     alertContents
   );
-  ReactDOM.render(workspaceAlert, container[0]);
+  createReactRoot(workspaceAlert, container[0]);
 
   return container[0];
 };
@@ -3188,7 +3192,7 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
   }
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
-  ReactDOM.render(playspaceAlert, renderElement);
+  createReactRoot(playspaceAlert, renderElement);
 
   return renderElement;
 };
@@ -3253,9 +3257,9 @@ StudioApp.prototype.hasDuplicateVariablesInForLoops = function () {
   if (this.editCode) {
     return false;
   }
-  return Blockly.mainBlockSpace
-    .getAllUsedBlocks()
-    .some(this.forLoopHasDuplicatedNestedVariables_);
+  return BlocklyUtils.getAllUsedBlocks(Blockly.getMainWorkspace()).some(
+    this.forLoopHasDuplicatedNestedVariables_
+  );
 };
 
 /**
@@ -3459,13 +3463,17 @@ if (IN_UNIT_TEST) {
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
-      Blockly.removeChangeListener(instance.changeListener);
+      Blockly.getMainWorkspace().removeChangeListener(instance.changeListener);
     }
     if (instance.hiddenWorkspaceChangeListener) {
-      Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
+      Blockly.getHiddenDefinitionWorkspace().removeChangeListener(
+        instance.hiddenWorkspaceChangeListener
+      );
     }
     if (instance.mainWorkspaceChangeListener) {
-      Blockly.removeChangeListener(instance.mainWorkspaceChangeListener);
+      Blockly.getMainWorkspace().removeChangeListener(
+        instance.mainWorkspaceChangeListener
+      );
     }
     instance = __oldInstance;
     __oldInstance = null;

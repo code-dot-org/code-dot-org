@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2025-12-22T17:42:25.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted": "false",
+    "title": "Reflection on AI Usage",
+    "long_instructions": "Looking back across all milestones, which AI suggestion or output improved your project most, and why?",
+    "stay_on_level_after_submit": "false",
+    "height": "-50",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "bubble_choice_description": "Reflect on how AI supported your work across all milestones. Explain which AI suggestions were most helpful and how your approach to using AI has changed ***(supports completing Milestone 4 tasks)***.",
+    "display_name": "Reflect on AI Usage",
+    "thumbnail_url": "https://images.code.org/03fde12052671fc647b4aa57492dfdba-thought-leadership.png",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-22T17:42:25.191+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level5-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level5-test-2025\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

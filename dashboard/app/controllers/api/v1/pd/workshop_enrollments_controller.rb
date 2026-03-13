@@ -15,6 +15,8 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     OWN: "own".freeze,
     CLOSED: "closed".freeze,
     FULL: "full".freeze,
+    NO_SCHOOL: "no school".freeze,
+    NOT_USA: "not usa".freeze,
     NOT_FOUND: "not found".freeze,
     ERROR: "error".freeze
   }
@@ -38,7 +40,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     if @workshop.nil?
       return render json: {submission_status: RESPONSE_MESSAGES[:NOT_FOUND]},
         status: :not_found
-    elsif params[:user_id].nil? || !User.exists?(params[:user_id])
+    elsif params[:user_id].nil? || !User.exists?(id: params[:user_id])
       return render_unsuccessful RESPONSE_MESSAGES[:ERROR], {error_message: 'User cannot be found.'}
     end
 
@@ -58,6 +60,10 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       render_unsuccessful RESPONSE_MESSAGES[:CLOSED]
     elsif workshop_full?
       render_unsuccessful RESPONSE_MESSAGES[:FULL]
+    elsif user.school_info.nil?
+      render_unsuccessful RESPONSE_MESSAGES[:NO_SCHOOL]
+    elsif !user.school_info&.usa?
+      render_unsuccessful RESPONSE_MESSAGES[:NOT_USA]
     else
       ActiveRecord::Base.transaction do
         school_info = user.school_info

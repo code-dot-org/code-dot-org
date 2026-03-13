@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ExperimentTest < ActiveSupport::TestCase
-  self.use_transactional_test_case = true
   setup_all do
     @teacher = create(:teacher)
     @section = create(:section, first_activity_at: DateTime.now, teacher: @teacher)

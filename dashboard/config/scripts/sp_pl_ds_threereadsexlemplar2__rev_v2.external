@@ -1,0 +1,53 @@
+name 'sp-pl-DS_ThreeReadsexlemplar2_-rev_v2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data: Three Reads Strategy
+
+#### To get a full picture of the **Three Read Strategy**, take a look at sample responses for the next two reads, **quantities** and **questions**.
+
+
+<img src="https://images.code.org/ec50df7f593a0b42a051016e9c923b50-image-1721233031201.16.52 PM.png" alt="spreadsheet of dataset with pizza preferences" alt="diagram of software: system software, application software, and utlity software with examples of icons of each" alt="chatbot lab level" width="30%" style="border: 2px solid black; border-radius: 8px; display: block; margin: auto; width: 40%;">
+<br>
+
+
+<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+    <!-- First Column -->
+    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%; text-align: center;">
+    <p style="font-size: 20px; font-weight: bold; color: #0093A4;">Read 2: Quantities</p>
+        <p style="font-size: 18px;"><b>What quantities do you notice?</b></p>
+        <details style="margin-top: 10px;">
+            <summary style="font-size: 18px; font-style: italic;">Sample Response</summary>
+            <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 5px;">
+                <p style="font-size: 18px; text-align: left;">
+                    - This dataset contains a total of 516 cases, with a sample size of 10 visible here. <br>- The three attributes included are: index, number of slices, and favorite type of pizza. <br>- The number of pizza slices ranges from 0 to 12.
+                </p>
+            </div>
+        </details>
+    </div>
+ 
+    <div style="background-color: #ffffff; box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); padding: 15px; border-radius: 10px; width: 45%; text-align: center;">
+        <p style="font-size: 20px; font-weight: bold; color: #0093A4;">Read 3: Questions</p>
+        <p style="font-size: 18px;"><b>What question could I answer?</b></p>
+        <details style="margin-top: 10px;">
+            <summary style="font-size: 18px; font-style: italic;">Sample Response</summary>
+            <div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 5px;">
+                <p style="font-size: 18px; text-align: left;">
+                    - What is the most popular type of pizza?<br>
+                   - What is the average number of slices eaten?<br>
+                    - How many people prefer certain types of pizza over others?
+                </p>
+            </div>
+        </details>
+    </div>
+</div>
+<br>
+
+<br>
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students will work in pairs to assess if their questions are effective. The process is made for students to learn to take time to analyze data for deeper understanding and can be used as a <b>formative assessment</b> of their understanding and ability to create effective questions based on the criteria.
+</p>
+</div>
+MARKDOWN

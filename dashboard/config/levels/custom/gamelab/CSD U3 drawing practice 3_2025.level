@@ -80,6 +80,7 @@
     "libraries_enabled": "false",
     "encrypted_examples": "uT1VvJpuqSQfWYUXceGqACW4uMSrRDJm1q1P4JkVLnKqlrfvzdM2f+qtTkPd\nu5FOs6YxhbCQJXuZzEwQMNhX2w==\n",
     "validation_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

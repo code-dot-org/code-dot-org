@@ -1,0 +1,18 @@
+<Fish>
+  <config><![CDATA[{
+  "game_id": 66,
+  "created_at": "2026-02-06T19:31:40.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "mode": "short",
+    "parent_level_id": 22325,
+    "encrypted": "false",
+    "instructions_important": "false",
+    "name_suffix": "_-2022-2"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-02-06T19:31:40.087+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod4-oceans_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod4-oceans_06_2024\"}]"
+}]]></config>
+</Fish>

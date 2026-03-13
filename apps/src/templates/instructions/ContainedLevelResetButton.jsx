@@ -1,11 +1,11 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
@@ -23,16 +23,6 @@ export const UnconnectedContainedLevelResetButton = ({
 }) => {
   const [resetFailed, setResetFailed] = useState(false);
 
-  const logButtonClick = () => {
-    firehoseClient.putRecord({
-      study: 'reset-predict-level',
-      event: 'level-reset',
-      user_id: userId,
-      script_id: serverScriptId,
-      level_id: serverLevelId,
-    });
-  };
-
   if (
     userRoleInCourse !== CourseRoles.Instructor ||
     teacherViewingStudentWork
@@ -41,9 +31,11 @@ export const UnconnectedContainedLevelResetButton = ({
   }
   return (
     <div>
-      <Button
+      <MuiButton
+        variant="outlined"
+        color="error"
+        size="small"
         name="containedLevelResetButton"
-        text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
             () => {
@@ -52,14 +44,13 @@ export const UnconnectedContainedLevelResetButton = ({
             },
             () => setResetFailed(true)
           );
-          logButtonClick();
         }}
-        size={'s'}
         disabled={!hasLevelResults || !!codeIsRunning}
-        color={buttonColors.destructive}
-        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
-        type={'secondary'}
-      />
+        type="button"
+        startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="trash" />}
+      >
+        {i18n.deleteAnswer()}
+      </MuiButton>
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
         <span style={styles.error}>{i18n.errorResettingAnswer()}</span>

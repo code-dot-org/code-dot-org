@@ -72,6 +72,7 @@
     "start_blocks": "//This code updates the exampleButton properties of the label and button on the screen\r\nonEvent(\"exampleButton\", \"click\", function() {\r\n  setProperty(\"screen1\", \"background-color\", \"orange\");\r\n  setProperty(\"label\", \"background-color\", \"blue\");\r\n  setProperty(\"label\", \"font-family\", \"Comic\");\r\n  setProperty(\"label\", \"border-width\", 3);\r\n  setProperty(\"label\", \"border-color\", \"red\");\r\n  setProperty(\"label\", \"text-color\", \"white\");\r\n  setProperty(\"label\", \"text-align\", \"center\");\r\n  setProperty(\"button\", \"background-color\", \"red\");\r\n  setProperty(\"button\", \"font-family\", \"Comic\");\r\n  setProperty(\"button\", \"border-width\", 3);\r\n  setProperty(\"button\", \"border-color\", \"blue\");\r\n});\r\n\r\n//Add your code here\r\n\r\n",
     "bubble_choice_description": "Create a custom App Lab theme for label and button elements on the screen",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play** level: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance.",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

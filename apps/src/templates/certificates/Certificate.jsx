@@ -1,11 +1,5 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {
-  BodyTwoText,
-  BodyThreeText,
-  Heading1,
-  Heading2,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
@@ -15,6 +9,8 @@ import {connect} from 'react-redux';
 import {register} from 'swiper/element/bundle';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import BackToFrontConfetti from '../BackToFrontConfetti';
@@ -57,14 +53,16 @@ function Certificate(props) {
     }
   };
 
-  const personalizeHocCertificate = session => {
+  const personalizeHocCertificate = async session => {
     $.ajax({
-      url: '/v2/certificate',
-      type: 'post',
+      url: studio(`/api/hour/certificates/${session}`),
+      type: 'patch',
       dataType: 'json',
+      headers: {
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
       data: {
-        session_s: session,
-        name_s: nameInputRef.current.value,
+        name: nameInputRef.current.value,
       },
     }).done(response => {
       if (response.certificate_sent) {
@@ -237,9 +235,13 @@ function Certificate(props) {
   return (
     <div className={style.container}>
       <div className={style.headerContainer}>
-        <Heading1 className={`${headingStyle} ${style.header}`}>
+        <Typography
+          className={`${headingStyle} ${style.header}`}
+          variant="h1"
+          gutterBottom
+        >
           {i18n.congratsCertificateHeading()}
-        </Heading1>
+        </Typography>
       </div>
       {courseName && (
         <LargeChevronLink link={coursePath} linkText={i18n.backToActivity()} />
@@ -299,10 +301,16 @@ function Certificate(props) {
             <>
               {courseName && !personalized && (
                 <div>
-                  <Heading3>{i18n.congratsCertificatePersonalize()}</Heading3>
-                  <BodyThreeText className={style.enterName}>
+                  <Typography variant="h3" gutterBottom>
+                    {i18n.congratsCertificatePersonalize()}
+                  </Typography>
+                  <Typography
+                    className={style.enterName}
+                    variant="body3"
+                    gutterBottom
+                  >
                     {i18n.enterYourName()}
-                  </BodyThreeText>
+                  </Typography>
                   <div className={style.inputButtonContainer}>
                     <input
                       id="name"
@@ -323,23 +331,25 @@ function Certificate(props) {
               )}
               {courseName && personalized && (
                 <div>
-                  <Heading2>
+                  <Typography variant="h2" gutterBottom>
                     <div id="uitest-thanks">
                       {i18n.congratsCertificateThanks()}
                     </div>
-                  </Heading2>
-                  <BodyTwoText>
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
                     {i18n.congratsCertificateContinue()}
-                  </BodyTwoText>
+                  </Typography>
                 </div>
               )}
               <hr />
             </>
           )}
-          <Heading3>{i18n.congratsCertificateShare()}</Heading3>
-          <BodyThreeText>
+          <Typography variant="h3" gutterBottom>
+            {i18n.congratsCertificateShare()}
+          </Typography>
+          <Typography variant="body3" gutterBottom>
             {i18n.congratsCertificateShareMessage()}
-          </BodyThreeText>
+          </Typography>
           {!userNameIsRequiredError && (
             <SocialShare
               facebook={facebook}

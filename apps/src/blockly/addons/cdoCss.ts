@@ -2,14 +2,20 @@ import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 import {BlocklyWrapperType} from '../types';
+
+let cssRegistered = false;
 export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
+  if (cssRegistered) {
+    return;
+  }
+  cssRegistered = true;
   blocklyWrapper.Css.register(
     `.blocklyFieldGrid {
       margin: 5px;
     }
     .blocklyFieldGrid .blocklyFieldGridItem {
-      border: none;
-      padding: 0px;
+      border: none !important;
+      padding: 0px !important;
       margin: 0px;
     }
     .blocklyFieldGrid .blocklyFieldGridItem img {

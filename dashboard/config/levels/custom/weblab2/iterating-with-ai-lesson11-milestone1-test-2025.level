@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-26T17:13:23.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-template-test-2025",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "long_instructions": "# Finalize Your Dataset\r\n\r\n1.  **Import Your Dataset:** At the top of your files panel, click the `+` sign to import your `dataset.js` file from your backpack. \r\n2.  **Consult AI:** Upload a screenshot of your schema from the previous level and consult AI. You might ask:\r\n\t- *Is this the right schema to represent this data?*\r\n    - *What potential biases should I consider with these fields?*\r\n3.  **Generate the Revised Dataset:** use AI to eliminate any fields you don't want from your dataset and update the `dataset.js` file. ",
+    "display_name": "Finalize Your Dataset",
+    "bubble_choice_description": "Refine your dataset with AI by cleaning field names, removing unneeded fields, and checking for missing perspectives or bias ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/167b920ca51fb0baa5783fc94d66f3f0-data-cleaning.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-26T17:13:23.560+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-milestone2-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-milestone2-test-2025\"},{\"changed_at\":\"2025-11-26 17:13:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 17:21:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:13:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:14:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:16:20 +0000\",\"changed\":[\"initial_view_mode\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 18:25:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:24:45 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:26:52 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:29:55 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:31:09 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:35:40 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

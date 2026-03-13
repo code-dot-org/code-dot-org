@@ -1,52 +1,85 @@
+import classNames from 'classnames';
 import React, {memo, useState} from 'react';
 
+import {getLineReferenceText} from '@cdo/apps/aichat/utils';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import CopyButton from '@cdo/apps/aiComponentLibrary/copyButton/CopyButton';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {ValueOf} from '@cdo/apps/types/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {
+  AiChatClientTypes,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ChatAsset,
   type ChatMessage as ChatMessageType,
   isCompletedChatMessage,
   isServerChatEvent,
+  ModelParameters,
 } from '../types';
 
 import FilePreview from './assets/FilePreview';
+import FlagResponseButton from './FlagResponseButton';
 import CleanFeedbackFooter from './teacherFeedback/CleanFeedbackFooter';
 import ProfanityFeedbackFooter from './teacherFeedback/ProfanityFeedbackFooter';
 
 import styles from './chatWorkspace.module.scss';
-
 interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
+  isAiTutorVersion?: boolean;
+  isLastMessage?: boolean;
+  clientType?: string;
+  modelParameters?: ModelParameters;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
   buildAssetUrl,
+  isAiTutorVersion,
+  isLastMessage,
+  clientType,
+  modelParameters,
 }) => {
+  const user = useAppSelector(state => state.currentUser);
+
   const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
-  const {status, role, chatMessageText, assets, userAddedSelectionContext} =
-    chatMessage;
+  const {
+    status,
+    role,
+    chatMessageText,
+    chatMessageDisplayText,
+    assets,
+    userAddedSelectionContext,
+  } = chatMessage;
   const hasAssets = assets && buildAssetUrl;
   const hasUserAddedSelectionContext = !!userAddedSelectionContext?.length;
+
+  // Determine if we should show the FlagResponseButton
+  // The user must be a levelbuilder, and we currently only show the button for AI Tutor messages
+  // that have been saved to the server (i.e. have an ID).
+  const canLogToLangfuse =
+    user.isLevelbuilder && clientType === AiChatClientTypes.AI_TUTOR;
+
+  // `chatMessageDisplayText` is optional and only needed if intended display text
+  //  is different from the chatMessageText sent to the model.
+  const intendedDisplayText = chatMessageDisplayText ?? chatMessageText;
 
   const displayText = getChatMessageDisplayText(
     status,
     role,
-    chatMessageText,
+    intendedDisplayText,
     showProfaneUserMessage
   );
 
-  // If the chat message's text is what is displayed (i.e. no error or violation)
+  // If the chat message's display text is what is displayed (i.e. no error or violation)
   const messageVisible =
-    displayText === chatMessage.chatMessageText &&
+    displayText === intendedDisplayText &&
     chatMessage.status !== Status.PROFANITY_VIOLATION;
 
   // If a user's chat message has a profanity violation
@@ -86,14 +119,28 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   } else {
     footer =
       messageVisible && isAssistant ? (
-        <CopyButton copyText={chatMessage.chatMessageText} />
+        <div className={styles.buttonRow}>
+          <CopyButton
+            copyText={chatMessage.chatMessageText}
+            usage={'ai-chat-msg-footer'}
+          />
+          {canLogToLangfuse && isServerChatEvent(chatMessage) && (
+            <FlagResponseButton
+              chatMessageId={chatMessage.id}
+              chatMessageText={chatMessage.chatMessageText}
+              modelParameters={modelParameters}
+            />
+          )}
+        </div>
       ) : null;
   }
 
   let header;
-  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
+  if (hasAssets || hasUserAddedSelectionContext) {
     header = (
-      <div className={styles.assetCol}>
+      <div
+        className={classNames(styles.assetCol, isAssistant && styles.assistant)}
+      >
         {hasAssets &&
           assets.map(asset => {
             const filename = asset.filename;
@@ -108,7 +155,14 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
                 {filename.endsWith('.pdf') ? (
                   <FilePreview type="pdf" filename={filename} url={url} />
                 ) : (
-                  <img alt="" className={styles.imagePreview} src={url} />
+                  <img
+                    alt=""
+                    className={classNames(
+                      styles.imagePreview,
+                      isAssistant && styles.assistant
+                    )}
+                    src={url}
+                  />
                 )}
               </button>
             );
@@ -118,7 +172,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
             <FilePreview
               key={contextItem.displayName}
               type="text"
-              filename={contextItem.displayName}
+              filename={contextItem.filename}
+              fileDetail={
+                contextItem.lineReference
+                  ? getLineReferenceText(contextItem.lineReference)
+                  : undefined
+              }
             />
           ))}
       </div>
@@ -127,6 +186,8 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   return (
     <ChatMessage
+      isAiTutorVersion={isAiTutorVersion}
+      isLastMessage={isLastMessage}
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
@@ -136,10 +197,10 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   );
 };
 
-function getChatMessageDisplayText(
+export function getChatMessageDisplayText(
   status: ValueOf<typeof Status>,
   role: Role,
-  chatMessageText: string,
+  chatMessageDisplayText: string,
   showProfaneUserMessage: boolean
 ) {
   // If Role is USER, display the original message, unless there is a PII violation
@@ -151,7 +212,7 @@ function getChatMessageDisplayText(
     if (status === Status.PROFANITY_VIOLATION && !showProfaneUserMessage) {
       return commonI18n.aiChatInappropriateUserMessage();
     }
-    return chatMessageText;
+    return chatMessageDisplayText;
   }
 
   // If Role is ASSISTANT, display the appropriate message based on the status.
@@ -167,7 +228,7 @@ function getChatMessageDisplayText(
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
     default:
-      return chatMessageText;
+      return chatMessageDisplayText;
   }
 }
 

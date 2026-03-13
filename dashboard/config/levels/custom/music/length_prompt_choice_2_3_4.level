@@ -7,7 +7,7 @@
   "properties": {
     "level_data": {
       "library": "launch2024",
-      "aiCodeGenerate": "true",
+      "guideMode": "aiCodeGenerate",
       "aiCodeGenerateAdlib": "length",
       "toolbox": {
         "blocks": {

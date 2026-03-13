@@ -82,6 +82,7 @@
     "encrypted_examples": "u12hEmNZ/t1pDft+eG1zqkF4Hvpaqg4oSoIPBxwTtZAzRhB1C9xbuvo7xwhF\nFzNNX/90pjqL95SAe7gMWYPjnA==\n",
     "start_blocks": "//1) Add code to represent the Yes response in your app. Remember that your representation should include both sound and visuals.\r\nonEvent(\"yesButton\", \"click\", function( ) {\r\n\r\n});\r\n//2) Add code to represent the No response in your app. Remember that your representation should include both sound and visuals.\r\nonEvent(\"noButton\", \"click\", function( ) {\r\n\r\n});\r\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

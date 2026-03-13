@@ -4,7 +4,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
   setup do
     @rsa_key_test = OpenSSL::PKey::RSA.new(2048)
     OpenSSL::PKey::RSA.stubs(:new).returns(@rsa_key_test)
-    @fake_channel_id = storage_encrypt_channel_id(1, 1)
+    @fake_channel_id = get_project_channel_id(1, 1)
 
     JavalabFilesHelper.stubs(:get_project_files).returns({})
     JavalabFilesHelper.stubs(:get_project_files_with_override_sources).returns({})
@@ -17,15 +17,15 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     user: :student,
     response: :forbidden
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :with_recent_captcha_teacher,
     response: :success
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
   test_user_gets_response_for :get_access_token,
-    params: {channelId: storage_encrypt_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), executionType: 'RUN', miniAppType: 'console'},
     user: :authorized_teacher,
     response: :success
 
@@ -63,7 +63,7 @@ class JavabuilderSessionsControllerTest < ActionController::TestCase
     response: :forbidden
   test_user_gets_response_for :access_token_with_override_validation,
     method: :post,
-    params: {channelId: storage_encrypt_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
+    params: {channelId: get_project_channel_id(1, 1), overrideValidation: "{'MyClass.java': {}}", executionType: 'RUN', miniAppType: 'console'},
     user: :levelbuilder,
     response: :success
 

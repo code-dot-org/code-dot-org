@@ -43,7 +43,8 @@ We organize our code as a single “monorepo” in Github vs. having multiple re
 <details>
   <summary>Exceptions</summary>
 
-  * 3rd Party Libraries we have forked (e.g., Google Blockly)  
+  * The "marketing sites" of Code.org, CSForAll.org, etc, which have no dependency on the Code Studio Learning Platform and are owned by the Marketing department with occasional Engineering Support. Keeping this separate empowers consultants and focused engineers to work within that more modern and tidy repo without being distracted by the learning platform.
+  * 3rd Party Libraries we have forked (e.g. Blockly)  
   * Gems and NPMs we published that already have 3rd party traction  
     * While we encourage releasing code as standalone open source packages hosted **within** the monorepo, please demonstrate significant 3rd party usage/interest/strategy before splitting the package out of the repo. Historically we’ve split first and then not gotten traction which resulted in lots of “eggs” (things outside the repo) but no “chickens” (3rd party uptake of our packages).
 

@@ -4,8 +4,6 @@ class ApiControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
   include Minitest::RSpecMocks
 
-  self.use_transactional_test_case = true
-
   setup_all do
     @teacher = create(:teacher)
 
@@ -104,7 +102,7 @@ class ApiControllerTest < ActionController::TestCase
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
 
-    # we fall back to twenty_hour_unit, which has no text_response levels
+    # we fall back to hoc_2014_unit, which has no text_response levels
     assert_equal '[]', @response.body
   end
 
@@ -285,6 +283,7 @@ class ApiControllerTest < ActionController::TestCase
     section_response = body[@section.id.to_s]
     assert_equal @section.id, section_response['section_id']
     assert_equal @section.name, section_response['section_name']
+    assert_equal @section.ai_chat_access_level, section_response['ai_chat_access_level']
     assert_equal 1, section_response['lessons'].length
 
     lessons_response = section_response['lessons']
@@ -1140,103 +1139,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal('level source', body['lastAttempt']['source'])
   end
 
-  test "should get progress for section with section script" do
-    Unit.stubs(:should_cache?).returns true
-
-    assert_queries 8 do
-      get :section_progress, params: {section_id: @flappy_section.id}
-    end
-    assert_response :success
-    assert_match "no-store", response.headers["Cache-Control"]
-
-    data = JSON.parse(@response.body)
-    expected = {
-      'script' => {
-        'id' => @flappy.id,
-        'name' => I18n.t("data.script.name.#{@flappy.name}.title"),
-        'levels_count' => 1,
-        'lessons' => [{
-          'length' => 1,
-          'title' => @flappy.name
-        }]
-      },
-      'students' => [{
-        'id' => @student_flappy_1.id,
-        'levels' => [['not_tried', 1, "/s/#{@flappy.name}/lessons/1/levels/1"]]
-      }]
-    }
-
-    assert_equal expected, data
-  end
-
-  test "should get paginated progress" do
-    get :section_progress, params: {section_id: @section.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    # fourth page has only one student (of 7 total)
-    get :section_progress, params: {section_id: @section.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].length
-
-    # if we request 1 per page, page 8 should still work (because page 7 gave
-    # us a full page of data), but page 9 should fail
-    get :section_progress, params: {section_id: @section.id, page: 8, per: 1}
-    assert_response :success
-    get :section_progress, params: {section_id: @section.id, page: 9, per: 1}
-    assert_response 416
-  end
-
-  test "should get progress for section with specific script" do
-    script = Unit.find_by_name('algebra')
-
-    get :section_progress, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
-    assert_response :success
-
-    assert_equal script.id, JSON.parse(@response.body)['script']['id']
-  end
-
-  test "should get paginated progress with specific script" do
-    script = Unit.find_by_name('algebra')
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 1, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-    assert_equal script.id, data['script']['id']
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 2, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 3, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 2, data['students'].length
-
-    # fourth page has only one student (of 7 total)
-    get :section_progress, params: {section_id: @section.id, script_id: script.id, page: 4, per: 2}
-    assert_response :success
-    data = JSON.parse(@response.body)
-    assert_equal 1, data['students'].length
-  end
-
   test 'section_level_progress response should not be cached by the browser' do
     get :section_level_progress, params: {section_id: @section.id, page: 1, per: 2}
     assert_response :success
@@ -1329,68 +1231,6 @@ class ApiControllerTest < ActionController::TestCase
     data = JSON.parse(@response.body)
     assert_equal 1, data['student_progress'].keys.length
     assert_equal 1, data['student_last_updates'].keys.length
-  end
-
-  test "should get paired icons for paired user levels" do
-    script = create(:script, :in_single_unit_course)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    sl = create(:script_level, lesson: lesson, script: script)
-    driver_ul = create(
-      :user_level,
-      user: @student_4,
-      level: sl.level,
-      script: sl.script,
-      best_result: 100
-    )
-    navigator_ul = create(
-      :user_level,
-      user: @student_5,
-      level: sl.level,
-      script: sl.script,
-      best_result: 100
-    )
-    create(:paired_user_level, driver_user_level: driver_ul, navigator_user_level: navigator_ul)
-
-    get :section_progress, params: {
-      section_id: @section.id,
-      script_id: sl.script.id
-    }
-    assert_response :success
-    parsed = JSON.parse(response.body)
-
-    assert_match /paired/, parsed['students'][3]['levels'].first[0]
-    assert_match /paired/, parsed['students'][4]['levels'].first[0]
-  end
-
-  test "should get progress for section with section script when blank script is specified" do
-    get :section_progress, params: {
-      section_id: @flappy_section.id,
-      script_id: ''
-    }
-    assert_response :success
-
-    assert_equal @flappy.id, JSON.parse(@response.body)['script']['id']
-  end
-
-  test "should not return progress for bonus levels" do
-    script = create(:script, :in_single_unit_course)
-    lesson_group = create(:lesson_group, script: script)
-    lesson = create(:lesson, script: script, lesson_group: lesson_group)
-    create(:script_level, script: script, lesson: lesson)
-    create(:script_level, script: script, lesson: lesson, bonus: true)
-
-    get :section_progress, params: {
-      section_id: @flappy_section.id,
-      script_id: script.id
-    }
-
-    assert_response :success
-
-    response = JSON.parse(@response.body)
-    assert_equal 1, response["students"][0]["levels"].length
-    assert_equal 1, response["script"]["levels_count"]
-    assert_equal 1, response["script"]["lessons"][0]["length"]
   end
 
   test "teacher_panel_progress returns progress when called with script and level" do
@@ -1659,56 +1499,16 @@ class ApiControllerTest < ActionController::TestCase
       {controller: "api", action: "user_menu"}
     )
 
-    assert_routing(
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/dashboardapi/section_progress/2"},
-      {controller: "api", action: "section_progress", section_id: '2'}
-    )
-
     # /api urls
     assert_recognizes(
       {controller: "api", action: "user_menu"},
       {method: "get", path: "http://#{CDO.dashboard_hostname}/api/user_menu"}
-    )
-
-    assert_recognizes(
-      {controller: "api", action: "section_progress", section_id: '2'},
-      {method: "get", path: "http://#{CDO.dashboard_hostname}/api/section_progress/2"}
     )
   end
 
   test 'clever_classrooms is Forbidden when not signed in' do
     sign_out :user
     get :clever_classrooms
-    assert_response :forbidden
-  end
-
-  test 'clever_classrooms queries clever with user uid for unmigrated user' do
-    teacher = create(:teacher, :sso_provider, :demigrated, provider: AuthenticationOption::CLEVER)
-    sign_in teacher
-
-    expected_uri = "https://api.clever.com/v2.1/teachers/#{teacher.uid}/sections"
-    auth = {authorization: "Bearer #{teacher.oauth_token}"}
-    mock_response = {data: []}.to_json
-    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
-    get :clever_classrooms
-  end
-
-  test 'clever_classrooms queries clever with clever authentication_id for migrated user' do
-    teacher = create(:teacher, :with_clever_authentication_option)
-    auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)
-    sign_in teacher
-    assert_nil teacher.uid
-
-    expected_uri = "https://api.clever.com/v2.1/teachers/#{auth_option.authentication_id}/sections"
-    auth = {authorization: "Bearer #{auth_option.data_hash[:oauth_token]}"}
-    mock_response = {data: []}.to_json
-    RestClient.expects(:get).with(expected_uri, auth).returns(mock_response)
-    get :clever_classrooms
-  end
-
-  test 'import_clever_classroom is Forbidden when not signed in' do
-    sign_out :user
-    get :import_clever_classroom
     assert_response :forbidden
   end
 
@@ -1751,11 +1551,12 @@ class ApiControllerTest < ActionController::TestCase
 
     ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
     mock_service.stubs(:list_course_students).returns(mock_response)
-    GoogleClassroomSection.any_instance.stubs(:from_service).returns(mock_section)
+    GoogleClassroomSection.stubs(:from_service).returns(mock_section)
 
     teacher = create(:teacher, :with_google_authentication_option)
+    google_auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     # change teacher email to @gmail.com, which will the teacher ineligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
+    google_auth_option.update(email: 'test@gmail.com')
     @controller.stubs(:current_user).returns(teacher)
     section = create(:section, user: teacher)
     assert_equal false, teacher.verified_teacher?
@@ -1764,9 +1565,151 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :ok
     assert_equal false, teacher.verified_teacher?
     # change email to non google/gmail email, teacher should now be eligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@test.com')
+    google_auth_option.update(email: 'test@test.com')
     get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
     assert_equal true, teacher.verified_teacher?
+  end
+
+  test 'import_google_classroom is Forbidden when section exists and current user is not an instructor' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    course_id = Random.hex(10)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).never
+    GoogleClassroomSection.expects(:from_service).never
+
+    section_owner = create(:teacher)
+    attacker = create(:teacher, :with_google_authentication_option)
+    create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      code: GoogleClassroomSection.code_for_section(course_id)
+    )
+    sign_in attacker
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: 'Existing Section'}
+
+    assert_response :forbidden
+  end
+
+  test 'import_google_classroom allows first import when section does not exist' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    course_id = Random.hex(10)
+    course_name = 'New Google Section'
+    students = []
+    teacher = create(:teacher, :with_google_authentication_option)
+    imported_section = mock('GoogleClassroomSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    mock_students_response.stubs(:students).returns(students)
+    mock_students_response.stubs(:next_page_token).returns(nil)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).with(course_id, page_token: nil).returns(mock_students_response)
+    GoogleClassroomSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_google_classroom allows import when section exists and current user is an instructor' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    course_id = Random.hex(10)
+    course_name = 'Existing Google Section'
+    students = []
+    section_owner = create(:teacher)
+    teacher = create(:teacher, :with_google_authentication_option)
+    imported_section = mock('GoogleClassroomSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      code: GoogleClassroomSection.code_for_section(course_id)
+    )
+    create(:section_instructor, section:, instructor: teacher, status: :active)
+
+    mock_students_response.stubs(:students).returns(students)
+    mock_students_response.stubs(:next_page_token).returns(nil)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).with(course_id, page_token: nil).returns(mock_students_response)
+    GoogleClassroomSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_clever_classroom is Forbidden when section exists and current user is not an instructor' do
+    course_id = Random.hex(10)
+
+    ApiController.any_instance.stubs(:query_clever_service).yields([])
+    CleverSection.expects(:from_service).never
+
+    section_owner = create(:teacher)
+    attacker = create(:teacher, :with_clever_authentication_option)
+    create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLEVER,
+      code: CleverSection.code_for_section(course_id)
+    )
+    sign_in attacker
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: 'Existing Section'}
+
+    assert_response :forbidden
+  end
+
+  test 'import_clever_classroom allows first import when section does not exist' do
+    course_id = Random.hex(10)
+    course_name = 'New Clever Section'
+    students = []
+    teacher = create(:teacher, :with_clever_authentication_option)
+    imported_section = mock('CleverSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    ApiController.any_instance.stubs(:query_clever_service).yields(students)
+    CleverSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_clever_classroom allows import when section exists and current user is an instructor' do
+    course_id = 'existing-clever-course-id-2'
+    course_name = 'Existing Clever Section'
+    students = []
+    section_owner = create(:teacher)
+    teacher = create(:teacher, :with_clever_authentication_option)
+    imported_section = mock('CleverSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLEVER,
+      code: CleverSection.code_for_section(course_id)
+    )
+    create(:section_instructor, section:, instructor: teacher, status: :active)
+
+    ApiController.any_instance.stubs(:query_clever_service).yields(students)
+    CleverSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
   end
 
   #
@@ -2080,6 +2023,81 @@ class ApiControllerTest < ActionController::TestCase
         it 'returns the outside_unit_group' do
           _(response.find {|cv| cv[:id] == outside_course_version.id}).must_be_instance_of Hash
         end
+      end
+    end
+  end
+
+  describe 'GET /api/import_clever_classroom' do
+    subject(:get_import_clever_classroom) do
+      get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+    end
+
+    let(:course_id) {'expected_course_id'}
+    let(:course_name) {'expected_course_name'}
+
+    let!(:teacher) {create(:teacher, :with_clever_authentication_option)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when teacher is not signed in' do
+      before do
+        sign_out teacher
+      end
+
+      it 'forbids request' do
+        get_import_clever_classroom
+        assert_response :forbidden
+      end
+    end
+
+    context 'when provider oauth_token has expired' do
+      around do |test|
+        VCR.use_cassette('api/get_import_clever_classroom/with_expired_oauth_token') {test.call}
+      end
+
+      it 'renders error message instructing to re-login using provider type' do
+        get_import_clever_classroom
+        assert_response :unauthorized
+        _(response.body).must_equal(
+          'Your sign-in with Clever has expired. ' \
+          "Please sign out of Code.org and sign back in using your Clever account to continue.\n"
+        )
+      end
+    end
+  end
+
+  describe 'GET /api/clever_classrooms' do
+    subject(:get_clever_classrooms) {get :clever_classrooms}
+    let(:teacher) {create(:teacher, :with_clever_authentication_option)}
+    let(:oauth_token) {teacher.oauth_tokens_for_provider(AuthenticationOption::CLEVER)[:oauth_token]}
+    let(:clever_auth_option) {teacher.authentication_options.find_by(credential_type: AuthenticationOption::CLEVER)}
+
+    before do
+      sign_in teacher
+    end
+
+    context 'when v3 auth option' do
+      let(:teacher) {create(:teacher, :with_clever_authentication_option, auth_option_version: AuthenticationOption::Clever::VERSION[:v3])}
+
+      it 'creates REST client for v3' do
+        clever_client = mock('clever_client')
+        Clients::CleverRest.expects(:new).with(oauth_token:).returns(clever_client)
+        clever_client.stubs(:get).returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
+      end
+
+      it 'calls /users/:id/sections endpoint' do
+        clever_client = mock('clever_client')
+        expected_uid = clever_auth_option.authentication_id
+        Clients::CleverRest.expects(:new).with(oauth_token:).returns(clever_client)
+        clever_client.expects(:get).with("users/#{expected_uid}/sections").returns({'data' => []})
+
+        get_clever_classrooms
+        assert_response :ok
       end
     end
   end

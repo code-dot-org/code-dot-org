@@ -1,0 +1,48 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2025-12-19T16:13:43.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "1",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "readonly",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "project_template_level_name": "Aichat Test - Template_cs50",
+    "long_instructions": "Project Template Backed Level #1",
+    "name_suffix": "_cs50"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-19T16:13:43.479+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Template Backed - 1\\\"\"],\"cloned_from\":\"AI Chat Test Template Backed - 1\"}]"
+}]]></config>
+</Aichat>

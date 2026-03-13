@@ -1,4 +1,4 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -21,7 +21,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
    * @param {Function} getColor - Returns the color for the frame's header.
    */
   constructor(
-    workspace: GoogleBlockly.WorkspaceSvg,
+    workspace: BlocklyCore.WorkspaceSvg,
     text: string,
     className: string,
     getColor: () => string
@@ -79,7 +79,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
       return;
     }
     // this.element_ is always a workspace in this class.
-    const workspace = this.element_ as GoogleBlockly.WorkspaceSvg;
+    const workspace = this.element_ as BlocklyCore.WorkspaceSvg;
     const minWidth = this.frameText_.getBoundingClientRect().width;
     let width =
       Math.max(
@@ -129,7 +129,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
   getFrameX() {
     // In LTR the svg should be to the right of the toolbox, plus a margin.
     const metricsManager = (
-      this.element_ as GoogleBlockly.WorkspaceSvg
+      this.element_ as BlocklyCore.WorkspaceSvg
     ).getMetricsManager();
     let frameX = frameSizes.MARGIN_SIDE / 2;
     // Toolbox width > 0 if we have a categorized toolbox.
@@ -165,7 +165,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
 
   getRtlFrameTextX() {
     // Width of the visible portion of the workspace.
-    const viewWidth = (this.element_ as GoogleBlockly.WorkspaceSvg)
+    const viewWidth = (this.element_ as BlocklyCore.WorkspaceSvg)
       .getMetricsManager()
       .getViewMetrics().width;
     // In RTL, frame text should be on the right side of the visible portion
@@ -187,7 +187,7 @@ export default class WorkspaceSvgFrame extends SvgFrame {
  *
  * @param {Blockly.Events.Abstract} event - The Blockly event object.
  */
-function onWorkspaceChange(event: GoogleBlockly.Events.Abstract) {
+function onWorkspaceChange(event: BlocklyCore.Events.Abstract) {
   const expectedEventTypes: string[] = [
     Blockly.Events.BLOCK_DELETE,
     Blockly.Events.BLOCK_MOVE,

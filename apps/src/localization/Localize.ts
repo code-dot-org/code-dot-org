@@ -193,6 +193,12 @@ export type LocalizeUpdatedDictionaryData = {
 };
 
 /**
+ * The argument given to the callback for the 'dictionaryAdded' event
+ * callback.
+ */
+export type LocalizeDictionaryAddedData = string;
+
+/**
  * The argument given to the callback for an 'error' event.
  */
 export type LocalizeErrorData = string;
@@ -206,6 +212,15 @@ export type LocalizeCallbackData =
   | LocalizeUpdatedDictionaryData
   | LocalizeErrorData
   | undefined;
+
+export interface LocalizeEventMap {
+  dictionaryAdded: LocalizeDictionaryAddedData;
+  error: LocalizeErrorData;
+  initialize: LocalizeOptions;
+  setLanguage: LocalizeSetLanguageData;
+  updatedDictionary: LocalizeUpdatedDictionaryData;
+  widgetLoaded: object;
+}
 
 /**
  * The LocalizeJS frontend API object.
@@ -310,11 +325,17 @@ interface LocalizeJS {
   /**
    * Attach an event handler to Localize events.
    */
-  on: (eventName: string, fn: (data: LocalizeCallbackData) => void) => void;
+  on: <K extends keyof LocalizeEventMap>(
+    eventName: K,
+    fn: (data: LocalizeEventMap[K]) => void
+  ) => void;
   /**
    * Remove an event handler.
    */
-  off: (eventName: string, fn?: (data: LocalizeCallbackData) => void) => void;
+  off: <K extends keyof LocalizeEventMap>(
+    eventName: K,
+    fn?: (data: LocalizeEventMap[K]) => void
+  ) => void;
   /**
    * Convert the format of a number to the format used in the currently selected
    * language/locale.

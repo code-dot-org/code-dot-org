@@ -1,6 +1,5 @@
 <Music>
   <config><![CDATA[{
-  "published": true,
   "game_id": 70,
   "created_at": "2025-05-31T03:01:15.000Z",
   "level_num": "custom",
@@ -926,8 +925,10 @@
     },
     "name_suffix": "_v2",
     "submittable": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-31T03:01:15.813+00:00\",\"changed\":[\"cloned from \\\"music-lab-functions-synthesis-rearrange2\\\"\"],\"cloned_from\":\"music-lab-functions-synthesis-rearrange2\"},{\"changed_at\":\"2025-07-07 18:14:09 +0000\",\"changed\":[\"level_data\",\"project_template_level_name\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-07 18:29:28 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>

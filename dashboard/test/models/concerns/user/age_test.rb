@@ -174,4 +174,74 @@ class AgeTest < ActiveSupport::TestCase
       end
     end
   end
+  describe '#precise_age' do
+    subject(:precise_age) {user.precise_age}
+    let(:user) {create(:student, birthday: 17.years.ago)}
+    let(:today) {DateTime.now.utc.to_date}
+
+    context 'when the user has no birthday' do
+      before do
+        user.update_attribute(:birthday, nil)
+      end
+      it 'returns nil' do
+        _precise_age.must_be_nil
+      end
+    end
+
+    context 'when the user is exactly 17 years old' do
+      it {_precise_age.must_equal 17}
+    end
+
+    context 'when the user has not had their birthday this year' do
+      before do
+        # Set birthday to tomorrow's date 18 years ago
+        user.update_attribute(:birthday, 1.day.from_now - 18.years)
+      end
+      it 'returns 17' do
+        _precise_age.must_equal 17
+      end
+    end
+
+    context 'when the user had their birthday yesterday' do
+      before do
+        # Set birthday to yesterday's date 18 years ago
+        user.update_attribute(:birthday, 1.day.ago - 18.years)
+      end
+      it 'returns 18' do
+        _precise_age.must_equal 18
+      end
+    end
+
+    context 'with a specific timezone' do
+      before do
+        # Set birthday to exactly 18 years ago in UTC
+        user.update_attribute(:birthday, DateTime.now.utc.to_date - 18.years)
+      end
+
+      it 'calculates age in the specified timezone' do
+        age_in_tz = user.precise_age(timezone: 'America/Denver')
+        _(age_in_tz).must_be :>=, 17
+        _(age_in_tz).must_be :<=, 18
+      end
+    end
+
+    context 'when user is a teacher' do
+      let(:teacher) {create(:teacher)}
+
+      it 'returns the precise age even for ages over 21' do
+        # Use update_column to bypass the make_teachers_21 callback
+        teacher.update_column(:birthday, 30.years.ago.to_date)
+        _(teacher.reload.precise_age).must_equal 30
+      end
+    end
+
+    context 'when calculating age for users over 21' do
+      let(:user) {create(:student, birthday: 30.years.ago.to_date)}
+
+      it 'returns the actual numeric age, not "21+"' do
+        # Directly set birthday to avoid age conversion issues
+        _(user.precise_age).must_equal 30
+      end
+    end
+  end
 end

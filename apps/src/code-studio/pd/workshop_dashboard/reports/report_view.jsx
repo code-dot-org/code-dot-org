@@ -20,7 +20,7 @@ import {
 
 import {RouterContext} from '@cdo/apps/code-studio/legacyDashboardRoutingCompatibility';
 
-import DatePicker from '../components/date_picker';
+import DatePicker from '../../../../sharedComponents/DatePicker';
 
 import {
   QUERY_BY_OPTIONS,

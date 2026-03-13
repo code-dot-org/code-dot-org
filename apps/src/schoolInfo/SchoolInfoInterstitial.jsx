@@ -1,9 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {NonSchoolOptions} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -42,11 +42,7 @@ export default function SchoolInfoInterstitial({
   const [isOpen, setIsOpen] = useState(true);
 
   useEffect(() => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SHOW, {});
   }, []);
 
   const saveDisabled = useMemo(
@@ -71,14 +67,10 @@ export default function SchoolInfoInterstitial({
     const hasNcesId =
       schoolInfo.schoolId &&
       !Object.values(NonSchoolOptions).includes(schoolInfo.schoolId);
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
-      {
-        hasNcesId: hasNcesId.toString(),
-        attempt: showSchoolInfoUnknownError ? 2 : 1,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SUBMIT, {
+      hasNcesId: hasNcesId.toString(),
+      attempt: showSchoolInfoUnknownError ? 2 : 1,
+    });
 
     try {
       await updateSchoolInfo({
@@ -88,23 +80,15 @@ export default function SchoolInfoInterstitial({
         schoolZip: schoolInfo.schoolZip,
       });
 
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       onClose();
     } catch (error) {
-      analyticsReporter.sendEvent(
-        EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
-        {
-          attempt: showSchoolInfoUnknownError ? 2 : 1,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE, {
+        attempt: showSchoolInfoUnknownError ? 2 : 1,
+      });
 
       if (!showSchoolInfoUnknownError) {
         // First failure, display error message and give the teacher a chance
@@ -118,11 +102,7 @@ export default function SchoolInfoInterstitial({
   };
 
   const dismissSchoolInfoForm = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     setIsOpen(false);
     onClose();
   };
@@ -145,25 +125,29 @@ export default function SchoolInfoInterstitial({
           <SchoolDataInputs {...schoolInfo} />
         </div>
         <div style={styles.bottom}>
-          <Button
-            text={i18n.dismiss()}
-            onClick={dismissSchoolInfoForm}
-            size="m"
-            type="secondary"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             id="dismiss-button"
-            color="gray"
+            onClick={dismissSchoolInfoForm}
             style={styles.button}
-          />
-          <Button
-            text={i18n.save()}
-            onClick={handleSchoolInfoSubmit}
-            size="m"
-            type="primary"
-            id="save-button"
-            color="purple"
+            type="button"
+          >
+            {i18n.dismiss()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={saveDisabled}
+            id="save-button"
+            onClick={handleSchoolInfoSubmit}
             style={styles.button}
-          />
+            type="button"
+          >
+            {i18n.save()}
+          </MuiButton>
         </div>
       </div>
     </BaseDialog>

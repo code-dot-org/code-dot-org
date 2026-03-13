@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're building a fitness app that tracks a user's daily step goal. Your app needs to remember how many steps the user is aiming for each day.\r\n\r\n1. Create a variable called `step_goal`.\r\n\r\n2. Assign it a number, like `8000` or `10000`.\r\n\r\n3. Use `print()` to show a message like\r\n\r\n   ```\r\n   Your daily step goal is 10000 steps.\r\n   ```\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nYou can use **commas** in a `print()` statement to combine text and variables. For example:\r\n\r\n```\r\nprint(\"Name:\", first_name)\r\n```",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

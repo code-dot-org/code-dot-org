@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2025-10-23T19:41:32.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.3,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Assist students with the following tasks:\n\nCreate a fictional product.\n\nCreate a sample user persona.\n\nBuild a mini brand kit with:\n\n3–5 color swatches\n\nA font pair (heading + body text)\n\n1–2 descriptive style words (e.g., sleek, bold, approachable)\n\nConnect their design choices for the fictional product back to the sample user persona.\n\nCheck the brand kit for accessibility and inclusivity:\n\nIdentify color combinations that may be hard to read or lack sufficient contrast.\n\nEncourage reflection on whether the design is inclusive and avoids bias (e.g., color meanings, readability, or assumptions about gender or culture).\n\nPrompt students to think about how different users or audiences might experience the design.\n\nSample Products (model)\n\nSpark Smoothie Bar (on-campus smoothies)\n\nMomentum (sports-training app)\n\nSnapStudy (study timer + focus sounds)\n\nKindling (YA book subscription)\n\nSample Persona (model)\n\nWho she is: Varsity winger + part-time barista. Ten-minute passing periods are her whole window.\n\nHabits & prefs: Saves favorite orders; lactose-sensitive; lives in Notes and Reminders; cracked iPhone screen.\n\nNeeds: Speed, price clarity, and simple choices that don’t derail her day.\n\nWhen users prompt the AI, ask them if they want a fictional product or a persona. If so, generate a new one and provide it for the user.\n\nIf they ask for help with colors, fonts, style words, or the connection between the style kit and the user persona, do not give direct answers.\nInstead:\n\nAsk probing questions.\n\nOffer one brief example if needed.\n\nGuide them to reflect on why a choice might or might not work—especially for accessibility and inclusivity.\n\nDo not complete the entire task for the user.",
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "display_name": "AI Chat ",
+    "long_instructions": "##Create a Mini Brand Kit\r\n\r\nUse AI to assist you with the following:\r\n- Create a fictional product.\r\n- Create a sample user persona\r\n- Check your brand kit for accessibility. \r\n   - Ask AI to identify any color combinations that might be hard to read or lack contrast.\r\n- Reflect on ethics and inclusivity. \r\n   - Ask AI to suggest how your colors, fonts, or imagery might be interpreted differently by people from various backgrounds or abilities.\r\n- Connect your design choices for your fictional product back to the sample user persona.\r\n\r\n\r\n",
+    "bubble_choice_description": "Use AI to chat through your ideas for the brand kit.",
+    "thumbnail_url": "https://images.code.org/cc00aad3ebc4bddcb48a0fcaf007f292-aiChat.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-23T19:41:32.936+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson5-level2b-test-2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson5-level2b-test-2025\"},{\"changed_at\":\"2025-10-23 19:55:11 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,10 +1,4 @@
-import {LinkButton, buttonColors} from '@code-dot-org/component-library/button';
 import Link from '@code-dot-org/component-library/link';
-import {
-  Heading2,
-  BodyFourText,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
 import {
   Card,
   CardContent,
@@ -15,6 +9,8 @@ import {
   TableBody,
   TableRow,
   TableCell,
+  Typography,
+  Button as MuiButton,
 } from '@mui/material';
 import React, {FC} from 'react';
 
@@ -39,22 +35,22 @@ export const WorkshopAttendance: FC = () => {
         className={commonStyles.cardHeader}
         title={
           <Box className={commonStyles.cardHeaderContainer}>
-            <Heading2 visualAppearance="body-two" noMargin>
-              <StrongText>Take Attendance</StrongText>
-            </Heading2>
+            <Typography component="h2" variant="body2">
+              <Typography variant="strong">Take Attendance</Typography>
+            </Typography>
           </Box>
         }
       />
       <CardContent className={commonStyles.cardContent}>
         <Box className={commonStyles.sectionContainer}>
           <Box className={commonStyles.column}>
-            <BodyFourText noMargin>
+            <Typography variant="body4">
               There is a unique attendance URL for each day of your workshop. On
               each day of your workshop, your participants must visit that day's
               attendance URL to receive professional development credit. The
               attendance URL(s) will be shown below, 2 days in advance, for your
               convenience.
-            </BodyFourText>
+            </Typography>
           </Box>
         </Box>
 
@@ -67,19 +63,19 @@ export const WorkshopAttendance: FC = () => {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <BodyFourText noMargin>
-                    <StrongText>Date</StrongText>
-                  </BodyFourText>
+                  <Typography variant="body4">
+                    <Typography variant="strong">Date</Typography>
+                  </Typography>
                 </TableCell>
                 <TableCell>
-                  <BodyFourText noMargin>
-                    <StrongText>Attendance URL</StrongText>
-                  </BodyFourText>
+                  <Typography variant="body4">
+                    <Typography variant="strong">Attendance URL</Typography>
+                  </Typography>
                 </TableCell>
                 <TableCell>
-                  <BodyFourText noMargin>
-                    <StrongText>View Daily Roster</StrongText>
-                  </BodyFourText>
+                  <Typography variant="body4">
+                    <Typography variant="strong">View Daily Roster</Typography>
+                  </Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -103,9 +99,9 @@ export const WorkshopAttendance: FC = () => {
                 return (
                   <TableRow key={session.id}>
                     <TableCell>
-                      <BodyFourText noMargin>
+                      <Typography variant="body4">
                         {formattedDateMonthFirst}
-                      </BodyFourText>
+                      </Typography>
                     </TableCell>
                     <TableCell>
                       {session.showLink && (
@@ -119,15 +115,17 @@ export const WorkshopAttendance: FC = () => {
                       )}
                     </TableCell>
                     <TableCell>
-                      <LinkButton
-                        text={rosterLabel}
-                        href={rosterUrl}
-                        size="xs"
-                        color={buttonColors.gray}
-                        type="secondary"
-                        target="_blank"
+                      <MuiButton
+                        variant="outlined"
+                        color="tertiary"
+                        size="extraSmall"
                         aria-label={`View daily roster for ${formattedDate} in new tab`}
-                      />
+                        href={rosterUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {rosterLabel}
+                      </MuiButton>
                     </TableCell>
                   </TableRow>
                 );

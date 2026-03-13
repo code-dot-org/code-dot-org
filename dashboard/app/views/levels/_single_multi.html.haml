@@ -80,7 +80,7 @@
             %label.item-label.item-answer-letter{style: "height: #{height}"}
               ="#{multi_answer_characters[i]}. "
               &nbsp;
-            %label.item-label{style: "height: #{height}"}
+            %label.item-label{style: "height: #{height}; max-width: calc(100% - 40px);"}
               != render_multi_or_match_content(localized_answers[i]['text'])
           - if use_tight_layout && !force_wrap_layout
             %br/

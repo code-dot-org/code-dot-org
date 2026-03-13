@@ -119,6 +119,7 @@
     "start_blocks": "var song = [];\r\nonEvent(\"cButton\", \"click\", function() {\r\n  appendItem(song, \"C4\");\r\n});\r\nonEvent(\"dButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"eButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"fButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"gButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"aButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"bButton\", \"click\", function() {\r\n  \r\n});\r\nonEvent(\"playButton\", \"click\", function() {\r\n  buzzer.playNotes(song, 120);\r\n});\r\nonEvent(\"clearButton\", \"click\", function() {\r\n  song = [];\r\n});\r\n",
     "bubble_choice_description": "Create an app that lets the user build their own songs using a new append block",
     "encrypted_examples": "MR5pMG/cdvH03fkUTheH2dY7nb5dmrykEptbBao6rnVPIOHPX2NgEPM5eMqn\nWUTjFCpPu2uG3a7/AWVY2k1Sjg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

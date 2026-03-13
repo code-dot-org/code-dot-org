@@ -7,7 +7,7 @@
 # longer use Varnish and so no longer rely on that logic. We could consider
 # removing our support for Varnish and simplifying this implementation.
 
-# `pegasus` and `dashboard` keys each return a Hash in the following format:
+# `dashboard` keys each return a Hash in the following format:
 
 # - `behaviors`: Array of behaviors. For a given HTTP request, `behaviors` is searched
 #    in-order until the first matching `path` is found. If no `path` matches the
@@ -31,13 +31,7 @@
 #   - `cookies`: An allowlist array of HTTP cookie keys to pass to the origin and include
 #     in the cache key.  To allowlist all cookies for the path, pass `'all'`.  To strip all
 #     cookies for the path, pass `'none'`.
-#   - `proxy` (Varnish-only): If specified, proxy all requests matching this path to the
-#      specified origin. (Currently either `'dashboard'` or `'pegasus'`)
-#     - Note: paths are not rewritten, so e.g., a GET request to `server1.code.org/here/abc`
-#       configured with the behavior `{path: '/here/*' proxy: 'dashboard' }` will proxy its
-#       request to `server1-studio.code.org/here/abc`.
-#     - Note: `proxy` is not yet implemented in CloudFront.  (Proxies will still work correctly
-#       when passed through to Varnish.)
+#   - `proxy`: proxy all requests matching this path to the specified origin.
 # - `default`: Default behavior if no other path patterns are matched.  Uses the same syntax
 #    as `behaviors` except `path` is not required.
 class HttpCache
@@ -75,8 +69,10 @@ class HttpCache
   CACHED_UNITS_MAP = %w(
     aquatic
     dance-ai-2023
+    oceans
     mc
     music-jam-2024
+    mix-move-ai-2025
   ).map do |script_name|
     # Assume all cached units are in single unit courses.
     [script_name, "/courses/#{script_name}/units/1/lessons/*"]
@@ -139,9 +135,10 @@ class HttpCache
       session_key,
       storage_id,
       'sign_up_user_type',
+      "brand#{env_suffix}",
     ].concat(default_cookies)
 
-    http_config = {
+    {
       pegasus: {
         behaviors: [
           # NextJS assets path for the marketing app
@@ -166,19 +163,22 @@ class HttpCache
             path: '/assets/*',
             proxy: 'cdo-assets',
             headers: S3_FORWARD_HEADERS,
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
+          # For .png images, don't forward any cookies or additional headers.
           {
-            path: '/api/hour/*',
-            headers: ALLOWLISTED_HEADERS,
-            # Allow the company cookie to be read and set to track company users for tutorials.
-            cookies: allowlisted_cookies + ['company']
+            path: '/*.png',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # For static-asset paths, don't forward any cookies or additional headers.
           {
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/files/* /images/* /fonts/*),
+            path: STATIC_ASSET_EXTENSION_PATHS - %w(/*.png) + %w(/files/* /images/* /fonts/*),
             headers: [],
-            cookies: 'none'
+            cookies: 'none',
+            include_marketing_router_lambda: true,
           },
           # Dashboard-based API paths in Pegasus are session-specific, allowlist all cookies.
           {
@@ -196,19 +196,22 @@ class HttpCache
                 /poste*
               ),
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/dashboardapi/*',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           {
             path: '/i18n/track_string_usage',
             proxy: 'dashboard',
             headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
+            cookies: allowlisted_cookies,
+            include_marketing_router_lambda: true,
           },
           # Cached paths that specifically filter query-parameters.
           {
@@ -310,12 +313,6 @@ class HttpCache
             cookies: 'none'
           },
           {
-            path: '/v2/*',
-            proxy: 'pegasus',
-            headers: ALLOWLISTED_HEADERS,
-            cookies: allowlisted_cookies
-          },
-          {
             path: %w(
               /v3/files-public/*
               /v3/sources-public/*
@@ -332,7 +329,14 @@ class HttpCache
             path: '/curriculum_tracking_pixel',
             headers: [],
             cookies: allowlisted_cookies
-          }
+          },
+          {
+            # ActionCable Websocket path:
+            path: '/cable',
+            # pass all headers, which disables caching, and also passes essential websocket upgrade headers:
+            headers: ['*'],
+            cookies: allowlisted_cookies,
+          },
         ],
         # Default Dashboard paths are session-specific, allowlist all session cookies and language header.
         default: {
@@ -341,27 +345,6 @@ class HttpCache
         }
       }
     }
-
-    if defined?(HocLegacy::Engine)
-      http_config.deep_merge!(
-        dashboard: {
-          behaviors: [
-            {
-              path: "#{HocLegacy::API_ROOT_PATH}*",
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-            {
-              path: '/v2/certificate',
-              headers: ALLOWLISTED_HEADERS,
-              cookies: allowlisted_cookies,
-            },
-          ],
-        },
-      )
-    end
-
-    http_config
   end
 
   def self.uncached_script_level_path?(script_level_path)

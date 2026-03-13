@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Read the existing code to see what the `Painter` currently does.\r\n\r\n2. Add an `if` statement to check if the `Painter` `is_facing_west()`\r\n\r\n3. Move the `paint(\"blue\")`command inside the `if` statement so it only runs when the condition is true.\r\n\r\n4. Run the program to check your result.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse this format for writing an `if` statement:\r\n\r\n```\r\nif condition:\r\n   do_something()\r\n```\r\n\r\nFor this problem, your condition will be `is_facing_west()`\r\n\r\n<br/>",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

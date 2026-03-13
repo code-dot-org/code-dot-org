@@ -1,0 +1,10 @@
+name 'programming-fundamentals-lesson3-level6_pilot-2025'
+submittable 'false'
+anonymous 'false'
+activity_guide_level 'true'
+
+page
+text 'programming-fundamentals-lesson3-level6-intro_pilot-2025'
+level 'programming-fundamentals-lesson3-level6a_pilot-2025'
+level 'programming-fundamentals-lesson3-level6b_pilot-2025'
+level 'programming-fundamentals-lesson3-level6c_pilot-2025'

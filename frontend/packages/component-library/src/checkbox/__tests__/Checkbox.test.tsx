@@ -1,14 +1,14 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
-import React, {ChangeEvent, useState} from 'react';
+import {ChangeEvent, useState, ComponentProps} from 'react';
 
 import Checkbox from '@/checkbox';
 
 describe('Design System - Checkbox', () => {
   const setupCheckbox = (
     initialChecked: boolean,
-    props: Partial<React.ComponentProps<typeof Checkbox>> = {},
+    props: Partial<ComponentProps<typeof Checkbox>> = {},
   ) => {
     const user = userEvent.setup();
     const spyOnChange = jest.fn();

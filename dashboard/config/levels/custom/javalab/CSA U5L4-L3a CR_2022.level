@@ -15,7 +15,7 @@
     "display_name": "Lunch Lines",
     "bubble_choice_description": "A teacher has students in grades 1 through 5 organized in a 2D array. The teacher wants to reverse each row so that students that were last in line the previous day are first in line today.",
     "thumbnail_url": "https://images.code.org/11529d7f6c9f47e85275829fcf959207-image-1651095387776.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12 19:14:26 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 19:57:08 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-27 21:37:28 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:05:34 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

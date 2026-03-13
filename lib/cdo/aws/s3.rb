@@ -9,8 +9,8 @@ module AWS
   module S3
     mattr_accessor :s3
 
-    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to Honeybadger,
-    # recording the request headers in the error context for further investigation.
+    # AWS SDK client plugin to log 'slow' (as defined by :notify_timeout) S3 responses to CloudWatch Metrics. Track S3
+    # API calls that take an unusually long time because that ties up our fixed pool of HTTP worker threads per vCPU.
     class SlowAwsResponseNotifier < Seahorse::Client::Plugin
       option(:notify_timeout, 5) # seconds
 
@@ -19,15 +19,13 @@ module AWS
           start_time = Time.now
           response = @handler.call(context)
           duration = Time.now - start_time
-          if duration > context.config.notify_timeout
-            Honeybadger.notify(
-              error_class: "SlowAWSResponse",
-              error_message: "Slow AWS response",
-              context: response.context.
-                http_response.headers.to_h.
-                slice('x-amz-request-id', 'x-amz-id-2').
-                merge(duration: duration)
-            )
+          # Only track long S3 API calls issued by web application server code on our production or managed test systems.
+          if CDO.running_web_application? &&
+              (CDO.rack_env?(:production) || CDO.test_system?) &&
+              duration > context.config.notify_timeout
+
+            Cdo::Metrics.put('S3Client', 'SlowResponse', 1, {Host: CDO.dashboard_hostname})
+            Cdo::Metrics.put('S3Client', 'SlowResponseDuration', duration, {Host: CDO.dashboard_hostname})
           end
           response
         end

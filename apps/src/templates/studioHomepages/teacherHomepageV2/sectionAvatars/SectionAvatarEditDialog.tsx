@@ -1,9 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import {CustomDialog} from '@code-dot-org/component-library/dialog';
-import {
-  Heading3,
-  BodyTwoText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import i18n from '@cdo/locale';
@@ -53,12 +49,16 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
         {i18n.avatarEditDialogDescription()}
       </div>
       <div className={styles.avatarDialogHeader}>
-        <Heading3>{i18n.editAvatar()}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {i18n.editAvatar()}
+        </Typography>
         <hr />
       </div>
       <div className={styles.avatarDialogBody}>
         <label className={styles.avatarDialogLabels}>
-          <BodyTwoText>{i18n.avatar()}</BodyTwoText>
+          <Typography variant="body2" gutterBottom>
+            {i18n.avatar()}
+          </Typography>
           <SectionAvatar
             color={selectedColor}
             emoji={selectedEmoji}
@@ -67,7 +67,9 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
         </label>
         <div className={styles.avatarDialogBodyRight}>
           <label className={styles.avatarDialogLabels}>
-            <BodyTwoText>{i18n.chooseEmoji()}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {i18n.chooseEmoji()}
+            </Typography>
             <PickerGrid
               type={'emoji'}
               selectCallback={setSelectedEmoji}
@@ -75,7 +77,9 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
             />
           </label>
           <label className={styles.avatarDialogLabels}>
-            <BodyTwoText>{i18n.chooseColor()}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {i18n.chooseColor()}
+            </Typography>
             <PickerGrid
               type={'color'}
               selectCallback={setSelectedColor}
@@ -86,19 +90,24 @@ const SectionAvatarEditDialog: React.FC<SectionAvatarEditDialogProps> = ({
       </div>
       <hr />
       <div className={styles.avatarDialogFooter}>
-        <Button
-          text={i18n.dialogCancel()}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
           onClick={() => closeCallback()}
-          color={'gray'}
-          size={'s'}
-          type={'secondary'}
-        />
-        <Button
-          text={i18n.selectAvatar()}
+          type="button"
+        >
+          {i18n.dialogCancel()}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           onClick={() => saveCallback(selectedColor, selectedEmoji)}
-          size={'s'}
-          type={'primary'}
-        />
+          type="button"
+        >
+          {i18n.selectAvatar()}
+        </MuiButton>
       </div>
     </CustomDialog>
   );

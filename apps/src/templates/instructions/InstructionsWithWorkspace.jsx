@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
+import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
+import {
+  areAiChatToolsEnabled,
+  shouldShowAiTutor,
+} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+
+import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
 import CodeWorkspaceContainer from '../CodeWorkspaceContainer';
 
@@ -20,16 +30,18 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     children: PropTypes.node,
     instructionsStyle: PropTypes.object,
     workspaceStyle: PropTypes.object,
-    labType: PropTypes.string,
-    inLevel: PropTypes.bool,
 
     // Provided by redux
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
+    labType: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
+    isShareView: PropTypes.bool,
   };
 
-  // only used so that we can rerender when resized
   state = {
+    aiChatOpen: false,
+    // only used so that we can rerender when resized
     windowWidth: undefined,
     windowHeight: undefined,
   };
@@ -88,6 +100,10 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
+  toggleAiChat = () => {
+    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  };
+
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
   }
@@ -97,26 +113,71 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
   }
 
   render() {
-    const {
+    let {
       instructionsStyle,
       workspaceStyle,
       instructionsHeight,
       labType,
+      aiChatAccessLevel,
+      isShareView,
       children,
-      inLevel,
     } = this.props;
+
+    const aiTutorAvailableForLevel =
+      window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+    const aiChatAccessDisabled = !areAiChatToolsEnabled({
+      appName: labType,
+      aiChatAccessLevel,
+    });
+
+    const showAiTutor =
+      !isShareView &&
+      AI_TUTOR_LEGACY_LABS.includes(labType) &&
+      shouldShowAiTutor({
+        appName: labType,
+        tutorLevel: aiTutorAvailableForLevel,
+        aiChatAccessLevel,
+      });
+
+    const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
+    const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
+    const tutorSpace = this.state.aiChatOpen
+      ? chatContainerSpace
+      : sidebarSpace;
+
+    if (showAiTutor) {
+      instructionsStyle = {...instructionsStyle, right: tutorSpace};
+      workspaceStyle = {...workspaceStyle, right: tutorSpace};
+    }
 
     return (
       <span>
         <TopInstructions mainStyle={instructionsStyle} />
         <CodeWorkspaceContainer
           ref={this.setCodeWorkspaceContainerRef}
-          style={{...workspaceStyle, top: instructionsHeight}}
-          labType={labType}
-          inLevel={inLevel}
+          style={{
+            ...workspaceStyle,
+            top: instructionsHeight,
+          }}
         >
           {children}
         </CodeWorkspaceContainer>
+        {showAiTutor && (
+          <AiChatDisabledProvider
+            chatDisabled={aiChatAccessDisabled}
+            chatDisabledMessage={
+              aiChatAccessDisabled
+                ? TEACHER_DISABLED_AI_CHAT_MESSAGE
+                : undefined
+            }
+          >
+            <AiTutorContainer
+              toggleAiChat={this.toggleAiChat}
+              aiChatOpen={this.state.aiChatOpen}
+            />
+          </AiChatDisabledProvider>
+        )}
       </span>
     );
   }
@@ -125,6 +186,12 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
 export default connect(
   state => ({
     instructionsHeight: state.instructions.renderedHeight,
+    labType: state.pageConstants.appType,
+    isShareView: state.pageConstants.isShareView,
+    aiChatAccessLevel:
+      (state.teacherSections
+        ? selectedSectionSelector(state)?.aiChatAccessLevel
+        : undefined) ?? state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

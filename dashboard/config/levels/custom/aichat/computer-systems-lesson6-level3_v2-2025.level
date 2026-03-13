@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-09-25T20:00:03.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Computer Build Assistant\r\n\r\n### Do This:\r\n1. **Describe your User**: Share which user you chose to build a PC for.\r\n2. **Ask about Components**: Do you need advice on CPU, GPU, motherboard, RAM, storage, power supply, or peripherals (like monitors, keyboards)?\r\n3. **Upload an screenshot of your build from PCPartPicker**. Use the multi-modal capability of the chatbot to examine your build and to offer suggestions.\r\n4. **Ask the chatbot to explain concepts**. Feel free to ask *why* or *how* questions for a deeper understanding of the steps involved in completing your build.\r\n\r\n::: details [**Prompt Templates:**]\r\n- What CPU and GPU should I pick for [User Name] based on their budget and needs?\r\n- What kind of RAM would work best for [User Name] and why?\r\n- Which motherboard would be compatible with your suggested CPU for [User Name]?\r\n- Why does [User Name] need a high-end GPU?\r\n- Can you explain why clock speed or core count matters for [User Name]'s tasks?\r\n- Can you compare two GPUs for [User Name]'s purpose?\r\n- Do any parts in my build for [User Name] need to be upgraded or changed?\r\n- Can you suggest a lower-cost version of this build for [User Name]?\r\n- If I have $100 more than [User Name]’s budget, what should I upgrade first?\r\n:::\r\n\r\n***\r\n_Note: The AI chatbot may not always reflect current availability or prices — double check on PCPartPicker!_",
+    "long_instructions": "## Computer Build Assistant\r\n\r\n### Do This:\r\n1. **Work with your Partner**: The AI Manager leads the chatbot interaction, while the Researcher checks compatibility, price, and specs using PCPartPicker.\r\n2. **Describe your User**: Share which user you chose to build a PC for.\r\n3. **Ask about Components**: Do you need advice on CPU, GPU, motherboard, RAM, storage, power supply, or peripherals (like monitors, keyboards)?\r\n4. **Upload an screenshot of your build from PCPartPicker**. Use the multi-modal capability of the chatbot to examine your build and to offer suggestions.\r\n5. **Refine and Re-Prompt**: Revise at least one prompt based on the AI’s feedback and record how the response changes in your activity guide.\r\n6. **Discuss Trade-Off**s: Identify any trade-offs (e.g., performance vs. cost, speed vs. storage) and decide what updates to make to your build.\r\n\r\n::: details [**Prompt Templates:**]\r\n- What CPU and GPU should I pick for [User Name] based on their budget and needs?\r\n- Which components show the best trade-off between price and performance for [User Name]?\r\n- What are the main strengths and weaknesses of my current build for [User Name]?\r\n- What kind of RAM would work best for [User Name] and why?\r\n- Which motherboard would be compatible with your suggested CPU for [User Name]?\r\n- Why does [User Name] need a high-end GPU?\r\n- Can you explain why clock speed or core count matters for [User Name]'s tasks?\r\n- Can you compare two GPUs for [User Name]'s purpose?\r\n- Do any parts in my build for [User Name] need to be upgraded or changed?\r\n- Can you suggest a lower-cost version of this build for [User Name]?\r\n- If I have $100 more than [User Name]’s budget, what should I upgrade first?\r\n- If I revise my prompt to include [User Name]’s specific needs, how does your advice change?\r\n:::\r\n\r\n***\r\n_Note: The AI chatbot may not always reflect current availability or prices — double check on PCPartPicker!_",
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gpt-4o-mini",
@@ -43,9 +44,11 @@
       ],
       "multimodalEnabled": true
     },
-    "name_suffix": "_v2-2025"
+    "name_suffix": "_v2-2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:03.836+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level3_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-09-25T20:00:03.836+00:00\",\"changed\":[\"cloned from \\\"computer-systems-lesson6-level3_2025\\\"\"],\"cloned_from\":\"computer-systems-lesson6-level3_2025\"},{\"changed_at\":\"2025-10-14 03:50:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-10-14 03:51:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2025-10-14 03:52:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Aichat>

@@ -30,6 +30,7 @@ npm-debug.log
 /rebuild-apps
 /rebuild-shared
 /rebuild-code-studio
+/.cached-staging-build-file-count
 
 #
 # Ruby Ignores
@@ -112,3 +113,14 @@ dashboard/brakeman_security_report.htm
 .pdm-python
 
 skaffold-build-tags.json
+
+# claude
+.claude/worktrees
+CLAUDE.local.md
+.claude/**/*.local.*
+.claude/skills/*.local
+
+# agent skills standard: https://agentskills.io/
+.agents/**/*.local.*
+.agents/skills/*.local
+

@@ -1,4 +1,5 @@
-@import '../../mixins.scss';
+@use '@cdo/apps/mixins.scss' as mixins;
+@use '@cdo/apps/lab2/views/components/layout/variables.scss' as variables;
 
 .workspace {
   color: var(--text-neutral-primary);
@@ -12,14 +13,37 @@
 }
 
 .workspaceToggleButtonContainer {
-  background-color: var(--background-neutral-tertiary);
   display: flex;
   align-items: center;
-  padding-left: 4px;
+  justify-content: center;
+  background: var(--background-neutral-primary);
+  border-inline-end: variables.$default-border;
+
+  &:not(.withFileBrowser) {
+    width: 42px;
+  }
 }
 
 .workspaceToggleButtonContainer.withFileBrowser {
-  justify-content: left;
+  background-color: var(--background-neutral-secondary);
+  justify-content: space-between;
+  padding-inline: 0.75rem 0.25rem;
+}
+
+.fileBrowserHeaderText {
+  color: var(--text-neutral-tertiary);
+  font-weight: 500;
+}
+
+.fileBrowserHeaderButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 0.125rem;
+
+  // Flip icons for RTL languages
+  :global(html[dir='rtl']) & i {
+    transform: scaleX(-1);
+  }
 }
 
 .workplaceEditorWrapper {
@@ -27,12 +51,7 @@
   flex: 1;
   grid-column: span 2;
 
-  &:focus {
-    outline: var(--borders-brand-teal-primary) solid 2px;
-    outline-offset: 2px;
-    border-radius: 0.25rem;
-    z-index: 1;
-  }
+  @include mixins.focus-styles($outline-offset: -2px);
 }
 
 .workplaceEditorWrapper.withFileBrowser {
@@ -48,7 +67,7 @@
 }
 
 .workspaceWorkarea.withFileBrowser {
-  grid-template-columns: 156px auto;
+  grid-template-columns: 164px auto;
 }
 
 .workspaceWarningArea {
@@ -62,7 +81,7 @@
 }
 
 .centerHeaderContent {
-  @include center-header-content(true);
+  @include mixins.center-header-content(true);
 }
 
 .lockedFilesBanner {
@@ -84,4 +103,13 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+}
+
+// Overrides styles for the Alert component to
+// make it fit better in the Workspace area
+.previousVersionBanner {
+  border-bottom: variables.$default-border;
+  border-radius: 0;
+  padding-block: 0;
+  height: 39px;
 }

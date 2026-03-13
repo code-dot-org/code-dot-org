@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\n1. Read the code in both `main.py` and `custom.py`\r\n\r\n2. Identify and fix the bugs. Look for issues with indentation, condition placement, and syntax.\r\n\r\n3. Make sure the `Painter` only paints when it has paint, and only moves south if it can.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/00dccf64eb36a7931327f30ff6cef04f-image-1745029422554.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nUse `while` to repeat actions and be sure your `if` statements only run when the condition is true. Every `if` and `while` needs a colon and an indented block.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

@@ -7,12 +7,14 @@ import React, {
   useEffect,
   useMemo,
   useState,
+  useRef,
 } from 'react';
 
 import {toolboxToWorkspaceBlocks} from '@cdo/apps/blockly/utils/toolbox';
 import {START_SOURCES, TOOLBOX_BLOCKS} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {
   BlocklyLevelProperties,
   LabProps,
@@ -21,7 +23,9 @@ import {
 import StartOverDialog, {
   MessageType,
 } from '@cdo/apps/lab2/views/dialogs/dsco/StartOverDialog';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import ProjectManager from '../projects/ProjectManager';
 import getInitialSources from '../utils/getInitialSources';
 
 const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
@@ -29,8 +33,13 @@ const isToolboxMode = getAppOptionsEditBlocks() === TOOLBOX_BLOCKS;
 
 interface SourcesContextType<T extends ProjectSources = ProjectSources> {
   currentSources: T;
-  updateSources: (newSources: T, forceSave?: boolean) => void;
+  updateSources: (
+    newSourcesOrUpdater: T | ((prev: T) => T),
+    forceSave?: boolean
+  ) => void;
   showStartOverDialog: (type: MessageType, message?: string) => void;
+  setReinitializationHandler: (handler: () => void) => void;
+  startOver: () => void;
 }
 
 const SourcesContext = createContext<SourcesContextType | null>(null);
@@ -46,21 +55,68 @@ export function useSources<T extends ProjectSources = ProjectSources>() {
   return context as unknown as SourcesContextType<T>;
 }
 
+interface SourcesContainerProps extends LabProps {
+  children: ReactNode;
+  defaultSources: ProjectSources;
+  /**
+   * Optionally supply a custom ProjectManager to use in place of the Lab2Registry's ProjectManager.
+   * Currently only used in very specific multi-project scenarios.
+   */
+  projectManager?: ProjectManager;
+}
+
 /**
  * Manages sources for a Lab.
  */
-const SourcesContainer: React.FC<
-  LabProps & {children: ReactNode; defaultSources: ProjectSources}
-> = ({levelProperties, initialSources, defaultSources, children}) => {
+const SourcesContainer: React.FC<SourcesContainerProps> = ({
+  levelProperties,
+  initialSources,
+  defaultSources,
+  children,
+  projectManager,
+}) => {
   const [currentSources, setCurrentSources] = useState<ProjectSources>(
     () => getInitialSources(levelProperties, initialSources) || defaultSources
   );
 
+  // When we use this value to decide whether to save sources or not,
+  // we want to make sure that we have the most up-to-date version of the readonly state of the workspace.
+  // In order to achieve this, we re-fetch the current value and save it to a ref on each render.
+  const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const readonlyWorkspaceRef = useRef(readonlyWorkspace);
+  readonlyWorkspaceRef.current = readonlyWorkspace;
+
+  const [startOverProps, setStartOverProps] = useState<{
+    type: MessageType;
+    message?: string;
+  }>();
+
+  const reinitializationHandler = useRef<() => void>();
+  const setReinitializationHandler = useCallback((handler: () => void) => {
+    reinitializationHandler.current = handler;
+  }, []);
+
+  const reinitializeSources = useCallback(
+    (sources: ProjectSources, save: boolean = false) => {
+      setCurrentSources(sources);
+      if (save && !readonlyWorkspaceRef.current) {
+        (
+          projectManager || Lab2Registry.getInstance().getProjectManager()
+        )?.save(sources, true);
+      }
+
+      if (reinitializationHandler.current) {
+        reinitializationHandler.current();
+      }
+    },
+    [projectManager, setCurrentSources, reinitializationHandler]
+  );
+
   useEffect(() => {
-    setCurrentSources(
+    reinitializeSources(
       getInitialSources(levelProperties, initialSources) || defaultSources
     );
-  }, [levelProperties, initialSources, defaultSources]);
+  }, [reinitializeSources, levelProperties, initialSources, defaultSources]);
 
   // Sources to reset to when starting over. Depends on the level edit mode.
   const startOverSources: ProjectSources = useMemo(() => {
@@ -77,31 +133,45 @@ const SourcesContainer: React.FC<
       : ((templateSources || startSources || defaultSources) as ProjectSources);
   }, [defaultSources, levelProperties]);
 
+  // In order to avoid possible stale state updates,
+  // we support passing a function that can take in the most up-to-date state as an argument
+  // and return new state.
   const updateSources = useCallback(
-    (newSources: ProjectSources, forceSave = false) => {
+    (
+      newSourcesOrUpdater:
+        | ProjectSources
+        | ((prev: ProjectSources) => ProjectSources),
+      forceSave = false
+    ) => {
       setCurrentSources(prev => {
+        // Handle both direct value and updater function
+        const newSources =
+          typeof newSourcesOrUpdater === 'function'
+            ? newSourcesOrUpdater(prev)
+            : newSourcesOrUpdater;
+
         // Perform a deep equality check to prevent unnecessary re-renders
         if (isEqual(prev, newSources)) {
           return prev;
         }
+
+        // Save if needed
+        if (!readonlyWorkspaceRef.current) {
+          (
+            projectManager || Lab2Registry.getInstance().getProjectManager()
+          )?.save(newSources, forceSave);
+        }
+
         return newSources;
       });
-      Lab2Registry.getInstance()
-        .getProjectManager()
-        ?.save(newSources, forceSave);
     },
-    [setCurrentSources]
+    [setCurrentSources, projectManager]
   );
 
   const onStartOver = useCallback(() => {
-    updateSources(startOverSources as ProjectSources, true);
+    reinitializeSources(startOverSources as ProjectSources, true);
     setStartOverProps(undefined);
-  }, [startOverSources, updateSources]);
-
-  const [startOverProps, setStartOverProps] = useState<{
-    type: MessageType;
-    message?: string;
-  }>();
+  }, [reinitializeSources, startOverSources]);
 
   const showStartOverDialog = useCallback(
     (type: MessageType, message?: string) => {
@@ -112,7 +182,13 @@ const SourcesContainer: React.FC<
 
   return (
     <SourcesContext.Provider
-      value={{currentSources, updateSources, showStartOverDialog}}
+      value={{
+        currentSources,
+        updateSources,
+        showStartOverDialog,
+        setReinitializationHandler,
+        startOver: onStartOver,
+      }}
     >
       {children}
       {startOverProps && (

@@ -1,6 +1,5 @@
 <Panels>
   <config><![CDATA[{
-  "published": true,
   "game_id": 73,
   "created_at": "2025-07-08T13:15:55.000Z",
   "level_num": "custom",
@@ -49,8 +48,10 @@
     ],
     "bubble_choice_description": "Review how to use Play Sequential when creating songs",
     "display_name": "Play Sequential",
-    "name_suffix": "_v2"
+    "name_suffix": "_v2",
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-07-08T13:15:55.275+00:00\",\"changed\":[\"cloned from \\\"music-lab-triggers-panel_v2\\\"\"],\"cloned_from\":\"music-lab-triggers-panel_v2\"},{\"changed_at\":\"2025-07-08 13:23:21 +0000\",\"changed\":[\"offer_browser_tts\",\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2025-07-08 13:23:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Panels>

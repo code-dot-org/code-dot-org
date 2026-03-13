@@ -1,0 +1,102 @@
+{
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/2": {
+    "long_instructions": "### Get started!\n\n1.  Choose an effect on the **set background effect** block. \n\n2.  Press the Run button.",
+    "callouts": {
+      "ai_dance_callout_draft_level_02": "⬆️ Start here."
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/3": {
+    "long_instructions": "### Use AI to design your dancer\n\nA prompt is an instruction that tells AI what to do.\n\n1.  Modify the prompt below.\n2.  Press Generate dancer."
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/4": {
+    "long_instructions": "### Use a prompt with more details\n\nExtra details help AI create what you have in mind."
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/5": {
+    "panels": {
+      "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1": "### Behind the scenes\n\nHow does AI make a dancer from your words?",
+      "Generate_dancer_info-93102ee9-aa96-4429-aafb-52f8fe7fd787": "**AI went through a training process**\n\nIn training, it looked at millions of pictures and their descriptions.",
+      "Generate_dancer_info-35731f8b-92f2-4309-954a-d8481cc58b14": "**AI learned from examples**\n\nThe AI noticed similarities in the images it trained on.",
+      "HoAI_pilot_5_dancer_info-0ae6fab6-0f3d-4751-bd68-31f5bc186f74": "**AI makes predictions**\n\nWhen you give the AI a **prompt**, it starts by predicting one detail after another.",
+      "Generate_dancer_info-07287924-c7c1-45c4-86e6-1dc2621827a0": "**AI generates something new**\n\nBy predicting detail after detail, it generates full images, like a new dancer!",
+      "Generate_dancer_info_2-571b0646-acfe-4ce0-804b-d73443dba600": "**AI isn’t magic… it’s math**\n\nAI may seem creative, but it's not.  It uses math to make predictions based on its training data.",
+      "mix-move-ai-panels-image-generation-820e42fb-c1e5-4a49-82e8-ff3ea26fa595": "**You’re in charge**\n\nWhat AI creates might be surprising, but you get to decide what to keep."
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/6": {
+    "long_instructions": "### Finish your lead dancer\n\nModify the prompt with even more details."
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/7": {
+    "long_instructions": "### Choose a dance move!\n\n1.  Change the move on the **dancer do move** block.\n\n2.  Press the Run button.",
+    "authored_hints": {
+      "HInt2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> The dancer should be the same on both blocks and the sequence (order) is important.  ",
+      "validation": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Add these blocks to <code style=\"color:white; background-color:#FFBD46\">setup</code> to create your first dancer: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">MOVES.Roll</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/8": {
+    "panels": {
+      "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1": "### Next up…\n\nCode a custom music mix for your dance performance."
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/9": {
+    "long_instructions": "### Make music with code!\n\n1.  Drag two or more **play** blocks under **when run**.\n\n2.  Choose two different sounds.\n\n3.  Press Run to start the music.",
+    "validations": {
+      "music-ai-skill-sequence_d6a47c71-67df-4b83-950a-71b503c6cdb6": "That sounds great! ",
+      "music-ai-skill-sequence2_3_cc846575-fc94-438c-a446-41ca46e828a2": "That sounds great! ",
+      "music-ai-skill-sequence2_3_a73de379-9a46-4c14-8cbf-e4af5ec56370": "That sounds great! ",
+      "music-ai-skill-sequence2_3_4116f123-a6d2-499e-bd1e-aa81bdb77b6d": "That sounds great! ",
+      "music-ai-skill-sequence2_3_bdf7ebe3-6e7c-41e2-950c-e7fbeaffeff2": "That sounds great! ",
+      "music-ai-skill-sequence2_3_0f4e2e3e-fbf3-4fb6-98f7-890d38a2e280": "That sounds great! ",
+      "music-ai-skill-sequence2_3_1aca0f88-2ab4-41e0-a026-8a3bbbd5cbd4": "That sounds great! ",
+      "music-ai-skill-sequence2_3_ab984b1f-77bb-4212-b9b2-7f01679e3bca": "That sounds great! ",
+      "music-ai-skill-sequence2_3_42073586-a6b1-4601-8537-f251f003dbd4": "That sounds great! ",
+      "music-ai-skill-sequence2_3_1e873460-2b14-4dd3-b75a-a97489b29c58": "<i class=\"fa-solid fa-lightbulb\"></i> Did you know you can change the sound? Click on the sound's name. ",
+      "music-ai-skill-sequence2_e3a14922-603d-4ea2-8eaf-4e9ce817f651": "<i class=\"fa-solid fa-lightbulb\"></i> You played one sound, now add another [sound][0]. ",
+      "music-ai-skill-sequence_100f6390-0a0c-4ff7-bc67-2979e4beed57": "<i class=\"fa-solid fa-lightbulb\"></i> Drag at least two [play][0] blocks under [when run][1]. "
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/10": {
+    "long_instructions": "### Layer the sounds\n\n1.  Add another sound into the **play together** block\n2.  Press Run",
+    "validations": {
+      "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b": "Those sounds are great together!",
+      "music-ai-skill-playtogether_7d85508c-951f-4734-8c97-9c67745a4207": "<i class=\"fa-solid fa-lightbulb\"></i> Add another [play][0] block into the [play together][1] block. ",
+      "music-ai-skill-playtogether_795b9999-0f45-441c-bd81-23af6c157f81": "<i class=\"fa-solid fa-lightbulb\"></i> Try playing two different [sounds][0] in the [play together][1] block.",
+      "music-ai-skill-playtogether_36540a11-c67f-47da-bb3a-e2bb6181e9d1": "<i class=\"fa-solid fa-lightbulb\"></i> No sounds have played yet. Add two [play][0] blocks _into_ the [play together][1] block."
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/11": {
+    "long_instructions": "### Use AI to code a music mix\n\nModify the prompt, then press Generate code."
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/12": {
+    "panels": {
+      "Generate_dancer_info-e349bed8-89d6-4efc-8a0e-29b8a1e5afb1": "### Behind the scenes\n\nHow does AI generate code from your words?",
+      "Generate_dancer_more_details-0bf87b05-fdcb-4acc-b8d2-5455e69d6e87": "**AI went through a training process**\n\nIn training, it read huge amounts of text, like books, computer programs, and articles from the internet.",
+      "Generate_dancer_more_details-48f5d03d-6aff-4230-bbc0-75fbac278d9c": "**AI learned from examples**\n\nAI noticed patterns in how words usually go together and learned to predict the next word.",
+      "Generate_dancer_more_details-f7defbff-6781-4fcd-ba98-bb4e03422fd5": "**AI makes predictions**\n\nWhen you give AI some starting words, it predicts how to respond, one word after another.",
+      "Generate_dancer_more_details-1af42de1-d2bc-4653-9e86-16d56ff2ceb3": "**AI generates something new**\n\nIn this way, it generates full sentences, whole conversations, and even Music Lab code!",
+      "Generate_dancer_more_details-90264270-422b-4ad6-86cd-c9c12253b4a6": "**AI isn’t magic… it’s math**\n\nRemember, AI doesn’t think or feel — it just uses math to make predictions based on its training data.",
+      "mix-move-ai-panels-code-generation-82688fba-1792-4158-b4fb-1bf0890f67d4": "**You’re in charge**\n\nAlways check what AI wrote. You decide what to keep or change!"
+    }
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/13": {
+    "long_instructions": "### Code the music mix for your dance\n\nModify the prompt with more details, then press Generate code."
+  },
+  "https://studio.code.org/s/mix-move-ai-2025/lessons/1/levels/14": {
+    "dsls": {
+      "description": "Your dancer is ready. Your music remix is ready. Now you're ready to generate code for the dance party!",
+      "display_name": "Time to party!"
+    },
+    "sublevels": {
+      "mix-move-ai-dance-prompt-3-input-choice": {
+        "display_name": "Generate the dance",
+        "bubble_choice_description": "Finish your dance party by generating code for the dance moves! ",
+        "long_instructions": "### Use AI to code your dance\r\nModify the prompt, then press Generate code."
+      },
+      "mix-move-ai-dancer-prompt-4-input-choice": {
+        "long_instructions": "### Finish your lead dancer\r\nModify the prompt with more details."
+      },
+      "mix-move-ai-music-prompt-3-input-choice": {
+        "long_instructions": "### Code the music mix for your dance\r\nModify the prompt with more details, then press Generate code."
+      }
+    }
+  }
+}

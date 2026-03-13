@@ -24,13 +24,13 @@ When(/^I click block "([^"]*)"$/) do |block|
   @browser.execute_script("$(\".blocklySvg [#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
-# This helps click on a field in Google Blockly. It always picks the first element from the list generated
+# This helps click on a field in Blockly. It always picks the first element from the list generated
 # by the selector.
 When(/^I click block field "([^"]*)"$/) do |selector|
   steps "Then I click block field \"#{selector}\" number 0"
 end
 
-# This helps click on a field in Google Blockly.
+# This helps click on a field in Blockly.
 When(/^I click block field "([^"]*)" number (\d+)$/) do |selector, index|
   code = <<~CODE
     $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
@@ -114,7 +114,6 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
 end
 
-# This function only works for Google Blockly
 Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
   @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
 end
@@ -280,7 +279,6 @@ Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
   @browser.execute_script(script)
 end
 
-# This only works for Google Blockly
 Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
   script = "
     Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
@@ -288,13 +286,11 @@ Then(/^I click block field that is number (.*?) in the list of blocks and number
   @browser.execute_script(script)
 end
 
-# This only works for Google Blockly
 Then(/^the open flyout has (.*?) blocks$/) do |n|
   script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
   expect(@browser.execute_script(script)).to eq(n.to_i)
 end
 
-# This only works for Google Blockly
 Then(/^the function editor workspace has (\d+) blocks$/) do |n|
   script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
   expect(@browser.execute_script(script)).to eq(n)

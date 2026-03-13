@@ -1,10 +1,18 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import markdownToTxt from 'markdown-to-txt';
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  MutableRefObject,
+} from 'react';
 import Typist from 'react-typist';
 
 import TextToSpeech from '@cdo/apps/lab2/views/components/TextToSpeech';
+import localization from '@cdo/apps/localization';
 
 import {queryParams} from '../code-studio/utils';
 import FontAwesome from '../legacySharedComponents/FontAwesome';
@@ -71,7 +79,10 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   const [typingDone, setTypingDone] = useState(false);
   const {cancel} = useBrowserTextToSpeech();
 
+  const contentRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
   const lastPanelStartTime = useRef<number>(Date.now());
+  const nextButtonRef = useRef<HTMLButtonElement>(null);
 
   targetWidth -= horizontalMargin * 2;
   targetHeight -= verticalMargin * 2 + childrenAreaHeight;
@@ -159,6 +170,18 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
   }, [currentPanelIndex, setTypingDone]);
 
   const panel = panels[currentPanelIndex];
+  const showTyping =
+    panel?.typing || queryParams('panels-show-typing') === 'true';
+
+  // When typing, only show the button when the typing is done.
+  const showButton = !showTyping || typingDone;
+
+  useEffect(() => {
+    if (showButton) {
+      nextButtonRef.current?.focus();
+    }
+  }, [showButton, currentPanelIndex]);
+
   if (!panel) {
     return null;
   }
@@ -191,12 +214,6 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
 
   const plainText = markdownToTxt(panel.text);
 
-  const showTyping =
-    panel.typing || queryParams('panels-show-typing') === 'true';
-
-  // When typing, only show the button when the typing is done.
-  const showButton = !showTyping || typingDone;
-
   return (
     <div
       id="panels-container"
@@ -208,26 +225,35 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
           <div
             className={styles.image}
             style={{
-              backgroundImage: `url("${previousPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(
+                previousPanel.imageUrl,
+                ['lz-image']
+              )}")`,
             }}
           />
         )}
         <div
           className={classNames(styles.image, styles.imageCurrent)}
           style={{
-            backgroundImage: `url("${panel.imageUrl}")`,
+            backgroundImage: `url("${localization.translate(panel.imageUrl, [
+              'lz-image',
+            ])}")`,
           }}
         />
         {nextPanel && (
           <div
             className={classNames(styles.image, styles.imageInvisible)}
             style={{
-              backgroundImage: `url("${nextPanel.imageUrl}")`,
+              backgroundImage: `url("${localization.translate(
+                nextPanel.imageUrl,
+                ['lz-image']
+              )}")`,
             }}
           />
         )}
         {panel.text && (
           <div
+            ref={contentRef}
             className={classNames(
               styles.text,
               panel.dark && styles.textDark,
@@ -237,7 +263,7 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
             {offerBrowserTts && (
               // Override the theme since the text container is always white.
               <div className={styles.ttsContainer} data-theme="Light">
-                <TextToSpeech text={panel.text} />
+                <TextToSpeech contentRef={contentRef} />
               </div>
             )}
             {showTyping ? (
@@ -267,16 +293,22 @@ const PanelsView: React.FunctionComponent<PanelsProps> = ({
         style={{width: width, height: childrenAreaHeight}}
       >
         {showButton && (
-          <Button
-            key={`button-${currentPanelIndex}`}
-            id="panels-button"
-            onClick={handleButtonClick}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             className={classNames(
               styles.button,
               showTyping ? styles.buttonReady : styles.buttonDelay
             )}
-            text={buttonText}
-          />
+            id="panels-button"
+            onClick={handleButtonClick}
+            type="button"
+            ref={nextButtonRef}
+            key={`button-${currentPanelIndex}`}
+          >
+            {buttonText}
+          </MuiButton>
         )}
 
         {panels.length > 1 && (

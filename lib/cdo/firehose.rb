@@ -4,6 +4,7 @@ require 'aws-sdk-firehose'
 require 'active_support/core_ext/module/attribute_accessors'
 
 # A wrapper client to the AWS Firehose service.
+# @deprecated We will be deprecating Firehose in favor of a different analytics solution. Please do not add new uses of this module.
 class FirehoseClient
   include Singleton
 
@@ -124,6 +125,7 @@ class FirehoseClient
   # Posts a record to the analytics stream.
   # @param stream [Symbol] The Firehose Stream to send the data to. A Symbol in the STREAMS hash.
   # @param data [Hash] The data to insert into the stream.
+  # @deprecated We will be deprecating Firehose in favor of a different analytics solution. Please do not add new uses of this module.
   def put_record(stream, data)
     return unless Gatekeeper.allows('firehose', default: true)
     raise ArgumentError.new("stream must be defined") if stream.nil? || stream.blank?

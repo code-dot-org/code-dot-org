@@ -3,13 +3,17 @@ import {prepareSourceForLevelbuilderSave} from '@codebridge/utils';
 import {useEffect, useMemo, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
-import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {START_SOURCES, WIDGET2_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {setProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  setProjectSource,
+  setProjectSourceLevelId,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {setAndSaveProjectSources} from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
@@ -30,6 +34,7 @@ export const useSource = (
     state => state.lab2Project.projectSources?.source as MultiFileSource
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isWidget2SourcesMode = getAppOptionsEditBlocks() === WIDGET2_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const {
     initialSources,
@@ -73,6 +78,16 @@ export const useSource = (
           prepareSourceForLevelbuilderSave(source);
         return {start_sources: parsedSource, validation_file: validationFile};
       });
+    } else if (isWidget2SourcesMode) {
+      header.showLevelBuilderSaveButton(
+        () => {
+          const {parsedSource, validationFile} =
+            prepareSourceForLevelbuilderSave(source);
+          return {start_sources: parsedSource, validation_file: validationFile};
+        },
+        'edit widget2 code',
+        `/widget2/${queryParams('widget2')}/update_code`
+      );
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
         () => ({exemplar_sources: source}),
@@ -80,7 +95,13 @@ export const useSource = (
         `/levels/${levelId}/update_exemplar_code`
       );
     }
-  }, [isStartMode, isEditingExemplarMode, source, levelId]);
+  }, [
+    isStartMode,
+    isEditingExemplarMode,
+    source,
+    levelId,
+    isWidget2SourcesMode,
+  ]);
 
   useEffect(() => {
     // We reset the project when the levelId changes, as this means we are on a new level.
@@ -100,13 +121,14 @@ export const useSource = (
           .getProjectManager()
           ?.setLastSource(initialSources);
         setSourceHelper(initialSources);
+        dispatch(setProjectSourceLevelId(levelId));
       }
       if (levelId) {
         previousLevelIdRef.current = levelId;
       }
       previousInitialSources.current = initialSources;
     }
-  }, [initialSources, levelId, setSourceHelper]);
+  }, [dispatch, initialSources, levelId, setSourceHelper]);
 
   return {
     startSources,

@@ -24,8 +24,11 @@ class SectionsController < ApplicationController
 
   def log_in
     if user = User.authenticate_with_section(section: @section, params: params)
-      bypass_sign_in user
-      user.update_tracked_fields!(request)
+      unless user == current_user
+        bypass_sign_in user
+        user.update_tracked_fields!(request)
+      end
+
       session[:show_pairing_dialog] = true if params[:show_pairing_dialog]
       redirect_to_section_script_or_course
     else

@@ -70,6 +70,7 @@
     ],
     "teacher_markdown": "Two new code blocks are introduced in this level: `getProperty` and `getText`. Students may notice these new blocks are being used with variables, and may predict they are being used to get user input from the screen. They may also notice there are new design elements: text inputs, dropdowns, and sliders. Try to push students to notice that the variables from `getText` and `getProperty` are used again later in the code to update the screen using `setText` and `setProperty` blocks.",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

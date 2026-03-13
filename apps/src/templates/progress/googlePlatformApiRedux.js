@@ -1,5 +1,3 @@
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 /*
  * The Google Classroom Share Button is only available through the google
  * platform api, so we have to add it to our page on load. We manage loading
@@ -37,27 +35,13 @@ export function loadGooglePlatformApi() {
 }
 
 function onLoadFinished(success, promise) {
-  return (dispatch, getState) => {
+  return dispatch => {
     dispatch(finishLoadingGapi(success));
     if (success) {
       promise.resolve();
     } else {
       promise.reject('Google Platform API failed to load.');
     }
-
-    const data = {
-      success: success,
-      load_time: elapsedLoadTimeSeconds(getState),
-    };
-    firehoseClient.putRecord(
-      {
-        study: 'google-classroom-share-button',
-        study_group: 'v0',
-        event: 'api_load_finished',
-        data_json: JSON.stringify(data),
-      },
-      {includeUserId: true}
-    );
   };
 }
 
@@ -122,15 +106,6 @@ function elapsedLoadTimeMillis(getState) {
     return Date.now() - startTime;
   } else {
     return -1;
-  }
-}
-
-function elapsedLoadTimeSeconds(getState) {
-  const millis = elapsedLoadTimeMillis(getState);
-  if (millis >= 0) {
-    return Math.round(millis / 1000);
-  } else {
-    return null;
   }
 }
 

@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {act, render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import '@testing-library/jest-dom';
@@ -19,12 +19,20 @@ import {
 
 const mockDispatch = jest.fn();
 const mockSubmitChatContents = jest.fn();
-let mockState: {aichat: Partial<AichatState>} = {
+let mockState: {
+  aichat: Partial<AichatState>;
+  pageConstants?: {
+    locale: string;
+  };
+} = {
   aichat: {
-    chatMessagePending: undefined,
+    chatEventsCurrent: [],
     saveInProgress: false,
     stagedFiles: [],
     userAddedSelectionContext: {},
+  },
+  pageConstants: {
+    locale: 'en_us',
   },
 };
 
@@ -36,6 +44,7 @@ jest.mock('@cdo/apps/util/reduxHooks', () => ({
 
 jest.mock('@cdo/apps/aichat/redux', () => ({
   __esModule: true,
+  ...jest.requireActual('@cdo/apps/aichat/redux'),
   submitChatContents: (...args: unknown[]) => mockSubmitChatContents(...args),
 }));
 
@@ -48,6 +57,7 @@ describe('UserChatMessageEditor', () => {
       retrievalContexts: [],
     },
     clientType: AiChatClientTypes.AI_TUTOR,
+    currentLevelId: 'level1',
   };
 
   beforeEach(() => {
@@ -55,7 +65,7 @@ describe('UserChatMessageEditor', () => {
     mockSubmitChatContents.mockReset();
     mockState = {
       aichat: {
-        chatMessagePending: undefined,
+        chatEventsCurrent: [],
         saveInProgress: false,
         stagedFiles: [],
         userAddedSelectionContext: {},
@@ -80,9 +90,13 @@ describe('UserChatMessageEditor', () => {
   });
 
   it('disables editor when chat response is pending', async () => {
-    mockState.aichat.chatMessagePending = {
-      status: 'unknown',
-    } as PendingChatMessage;
+    mockState.aichat.chatEventsCurrent = [
+      {
+        status: 'unknown',
+        role: 'user',
+        chatMessageText: 'what is up?',
+      } as PendingChatMessage,
+    ];
 
     render(<UserChatMessageEditor {...baseProps} />);
 
@@ -102,7 +116,9 @@ describe('UserChatMessageEditor', () => {
 
     await user.click(textarea);
     await user.type(textarea, 'Hello bot');
-    await user.keyboard('{Enter}');
+    await act(async () => {
+      await user.keyboard('{Enter}');
+    });
 
     expect(mockSubmitChatContents).toHaveBeenCalledTimes(1);
     // First arg is the payload object
@@ -160,12 +176,31 @@ describe('UserChatMessageEditor', () => {
       commonI18n.aiUserMessagePlaceholder()
     );
     await user.type(textarea, 'Use my image');
-    await user.keyboard('{Enter}');
+    await act(async () => {
+      await user.keyboard('{Enter}');
+    });
 
     expect(mockSubmitChatContents).toHaveBeenCalledTimes(1);
     expect(mockSubmitChatContents.mock.calls[0][0]).toMatchObject({
       text: 'Use my image',
       assets: [file],
     });
+  });
+
+  it('clears the un-submitted user message when the level changes', async () => {
+    const user = userEvent.setup();
+
+    const {rerender} = render(<UserChatMessageEditor {...baseProps} />);
+
+    const textarea = screen.getByPlaceholderText(
+      commonI18n.aiUserMessagePlaceholder()
+    );
+    await user.type(textarea, 'Here is a message that should clear');
+
+    expect(textarea).toHaveValue('Here is a message that should clear');
+
+    rerender(<UserChatMessageEditor {...baseProps} currentLevelId="level2" />);
+
+    expect(textarea).toHaveValue('');
   });
 });

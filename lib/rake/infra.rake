@@ -99,7 +99,7 @@ namespace :infra do
 
   timed_task_with_logging test: [
     :all,
-    'test:ci'
+    'test:qa'
   ]
 
   desc 'Update the server as part of continuous integration.'

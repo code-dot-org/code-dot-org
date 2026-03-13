@@ -69,6 +69,7 @@
     "video_key": "csp_applab_conditionals_2A",
     "name_suffix": "_2025",
     "teacher_markdown": "**Supporting Students:** These levels are similar to similar customizations students completed in previous lessons. If students get stuck, consider referring them to these previous lessons:\r\n- Adding multiple screens for the resulting prediction: [Lesson 10 - Model Cards in App Lab](../../../../10/levels/5)",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -100,7 +100,14 @@ class FollowersController < ApplicationController
   end
 
   private def redirect_url
-    params[:redirect] || student_user_new_path
+    uri = URI.parse(params[:redirect])
+    if (uri.host.nil? && uri.path.present? && uri.path.start_with?('/')) || (uri.host == CDO.dashboard_site_host)
+      uri.to_s
+    else
+      student_user_new_path
+    end
+  rescue URI::InvalidURIError
+    student_user_new_path
   end
 
   private def load_section

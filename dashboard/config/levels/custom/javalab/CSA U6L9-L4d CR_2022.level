@@ -15,7 +15,7 @@
     "display_name": "Most Common Word",
     "bubble_choice_description": "Find which word occurs the most often in text.",
     "thumbnail_url": "https://images.code.org/f79d52ac2e1d4796dd7b6cf6838163fe-computer.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:41:07.480+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4c CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4c CR_2022\"},{\"changed_at\":\"2022-04-14 19:41:09 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:30:19 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 21:28:21 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-07 13:12:22 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:39 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

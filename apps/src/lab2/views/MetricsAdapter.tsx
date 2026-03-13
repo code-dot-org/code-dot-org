@@ -5,6 +5,8 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {Callback, LifecycleEvent} from '@cdo/apps/lab2/utils';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import {useLevelProperties} from './LevelPropertiesWrapper';
+
 /**
  * Listens for Redux state changes and updates the Lab2MetricsReporter accordingly.
  * Reports errors whenever the pageError state is updated, and reports a LevelLoad
@@ -12,7 +14,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
  */
 const MetricsAdapter: React.FunctionComponent = () => {
   const channelId = useAppSelector(state => state.lab.channel?.id);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const appName = useLevelProperties().levelProperties.appName;
   const currentLevelId = useAppSelector(
     state => state.progress.currentLevelId || undefined
   );

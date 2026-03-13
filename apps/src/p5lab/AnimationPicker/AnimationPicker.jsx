@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
@@ -226,24 +226,52 @@ class AnimationPicker extends React.Component {
           pendingUploadData: data,
         });
 
+        MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
+          {name: 'AppName', value: this.props.projectType || 'unknown'},
+          {name: 'UploaderType', value: 'AnimationPicker'},
+        ]);
+        analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: this.props.projectType,
+        });
+
         HttpClient.post(`/v3/images/moderate`, file, true, {
           'Content-Type': file.type,
         })
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) {
+              MetricsReporter.logError(
+                'Error with image moderation: HTTP error'
+              );
+              MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
+                {name: 'AppName', value: this.props.projectType || 'unknown'},
+                {name: 'UploaderType', value: 'AnimationPicker'},
+              ]);
+              this.props.onUploadError(msg.animationPicker_uploadingError());
+              return null;
+            }
+            return response.json();
+          })
           .then(json => {
+            if (!json) return; // Skip if an HTTP error occurred.
+
+            MetricsReporter.incrementCounter('ModerateCustomImage.Success', [
+              {name: 'AppName', value: this.props.projectType || 'unknown'},
+              {name: 'UploaderType', value: 'AnimationPicker'},
+            ]);
             // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
             if (json.rating !== 'everyone' && json.rating !== 'unknown') {
               this.setState({
                 showFlaggedModal: true,
               });
-              analyticsReporter.sendEvent(
-                EVENTS.FLAGGED_CUSTOM_IMAGE,
-                {
-                  UploaderType: 'Animation Picker',
-                  ProjectType: this.props.projectType,
-                },
-                PLATFORMS.STATSIG
-              );
+              analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
+                UploaderType: 'Animation Picker',
+                ProjectType: this.props.projectType,
+              });
+              MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
+                {name: 'AppName', value: this.props.projectType || 'unknown'},
+                {name: 'UploaderType', value: 'AnimationPicker'},
+              ]);
             } else {
               // If the image is rated 'everyone' or 'unknown', continue with upload.
               this.props.onUploadStart(this.state.pendingUploadData);
@@ -251,7 +279,11 @@ class AnimationPicker extends React.Component {
           })
           .catch(err => {
             this.props.onUploadError(msg.animationPicker_uploadingError());
-            MetricsReporter.logError('Azure image moderation error: ' + err);
+            MetricsReporter.logError('Error with image moderation: ' + err);
+            MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
+              {name: 'AppName', value: this.props.projectType || 'unknown'},
+              {name: 'UploaderType', value: 'AnimationPicker'},
+            ]);
           });
       })
       .catch(err => {
@@ -279,14 +311,10 @@ class AnimationPicker extends React.Component {
           pendingUploadData: null,
         });
         this.props.disableUploads();
-        analyticsReporter.sendEvent(
-          EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE,
-          {
-            UploaderType: 'Animation Picker',
-            ProjectType: this.props.projectType,
-          },
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(EVENTS.ACCEPT_FLAGGED_CUSTOM_IMAGE, {
+          UploaderType: 'Animation Picker',
+          ProjectType: this.props.projectType,
+        });
       })
       .catch(err => {
         this.setState({
@@ -303,11 +331,10 @@ class AnimationPicker extends React.Component {
       pendingUploadData: null,
       flaggedModalError: null,
     });
-    analyticsReporter.sendEvent(
-      EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE,
-      {UploaderType: 'Animation Picker', ProjectType: this.props.projectType},
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.CANCEL_FLAGGED_CUSTOM_IMAGE, {
+      UploaderType: 'Animation Picker',
+      ProjectType: this.props.projectType,
+    });
     this.props.onClose(); // Close the entire AnimationPicker
   };
 

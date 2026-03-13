@@ -21,6 +21,12 @@ declare const DEBUG_MINIFIED: number;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare const stylelint: any;
 
+// Imported markdown files are treated as raw strings
+declare module '*.md' {
+  const content: string;
+  export = content;
+}
+
 // Imported static files are treated as strings
 declare module '*.png' {
   const value: string;
@@ -35,6 +41,20 @@ declare module '*.svg' {
 declare module '*.gif' {
   const value: string;
   export = value;
+}
+
+type WebLabInstance = {
+  getCode: () => Promise<string>;
+  channel?: string;
+};
+
+interface Window {
+  getWebLab?: () => WebLabInstance | undefined;
+  appOptions?: {
+    level?: {
+      aiTutorAvailable?: boolean;
+    };
+  };
 }
 
 // Modules without types

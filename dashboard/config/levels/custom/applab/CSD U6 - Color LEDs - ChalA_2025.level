@@ -100,6 +100,7 @@
     "bubble_choice_description": "Light up a random LED light whenever the mouse moves",
     "thumbnail_url": "https://images.code.org/5f14092abd02801a9a1f85a7c9e50cdc-image-1648762443382.8.a-preview.gif",
     "encrypted_examples": "eaYabnU1owRBwFW9G/7YE3L/l1qu5GUmWi4WfwNp9yP5L7wOdHRhW6OBnkFP\n3ZuSOXI+/gEIfa5yAvz2wBi96w==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

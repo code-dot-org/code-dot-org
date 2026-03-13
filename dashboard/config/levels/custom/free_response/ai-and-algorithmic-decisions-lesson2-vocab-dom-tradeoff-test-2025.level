@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-10-24T21:15:55.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Document Object Model (DOM)",
+    "display_name": "Document Object Model (DO",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "thumbnail_url": "https://images.code.org/9792d3c96aa1154e79d2e5907dc0e7ff-dom.jpg",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-24T21:15:55.452+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-vocab-frq-tradeoff-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-vocab-frq-tradeoff-test-2025\"},{\"changed_at\":\"2025-10-24 21:16:14 +0000\",\"changed\":[\"title\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-10-27 14:49:42 +0000\",\"changed\":[\"display_name\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

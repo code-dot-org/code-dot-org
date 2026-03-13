@@ -1,32 +1,11 @@
-import {
-  init,
-  track,
-  Identify,
-  identify,
-  setSessionId,
-  flush,
-  setUserId,
-} from '@amplitude/analytics-browser';
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import DCDO from '@cdo/apps/dcdo';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-// We are transitioning off of a standalone Amplitude project for Music Lab
-// and onto Code.org's main Statsig project.
-// In the short term, we log to both projects to establish parity between the two logging systems.
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
-import cdoAnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import AnalyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {
-  getEnvironment,
-  isDevelopmentEnvironment,
-  isProductionEnvironment,
-} from '@cdo/apps/utils';
 
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
-
-const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
 const blockFeatureList = [
   BlockTypes.FOR_LOOP,
@@ -84,104 +63,36 @@ interface ProjectContext {
 }
 
 /**
- * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
- * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
- * outside of Music Lab, check {@link apps/src/metrics/AnalyticsReporter}.
+ * An analytics reporter specifically used for Music Lab, which tracks Music Lab-specific
+ * session information and forwards events to the global Code.org {@link AnalyticsReporter}.
  */
-export default class AnalyticsReporter {
-  private static initialized = false;
-
-  /**
-   * Temporarily available as a public static method so this reporter can be used outside of the
-   * context of Music Lab, specifically for Panels levels in 2024 Hour of Code progression.
-   * TODO: Remove/consolidate reporters after HOC 2024.
-   */
-  public static async initialize() {
-    if (AnalyticsReporter.initialized) {
-      return;
-    }
-
-    const response = await fetch(API_KEY_ENDPOINT);
-    const responseJson = await response.json();
-
-    if (!responseJson.key) {
-      throw new Error('No key for analytics.');
-    }
-
-    AnalyticsReporter.initialized = true;
-    init(responseJson.key);
-  }
-
+export default class MusicAnalyticsReporter {
   private session: Session | undefined;
   private projectContext: ProjectContext | undefined;
-  private startInProgress: boolean = false;
 
-  async startSession() {
-    // If a session is already in the process of starting, do not start another.
-    if (this.startInProgress) {
-      return;
-    }
-    this.startInProgress = true;
-    // Capture start time before making init call
+  startSession() {
     const startTime = Date.now();
 
-    try {
-      await AnalyticsReporter.initialize();
-      this.session = {
-        startTime,
-        soundsUsed: new Set(),
-        soundsPlayed: {},
-        blockStats: {
-          endingBlockCount: 0,
-          endingTriggerBlockCount: 0,
-          endingTriggerBlocksWithCode: 0,
-          maxBlockCount: 0,
-          maxTriggerBlockCount: 0,
-          maxTriggerBlocksWithCode: 0,
-        },
-        featuresUsed: {},
-      };
-      setSessionId(this.session.startTime);
-      this.log(`Session start. Session ID: ${this.session.startTime}`);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      this.log(`Did not initialize analytics reporter.  (${message})`);
-
-      // Log an error if this is not development. On development, this error is expected.
-      if (!isDevelopmentEnvironment()) {
-        Lab2Registry.getInstance()
-          .getMetricsReporter()
-          .logError(message, error as Error);
-      }
-    }
-
+    this.session = {
+      startTime,
+      soundsUsed: new Set(),
+      soundsPlayed: {},
+      blockStats: {
+        endingBlockCount: 0,
+        endingTriggerBlockCount: 0,
+        endingTriggerBlocksWithCode: 0,
+        maxBlockCount: 0,
+        maxTriggerBlockCount: 0,
+        maxTriggerBlocksWithCode: 0,
+      },
+      featuresUsed: {},
+    };
+    this.log(`Session start. Start time: ${this.session.startTime}`);
     trackEvent('music', 'music_session_start');
-    this.startInProgress = false;
   }
 
   isSessionInProgress() {
     return !!this.session;
-  }
-
-  setUserProperties(userId: number, userType: string, signInState: string) {
-    if (!this.session) {
-      this.log('No session in progress');
-      return;
-    }
-
-    if (userId) {
-      setUserId(this.formatUserId(userId));
-    }
-
-    const identifyEvent = new Identify();
-    identifyEvent.set('userType', userType);
-    identifyEvent.set('signInState', signInState);
-
-    identify(identifyEvent);
-
-    this.log(
-      `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
-    );
   }
 
   setProjectProperty<K extends keyof ProjectContext>(
@@ -193,20 +104,10 @@ export default class AnalyticsReporter {
       return;
     }
 
-    // For Statsig
     if (!this.projectContext) {
       this.projectContext = {};
     }
     this.projectContext[property] = value;
-
-    // For Amplitude
-    const identifyEvent = new Identify();
-    if (value) {
-      identifyEvent.set(property, value);
-    } else {
-      identifyEvent.unset(property);
-    }
-    identify(identifyEvent);
 
     this.log(`Project property: ${property}: ${value}`);
   }
@@ -272,8 +173,7 @@ export default class AnalyticsReporter {
       this.log(logMessage);
     }
 
-    this.sendStatsigEvent(eventType, payload);
-    track(eventType, payload).promise;
+    this.sendEvent(eventType, payload);
   }
 
   onSoundPlayed(id: string) {
@@ -289,7 +189,7 @@ export default class AnalyticsReporter {
     this.session.soundsPlayed[id] = 1 + (this.session.soundsPlayed[id] ?? 0);
   }
 
-  onBlocksUpdated(blocks: GoogleBlockly.Block[]) {
+  onBlocksUpdated(blocks: BlocklyCore.Block[]) {
     if (!this.session) {
       this.log('No session in progress');
       return;
@@ -353,40 +253,19 @@ export default class AnalyticsReporter {
 
     this.session = undefined;
 
-    this.sendStatsigEvent('Session end', payload);
-    track('Session end', payload);
-    flush();
+    this.sendEvent('Session end', payload);
 
     this.log(`Session end. Payload: ${JSON.stringify(payload)}`);
   }
 
   log(message: string) {
-    console.log(`[MUSIC AMPLITUDE ANALYTICS EVENT]: ${message}`);
+    console.log(`[MUSIC ANALYTICS EVENT]: ${message}`);
   }
 
-  private formatUserId(userId: number) {
-    if (!userId) {
-      return 'none';
-    }
-    const userIdString = userId.toString();
-    if (isProductionEnvironment()) {
-      return userIdString.padStart(5, '0');
-    } else {
-      const environment = getEnvironment();
-      return `${environment}-${userIdString}`;
-    }
-  }
-
-  private sendStatsigEvent(eventName: string, payload: object) {
-    // We include project properties as part of the event payload rather than as user properties in Statsig.
-    const combinedPayload = this.projectContext
-      ? {...payload, ...this.projectContext}
-      : payload;
-
-    cdoAnalyticsReporter.sendEvent(
-      `Music Lab ${eventName}`,
-      combinedPayload,
-      PLATFORMS.STATSIG
-    );
+  private sendEvent(eventName: string, payload: object) {
+    AnalyticsReporter.sendEvent(`Music Lab ${eventName}`, {
+      ...payload,
+      ...this.projectContext,
+    });
   }
 }

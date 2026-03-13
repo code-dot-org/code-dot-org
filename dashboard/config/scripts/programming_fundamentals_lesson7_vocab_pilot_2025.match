@@ -1,0 +1,18 @@
+name 'programming-fundamentals-lesson7-vocab_pilot-2025'
+title 'Check Your Understanding'
+description 'Match each term with the correct definition.'
+height '100'
+
+question 'parameter'
+answer 'a placeholder in your function'
+
+question 'function'
+answer 'a named block of code that performs a task'
+
+question 'module'
+answer 'a .py file that contains Python code'
+
+question 'argument'
+answer 'the actual value you pass into a function when you call it'
+
+allow_multiple_attempts true

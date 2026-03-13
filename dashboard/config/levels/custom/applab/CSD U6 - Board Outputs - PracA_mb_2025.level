@@ -75,6 +75,7 @@
     "teacher_markdown": "This level emphasizes how the `randomNumber` block works. Students need to correct each block to say `(0, 4)` to span the entire length of the `ledScreen`.",
     "encrypted_examples": "1TmNvSsn91UhVHa7M5LLzXJjL9iQCitM6Ux26tu4A9KKm34Y3K0FoiVkmscZ\nghAYgY/3I4EnY66LNQh8GCIzzA==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

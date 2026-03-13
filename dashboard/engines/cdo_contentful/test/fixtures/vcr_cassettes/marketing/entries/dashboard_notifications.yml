@@ -2,25 +2,10 @@
 http_interactions:
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/90t6bu6vlf76/environments/master/entries?content_type=dashboard-notification&limit=2&locale=en-US&skip=0
+    uri: https://cdn.contentful.com/spaces/90t6bu6vlf76/environments/master/entries?content_type=dashboard-notification&limit=2&locale=en-US&order=sys.createdAt&skip=0
     body:
       encoding: UTF-8
       string: ''
-    headers:
-      X-Contentful-User-Agent:
-      - sdk contentful.rb/2.18.0; platform ruby/3.1.0; os macOS/24;
-      Authorization:
-      - Bearer YaMMQinGe3DlLoegQDfpdIvcDUXOA8ATwwqC7ugje0o
-      Content-Type:
-      - application/vnd.contentful.delivery.v1+json
-      Accept-Encoding:
-      - gzip
-      Connection:
-      - close
-      Host:
-      - cdn.contentful.com
-      User-Agent:
-      - http.rb/5.2.0
   response:
     status:
       code: 200
@@ -91,25 +76,10 @@ http_interactions:
   recorded_at: Fri, 19 Sep 2025 18:16:34 GMT
 - request:
     method: get
-    uri: https://cdn.contentful.com/spaces/90t6bu6vlf76/environments/master/entries?content_type=dashboard-notification&limit=2&locale=en-US&skip=2
+    uri: https://cdn.contentful.com/spaces/90t6bu6vlf76/environments/master/entries?content_type=dashboard-notification&limit=2&locale=en-US&order=sys.createdAt&skip=2
     body:
       encoding: UTF-8
       string: ''
-    headers:
-      X-Contentful-User-Agent:
-      - sdk contentful.rb/2.18.0; platform ruby/3.1.0; os macOS/24;
-      Authorization:
-      - Bearer YaMMQinGe3DlLoegQDfpdIvcDUXOA8ATwwqC7ugje0o
-      Content-Type:
-      - application/vnd.contentful.delivery.v1+json
-      Accept-Encoding:
-      - gzip
-      Connection:
-      - close
-      Host:
-      - cdn.contentful.com
-      User-Agent:
-      - http.rb/5.2.0
   response:
     status:
       code: 200

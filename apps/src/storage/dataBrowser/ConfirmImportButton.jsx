@@ -1,3 +1,4 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -5,7 +6,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 
 import Dialog from '../../legacySharedComponents/Dialog';
-import PendingButton from '../../legacySharedComponents/PendingButton';
 
 import dataStyles from './data-styles.module.scss';
 
@@ -80,13 +80,24 @@ class ConfirmImportButton extends React.Component {
           onConfirm={this.handleConfirm}
           title={msg.confirmImportOverwriteTitle()}
         />
-        <PendingButton
-          isPending={this.state.isImporting}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
+          loading={this.state.isImporting}
+          disabled={this.state.isImporting}
+          className={classNames(
+            dataStyles.button,
+            dataStyles.buttonText,
+            dataStyles.buttonRightMargin
+          )}
+          id="confirmImportButton"
           onClick={() => this.importFileInput.click()}
-          pendingText={msg.importingWithEllipsis()}
-          className={classNames(dataStyles.button, dataStyles.buttonWhite)}
-          text={msg.importCSV()}
-        />
+          aria-label={msg.importCSV()}
+          type="button"
+        >
+          {msg.importCSV()}
+        </MuiButton>
       </span>
     );
   }

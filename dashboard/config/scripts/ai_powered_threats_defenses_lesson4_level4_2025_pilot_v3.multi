@@ -1,0 +1,17 @@
+name 'ai-powered-threats-defenses-lesson4-level4_2025-pilot_v3'
+title 'AI and Phishing'
+
+question 'What is the primary way AI increases the effectiveness of smishing, phishing, and deepfake scams?'
+
+right 'By generating realistic messages, voices, or videos tailored to the victim'
+wrong 'By making scams look more casual and less scripted'
+wrong 'By ensuring scammers never need real-world information'
+wrong 'By replacing social engineering tactics with automation.'
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+AI improves all three attacks by increasing realism and personalization. AI tools can tailor text messages using personal details (smishing), clone voices to mimic someone familiar (vishing), and generate convincing fake videos (deepfakes). This makes the scams more believable and harder to detect across multiple formats.
+- If students select B, revisit the smishing example from Level 1 and emphasize that AI makes messages more personalized, not necessarily more casual.
+- If students select C, review how attackers use real data (names, relationships, recent events) to strengthen deception across all three scam types.
+- If students select D, reinforce that AI does not replace social engineering tactics — it enhances them by making impersonation more convincing.
+MARKDOWN

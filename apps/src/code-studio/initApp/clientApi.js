@@ -241,15 +241,15 @@ function errorString(request, status, error, details = null) {
   );
 }
 
-module.exports = {
-  /**
-   * Create a ClientApi instance with the given base URL.
-   * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
-   * @returns {ClientApi}
-   */
-  create: function (url) {
-    return _.assign({}, base, {
-      api_base_url: url,
-    });
-  },
-};
+/**
+ * Create a ClientApi instance with the given base URL.
+ * @param {!string} url - Custom API base url (e.g. '/v3/netsim')
+ * @returns {ClientApi}
+ */
+function create(url) {
+  return _.assign({}, base, {
+    api_base_url: url,
+  });
+}
+
+export default {create};

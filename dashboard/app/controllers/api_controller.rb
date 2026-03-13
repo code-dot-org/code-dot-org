@@ -69,11 +69,12 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def clever_classrooms
     return head :forbidden unless current_user
 
     uid = current_user.uid_for_provider(AuthenticationOption::CLEVER)
-    query_clever_service("v2.1/teachers/#{uid}/sections") do |response|
+    query_clever_service("users/#{uid}/sections") do |response|
       json = response.map do |section|
         data = section['data']
         {
@@ -88,13 +89,16 @@ class ApiController < ApplicationController
     end
   end
 
+  # TODO: Move to `Api::V1::Roster::Clever::SectionsController`
   def import_clever_classroom
     return head :forbidden unless current_user
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = CleverSection.find_by(code: CleverSection.code_for_section(course_id))
+    return head :forbidden if section.present? && !section_instructor?(section)
 
-    query_clever_service("v2.1/sections/#{course_id}/students") do |students|
+    query_clever_service("sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
       render json: section.summarize
     end
@@ -112,6 +116,8 @@ class ApiController < ApplicationController
     return head :forbidden unless current_user
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = GoogleClassroomSection.find_by(code: GoogleClassroomSection.code_for_section(course_id))
+    return head :forbidden if section.present? && !section_instructor?(section)
 
     query_google_classroom_service do |service|
       students = []
@@ -196,6 +202,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
+        ai_chat_access_level: section.ai_chat_access_level,
         lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
@@ -211,83 +218,6 @@ class ApiController < ApplicationController
     section = load_section
 
     render json: section.selected_section_summarize.merge(section.concise_summarize)
-  end
-
-  use_reader_connection_for_route(:section_progress)
-
-  def section_progress
-    prevent_caching
-    section = load_section
-    script = load_script(section)
-
-    # lesson data
-    lessons = script.script_levels.select {|sl| sl.bonus.nil?}.group_by(&:lesson).map do |lesson, levels|
-      {
-        length: levels.length,
-        title: ActionController::Base.helpers.strip_tags(lesson.localized_title)
-      }
-    end
-
-    script_levels = script.script_levels.select {|sl| sl.bonus.nil?}
-
-    # Clients are seeing requests time out for large sections as we attempt to
-    # send back all of this data. Allow them to instead request paginated data
-    if params[:page] && params[:per]
-      paged_students = section.students.page(params[:page]).per(params[:per])
-      # As designed, if there are 50 students, the client will ask for both
-      # page 1 and page 2, even though page 2 is out of range. However, it should
-      # never ask for page 3
-      if params[:page].to_i > paged_students.total_pages + 1
-        return head :range_not_satisfiable
-      end
-    else
-      paged_students = section.students
-    end
-
-    # student level completion data
-    students = paged_students.map do |student|
-      level_map = student.user_levels_by_level(script)
-      paired_user_level_ids = PairedUserLevel.pairs(level_map.values.map(&:id))
-      student_levels = script_levels.map do |script_level|
-        user_levels = script_level.level_ids.filter_map do |id|
-          contained_levels = Unit.cache_find_level(id).contained_levels
-          if contained_levels.any?
-            level_map[contained_levels.first.id]
-          else
-            level_map[id]
-          end
-        end
-        user_levels_ids = user_levels.map(&:id)
-        level_class = (best_activity_css_class user_levels).dup
-        paired = (paired_user_level_ids & user_levels_ids).any?
-        level_class << ' paired' if paired
-        title = paired ? '' : script_level.position
-        # We use a list rather than a hash here to save ourselves from sending
-        # the field names over the wire (which adds up to a lot of bytes when
-        # multiplied across all the levels)
-        [
-          level_class,
-          title,
-          # we use to build a path that included section_id/user_id. We now let
-          # the client adds these params itself, thus saving ourselves many bytes
-          # over the wire again
-          build_script_level_path(script_level)
-        ]
-      end
-      {id: student.id, levels: student_levels}
-    end
-
-    data = {
-      students: students,
-      script: {
-        id: script.id,
-        name: data_t_suffix('script.name', script.name, 'title'),
-        levels_count: script_levels.length,
-        lessons: lessons,
-      }
-    }
-
-    render json: data
   end
 
   def show_courses_with_progress
@@ -324,7 +254,7 @@ class ApiController < ApplicationController
     # occur when we get the progress for the student twice.  We saw two issues that were caused by
     # having duplicate students in a section AND the number of students being a multiple of the page amount
     # Deduplicating students ensures all data for all students is pulled.
-    deduplicated_students = section.students.distinct
+    deduplicated_students = section.students.distinct.order(:id)
     paged_students = deduplicated_students.page(page).per(per)
     # As designed, if there are 50 students, the client will ask for both
     # page 1 and page 2, even though page 2 is out of range. However, it should
@@ -682,12 +612,15 @@ class ApiController < ApplicationController
 
   private def query_clever_service(endpoint)
     tokens = current_user.oauth_tokens_for_provider(AuthenticationOption::CLEVER)
+    clever_client = Clients::CleverRest.new(oauth_token: tokens[:oauth_token])
     begin
-      auth = {authorization: "Bearer #{tokens[:oauth_token]}"}
-      response = RestClient.get("https://api.clever.com/#{endpoint}", auth)
-      yield JSON.parse(response)['data']
+      yield clever_client.get(endpoint)['data']
     rescue RestClient::ExceptionWithResponse => exception
-      render status: exception.response.code, json: {error: exception.response.body}
+      if exception.http_code == 401 && exception.response.body.include?('Unrecognized token string')
+        render status: exception.response.code, plain: I18n.t('auth.token_expired', provider: I18n.t('auth.clever'))
+      else
+        render status: exception.response.code, json: {error: exception.response.body}
+      end
     end
   end
 
@@ -711,6 +644,11 @@ class ApiController < ApplicationController
     rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
       render status: :forbidden, json: {error: exception}
     end
+  end
+
+  private def section_instructor?(section)
+    return false unless current_user
+    section&.instructors&.exists?(id: current_user.id)
   end
 
   # Gets progress-related app_options for the given script and level for the
@@ -760,7 +698,7 @@ class ApiController < ApplicationController
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id
-    script ||= Unit.twenty_hour_unit
+    script ||= Unit.hoc_2014_unit
     script
   end
 end

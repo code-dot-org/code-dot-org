@@ -81,6 +81,7 @@
     "rubric_performance_level_3": "The app is missing at least one of the sensor values",
     "rubric_performance_level_4": "The app has not been started",
     "encrypted_examples": "mImMxcSV7gUKD/vdSCyU8H7YqxV4foy9c2/HILnItjrDHkW0QVIMCqzVVhij\nKm/9Y0yf0mCv8AXnofI5+zqexA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

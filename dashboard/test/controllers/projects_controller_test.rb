@@ -16,8 +16,6 @@ class ProjectsControllerTest < ActionController::TestCase
     AzureTextToSpeech.stubs(:get_voices).returns({})
   end
 
-  self.use_transactional_test_case = false
-
   setup_all do
     # Create placeholder levels for the standalone project pages.
     # Note that all this does is create blank levels with appropriate names; it
@@ -479,49 +477,6 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil @response.body['channel']
   end
 
-  test 'get_or_create_for_level with user uses script level ID if provided' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
-    student = create(:user)
-    other_student = create(:user)
-    create(:follower, section: section, student_user: student)
-    sign_in teacher
-
-    script = create(:script, :in_single_unit_course)
-    sublevel = create(:level, :blockly)
-    parent_level = create(:bubble_choice_level, sublevels: [sublevel])
-    script_level = create(:script_level, script: script, levels: [parent_level])
-
-    # Teacher should be able to get the channel for the given sublevel for the student.
-    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}
-    assert_response :success
-
-    # Teacher should be able to get the channel for the parent level for the student since it matches the script level ID.
-    get :get_or_create_for_level, params: {script_id: script.id, level_id: parent_level.id, script_level_id: script_level.id, user_id: student.id}
-    assert_response :success
-
-    # Teacher should not be able to get the channel for the given sublevel for a student not in their section.
-    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: other_student.id}
-    assert_response :forbidden
-  end
-
-  test 'get_or_create_for_level with user returns forbidden if script level ID does not match level ID' do
-    teacher = create(:teacher)
-    section = create(:section, user: teacher, login_type: 'word')
-    student = create(:user)
-    create(:follower, section: section, student_user: student)
-    sign_in teacher
-
-    script = create(:script, :in_single_unit_course)
-    sublevel = create(:level, :blockly)
-    other_level = create(:level, :blockly)
-    script_level = create(:script_level, script: script, levels: [other_level])
-
-    # Teacher should not be able to get the channel for the given sublevel since the provided level ID does not match the script level ID.
-    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}
-    assert_response :forbidden
-  end
-
   test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
     channel_id = '12345'
     Projects.any_instance.stubs(:get).returns({isOwner: true})
@@ -553,7 +508,7 @@ class ProjectsControllerTest < ActionController::TestCase
     sign_in_with_request @project_owner
     Project.stubs(:find_by).returns(@test_project)
     channel_id = '123456'
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    @controller.stubs(:get_storage_id_and_project_id).returns([123, 456])
     SharedConstants::PROJECT_SUBMISSION_STATUS.each_value do |status|
       @test_project.stubs(:submission_status).returns(status)
       get :submission_status, params: {project_type: 'music', channel_id: channel_id}

@@ -179,6 +179,10 @@ label.typographyLabelTwo {
   padding: 0.3em;
 }
 
+.unitDropdownLabel {
+  margin-bottom: 7px;
+}
+
 button.advancedSettingsButton {
   margin: 5px;
   font-size: unset;
@@ -196,7 +200,7 @@ button.advancedSettingsButton {
 
 .celebrationDialogBody {
   padding: 36px;
-  font: $barlowSemiCondensed-medium;
+  font-family: var(--font-family-barlow-semi-condensed-medium);
 
   h1 {
     margin-bottom: 0;

@@ -12,7 +12,7 @@
     "display_name": "TextTrekkers",
     "bubble_choice_description": "Welcome to TextTrekkers, where your words shape your adventure! Traverse through exciting landscapes, solve riddles, and engage in quests using just your text commands.",
     "thumbnail_url": "https://images.code.org/21304bf12cc1cae9b42110e7df85e8c9-texttrekkers.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:14:27.846+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L2c\\\"\"],\"cloned_from\":\"CSA-SE-L2-L2c\"},{\"changed_at\":\"2023-08-02 16:15:03 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-16 17:03:32 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 16:51:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

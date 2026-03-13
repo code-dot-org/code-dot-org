@@ -30,13 +30,24 @@ class LevelStarterAssetsController < ApplicationController
     get_file_and_send(uuid_name)
   end
 
-  # GET /level_starter_assets/:level_name/:uuid.:format
+  # GET /level_starter_assets/:level_name/uuid/:uuid.:format
   # Returns requested file body as an IO stream.
   # Client specifies the UUID of the file rather than the user-friendly name,
   # and the level's start_sources manages the mapping between friendly names
   # and UUIDs.
   def file_by_uuid
     uuid_name = "#{params[:uuid]}.#{params[:format]}"
+
+    preview_host = CDO.preview_codeprojects_hostname
+    # Allow any subdomain of codeprojects preview (with optional port) to fetch level starter assets.
+    if preview_host.present?
+      preview_regex = %r{\Ahttps?://[^/]+\.#{Regexp.escape(preview_host)}(:\d+)?\z}
+      # If the request's origin matches the preview host, set CORS header to allow it.
+      if request.origin&.match?(preview_regex)
+        response.headers['Access-Control-Allow-Origin'] = request.origin
+      end
+    end
+
     get_file_and_send(uuid_name)
   end
 

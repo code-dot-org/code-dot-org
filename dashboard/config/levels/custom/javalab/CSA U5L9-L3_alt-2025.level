@@ -10,7 +10,7 @@
     "mini_rubric": "false",
     "submittable": "false",
     "hide_share_and_remix": "false",
-    "csa_view_mode": "console",
+    "csa_view_mode": "theater",
     "start_sources": {
       "Runner.java": {
         "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
@@ -20,9 +20,9 @@
     },
     "project_template_level_name": "CSA U5L9-Manipulations PBT_alt-2025",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:26:05.544+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L9-L3_pilot-2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:26:05.544+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L9-L3_pilot-2025\"},{\"changed_at\":\"2025-12-02 18:59:04 +0000\",\"changed\":[\"csa_view_mode\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

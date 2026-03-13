@@ -1,6 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
-import React, {useState, useCallback, useMemo, useEffect, useRef} from 'react';
+import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -13,13 +14,18 @@ const MAX_MESSAGE_LENGTH = 10000;
  */
 
 export interface UserMessageEditorProps {
+  userMessage: string;
+  onChange: (userMessage: string) => void;
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  children?: React.ReactNode;
 }
+
+const EditorButtonIcon = () => <FontAwesomeV6Icon iconName="arrow-up" />;
 
 const UserMessageEditor = React.forwardRef<
   HTMLTextAreaElement,
@@ -27,16 +33,18 @@ const UserMessageEditor = React.forwardRef<
 >(
   (
     {
+      userMessage,
+      onChange,
       onSubmit,
       disabled,
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      children,
     },
     externalInputRef
   ) => {
     const internalInputRef = useRef<HTMLTextAreaElement | null>(null);
-    const [userMessage, setUserMessage] = useState<string>('');
     // Track focus state on textarea to apply focus styles to container since
     // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
@@ -48,17 +56,9 @@ const UserMessageEditor = React.forwardRef<
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
       if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
-        handleSubmit(userMessage);
+        onSubmit(userMessage);
       }
     };
-
-    const handleSubmit = useCallback(
-      (userMessage: string) => {
-        onSubmit(userMessage);
-        setUserMessage('');
-      },
-      [onSubmit]
-    );
 
     useEffect(() => {
       if (!internalInputRef.current) {
@@ -70,7 +70,20 @@ const UserMessageEditor = React.forwardRef<
         internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
-    const icon = {iconName: 'arrow-up'};
+    const editorButtonCommonProps = {
+      variant: 'contained' as const,
+      color: 'primary' as const,
+      size: 'extraSmall' as const,
+      disabled: disabled || !userMessage || userMessageIsEmpty,
+      id: 'uitest-chat-submit',
+      onClick: (e: React.MouseEvent) => {
+        e.stopPropagation();
+        onSubmit(userMessage);
+      },
+      'aria-label': commonI18n.submit(),
+      type: 'button' as const,
+      component: 'button' as const,
+    };
 
     return (
       <div
@@ -79,6 +92,7 @@ const UserMessageEditor = React.forwardRef<
           focused && moduleStyles.focused,
           editorContainerClassName
         )}
+        onClick={() => internalInputRef.current?.focus()}
       >
         <textarea
           ref={node => {
@@ -96,7 +110,7 @@ const UserMessageEditor = React.forwardRef<
           placeholder={
             customPlaceholder || commonI18n.aiUserMessagePlaceholder()
           }
-          onChange={e => setUserMessage(e.target.value)}
+          onChange={e => onChange(e.target.value)}
           value={userMessage}
           disabled={disabled}
           onKeyDown={e => handleKeyPress(e, userMessage)}
@@ -107,16 +121,19 @@ const UserMessageEditor = React.forwardRef<
           onBlur={() => setFocused(false)}
         />
         <div className={moduleStyles.chatActionsContainer}>
-          <Button
-            aria-label={commonI18n.submit()}
-            id="uitest-chat-submit"
-            isIconOnly={!showSubmitLabel}
-            size="xs"
-            onClick={() => handleSubmit(userMessage)}
-            disabled={disabled || !userMessage || userMessageIsEmpty}
-            text={showSubmitLabel ? commonI18n.submit() : undefined}
-            {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
-          />
+          {children}
+          {showSubmitLabel ? (
+            <MuiButton
+              {...editorButtonCommonProps}
+              startIcon={<EditorButtonIcon />}
+            >
+              {commonI18n.submit()}
+            </MuiButton>
+          ) : (
+            <MuiIconButton {...editorButtonCommonProps}>
+              <EditorButtonIcon />
+            </MuiIconButton>
+          )}
         </div>
       </div>
     );

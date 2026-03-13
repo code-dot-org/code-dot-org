@@ -1,0 +1,10 @@
+name 'aid-thinking-critically-lesson5-level1_2026-test'
+display_name 'AI Chat: Co-Creation with AI'
+description 'Choose the AI Chat option below that aligns with the Exploration that you have chosen.'
+
+sublevels
+level 'aid-thinking-critically-lesson5-level1a_2026-test'
+level 'aid-thinking-critically-lesson5-level1b_2026-test'
+level 'aid-thinking-critically-lesson5-level1c_2026-test'
+
+uses_lab2

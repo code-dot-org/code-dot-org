@@ -1,0 +1,36 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-20T20:55:34.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "building-data-driven-systems-lesson3-templateA-test-2025",
+    "long_instructions": "Use PAIR Programming with AI to  help manage your postings:\r\n\r\n* **Prompt:** Ask AI to generate or explain a helper.\r\n\r\n* **Analyze:** Compare two possible versions or lines of code.\r\n\r\n* **Integrate:** Implement and test in the display.\r\n\r\n* **Reflect:** Write a short statement about how helper functions protect data consistency in *reflection.md*\r\n\r\n---\r\n### 🗓️ Keep it Fresh\r\n**Status:** Cleanup Routine\r\n\r\n**Details:** The humidity level dropped throughout the day. The \"Anti-Frizz Tip\" is old news.\r\n\r\n**Action Required:** Remove the very first post from your schedule using *shift()*. The post that was on Tuesday will automatically slide over to fill the Monday slot.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "display_name": "Hair Stylist",
+    "bubble_choice_description": "Priorities and weather changes, so you need to delete that post from the beginning of your feed, after all.",
+    "thumbnail_url": "https://images.code.org/4111b514e9c5c7986f645bccf94d4a80-stylist.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T20:55:34.747+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson3-level6a-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson3-level6a-test-2025\"},{\"changed_at\":\"2025-11-20 20:56:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 21:13:10 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-20 21:13:42 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

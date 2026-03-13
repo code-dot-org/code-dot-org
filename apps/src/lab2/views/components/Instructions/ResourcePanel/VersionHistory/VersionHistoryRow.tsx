@@ -1,13 +1,14 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {BodyFourText} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
-import React from 'react';
+import React, {useMemo} from 'react';
 
 import {INITIAL_VERSION_ID} from '@cdo/apps/lab2/constants';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {AI_SAVED_COMMENT} from '@cdo/apps/weblab2/constants';
 
 import moduleStyles from './version-history-row.module.scss';
 
@@ -18,45 +19,83 @@ interface VersionHistoryRowProps {
   isSelected: boolean;
   comment?: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  disabled?: boolean;
+  children?: React.ReactNode;
+  showRestoreButton: boolean;
+  className?: string;
+  alwaysShowAutoSaves?: boolean;
 }
 
-const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
+interface RestoreVersionButtonProps {
+  restoreOnClick: () => void;
+  restoreLoading: boolean;
+  restoreDisabled: boolean;
+}
+
+const VersionHistoryRow: React.FunctionComponent<
+  VersionHistoryRowProps & RestoreVersionButtonProps
+> = ({
   versionId,
   label,
   isLatest,
   isSelected,
   comment,
   onChange,
+  disabled = false,
+  children,
+  showRestoreButton = false,
+  restoreOnClick,
+  restoreDisabled = false,
+  restoreLoading = false,
+  className,
+  alwaysShowAutoSaves = false,
 }) => {
   if (isLatest) {
     label = commonI18n.currentVersion();
   }
 
-  let rowMarginStyle, ariaLabel;
+  let ariaLabel;
   let isBoldtype = true;
+  const aiSavedComment = useMemo(() => {
+    if (comment && comment === AI_SAVED_COMMENT) {
+      return comment; // Display AI saved versions without a comment if no user description was added.
+    } else if (comment && comment.startsWith(AI_SAVED_COMMENT)) {
+      return comment.slice(AI_SAVED_COMMENT.length);
+    }
+    return undefined;
+  }, [comment]);
+  const classes = [];
   if (versionId === INITIAL_VERSION_ID) {
-    rowMarginStyle = moduleStyles.initialVersionRow;
+    classes.push(moduleStyles.initialVersionRow);
   } else if (isLatest) {
     // Note that the latest or most current version can also include a comment.
     // This styling adds the appropriate margin to a given row.
-    rowMarginStyle = moduleStyles.currentVersionRow;
-  } else if (comment) {
-    rowMarginStyle = moduleStyles.commentRow;
+    classes.push(moduleStyles.currentVersionRow);
+  } else if (comment && aiSavedComment) {
+    classes.push(moduleStyles.commentRow);
     ariaLabel = lab2I18n.committedVersion();
   } else {
-    rowMarginStyle = moduleStyles.row;
+    classes.push(moduleStyles.row);
     ariaLabel = lab2I18n.autosavedVersion();
     isBoldtype = false;
   }
+  if (aiSavedComment) {
+    classes.push(moduleStyles.aiSaveRow);
+    ariaLabel = aiSavedComment;
+  }
+
+  const showAutoSavedIcon =
+    !alwaysShowAutoSaves && ariaLabel === lab2I18n.autosavedVersion();
 
   return (
     <div
       id={versionId}
-      className={classNames(moduleStyles.rowContainer, rowMarginStyle)}
+      className={classNames(classes, moduleStyles.rowContainer, className)}
     >
       <div className={moduleStyles.versionContent}>
         <div className={moduleStyles.versionHeader}>
           <RadioButton
+            className={moduleStyles.versionLabel}
             name={versionId}
             value={versionId}
             label={label}
@@ -64,13 +103,52 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             checked={isSelected}
             ariaLabel={ariaLabel}
             textThickness={isBoldtype ? 'thick' : 'thin'}
+            disabled={disabled}
+            size="s"
           />
-          {ariaLabel === lab2I18n.autosavedVersion() && (
+          {showRestoreButton && (
+            <MuiButton
+              variant="outlined"
+              color="tertiary"
+              size="extraSmall"
+              loading={restoreLoading}
+              loadingPosition="start"
+              disabled={restoreDisabled}
+              className={moduleStyles.restoreButton}
+              onClick={restoreOnClick}
+              type="button"
+              startIcon={
+                <FontAwesomeV6Icon
+                  iconName="arrow-rotate-left"
+                  iconStyle="solid"
+                />
+              }
+            >
+              {commonI18n.restore()}
+            </MuiButton>
+          )}
+          {aiSavedComment && !showRestoreButton && (
+            <WithTooltip
+              tooltipProps={{
+                text: 'AI Version Save',
+                size: 's',
+                tooltipId: `${versionId}-ai-saved-tooltip`,
+                direction: 'onBottom',
+              }}
+            >
+              <FontAwesomeV6Icon
+                iconFamily="kit"
+                iconName="ai-head-solid"
+                className={moduleStyles.aiSaveIcon}
+              />
+            </WithTooltip>
+          )}
+          {showAutoSavedIcon && !showRestoreButton && (
             <WithTooltip
               tooltipProps={{
                 text: lab2I18n.autosavedVersion(),
                 size: 's',
-                tooltipId: `${versionId}-tooltip`,
+                tooltipId: `${versionId}-autosaved-tooltip`,
                 direction: 'onBottom',
               }}
             >
@@ -81,11 +159,16 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
             </WithTooltip>
           )}
         </div>
-        {comment && (
-          <BodyFourText className={moduleStyles.commitDescription}>
-            {comment}
-          </BodyFourText>
-        )}
+        {children}
+        {comment !== AI_SAVED_COMMENT && // Display comment only if user description is included.
+          (aiSavedComment || comment) && (
+            <Typography
+              className={moduleStyles.commitDescription}
+              variant="body4"
+            >
+              {aiSavedComment || comment}
+            </Typography>
+          )}
       </div>
     </div>
   );

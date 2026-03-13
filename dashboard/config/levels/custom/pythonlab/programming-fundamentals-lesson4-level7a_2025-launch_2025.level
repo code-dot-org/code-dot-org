@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're helping fix a book recommendation app. The code is supposed to store and print the title of a recommended book, but something's broken!\r\n\r\n1. Look for **two** bugs.\r\n\r\n2. Fix both bugs so the program runs without errors and prints the message.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

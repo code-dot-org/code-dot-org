@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2025-05-29T11:51:06.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##  🔍Teacher Tip\r\n**Welcome to AI chat lab!** Take your time exploring AI chat lab as you and your students will be using this tool for the remainder of the Generative AI Unit.\r\n\r\nIn this level, you will attempt to figure out the specific purpose of this chatbot. You may notice frustration when the bot says ‘I’m not interested in that’. Remind your students to play the role of a detective as they explore how chatbots work.\r\n\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This Level is from Lesson 2. You can find more details in the full <a href='https://levelbuilder-studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Explore a Chatbot\r\n\r\nThese levels let you experiment with chatbots. They use a language model behind the scenes to answer questions. Let's experiment and see what questions we can get answered.\r\n\r\n**Fair Warning:** This chatbot is for educational purposes, so we've built in appropriate restrictions and accountability to make sure it doesn't get abused. Inappropriate messages from you _or_ the chatbot will be flagged and not displayed. The chatbot also keeps track of **all messages you send to it**, and your teacher can view them upon request. So be sure to just use the chatbot as directed!\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot 3-4 questions. Try to determine it's purpose.\r\n2) Find the button that lets you clear the chat. This also resets the conversation\r\n3) Find the button that lets you copy the chat. This will be useful to know about later!\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What is space like?\r\n* Where is Tucson located?\r\n* Where can I get a good chile relleno?\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "##  🔍Teacher Tip\r\n**Welcome to AI chat lab!** Take your time exploring AI chat lab as you and your students will be using this tool for the remainder of the Generative AI Unit.\r\n\r\nIn this level, you will attempt to figure out the specific purpose of this chatbot. You may notice frustration when the bot says ‘I’m not interested in that’. Remind your students to play the role of a detective as they explore how chatbots work.\r\n\r\n\r\n<p style=\"font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;\">➡️ This Level is from Lesson 2. You can find more details in the full <a href='https://studio.code.org/courses/exploring-gen-ai-2025/units/2/lessons/2' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>Lesson Plan</a>.\r\n</p>\r\n\r\n---\r\n\r\n## Explore a Chatbot\r\n\r\nThese levels let you experiment with chatbots. They use a language model behind the scenes to answer questions. Let's experiment and see what questions we can get answered.\r\n\r\n**Fair Warning:** This chatbot is for educational purposes, so we've built in appropriate restrictions and accountability to make sure it doesn't get abused. Inappropriate messages from you _or_ the chatbot will be flagged and not displayed. The chatbot also keeps track of **all messages you send to it**, and your teacher can view them upon request. So be sure to just use the chatbot as directed!\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot 3-4 questions. Try to determine it's purpose.\r\n2) Find the button that lets you clear the chat. This also resets the conversation\r\n3) Find the button that lets you copy the chat. This will be useful to know about later!\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What is space like?\r\n* Where is Tucson located?\r\n* Where can I get a good chile relleno?\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -44,9 +45,11 @@
       ],
       "multimodalEnabled": false
     },
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2025-05-29T11:51:06.951+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_02_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-05-29T11:51:06.951+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing_02_2024\"},{\"changed_at\":\"2026-03-05 16:33:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]"
 }]]></config>
 </Aichat>

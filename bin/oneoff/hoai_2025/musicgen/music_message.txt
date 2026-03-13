@@ -1,0 +1,1 @@
+Please generate a {mood} song.  Between {range} measures is enough duration.  Use layering of sounds to make it exciting.

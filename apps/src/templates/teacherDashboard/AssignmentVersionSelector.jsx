@@ -177,7 +177,6 @@ const styles = {
  *   # All pages
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       AssignmentVersionSelector:
  *         courseFilters:
  *           language: fa-IR

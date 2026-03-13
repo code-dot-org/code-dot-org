@@ -28,7 +28,7 @@
     "display_name": "Add Your Own Music",
     "bubble_choice_description": "Add music to the scene displaying a motivational image.",
     "thumbnail_url": "https://images.code.org/61716362f895a9834bd8bf610fbf8941-image-1650486321810.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-07T17:27:48.125+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L5c_2022\\\"\"],\"cloned_from\":\"CSA U4L1-L5c_2022\"},{\"changed_at\":\"2022-04-07 17:27:50 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 19:47:25 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:24:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-20 20:26:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

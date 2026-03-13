@@ -1,8 +1,6 @@
 # Configuration defaults for development environment.
 <%= clear_secrets %>
 
-dashboard_enable_pegasus: true
-
 # In local dev, start Puma in single mode (no workers) rather than cluster mode:
 dashboard_workers: 0
 
@@ -44,6 +42,7 @@ poste_secret: not a real secret
 channels_api_secret: not a real secret
 dashboard_devise_pepper: not a pepper!
 dashboard_secret_key_base: not a secret
+puma_control_server_token: Tr0ub4dor&3
 
 custom_error_response: false
 
@@ -72,9 +71,23 @@ jwk_private_key_data:
 openai_evaluate_rubric_api_key:
 openai_student_learning_api_key: !Secret
 openai_measures_of_learning_api_key: !Secret
+openai_lesson_summaries_api_key: !Secret
+elevenlabs_api_key: !Secret
 
 google_gemini_ai_chat_lab_api_key: !Secret
 google_gemini_ai_tutor_api_key: !Secret
+
+# AI Gateway
+ai_gateway_auth_key: !Secret
+ai_gateway_auth_public_key: !Secret
+ai_gateway_auth_key_passphrase: !Secret
+
+google_vertex_ai_tutor_service_account_key: !Secret
+google_vertex_ai_chat_service_account_key: !Secret
+
+# Credentials for Langfuse API
+langfuse_secret_key: !Secret
+langfuse_public_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true

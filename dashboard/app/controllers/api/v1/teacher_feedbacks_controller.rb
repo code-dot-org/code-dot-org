@@ -1,6 +1,6 @@
 class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
-  authorize_resource
   load_resource only: :create
+  authorize_resource
 
   use_reader_connection_for_route(:get_feedback_from_teacher)
 

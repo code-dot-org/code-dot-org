@@ -1,7 +1,7 @@
 import {SimpleDropdown} from '@code-dot-org/component-library/dropdown';
 import FormFieldWrapper from '@code-dot-org/component-library/formFieldWrapper';
 import TextField from '@code-dot-org/component-library/textField';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import classNames from 'classnames';
 import React, {ChangeEvent, FC, memo, useMemo} from 'react';
 
@@ -58,7 +58,9 @@ export const AdditionalInfo: FC<AdditionalInfoProps> = ({
 
   return (
     <section>
-      <Heading2 visualAppearance="heading-sm">Additional Information</Heading2>
+      <Typography component="h2" variant="h5" gutterBottom>
+        Additional Information
+      </Typography>
       {(fields.fee || fields.participant_group_type) && (
         <div className={commonStyles.row}>
           {fields.fee && (

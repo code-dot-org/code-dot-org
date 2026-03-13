@@ -1,5 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
-import {Heading3, StrongText} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
@@ -14,6 +13,8 @@ import {
   ParentLevelPathLink,
   ScriptLevelPathLink,
 } from '../types';
+
+import {useLevelProperties} from './LevelPropertiesWrapper';
 
 import moduleStyles from './extra-links.module.scss';
 
@@ -51,9 +52,8 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
     state => state.lab.channel && state.lab.channel.id
   );
 
-  const isStandaloneProject: boolean = useAppSelector(
-    state => !!state.lab.levelProperties?.isProjectLevel
-  );
+  const isStandaloneProject =
+    useLevelProperties().levelProperties.isProjectLevel || false;
 
   useEffect(() => {
     setClonedLevelName(levelLinkData.level_name);
@@ -153,12 +153,16 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
 
   return isOpen ? (
     <AccessibleDialog onClose={onClose} theme="Light">
-      <Heading3>Extra links</Heading3>
+      <Typography variant="h3" gutterBottom>
+        Extra links
+      </Typography>
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
         <div key={`${listTitle}-div`}>
-          <StrongText key={`${listTitle}-title`}>{listTitle}</StrongText>
+          <Typography key={`${listTitle}-title`} variant="strong">
+            {listTitle}
+          </Typography>
           <ul key={`${listTitle}-list`}>
             {links.map(link => (
               <li key={link.url}>
@@ -238,11 +242,15 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
   }
   return (
     <div>
-      <Button
-        size="xs"
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="extraSmall"
         onClick={() => setShowCloneField(!showCloneField)}
-        text={showCloneField ? 'Cancel Clone' : 'Clone'}
-      />
+        type="button"
+      >
+        {showCloneField ? 'Cancel Clone' : 'Clone'}
+      </MuiButton>
       {showCloneField && (
         <div>
           {'New level name: '}
@@ -251,7 +259,15 @@ const CloneLevelButton: React.FunctionComponent<CloneLevelButtonProps> = ({
             value={clonedLevelName}
             onChange={event => setClonedLevelName(event.target.value)}
           />
-          <Button onClick={handleClone} text={'Clone'} size="xs" />
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="extraSmall"
+            onClick={handleClone}
+            type="button"
+          >
+            {'Clone'}
+          </MuiButton>
           {cloneError && (
             <p className={moduleStyles.errorMessage}>{cloneError}</p>
           )}
@@ -282,17 +298,28 @@ const DeleteLevelButton: React.FunctionComponent<DeleteLevelButtonProps> = ({
   }
   return (
     <div>
-      <Button
-        size="xs"
-        text={showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
-        color={buttonColors.destructive}
-        onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+      <MuiButton
+        variant="contained"
+        color="error"
+        size="extraSmall"
         className={moduleStyles.bottomButton}
-      />
+        onClick={() => setShowDeleteConfirm(!showDeleteConfirm)}
+        type="button"
+      >
+        {showDeleteConfirm ? 'Cancel Delete' : 'Delete'}
+      </MuiButton>
       {showDeleteConfirm && (
         <div>
           {'Are you sure you want to delete this level? '}
-          <Button onClick={handleDelete} text={'Confirm Delete'} size="xs" />
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="extraSmall"
+            onClick={handleDelete}
+            type="button"
+          >
+            {'Confirm Delete'}
+          </MuiButton>
           {deleteError && (
             <p className={moduleStyles.errorMessage}>{deleteError}</p>
           )}
@@ -313,7 +340,15 @@ const FeaturedProjectInfo: React.FunctionComponent<
     return (
       <>
         <div>Not a featured project</div>
-        <Button size="xs" onClick={onBookmark} text={'Bookmark as featured'} />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="extraSmall"
+          onClick={onBookmark}
+          type="button"
+        >
+          {'Bookmark as featured'}
+        </MuiButton>
       </>
     );
   }
@@ -360,19 +395,27 @@ const AbuseScoreInfo: React.FunctionComponent<{
         <li>{msg}</li>
       </ul>
       <div>
-        <Button
-          size="xs"
-          text={'Reset abuse score to 0'}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="extraSmall"
           onClick={onResetAbuseScore}
-        />
+          type="button"
+        >
+          {'Reset abuse score to 0'}
+        </MuiButton>
       </div>
       <div>
-        <Button
-          size="xs"
-          text={'Report abuse'}
-          onClick={onReportAbuse}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="extraSmall"
           className={moduleStyles.bottomButton}
-        />
+          onClick={onReportAbuse}
+          type="button"
+        >
+          {'Report abuse'}
+        </MuiButton>
       </div>
     </>
   );
@@ -405,7 +448,7 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   }
   return (
     <>
-      <StrongText>Project Info</StrongText>
+      <Typography variant="strong">Project Info</Typography>
       <ul>
         <li>Project owner: {ownerInfo.name}</li>
         <li>Owner storage id: {ownerInfo.storage_id}</li>
@@ -455,9 +498,9 @@ const ScriptLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <StrongText>
+      <Typography variant="strong">
         This level is in {Object.entries(scriptLevelPathLinks).length} scripts:
-      </StrongText>
+      </Typography>
       <ul>
         {scriptLevelPathLinks.map(link => (
           <li key={link.path}>
@@ -482,10 +525,10 @@ const ParentLevelPathLinks: React.FunctionComponent<
   }
   return (
     <>
-      <StrongText>
+      <Typography variant="strong">
         This level is in {Object.entries(parentLevelPathLinks).length} other
         levels:
-      </StrongText>
+      </Typography>
       <ul>
         {parentLevelPathLinks.map(link => (
           <li key={link.path}>

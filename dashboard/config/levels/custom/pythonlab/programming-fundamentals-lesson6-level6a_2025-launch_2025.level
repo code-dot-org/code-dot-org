@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nYou're setting up to livestream an event. Two things need to happen before you can go live: your webcam needs to turn on, and your streaming software needs to launch. Luckily, you've already written functions for both. Now, you'll write a third function that brings them together in the right order.\r\n\r\n1. Review the two existing functions: `activate_camera()` and `open_streaming_tool()`\r\n\r\n2. Write a new function called `prepare_stream()` that **calls both functions in order**.\r\n\r\n3. After defining `prepare_stream()`, call it to run your full setup.\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nFunctions can call other functions—just make sure the ones you're calling are defined first!",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

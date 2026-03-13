@@ -7,9 +7,9 @@ import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-dis
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
+import DatePicker from '../../../sharedComponents/DatePicker';
 import FormComponent from '../form_components/FormComponent';
 import FormController from '../form_components/FormController';
-import DatePicker from '../workshop_dashboard/components/date_picker';
 import {DATE_FORMAT} from '../workshop_dashboard/workshopConstants';
 
 export default class InternationalOptIn extends FormController {

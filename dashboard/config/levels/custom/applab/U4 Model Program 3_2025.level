@@ -63,6 +63,7 @@
     "map_reference": "/courses/csd-2024/guides/responding-to-user-input",
     "mini_rubric": "false",
     "encrypted": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

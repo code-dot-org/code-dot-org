@@ -1,6 +1,7 @@
 module User::Age
   extend ActiveSupport::Concern
   include User::ProviderFlags
+  include TimezoneNormalizer
 
   included do
     AGE_DROPDOWN_OPTIONS = (4..20).to_a << "21+"
@@ -52,4 +53,26 @@ module User::Age
   def over_21?
     !age.nil? && age.to_i >= 21
   end
+
+  # Calculates the user's precise age in years based on their birthday.
+  # Unlike the `age` method which returns an approximation, this returns
+  # the actual age with proper timezone handling.
+  # @param timezone [ActiveSupport::TimeZone, String, Integer, nil] the timezone to use for calculation.
+  #   Can be a timezone name ('America/Denver'), timezone object, or UTC offset in seconds.
+  #   Defaults to UTC if not specified.
+  # @return [Integer, nil] the user's age in years, or nil if no birthday
+  def precise_age(timezone: nil)
+    return unless birthday
+
+    tz = normalize_timezone(timezone)
+    # Birthday is a Date and needs to be set to ActiveSupport::TimeWithZone before switching to the provided timezone.
+    born = birthday.in_time_zone('UTC').in_time_zone(tz).to_date
+    today = tz.today
+
+    user_age = today.year - born.year
+    user_age -= 1 if born + user_age.years > today
+    user_age
+  end
+
+  private :normalize_timezone
 end

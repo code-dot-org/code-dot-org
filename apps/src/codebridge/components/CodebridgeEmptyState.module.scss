@@ -1,0 +1,29 @@
+.codebridgeEmptyStateContainer {
+  box-sizing: border-box;
+  max-width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  background-color: var(--background-neutral-primary);
+
+  .emptyStateImage {
+    width: auto;
+    max-height: 8.5rem;
+    height: auto;
+    margin-bottom: 1rem;
+
+    // Prevent image from getting cut off in Safari
+    img {
+      object-fit: contain;
+    }
+  }
+
+  .textContainer {
+    max-width: 21rem;
+  }
+}

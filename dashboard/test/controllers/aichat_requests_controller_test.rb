@@ -1,12 +1,10 @@
 require 'test_helper'
 
 class AichatRequestsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup_all do
     @authorized_teacher1 = create(:authorized_teacher)
     unit_group = create(:unit_group, name: 'exploring-gen-ai-2024')
-    section = create(:section, user: @authorized_teacher1, unit_group: unit_group)
+    section = create(:section, user: @authorized_teacher1, unit_group: unit_group, ai_chat_access_level: Section::AI_CHAT_ACCESS_LEVELS[:ESSENTIAL_ONLY])
     @authorized_student1 = create(:follower, section: section).student_user
     @unauthorized_student = create(:student)
     @unauthorized_teacher = create(:teacher)
@@ -14,7 +12,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
     @level = create(:level)
     @script = create(:script, :in_single_unit_course)
 
-    @default_model_customizations = {clientType: 0, temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
+    @default_model_customizations = {clientType: SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB], temperature: 0.5, retrievalContexts: ['test'], systemPrompt: 'test', selectedModelId: 'gpt-4o-mini'}.stringify_keys
     @default_aichat_context = {
       currentLevelId: @level.id,
       scriptId: @script.id,
@@ -35,9 +33,10 @@ class AichatRequestsControllerTest < ActionController::TestCase
   end
 
   setup do
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
+    AichatAiHelper.stubs(:project_id_from_context).returns(@project_id)
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
     DCDO.stubs(:get).with('block_ai_tutor_chat_completion', anything).returns(false)
-    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(false)
+    DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(false)
     DCDO.stubs(:get).with('aichat_request_limit_per_min', anything).returns(AichatRequestsController::DEFAULT_REQUEST_LIMIT_PER_MIN)
     DCDO.stubs(:get).with('aichat_polling_interval_ms', anything).returns(AichatRequestsController::DEFAULT_POLLING_INTERVAL_MS)
     DCDO.stubs(:get).with('aichat_polling_backoff_rate', anything).returns(AichatRequestsController::DEFAULT_POLLING_BACKOFF_RATE)
@@ -88,7 +87,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'aichat DCDO flag does not block access to start_chat_completion from ai tutor levels' do
     sign_in(@unauthorized_student)
-    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
+    DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(true)
     ai_tutor_client_type = SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR]
     params_with_ai_tutor_client_type = @valid_params_chat_completion.merge(aichatContext: @default_aichat_context.merge(clientType: ai_tutor_client_type))
     post :start_chat_completion, params: params_with_ai_tutor_client_type, as: :json
@@ -97,7 +96,7 @@ class AichatRequestsControllerTest < ActionController::TestCase
 
   test 'aichat DCDO flag blocks start_chat_completion from ai chat levels' do
     sign_in(@authorized_teacher1)
-    DCDO.stubs(:get).with('block_aichat_chat_completion', anything).returns(true)
+    DCDO.stubs(:get).with('block_aichat_lab_chat_completion', anything).returns(true)
     post :start_chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :forbidden
   end

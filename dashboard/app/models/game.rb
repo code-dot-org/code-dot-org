@@ -209,6 +209,10 @@ class Game < ApplicationRecord
     @@game_sketchlab ||= find_by_name("Sketchlab")
   end
 
+  def self.bubble_choice
+    @@game_bubble_choice ||= find_by_name("BubbleChoice")
+  end
+
   def unplugged?
     app == UNPLUG
   end

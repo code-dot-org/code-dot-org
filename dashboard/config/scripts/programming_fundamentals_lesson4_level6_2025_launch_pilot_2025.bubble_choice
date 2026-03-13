@@ -1,0 +1,9 @@
+name 'programming-fundamentals-lesson4-level6_2025-launch_pilot-2025'
+display_name 'Test Your Data Types'
+description 'Choose **ONE** the world scenarios, where you\'ll experiment with integers, strings, and booleans. You\'ll try using operations like `+`, `-`, or `*` on different variables, predict which ones will work, and test your ideas in code. Sometimes you\'ll get results — and sometimes, errors that help you learn!'
+
+sublevels
+level 'programming-fundamentals-lesson4-level6a_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level6b_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level6c_2025-launch_pilot-2025'
+level 'programming-fundamentals-lesson4-level6d_2025-launch_pilot-2025'

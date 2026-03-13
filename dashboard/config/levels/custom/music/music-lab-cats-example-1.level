@@ -388,6 +388,7 @@
     "display_name": "Curious Cat",
     "bubble_choice_description": "Explore the backing track for this curious cat",
     "thumbnail_url": "https://images.code.org/07e2589979d461e81822f30cdf67e135-image-1749146659865.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

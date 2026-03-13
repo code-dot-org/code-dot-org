@@ -2,7 +2,11 @@ import {Badge} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useState} from 'react';
 
+import {fetchThreadMessages} from '@cdo/apps/aichat/redux';
+import {setChatIsOpen} from '@cdo/apps/aichat/redux/slice';
+import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
@@ -10,19 +14,22 @@ import {
   trySetLocalStorage,
 } from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import aiFabWithIconBase from '@cdo/static/ai-bot-ta-base.png';
 import aiFabWithoutText from '@cdo/static/ai-bot-ta-no-text.png';
-import aiFabWithIconTag from '@cdo/static/ai-bot-ta-tag-cyan.png';
 
-import {EVENTS, PLATFORMS} from '../metrics/AnalyticsConstants';
+import {EVENTS} from '../metrics/AnalyticsConstants';
 import analyticsReporter from '../metrics/AnalyticsReporter';
+import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
-import AiDiffContainer from './AiDiffContainer';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
+
+const LazyAiDiffContainer = React.lazy(
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  () => import('./AiDiffContainer' as any)
+);
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
@@ -70,7 +77,10 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     number | 'loading'
   >('loading');
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const chatIsOpen = useAppSelector(state => state.aichat.chatIsOpen);
+  const threadMessages = useAppSelector(state => state.aichat.threadMessages);
+
+  const dispatch = useAppDispatch();
 
   React.useEffect(() => {
     // If the user has manually opened or closed the FAB, we should not open it automatically.
@@ -84,13 +94,15 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       // Keeps FAB open/closed on new pages in the same tab or window
       // New tab or window is default closed if they have previously opened/closed the FAB
       // Default open if they have never opened/closed the fab before (i.e. first time on the site)
-      setIsOpen(
-        canStartOpen &&
-          ((isFirstSession && canDefaultOpen) ||
-            JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
+      dispatch(
+        setChatIsOpen(
+          canStartOpen &&
+            ((isFirstSession && canDefaultOpen) ||
+              JSON.parse(tryGetSessionStorage(SESSION_STORAGE_KEY, false)))
+        )
       );
     }
-  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen]);
+  }, [canStartOpen, hasOpened, hasClosed, canDefaultOpen, dispatch]);
 
   const updateUnreadNotificationCount = React.useCallback(() => {
     HttpClient.fetchJson<AiDiffNotification[]>('/notifications')
@@ -109,7 +121,37 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
     updateUnreadNotificationCount();
   }, [updateUnreadNotificationCount]);
 
+  // WebSocket subscription for real-time notification count updates
+  React.useEffect(() => {
+    if (
+      DCDO.get('ai-lesson-summaries-notifications-enabled', false) ||
+      experiments.isEnabled('teacher-notifications-ws')
+    ) {
+      const unsubscribe = createTeacherNotificationSubscription({
+        onNewNotification: () =>
+          setUnreadNotificationCount(prevCount =>
+            prevCount === 'loading' ? prevCount : prevCount + 1
+          ),
+      });
+
+      return unsubscribe || undefined;
+    }
+  }, [updateUnreadNotificationCount]);
+
   const [curriculumCourses, setCurriculumCourses] = useState<string[]>();
+
+  React.useEffect(() => {
+    if (!threadMessages || threadMessages.length === 0) {
+      dispatch(
+        fetchThreadMessages({
+          contextType: context.type,
+          thread: 0,
+          curriculumCourses: curriculumCourses,
+        })
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const body = JSON.stringify({
@@ -126,7 +168,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         console.log(error);
         setCurriculumCourses([]);
       });
-  }, [context]);
+  }, [context, dispatch]);
 
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
 
@@ -140,17 +182,24 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
       aiDiffChatContext: context,
       scriptName,
     };
-    const eventName = isOpen
+    const eventName = chatIsOpen
       ? EVENTS.AI_DIFF_CHAT_CLOSED
       : EVENTS.AI_DIFF_CHAT_OPENED;
-    analyticsReporter.sendEvent(eventName, eventData, PLATFORMS.STATSIG);
+    analyticsReporter.sendEvent(eventName, eventData);
     if (eventName === EVENTS.AI_DIFF_CHAT_OPENED) {
       trySetLocalStorage(LOCAL_STORAGE_OPENED_KEY, true.toString());
     } else {
       trySetLocalStorage(LOCAL_STORAGE_CLOSED_KEY, true.toString());
     }
-    setIsOpen(!isOpen);
-    trySetSessionStorage(SESSION_STORAGE_KEY, (!isOpen).toString());
+    dispatch(setChatIsOpen(!chatIsOpen));
+    dispatch(
+      fetchThreadMessages({
+        contextType: context.type,
+        thread: 0,
+        curriculumCourses: curriculumCourses,
+      })
+    );
+    trySetSessionStorage(SESSION_STORAGE_KEY, (!chatIsOpen).toString());
     updateUnreadNotificationCount();
   };
 
@@ -163,76 +212,61 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
         onClick={handleClick}
         type="button"
       >
-        {experiments.isEnabled('teacher-notifications') ? (
-          <Badge
-            badgeContent={
-              unreadNotificationCount === 'loading'
-                ? 0
-                : unreadNotificationCount > 0
-                ? unreadNotificationCount
-                : 'TA'
-            }
-            color="error"
-            overlap="circular"
-            aria-label={
-              unreadNotificationCount &&
-              i18n.unreadNotificationsCount({
-                unreadCount: unreadNotificationCount,
-              })
-            }
-            sx={{
-              height: '48px',
-              width: '48px',
-              '& .MuiBadge-badge': {
-                backgroundColor:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--background-error-primary)'
-                    : '#3CFFF8',
-                color:
-                  unreadNotificationCount === 'loading' ||
-                  unreadNotificationCount > 0
-                    ? 'var(--text-neutral-white-fixed)'
-                    : 'var(--text-neutral-black-fixed)',
-                top: '5%',
-                right: '5%',
-              },
-            }}
-            className={style.badge}
-          >
-            <img
-              alt="AI bot - unread notifications"
-              src={aiFabWithoutText}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-              className={style.fabImageWithBadge}
-            />
-          </Badge>
-        ) : (
-          <div>
-            <img
-              alt="AI bot"
-              src={aiFabWithIconBase}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-            />
-            <img
-              alt="TA tag"
-              src={aiFabWithIconTag}
-              className={style.floatingActionButtonTag}
-              onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
-            />
-          </div>
-        )}
+        <Badge
+          badgeContent={
+            unreadNotificationCount === 'loading'
+              ? 0
+              : unreadNotificationCount > 0
+              ? unreadNotificationCount
+              : 'TA'
+          }
+          color="error"
+          overlap="circular"
+          aria-label={
+            unreadNotificationCount &&
+            i18n.unreadNotificationsCount({
+              unreadCount: unreadNotificationCount,
+            })
+          }
+          sx={{
+            height: '48px',
+            width: '48px',
+            '& .MuiBadge-badge': {
+              backgroundColor:
+                unreadNotificationCount === 'loading' ||
+                unreadNotificationCount > 0
+                  ? 'var(--background-error-primary)'
+                  : '#3CFFF8',
+              color:
+                unreadNotificationCount === 'loading' ||
+                unreadNotificationCount > 0
+                  ? 'var(--text-neutral-white-fixed)'
+                  : 'var(--text-neutral-black-fixed)',
+              top: '5%',
+              right: '5%',
+            },
+          }}
+          className={style.badge}
+        >
+          <img
+            alt="AI bot - unread notifications"
+            src={aiFabWithoutText}
+            onLoad={() => !isFabImageLoaded && setIsFabImageLoaded(true)}
+            className={style.fabImageWithBadge}
+          />
+        </Badge>
       </button>
-      <AiDiffContainer
-        open={isOpen}
-        context={context}
-        closeTutor={handleClick}
-        scriptName={scriptName}
-        curriculumCourses={curriculumCourses}
-        unreadNotificationCount={
-          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-        }
-      />
+      <React.Suspense fallback={<div />}>
+        <LazyAiDiffContainer
+          context={context}
+          closeTutor={handleClick}
+          curriculumCourses={curriculumCourses || ([] as string[])}
+          scriptName={scriptName}
+          unreadNotificationCount={
+            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+          }
+        />
+      </React.Suspense>
     </div>
   );
 };

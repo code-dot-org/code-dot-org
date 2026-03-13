@@ -47,6 +47,7 @@ export default class CdoBramble {
       syncFiles: this.syncFiles.bind(this),
       undo: this.undo.bind(this),
       validateProjectChanged: this.validateProjectChanged.bind(this),
+      getConcatenatedCodeString: this.getConcatenatedCodeString.bind(this),
     };
   }
 
@@ -839,5 +840,73 @@ export default class CdoBramble {
 
   disableFullscreenPreview(callback) {
     this.brambleProxy?.disableFullscreenPreview(callback);
+  }
+
+  getBrackets() {
+    return window.brackets;
+  }
+
+  async getConcatenatedCodeString() {
+    const htmlOrCssRegExp = /\.(html?|css)$/i;
+
+    try {
+      // get all filenames in the project
+      let filenames = await new Promise((resolve, reject) => {
+        this.shell().ls(this.projectPath, (err, entries) => {
+          if (err) {
+            return reject(err);
+          }
+          resolve(entries?.map(e => e.path) || []);
+        });
+      });
+
+      // filter to only html and css files
+      filenames = filenames.filter(name => htmlOrCssRegExp.test(name));
+
+      const filePathsAndContents = await new Promise(resolve => {
+        this.recursivelyReadFiles(filenames, 0, [], (_, files) => {
+          // files: [{name, data: Buffer}]
+          resolve(
+            (files || []).map(({name, data}) => {
+              const text = data?.toString?.('utf8') ?? '';
+              // normalize to "/filename"
+              const path = '/' + String(name || '').replace(/^\/+/, '');
+              return [path, text];
+            })
+          );
+        });
+      });
+
+      // overlay unsaved editor text on top of saved file content
+      const brackets = this.getBrackets();
+      if (brackets) {
+        const DocumentManager = brackets.getModule('document/DocumentManager');
+        const openDocs = DocumentManager.getAllOpenDocuments?.() || [];
+        for (const doc of openDocs) {
+          const fullPath = doc.file?.fullPath;
+          if (!fullPath || !htmlOrCssRegExp.test(fullPath)) {
+            continue;
+          }
+          const path = fullPath.startsWith('/') ? fullPath : `/${fullPath}`;
+          const existingFile = filePathsAndContents.find(
+            ([filePath]) => filePath === path
+          );
+          const text = doc.getText?.() ?? '';
+          if (existingFile) {
+            existingFile[1] = text;
+          } else {
+            filePathsAndContents.push([path, text]);
+          }
+        }
+      }
+
+      // concatenate with file names
+      return filePathsAndContents
+        .map(([path, text]) => `/* ${path} */\n${text}\n`)
+        .join('\n');
+    } catch (err) {
+      console.error('[CdoBramble] getConcatenatedCodeString failed:', err);
+      return '';
+    }
   }
 }

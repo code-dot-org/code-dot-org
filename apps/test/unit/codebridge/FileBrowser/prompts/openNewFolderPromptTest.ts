@@ -22,7 +22,7 @@ const getNewFolderMock = (
 
 describe('openNewFolderPrompt', function () {
   it('can successfully add a new folder to root', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'valid_folder_name';
     const parentId = DEFAULT_FOLDER_ID;
 
@@ -33,7 +33,7 @@ describe('openNewFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(newFolderData.parentId).toEqual(parentId);
@@ -42,7 +42,7 @@ describe('openNewFolderPrompt', function () {
   });
 
   it('can successfully implicitly add a new folder to root', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'valid_folder_name';
     const parentId = DEFAULT_FOLDER_ID;
 
@@ -52,7 +52,7 @@ describe('openNewFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(newFolderData.parentId).toEqual(parentId);
@@ -61,7 +61,7 @@ describe('openNewFolderPrompt', function () {
   });
 
   it('can successfully add a new folder to subfolder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'valid_folder_name';
     const parentId = '1';
 
@@ -72,7 +72,7 @@ describe('openNewFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(newFolderData.parentId).toEqual(parentId);
@@ -81,7 +81,7 @@ describe('openNewFolderPrompt', function () {
   });
 
   it('can refuse to add an invalid folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'invalid folder @';
     const parentId = DEFAULT_FOLDER_ID;
 
@@ -92,7 +92,7 @@ describe('openNewFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(newFolderData).length).toEqual(0);
@@ -100,7 +100,7 @@ describe('openNewFolderPrompt', function () {
   });
 
   it('can refuse to add a duplicate folder', async function () {
-    const [analyticsData, sendCodebridgeAnalyticsEvent] = getAnalyticsMock();
+    const [analyticsData, sendLab2AnalyticsEvent] = getAnalyticsMock();
     const newFolderName = 'testfolder1';
     const parentId = DEFAULT_FOLDER_ID;
 
@@ -111,7 +111,7 @@ describe('openNewFolderPrompt', function () {
       dialogControl: getDialogControlMock(newFolderName),
       newFolder: newFolderDataMock,
       projectFolders: testProject.folders,
-      sendCodebridgeAnalyticsEvent,
+      sendLab2AnalyticsEvent,
     });
 
     expect(Object.keys(newFolderData).length).toEqual(0);

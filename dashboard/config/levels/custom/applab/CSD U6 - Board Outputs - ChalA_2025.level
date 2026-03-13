@@ -83,6 +83,7 @@
     "start_blocks": "//Add code so when you click each animal, it makes a unique sound\r\n//Use different frequencies and durations to differentiate each animal\r\n",
     "bubble_choice_description": "Make each animal make a unique sound using the buzzer!",
     "encrypted_examples": "pMxORM14KhdZVsXOJcitrcPRqv9JtMWoz5rp9GOiwrrbR+laD7sULKINaJLZ\nXOBudC0qg6RWygupJEsrziYsJA==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

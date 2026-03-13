@@ -1,7 +1,7 @@
 :ruby
   require 'cdo/language_dir'
 
-  script = local_assigns[:script] || Unit.twenty_hour_unit
+  script = local_assigns[:script] || Unit.hoc_2014_unit
   script_level = local_assigns[:script_level]
   level = local_assigns[:level]
   lesson = local_assigns[:lesson]
@@ -70,15 +70,15 @@
 
 %link{:href=>'/shared/css/hamburger.css', :rel=>'stylesheet'}
 
-%header{class: header_class, role: "banner"}
+%header{class: header_class}
   .navbar-static-top.header
     .container{style: "width: 100%; display: flex; justify-content: space-between; height: 50px;"}
       .header_left
         .header_logo
           - if current_user
-            = link_to(image_tag('logo-inverse.svg', alt: I18n.t(:code_org_logo_alt)), home_path, {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.logo_filename(request), alt: Cdo::Brand.logo_alt_text(request)), home_path, {id: "logo_home_link"})
           - else
-            = link_to(image_tag('logo-inverse.svg', alt: I18n.t(:code_org_logo_alt)), CDO.code_org_url(ge_region: request.ge_region), {id: "logo_home_link"})
+            = link_to(image_tag(Cdo::Brand.logo_filename(request), alt: Cdo::Brand.logo_alt_text(request)), Cdo::Brand.marketing_url(ge_region: request.ge_region), {id: "logo_home_link"})
 
       .header_middle{dir: locale_dir}
         - if should_show_progress || level

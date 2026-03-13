@@ -1,9 +1,9 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useContext, useState} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   Card,
@@ -39,16 +39,8 @@ const LtiNewAccountCard = () => {
       lms_name: ltiProviderName,
       user_type: userType,
     };
-    analyticsReporter.sendEvent(
-      EVENTS.SIGN_UP_STARTED_EVENT,
-      {source: 'LTI'},
-      PLATFORMS.BOTH
-    );
-    analyticsReporter.sendEvent(
-      EVENTS.LTI_NEW_ACCOUNT_CLICK,
-      eventPayload,
-      PLATFORMS.STATSIG
-    );
+    analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {source: 'LTI'});
+    analyticsReporter.sendEvent(EVENTS.LTI_NEW_ACCOUNT_CLICK, eventPayload);
 
     sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, userType);
     sessionStorage.setItem(EMAIL_SESSION_KEY, emailAddress);
@@ -88,15 +80,18 @@ const LtiNewAccountCard = () => {
         })}
       </CardContent>
       <CardActions>
-        <Button
-          className={classNames(styles.button, styles.cardSecondaryButton)}
-          color={buttonColors.white}
-          size="m"
-          text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
-          isPending={isSaving}
+        <MuiButton
+          variant="contained"
+          color="white"
+          size="medium"
+          loading={isSaving}
           disabled={isSaving}
+          className={classNames(styles.button, styles.cardSecondaryButton)}
           onClick={handleNewAccountSubmit}
-        />
+          type="button"
+        >
+          {i18n.ltiLinkAccountNewAccountCardActionLabel()}
+        </MuiButton>
       </CardActions>
     </Card>
   );

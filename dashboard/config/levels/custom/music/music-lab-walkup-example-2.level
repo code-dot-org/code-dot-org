@@ -647,6 +647,7 @@
     "display_name": "Encanto",
     "bubble_choice_description": "Explore Walk-Up songs for characters from Encanto",
     "thumbnail_url": "https://images.code.org/0c6b9eec9370d3cae997461c5293b49a-butterfly (1).png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -1,5 +1,5 @@
 #!/bin/bash
-# This is the implementation of `yarn test`. It runs all the tests 
+# This is the implementation of `yarn test`. It runs all the tests
 # (just like `npx karma start`) would, but it splits them into parallel jobs.
 #
 # If you want to add a new levelType or testType to `yarn test`, add an
@@ -32,7 +32,7 @@ function linuxNumProcs() {
   if ((procs == 0)); then
     local free_kb=$(awk "/MemFree/ {printf \"%d\", \$2/1024}" /proc/meminfo)
     procs=1
-  fi 
+  fi
 
   echo $procs
 }
@@ -96,11 +96,17 @@ echo && echo && echo "Starting ${PROCS}x-parallel test jobs:"
 PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 # Each line in this SCRIPT block will be run as a parallel test job
-# If any line fails, the whole block will fail and exit early
+# If any line fails, the whole block will fail and exit early.
+#
+# yarn lint has been configured to run with 2-way parallelism specifically to
+# optimize for drone m7i.4xlarge machines with 16 CPUs and 64GB RAM. We use
+# `concurrently` to do this because eslint 8.56 does not have built-in support
+# for concurrency. Once we upgrade to eslint 9.34, we can replace the use of
+# `concurrently` with `eslint --concurrency 2 ...` instead. See:
+# https://eslint.org/blog/2025/08/eslint-v9.34.0-released/
 ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
   yarn lint
   npx karma start --testType=unit --port=9876
-  npx karma start --testType=storybook --port=9877
   npx karma start --testType=integration --levelType='turtle' --port=9879
   npx karma start --testType=integration --levelType='maze' --port=9880
   npx karma start --testType=integration --levelType='gamelab' --port=9881

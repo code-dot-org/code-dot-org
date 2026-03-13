@@ -1,16 +1,19 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
+import {getCode} from '@cdo/apps/blockly/utils';
 import {files} from '@cdo/apps/clientApi';
 import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import {repackageError} from '@cdo/apps/metrics/analyticsUtils';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import msg from '@cdo/locale';
 
 import getScriptData from '../../util/getScriptData';
@@ -66,15 +69,11 @@ export function setupApp(appOptions) {
       const isViewingStudent = !!queryParams('user_id');
       const teacherViewingStudentWork = isTeacher && isViewingStudent;
       if (teacherViewingStudentWork) {
-        analyticsReporter.sendEvent(
-          EVENTS.TEACHER_VIEWING_STUDENT_WORK,
-          {
-            unitId: appOptions.serverScriptId,
-            levelId: appOptions.serverLevelId,
-            sectionId: queryParams('section_id'),
-          },
-          PLATFORMS.BOTH
-        );
+        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+          unitId: appOptions.serverScriptId,
+          levelId: appOptions.serverLevelId,
+          sectionId: queryParams('section_id'),
+        });
       }
 
       if (appSupportsSettings(appOptions.app, appOptions.droplet)) {
@@ -125,7 +124,7 @@ export function setupApp(appOptions) {
       // in the contained level case, unless we're editing blocks.
       if (appOptions.level.edit_blocks || !appOptions.hasContainedLevels) {
         if (appOptions.hasContainedLevels) {
-          report.program = Blockly.cdoUtils.getCode(Blockly.mainBlockSpace);
+          report.program = getCode(Blockly.mainBlockSpace);
         }
         report.callback = appOptions.report.callback;
       }
@@ -161,7 +160,7 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        ReactDOM.render(
+        createReactRoot(
           <PlayZone
             lessonName={lessonName}
             onContinue={() => {
@@ -521,20 +520,48 @@ const sourceHandler = {
       let source;
       let appOptions = getAppOptions();
       if (window.Blockly && Blockly.mainBlockSpace) {
-        const getSourceAsJson = true;
-        // If we're readOnly, source hasn't changed at all
-        source = Blockly.cdoUtils.isWorkspaceReadOnly(Blockly.mainBlockSpace)
-          ? currentLevelSource
-          : Blockly.cdoUtils.getCode(Blockly.mainBlockSpace, getSourceAsJson);
-        resolve(source);
+        try {
+          const getSourceAsJson = true;
+          // If we're readOnly, source hasn't changed at all
+          source = Blockly.mainBlockSpace.isReadOnly()
+            ? currentLevelSource
+            : getCode(Blockly.mainBlockSpace, getSourceAsJson);
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from Blockly in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCode) {
-        source = appOptions.getCode();
-        resolve(source);
+        try {
+          source = appOptions.getCode();
+          resolve(source);
+        } catch (err) {
+          MetricsReporter.logError({
+            event: 'Error from getCode in getLevelSource',
+            error: repackageError(err),
+            appType: appOptions.app,
+            levelId: appOptions.level?.id,
+          });
+          reject(err);
+        }
       } else if (appOptions.getCodeAsync) {
         appOptions
           .getCodeAsync()
           .then(source => resolve(source))
-          .catch(err => reject(err));
+          .catch(err => {
+            MetricsReporter.logError({
+              event: 'Error from getCodeAsync in getLevelSource',
+              error: repackageError(err),
+              appType: appOptions.app,
+              levelId: appOptions.level?.id,
+            });
+            reject(err);
+          });
       }
     });
   },

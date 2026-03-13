@@ -7,7 +7,6 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import applabMsg from '@cdo/applab/locale';
@@ -17,6 +16,7 @@ import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
 import commonMsg from '@cdo/locale';
 
@@ -230,7 +230,7 @@ function renderFooterInSharedGame() {
 
   const menuItems = Applab.makeFooterMenuItems(isIframeEmbed);
 
-  ReactDOM.render(
+  createReactRoot(
     <SmallFooter
       i18nDropdownInBase={false}
       privacyPolicyInBase={false}
@@ -937,7 +937,7 @@ Applab.render = function () {
     handleVersionHistory: Applab.handleVersionHistory,
     autogenerateML: autogenerateML,
   });
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={getStore()}>
       <AppLabView {...nextProps} />
     </Provider>,
@@ -998,11 +998,11 @@ Applab.isRunning = function () {
  */
 Applab.toggleDivApplab = function (isVisible) {
   if (isVisible) {
-    $('#divApplab').show();
-    $('#designModeViz').hide();
+    $('#divApplab').css('display', 'block');
+    $('#designModeViz').css('display', 'none');
   } else {
-    $('#divApplab').hide();
-    $('#designModeViz').show();
+    $('#divApplab').css('display', 'none');
+    $('#designModeViz').css('display', 'block');
   }
 };
 
@@ -1119,9 +1119,6 @@ Applab.serializeAndSave = function (callback) {
 Applab.runButtonClick = function () {
   Sounds.getSingleton().unmuteURLs();
   studioApp().toggleRunReset('reset');
-  if (studioApp().isUsingBlockly()) {
-    Blockly.mainBlockSpace.traceOn(true);
-  }
   Applab.execute();
   const analyticsData = studioApp().analyticsData();
   // We don't want to log a User Level Interaction if we don't have a scriptId, which is the case

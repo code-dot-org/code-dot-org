@@ -73,6 +73,7 @@
     "bubble_choice_description": "Learn to use the playSpeech block by creating an \"About Me\" app",
     "encrypted_examples": "uevfbMvF0av2KMpAtLXoMgF2CGYyeMGMg1WTIG+VqTGXKVMmUX89Ul8WiGfv\nJpG6qTOdEjcEdvJ7phjyCQ7wxA==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

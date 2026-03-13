@@ -388,6 +388,7 @@
     "display_name": "Attentive Cat",
     "bubble_choice_description": "Explore the backing track for this attentive cat",
     "thumbnail_url": "https://images.code.org/c2b7f28fa6227c4b8311ca194b07b075-image-1749147135292.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

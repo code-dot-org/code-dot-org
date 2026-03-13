@@ -27,6 +27,7 @@
 #  ai_tutor_enabled     :boolean          default(FALSE)
 #  avatar_color         :integer
 #  avatar_emoji         :integer
+#  ai_chat_access_level :string(255)      default("disabled")
 #
 # Indexes
 #
@@ -93,6 +94,9 @@ class Section < ApplicationRecord
   has_many :section_hidden_scripts
   has_many :code_review_groups
 
+  has_many :aidiff_artifact_associations, dependent: :destroy
+  has_many :aidiff_artifacts, through: :aidiff_artifact_associations
+
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
   alias_attribute :lesson_extras, :stage_extras
@@ -111,6 +115,8 @@ class Section < ApplicationRecord
   validate :participant_type_not_changed
 
   scope :visible, -> {where(hidden: false)}
+
+  validates :ai_chat_access_level, inclusion: {in: SharedConstants::AI_CHAT_ACCESS_LEVELS.values}
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -477,6 +483,8 @@ class Section < ApplicationRecord
         primaryInstructor: primary_instructor,
         avatar_color: avatar_color,
         avatar_emoji: avatar_emoji,
+        assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+        ai_chat_access_level: ai_chat_access_level,
       }
     end
   end
@@ -563,6 +571,8 @@ class Section < ApplicationRecord
           at_risk_age_gated_us_state: at_risk_student&.us_state,
           avatar_color: avatar_color,
           avatar_emoji: avatar_emoji,
+          assigned_ai_chat_tools_dependency: assigned_ai_chat_tools_dependency,
+          ai_chat_access_level: ai_chat_access_level,
         }
       )
     end
@@ -608,6 +618,7 @@ class Section < ApplicationRecord
         currentUnitTitle: title_of_current_unit,
         linkToCurrentUnit: link_to_current_unit,
         code: code,
+        hidden: hidden,
         login_type: login_type,
         grades: grades,
         is_assigned_single_unit_course: unit_group&.single_unit_course?,
@@ -691,6 +702,12 @@ class Section < ApplicationRecord
     unit_groups.any? {|unit_group| unit_group.course_assignable?(user)}
   end
 
+  def assigned_ai_chat_tools_dependency
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:ESSENTIAL] if script&.requires_ai_chat_tools? || unit_group&.requires_ai_chat_tools?
+    return SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:AVAILABLE] if script&.has_ai_chat_tools? || unit_group&.has_ai_chat_tools?
+    SharedConstants::AI_CHAT_TOOLS_DEPENDENCY[:NONE]
+  end
+
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
@@ -759,8 +776,10 @@ class Section < ApplicationRecord
   end
 
   def reset_code_review_groups(new_groups)
+    students_with_sharing_enabled = []
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
+      assigned_follower_ids = []
       new_groups.each do |group|
         # skip any unassigned members
         next if group[:unassigned]
@@ -768,9 +787,35 @@ class Section < ApplicationRecord
         next unless group[:members]
         group[:members].each do |member|
           CodeReviewGroupMember.create!(follower_id: member[:follower_id], code_review_group_id: new_group.id)
+          assigned_follower_ids << member[:follower_id]
         end
       end
+      # Enable sharing for all students assigned to code review groups
+      students_with_sharing_enabled = enable_sharing_for_followers(assigned_follower_ids)
     end
+    students_with_sharing_enabled
+  end
+
+  # Enable sharing for students in code review groups
+  # Students need sharing enabled to participate in code review
+  # Returns array of student names who had sharing enabled
+  def enable_sharing_for_followers(follower_ids)
+    return [] if follower_ids.empty?
+
+    # Get all students for the followers
+    students_to_check = followers.where(id: follower_ids).includes(:student_user).map(&:student_user)
+
+    # Filter to only those with sharing disabled
+    students_needing_sharing = students_to_check.select(&:sharing_disabled?)
+    return [] if students_needing_sharing.empty?
+
+    student_names = []
+    students_needing_sharing.each do |student|
+      student.update!(sharing_disabled: false)
+      student_names << student.name
+    end
+
+    student_names
   end
 
   def update_code_review_expiration(enable_code_review)

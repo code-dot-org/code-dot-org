@@ -10,6 +10,9 @@ After=network.target
 Type=notify
 WatchdogSec=10
 
+# Maximum number of open files (descriptors).
+LimitNOFILE=65536
+
 # Our servers can take a while to start up; wait ten full minutes for them to
 # do so before giving up.
 TimeoutStartSec=600

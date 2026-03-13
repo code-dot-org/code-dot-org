@@ -41,6 +41,12 @@
   gap: 6px;
 }
 
+// Notification Banner
+.notificationBanner {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 // SectionList
 .sectionList {
   display: flex;
@@ -430,9 +436,13 @@
   gap: 10px;
   background-color: var(--background-neutral-secondary);
   border: 1px solid var(--borders-neutral-strong);
+  max-height: 60%;
 
-  h2 {
-    margin-bottom: 0;
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin-bottom: 0 !important;
   }
 
   p {

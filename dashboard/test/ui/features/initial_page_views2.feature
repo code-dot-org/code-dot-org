@@ -22,7 +22,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
       | http://studio.code.org/                                  | logged in student studio homepage | css         | student   |
       | http://studio.code.org/                                  | logged in teacher studio homepage | css         | teacher   |
       | http://studio.code.org/courses/allthethingscourse/units/1                    | logged in script progress         | css         | student   |
-      | http://studio.code.org/courses/course4/units/1/lessons/1/levels/1        | unplugged video level             | css         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1       | unplugged video level             | css         | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/14 | no iframe in dsl                  | css         | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/26/levels/1  | rich long assessment              | css         | student   |
       | http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1  | free response                     | css         | student   |

@@ -194,13 +194,13 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
 
   const completedStatuses = [
     LevelStatus.perfect,
+    LevelStatus.passed,
     LevelStatus.submitted,
     LevelStatus.free_play_complete,
     LevelStatus.completed_assessment,
   ];
 
   let attempted = 0;
-  let imperfect = 0;
   let completed = 0;
   let timeSpent = 0;
   let lastTimestamp = 0;
@@ -209,15 +209,14 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
     const levelProgress = studentLevelProgress[level.id];
     if (levelProgress) {
       attempted += levelProgress.status === LevelStatus.attempted;
-      imperfect += levelProgress.status === LevelStatus.passed;
       completed += completedStatuses.includes(levelProgress.status);
       timeSpent += levelProgress.timeSpent || 0;
       lastTimestamp = Math.max(lastTimestamp, levelProgress.lastTimestamp || 0);
     }
   });
 
-  const incomplete = filteredLevels.length - completed - imperfect;
-  const isLessonStarted = attempted + imperfect + completed > 0;
+  const incomplete = filteredLevels.length - completed;
+  const isLessonStarted = attempted + completed > 0;
 
   if (!isLessonStarted) {
     return null;
@@ -226,7 +225,6 @@ function lessonProgressForStudent(studentLevelProgress, lessonLevels) {
   const getPercent = count => (100 * count) / filteredLevels.length;
   return {
     incompletePercent: getPercent(incomplete),
-    imperfectPercent: getPercent(imperfect),
     completedPercent: getPercent(completed),
     timeSpent: timeSpent,
     lastTimestamp: lastTimestamp,
@@ -251,7 +249,7 @@ export function lessonProgressForSection(sectionLevelProgress, lessons) {
       // create empty "dictionary" to store per-lesson progress for student
       const studentLessonProgress = {};
       // for each lesson, summarize student's progress based on level progress
-      lessons.forEach(lesson => {
+      lessons?.forEach(lesson => {
         studentLessonProgress[lesson.id] = lessonProgressForStudent(
           studentLevelProgress,
           lesson.levels
@@ -305,6 +303,7 @@ export const processedLevel = (level, parentLevelId) => {
       level.sublevels.map(sublevel => processedLevel(sublevel, id)),
     path: level.path,
     parentLevelId,
+    navigationType: parentLevelId ? level.navigation_type : undefined, // Only applicable for sublevels.
   };
 };
 

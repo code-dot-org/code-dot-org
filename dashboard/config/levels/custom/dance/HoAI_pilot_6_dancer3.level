@@ -32,9 +32,8 @@
     "hide_pause_button": "false",
     "default_song": "introtoshamstep_47SOUL",
     "uses_lab2": "true",
-    "generate_dancer_mode": "true",
+    "guide_mode": "aiDancerGenerate",
     "ai_dancer_generate_adlib": "adjective-animal-attire-02",
-    "ai_code_generate": "false",
     "preload_asset_list": null
   },
   "published": true,

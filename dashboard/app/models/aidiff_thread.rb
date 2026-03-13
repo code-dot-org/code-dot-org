@@ -22,6 +22,7 @@
 #
 class AidiffThread < ApplicationRecord
   belongs_to :user
+  has_one :aidiff_artifact
   has_many :aidiff_messages
 
   validates :context_type, inclusion: {in: SharedConstants::AI_DIFF_CONTEXT.values}
@@ -32,13 +33,15 @@ class AidiffThread < ApplicationRecord
       title: generate_title,
       updated_at: updated_at,
       context_type: context_type,
+      has_artifact: !aidiff_artifact.nil?
     }
   end
 
   def summarize_with_messages
     summarize.merge(
       {
-        messages: aidiff_messages&.map(&:summarize)
+        messages: aidiff_messages&.map(&:summarize),
+        artifact: aidiff_artifact&.summarize
       }
     )
   end

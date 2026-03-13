@@ -62,6 +62,10 @@ class CourseOffering < ApplicationRecord
     '6-12 Workshops': 'https://code.org/apply',
   }
 
+  # Subdirectory paths for course offering files, relative to root_path
+  COURSE_OFFERING_DIRECTORY = 'config/course_offerings'
+  UI_TEST_COURSE_OFFERING_DIRECTORY = 'test/ui/config/course_offerings'
+
   has_many :course_versions
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
@@ -230,14 +234,14 @@ class CourseOffering < ApplicationRecord
   end
 
   def self.self_paced_course_offerings_for_catalog(user = nil, locale = 'en-us')
-    offerings = all_course_offerings.select do |co|
-      co.get_participant_audience == 'teacher' &&
-        co.instruction_type == 'self_paced' &&
-        co.assignable? &&
-        co.any_version_is_in_published_state?
+    all_course_offerings.filter_map do |co|
+      if co.get_participant_audience == 'teacher' &&
+          co.instruction_type == 'self_paced' &&
+          co.assignable? &&
+          co.any_version_is_in_published_state?
+        co.summarize_for_catalog(locale, user)
+      end
     end
-
-    offerings.map {|co| co.summarize_for_catalog(locale, user)}
   end
 
   def self.self_paced_pl_course_offerings_for_workshops
@@ -298,6 +302,7 @@ class CourseOffering < ApplicationRecord
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)},
       ai_teaching_assistant_available: ai_teaching_assistant_available,
+      ai_chat_tools_dependency: ai_chat_tools_dependency,
     }
   end
 
@@ -342,6 +347,12 @@ class CourseOffering < ApplicationRecord
     end
 
     facilitated_workshops.sort_by {|ws| ws.sessions.first.start}
+  end
+
+  def ai_chat_tools_dependency
+    # Returns the AI chat tools dependency for this course offering, which is determined by latest course version.
+    unit_group = latest_published_version&.content_root
+    unit_group&.ai_chat_tools_dependency
   end
 
   def summarize_for_edit
@@ -393,7 +404,8 @@ class CourseOffering < ApplicationRecord
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       available_resources: get_available_resources(locale_code),
-      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog)
+      facilitated_workshops: Array(upcoming_facilitated_workshops(user)).map(&:summarize_for_pl_catalog),
+      ai_chat_tools_dependency: ai_chat_tools_dependency,
     }
   end
 
@@ -421,15 +433,28 @@ class CourseOffering < ApplicationRecord
       published_date: published_date,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
       ai_teaching_assistant_available: ai_teaching_assistant_available,
-      facilitator_course_permissions: facilitator_course_permissions
+      facilitator_course_permissions: facilitator_course_permissions,
     }
+  end
+
+  # Returns the filepath for a course offering's .json file.
+  # UI test course offerings (those with keys starting with 'ui-test-') are stored in
+  # test/ui/config/course_offerings/, while normal offerings are stored in config/course_offerings/.
+  # The root_path parameter can be customized for different environments or testing.
+  #
+  # @param [String] key - the key of the course offering
+  # @param [Pathname, String] root_path - the root directory path (defaults to Rails.root)
+  # @return [Pathname] - the absolute filepath to the .json file
+  def self.file_path(key, root_path = Rails.root)
+    subdirectory = key.start_with?('ui-test-') ? UI_TEST_COURSE_OFFERING_DIRECTORY : COURSE_OFFERING_DIRECTORY
+    root_path.join(subdirectory, "#{key}.json")
   end
 
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
-    file_path = Rails.root.join("config/course_offerings/#{key}.json")
+    filepath = CourseOffering.file_path(key)
     object_to_serialize = serialize
-    File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
+    File.write(filepath, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
   def self.seed_all(root_dir: Rails.root, glob: "config/course_offerings/*.json")
@@ -437,6 +462,8 @@ class CourseOffering < ApplicationRecord
     Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
+    # Don't destroy ui-test-* course offerings; they are seeded separately
+    removed_records = removed_records.reject {|key| key.start_with?('ui-test-')}
     where(key: removed_records).destroy_all
   end
 

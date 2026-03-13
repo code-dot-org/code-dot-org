@@ -90,6 +90,7 @@
     "bubble_choice_description": "Create an app that lets you adjust the background color of an app using 3 sliders for red, green, and blue color values",
     "encrypted_examples": "RYGBVpuiAyF6UpGq54V7g21fmn/nc7iYSIpCcEn4D91uDFGZUkdDU//p8a3E\nHFaKr4tdMdcbhFcmLFnXcC2x/Q==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

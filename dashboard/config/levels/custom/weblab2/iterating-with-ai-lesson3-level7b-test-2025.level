@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-20T18:21:35.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>While Loop Stopwatch</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <div class=\"container\">\n    <h1>⏱ While Loop Stopwatch</h1>\n    <p id=\"output\">Press and hold the button to start!</p>\n    <button id=\"runWhile\">Hold to Count</button>\n  </div>\n\n  <script src=\"script.js\"></script>\n</body>\n</html>\n",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "language": "css",
+          "contents": "body {\n  font-family: \"Segoe UI\", sans-serif;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n  background: linear-gradient(180deg, #e3f2fd, #bbdefb);\n  margin: 0;\n}\n\n.container {\n  text-align: center;\n  background: white;\n  padding: 2rem 3rem;\n  border-radius: 16px;\n  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);\n}\n\nh1 {\n  color: #1565c0;\n  margin-bottom: 1rem;\n}\n\n#output {\n  font-size: 1.25rem;\n  margin-bottom: 1.5rem;\n  min-height: 2em;\n}\n\nbutton {\n  background-color: #42a5f5;\n  color: white;\n  border: none;\n  padding: 0.75rem 2rem;\n  border-radius: 10px;\n  font-size: 1rem;\n  cursor: pointer;\n  transition: background-color 0.2s, transform 0.1s;\n}\n\nbutton:hover {\n  background-color: #1e88e5;\n}\n\nbutton:active {\n  background-color: #0d47a1;\n  transform: scale(0.97);\n}\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const output = document.getElementById(\"output\");\nconst runButton = document.getElementById(\"runWhile\");\n\nlet running = false;\nlet time = 0;\n\n// --- MAIN LOOP FUNCTION ---\nconst runStopwatch = () => {\n  while (running) {\n\n\n\n\n\n    \n  }\n};\n\n// --- EVENT HANDLERS ---\nrunButton.addEventListener(\"mousedown\", () => {\n  running = true;\n  runStopwatch();\n});\n\nrunButton.addEventListener(\"mouseup\", () => {\n  running = false;\n  output.textContent = `⏹ Stopped at ${time} seconds`;\n});\n\nrunButton.addEventListener(\"mouseleave\", () => {\n  running = false;\n  output.textContent = `⏹ Stopped at ${time} seconds`;\n});\n",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "3",
+        "1",
+        "2"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nDR+aVw8b+5cZTCpqMSbZNvdx\n",
+    "long_instructions": "# Stopwatch\r\n\r\n## Do This\r\n\r\n1. Find where to write your `while` loop inside the `runStopwatch()` function.\r\n2. Use AI to help you complete the `while` loop so that it keeps counting up while the button is held down and stops when the button is released.\r\n3. Test your stopwatch to make sure it starts when pressed, stops when released, and doesn’t become an infinite loop.\r\n\r\n<details> \r\n  <summary>Need help? Ask the AI Tutor.</summary> \r\n    <ol> \r\n      <li>How do I make the loop keep running while <code>running</code> is true?</li> \r\n      <li>How do I update the time so it increases each second?</li> \r\n      <li>How do I stop the loop when the user lets go of the button?</li> \r\n    </ol> \r\n</details>"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-20T18:21:35.576+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson3-level7a-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson3-level7a-test-2025\"},{\"changed_at\":\"2025-11-20 18:21:37 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:34:55 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:35:12 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:36:41 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:37:08 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 15:40:02 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

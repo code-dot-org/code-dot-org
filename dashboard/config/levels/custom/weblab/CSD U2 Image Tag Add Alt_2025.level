@@ -1,6 +1,5 @@
 <Weblab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 58,
   "created_at": "2025-03-12T20:54:17.000Z",
   "level_num": "custom",
@@ -31,8 +30,10 @@
     "display_name": "Add alt to existing images",
     "bubble_choice_description": "Add alt attributes to describe existing images.",
     "thumbnail_url": "https://images.code.org/9ce21680e1a5efe685ccc1ac5054637f-image-1564080485351.jpg",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
+  "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:17.687+00:00\",\"changed\":[\"cloned from \\\"CSD U2 Image Tag Add Alt_2024\\\"\"],\"cloned_from\":\"CSD U2 Image Tag Add Alt_2024\"},{\"changed_at\":\"2025-10-11 18:57:44 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>

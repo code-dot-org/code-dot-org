@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-12-16T15:46:31.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "**Snippet 1: The Core `fetch` Promise Chain**\r\n\r\nThis example demonstrates how to use the browser's `fetch` API for network requests, utilizing the `.then()` for successful steps and the `.catch()` for handling failures in the asynchronous **Promise chain**.\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const apiEndpoint = 'https://restcountries.com/v3.1/all?fields=name,population';\nconst statusElement = document.getElementById('app-status');\nconst outputElement = document.getElementById('data-output');\n\ndocument.getElementById('fetch-button').addEventListener('click', () => {\n\n    fetch(apiEndpoint)\n      // 1. Convert response to JSON\n      .then(response => {\n        statusElement.textContent = `Status: Response received (${response.status}).`;\n        // Removed: if (!response.ok) check\n        return response.json(); \n      })\n      \n     \n      // 2. Process and display the data (which is an array)\n      .then(data => {\n        const countries = data; \n        \n        statusElement.textContent = `Status: Success! Displaying ${countries.length} countries.`;\n        \n        // Start building the HTML output\n        let htmlList = `<h3>🌍 Populations for ${countries.length} Countries</h3> <ul>`;\n        \n        // Use .forEach() to loop through every country in the array\n        countries.forEach(country => {\n            const name = country.name.common;\n            const population = country.population;\n            htmlList += `<li>${name}: ${population}</li>`;\n        });\n        \n        htmlList += '</ul>';\n\n        // Update the output element\n        outputElement.innerHTML = htmlList;\n      })\n     \n      \n      // 3. Catch any error (NETWORK/HTTP/PARSING ERROR HANDLER)\n      .catch(error => {\n        // This block runs if any promise in the chain above is rejected\n        statusElement.textContent = `Status: FAILED!`;\n        outputElement.innerHTML = `<p style=\"color: red; padding: 10px;\">\n                                      <strong>Error Fetching Data:</strong> ${error.message}\n                                  </p>`;\n      });\n;\n});",
+          "folderId": "0",
+          "active": true
+        },
+        "2": {
+          "id": "2",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n  </head>\n  <body>\n    \n    <div id=\"app-status\" style=\"font-weight: bold; margin-top: 10px;\">Status: Ready</div>\n    \n    <div id=\"data-output\" style=\"border: 1px dashed #444; padding: 10px; margin-top: 10px;\">\n    </div>\n\n    <button id=\"fetch-button\">▶ Get Population Data</button> \n\n    <script src=\"script.js\"></script>\n  </body>\n</html>",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-12-16T15:46:31.557+00:00\",\"changed\":[\"cloned from \\\"aif-s2-u5-l2-example2\\\"\"],\"cloned_from\":\"aif-s2-u5-l2-example2\"},{\"changed_at\":\"2025-12-16 15:49:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 15:56:49 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 16:06:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 16:08:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:00:05 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:02:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:44:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2025-12-16 17:50:47 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>

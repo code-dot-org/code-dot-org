@@ -3,21 +3,33 @@
 }
 
 .textArea {
-  font-size: 20px;
-  line-height: 1.5;
   width: 100%;
-  height: 40%;
-  padding: 10px 20px;
-  margin: 0;
+  height: 100%;
   box-sizing: border-box;
-  color: white;
-  background-color: rgba(26 11 76 / 0.6);
-  border: none;
-  resize: vertical;
+  gap: 12px;
+  background: var(--neutral-base-black);
+  color: var(--neutral-base-white);
   border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  padding: 16px;
+}
 
-  &Small {
-    font-size: 14px;
+.buttonWide {
+  flex: 1;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+
+  @container (max-width: 500px) {
+    flex-direction: column;
   }
 }
 
@@ -27,4 +39,24 @@
   span {
     font-size: 14px;
   }
+}
+
+.markdown {
+  h1, h2, h3, h4 {
+    font-size: 28px;
+  }
+
+  p, li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+}
+
+.hiddenButton {
+  opacity: 0;
+  position: fixed;
+  left: -100%;
+  bottom: -100%;
+  width: 0;
+  height: 0;
 }

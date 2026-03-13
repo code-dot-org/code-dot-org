@@ -359,7 +359,7 @@
     "display_name": "Paint a Rectangle",
     "bubble_choice_description": "The food truck wants to paint a rectangle to indicate where people can eat.",
     "thumbnail_url": "https://images.code.org/ec50a6bff3e779ec4e49c5dac8e6dad0-image-1625240201734.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-07-30T14:06:38.816+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L1b\\\"\"],\"cloned_from\":\"CSA U1L5-L1b\"},{\"changed_at\":\"2021-07-30 14:06:41 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:17:42 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 13:46:48 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

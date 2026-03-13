@@ -1,0 +1,9 @@
+name 'pl-aif-2-U3-array-method-choice-level'
+display_name 'Social Media Scheduler'
+description '#### Choose one of the professions below and assist with updating their social media scheduler based on unique events that occur.'
+sublevels
+level 'pl-aif-2-U3-array-method-choice-A'
+level 'pl-aif-2-U3-array-method-choice-B'
+level 'pl-aif-2-U3-array-method-choice-C'
+
+uses_lab2

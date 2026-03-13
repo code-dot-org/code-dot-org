@@ -89,6 +89,7 @@
     "bubble_choice_description": "Change the order so that the strawberry appears on top of the lines but behind the text and eyes.",
     "validation_enabled": "false",
     "start_blocks": "//1) Reorder the blocks so that each part of the scene is drawn in the correct order so that the scene looks like the picture\r\nvar berry = createSprite(200, 180);\r\nberry.setAnimation(\"strawberry\");\r\nberry.scale = 0.7;\r\nberry.rotation = 45;\r\n\r\nbackground(\"lightpink\");\r\n\r\nstroke(\"black\");\r\nline(0, 0, 400, 400);\r\nline(100, 0, 400, 300);\r\nline(200, 0, 400, 200);\r\nline(300, 0, 400, 100);\r\nline(0, 100, 300, 400);\r\nline(0, 200, 200, 400);\r\nline(0, 300, 100, 400);\r\n\r\nfill(\"yellow\");\r\ntextSize(35);\r\ntext(\"It's berry nice to see you\", 10, 100);\r\n\r\nnoStroke();\r\nfill(\"white\");\r\nellipse(185, 140, 40, 40);\r\nellipse(233, 168, 40, 40);\r\nfill(\"black\");\r\nellipse(185, 140, 15, 15);\r\nellipse(233, 168, 15, 15);\r\n\r\ndrawSprites();",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U5L6-Image Filters PBT_pilot_oo2025",
     "teacher_markdown": "1. This line sets a reference to the current `Pixel` object that we are going to be modifying.\r\n\r\n2. If we were to subtract values, then the image would get darker.",
     "name_suffix": "_oo2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-13T00:41:57.670+00:00\",\"changed\":[\"cloned from \\\"CSA U5L6-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L6-L4_pilot-2025\"}]"

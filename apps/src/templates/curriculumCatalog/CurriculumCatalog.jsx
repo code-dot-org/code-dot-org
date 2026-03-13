@@ -4,17 +4,17 @@
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import HeroBanner from '@code-dot-org/component-library/heroBanner';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMathcingSearchResultsFound';
+import NoMatchingSearchResultsFound from '@cdo/apps/templates/courseOfferings/noMatchingSearchResultsFound/NoMatchingSearchResultsFound';
 import GlobalEditionWrapper from '@cdo/apps/templates/GlobalEditionWrapper';
 import {
   getSimilarRecommendations,
@@ -24,7 +24,7 @@ import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
-import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
+import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.svg';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
@@ -77,8 +77,7 @@ const CurriculumCatalog = ({
       EVENTS.CURRICULUM_CATALOG_ASSIGN_COMPLETED_EVENT,
       {
         curriculum_offering: assignmentData.assignedTitle,
-      },
-      PLATFORMS.BOTH
+      }
     );
   };
 
@@ -213,6 +212,7 @@ const CurriculumCatalog = ({
                 duration,
                 school_subject,
                 cs_topic,
+                ai_chat_tools_dependency,
                 course_version_path,
                 course_version_id,
                 course_id,
@@ -240,6 +240,7 @@ const CurriculumCatalog = ({
                   gradesArray={grade_levels.split(',')}
                   subjects={school_subject?.split(',')}
                   topics={cs_topic?.split(',')}
+                  aiChatToolsDependency={ai_chat_tools_dependency}
                   isTranslated={is_translated}
                   isEnglish={isEnglish}
                   pathToCourse={course_version_path}
@@ -287,16 +288,22 @@ const CurriculumCatalog = ({
 
   return (
     <>
-      <HeaderBanner
-        headingText={i18n.curriculumCatalogHeaderTitle()}
-        subHeadingText={i18n.curriculumCatalogHeaderSubtitle()}
-        backgroundUrl={CourseCatalogBannerBackground}
-        imageUrl={CourseCatalogIllustration01}
+      <HeroBanner
+        className={style.curriculumCatalogHeroBanner}
+        data-theme="Dark"
+        heading={i18n.curriculumCatalogHeaderTitle()}
+        subHeading={i18n.curriculumCatalogHeaderSubtitle()}
+        imageProps={{src: CourseCatalogIllustration01}}
+        backgroundImageUrl={CourseCatalogBannerBackground}
+        withWideText
+        hideImageOnSmallScreen
       />
       {showAssignSuccessMessage && (
         <div className={style.assignSuccessMessageCenter}>
           <div className={style.assignSuccessMessageContainer}>
-            <BodyTwoText>{assignSuccessMessage}</BodyTwoText>
+            <Typography variant="body2" gutterBottom>
+              {assignSuccessMessage}
+            </Typography>
             <button
               aria-label="close success message"
               onClick={handleCloseAssignSuccessMessage}
@@ -345,7 +352,6 @@ CurriculumCatalog.propTypes = {
  *   # Home dashboards
  *   - path: /
  *     components:
- *       LtiFeedbackBanner: false
  *       CurriculumCatalog:
  *         forceTranslated: true
  * ```

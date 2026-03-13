@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2025-03-11T18:23:56.000Z",
   "level_num": "custom",
@@ -26,7 +27,6 @@
     "hide_design_mode": "false",
     "beginner_mode": "false",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
     "parent_level_id": 19851,
     "mini_rubric": "false",
     "encrypted": "false",
@@ -85,16 +85,22 @@
       "toLowerCase": null,
       "join": null,
       "mathRandom": null,
-      "comment": null
+      "comment": null,
+      "setImageURL": null
     },
     "data_library_tables": "words",
     "libraries_enabled": "false",
     "name_suffix": "_2025",
-    "preload_asset_list": null
+    "ai_tutor_available": "true",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "validation_enabled": "false",
+    "ai_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:56.959+00:00\",\"changed\":[\"cloned from \\\"CSP U5 Hackathon Template_2024\\\"\"],\"cloned_from\":\"CSP U5 Hackathon Template_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-11T18:23:56.959+00:00\",\"changed\":[\"cloned from \\\"CSP U5 Hackathon Template_2024\\\"\"],\"cloned_from\":\"CSP U5 Hackathon Template_2024\"},{\"changed_at\":\"2026-02-27 22:34:03 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

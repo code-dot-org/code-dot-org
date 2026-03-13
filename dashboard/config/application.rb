@@ -22,6 +22,16 @@ require 'cdo/shared_constants'
 # can be automatically loaded just below.
 require 'cdo/pycall'
 
+# Early in the Rails boot process, set the environment variable VITE_RUBY_ROOT so that
+# vite_ruby knows where to find the frontend code.
+ENV["VITE_RUBY_ROOT"] = vite_dir
+
+# Our CI process runs a custom build step before assets:precompile, so we skip
+# Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
+# These must be set before Bundler.require loads vite_ruby, which checks them at load time.
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_EXTENSION"] = "true"
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_INSTALL"] = "true"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -95,10 +105,6 @@ module Dashboard
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
-    if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
-      require 'pegasus_sites'
-      config.middleware.insert_after VarnishEnvironment, PegasusSites
-    end
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -126,7 +132,7 @@ module Dashboard
     config.active_record.default_timezone = :utc
 
     # By default, config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.{json,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*', '*.{json,yml}')]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [Cdo::I18n::DEFAULT_LOCALE]
@@ -190,12 +196,15 @@ module Dashboard
     #
     # These directories will also be treated as top-level directories by
     # Zeitwerk, rather than as subdirectories which require namspacing.
-    config.eager_load_paths += runtime_load_paths.map(&:to_s)
+    config.eager_load_paths += runtime_load_paths
 
     # Ignore certain directories for autoloading and eager loading
+    # Ignore lib/clever becuase this is generated code and the generated code
+    # does not expect 'Clever::' to be prepended to everything it references.
     Rails.autoloaders.main.ignore(
       Rails.root.join("lib", "tasks"),
       Rails.root.join("lib", "assets"),
+      Rails.root.join("lib", "clever"),
     )
 
     # Tools which are designed for development / test environments should not be eager-loaded
@@ -204,18 +213,15 @@ module Dashboard
     config.autoload_paths << Rails.root.join('lib', 'devtools')
     Rails.autoloaders.main.do_not_eager_load(Rails.root.join('lib', 'devtools'))
 
-    # Make sure to explicitly cast all autoload paths to strings; the gem we use to
-    # annotate model files with schema descriptions doesn't know how to deal with
-    # Pathnames. See https://github.com/ctran/annotate_models/issues/758
-    #
-    # We have a PR opened with a fix at https://github.com/ctran/annotate_models/pull/848;
-    # once a version of the gem is released which includes that change, we can get rid of
-    # this line.
+    # Explicitly cast all paths to strings; otherwise, the bootsnap gem might
+    # fail in some local development environments with a `no implicit
+    # conversion of Pathname into String` error when trying to run `db:migrate`
+    # See https://github.com/rails/bootsnap/blob/v1.16.0/lib/bootsnap/load_path_cache/loaded_features_index.rb#L39
     config.autoload_paths.map!(&:to_s)
+    config.eager_load_paths.map!(&:to_s)
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
-    config.action_mailer.delivery_job = 'MailDeliveryJob'
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
@@ -237,6 +243,13 @@ module Dashboard
       require 'newrelic_rpm'
     end
 
+    # Webpack handles js compression for us, so don't compress by default.
+    # config.assets.js_compressor = :uglifier
+    # config.assets.css_compressor = :sass
+
+    # Version of your assets, change this if you want to expire all your assets.
+    config.assets.version = '1.0'
+
     config.assets.image_optim = false unless CDO.image_optim
 
     config.experiment_cache_time_seconds = 60
@@ -247,7 +260,11 @@ module Dashboard
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
 
+    # Options which refer to reloadable constants must be configured in a `to_prepare` block.
+    # See: https://guides.rubyonrails.org/v7.0.8/autoloading_and_reloading_constants.html#autoloading-when-the-application-boots
     config.to_prepare do
+      Rails.application.config.action_mailer.delivery_job = 'MailDeliveryJob'
+
       # Register the Contentful source for notifications in the Dashboard app
       contentful_client = if (Rails.application.config.respond_to?(:stub_contentful_notifications) && Rails.application.config.stub_contentful_notifications) || [:development, :test].include?(rack_env)
                             Marketing::DashboardNotificationEntriesMock
@@ -255,6 +272,9 @@ module Dashboard
                             CdoContentful::Marketing::Entry::DashboardNotification
                           end
       ::Notifications.register(Marketing::DashboardNotifications::ContentfulNotificationSource.new(contentful_client))
+
+      # Register the TeacherNotificationSource for database-backed notifications
+      ::Notifications.register(TeacherNotificationSource.new)
     end
   end
 end

@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-12T19:29:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Interactivity\n\n**Interactivity** is the ability of a software application or website to respond to user input",
+        "imageUrl": "https://images.code.org/ffb6ec9b2ca458a1979462cfcd8c52f6-interactivitygif.gif",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-12T19:29:57.830+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson1-panel-interactivity-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson1-panel-interactivity-test-2025\"},{\"changed_at\":\"2025-11-12 19:31:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</Panels>

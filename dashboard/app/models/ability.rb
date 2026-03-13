@@ -61,7 +61,8 @@ class Ability
       CodeReview,
       LearningGoalTeacherEvaluation,
       AidiffThread,
-      AidiffMessage
+      AidiffMessage,
+      AidiffArtifact,
     ]
     cannot :index, Level
 
@@ -171,13 +172,15 @@ class Ability
 
       can :evaluate, :openai_evaluate
       can :evaluate_section, :openai_evaluate
+      can :match_teaching_profile, :openai_personalization
 
       # all signed in users can access the aichat_request and aichat_events endpoints
       # additional permission logic lives in the controllers themselves
-      can [:start_chat_completion, :chat_request], :aichat_request
+      can :manage, :aichat_request
       can [:log_chat_event, :chat_history, :submit_teacher_feedback], :aichat_event
 
       if user.teacher?
+        can :access, :teacher_only
         can :manage, Section do |s|
           s.instructors.include?(user)
         end
@@ -215,6 +218,14 @@ class Ability
         end
         can :get_feedbacks, TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
+        end
+
+        # LessonFeedback abilities - teachers can manage lesson feedback for their students
+        can :create, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id)
+        end
+        can :update, LessonFeedback do |feedback|
+          user.students.exists?(id: feedback.student_id) && feedback.teacher_id == user.id
         end
 
       end
@@ -286,7 +297,19 @@ class Ability
       if Experiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :submit_feedback, AidiffMessage
         can :create, AidiffThread
+        can :manage, AidiffThread, user_id: user.id
+        can :manage, AidiffMessage do |message|
+          can?(:manage, message.aidiff_thread)
+        end
         can [:index, :show, :chat_completion, :curriculum_courses], AidiffThread, user_id: user.id
+        if Experiment.enabled?(user: user, experiment_name: 'ai-artifact')
+          can :create, AidiffArtifact
+          can :create, AidiffExitTicket
+          can :create, AidiffLessonHook
+          can [:index], AidiffArtifact, user_id: user.id
+          can [:index, :update, :show], AidiffExitTicket, user_id: user.id
+          can [:index, :update, :show], AidiffLessonHook, user_id: user.id
+        end
       end
 
       can :show, Rubric
@@ -339,7 +362,7 @@ class Ability
       end
     end
 
-    can [:read, :show_by_id, :student_lesson_plan], Lesson do |lesson, context_unit_group|
+    can [:read, :show_by_id, :student_lesson_plan, :level_properties, :level_properties_by_id], Lesson do |lesson, context_unit_group|
       script = lesson.script
       unit_group = context_unit_group || script.original_unit_group
       can?(:read, script, unit_group)
@@ -380,6 +403,10 @@ class Ability
     if user.persisted? && user.can_access_student_work?
       can [:fetch_student_code_samples], :student_work_sample
       can [:fetch_free_response_answers], :student_work_sample
+    end
+
+    if user.persisted? && user.levelbuilder?
+      can [:add_internal_ai_tutor_dataset_item], :ai_observability
     end
 
     # In order to accommodate the possibility of there being no database, we
@@ -509,7 +536,7 @@ class Ability
       end
 
       can :find_toxicity, :aichat do
-        user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
+        user.teacher_can_access_ai_chat_lab? || user.student_can_access_ai_chat_lab?
       end
 
       can :user_has_access, :aichat

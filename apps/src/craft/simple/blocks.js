@@ -1,4 +1,6 @@
-import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import {BlockStyles} from '@cdo/apps/blockly/constants';
 
 import {blockTypesToDropdownOptions} from '../utils';
 
@@ -70,13 +72,9 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_moveForward = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockMoveForward())
+        new CdoFieldLabel(i18n.blockMoveForward())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -91,13 +89,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: 'http://code.google.com/p/blockly/wiki/Turn',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.DIRECTIONS),
+        new CdoFieldDropdown(this.DIRECTIONS),
         'DIR'
       );
       this.setPreviousStatement(true);
@@ -120,13 +114,9 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_destroyBlock = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockDestroyBlock())
+        new CdoFieldLabel(i18n.blockDestroyBlock())
       );
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -140,14 +130,8 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_shear = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.appendDummyInput().appendField(
-        new blockly.FieldLabel(i18n.blockShear())
-      );
+      this.setStyle(BlockStyles.DEFAULT);
+      this.appendDummyInput().appendField(new CdoFieldLabel(i18n.blockShear()));
       this.setPreviousStatement(true);
       this.setNextStatement(true);
     },
@@ -163,13 +147,9 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.ifBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput()
         .appendField(i18n.blockIf())
         .appendField(dropdown, 'TYPE')
@@ -197,11 +177,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_ifLavaAhead = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendDummyInput().appendField(i18n.blockIfLavaAhead());
       this.appendStatementInput('DO').appendField(i18n.blockWhileXAheadDo());
       this.setPreviousStatement(true);
@@ -226,14 +202,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
         .appendField(i18n.blockPlaceXPlace())
         .appendField(dropdown, 'TYPE');
@@ -250,11 +222,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_placeTorch = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(i18n.blockPlaceTorch());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -268,11 +236,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_plantCrop = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(i18n.blockPlantCrop());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -286,11 +250,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.craft_tillSoil = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(i18n.blockTillSoil());
       this.setPreviousStatement(true);
       this.setNextStatement(true);
@@ -307,14 +267,10 @@ exports.install = function (blockly, blockInstallOptions) {
       var dropdownOptions = blockTypesToDropdownOptions(
         craftBlockOptions.placeBlockOptions || allDropdownBlocks
       );
-      var dropdown = new blockly.FieldDropdown(dropdownOptions);
+      var dropdown = new CdoFieldDropdown(dropdownOptions);
       dropdown.setValue(dropdownOptions[0][1]);
 
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput()
         .appendField(i18n.blockPlaceXAheadPlace())
         .appendField(dropdown, 'TYPE')

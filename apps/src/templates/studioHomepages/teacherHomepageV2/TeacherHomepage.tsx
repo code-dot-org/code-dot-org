@@ -1,14 +1,15 @@
-import {Heading2} from '@code-dot-org/component-library/typography';
+import Alert from '@code-dot-org/component-library/alert';
+import {Typography} from '@mui/material';
 import React from 'react';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
@@ -35,23 +36,98 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   const teacherName = useAppSelector(state => state.currentUser.displayName);
   const teacherId = useAppSelector(state => state.currentUser.userId);
 
+  const [personaData, setPersonaData] = React.useState<{
+    hasMatchedPersona: boolean | null;
+    isLoading: boolean;
+  }>({
+    hasMatchedPersona: null,
+    isLoading: true,
+  });
+  const [
+    hasDismissedPersonalizationAlert,
+    setHasDismissedPersonalizationAlert,
+  ] = React.useState<boolean>(false);
+  const [
+    isLoadingPersonalizationAlertStatus,
+    setIsLoadingPersonalizationAlertStatus,
+  ] = React.useState<boolean>(true);
+
   const dispatch = useAppDispatch();
-
-  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
-  const toggleCAPModal = () => {
-    setCAPModalOpen(!CAPmodalOpen);
-  };
-
-  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
-
-  const shouldDisplayAtRiskAgeGatedWarning = () => {
-    return ageGatedSections?.length > 0;
-  };
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
     dispatch(asyncLoadCoteacherInvite());
+
+    // Fetch personalization alert dismissal status
+    const fetchPersonalizationStatus = async () => {
+      try {
+        const userPreferences = new UserPreferences();
+        const hasDismissed =
+          await userPreferences.getHasDismissedPersonalizationAlert();
+        setHasDismissedPersonalizationAlert(hasDismissed);
+      } catch (error) {
+        console.error('Error fetching personalization alert status:', error);
+        setHasDismissedPersonalizationAlert(false);
+      } finally {
+        setIsLoadingPersonalizationAlertStatus(false);
+      }
+    };
+
+    fetchPersonalizationStatus();
+
+    // Fetch teaching profile data
+    const fetchTeachingProfileData = async () => {
+      try {
+        const response = await fetch('/teaching_profile_data');
+        const data = await response.json();
+        setPersonaData({
+          hasMatchedPersona: !!data.data.matchedPersona,
+          isLoading: false,
+        });
+      } catch (error) {
+        console.error('Error fetching teaching profile data:', error);
+        setPersonaData({
+          hasMatchedPersona: false,
+          isLoading: false,
+        });
+      }
+    };
+
+    fetchTeachingProfileData();
   }, [dispatch]);
+
+  const needsToAnswerPersonalizationQuestions = React.useMemo(() => {
+    // Don't show while loading
+    if (personaData.isLoading) {
+      return false;
+    }
+    // Show alert only when hasMatchedPersona is explicitly false
+    return personaData.hasMatchedPersona === false;
+  }, [personaData]);
+
+  const shouldShowPersonalizationAlert = React.useMemo(() => {
+    // Don't show if still loading data
+    if (personaData.isLoading || isLoadingPersonalizationAlertStatus) {
+      return false;
+    }
+
+    // Don't show if user has already dismissed the alert
+    if (hasDismissedPersonalizationAlert) {
+      return false;
+    }
+
+    // Don't show if user has answered personalization questions
+    if (!needsToAnswerPersonalizationQuestions) {
+      return false;
+    }
+
+    return true;
+  }, [
+    personaData.isLoading,
+    isLoadingPersonalizationAlertStatus,
+    hasDismissedPersonalizationAlert,
+    needsToAnswerPersonalizationQuestions,
+  ]);
 
   React.useEffect(() => {
     // Send one analytics event when a teacher logs in. Use session storage to determine
@@ -62,19 +138,14 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
     ) {
       trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-      analyticsReporter.sendEvent(
-        EVENTS.TEACHER_LOGIN_EVENT,
-        {
-          'user id': teacherId,
-        },
-        PLATFORMS.BOTH
-      );
+      analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
+        'user id': teacherId,
+      });
     }
-    analyticsReporter.sendEvent(
-      EVENTS.NEW_TEACHER_HOMEPAGE_VISITED,
-      {},
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.NEW_TEACHER_HOMEPAGE_VISITED, {});
+
+    // Temporarily check network availability on teacher login
+    detectNetworkAvailability(teacherId);
   }, [teacherId]);
 
   const [selectedArchiveToggle, setSelectedArchiveToggle] =
@@ -98,32 +169,46 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
       value === 'teaching'
         ? EVENTS.SECTION_LIST_TEACHING_TOGGLE_CLICKED
         : EVENTS.SECTION_LIST_ARCHIVE_TOGGLE_CLICKED;
-    analyticsReporter.sendEvent(toggleEvent, {}, PLATFORMS.BOTH);
+    analyticsReporter.sendEvent(toggleEvent, {});
     setSelectedArchiveToggle(value);
+  };
+
+  const handleAlertClose = () => {
+    setHasDismissedPersonalizationAlert(true);
+    new UserPreferences().setHasDismissedPersonalizationAlert(true);
   };
 
   return (
     <div className={styles.teacherHomepage}>
       <div className={styles.teacherHomepageBody}>
-        <Heading2>
+        <Typography variant="h2" gutterBottom>
           {teacherName
             ? i18n.welcome({teacherName: teacherName})
             : i18n.welcomeWithoutName()}
-        </Heading2>
+        </Typography>
         <div className={styles.teacherHomepageContent}>
           <div className={styles.teacherHomepageLeftContent}>
+            {shouldShowPersonalizationAlert && (
+              <Alert
+                aria-labelledby="feedback-banner-title"
+                showIcon={true}
+                className={styles.notificationBanner}
+                icon={{
+                  iconName: 'user-circle',
+                }}
+                type={'primary'}
+                text={i18n.personalizationInvitation()}
+                link={{
+                  text: i18n.personalizationLinkText(),
+                  href: '/users/personalization_information',
+                }}
+                onClose={handleAlertClose}
+              />
+            )}
             <Header
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-
-            {shouldDisplayAtRiskAgeGatedWarning() && (
-              <AgeGatedSectionsBanner
-                toggleModal={toggleCAPModal}
-                modalOpen={CAPmodalOpen}
-                ageGatedSections={ageGatedSections}
-              />
-            )}
 
             <CoteacherInviteNotification
               isForPl={false}

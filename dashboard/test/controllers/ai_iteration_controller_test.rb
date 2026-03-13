@@ -29,24 +29,10 @@ class AiIterationControllerTest < ActionController::TestCase
   method: :get,
   response: :forbidden
 
-  # Levelbuiilder cannot access the tools page
+  # Levelbuilder can access the tools page
   test_user_gets_response_for :tools,
-  name: "levelbuilder_no_access_test",
+  name: "levelbuilder_access_test",
   user: :levelbuilder,
   method: :get,
-  response: :forbidden
-
-  # AI Tutor Access cannot access the tools page
-  test_user_gets_response_for :tools,
-  name: "ai_tutor_permissions_no_access_test",
-  user: :ai_tutor_access,
-  method: :get,
-  response: :forbidden
-
-  # AI Tutor Access + Levelbuilder can access the tools page
-  test_user_gets_response_for :tools,
-  name: "ai_iteration_tools_user_can_access_test",
-  user: :ai_iteration_tools_user,
-  method: :get,
-  response: :ok
+  response: :success
 end

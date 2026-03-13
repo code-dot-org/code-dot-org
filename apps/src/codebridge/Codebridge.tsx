@@ -13,12 +13,12 @@ import {
 import classNames from 'classnames';
 import React, {useEffect, useMemo} from 'react';
 
-import {ChatButtonData} from '@cdo/apps/aichat/types';
+import {ChatButtonData, ResponseSchemaSettings} from '@cdo/apps/aichat/types';
 import {AiTutorContextHelper} from '@cdo/apps/aiTutor/helpers/aiTutorContextHelper';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {BackpackAPIContext} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
@@ -46,7 +46,9 @@ type CodebridgeProps = {
   aiTutorMultimodalEnabled?: boolean;
   aiTutorChatButtonData?: ChatButtonData[];
   aiTutorContextHelper?: AiTutorContextHelper<object>;
-  aiTutorSystemPromptName?: string;
+  aiTutorSystemPrompt?: string;
+  aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
+  secondaryBackpackAppNames?: AppName[];
 };
 
 export const Codebridge = React.memo(
@@ -63,15 +65,15 @@ export const Codebridge = React.memo(
     aiTutorMultimodalEnabled,
     aiTutorChatButtonData,
     aiTutorContextHelper,
-    aiTutorSystemPromptName,
+    aiTutorSystemPrompt,
+    aiTutorResponseSchemaSettings,
+    secondaryBackpackAppNames,
   }: CodebridgeProps) => {
     const isShareView = useAppSelector(state => state.lab.isShareView);
     const isWidgetView = !!levelProperties.widgetView;
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
     const appName = levelProperties.appName;
-    const isFullScreenView = useAppSelector(
-      state => state.lab.isFullScreenView
-    );
+    const currentUserId = useAppSelector(state => state.currentUser.userId);
 
     // Adds keyboard shortcuts for Editor (1), Run (2), and Console (3)
     // which are preceded by Control (Windows/Linux) or Command (macOS).
@@ -132,9 +134,6 @@ export const Codebridge = React.memo(
       if (isWidgetView && config.layoutComponents.widget && !isStartMode) {
         return config.layoutComponents.widget;
       }
-      if (isFullScreenView && config.layoutComponents.fullScreen) {
-        return config.layoutComponents.fullScreen;
-      }
       let currentLayout = config.activeLayout;
       if (!currentLayout) {
         currentLayout = appName === 'pythonlab' ? 'horizontal' : 'vertical';
@@ -149,16 +148,30 @@ export const Codebridge = React.memo(
       appName,
       config.activeLayout,
       config.layoutComponents,
-      isFullScreenView,
       isShareView,
       isStartMode,
       isWidgetView,
     ]);
 
-    const backpackApi = useMemo(
-      () => new BackpackClientApi(appName, null),
-      [appName]
-    );
+    const backpackContext = useMemo(() => {
+      // The backpack api does not work for signed-out users (it redirects to sign-in),
+      // so we don't create the api instance if there is no current user.
+      if (currentUserId) {
+        const primaryApi = new BackpackClientApi(appName, null);
+        if (secondaryBackpackAppNames && secondaryBackpackAppNames.length > 0) {
+          const secondaryApis: {[key: string]: BackpackClientApi} = {};
+          secondaryBackpackAppNames.forEach(secondaryAppName => {
+            secondaryApis[secondaryAppName] = new BackpackClientApi(
+              secondaryAppName,
+              null
+            );
+          });
+          return {primaryApi, secondaryApis};
+        }
+        return {primaryApi};
+      }
+      return null;
+    }, [appName, currentUserId, secondaryBackpackAppNames]);
 
     // Send analytics when user zooms in/out (will be compared to user updating font size via settings).
     useZoomTracker(appName);
@@ -193,15 +206,17 @@ export const Codebridge = React.memo(
           aiTutorMultimodalEnabled,
           aiTutorChatButtonData,
           aiTutorContextHelper,
-          aiTutorSystemPromptName,
+          aiTutorResponseSchemaSettings,
+          aiTutorSystemPrompt,
         }}
       >
-        <BackpackAPIContext.Provider value={backpackApi}>
+        <BackpackAPIContext.Provider value={backpackContext}>
           <div className={classNames(moduleStyles.codebridgeContainer)}>
             {flaggedImageData && (
               <FlaggedImageModal
                 onAccept={handleAcceptFlaggedImage}
                 onCancel={handleCancelFlaggedImage}
+                appName={appName}
               />
             )}
             <InnerLayout

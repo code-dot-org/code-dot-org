@@ -99,6 +99,7 @@
     "rubric_performance_level_3": "The LEDs turn on, but they do not react to the values that the user enters. Variables are not used correctly in the program.",
     "rubric_performance_level_4": "The app has not been changed.",
     "encrypted_examples": "GyN/kRhlGOyuppr/TcOB3Fm0IQ6Gu574gw6egUDtQG+NCcJ8cXSFuKKW/IKP\nswl0datxml3E1BC8VxEa14gbcQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

@@ -910,6 +910,19 @@ en:
         PL_LMSIntegrations_2025_Updated: 'Getting Started: Integrating Learning Management Systems'
         problem-solving-with-ai-1: Problem Solving with AI
         gen-ai-careers: Careers in Exploring Generative AI
+        zz-testing-video-upload: zzTesting Video Upload
+        mix_move_ai_intro: Mix & Move with AI Intro
+        aif2-weblab-html-tutorial: Web Lab HTML Tutoral
+        aif2-weblab-tutorial-CSS: Web Lab CSS Tutorial
+        aif2-weblab-tutorial-wireframe: Creating a Website with a Wireframe
+        aid-thinking-critically-lesson5-minilesson1-2026-test: Confident AI - Pilot
+        aid-thinking-critically-lesson5-minilesson2-2026-test: AI Makes Guesses
+        aid-thinking-critically-lesson5-minilesson3-2026-test: Missing Perspectives - Pilot
+        Dot-Notation: 'Dot Notation: Accessing Data in APIs'
+        aif2-pl-tray-and-catch: Try and Catch Blocks
+        aif2-pl-updating-the-DOM: Updating the DOM
+        aif2-pl-conditionals: Making Decisions in Code
+        aif2-pl-variables: Debugging Variables
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

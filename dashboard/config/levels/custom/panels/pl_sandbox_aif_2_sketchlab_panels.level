@@ -1,0 +1,91 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-10-22T18:12:26.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "### Sketch Lab\nWelcome to Sketch Lab our built-in visual design tool. Like Canva or Figma, it allows students to create their designs right on the platform—no extra tools needed!\n\nSketch Lab has 2 key areas:\n- **Instruction Panel** \n- **Workspace** \n\nYou create by adding elements to the workspace.\n",
+        "imageUrl": "https://images.code.org/d69619208f073df56d3bac758b2c2227-Sketch Lab.png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-77c61549-a2c5-4165-a211-283d47d9b82a",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Tool Bar\nThe tool bar across the top of the workspace offers different ways to add to your design. \n\n### Grip Tool\nThe grip tool makes it easy to move your design around. When this is selected, you can move your workspace around. \n",
+        "imageUrl": "https://images.code.org/67327cbb3e07429d649f3ca65db6f37d-Sketch Lab (1).png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-44ddc497-1a7a-4252-a306-a19ab550d8cf",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Selector Tool\n\n\nThis selector tool allows you to focus on an element and make adjustments. ",
+        "imageUrl": "https://images.code.org/886b6fdd828231c9a579a15e27e59821-Sketch Lab (2).png",
+        "key": "test-music-lab-sequences-explore-play-sequential-overviewpanel_v2-7a8a8c6f-7428-456d-b4a8-1463a42d1f1a",
+        "fadeInOverPrevious": false
+      },
+      {
+        "text": "### Shapes\n\nDifferent shape elements are available for you to design with. \n\nOnce a shape is selected, drag it out to the size you want. \n\nNext, use the pop-up menu to design the shape. \n\n",
+        "imageUrl": "https://images.code.org/c5c95e329365f033e55f36f3876d821c-Sketch Lab (3).png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-08943d00-a581-4880-acd6-de0970d8529d",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "### Lines and Arrows\n\n\nLines and Arrows can be added to your design. \n\nLike the shapes, select the element and drag it to the size you want. \n\nUse the pop-up box to give it the look you want. \n",
+        "imageUrl": "https://images.code.org/e77bc4211a0c584350f07e6676770f45-Sketch Lab (4).png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-bf0bbc9c-45a8-4461-b394-d279f7547c56",
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Text\n\nSelect the `A` in the tool box to add text to your design. \n\nLike the other elements, it can be customized in the pop-up box. ",
+        "imageUrl": "https://images.code.org/d3f81843748e057c68c825da719ca683-Sketch Lab (5).png",
+        "key": "test-music-lab-sequences-practice-play-sequential-panel-c846fce5-8889-4bff-8a48-f717d5302c15",
+        "typing": false,
+        "fadeInOverPrevious": false,
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Images and Eraser \n\nOn the far right end, you will find a place to upload images and an eraser.",
+        "imageUrl": "https://images.code.org/7230f8d8e0e7fb4adb64b71e1e864987-Sketch Lab (6).png",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-ffa1e325-b3c7-48c8-b825-d0e6063ed20c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Extra tools\n\nThere are extra tools embedded in Sketch Lab to help you design your websites. Thinks like a Frame tool and web embed make it easier to design your sites. ",
+        "imageUrl": "https://images.code.org/613814fdf80f51f0e2e88d641eee7c26-Sketch Lab (7).png",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-a52624ae-6483-4c17-a46e-9d7f1bc4d6c5",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Menu\n\nOn the top left of the workspace, there is a menu icon.\nThis is where you can find things to save or export your designs. ",
+        "imageUrl": "https://images.code.org/65640494ee43fd69a0bfb83984e6435a-Sketch Lab (8).png",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-b6e24a79-cc15-4655-b21f-619d07386289",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Settings \nThe gear icon on the bottom left of Sketch Lab brings up the settings menu allowing you to choose a language and theme to customize your space. ",
+        "imageUrl": "https://images.code.org/a39744c3ffc7e8983a87c613f474c261-Sketch Lab (9).png",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-6d3d77ae-afc7-44a2-9f77-b625b12c0ac3",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Up Next\nIn the next level, you will practice using Sketch Lab to build a wireframe. ",
+        "imageUrl": "https://images.code.org/2faa1230b53075d4ea4a0ccf1ccc4d7b-Graphics in PL AIF2.jpg",
+        "key": "pl_sandbox_aif_2_sketchlab_panels-0a8f7bbf-0b67-49b1-a3b3-d3fe272b65d3",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "bubble_choice_description": "Review how to use Play Sequential when creating songs",
+    "display_name": "Play Sequential",
+    "name_suffix": "_v2",
+    "thumbnail_url": "https://images.code.org/7b4d46640230aa16863cc2819604d75e-Screenshot 2025-04-02 at 7.41.41 AM.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-10-22T18:12:26.948+00:00\",\"changed\":[\"cloned from \\\"pl_sandbox_aif_2_weblab_panels_14\\\"\"],\"cloned_from\":\"pl_sandbox_aif_2_weblab_panels_14\"},{\"changed_at\":\"2025-10-22 22:02:32 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2025-10-22 22:03:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 22:27:52 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-01-06 22:34:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+}]]></config>
+</Panels>

@@ -220,6 +220,7 @@
     "display_name": "Pet Chooser App",
     "parent_level_id": 23130,
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

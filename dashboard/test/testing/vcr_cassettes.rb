@@ -1,8 +1,17 @@
 require 'vcr'
 
 VCR.configure do |config|
-  config.cassette_library_dir = File.expand_path('../fixtures/vcr_cassettes', __dir__)
+  config.cassette_library_dir = Rails.root.join('test/vcr_cassettes').to_s
   config.hook_into :webmock
-  config.default_cassette_options = {record: :once}
+  config.ignore_localhost = true
   config.allow_http_connections_when_no_cassette = true
+
+  config.default_cassette_options = {
+    # Fail on empty/missing cassette in CI or during DTT.
+    record: ENV['CI'] || CDO.chef_managed ? :none : :once,
+  }
+
+  config.before_record do |interaction|
+    interaction.request.headers = {}
+  end
 end

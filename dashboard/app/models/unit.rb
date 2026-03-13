@@ -18,6 +18,7 @@
 #  participant_audience   :string(255)
 #  original_unit_group_id :integer
 #  hide_within_course     :boolean          default(FALSE)
+#  md5                    :string(255)
 #
 # Indexes
 #
@@ -71,34 +72,26 @@ class Unit < ApplicationRecord
   scope(
     :with_associated_models, lambda do
       includes(
-        [
+        :lesson_groups,
+        :resources,
+        :student_resources,
+        script_levels: [
           {
-            script_levels: [
-              {
-                levels: [
-                  :concepts,
-                  :game,
-                  :level_concept_difficulty,
-                  :levels_child_levels
-                ]
-              },
-              :lesson,
-              :callouts
+            levels: [
+              :concepts,
+              :game,
+              :level_concept_difficulty,
+              :levels_child_levels
             ]
           },
-          :lesson_groups,
-          :resources,
-          :student_resources,
-          {
-            lessons: [
-              :lesson_activities,
-              {script_levels: [:levels]}
-            ]
-          },
-          {
-            unit_group_units: :unit_group
-          }
-        ]
+          :lesson,
+          :callouts
+        ],
+        lessons: [
+          :lesson_activities,
+          {script_levels: :levels}
+        ],
+        unit_group_units: :unit_group
       )
     end
   )
@@ -107,33 +100,30 @@ class Unit < ApplicationRecord
   scope(
     :with_seed_models, lambda do
       includes(
-        [
-          {
-            unit_group_units: {
-              unit_group: :course_version
-            }
-          },
-          :lesson_groups,
-          {
-            lessons: [
-              {lesson_activities: :activity_sections},
-              :resources,
-              :vocabularies,
-              :programming_expressions,
-              :objectives,
-              {rubric: {learning_goals: :learning_goal_evidence_levels}},
-              :standards,
-              :opportunity_standards
-            ]
-          },
-          :script_levels,
-          :levels,
+        :lesson_groups,
+        :resources,
+        :student_resources,
+        script_levels: :levels,
+        lessons: [
+          {lesson_activities: :activity_sections},
           :resources,
-          :student_resources
-        ]
+          :vocabularies,
+          :programming_expressions,
+          :objectives,
+          {rubric: {learning_goals: :learning_goal_evidence_levels}},
+          :standards,
+          :opportunity_standards
+        ],
+        unit_group_units: {
+          unit_group: :course_version
+        }
       )
     end
   )
+
+  scope :with_ai_chat_tools, -> {joins(:levels).merge(Level.with_any_ai_chat_tools)}
+
+  scope :with_essential_ai_chat_tools, -> {joins(:levels).merge(Level.with_essential_ai_chat_tools)}
 
   attr_accessor :skip_name_format_validation
 
@@ -181,6 +171,7 @@ class Unit < ApplicationRecord
   end
 
   UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UI_TEST_JSON_DIRECTORY = "#{Rails.root}/test/ui/config/scripts_json".freeze
 
   def self.unit_json_directory
     UNIT_JSON_DIRECTORY
@@ -289,20 +280,12 @@ class Unit < ApplicationRecord
     enable_blockly_keyboard_navigation
   )
 
-  def self.twenty_hour_unit
-    Unit.get_from_cache(Unit::TWENTY_HOUR_NAME)
-  end
-
   def self.hoc_2014_unit
     Unit.get_from_cache(Unit::HOC_NAME)
   end
 
   def self.starwars_unit
     Unit.get_from_cache(Unit::STARWARS_NAME)
-  end
-
-  def self.course1_unit
-    Unit.get_from_cache(Unit::COURSE1_NAME)
   end
 
   def self.flappy_unit
@@ -618,17 +601,12 @@ class Unit < ApplicationRecord
   # Legacy levels have different video and title logic in LevelsHelper.
   def legacy_curriculum?
     [
-      Unit::TWENTY_HOUR_NAME,
       Unit::HOC_2013_NAME,
       Unit::EDIT_CODE_NAME,
       Unit::TWENTY_FOURTEEN_NAME,
       Unit::FLAPPY_NAME,
       Unit::JIGSAW_NAME
     ].include? name
-  end
-
-  def twenty_hour?
-    name == '20-hour'
   end
 
   def hoc?
@@ -647,16 +625,8 @@ class Unit < ApplicationRecord
     name == 'flappy'
   end
 
-  def csf_international?
-    ScriptConstants::CATEGORIES[:csf_international].include?(name)
-  end
-
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
     Unit.where("properties -> '$.curriculum_umbrella' = ?", curriculum_umbrella).pluck(:name)
-  end
-
-  def has_standards_associations?
-    curriculum_umbrella == 'CSF' && (get_original_unit_group&.version_year && get_original_unit_group.version_year >= '2019')
   end
 
   def standards
@@ -681,8 +651,6 @@ class Unit < ApplicationRecord
   end
 
   def k5_course?
-    return false if twenty_hour?
-
     # TODO(dmcavoy): When we update course type to differentiate between k5 and 6-12 update this method
     k5_csc_course = [
       Unit::POETRY_2021_NAME,
@@ -799,7 +767,6 @@ class Unit < ApplicationRecord
 
   def has_banner?
     # Temporarily remove Course A-F banner (wrong size) - Josh L.
-    return true if csf_international?
     return false if csf?
 
     [
@@ -1139,7 +1106,12 @@ class Unit < ApplicationRecord
     return unless Rails.application.config.levelbuilder_mode
 
     filepath = Unit.script_json_filepath(name)
-    File.write(filepath, Services::ScriptSeed.serialize_seeding_json(self))
+    contents = Services::ScriptSeed.serialize_seeding_json(self)
+    File.write(filepath, contents)
+
+    # Update MD5 hash to match the written file, so incremental seeding
+    # in other environments will recognize this version as already seeded.
+    update_column(:md5, Digest::MD5.hexdigest(contents))
   end
 
   def update_teacher_resources(resource_ids)
@@ -1204,29 +1176,21 @@ class Unit < ApplicationRecord
 
   def hoc_finish_url
     if name == Unit::HOC_2013_NAME
-      CDO.code_org_url '/api/hour/finish'
+      CDO.studio_url('/api/hour/finish')
     else
-      CDO.code_org_url "/api/hour/finish/#{name}"
+      CDO.studio_url("/api/hour/finish/#{name}")
     end
   end
 
   def csf_finish_url
-    if name == Unit::TWENTY_HOUR_NAME
-      # Rename from 20-hour to public facing Accelerated
-      CDO.code_org_url "/congrats/#{Unit::ACCELERATED_NAME}"
-    else
-      CDO.code_org_url "/congrats/#{name}"
-    end
+    ApplicationController.helpers.course_completion_certificate_url(course_name: name)
   end
 
   def finish_url(unit_group_unit: nil)
     return hoc_finish_url if hoc_or_hoai?
     return csf_finish_url if csf?
     course = unit_group_unit&.unit_group || get_original_unit_group
-    if course
-      return CDO.code_org_url "/congrats/#{course.name}"
-    end
-    CDO.code_org_url "/congrats/#{name}"
+    ApplicationController.helpers.course_completion_certificate_url(course_name: course ? course.name : name)
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1342,7 +1306,6 @@ class Unit < ApplicationRecord
         curriculum_umbrella: curriculum_umbrella,
         version_year: unit_group_unit&.cached_unit_group&.version_year,
         assigned_section_id: assigned_section_id,
-        hasStandards: has_standards_associations?,
         tts: tts?,
         deprecated: deprecated?,
         is_migrated: is_migrated?,
@@ -1887,8 +1850,15 @@ class Unit < ApplicationRecord
     Services::ScriptSeed.seed_from_json_file(filepath) if File.exist?(filepath)
   end
 
+  # Returns the filepath for a unit's script JSON file.
+  # UI test scripts (those with names starting with 'ui-test-') are stored in
+  # test/ui/config/scripts_json/, while normal scripts are stored in config/scripts_json/.
+  #
+  # @param [String] unit_name - the name of the unit
+  # @return [String] - the absolute filepath to the .script_json file
   def self.script_json_filepath(unit_name)
-    "#{unit_json_directory}/#{unit_name}.script_json"
+    directory = unit_name.start_with?('ui-test-') ? UI_TEST_JSON_DIRECTORY : unit_json_directory
+    "#{directory}/#{unit_name}.script_json"
   end
 
   def get_unit_overview_pdf_url
@@ -1933,7 +1903,15 @@ class Unit < ApplicationRecord
 
   # TODO-AITUTOR: update or remove
   def has_ai_tutor_level?
-    levels&.any?(&:ai_tutor_available?)
+    levels.with_ai_tutor_available.exists?
+  end
+
+  def has_ai_chat_tools?
+    self.class.where(id: id).with_ai_chat_tools.exists?
+  end
+
+  def requires_ai_chat_tools?
+    self.class.where(id: id).with_essential_ai_chat_tools.exists?
   end
 
   private def teacher_feedback_enabled?

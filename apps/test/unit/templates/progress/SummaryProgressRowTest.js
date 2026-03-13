@@ -16,6 +16,7 @@ const baseProps = {
   lessonIsLockedForUser: () => false,
   lessonIsLockedForAllStudents: () => false,
   viewAs: ViewType.Instructor,
+  unitHasUnnumberedLessons: false,
 };
 
 const setUp = (overrideProps = {}) => {
@@ -49,6 +50,23 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.props().style.borderStyle).toEqual('dashed');
       expect(wrapper.find('td').at(0).props().style.opacity).toEqual(0.6);
       expect(wrapper.find('td').at(1).props().style.opacity).toEqual(0.6);
+    });
+
+    it('renders lesson numbers with unitHasUnnumberedLessons false', () => {
+      const wrapper = setUp({
+        unitHasUnnumberedLessons: false,
+      });
+
+      expect(wrapper.find('td').at(0).text()).toContain('3. Maze');
+    });
+
+    it('renders lesson names without numbers with unitHasUnnumberedLessons true', () => {
+      const wrapper = setUp({
+        unitHasUnnumberedLessons: true,
+      });
+
+      expect(wrapper.find('td').at(0).text()).toContain('Maze');
+      expect(wrapper.find('td').at(0).text()).not.toContain('3.');
     });
 
     it('disables bubbles when locked', () => {

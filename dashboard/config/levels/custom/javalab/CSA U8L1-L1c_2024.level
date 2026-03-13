@@ -62,7 +62,7 @@
     "bubble_choice_description": "An example project that creates a game where the player battles against another character.",
     "thumbnail_url": "https://images.code.org/09f5a3d547909bb2e16cf8413d0e973e-optionC.png",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-01-12T21:08:24.353+00:00\",\"changed\":[\"cloned from \\\"CSA U8L1-L1c_2023\\\"\"],\"cloned_from\":\"CSA U8L1-L1c_2023\"}]"

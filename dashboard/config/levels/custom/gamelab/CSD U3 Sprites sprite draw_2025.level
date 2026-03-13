@@ -92,6 +92,7 @@
     "bubble_choice_description": "Create your own scene using both drawing and sprites.",
     "libraries_enabled": "false",
     "encrypted_examples": "D1fc8WFpHoekhS+GG0IaWcY/EYOR8i4NCNLHpyh19/W2glMbStm95AVCSZNH\nIsRogefTJQUx028p84RMWUZrXw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

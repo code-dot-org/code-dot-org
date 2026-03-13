@@ -15,7 +15,7 @@
     "display_name": "Daily Temperatures",
     "bubble_choice_description": "A weather analyst wants to know the overall average temperature for a several cities and their daily temperatures.",
     "thumbnail_url": "https://images.code.org/da503f4004138d2d2ee272ecde2d51fb-image-1651005744030.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-12T19:22:05.665+00:00\",\"changed\":[\"cloned from \\\"CSA U5L5-L4a CR_2022\\\"\"],\"cloned_from\":\"CSA U5L5-L4a CR_2022\"},{\"changed_at\":\"2022-04-12 19:22:07 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 16:05:43 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-04-28 16:48:50 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:06:10 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

@@ -14,7 +14,7 @@ type OpenConfirmDeleteFileArgsType = {
   folder: ProjectFolder;
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   deleteFolder: DeleteFolderFunction;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
   projectFiles: MultiFileSource['files'];
   projectFolders: MultiFileSource['folders'];
 };
@@ -25,7 +25,7 @@ export const openConfirmDeleteFolder = async ({
   folder,
   dialogControl,
   deleteFolder,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
   projectFiles,
   projectFolders,
 }: OpenConfirmDeleteFileArgsType) => {
@@ -72,6 +72,6 @@ export const openConfirmDeleteFolder = async ({
 
   if (results.type === 'confirm') {
     deleteFolder(folder.id);
-    sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER);
+    sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_DELETE_FOLDER);
   }
 };

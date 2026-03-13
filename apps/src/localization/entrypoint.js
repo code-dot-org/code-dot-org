@@ -11,17 +11,26 @@ import {get, set} from 'js-cookie';
  * The current course listing and a mapping between them and Localize project
  * keys. This is a temporary measure for now.
  */
-const csd_prefixes = ['/courses/csd-2024'];
+const csd_prefixes = ['/courses/csd-2024', '/courses/self-paced-pl-csd-2024'];
 
 const csf_prefixes = [
   '/courses/k5-unplugged',
   '/courses/express-2024',
   '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
 ];
 
 const donor_prefixes = [
   '/courses/customizing-llms-2024',
   '/courses/self-paced-pl-ai-101-2024',
+  '/courses/ai-ethics-2023',
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
@@ -29,11 +38,22 @@ const donor_prefixes = [
   '/courses/elementaryai-2024',
   '/courses/3-5gamedesign-2024',
   '/courses/elem-game-design-2024',
+  '/courses/mix-move-ai-2025',
 ];
 
-const aif_prefixes = ['/courses/artificial-intelligence-foundations-2025'];
+const aif_prefixes = [
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
+];
 
-const dashboard_prefixes = ['/home', '/users', '/teacher_dashboard'];
+const dashboard_prefixes = [
+  '/home',
+  '/users',
+  '/sections',
+  '/teacher_dashboard',
+];
 
 const prefixes = {
   MlKri360o3v2T: csd_prefixes,
@@ -44,13 +64,32 @@ const prefixes = {
 };
 
 const live = [
-  '/courses/3-5gamedesign-2024',
+  '/courses/k5-unplugged',
+  '/courses/ai-ethics-2023',
+  '/courses/express-2024',
+  '/courses/pre-express-2024',
+  '/courses/k5-onlinepd-2024',
+  '/courses/teaching-csf-2025',
+  '/courses/coursea-2024',
+  '/courses/courseb-2024',
+  '/courses/coursec-2024',
+  '/courses/coursed-2024',
+  '/courses/coursee-2024',
+  '/courses/coursef-2024',
+  '/courses/customizing-llms-2024',
+  '/courses/self-paced-pl-ai-101-2024',
   '/courses/foundations-gen-ai-2024',
   '/courses/foundations-gen-ai-2025',
   '/courses/foundations-generative-ai-unplugged',
   '/courses/k5-ai-data-2024',
-  '/courses/artificial-intelligence-foundations-2025/units/2',
-  '/courses/artificial-intelligence-foundations-2025/units/5',
+  '/courses/elementaryai-2024',
+  '/courses/3-5gamedesign-2024',
+  '/courses/elem-game-design-2024',
+  '/courses/artificial-intelligence-foundations-2025',
+  '/courses/mix-move-ai-2025',
+  '/courses/teaching-ai-foundations-2025',
+  '/courses/oceans',
+  '/courses/how-ai-works-2023',
 ];
 
 const experiments =
@@ -147,7 +186,7 @@ function loadLocalize() {
     };
 
     // When the site loads, ensure the language selector has the correct value
-    document.addEventListener('DOMContentLoaded', () => {
+    const onDOMLoad = () => {
       const localeSelect =
         document.querySelector('#locale') ||
         document.querySelector("select[name='locale']");
@@ -166,7 +205,14 @@ function loadLocalize() {
         localeSelect.addEventListener('change', handleChange);
       }
       ensureSelector(cdoLanguage);
-    });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', onDOMLoad);
+    } else {
+      // 'interactive' or 'complete' — DOMContentLoaded has already fired
+      onDOMLoad();
+    }
 
     // Translate everything in the Blockly message pool
     ensureSelector(cdoLanguage);
@@ -189,7 +235,6 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
    */
   const locale = get('language_') || 'en';
   if (!locale.startsWith('en')) {
-    set('language_', 'en-US');
     set('language_', 'en-US', {domain: '.code.org'});
     window.location.reload();
   } else {
@@ -203,7 +248,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
     // Localization class.
     window.LocalizeLoader = new Promise((resolve, reject) => {
       script.onload = () => {
-        // Optional: Handle script load event
+        // Load the localize widget
         loadLocalize();
         resolve(window.Localize);
       };
@@ -212,6 +257,7 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
         reject();
       };
     });
+
     document.head.appendChild(script);
   }
 }

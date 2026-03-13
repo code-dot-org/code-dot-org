@@ -7,7 +7,7 @@
   "properties": {
     "encrypted": "false",
     "long_instructions": "## Do This:\r\n\r\nThe `Painter` is supposed to paint a path to the taxi, but it's not working! Figure out why the `Painter` is not painting and fix the code so it paints while it has paint.\r\n\r\n&nbsp;\r\n\r\n![](https://images.code.org/919ee91f65fc96fa6b85ff42f9d2fd03-image-1744861774383.gif)\r\n\r\n---\r\n\r\n<i class=\"fa-solid fa-laptop\"></i> **Coding Tip**\r\n\r\nA `while` loop only runs if the condition is true at the beginning. If it's false right away, the loop is skipped completely.",
-    "ai_tutor_available": "false",
+    "ai_tutor_available": "true",
     "submittable": "false",
     "hide_share_and_remix": "false",
     "enable_micro_bit": "false",

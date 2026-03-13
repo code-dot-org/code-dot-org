@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2025-11-21T16:21:49.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "#Creating a While Loop\r\n\r\n1. **Create the Loop:** Inside the event listener, write a `while` loop that continues running as long as `roll` is strictly not equal (`!==`) to `target`.\r\n2. **Roll the Die:** Set the value of `roll` to the result of the `rollDie()` function.\r\n3. **Show the Result:** Work with AI to create a new list item, set its text to the `roll` number, and add it to `resultsList`.\r\n4. **Test:** Click the button. The list should generate random numbers and stop immediately once it prints a 6.\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "allowMultipleAttempts": false,
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n  <title>Lucky 6 Dice Roller</title>\n  <link rel=\"stylesheet\" href=\"style.css\">\n  <script src=\"script.js\" defer></script>\n</head>\n<body>\n\n  <main>\n    <h1>Lucky 6 Roller</h1>\n    <p>Roll the die until you get a 6!</p>\n    \n    <button id=\"rollBtn\">Roll Dice</button>\n    \n    <div class=\"results-container\">\n      <h3>Roll History:</h3>\n      <ul id=\"results\">\n        </ul>\n    </div>\n  </main>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// DOM elements\nconst rollBtn = document.querySelector(\"#rollBtn\");\nconst resultsList = document.querySelector(\"#results\");\n\n// Helper function\nconst rollDie = () => Math.floor(Math.random() * 6) + 1;\n\n// Event Listener\nrollBtn.addEventListener(\"click\", () => {\n  resultsList.innerHTML = \"\";  // Reset the list\n  \n  // Initialize variables\n  let roll = 0; // Start with an impossible value so the loop runs at least once\n  const target = 6;\n\n  // Write your while loop here\n\n  \n});",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "/* Base Styles */\nbody {\n  font-family: 'Verdana', sans-serif;\n  background-color: #f0f4f8;\n  color: #333;\n  text-align: center;\n  padding: 2rem;\n}\n\nh1 {\n  color: #2c3e50;\n}\n\n/* Button Styling */\nbutton {\n  background-color: #3498db;\n  color: white;\n  border: none;\n  padding: 1rem 2rem;\n  font-size: 1.2rem;\n  border-radius: 8px;\n  cursor: pointer;\n  margin-bottom: 2rem;\n  transition: background-color 0.2s;\n}\n\nbutton:hover {\n  background-color: #2980b9;\n}\n\n/* Results List */\n.results-container {\n  background: white;\n  max-width: 400px;\n  margin: 0 auto;\n  padding: 1rem;\n  border-radius: 8px;\n  box-shadow: 0 4px 6px rgba(0,0,0,0.1);\n}\n\nul {\n  list-style-type: none;\n  padding: 0;\n}\n\nli {\n  background-color: #ecf0f1;\n  margin: 5px 0;\n  padding: 10px;\n  border-radius: 4px;\n  font-family: 'Courier New', monospace;\n  font-weight: bold;\n}\n\n/* Highlight the winning roll */\nli:last-child {\n  background-color: #2ecc71;\n  color: white;\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "1",
+        "3"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\nxo9WGdcn76E=\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-21T16:21:49.737+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-template\\\"\"],\"cloned_from\":\"building-data-driven-systems-template\"},{\"changed_at\":\"2025-11-21 16:21:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:23:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:23:52 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:40:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:40:45 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:42:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 16:43:44 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

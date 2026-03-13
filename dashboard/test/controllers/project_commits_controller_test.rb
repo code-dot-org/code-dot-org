@@ -5,13 +5,64 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     student = create(:student)
     sign_in student
 
-    @controller.expects(:storage_decrypt_channel_id).with("abcdef").returns([123, 654])
+    @controller.expects(:get_storage_id_and_project_id).with("abcdef").returns([123, 654])
     assert_creates(ProjectCommit) do
       post :create, params: {storage_id: 'abcdef', version_id: 'fghj', comment: 'This is a comment'}
     end
     project_commit = ProjectCommit.find_by(project_id: 654, object_version_id: 'fghj')
     refute_nil project_commit
     assert_equal 'This is a comment', project_commit.comment
+  end
+
+  test "duplicate project commit submission preserves original comment" do
+    student = create(:student)
+    sign_in student
+
+    # Create the first commit.
+    @controller.expects(:get_storage_id_and_project_id).with("abcdef").returns([123, 654]).twice
+    post :create, params: {storage_id: 'abcdef', version_id: 'version123', comment: 'Original comment'}
+
+    # Verify it was created.
+    project_commit = ProjectCommit.find_by(project_id: 654, object_version_id: 'version123')
+    assert_equal 'Original comment', project_commit.comment
+
+    # Attempt to create a duplicate with a different comment.
+    assert_does_not_create(ProjectCommit) do
+      post :create, params: {storage_id: 'abcdef', version_id: 'version123', comment: 'Duplicate comment'}
+    end
+
+    # Verify the original comment is preserved
+    project_commit.reload
+    assert_equal 'Original comment', project_commit.comment
+    assert_response :conflict
+    response_json = JSON.parse(@response.body)
+    assert_equal 'A comment already exists for this project version.', response_json['error']
+  end
+
+  test "duplicate project commit submission notifies Honeybadger" do
+    student = create(:student)
+    sign_in student
+
+    # Create the first commit.
+    @controller.expects(:get_storage_id_and_project_id).with("abcdef").returns([123, 654]).twice
+    post :create, params: {storage_id: 'abcdef', version_id: 'version456', comment: 'First comment'}
+
+    # Attempt to create a duplicate - expect Honeybadger notification
+    Honeybadger.expects(:notify).with(
+      'Duplicate project commit submission detected.',
+      context: {
+        project_id: 654,
+        object_version_id: 'version456',
+        existing_comment: 'First comment',
+        attempted_comment: 'Second comment',
+        user_id: student.id
+      }
+    )
+
+    post :create, params: {storage_id: 'abcdef', version_id: 'version456', comment: 'Second comment'}
+    assert_response :conflict
+    response_json = JSON.parse(@response.body)
+    assert_equal 'A comment already exists for this project version.', response_json['error']
   end
 
   test "can fetch project commits of own project" do
@@ -22,7 +73,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_project_id = 654
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:get_storage_id_and_project_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
 
     create(:project_commit, project_id: fake_project_id, comment: "First comment", created_at: 2.days.ago)
     create(:project_commit, project_id: fake_project_id, comment: "Second comment", created_at: 1.day.ago)
@@ -44,7 +95,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_project_id = 654
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:get_storage_id_and_project_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
 
     create(:project_commit, project_id: fake_project_id, comment: "First comment", created_at: 2.days.ago)
     create(:project_commit, project_id: fake_project_id, comment: "", created_at: 1.day.ago)
@@ -68,7 +119,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_project_id = 654
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:get_storage_id_and_project_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
 
     create(:project_commit, project_id: fake_project_id, comment: "Third comment")
 
@@ -93,7 +144,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_project_id = 654
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:get_storage_id_and_project_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
     create(:code_review, user_id: project_owner_student.id, project_id: fake_project_id)
 
     create(:project_commit, project_id: fake_project_id, comment: "Third comment")
@@ -119,7 +170,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
     fake_project_id = 654
     fake_channel_id = 'abcdef'
     @controller.expects(:user_id_for_storage_id).with(fake_storage_id).returns(project_owner_student.id)
-    @controller.expects(:storage_decrypt_channel_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
+    @controller.expects(:get_storage_id_and_project_id).with(fake_channel_id).returns([fake_storage_id, fake_project_id])
     create(:code_review, user_id: project_owner_student.id, project_id: fake_project_id)
 
     create(:project_commit, project_id: fake_project_id, comment: "Third comment")

@@ -1,11 +1,11 @@
-import * as GoogleBlockly from 'blockly/core';
+import * as BlocklyCore from 'blockly/core';
 
 import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
 
 const unknownBlockState = {type: 'unknown', enabled: false};
 
-export default class CdoBlockSerializer extends GoogleBlockly.serialization
-  .blocks.BlockSerializer {
+export default class CdoBlockSerializer extends BlocklyCore.serialization.blocks
+  .BlockSerializer {
   /**
    * Catch errors when deserializing, and create unknown blocks instead.
    * Adapted from:
@@ -15,8 +15,8 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
    * @param workspace - The workspace to deserialize into.
    */
   load(
-    stateToLoad: {blocks: GoogleBlockly.serialization.blocks.State[]},
-    workspace: GoogleBlockly.Workspace
+    stateToLoad: {blocks: BlocklyCore.serialization.blocks.State[]},
+    workspace: BlocklyCore.Workspace
   ) {
     for (const blockState of stateToLoad['blocks']) {
       try {
@@ -29,12 +29,12 @@ export default class CdoBlockSerializer extends GoogleBlockly.serialization
           // Ensures that when run blocks cannot be deleted.
           blockState.deletable = false;
         }
-        GoogleBlockly.serialization.blocks.append(blockState, workspace, {
+        BlocklyCore.serialization.blocks.append(blockState, workspace, {
           recordUndo: Blockly.Events.getRecordUndo(),
         });
       } catch (e) {
         console.warn(`Creating "unknown block". ${(e as Error).message}`);
-        GoogleBlockly.serialization.blocks.append(
+        BlocklyCore.serialization.blocks.append(
           {...unknownBlockState, x: blockState.x, y: blockState.y},
           workspace,
           {

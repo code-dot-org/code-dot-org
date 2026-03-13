@@ -1,0 +1,91 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2025-11-13T11:56:37.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Eco Actions</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">Eco Actions</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"main-image\" src=\"main-image.png\" alt=\"Eco actions illustration showing water, energy, and reuse\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"output\" class=\"output\" aria-live=\"polite\">Choose a category to get one tiny habit to try today.</div>\n        <div class=\"buttons\">\n          <button id=\"water-btn\" type=\"button\">Water</button>\n          <button id=\"energy-btn\" type=\"button\">Energy</button>\n          <button id=\"transit-btn\" type=\"button\">Transit</button>\n          <button id=\"food-btn\" type=\"button\">Food</button>\n          <button id=\"reuse-btn\" type=\"button\">Reuse</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// SELECTORS and LISTENERS: connect user actions (clicks) to handlers for specific UI elements\ndocument.querySelector('#water-btn').addEventListener('click', () => {\n  // UI CHANGE: show a new message in the output box\n  document.querySelector('#output').textContent = 'Water: Turn off the tap while brushing—save a few gallons today.';\n});\n\n// TODO: Attach an event listener to the Energy button\n\n  // TODO: update text for Energy\n\n// TODO: Attach an event listener to the Transit button\n\n  // TODO: update text for Transit\n\n// TODO: Attach an event listener to the Food button\n\n  // TODO: update text for Food\n\n// TODO: Attach an event listener to the Reuse button\n\n  // TODO: update text for Reuse\n\n",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* { box-sizing: border-box; }\nhtml, body { height: 100%; }\nbody { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #3ba36a; color: #1f2937; }\n\n.title { text-align: center; margin: 16px 0 0; font-size: 1.75rem; letter-spacing: 0.5px; color: #0f172a; }\n\n.container { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; max-width: 1000px; margin: 0 auto; }\n.left { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; display: flex; align-items: center; justify-content: center; overflow: hidden; }\n#main-image { display: block; max-width: 100%; height: auto; border-radius: 8px; object-fit: contain; }\n\n.right { display: flex; flex-direction: column; gap: 24px; }\n.output { min-height: 120px; border: 1px dashed #cbd5e1; border-radius: 12px; padding: 16px; background: #fff; font-size: 1.1rem; line-height: 1.6; color: #111827; }\n\n.buttons { display: flex; flex-direction: column; gap: 12px; width: 240px; margin-inline: auto; }\n.buttons button { padding: 12px 16px; font-size: 1rem; border-radius: 10px; border: 1px solid #1f2937; background: #ffffff; color: #111827; cursor: pointer; transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease; }\n.buttons button:hover { background: #111827; color: #ffffff; border-color: #111827; }\n.buttons button:active { transform: translateY(1px); }\n\n@media (max-width: 800px) {\n  .container { grid-template-columns: 1fr; }\n  .buttons { width: 100%; }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "main-image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level5-choiced-test-2025/uuid/5201eec3-d1fa-4af3-ba48-cd228ec32afe.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "requirements.md",
+          "language": "md",
+          "contents": "# UI Elements (Eco Actions)\n\n- **Image**: `main-image`\n- **Output text box**: `output`\n- **Buttons**:\n  - `water-btn` (Water)\n  - `energy-btn` (Energy)\n  - `transit-btn` (Transit)\n  - `food-btn` (Food)\n  - `reuse-btn` (Reuse)\n\n## Behavior\n- **Click a category button** updates `#output` with one tiny habit to try today for that category.\n- **App load** shows: \"Choose a category to get one tiny habit to try today.\"\n- **No console errors** and repeated clicks are safe.",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "5",
+        "2",
+        "1",
+        "3",
+        "4"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n1eMIoL3SOdtoTIuM\n",
+    "encrypted": "false",
+    "display_name": "Eco Actions App",
+    "bubble_choice_description": "Create a web app that gives useful advice for earth-friendly actions one might take",
+    "thumbnail_url": "https://images.code.org/ef1d0bfa8eea3ffc1aab599c21ed456c-main-image.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "## Eco Actions App\r\n\r\n**Dcoument the UI** (buttons and output) in the Activity Guide\r\n\r\n**Explore**: Create additional buttons in HTML; `querySelector` each; add `click` listeners; in handlers, update `output` text.\r\n\r\n**Test every button** with the debug checklist; fix issues.\r\n\r\n**Use AI** to clarify terms, generate short display text (Eco Steps/Impacts signs), and translate errors."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-13T11:56:37.909+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level5-choiced-test-2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level5-choiced-test-2025\"},{\"changed_at\":\"2025-11-13 11:58:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-12-19 14:31:42 +0000\",\"changed\":[\"ai_tutor_mode\"],\"changed_by_id\":155,\"changed_by_email\":\"dani@code.org\"}]"
+}]]></config>
+</Weblab2>

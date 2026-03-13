@@ -20,7 +20,7 @@
     },
     "project_template_level_name": "CSA U3L6-Polymorphism PBT_2023",
     "teacher_markdown": "Students should notice the `calculateArea()` is defined in the `Shape`, `Rectangle`, and `Circle` classes. Each version of the `calculateArea()` method calculates the area differently based on the type of shape.\r\n\r\nWhen students update the `calculateArea()` method in the `Shape` class to return `0.0`, they should notice that this only impacts `Shape` objects. The `calculateArea()` method in the `Rectangle` and `Circle` classes still execute as defined on the `Rectangle` and `Circle` objects.",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-01-12T19:57:56.028+00:00\",\"changed\":[\"cloned from \\\"CSA Investigate Level Template\\\"\"],\"cloned_from\":\"CSA Investigate Level Template\"},{\"changed_at\":\"2023-01-12 19:58:04 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-01-24 16:46:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-03-31 20:26:47 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

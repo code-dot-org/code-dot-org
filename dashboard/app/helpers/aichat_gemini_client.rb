@@ -1,8 +1,10 @@
+require 'googleauth'
+
 # This class implements a gemini backend for the generic AichatAiClient.
 class AichatGeminiClient < AichatAiClient
   # The url to send with the post request.
   private def url
-    "https://generativelanguage.googleapis.com/v1beta/models/#{model}:generateContent?key=#{api_key}"
+    "https://aiplatform.googleapis.com/v1/projects/#{project_id}/locations/global/publishers/google/models/#{model}:generateContent"
   end
 
   # Take response_body and raise any errors if appropriate.
@@ -19,16 +21,18 @@ class AichatGeminiClient < AichatAiClient
   private def get_usage_from_body(response_body)
     total_tokens = response_body.dig('usageMetadata', 'totalTokenCount')
     prompt_tokens = response_body.dig('usageMetadata', 'promptTokenCount')
+    thought_tokens = response_body.dig('usageMetadata', 'thoughtsTokenCount')
+    cached_prompt_tokens = response_body.dig('usageMetadata', 'cachedContentTokenCount')
+
     {
       'prompt_tokens' =>  prompt_tokens || 0,
+      'thought_tokens' => thought_tokens ||  0,
+      'cached_prompt_tokens' =>  cached_prompt_tokens || 0,
 
       # This calculation - (total tokens - prompt tokens) seems to be what the OpenAI compat API
       # returns for completion tokens, but metrics could be made more flexible based on what's
       # available in a given API.
-      'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0,
-
-      # Gemini doesn't seem to support so setting to -1 to indicate the value is not meaningful.
-      'cached_prompt_tokens' =>  -1
+      'completion_tokens' => total_tokens &&  prompt_tokens ? total_tokens -  prompt_tokens : 0
 
     }
   end
@@ -45,9 +49,10 @@ class AichatGeminiClient < AichatAiClient
         temperature: config[:temperature],
         responseMimeType: response_mime_type,
         responseJsonSchema: response_json_schema,
-        # Set thinking budget to 0 to disable "thinking".
+        # Thinking budget documentation: https://ai.google.dev/gemini-api/docs/thinking#set-budget
+        # Set to 2000 to give it some thinking tokens but still keep requests from timing out.
         thinkingConfig: {
-          thinkingBudget: 0
+          thinkingBudget: 2000
         }
       }.compact, # Use compact to remove null responseMimeType / responseJsonSchema
       system_instruction: {
@@ -86,5 +91,25 @@ class AichatGeminiClient < AichatAiClient
   # Helper to format gemini "parts" array from internal representation.
   private def format_parts(internal_parts)
     internal_parts&.map {|internal_part| format_part(internal_part)}
+  end
+
+  # Helper to get project ID from api_key hash
+  private def project_id
+    api_key["project_id"]
+  end
+
+  # Helper to get Vertex access token from api_key hash
+  private def bearer_token
+    scope = 'https://www.googleapis.com/auth/cloud-platform'
+
+    authorizer = Google::Auth::ServiceAccountCredentials.make_creds(
+      json_key_io: StringIO.new(api_key.to_json),
+      scope: scope
+    )
+
+    # Fetch the token (this handles the JWT signing/exchange)
+    token_data = authorizer.fetch_access_token!
+
+    token_data['access_token']
   end
 end

@@ -2,10 +2,12 @@
 import {Codebridge} from '@codebridge/Codebridge';
 import {useSource} from '@codebridge/hooks/useSource';
 import {CodebridgeLevelProperties, ConfigType} from '@codebridge/types';
+import {json} from '@codemirror/lang-json';
 import {python} from '@codemirror/lang-python';
 import {LanguageSupport} from '@codemirror/language';
 import React, {useContext, useEffect, useMemo, useState} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -39,6 +41,7 @@ import {
   STANDALONE_CONSOLE_PROJECT,
   STANDALONE_NEIGHBORHOOD_PROJECT,
   PYTHONLAB_EDITABLE_FILE_TYPES,
+  PYTHONLAB_SUPPORTED_FILE_TYPES,
 } from './constants';
 import {AiTutorPythonLabContextHelper} from './helpers/aiTutorContextHelper';
 import HorizontalLayout from './layout/HorizontalLayout';
@@ -54,6 +57,7 @@ const aiTutorHelper = new AiTutorPythonLabContextHelper();
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
+  json: json(),
 };
 
 const standaloneStartSources: {[key: string]: ProjectSources} = {
@@ -64,6 +68,7 @@ const standaloneStartSources: {[key: string]: ProjectSources} = {
 const defaultConfig: ConfigType = {
   languageMapping: pythonlabLangMapping,
   editableFileTypes: PYTHONLAB_EDITABLE_FILE_TYPES,
+  supportedFileTypes: PYTHONLAB_SUPPORTED_FILE_TYPES,
   activeLayout: 'horizontal',
   layoutComponents: {
     horizontal: HorizontalLayout,
@@ -81,6 +86,9 @@ const PythonlabView: React.FunctionComponent<
     DEFAULT_PROJECT,
     levelProperties,
     initialSources
+  );
+  const sourceLevelId = useAppSelector(
+    state => state.lab2Project.projectSourceLevelId
   );
   const validationFile = levelProperties.validationFile;
   const isPredictLevel = levelProperties.predictSettings?.isPredictLevel;
@@ -104,14 +112,22 @@ const PythonlabView: React.FunctionComponent<
   const miniAppName = useAppSelector(
     state => state.lab2Project.projectSources?.labConfig?.miniApp?.name
   );
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
+  const hasEdited = useAppSelector(state => state.lab2Project.hasEdited);
+  const aiChatAccessLevel = useAppSelector(
+    state => state.currentUser.aiChatAccessLevel
+  );
 
   const hasSource = !!source;
-  const isAiTutor2Enabled = useMemo(() => {
-    return (
-      levelProperties.aiTutorAvailable ||
-      queryParams('show-ai-tutor2') === 'true'
-    );
-  }, [levelProperties.aiTutorAvailable]);
+
+  const isAiTutorEnabled =
+    shouldShowAiTutor({
+      appName: levelProperties.appName,
+      tutorLevel: levelProperties.aiTutorAvailable,
+      aiChatAccessLevel: aiChatAccessLevel,
+    }) ||
+    queryParams('show-ai-tutor2') === 'true' ||
+    queryParams('show-ai-tutor') === 'true';
 
   const dispatch = useAppDispatch();
 
@@ -188,12 +204,14 @@ const PythonlabView: React.FunctionComponent<
   );
 
   useEffect(() => {
-    if (isAiTutor2Enabled) {
+    if (isAiTutorEnabled) {
       aiTutorHelper.setAiTutorContext({
         source,
         miniAppName,
         validationFile,
         longInstructions: levelProperties.longInstructions,
+        hasRun,
+        hasEdited,
       });
     }
   }, [
@@ -201,7 +219,9 @@ const PythonlabView: React.FunctionComponent<
     source,
     validationFile,
     miniAppName,
-    isAiTutor2Enabled,
+    isAiTutorEnabled,
+    hasRun,
+    hasEdited,
   ]);
 
   const onRun = async (
@@ -237,7 +257,7 @@ const PythonlabView: React.FunctionComponent<
 
   return (
     <div className={moduleStyles.pythonlab}>
-      {hasSource && (
+      {hasSource && sourceLevelId === levelProperties.id && (
         <Codebridge
           config={config}
           setConfig={setConfig}

@@ -56,11 +56,13 @@ Given(/^I am a teacher with student sections named Section 1 and Section 2/) do
   )
 end
 
-Given(/^I create a new student section assigned to course "([^"]*)" unit (\d+)( and save the section)?$/) do |course_name, unit_position, save|
+Given(/^I create a new student section assigned to course "([^"]*)" unit (\d+)( with AI chat enabled)?( and save the section)?$/) do |course_name, unit_position, ai_chat_enabled, save|
+  body = {course_name: course_name, unit_position: unit_position}
+  body[:ai_chat_access_level] = 'essential_only' if ai_chat_enabled
   response = JSON.parse(browser_request(
                           url: '/api/test/create_student_section_assigned_to_course_and_unit',
                           method: 'POST',
-                          body: {course_name: course_name, unit_position: unit_position}
+                          body: body
     )
   )
   if save
@@ -291,7 +293,7 @@ Then /^I save the section id from row (\d+) of the section table$/ do |section_i
   href = nil
   wait_until do
     href = @browser.execute_script(
-      "return $('#ui-test-section-list ol li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
+      "return $('#ui-test-section-list li:eq(#{section_index}) #ui-test-Section-settings').attr('href')"
     )
     !href.nil?
   end

@@ -41,7 +41,7 @@ table {
     background-color: $light_gray_50;
     color: $light_black;
     font-size: 0.875rem;
-    font-weight: $semi-bold-font-weight;
+    font-weight: var(--font-weight-semi-bold);
     padding-block: 1rem !important;
     text-align: initial;
   }

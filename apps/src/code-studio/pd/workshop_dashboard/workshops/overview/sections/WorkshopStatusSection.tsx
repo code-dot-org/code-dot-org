@@ -1,17 +1,19 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
 import {
-  Heading2,
-  BodyFourText,
-  StrongText,
-  Heading3,
-} from '@code-dot-org/component-library/typography';
-import {Card, CardContent, CardHeader, Box} from '@mui/material';
+  Card,
+  CardContent,
+  CardHeader,
+  Box,
+  Typography,
+  Button as MuiButton,
+} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
@@ -74,6 +76,7 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
   const inProgress = workshop.state === 'In Progress';
   const ended = workshop.state === 'Ended';
   const cannotEndWorkshop = !workshop.readyToClose;
+  const navigate = useNavigate();
 
   const handleClick = (stateKey: WorkshopActions) => {
     setError(null);
@@ -139,9 +142,9 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
           title={
             <Box className={styles.cardHeaderContainer}>
               <Box className={styles.cardHeaderRow}>
-                <Heading2 visualAppearance="body-two" noMargin>
-                  <StrongText>Workshop Status</StrongText>
-                </Heading2>
+                <Typography component="h2" variant="body2">
+                  <Typography variant="strong">Workshop Status</Typography>
+                </Typography>
                 <Tags
                   className={classNames(styles.workshopTag, styles.status)}
                   tagsList={[
@@ -154,22 +157,26 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                 />
               </Box>
               {isWorkshopAdmin && inProgress && (
-                <Button
-                  text="Unstart (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('unstart')}
-                />
+                  type="button"
+                >
+                  Unstart (admin)
+                </MuiButton>
               )}
               {isWorkshopAdmin && ended && (
-                <Button
-                  text="Reopen (admin)"
-                  size="xs"
-                  type="secondary"
-                  color={buttonColors.gray}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={() => handleClick('reopen')}
-                />
+                  type="button"
+                >
+                  Reopen (admin)
+                </MuiButton>
               )}
             </Box>
           }
@@ -178,22 +185,24 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
           <Box className={styles.sectionContainer}>
             <Box className={styles.column}>
               {notStarted && (
-                <BodyFourText noMargin>
+                <Typography variant="body4">
                   On the day of your workshop, click the "Start Workshop" button
                   below.
-                </BodyFourText>
+                </Typography>
               )}
 
               {inProgress && workshop.accountRequiredForAttendance && (
                 <>
-                  <BodyFourText noMargin>
+                  <Typography variant="body4">
                     On the day of the workshop, ask workshop attendees to follow
                     the steps:
-                  </BodyFourText>
-                  <Heading3 visualAppearance="body-two" noMargin>
-                    <StrongText>Step 1: Sign into Code Studio</StrongText>
-                  </Heading3>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography component="h3" variant="body2">
+                    <Typography variant="strong">
+                      Step 1: Sign into Code Studio
+                    </Typography>
+                  </Typography>
+                  <Typography variant="body4">
                     Tell workshop attendees to sign into their Code Studio
                     accounts. If they do not already have an account tell them
                     to create one by going to{' '}
@@ -206,36 +215,42 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     >
                       {window.origin}
                     </Link>
-                  </BodyFourText>
-                  <Heading3 visualAppearance="body-two" noMargin>
-                    <StrongText>Step 2: Take attendance</StrongText>
-                  </Heading3>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography component="h3" variant="body2">
+                    <Typography variant="strong">
+                      Step 2: Take attendance
+                    </Typography>
+                  </Typography>
+                  <Typography variant="body4">
                     After workshop attendees have signed into their Code Studio
-                    accounts, use the attendance links below to take attendance.
-                    Note: Workshop attendees need to have enrolled in the
-                    workshop in order to take attendance. They can enroll in the
-                    workshop using{' '}
+                    accounts, share the attendance link(s) from the{' '}
                     <Link
                       className={styles.workshopLink}
                       size="xs"
-                      openInNewTab
-                      aria-label="Open enrollment page in new tab"
-                      href={`/professional-learning/workshops/${workshop.id}`}
+                      aria-label="Open attendance link"
+                      href={`/pd/workshop_dashboard/workshops/${workshop.id}/attendance`}
+                      onClick={e => {
+                        // preventing native link behavior to navigate client side using react-router
+                        e.preventDefault();
+                        navigate(`/workshops/${workshop.id}/attendance`);
+                      }}
                     >
-                      {`${window.origin}/professional-learning/workshops/${workshop.id}`}
+                      attendance tab
                     </Link>
-                  </BodyFourText>
+                    . Note: if a teacher has not already enrolled in the
+                    workshop, they will be prompted to do so before completing
+                    attendance.
+                  </Typography>
                 </>
               )}
 
               {inProgress && !workshop.accountRequiredForAttendance && (
                 <>
-                  <BodyFourText noMargin>
+                  <Typography variant="body4">
                     On the day of the workshop, ask workshop attendees to
                     register if they haven't already:
-                  </BodyFourText>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography variant="body4">
                     <Link
                       className={styles.workshopLink}
                       size="xs"
@@ -245,23 +260,23 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     >
                       {`${window.origin}/professional-learning/workshops/${workshop.id}`}
                     </Link>
-                  </BodyFourText>
+                  </Typography>
                 </>
               )}
 
               {inProgress && cannotEndWorkshop && (
-                <BodyFourText noMargin>
+                <Typography variant="body4">
                   Workshop should not end until all sessions are complete and
                   attendance has been taken.
-                </BodyFourText>
+                </Typography>
               )}
 
               {ended && (
                 <>
-                  <BodyFourText noMargin>
+                  <Typography variant="body4">
                     We hope you had a great workshop!
-                  </BodyFourText>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography variant="body4">
                     Workshop attendees will receive an email with survey link
                     from{' '}
                     <Link size="xs" href="mailto:survey@code.org">
@@ -277,14 +292,14 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
                     'my account' page via the top right corner to confirm their
                     email address was typed correctly when they first created
                     the account.
-                  </BodyFourText>
-                  <BodyFourText noMargin>
+                  </Typography>
+                  <Typography variant="body4">
                     If they still can't find the email, have them email{' '}
                     <Link size="xs" href="mailto:support@code.org">
                       support@code.org
                     </Link>{' '}
                     and we will help them.
-                  </BodyFourText>
+                  </Typography>
                 </>
               )}
 
@@ -300,30 +315,35 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
 
               <Box>
                 {notStarted && (
-                  <Button
-                    size="s"
-                    text="Start Workshop"
+                  <MuiButton
+                    variant="contained"
+                    color="primary"
+                    size="small"
                     onClick={() => handleClick('start')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    Start Workshop
+                  </MuiButton>
                 )}
 
                 {inProgress && (
-                  <Button
-                    size="s"
-                    text="End workshop"
-                    type="secondary"
-                    color={buttonColors.destructive}
+                  <MuiButton
+                    variant="outlined"
+                    color="error"
+                    size="small"
                     onClick={() => handleClick('end')}
+                    type="button"
                     disabled={isUpdating}
-                  />
+                  >
+                    End workshop
+                  </MuiButton>
                 )}
               </Box>
             </Box>
           </Box>
         </CardContent>
       </Card>
-
       {dialogs.map(({stateKey, label, description, primaryButtonProps}) =>
         activeDialog === stateKey ? (
           <Dialog

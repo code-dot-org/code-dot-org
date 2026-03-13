@@ -19,7 +19,8 @@
     "v1_initial_width": "10",
     "v1_initial_height": "10",
     "parent_level_id": 20315,
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

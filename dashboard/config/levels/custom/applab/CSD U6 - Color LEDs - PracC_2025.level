@@ -101,6 +101,7 @@
     "bubble_choice_description": "Create an app that simulates an alarm clock using LEDs and the buzzer",
     "thumbnail_url": "https://images.code.org/0bc17ebca594d7eacb20849598546885-image-1649456272628.png",
     "encrypted_examples": "hz2m3TbNkSY4HogiyTg9TKqvdFN6W/sU/GSCpbe1rpj5lPTI6G1XbUMRihHP\n8w6vfQH1D/bCSrqjCIkeo1hvSg==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

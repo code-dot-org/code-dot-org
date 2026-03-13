@@ -1,6 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import Chips from '@code-dot-org/component-library/chips';
-import {Heading2} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
@@ -43,7 +42,9 @@ export default function SingleSectionSetUp({
   return (
     <div>
       <div className={moduleStyles.containerWithMarginTop}>
-        <Heading2>{i18n.classSection()}</Heading2>
+        <Typography variant="h2" gutterBottom>
+          {i18n.classSection()}
+        </Typography>
         <label className={moduleStyles.typographyLabelTwo}>
           {i18n.className()}
 
@@ -79,15 +80,17 @@ export default function SingleSectionSetUp({
                 emoji={section.avatar_emoji || 0}
                 size={'m'}
               />
-              <Button
+              <MuiButton
+                variant="outlined"
+                color="tertiary"
+                size="small"
                 className={styles.avatarButton}
-                text={i18n.editAvatar()}
-                aria-label={i18n.editAvatar()}
-                type={'secondary'}
-                color={'gray'}
-                size={'s'}
                 onClick={() => setShowAvatarDialog(true)}
-              />
+                aria-label={i18n.editAvatar()}
+                type="button"
+              >
+                {i18n.editAvatar()}
+              </MuiButton>
             </>
           )}
         </div>

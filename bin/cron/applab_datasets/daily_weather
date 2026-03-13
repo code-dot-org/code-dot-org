@@ -6,6 +6,7 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script fetches weather forecast data from api.openweathermap and uploads to the shared datablock storage table.
 require_relative '../../../dashboard/config/environment'
 require_relative '../../../deployment'
+require 'cdo/chat_client'
 require 'net/http'
 require 'json'
 require 'ostruct'
@@ -154,7 +155,7 @@ def get_weather_data
     response = Net::HTTP.get_response(URI(url))
     if response.code != '200'
       puts "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets."
-      Honeybadger.notify(
+      Honeybadger.notify_cronjob_error(
         error: response.message,
         error_message: "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets.",
       )
@@ -204,9 +205,21 @@ def main
   records = get_weather_data
   if records.empty?
     puts "No data returned from OpenWeather API. No records will be written to datablock storage."
-    Honeybadger.notify(
+    Honeybadger.notify_cronjob_error(
       error_message: "No data returned from OpenWeather API. No records will be written to datablock storage."
-      )
+    )
+    return
+  end
+
+  # For some reason, we're getting dates from the API in August 2025 sometimes.
+  # Better to fail and have slightly stale data than overwrite with obviously wrong data.
+  days_old = (Time.now.to_i - records.first[:'UTC Timestamp']) / (24 * 60 * 60)
+  if days_old > (NUM_DAYS+2)
+    ChatClient.message(
+      'cron-daily',
+      "Daily Weather dataset not updated because data returned from the OpenWeather API is #{days_old} days old from #{records.first[:Date]}.",
+      color: 'yellow'
+    )
     return
   end
 

@@ -16,7 +16,8 @@
     "bubble_choice_description": "Use your debugging skills to figure out why the images aren't being styled correctly on this web page.",
     "thumbnail_url": "https://images.code.org/dc09b7789b974ed9487f7966c7c836df-travel.png",
     "encrypted_examples": "Qmtr0Y3PcPk6OiYRQxNz/5jRq+7BCEaXTXcXBqV+UxXgXzU1WHZ47L557WE+\nI4iU9qqoArUOi8FDX1Q5a0lh5w==\n",
-    "name_suffix": "_2025"
+    "name_suffix": "_2025",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2025-03-12T20:54:38.396+00:00\",\"changed\":[\"cloned from \\\"CSD classes travel_2024\\\"\"],\"cloned_from\":\"CSD classes travel_2024\"}]"

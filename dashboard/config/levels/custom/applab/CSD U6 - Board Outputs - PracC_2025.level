@@ -76,6 +76,7 @@
     "bubble_choice_description": "Help find the bug in the code!",
     "thumbnail_url": "https://images.code.org/561e5f13e03e937e873c47667c2f9117-image-1650058411329.png",
     "encrypted_examples": "3yQstn/dclqFmt7FYyqXtM5yn+2jijNDw1HnL6KfWnzR/6km4u4xJ0N6OLoQ\nOdIn1pYon3s8u2A3Wv6vPlLoSQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

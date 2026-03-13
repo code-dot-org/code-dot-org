@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://api1.webpurify.com/services/rest
+    uri: https://api1.webpurify.com/services/rest
     body:
       encoding: US-ASCII
       string: ''

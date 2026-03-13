@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -52,6 +51,13 @@ class Visualization extends React.Component {
   };
 
   render() {
+    const {
+      isResponsive,
+      isShareView,
+      playspacePhoneFrame,
+      isRunning,
+      isPaused,
+    } = this.props;
     const appWidth = applabConstants.getAppWidth(this.props);
     const appHeight =
       applabConstants.APP_HEIGHT - applabConstants.FOOTER_HEIGHT;
@@ -60,17 +66,15 @@ class Visualization extends React.Component {
       <div
         id={VISUALIZATION_DIV_ID}
         className={this.getVisualizationClassNames()}
-        style={[
-          !this.props.isResponsive && {
+        style={combineStyles(
+          !isResponsive && {
             ...styles.nonResponsive,
             width: appWidth, // Required for the project share page.
           },
-          this.props.isShareView && styles.share,
-          this.props.playspacePhoneFrame && styles.phoneFrame,
-          this.props.playspacePhoneFrame &&
-            this.props.isRunning &&
-            styles.phoneFrameRunning,
-        ]}
+          isShareView && styles.share,
+          playspacePhoneFrame && styles.phoneFrame,
+          playspacePhoneFrame && isRunning && styles.phoneFrameRunning
+        )}
       >
         <div id="divApplab" className="appModern" />
         <div
@@ -89,16 +93,18 @@ class Visualization extends React.Component {
           handleTryAgain={this.handleTryAgain}
         />
         <div
-          style={[
-            {...styles.screenBlock, ...{width: appWidth}},
-            !(this.props.isPaused && this.props.playspacePhoneFrame) &&
-              commonStyles.hidden,
-          ]}
+          style={combineStyles(
+            {...styles.screenBlock, width: appWidth},
+            !(isPaused && playspacePhoneFrame) && commonStyles.hidden
+          )}
         />
       </div>
     );
   }
 }
+
+const combineStyles = (...styles) =>
+  Object.assign({}, ...styles.filter(Boolean));
 
 const styles = {
   nonResponsive: {
@@ -140,4 +146,4 @@ export default connect(state => ({
   playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   isResponsive: isResponsiveFromState(state),
   widgetMode: state.pageConstants.widgetMode,
-}))(Radium(Visualization));
+}))(Visualization);

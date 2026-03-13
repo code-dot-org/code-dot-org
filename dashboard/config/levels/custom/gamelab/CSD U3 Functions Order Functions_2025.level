@@ -75,6 +75,7 @@
     ],
     "libraries_enabled": "false",
     "palette_category_at_start": "functions",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

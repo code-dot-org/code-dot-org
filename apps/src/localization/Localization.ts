@@ -4,8 +4,8 @@ import {get} from 'js-cookie';
 import type {
   LocalizeJS,
   LocalizeOptions,
+  LocalizeSetLanguageData,
 } from '@cdo/apps/localization/Localize';
-import experiments from '@cdo/apps/util/experiments';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 
@@ -113,6 +113,9 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
   private options: LocalizeOptions | undefined;
 
   private localeList: LanguageInfo[] = [];
+  private localeLoaded: {
+    [locale: string]: boolean;
+  };
   private Localize: LocalizeJS | undefined;
   private loader?: Promise<boolean>;
 
@@ -124,12 +127,9 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     super();
 
     this.localeList = [];
-
-    // Only allow when enableExperiments=localizejs has been set
-    // or localizejs=1 is specified in the URL
-    if (!experiments.isEnabledAllowingQueryString(experiments.LOCALIZEJS)) {
-      return;
-    }
+    this.localeLoaded = {
+      en: true,
+    };
 
     this.loader = new Promise(resolve => {
       window.LocalizeLoader?.then(loadedLocalize => {
@@ -140,9 +140,19 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
           this.options = options as LocalizeOptions;
         });
 
-        this.Localize?.on?.('setLanguage', _ => {
+        this.Localize?.on?.('setLanguage', (data: LocalizeSetLanguageData) => {
           // Call our own 'change' event
-          this.emit('change', {locale: this.locale, rtl: this.rtl});
+          if (this.localeLoaded[data.to]) {
+            this.emit('change', {locale: data.to, rtl: this.isRTL(data.to)});
+          }
+        });
+
+        this.Localize?.on?.('dictionaryAdded', locale => {
+          // Call our own 'change' event, again, to reflect new dictionary data
+          this.localeLoaded[locale] = true;
+          if (locale === this.locale) {
+            this.emit('change', {locale: this.locale, rtl: this.rtl});
+          }
         });
 
         this.Localize?.getAvailableLanguages?.((_, data) => {
@@ -163,6 +173,13 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
         resolve(false);
       }
     });
+  }
+
+  /**
+   * Returns true if LocalizeJS has been properly initialized and is available.
+   */
+  isLocalizeJS(): boolean {
+    return !!this.Localize;
   }
 
   async waitUntilLoaded(): Promise<boolean> {
@@ -249,12 +266,14 @@ export class Localization extends TypedEventEmitter<LocalizationEventMap> {
     event: K,
     listener: (payload: LocalizationEventMap[K]) => void
   ): this {
-    return super.on(event, listener);
+    const ret = super.on(event, listener);
 
-    // Ensure that we call the 'change' event at least once
+    // Ensure that we call this particular 'change' event at least once
     if (event === 'change') {
-      this.emit('change', {locale: this.locale, rtl: this.rtl});
+      listener({locale: this.locale, rtl: this.rtl});
     }
+
+    return ret;
   }
 
   override addListener<K extends keyof LocalizationEventMap>(

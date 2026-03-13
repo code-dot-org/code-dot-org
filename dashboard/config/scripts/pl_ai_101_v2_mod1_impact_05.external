@@ -1,0 +1,94 @@
+name 'pl-ai-101-V2-mod1-impact-05'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Realizing the Benefits of AI in Education
+
+#### With guidance, an education system may realize the potential benefits of AI to improve learning outcomes, support teacher instruction and quality of life, and enhance educational equity. Without guidance, teachers and students can be exposed to privacy violations, inconsistent disciplinary consequences, and counterproductive AI adoption practices.
+
+#### Take a look at the graphic below that highlights seven **Principles for AI in Education**.
+
+#### 👉 Click on the drop downs below to learn more about each principle.
+
+<br>
+<p style="text-align:center;"><img src="https://images.code.org/18fa5a89b18e779fadb3a109f82806a8-Screenshot 2026-02-04 at 3.11.56 PM.png" alt="Potential benefits and risks of AI in education."></p>
+
+*Image: TeachAI*
+
+---
+
+<!-- 6 Principle Dropdowns -->
+
+<details style="background-color:#0284B7; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+1. Purpose — Use AI to help all students achieve educational goals.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+This principle emphasizes that AI should be used intentionally to support student learning, well-being, and equity—not simply because the technology is available. Schools should be clear about why they are using AI and how it aligns with instructional goals and values. When thoughtfully implemented, AI can expand access to learning supports and help meet diverse student needs. However, whether AI reduces or worsens inequities depends on leadership, access, and clear guidance.
+</div>
+</details>
+
+<details style="background-color:#083B8C; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+2. Compliance — Reaffirm adherence to existing policies.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+AI use in schools must follow existing laws and policies related to privacy, data security, accessibility, and student safety. This includes regulations like FERPA, COPPA, and disability protections, as well as local procurement and acceptable use policies. Rather than assuming AI is exempt from current rules, schools should review how AI tools collect, store, and use data. Careful vetting and transparency from vendors are essential before adoption.
+</div>
+</details>
+
+<details style="background-color:#2FA05A; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+3. Knowledge — Promote AI Literacy.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+AI literacy means understanding what AI is, how it works, what it can and cannot do, and its ethical implications. Educators and students alike need opportunities to learn how to critically evaluate AI-generated content, recognize bias, and understand limitations such as errors or misinformation. Promoting AI literacy helps students develop skills like critical thinking and prepares them for a future where AI is common. This principle encourages integrating AI concepts across subjects, not limiting them to computer science classes.
+</div>
+</details>
+
+<details style="background-color:#0284B7; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+4. Balance — Realize the benefits of AI and address the risks.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+AI is neither inherently good nor bad; its impact depends on how it is used. This principle encourages schools to embrace AI’s potential benefits—such as personalized learning and teacher support—while also proactively addressing risks like plagiarism, misinformation, bias, and overreliance. A balanced approach includes clear expectations, redesigned assessments, and safeguards that keep learning authentic. The focus is on thoughtful integration rather than fear-driven bans or uncritical adoption.
+</div>
+</details>
+
+<details style="background-color:#083B8C; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+5. Evaluation — Advance academic integrity.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+AI challenges traditional ideas about plagiarism and originality, making it necessary to revisit academic integrity policies. Instead of treating all AI use as cheating, schools should clarify when and how AI tools may be used and how that use should be acknowledged. This principle emphasizes teaching students honesty, transparency, and responsibility in their work. Clear guidance helps maintain trust while recognizing that AI is becoming part of real-world writing and problem-solving.
+</div>
+</details>
+
+<details style="background-color:#2FA05A; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+6. Agency — Maintain human decision-making when using AI.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+AI should support, not replace, human judgment in education. Important decisions—such as grading, academic interventions, hiring, or discipline—must remain the responsibility of educators and administrators. This principle reinforces the idea of “humans in the loop,” where AI provides input or recommendations, but people make final decisions. Maintaining agency helps ensure accountability, fairness, and alignment with educational values.
+</div>
+</details>
+
+
+<details style="background-color:#0284B7; color:#ffffff; padding:14px 14px; border-radius:10px; margin-bottom:14px; font-size:18px;">
+<summary style="cursor:pointer; font-weight:700; list-style:none;">
+7. Integrity — Regularly assess the impacts of AI.
+</summary>
+<div style="padding-top:10px; font-size:16px; line-height:1.5; opacity:0.95;">
+Because AI tools and policies evolve quickly, schools should regularly review how AI is being used and what effects it is having. This includes gathering feedback from teachers, students, and families, and using evidence to guide decisions about adoption or revision. Ongoing evaluation helps ensure AI tools continue to align with instructional goals, legal requirements, and best practices. Treating AI guidance as a living document allows schools to adapt as technology and understanding change.
+</div>
+</details>
+
+>#### **💬 Quick Reflection:** Which of these are most excited about championing in your school or classroom? What's one way you can do so?
+
+
+---
+
+#### We'll return to these **Principles for AI in Education** in Module 6, Ensuring a Responsible Approach to AI.
+
+MARKDOWN

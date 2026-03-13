@@ -107,6 +107,7 @@
     "start_blocks": "var waterY = 400;\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  //1) When the A button is pressed, the water rises up the screen\r\n  \r\n  //2) If the water gets to the black line, the circuit playground should buzz\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  //3) When the B button is pressed, the water lowers on the screen\r\n  \r\n});\r\n",
     "encrypted_examples": "yAQZOjOk/mCeyxU2FvdtdUHwXwfBkw+XBkSKuU0sphaiJfuwv3H1ggfKtxkN\nIAaqBBGcD3kkhgg1ZF1PnznSVg==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

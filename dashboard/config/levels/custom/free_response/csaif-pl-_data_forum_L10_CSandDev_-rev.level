@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-25T22:23:26.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Reflection\r\n\r\n#### Reflect on teaching data ethics...\r\n \r\n- #### How can you deepen students’ understanding of data ethics, bias, or interpretation in future lessons?\r\n\r\n- #### What strategies will you use to build a bridge between data skills and real-world applications?\r\n\r\n#### *These questions are just starting points for reflection and discussion—there’s no need to answer all of them. Focus on the ones that resonate most with your teaching experience and goals.*\r\n\r\n\r\n<div style=\"display: flex; align-items: left; margin:20px 0px 30px 0px\">\r\n\r\n<a href=\"https://forum.code.org/t/teaching-ai-and-the-systems-that-power-it-pl-reflection-teaching-data-ethics/40999?u=amanda.dennard1\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n\r\n<img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width: auto; height: 100px;\"  alt=\"A browser with two text boxes, both including an avatar and lines of text.\"></a>\r\n\r\n<div style=\"background-color: #007786; border-radius: 20px 20px 20px 20px; color: #000000; width: 80%; margin-left: 5%; margin-right: 5%; padding: 10px 10px 5px 10px;\">\r\n\r\n<p style=\"color: white; line-height: 1.5; margin-left: 10px; margin-right: 10px; font-size: 18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color: white; line-height: 1.2; margin-left: 10px; margin-right: 10px; font-size: 18px\">Share your response and read other educators' ideas on the forum! Click on the icon to the left to direct to our forum post.\r\n</p>\r\n\r\n\r\n</div>\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "stay_on_level_after_submit": "false",
+    "name_suffix": "_-rev"
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-25T22:23:26.718+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-_data_forum_L10_CSandDev_2025\\\"\"],\"cloned_from\":\"csaif-pl-_data_forum_L10_CSandDev_2025\"},{\"changed_at\":\"2025-12-15 16:43:34 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-15 16:44:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"},{\"changed_at\":\"2025-12-15 16:46:29 +0000\",\"changed\":[\"title\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

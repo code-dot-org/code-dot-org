@@ -59,6 +59,7 @@
     "contained_level_names": [
       "CSD U3L7 - PredictEmbed_2025"
     ],
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

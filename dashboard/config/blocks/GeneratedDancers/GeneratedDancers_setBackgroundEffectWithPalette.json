@@ -1,0 +1,125 @@
+{
+  "category": "World",
+  "config": {
+    "style": "world_blocks",
+    "inline": false,
+    "func": "setBackgroundEffectWithPalette",
+    "blockText": "set background effect\n{PALETTE} {EFFECT}",
+    "args": [
+      {
+        "name": "EFFECT",
+        "options": [
+          [
+            "None",
+            "\"none\""
+          ],
+          [
+            "(Random)",
+            "\"rand\""
+          ],
+          [
+            "Angles",
+            "\"quads\""
+          ],
+          [
+            "Disco Ball",
+            "\"disco_ball\""
+          ],
+          [
+            "Fireworks",
+            "\"fireworks\""
+          ],
+          [
+            "Growing Stars",
+            "\"growing_stars\""
+          ],
+          [
+            "Higher Power",
+            "\"higher_power\""
+          ],
+          [
+            "Hypno",
+            "\"swirl\""
+          ],
+          [
+            "Kaleidoscope",
+            "\"kaleidoscope\""
+          ],
+          [
+            "Laser Dance Floor",
+            "\"lasers\""
+          ],
+          [
+            "Paint Splatter",
+            "\"splatter\""
+          ],
+          [
+            "Snow",
+            "\"snowflakes\""
+          ],
+          [
+            "Squiggles",
+            "\"squiggles\""
+          ],
+          [
+            "Space",
+            "\"galaxy\""
+          ],
+          [
+            "Sparkles",
+            "\"sparkles\""
+          ],
+          [
+            "Spiral",
+            "\"spiral\""
+          ],
+          [
+            "Stars",
+            "\"stars\""
+          ]
+        ]
+      },
+      {
+        "name": "PALETTE",
+        "options": [
+          [
+            "Black and White",
+            "\"rave\""
+          ],
+          [
+            "Cool",
+            "\"cool\""
+          ],
+          [
+            "Electronic",
+            "\"electronic\""
+          ],
+          [
+            "Ice Cream",
+            "\"iceCream\""
+          ],
+          [
+            "Light",
+            "\"default\""
+          ],
+          [
+            "Neon",
+            "\"neon\""
+          ],
+          [
+            "Tropical",
+            "\"tropical\""
+          ],
+          [
+            "Vintage",
+            "\"vintage\""
+          ],
+          [
+            "Warm",
+            "\"warm\""
+          ]
+        ]
+      }
+    ]
+  }
+}

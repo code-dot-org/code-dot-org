@@ -15,7 +15,7 @@ export const FolderRowIcon: FileBrowserIconComponentType = ({item}) => {
   const folderItem = item as ProjectFolder;
   return (
     <FontAwesomeV6Icon
-      iconName={folderItem.open ? 'caret-down' : 'caret-right'}
+      iconName={folderItem.open ? 'folder-open' : 'folder'}
       iconStyle={'solid'}
       className={moduleStyles.rowIcon}
     />

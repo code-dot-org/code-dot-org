@@ -1,52 +1,74 @@
 import SegmentedButtons, {
   SegmentedButtonsProps,
 } from '@code-dot-org/component-library/segmentedButtons';
-import Typography from '@code-dot-org/component-library/typography';
 import {InfoPanel} from '@codebridge/InfoPanel/InfoPanel';
 import {LayoutProps} from '@codebridge/types';
 import HeaderButtons from '@codebridge/Workspace/HeaderButtons';
 import Workspace from '@codebridge/Workspace/Workspace';
 import classNames from 'classnames';
 import React, {useEffect} from 'react';
+import {useResizable} from 'react-resizable-layout';
 
-import {HTMLPreview} from '@cdo/apps/codebridge/FilePreview/HTMLPreview';
+import AiTutorVersionAlert from '@cdo/apps/aiComponentLibrary/aiTutorVersionAlert/AiTutorVersionAlert';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
+import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
+import {logOnResize} from '@cdo/apps/lab2/utils/resizeUtils';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
-import ProjectTemplateWorkspaceIconV2 from '@cdo/apps/templates/ProjectTemplateWorkspaceIconV2';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {HTMLPreview} from '@cdo/apps/weblab2/htmlPreview/HTMLPreview';
 import weblab2I18n from '@cdo/apps/weblab2/locale';
 
-import {setViewMode} from '../redux';
+import DebugPanel from '../debugPanel/DebugPanel';
 import {ViewMode} from '../types';
+import {setViewMode} from '../weblab2Redux';
 
 import lab2Styles from '@cdo/apps/lab2/views/components/layout/layout.module.scss';
 import weblab2Styles from '@cdo/apps/weblab2/layout/vertical-layout.module.scss';
 
-const MIN_INFO_PANEL_WIDTH = 150;
+const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 400;
 const INITIAL_INFO_PANEL_WIDTH_WIDGET = 500;
 const MIN_EDITOR_WIDTH = 300;
 const MIN_PREVIEW_WIDTH = 320;
 const INITIAL_PREVIEW_WIDTH = 400;
 const INITIAL_PREVIEW_WIDTH_WIDGET = 900;
+const INITIAL_INFO_PANEL_WIDTH_COLLAPSED = 55;
+const INITIAL_PREVIEW_WIDTH_COLLAPSED = 650;
+const DEBUG_PANEL_INITIAL_HEIGHT = 300;
+const MIN_DEBUG_PANEL_HEIGHT = 200;
 
 const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
-  isProjectLevel,
   isWidgetView,
 }) => {
   const viewMode = useAppSelector(state => state.weblab2.viewMode);
-  const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
+  const hideWorkspaceForWidgetView = !getIsStartMode() && isWidgetView;
+  const isStandaloneCollapsed = useAppSelector(
+    state => state.lab2View.isStandaloneCollapsed
+  );
+  const isAiTutorVersion = useAppSelector(
+    state => state.lab2Project.viewingAiTutorVersion
+  );
+
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.weblab2.aiTutorVersionFiles
+  );
+
+  const debugPanelOpen = useAppSelector(state => state.weblab2.debugPanelOpen);
+
   const dispatch = useAppDispatch();
 
-  const infoPanelInitialWidth = isProjectLevel
-    ? 0
-    : isWidgetView
+  const infoPanelInitialWidth = isStandaloneCollapsed
+    ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+    : hideWorkspaceForWidgetView
     ? INITIAL_INFO_PANEL_WIDTH_WIDGET
     : INITIAL_INFO_PANEL_WIDTH;
 
-  const editorMinWidth = isWidgetView ? 0 : MIN_EDITOR_WIDTH;
-  const previewInitialWidth = isWidgetView
+  const editorMinWidth = hideWorkspaceForWidgetView ? 0 : MIN_EDITOR_WIDTH;
+  const previewInitialWidth = isStandaloneCollapsed
+    ? INITIAL_PREVIEW_WIDTH_COLLAPSED
+    : hideWorkspaceForWidgetView
     ? INITIAL_PREVIEW_WIDTH_WIDGET
     : INITIAL_PREVIEW_WIDTH;
 
@@ -63,7 +85,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     panelClassName,
   } = useVerticalLayout({
     leftPanel: {
-      minWidth: isProjectLevel ? 0 : MIN_INFO_PANEL_WIDTH,
+      minWidth: MIN_INFO_PANEL_WIDTH,
       initialWidth: infoPanelInitialWidth,
       name: 'instructions',
     },
@@ -79,10 +101,27 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     appName: 'weblab2',
   });
 
+  const {
+    position: debugPanelHeight,
+    separatorProps: debugPanelSeparatorProps,
+    isDragging: debugPanelDragging,
+  } = useResizable({
+    axis: 'y',
+    initial: DEBUG_PANEL_INITIAL_HEIGHT,
+    min: MIN_DEBUG_PANEL_HEIGHT,
+    reverse: true,
+    onResizeStart: () =>
+      logOnResize('weblab2', {
+        layout: 'vertical',
+        resizeBar: 'debugPanel',
+      }),
+  });
+
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
         label: weblab2I18n.code(),
+        ariaLabel: 'View code editor only',
         value: ViewMode.CODE,
         iconLeft: {
           iconName: 'code',
@@ -91,6 +130,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.preview(),
+        ariaLabel: 'View web preview only',
         value: ViewMode.PREVIEW,
         iconLeft: {
           iconName: 'eye',
@@ -99,6 +139,7 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
       },
       {
         label: weblab2I18n.splitView(),
+        ariaLabel: 'View code and web preview side by side',
         value: ViewMode.SPLIT,
         iconLeft: {
           iconName: 'table-columns',
@@ -109,106 +150,121 @@ const VerticalLayout: React.FunctionComponent<LayoutProps> = ({
     size: 'xs',
     selectedButtonValue: viewMode,
     onChange: viewMode => dispatch(setViewMode(viewMode as ViewMode)),
+    className: weblab2Styles.truncateButtonText,
   };
 
   useEffect(() => {
     setRightPanelSize(
-      isWidgetView ? INITIAL_PREVIEW_WIDTH_WIDGET : INITIAL_PREVIEW_WIDTH
+      isStandaloneCollapsed
+        ? INITIAL_PREVIEW_WIDTH_COLLAPSED
+        : hideWorkspaceForWidgetView
+        ? INITIAL_PREVIEW_WIDTH_WIDGET
+        : INITIAL_PREVIEW_WIDTH
     );
-  }, [setRightPanelSize, isWidgetView]);
+  }, [setRightPanelSize, hideWorkspaceForWidgetView, isStandaloneCollapsed]);
 
   useEffect(() => {
-    if (!isProjectLevel) {
-      setLeftPanelSize(
-        isWidgetView
-          ? INITIAL_INFO_PANEL_WIDTH_WIDGET
-          : INITIAL_INFO_PANEL_WIDTH
-      );
-    } else {
-      setLeftPanelSize(0);
-    }
-  }, [isProjectLevel, setLeftPanelSize, isWidgetView]);
+    setLeftPanelSize(
+      isStandaloneCollapsed
+        ? INITIAL_INFO_PANEL_WIDTH_COLLAPSED
+        : hideWorkspaceForWidgetView
+        ? INITIAL_INFO_PANEL_WIDTH_WIDGET
+        : INITIAL_INFO_PANEL_WIDTH
+    );
+  }, [setLeftPanelSize, hideWorkspaceForWidgetView, isStandaloneCollapsed]);
 
   return (
-    <div
-      className={
-        isProjectLevel
-          ? lab2Styles.containerWithFooter
-          : lab2Styles.defaultContainer
-      }
-    >
+    <div className={lab2Styles.defaultContainer}>
       <div className={lab2Styles.layoutContainer}>
-        {!isProjectLevel && (
-          <>
-            <InfoPanel
-              style={{width: leftPanelWidth}}
-              className={classNames(lab2Styles.flexShrink0, panelClassName)}
-            />
-            <ResizeBar
-              isVertical={true}
-              separatorProps={leftPanelSeparatorProps}
-              isDragging={leftPanelDragging}
-            />
-          </>
-        )}
+        <InfoPanel
+          style={{width: leftPanelWidth}}
+          className={classNames(lab2Styles.flexShrink0, panelClassName)}
+        />
+        <ResizeBar
+          isVertical={true}
+          separatorProps={leftPanelSeparatorProps}
+          isDragging={leftPanelDragging}
+        />
+
         <div
           className={classNames(
             lab2Styles.flexColumn,
             lab2Styles.shrinkAndGrow
           )}
         >
-          <div className={weblab2Styles.headerContainer}>
-            {isWidgetView ? (
-              <span />
-            ) : (
-              <SegmentedButtons {...viewModeButtonsProps} />
+          <PanelContainer
+            id="workspace"
+            className={weblab2Styles.headerContainer}
+            headerContent={<WorkspaceHeader />}
+            leftHeaderContent={
+              hideWorkspaceForWidgetView ? undefined : (
+                <SegmentedButtons {...viewModeButtonsProps} />
+              )
+            }
+            rightHeaderContent={<HeaderButtons />}
+          />
+          <div className={weblab2Styles.workspaceContainer}>
+            {isAiTutorVersion && (
+              <AiTutorVersionAlert aiTutorVersionFiles={aiTutorVersionFiles} />
             )}
-            <div className={weblab2Styles.centerHeaderContent}>
-              <Typography
-                semanticTag="h2"
-                visualAppearance="overline-two"
-                noMargin
-                className={classNames(
-                  weblab2Styles.headerLabel,
-                  weblab2Styles.centerHeaderContentText
-                )}
-              >
-                {weblab2I18n.workspace()}
-              </Typography>
-              {projectTemplateLevel && <ProjectTemplateWorkspaceIconV2 />}
-            </div>
-            <HeaderButtons />
-          </div>
-          <div className={weblab2Styles.editorAndPreviewContainer}>
-            {!isWidgetView && viewMode !== ViewMode.PREVIEW && (
-              <>
-                <Workspace
-                  style={{width: middlePanelWidth}}
+            <div
+              className={classNames(
+                weblab2Styles.editorAndPreviewContainer,
+                isAiTutorVersion && weblab2Styles.aiTutorVersionContainer
+              )}
+            >
+              {!hideWorkspaceForWidgetView && viewMode !== ViewMode.PREVIEW && (
+                <>
+                  <Workspace
+                    style={{width: middlePanelWidth}}
+                    className={classNames(
+                      lab2Styles.shrinkAndGrow,
+                      panelClassName,
+                      debugPanelDragging && lab2Styles.resizingPanel
+                    )}
+                    hideHeaders
+                  />
+                  <ResizeBar
+                    isVertical={true}
+                    separatorProps={rightPanelSeparatorProps}
+                    isDragging={rightPanelDragging}
+                  />
+                </>
+              )}
+              {viewMode !== ViewMode.CODE && (
+                <div
+                  style={{width: rightPanelWidth}}
                   className={classNames(
                     lab2Styles.shrinkAndGrow,
-                    panelClassName
+                    panelClassName,
+                    debugPanelDragging && lab2Styles.resizingPanel
                   )}
-                  hideHeaders
-                />
-                <ResizeBar
-                  isVertical={true}
-                  separatorProps={rightPanelSeparatorProps}
-                  isDragging={rightPanelDragging}
-                />
-              </>
-            )}
-            {viewMode !== ViewMode.CODE && (
-              <div
-                style={{width: rightPanelWidth}}
-                className={classNames(lab2Styles.shrinkAndGrow, panelClassName)}
-              >
-                <HTMLPreview />
-              </div>
-            )}
+                >
+                  <HTMLPreview />
+                </div>
+              )}
+            </div>
           </div>
+          {debugPanelOpen && (
+            <>
+              <ResizeBar
+                isVertical={false}
+                separatorProps={debugPanelSeparatorProps}
+                isDragging={debugPanelDragging}
+              />
+              <div
+                style={{height: debugPanelHeight}}
+                className={classNames(
+                  lab2Styles.flexShrink0,
+                  debugPanelDragging && lab2Styles.resizingPanel
+                )}
+              >
+                <DebugPanel />
+              </div>
+            </>
+          )}
         </div>
       </div>
-      {isProjectLevel && <div className={lab2Styles.footerArea} />}
     </div>
   );
 };

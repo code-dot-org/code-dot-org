@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -14,6 +13,7 @@ import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
+import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 $(document).ready(initPage);
 
@@ -63,7 +63,7 @@ function renderTeacherContentToggle(store) {
     .insertAfter(levelContent)[0];
   const isBlocklyOrDroplet = !!(window.appOptions && appOptions.app);
 
-  ReactDOM.render(
+  createReactRoot(
     <Provider store={store}>
       <InstructorsOnly>
         <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />

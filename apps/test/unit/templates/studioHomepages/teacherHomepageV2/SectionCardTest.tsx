@@ -10,7 +10,7 @@ import {
 } from 'react-router-dom';
 import {Store} from 'redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import {SectionCard} from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/SectionCard';
@@ -111,8 +111,7 @@ describe('SectionCard', () => {
     );
     expect(sendEventSpy).toHaveBeenCalledWith(
       EVENTS.SECTION_CARD_CLASS_CODE_CLICKED,
-      {source: 'teacherHomepage'},
-      PLATFORMS.BOTH
+      {source: 'teacherHomepage'}
     );
   });
 

@@ -12,7 +12,7 @@
     "display_name": "BrandBook",
     "bubble_choice_description": "Unleash your inner fashionista with BrandBook! We bring you an A-Z guide of the world's most coveted fashion brands and designers, alphabetically sorted for your browsing pleasure. So go on, dive in, and explore the trends that are just a click away!",
     "thumbnail_url": "https://images.code.org/b25bfe6751718a77fc5c314a493d33c3-brandbook.gif",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-08-02T16:04:25.736+00:00\",\"changed\":[\"cloned from \\\"CSA-SE-L2-L1a\\\"\"],\"cloned_from\":\"CSA-SE-L2-L1a\"},{\"changed_at\":\"2023-08-02 16:05:07 +0000\",\"changed\":[\"link_title\",\"url\",\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-02 16:06:52 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-08-16 15:04:09 +0000\",\"changed\":[\"url\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-09-07 15:24:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

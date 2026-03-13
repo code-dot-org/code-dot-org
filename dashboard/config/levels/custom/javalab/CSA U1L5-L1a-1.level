@@ -446,7 +446,7 @@
     "display_name": "Prepare for the Parade",
     "bubble_choice_description": "Paint the street for the parade path.",
     "thumbnail_url": "https://images.code.org/7e2a35f978d071ec2b6d91ac15f34d0e-image-1625238241852.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-07-30T14:05:52.238+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L1a\\\"\"],\"cloned_from\":\"CSA U1L5-L1a\"},{\"changed_at\":\"2021-07-30 14:05:57 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:15:44 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:17:32 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-08-03 13:46:22 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"

@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2026-01-12T16:34:05.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "csd_concept_computer",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28731,
+    "name_suffix": "_2026",
+    "encrypted": "false",
+    "long_instructions": "<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>A Computer System</strong> is a set of parts that work together to process information and complete tasks. It includes</p>\r\n<ul>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Hardware</strong> the physical parts.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Software</strong> the programs that run on it.</li>\r\n<li style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\"> <strong>Operating System</strong> manages the hardware and software.</li>\r\n</ul>\r\n</div>\r\n\r\n#### Computer systems are everywhere in daily life, from smartphones and gaming consoles to self-checkout kiosks, smart home devices, and even AI-powered cars.\r\n\r\n<br>\r\n\r\n#### 🔎 **Think About** \r\n#### As you watch, listen for how the different parts of a computer system — hardware, software, and the operating system — work together.\r\n<br>"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-01-12T16:34:05.821+00:00\",\"changed\":[\"cloned from \\\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2\\\"\"],\"cloned_from\":\"csaif-pl-computersystems-video-L2-CSandDev_-rev_v2\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

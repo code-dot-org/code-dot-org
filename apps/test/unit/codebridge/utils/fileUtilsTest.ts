@@ -12,7 +12,6 @@ import {mockAppOptions} from '../test_utils';
 const defaultFile: ProjectFile = {
   id: '1',
   name: '',
-  language: '',
   contents: '',
   folderId: '',
 };
@@ -78,6 +77,13 @@ describe('fileUtils', () => {
         type: ProjectFileType.STARTER,
       })
     ).toEqual({iconName: 'file-lines', iconStyle: 'solid', isBrand: false});
+    expect(
+      getFileIconNameAndStyle({
+        ...defaultFile,
+        name: 'test.md',
+        type: ProjectFileType.STARTER,
+      })
+    ).toEqual({iconName: 'markdown', iconStyle: 'regular', isBrand: true});
     expect(
       getFileIconNameAndStyle({
         ...defaultFile,

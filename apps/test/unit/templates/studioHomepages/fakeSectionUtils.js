@@ -17,6 +17,7 @@ export const sections = [
     numberOfStudents: 1,
     linkToStudents: manageStudentsUrl,
     code: 'ABCDEF',
+    hidden: false,
     loginType: 'picture',
     lessonExtras: false,
     pairingAllowed: true,
@@ -36,6 +37,7 @@ export const sections = [
     numberOfStudents: 2,
     linkToStudents: manageStudentsUrl,
     code: 'EEBSKR',
+    hidden: false,
     loginType: 'picture',
     lessonExtras: false,
     pairingAllowed: true,
@@ -44,6 +46,14 @@ export const sections = [
     courseVersionId: null,
     unitId: null,
     participant_type: 'student',
+  },
+];
+
+export const archivedSections = [
+  {
+    id: 21,
+    name: 'Archived Period 1',
+    hidden: true,
   },
 ];
 

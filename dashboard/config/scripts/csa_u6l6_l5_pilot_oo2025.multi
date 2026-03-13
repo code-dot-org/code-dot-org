@@ -1,9 +1,9 @@
 name 'CSA U6L6-L5_pilot_oo2025'
 title 'Check for Understanding'
 
-wrong '`Alice`'
+wrong '`Charlie`'
 wrong '`Bob`'
-right '`Charlie`'
+right '`Alice`'
 wrong 'The code will not compile.'
 wrong 'The code will throw a `NullPointerException`'
 
@@ -36,9 +36,9 @@ The `getFirst()` method takes three `String` parameters `a`, `b`, and `c`, and c
 
 In this case, `name1` has the value `"Alice"`, `name2` has the value `"Bob"`, and `name3` has the value `"Charlie"`.
 
-The first name is initially set to `name1` (which is `"Alice"`), and then it is compared to `name2` (which is `"Bob"`) using `compareTo()`. Since `"Alice"` comes before `"Bob"` in lexicographic order, the `if` statement will evaluate to `true` and `first` will be set to `"Bob"`.
+The first name is initially set to `name1` (which is `"Alice"`), and then it is compared to `name2` (which is `"Bob"`) using `compareTo()`. Since `"Alice"` comes before `"Bob"` in lexicographic order, the `if` statement will evaluate to `false`.
 
-Next, `first` (which is now `"Bob"`) is compared to `name3` (which is `"Charlie"`). Since `"Bob"` comes before `"Charlie"` in lexicographic order, the `if` statement will evaluate to `true` and `first` will be set to `"Charlie"`.
+Next, `first` (which is still `"Alice"`) is compared to `name3` (which is `"Charlie"`). Since `"Alice"` comes before `"Charlie"` in lexicographic order, the `if` statement will evaluate to `false` and `first` will remain `"Alice"`.
 
-Finally, the value of `first` (`"Charlie"`) is returned by the `getFirst()` method and is printed to the console.
+Finally, the value of `first` (`"Alice"`) is returned by the `getFirst()` method and is printed to the console.
 MARKDOWN

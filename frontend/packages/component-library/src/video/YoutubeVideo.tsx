@@ -1,14 +1,15 @@
-import ReactPlayer from 'react-player/youtube';
+import {ReactEventHandler} from 'react';
+import ReactPlayer from 'react-player';
 
 import {VideoProps} from '@/video/types';
 
 interface YouTubeVideoProps extends VideoProps {
   src: string;
   posterThumbnail: string;
-  onError: (error?: Error) => void;
+  onError: (error: string | Event) => void;
 }
 
-const YouTubeVideo = ({src, onError}: YouTubeVideoProps) => {
+const YouTubeVideo = ({src, onError, videoTitle}: YouTubeVideoProps) => {
   /**
    * Injects the YouTube IFrame API into the <head>. Does not reinject if already present.
    */
@@ -38,7 +39,7 @@ const YouTubeVideo = ({src, onError}: YouTubeVideoProps) => {
         isYouTubeBlocked: true,
       };
 
-      onError();
+      onError(error);
     };
     el.src = 'https://www.youtube.com/iframe_api';
     head.append(el);
@@ -55,13 +56,15 @@ const YouTubeVideo = ({src, onError}: YouTubeVideoProps) => {
     <ReactPlayer
       height={'100%'}
       width={'100%'}
-      url={src}
-      onError={onError}
+      src={src}
+      title={videoTitle}
+      onError={onError as unknown as ReactEventHandler<HTMLVideoElement>}
       previewTabIndex={-1} // the play icon is the tabbable portion
       playing={true}
       controls={true}
+      autoPlay={true}
       config={{
-        playerVars: {autoplay: 1, rel: 0},
+        youtube: {rel: 0},
       }}
     />
   );

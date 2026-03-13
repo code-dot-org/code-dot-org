@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React, {useState} from 'react';
 
 import {useExtraLinks} from '@cdo/apps/lab2/hooks/useExtraLinks';
@@ -16,7 +16,6 @@ interface ExtraLinksProps {
 // then display a modal with the link data.
 const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
   levelId,
-  positionRightOfFooter,
 }: ExtraLinksProps) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const {isExtraLinksLoading, levelLinkData, projectLinkData} =
@@ -28,17 +27,17 @@ const ExtraLinks: React.FunctionComponent<ExtraLinksProps> = ({
 
   return (
     <>
-      <Button
+      <MuiButton
+        variant="contained"
+        color="primary"
+        size="small"
+        className={moduleStyles.extraLinksButton}
+        id="uitest-extra-links-button"
         onClick={() => setIsModalOpen(true)}
-        text={'Extra Links'}
-        className={
-          positionRightOfFooter
-            ? moduleStyles.buttonRightOfFooter
-            : moduleStyles.extraLinksButton
-        }
-        size={'s'}
-        id={'uitest-extra-links-button'}
-      />
+        type="button"
+      >
+        {'Extra Links'}
+      </MuiButton>
       {levelLinkData && (
         <ExtraLinksModal
           levelLinkData={levelLinkData}

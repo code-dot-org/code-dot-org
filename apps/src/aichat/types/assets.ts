@@ -7,4 +7,5 @@ export interface ChatAsset {
 export enum AssetSource {
   PROJECT = 'project',
   LEVEL = 'level',
+  LEVEL_UUID = 'level_uuid',
 }

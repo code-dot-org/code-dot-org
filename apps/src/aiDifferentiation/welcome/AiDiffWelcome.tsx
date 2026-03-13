@@ -1,51 +1,30 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {
-  BodyOneText,
-  BodyThreeText,
-  BodyTwoText,
-  Heading1,
-  Heading3,
-  Heading6,
-  StrongText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 import Confetti from 'react-dom-confetti';
 
+import {
+  setInitialChatMessage,
+  setThreadMessages,
+} from '@cdo/apps/aichat/redux/slice';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {AiDiffContext} from '@cdo/generated-scripts/sharedConstants';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {
+  AiInteractionStatus as Status,
+  AiDiffContext,
+} from '@cdo/generated-scripts/sharedConstants';
 import ai101Thumnail from '@cdo/static/ai-101-pl-course-thumbnail.png';
 import aiBotHappy from '@cdo/static/ai-bot-happy.png';
 import aiBotScanning from '@cdo/static/ai-bot-scanning.png';
 
-import {EVENTS, PLATFORMS} from '../../metrics/AnalyticsConstants';
+import {EVENTS} from '../../metrics/AnalyticsConstants';
 import analyticsReporter from '../../metrics/AnalyticsReporter';
 import AiDiffChat from '../AiDiffChat';
-import {
-  EXAMPLE_PROMPT,
-  EXPLAIN_CONCEPT_PROMPT,
-  EXTRA_PRACTICE_PROMPT,
-  FINISH_EARLY_PROMPT,
-  ADJUST_TIMING_PROMPT,
-  DEBUG_MISTAKES_PROMPT,
-  REAL_WORLD_PROMPT,
-  EXIT_TICKET_PROMPT,
-  MINI_LESSON_PROMPT,
-  LESSON_HOOK_PROMPT,
-  SUGGEST_CURRICULUM_PROMPT,
-  GET_STARTED_PROMPT,
-  PROFESSIONAL_LEARNING_PROMPT,
-  CREATE_SECTION_PROMPT,
-  ADDITIONAL_HELP_PROMPT,
-  APCSP_EXAM_PREPARATION_RESOURCES,
-  APCSP_EXAM_SAMPLE_QUESTIONS,
-  APCSP_EXAM_TIME_STRATEGIES,
-  APCSP_CREATE_PT_AI,
-  APCSP_CREATE_PT_PREPARATION,
-} from '../AiDiffPredefinedPrompts';
-import {ChatPrompt, Context} from '../types';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '../predefinedPrompts';
+import {Context, SuggestPromptsType} from '../types';
 
 import style from './ai-diff-welcome.module.scss';
 
@@ -64,55 +43,10 @@ const WelcomeStates: {[key in WelcomeState]: WelcomeState} = {
 interface AiDiffWelcomeProps {
   setShowWelcomeExperience: (show: boolean) => void;
   context: Context;
+  curriculumCourses: string[];
   scriptName?: string;
   firstState?: WelcomeState;
-  curriculumCourses?: string[];
 }
-
-const SUGGESTED_PROMPTS_FOR_SELECTION: {
-  [selection: string]: {initialMessage: string; suggestedPrompts: ChatPrompt[]};
-} = {
-  plan: {
-    initialMessage: `Let's iterate together! What would you like to change? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      EXPLAIN_CONCEPT_PROMPT,
-      EXAMPLE_PROMPT,
-      ADJUST_TIMING_PROMPT,
-      DEBUG_MISTAKES_PROMPT,
-      REAL_WORLD_PROMPT,
-    ],
-  },
-  create: {
-    initialMessage: `Let's work together to create resources for your classroom! What would you like help creating? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      FINISH_EARLY_PROMPT,
-      EXTRA_PRACTICE_PROMPT,
-      EXIT_TICKET_PROMPT,
-      MINI_LESSON_PROMPT,
-      LESSON_HOOK_PROMPT,
-    ],
-  },
-  support: {
-    initialMessage: `Let's get started teaching on Code.org together! What would you like to do on the Code.org platform? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      SUGGEST_CURRICULUM_PROMPT,
-      GET_STARTED_PROMPT,
-      PROFESSIONAL_LEARNING_PROMPT,
-      CREATE_SECTION_PROMPT,
-      ADDITIONAL_HELP_PROMPT,
-    ],
-  },
-  apcsp: {
-    initialMessage: `Let's get started with AP prep! What would you like help with preparing for the AP exam? Below are some of the tasks I can help you with.`,
-    suggestedPrompts: [
-      APCSP_EXAM_PREPARATION_RESOURCES,
-      APCSP_EXAM_SAMPLE_QUESTIONS,
-      APCSP_EXAM_TIME_STRATEGIES,
-      APCSP_CREATE_PT_AI,
-      APCSP_CREATE_PT_PREPARATION,
-    ],
-  },
-};
 
 const optionButton = (
   isSelected = false,
@@ -137,14 +71,18 @@ const optionButton = (
         className={style.optionIcon}
       />
       <div className={style.optionText}>
-        <BodyTwoText className={style.optionTitle}>
-          <StrongText>{title}</StrongText>
-        </BodyTwoText>
+        <Typography className={style.optionTitle} variant="body2" gutterBottom>
+          <Typography variant="strong">{title}</Typography>
+        </Typography>
 
         {description && (
-          <BodyThreeText className={style.optionDescription}>
+          <Typography
+            className={style.optionDescription}
+            variant="body3"
+            gutterBottom
+          >
             {description}
-          </BodyThreeText>
+          </Typography>
         )}
       </div>
     </button>
@@ -161,10 +99,22 @@ const getStartedPage = (onClick: () => void) => {
             className={style.botScanning}
             alt={'AI Teaching Assistant'}
           />
-          <Heading1>AI Teaching Assistant</Heading1>
-          <BodyOneText>Empowering teachers. Enhancing learning.</BodyOneText>
+          <Typography variant="h1" gutterBottom>
+            AI Teaching Assistant
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Empowering teachers. Enhancing learning.
+          </Typography>
         </div>
-        <Button onClick={onClick} text="Get Started" />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={onClick}
+          type="button"
+        >
+          {'Get Started'}
+        </MuiButton>
       </div>
     </div>
   );
@@ -198,21 +148,19 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
   setShowWelcomeExperience,
   context,
   scriptName,
+  curriculumCourses,
   // This should only be used for testing purposes
   firstState = 'get_started',
-  curriculumCourses,
 }) => {
   const [currentWelcomeState, setCurrentWelcomeState] =
     React.useState<WelcomeState>(firstState);
-
   const [chatContinueButtonDisabled, setChatContinueButtonDisabled] =
     React.useState(true);
-
-  const [selectedOption, setSelectedOption] = React.useState<
-    'plan' | 'create' | 'support' | 'apcsp' | null
-  >(null);
-
+  const [selectedOption, setSelectedOption] =
+    React.useState<SuggestPromptsType | null>(null);
   const [confettiActive, setConfettiActive] = React.useState<boolean>(false);
+
+  const dispatch = useAppDispatch();
 
   const reportingContext = React.useMemo(() => {
     return {
@@ -223,13 +171,27 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     };
   }, [context, scriptName, selectedOption]);
 
+  React.useEffect(() => {
+    if (selectedOption) {
+      const {initialMessage, suggestedPrompts} =
+        SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
+      dispatch(setInitialChatMessage(initialMessage));
+      dispatch(
+        setThreadMessages([
+          {
+            role: Role.ASSISTANT,
+            chatMessageText: initialMessage,
+            status: Status.OK,
+          },
+          suggestedPrompts,
+        ])
+      );
+    }
+  }, [selectedOption, dispatch]);
+
   const updateShowWelcomeExperience = React.useCallback(
     (statsigKey: string) => {
-      analyticsReporter.sendEvent(
-        statsigKey,
-        reportingContext,
-        PLATFORMS.STATSIG
-      );
+      analyticsReporter.sendEvent(statsigKey, reportingContext);
       HttpClient.post(HAS_SEEN_WELCOME_URL, undefined, true).then(() => {
         setShowWelcomeExperience(false);
       });
@@ -251,11 +213,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         return null;
       })();
       if (statsigKey) {
-        analyticsReporter.sendEvent(
-          statsigKey,
-          reportingContext,
-          PLATFORMS.STATSIG
-        );
+        analyticsReporter.sendEvent(statsigKey, reportingContext);
       }
 
       setCurrentWelcomeState(nextState);
@@ -267,12 +225,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
     (nextState: WelcomeState, continueDisabled: boolean) => {
       return (
         <div className={style.bottomButtons}>
-          <Button
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            disabled={continueDisabled}
             id="uitest_aiDiffWelcomeContinue"
             onClick={() => moveForwardTo(nextState)}
-            text="Continue"
-            disabled={continueDisabled}
-          />
+            type="button"
+          >
+            {'Continue'}
+          </MuiButton>
           <Link
             className={style.skipLink}
             onClick={() =>
@@ -294,10 +257,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
         <div className={style.selectOptionPage}>
           {progressBarHeader(30, () => setCurrentWelcomeState('get_started'))}
           <div className={style.selectOptionContent}>
-            <Heading3>Pick a skill to practice</Heading3>
-            <Heading6 className={style.selectOptionSubtitle}>
+            <Typography variant="h3" gutterBottom>
+              Pick a skill to practice
+            </Typography>
+            <Typography
+              className={style.selectOptionSubtitle}
+              variant="h6"
+              gutterBottom
+            >
               Using AI in multiple ways increases productivity.
-            </Heading6>
+            </Typography>
             {context.type === AiDiffContext.GENERAL &&
               optionButton(
                 selectedOption === 'support',
@@ -320,8 +289,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
               'Create',
               'Differentiate assessment materials, generate lesson-aligned activities and practice problems'
             )}
-            {curriculumCourses &&
-              curriculumCourses.includes('csp') &&
+            {curriculumCourses.includes('csp') &&
               optionButton(
                 selectedOption === 'apcsp',
                 () => setSelectedOption('apcsp'),
@@ -358,10 +326,16 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={style.botHappy}
             alt={'Congratulations!'}
           />
-          <Heading3>You’re on your way to becoming an AI all-star!</Heading3>
-          <Heading6 className={style.endPageSubTitle}>
+          <Typography variant="h3" gutterBottom>
+            You’re on your way to becoming an AI all-star!
+          </Typography>
+          <Typography
+            className={style.endPageSubTitle}
+            variant="h6"
+            gutterBottom
+          >
             Continue your learning journey
-          </Heading6>
+          </Typography>
           {optionButton(
             false,
             () => setCurrentWelcomeState(WelcomeStates.select_option),
@@ -374,11 +348,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             className={classNames(style.optionRow, style.optionRowWithPic)}
             href="https://code.org/ai/pl/101"
             onClick={() =>
-              analyticsReporter.sendEvent(
-                EVENTS.AI_DIFF_101,
-                reportingContext,
-                PLATFORMS.STATSIG
-              )
+              analyticsReporter.sendEvent(EVENTS.AI_DIFF_101, reportingContext)
             }
           >
             <div className={style.optionWithPicTop}>
@@ -387,11 +357,15 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
                 iconFamily="duotone"
                 className={style.optionIcon}
               />
-              <BodyTwoText className={style.optionTitle}>
-                <StrongText>
+              <Typography
+                className={style.optionTitle}
+                variant="body2"
+                gutterBottom
+              >
+                <Typography variant="strong">
                   Take Code.org’s self-paced AI 101 professional learning course
-                </StrongText>
-              </BodyTwoText>
+                </Typography>
+              </Typography>
             </div>
             <img
               src={ai101Thumnail}
@@ -400,12 +374,17 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             />
           </a>
         </div>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           onClick={() =>
             updateShowWelcomeExperience(EVENTS.AI_DIFF_CELEBRATION)
           }
-          text="Finish"
-        />
+          type="button"
+        >
+          {'Finish'}
+        </MuiButton>
       </div>
     );
   }, [updateShowWelcomeExperience, confettiActive, reportingContext]);
@@ -416,8 +395,6 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
       setSelectedOption('plan');
       return null;
     }
-    const {initialMessage, suggestedPrompts} =
-      SUGGESTED_PROMPTS_FOR_SELECTION[selectedOption];
 
     return (
       <div className={style.practicePage}>
@@ -427,9 +404,7 @@ const AiDiffWelcome: React.FC<AiDiffWelcomeProps> = ({
             context={context}
             scriptName={scriptName}
             chatResponseCallback={() => setChatContinueButtonDisabled(false)}
-            initialChatMessage={initialMessage}
-            suggestedPrompts={suggestedPrompts}
-            disableEndButtons={true}
+            hideChatHeader
           />
         </div>
         {continueAndSkipButtons(

@@ -22,7 +22,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
-import UnitSelectorV2 from '../UnitSelectorV2';
+import UnitSelectorV2 from '../teacherDashboardShared/UnitSelectorV2';
 
 import {CalendarEmptyState} from './CalendarEmptyState';
 

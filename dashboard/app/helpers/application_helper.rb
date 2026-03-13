@@ -174,6 +174,9 @@ module ApplicationHelper
       else
         asset_url "bounce_sharing_drawing.png"
       end
+    elsif opts[:level].is_a?(BubbleChoice)
+      project_type = opts[:level].try(:project_type)
+      asset_url "#{project_type}_sharing_drawing.png"
     else
       asset_url 'sharing_drawing.png'
     end

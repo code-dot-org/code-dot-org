@@ -73,26 +73,28 @@ module GitHub
       'git fetch',
       "git checkout -b #{branch_name} #{base_branch}",
     ].join(' && ')
-    return false unless created_branch
+    raise "GitHub.create_branch_from_commit: Failed to create branch #{branch_name}" unless created_branch
 
     # merge the commit into the branch
-    system "#{prefix_command} && git merge #{commit} --no-edit"
+    merge_success = system "#{prefix_command} && git merge #{commit} --no-edit"
 
-    # check for conflicts
-    conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
-    if conflicts > 0
-      # if there are conflicts, abort the merge and cleanup
+    if merge_success
+      # if the merge succeeds push the new branch
+      push_success = system "#{prefix_command} && git push origin #{branch_name}"
+      raise "GitHub.create_branch_from_commit: Failed to push to #{branch_name}" unless push_success
+    else
+      # check for conflicts
+      conflicts = `#{prefix_command} && git ls-files -u | wc -l`.to_i
+
+      # if the merge fails or there are conflicts, abort the merge and cleanup
       system [
         prefix_command,
         'git merge --abort',
         "git checkout #{base_branch}",
         "git branch -D #{branch_name}"
       ].join(' && ')
-      return false
-    else
-      # otherwise, push the new branch!
-      system "#{prefix_command} && git push origin #{branch_name}"
-      return true
+
+      raise "GitHub.create_branch_from_commit: Failed to merge; #{conflicts} conflicts detected"
     end
   end
 
@@ -122,7 +124,7 @@ module GitHub
     configure_octokit
     response = Octokit.create_pull_request(REPO, base, head, title, body)
 
-    response['number']
+    response['number'] || raise("GitHub.create_pull_request failed.")
   end
 
   # Octokit Documentation: https://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_requests-instance_method

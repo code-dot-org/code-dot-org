@@ -1,8 +1,4 @@
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {
-  getFileNameWithNumberSuffix,
-  sendCodebridgeAnalyticsEvent,
-} from '@codebridge/utils';
+import {getFileNameWithNumberSuffix} from '@codebridge/utils';
 import React from 'react';
 
 import BackpackErrorAlertBody from '@cdo/apps/codebridge/FileBrowser/BackpackErrorAlertBody';
@@ -15,18 +11,23 @@ import {
   TypedDialogProps,
 } from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {BackpackContextType} from '@cdo/apps/sharedComponents/backpack/BackpackAPIContext';
+import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 
 type OpenSaveToBackpackPromptArgsType = {
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
-  backpackApi: BackpackContextType;
+  backpackApi: BackpackClientApi;
   file: ProjectFile;
+  sendLab2AnalyticsEvent: (
+    eventName: string,
+    payload?: Record<string, string>
+  ) => void;
 };
 
 export const openSaveToBackpackPrompt = async ({
   dialogControl,
   backpackApi,
   file,
+  sendLab2AnalyticsEvent,
 }: OpenSaveToBackpackPromptArgsType) => {
   const handleError =
     (title: string, message: string, errorMessage: string) =>
@@ -85,34 +86,41 @@ export const openSaveToBackpackPrompt = async ({
       const selectedFileName =
         results.type === 'confirm' ? file.name : fileNameCopy;
 
-      let successMetric = EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_NEW;
+      let successMetric = EVENTS.SAVE_TO_BACKPACK_NEW;
       if (isDuplicateFileName) {
         successMetric =
           selectedFileName === file.name
-            ? EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_REPLACE
-            : EVENTS.CODEBRIDGE_SAVE_TO_BACKPACK_RENAME;
+            ? EVENTS.SAVE_TO_BACKPACK_REPLACE
+            : EVENTS.SAVE_TO_BACKPACK_RENAME;
       }
-      const successCallback = () => sendCodebridgeAnalyticsEvent(successMetric);
+      const successCallback = () =>
+        sendLab2AnalyticsEvent(successMetric, {
+          fileType: selectedFileName.split('.').pop()?.toLowerCase() || '',
+        });
 
-      const fileContents = {
-        name: selectedFileName,
-        contents: file.contents,
-        folderId: DEFAULT_FOLDER_ID,
-        language: 'py',
-        active: false,
-      } as ProjectFile;
-      backpackApi.savePythonlabFile(
-        selectedFileName,
-        fileContents,
-        handleError(
-          codebridgeI18n.saveToBackpackTitle(),
-          codebridgeI18n.saveToBackpackError({selectedFileName}) +
-            ' ' +
-            codebridgeI18n.closeWindowTryAgain(),
-          'Save to backpack error'
-        ),
-        successCallback
+      const errorCallback = handleError(
+        codebridgeI18n.saveToBackpackTitle(),
+        codebridgeI18n.saveToBackpackError({selectedFileName}) +
+          ' ' +
+          codebridgeI18n.closeWindowTryAgain(),
+        'Save to backpack error'
       );
+
+      if (file.url) {
+        backpackApi.saveCodebridgeFileFromUrl(
+          selectedFileName,
+          file.url,
+          errorCallback,
+          successCallback
+        );
+      } else {
+        backpackApi.saveCodebridgeFile(
+          selectedFileName,
+          file.contents,
+          errorCallback,
+          successCallback
+        );
+      }
     }
   );
 };

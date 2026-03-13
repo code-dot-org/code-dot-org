@@ -104,6 +104,7 @@
     "start_blocks": "onEvent(\"moodDropdown\", \"change\", function() {\r\n  //Add your code here\r\n  \r\n});\r\n",
     "bubble_choice_description": "Create an app prototype that simulates a Mood Ring, which changes the colors of the LEDs based on the mood of the user",
     "encrypted_examples": "vcZPYGWO76DTmGInqrS2RBYDiqa/DG41O2ZX+W0GKNmqv1vazypkZ2REw8cX\nuuR93Hv5GxcFY81ySLCd7eA7nw==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

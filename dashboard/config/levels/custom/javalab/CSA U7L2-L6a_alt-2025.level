@@ -36,7 +36,8 @@
         "tabOrder": 2
       }
     },
-    "name_suffix": "_alt-2025"
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:29:39.426+00:00\",\"changed\":[\"cloned from \\\"CSA U7L2-L6a_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L2-L6a_pilot-2025\"},{\"changed_at\":\"2025-04-23 09:03:13 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"

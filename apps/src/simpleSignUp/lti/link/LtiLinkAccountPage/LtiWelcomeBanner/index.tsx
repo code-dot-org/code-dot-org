@@ -1,11 +1,12 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import React, {useCallback, useContext} from 'react';
 
 import codeLogo from '@cdo/apps/templates/images/codeLogo.png';
 import i18n from '@cdo/locale';
 
 import canvas from '../../../assets/canvas.svg';
+import classlink from '../../../assets/classlink.png';
 import schoology from '../../../assets/schoology.svg';
 import {LtiProviderContext} from '../context';
 
@@ -22,6 +23,8 @@ const LtiWelcomeBanner = () => {
         return canvas;
       case 'schoology':
         return schoology;
+      case 'classlink':
+        return classlink;
       default:
         return undefined;
     }
@@ -41,16 +44,11 @@ const LtiWelcomeBanner = () => {
           <img src={codeLogo} alt={i18n.codeLogo()} />
         </div>
       )}
-
       <div className={styles.titleContainer}>
-        <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
+        <Typography variant="h1" gutterBottom>
           {i18n.ltiLinkAccountWelcomeBannerHeaderLabel()}
         </Typography>
-        <Typography
-          className={styles.titleDesc}
-          semanticTag={'p'}
-          visualAppearance={'body-two'}
-        >
+        <Typography className={styles.titleDesc} variant="body2" gutterBottom>
           {i18n.ltiLinkAccountWelcomeBannerContent({
             providerName: ltiProviderName,
           })}

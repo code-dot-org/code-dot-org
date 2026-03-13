@@ -20,7 +20,7 @@ type OpenMoveFolderPromptArgsType = {
   projectFolders: MultiFileSource['folders'];
   dialogControl: Pick<DialogControlInterface, 'showDialog'>;
   moveFolder: MoveFolderFunction;
-  sendCodebridgeAnalyticsEvent: (eventName: string) => unknown;
+  sendLab2AnalyticsEvent: (eventName: string) => unknown;
 };
 
 export const openMoveFolderPrompt = async ({
@@ -28,7 +28,7 @@ export const openMoveFolderPrompt = async ({
   projectFolders,
   dialogControl,
   moveFolder,
-  sendCodebridgeAnalyticsEvent,
+  sendLab2AnalyticsEvent,
 }: OpenMoveFolderPromptArgsType) => {
   const folder = projectFolders[folderId];
 
@@ -51,6 +51,7 @@ export const openMoveFolderPrompt = async ({
     selectedValue: possibleDestinationFolders[0].value,
     items: possibleDestinationFolders,
     dropdownLabel: '',
+    useModal: true,
   });
 
   if (results.type !== 'confirm') {
@@ -60,5 +61,5 @@ export const openMoveFolderPrompt = async ({
 
   moveFolder(folderId, destinationFolderId);
 
-  sendCodebridgeAnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER);
+  sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_MOVE_FOLDER);
 };

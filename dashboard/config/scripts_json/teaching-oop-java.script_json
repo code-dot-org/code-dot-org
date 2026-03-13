@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-07-18 15:46:44 UTC",
+    "serialized_at": "2025-10-31 21:03:36 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -302,6 +302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-overview-1_pl"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -324,6 +327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-intro-video-2_pl"
+        ],
         "progression": "Object-oriented programming"
       },
       "bonus": false,
@@ -346,6 +352,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-predict-3_pl"
+        ],
         "progression": "Object-oriented programming"
       },
       "bonus": false,
@@ -368,6 +377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-practice-modify-4_pl"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -390,6 +402,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-neighborhood-5_pl"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -412,6 +427,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-practice-paint-6_pl"
+        ],
         "progression": "Introducing the Neighborhood"
       },
       "bonus": false,
@@ -434,6 +452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-classes-objects-7_pl"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -456,6 +477,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-calling-methods-8_pl"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -478,6 +502,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-creating-objects-video-9_pl"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -500,6 +527,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-debug-practice-10_pl"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -522,6 +552,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-painter-practice-11_pl"
+        ],
         "progression": "Instantiating objects and calling methods"
       },
       "bonus": false,
@@ -544,6 +577,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-chk-und-vocab-12_pl"
+        ],
         "progression": "Vocabulary wrap-up"
       },
       "bonus": false,
@@ -566,6 +602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-oop-summary-13_pl"
+        ],
         "progression": "Vocabulary wrap-up"
       },
       "bonus": false,
@@ -588,6 +627,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-overview-1_pl"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -610,6 +652,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-uml-2_pl"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -632,6 +677,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-documentation-video-3_pl"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -654,6 +702,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-practice-4_pl"
+        ],
         "progression": "Introduction to UML diagrams"
       },
       "bonus": false,
@@ -676,6 +727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-return-methods-5_pl"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -698,6 +752,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-predict-6_pl"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -720,6 +777,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-practice-methods-7_pl"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -742,6 +802,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-code-solution-video-8_pl"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -764,6 +827,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-choice-practice-9_pl"
+        ],
         "progression": "Using methods that return informaiton"
       },
       "bonus": false,
@@ -786,6 +852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-painter-conclude-10_pl"
+        ],
         "progression": "Wrap-up"
       },
       "bonus": false,
@@ -808,6 +877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-overview-1_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -830,6 +902,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-parts-2_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -852,6 +927,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-using-fliles-3_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -874,6 +952,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-file-practice-4_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -896,6 +977,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-predict-class-4_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -918,6 +1002,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-modify-5_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -940,6 +1027,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-modify-6_pl"
+        ],
         "progression": "Overview of Class Structure"
       },
       "bonus": false,
@@ -962,6 +1052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-instance-variable-video-7_pl"
+        ],
         "progression": "Instance Variables"
       },
       "bonus": false,
@@ -984,6 +1077,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-instance-variable-info-9_pl"
+        ],
         "progression": "Instance Variables"
       },
       "bonus": false,
@@ -1006,6 +1102,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-choice-10_pl"
+        ],
         "progression": "Instance Variables"
       },
       "bonus": false,
@@ -1028,6 +1127,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-chk-und-11_pl"
+        ],
         "progression": "Instance Variables"
       },
       "bonus": false,
@@ -1050,6 +1152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-constructors-12_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1072,6 +1177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-no-arg-predict-13_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1094,6 +1202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-no-arg-invest-14_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1116,6 +1227,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-constructors-15_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1138,6 +1252,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-no-argument-15_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1160,6 +1277,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ava-class-design-param-constructor-18_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1182,6 +1302,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-param-constructor-18_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1204,6 +1327,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-param-const-chk-und-18_pl"
+        ],
         "progression": "Constructors "
       },
       "bonus": false,
@@ -1226,6 +1352,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-scanner-video-19-2_pl"
+        ],
         "progression": "User Input"
       },
       "bonus": false,
@@ -1248,6 +1377,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-scanner-practice-21_pl"
+        ],
         "progression": "User Input"
       },
       "bonus": false,
@@ -1270,6 +1402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-this-keyword-22_pl"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1292,6 +1427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-modify-23_pl"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1314,6 +1452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-modify-24_pl"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1336,6 +1477,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-this-choice-26_pl"
+        ],
         "progression": "The This Keyword"
       },
       "bonus": false,
@@ -1358,6 +1502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-methods-info-26_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1380,6 +1527,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-video_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1402,6 +1552,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-26_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1424,6 +1577,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-27_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1446,6 +1602,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-28_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1468,6 +1627,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-mutator-methods-info-29-2_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1490,6 +1652,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-mutator-video_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1512,6 +1677,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-29_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1534,6 +1702,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-30_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1556,6 +1727,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-method-modify-31_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1578,6 +1752,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-accessor-mutator-check-31_pl"
+        ],
         "progression": "Accessor and Mutator Methods"
       },
       "bonus": false,
@@ -1600,6 +1777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toString-video_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1622,6 +1802,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-toString-panel-35_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1644,6 +1827,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-structure-toPrint-info-35_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1666,6 +1852,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-modify-36_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1688,6 +1877,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-modify-37_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1710,6 +1902,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-class-design-toPrint-practice-37_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,
@@ -1732,6 +1927,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-java-next-steps_pl"
+        ],
         "progression": "Printing Objects"
       },
       "bonus": false,

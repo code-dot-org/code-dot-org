@@ -72,6 +72,10 @@ def frontend_dir(*dirs)
   deploy_dir('frontend', *dirs)
 end
 
+def vite_dir(*dirs)
+  frontend_dir('apps', 'studio', *dirs)
+end
+
 def pegasus_dir(*paths)
   deploy_dir('pegasus', *paths)
 end

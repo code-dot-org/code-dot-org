@@ -1,8 +1,6 @@
 require 'test_helper'
 
 class Api::V1::PeerReviewSubmissionsControllerTest < ActionController::TestCase
-  self.use_transactional_test_case = true
-
   setup do
     @plc_reviewer = create(:plc_reviewer)
     sign_in(@plc_reviewer)

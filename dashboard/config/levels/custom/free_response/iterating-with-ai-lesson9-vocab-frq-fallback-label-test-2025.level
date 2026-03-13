@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2025-11-24T16:18:27.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "title": "Fallback Label",
+    "long_instructions": "Define the term in your own words. Use examples from the lesson to explain your thinking and take notes on anything that helps you remember how it works.",
+    "stay_on_level_after_submit": "false",
+    "height": "200",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "teacher_markdown": "Students understand that a fallback label is explicit text shown when data is missing, helping users see that something is absent rather than assuming it doesn’t exist."
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-24T16:18:27.515+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson9-vocab-frq-threshold-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson9-vocab-frq-threshold-test-2025\"},{\"changed_at\":\"2025-11-24 16:19:07 +0000\",\"changed\":[\"title\",\"display_name\",\"thumbnail_url\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

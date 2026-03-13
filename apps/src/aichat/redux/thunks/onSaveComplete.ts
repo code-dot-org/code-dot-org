@@ -36,7 +36,6 @@ export const onSaveComplete =
           sendAnalytics(saveTypeToAnalyticsEvent[currentSaveType], {
             propertyUpdated: property,
             propertyChangedTo,
-            levelPath: window.location.pathname,
           })
         );
       }

@@ -1,6 +1,19 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
+import {
+  DEFAULT_THREAD_TITLE,
+  ThreadTypeFields,
+  THREAD_TYPES,
+} from '@cdo/apps/aiDifferentiation/constants';
+import {SUGGESTED_PROMPTS_FOR_SELECTION} from '@cdo/apps/aiDifferentiation/predefinedPrompts';
+import {
+  AiArtifact,
+  ChatItem,
+  ChatPrompt,
+  ChatTextMessage,
+} from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ModalTypes,
@@ -20,12 +33,14 @@ import {
   FeedbackValue,
   ServerChatEvent,
   isCompletedChatMessage,
-  PendingChatMessage,
   ChatAsset,
   SaveError,
   AiChatClientType,
   WorkspaceTeacherViewTab,
   UserAddedSelectionContextItem,
+  ChatMessage,
+  isPendingOrCompletedChatMessage,
+  CompletedChatMessage,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -36,10 +51,18 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {AichatState} from './state';
 
 const initialState: AichatState = {
+  chatIsOpen: false,
   clientType: undefined,
+  threadId: 0,
+  threadTitle: DEFAULT_THREAD_TITLE,
+  threadType: THREAD_TYPES.default,
+  initialThreadPrompt: null,
+  selectedPrompt: null,
+  threadMessages: [],
+  threadKeyId: 0,
+  initialChatMessage: SUGGESTED_PROMPTS_FOR_SELECTION['default'].initialMessage,
   chatEventsPast: [],
   chatEventsCurrent: [],
-  chatMessagePending: undefined,
   studentChatHistory: [],
   showModalType: undefined,
   initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -49,22 +72,29 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
-  userHasAichatAccess: false,
+  userHasAichatLabAccess: false,
   stagedFiles: [],
   stagedFilesAlert: undefined,
   hasSentMessage: false,
   hasUpdatedCustomizations: false,
   saveError: undefined,
   showResetMessage: false,
-  hasSetStartingCustomizations: false,
+  showUnsupportedModelMessage: false,
+  hasSetInitialCustomizations: false,
   chatWorkspaceSelectedTab: null,
   userAddedSelectionContext: {},
+  artifactType: undefined,
+  artifact: undefined,
+  pendingArtifactMessage: undefined,
 };
 
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
+    setChatIsOpen: (state, action: PayloadAction<boolean>) => {
+      state.chatIsOpen = action.payload;
+    },
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
@@ -88,8 +118,12 @@ const aichatSlice = createSlice({
       for (let i = events.length - 1; i >= 0; i--) {
         const event = events[i];
 
+        // We always reset conversation history when the user clears the chat.
+        // In addition, for AI Chat lab, clear the history when certain model updates occur,
+        // as the user controls model updates.
         if (
-          (isModelUpdate(event) &&
+          (state.clientType === AiChatClientTypes.AI_CHAT_LAB &&
+            isModelUpdate(event) &&
             RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
               event.updatedField
             )) ||
@@ -106,12 +140,47 @@ const aichatSlice = createSlice({
         state.chatEventsCurrent = events;
       }
     },
-    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
-      state.userHasAichatAccess = action.payload;
+    setUserHasAichatLabAccess: (state, action: PayloadAction<boolean>) => {
+      state.userHasAichatLabAccess = action.payload;
     },
-
     setClientType(state, action: PayloadAction<AiChatClientType>) {
       state.clientType = action.payload;
+    },
+    setThreadId(state, action: PayloadAction<number>) {
+      state.threadId = action.payload;
+    },
+    setThreadTitle(state, action: PayloadAction<string>) {
+      state.threadTitle = action.payload;
+    },
+    setThreadType(state, action: PayloadAction<ThreadTypeFields>) {
+      state.threadType = action.payload;
+    },
+    setInitialThreadPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.initialThreadPrompt = action.payload;
+    },
+    setSelectedPrompt(state, action: PayloadAction<ChatPrompt | null>) {
+      state.selectedPrompt = action.payload;
+    },
+    setThreadMessages(state, action: PayloadAction<ChatItem[]>) {
+      state.threadMessages = action.payload;
+    },
+    addThreadMessage: (state, action: PayloadAction<ChatItem>) => {
+      state.threadMessages.push(action.payload);
+    },
+    setThreadKeyId(state, action: PayloadAction<number>) {
+      state.threadKeyId = action.payload;
+    },
+    setArtifactType(state, action: PayloadAction<string | undefined>) {
+      state.artifactType = action.payload;
+    },
+    setArtifact(state, action: PayloadAction<AiArtifact | undefined>) {
+      state.artifact = action.payload;
+    },
+    setPendingArtifactMessage(state, action: PayloadAction<ChatTextMessage>) {
+      state.pendingArtifactMessage = action.payload;
+    },
+    clearPendingArtifactMessage: state => {
+      state.pendingArtifactMessage = undefined;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -141,17 +210,39 @@ const aichatSlice = createSlice({
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
     },
-    setChatMessagePending: (
+    updateChatMessageStatus: (
       state,
-      action: PayloadAction<PendingChatMessage>
+      action: PayloadAction<{updateId: string; status: ChatMessage['status']}>
     ) => {
-      state.chatMessagePending = action.payload;
-      state.hasSentMessage = true;
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      event.status = action.payload.status;
     },
-    clearChatMessagePending: state => (state.chatMessagePending = undefined),
+    updateRequestId: (
+      state,
+      action: PayloadAction<{updateId: string; requestId: number}>
+    ) => {
+      const event = state.chatEventsCurrent.find(
+        (event): event is ChatMessage =>
+          isPendingOrCompletedChatMessage(event) &&
+          event.updateId === action.payload.updateId
+      );
+      if (!event) return;
+      (event as CompletedChatMessage).requestId = action.payload.requestId;
+    },
+    setChatMessageSent: (state, action: PayloadAction<boolean>) => {
+      state.hasSentMessage = action.payload;
+    },
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
+    },
+    setInitialChatMessage(state, action: PayloadAction<string>) {
+      state.initialChatMessage = action.payload;
     },
     setShowModalType: (
       state,
@@ -162,57 +253,29 @@ const aichatSlice = createSlice({
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
     },
-    setStartingAiCustomizations: (
+    setInitialConfiguration: (
       state,
       action: PayloadAction<{
-        levelAichatSettings?: LevelAichatSettings;
-        studentAiCustomizations: AiCustomizations;
+        customizations: AiCustomizations;
+        visibilities: {[key in keyof AiCustomizations]: Visibility};
+        showUnsupportedModelMessage: boolean;
       }>
     ) => {
-      const {levelAichatSettings, studentAiCustomizations} = action.payload;
-
-      let reconciledAiCustomizations: AiCustomizations = {
-        ...(levelAichatSettings?.initialCustomizations ||
-          EMPTY_AI_CUSTOMIZATIONS),
-      };
-
-      for (const customizationUntyped in reconciledAiCustomizations) {
-        const customization = customizationUntyped as keyof AiCustomizations;
-
-        if (
-          (levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES)[
-            customization
-          ] === Visibility.EDITABLE &&
-          studentAiCustomizations[customization]
-        ) {
-          reconciledAiCustomizations = {
-            ...reconciledAiCustomizations,
-            [customization]: studentAiCustomizations[customization],
-          };
-        }
-      }
-
-      // Make sure model ID is valid
-      reconciledAiCustomizations = {
-        ...reconciledAiCustomizations,
-        selectedModelId: validateModelId(
-          reconciledAiCustomizations.selectedModelId
-        ),
-      };
-
-      state.initialAiCustomizations = reconciledAiCustomizations;
-      state.savedAiCustomizations = reconciledAiCustomizations;
-      state.currentAiCustomizations = reconciledAiCustomizations;
-      state.fieldVisibilities =
-        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+      const {customizations, visibilities, showUnsupportedModelMessage} =
+        action.payload;
+      state.initialAiCustomizations = customizations;
+      state.savedAiCustomizations = customizations;
+      state.currentAiCustomizations = customizations;
+      state.fieldVisibilities = visibilities;
 
       // Reset sent message and updated customizations flags
       state.hasSentMessage = false;
       state.hasUpdatedCustomizations = false;
-      state.hasSetStartingCustomizations = true;
+      state.hasSetInitialCustomizations = true;
+      state.showUnsupportedModelMessage = showUnsupportedModelMessage;
     },
-    clearHasSetStartingCustomizations: state => {
-      state.hasSetStartingCustomizations = false;
+    clearHasSetInitialCustomizations: state => {
+      state.hasSetInitialCustomizations = false;
     },
     resetToDefaultAiCustomizations: (
       state,
@@ -227,8 +290,9 @@ const aichatSlice = createSlice({
       defaultAiCustomizations = {
         ...defaultAiCustomizations,
         selectedModelId: validateModelId(
-          defaultAiCustomizations.selectedModelId
-        ),
+          defaultAiCustomizations.selectedModelId,
+          levelAichatSettings?.availableModelIds
+        ).modelId,
       };
 
       state.currentAiCustomizations = defaultAiCustomizations;
@@ -259,6 +323,7 @@ const aichatSlice = createSlice({
       // Clear save error and reset message, if any.
       state.saveError = undefined;
       state.showResetMessage = false;
+      state.showUnsupportedModelMessage = false;
     },
     setModelCardProperty: <T extends keyof ModelCardInfo>(
       state: AichatState,
@@ -274,12 +339,14 @@ const aichatSlice = createSlice({
       };
       state.currentAiCustomizations.modelCardInfo = updatedModelCardInfo;
       state.showResetMessage = false;
+      state.showUnsupportedModelMessage = false;
     },
     startSave(state, action: PayloadAction<SaveType>) {
       state.saveInProgress = true;
       state.currentSaveType = action.payload;
       // Clear save error, if any.
       state.saveError = undefined;
+      state.showUnsupportedModelMessage = false;
     },
     endSave(state) {
       state.saveInProgress = false;
@@ -384,11 +451,15 @@ const getUpdateMessageLocation = (removeId: number, state: AichatState) => {
 
 registerReducers({aichat: aichatSlice.reducer});
 
+export const aichatReducer = aichatSlice.reducer;
+
 export const {
+  setChatIsOpen,
   addEventToChatEventsCurrent,
   startSave,
-  setChatMessagePending,
-  clearChatMessagePending,
+  updateChatMessageStatus,
+  updateRequestId,
+  setChatMessageSent,
   setSavedAiCustomizations,
   updateChatMessageFeedback,
   clearChatMessages,
@@ -398,12 +469,25 @@ export const {
   setAiCustomizationProperty,
   setModelCardProperty,
   setNewChatSession,
+  setInitialChatMessage,
   setShowModalType,
-  setStartingAiCustomizations,
+  setInitialConfiguration,
   setStudentChatHistory,
   setOwnChatHistory,
-  setUserHasAichatAccess,
+  setUserHasAichatLabAccess,
   setClientType,
+  setThreadId,
+  setThreadTitle,
+  setThreadType,
+  setInitialThreadPrompt,
+  setSelectedPrompt,
+  setThreadMessages,
+  addThreadMessage,
+  setThreadKeyId,
+  setArtifactType,
+  setArtifact,
+  setPendingArtifactMessage,
+  clearPendingArtifactMessage,
   setViewMode,
   addStagedFile,
   stagedFileUploadFinished,
@@ -412,7 +496,7 @@ export const {
   stagedFilesLimitExceeded,
   clearStagedFilesAlert,
   setSaveError,
-  clearHasSetStartingCustomizations,
+  clearHasSetInitialCustomizations,
   setChatWorkspaceSelectedTab,
   addItemToUserAddedSelectionContext,
   removeItemFromUserAddedSelectionContext,

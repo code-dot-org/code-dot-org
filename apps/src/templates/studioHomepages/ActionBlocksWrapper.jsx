@@ -1,9 +1,4 @@
-import {LinkButton} from '@code-dot-org/component-library/button';
-import {
-  Heading2,
-  OverlineTwoText,
-  BodyThreeText,
-} from '@code-dot-org/component-library/typography';
+import {Typography, Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -20,28 +15,43 @@ const OneColumnActionBlock = ({
     <div className={styles.oneColumnActionBlock}>
       <div className={styles.contentWrapper}>
         {overline && (
-          <OverlineTwoText className={styles.overline}>
+          <Typography
+            className={styles.overline}
+            variant="overline2"
+            gutterBottom
+          >
             {overline}
-          </OverlineTwoText>
+          </Typography>
         )}
         {heading && (
-          <Heading2 visualAppearance="heading-md">{heading}</Heading2>
+          <Typography component="h2" variant="h4" gutterBottom>
+            {heading}
+          </Typography>
         )}
         {imageUrl && <img src={imageUrl} alt="" />}
-        {description && <BodyThreeText>{description}</BodyThreeText>}
+        {description && (
+          <Typography variant="body3" gutterBottom>
+            {description}
+          </Typography>
+        )}
       </div>
       <div className={styles.buttonWrapper}>
         {buttons &&
           buttons.map((button, index) => (
-            <LinkButton
+            <MuiButton
               key={index}
-              color={button.color}
+              variant={button.variant || 'contained'}
+              color={button.color || 'primary'}
+              size="medium"
+              aria-label={button.ariaLabel}
               href={button.url}
-              size="m"
-              text={button.text}
-              type={button.type}
-              ariaLabel={button.ariaLabel}
-            />
+              target={button.target}
+              rel={
+                button.target === '_blank' ? 'noopener noreferrer' : undefined
+              }
+            >
+              {button.text}
+            </MuiButton>
           ))}
       </div>
     </div>
@@ -55,12 +65,11 @@ OneColumnActionBlock.propTypes = {
   description: PropTypes.string,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
+      variant: PropTypes.string,
       color: PropTypes.string,
       url: PropTypes.string,
-      size: PropTypes.string,
       text: PropTypes.string,
       target: PropTypes.string,
-      type: PropTypes.string,
       ariaLabel: PropTypes.string,
     })
   ),

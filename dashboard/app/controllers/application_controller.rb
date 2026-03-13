@@ -3,6 +3,7 @@ require 'dynamic_config/dcdo'
 require 'dynamic_config/gatekeeper'
 require 'dynamic_config/page_mode'
 require 'cdo/shared_constants'
+require 'cdo/brand'
 require 'policies/child_account'
 
 class ApplicationController < ActionController::Base
@@ -28,8 +29,9 @@ class ApplicationController < ActionController::Base
 
   before_action :clear_sign_up_session_vars
 
-  helper_method :statsig_stable_id
-  before_action :statsig_stable_id
+  before_action :initialize_statsig_stable_id
+
+  before_action :persist_brand_params
 
   around_action :with_global_current_user
 
@@ -63,6 +65,29 @@ class ApplicationController < ActionController::Base
         cookies[:dbg] = (params[:dbg] == 'off') ? nil : 'on'
       end
       @use_web_console = cookies[:dbg]
+    end
+  end
+
+  # Persist brand selection as a cookie so the brand sticks across page navigations.
+  # Set brand:   ?brand=codeai
+  # Clear brand: ?brand-reset=1
+  def persist_brand_params
+    return unless DCDO.get('brand-router-enabled', false)
+
+    brand_cookie = environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)
+
+    if params['brand-reset']
+      cookies.delete(brand_cookie, domain: :all)
+      return
+    end
+
+    return if params['brand'].blank?
+
+    brand = params['brand']
+    if Cdo::Brand::BRANDS.key?(brand)
+      cookies[brand_cookie] = {value: brand, domain: :all}
+    else
+      cookies.delete(brand_cookie, domain: :all)
     end
   end
 
@@ -286,6 +311,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  protected def authorize_teacher!
+    authorize! :access, :teacher_only
+  end
+
   protected def require_admin
     authorize! :read, :reports
   end
@@ -417,7 +446,10 @@ class ApplicationController < ActionController::Base
   end
 
   # Creates a statsig stable id for use of signed-out user tracking.
-  protected def statsig_stable_id
+  # This cookie is used by the Statsig SDK for both JS and Ruby.
+  protected def initialize_statsig_stable_id
+    existing_stable_id = cookies[:statsig_stable_id]
+    session[:statsig_stable_id] = existing_stable_id if existing_stable_id.present?
     session[:statsig_stable_id] ||= SecureRandom.uuid
   end
 
@@ -431,5 +463,11 @@ class ApplicationController < ActionController::Base
     yield
   ensure
     RequestStore.store[:current_user] = nil
+  end
+
+  private def append_info_to_payload(payload)
+    super
+    payload[:user_id] = current_user&.id
+    payload[:admin_id] = session[:admin_id] if session[:assumed_identity]
   end
 end

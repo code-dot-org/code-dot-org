@@ -1,0 +1,12 @@
+name 'CSD U2L5-L1-2025'
+display_name 'HTML Review'
+description 'Here are some HTML tags that you may have seen in the past couple of lessons.  You can use them to review the tags you might want for your web page.'
+uses_lab2
+sublevels
+level 'CSD U2L5-L1a-2025'
+level 'CSD U2L5-L1b-2025'
+level 'CSD U2L5-L1c-2025'
+level 'CSD U2L5-L1d-2025'
+level 'CSD U2L5-L1e-2025'
+level 'CSD U2L5-L1f-2025'
+level 'CSD U2L5-L1g-2025'

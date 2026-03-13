@@ -12,7 +12,6 @@ import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';
-import '../build/locales/en_us/tutorialExplorer_locale.js';
 import '../build/locales/en_us/weblab_locale.js';
 import '../build/locales/en_us/gamelab_locale.js';
 import '../build/locales/en_us/poetry_locale.js';
@@ -29,6 +28,7 @@ import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';
+import {TransformStream} from 'web-streams-polyfill';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
@@ -82,14 +82,16 @@ window.Element.prototype.getClientRects = function () {
     }
     node = node.parentNode;
   }
-  var self = $(this);
-  return [{width: self.width(), height: self.height()}];
+  const width = this.offsetWidth || this.clientWidth || 0;
+  const height = this.offsetHeight || this.clientHeight || 0;
+  return [{width, height}];
 };
 
 global.$ = global.jQuery = $;
 global.IN_UNIT_TEST = true;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
+global.TransformStream = TransformStream;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
 
 jest.mock('@cdo/apps/metrics/firehose', () => ({

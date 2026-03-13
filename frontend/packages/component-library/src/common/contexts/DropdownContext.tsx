@@ -1,4 +1,10 @@
-import React, {createContext, useContext, useState, ReactNode} from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  FunctionComponent,
+  ReactNode,
+} from 'react';
 
 /**
  * Dropdown context is used to manage that only one of CheckboxDropdowns is open at a time.
@@ -15,9 +21,9 @@ const DropdownContext = createContext({
 
 export const useDropdownContext = () => useContext(DropdownContext);
 
-export const DropdownProviderWrapper: React.FC<{children: ReactNode}> = ({
-  children,
-}) => {
+export const DropdownProviderWrapper: FunctionComponent<{
+  children: ReactNode;
+}> = ({children}) => {
   const [activeDropdownName, setActiveDropdownName] = useState('');
 
   return (

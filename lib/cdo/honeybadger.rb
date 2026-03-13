@@ -57,7 +57,7 @@ module Honeybadger
 
   # notify_cronjob_error - logs a Honeybadger error in the Cronjobs project
   # See https://docs.honeybadger.io/ruby/gem-reference/api.html#honeybadger-notify-error-opts
-  def self.notify_cronjob_error(opts)
+  def self.notify_cronjob_error(...)
     # Configure and start Honeybadger
     Honeybadger.configure do |config|
       config.env = ENV.fetch('RACK_ENV', nil)
@@ -68,7 +68,7 @@ module Honeybadger
       config.report_data = true
     end
 
-    result = Honeybadger.notify(opts)
+    result = Honeybadger.notify(...)
     Honeybadger.flush # these events are sometimes getting swallowed without this
     result
   end

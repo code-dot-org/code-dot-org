@@ -1,6 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {BodyTwoText} from '@code-dot-org/component-library/typography';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import {isEqual} from 'lodash';
 import React, {useCallback} from 'react';
@@ -100,26 +100,36 @@ const EditToolboxBlocks: React.FC<EditToolboxBlocksProps> = ({
 
   return (
     <div className={styles.section}>
-      <BodyTwoText className={classNames(styles.noMargin)}>
+      <Typography
+        className={classNames(styles.noMargin)}
+        variant="body2"
+        gutterBottom
+      >
         Allowed Blocks:
-      </BodyTwoText>
+      </Typography>
       <div className={classNames(styles.verticalFlex, styles.gapMedium)}>
-        <Button
-          text="Select All"
-          onClick={() => onChange(defaultBlocks)}
-          size="xs"
-          iconLeft={{iconName: 'circle-check'}}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="extraSmall"
           disabled={isEqual(blocksMap, defaultBlocks)}
-        />
-        <Button
-          text="Clear All"
-          onClick={() => onChange({})}
-          size="xs"
-          iconLeft={{iconName: 'ban'}}
-          color="destructive"
-          type="secondary"
+          onClick={() => onChange(defaultBlocks)}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="circle-check" />}
+        >
+          {'Select All'}
+        </MuiButton>
+        <MuiButton
+          variant="outlined"
+          color="error"
+          size="extraSmall"
           disabled={Object.keys(blocksMap).length === 0}
-        />
+          onClick={() => onChange({})}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="ban" />}
+        >
+          {'Clear All'}
+        </MuiButton>
       </div>
       <MultiCategorySelect
         items={multiSelectItems}

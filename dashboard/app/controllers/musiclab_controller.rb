@@ -1,5 +1,4 @@
 class MusiclabController < ApplicationController
-  ANALYTICS_KEY = CDO.amplitude_api_key
   # The hard-coded list of channel IDs for the mini player if the 'get_channel_ids_from_featured_projects_gallery'
   # DCDO flag is set to `false`. If the DCDO flag is set to `true`, then the channel IDs are randomly selected from
   # the set of active music lab featured projects. See get_selected_channel_ids below.
@@ -44,18 +43,6 @@ class MusiclabController < ApplicationController
     @projects = get_project_details(selected_channel_ids)
   end
 
-  # TODO: This is a temporary addition to serve the analytics API key
-  # specifically for Music Lab. When we start using Amplitude for other
-  # applications, we should create a dedicated controller/util that serves
-  # API keys for various analytics projects, not just Music Lab.
-  # We may also need to move the Amplitude analytics reporting
-  # client to the back-end to avoid exposing keys (as we are currently).
-
-  # GET /musiclab/analytics_key
-  def get_analytics_key
-    render(json: {key: ANALYTICS_KEY})
-  end
-
   private def get_selected_channel_ids(channels_param = nil, count = nil)
     channel_ids_from_params = channels_param.nil? ? [] : channels_param.split(',')
     channel_ids_from_featured_projects = CHANNELS
@@ -76,7 +63,7 @@ class MusiclabController < ApplicationController
 
   private def get_project_details(project_channel_ids)
     project_ids = project_channel_ids.map do |channel_id|
-      _, project_id = storage_decrypt_channel_id(channel_id)
+      _, project_id = get_storage_id_and_project_id(channel_id)
       project_id
     end
     Project.

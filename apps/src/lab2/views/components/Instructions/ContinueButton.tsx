@@ -1,4 +1,7 @@
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+} from '@mui/material';
 import React from 'react';
 
 import WithConditionalTooltip from '@cdo/apps/codebridge/components/WithConditionalTooltip';
@@ -7,10 +10,11 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from '@cdo/apps/lab2/views/components/Instructions/instructions.module.scss';
 
-interface ContinueButtonProps extends ButtonProps {
+type ContinueButtonProps = Omit<MuiButtonProps, 'onClick'> & {
   tooltipMessage?: string;
   hideIfDisabled?: boolean;
-}
+  onContinue?: () => void;
+};
 
 /**
  * Displays the 'Continue' or 'Finish' button that advances to the next level or finishes the progression unless
@@ -20,6 +24,8 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
   tooltipMessage,
   hideIfDisabled,
   disabled,
+  onContinue,
+  children,
   ...buttonProps
 }) => {
   const dispatch = useAppDispatch();
@@ -42,13 +48,21 @@ const ContinueButton: React.FC<ContinueButtonProps> = ({
           size: 'xs',
         }}
       >
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          type="button"
           id="instructions-continue-button"
-          onClick={() => dispatch(continueOrFinishLesson())}
+          onClick={() => {
+            onContinue?.();
+            dispatch(continueOrFinishLesson());
+          }}
           disabled={disabled}
-          size={'s'}
           {...buttonProps}
-        />
+        >
+          <span>{children}</span>
+        </MuiButton>
       </WithConditionalTooltip>
     </div>
   );

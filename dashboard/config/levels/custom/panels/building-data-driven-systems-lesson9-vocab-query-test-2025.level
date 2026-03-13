@@ -1,0 +1,22 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2025-11-21T21:29:47.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# Query\n\nA **query** is the question or request you send to a computer to get specific information back from a larger set of data.\n\n**Examples:**\n * Typing “science club” in a clubs search bar.\n* Choosing “movies with country music” in a soundtrack filter dropdown.",
+        "imageUrl": "https://images.code.org/604f4b068a0cce3c0321398b6ed28976-Screenshot 2025-11-21 133917.png",
+        "key": "undefined-ea03636a-a1b5-4568-be2b-86c3c6462665",
+        "layout": "text-top-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2025-11-21T21:29:47.731+00:00\",\"changed\":[\"cloned from \\\"building-data-driven-systems-lesson8-vocab-filter-test-2025\\\"\"],\"cloned_from\":\"building-data-driven-systems-lesson8-vocab-filter-test-2025\"},{\"changed_at\":\"2025-11-21 21:30:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-21 21:40:54 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Panels>

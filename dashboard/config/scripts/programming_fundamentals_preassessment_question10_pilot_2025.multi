@@ -1,0 +1,13 @@
+name 'programming-fundamentals-preassessment-question10_pilot-2025'
+title 'Programming Fundamentals Pre-Assessment: Question 10'
+
+wrong 'Forgetting to define a function'
+wrong 'Writing an infinite loop'
+wrong 'Running a program without output'
+right 'Using incorrect indentation'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Which of the following is an example of a **syntax error**?
+MARKDOWN

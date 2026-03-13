@@ -385,6 +385,7 @@
     "display_name": "Sleepy Cat",
     "bubble_choice_description": "Explore the backing track for this sleepy cat",
     "thumbnail_url": "https://images.code.org/6c466a1465160e77a1d89d9d1219a880-image-1749147067425.png",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

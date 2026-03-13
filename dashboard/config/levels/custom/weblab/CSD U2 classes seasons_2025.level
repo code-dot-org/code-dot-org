@@ -33,7 +33,8 @@
     "bubble_choice_description": "Use your debugging skills to figure out why the Autumn class isn't working on this web page.",
     "thumbnail_url": "https://images.code.org/9554eb33588294f6ad8fc8b250d755b4-image-1588247164152.45.29 AM.png",
     "encrypted_examples": "kgFfaKiHy7W00rwdCL0K31ITrTQhDnL7d9l2NGHAqxlZI/c2vezwnyftMrIm\npbPWDJhjuguhYvgwCI+LRAqRxA==\n",
-    "validation_enabled": "false"
+    "validation_enabled": "false",
+    "ai_tutor_available": "true"
   },
   "published": true,
   "notes": "",

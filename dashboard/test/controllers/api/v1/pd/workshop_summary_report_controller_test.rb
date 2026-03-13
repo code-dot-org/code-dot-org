@@ -32,7 +32,6 @@ class Api::V1::Pd::WorkshopSummaryReportControllerTest < ActionController::TestC
     end
   end.freeze
 
-  self.use_transactional_test_case = true
   setup do
     @workshop_admin = create(:workshop_admin)
     @organizer = create(:workshop_organizer)

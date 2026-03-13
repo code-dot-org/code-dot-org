@@ -68,6 +68,7 @@
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Sensors - SB - Data Event Template_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

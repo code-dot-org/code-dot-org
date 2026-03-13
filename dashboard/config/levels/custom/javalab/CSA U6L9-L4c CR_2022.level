@@ -15,7 +15,7 @@
     "display_name": "Count Phrases",
     "bubble_choice_description": "Count the number of times a word or phrase appears in text.",
     "thumbnail_url": "https://images.code.org/4fd636e38bd9dcd6d98e9b67ea0b45cd-document.png",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-04-14T19:40:58.529+00:00\",\"changed\":[\"cloned from \\\"CSA U6L9-L4b CR_2022\\\"\"],\"cloned_from\":\"CSA U6L9-L4b CR_2022\"},{\"changed_at\":\"2022-04-14 19:41:00 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 20:29:53 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-05-06 21:19:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-06-21 19:09:33 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"

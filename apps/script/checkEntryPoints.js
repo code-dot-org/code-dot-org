@@ -82,7 +82,6 @@ const SILENCED = [
   'code-studio',
 
   // referenced by multiple sites
-  'tutorialExplorer',
   'cookieBanner',
   'userHeaderEventLogger',
   'regionalPartnerMiniContact',
@@ -92,12 +91,14 @@ const SILENCED = [
 
   // other entry points
   'blockly',
-  'googleblockly',
   'brambleHost',
   'levelbuilder',
 
   // needed to initialize the locales before all other app code loads
   'localization',
+
+  // DataDog global entry point
+  'dataDog',
 ].concat(hasPegasusContent ? [] : Object.keys(PEGASUS_ENTRIES));
 const SITES_CONFIG = {
   studio: {

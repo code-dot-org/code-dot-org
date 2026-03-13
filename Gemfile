@@ -24,7 +24,7 @@ gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgr
 gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.0'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # Compile Sprockets assets concurrently in `assets:precompile`.
@@ -33,6 +33,17 @@ gem 'rails-controller-testing', '~> 1.0.5'
 # Ref: https://github.com/rails/sprockets/pull/469
 # Ref: https://github.com/rails/sprockets/blob/main/UPGRADING.md#manifestjs
 gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
+
+# Starting in Rails 7, sprockets is no longer an automatic dependency, so we
+# need to declare it specifically. We pin to the specific version we are
+# currently using to reduce moving parts during the Rails upgrade; we can
+# loosen this to something like "~> 3.5" once we're fully on Rails 7.
+# In the long term, we probably want to migrate away from sprockets entirely.
+gem 'sprockets-rails', '3.3.0'
+
+# Rails depends on zeitwerk ~>2.3, but cpath support added in 2.6.9 plays a bit
+# nicer with some of our more convoluted model names (eg, LevelsScriptLevel).
+gem 'zeitwerk', '~> 2.6.9'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -71,7 +82,7 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotaterb', '~> 4.19'
   gem 'aws-google', '~> 0.2.3'
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
@@ -112,7 +123,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
-  gem 'minitest-rails', '~> 6.1', require: false
+  gem 'minitest-rails', '~> 7.0', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -140,10 +151,19 @@ gem 'open_uri_redirections', require: false
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
 
-gem 'puma', '~> 5.6'
+gem 'jmespath', '~> 1.4' # Used by our pumactl wrapper shell script to filter JSON output.
 gem 'puma_worker_killer'
-gem 'raindrops'
 gem 'sd_notify' # required for Puma to support systemd's Type=notify
+
+# We are using Puma just 2 commits past Puma 7.2 release, but crucially this includes a PR
+# that enables Puma to dump backtraces when it receives SIGPWR on Linux. We need this
+# PR for debugging and it is not included in a release (yet).
+#
+# Backtrace PR: https://github.com/puma/puma/pull/3829
+#
+# We should switch to Puma 7.3 as soon as it is released and remove this comment, (expected ~Mar-May 2026)
+gem 'puma', git: 'https://github.com/puma/puma.git', ref: '42161dd0fc3f3ad9d51359e4037c75b351b18219'
+# gem 'puma', '~> 7.2'
 
 gem 'chronic', '~> 0.10.2'
 
@@ -169,7 +189,8 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
+gem 'omniauth-classlink', '~> 0.3.1'
+gem 'omniauth-clever', '~> 3.0.0', github: 'code-dot-org/omniauth-clever', tag: 'v3.0.0'
 gem 'omniauth-facebook', '~> 10.0.0'
 gem 'omniauth-google-oauth2', '~> 1.1.3'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -184,13 +205,13 @@ gem 'haml', '~> 5.2.0'
 
 gem 'jquery-ui-rails', '~> 6.0.1'
 
-gem 'nokogiri', '>= 1.10.0'
+gem 'nokogiri', '~> 1.18.9'
 
 gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
-gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production] # perf/error/etc monitoring
+gem 'newrelic_rpm', '~> 8.3', group: [:staging, :development, :production], require: false # perf/error/etc monitoring
 
 gem 'redcarpet', '~> 3.6.0'
 
@@ -248,7 +269,7 @@ gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
 gem 'aws-sdk-cloudwatchlogs'
 gem 'aws-sdk-comprehend'
-gem 'aws-sdk-core'
+gem 'aws-sdk-core', '>= 3.239.2'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2'
@@ -256,7 +277,8 @@ gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
-gem 'aws-sdk-s3'
+gem 'aws-sdk-s3', '~> 1.113'
+gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
@@ -285,7 +307,7 @@ gem 'pusher', '~> 1.3.1', require: false
 gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
-gem 'httparty'
+gem 'httparty', '~> 0.24'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
@@ -304,7 +326,8 @@ gem 'sshkit'
 gem 'validates_email_format_of'
 gem 'validate_url', '~> 1.0.15'
 
-gem 'composite_primary_keys', '~> 13.0'
+# Target 14.0.5 specifically, because 14.0.6 removed an important performance optimization.
+gem 'composite_primary_keys', '14.0.5'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
@@ -372,7 +395,8 @@ gem 'rack-cors', '~> 2.0.1'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
-gem 'http', '~> 5.0'
+# Speculatively target 5.3 specifically to diagnose some S3 networking errors
+gem 'http', '~> 5.3.1'
 
 gem 'statsig', '~> 2.5.5'
 
@@ -390,7 +414,25 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
+gem "opentelemetry-exporter-otlp", "~> 0.31.1"
+gem 'opentelemetry-sdk', '~> 1.10'
+
+# pinned due to rails 7, upgrade on rails 7.1
+gem "opentelemetry-instrumentation-all", "0.85.0"
+
 # Automatically include all rails engines
 Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
   gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
 end
+
+# OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
+# By using the openssl gem, we can pick up the fixes without needing to upgrade Ruby.
+# This gem line can be removed once we upgrade to Ruby 3.4 >= 3.4.8, or Ruby 3.3 >= 3.3.10 or Ruby 3.2 >= 3.2.10
+# which will include the openssl fix by default, see: https://github.com/ruby/openssl/issues/949#issuecomment-3388132260
+gem 'openssl', '>= 3.3.1'
+
+# Used for Clever Client
+gem 'typhoeus', '~> 1.0', '>= 1.0.1'
+
+# Used for Vite integration, only available in development and adhoc at this time.
+gem "vite_rails", "~> 3.0", group: [:development, :adhoc, :staging, :test]

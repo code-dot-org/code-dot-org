@@ -126,7 +126,7 @@ module RakeUtils
   def self.bundle_install(*args)
     without = CDO.rack_envs - [CDO.rack_env]
     run_bundle_command('config set --local without', *without)
-    run_bundle_command('config set --local deployment \'true\'') if CDO.chef_managed
+    run_bundle_command('config set --local deployment \'true\'') if CDO.chef_managed || ENV['CI']
     run_bundle_command('install --quiet --jobs', nproc, *args)
   end
 
@@ -228,7 +228,7 @@ module RakeUtils
   end
 
   def self.yarn_install(*args)
-    run_packages_with('yarn', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
+    run_packages_with('COREPACK_ENABLE_DOWNLOAD_PROMPT=0 yarn', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
   end
 
   def self.npm_rebuild(*args)

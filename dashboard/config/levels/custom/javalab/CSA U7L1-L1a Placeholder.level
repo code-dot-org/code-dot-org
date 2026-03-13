@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-10T00:47:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "display_name": "Music Creator",
@@ -41,12 +45,9 @@
       "studio.jpeg": "f946a051-27f8-4ef3-b692-36a89cd559de.jpeg",
       "turntable.jpeg": "450ffd2c-95b0-418e-9563-a7492b3d8ac7.jpeg",
       "electrohouse.wav": "a750323f-3e2a-45f1-88d7-ff0efd9cee4b.wav"
-    }
+    },
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-12-10T00:47:31.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-10T00:47:31.047+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1a\\\"\"],\"cloned_from\":\"CSA U7L1-L1a\"},{\"changed_at\":\"2021-12-10 00:47:43 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 19:36:08 +0000\",\"changed\":[\"display_name\",\"bubble_choice_description\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 20:52:30 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 20:52:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2021-12-17 23:42:01 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

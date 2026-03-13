@@ -1,5 +1,10 @@
-import {Button, ButtonProps} from '@code-dot-org/component-library/button';
+import {ButtonProps as DSCO_ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {
+  Button as MuiButton,
+  ButtonProps as MuiButtonProps,
+} from '@mui/material';
 import React, {ChangeEvent, useState} from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -25,11 +30,12 @@ import {
 } from '../../redux';
 import {AssetSource, ChatAsset} from '../../types';
 
-interface UploadButtonProps {
+export interface UploadButtonProps {
   isDisabled: boolean;
   levelName: string;
   buildAssetUrl: (asset: ChatAsset) => string;
   hasStarterAssets?: boolean;
+  showLabel?: boolean;
 }
 
 const UploadButton: React.FC<UploadButtonProps> = ({
@@ -37,6 +43,7 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   levelName,
   buildAssetUrl,
   hasStarterAssets = false,
+  showLabel = true,
 }) => {
   const dispatch = useAppDispatch();
   const numStagedFiles = useAppSelector(
@@ -75,6 +82,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     let uploadSuccessCount = 0;
     let sizeLimitExceededCount = 0;
     let uploadFailureCount = 0;
+    let fileCountPdf = 0;
+    let fileCountImage = 0;
     for (const [key, asset, file] of allowedFiles) {
       if (file.size > MAX_FILE_SIZE_MB * 1024 * 1024) {
         sizeLimitExceededCount += 1;
@@ -85,6 +94,12 @@ const UploadButton: React.FC<UploadButtonProps> = ({
           })
         );
         continue; // Skip uploading this file if it exceeds the size limit.
+      }
+
+      if (file.name.endsWith('.pdf')) {
+        fileCountPdf += 1;
+      } else {
+        fileCountImage += 1;
       }
 
       try {
@@ -124,6 +139,8 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         fileCountFailureSizeLimitExceeded: sizeLimitExceededCount,
         fileCountFailureUnknownCause: uploadFailureCount,
         fileCountFailureNumberExceeded: Math.max(excessFileCount, 0),
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -141,11 +158,17 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         })
       );
     }
+    const fileCount = assets.length;
+    const fileCountPdf =
+      assets?.filter(asset => asset.filename.endsWith('.pdf')).length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
 
     dispatch(
       sendAnalytics(EVENTS.AICHAT_MULTIMODAL_UPLOAD_STAGED, {
         source: AssetSource.LEVEL,
-        fileCountSuccess: assets.length,
+        fileCountSuccess: fileCount,
+        fileCountImage,
+        fileCountPdf,
       })
     );
   };
@@ -165,24 +188,57 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     );
   };
 
-  const buttonProps: ButtonProps = {
+  // TODO: Set of legacy DSCO props, remove once Dropdowns are moved to MUI.
+  const DSCO_buttonPropsCommon: DSCO_ButtonProps = {
     type: 'secondary',
     color: 'gray',
-    iconLeft: {iconName: 'plus'},
+  };
+
+  const DSCO_buttonPropsWithLabel: DSCO_ButtonProps = {
+    ...DSCO_buttonPropsCommon,
     text: aichatI18n.aichatAddFile(),
+    iconLeft: {iconName: 'plus'},
+  };
+
+  const DSCO_buttonPropsIconOnly: DSCO_ButtonProps = {
+    ...DSCO_buttonPropsCommon,
+    icon: {iconName: 'plus', iconStyle: 'solid'},
+  };
+
+  const DSCO_commonProps = {
+    size: 'xs',
+    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
+  } as const;
+
+  const buttonPropsCommon: MuiButtonProps = {
+    variant: 'outlined',
+    color: 'secondary',
+  };
+
+  const buttonPropsWithLabel: MuiButtonProps = {
+    ...buttonPropsCommon,
+    children: aichatI18n.aichatAddFile(),
+    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+  };
+
+  const buttonPropsIconOnly: MuiButtonProps = {
+    ...buttonPropsCommon,
+    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
   const commonProps = {
-    size: 's',
+    size: 'extraSmall',
     disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
   } as const;
 
   const uploadButton = hasStarterAssets ? (
     <ActionDropdown
-      {...commonProps}
+      {...DSCO_commonProps}
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
-      triggerButtonProps={buttonProps}
+      triggerButtonProps={
+        showLabel ? DSCO_buttonPropsWithLabel : DSCO_buttonPropsIconOnly
+      }
       menuVerticalPlacement="top"
       options={[
         {
@@ -207,7 +263,12 @@ const UploadButton: React.FC<UploadButtonProps> = ({
       ]}
     />
   ) : (
-    <Button {...buttonProps} {...commonProps} onClick={onDeviceUploadClick} />
+    <MuiButton
+      type="button"
+      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
+      {...commonProps}
+      onClick={onDeviceUploadClick}
+    />
   );
 
   return (

@@ -25,9 +25,13 @@ const ALL_APPS = [
 
 // prettier-ignore
 const CODE_STUDIO_ENTRIES = {
+  'admin_users/mass_delete_student_progress': './src/sites/studio/pages/admin_users/mass_delete_student_progress.js',
+  'aidiff_exit_tickets/show': './src/sites/studio/pages/aidiff_exit_tickets/show.js',
+  'aidiff_lesson_hooks/show': './src/sites/studio/pages/aidiff_lesson_hooks/show.js',
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
+  'codeprojects_preview/page_not_found': './src/sites/studio/pages/codeprojects_preview/page_not_found.js',
   'codeprojects_preview/show': './src/sites/studio/pages/codeprojects_preview/show.js',
   'congrats/index': './src/sites/studio/pages/congrats/index.js',
   'courses/show': './src/sites/studio/pages/courses/show.js',
@@ -142,6 +146,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
   'levels/editors/fields/_aichat_settings': './src/sites/studio/pages/levels/editors/fields/_aichat_settings.js',
+  'levels/editors/fields/_ai_tutor_prompt_settings': './src/sites/studio/pages/levels/editors/fields/_ai_tutor_prompt_settings.js',
   'levels/editors/fields/_animation': './src/sites/studio/pages/levels/editors/fields/_animation.js',
   'levels/editors/fields/_bubble_choice_sublevel': './src/sites/studio/pages/levels/editors/fields/_bubble_choice_sublevel.js',
   'levels/editors/fields/_blockly': './src/sites/studio/pages/levels/editors/fields/_blockly.js',
@@ -162,7 +167,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
   'levels/editors/fields/_validations': './src/sites/studio/pages/levels/editors/fields/_validations.js',
   'levels/editors/fields/_video': './src/sites/studio/pages/levels/editors/fields/_video.js',
-  'levels/editors/_gamelab': './src/sites/studio/pages/levels/editors/_gamelab.js',
+  'levels/editors/fields/_widget2': './src/sites/studio/pages/levels/editors/fields/_widget2.js',
   'levels/editors/_navigation_sidebar': './src/sites/studio/pages/levels/editors/_navigation_sidebar.js',
   'levels/editors/_pixelation': './src/sites/studio/pages/levels/editors/_pixelation.js',
   'levels/editors/_studio': './src/sites/studio/pages/levels/editors/_studio.js',
@@ -202,7 +207,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
-  'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
   'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
@@ -228,9 +232,6 @@ const PEGASUS_ENTRIES = {
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
   'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
   'hourofcode.com/views/swiper_page_resources': './src/sites/hourofcode.com/pages/views/swiper_page_resources.js',
-
-  // shared between code.org and hourofcode.com
-  'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
 };
 
 // prettier-ignore
@@ -286,7 +287,6 @@ const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
   blockly: './src/sites/studio/pages/blockly.js',
-  googleblockly: './src/sites/studio/pages/googleblockly.js',
 
   // embedBlocks.js is just React, the babel-polyfill, and a few other dependencies
   // in a bundle to minimize the amount of stuff we need when loading blocks
@@ -301,6 +301,7 @@ const OTHER_ENTRIES = {
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+  dataDog: './src/instrumentation/dataDog.js',
 };
 
 const LOCALIZATION_ENTRIES = {

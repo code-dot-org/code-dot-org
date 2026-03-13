@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-12-14T15:44:02.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Evaluate and test this program using the guiding questions and prompts on the **Secure Coding Practices** activity guide.",
@@ -27,12 +31,9 @@
         "text": "public class Patron {\n\n  /**\n   * the first and last name of the patron\n   */\n  private String name;\n\n  /**\n   * the address of the patron\n   */\n  private String address;\n\n  /**\n   * the book the patron has checked out\n   */\n  private Book currentBook;\n\n  /**\n   * Creates a Patron\n   * @param name the first and last name of the patron\n   * @param address the address of the patron\n   */\n  public Patron(String name, String address, Book currentBook) {\n    this.name = name;\n    this.address = address;\n    this.currentBook = currentBook;\n    this.currentBook.setHasBeenChecked(true);\n  }\n\n  /**\n   * Gets the patron's information\n   * @return a String containing the patron's information\n   */\n  public String toString() {\n    return name + \" (\" + address + \"): Current Book = \" + currentBook;\n  }\n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": "false"
   },
-  "game_id": 68,
-  "created_at": "2021-12-14T15:44:02.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-12-14T15:44:02.493+00:00\",\"changed\":[\"cloned from \\\"CSA U8L10-L1c\\\"\"],\"cloned_from\":\"CSA U8L10-L1c\"},{\"changed_at\":\"2021-12-14 15:44:35 +0000\",\"changed\":[\"name\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 14:03:40 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 17:02:18 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 17:29:21 +0000\",\"changed\":[\"long_instructions\",\"csa_view_mode\",\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-01-10 22:50:31 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

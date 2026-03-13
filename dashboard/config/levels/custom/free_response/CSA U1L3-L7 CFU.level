@@ -18,7 +18,7 @@
     "optional": "false",
     "title": "Check for Understanding",
     "allow_multiple_attempts": "true",
-    "ai_tutor_available": true
+    "ai_tutor_available": "false"
   },
   "published": true,
   "notes": "",

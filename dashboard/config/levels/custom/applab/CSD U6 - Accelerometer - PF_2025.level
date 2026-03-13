@@ -107,6 +107,7 @@
     "bubble_choice_description": "Tilt the circuit playground to get as close as you can to a target number",
     "thumbnail_url": "https://images.code.org/429ac67f817ec2079e549c9c53e100c2-image-1648866380294.png",
     "encrypted_examples": "kNK+LQCtuD3j4fdpbPOpDdmOhvlNXyMSxvmsj09s/CYpvL4Tf6SYVROvqJfV\nHUKwgOSLjTqIFrEhyYaLyb00pQ==\n",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

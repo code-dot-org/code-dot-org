@@ -1,6 +1,4 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import firehoseClient from '@cdo/apps/metrics/firehose';
-
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {
   constructor(channelId) {
@@ -66,21 +64,6 @@ export default class LibraryClientApi {
           });
           onSuccess(mostRecent.versionId);
         } else {
-          // Log to Firehose on error using "event" as context.
-          // See https://codedotorg.atlassian.net/browse/STAR-2140 for details.
-          firehoseClient.putRecord(
-            {
-              study: 'applab_library_versions',
-              event: event,
-              data_json: JSON.stringify({
-                error: error.message,
-                channelId: this.channelId,
-                pathname: location.pathname,
-              }),
-            },
-            {includeUserId: true}
-          );
-
           onError(error);
         }
       }

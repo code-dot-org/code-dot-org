@@ -3,6 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 
 import Dialog, {Body, Buttons, Confirm} from '../legacySharedComponents/Dialog';
 import color from '../util/color';
@@ -22,6 +24,9 @@ export class ImportProjectDialog extends React.Component {
   state = {...initialState};
 
   onImport = () => {
+    analyticsReporter.sendEvent(EVENTS.APPLAB_IMPORT_PROJECT, {
+      url: this.state.url,
+    });
     this.props.onImport(this.state.url);
     this.setState(initialState);
   };

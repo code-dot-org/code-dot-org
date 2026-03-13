@@ -1,10 +1,4 @@
-/**
- * View shown to a teacher when beginning to add students to an empty section.
- * Lets the teacher decide whether to use word/picture logins, have students
- * manage their own accounts via email/oauth, or to sync students with an
- * external service like Microsoft Classroom or Clever.
- */
-import Typography from '@code-dot-org/component-library/typography';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -16,8 +10,6 @@ import {
 } from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading3} from '@cdo/apps/legacySharedComponents/Headings';
-import {PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
@@ -36,7 +28,6 @@ import {
   schoologyLogo,
 } from './LmsInformationalCard/assets';
 import LoginTypeCard from './LoginTypeCard';
-
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
 const SELECT_LOGIN_TYPE = 'Login Type Selection';
@@ -71,13 +62,9 @@ class LoginTypePicker extends Component {
   };
 
   recordSectionSetupExitEvent = eventName => {
-    analyticsReporter.sendEvent(
-      eventName,
-      {
-        source: SELECT_LOGIN_TYPE,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(eventName, {
+      source: SELECT_LOGIN_TYPE,
+    });
   };
 
   openImportDialog = provider => {
@@ -174,7 +161,9 @@ class LoginTypePicker extends Component {
 
     return (
       <div style={style.container}>
-        <Heading3 isRebranded>{title}</Heading3>
+        <Typography variant="h3" gutterBottom>
+          {title}
+        </Typography>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
         {showStudentsToSectionPermissionWarning && (
           <p>
@@ -208,11 +197,7 @@ class LoginTypePicker extends Component {
             handleClose={() => this.setState({isLearnMoreOpen: false})}
           />
         )}
-        <Typography
-          style={style.subheader}
-          semanticTag={'h6'}
-          visualAppearance={'heading-xs'}
-        >
+        <Typography style={style.subheader} variant="h6" gutterBottom>
           {i18n.loginTypes()}
         </Typography>
         <div style={style.scroll}>
@@ -231,11 +216,7 @@ class LoginTypePicker extends Component {
         </div>
         {!withAllLmsProviders && (
           <>
-            <Typography
-              style={style.subheader}
-              semanticTag={'h6'}
-              visualAppearance={'heading-xs'}
-            >
+            <Typography style={style.subheader} variant="h6" gutterBottom>
               {i18n.lmsIntegrations()}
             </Typography>
             <div
@@ -289,6 +270,7 @@ class LoginTypePicker extends Component {
 }
 
 export const UnconnectedLoginTypePicker = LoginTypePicker;
+
 export default connect(state => ({
   providers: state.teacherSections.providers,
 }))(LoginTypePicker);
@@ -302,6 +284,7 @@ const PictureLoginCard = props => (
     onClick={() => props.onClick('picture')}
   />
 );
+
 PictureLoginCard.propTypes = {
   onClick: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
@@ -316,6 +299,7 @@ const WordLoginCard = props => (
     onClick={() => props.onClick('word')}
   />
 );
+
 WordLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const EmailLoginCard = props => (
@@ -327,6 +311,7 @@ const EmailLoginCard = props => (
     onClick={() => props.onClick('email')}
   />
 );
+
 EmailLoginCard.propTypes = PictureLoginCard.propTypes;
 
 const GoogleClassroomCard = props => (
@@ -336,6 +321,7 @@ const GoogleClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.google_classroom)}
   />
 );
+
 GoogleClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const MicrosoftClassroomCard = props => (
@@ -345,6 +331,7 @@ const MicrosoftClassroomCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.microsoft_classroom)}
   />
 );
+
 MicrosoftClassroomCard.propTypes = PictureLoginCard.propTypes;
 
 const CleverCard = props => (
@@ -354,4 +341,5 @@ const CleverCard = props => (
     onClick={() => props.onClick(OAuthSectionTypes.clever)}
   />
 );
+
 CleverCard.propTypes = PictureLoginCard.propTypes;

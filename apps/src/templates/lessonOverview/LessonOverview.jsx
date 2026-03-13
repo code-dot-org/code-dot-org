@@ -6,9 +6,8 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
@@ -57,45 +56,23 @@ class LessonOverview extends Component {
   constructor(props) {
     super(props);
 
-    analyticsReporter.sendEvent(
-      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT,
-      {
-        lessonId: props.lesson.id,
-        lessonName: props.lesson.displayName,
-        lessonLink: document.location.pathname,
-        referrer: document.referrer,
-        unitName: props.lesson.unit.displayName,
-        unitLink: props.lesson.unit.link,
-      },
-      PLATFORMS.BOTH
-    );
+    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
+      lessonId: props.lesson.id,
+      lessonName: props.lesson.displayName,
+      lessonLink: document.location.pathname,
+      referrer: document.referrer,
+      unitName: props.lesson.unit.displayName,
+      unitLink: props.lesson.unit.link,
+    });
   }
 
-  recordAndHandleResource = (e, firehoseKey, action, url = null) => {
+  handleResource = (e, action, url = null) => {
     e.preventDefault(); // Prevent navigation to url until callback
-    const event =
-      action === ResourceActions.NAVIGATE ? 'open-pdf' : 'print-from-browser';
-    firehoseClient.putRecord(
-      {
-        study: 'pdf-click',
-        study_group: 'lesson',
-        event: event,
-        data_json: JSON.stringify({
-          name: this.props.lesson.key,
-          pdfType: firehoseKey,
-        }),
-      },
-      {
-        includeUserId: true,
-        callback: () => {
-          if (action === ResourceActions.NAVIGATE && url) {
-            window.location.href = url; // Navigate to the URL
-          } else if (action === ResourceActions.PRINT) {
-            window.print(); // Trigger the print dialog
-          }
-        },
-      }
-    );
+    if (action === ResourceActions.NAVIGATE && url) {
+      window.location.href = url; // Navigate to the URL
+    } else if (action === ResourceActions.PRINT) {
+      window.print(); // Trigger the print dialog
+    }
     return false;
   };
 
@@ -132,12 +109,7 @@ class LessonOverview extends Component {
         <a
           key={option.key}
           onClick={e =>
-            this.recordAndHandleResource(
-              e,
-              option.key,
-              ResourceActions.NAVIGATE,
-              option.url
-            )
+            this.handleResource(e, ResourceActions.NAVIGATE, option.url)
           }
           href={option.url}
         >
@@ -149,7 +121,7 @@ class LessonOverview extends Component {
         <a
           key={WINDOW_PRINT}
           onClick={e =>
-            this.recordAndHandleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
+            this.handleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
           }
           href="#"
         >
@@ -209,9 +181,6 @@ class LessonOverview extends Component {
             announcements={announcements}
             width={styleConstants['content-width']}
             viewAs={viewAs}
-            firehoseAnalyticsData={{
-              lesson_id: lesson.id,
-            }}
           />
         )}
         {displayVerifiedResourcesNotification && (

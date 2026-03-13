@@ -34,6 +34,7 @@ export type SideBarItem = {
 export type ConfigType = {
   defaultTheme?: EditorTheme;
   editableFileTypes: string[];
+  supportedFileTypes: string[];
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
   activeLayout?: LayoutKey;
@@ -43,7 +44,6 @@ export type ConfigType = {
     vertical: React.FunctionComponent<LayoutProps>;
     share?: React.FunctionComponent<LayoutProps>;
     widget?: React.FunctionComponent<LayoutProps>;
-    fullScreen?: React.FunctionComponent<LayoutProps>;
   };
 };
 

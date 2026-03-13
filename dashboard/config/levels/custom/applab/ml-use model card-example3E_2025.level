@@ -55,6 +55,7 @@
     "long_instructions": "# Test The App!\r\n\r\nNow that we’ve added our new features, let’s test the app to make sure it works.\r\n\r\n# Do This:\r\n\r\n- Run the app several times, trying different road conditions. Verify that the app still works correctly\r\n- If the app doesn't work like you expected, go back to previous levels and double-check the steps you took. Some common places to debug are:\r\n\t- Checking for typos, especially in the IDs of your elements\r\n    - Checking that the dropdown menu for Time Of Day matches the model card information\r\n    - Checking that the [`getText()`(#fff176)](/docs/applab/getText/) blocks have the correct IDs in them\r\n\r\nIf the app is working correctly, continue to the next level where you can continue to customize your app",
     "encrypted_examples": "iL3Y079OVv/Z4rNRLCxwJvJWpkpLdSZxyzfzs4UglUyX0iax+tvGOSWY6vKI\nzxW/kJRUhuJx7F07Ix/VMWhKkw==\n",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

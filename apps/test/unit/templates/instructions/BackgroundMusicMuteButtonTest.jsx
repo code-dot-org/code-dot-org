@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
@@ -40,17 +41,25 @@ describe('SignedInUser', () => {
     assert(wrapper.text() === i18n.backgroundMusicOff());
   });
 
-  it('calls mute and unmute functions accordingly', () => {
+  it('calls mute and unmute functions accordingly', async () => {
     let onMuteSpy = sinon.spy();
     let onUnmuteSpy = sinon.spy();
     const wrapper = setUp({
       muteBackgroundMusic: onMuteSpy,
       unmuteBackgroundMusic: onUnmuteSpy,
     });
-    wrapper.find('.uitest-mute-music-button').simulate('click');
-    server.respond();
+    await act(async () => {
+      wrapper.find('.uitest-mute-music-button').simulate('click');
+    });
+    await act(async () => {
+      server.respond();
+    });
+    wrapper.update();
     expect(onMuteSpy).to.have.been.calledOnce;
-    wrapper.find('.uitest-mute-music-button').simulate('click');
+    await act(async () => {
+      wrapper.find('.uitest-mute-music-button').simulate('click');
+    });
+    wrapper.update();
     expect(onUnmuteSpy).to.have.been.calledOnce;
   });
 

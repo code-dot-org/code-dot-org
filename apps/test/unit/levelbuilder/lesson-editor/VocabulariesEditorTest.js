@@ -1,3 +1,4 @@
+import {Dialog} from '@code-dot-org/component-library/dialog';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -37,8 +38,9 @@ describe('VocabulariesEditor', () => {
     expect(wrapper.find('tr').length).toBe(3);
   });
 
-  it('can remove a vocabulary', () => {
+  it('opens the delete vocabulary dialog', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
+    expect(wrapper.find('Dialog').exists()).toBe(false);
     const numVocabularies = wrapper.find('tr').length;
     expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
@@ -46,24 +48,22 @@ describe('VocabulariesEditor', () => {
       .find('.unit-test-remove-vocabulary')
       .first();
     removeVocabularyButton.simulate('mouseDown');
-    const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(2);
-    deleteButton.simulate('click');
-    expect(removeVocabulary).toHaveBeenCalledTimes(1);
+    const removeDialog = wrapper.find(Dialog);
+    expect(removeDialog.exists()).toBe(true);
+    expect(removeDialog.text()).toEqual(
+      expect.stringContaining('Delete Vocabulary')
+    );
   });
 
-  it('can cancel removing a vocabulary', () => {
+  it('opens the add vocabulary dialog', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
-    const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).toBeGreaterThanOrEqual(2);
-    // Find one of the "remove" buttons and click it
-    const removeVocabularyButton = wrapper
-      .find('.unit-test-remove-vocabulary')
+    expect(wrapper.find('BaseDialog').exists()).toBe(false);
+    const addVocabularyButton = wrapper
+      .find('.unit-test-add-vocabulary')
       .first();
-    removeVocabularyButton.simulate('mouseDown');
-    const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(1);
-    cancelButton.simulate('click');
-    expect(removeVocabulary).not.toHaveBeenCalled();
+    addVocabularyButton.simulate('click');
+    const addDialog = wrapper.find('BaseDialog');
+    expect(addDialog.exists()).toBe(true);
+    expect(addDialog.text()).toEqual(expect.stringContaining('Add Vocabulary'));
   });
 });

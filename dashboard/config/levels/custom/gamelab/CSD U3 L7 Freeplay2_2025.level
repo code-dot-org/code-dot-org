@@ -92,6 +92,7 @@
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a focused free-play level: students are free to design a scene based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their scene, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
     "bubble_choice_description": "Create a scene with your favorite food, animated, and telling a *punny* joke!",
     "start_blocks": "//1) Add or draw your sprites in the Animation Tab\r\n\r\n//2) Create your sprites and set their animations\r\n\r\n//3) Add a draw loop and the needed code to animate your pun",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

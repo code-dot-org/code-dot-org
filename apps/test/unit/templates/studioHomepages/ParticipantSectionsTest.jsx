@@ -4,7 +4,7 @@ import React from 'react';
 import ParticipantSections from '@cdo/apps/templates/studioHomepages/ParticipantSections';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 
-import {sections} from './fakeSectionUtils';
+import {sections, archivedSections} from './fakeSectionUtils';
 
 describe('ParticipantSections', () => {
   let defaultProps, updateSections, updateSectionsResult;
@@ -32,5 +32,12 @@ describe('ParticipantSections', () => {
       <ParticipantSections {...defaultProps} sections={sections} />
     );
     expect(wrapper.find(SectionsAsStudentTable).length).toBe(1);
+  });
+
+  it('hides archived sections by default', () => {
+    const wrapper = shallow(
+      <ParticipantSections {...defaultProps} sections={archivedSections} />
+    );
+    expect(wrapper.find(SectionsAsStudentTable).length).toBe(0);
   });
 });

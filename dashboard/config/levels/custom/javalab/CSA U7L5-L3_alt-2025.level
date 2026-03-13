@@ -21,7 +21,7 @@
     "project_template_level_name": "CSA U7L5-L1 Overriding PBT_alt-2025",
     "teacher_markdown": "`isTrending` is only set in the constructor. It is not changed when the number of likes is changed.",
     "name_suffix": "_alt-2025",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true"
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2024-08-02T22:11:33.051+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L5-L3_pilot-2025\"}]"

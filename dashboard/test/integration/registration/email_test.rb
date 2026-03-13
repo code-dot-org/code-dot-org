@@ -14,7 +14,7 @@ module RegistrationsControllerTests
     end
 
     test "student in new sign-up" do
-      email = "student@example.com"
+      email = Faker::Internet.unique.email
 
       post '/users/begin_sign_up', params: {
         user: {
@@ -36,7 +36,7 @@ module RegistrationsControllerTests
     end
 
     test "teacher in new sign-up" do
-      email = "teacher@example.com"
+      email = Faker::Internet.unique.email
 
       post '/users/begin_sign_up', params: {
         user: {

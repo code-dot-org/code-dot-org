@@ -1,0 +1,18 @@
+<Sketchlab>
+  <config><![CDATA[{
+  "game_id": 75,
+  "created_at": "2025-11-26T15:26:22.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "iterating-with-ai-lesson11-sketchlab-template-test-2025",
+    "long_instructions": "# **Schema Design & Card Sketch**\r\n\r\n **Goal:** Visually define the project's data structure and initial UI concept\r\n\r\n   1. Given the dataset that you selected, decide which fields you want to keep and write these in under the `Data Schema` section.\r\n   3. Design the UI for a single card view, showing how chosen fields will be displayed in the `Card View` section.\r\n",
+    "display_name": "Schema Design & Card Sketch",
+    "bubble_choice_description": "Decide which fields to keep and outline your schema. Then sketch a simple card layout to show how these fields will appear in your dashboard ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/d2f6256449032ef4cee95fe915800e7c-mood-board.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2025-11-26 19:43:55 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-11-26 19:50:54 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:24:36 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:26:26 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:29:36 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2025-12-10 20:32:04 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab>

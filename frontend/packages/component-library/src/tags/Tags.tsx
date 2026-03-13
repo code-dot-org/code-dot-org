@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import {FunctionComponent} from 'react';
 
 import {ComponentSizeXSToL} from '@/common/types';
 
@@ -28,7 +29,7 @@ export interface TagsProps {
  * Design System: Tags Component.
  * Can be used to render tags or as a part of bigger/more complex components (e.g. Some blocks, cards, etc).
  */
-const Tags: React.FunctionComponent<TagsProps> = ({
+const Tags: FunctionComponent<TagsProps> = ({
   tagsList,
   size = 'm',
   className,

@@ -26,7 +26,7 @@ class ReportAbuseController < ApplicationController
   # they are safe. This reduces spamming of the report abuse feature.
   def protected_project?
     return false if params[:channel_id].blank?
-    owner_storage_id, _ = storage_decrypt_channel_id(params[:channel_id])
+    owner_storage_id, _ = get_storage_id_and_project_id(params[:channel_id])
     owner_user_id = user_id_for_storage_id(owner_storage_id)
     return false unless owner_user_id
     project_owner = User.find(owner_user_id)
@@ -82,19 +82,16 @@ class ReportAbuseController < ApplicationController
     return head :unauthorized unless can?(:destroy_abuse, nil)
 
     begin
-      value = Projects.new(get_storage_id).reset_abuse(params[:channel_id])
+      channel_id = params[:channel_id]
+      value = Projects.new(get_storage_id).reset_abuse(channel_id)
+      update_file_abuse_score('assets', channel_id, 0)
+      update_file_abuse_score('files', channel_id, 0)
+      update_file_abuse_score('libraries', channel_id, 0)
+      update_file_abuse_score('sources', channel_id, 0)
+      update_file_abuse_score('animations', channel_id, 0)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
       raise ActionController::BadRequest.new, "Bad channel_id"
     end
-    render json: {abuse_score: value}
-  end
-
-  # PATCH /v3/(animations|assets|sources|files|libraries)/:channel_id?abuse_score=:abuse_score
-  def update_file_abuse
-    return head :unauthorized unless can?(:update_file_abuse, nil)
-
-    value = update_file_abuse_score(params[:endpoint], params[:encrypted_channel_id], params[:abuse_score])
-
     render json: {abuse_score: value}
   end
 

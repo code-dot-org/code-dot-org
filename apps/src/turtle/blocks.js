@@ -21,17 +21,27 @@
  * @fileoverview Demonstration of Blockly: Turtle Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
+import CdoFieldAngleDropdown from '@cdo/apps/blockly/addons/cdoFieldAngleDropdown';
+import CdoFieldAngleTextInput from '@cdo/apps/blockly/addons/cdoFieldAngleTextInput';
+import CdoFieldColour from '@cdo/apps/blockly/addons/cdoFieldColour';
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
+import CdoFieldLabel from '@cdo/apps/blockly/addons/cdoFieldLabel';
+import {BlockStyles} from '@cdo/apps/blockly/constants';
+import {
+  interpolateMsg,
+  numberValidator,
+  registerCustomProcedureBlocks,
+} from '@cdo/apps/blockly/utils';
+import commonMsg from '@cdo/locale';
 
+import {setAngleHelperOptions} from '../blockly/addons/cdoAngleHelperOptions';
+import CdoFieldImage from '../blockly/addons/cdoFieldImage';
+import {CdoFieldImageDropdown} from '../blockly/addons/cdoFieldImageDropdown';
 import {Position} from '../constants';
 
-var commonMsg = require('@cdo/locale');
-
-var BlockStyles = require('../blockly/constants').BlockStyles;
-var BlockColors = require('../blockly/constants').BlockColors;
-
-var Colours = require('./colours');
-var customLevelBlocks = require('./customLevelBlocks');
-var msg = require('./locale');
+import Colours from './colours';
+import customLevelBlocks from './customLevelBlocks';
+import msg from './locale';
 
 const RANDOM_VALUE = 'RAND';
 
@@ -80,7 +90,7 @@ const DIRECTION_VALUES = [
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
-  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();
@@ -93,7 +103,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   if (skin.id === 'anna' || skin.id === 'elsa') {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       Colours.FROZEN1,
       Colours.FROZEN2,
       Colours.FROZEN3,
@@ -104,10 +114,10 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.FROZEN8,
       Colours.FROZEN9,
     ];
-    blockly.FieldColour.COLUMNS = 3;
+    CdoFieldColour.COLUMNS = 3;
   } else {
     // Create a smaller palette.
-    blockly.FieldColour.COLOURS = [
+    CdoFieldColour.COLOURS = [
       // Row 1.
       Colours.BLACK,
       Colours.GREY,
@@ -124,7 +134,7 @@ exports.install = function (blockly, blockInstallOptions) {
       Colours.AQUAMARINE,
       Colours.PLUM,
     ];
-    blockly.FieldColour.COLUMNS = 4;
+    CdoFieldColour.COLUMNS = 4;
   }
 
   // Block definitions.
@@ -132,18 +142,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward or backward the internal number of pixels.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
+          new blockly.FieldTextInput('100', numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -158,17 +164,13 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward or backward the internal number of pixels.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(MOVE_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(MOVE_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(new CdoFieldDropdown(), 'VALUE')
         .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -197,18 +199,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning either left or right from among a fixed set of angles.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -247,18 +245,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -275,18 +269,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
           }),
           'VALUE'
@@ -333,18 +323,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning either left or right from among a fixed set of angles.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             directionTitleName: 'DIR',
             menuGenerator: this.VALUE,
           }),
@@ -383,18 +369,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right any number of degrees.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(TURN_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(TURN_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldAngleTextInput('90', {
+          new CdoFieldAngleTextInput('90', {
             directionTitle: 'DIR',
           }),
           'VALUE'
@@ -411,11 +393,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.DEFAULT,
-          BlockStyles.DEFAULT
-        );
+        this.setStyle(BlockStyles.DEFAULT);
         this.setPreviousStatement(true);
         this.setInputsInline(true);
         this.setNextStatement(true);
@@ -433,7 +411,7 @@ exports.install = function (blockly, blockInstallOptions) {
     block
       .appendDummyInput()
       .appendField(
-        new blockly.FieldAngleTextInput('0', {
+        new CdoFieldAngleTextInput('0', {
           direction: 'turnRight',
         }),
         'DIRECTION'
@@ -448,13 +426,13 @@ exports.install = function (blockly, blockInstallOptions) {
 
   blockly.Blocks.point_to_param = createPointToBlocks(function (block) {
     // Block for pointing to a specified direction
-    block
+    const input = block
       .appendValueInput('VALUE')
-      .setCheck(blockly.BlockValueType.NUMBER)
-      .addFieldHelper(blockly.BlockFieldHelper.ANGLE_HELPER, {
-        block,
-        direction: 'turnRight',
-      });
+      .setCheck(blockly.BlockValueType.NUMBER);
+    setAngleHelperOptions(input.connection, {
+      block,
+      direction: 'turnRight',
+    });
     block.appendDummyInput().appendField(msg.degrees());
   });
 
@@ -472,7 +450,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldAngleDropdown({
+          new CdoFieldAngleDropdown({
             direction: 'turnRight',
             menuGenerator: block.VALUE,
           }),
@@ -512,14 +490,10 @@ exports.install = function (blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -536,14 +510,10 @@ exports.install = function (blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel(msg.lengthParameter()), 'VAR');
+        .appendField(new CdoFieldLabel(msg.lengthParameter()), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -558,14 +528,10 @@ exports.install = function (blockly, blockInstallOptions) {
     category: null, // Variables are handled specially.
     helpUrl: blockly.Msg.VARIABLES_GET_HELPURL,
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.VARIABLE,
-        BlockStyles.VARIABLE
-      );
+      this.setStyle(BlockStyles.VARIABLE);
       this.appendDummyInput()
         .appendField(blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(new blockly.FieldLabel('sides'), 'VAR');
+        .appendField(new CdoFieldLabel('sides'), 'VAR');
       this.setOutput(true);
       this.setTooltip(blockly.Msg.VARIABLES_GET_TOOLTIP);
     },
@@ -580,14 +546,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.draw_a_square = {
     // Draw a square.
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.PROCEDURE,
-        BlockStyles.PROCEDURE
-      );
+      this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASquare());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -618,14 +580,10 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.draw_a_snowman = {
     // Draw a circle in front of the turtle, ending up on the opposite side.
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.PROCEDURE,
-        BlockStyles.PROCEDURE
-      );
+      this.setStyle(BlockStyles.PROCEDURE);
       this.appendDummyInput().appendField(msg.drawASnowman());
       this.appendValueInput('VALUE')
-        .setAlign(blockly.ALIGN_RIGHT)
+        .setAlign(blockly.inputs.Align.RIGHT)
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.lengthParameter() + ':');
       this.setPreviousStatement(true);
@@ -697,23 +655,20 @@ exports.install = function (blockly, blockInstallOptions) {
     // For loop with hardcoded loop variable.
     helpUrl: blockly.Msg.CONTROLS_FOR_HELPURL,
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOOP,
-        BlockStyles.LOOP
-      );
+      this.setStyle(BlockStyles.LOOP);
       this.appendDummyInput()
         .appendField(
           blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
         )
-        .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
-      this.interpolateMsg(
+        .appendField(new CdoFieldLabel(msg.loopVariable()), 'VAR');
+      interpolateMsg(
+        this,
         blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
           msg.controlsForInputFromToBy(),
-        ['FROM', 'Number', blockly.ALIGN_RIGHT],
-        ['TO', 'Number', blockly.ALIGN_RIGHT],
-        ['BY', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['FROM', 'Number', blockly.inputs.Align.RIGHT],
+        ['TO', 'Number', blockly.inputs.Align.RIGHT],
+        ['BY', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.appendStatementInput('DO').appendField(
         Blockly.Msg.CONTROLS_FOR_INPUT_DO
@@ -740,12 +695,10 @@ exports.install = function (blockly, blockInstallOptions) {
     // deserialize the counter variable name
     domToMutation: function (xmlElement) {
       var counter = xmlElement.getAttribute('counter');
-      this.setTitleValue(counter, 'VAR');
+      this.setFieldValue(counter, 'VAR');
     },
   };
-  // Google Blockly uses forBlock, CDO Blockly does not.
-  generator.controls_for_counter =
-    generator.controls_for || generator.forBlock.controls_for;
+  generator.controls_for_counter = generator.forBlock.controls_for;
 
   // Delete these standard blocks.
   delete blockly.Blocks.procedures_defreturn;
@@ -757,21 +710,18 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.moveDirectionByPixels(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(DIRECTION_VALUES),
+            new CdoFieldDropdown(DIRECTION_VALUES),
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -799,21 +749,18 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for moving forward or backwards.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.jumpByDirection(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(JUMP_DIRECTION_VALUES),
+            new CdoFieldDropdown(JUMP_DIRECTION_VALUES),
             'DIR'
           );
         },
-        ['VALUE', 'Number', blockly.ALIGN_RIGHT],
-        blockly.ALIGN_RIGHT
+        ['VALUE', 'Number', blockly.inputs.Align.RIGHT],
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1024,37 +971,33 @@ exports.install = function (blockly, blockInstallOptions) {
       return {
         helpUrl: '',
         init: function () {
-          Blockly.cdoUtils.handleColorAndStyle(
-            this,
-            BlockColors.DEFAULT,
-            BlockStyles.DEFAULT
-          );
+          this.setStyle(BlockStyles.DEFAULT);
           var input = this.appendDummyInput();
           if (directionConfig.isJump) {
             input.appendField(commonMsg.jump());
           }
           input.appendField(
-            new blockly.FieldLabel(directionConfig.title, {
+            new CdoFieldLabel(directionConfig.title, {
               fixedSize: {width: directionLetterWidth, height: 18},
             })
           );
 
           if (directionConfig.imageDimensions) {
             input.appendField(
-              new blockly.FieldImage(
+              new CdoFieldImage(
                 directionConfig.image,
                 directionConfig.imageDimensions.width,
                 directionConfig.imageDimensions.height
               )
             );
           } else {
-            input.appendField(new blockly.FieldImage(directionConfig.image));
+            input.appendField(new CdoFieldImage(directionConfig.image));
           }
           this.setPreviousStatement(true);
           this.setNextStatement(true);
           this.setTooltip(directionConfig.tooltip);
           if (hasLengthInput) {
-            var dropdown = new blockly.FieldImageDropdown(
+            var dropdown = new CdoFieldImageDropdown(
               directionConfig.lengths,
               directionConfig.imageDimensions.width,
               directionConfig.imageDimensions.height
@@ -1109,18 +1052,14 @@ exports.install = function (blockly, blockInstallOptions) {
     // without drawing.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
+          new blockly.FieldTextInput('100', numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -1136,17 +1075,13 @@ exports.install = function (blockly, blockInstallOptions) {
     // without drawing.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(JUMP_BY_DIRECTION_VALUES),
+        new CdoFieldDropdown(JUMP_BY_DIRECTION_VALUES),
         'DIR'
       );
       this.appendDummyInput()
-        .appendField(new blockly.FieldDropdown(), 'VALUE')
+        .appendField(new CdoFieldDropdown(), 'VALUE')
         .appendField(msg.dots());
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1175,19 +1110,16 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping to a specified position
     helpUrl: '',
     init: function () {
-      var dropdown = new blockly.FieldDropdown(this.VALUES);
+      var dropdown = new CdoFieldDropdown(this.VALUES);
       dropdown.setValue(this.VALUES[1][1]); // default to top-left
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.jumpToPosition(),
         () => {
           this.appendDummyInput().appendField(dropdown, 'VALUE');
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1213,26 +1145,23 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for jumping to specified XY location.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.jumpToOverDown(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
+            new blockly.FieldTextInput('0', numberValidator),
             'XPOS'
           );
         },
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
+            new blockly.FieldTextInput('0', numberValidator),
             'YPOS'
           );
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setPreviousStatement(true);
       this.setInputsInline(true);
@@ -1251,29 +1180,24 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for turning left or right.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
+      this.setStyle(BlockStyles.DEFAULT);
+      interpolateMsg(
         this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
-      this.interpolateMsg(
         msg.turnDirection(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldDropdown(TURN_DIRECTION_VALUES),
+            new CdoFieldDropdown(TURN_DIRECTION_VALUES),
             'DIR'
           );
         },
         () => {
-          this.appendValueInput('VALUE').addFieldHelper(
-            blockly.BlockFieldHelper.ANGLE_HELPER,
-            {
-              block: this,
-              directionTitle: 'DIR',
-            }
-          );
+          const input = this.appendValueInput('VALUE');
+          setAngleHelperOptions(input.connection, {
+            block: this,
+            directionTitle: 'DIR',
+          });
         },
-        blockly.ALIGN_RIGHT
+        blockly.inputs.Align.RIGHT
       );
       this.setInputsInline(true);
       this.setPreviousStatement(true);
@@ -1303,11 +1227,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting the pen width.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendValueInput('WIDTH')
         .setCheck(blockly.BlockValueType.NUMBER)
         .appendField(msg.setWidth());
@@ -1329,15 +1249,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting the pen width.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.setInputsInline(true);
       this.appendDummyInput().appendField(msg.setWidth());
       this.appendDummyInput().appendField(
-        new blockly.FieldTextInput('1', blockly.cdoUtils.numberValidator),
+        new blockly.FieldTextInput('1', numberValidator),
         'WIDTH'
       );
       this.setPreviousStatement(true);
@@ -1356,13 +1272,9 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for pen up/down.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'PEN'
       );
       this.setPreviousStatement(true);
@@ -1387,11 +1299,7 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for setting the colour.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.appendValueInput('COLOUR')
         .setCheck(blockly.BlockValueType.COLOUR)
         .appendField(msg.setColour());
@@ -1412,11 +1320,7 @@ exports.install = function (blockly, blockInstallOptions) {
         .appendField(msg.setAlpha());
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
-      );
+      this.setStyle(BlockStyles.LOGIC);
       this.setTooltip('');
     },
   };
@@ -1452,12 +1356,15 @@ exports.install = function (blockly, blockInstallOptions) {
         Colours.AQUAMARINE,
         Colours.PLUM,
       ];
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.LOGIC,
-        BlockStyles.LOGIC
+      this.setStyle(BlockStyles.LOGIC);
+      // 3-column colour field with an increased height/width for menu options and the field itself.
+      const colourField = new CdoFieldColour(
+        colours[0],
+        undefined,
+        {colourOptions: colours, columns: 3},
+        true
       );
-      const colourField = Blockly.customBlocks.getColourDropdownField(colours);
+
       this.appendDummyInput()
         .appendField(msg.setColour())
         .appendField(colourField, 'COLOUR');
@@ -1477,17 +1384,13 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block to handle event when an arrow button is pressed.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput()
         .appendField(msg.setPattern())
         .appendField(
-          new blockly.FieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
+          new CdoFieldImageDropdown(skin.lineStylePatternOptions, 150, 20),
           'VALUE'
         );
       this.setTooltip(msg.setPattern());
@@ -1505,15 +1408,11 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.up_big = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
@@ -1532,15 +1431,11 @@ exports.install = function (blockly, blockInstallOptions) {
     // Block for changing turtle visiblity.
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(this.STATE),
+        new CdoFieldDropdown(this.STATE),
         'VISIBILITY'
       );
       this.setTooltip(msg.turtleVisibilityTooltip());
@@ -1567,11 +1462,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.DEFAULT,
-          BlockStyles.DEFAULT
-        );
+        this.setStyle(BlockStyles.DEFAULT);
         var dropdown;
         var input = this.appendDummyInput();
         input.appendField(msg.drawSticker());
@@ -1585,7 +1476,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin.stickers[name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 
@@ -1605,10 +1496,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block.appendDummyInput().appendField(msg.withSize());
       block
         .appendDummyInput()
-        .appendField(
-          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
-          'SIZE'
-        )
+        .appendField(new blockly.FieldTextInput('0', numberValidator), 'SIZE')
         .appendField(msg.pixels());
       block.setTooltip(msg.drawStickerWithSize());
     } else {
@@ -1662,11 +1550,7 @@ exports.install = function (blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function () {
-        Blockly.cdoUtils.handleColorAndStyle(
-          this,
-          BlockColors.DEFAULT,
-          BlockStyles.DEFAULT
-        );
+        this.setStyle(BlockStyles.DEFAULT);
         var dropdown;
         var input = this.appendDummyInput();
         input.appendField(msg.drawShape());
@@ -1680,7 +1564,7 @@ exports.install = function (blockly, blockInstallOptions) {
           var url = skin[shapeNames][name];
           values.push([url, name]);
         }
-        dropdown = new blockly.FieldImageDropdown(values, 40, 40);
+        dropdown = new CdoFieldImageDropdown(values, 40, 40);
 
         input.appendField(dropdown, 'VALUE');
 
@@ -1700,10 +1584,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block.appendDummyInput().appendField(msg.withSideLength());
       block
         .appendDummyInput()
-        .appendField(
-          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
-          'SIZE'
-        )
+        .appendField(new blockly.FieldTextInput('0', numberValidator), 'SIZE')
         .appendField(msg.pixels());
       block.setTooltip(msg.drawShapeWithSideLength());
     } else {
@@ -1764,11 +1645,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.turtle_setArtist = {
     helpUrl: '',
     init: function () {
-      Blockly.cdoUtils.handleColorAndStyle(
-        this,
-        BlockColors.DEFAULT,
-        BlockStyles.DEFAULT
-      );
+      this.setStyle(BlockStyles.DEFAULT);
       var values = (skin.artistOptions || ['default']).map(artist => [
         msg.setCharacter({
           character: artist.charAt(0).toUpperCase() + artist.slice(1),
@@ -1776,7 +1653,7 @@ exports.install = function (blockly, blockInstallOptions) {
         artist,
       ]);
       this.appendDummyInput().appendField(
-        new blockly.FieldDropdown(values),
+        new CdoFieldDropdown(values),
         'VALUE'
       );
       this.setPreviousStatement(true);

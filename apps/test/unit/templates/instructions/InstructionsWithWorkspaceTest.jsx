@@ -27,6 +27,68 @@ describe('InstructionsWithWorkspace', () => {
     expect(wrapper.state()).toEqual({
       windowWidth: undefined,
       windowHeight: undefined,
+      aiChatOpen: false,
+    });
+  });
+
+  describe('AI tutor visibility', () => {
+    beforeEach(() => {
+      window.appOptions = {level: {aiTutorAvailable: true}};
+    });
+
+    afterEach(() => {
+      delete window.appOptions;
+    });
+
+    it('does not render AI tutor in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={true}
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
+    });
+
+    it('renders AI tutor when not in share view', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel="enabled"
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('renders AI tutor when selected section has AI enabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel="enabled"
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
+    });
+
+    it('does not render AI tutor when selected section has AI disabled', () => {
+      const wrapper = shallow(
+        <InstructionsWithWorkspace
+          instructionsHeight={400}
+          setInstructionsMaxHeightAvailable={() => {}}
+          labType="applab"
+          isShareView={false}
+          aiChatAccessLevel="disabled"
+        />
+      );
+      expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
     });
   });
 

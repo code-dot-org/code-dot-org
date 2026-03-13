@@ -220,6 +220,7 @@
     "display_name": "Water Conservation",
     "thumbnail_url": "https://images.code.org/f09fd20b7451597951054ec0712b22fe-Screenshot 2024-05-05 at 5.25.39 PM.png",
     "ai_enabled": "false",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

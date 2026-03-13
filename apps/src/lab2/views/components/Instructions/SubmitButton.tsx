@@ -1,4 +1,4 @@
-import {Button} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {sendSubmitReport} from '@cdo/apps/code-studio/progressRedux';
@@ -41,7 +41,9 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
   const scriptId = useAppSelector(
     state => state.progress.scriptId || undefined
   );
-  const buttonText = hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
+  const buttonText = hasSubmitted
+    ? commonI18n.unsubmit()
+    : commonI18n.submitWork();
 
   const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
@@ -89,13 +91,18 @@ export const SubmitButton: React.FC<SubmitButtonProps> = ({
           size: 'xs',
         }}
       >
-        <Button
-          id="instructions-submit-button"
-          text={buttonText}
-          onClick={onSubmit}
-          className={className}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={!enabled}
-        />
+          className={className}
+          id="instructions-submit-button"
+          onClick={onSubmit}
+          type="button"
+        >
+          {buttonText}
+        </MuiButton>
       </WithConditionalTooltip>
     </div>
   );

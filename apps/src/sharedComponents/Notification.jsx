@@ -7,7 +7,6 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/metrics/firehose';
 import color from '@cdo/apps/util/color';
 
 export const NotificationType = {
@@ -36,7 +35,6 @@ const Notification = ({
   detailsLinkNewWindow,
   detailsLinkText,
   dismissible,
-  firehoseAnalyticsData,
   iconStyles,
   isRtl,
   newWindow,
@@ -58,40 +56,7 @@ const Notification = ({
     }
   };
 
-  const logAnnouncementClickToFirehose = () => {
-    let record = {};
-
-    // Our firehose logging system has standalone fields for commonly used metadata (eg, user_id).
-    // Here, we separate out those fields from any other analytics data provided in the firehoseAnalyticsData prop.
-    // We include these properties in the data_json object as well, in case that is easier for our product team to use.
-    ['user_id', 'script_id', 'lesson_id'].forEach(firehoseMetadataKey => {
-      if (firehoseMetadataKey in firehoseAnalyticsData) {
-        record[firehoseMetadataKey] =
-          firehoseAnalyticsData[firehoseMetadataKey];
-      }
-    });
-
-    record = {
-      ...record,
-      study: 'notification_engagement',
-      event: 'notification_click',
-      data_json: JSON.stringify({
-        ...firehoseAnalyticsData,
-        notice: notice,
-        details: details,
-        buttonLink: buttonLink,
-      }),
-    };
-
-    firehoseClient.putRecord(record, {includeUserId: true});
-  };
-
   const onAnnouncementClick = () => {
-    // Log to Firehose
-    if (firehoseAnalyticsData) {
-      logAnnouncementClickToFirehose();
-    }
-
     if (onButtonClick) {
       onButtonClick();
     }
@@ -223,9 +188,6 @@ Notification.propTypes = {
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
-  // firehoseAnalyticsData are only used when a primary button is provided.
-  // It's not used by the array of buttons.
-  firehoseAnalyticsData: PropTypes.object,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
   isRtl: PropTypes.bool.isRequired,
   onButtonClick: PropTypes.func,

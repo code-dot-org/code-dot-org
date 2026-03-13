@@ -1,0 +1,42 @@
+name 'sp-pl-DS-teacher-discuss-ethcialFramework_-rev'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Discussing Cleaning Data  
+
+## Discuss and Compare
+
+#### A key idea in Data Science is that information can be represented in a variety of ways; data scientists have to make choices, and these choices have trade-offs.
+
+#### When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. 
+
+> #### **Classroom Scenario:** 
+> - #### **Student A** cleaned the data by excluding records with blank fields, but didn't consider including a column for dietary restrictions, like vegetarian or vegan options, which was in the original survey data.
+> - #### **Student B** also cleaned the data, but specifically preserved the dietary restriction information, categorizing students as "vegetarian," "vegan," or "no restrictions." 
+
+
+## Consider the Ethical Framework 
+
+#### **Discuss:** Which do you think should be prioritized when deciding how to clean data?
+
+#### For **Accuracy and Bias**, students may bring up things like:
+
+- #### Changing the format allows the data scientist's bias to enter the picture
+- #### Cleaned data may not accurately portray what the person wanted
+- #### Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza
+
+#### For **Privacy**, students may bring up things like:
+
+- #### Creating categories can unintentionally identify certain members of a group
+
+#### For **Misuse and Consent**, students may bring up things like:
+
+- #### It’s possible that people have not consented to their data being used in this altered, cleaned, format
+
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;">
+    ➡️ Students also practice using AI to help clean data in this lesson. If you have time, you can check out the associated <a href='https://studio.code.org/courses/artificial-intelligence-foundations-v2-2025/units/6/lessons/8/levels/4?no_redirect=1' target='_blank' rel='noopener noreferrer' style='text-decoration: none; font-weight: bold;'>AI Chat Level</a>.
+</p>
+
+
+MARKDOWN

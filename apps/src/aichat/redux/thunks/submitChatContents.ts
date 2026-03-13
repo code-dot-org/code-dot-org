@@ -1,23 +1,36 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 
 import {
-  clearChatMessagePending,
+  addEventToChatEventsCurrent,
   clearStagedFiles,
   clearUserAddedSelectionContext,
-  setChatMessagePending,
+  setChatMessageSent,
+  updateChatMessageStatus,
+  updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
+import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {isAiGatewayEnabled} from '@cdo/apps/aiGateway';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
+import {ValueOf} from '@cdo/apps/types/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {createUuid} from '@cdo/apps/utils';
+import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
+import {
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import {logChatEvent} from '../../helpers/logChatEvent';
+import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
   AichatContext,
   isCompletedChatMessage,
@@ -28,12 +41,16 @@ import {
   AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
+  AichatLevelProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
+
+const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
+  isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -49,6 +66,8 @@ export const submitChatContents = createAsyncThunk(
       assets?: ChatAsset[];
       analyticsProperties?: AnalyticsProperties;
       userAddedSelectionContext?: UserAddedSelectionContextItem[];
+      responseCallback?: (response: string) => string;
+      logLevelActivity?: () => void;
     },
     thunkAPI
   ) => {
@@ -63,12 +82,14 @@ export const submitChatContents = createAsyncThunk(
       clientType,
       analyticsProperties,
       userAddedSelectionContext,
+      responseCallback,
+      logLevelActivity,
     } = newUserMessageInput;
 
     // Clear any staged files if present (used with multimodal models)
-    thunkAPI.dispatch(clearStagedFiles());
+    dispatch(clearStagedFiles());
     // Clear any user added context if present.
-    thunkAPI.dispatch(clearUserAddedSelectionContext());
+    dispatch(clearUserAddedSelectionContext());
 
     const aichatContext: AichatContext = {
       clientType,
@@ -76,77 +97,183 @@ export const submitChatContents = createAsyncThunk(
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newUserMessage: PendingChatMessage = {
+
+    // Default to just sending `chatMessageText`, in case display text is the same as text to send to the model.
+    let chatMessageText = text;
+    let chatMessageDisplayText;
+
+    // If we have userAddedSelectionContext, display text and text to send to the model will be different.
+    if (userAddedSelectionContext?.length) {
+      // Add the user added selections to the text to send to the model.
+      chatMessageText +=
+        '\n\n' +
+        formatUserAddedSelectionContextForPrompt(userAddedSelectionContext);
+      // And use the original message for the display.
+      chatMessageDisplayText = text;
+    }
+
+    // Create the new user ChatMessage and add to chatEventsCurrent.
+    const newUserMessage: PendingChatMessage & {updateId: string} = {
       role: Role.USER,
       status: Status.UNKNOWN,
-      chatMessageText: text,
+      chatMessageText,
+      chatMessageDisplayText,
       hiddenContext,
       assets,
       userAddedSelectionContext,
       timestamp: Date.now(),
+      updateId: createUuid(),
     };
-    dispatch(setChatMessagePending(newUserMessage));
+    dispatch(addEventToChatEventsCurrent(newUserMessage));
+    dispatch(setChatMessageSent(true));
+
+    if (logLevelActivity) {
+      logLevelActivity();
+    }
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
     let messages: CompletedChatMessage[] = [];
+    const projectFileCount =
+      newUserMessage.userAddedSelectionContext?.length || 0;
+    const projectFileCountHtml =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.html')
+      ).length || 0;
+    const projectFileCountJs =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.js')
+      ).length || 0;
+    const projectFileCountCss =
+      newUserMessage.userAddedSelectionContext?.filter(file =>
+        file.filename.endsWith('.css')
+      ).length || 0;
+    const fileCount = newUserMessage.assets?.length || 0;
+    const fileCountPdf =
+      newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
+        .length || 0;
+    const fileCountImage = fileCount - fileCountPdf;
+
+    const eventData = {
+      fileCount,
+      fileCountImage,
+      fileCountPdf,
+      projectFileCount,
+      projectFileCountHtml,
+      projectFileCountJs,
+      projectFileCountCss,
+      clientType,
+      ...analyticsProperties,
+    };
+
     try {
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .incrementCounter('Aichat.ChatCompletionRequestInitiated');
-      messages = await postAichatCompletionMessage(
-        newUserMessage,
-        chatEventsCurrent.filter(isCompletedChatMessage),
-        modelParameters,
-        aichatContext
+
+      dispatch(
+        sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      const fileCount = newUserMessage.assets?.length || 0;
-      const fileCountPdf =
-        newUserMessage.assets?.filter(asset => asset.filename.endsWith('.pdf'))
-          .length || 0;
-      const fileCountImage = fileCount - fileCountPdf;
+      if (useClientApi(modelParameters.selectedModelId)) {
+        const levelProperties = state.lab.levelProperties;
+        const levelName = levelProperties?.name;
+        const levelSystemPrompt =
+          (levelProperties as Weblab2LevelProperties)?.levelSystemPrompt ||
+          (levelProperties as AichatLevelProperties)?.aichatSettings
+            ?.levelSystemPrompt;
+
+        let filteredChatEvents: CompletedChatMessage[] =
+          chatEventsCurrent.filter(isCompletedChatMessage);
+
+        if (
+          modelParameters.selectedModelId ===
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+        ) {
+          filteredChatEvents = filteredChatEvents.filter(
+            message => message.status === Status.OK
+          );
+        }
+
+        messages = await performClientApiChatCompletion(
+          newUserMessage,
+          filteredChatEvents,
+          modelParameters,
+          aichatContext,
+          (asset: ChatAsset) =>
+            getAssetUrl(asset, aichatContext.channelId, levelName),
+          levelSystemPrompt
+        );
+      } else {
+        messages = await postAichatCompletionMessage(
+          newUserMessage,
+          chatEventsCurrent.filter(isCompletedChatMessage),
+          {...modelParameters},
+          aichatContext
+        );
+      }
+      // In milliseconds
+      const responseTime = Date.now() - startTime;
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_SUCCESS, {
-          levelPath: window.location.pathname,
-          fileCount,
-          fileCountImage,
-          fileCountPdf,
-          clientType,
-          ...analyticsProperties,
+          ...eventData,
+          responseTime,
         })
       );
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .reportLoadTime('AichatModelResponseTime', responseTime, [
+          {
+            name: 'ModelId',
+            value: modelParameters.selectedModelId,
+          },
+        ]);
     } catch (error) {
-      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(
+        error as Error,
+        newUserMessage,
+        dispatch,
+        state.progress.viewAsUserId
+      );
       return;
     }
 
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
-        {
-          name: 'ModelId',
-          value: modelParameters.selectedModelId,
-        },
-      ]);
-
-    thunkAPI.dispatch(clearChatMessagePending());
     // Send a report that the user has started the aichat level after successfully sending
     // a chat message and then receiving a response from the chatbot.
     // A teacher will view that the level is now in progress.
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
-      dispatch(addChatEvent(message));
+      if (message.role === Role.ASSISTANT) {
+        message.chatMessageText =
+          responseCallback?.(message.chatMessageText) ??
+          message.chatMessageText;
+        dispatch(addChatEvent(message));
+      }
+      if (message.role === Role.USER) {
+        dispatch(
+          updateChatMessageStatus({
+            updateId: newUserMessage.updateId,
+            status: message.status,
+          })
+        );
+        dispatch(
+          updateRequestId({
+            updateId: newUserMessage.updateId,
+            requestId: message.requestId,
+          })
+        );
+        logChatEvent(message, state.progress.viewAsUserId);
+      }
     });
   }
 );
 
 async function handleChatCompletionError(
   error: Error,
-  newUserMessage: PendingChatMessage,
-  dispatch: AppDispatch
+  newUserMessage: PendingChatMessage & {updateId: string},
+  dispatch: AppDispatch,
+  viewAsUserId: number | null
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -155,8 +282,13 @@ async function handleChatCompletionError(
       .logError('Error in aichat completion request', error as Error);
   }
 
-  dispatch(clearChatMessagePending());
-  dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+  dispatch(
+    updateChatMessageStatus({
+      updateId: newUserMessage.updateId,
+      status: Status.ERROR,
+    })
+  );
+  logChatEvent({...newUserMessage, status: Status.ERROR}, viewAsUserId);
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.

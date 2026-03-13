@@ -29,7 +29,7 @@ export const alertTypes: {[key in AlertType]: AlertType} = {
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   /** Alert text */
-  text: string;
+  text: string | JSX.Element;
   /** Alert link */
   link?: LinkProps;
   /** Alert icon */

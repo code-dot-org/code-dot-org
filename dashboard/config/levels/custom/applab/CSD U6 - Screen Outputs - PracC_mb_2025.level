@@ -73,6 +73,7 @@
     "encrypted_examples": "md5c7MypYMYL70QlzH018W2sO+2YsE+tJqI8hc2IRjkog6hatyKYK3VtwpHI\nW7rHnOh839qJA4Of1vWP0l9AxA==\n",
     "video_key": "csd_debugging",
     "name_suffix": "_2025",
+    "ai_tutor_available": "true",
     "preload_asset_list": null
   },
   "published": true,

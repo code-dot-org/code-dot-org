@@ -1,0 +1,15 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2025-11-19T21:29:29.000Z",
+  "level_num": "custom",
+  "user_id": 1193,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "test",
+    "bubble_choice_description": "Here is a description",
+    "offer_browser_tts": "false"
+  },
+  "published": true
+}]]></config>
+</Panels>

@@ -9,7 +9,7 @@ wrong 'Wrong object name'
 allow_multiple_attempts false
 
 markdown <<MARKDOWN
-What error will this line of code cause?
+What is missing from this line of code if you want Alice to move?
 
 ```
 alice.move

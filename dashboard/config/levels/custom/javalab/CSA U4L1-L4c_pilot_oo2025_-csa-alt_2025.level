@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2025-05-21T19:32:51.000Z",
   "level_num": "custom",
@@ -35,11 +34,9 @@
     },
     "encrypted_exemplar_sources": "Q1PxmLgiasYA0VmeXomMQm8rxQrn3nRO03FnOhEzENUJCe0Css4AYkmksVap\nO1lTQyYBxuX3msehfNe27dDrdAMoA4rPG1bVuNgxE5jesmIsNdkIswes7wka\nBfaY6ev3uYQi6w5Ev4RiNbaxBEX32JFLr7OJOxv4+xPrrrn5zmVl1a9sHLXW\n8T4yyh9I0TQ8NjWWyryeVchfr2sV7mplx0DeX/AgSctoNkzR3Sl4ieHaGeD5\nVFCAjDjxw1PsTe7u0n6PwVQAy0pR3/DaCzYYeYocFliFjsFBMEsNnIJ4BIIu\nG/xkyUks9CiiYGo6NWBl2z3FeBPjQNgL1ZDchwzFA3kEOKtWb/ptBqiXE9j+\n74JSLS0BkfGDMWq8ivB4ABgjqy3/EskA3pPx460EItvPyr3z4LWezTr0gS1D\nX5wFUVeI7i/htGLpOI5oekkarCKyoT5EzWA7YD0/Bl42Q6X/JYI+0yyfXb6T\novm3kIUaSvSYQhq5BjSn61mJ0uayncnZbaj8a6sm7TyaFYl5sO+PvMjyh0Sq\nEOvshTdxfFTnpJB2IjmJgn6GcHn8DfLRep55soLoJOka0SB2sXgNRq7/XhMC\nqrr9ads9ZyoA9H8k45zLzxBtDEFFt6Q1nqI2rqfLQOs4aWdLKNri9q+GBGSE\nogVo0qzzaWY5dsVJY1mLjus9gzhkiPOMYzVick6uH4AuQqZl0qOa8QX3nV0u\nj9W1RK9GwG8U8sHPdTuWGLaFpCDiROfKM5R+om24F2GjU04DCDc6+yD+cCFU\nOZ+SRsKB7iQzhPcQFHRK6o8OcRkHOoIuDAma8krR8HNuDxjQC8P7VPxOhPm3\nAr05EtsPzbQdzje5r4wcGy5pHoY3PSqJc+o9iaRbjimlJx1ku0mcTdEikWG9\nxkWnPEL0COWMiu6PDRaRnJ1wYuipsXlj+alyRVaGXe2kFBay2cPJSGCvIz/L\nyJMRB5F775IdlEDCnl+T1MaTBDi/bQg0kPwQbBCWviDJlR8ze+uwfL2HSWck\n2yDD0rjbQxYBEH3aX9+8DmAKeev8Wh2ma8FoEXdgJHpaYjhicKbrdkgXcgcf\nZFHpi9Fw5vxnliJw3j3dAaxKy19RN2FMyKvSbfARcvHywP1P2zvIiiWO8RSK\n5Spjwj7BzXvJ9JkZPG0KUnHmBQI4iXDkNnFiQtjalTIvJL13cNFG6yXemVv6\ndTCfDKdkBf6Eno88xHlRdxnKfU3FJUOS+wIPuIvVcxl0gZQT9SJpKRjzGRct\nEsey5gXaxMm736NCGYd5XhriLe/57Vu6CXmc4xwQDVhljme7gpPn5L4A1q7G\nx1ok6lVtqJBtmYpIZSMOy541IZaGmDdVRjV8jbLRoBk9fdpW44IqLGVfDsik\npF3EqgMSSJN4RFPer5IcDL6w46fZ83XhL0lIzYJSv/InPVm++07zOaEdgtCW\n97+ATc2EilRhdMm1wet/Q9xA2xr8i/zKSD/KPxti/hyQNLIMsXrlolXp4o23\njKzBzBQ+XKEFsjnqWH92ikU2FYpxDi7+RJV2MC2NA0MJV1t0xCgYbSQ19tJT\nAES5q05u7AIe52to32SwfQUTUVCHEo5Y3gC9HYvuzRcVTpZZ6g7op+y7uxkn\nFeTtTbwhpBSxhziuwEZJ8WFytRMiyZxN25wvsgP+aWWNcHZrshOME5ZNnW0i\nXYmTuW8nvw2IOmYxAOHXXD/KAI76r/dQpmxVHQgbzgRQ/P2Si99//uWu2zoN\nfrtMGEsG/w==\n",
     "name_suffix": "_-csa-alt_2025",
-    "ai_tutor_available": "true",
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": "false"
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2025-05-21T19:32:51.605+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L4c_pilot_oo2025\\\"\"],\"cloned_from\":\"CSA U4L1-L4c_pilot_oo2025\"},{\"changed_at\":\"2025-05-23 17:57:43 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 17:58:06 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 17:58:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2025-05-23 17:59:36 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_available\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>
