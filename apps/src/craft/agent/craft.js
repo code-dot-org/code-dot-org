@@ -788,9 +788,6 @@ export default class Craft {
     });
 
     Craft.gameController.codeOrgAPI.startAttempt(success => {
-      if (Craft.level.freePlay) {
-        return;
-      }
       Craft.reportResult(success);
     });
   }
