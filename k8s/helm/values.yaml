@@ -11,8 +11,9 @@ RAILS_ENV:
 
 locals.yml:
 
-# Provide access to AWS Secrets Manager secrets via k8s secrets? Enables ESO
-use_aws_secrets_manager: false
+# Require the k8s secret `cdo-external-secrets` to exist before bootup
+# Aka: "Require AWS Secrets Manager access to boot" mode
+require_external_secrets: false
 
 healthChecks:
   enabled: false

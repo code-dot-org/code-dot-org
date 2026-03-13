@@ -67,7 +67,7 @@ spec:
           - prefix: CDO_
             secretRef:
               name: cdo-external-secrets
-              optional: {{ not .Values.use_aws_secrets_manager }}
+              optional: {{ not .Values.require_external_secrets }}
 
           # Secrets defined locally in this helm chart
           # Comes second, so Helm-managed local service secrets can override AWS-synced ones.
