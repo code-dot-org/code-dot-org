@@ -1,5 +1,5 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isAiGatewayEnabled} from '@cdo/apps/aiGateway';
+import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {
   AiChatModelIds,
