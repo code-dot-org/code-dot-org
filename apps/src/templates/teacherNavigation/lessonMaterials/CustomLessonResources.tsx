@@ -1,6 +1,8 @@
 import {Typography} from '@mui/material';
 import React, {useEffect, useState} from 'react';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 import {Resource} from './LessonMaterialTypes';
@@ -92,7 +94,21 @@ const CustomLessonResources: React.FC<CustomResourcesProps> = ({
       </div>
       {resources.length === 0 && renderNoResourcesRow}
       {resources.map(resource => (
-        <ResourceRow key={resource.id} unitNumber={null} resource={resource} />
+        <ResourceRow
+          key={resource.id}
+          unitNumber={null}
+          resource={resource}
+          callback={() => {
+            analyticsReporter.sendEvent(
+              EVENTS.AI_ARTIFACT_OPEN_FROM_RESOURCES,
+              {
+                artifactId: resource.id,
+                url: window.location.href,
+                artifactType: resource.type,
+              }
+            );
+          }}
+        />
       ))}
     </div>
   );

@@ -314,6 +314,15 @@ const EVENTS = {
   AI_DIFF_CELEBRATION: 'AI Teaching Assistant Celebration screen',
   AI_DIFF_101: 'AI Teaching Assistant AI 101 CTA',
   AI_DIFF_SKIP_WELCOME: 'AI Teaching Assistant Skip Welcome',
+  AI_ARTIFACT_PROMPT_CLICKED: 'AI Artifact prompt click',
+  AI_ARTIFACT_PROMPT_RESPONDED: 'AI Artifact user responded to artifact thread',
+  AI_ARTIFACT_CREATE_CLICKED: 'AI Artifact user clicked create artifact',
+  AI_ARTIFACT_SAVED: 'AI Artifact saved',
+  AI_ARTIFACT_SAVE_CANCELLED: 'AI Artifact save dialog cancelled',
+  AI_ARTIFACT_THREAD_REOPENED: 'AI Artifact thread reopened',
+  AI_ARTIFACT_OPEN_FROM_THREAD: 'AI Artifact view opened from thread',
+  AI_ARTIFACT_OPEN_FROM_RESOURCES:
+    'AI Artifact view opened from lesson resources',
 
   AI_DIFF_NOTIFICATIONS_OPENED: 'AI Differentiation Notifications Opened',
   AI_DIFF_NOTIFICATION_URL_CLICKED:
