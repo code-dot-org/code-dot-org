@@ -4,8 +4,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {useParams} from 'react-router-dom';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {
   getSelectedCourseId,
   getSelectedUnitPosition,
@@ -43,12 +41,6 @@ function SectionProgressV2({
   const params = useParams();
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
-      sectionId: sectionId,
-      unitId: scriptId,
-      windowWidth: window.innerWidth,
-      windowHeight: window.innerHeight,
-    });
   }, [scriptId, sectionId, loadExpandedLessonsFromLocalStorage]);
 
   const levelDataInitialized = React.useMemo(() => {

@@ -402,10 +402,6 @@ FeedbackUtils.prototype.displayFeedback = function (
 
     dom.addClickTouchEvent(continueButton, function () {
       feedbackDialog.hide();
-      recordFinishShare(
-        'FINISH_BUTTON_CERTIFICATE',
-        project.getStandaloneApp()
-      );
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {

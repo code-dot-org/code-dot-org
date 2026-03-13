@@ -7,8 +7,8 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelProperties} from '../types';
 
 /**
- * Custom hook that provides a callback to log LEVEL_ACTIVITY or PROJECT_ACTIVITY
- * analytics events when a user performs their first activity in a Lab2 environment.
+ * Custom hook that provides a callback to log a LEVEL_ACTIVITY
+ * analytics event when a user performs their first activity in a Lab2 environment.
  *
  * This hook returns a callback function that labs should call when activity occurs.
  * The callback will log exactly once per level, preventing duplicate events.
@@ -39,22 +39,21 @@ export function useLevelActivityMetrics(
     if (hasLoggedRef.current) {
       return;
     }
+    if (levelProperties.isProjectLevel) {
+      return;
+    }
 
     hasLoggedRef.current = true;
 
-    const eventName = levelProperties.isProjectLevel
-      ? EVENTS.PROJECT_ACTIVITY
-      : EVENTS.LEVEL_ACTIVITY;
-
-    sendLab2AnalyticsEvent(eventName, {
+    sendLab2AnalyticsEvent(EVENTS.LEVEL_ACTIVITY, {
       signedIn: signedIn,
       unitName: scriptName ?? '',
       levelId: levelProperties.id,
       levelName: levelProperties.name,
     });
   }, [
-    levelProperties.isProjectLevel,
     levelProperties.id,
+    levelProperties.isProjectLevel,
     levelProperties.name,
     signedIn,
     scriptName,
