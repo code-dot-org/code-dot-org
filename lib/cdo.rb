@@ -35,21 +35,8 @@ module Cdo
       super
       root = File.expand_path('..', __dir__)
       load_configuration(
-        # 1. ENV - environment variables (CDO_*)
-        ENV.to_h.
-          select {|k, _| k.match?(ENV_PREFIX)}.
-          transform_keys {|k| k.sub(ENV_PREFIX, '')}.
-          reject {|k, _| k.start_with?('_')}.
-          transform_keys(&:downcase).
-          transform_values do |v|
-            # Parse CDO_* env vars as YAML, if they can
-            YAML.load(v)
-          rescue Psych::Exception
-            # Pass thru parse fails as strings: this allows random ascii password strings
-            # that happen to start with { or [, but don't have a matching close bracket:
-            # {fj@95randompassword or [#092pass
-            v
-          end,
+        # 1. ENV - environment variables (CDO_*, e.g. CDO_BUILD_APPS => build_apps)
+        env_vars_to_configuration,
         # 2. locals.yml - local configuration
         "#{root}/locals.yml",
         # 3. globals.yml - [Chef-]provisioned configuration
@@ -401,6 +388,26 @@ module Cdo
         ]
       ).reservations.map(&:instances).flatten.map {|i| ["fe-#{i.instance_id}", i.private_dns_name]}.to_h
       servers.merge(self[:app_servers])
+    end
+
+    # Parse CDO_* env vars to set the same params as locals.yml
+    private def env_vars_to_configuration
+      ENV.to_h.
+        select {|k, _| k.match?(ENV_PREFIX)}.
+        transform_keys {|k| k.sub(ENV_PREFIX, '')}.
+        # Ignore keys like `CDO__*`, e.g. ignore CDO__skip_it
+        reject {|k, _| k.start_with?('_')}.
+        # CDO_BUILD_APPS or CDO_build_apps both => build_apps
+        transform_keys(&:downcase).
+        # Try to parse CDO_* env vars as YAML, fall back to strings
+        transform_values do |env_var_value|
+          YAML.load(env_var_value)
+        rescue Psych::Exception
+          # Pass thru yaml parse fails as strings: this allows random ascii password strings
+          # that happen to start with { or [, but don't have a matching close bracket:
+          # {fj@95randompassword or [#092pass
+          env_var_value
+        end
     end
   end
 end
