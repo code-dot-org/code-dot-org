@@ -320,6 +320,7 @@ roles = {
     ManagedPolicyArns: [
       '!Ref ContributorS3Policy',
       '!Ref ContributorSecretsPolicy',
+      '!Ref BedrockKnowledgeBaseInvocationPolicy',
       'arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess'
     ]
   },
