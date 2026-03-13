@@ -276,9 +276,9 @@ class ResourcesEditor extends Component {
         )}
         <div>
           <div style={styles.resourceSearch}>
-            <label>
+            <div style={styles.sectionLabel}>
               <strong>Select a resource to add</strong>
-            </label>
+            </div>
             <SearchBox
               onSearchSelect={this.onSearchSelect}
               searchUrl={'resources/search'}
@@ -319,6 +319,9 @@ class ResourcesEditor extends Component {
 const styles = {
   resourceSearch: {
     paddingBottom: 10,
+  },
+  sectionLabel: {
+    marginBottom: 5,
   },
   actionsColumn: {
     display: 'flex',
