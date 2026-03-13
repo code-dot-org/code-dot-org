@@ -1,33 +1,42 @@
 require "cdo/aws/s3"
+require "mysql2"
 require "redis"
 
 class ServerStatus
   S3_BUCKET = "cdo-v3-sources".freeze
   S3_KEY = "sources_development/k8s-dashboard-mimic.deteleme".freeze
 
-  def db_connection
-    db_health_check[:message]
+  def mysql_status
+    config = ActiveRecord::Base.configurations.configs_for(env_name: Rails.env, name: "primary").configuration_hash
+    db_name = config[:database]
+    client = Mysql2::Client.new(
+      host: config[:host],
+      port: config[:port],
+      username: config[:username],
+      password: config[:password]
+    )
+    db_found = client.query("SHOW DATABASES LIKE '#{db_name}'").any?
+    populated = db_found && client.query("SELECT 1 FROM `#{db_name}`.data_docs LIMIT 1").any?
+
+    {
+      connected: true,
+      db_name: db_name,
+      db_found: db_found,
+      populated: populated
+    }
+  rescue StandardError
+    {
+      connected: false,
+      db_name: config&.dig(:database),
+      db_found: false,
+      populated: false
+    }
   end
 
-  def db_health_check
-    connection = ActiveRecord::Base.connection
-    connection.active?
-    {ok: true, message: "connected"}
+  def redis_status
+    {connected: Redis.new(url: CDO.redis_url).ping == "PONG"}
   rescue StandardError
-    {ok: false, message: "not connected"}
-  end
-
-  def read_data_docs_sql_table
-    name = DataDoc.where(key: "100-birds").pick(:name)
-    name == "100 Birds of the World"
-  rescue StandardError
-    false
-  end
-
-  def redis_connection
-    Redis.new(url: CDO.redis_url).ping == "PONG" ? "connected" : "not connected"
-  rescue StandardError
-    "not connected"
+    {connected: false}
   end
 
   def s3_status
