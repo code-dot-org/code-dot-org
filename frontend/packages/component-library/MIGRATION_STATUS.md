@@ -7,6 +7,7 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 | State | Description |
 |-------|-------------|
 | **Migrated** | MUI equivalent exists with style overrides in `src/themes/code.org/styleOverrides/`. DSCO component is deprecated. Use MUI directly. |
+| **In Progress** | MUI style overrides exist, but consumer migration is not yet complete. DSCO component is still active. |
 | **MUI-native** | Component already built on MUI primitives. No separate DSCO implementation to migrate. |
 | **Not Started** | No MUI equivalent yet. Continue using the DSCO component. |
 | **N/A** | No direct MUI equivalent exists or component is utility/infrastructure. |
@@ -17,9 +18,9 @@ This document tracks the migration progress of DSCO (Design System Code.org) com
 |---------------|--------|---------------|----------------|-------|
 | `typography` | **Migrated** | `Typography` | `styleOverrides/typography.ts` | Deprecated. Use `Typography` from `@mui/material`. |
 | `button` | **Migrated** | `Button` | `styleOverrides/button.tsx` | Deprecated. Use `Button` from `@mui/material`. Codemod available: `yarn codemod:buttons`. See `src/button/BUTTON_MIGRATION_TO_MUI.md`. |
-| `link` | **Migrated** | `Link` | `styleOverrides/link.ts` | Deprecated. Use `Link` from `@mui/material`. |
+| `link` | In Progress | `Link` | `styleOverrides/link.ts` | Style overrides exist. Migration of consumers not yet complete. |
 | `breadcrumbs` | **Migrated** | `Breadcrumbs` | `styleOverrides/breadcrumbs.ts` | Deprecated. Use `Breadcrumbs` from `@mui/material`. Custom size prop augmented (`xs`, `s`, `m`, `l`). |
-| `closeButton` | **Migrated** | `IconButton` | `styleOverrides/iconButton.tsx` | Deprecated. Use `IconButton` from `@mui/material` with an `xmark` icon. |
+| `closeButton` | In Progress | `IconButton` | `styleOverrides/iconButton.tsx` | Style overrides exist. Migration of consumers not yet complete. |
 | `notification-banner` | **MUI-native** | — | `styleOverrides/notificationBanner.tsx` | Already built on MUI `Paper`, `Stack`, `Typography`, `IconButton`. No migration needed. |
 | `snackbar` | **MUI-native** | `Snackbar` | — | No DSCO wrapper exported. Use `Snackbar` from `@mui/material` directly. |
 | `accordion` | Not Started | `Accordion` | — | |
