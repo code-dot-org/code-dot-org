@@ -46,6 +46,17 @@
     - It takes ~10s to typecheck, so it can be run too frequently too.
     - A good litmus test is if you've made a batch of changes, or before reporting success to the user, run `yarn run typecheck` first.
 
+## Design System (DSCO → MUI Migration)
+- Our design system lives in `frontend/packages/component-library/` (package: `@code-dot-org/component-library`)
+- We are actively migrating from custom DSCO components to MUI (`@mui/material` v7)
+- **Migration status doc**: see `frontend/packages/component-library/MIGRATION_STATUS.md` for the current state of each component
+- MUI theme and style overrides live in `frontend/packages/component-library/src/themes/code.org/`
+  - `styleOverrides/` contains per-component MUI overrides (button, typography, breadcrumbs, link, iconButton)
+  - `types.d.ts` contains custom MUI type augmentations (must be manually synced to `apps/src/types/mui.d.ts`)
+- Components marked `@deprecated` in JSDoc have a ready MUI equivalent — use MUI directly for new code
+- When adding new UI components, prefer MUI with style overrides over creating new DSCO components
+- Button migration has a codemod (`yarn codemod:buttons` from component-library/) and a detailed guide in `src/button/BUTTON_MIGRATION_TO_MUI.md`
+
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".
 - Levelbuilder is mostly implemented in rails, but with some react views
