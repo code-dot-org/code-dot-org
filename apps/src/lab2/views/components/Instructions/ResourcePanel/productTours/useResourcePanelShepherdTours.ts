@@ -56,10 +56,6 @@ const useResourcePanelShepherdTours = ({
   });
 
   // ONBOARDING TOUR
-  const showOnboardingTour = useMemo(
-    () => isOnboardingTourEnabled || false,
-    [isOnboardingTourEnabled]
-  );
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
     () => tryGetLocalStorage(ONBOARDING_TOUR_LOCAL_STORAGE_KEY, 'no') === 'yes'
   );
@@ -76,7 +72,7 @@ const useResourcePanelShepherdTours = ({
   const {tour: onboardingTour} = useProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: ONBOARDING_TOUR_LOCAL_STORAGE_KEY,
-    tourAvailable: showOnboardingTour && !isLevelLoading,
+    tourAvailable: isOnboardingTourEnabled && !isLevelLoading,
     onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
     onComplete: onOnboardingTourComplete,
     onCancel: onOnboardingTourCancel,
