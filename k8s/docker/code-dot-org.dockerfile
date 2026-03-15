@@ -119,6 +119,16 @@ COPY --chown=${UID} --link \
   --from=code-dot-org-bundle-install ${HOME}/.rbenv \
   ${HOME}/.rbenv
 
+# bundle exec also needs the repo's Ruby/Bundler manifests so rbenv selects the
+# copied Ruby version and Bundler can resolve the already-installed gem set.
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${SRC}/.ruby-version ${SRC}/Gemfile ${SRC}/Gemfile.lock \
+  ./
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-bundle-install ${SRC}/dashboard/engines/ \
+  ./dashboard/engines/
+
 # grunt exec:generateSharedConstants => bundle exec ./script/generateSharedConstants.rb => (lib/cdo/shared_constants.rb, lib/cdo/shared_constants/**)
 # grunt exec:generateRegionConfigurations => bundle exec ./script/generateRegionConfigurations.rb => (lib/cdo.rb, lib/cdo/global_edition.rb)
 COPY --chown=${UID} ./lib/ ./lib/
@@ -137,6 +147,16 @@ COPY --chown=${UID} --parents ./config/development.yml.erb ./
 COPY --chown=${UID} ./dashboard/app/views/ ./dashboard/app/views/
 
 ENV HAS_PEGASUS_CONTENT='false'
+
+# yarn build resolves @cdo/static and @cdo/i18n aliases at compile time, so
+# reuse those split assets here without reintroducing them from the host context.
+COPY --chown=${UID} --link \
+  --from=code-dot-org-static /apps/static \
+  ./apps/static
+
+COPY --chown=${UID} --link \
+  --from=code-dot-org-static /apps/i18n \
+  ./apps/i18n
 
 # Main JS subdirs
 COPY --chown=${UID} ./apps/ ./apps/
