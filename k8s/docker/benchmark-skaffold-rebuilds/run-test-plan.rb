@@ -221,6 +221,12 @@ end
 
 def build_summary(run_datestamp:, description:, day_results:, warm_cache_build:, run_dir:, summary_path:, error:)
   total_build_time_minutes = day_results.sum {|day| day.fetch('build_time_minutes')}
+  average_build_time_per_day_minutes =
+    if day_results.empty?
+      0.0
+    else
+      total_build_time_minutes / day_results.length.to_f
+    end
   last_day = day_results.last
   {
     'run_datestamp' => run_datestamp,
@@ -229,6 +235,7 @@ def build_summary(run_datestamp:, description:, day_results:, warm_cache_build:,
     'results_json_path' => summary_path.to_s,
     'days_tested' => day_results.length,
     'total_build_time_minutes' => total_build_time_minutes.round(6),
+    'average_build_time_per_day_minutes' => average_build_time_per_day_minutes.round(6),
     'docker_image_reference' => last_day&.fetch('docker_image_reference', nil),
     'warm_cache_build' => warm_cache_build,
     'days' => day_results,
@@ -390,10 +397,11 @@ def main
 
   puts JSON.pretty_generate(summary)
   print_day_summary_lines(day_results, run_dir)
-  puts "Total build time: #{format_hours_and_minutes(summary.fetch('total_build_time_minutes'))}"
   print_final_docker_image_size(last_image_inspect_payload)
   puts "Test run directory: #{run_dir.relative_path_from(SCRIPT_DIR)}"
   puts "Results JSON: #{summary_path.relative_path_from(SCRIPT_DIR)}"
+  puts "Total build time: #{format_hours_and_minutes(summary.fetch('total_build_time_minutes'))}"
+  puts "Average rebuild time: #{format_hours_and_minutes(summary.fetch('average_build_time_per_day_minutes'))}"
 end
 
 main if $PROGRAM_NAME == __FILE__
