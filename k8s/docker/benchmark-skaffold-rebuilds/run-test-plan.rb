@@ -12,7 +12,7 @@ require_relative 'src/cache_miss_test_plan_support'
 
 SCRIPT_DIR = Pathname(__dir__).realpath
 REPO_ROOT = SCRIPT_DIR.parent.parent.parent
-TEST_PLAN_PATH = SCRIPT_DIR / 'cache-miss-test-plan.json'
+TEST_PLAN_PATH = SCRIPT_DIR / 'test-plan.json'
 CACHE_MISS_DAILY_ODDS_PATH = SCRIPT_DIR / 'daily-odds-of-file-change.json'
 RUN_ID_LENGTH = 4
 BUILD_COMMAND = %w[skaffold build].freeze
@@ -63,6 +63,8 @@ def timestamped_run(command, log_path)
     Open3.popen2e(*command, chdir: REPO_ROOT.to_s) do |_stdin, combined, wait_thr|
       combined.each_line do |line|
         log_file.write("#{Time.now.iso8601} #{line}")
+        print line
+        $stdout.flush
       end
       success = wait_thr.value.success?
     end
@@ -153,6 +155,48 @@ def summary_day(day_number, modify_paths, duration, log_path, success)
   }
 end
 
+def duration_summary(seconds)
+  {
+    'seconds' => seconds.round(6),
+    'minutes' => (seconds / 60.0).round(6),
+    'hours' => (seconds / 3600.0).round(6)
+  }
+end
+
+def format_hours_and_minutes(duration)
+  format('%.2f hrs (%.2f minutes)', duration.fetch('hours'), duration.fetch('minutes'))
+end
+
+def print_day_header(day_number, modify_paths)
+  puts
+  puts
+  puts '=' * 80
+  puts "STARTING DAY #{day_number}"
+  puts 'Paths to modify:'
+  if modify_paths.empty?
+    puts '  (none)'
+  else
+    modify_paths.each do |path|
+      puts "  - #{path}"
+    end
+  end
+  puts '=' * 80
+  puts
+  puts
+end
+
+def print_day_result(day_number, duration, success)
+  duration_text = format_hours_and_minutes(duration_summary(duration))
+  puts
+  puts
+  puts '*' * 80
+  puts "FINISHED DAY #{day_number}: #{duration_text}"
+  puts "Status: #{success ? 'success' : 'failed'}"
+  puts '*' * 80
+  puts
+  puts
+end
+
 def main
   options = parse_options
   plan = CacheMissTestPlanSupport.load_test_plan(TEST_PLAN_PATH)
@@ -174,7 +218,7 @@ def main
     warm_log_path = run_dir / 'logs' / 'warm-cache' / 'skaffold-build.log'
     warm_success, warm_duration = timestamped_run(BUILD_COMMAND, warm_log_path)
     warm_cache_build = {
-      'build_time_seconds' => warm_duration,
+      'build_time' => duration_summary(warm_duration),
       'log_path' => warm_log_path.relative_path_from(run_dir).to_s,
       'success' => warm_success
     }
@@ -183,10 +227,12 @@ def main
       plan.each do |day|
         day_number = day.fetch('day')
         modify_paths = day.fetch('modify_paths')
+        print_day_header(day_number, modify_paths)
         write_day_modifications(day)
 
         day_log_path = run_dir / 'logs' / "day#{day_number}" / 'skaffold-build.log'
         success, duration = timestamped_run(BUILD_COMMAND, day_log_path)
+        print_day_result(day_number, duration, success)
         day_results << summary_day(
           day_number,
           modify_paths,
@@ -201,17 +247,19 @@ def main
     restore_files(snapshots)
   end
 
+  total_build_time_seconds = day_results.sum {|day| day.fetch('build_time_seconds')}
   summary = {
     'run_id' => run_id,
     'description' => options.fetch(:description),
     'days_tested' => day_results.length,
-    'total_build_time_seconds' => day_results.sum {|day| day.fetch('build_time_seconds')}.round(6),
+    'total_build_time' => duration_summary(total_build_time_seconds),
     'warm_cache_build' => warm_cache_build,
     'days' => day_results,
     'cache_miss_test_plan' => plan
   }
 
   CacheMissTestPlanSupport.write_pretty_json(summary_path, summary)
+  puts "Total build time: #{format_hours_and_minutes(summary.fetch('total_build_time'))}"
   puts JSON.pretty_generate(summary)
 end
 
