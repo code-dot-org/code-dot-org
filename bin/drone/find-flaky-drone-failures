@@ -119,7 +119,7 @@ def relevant_build?(build)
   FAILED_STATUSES.include?(build[:status]) || build[:status] == SUCCESS_STATUS
 end
 
-def fetch_build_history(cutoff)
+def fetch_build_history(cutoff, end_time)
   builds = []
   page = 1
 
@@ -129,7 +129,12 @@ def fetch_build_history(cutoff)
 
     builds.concat(page_builds)
 
-    oldest_build_created = page_builds.map {|build| Time.at(build.fetch(:created, 0).to_i)}.min
+    batch_times = page_builds.map {|build| Time.at(build.fetch(:created, 0).to_i)}
+    newest_build_created = batch_times.max
+    oldest_build_created = batch_times.min
+    batch_in_range = newest_build_created >= cutoff && oldest_build_created <= end_time
+    batch_status = batch_in_range ? "in_range" : "skipped_out_of_range"
+    puts "Loaded build batch page=#{page} status=#{batch_status} range=#{newest_build_created.iso8601}..#{oldest_build_created.iso8601}"
     break if oldest_build_created < cutoff
 
     page += 1
@@ -174,9 +179,11 @@ def build_log_url(build_number, stage_number, step_number)
 end
 
 def drone_log_text(build_number, stage_number, step_number)
-  drone_api_get("builds/#{build_number}/logs/#{stage_number}/#{step_number}").
-    map {|chunk| chunk[:out]}.
-    join
+  chunks = drone_api_get("builds/#{build_number}/logs/#{stage_number}/#{step_number}")
+  raise "log response was empty" if chunks.nil?
+  raise "log response was #{chunks.class}, expected Array" unless chunks.is_a?(Array)
+
+  chunks.map {|chunk| chunk[:out]}.join
 end
 
 def extract_ui_test_report(log_text)
@@ -266,7 +273,9 @@ def materialize_flaky_run(match)
   failed_build_number = match[:failed][:number]
   passed_build_number = match[:passed][:number]
   test_dir = File.join(OUTPUT_DIR, failed_build_number.to_s)
-  ui_report_entries = []
+  report_entries = []
+
+  puts "Inspecting flaky run fail=#{failed_build_number} pass=#{passed_build_number}"
 
   FileUtils.mkdir_p(test_dir)
   write_text_file(File.join(test_dir, "flaky-failed-run-url.txt"), build_url(failed_build_number))
@@ -285,46 +294,36 @@ def materialize_flaky_run(match)
     FileUtils.mkdir_p(stage_dir)
 
     log_url = build_log_url(failed_build_number, stage[:number], failed_step[:number])
-    log_text = drone_log_text(failed_build_number, stage[:number], failed_step[:number])
+    log_text = begin
+      drone_log_text(failed_build_number, stage[:number], failed_step[:number])
+    rescue StandardError => exception
+      warning = "Warning: couldn't download #{stage[:name]} log for failed build " \
+        "#{failed_build_number} at #{log_url}: #{exception.message}"
+      puts warning
+      warning
+    end
 
     File.write(File.join(stage_dir, "build.log"), log_text)
     write_text_file(File.join(stage_dir, "url.txt"), log_url)
 
-    next unless stage[:name] == "ui"
+    report_body = nil
+    if stage[:name] == "ui"
+      ui_test_report = extract_ui_test_report(log_text)
+      report_body = ui_test_report || "couldn't extract ui test report"
+      File.write(File.join(test_dir, "flaky-ui-test-report.log"), report_body)
+    end
 
-    ui_test_report = extract_ui_test_report(log_text)
-    File.write(File.join(test_dir, "flaky-ui-test-report.log"), ui_test_report) if ui_test_report
-
-    ui_report_entries << {
+    report_entries << {
       stage_name: stage[:name],
       failed_build_number: failed_build_number,
       failed_log_url: log_url,
       passed_build_url: build_url(passed_build_number),
       passed_created: match[:passed][:created],
-      report_body: ui_test_report || "couldn't extract ui test report",
-    }
-
-    next
-  end
-
-  failed_build.fetch(:stages, []).each do |stage|
-    next unless stage[:name] == "unit"
-    next unless FAILED_STATUSES.include?(stage[:status])
-
-    failed_step = failed_step_for(stage)
-    next unless failed_step
-
-    ui_report_entries << {
-      stage_name: stage[:name],
-      failed_build_number: failed_build_number,
-      failed_log_url: build_log_url(failed_build_number, stage[:number], failed_step[:number]),
-      passed_build_url: build_url(passed_build_number),
-      passed_created: match[:passed][:created],
-      report_body: nil,
+      report_body: report_body,
     }
   end
 
-  ui_report_entries
+  report_entries
 end
 
 def materialize_flaky_runs(matches)
@@ -346,6 +345,9 @@ def print_matches(matches, cutoff, end_time)
 
     puts "pass= #{build_url(passed_build[:number])}  fail= #{build_url(failed_build[:number])}"
   end
+
+  puts
+  puts "Found #{matches.length} flaky Drone runs."
 end
 
 def print_report_location
@@ -377,19 +379,12 @@ def main(argv)
 
   end_time = search_end_time(options)
   cutoff = lookback_cutoff(options, end_time)
-  builds = fetch_build_history(cutoff)
+  builds = fetch_build_history(cutoff, end_time)
   matches = flaky_matches(builds, cutoff, end_time)
 
   materialize_flaky_runs(matches)
   print_matches(matches, cutoff, end_time)
   print_report_location
-rescue OptionParser::ParseError => exception
-  warn exception.message
-  warn parser
-  exit 1
-rescue StandardError => exception
-  warn exception.message
-  exit 1
 end
 
 main(ARGV)
