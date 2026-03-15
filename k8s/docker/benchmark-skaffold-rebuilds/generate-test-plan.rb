@@ -15,7 +15,7 @@ def parse_options
   options = {test_days: DEFAULT_TEST_DAYS}
 
   OptionParser.new do |parser|
-    parser.banner = 'Usage: generate-cache-miss-test-plan.rb [--test-days=N]'
+    parser.banner = 'Usage: generate-test-plan.rb [--test-days=N]'
     parser.on('--test-days=N', Integer, 'Number of virtual test days to generate') do |days|
       raise OptionParser::InvalidArgument, 'test days must be positive' unless days.positive?
 
