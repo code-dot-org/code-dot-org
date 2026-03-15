@@ -49,7 +49,7 @@ To profile Dockerfile changes:
 2. Run the executor and give the run a descriptive `--description`.
 3. Change the Dockerfiles to the alternate layout.
 4. Run the executor again with a different `--description`.
-5. Compare the resulting `test-run-<id>.json` summary files.
+5. Compare the resulting `test-run-<datestamp>.json` summary files.
 
 ## Normal Usage
 
@@ -62,9 +62,9 @@ Generated artifacts in this directory:
 - `daily-odds-of-file-change-report.md`
 - `daily-odds-of-file-change.json`
 - `test-plan.json`
-- `test-run-<id>/`
+- `test-run-<datestamp>/`
 
-Each `test-run-<id>/` contains:
+Each `test-run-<datestamp>/` contains:
 
 - `description.txt`
 - `test-plan.json`
@@ -72,7 +72,9 @@ Each `test-run-<id>/` contains:
   - Snapshots of the Dockerfiles referenced by `daily-odds-of-file-change.json`
 - `logs/warm-cache/skaffold-build.log`
 - `logs/dayN/skaffold-build.log`
-- `test-run-<id>.json`
+- `logs/dayN/skaffold-build-tags.json`
+- `logs/dayN/docker-image-inspect-size.json`
+- `test-run-<datestamp>.json`
 
 The executor restores any modified files when the run ends, even if a build fails.
 
@@ -112,13 +114,13 @@ PATH="$tmpdir:$PATH" bundle exec ruby run-test-plan.rb \
 
 What to check after the fake run:
 
-- a new `test-run-<id>/` exists
+- a new `test-run-<datestamp>/` exists
 - it has `description.txt`
 - it has `test-plan.json`
 - it has `dockerfiles/` with the expected Dockerfile snapshots
 - it has `logs/warm-cache/skaffold-build.log`
 - it has one `logs/dayN/skaffold-build.log` per test day
-- the summary JSON embeds the entire test plan
+- it has one `logs/dayN/docker-image-inspect-size.json` per test day
 
 ## Caveats
 
