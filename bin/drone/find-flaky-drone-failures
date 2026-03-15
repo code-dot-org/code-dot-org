@@ -1,0 +1,370 @@
+#!/usr/bin/env -S bundle exec ruby
+
+# Find "flaky" Drone runs, where a run failed first and a restart later passed.
+#
+# Usage:
+# - `./bin/drone/find-flaky-drone-failures` (defaults to searching the past month)
+# - `./bin/drone/find-flaky-drone-failures --days=7` (search back 7 days)
+#
+# Outputs:
+# - a report to: ./bin/drone-find-flaky-drone-failures/flaky-runs/flaky-drone-failures.md
+# - for each flaky run found, a subdir of flaky-runs/ which includes a build.log for easier local grepping
+
+$VERBOSE = nil
+
+require "json"
+require "optparse"
+require "time"
+require "date"
+require "fileutils"
+
+require "httparty"
+
+DEFAULT_DRONE_SERVER = "https://drone.cdn-code.org".freeze
+REPO_SLUG = "code-dot-org/code-dot-org".freeze
+OUTPUT_DIR = File.join(__dir__, "flaky-runs").freeze
+PAGE_LIMIT = 100
+FAILED_STATUSES = %w[failure error killed].freeze
+SUCCESS_STATUS = "success".freeze
+FAILED_STAGE_NAMES = %w[unit ui].freeze
+UI_TEST_REPORT_REGEX = /UI TEST REPORT: .*?\n.*?UI Test Status Page.*?\n.*?\n/m
+UI_TEST_FAILURE_LINE_REGEX = /^\u2022 \*FAILED: (?<test_name>[^*]+)\*  <a href='(?<cucumber_url>[^']+)'/ # rubocop:disable Layout/LineLength
+FLAKY_FAILURES_FILENAME = "flaky-drone-failures.md".freeze
+FLAKY_FAILURES_RELATIVE_PATH = File.join("bin", "drone", "flaky-runs", FLAKY_FAILURES_FILENAME).freeze
+LEGACY_ALL_UI_REPORTS_FILENAME = "all-flaky-ui-test-reports.md".freeze
+
+def build_option_parser(options)
+  OptionParser.new do |opts|
+    opts.banner = "Usage: #{File.basename(__FILE__)} [--months=N] [--days=N]"
+
+    opts.on("--months=N", Integer, "Search N months back (default: 1)") do |months|
+      raise OptionParser::InvalidArgument, "months must be positive" unless months.positive?
+
+      options[:months] = months
+      options[:days] = nil
+    end
+
+    opts.on("--days=N", Integer, "Search N days back") do |days|
+      raise OptionParser::InvalidArgument, "days must be positive" unless days.positive?
+
+      options[:days] = days
+    end
+
+    opts.on("-h", "--help", "Print this help") do
+      puts opts
+      exit
+    end
+  end
+end
+
+def drone_server
+  ENV.fetch("DRONE_SERVER", DEFAULT_DRONE_SERVER)
+end
+
+def drone_token
+  ENV.fetch("DRONE_TOKEN") do
+    raise "Env var DRONE_TOKEN must be set to 'Your Personal Token' from #{drone_server}/account"
+  end
+end
+
+def cutoff_time(months)
+  now = Time.now
+  cutoff_date = now.to_date << months
+  Time.new(cutoff_date.year, cutoff_date.month, cutoff_date.day, now.hour, now.min, now.sec, now.utc_offset)
+end
+
+def lookback_cutoff(options)
+  return Time.now - (options[:days] * 86_400) if options[:days]
+
+  cutoff_time(options[:months])
+end
+
+def build_url(build_number)
+  "#{drone_server}/#{REPO_SLUG}/#{build_number}"
+end
+
+def build_group_key(build)
+  [
+    build[:after],
+    build[:ref],
+    build[:event],
+    build[:action],
+    build[:author_login],
+  ]
+end
+
+def relevant_build?(build)
+  FAILED_STATUSES.include?(build[:status]) || build[:status] == SUCCESS_STATUS
+end
+
+def fetch_build_history(cutoff)
+  builds = []
+  page = 1
+
+  loop do
+    page_builds = drone_api_get("builds?limit=#{PAGE_LIMIT}&page=#{page}")
+    break if page_builds.empty?
+
+    builds.concat(page_builds)
+
+    oldest_build_created = page_builds.map {|build| Time.at(build.fetch(:created, 0).to_i)}.min
+    break if oldest_build_created < cutoff
+
+    page += 1
+  end
+
+  builds
+end
+
+def flaky_matches(builds, cutoff)
+  builds.
+    select {|build| relevant_build?(build)}.
+    group_by {|build| build_group_key(build)}.
+    values.
+    flat_map do |group|
+      group.sort_by! {|build| build.fetch(:number, 0).to_i}
+
+      group.each_cons(2).filter_map do |failed_build, passed_build|
+        next unless FAILED_STATUSES.include?(failed_build[:status])
+        next unless passed_build[:status] == SUCCESS_STATUS
+        next unless failed_build[:trigger] == "@hook"
+
+        # On the live Drone server, observed reruns keep parent=nil and version is
+        # just a row update counter, so detect reruns by matching stable build
+        # metadata and looking for the trigger changing from "@hook" to the author.
+        next unless passed_build[:trigger] == passed_build[:author_login]
+        next unless Time.at(passed_build.fetch(:created, 0).to_i) >= cutoff
+
+        {failed: failed_build, passed: passed_build}
+      end
+    end
+end
+
+def failed_step_for(stage)
+  stage.fetch(:steps, []).find {|step| FAILED_STATUSES.include?(step[:status])} ||
+    stage.fetch(:steps, []).find {|step| step[:status] != SUCCESS_STATUS}
+end
+
+def build_log_url(build_number, stage_number, step_number)
+  "#{build_url(build_number)}/#{stage_number}/#{step_number}"
+end
+
+def drone_log_text(build_number, stage_number, step_number)
+  drone_api_get("builds/#{build_number}/logs/#{stage_number}/#{step_number}").
+    map {|chunk| chunk[:out]}.
+    join
+end
+
+def extract_ui_test_report(log_text)
+  match = log_text.match(UI_TEST_REPORT_REGEX)
+  match && match[0]
+end
+
+def write_text_file(path, contents)
+  File.write(path, "#{contents}\n")
+end
+
+def flaky_failures_path
+  File.join(OUTPUT_DIR, FLAKY_FAILURES_FILENAME)
+end
+
+def local_build_log_path(entry)
+  "./#{entry[:failed_build_number]}/#{entry[:stage_name]}/build.log"
+end
+
+def flaky_failure_header(entry)
+  local_build_log = local_build_log_path(entry)
+  "### [#{local_build_log}](#{local_build_log}) " \
+    "([initial fail](#{entry[:failed_log_url]}), [pass on retry](#{entry[:passed_build_url]}))"
+end
+
+def flaky_failure_entry_markdown(entry)
+  [flaky_failure_header(entry), entry[:report_body]].compact.join("\n")
+end
+
+def flaky_failure_section_markdown(title, entries)
+  section_entries = entries.
+    sort_by {|entry| -entry[:passed_created].to_i}.
+    map {|entry| flaky_failure_entry_markdown(entry)}
+
+  ["## #{title}", section_entries.join("\n\n\n\n")].reject(&:empty?).join("\n\n")
+end
+
+def ui_test_failures_from_report(report_body)
+  report_body.to_s.each_line.filter_map do |line|
+    match = line.match(UI_TEST_FAILURE_LINE_REGEX)
+    next unless match
+
+    {
+      test_name: match[:test_name],
+      cucumber_url: match[:cucumber_url],
+    }
+  end
+end
+
+def flaky_ui_summary_markdown(entries)
+  test_failures = Hash.new {|hash, key| hash[key] = []}
+
+  entries.select {|entry| entry[:stage_name] == "ui"}.each do |entry|
+    ui_test_failures_from_report(entry[:report_body]).each do |failure|
+      test_failures[failure[:test_name]] << failure[:cucumber_url]
+    end
+  end
+
+  sorted_test_failures = test_failures.sort_by do |test_name, cucumber_urls|
+    [-cucumber_urls.length, test_name]
+  end
+
+  summary_lines = sorted_test_failures.map do |test_name, cucumber_urls|
+    links = cucumber_urls.map {|url| "[link](#{url})"}.join(" ")
+    "- #{test_name} had #{cucumber_urls.length} flaky failures #{links}".rstrip
+  end.join("\n")
+
+  return "" if summary_lines.empty?
+
+  ["Flaky UI test failures:", summary_lines].join("\n\n")
+end
+
+def flaky_failures_markdown(entries)
+  ui_entries = entries.select {|entry| entry[:stage_name] == "ui"}
+  unit_entries = entries.select {|entry| entry[:stage_name] == "unit"}
+  summary = flaky_ui_summary_markdown(ui_entries)
+
+  [
+    "# Flaky Drone Failures",
+    summary,
+    flaky_failure_section_markdown("UI Tests", ui_entries),
+    flaky_failure_section_markdown("Unit Tests", unit_entries),
+  ].reject(&:empty?).join("\n\n\n\n")
+end
+
+def materialize_flaky_run(match)
+  failed_build_number = match[:failed][:number]
+  passed_build_number = match[:passed][:number]
+  test_dir = File.join(OUTPUT_DIR, failed_build_number.to_s)
+  ui_report_entries = []
+
+  FileUtils.mkdir_p(test_dir)
+  write_text_file(File.join(test_dir, "flaky-failed-run-url.txt"), build_url(failed_build_number))
+  write_text_file(File.join(test_dir, "pass-on-retry-url.txt"), build_url(passed_build_number))
+
+  failed_build = drone_api_get("builds/#{failed_build_number}")
+
+  failed_build.fetch(:stages, []).each do |stage|
+    next unless FAILED_STAGE_NAMES.include?(stage[:name])
+    next unless FAILED_STATUSES.include?(stage[:status])
+
+    failed_step = failed_step_for(stage)
+    next unless failed_step
+
+    stage_dir = File.join(test_dir, stage[:name])
+    FileUtils.mkdir_p(stage_dir)
+
+    log_url = build_log_url(failed_build_number, stage[:number], failed_step[:number])
+    log_text = drone_log_text(failed_build_number, stage[:number], failed_step[:number])
+
+    File.write(File.join(stage_dir, "build.log"), log_text)
+    write_text_file(File.join(stage_dir, "url.txt"), log_url)
+
+    next unless stage[:name] == "ui"
+
+    ui_test_report = extract_ui_test_report(log_text)
+    File.write(File.join(test_dir, "flaky-ui-test-report.log"), ui_test_report) if ui_test_report
+
+    ui_report_entries << {
+      stage_name: stage[:name],
+      failed_build_number: failed_build_number,
+      failed_log_url: log_url,
+      passed_build_url: build_url(passed_build_number),
+      passed_created: match[:passed][:created],
+      report_body: ui_test_report || "couldn't extract ui test report",
+    }
+
+    next
+  end
+
+  failed_build.fetch(:stages, []).each do |stage|
+    next unless stage[:name] == "unit"
+    next unless FAILED_STATUSES.include?(stage[:status])
+
+    failed_step = failed_step_for(stage)
+    next unless failed_step
+
+    ui_report_entries << {
+      stage_name: stage[:name],
+      failed_build_number: failed_build_number,
+      failed_log_url: build_log_url(failed_build_number, stage[:number], failed_step[:number]),
+      passed_build_url: build_url(passed_build_number),
+      passed_created: match[:passed][:created],
+      report_body: nil,
+    }
+  end
+
+  ui_report_entries
+end
+
+def materialize_flaky_runs(matches)
+  FileUtils.mkdir_p(OUTPUT_DIR)
+  ui_report_entries = matches.flat_map {|match| materialize_flaky_run(match)}
+  FileUtils.rm_f(File.join(OUTPUT_DIR, LEGACY_ALL_UI_REPORTS_FILENAME))
+  File.write(flaky_failures_path, flaky_failures_markdown(ui_report_entries))
+end
+
+def print_matches(matches, cutoff)
+  if matches.empty?
+    puts "No flaky Drone reruns found since #{cutoff.iso8601}."
+    return
+  end
+
+  matches.sort_by {|match| -match[:passed].fetch(:created, 0).to_i}.each do |match|
+    passed_build = match[:passed]
+    failed_build = match[:failed]
+
+    puts "pass= #{build_url(passed_build[:number])}  fail= #{build_url(failed_build[:number])}"
+  end
+end
+
+def print_report_location
+  puts
+  puts "Start here: #{FLAKY_FAILURES_RELATIVE_PATH}"
+end
+
+def drone_api_get(path)
+  url = "#{drone_server}/api/repos/#{REPO_SLUG}/#{path}"
+  response = HTTParty.get(
+    url,
+    headers: {
+      "Authorization" => "Bearer #{drone_token}",
+      "Content-Type" => "application/json",
+    },
+    format: :plain,
+  )
+
+  raise "#{response.code} #{response.message} - GET request to #{url} failed" unless response.success?
+
+  JSON.parse(response.body, symbolize_names: true)
+end
+
+def main(argv)
+  options = {months: 1}
+  parser = build_option_parser(options)
+  parser.parse!(argv)
+  raise OptionParser::InvalidOption, argv.join(" ") unless argv.empty?
+
+  cutoff = lookback_cutoff(options)
+  builds = fetch_build_history(cutoff)
+  matches = flaky_matches(builds, cutoff)
+
+  materialize_flaky_runs(matches)
+  print_matches(matches, cutoff)
+  print_report_location
+rescue OptionParser::ParseError => exception
+  warn exception.message
+  warn parser
+  exit 1
+rescue StandardError => exception
+  warn exception.message
+  exit 1
+end
+
+main(ARGV)
