@@ -8,7 +8,7 @@ require_relative 'src/cache_miss_test_plan_support'
 
 SCRIPT_DIR = Pathname(__dir__).realpath
 INPUT_PATH = SCRIPT_DIR / 'daily-odds-of-file-change.json'
-OUTPUT_PATH = SCRIPT_DIR / 'cache-miss-test-plan.json'
+OUTPUT_PATH = SCRIPT_DIR / 'test-plan.json'
 DEFAULT_TEST_DAYS = 10
 
 def parse_options
@@ -16,7 +16,7 @@ def parse_options
 
   OptionParser.new do |parser|
     parser.banner = 'Usage: generate-test-plan.rb [--test-days=N]'
-    parser.on('--test-days=N', Integer, 'Number of virtual test days to generate') do |days|
+    parser.on('--test-days=N', Integer, 'Total number of plan days to generate, including day 0') do |days|
       raise OptionParser::InvalidArgument, 'test days must be positive' unless days.positive?
 
       options[:test_days] = days
@@ -27,7 +27,15 @@ def parse_options
 end
 
 def build_plan(path_entries, test_days)
-  (1..test_days).map do |day|
+  all_modify_paths = path_entries.map {|entry| entry.fetch('path_to_modify_to_trigger_cache_miss')}.uniq.sort
+
+  plan = [{
+    'day' => 0,
+    'modify_paths' => all_modify_paths,
+    'cache_miss_all_day' => true
+  }]
+
+  plan.concat((1...test_days).map do |day|
     modify_paths = path_entries.filter_map do |entry|
       entry.fetch('path_to_modify_to_trigger_cache_miss') if rand < entry.fetch('odds_of_a_cache_miss')
     end.uniq.sort
@@ -37,6 +45,9 @@ def build_plan(path_entries, test_days)
       'modify_paths' => modify_paths
     }
   end
+  )
+
+  plan
 end
 
 def main

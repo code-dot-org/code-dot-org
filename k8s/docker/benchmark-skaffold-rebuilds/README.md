@@ -32,6 +32,8 @@ Change the number of simulated days with:
 bundle exec ruby generate-test-plan.rb --test-days=20
 ```
 
+The generator always uses `day: 0` as the first plan day. That entry invalidates every copy path and is marked with `"cache_miss_all_day": true`, and it counts toward `--test-days`.
+
 ### Executing the test plan
 
 Execute the current plan with:
@@ -59,13 +61,13 @@ Generated artifacts in this directory:
 
 - `daily-odds-of-file-change-report.md`
 - `daily-odds-of-file-change.json`
-- `cache-miss-test-plan.json`
+- `test-plan.json`
 - `test-run-<id>/`
 
 Each `test-run-<id>/` contains:
 
 - `description.txt`
-- `cache-miss-test-plan.json`
+- `test-plan.json`
 - `dockerfiles/`
   - Snapshots of the Dockerfiles referenced by `daily-odds-of-file-change.json`
 - `logs/warm-cache/skaffold-build.log`
@@ -88,7 +90,7 @@ Verify the outputs exist:
 ```sh
 ls daily-odds-of-file-change-report.md
 ls daily-odds-of-file-change.json
-ls cache-miss-test-plan.json
+ls test-plan.json
 ```
 
 ### Safe smoke test for the executor
@@ -112,7 +114,7 @@ What to check after the fake run:
 
 - a new `test-run-<id>/` exists
 - it has `description.txt`
-- it has `cache-miss-test-plan.json`
+- it has `test-plan.json`
 - it has `dockerfiles/` with the expected Dockerfile snapshots
 - it has `logs/warm-cache/skaffold-build.log`
 - it has one `logs/dayN/skaffold-build.log` per test day
