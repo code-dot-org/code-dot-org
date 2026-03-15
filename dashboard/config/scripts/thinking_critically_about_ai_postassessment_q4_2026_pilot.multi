@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-postassessment-q4_2026-pilot'
+
+question 'Which scenario best demonstrates a student appropriately decomposing a task between human and AI contributions?'
+
+right 'A student brainstorms the argument for their essay, uses AI to suggest counterarguments they might not have considered, then evaluates each counterargument themselves before deciding which to include.'
+wrong 'A student asks AI to write the full essay, then changes a few words so it sounds more like them.'
+wrong 'A student writes the essay entirely without AI, then asks AI to give it a grade.'
+wrong 'A student uses AI to pick their essay topic, structure, evidence, and conclusion, then types it up.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lessons 3, 4
+MARKDOWN

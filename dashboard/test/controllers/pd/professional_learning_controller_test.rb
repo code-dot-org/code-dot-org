@@ -601,6 +601,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     create(:workshop, course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_SUMMER_WORKSHOP, sessions: [session_on_day(1)], organizer: pm)
     byow = create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm)
 
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
     DCDO.stubs(:get).with('pl-teacher-application-off-season', false).returns(true)
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}
@@ -641,6 +642,7 @@ class Pd::ProfessionalLearningControllerTest < ActionController::TestCase
     # Non-[CSD, CSP, CSA] workshop
     byow = create(:byo_workshop, sessions: [session_on_day(1)], participant_group_type: 'Regional', organizer: pm)
 
+    DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
     DCDO.stubs(:get).with('pl-teacher-application-off-season', false).returns(false)
 
     reg_ws_data_response = get :regional_workshop_data, params: {zip_code: "11111"}

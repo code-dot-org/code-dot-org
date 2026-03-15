@@ -920,6 +920,9 @@ en:
         aid-thinking-critically-lesson5-minilesson3-2026-test: Missing Perspectives - Pilot
         Dot-Notation: 'Dot Notation: Accessing Data in APIs'
         aif2-pl-tray-and-catch: Try and Catch Blocks
+        aif2-pl-updating-the-DOM: Updating the DOM
+        aif2-pl-conditionals: Making Decisions in Code
+        aif2-pl-variables: Debugging Variables
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

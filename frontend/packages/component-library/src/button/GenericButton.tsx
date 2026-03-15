@@ -330,9 +330,12 @@ const GenericButton = forwardRef<
  * * (see ./__tests__/GenericButton.test.tsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Ready for dev```
+ * ###  Status: ```DEPRECATED```
  *
- * Design System: ***GenericButton*** Component.
+ * @deprecated Use MUI `Button` or `IconButton` from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/button.tsx`.
+ * See `src/button/BUTTON_MIGRATION_TO_MUI.md` for migration guide.
+ * Codemod available: `yarn codemod:buttons`.
  *
  */
 export default memo(GenericButton);

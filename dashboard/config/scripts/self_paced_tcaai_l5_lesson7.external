@@ -1,0 +1,112 @@
+name 'self-paced-TCaAI-L5-Lesson7'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 4 Lesson Overviews
+
+## Lesson 7: Exploring Data in AI
+
+#### Lesson 7 is a **Building Knowledge** lesson. Students explore how AI systems combine everyday data to create detailed personal inferences. They will use this knowledge to inform their Safety & Privacy guidelines in Lesson 8.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/7" target="blank" rel="noopener noreferrer">
+Access Lesson 7: Exploring Data in AI
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (10 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students analyze the “Z-Tech selfie” scenario to determine how small background details could reveal a home location.
+</p>
+<p style="font-size: 13pt">
+Through discussion, students recognize how public details can combine into private or sensitive insights through inference and pattern recognition.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (25 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 14pt"><b>🔎 Data Exploration Stations</b></p>
+
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; width: 100%; margin: 15px auto;">
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/4078d7e393bf5ca7e50a0947a504dc24-image-1773183450291.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+Smart Cart Data
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+How does AI use shopping data to make inferences?
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/42fa684dcc7e0add704b099325bc54cf-image-1773183448233.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+Public Profile Safety
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+How much can AI infer from public profile data?
+</p>
+</div>
+
+<div style="background-color: #F5F7F8; padding: 18px; border-radius: 12px; text-align: center;">
+<img src="https://images.code.org/dbb62aae62ac4e3985a544bba169a06f-image-1773183446382.png" alt="" style="width: 60px; height: auto; margin-bottom: 10px;">
+<p style="font-size: 14pt; font-weight: bold; margin: 0 0 8px 0;">
+Safer Social Media
+</p>
+<p style="font-size: 12pt; margin: 0; line-height: 1.4;">
+How can images be anonymized to reduce risk?
+</p>
+</div>
+
+</div>
+
+<p style="font-size: 13pt">
+Students classify information as <strong>Public, Private, or Sensitive</strong>, test combinations of data in AI Chat, and experiment with anonymization in Sketch Lab.
+</p>
+
+<p style="font-size: 13pt">
+They identify patterns that separate safe sharing from oversharing and record Red Flags and Green Flags in their Learning Logs.
+</p>
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (10 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt">
+Students reflect on how much data AI needs to feel “personal” and consider the trade-offs between personalization and privacy.
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Print copies of each Exploration Guide and set them up as stations.
+* #### Ensure students bring their Milestone 4 Learning Log and KWL Chart.
+* #### Preview anonymization activities in Sketch Lab.
+* #### Plan time for group discussion and synthesis.
+
+### 💡 **Tips for Teaching**:
+* #### Push students to explain why a data point belongs in a specific category.
+* #### Encourage discussion about how multiple harmless details can combine into sensitive information.
+* #### Reinforce that AI inference is powered by pattern recognition, not intention.
+* 
+___
+
+#### **Up Next**: Preview *only* the Sketch Lab levels for Lesson 7 to get an idea of what students will create.
+MARKDOWN

@@ -33,6 +33,7 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDialogControl} from '../lab2/views/dialogs';
@@ -41,6 +42,7 @@ import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
+import useSketchlabShepherdTour from './useSketchlabShepherdTour';
 import {
   handleSaveToBackpack,
   generateNewExternalFiles,
@@ -326,6 +328,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
+    experiments.SHEPHERD_PRODUCT_TOURS
+  );
+  useSketchlabShepherdTour();
+
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
@@ -333,9 +340,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        <IntroJSTourWrapper enabled={true}>
-          <SketchlabTourSteps />
-        </IntroJSTourWrapper>
+        {!showShepherdProductTours && (
+          <IntroJSTourWrapper enabled={true}>
+            <SketchlabTourSteps />
+          </IntroJSTourWrapper>
+        )}
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}

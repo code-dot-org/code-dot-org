@@ -1,8 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
 import {getFolderPath} from '@codebridge/utils';
-import {Typography} from '@mui/material';
+import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -120,15 +119,16 @@ const AiTutorVersionFileChip: React.FC<AiTutorVersionFileChipProps> = ({
               direction: 'onTop',
             }}
           >
-            <Button
+            <MuiIconButton
+              variant="text"
+              color="tertiary"
+              size="extraSmall"
               onClick={handlePreviewClick}
               aria-label={`Preview ${file.name}`}
-              size="xs"
-              type="tertiary"
-              color="gray"
-              isIconOnly={true}
-              icon={{iconName: 'eye', iconStyle: 'solid'}}
-            />
+              type="button"
+            >
+              <FontAwesomeV6Icon iconName="eye" iconStyle="solid" />
+            </MuiIconButton>
           </WithTooltip>
         </span>
       )}

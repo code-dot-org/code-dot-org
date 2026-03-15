@@ -1,0 +1,8 @@
+name 'aid-thinking-critically-lesson7-level3_2026-test_2026-pilot'
+display_name 'Safety & Privacy Mini-Lessons'
+description 'Select one of the mini-lessons below to explore in order to gain more understanding and awareness about maintaining safety and privacy in an age of AI'
+
+sublevels
+level 'aid-thinking-critically-lesson7-level3a_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson7-level3b_2026-test_2026-pilot'
+level 'aid-thinking-critically-lesson7-level3d_2026-test_2026-pilot'

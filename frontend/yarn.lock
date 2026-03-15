@@ -1341,6 +1341,7 @@ __metadata:
     eslint: "npm:^9.39.1"
     eslint-plugin-react-hooks: "npm:^7.0.1"
     eslint-plugin-react-refresh: "npm:^0.4.24"
+    ky: "npm:^1.14.3"
     prettier: "npm:3.4.2"
     react: "npm:^19.2.0"
     tldts: "npm:^7.0.23"
@@ -1350,6 +1351,7 @@ __metadata:
     vite-plugin-externalize-deps: "npm:^0.10.0"
     vitest: "npm:^4.0.17"
   peerDependencies:
+    ky: ^1.14.3
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: unknown
   linkType: soft
@@ -1522,6 +1524,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.2.0"
     eslint-plugin-react-refresh: "npm:^0.4.22"
     globals: "npm:^16.4.0"
+    ky: "npm:^1.14.3"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
     typescript: "npm:~5.9.3"
@@ -11780,9 +11783,9 @@ __metadata:
   linkType: hard
 
 "flatted@npm:^3.2.9, flatted@npm:^3.3.2":
-  version: 3.3.3
-  resolution: "flatted@npm:3.3.3"
-  checksum: 10c0/e957a1c6b0254aa15b8cce8533e24165abd98fadc98575db082b786b5da1b7d72062b81bfdcd1da2f4d46b6ed93bec2434e62333e9b4261d79ef2e75a10dd538
+  version: 3.4.1
+  resolution: "flatted@npm:3.4.1"
+  checksum: 10c0/3987a7f1e39bc7215cece001354313b462cdb4fb2dde0df4f7acd9e5016fbae56ee6fb3f0870b2150145033be8bda4f01af6f87a00946049651131bbfca7dfa6
   languageName: node
   linkType: hard
 
@@ -14945,6 +14948,13 @@ __metadata:
   version: 0.30.0
   resolution: "ky@npm:0.30.0"
   checksum: 10c0/ad77939194804dc02a5a4d6708cbf0402cd265627b23dd2a8407f1d57640f3f13d088ae9355cc5f15525aeb50b1231309f9ca09fe2822eace86709e6232b3f79
+  languageName: node
+  linkType: hard
+
+"ky@npm:^1.14.3":
+  version: 1.14.3
+  resolution: "ky@npm:1.14.3"
+  checksum: 10c0/8e91c9512c8f1501201108ad58ed437eaf3f5b0a0da842bd846d785932426e84a31cf51d0fffce1921d4e70e26465a9b2b89ed2477822975568258a1fa68a740
   languageName: node
   linkType: hard
 

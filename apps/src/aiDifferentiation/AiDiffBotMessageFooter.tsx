@@ -1,4 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {IconButton as MuiIconButton} from '@mui/material';
 import {PDFDownloadLink} from '@react-pdf/renderer';
 import React, {useState} from 'react';
 
@@ -94,73 +95,77 @@ const AiDiffBotMessageFooter: React.FC<Props> = ({message, reportingData}) => {
           document={<AiDiffPdf messages={[message]} />}
           fileName="ai_differentiation_message.pdf"
         >
-          <Button
-            aria-label={commonI18n.aiDifferentiation_download_pdf()}
-            onClick={() => {
-              setPdfTimeout(true);
-              setTimeout(() => setPdfTimeout(false), CONFIRM_TIMEOUT_MS);
-            }}
-            disabled={pdfTimeout}
+          <MuiIconButton
+            variant="contained"
             color="white"
-            size="xs"
-            isIconOnly
-            icon={{
-              iconStyle: 'solid',
-              iconName: pdfTimeout ? 'check' : 'download',
-            }}
-            type="primary"
+            size="extraSmall"
+            disabled={pdfTimeout}
             className={
               pdfTimeout
                 ? style.messageFeedbackConfirm
                 : style.messageFeedbackButton
             }
-          />
+            onClick={() => {
+              setPdfTimeout(true);
+              setTimeout(() => setPdfTimeout(false), CONFIRM_TIMEOUT_MS);
+            }}
+            aria-label={commonI18n.aiDifferentiation_download_pdf()}
+            type="button"
+          >
+            <FontAwesomeV6Icon
+              iconStyle="solid"
+              iconName={pdfTimeout ? 'check' : 'download'}
+            />
+          </MuiIconButton>
         </PDFDownloadLink>
       </div>
       <div className={style.messageFeedbackRight}>
         {commonI18n.aiFeedbackQuestion()}
-        <Button
-          aria-label={commonI18n.aiDifferentiationThumbsUp()}
-          onClick={() => onFeedbackClick(!thumbsUp, false, flagged)}
+        <MuiIconButton
+          variant="contained"
           color="white"
-          size="xs"
-          isIconOnly
-          icon={{iconStyle: 'regular', iconName: 'thumbs-up'}}
-          type="primary"
+          size="extraSmall"
           className={
             thumbsUp
               ? style.messageFeedbackConfirm
               : style.messageFeedbackButton
           }
-        />
-        <Button
-          aria-label={commonI18n.aiDifferentiationThumbsDown()}
-          onClick={() => onFeedbackClick(false, !thumbsDown, flagged)}
+          onClick={() => onFeedbackClick(!thumbsUp, false, flagged)}
+          aria-label={commonI18n.aiDifferentiationThumbsUp()}
+          type="button"
+        >
+          <FontAwesomeV6Icon iconStyle="regular" iconName="thumbs-up" />
+        </MuiIconButton>
+        <MuiIconButton
+          variant="contained"
           color="white"
-          size="xs"
-          isIconOnly
-          icon={{iconStyle: 'regular', iconName: 'thumbs-down'}}
-          type="primary"
+          size="extraSmall"
           className={
             thumbsDown
               ? style.messageFeedbackNegative
               : style.messageFeedbackButton
           }
-        />
-        <Button
-          aria-label={commonI18n.aiDifferentiationFlag()}
-          onClick={() => onFeedbackClick(thumbsUp, thumbsDown, !flagged)}
+          onClick={() => onFeedbackClick(false, !thumbsDown, flagged)}
+          aria-label={commonI18n.aiDifferentiationThumbsDown()}
+          type="button"
+        >
+          <FontAwesomeV6Icon iconStyle="regular" iconName="thumbs-down" />
+        </MuiIconButton>
+        <MuiIconButton
+          variant="contained"
           color="white"
-          size="xs"
-          isIconOnly
-          icon={{iconStyle: 'regular', iconName: 'flag-pennant'}}
-          type="primary"
+          size="extraSmall"
           className={
             flagged
               ? style.messageFeedbackNegative
               : style.messageFeedbackButton
           }
-        />
+          onClick={() => onFeedbackClick(thumbsUp, thumbsDown, !flagged)}
+          aria-label={commonI18n.aiDifferentiationFlag()}
+          type="button"
+        >
+          <FontAwesomeV6Icon iconStyle="regular" iconName="flag-pennant" />
+        </MuiIconButton>
       </div>
     </div>
   );
