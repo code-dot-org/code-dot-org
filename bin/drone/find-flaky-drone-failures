@@ -5,9 +5,10 @@
 # Usage:
 # - `./bin/drone/find-flaky-drone-failures` (defaults to searching the past month)
 # - `./bin/drone/find-flaky-drone-failures --days=7` (search back 7 days)
+# - `./bin/drone/find-flaky-drone-failures --months=1 --end-date=2025-11-30` (search Nov 1 through Nov 30 of 2025)
 #
 # Outputs:
-# - a report to: ./bin/drone-find-flaky-drone-failures/flaky-runs/flaky-drone-failures.md
+# - a report to: ./bin/drone/flaky-runs/flaky-drone-failures.md
 # - for each flaky run found, a subdir of flaky-runs/ which includes a build.log for easier local grepping
 
 $VERBOSE = nil
@@ -35,7 +36,7 @@ LEGACY_ALL_UI_REPORTS_FILENAME = "all-flaky-ui-test-reports.md".freeze
 
 def build_option_parser(options)
   OptionParser.new do |opts|
-    opts.banner = "Usage: #{File.basename(__FILE__)} [--months=N] [--days=N]"
+    opts.banner = "Usage: #{File.basename(__FILE__)} [--months=N] [--days=N] [--end-date=YYYY-MM-DD]"
 
     opts.on("--months=N", Integer, "Search N months back (default: 1)") do |months|
       raise OptionParser::InvalidArgument, "months must be positive" unless months.positive?
@@ -48,6 +49,12 @@ def build_option_parser(options)
       raise OptionParser::InvalidArgument, "days must be positive" unless days.positive?
 
       options[:days] = days
+    end
+
+    opts.on("--end-date=YYYY-MM-DD", String, "Use the end of this local date instead of now") do |end_date|
+      options[:end_date] = Date.iso8601(end_date)
+    rescue Date::Error
+      raise OptionParser::InvalidArgument, "end-date must be in YYYY-MM-DD format"
     end
 
     opts.on("-h", "--help", "Print this help") do
@@ -67,16 +74,31 @@ def drone_token
   end
 end
 
-def cutoff_time(months)
-  now = Time.now
-  cutoff_date = now.to_date << months
-  Time.new(cutoff_date.year, cutoff_date.month, cutoff_date.day, now.hour, now.min, now.sec, now.utc_offset)
+def end_of_day(date)
+  Time.local(date.year, date.month, date.day, 23, 59, 59)
 end
 
-def lookback_cutoff(options)
-  return Time.now - (options[:days] * 86_400) if options[:days]
+def beginning_of_day(date)
+  Time.local(date.year, date.month, date.day, 0, 0, 0)
+end
 
-  cutoff_time(options[:months])
+def search_end_time(options)
+  return end_of_day(options[:end_date]) if options[:end_date]
+
+  Time.now
+end
+
+def cutoff_time(months, end_time)
+  cutoff_date = end_time.to_date << months
+  Time.new(cutoff_date.year, cutoff_date.month, cutoff_date.day, end_time.hour, end_time.min, end_time.sec, end_time.utc_offset)
+end
+
+def lookback_cutoff(options, end_time)
+  return beginning_of_day(options[:end_date] - options[:days]) if options[:days] && options[:end_date]
+  return end_time - (options[:days] * 86_400) if options[:days]
+  return beginning_of_day(options[:end_date] << options[:months]) if options[:end_date]
+
+  cutoff_time(options[:months], end_time)
 end
 
 def build_url(build_number)
@@ -116,7 +138,7 @@ def fetch_build_history(cutoff)
   builds
 end
 
-def flaky_matches(builds, cutoff)
+def flaky_matches(builds, cutoff, end_time)
   builds.
     select {|build| relevant_build?(build)}.
     group_by {|build| build_group_key(build)}.
@@ -132,8 +154,10 @@ def flaky_matches(builds, cutoff)
         # On the live Drone server, observed reruns keep parent=nil and version is
         # just a row update counter, so detect reruns by matching stable build
         # metadata and looking for the trigger changing from "@hook" to the author.
+        passed_created = Time.at(passed_build.fetch(:created, 0).to_i)
         next unless passed_build[:trigger] == passed_build[:author_login]
-        next unless Time.at(passed_build.fetch(:created, 0).to_i) >= cutoff
+        next unless passed_created >= cutoff
+        next unless passed_created <= end_time
 
         {failed: failed_build, passed: passed_build}
       end
@@ -310,9 +334,9 @@ def materialize_flaky_runs(matches)
   File.write(flaky_failures_path, flaky_failures_markdown(ui_report_entries))
 end
 
-def print_matches(matches, cutoff)
+def print_matches(matches, cutoff, end_time)
   if matches.empty?
-    puts "No flaky Drone reruns found since #{cutoff.iso8601}."
+    puts "No flaky Drone reruns found between #{cutoff.iso8601} and #{end_time.iso8601}."
     return
   end
 
@@ -351,12 +375,13 @@ def main(argv)
   parser.parse!(argv)
   raise OptionParser::InvalidOption, argv.join(" ") unless argv.empty?
 
-  cutoff = lookback_cutoff(options)
+  end_time = search_end_time(options)
+  cutoff = lookback_cutoff(options, end_time)
   builds = fetch_build_history(cutoff)
-  matches = flaky_matches(builds, cutoff)
+  matches = flaky_matches(builds, cutoff, end_time)
 
   materialize_flaky_runs(matches)
-  print_matches(matches, cutoff)
+  print_matches(matches, cutoff, end_time)
   print_report_location
 rescue OptionParser::ParseError => exception
   warn exception.message
