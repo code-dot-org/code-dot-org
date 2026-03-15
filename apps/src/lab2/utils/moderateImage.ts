@@ -37,7 +37,11 @@ export const moderateImage = async (
   }
   const dimensions = [{name: 'UploaderType', value: uploaderType}];
   MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
-  analyticsReporter.sendEvent(moderateEvent, {UploaderType: uploaderType});
+  analyticsReporter.sendEvent(moderateEvent, {
+    UploaderType: uploaderType,
+    appName,
+    levelPath: window.location.pathname,
+  });
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
@@ -48,7 +52,11 @@ export const moderateImage = async (
       return 'ok';
     }
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
-    analyticsReporter.sendEvent(flaggedEvent, {UploaderType: uploaderType});
+    analyticsReporter.sendEvent(flaggedEvent, {
+      UploaderType: uploaderType,
+      appName,
+      levelPath: window.location.pathname,
+    });
     return 'flagged';
   } catch (error) {
     MetricsReporter.logError('Error with image moderation: ' + error);
