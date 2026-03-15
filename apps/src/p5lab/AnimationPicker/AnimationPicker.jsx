@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import {moderateImage} from '@cdo/apps/lab2/utils/moderateImage';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -213,7 +214,7 @@ class AnimationPicker extends React.Component {
       return;
     }
     this.getImageDimensions(file)
-      .then(({width, height}) => {
+      .then(async ({width, height}) => {
         if (width < 128 || height < 128) {
           // We skip moderation of small images because Azure Content Moderator has a minimum
           // requirement for their evaluate endpoint.
@@ -222,69 +223,20 @@ class AnimationPicker extends React.Component {
           return;
         }
 
-        this.setState({
-          pendingUploadData: data,
-        });
+        this.setState({pendingUploadData: data});
 
-        MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', [
-          {name: 'AppName', value: this.props.projectType || 'unknown'},
-          {name: 'UploaderType', value: 'AnimationPicker'},
-        ]);
-        analyticsReporter.sendEvent(EVENTS.MODERATE_CUSTOM_IMAGE, {
-          UploaderType: 'Animation Picker',
-          ProjectType: this.props.projectType,
-        });
-
-        HttpClient.post(`/v3/images/moderate`, file, true, {
-          'Content-Type': file.type,
-        })
-          .then(response => {
-            if (!response.ok) {
-              MetricsReporter.logError(
-                'Error with image moderation: HTTP error'
-              );
-              MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
-                {name: 'AppName', value: this.props.projectType || 'unknown'},
-                {name: 'UploaderType', value: 'AnimationPicker'},
-              ]);
-              this.props.onUploadError(msg.animationPicker_uploadingError());
-              return null;
-            }
-            return response.json();
-          })
-          .then(json => {
-            if (!json) return; // Skip if an HTTP error occurred.
-
-            MetricsReporter.incrementCounter('ModerateCustomImage.Success', [
-              {name: 'AppName', value: this.props.projectType || 'unknown'},
-              {name: 'UploaderType', value: 'AnimationPicker'},
-            ]);
-            // If rating is not 'everyone' or 'unknown', then flag project for image moderation.
-            if (json.rating !== 'everyone' && json.rating !== 'unknown') {
-              this.setState({
-                showFlaggedModal: true,
-              });
-              analyticsReporter.sendEvent(EVENTS.FLAGGED_CUSTOM_IMAGE, {
-                UploaderType: 'Animation Picker',
-                ProjectType: this.props.projectType,
-              });
-              MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', [
-                {name: 'AppName', value: this.props.projectType || 'unknown'},
-                {name: 'UploaderType', value: 'AnimationPicker'},
-              ]);
-            } else {
-              // If the image is rated 'everyone' or 'unknown', continue with upload.
-              this.props.onUploadStart(this.state.pendingUploadData);
-            }
-          })
-          .catch(err => {
-            this.props.onUploadError(msg.animationPicker_uploadingError());
-            MetricsReporter.logError('Error with image moderation: ' + err);
-            MetricsReporter.incrementCounter('ModerateCustomImage.Error', [
-              {name: 'AppName', value: this.props.projectType || 'unknown'},
-              {name: 'UploaderType', value: 'AnimationPicker'},
-            ]);
-          });
+        const ext = file.name.split('.').pop()?.toLowerCase() || '';
+        const moderationStatus = await moderateImage(
+          file,
+          ext,
+          this.props.projectType,
+          {uploaderType: 'AnimationPicker'}
+        );
+        if (moderationStatus === 'flagged') {
+          this.setState({showFlaggedModal: true});
+        } else {
+          this.props.onUploadStart(this.state.pendingUploadData);
+        }
       })
       .catch(err => {
         MetricsReporter.logError('Error getting image dimensions: ' + err);

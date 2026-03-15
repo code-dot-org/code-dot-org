@@ -1,13 +1,20 @@
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {WEBLAB2_IMAGE_FILE_TYPES} from '@cdo/apps/weblab2/constants';
 
-const LAB2_LABS_MODERATE_IMAGES = ['weblab2', 'aichat'];
+const LABS_WITH_IMAGE_MODERATION = [
+  'weblab2',
+  'aichat',
+  'gamelab',
+  'spritelab',
+  'poetry',
+];
+
+const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 
 interface AnalyticsData {
-  uploaderType?: 'Lab2FileUploader' | 'n/a';
+  uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
 }
@@ -23,30 +30,29 @@ export const moderateImage = async (
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
   if (
-    !LAB2_LABS_MODERATE_IMAGES.includes(appName ?? '') ||
-    !WEBLAB2_IMAGE_FILE_TYPES.includes(ext)
+    !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
+    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(ext)
   ) {
     return 'skipped';
   }
-  const metricsReporter = Lab2Registry.getInstance().getMetricsReporter();
   const dimensions = [{name: 'UploaderType', value: uploaderType}];
-  metricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
-  sendLab2AnalyticsEvent(moderateEvent, {UploaderType: uploaderType});
+  MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
+  analyticsReporter.sendEvent(moderateEvent, {UploaderType: uploaderType});
   try {
     const response = await HttpClient.post(`/v3/images/moderate`, file, true, {
       'Content-Type': file.type || 'application/octet-stream',
     });
     const json = await response.json();
-    metricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
+    MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
     }
-    metricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
-    sendLab2AnalyticsEvent(flaggedEvent, {UploaderType: uploaderType});
+    MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
+    analyticsReporter.sendEvent(flaggedEvent, {UploaderType: uploaderType});
     return 'flagged';
   } catch (error) {
-    metricsReporter.logError('Error with image moderation: ' + error);
-    metricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
+    MetricsReporter.logError('Error with image moderation: ' + error);
+    MetricsReporter.incrementCounter('ModerateCustomImage.Error', dimensions);
     return 'skipped';
   }
 };
