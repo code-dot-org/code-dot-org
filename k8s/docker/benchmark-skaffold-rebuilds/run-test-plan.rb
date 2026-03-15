@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require 'fileutils'
+require 'optparse'
 require 'open3'
 require 'pathname'
 require 'securerandom'
@@ -15,6 +16,24 @@ TEST_PLAN_PATH = SCRIPT_DIR / 'cache-miss-test-plan.json'
 CACHE_MISS_DAILY_ODDS_PATH = SCRIPT_DIR / 'daily-odds-of-file-change.json'
 RUN_ID_LENGTH = 4
 BUILD_COMMAND = %w[skaffold build].freeze
+
+def parse_options
+  options = {}
+
+  OptionParser.new do |parser|
+    parser.banner = 'Usage: run-test-plan.rb --description=TEXT'
+    parser.on('--description=TEXT', 'Short description of this benchmark run') do |description|
+      stripped = description.strip
+      raise OptionParser::InvalidArgument, 'description must not be empty' if stripped.empty?
+
+      options[:description] = stripped
+    end
+  end.parse!
+
+  raise OptionParser::MissingArgument, '--description=TEXT is required' unless options.key?(:description)
+
+  options
+end
 
 def random_run_id
   SecureRandom.alphanumeric(RUN_ID_LENGTH).downcase
@@ -135,15 +154,20 @@ def summary_day(day_number, modify_paths, duration, log_path, success)
 end
 
 def main
+  options = parse_options
   plan = CacheMissTestPlanSupport.load_test_plan(TEST_PLAN_PATH)
   run_id = random_run_id
-  run_dir = SCRIPT_DIR / "cache-test-run-#{run_id}"
-  summary_path = run_dir / "cache-test-run-#{run_id}.json"
+  run_dir = SCRIPT_DIR / "test-run-#{run_id}"
+  run_test_plan_path = run_dir / TEST_PLAN_PATH.basename
+  description_path = run_dir / 'description.txt'
+  summary_path = run_dir / "test-run-#{run_id}.json"
   snapshots = snapshot_modified_files(plan)
   day_results = []
   warm_cache_build = nil
 
   FileUtils.mkdir_p(run_dir)
+  CacheMissTestPlanSupport.write_pretty_json(run_test_plan_path, plan)
+  description_path.write(options.fetch(:description) + "\n")
   snapshot_test_dockerfiles(run_dir)
 
   begin
@@ -179,6 +203,7 @@ def main
 
   summary = {
     'run_id' => run_id,
+    'description' => options.fetch(:description),
     'days_tested' => day_results.length,
     'total_build_time_seconds' => day_results.sum {|day| day.fetch('build_time_seconds')}.round(6),
     'warm_cache_build' => warm_cache_build,
