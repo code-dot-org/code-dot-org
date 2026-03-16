@@ -58,9 +58,9 @@ Scenario: Navigate from unit edit page for migrated unit to lesson edit page
   And I view the temp unit edit page
 
   # Open the lesson edit page
-  And I wait until element ".fa-pencil" is visible
-  Then I scroll the ".fa-pencil" element into view
-  And I click ".fa-pencil"
+  And I wait until element ".fa-pen" is visible
+  Then I scroll the ".fa-pen" element into view
+  And I click ".fa-pen"
   And I switch tabs
   And I wait until element "#edit-container" is visible
 

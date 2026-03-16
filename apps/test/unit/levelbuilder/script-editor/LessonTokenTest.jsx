@@ -69,8 +69,8 @@ describe('LessonToken', () => {
           allowMajorCurriculumChanges={false}
         />
       );
-      expect(wrapper.find('.fa-arrows-v').length).toBe(0);
-      expect(wrapper.find('.fa-times').length).toBe(0);
+      expect(wrapper.find('.fa-up-down').length).toBe(0);
+      expect(wrapper.find('.fa-xmark').length).toBe(0);
     });
 
     it('show movement and deleting buttons when allowed to make major curriculum changes', () => {
@@ -87,7 +87,7 @@ describe('LessonToken', () => {
     it('renders existing lesson with edit and clone buttons', () => {
       const wrapper = shallow(<LessonTokenContents {...defaultProps} />);
       expect(wrapper.contains('Lesson 1')).toBe(true);
-      expect(wrapper.find('.fa-pencil').length).toBe(1);
+      expect(wrapper.find('.fa-pen').length).toBe(1);
       expect(wrapper.find('.fa-clone').length).toBe(1);
       expect(wrapper.contains('assessment')).toBe(true);
     });
@@ -106,8 +106,8 @@ describe('LessonToken', () => {
       );
       // New Lesson
       expect(wrapper.contains('New Lesson')).toBe(true);
-      // fa-pencil
-      expect(wrapper.find('.fa-pencil').length).toBe(0);
+      // fa-pen
+      expect(wrapper.find('.fa-pen').length).toBe(0);
       // fa-clone
       expect(wrapper.find('.fa-clone').length).toBe(0);
     });
