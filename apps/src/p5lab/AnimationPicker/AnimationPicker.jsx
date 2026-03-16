@@ -177,71 +177,45 @@ class AnimationPicker extends React.Component {
     );
   }
 
-  getImageDimensions = file => {
-    return new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.onload = () => {
-        const img = new Image();
-        img.onload = () => {
-          resolve({width: img.width, height: img.height});
-        };
-        img.onerror = reject;
-        img.src = reader.result;
-      };
-      reader.onerror = reject;
-      reader.readAsDataURL(file);
-    });
-  };
-
   /**
    * Send the uploaded image file to be moderated. Then continue with uploadStart.
    */
-  handleModeratedUploadStart = data => {
+  handleModeratedUploadStart = async data => {
     const file = data?.files?.[0];
     if (!file) {
       console.error('No file found in upload data.');
       return;
     }
-    if (data.files[0].size >= MAX_UPLOAD_SIZE) {
+    if (file.size >= MAX_UPLOAD_SIZE) {
       this.props.onUploadError(msg.animationPicker_unsupportedSize());
       return;
     }
-    if (
-      data.files[0].type !== 'image/png' &&
-      data.files[0].type !== 'image/jpeg'
-    ) {
+    if (file.type !== 'image/png' && file.type !== 'image/jpeg') {
       this.props.onUploadError(msg.animationPicker_unsupportedType());
       return;
     }
-    this.getImageDimensions(file)
-      .then(async ({width, height}) => {
-        if (width < 128 || height < 128) {
-          // We skip moderation of small images because Azure Content Moderator has a minimum
-          // requirement for their evaluate endpoint.
-          // TODO: resize small images and then moderate. https://codedotorg.atlassian.net/browse/SL-1367
-          this.props.onUploadStart(data);
-          return;
-        }
 
-        this.setState({pendingUploadData: data});
+    this.setState({pendingUploadData: data});
 
-        const ext = file.name.split('.').pop()?.toLowerCase() || '';
-        const moderationStatus = await moderateImage(
-          file,
-          ext,
-          this.props.projectType,
-          {uploaderType: 'AnimationPicker'}
-        );
-        if (moderationStatus === 'flagged') {
-          this.setState({showFlaggedModal: true});
-        } else {
-          this.props.onUploadStart(this.state.pendingUploadData);
+    try {
+      const ext = file.name.split('.').pop()?.toLowerCase() || '';
+      const moderationStatus = await moderateImage(
+        file,
+        ext,
+        this.props.projectType,
+        {
+          uploaderType: 'AnimationPicker',
         }
-      })
-      .catch(err => {
-        MetricsReporter.logError('Error getting image dimensions: ' + err);
-        this.props.onUploadError(msg.animationPicker_uploadingError());
-      });
+      );
+      if (moderationStatus === 'flagged') {
+        this.setState({showFlaggedModal: true});
+      } else {
+        this.props.onUploadStart(this.state.pendingUploadData);
+      }
+    } catch (err) {
+      MetricsReporter.logError('Error moderating uploaded image: ' + err);
+      this.props.onUploadError(msg.animationPicker_uploadingError());
+    }
   };
 
   handleAcceptFlaggedImage = () => {
