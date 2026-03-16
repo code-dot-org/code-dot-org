@@ -19,7 +19,7 @@ const mediaTypeToExtensionMap: Record<string, string> = {
 
 // Derived reverse map. `jpeg` is added as an alias since both `jpg` and
 // `jpeg` are valid extensions for `image/jpeg`.
-const extensionToMediaType: Record<string, string> = {
+const extensionToMediaTypeMap: Record<string, string> = {
   ...Object.fromEntries(
     Object.entries(mediaTypeToExtensionMap).map(([type, ext]) => [ext, type])
   ),
@@ -72,7 +72,7 @@ export async function assetToFilePart(
 
   const mediaType =
     response.headers.get('content-type') ||
-    extensionToMediaType[extension] ||
+    extensionToMediaTypeMap[extension] ||
     'application/octet-stream';
 
   return {
