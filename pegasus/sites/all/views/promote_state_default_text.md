@@ -1,1 +1,0 @@
-Computer science is driving job growth and innovation throughout our economy and society. More than half of projected jobs in STEM ﬁelds are in computing occupations. Despite this, computer science education is marginalized throughout our K-12 education system, denying access to this critical knowledge, especially among underrepresented groups. 

@@ -30,10 +30,11 @@ export interface BreadcrumbsProps {
  * * (see ./__tests__/Breadcrumbs.test.tsx)
  * * (?) passes accessibility checks;
  *
- * ### Status: ```Ready for dev```
+ * ### Status: ```DEPRECATED```
  *
- * Design System: Breadcrumbs Component.
- * It Can be used to render Breadcrumbs or as a part of bigger/more complex components (e.g. forms).
+ * @deprecated Use MUI `Breadcrumbs` from `@mui/material` instead.
+ * Style overrides are in `src/themes/code.org/styleOverrides/breadcrumbs.ts`.
+ * Custom size prop augmented (`xs`, `s`, `m`, `l`).
  */
 const Breadcrumbs: React.FunctionComponent<BreadcrumbsProps> = ({
   breadcrumbs,

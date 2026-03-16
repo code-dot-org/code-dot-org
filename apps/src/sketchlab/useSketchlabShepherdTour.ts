@@ -1,9 +1,9 @@
 import {offset} from '@floating-ui/dom';
 import {useEffect, useMemo, useState} from 'react';
 
+import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import experiments from '@cdo/apps/util/experiments';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
@@ -79,7 +79,7 @@ const useSketchlabShepherdTour = () => {
     []
   );
 
-  const {tour} = useProductTour({
+  const {tour} = useLab2ProductTour({
     getSteps: createSketchlabTourSteps,
     localStorageKey: SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
     tourAvailable: showShepherdProductTours && isToolbarReady,

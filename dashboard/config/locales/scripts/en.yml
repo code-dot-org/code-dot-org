@@ -10317,6 +10317,8 @@ en:
               name: Step 5 Project Design Prototype
             lesson-25:
               name: Edit modes
+            lesson-26:
+              name: Lesson 3 exploration
           lesson_groups:
             lessonGroup-2:
               display_name: Cyber
@@ -25940,8 +25942,20 @@ en:
             - Evaluate the impact of algorithmic filtering by analyzing how design choices affect fairness, transparency, inclusivity, and user trust.
             - Make informed coding decisions by documenting when they adapt suggested code and when they write or refactor loop logic independently, justifying how their choices supported clarity and control.
         designing-reliable-apps-with-ai-and-apis-pilot-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Pre-Assessment
+            lesson-2:
+              name: End of Unit Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
           name: designing-reliable-apps-with-ai-and-apis-pilot-2025
           title: Designing Reliable Apps with AI and APIs
           description_audience: ''
@@ -25950,7 +25964,9 @@ en:
           student_description: ''
         web-apps-with-ai-capstone-project-pilot-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: web-apps-with-ai-capstone-project-pilot-2025
           title: Web Apps with AI Capstone Project
           description_audience: ''

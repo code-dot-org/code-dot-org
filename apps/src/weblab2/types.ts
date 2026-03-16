@@ -30,6 +30,7 @@ export const AI_TUTOR_ANSWER_TYPES = [
   'buildCSS',
   'buildHTML',
   'buildJavaScript',
+  'buildJSON',
   'debug',
   'documentation',
   'example',
