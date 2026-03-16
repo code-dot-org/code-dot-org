@@ -671,19 +671,19 @@ export default class Craft {
 
   static executeUserCode() {
     if (Craft.initialConfig.level.edit_blocks) {
-      Craft.reportResult(true, true);
+      Craft.reportResult(true);
       return;
     }
 
     if (Craft.initialConfig.level.freePlay) {
       Craft.reportResult(true, true);
-    }
-
-    // Fail immediately for empty repeat blocks, etc.
-    const initialTestResults = studioApp().getTestResults(false);
-    if (Craft.isPreAnimationFailure(initialTestResults)) {
-      Craft.reportResult(false, true);
-      return;
+    } else {
+      // Fail immediately for empty repeat blocks, etc.
+      const initialTestResults = studioApp().getTestResults(false);
+      if (Craft.isPreAnimationFailure(initialTestResults)) {
+        Craft.reportResult(false);
+        return;
+      }
     }
 
     studioApp().playAudio('start');

@@ -514,18 +514,16 @@ Craft.runButtonClick = function () {
 
 Craft.executeUserCode = function () {
   if (Craft.initialConfig.level.edit_blocks) {
-    this.reportResult(true, true);
+    this.reportResult(true);
     return;
   }
 
   if (Craft.initialConfig.level.freePlay) {
     this.reportResult(true, true);
-  }
-
-  if (studioApp().hasUnwantedExtraTopBlocks()) {
+  } else if (studioApp().hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
-    this.reportResult(false, true);
+    this.reportResult(false);
     return;
   }
 
