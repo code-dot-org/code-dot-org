@@ -480,7 +480,7 @@ class JsDebugger extends React.Component {
           >
             <FontAwesome
               icon={
-                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
+                this.state.open ? 'circle-chevron-down' : 'circle-chevron-up'
               }
             />
           </button>
@@ -548,8 +548,8 @@ class JsDebugger extends React.Component {
                   id="hide-watcher"
                   icon={
                     this.state.watchersHidden
-                      ? 'chevron-circle-left'
-                      : 'chevron-circle-right'
+                      ? 'circle-chevron-left'
+                      : 'circle-chevron-right'
                   }
                 />
               </button>

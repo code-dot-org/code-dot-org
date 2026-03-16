@@ -176,7 +176,7 @@ class ProjectAppTypeArea extends React.Component {
           size="s"
           type="secondary"
           color="black"
-          iconLeft={{iconStyle: 'solid', iconName: 'chevron-circle-up'}}
+          iconLeft={{iconStyle: 'solid', iconName: 'circle-chevron-up'}}
         />
       </div>
     );
