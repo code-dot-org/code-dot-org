@@ -87,7 +87,7 @@ export async function generateChatResponse(
     const asset = await generatedFileToAsset(
       file,
       buildAssetUrl,
-      ALLOWED_IMAGE_FILE_EXTENSIONS
+      ALLOWED_IMAGE_FILE_EXTENSIONS // Currently only image files are supported.
     );
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
