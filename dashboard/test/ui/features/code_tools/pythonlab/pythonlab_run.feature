@@ -5,7 +5,7 @@ Feature: Python Lab run code
 
 Background:
   Given I create a student named "Penelope"
-  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?noIntrojs=true"
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/1?hideProductTours=true"
   And I wait to see "#uitest-codebridge-run"
   And I wait until "#uitest-codebridge-run" is not disabled
 
