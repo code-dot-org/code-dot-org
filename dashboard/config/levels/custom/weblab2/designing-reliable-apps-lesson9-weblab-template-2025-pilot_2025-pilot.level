@@ -1,0 +1,57 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:22.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Flight Search</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <section id=\"flight-search-container\">\n        <h1>Flight Search</h1>\n        \n        <form id=\"flight-form\">\n            <div>\n                <label for=\"departure-date\">Departure Date</label>\n                <input type=\"date\" id=\"departure-date\" name=\"departure-date\" required>\n            </div>\n\n            <div>\n                <label for=\"return-date\">Return Date</label>\n                <input type=\"date\" id=\"return-date\" name=\"return-date\">\n            </div>\n\n            <div>\n                <label for=\"passenger-count\">Passengers</label>\n                <input type=\"number\" id=\"passenger-count\" name=\"passenger-count\" min=\"1\" value=\"1\" required>\n            </div>\n\n            <div>\n                <button type=\"submit\">Find flights</button>\n            </div>\n        </form>\n    </section>\n\n    <div id=\"status-display\"></div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "/* --- Professional Results View --- */\n.results-container {\n    max-width: 850px; /* Wider container for better spacing */\n    margin: 20px auto;\n    text-align: left;\n    font-family: Arial, sans-serif;\n}\n\n.results-header {\n    font-size: 24px;\n    font-weight: 600;\n    margin-bottom: 4px;\n    color: #202124;\n}\n\n.results-subtext {\n    font-size: 14px;\n    color: #70757a;\n    margin-bottom: 24px;\n}\n\n/* The Card */\n.flight-row-card {\n    background: #fff;\n    border: 1px solid #dadce0;\n    border-radius: 12px; /* Slightly rounder for a modern look */\n    margin-bottom: 16px; /* Space between cards */\n    transition: box-shadow 0.2s ease-in-out;\n}\n\n.flight-row-card:hover {\n    box-shadow: 0 4px 12px rgba(60,64,67, 0.15);\n}\n\n.flight-main-content {\n    display: flex;\n    align-items: center;\n    padding: 24px; /* Increased from 16px for more breathing room */\n    justify-content: space-between;\n}\n\n/* Adjusted Column Widths for Spacing */\n.airline-col {\n    display: flex;\n    align-items: center;\n    flex: 2; /* Given more space to prevent text wrapping */\n    gap: 16px;\n}\n\n.fake-logo {\n    width: 36px;\n    height: 36px;\n    background: #1a73e8;\n    border-radius: 6px;\n    flex-shrink: 0;\n}\n\n.time-col { \n    flex: 2.5; \n    padding: 0 20px; /* Added internal padding to separate from neighbors */\n}\n\n.duration-col { \n    flex: 2; \n    text-align: left;\n}\n\n.price-col { \n    flex: 1.5; \n    text-align: right;\n    border-left: 1px solid #f1f3f4; /* Subtle divider before price */\n    padding-left: 20px;\n}\n\n/* Typography Polish */\n.airline-name-serious {\n    font-size: 15px;\n    font-weight: 500;\n    color: #3c4043;\n}\n\n.time-range {\n    font-size: 18px;\n    font-weight: 700;\n    color: #202124;\n    margin-bottom: 4px;\n}\n\n.route-details {\n    font-size: 14px;\n    color: #70757a;\n}\n\n.duration-text {\n    font-size: 15px;\n    display: block;\n    margin-bottom: 2px;\n}\n\n.stop-info {\n    font-size: 14px;\n    color: #188038;\n    font-weight: 600;\n}\n\n.flight-price {\n    display: block;\n    font-size: 22px;\n    font-weight: 700;\n    color: #188038;\n}\n\n.price-type {\n    font-size: 12px;\n    color: #70757a;\n}\n\n/* Card Footer */\n.flight-footer-link {\n    border-top: 1px solid #f1f3f4;\n    padding: 12px 24px;\n    font-size: 14px;\n    color: #1a73e8;\n    text-align: right;\n    font-weight: 500;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "language": "js",
+          "contents": "// Select the UI elements\nconst searchBtn = document.querySelector('.search-btn');\nconst plannerCard = document.querySelector('.planner-card');\nconst statusArea = document.getElementById('status-area');\n\n//TODO: 1. Select placeholders for Loading, Empty, and Error information\n\n\n\n/**\n * Main Async Function to handle flight search logic\n */\nasync function findFlights() {\n    // Hide the input form\n    plannerCard.style.display = 'none';\n    statusArea.style.display = 'block';\n\n    // TODO: 2. SET UP LOADING STATE\n\n\n  \n\n    try {\n        // Simulate network latency\n        await new Promise(resolve => setTimeout(resolve, 2000));\n\n        // Generate a random outcome\n        const outcome = Math.random();\n\n        if (outcome < 0.33) {\n            // SUCCESS PATH\n            const response = await fetch('flights.json');\n            if (!response.ok) throw new Error(\"Could not find the flight data file.\");\n            \n            const data = await response.json();\n            \n            // Hide the status area and render the actual list\n            statusArea.style.display = 'none';\n            renderFlightList(data.flights);\n\n        } else if (outcome < 0.66) {\n            // TODO: 3. SET UP EMPTY STATE\n\n\n          \n            \n        } else {\n            // ERROR PATH: This triggers the catch block below\n            throw new Error(\"Page doesn't load!\");\n        }\n\n    } catch (error) {\n        // TODO: 4. SET UP ERROR STATE\n\n\n      \n    }\n}\n\n/**\n * Renders the serious JSON data into a professional list view\n * NOTE: Do not modify this function.\n */\nfunction renderFlightList(flights) {\n    const resultsContainer = document.querySelector('#results-container');\n    resultsContainer.style.display = 'block';\n    \n    const flightList = document.querySelector('.flight-list');\n    flightList.innerText = \"\"; // Clear previous results\n\n    flights.forEach(f => {\n        const card = document.createElement(\"div\");\n        card.className = \"flight-row-card\";\n        \n        // Creating the structure without innerHTML\n        card.innerHTML = `\n            <div class=\"flight-main-content\">\n                <div class=\"airline-col\">\n                    <div class=\"fake-logo\"></div>\n                    <span class=\"airline-name-serious\">${f.airline}</span>\n                </div>\n                <div class=\"time-col\">\n                    <div class=\"time-range\">${f.time}</div>\n                    <div class=\"route-details\">${f.route.replace('→', '—')}</div>\n                </div>\n                <div class=\"duration-col\">\n                    <span class=\"duration-text\">7h 15m</span>\n                    <span class=\"stop-info\">• Nonstop</span>\n                </div>\n                <div class=\"price-col\">\n                    <span class=\"flight-price\">${f.price}</span>\n                    <span class=\"price-type\">roundtrip</span>\n                </div>\n            </div>\n            <div class=\"flight-footer-link\"><span>Flight details ⌄</span></div>\n        `;\n        flightList.appendChild(card);\n    });\n}\n\n/**\n * Resets the application to the initial search state\n */\nwindow.resetApp = function() {\n    const resultsContainer = document.querySelector('#results-container');\n    resultsContainer.style.display = 'none';\n    statusArea.style.display = 'none';\n    plannerCard.style.display = 'block';\n};\n\nsearchBtn.addEventListener('click', findFlights);",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "flights.json",
+          "language": "json",
+          "contents": "{\n  \"flights\": [\n    {\n      \"airline\": \"JetBlue\",\n      \"route\": \"JFK → LAX\",\n      \"time\": \"08:30 AM - 11:45 AM\",\n      \"price\": \"$114.00\",\n      \"status\": \"On Time\"\n    },\n    {\n      \"airline\": \"Delta Air Lines\",\n      \"route\": \"JFK → MIA\",\n      \"time\": \"11:15 AM - 02:30 PM\",\n      \"price\": \"$135.00\",\n      \"status\": \"Limited Seats\"\n    },\n    {\n      \"airline\": \"Frontier Airlines\",\n      \"route\": \"JFK → ORD\",\n      \"time\": \"02:00 PM - 03:45 PM\",\n      \"price\": \"$43.00\",\n      \"status\": \"On Time\"\n    },\n    {\n      \"airline\": \"American Airlines\",\n      \"route\": \"JFK → SFO\",\n      \"time\": \"05:45 PM - 09:15 PM\",\n      \"price\": \"$185.00\",\n      \"status\": \"On Time\"\n    }\n  ]\n}",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    },
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:22.348+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson9-weblab-template-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson9-weblab-template-2025-pilot\"}]"
+}]]></config>
+</Weblab2>

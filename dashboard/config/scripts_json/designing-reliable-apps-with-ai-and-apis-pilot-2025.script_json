@@ -2,13 +2,26 @@
   "script": {
     "name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "content_area": "curriculum_9_12",
+      "curriculum_umbrella": "AIF",
+      "has_unnumbered_lessons": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
+      "is_migrated": true,
+      "project_sharing": true,
+      "show_calendar": true,
+      "student_detail_progress_view": true,
+      "topic_tags": [
+        "ai"
+      ],
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-08 00:35:14 UTC",
+    "serialized_at": "2026-03-13 12:11:50 UTC",
     "hide_within_course": true,
     "published_state": "in_development",
     "instruction_type": null,
@@ -20,31 +33,3605 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-2",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Pre-Assessment"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "End of Unit Project"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "End of Unit Assessment"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Pre-Assessment",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Where Data Comes From",
+      "name": "Where Data Comes From",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Why Apps Wait",
+      "name": "Why Apps Wait",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Getting Data Online",
+      "name": "Getting Data Online",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Making Steps Clear",
+      "name": "Making Steps Clear",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Making Sense of Data",
+      "name": "Making Sense of Data",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Showing Data on the Page",
+      "name": "Showing Data on the Page",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "When Things Break",
+      "name": "When Things Break",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Catching Problems",
+      "name": "Catching Problems",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Keeping Users Informed",
+      "name": "Keeping Users Informed",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Local vs Live Data",
+      "name": "Local vs Live Data",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "Explore-Style App Project",
+      "name": "Explore-Style App Project",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "End of Unit Assessment",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d59a177b-a6bc-4169-874a-ecf26277e0ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae",
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "0ade1968-278a-4105-9703-cd7453fc13fd",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0ade1968-278a-4105-9703-cd7453fc13fd",
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "e85c10e1-6dd3-45a0-a844-0d228de41526",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e85c10e1-6dd3-45a0-a844-0d228de41526",
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "eed9ef9f-58bf-4235-8283-1715f9c08267",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eed9ef9f-58bf-4235-8283-1715f9c08267",
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "8f887029-dceb-4721-91de-811901cd9749",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f887029-dceb-4721-91de-811901cd9749",
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "28e35429-2882-4691-99b7-1f1fd7d1aa22",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "28e35429-2882-4691-99b7-1f1fd7d1aa22",
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "263e787c-4def-48dd-bfdf-1f83b7fdac93",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "263e787c-4def-48dd-bfdf-1f83b7fdac93",
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "f5663704-a466-4c47-97ef-5657dde82e85",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85",
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79",
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "725e5e85-31d8-4a5d-9343-73e812e68a4f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f",
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "96d4d783-8667-4619-84e4-6f8e9222620a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a",
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25",
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "a83aefa0-1830-4afb-a1fb-b6461bb6fc09",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a83aefa0-1830-4afb-a1fb-b6461bb6fc09",
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "44c42078-7d8d-438c-8364-c3374aa18fc6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44c42078-7d8d-438c-8364-c3374aa18fc6",
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "cb912c8d-f8d2-4179-96b1-5b3a6f12bf57",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb912c8d-f8d2-4179-96b1-5b3a6f12bf57",
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "74473074-2767-4c98-8851-88b30b1c8fda",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74473074-2767-4c98-8851-88b30b1c8fda",
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "9c954fef-22c3-4243-a744-e346f01c54e1",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9c954fef-22c3-4243-a744-e346f01c54e1",
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "691afdc7-7dc8-47ea-b118-0a744291c05b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "691afdc7-7dc8-47ea-b118-0a744291c05b",
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "610d0d73-ce8d-4f90-8781-2da89410a1b6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "610d0d73-ce8d-4f90-8781-2da89410a1b6",
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "39a472ad-7357-4872-a4ac-5cd15489f0bb",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "39a472ad-7357-4872-a4ac-5cd15489f0bb",
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    },
+    {
+      "key": "dd0d6140-6f9f-45c1-90df-d3079340a328",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd0d6140-6f9f-45c1-90df-d3079340a328",
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3a905908-5f40-4e86-953c-f8c9c0c6669b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: API"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a905908-5f40-4e86-953c-f8c9c0c6669b",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: JSON"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "08e09f7f-399f-4473-8408-493000cb0182",
+      "position": 3,
+      "properties": {
+        "progression_name": "Exploring the Network Panel"
+      },
+      "seeding_key": {
+        "activity_section.key": "08e09f7f-399f-4473-8408-493000cb0182",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "9a2ac1f2-42bd-477e-b421-26af86cddbcf",
+      "position": 4,
+      "properties": {
+        "progression_name": "Navigate a Weather App"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a2ac1f2-42bd-477e-b421-26af86cddbcf",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "08c88b33-0ba5-426b-bb8d-872c47bbf9a4",
+      "position": 5,
+      "properties": {
+        "progression_name": "Explore API Documentation"
+      },
+      "seeding_key": {
+        "activity_section.key": "08c88b33-0ba5-426b-bb8d-872c47bbf9a4",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "cbeb7702-dd25-4dc3-b753-9e469c629bf1",
+      "position": 6,
+      "properties": {
+        "progression_name": "Make a Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbeb7702-dd25-4dc3-b753-9e469c629bf1",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "72d92016-3310-4205-9e40-e31f42831d5d",
+      "position": 7,
+      "properties": {
+        "progression_name": "Modify an API Call"
+      },
+      "seeding_key": {
+        "activity_section.key": "72d92016-3310-4205-9e40-e31f42831d5d",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "f0c0579c-dc13-4df9-9b77-8229773e31cd",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f0c0579c-dc13-4df9-9b77-8229773e31cd",
+        "lesson_activity.key": "d59a177b-a6bc-4169-874a-ecf26277e0ae"
+      }
+    },
+    {
+      "key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Synchronous Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b",
+        "lesson_activity.key": "0ade1968-278a-4105-9703-cd7453fc13fd"
+      }
+    },
+    {
+      "key": "fa178839-b64d-4bb6-93ea-9e05c5799077",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Asynchronous Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa178839-b64d-4bb6-93ea-9e05c5799077",
+        "lesson_activity.key": "0ade1968-278a-4105-9703-cd7453fc13fd"
+      }
+    },
+    {
+      "key": "81b9c484-531f-4240-b04b-7f0b836fa060",
+      "position": 3,
+      "properties": {
+        "progression_name": "Demo: Run the Frozen App"
+      },
+      "seeding_key": {
+        "activity_section.key": "81b9c484-531f-4240-b04b-7f0b836fa060",
+        "lesson_activity.key": "0ade1968-278a-4105-9703-cd7453fc13fd"
+      }
+    },
+    {
+      "key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Analogy: Synchronous vs. Asynchronous "
+      },
+      "seeding_key": {
+        "activity_section.key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f",
+        "lesson_activity.key": "e85c10e1-6dd3-45a0-a844-0d228de41526"
+      }
+    },
+    {
+      "key": "3a6af926-e9de-4fb4-a242-7cea0cabae22",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Promise"
+      },
+      "seeding_key": {
+        "activity_section.key": "3a6af926-e9de-4fb4-a242-7cea0cabae22",
+        "lesson_activity.key": "eed9ef9f-58bf-4235-8283-1715f9c08267"
+      }
+    },
+    {
+      "key": "c73fe969-1efa-460e-b73d-3a9947443f82",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: .then() and .catch()"
+      },
+      "seeding_key": {
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82",
+        "lesson_activity.key": "8f887029-dceb-4721-91de-811901cd9749"
+      }
+    },
+    {
+      "key": "da6ec6cb-7055-47ba-bb4e-498c9177d32a",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Unboxing Rule"
+      },
+      "seeding_key": {
+        "activity_section.key": "da6ec6cb-7055-47ba-bb4e-498c9177d32a",
+        "lesson_activity.key": "8f887029-dceb-4721-91de-811901cd9749"
+      }
+    },
+    {
+      "key": "b8b2ce83-7c27-4549-a3e1-22a12079b0b3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Trace the Promise Chain"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8b2ce83-7c27-4549-a3e1-22a12079b0b3",
+        "lesson_activity.key": "8f887029-dceb-4721-91de-811901cd9749"
+      }
+    },
+    {
+      "key": "885128d0-b96b-48ac-ab48-02df8a3335be",
+      "position": 1,
+      "properties": {
+        "progression_name": "Build a Promise Chain"
+      },
+      "seeding_key": {
+        "activity_section.key": "885128d0-b96b-48ac-ab48-02df8a3335be",
+        "lesson_activity.key": "28e35429-2882-4691-99b7-1f1fd7d1aa22"
+      }
+    },
+    {
+      "key": "09c8189f-ba76-48eb-9232-8158857a0128",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: async / await"
+      },
+      "seeding_key": {
+        "activity_section.key": "09c8189f-ba76-48eb-9232-8158857a0128",
+        "lesson_activity.key": "263e787c-4def-48dd-bfdf-1f83b7fdac93"
+      }
+    },
+    {
+      "key": "74277a20-b9d0-41fa-80ee-8818e27d6fc1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Use AI to Refactor the Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "74277a20-b9d0-41fa-80ee-8818e27d6fc1",
+        "lesson_activity.key": "263e787c-4def-48dd-bfdf-1f83b7fdac93"
+      }
+    },
+    {
+      "key": "5493ae10-e845-4c8f-b241-3a2222f82523",
+      "position": 3,
+      "properties": {
+        "progression_name": "Manually Refactor the Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "5493ae10-e845-4c8f-b241-3a2222f82523",
+        "lesson_activity.key": "263e787c-4def-48dd-bfdf-1f83b7fdac93"
+      }
+    },
+    {
+      "key": "34b52363-eb6e-4da0-a3ab-12d12ccf59a9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Seeing the Shape of the JSON"
+      },
+      "seeding_key": {
+        "activity_section.key": "34b52363-eb6e-4da0-a3ab-12d12ccf59a9",
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85"
+      }
+    },
+    {
+      "key": "1c50acd2-911c-42a0-9ad7-af70c73e2479",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Dot Notation"
+      },
+      "seeding_key": {
+        "activity_section.key": "1c50acd2-911c-42a0-9ad7-af70c73e2479",
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85"
+      }
+    },
+    {
+      "key": "c73f24cb-a846-4612-9077-ed4538a80af5",
+      "position": 3,
+      "properties": {
+        "progression_name": "Trace a Dot-Notation Path"
+      },
+      "seeding_key": {
+        "activity_section.key": "c73f24cb-a846-4612-9077-ed4538a80af5",
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85"
+      }
+    },
+    {
+      "key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac",
+      "position": 4,
+      "properties": {
+        "progression_name": "Vocab: .map()"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac",
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85"
+      }
+    },
+    {
+      "key": "3c47d8ca-04cf-46f4-85c7-4cf31efc8b54",
+      "position": 5,
+      "properties": {
+        "progression_name": "Design a Mapped Object for the UI"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c47d8ca-04cf-46f4-85c7-4cf31efc8b54",
+        "lesson_activity.key": "f5663704-a466-4c47-97ef-5657dde82e85"
+      }
+    },
+    {
+      "key": "c00216a2-cf00-415e-a5fc-bb9099585e2a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Data-Driven Content"
+      },
+      "seeding_key": {
+        "activity_section.key": "c00216a2-cf00-415e-a5fc-bb9099585e2a",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "6339c074-0207-43c7-9db5-d9a43ec1c687",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Parsing JSON"
+      },
+      "seeding_key": {
+        "activity_section.key": "6339c074-0207-43c7-9db5-d9a43ec1c687",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "f84ce953-023b-48a7-b111-0d8fc9d8ade6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sketch Your Music App"
+      },
+      "seeding_key": {
+        "activity_section.key": "f84ce953-023b-48a7-b111-0d8fc9d8ade6",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "224e4003-9f72-41b0-aa72-2378d0fb1d20",
+      "position": 4,
+      "properties": {
+        "progression_name": "Design Your Web App"
+      },
+      "seeding_key": {
+        "activity_section.key": "224e4003-9f72-41b0-aa72-2378d0fb1d20",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "a72e0519-9352-4601-b6ba-c46b0fef6987",
+      "position": 5,
+      "properties": {
+        "progression_name": "Debug the Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "a72e0519-9352-4601-b6ba-c46b0fef6987",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "688a1292-5dd7-44b4-b288-75f749b470ba",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "688a1292-5dd7-44b4-b288-75f749b470ba",
+        "lesson_activity.key": "6cc520cf-4bc7-4af2-a71d-49b532f76f79"
+      }
+    },
+    {
+      "key": "73fd6ace-d865-4a3c-97f2-0049c0220a7c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Explore Error Handling"
+      },
+      "seeding_key": {
+        "activity_section.key": "73fd6ace-d865-4a3c-97f2-0049c0220a7c",
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f"
+      }
+    },
+    {
+      "key": "b3638ae4-74c5-4e66-82a6-05487d81fe10",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Network Failure"
+      },
+      "seeding_key": {
+        "activity_section.key": "b3638ae4-74c5-4e66-82a6-05487d81fe10",
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f"
+      }
+    },
+    {
+      "key": "341130af-528a-48d7-84e9-813e5b0877f1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Vocab: Server Failure"
+      },
+      "seeding_key": {
+        "activity_section.key": "341130af-528a-48d7-84e9-813e5b0877f1",
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f"
+      }
+    },
+    {
+      "key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Vocab: Invalid Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e",
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f"
+      }
+    },
+    {
+      "key": "5471bb8f-88f7-4ef7-af1b-0b1de74b1747",
+      "position": 5,
+      "properties": {
+        "progression_name": "Designing Recovery States"
+      },
+      "seeding_key": {
+        "activity_section.key": "5471bb8f-88f7-4ef7-af1b-0b1de74b1747",
+        "lesson_activity.key": "725e5e85-31d8-4a5d-9343-73e812e68a4f"
+      }
+    },
+    {
+      "key": "0a65ab6d-f426-4fbd-8c34-102802145380",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: try...catch"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a65ab6d-f426-4fbd-8c34-102802145380",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "d6c52e3c-9f37-4b87-8576-201fef55cae1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Vocab: Fallback"
+      },
+      "seeding_key": {
+        "activity_section.key": "d6c52e3c-9f37-4b87-8576-201fef55cae1",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "5850cb14-9620-49dd-8bdd-363a61e6820e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Predict and Run: Broken Fetch"
+      },
+      "seeding_key": {
+        "activity_section.key": "5850cb14-9620-49dd-8bdd-363a61e6820e",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "79e4b3e2-74cd-43c0-82a5-94e7630aafed",
+      "position": 4,
+      "properties": {
+        "progression_name": "Modify: Broken Fetch"
+      },
+      "seeding_key": {
+        "activity_section.key": "79e4b3e2-74cd-43c0-82a5-94e7630aafed",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "45800fba-311e-4e49-a0d1-1bc5c95184af",
+      "position": 5,
+      "properties": {
+        "progression_name": "Chaos Challenge Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "45800fba-311e-4e49-a0d1-1bc5c95184af",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "857d6798-659a-4ac5-bc90-d22c29d49fd7",
+      "position": 6,
+      "properties": {
+        "progression_name": "Chaos Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "857d6798-659a-4ac5-bc90-d22c29d49fd7",
+        "lesson_activity.key": "96d4d783-8667-4619-84e4-6f8e9222620a"
+      }
+    },
+    {
+      "key": "af323257-c72b-497b-8036-53bbf487da20",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Human-Centered Reliability"
+      },
+      "seeding_key": {
+        "activity_section.key": "af323257-c72b-497b-8036-53bbf487da20",
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25"
+      }
+    },
+    {
+      "key": "17bafc16-b588-4fb5-aea6-8bc0bca4a292",
+      "position": 2,
+      "properties": {
+        "progression_name": "Drafting the Web App State"
+      },
+      "seeding_key": {
+        "activity_section.key": "17bafc16-b588-4fb5-aea6-8bc0bca4a292",
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25"
+      }
+    },
+    {
+      "key": "24f7de64-356e-43ee-8a64-5a991e1d44e2",
+      "position": 3,
+      "properties": {
+        "progression_name": "Build Your Web App State"
+      },
+      "seeding_key": {
+        "activity_section.key": "24f7de64-356e-43ee-8a64-5a991e1d44e2",
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25"
+      }
+    },
+    {
+      "key": "05e5441d-42aa-4927-9779-d37857b52a7c",
+      "position": 4,
+      "properties": {
+        "progression_name": "Getting Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "05e5441d-42aa-4927-9779-d37857b52a7c",
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25"
+      }
+    },
+    {
+      "key": "b64f70c8-2917-4847-8956-391ccb1979f6",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b64f70c8-2917-4847-8956-391ccb1979f6",
+        "lesson_activity.key": "85cd263e-43b0-4dc0-b5c9-0bcae1ed5d25"
+      }
+    },
+    {
+      "key": "3129ca55-d226-4671-98c2-86cb021c7b7a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Local Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "3129ca55-d226-4671-98c2-86cb021c7b7a",
+        "lesson_activity.key": "a83aefa0-1830-4afb-a1fb-b6461bb6fc09"
+      }
+    },
+    {
+      "key": "6dc01227-359f-4a39-a102-f80d648bbaae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Vocab: Live Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "6dc01227-359f-4a39-a102-f80d648bbaae",
+        "lesson_activity.key": "44c42078-7d8d-438c-8364-c3374aa18fc6"
+      }
+    },
+    {
+      "key": "833c82ea-f213-4613-912f-e5fff569ad61",
+      "position": 1,
+      "properties": {
+        "progression_name": "Create an App Shell"
+      },
+      "seeding_key": {
+        "activity_section.key": "833c82ea-f213-4613-912f-e5fff569ad61",
+        "lesson_activity.key": "cb912c8d-f8d2-4179-96b1-5b3a6f12bf57"
+      }
+    },
+    {
+      "key": "55a83019-60bb-4926-9464-b8e81759063c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Store Backup Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "55a83019-60bb-4926-9464-b8e81759063c",
+        "lesson_activity.key": "74473074-2767-4c98-8851-88b30b1c8fda"
+      }
+    },
+    {
+      "key": "daa6edb9-055b-4777-ba3f-ebc88735d7e8",
+      "position": 1,
+      "properties": {
+        "progression_name": "Implement Hybrid Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "daa6edb9-055b-4777-ba3f-ebc88735d7e8",
+        "lesson_activity.key": "9c954fef-22c3-4243-a744-e346f01c54e1"
+      }
+    },
+    {
+      "key": "ed81a0ce-1c31-4da9-9a57-d5133638b449",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 1"
+      },
+      "seeding_key": {
+        "activity_section.key": "ed81a0ce-1c31-4da9-9a57-d5133638b449",
+        "lesson_activity.key": "691afdc7-7dc8-47ea-b118-0a744291c05b"
+      }
+    },
+    {
+      "key": "67ddd525-198b-4ccf-b2cc-7d6144f20c15",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "67ddd525-198b-4ccf-b2cc-7d6144f20c15",
+        "lesson_activity.key": "610d0d73-ce8d-4f90-8781-2da89410a1b6"
+      }
+    },
+    {
+      "key": "f128fbf8-3f79-42bb-94b7-956f8b8a2e55",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "f128fbf8-3f79-42bb-94b7-956f8b8a2e55",
+        "lesson_activity.key": "39a472ad-7357-4872-a4ac-5cd15489f0bb"
+      }
+    },
+    {
+      "key": "20f7a2c6-b4ca-40c7-8f52-aa704854b08c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Milestone 4"
+      },
+      "seeding_key": {
+        "activity_section.key": "20f7a2c6-b4ca-40c7-8f52-aa704854b08c",
+        "lesson_activity.key": "dd0d6140-6f9f-45c1-90df-d3079340a328"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: API"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a905908-5f40-4e86-953c-f8c9c0c6669b"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: API"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a905908-5f40-4e86-953c-f8c9c0c6669b"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: JSON"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: JSON"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploring the Network Panel"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "08e09f7f-399f-4473-8408-493000cb0182"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Navigate a Weather App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "9a2ac1f2-42bd-477e-b421-26af86cddbcf"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore API Documentation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "08c88b33-0ba5-426b-bb8d-872c47bbf9a4"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make a Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level4-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "cbeb7702-dd25-4dc3-b753-9e469c629bf1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level4-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify an API Call"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "72d92016-3310-4205-9e40-e31f42831d5d"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Synchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Synchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Asynchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "fa178839-b64d-4bb6-93ea-9e05c5799077"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Asynchronous Programming"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "fa178839-b64d-4bb6-93ea-9e05c5799077"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Demo: Run the Frozen App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "81b9c484-531f-4240-b04b-7f0b836fa060"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Analogy: Synchronous vs. Asynchronous "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Promise"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a6af926-e9de-4fb4-a242-7cea0cabae22"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Promise"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a6af926-e9de-4fb4-a242-7cea0cabae22"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: .then() and .catch()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: .then() and .catch()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: .then() and .catch()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Unboxing Rule"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "da6ec6cb-7055-47ba-bb4e-498c9177d32a"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Trace the Promise Chain"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b8b2ce83-7c27-4549-a3e1-22a12079b0b3"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level5-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Promise Chain"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "885128d0-b96b-48ac-ab48-02df8a3335be"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: async / await"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "09c8189f-ba76-48eb-9232-8158857a0128"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: async / await"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "09c8189f-ba76-48eb-9232-8158857a0128"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson4-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Use AI to Refactor the Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-level1-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "74277a20-b9d0-41fa-80ee-8818e27d6fc1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson4-level1-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Manually Refactor the Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5493ae10-e845-4c8f-b241-3a2222f82523"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson4-level2-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Seeing the Shape of the JSON"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "34b52363-eb6e-4da0-a3ab-12d12ccf59a9"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Dot Notation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "1c50acd2-911c-42a0-9ad7-af70c73e2479"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Dot Notation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "1c50acd2-911c-42a0-9ad7-af70c73e2479"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Trace a Dot-Notation Path"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73f24cb-a846-4612-9077-ed4538a80af5"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: .map()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: .map()"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Design a Mapped Object for the UI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3c47d8ca-04cf-46f4-85c7-4cf31efc8b54"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Data-Driven Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c00216a2-cf00-415e-a5fc-bb9099585e2a"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Data-Driven Content"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c00216a2-cf00-415e-a5fc-bb9099585e2a"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Parsing JSON"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6339c074-0207-43c7-9db5-d9a43ec1c687"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Parsing JSON"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6339c074-0207-43c7-9db5-d9a43ec1c687"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-vocabsummary2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Sketch Your Music App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "f84ce953-023b-48a7-b111-0d8fc9d8ade6"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Design Your Web App"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "224e4003-9f72-41b0-aa72-2378d0fb1d20"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Debug the Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "a72e0519-9352-4601-b6ba-c46b0fef6987"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Error Handling"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "73fd6ace-d865-4a3c-97f2-0049c0220a7c"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Network Failure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b3638ae4-74c5-4e66-82a6-05487d81fe10"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Network Failure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b3638ae4-74c5-4e66-82a6-05487d81fe10"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Server Failure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab3-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "341130af-528a-48d7-84e9-813e5b0877f1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocab3-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Server Failure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary3-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "341130af-528a-48d7-84e9-813e5b0877f1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocabsummary3-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Invalid Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Invalid Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-vocabsummary2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Designing Recovery States"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5471bb8f-88f7-4ef7-af1b-0b1de74b1747"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: try...catch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "0a65ab6d-f426-4fbd-8c34-102802145380"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: try...catch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "0a65ab6d-f426-4fbd-8c34-102802145380"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Fallback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "d6c52e3c-9f37-4b87-8576-201fef55cae1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Fallback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "d6c52e3c-9f37-4b87-8576-201fef55cae1"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Predict and Run: Broken Fetch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5850cb14-9620-49dd-8bdd-363a61e6820e"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Modify: Broken Fetch"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level6-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "79e4b3e2-74cd-43c0-82a5-94e7630aafed"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-level6-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chaos Challenge Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "45800fba-311e-4e49-a0d1-1bc5c95184af"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Chaos Challenge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "857d6798-659a-4ac5-bc90-d22c29d49fd7"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Human-Centered Reliability"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "af323257-c72b-497b-8036-53bbf487da20"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Human-Centered Reliability"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "af323257-c72b-497b-8036-53bbf487da20"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Drafting the Web App State"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "17bafc16-b588-4fb5-aea6-8bc0bca4a292"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build Your Web App State"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "24f7de64-356e-43ee-8a64-5a991e1d44e2"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "05e5441d-42aa-4927-9779-d37857b52a7c"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Local Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3129ca55-d226-4671-98c2-86cb021c7b7a"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Local Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3129ca55-d226-4671-98c2-86cb021c7b7a"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level2-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Live Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6dc01227-359f-4a39-a102-f80d648bbaae"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level3-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Vocab: Live Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6dc01227-359f-4a39-a102-f80d648bbaae"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level4-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Create an App Shell"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "833c82ea-f213-4613-912f-e5fff569ad61"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Store Backup Data"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "55a83019-60bb-4926-9464-b8e81759063c"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Implement Hybrid Logic"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "daa6edb9-055b-4777-ba3f-ebc88735d7e8"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 1"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ed81a0ce-1c31-4da9-9a57-d5133638b449"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 2"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "67ddd525-198b-4ccf-b2cc-7d6144f20c15"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 3"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "f128fbf8-3f79-42bb-94b7-956f8b8a2e55"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-pilot"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Milestone 4"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "20f7a2c6-b4ca-40c7-8f52-aa704854b08c"
+      },
+      "level_keys": [
+        "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-pilot"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a905908-5f40-4e86-953c-f8c9c0c6669b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a905908-5f40-4e86-953c-f8c9c0c6669b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "2b4735b2-52bd-4aed-a1c7-7cf9ad3ce590"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-panel-2025-_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "08e09f7f-399f-4473-8408-493000cb0182"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level1-networks-tab-test-20_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "9a2ac1f2-42bd-477e-b421-26af86cddbcf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "08c88b33-0ba5-426b-bb8d-872c47bbf9a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level4-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level4-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "cbeb7702-dd25-4dc3-b753-9e469c629bf1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson1-level3-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Where Data Comes From",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "72d92016-3310-4205-9e40-e31f42831d5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "dd475ae8-0b64-4f8d-bc75-1b58ef13338b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "fa178839-b64d-4bb6-93ea-9e05c5799077"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "fa178839-b64d-4bb6-93ea-9e05c5799077"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "81b9c484-531f-4240-b04b-7f0b836fa060"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson2-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Why Apps Wait",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "25dc69ed-f576-4672-afe4-a8b13ce3f88f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a6af926-e9de-4fb4-a242-7cea0cabae22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3a6af926-e9de-4fb4-a242-7cea0cabae22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level9-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73fe969-1efa-460e-b73d-3a9947443f82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "da6ec6cb-7055-47ba-bb4e-498c9177d32a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level5-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b8b2ce83-7c27-4549-a3e1-22a12079b0b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson3-level10-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Getting Data Online",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "885128d0-b96b-48ac-ab48-02df8a3335be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "09c8189f-ba76-48eb-9232-8158857a0128"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson4-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "09c8189f-ba76-48eb-9232-8158857a0128"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson4-level1-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-level1-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "74277a20-b9d0-41fa-80ee-8818e27d6fc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson4-level2-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson4-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Steps Clear",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5493ae10-e845-4c8f-b241-3a2222f82523"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "34b52363-eb6e-4da0-a3ab-12d12ccf59a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-2025-pilo_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "1c50acd2-911c-42a0-9ad7-af70c73e2479"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-dotnotation-frq-2025-_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "1c50acd2-911c-42a0-9ad7-af70c73e2479"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level4-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c73f24cb-a846-4612-9077-ed4538a80af5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-vocab-map-frq-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ff09c849-f01e-43c4-80ca-f6dc36ff10ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson5-level7-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Making Sense of Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3c47d8ca-04cf-46f4-85c7-4cf31efc8b54"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c00216a2-cf00-415e-a5fc-bb9099585e2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "c00216a2-cf00-415e-a5fc-bb9099585e2a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6339c074-0207-43c7-9db5-d9a43ec1c687"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-vocabsummary2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6339c074-0207-43c7-9db5-d9a43ec1c687"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-choicelevel-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "f84ce953-023b-48a7-b111-0d8fc9d8ade6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-level1-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "224e4003-9f72-41b0-aa72-2378d0fb1d20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson6-level2-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Showing Data on the Page",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "a72e0519-9352-4601-b6ba-c46b0fef6987"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-panel1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "73fd6ace-d865-4a3c-97f2-0049c0220a7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b3638ae4-74c5-4e66-82a6-05487d81fe10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "b3638ae4-74c5-4e66-82a6-05487d81fe10"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocab3-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab3-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "341130af-528a-48d7-84e9-813e5b0877f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocabsummary3-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary3-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "341130af-528a-48d7-84e9-813e5b0877f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-vocabsummary2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "e56fc63e-9d8a-4d44-876b-aa2fb957ef8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson7-sketchlab-choice-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "When Things Break",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5471bb8f-88f7-4ef7-af1b-0b1de74b1747"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "0a65ab6d-f426-4fbd-8c34-102802145380"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "0a65ab6d-f426-4fbd-8c34-102802145380"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocab2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "d6c52e3c-9f37-4b87-8576-201fef55cae1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-vocabsummary2-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "d6c52e3c-9f37-4b87-8576-201fef55cae1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level5-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "5850cb14-9620-49dd-8bdd-363a61e6820e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-level6-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-level6-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "79e4b3e2-74cd-43c0-82a5-94e7630aafed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-weblab-panel-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "45800fba-311e-4e49-a0d1-1bc5c95184af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson8-weblab-choice-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Catching Problems",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "857d6798-659a-4ac5-bc90-d22c29d49fd7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-vocab1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "af323257-c72b-497b-8036-53bbf487da20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-vocabsummary1-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "af323257-c72b-497b-8036-53bbf487da20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-sketchlab-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "17bafc16-b588-4fb5-aea6-8bc0bca4a292"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level4-weblab-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "24f7de64-356e-43ee-8a64-5a991e1d44e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson9-level5-test-2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Keeping Users Informed",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "05e5441d-42aa-4927-9779-d37857b52a7c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level1-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3129ca55-d226-4671-98c2-86cb021c7b7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level2-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "3129ca55-d226-4671-98c2-86cb021c7b7a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level3-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6dc01227-359f-4a39-a102-f80d648bbaae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level4-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "6dc01227-359f-4a39-a102-f80d648bbaae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level5-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "833c82ea-f213-4613-912f-e5fff569ad61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level6-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "55a83019-60bb-4926-9464-b8e81759063c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson10-level7-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Local vs Live Data",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "daa6edb9-055b-4777-ba3f-ebc88735d7e8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-level1-hub-test_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "ed81a0ce-1c31-4da9-9a57-d5133638b449"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone2-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "67ddd525-198b-4ccf-b2cc-7d6144f20c15"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone3-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "f128fbf8-3f79-42bb-94b7-956f8b8a2e55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-pilot",
+        "script_level.level_keys": [
+          "designing-reliable-apps-lesson11-milestone4-test_2025-pilot_2025-pilot"
+        ],
+        "lesson.key": "Explore-Style App Project",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "designing-reliable-apps-with-ai-and-apis-pilot-2025",
+        "activity_section.key": "20f7a2c6-b4ca-40c7-8f52-aa704854b08c"
+      }
+    }
   ],
   "resources": [
 
