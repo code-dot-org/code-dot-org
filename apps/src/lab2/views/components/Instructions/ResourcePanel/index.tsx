@@ -213,7 +213,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
   useResourcePanelShepherdTours({
-    isOnboardingTourEnabled: isOnboardingTourEnabled || false,
+    isOnboardingTourEnabled:
+      (isOnboardingTourEnabled && !isStandaloneCollapsed) || false,
     isValidationTourEnabled: isValidationTourEnabled || false,
     hasValidationConditions,
     validationSettings,

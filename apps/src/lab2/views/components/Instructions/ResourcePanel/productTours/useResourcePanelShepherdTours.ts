@@ -1,5 +1,6 @@
 import {useCallback, useMemo, useState} from 'react';
 
+import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
@@ -8,7 +9,6 @@ import {
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Validation/ValidationPanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
@@ -69,7 +69,7 @@ const useResourcePanelShepherdTours = ({
     setOnboardingTourSeen(true);
   }, []);
 
-  const {tour: onboardingTour} = useProductTour({
+  const {tour: onboardingTour} = useLab2ProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: ONBOARDING_TOUR_LOCAL_STORAGE_KEY,
     tourAvailable: isOnboardingTourEnabled && !isLevelLoading,
@@ -98,7 +98,7 @@ const useResourcePanelShepherdTours = ({
     ]
   );
 
-  const {tour: validationTour} = useProductTour({
+  const {tour: validationTour} = useLab2ProductTour({
     getSteps: createValidationTourSteps,
     localStorageKey: VALIDATION_TOUR_LOCAL_STORAGE_KEY,
     tourAvailable: showValidationTour,
