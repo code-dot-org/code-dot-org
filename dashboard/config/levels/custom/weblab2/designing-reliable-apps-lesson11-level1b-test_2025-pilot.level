@@ -53,8 +53,9 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test-2025"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-04T18:00:55.218+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1-test-2025\"},{\"changed_at\":\"2026-03-04 20:46:45 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-04 20:47:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-04 20:53:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-04T18:00:55.218+00:00\",\"changed\":[\"cloned from \\\"iterating-with-ai-lesson11-level1-test-2025\\\"\"],\"cloned_from\":\"iterating-with-ai-lesson11-level1-test-2025\"},{\"changed_at\":\"2026-03-04 20:46:45 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-04 20:47:36 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-04 20:53:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-05 15:57:23 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
 }]]></config>
 </Weblab2>

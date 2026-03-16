@@ -1551,11 +1551,12 @@ class ApiControllerTest < ActionController::TestCase
 
     ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
     mock_service.stubs(:list_course_students).returns(mock_response)
-    GoogleClassroomSection.any_instance.stubs(:from_service).returns(mock_section)
+    GoogleClassroomSection.stubs(:from_service).returns(mock_section)
 
     teacher = create(:teacher, :with_google_authentication_option)
+    google_auth_option = teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     # change teacher email to @gmail.com, which will the teacher ineligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@gmail.com')
+    google_auth_option.update(email: 'test@gmail.com')
     @controller.stubs(:current_user).returns(teacher)
     section = create(:section, user: teacher)
     assert_equal false, teacher.verified_teacher?
@@ -1564,9 +1565,151 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :ok
     assert_equal false, teacher.verified_teacher?
     # change email to non google/gmail email, teacher should now be eligible for verified
-    teacher.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE).update(email: 'test@test.com')
+    google_auth_option.update(email: 'test@test.com')
     get :import_google_classroom, params: {courseId: section.course_id, courseName: section.name}
     assert_equal true, teacher.verified_teacher?
+  end
+
+  test 'import_google_classroom is Forbidden when section exists and current user is not an instructor' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    course_id = Random.hex(10)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).never
+    GoogleClassroomSection.expects(:from_service).never
+
+    section_owner = create(:teacher)
+    attacker = create(:teacher, :with_google_authentication_option)
+    create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      code: GoogleClassroomSection.code_for_section(course_id)
+    )
+    sign_in attacker
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: 'Existing Section'}
+
+    assert_response :forbidden
+  end
+
+  test 'import_google_classroom allows first import when section does not exist' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    course_id = Random.hex(10)
+    course_name = 'New Google Section'
+    students = []
+    teacher = create(:teacher, :with_google_authentication_option)
+    imported_section = mock('GoogleClassroomSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    mock_students_response.stubs(:students).returns(students)
+    mock_students_response.stubs(:next_page_token).returns(nil)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).with(course_id, page_token: nil).returns(mock_students_response)
+    GoogleClassroomSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_google_classroom allows import when section exists and current user is an instructor' do
+    mock_service = mock('Google::Apis::ClassroomV1::ClassroomService')
+    mock_students_response = mock('Google::Apis::ClassroomV1::ListStudentsResponse')
+    course_id = Random.hex(10)
+    course_name = 'Existing Google Section'
+    students = []
+    section_owner = create(:teacher)
+    teacher = create(:teacher, :with_google_authentication_option)
+    imported_section = mock('GoogleClassroomSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_GOOGLE_CLASSROOM,
+      code: GoogleClassroomSection.code_for_section(course_id)
+    )
+    create(:section_instructor, section:, instructor: teacher, status: :active)
+
+    mock_students_response.stubs(:students).returns(students)
+    mock_students_response.stubs(:next_page_token).returns(nil)
+
+    ApiController.any_instance.stubs(:query_google_classroom_service).yields(mock_service)
+    mock_service.expects(:list_course_students).with(course_id, page_token: nil).returns(mock_students_response)
+    GoogleClassroomSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_google_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_clever_classroom is Forbidden when section exists and current user is not an instructor' do
+    course_id = Random.hex(10)
+
+    ApiController.any_instance.stubs(:query_clever_service).yields([])
+    CleverSection.expects(:from_service).never
+
+    section_owner = create(:teacher)
+    attacker = create(:teacher, :with_clever_authentication_option)
+    create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLEVER,
+      code: CleverSection.code_for_section(course_id)
+    )
+    sign_in attacker
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: 'Existing Section'}
+
+    assert_response :forbidden
+  end
+
+  test 'import_clever_classroom allows first import when section does not exist' do
+    course_id = Random.hex(10)
+    course_name = 'New Clever Section'
+    students = []
+    teacher = create(:teacher, :with_clever_authentication_option)
+    imported_section = mock('CleverSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    ApiController.any_instance.stubs(:query_clever_service).yields(students)
+    CleverSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
+  end
+
+  test 'import_clever_classroom allows import when section exists and current user is an instructor' do
+    course_id = 'existing-clever-course-id-2'
+    course_name = 'Existing Clever Section'
+    students = []
+    section_owner = create(:teacher)
+    teacher = create(:teacher, :with_clever_authentication_option)
+    imported_section = mock('CleverSection')
+    imported_section.stubs(:summarize).returns({section_id: Random.hex(10)})
+
+    section = create(
+      :section,
+      user: section_owner,
+      login_type: Section::LOGIN_TYPE_CLEVER,
+      code: CleverSection.code_for_section(course_id)
+    )
+    create(:section_instructor, section:, instructor: teacher, status: :active)
+
+    ApiController.any_instance.stubs(:query_clever_service).yields(students)
+    CleverSection.expects(:from_service).with(course_id, teacher.id, students, course_name).returns(imported_section)
+    sign_in teacher
+
+    get :import_clever_classroom, params: {courseId: course_id, courseName: course_name}
+
+    assert_response :ok
   end
 
   #

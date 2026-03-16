@@ -527,24 +527,28 @@ export default class AnimationUpload extends React.Component {
               </label>
               {availability === AnimationLocations.level && (
                 <div>
-                  <label>Type:</label>
-                  <select onChange={this.handleCategoryChange}>
-                    <option value="">Sprite Costume</option>
-                    <option value="backgrounds">Background</option>
-                  </select>
+                  <label>
+                    Type:
+                    <select onChange={this.handleCategoryChange}>
+                      <option value="">Sprite Costume</option>
+                      <option value="backgrounds">Background</option>
+                    </select>
+                  </label>
                 </div>
               )}
               {availability === AnimationLocations.library && (
                 <div>
-                  <label>Category:</label>
-                  <select onChange={this.handleCategoryChange}>
-                    <option value="">Select an Option</option>
-                    {(spriteLabLibraryCategories || []).map(category => (
-                      <option key={category} value={category}>
-                        {category}
-                      </option>
-                    ))}
-                  </select>
+                  <label>
+                    Category:
+                    <select onChange={this.handleCategoryChange}>
+                      <option value="">Select an Option</option>
+                      {(spriteLabLibraryCategories || []).map(category => (
+                        <option key={category} value={category}>
+                          {category}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
                 </div>
               )}
               Animation Upload Destination:{' '}

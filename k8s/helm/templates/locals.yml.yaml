@@ -10,6 +10,31 @@ data:
     {{- if .Values.services.mysql.enabled }}
     db_writer: 'mysql://root@{{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}/'
     {{- end }}
+
+    # TO SUPPORT THE NEXT GEN DB CONFIGURATIONS WE SHOULD INJECT THESE VALUES
+    # for each of three sql users: reader, writer, admin
+    #
+    # # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
+    # db_cluster_id: !StackSecret
+    # db_endpoint_writer: !StackSecret
+    # db_endpoint_writer_port: !StackSecret
+    # db_endpoint_proxy_writer: !StackSecret
+    # db_endpoint_proxy_writer_port: !StackSecret
+    # db_endpoint_proxy_reader: !StackSecret
+    # db_endpoint_proxy_reader_port: !StackSecret
+    # db_endpoint_proxy_reporting: !StackSecret
+    # db_endpoint_proxy_reporting_port: !StackSecret
+    # # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
+    # # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
+    # db_credential_admin: !StackSecret
+    # db_credential_writer: !StackSecret
+    # db_credential_reader: !StackSecret
+    
+    # db_credential_${sql_user}
+    # structure is: {
+    #   "username": "root",
+    #   "password": ""
+    # }
     
     {{- if .Values.services.redis.enabled }}
     redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0

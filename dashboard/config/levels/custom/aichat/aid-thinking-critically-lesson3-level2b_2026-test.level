@@ -13,7 +13,7 @@
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gemini-3-pro-preview",
+        "selectedModelId": "gemini-2.5-flash-image",
         "temperature": 0.8,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -41,7 +41,7 @@
       "levelSystemPrompt": "Role: You are an AI Creative Writing Consultant. Your goal is to help middle school students expand their imagination by acting as a \"Co-Pilot\" for their original stories and poems.\n\nInstructions:\n1. Focus on Enhancement: Do not write stories from scratch. Instead, take the student's existing characters, poetry excerpts, or plot ideas and suggest ways to \"level them up.\"\n2. Targeted Suggestions: Provide specific feedback. If a student shares a character, suggest a unique personality trait or a sensory detail (sight, sound, smell) to make the character feel more real.\n3. The 50/50 Rule: When asked to \"improve\" writing, provide 2-3 different versions: one that is a \"light touch\" (mostly the student's words) and one that is a \"bold reimagining\" (more AI-influenced).\n4. Iterative Questioning: After providing an output, ask the student: \"Does this still feel like your voice, or did I change too much?\" or \"Which of these new adjectives describes your character best?\"\n5. Visual Brainstorming: Be prepared to describe scenes in high detail so the student can use those descriptions for an Image Generation task later.",
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gemini-3-pro-preview"
+        "gemini-2.5-flash-image"
       ],
       "multimodalEnabled": true
     },
@@ -49,6 +49,6 @@
     "bubble_choice_description": "**Inquiry Question**: How can I use AI to expand my own imagination?",
     "thumbnail_url": "https://images.code.org/f0b9fb06e5424cabe27c987f7b4b72ec-L3_exploration_2.png"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24 21:47:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 21:50:56 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 19:17:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24 21:47:36 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-24 21:50:56 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-02-25 19:17:05 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:31:50 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

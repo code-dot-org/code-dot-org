@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "how-ai-works-llms-full",
+    "video_key": "Dot-Notation",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -16,7 +16,7 @@
     "long_instructions": "## Accessing Properties \r\n\r\n#### Now that you have learned how to identify data in JSON, we are going to focus on how to access the correct piece of data. \r\n\r\n<div style=\"background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;\">\r\n<p style=\"font-size: 14pt; margin-top: 12px; line-height: 120%;\">📖 <strong>Dot Notation </strong>  is a way to access properties inside JavaScript objects by chaining property names with dots from left to right.\r\n</p>\r\n</div>\r\n\r\n#### Take a look at the diagram below to understand how properties and objects are connected with dot notation. \r\n\r\n<img src=\"https://images.code.org/ebdc99a8f0e40584ec19cbef74fe38a3-image-1772122722177.png\" alt=\"diagram illustrating the property name of object user being connected with dot notation to access the data john.\" width=\"450px\" style=\"display: block; margin-left: auto; margin-right: auto;border-radius:10px; \">\r\n\r\n---\r\n## Tracing Dot Notation\r\n\r\n#### The video below explains the process in JavaScript. Watch the video for an explanation and then try on you own in the next level. \r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2026-02-25T17:55:36.199+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations-overview_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations-overview_04_2024\"},{\"changed_at\":\"2026-02-26 16:25:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-02-25T17:55:36.199+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations-overview_04_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations-overview_04_2024\"},{\"changed_at\":\"2026-02-26 16:25:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-09 20:35:38 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -27,6 +27,7 @@
     "@mui/material": "^7.3.4",
     "@tanstack/react-router": "^1.139.14",
     "@tanstack/react-router-devtools": "^1.139.14",
+    "ky": "^1.14.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },

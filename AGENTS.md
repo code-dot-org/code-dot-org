@@ -19,7 +19,7 @@
 - Some non-rails ruby code also lives in `lib/`
 - We use CanCanCan for authorization and Devise for authentication
 - Use `bundle exec` to run ruby commands (exception: most ./bin/* commands automatically load the rails environment)
-- `./bin/dashboard-console-skip-reload` can be used to launch `rails console` / `./bin/dashboard-console` in a way that loads much quicker, but fyi it still takes ~15s to load so don't overuse it
+- To execute/test Ruby / Rails code snippets (recommended!), use `./bin/rails runner` from the `dashboard/` directory.
 - `./bin/mysql-client-dashboard-reader` can be used to safely query the local db with SQL commands
 - `./bin/mysql-client-dashboard-writer` is also available, but is not safe and usage should be approved by the user first
 - `config/*.yml.erb` (e.g. `config/development.yml.erb`) contains per-rails-env configuration, also related to local config keys settable in locals.yml. API keys, passwords, etc are often set using this system.
@@ -86,3 +86,8 @@
 - next, test as much as you can with rails runner, mysql commands, in the browser, etc (as relevant)
 - finally, if there's a relevant test suite, run it
 - once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
+
+# Agent skills
+- Add agent skills to the `.agents/skills` directory shared by all agents.
+- Skill directories matching `.agents/skills/*.local` are not committed to git.
+- Prefer adding agent skills to extending AGENTS.md.
