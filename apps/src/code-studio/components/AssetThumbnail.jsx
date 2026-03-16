@@ -144,7 +144,7 @@ const AudioThumbnail = class extends React.Component {
       <div style={{...styles.wrapper, ...styles.audioWrapper}}>
         <i
           onClick={this.props.clickSoundControl}
-          className={'fa ' + playIcon + ' fa-4x'}
+          className={'fa-solid ' + playIcon + ' fa-4x'}
           style={styles.audioIcon}
         />
       </div>
