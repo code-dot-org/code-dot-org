@@ -7,13 +7,7 @@ import {ValueOf} from '@cdo/apps/types/utils';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import {prepareGeneratedFile} from './fileHelpers';
-// Image types that safety moderation supports.
-const IMAGE_SAFETY_ACCEPTED_MEDIA_TYPES = [
-  'image/jpeg',
-  'image/png',
-  'image/gif',
-];
+import {prepareGeneratedFile, ACCEPTED_IMAGE_MEDIA_TYPES} from './fileHelpers';
 import {getModel} from './modelHelpers';
 
 const outputSchema = Output.object({
@@ -63,7 +57,7 @@ export async function isTextSafe(
 export async function isImageSafe(file: GeneratedFile): Promise<boolean> {
   const {filename, fileBuffer, mediaType, extension} = prepareGeneratedFile(
     file,
-    IMAGE_SAFETY_ACCEPTED_MEDIA_TYPES
+    ACCEPTED_IMAGE_MEDIA_TYPES
   );
   const image = new File([fileBuffer], filename, {type: mediaType});
   const moderationStatus = await moderateImage(image, extension, 'aichat', {

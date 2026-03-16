@@ -1,10 +1,10 @@
 import {type ModelMessage} from 'ai';
 
+import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/api/client/helpers/fileHelpers';
 import {generateText} from '@cdo/apps/aiGateway';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {ALLOWED_IMAGE_FILE_EXTENSIONS} from '@cdo/apps/util/moderateImage';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -90,7 +90,7 @@ export async function generateChatResponse(
       asset = await generatedFileToAsset(
         file,
         buildAssetUrl,
-        ALLOWED_IMAGE_FILE_EXTENSIONS // Currently only image files are supported.
+        ACCEPTED_IMAGE_MEDIA_TYPES // Currently only image files are supported.
       );
     } catch (error) {
       // Log and skip files with unsupported or unrecognized media types so the
