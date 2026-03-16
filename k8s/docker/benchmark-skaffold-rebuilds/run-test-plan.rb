@@ -15,7 +15,7 @@ SCRIPT_DIR = Pathname(__dir__).realpath
 REPO_ROOT = SCRIPT_DIR.parent.parent.parent
 TEST_PLAN_PATH = SCRIPT_DIR / 'test-plan.json'
 CACHE_MISS_DAILY_ODDS_PATH = SCRIPT_DIR / 'daily-odds-of-file-change.json'
-BUILD_COMMAND = %w[skaffold build].freeze
+BUILD_COMMAND = ['skaffold', 'build', '--cache-artifacts=false'].freeze
 TARGET_IMAGE_NAME = 'code-dot-org'
 SKAFFOLD_BUILD_TAGS_FILENAME = 'skaffold-build-tags.json'
 
@@ -398,11 +398,11 @@ def main
     error: run_error
   )
 
+  puts "Results JSON: #{summary_path.relative_path_from(SCRIPT_DIR)}"
   puts JSON.pretty_generate(summary)
   print_day_summary_lines(day_results, run_dir)
   print_final_docker_image_size(last_image_inspect_payload)
   puts "Test run directory: #{run_dir.relative_path_from(SCRIPT_DIR)}"
-  puts "Results JSON: #{summary_path.relative_path_from(SCRIPT_DIR)}"
   puts "Total build time: #{format_hours_and_minutes(summary.fetch('total_build_time_minutes'))}"
   puts "Average rebuild time: #{format_hours_and_minutes(summary.fetch('average_build_time_per_day_minutes'))}"
 end
