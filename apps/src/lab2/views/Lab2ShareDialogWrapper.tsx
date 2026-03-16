@@ -116,7 +116,6 @@ const Lab2ShareDialogWrapper: React.FunctionComponent<
         projectType={projectType}
         onSubmitClick={onSubmitClick}
         submissionStatus={submissionStatus}
-        channelId={channelId}
         userSharingDisabled={userSharingDisabled}
       />
     ) : (

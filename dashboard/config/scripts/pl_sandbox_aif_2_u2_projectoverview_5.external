@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 #### In this project, students take on the role of Front-End Developers and QA Engineers to design and implement a badge-awarding system in a web app of their choice (sports, music, art, gaming, school life, and more).
 
-<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;"> <div> <h4 style="margin-top: 0; font-weight: bold">Students will:</h4> <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt"> <li>Design a custom badge system with clearly defined achievement criteria.</li> <br> <li>Create a flowchart to plan the logic behind their badge-awarding system.</li> <br> <li>Translate their plan into JavaScript using functions, variables, and conditionals.</li> <br> <li>Build a dynamic interface that updates based on user actions.</li> <br> <li>Test and refine their code while documenting their debugging process.</li> <br> <li>Reflect on how AI supported their brainstorming and problem-solving.</li> </ul> </div> <div> <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" alt="Icon of clipboard and pen" style="border-radius: 10px; width: 200px; height: auto;"> </div> </div>
+<div style="display: flex; align-items: center; justify-content: space-between; background: #f7f8fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); font-size: 14pt; line-height: 1.6; max-width: 800px; margin: 20px auto;"> <div> <h4 style="margin-top: 0; font-weight: bold">Students will:</h4> <ul style="list-style-type: disc; padding-left: 10px; font-size: 14pt"> <li>Design a custom badge system with clearly defined achievement criteria.</li> <br> <li>Create a flowchart to plan the logic behind their badge-awarding system.</li> <br> <li>Translate their plan into JavaScript using functions, variables, and conditionals.</li> <br> <li>Build a dynamic interface that updates based on user actions.</li> <br>  <li>Reflect on how AI supported their brainstorming and problem-solving.</li> </ul> </div> <div> <img src="https://images.code.org/4e1b6412c687590c048f087cef0675e6-image-1741789708762.png" alt="Icon of clipboard and pen" style="border-radius: 10px; width: 200px; height: auto;"> </div> </div>
 
 ####The result is a personalized, interactive app that demonstrates how developer choices and values shape user experience.
  
@@ -20,7 +20,7 @@ markdown <<MARKDOWN
 
 ### **When Project Begins:** Final lesson of the unit
 
-### The project extends over three class periods. Beginning in Lesson 11.
+### The project extends over five class periods. Beginning in Lesson 11.
 
 ## Sample
 

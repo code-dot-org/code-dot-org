@@ -114,7 +114,13 @@ dashboard/brakeman_security_report.htm
 
 skaffold-build-tags.json
 
-# ai
+# claude
 .claude/worktrees
 CLAUDE.local.md
-.claude/*.local.*
+.claude/**/*.local.*
+.claude/skills/*.local
+
+# agent skills standard: https://agentskills.io/
+.agents/**/*.local.*
+.agents/skills/*.local
+

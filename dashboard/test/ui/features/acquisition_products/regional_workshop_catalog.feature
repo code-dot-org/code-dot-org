@@ -12,7 +12,7 @@ Feature: Regional Workshop Catalog page
 
     # Enter zip with no match and no workshops
     Then I press keys "99999" for element "input[name='zipSearch']"
-    Then I click selector "span:contains(Submit)"
+    Then I click selector "button[aria-label='submitZip']"
     And I wait until element "p:contains(No regional partner found)" is visible
     And I wait until element "h2:contains(No workshops found)" is visible
 
@@ -30,7 +30,7 @@ Feature: Regional Workshop Catalog page
 
     # Enter zip with regional partner match
     Then I press keys "12345" for element "input[name='zipSearch']"
-    Then I click selector "span:contains(Submit)"
+    Then I click selector "button[aria-label='submitZip']"
     And I wait until element "p:contains(Reggie Partner)" is visible
     And I wait until element "h2:contains(Upcoming local workshops)" is visible
     
@@ -57,7 +57,7 @@ Feature: Regional Workshop Catalog page
 
     # Enter zip with regional partner match
     Then I press keys "12345" for element "input[name='zipSearch']"
-    Then I click selector "span:contains(Submit)"
+    Then I click selector "button[aria-label='submitZip']"
     And I wait until element "p:contains(Reggie Partner)" is visible
     And I wait until element "h2:contains(Upcoming local workshops)" is visible
 
