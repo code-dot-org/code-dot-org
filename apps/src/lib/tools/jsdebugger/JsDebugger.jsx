@@ -448,7 +448,7 @@ class JsDebugger extends React.Component {
       >
         <div
           id="debugResizeBar"
-          className="fa fa-ellipsis-h"
+          className="fa-solid fa-ellipsis"
           onMouseDown={this.onMouseDownDebugResizeBar}
           ref={debugResizeBar => (this._debugResizeBar = debugResizeBar)}
         />
@@ -480,7 +480,7 @@ class JsDebugger extends React.Component {
           >
             <FontAwesome
               icon={
-                this.state.open ? 'chevron-circle-down' : 'chevron-circle-up'
+                this.state.open ? 'circle-chevron-down' : 'circle-chevron-up'
               }
             />
           </button>
@@ -548,8 +548,8 @@ class JsDebugger extends React.Component {
                   id="hide-watcher"
                   icon={
                     this.state.watchersHidden
-                      ? 'chevron-circle-left'
-                      : 'chevron-circle-right'
+                      ? 'circle-chevron-left'
+                      : 'circle-chevron-right'
                   }
                 />
               </button>
@@ -562,7 +562,7 @@ class JsDebugger extends React.Component {
           )}
           <PaneButton
             id="clear-console-header"
-            iconClass="fa fa-eraser"
+            iconClass="fa-solid fa-eraser"
             label={i18n.debugClearButton()}
             headerHasFocus={hasFocus}
             isRtl={false}
@@ -570,7 +570,7 @@ class JsDebugger extends React.Component {
           />
           {isRunning && canShowDebugSprites && (
             <PaneButton
-              iconClass="fa fa-bug"
+              iconClass="fa-solid fa-bug"
               label={i18n.debugSpritesOff()}
               headerHasFocus={hasFocus}
               isRtl={false}

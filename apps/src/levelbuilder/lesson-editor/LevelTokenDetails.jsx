@@ -32,7 +32,7 @@ const bonusAlreadySelectedTooltipText =
   'In order for bonus levels to show up for users you must enable lesson extras for the unit.';
 
 const ArrowRenderer = ({onMouseDown}) => {
-  return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
+  return <i className="fa-solid fa-chevron-down" onMouseDown={onMouseDown} />;
 };
 ArrowRenderer.propTypes = {onMouseDown: PropTypes.func.isRequried};
 
