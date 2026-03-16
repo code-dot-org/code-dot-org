@@ -36,9 +36,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
         onRecordStart?.();
       } else {
         setErrorMessage(
-          startState === 'Unsupported'
-            ? 'Audio recording is not supported on your device.'
-            : startState === 'PermissionDenied'
+          startState === 'PermissionDenied'
             ? 'Permission to access the microphone was denied.'
             : unknownErrorMessage
         );
@@ -70,9 +68,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
     ? {iconName: 'spinner-third', iconFamily: 'duotone', animationType: 'spin'}
     : {iconName: 'microphone'};
 
-  if (!recorderRef.current?.canRecord()) {
-    return null;
-  }
+  const canRecord = recorderRef.current?.canRecord();
 
   return (
     <div className={styles.row}>
@@ -103,16 +99,30 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       )}
       <div className={styles.buttonContainer}>
         {isRecording && <div className={styles.ping} />}
-        <MuiIconButton
-          variant="outlined"
-          size="extraSmall"
-          onClick={isRecording ? onEndRecording : onStartRecording}
-          disabled={isTranscribing}
-          color={isRecording ? 'white' : 'secondary'}
-          className={classNames(isRecording && styles.recording)}
+        <WithTooltip
+          tooltipProps={{
+            size: 'xs',
+            tooltipId: 'error-tooltip',
+            text: !canRecord
+              ? 'Audio recording is not supported on your device.'
+              : undefined,
+            direction: 'onLeft',
+            className: classNames(canRecord && styles.hide),
+          }}
         >
-          <FontAwesomeV6Icon {...iconProps} />
-        </MuiIconButton>
+          <div>
+            <MuiIconButton
+              variant="outlined"
+              size="extraSmall"
+              onClick={isRecording ? onEndRecording : onStartRecording}
+              disabled={!canRecord || isTranscribing}
+              color={isRecording ? 'white' : 'secondary'}
+              className={classNames(isRecording && styles.recording)}
+            >
+              <FontAwesomeV6Icon {...iconProps} />
+            </MuiIconButton>
+          </div>
+        </WithTooltip>
       </div>
     </div>
   );
