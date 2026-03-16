@@ -3,9 +3,10 @@ import React, {useCallback, useEffect, useRef, useState} from 'react';
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {canUseClientApi} from '../api/performClientApiChatCompletion';
+import supportsClientApi from '../api/supportsClientApi';
 import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
 import {
   AiChatClientType,
@@ -137,8 +138,11 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
-  // Speech to text is only enabled with the client API since it makes use of the AI Gateway.
-  const speechToTextEnabled = canUseClientApi(modelParameters.selectedModelId);
+  // Speech to text is only enabled if the client API is supported for the current model
+  // since it makes use of the AI Gateway.
+  const speechToTextEnabled =
+    supportsClientApi(modelParameters.selectedModelId) ||
+    experiments.isEnabledAllowingQueryString('enable-speech-to-text');
 
   return (
     <>

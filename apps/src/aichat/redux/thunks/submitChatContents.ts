@@ -26,10 +26,8 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
-import {
-  canUseClientApi,
-  performClientApiChatCompletion,
-} from '../../api/performClientApiChatCompletion';
+import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import supportsClientApi from '../../api/supportsClientApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -174,7 +172,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (canUseClientApi(modelParameters.selectedModelId)) {
+      if (supportsClientApi(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =

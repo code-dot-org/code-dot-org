@@ -1,8 +1,5 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isAiGatewayEnabled} from '@cdo/apps/aiGateway/isAiGatewayEnabled';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {
-  AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -20,12 +17,6 @@ import {
   createAichatRequest,
   updateAichatRequest,
 } from './client/helpers/aichatRequestHelpers';
-
-export function canUseClientApi(modelId: ValueOf<typeof AiChatModelIds>) {
-  return (
-    isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
-  );
-}
 
 /**
  * Performs client-side chat completion submission flow, which involves creating a new AichatRequest record,
