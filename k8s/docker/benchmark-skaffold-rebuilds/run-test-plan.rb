@@ -15,7 +15,7 @@ SCRIPT_DIR = Pathname(__dir__).realpath
 REPO_ROOT = SCRIPT_DIR.parent.parent.parent
 TEST_PLAN_PATH = SCRIPT_DIR / 'test-plan.json'
 CACHE_MISS_DAILY_ODDS_PATH = SCRIPT_DIR / 'daily-odds-of-file-change.json'
-BUILD_COMMAND = %w[skaffold build].freeze
+BUILD_COMMAND = ['skaffold', 'build', '--cache-artifacts=false'].freeze
 TARGET_IMAGE_NAME = 'code-dot-org'
 SKAFFOLD_BUILD_TAGS_FILENAME = 'skaffold-build-tags.json'
 
@@ -80,6 +80,7 @@ def timestamped_run(command, log_path)
   success = false
 
   log_path.open('wb') do |log_file|
+    log_file.sync = true
     Open3.popen2e(*command, chdir: REPO_ROOT.to_s) do |_stdin, combined, wait_thr|
       combined.each_line do |line|
         log_file.write("#{Time.now.iso8601} #{line}")
@@ -251,6 +252,8 @@ def print_day_header(day_number, modify_paths)
   puts
   puts
   puts '=' * 80
+  puts
+  puts
   puts "STARTING DAY #{day_number}"
   puts 'Paths to modify:'
   if modify_paths.empty?
@@ -310,7 +313,7 @@ def main
   )
 
   begin
-    warm_log_path = run_dir / 'logs' / 'warm-cache' / 'skaffold-build.log'
+    warm_log_path = run_dir / 'days' / 'warm-cache' / 'skaffold-build.log'
     warm_success, warm_duration = timestamped_run(build_command(run_tag), warm_log_path)
     warm_cache_build = {
       'build_time_minutes' => (warm_duration / 60.0).round(6),
@@ -337,7 +340,7 @@ def main
         print_day_header(day_number, modify_paths)
         write_day_modifications(day)
 
-        day_dir = run_dir / 'logs' / "day#{day_number}"
+        day_dir = run_dir / 'days' / "day#{day_number}"
         day_log_path = day_dir / 'skaffold-build.log'
         day_skaffold_build_tags_path = day_dir / SKAFFOLD_BUILD_TAGS_FILENAME
         success, duration = timestamped_run(build_command(run_tag, day_skaffold_build_tags_path), day_log_path)
@@ -395,11 +398,11 @@ def main
     error: run_error
   )
 
+  puts "Results JSON: #{summary_path.relative_path_from(SCRIPT_DIR)}"
   puts JSON.pretty_generate(summary)
   print_day_summary_lines(day_results, run_dir)
   print_final_docker_image_size(last_image_inspect_payload)
   puts "Test run directory: #{run_dir.relative_path_from(SCRIPT_DIR)}"
-  puts "Results JSON: #{summary_path.relative_path_from(SCRIPT_DIR)}"
   puts "Total build time: #{format_hours_and_minutes(summary.fetch('total_build_time_minutes'))}"
   puts "Average rebuild time: #{format_hours_and_minutes(summary.fetch('average_build_time_per_day_minutes'))}"
 end

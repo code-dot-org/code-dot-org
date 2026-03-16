@@ -70,10 +70,10 @@ Each `test-run-<datestamp>/` contains:
 - `test-plan.json`
 - `dockerfiles/`
   - Snapshots of the Dockerfiles referenced by `daily-odds-of-file-change.json`
-- `logs/warm-cache/skaffold-build.log`
-- `logs/dayN/skaffold-build.log`
-- `logs/dayN/skaffold-build-tags.json`
-- `logs/dayN/docker-image-inspect-size.json`
+- `days/warm-cache/skaffold-build.log`
+- `days/dayN/skaffold-build.log`
+- `days/dayN/skaffold-build-tags.json`
+- `days/dayN/docker-image-inspect-size.json`
 - `test-run-<datestamp>.json`
 
 The executor restores any modified files when the run ends, even if a build fails.
@@ -118,9 +118,9 @@ What to check after the fake run:
 - it has `description.txt`
 - it has `test-plan.json`
 - it has `dockerfiles/` with the expected Dockerfile snapshots
-- it has `logs/warm-cache/skaffold-build.log`
-- it has one `logs/dayN/skaffold-build.log` per test day
-- it has one `logs/dayN/docker-image-inspect-size.json` per test day
+- it has `days/warm-cache/skaffold-build.log`
+- it has one `days/dayN/skaffold-build.log` per test day
+- it has one `days/dayN/docker-image-inspect-size.json` per test day
 
 ## Caveats
 
