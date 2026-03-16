@@ -525,23 +525,32 @@ class ProjectsController < ApplicationController
 
     project = Projects.new(get_storage_id)
     src_project = project.get(src_channel_id)
-    # If this project has subprojects, remix each subproject and update the parent channel.
+
     if src_project["subprojects"]
-      # Only process a reasonable number of subprojects.
-      new_subprojects = src_project["subprojects"].first(3).map do |entry|
-        subproject_src_channel_id = entry['channel_id']
-        subproject = project.get(subproject_src_channel_id)
-        subproject_type = subproject["projectType"]
-        return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
-        new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
-        {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
+      if project_type == BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+        # Only process a reasonable number of subprojects.
+        sub_projects = src_project["subprojects"].first(BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
+        # Remix each subproject and update the parent channel.
+        new_subprojects = sub_projects.map do |entry|
+          subproject_src_channel_id = entry['channel_id']
+          subproject = project.get(subproject_src_channel_id)
+          subproject_type = subproject["projectType"]
+          return head :forbidden if Projects.in_restricted_share_mode(subproject_src_channel_id, subproject_type)
+          new_subproject_channel_id = remix_project(subproject_src_channel_id, subproject_type, is_subproject: true)
+          {level_id: entry['level_id'], channel_id: new_subproject_channel_id}
+        end
+        value = project.get(new_channel_id)
+        project.update(
+          new_channel_id,
+          value.merge("subprojects" => new_subprojects),
+          request.ip
+        )
+      else
+        # Remove subprojects entirely for non-music_dance_ai project types.
+        value = project.get(new_channel_id)
+        value.delete("subprojects")
+        project.update(new_channel_id, value, request.ip)
       end
-      value = project.get(new_channel_id)
-      project.update(
-        new_channel_id,
-        value.merge("subprojects" => new_subprojects),
-        request.ip
-      )
     end
     redirect_to action: 'edit', channel_id: new_channel_id
   rescue ArgumentError, OpenSSL::Cipher::CipherError

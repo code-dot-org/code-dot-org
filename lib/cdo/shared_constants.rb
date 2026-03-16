@@ -943,6 +943,8 @@ module SharedConstants
     MUSIC_DANCE_AI: 'music_dance_ai',
   }.freeze
 
+  BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS = 3
+
   BUBBLE_CHOICE_NAVIGATION_TYPES = {
     PARENT: 'parent',
     NEXT_LEVEL: 'next_level',

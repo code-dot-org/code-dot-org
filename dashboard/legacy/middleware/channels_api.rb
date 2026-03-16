@@ -161,8 +161,15 @@ class ChannelsApi < Sinatra::Base
     # type is then determined by client-side logic when the project is updated.
     project_type = value["projectType"]
 
-    # Only process a reasonable number of subprojects.
-    value["subprojects"] = value["subprojects"]&.first(3)
+    # Only process a reasonable number of subprojects for music_dance_ai projects.
+    # Remove subprojects entirely for all other project types.
+    if value["subprojects"]
+      if project_type == BUBBLE_CHOICE_CUSTOM_MODES[:MUSIC_DANCE_AI]
+        value["subprojects"] = value["subprojects"].first(BUBBLE_CHOICE_CUSTOM_MODE_MAX_SUBPROJECTS)
+      else
+        value.delete("subprojects")
+      end
+    end
 
     begin
       value = Projects.new(get_storage_id).update(id, value, request.ip, locale: request.locale, project_type: project_type)
