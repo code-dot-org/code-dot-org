@@ -1,5 +1,7 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
@@ -53,24 +55,28 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     const chatButtonDataToUse = aiTutorChatButtonData || defaultChatButtonData;
     return chatButtonDataToUse.map(button => ({
       ChatButton: ({onClick}: {onClick: ChatButtonClickHandler}) => (
-        <Button
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="small"
           className={moduleStyles.chatButton}
-          aria-label={button.label}
-          iconLeft={
-            {
-              ...button.icon,
-              className: classNames({
-                [moduleStyles['icon']]: true,
-                [moduleStyles[`icon-${button.icon?.iconName}`]]: button.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
           onClick={() => onClick(button.value, button.analyticsProperties)}
-          text={button.label}
-          size="s"
-          type="secondary"
-          color="black"
-        />
+          aria-label={button.label}
+          startIcon={
+            button.icon ? (
+              <FontAwesomeV6Icon
+                {...(button.icon as FontAwesomeV6IconProps)}
+                className={classNames({
+                  [moduleStyles['icon']]: true,
+                  [moduleStyles[`icon-${button.icon.iconName}`]]: true,
+                })}
+              />
+            ) : undefined
+          }
+          type="button"
+        >
+          {button.label}
+        </MuiButton>
       ),
       key: button.label,
     }));

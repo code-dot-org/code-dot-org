@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-12 05:29:45 UTC",
+    "serialized_at": "2026-03-16 06:46:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -212,8 +212,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "**How do we define our user’s needs clearly?**\n\nStudents learn a process for analyzing user personas in order to identify needs and constraints. These observations translate into design implications and decisions. As a result, students finally draft problem statements that directly inform application design.",
-        "student_overview": "**How do we define our user’s needs clearly?**\n\nAnalyze a user persona to spot real needs and limits, turn those insights into smart design choices, and write a clear problem statement that will steer your app."
+        "overview": "**How do we define our user’s needs clearly?**\n\nStudents analyze a scenario to build a realistic user persona and identify a core frustration and meaningful goal. They synthesize those insights into a focused problem statement centered on a user need, not a solution. This process strengthens students’ ability to ground future design decisions in clearly defined user needs.",
+        "student_overview": "**How do we define our user’s needs clearly?**\n\nAnalyze a user persona to identify real needs and constraints, then turn those insights into a clear, focused problem statement. Use this process to guide thoughtful, user-centered design decisions."
       },
       "seeding_key": {
         "lesson.key": "Lesson 7: Meet Your User",
@@ -2322,7 +2322,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students practice planning like designers by using a mood board to test visual direction before building.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students get out their copy of the AI-Generated Design Unit Guide.",
         "duration": "25",
-        "name": "Mood Boarding"
+        "name": "Creating a Mood Board"
       },
       "seeding_key": {
         "activity_section.key": "d1d1ea21-f1ba-433d-90b8-0b6e30884847",
@@ -2365,7 +2365,7 @@
       "key": "bd57988a-4bbe-4755-98e1-c73d8be6b5b7",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define mood boarding and direct students to record the definition in their Unit Guide. Explain that designers use mood boards as a tool to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.\n",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Define mood board and direct students to record the definition in their Unit Guide. Explain that designers use mood boards as a tool to collect visual inspiration. Emphasize that mood boards are a familiar way to express feeling or style, not to create a finished product.\n",
         "tips": [
           {
             "type": "teachingTip",
@@ -2506,7 +2506,7 @@
       "key": "90c3c012-db85-457a-b2c0-ece76d31a94d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide and give them about two minutes to write independently. Then invite two or three volunteers to share their thinking with the class. As students respond, prompt them to explain what they learned about analyzing designs (strengths, weaknesses, mood boarding, audience fit, etc), why those insights matter when creating their own work, and how they might apply those ideas in future projects.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that designers draw inspiration by analyzing what works and doesn’t work in existing designs, then intentionally applying those insights to guide their own style decisions.\n\n\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide and give them about two minutes to write independently. Then invite two or three volunteers to share their thinking with the class. As students respond, prompt them to explain what they learned about analyzing designs (strengths, weaknesses, mood boards, audience fit, etc), why those insights matter when creating their own work, and how they might apply those ideas in future projects.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that designers draw inspiration by analyzing what works and doesn’t work in existing designs, then intentionally applying those insights to guide their own style decisions.\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "90c3c012-db85-457a-b2c0-ece76d31a94d",
@@ -2954,7 +2954,7 @@
       "key": "725b8d5c-cbcb-4f21-974a-49cf08d9f7f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Establish students' role as front-end web designers who translate brand kits into live, coded web pages using CSS.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as front-end designers using AI as their coding partner. Designers define the vision, and front-end developers ensure it's executed correctly in code — responsibly, accessibly, and on brand.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Establish students' role as front-end web designers who translate brand kits into live, coded web pages using CSS.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as front-end designers using AI as their coding partner. Designers define the vision, and front-end developers ensure it's executed correctly in code — responsibly, accessibly, and on brand. As front-end developers, they also check whether their pages still work well across different screen sizes. This is called responsive design, which means a page adjusts so it remains readable and usable on phones, tablets, and laptops.",
         "duration": "15",
         "name": "Style Sheets",
         "tips": [
@@ -2970,22 +2970,32 @@
       }
     },
     {
-      "key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
+      "key": "481e6ae3-b935-4570-a071-9515ddf1d29f",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define style sheet. Explain that CSS is the bridge between design and development: it's how the decisions made in a brand kit — like colors, fonts, and layout — become consistent code. Every time students see a website where the colors, fonts, and spacing look intentional and consistent, that's CSS at work.\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students apply a stylesheet across multiple pages to maintain consistent brand identity, testing and refining AI-generated code for accuracy and readability.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 4.\n- Level 1: Students learn how to add images as context for their AI prompts.\n- Level 2: Students learn how to add code as context for their AI prompts.\n- Level 3: Students learn how to add items to and retrieve items from the Backpack.\n- Level 4: Students learn how to add images to their webpage.",
-        "progression_name": "How To: Adding Context and Saving Prompts"
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the AI-Generated Design Unit Guide."
       },
       "seeding_key": {
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
+        "activity_section.key": "481e6ae3-b935-4570-a071-9515ddf1d29f",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "511800c3-4666-46ee-8e17-64b5f4bb9476",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define style sheet. Explain that CSS is the bridge between design and development: it's how the decisions made in a brand kit — like colors, fonts, and layout — become consistent code. Every time students see a website where the colors, fonts, and spacing look intentional and consistent, that's CSS at work."
+      },
+      "seeding_key": {
+        "activity_section.key": "511800c3-4666-46ee-8e17-64b5f4bb9476",
         "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
       }
     },
     {
       "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students that they practiced this “Prompt Like a Developer” routine in Lesson 3. Review the three requirements and explain that they’ll use the same structure again in the next level before prompting AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 5 through 7.\n- Level 5: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 6: Students prompt AI to generate and apply a basic CSS stylesheet.\n- Level 7: Students prompt AI to apply brand colors and fonts to key regions (header, nav, main, footer) and refine for accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students provided the stylesheet as context to the AI and prompted the AI to generate new HTML with their stylesheet linked in the <head>). Have students explain what they notice about the AI's code and why it made those styling choices.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students that they practiced this “Prompt Like a Designer” routine in Lesson 3. Review the three requirements and explain that they’ll use the same structure again in the next level before prompting AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students prompt AI to generate and apply a basic CSS stylesheet.\n- Level 3: Students prompt AI to apply brand colors and fonts to key regions (header, nav, main, footer) and refine for accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students provided the stylesheet as context to the AI and prompted the AI to generate new HTML with their stylesheet linked in the `<head>`. Have students explain what they notice about the AI's code and why it made those styling choices.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
         "progression_name": "Apply a Stylesheet",
         "tips": [
           {
@@ -3001,7 +3011,7 @@
     },
     {
       "key": "eb19e8c6-032e-459a-a171-d7d33faf20d8",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent."
       },
@@ -3012,7 +3022,7 @@
     },
     {
       "key": "334832a8-868c-44f9-ab42-48736fbf0c38",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "When developers use AI tools, they don't assume every output is correct — they check what changed, why it changed, and whether it still fits the brand's tone and user needs. You're doing the same thing here: validating the AI's choices.",
         "remarks": true
@@ -3024,21 +3034,34 @@
     },
     {
       "key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
-      "position": 6,
+      "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 8 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, consistent, or accessible?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Document what changed and why it improved the design.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 4 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
         "duration": "15",
         "name": "Style Choice Challenge",
         "progression_name": "Styling Challenge",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use the Level 9 reflection level to formatively assess whether students can:\n- Describe one specific styling refinement they made.\n- Explain how they used AI intentionally (including how they adjusted their prompt, if needed).\n- Connect their change to improved brand alignment and usability.\n- Distinguish between structural changes (HTML) and styling changes (CSS).\n"
+            "markdown": "Use the Level 5 reflection level to formatively assess whether students can:\n- Describe one specific styling refinement they made.\n- Explain how they used AI intentionally (including how they adjusted their prompt, if needed).\n- Connect their change to improved brand alignment and usability.\n- Distinguish between structural changes (HTML) and styling changes (CSS).\n"
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that reference levels at the end of the lesson show how to add context and save prompts in AI Tutor.",
+        "name": "Reference Materials",
+        "progression_name": "Reference: Adding Context and Saving Prompts"
+      },
+      "seeding_key": {
+        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
         "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
       }
     },
@@ -3068,7 +3091,7 @@
       "key": "ce6cf2f8-df50-4314-a1e3-1f42cad0373c",
       "position": 2,
       "properties": {
-        "description": "When we build personas and problem statements today, we want to capture not just what users do, but how they feel. If we understand needs and emotions clearly, we can design solutions that don't leave users frustrated.",
+        "description": "Those feelings are signals. If users feel frustrated or confused, something isn’t working. Our job is to design something that makes them feel more confident and supported.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3077,12 +3100,23 @@
       }
     },
     {
+      "key": "bf893d98-72c2-46c8-9585-ec7b22733d00",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf893d98-72c2-46c8-9585-ec7b22733d00",
+        "lesson_activity.key": "23072a29-d20a-4c53-93dc-8d9e52098830"
+      }
+    },
+    {
       "key": "3bf34182-3a70-4c2d-aa06-b45c402ba285",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Analyze a persona from a series and connect it to design implications.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give each student a copy of the Design Implications activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2.\n- Level 1: Read an informational panel on how user personas inform design decisions\n- Level 2: Analyze a sample user persona, inferring design decisions and connecting them to a problem statement. Complete page 1 of the activity guide.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Create a user persona and use it to generate a focused, need-based problem statement.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students get out their copy of the AI-Generated Design Unit Guide.",
         "duration": "15",
-        "name": "User Persona Analysis",
+        "name": "Persona and Problem Statement Practice",
         "progression_name": "Build a User Personas and Problem Statement"
       },
       "seeding_key": {
@@ -3091,9 +3125,211 @@
       }
     },
     {
-      "key": "167122eb-59d1-49b3-9efc-775d6b250a01",
+      "key": "73a71285-dd6f-4632-9a61-3cd89a21738f",
       "position": 2,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "73a71285-dd6f-4632-9a61-3cd89a21738f",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "dfc03077-a991-4c53-8095-edf16c6a5262",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define problem statement and direct students to record the definition in their Unit Guide. Emphasize that a strong problem statement focuses on a user's need and why it matters, not a feature or solution. Introduce the structure: [user] needs a way to [need] because [reason/insight]."
+      },
+      "seeding_key": {
+        "activity_section.key": "dfc03077-a991-4c53-8095-edf16c6a5262",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "a413ca7e-9972-4d97-a2dc-d3bc48cc4b72",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a413ca7e-9972-4d97-a2dc-d3bc48cc4b72",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "54a0a662-084c-4f52-9ee8-5a38854cf3ba",
+      "position": 5,
+      "properties": {
+        "description": "Today we’re not jumping into features. We’re not designing screens yet. We’re stepping back and asking a more important question — who are we designing for? Later, when we design layouts and navigation, those decisions will come directly from a user and their needs.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "54a0a662-084c-4f52-9ee8-5a38854cf3ba",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "6b0ef1c9-7825-4514-bb26-a5373d83defa",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b0ef1c9-7825-4514-bb26-a5373d83defa",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "5e9b8d5f-30ef-4396-94dd-baa22965ca70",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that strong designers define the user and the problem before building features. Briefly ask, \"Who might get left out if we only design for users like ourselves?\" Take 1–2 quick responses, then connect this to why detailed personas matter. Emphasize that skipping this step often leads to confusing or ineffective designs.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time allows, ask students to think about an app they've stopped using and why it didn't work for them. Take a few quick responses and connect them back to unclear design, too many clicks, or not matching how users actually behave. Reinforce that this happens when designers don't deeply understand their users.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5e9b8d5f-30ef-4396-94dd-baa22965ca70",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "41354fdf-8660-465d-a820-fadb75a60281",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "41354fdf-8660-465d-a820-fadb75a60281",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "2b2e98c9-f052-464f-b341-c4c31453d55f",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that before designing a solution, we need to clearly define who we’re designing for. For this example scenario, invite students to help create a sample student persona. Ask for suggestions for the student's name, grade level, and 2–3 clubs they're involved in. Record responses visibly and have students write down the same details in their Unit Guide. Pause briefly to reinforce: specific details make better design decisions later.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this quick. Take 2–3 suggestions and settle on one clear, realistic persona. This is a working draft, not a fully developed character. Remind them that real design decisions depend on these details.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2b2e98c9-f052-464f-b341-c4c31453d55f",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "07384a85-2a5f-4315-bc28-f2522db1a37c",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "07384a85-2a5f-4315-bc28-f2522db1a37c",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "78422270-9d8d-4ca2-bd74-7b4b67de3205",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that now we're stepping into the user's perspective. Read the \"Says\" and \"Thinks\" examples aloud, then ask students \"What might this student be feeling?\" and \"What might they actually do in this situation?\" Invite a few responses for each and record them visibly. Have students add the same ideas to their Unit Guide. Remind students that good problem statements come from understanding these deeper frustrations, not jumping to features. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Limit responses to 1–2 strong examples per quadrant. Focus on patterns, not listing everything the user might feel or think.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "78422270-9d8d-4ca2-bd74-7b4b67de3205",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "6b3de018-3281-49a7-815c-a9507b000ff7",
+      "position": 12,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6b3de018-3281-49a7-815c-a9507b000ff7",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "6fef9ffd-1567-4c28-ae6e-2ec28f6b182b",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that now we move from broad observations to focus. Based on what the user says, thinks, feels, and does, ask students: \"What is the core frustration underneath all of this?\" and \"What is the goal the user is really trying to achieve?\" Push them to be specific (not \"too many meetings\" but \"missing important information because information is scattered\"). Record one strong example of a frustration and one strong example of a goal. Have students add the same to their Unit Guide. Briefly note that this frustration and goal will become the foundation for the problem statement.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Push for specificity, then move on. Record one strong frustration and one meaningful goal that clearly connect to the user’s situation.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6fef9ffd-1567-4c28-ae6e-2ec28f6b182b",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "b6f53090-f92f-48bc-b5d2-e3535587d304",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b6f53090-f92f-48bc-b5d2-e3535587d304",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "e0840b5d-da1c-4052-8f56-2a3aab19cd9f",
+      "position": 15,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that now we combine the user's core frustration and meaningful goal into a clear problem statement. Remind students that a strong problem statement focuses on a need, not a specific solution (no apps, features, or tools yet). Invite a few suggestions using the template and push for clarity and specificity. Record one strong version visibly, then have students write it in their Unit Guide. Briefly note that problem statements will guide future layout and navigation decisions — what gets prioritized, simplified, or removed. For example, if a user feels overwhelmed, we might design something simple and uncluttered; if they struggle with scattered information, we might prioritize one clear dashboard.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Draft one strong class example using the template. Avoid rewriting it multiple times — refinement will happen during independent practice.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e0840b5d-da1c-4052-8f56-2a3aab19cd9f",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "6bba7f96-c707-4697-8cf3-c8f3ea4772d6",
+      "position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6bba7f96-c707-4697-8cf3-c8f3ea4772d6",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "f758bb3f-393a-4da6-a811-84372604bd27",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students use the checklist in their Unit Guide to decide which problem statement is stronger and explain why. Guide them to notice that #1 is stronger because it \n- Focuses on a user need, not a specific solution\n- Connects directly to the user's frustration (missing important information)\n- Clearly explains why the need matters in the \"because\" clause.\n\nIn contrast, #2 jumps to a specific solution (\"an app that sends notifications\") and does not explain the underlying need or insight.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f758bb3f-393a-4da6-a811-84372604bd27",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "167122eb-59d1-49b3-9efc-775d6b250a01",
+      "position": 18,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students create a realistic user persona and write a clear, need-focused problem statement.",
+        "duration": "20",
+        "name": "Create a User Persona and Problem Statement",
         "progression_name": "User Persona Analysis: Alex"
       },
       "seeding_key": {
@@ -3102,10 +3338,52 @@
       }
     },
     {
-      "key": "dab912cf-9d2e-4877-b065-e404ad591735",
-      "position": 3,
+      "key": "b2c2f2ca-7464-4405-9d01-f7756bb07d46",
+      "position": 19,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define problem statement. Problem statement format - [user] needs a way to [need] because [reason].\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which statement is stronger? Why?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that B is better because it's specific, user-centered, and explains constraints."
+      },
+      "seeding_key": {
+        "activity_section.key": "b2c2f2ca-7464-4405-9d01-f7756bb07d46",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "413bcaa9-7d6b-4fd2-aac1-4ba2c3454043",
+      "position": 20,
+      "properties": {
+        "description": "Now it's your turn. Choose a scenario, define your user clearly, and turn their frustration and goal into a focused problem statement. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "413bcaa9-7d6b-4fd2-aac1-4ba2c3454043",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "501296f6-2736-43c3-a358-7d09620c8385",
+      "position": 21,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "501296f6-2736-43c3-a358-7d09620c8385",
+        "lesson_activity.key": "a68e95de-4243-4dad-b743-edf64fbe0a62"
+      }
+    },
+    {
+      "key": "dab912cf-9d2e-4877-b065-e404ad591735",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. Students choose a scenario, build a persona, and draft a problem statement. The AI Design Partner is optional and should be used to strengthen clarity, to not generate everything for them. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for whether their personas feel specific and realistic (not generic like \"a student who is busy\"). Check that problem statements focus on a need, not a solution. If students write something like \"needs an app that … \", ask \"What is the actual need underneath that?\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students get stuck, have them return to the user's frustration and goal first. A strong problem statement grows directly from those two pieces. Remind them: clarity matters more than sounding \"fancy.\"\n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Student work on this level can be used as a formative assessment of the lesson objectives: \n- Create a persona representing a user type.\n- Write concise problem statement aligned to the persona.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735",
@@ -3114,11 +3392,8 @@
     },
     {
       "key": "9f6abb35-06ab-4c26-b41c-9bff694a9961",
-      "position": 4,
+      "position": 23,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Students create a user persona and write problem statements with AI support.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3. Students should choose a scenario, create a sample user persona, and draft a problem statement.",
-        "duration": "20",
-        "name": "Create a User Persona",
         "progression_name": "Create a User Persona and Problem Statement"
       },
       "seeding_key": {
@@ -3128,10 +3403,16 @@
     },
     {
       "key": "fe2bd43f-bde3-470f-a442-4c42768804c7",
-      "position": 5,
+      "position": 24,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students swap personas and problem statements with a partner to provide feedback. Students use a Peer Review Checklist to provide feedback.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for feedback that is specific and actionable.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 4 and 5.\n- Level 4: Review the vocabulary term problem statement.\n- Level 5: Define the term in student's own words. Use examples from the lesson to explain their thinking.",
-        "progression_name": "Vocab: Problem Statement"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students pair up and read their partner's problem statement aloud. Using the Problem Statement Checklist in their Unit Guide, they should give one specific piece of feedback and one suggestion for improvement. This can be shared verbally or written on a sticky note. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen for feedback that directly references the Problem Statement Checklist rather than personal opinion. Encourage students to name exactly what is working or needs improvement, such as whether the statement focuses on a need instead of a solution or whether the \"because\" clause clearly explains why the need matters. If feedback is vague, prompt students with questions like \"Does this focus on a need or a solution?\" or \"Is the reason specific and meaningful?\" to push them toward more precise actionable critique. ",
+        "progression_name": "Vocab: Problem Statement",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this fast-paced. One strong comment per partner is enough. Remind students that the goal isn’t to rewrite their partner’s statement. It’s to help them see whether their problem statement clearly focuses on a need, connects to the persona, and explains why that need matters. Encourage feedback that references the checklist directly rather than personal preference.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "fe2bd43f-bde3-470f-a442-4c42768804c7",
@@ -3142,7 +3423,7 @@
       "key": "79ebfce7-74dc-4b05-9813-7538692e806b",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently, then invite a few volunteers to share. As students respond, press them to explain why defining needs clearly matters and how a strong problem statement will guide future layout and design decisions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "79ebfce7-74dc-4b05-9813-7538692e806b",
@@ -3518,19 +3799,8 @@
       }
     },
     {
-      "key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1",
-      "position": 6,
-      "properties": {
-        "progression_name": "Vocab: POUR Principles"
-      },
-      "seeding_key": {
-        "activity_section.key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
       "key": "53d0f84e-a9c7-47c2-9e16-4e0882bdd3a4",
-      "position": 7,
+      "position": 6,
       "properties": {
         "progression_name": "Fix Accessibility Issues",
         "tips": [
@@ -3547,7 +3817,7 @@
     },
     {
       "key": "a957d2c4-7506-4727-b67f-50fc37f009db",
-      "position": 8,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -3557,7 +3827,7 @@
     },
     {
       "key": "bd913774-0194-4540-a189-6dce8385e60b",
-      "position": 9,
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do we need a framework like POUR when designing for accessibility?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that POUR provides a structured approach to ensure digital products are usable by everyone. Guide them to see it as a checklist or a set of guiding principles that help designers systematically consider different aspects of accessibility. Emphasize that it helps ensure inclusivity and usability across a wide range of user needs and abilities."
       },
@@ -3568,7 +3838,7 @@
     },
     {
       "key": "433a4c94-8701-42d4-b508-86981dfcb0a7",
-      "position": 10,
+      "position": 9,
       "properties": {
         "description": "Now we'll use these principles to start identifying issues and prompting AI to fix them.",
         "remarks": true
@@ -3580,7 +3850,7 @@
     },
     {
       "key": "97961015-fc2a-438d-ad78-2382993d71dd",
-      "position": 11,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4. Students apply accessibility principles to their own apps from Lesson 8 by revisiting them with a user persona who has an accessibility constraint.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind them to be specific in their prompts, referencing the POUR principles. Ask students to explain how their user's constraint makes certain aspects of their app challenging. Prompt them to connect specific design elements to potential accessibility barriers.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 5."
       },
@@ -3591,7 +3861,7 @@
     },
     {
       "key": "8252879a-218a-4d83-a560-d4d85c0a010d",
-      "position": 12,
+      "position": 11,
       "properties": {
         "progression_name": "Apply Accessibility Principles"
       },
@@ -3602,7 +3872,7 @@
     },
     {
       "key": "4eb39b41-cf4c-471e-8fd8-54286965668b",
-      "position": 13,
+      "position": 12,
       "properties": {
         "progression_name": "Check for Understanding",
         "tips": [
@@ -3629,19 +3899,6 @@
       },
       "seeding_key": {
         "activity_section.key": "2f82b4de-d2f8-4331-be82-fae001199b5d",
-        "lesson_activity.key": "fd417ef1-11b5-466f-b064-4b37dafa8609"
-      }
-    },
-    {
-      "key": "2d240ec2-c420-4436-a8cc-ec313e55839f",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 5 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "2d240ec2-c420-4436-a8cc-ec313e55839f",
         "lesson_activity.key": "fd417ef1-11b5-466f-b064-4b37dafa8609"
       }
     },
@@ -4994,10 +5251,10 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
+        "progression": "Create a Brand Kit"
       },
       "bonus": false,
       "seeding_key": {
@@ -5007,7 +5264,7 @@
         "lesson.key": "Lesson 5: Brand Identity",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8e133331-e7f2-4647-bc33-54782c9e208b"
+        "activity_section.key": "2091b56c-977b-4fa8-beff-e6722c15904a"
       },
       "level_keys": [
         "ai-generated-design-lesson5-level5_2026"
@@ -5016,94 +5273,6 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "How To: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level1_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level1_2026"
-      ]
-    },
-    {
-      "chapter": 20,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "How To: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level2_2026"
-      ]
-    },
-    {
-      "chapter": 21,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "How To: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level3_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level3_2026"
-      ]
-    },
-    {
-      "chapter": 22,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "How To: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level4_2026-v5"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level4_2026-v5"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5124,8 +5293,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 6,
+      "chapter": 20,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -5134,7 +5303,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level5_2026-v2"
+          "ai-generated-design-lesson6-level5_2026-v3"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -5142,12 +5311,12 @@
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level5_2026-v2"
+        "ai-generated-design-lesson6-level5_2026-v3"
       ]
     },
     {
-      "chapter": 25,
-      "position": 7,
+      "chapter": 21,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -5156,7 +5325,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2025-v2"
+          "ai-generated-design-lesson6-level2_2025-v2"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -5164,12 +5333,12 @@
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level6_2025-v2"
+        "ai-generated-design-lesson6-level2_2025-v2"
       ]
     },
     {
-      "chapter": 26,
-      "position": 8,
+      "chapter": 22,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5178,7 +5347,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2025-v2"
+          "ai-generated-design-lesson6-level4_2025-v2"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -5186,12 +5355,12 @@
         "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level7_2025-v2"
+        "ai-generated-design-lesson6-level4_2025-v2"
       ]
     },
     {
-      "chapter": 27,
-      "position": 9,
+      "chapter": 23,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5212,12 +5381,77 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Reference: Adding Context and Saving Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level1_2026"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson6-level1_2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Reference: Adding Context and Saving Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level2_2026"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson6-level2_2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Reference: Adding Context and Saving Prompts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level3_2026"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson6-level3_2026"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build a User Personas and Problem Statement"
       },
       "bonus": false,
       "seeding_key": {
@@ -5227,58 +5461,14 @@
         "lesson.key": "Lesson 7: Meet Your User",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3bf34182-3a70-4c2d-aa06-b45c402ba285"
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
       },
       "level_keys": [
         "ai-generated-design-lesson7-level1_choice_2026"
       ]
     },
     {
-      "chapter": 29,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "User Persona Analysis: Alex"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-level1_2026"
-        ],
-        "lesson.key": "Lesson 7: Meet Your User",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "167122eb-59d1-49b3-9efc-775d6b250a01"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson7-level1_2026"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "User Persona Analysis: Alex"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-level2_2026"
-        ],
-        "lesson.key": "Lesson 7: Meet Your User",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "167122eb-59d1-49b3-9efc-775d6b250a01"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson7-level2_2026"
-      ]
-    },
-    {
-      "chapter": 31,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5300,7 +5490,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5322,7 +5512,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5344,7 +5534,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5366,7 +5556,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5388,52 +5578,8 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: POUR Principles"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level1_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson9-level1_2026"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: POUR Principles"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level2_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson9-level2_2026"
-      ]
-    },
-    {
-      "chapter": 38,
-      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5454,8 +5600,8 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 4,
+      "chapter": 34,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5476,8 +5622,8 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 5,
+      "chapter": 35,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5498,29 +5644,7 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level6_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "2d240ec2-c420-4436-a8cc-ec313e55839f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson9-level6_2026"
-      ]
-    },
-    {
-      "chapter": 42,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5542,52 +5666,8 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 37,
       "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Wireframe"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level2_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3a627c77-c0b1-4c15-a851-7e7292c30472"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-level2_2026"
-      ]
-    },
-    {
-      "chapter": 44,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Wireframe"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level3_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3a627c77-c0b1-4c15-a851-7e7292c30472"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-level3_2026"
-      ]
-    },
-    {
-      "chapter": 45,
-      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5608,7 +5688,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5630,7 +5710,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5652,7 +5732,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5674,7 +5754,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5696,7 +5776,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5718,7 +5798,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5740,7 +5820,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5762,7 +5842,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5784,7 +5864,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5806,7 +5886,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5828,7 +5908,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5850,7 +5930,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5872,7 +5952,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6108,7 +6188,67 @@
         "lesson.key": "Lesson 5: Brand Identity",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8e133331-e7f2-4647-bc33-54782c9e208b"
+        "activity_section.key": "2091b56c-977b-4fa8-beff-e6722c15904a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson6-level4_2026-v4",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level4_2026-v4"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson6-level5_2026-v3",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level5_2026-v3"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson6-level2_2025-v2",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level2_2025-v2"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson6-level4_2025-v2",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level4_2025-v2"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson6-level8_2026-v2",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson6-level8_2026-v2"
+        ],
+        "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
       }
     },
     {
@@ -6149,78 +6289,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level4_2026-v5",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level4_2026-v5"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level4_2026-v4",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level4_2026-v4"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level5_2026-v2",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level5_2026-v2"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level6_2025-v2",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level6_2025-v2"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level7_2025-v2",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level7_2025-v2"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level8_2026-v2",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level8_2026-v2"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson7-level1_choice_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson7-level1_choice_2026"
@@ -6228,31 +6296,7 @@
         "lesson.key": "Lesson 7: Meet Your User",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3bf34182-3a70-4c2d-aa06-b45c402ba285"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson7-level1_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-level1_2026"
-        ],
-        "lesson.key": "Lesson 7: Meet Your User",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "167122eb-59d1-49b3-9efc-775d6b250a01"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson7-level2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson7-level2_2026"
-        ],
-        "lesson.key": "Lesson 7: Meet Your User",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "167122eb-59d1-49b3-9efc-775d6b250a01"
+        "activity_section.key": "dab912cf-9d2e-4877-b065-e404ad591735"
       }
     },
     {
@@ -6317,30 +6361,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson9-level1_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level1_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson9-level2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level2_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "65f49e24-d3db-4cbb-acc2-de7e0447cea1"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson9-level3_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson9-level3_2026"
@@ -6377,18 +6397,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson9-level6_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson9-level6_2026"
-        ],
-        "lesson.key": "Lesson 9: Accessibility in Design",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "2d240ec2-c420-4436-a8cc-ec313e55839f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson10-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson10-level1_2026"
@@ -6397,30 +6405,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "680e9565-15c8-4f93-94ee-76c65da3ae5d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson10-level2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level2_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3a627c77-c0b1-4c15-a851-7e7292c30472"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson10-level3_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level3_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3a627c77-c0b1-4c15-a851-7e7292c30472"
       }
     },
     {
@@ -6633,20 +6617,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_from_wireframes_to_layouts"
-      }
-    },
-    {
-      "name": "[KEY] Meet Your User",
-      "url": "https://docs.google.com/document/d/1Fmaj1ixh31WOJbVFUVcoAoMP90-P7fhsQpbFYLfhF-8/edit?usp=sharing",
-      "key": "_key_meet_your_user",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_meet_your_user"
       }
     },
     {
@@ -6909,7 +6879,7 @@
     },
     {
       "name": "Meet Your User",
-      "url": "https://docs.google.com/presentation/d/1KhVmpgnmUGjI0K5LX_9RqLEXO98j12fSINQ31qZVZYw/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
+      "url": "https://docs.google.com/presentation/d/1xnyCwcyYXbzWT3-UITZPLwDOcDIVB6zE-tv0Whjz0do/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "meet_your_user",
       "properties": {
         "audience": "Teacher",
@@ -6919,21 +6889,6 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_user"
-      }
-    },
-    {
-      "name": "Meet Your User",
-      "url": "https://docs.google.com/document/d/1GkWne6z61Fhd-Cr9l7oDvs--Xt-6eBMeXthCFAr9skg/edit?usp=sharing",
-      "key": "meet_your_user_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "meet_your_user_1"
       }
     },
     {
@@ -7273,19 +7228,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 7: Meet Your User",
-        "resource.key": "_key_meet_your_user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Meet Your User",
         "resource.key": "meet_your_user"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 7: Meet Your User",
-        "resource.key": "meet_your_user_1"
       }
     },
     {
@@ -7339,7 +7282,7 @@
     {
       "key": "css_cascading_style_sheets_",
       "word": "CSS (Cascading Style Sheets)",
-      "definition": "Controls the layout, colors, fonts, and overall style",
+      "definition": "controls the layout, colors, fonts, and overall style",
       "properties": {
       },
       "seeding_key": {
@@ -7379,7 +7322,7 @@
     {
       "key": "html_hypertext_markup_language_",
       "word": "HTML (HyperText Markup Language)",
-      "definition": "Provides the structure and content of a web page",
+      "definition": "provides the structure and content of a web page",
       "properties": {
       },
       "seeding_key": {
@@ -7397,13 +7340,13 @@
       }
     },
     {
-      "key": "mood_boarding",
-      "word": "mood boarding",
+      "key": "mood_board",
+      "word": "mood board",
       "definition": "a collection of images, colors, and text used to explore the overall aesthetic of a brand",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "mood_boarding"
+        "vocabulary.key": "mood_board"
       }
     },
     {
@@ -7429,7 +7372,7 @@
     {
       "key": "problem_statement",
       "word": "problem statement",
-      "definition": "clearly explains what a user needs and why it matters, without jumping to a solution",
+      "definition": "explains what a user needs and why it matters, without jumping to a solution",
       "properties": {
       },
       "seeding_key": {
@@ -7625,7 +7568,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
-        "vocabulary.key": "mood_boarding"
+        "vocabulary.key": "mood_board"
       }
     },
     {
@@ -8068,6 +8011,14 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
+    },
+    {
+      "level_name": "ai-generated-design-lesson9-level3_2026",
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
     }
   ],
   "learning_goals": [
@@ -8106,6 +8057,19 @@
       "seeding_key": {
         "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
         "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+      "position": 1,
+      "learning_goal": "exampel 1",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+        "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8291,6 +8255,54 @@
         "understanding": 3,
         "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
         "lesson.key": "Lesson 2: The User's Experience",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "no stuff and things",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "little bit of stuff and things",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "things",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "stuff",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
+        "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }

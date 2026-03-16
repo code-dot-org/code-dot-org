@@ -13,6 +13,7 @@ import {
   ChatTextMessage,
 } from '@cdo/apps/aiDifferentiation/types';
 import {registerReducers} from '@cdo/apps/redux';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {
   ModalTypes,
@@ -117,8 +118,12 @@ const aichatSlice = createSlice({
       for (let i = events.length - 1; i >= 0; i--) {
         const event = events[i];
 
+        // We always reset conversation history when the user clears the chat.
+        // In addition, for AI Chat lab, clear the history when certain model updates occur,
+        // as the user controls model updates.
         if (
-          (isModelUpdate(event) &&
+          (state.clientType === AiChatClientTypes.AI_CHAT_LAB &&
+            isModelUpdate(event) &&
             RESET_CONVERSATION_CUSTOMIZATION_UPDATES.includes(
               event.updatedField
             )) ||

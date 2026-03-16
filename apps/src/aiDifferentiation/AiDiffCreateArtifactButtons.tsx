@@ -5,15 +5,27 @@ import React from 'react';
 import {setPendingArtifactMessage} from '@cdo/apps/aichat/redux/slice';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import {EVENTS} from '../metrics/AnalyticsConstants';
+
 import {ChatTextMessage} from './types';
 
 import style from './ai-differentiation.module.scss';
 
 interface Props {
   message: ChatTextMessage;
+  threadId: number;
+  eventCallback: (
+    thread: number,
+    event: (typeof EVENTS)[keyof typeof EVENTS],
+    prompt?: string
+  ) => void;
 }
 
-const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
+const AiDiffCreateArtifactButtons: React.FC<Props> = ({
+  message,
+  threadId,
+  eventCallback,
+}) => {
   const dispatch = useAppDispatch();
 
   return message.isArtifactCandidate ? (
@@ -22,7 +34,10 @@ const AiDiffCreateArtifactButtons: React.FC<Props> = ({message}) => {
         variant="outlined"
         color="tertiary"
         size="small"
-        onClick={() => dispatch(setPendingArtifactMessage(message))}
+        onClick={() => {
+          dispatch(setPendingArtifactMessage(message));
+          eventCallback(threadId, EVENTS.AI_ARTIFACT_CREATE_CLICKED);
+        }}
         aria-label="Create artifact"
         type="button"
         startIcon={<FontAwesomeV6Icon iconName="shapes" />}

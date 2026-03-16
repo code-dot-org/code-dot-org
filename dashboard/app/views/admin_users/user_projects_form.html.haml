@@ -10,7 +10,7 @@
 = form_tag url_for(action: 'user_projects_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
   = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', placeholder: 'user id, email, or username', size: 80
   %button.btn{type: 'submit'}
-    %i.fa.fa-search
+    %i.fa-solid.fa-magnifying-glass
 
 -if @target_user
   %h2 User information

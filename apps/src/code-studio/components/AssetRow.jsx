@@ -101,7 +101,7 @@ export default class AssetRow extends React.Component {
                 className={usage > 0 ? '' : 'btn-danger'}
                 onClick={usage > 0 ? this.attemptBadDelete : this.confirmDelete}
               >
-                <i className="fa fa-trash-o" />
+                <i className="fa-regular fa-trash-can" />
               </button>
             )}
 
@@ -137,7 +137,7 @@ export default class AssetRow extends React.Component {
         actions = (
           <td width="250" style={{textAlign: 'right'}}>
             <i
-              className="fa fa-spinner fa-spin"
+              className="fa-solid fa-spinner fa-spin"
               style={{
                 fontSize: '32px',
                 marginRight: '15px',

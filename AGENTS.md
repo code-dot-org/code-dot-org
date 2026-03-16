@@ -86,3 +86,8 @@
 - next, test as much as you can with rails runner, mysql commands, in the browser, etc (as relevant)
 - finally, if there's a relevant test suite, run it
 - once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
+
+# Agent skills
+- Add agent skills to the `.agents/skills` directory shared by all agents.
+- Skill directories matching `.agents/skills/*.local` are not committed to git.
+- Prefer adding agent skills to extending AGENTS.md.

@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
   TooltipProps,
   WithTooltip,
@@ -7,6 +7,7 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import ControlButtons from '@codebridge/Console/ControlButtons';
 import {MiniApps} from '@codebridge/constants';
+import {IconButton as MuiIconButton} from '@mui/material';
 import React, {useEffect, useMemo, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -81,35 +82,36 @@ const MiniAppPreview: React.FunctionComponent<MiniAppPreviewProps> = ({
       rightHeaderContent={
         <>
           <WithTooltip tooltipProps={tooltipProps}>
-            <Button
-              onClick={resetMiniApp}
-              icon={{
-                iconStyle: 'solid',
-                iconName: 'rotate-left',
-              }}
-              size={'xs'}
-              type={'tertiary'}
-              isIconOnly={true}
-              ariaLabel={codebridgeI18n.resetPreview()}
+            <MuiIconButton
+              variant="text"
+              color="primary"
+              size="extraSmall"
               disabled={isResetButtonDisabled}
-            />
+              onClick={resetMiniApp}
+              aria-label={codebridgeI18n.resetPreview()}
+              type="button"
+            >
+              <FontAwesomeV6Icon iconStyle="solid" iconName="rotate-left" />
+            </MuiIconButton>
           </WithTooltip>
           {showMaximizeButton && (
-            <Button
+            <MuiIconButton
+              variant="text"
+              color="primary"
+              size="extraSmall"
               onClick={isMaximized ? minimizeMiniApp : maximizeMiniApp}
-              icon={{
-                iconStyle: 'solid',
-                iconName: isMaximized ? 'compress' : 'expand',
-              }}
-              size={'xs'}
-              type={'tertiary'}
-              isIconOnly={true}
-              ariaLabel={
+              aria-label={
                 isMaximized
                   ? codebridgeI18n.minimizePreview()
                   : codebridgeI18n.maximizePreview()
               }
-            />
+              type="button"
+            >
+              <FontAwesomeV6Icon
+                iconStyle="solid"
+                iconName={isMaximized ? 'compress' : 'expand'}
+              />
+            </MuiIconButton>
           )}
         </>
       }
