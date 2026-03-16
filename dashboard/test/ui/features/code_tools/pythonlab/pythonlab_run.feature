@@ -32,6 +32,8 @@ Scenario: Continue button and progress status shows up correctly
   # Validated level that passes by default, running validation will pass the level and
   # cause the continue button to be enabled.
   And I wait until current URL contains "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/2"
+  # Ensure we still have the tour disabled flag.
+  And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/50/levels/2?hideProductTours=true"
   # Check that progress has been updated for the previous level
   Then I verify progress in the header of the current page is "perfect" for level 1
   And I wait until element "#resource-panel-tab-validation" is visible

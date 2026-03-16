@@ -13,8 +13,8 @@ const useLab2ProductTour = ({
   ...useProductTourProps
 }: UseProductTourProps) => {
   const isStartMode = getIsStartMode();
-  const viewingExemplar = getAppOptionsViewingExemplar();
-  const editingExemplar = getAppOptionsEditingExemplar();
+  const viewingExemplar = !!getAppOptionsViewingExemplar();
+  const editingExemplar = !!getAppOptionsEditingExemplar();
   const hideTour = isStartMode || viewingExemplar || editingExemplar;
   return useProductTour({
     tourAvailable: tourAvailable && !hideTour,
