@@ -5,19 +5,17 @@ import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
+  RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
   RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
+  VALIDATION_TOUR_SEEN,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {ValidationSettings} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/Validation/ValidationPanel';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
 import {createValidationTourSteps} from './validationTourShepherdSteps';
-
-const ONBOARDING_TOUR_LOCAL_STORAGE_KEY = 'resourcePanelOnboardingTourV2Seen';
-const VALIDATION_TOUR_LOCAL_STORAGE_KEY = 'validationTourV2Seen';
 
 interface UseResourcePanelShepherdToursParams {
   isOnboardingTourEnabled: boolean;
@@ -44,10 +42,6 @@ const useResourcePanelShepherdTours = ({
   hasValidationConditions,
   validationSettings,
 }: UseResourcePanelShepherdToursParams) => {
-  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
-    experiments.SHEPHERD_PRODUCT_TOURS
-  );
-
   // We track level load state to avoid starting tours while the level is still loading.
   // This can cause multiple tours to show up if we load one for the previous level and
   // then one for the new level.
@@ -61,12 +55,12 @@ const useResourcePanelShepherdTours = ({
   });
 
   // ONBOARDING TOUR
-  const showOnboardingTour = useMemo(
-    () => (showShepherdProductTours && isOnboardingTourEnabled) || false,
-    [showShepherdProductTours, isOnboardingTourEnabled]
-  );
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
-    () => tryGetLocalStorage(ONBOARDING_TOUR_LOCAL_STORAGE_KEY, 'no') === 'yes'
+    () =>
+      tryGetLocalStorage(
+        RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+        'no'
+      ) === 'yes'
   );
   const onOnboardingTourComplete = useCallback(() => {
     onTourComplete(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME)();
@@ -80,8 +74,8 @@ const useResourcePanelShepherdTours = ({
 
   const {tour: onboardingTour} = useLab2ProductTour({
     getSteps: createOnboardingTourSteps,
-    localStorageKey: ONBOARDING_TOUR_LOCAL_STORAGE_KEY,
-    tourAvailable: showOnboardingTour && !isLevelLoading,
+    localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
+    tourAvailable: isOnboardingTourEnabled && !isLevelLoading,
     onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
     onComplete: onOnboardingTourComplete,
     onCancel: onOnboardingTourCancel,
@@ -93,7 +87,6 @@ const useResourcePanelShepherdTours = ({
   const showValidationTour = useMemo(
     () =>
       (!isLevelLoading &&
-        showShepherdProductTours &&
         isValidationTourEnabled &&
         !!hasValidationConditions &&
         !!validationSettings &&
@@ -101,7 +94,6 @@ const useResourcePanelShepherdTours = ({
       false,
     [
       isLevelLoading,
-      showShepherdProductTours,
       isValidationTourEnabled,
       hasValidationConditions,
       validationSettings,
@@ -111,7 +103,7 @@ const useResourcePanelShepherdTours = ({
 
   const {tour: validationTour} = useLab2ProductTour({
     getSteps: createValidationTourSteps,
-    localStorageKey: VALIDATION_TOUR_LOCAL_STORAGE_KEY,
+    localStorageKey: VALIDATION_TOUR_SEEN,
     tourAvailable: showValidationTour,
     onStart: onTourStart(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
     onComplete: onTourComplete(RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME),
