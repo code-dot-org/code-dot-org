@@ -68,6 +68,13 @@ export default class SmallFooter extends React.Component {
     localeOptions: this.props.localeOptions,
   };
 
+  onLocaleUpdate = info => {
+    this.setState({
+      localeOptions: localization.locales,
+      currentLocale: info.locale,
+    });
+  };
+
   componentDidMount() {
     this.captureBaseElementDimensions();
     window.addEventListener(
@@ -75,14 +82,11 @@ export default class SmallFooter extends React.Component {
       debounce(this.captureBaseElementDimensions, 100)
     );
 
-    localization.on('change', info => {
-      debounce(() => {
-        this.setState({
-          localeOptions: localization.locales,
-          currentLocale: info.locale,
-        });
-      }, 100);
-    });
+    localization.on('change', this.onLocaleUpdate);
+  }
+
+  componentWillUnmount() {
+    localization.off('change', this.onLocaleUpdate);
   }
 
   captureBaseElementDimensions = () => {

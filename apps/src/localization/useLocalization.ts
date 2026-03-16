@@ -9,11 +9,18 @@ import localization from './Localization';
 export const useLocalization = () => {
   const [locale, setLocale] = useState<string>(localization.locale);
 
+  const updateLocale = useCallback(
+    () => setLocale(localization.locale),
+    [setLocale]
+  );
+
   useEffect(() => {
-    localization.on('change', info => {
-      setLocale(localization.locale);
-    });
-  }, [setLocale]);
+    localization.on('change', updateLocale);
+
+    return () => {
+      localization.off('change', updateLocale);
+    };
+  }, [updateLocale]);
 
   return locale;
 };
