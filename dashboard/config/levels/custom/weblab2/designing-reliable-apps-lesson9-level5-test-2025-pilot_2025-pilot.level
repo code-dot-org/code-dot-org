@@ -1,0 +1,42 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:22.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "designing-reliable-apps-lesson9-weblab-template-2025-pilot_2025-pilot",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "long_instructions": "## User Testing\r\n\r\nYour flight planner is ready for takeoff, but what do your passengers think? Swap seats with a classmate to test out each other's apps.\r\n\r\n\r\n1. **Observe the Flow:** Click through your partner's app to experience all three outcomes.\r\n\r\n2. **Consider Human-Centered Reliability:** Do the three states have a similar personality and vibe? Do the messages and icons make sense? Do you know which state is which?\r\n\r\n3. **Share Your Feedback:** Give your partner feedback on their app. Make sure to share your thoughts on loading, empty, and error states.",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:22.690+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson9-level5-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson9-level5-test-2025-pilot\"}]"
+}]]></config>
+</Weblab2>

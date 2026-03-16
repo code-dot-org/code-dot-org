@@ -15,6 +15,9 @@ export default defineConfig({
     // Instead, they are expected to be provided by the host application.
     externalizeDeps(),
   ],
+  server: {
+    allowedHosts: ['localhost-studio.code.org'],
+  },
   build: {
     lib: {
       entry: ['src/App.tsx'],
