@@ -1,6 +1,7 @@
 import {type ModelMessage} from 'ai';
 
 import {generateText} from '@cdo/apps/aiGateway';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ALLOWED_IMAGE_FILE_EXTENSIONS} from '@cdo/apps/util/moderateImage';
@@ -84,11 +85,22 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
-    const asset = await generatedFileToAsset(
-      file,
-      buildAssetUrl,
-      ALLOWED_IMAGE_FILE_EXTENSIONS // Currently only image files are supported.
-    );
+    let asset: ChatAsset;
+    try {
+      asset = await generatedFileToAsset(
+        file,
+        buildAssetUrl,
+        ALLOWED_IMAGE_FILE_EXTENSIONS // Currently only image files are supported.
+      );
+    } catch (error) {
+      // Log and skip files with unsupported or unrecognized media types so the
+      // text response is still returned to the user. The error is surfaced in
+      // the console locally and tracked in production monitoring.
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Skipping unsupported generated file type', error as Error);
+      continue;
+    }
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);

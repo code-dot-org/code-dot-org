@@ -31,11 +31,7 @@ const extensionToMediaTypeMap: Record<string, string> = {
  *
  * @param mediaType - The MIME type string, e.g. "image/png"
  * @param accepts - The set of media types this call site expects. If mediaType
- *   is not in this list, an error is thrown immediately so gaps in coverage are
- *   caught in development rather than silently producing bad filenames.
- * @throws If mediaType is not in accepts, or if there is no extension mapping
- *   for it (which can happen for compound types like "image/svg+xml" if the
- *   map is incomplete).
+ *   is not in this list, an error is thrown.
  */
 export function convertMediaTypeToExtension(
   mediaType: string,
