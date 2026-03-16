@@ -1,8 +1,3 @@
-locals {
-  # Strip "https://" from the issuer URL to get the OIDC provider host used in IAM condition keys
-  oidc_host = replace(var.cluster_oidc_issuer_url, "https://", "")
-}
-
 data "aws_iam_policy_document" "eso_trust" {
   statement {
     effect  = "Allow"

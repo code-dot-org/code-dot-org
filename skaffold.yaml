@@ -3,7 +3,7 @@
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
 
-apiVersion: skaffold/v4beta13
+apiVersion: skaffold/v4beta12
 kind: Config
 build:
   artifacts:
@@ -80,11 +80,11 @@ deploy:
           # https://github.com/GoogleContainerTools/skaffold/issues/2479
           # If we find a solution, we can drop this override:
           user.username: root
-          user.uid: "0"
-          user.gid: "0"
+          user.uid: 0
+          user.gid: 0
           user.home: /home/root
         valuesFiles:
-          # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yaml
+          # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yml
           - k8s/helm/values.yaml
 
 profiles:
@@ -93,7 +93,7 @@ profiles:
   patches:
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
-      value: k8s/helm/production.values.yaml
+      value: k8s/helm/production.values.yml
 
 - name: test
   patches:
@@ -109,7 +109,7 @@ profiles:
   patches:
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
-      value: k8s/helm/development.values.yaml
+      value: k8s/helm/development.values.yml
     # These have to be patches vs in values.yml because they inject local env vars:
     - op: add
       path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.home
@@ -121,20 +121,6 @@ profiles:
       path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
       value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
 
-# Mount local machine credential directories into the dashboard container so it can
-# use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
-- name: local-dev
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/setValues
-      value:
-        localDev:
-          mounts:
-            mountDotAWS: true
-            mountDotConfigGcloud: true
-
-# Populates Dashboard DB (rake dashboard:setup_db)
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
   patches:
       - op: add
@@ -144,8 +130,6 @@ profiles:
           name: setup-db
           args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
 
-# Create standard cdo-v3-* S3 buckets in minio.
-# Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-s3
   patches:
       - op: add
@@ -162,6 +146,10 @@ profiles:
 # For details, see: ./k8s/mimic/README.md
 - name: mimic
   patches:
+    # Name the helm release 'mimic' instead of 'code-dot-org'
+    - op: replace
+      path: /deploy/helm/releases/0/name
+      value: mimic
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
     # mimic docker build. This is just a copy of k8s/mimic/code-dot-org, but symlinks
     # have been replaced by copies of the real files, because docker doesn't follow
@@ -236,16 +224,15 @@ portForward:
 - resourceType: Service
   resourceName: cdo-mysql
   port: mysql
-  localPort: 13306
+  localPort: 16379
 - resourceType: Service
   resourceName: cdo-redis
   port: redis
-  localPort: 16379
-- resourceType: Service
+- resourceType: service
   resourceName: cdo-minio
   port: api
   localPort: 29000
-- resourceType: Service
+- resourceType: service
   resourceName: cdo-minio
   port: console
   localPort: 29001
