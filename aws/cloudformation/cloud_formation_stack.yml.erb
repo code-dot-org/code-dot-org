@@ -242,6 +242,12 @@ Resources:
               - 'bedrock:InvokeModel'
             Resource:
               - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+          # Allow Frontend and Daemon servers to write to Amazon Managed Prometheus (AMP)
+          # TODO: Replace with SSM - https://codedotorg.atlassian.net/browse/INF-2079
+          - Effect: Allow
+            Action:
+              - 'aps:RemoteWrite'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
