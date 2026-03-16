@@ -7,10 +7,9 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
+import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
 import {createSketchlabTourSteps} from './sketchlabShepherdTourSteps';
 
-const SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY =
-  'sketchlabOnboardingTourV2Seen';
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
 const onTourStart = () =>
@@ -33,10 +32,7 @@ const useSketchlabShepherdTour = () => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
-    const tourSeen = tryGetLocalStorage(
-      SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
-      'no'
-    );
+    const tourSeen = tryGetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'no');
     if (tourSeen === 'yes') {
       return;
     }
@@ -76,7 +72,7 @@ const useSketchlabShepherdTour = () => {
 
   const {tour} = useLab2ProductTour({
     getSteps: createSketchlabTourSteps,
-    localStorageKey: SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
+    localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
     tourAvailable: isToolbarReady,
     onStart: onTourStart,
     onComplete: onTourComplete,
