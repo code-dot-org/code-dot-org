@@ -66,6 +66,22 @@
   gap: 16px;
 }
 
+// Demo SectionCard
+.demoSectionTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  h5 {
+    margin-bottom: 0;
+  }
+}
+
+.demoTag [class*='tag'] {
+  background: var(--background-brand-purple-extra-light);
+}
+
+
 .sectionCardHeader {
   padding: 16px;
   border-bottom: 1px solid var(--neutral-gray-20);

@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 
 import {
   TEACHER_NAVIGATION_SECTIONS_URL,
@@ -15,6 +15,7 @@ interface EmptyStateButtonProps {
   icon: string;
   sectionId: number;
   path: string;
+  onBeforeNavigate?: () => Promise<number>;
 }
 
 /**
@@ -24,20 +25,37 @@ interface EmptyStateButtonProps {
  * @param icon - FontAwesome Icon to display on the left of the button.
  * @param sectionId - Section ID to navigate to in teacher dashboard
  * @param path - Path to navigate to in teacher dashboard
+ * @param onBeforeNavigate - Optional async callback that returns a new section ID to navigate to.
  */
 export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
   buttonText,
   icon,
   sectionId,
   path,
+  onBeforeNavigate,
 }) => {
+  const navigate = useNavigate();
   const inDashboard: boolean = Object.values(TEACHER_NAVIGATION_PATHS).includes(
     path
   );
+
+  const handleClick = async (e: React.MouseEvent) => {
+    if (onBeforeNavigate) {
+      e.preventDefault();
+      const newSectionId = await onBeforeNavigate();
+      if (inDashboard) {
+        navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${newSectionId}/${path}`);
+      } else {
+        window.location.href = path;
+      }
+    }
+  };
+
   return inDashboard ? (
     <NavLink
       id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
       className={styles.emptyStateButton}
+      onClick={handleClick}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
       <div className={styles.taskButtonLeft}>
@@ -61,6 +79,7 @@ export const EmptyStateButton: React.FC<EmptyStateButtonProps> = ({
       id={`ui-test-empty-state-button-${buttonText.replaceAll(' ', '-')}`}
       className={styles.emptyStateButton}
       href={path}
+      onClick={handleClick}
     >
       <div className={styles.taskButtonLeft}>
         <FontAwesomeV6Icon

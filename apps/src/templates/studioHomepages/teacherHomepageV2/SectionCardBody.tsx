@@ -15,20 +15,28 @@ import styles from './teacherHomepage.module.scss';
 
 interface SectionCardBodyProps {
   section: Section;
+  onBeforeNavigate?: () => Promise<number>;
 }
 
-const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
+const SectionCardBody: React.FC<SectionCardBodyProps> = ({
+  section,
+  onBeforeNavigate,
+}) => {
   return (
     <div className={styles.sectionCardBody}>
       <div className={styles.sectionCardBodyLeft}>
         {section.courseId ? (
-          <CourseContentDropdown section={section} />
+          <CourseContentDropdown
+            section={section}
+            onBeforeNavigate={onBeforeNavigate}
+          />
         ) : (
           <EmptyStateButton
             buttonText={i18n.assignACourseButton()}
             icon={'book-open-cover'}
             sectionId={section.id}
             path={'/catalog'}
+            onBeforeNavigate={onBeforeNavigate}
           />
         )}
       </div>
@@ -40,6 +48,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             sectionId={section.id}
             sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.progress}
+            onBeforeNavigate={onBeforeNavigate}
           />
         ) : section.studentCount > 0 && !section.courseId ? (
           <div className={styles.studentsAddedAlert}>
@@ -60,6 +69,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             icon={'users'}
             sectionId={section.id}
             path={TEACHER_NAVIGATION_PATHS.roster}
+            onBeforeNavigate={onBeforeNavigate}
           />
         )}
         {section.courseId && (
@@ -69,6 +79,7 @@ const SectionCardBody: React.FC<SectionCardBodyProps> = ({section}) => {
             sectionId={section.id}
             sectionName={section.name}
             path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
+            onBeforeNavigate={onBeforeNavigate}
           />
         )}
       </div>

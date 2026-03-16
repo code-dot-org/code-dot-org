@@ -215,7 +215,10 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               destructiveLoad={true}
             />
             {numSections === 0 ? (
-              <EmptyHomepage showHiddenOnly={showHiddenOnly} />
+              <EmptyHomepage
+                showHiddenOnly={showHiddenOnly}
+                studioUrlPrefix={studioUrlPrefix}
+              />
             ) : (
               <SectionList
                 showHiddenOnly={selectedArchiveToggle === 'archived'}

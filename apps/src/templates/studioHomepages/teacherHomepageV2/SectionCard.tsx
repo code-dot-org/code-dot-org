@@ -19,6 +19,7 @@ interface SectionCardProps {
   section: Section;
   onDeleteClickCallback: (sectionId: number) => void;
   id: number;
+  onBeforeNavigate?: () => Promise<number>;
 }
 
 export const SectionCard: React.FC<SectionCardProps> = ({
@@ -26,6 +27,7 @@ export const SectionCard: React.FC<SectionCardProps> = ({
   section,
   onDeleteClickCallback,
   id,
+  onBeforeNavigate,
 }) => {
   const {attributes, listeners, setNodeRef, transform, transition, isDragging} =
     useSortable({id});
@@ -88,7 +90,12 @@ export const SectionCard: React.FC<SectionCardProps> = ({
           />
         </div>
       </div>
-      {!section.hidden && <SectionCardBody section={section} />}
+      {!section.hidden && (
+        <SectionCardBody
+          section={section}
+          onBeforeNavigate={onBeforeNavigate}
+        />
+      )}
     </li>
   );
 };

@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
@@ -15,6 +15,7 @@ interface TaskButtonProps {
   sectionId: number;
   sectionName: string;
   path: string;
+  onBeforeNavigate?: () => Promise<number>;
 }
 
 /**
@@ -24,6 +25,7 @@ interface TaskButtonProps {
  * @param icon - FontAwesome Icon to display on the left of the button.
  * @param sectionId - Section ID to navigate to in teacher dashboard
  * @param path - Path to navigate to in teacher dashboard
+ * @param onBeforeNavigate - Optional async callback that returns a new section ID to navigate to.
  */
 export const TaskButton: React.FC<TaskButtonProps> = ({
   buttonText,
@@ -31,7 +33,10 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
   sectionId,
   sectionName,
   path,
+  onBeforeNavigate,
 }) => {
+  const navigate = useNavigate();
+
   const sendEvent = () => {
     const navEvent =
       path === 'progress'
@@ -42,6 +47,17 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
     analyticsReporter.sendEvent(navEvent, {});
   };
 
+  const handleClick = async (e: React.MouseEvent) => {
+    if (onBeforeNavigate) {
+      e.preventDefault();
+      const newSectionId = await onBeforeNavigate();
+      sendEvent();
+      navigate(`${TEACHER_NAVIGATION_SECTIONS_URL}/${newSectionId}/${path}`);
+    } else {
+      sendEvent();
+    }
+  };
+
   return (
     <NavLink
       id={`task-button-${buttonText.replaceAll(
@@ -49,7 +65,7 @@ export const TaskButton: React.FC<TaskButtonProps> = ({
         '-'
       )}-${sectionName.replaceAll(' ', '-')}`}
       className={styles.taskButtons}
-      onClick={sendEvent}
+      onClick={handleClick}
       to={`${TEACHER_NAVIGATION_SECTIONS_URL}/${sectionId}/${path}`}
     >
       <div className={styles.taskButtonLeft}>

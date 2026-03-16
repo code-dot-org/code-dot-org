@@ -20,7 +20,6 @@ import currentUser, {
 import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgressV2/sectionProgressRedux';
-import TeacherHomepage from '@cdo/apps/templates/studioHomepages/teacherHomepageV2/TeacherHomepage';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import teacherSections, {
   setAuthProviders,
@@ -93,13 +92,7 @@ $(document).ready(function () {
 
   createReactRoot(
     <Provider store={store}>
-      {sections.length === 0 ? (
-        // If a teacher has no sections, we will send them directly to the homepage to bypass
-        // all of the section loading logic in the TeacherNavigationRouter.
-        <TeacherHomepage studioUrlPrefix={scriptData.studioUrlPrefix} />
-      ) : (
-        <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
-      )}
+      <TeacherNavigationRouter studioUrlPrefix={scriptData.studioUrlPrefix} />
       <FlashHandler flash={flash} autoHideDuration={FLASH_DURATION} />
     </Provider>,
     document.getElementById('teacher-dashboard')

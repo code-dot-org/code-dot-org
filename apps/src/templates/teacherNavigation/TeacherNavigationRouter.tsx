@@ -300,7 +300,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                     '/teacher_dashboard' +
                     generatePath(
                       LABELED_TEACHER_NAVIGATION_PATHS.progress.absoluteUrl,
-                      {sectionId: sectionId}
+                      {sectionId: sectionId || '0'}
                     )
                   }
                 />

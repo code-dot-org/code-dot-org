@@ -14,6 +14,7 @@ import styles from './teacherHomepage.module.scss';
 
 interface CourseContentDropdownProps {
   section: Section;
+  onBeforeNavigate?: () => Promise<number>;
 }
 
 // Interface for the unit lessons dropdown
@@ -29,6 +30,7 @@ interface UnitLessonOptions {
  */
 export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
   section,
+  onBeforeNavigate,
 }) => {
   const [lessonList, setLessonList] = useState<UnitLessonOptions[]>([]);
 
@@ -95,6 +97,7 @@ export const CourseContentDropdown: React.FC<CourseContentDropdownProps> = ({
           sectionId={section.id}
           sectionName={section.name}
           path={`courses/${section.courseVersionName}`}
+          onBeforeNavigate={onBeforeNavigate}
         />
       )}
     </div>

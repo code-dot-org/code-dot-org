@@ -239,6 +239,11 @@ const sectionSlice = createSlice({
           ...state.sections[sectionId],
           ...sectionFromServerSection(action.payload),
         };
+        if (!state.sectionIds.includes(sectionId)) {
+          state.sectionIds.push(sectionId);
+        }
+        state.selectedSectionId = sectionId;
+        state.selectedSectionName = state.sections[sectionId].name || '';
       }
     },
     setSections: {
