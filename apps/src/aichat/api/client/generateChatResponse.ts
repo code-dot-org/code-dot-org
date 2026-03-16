@@ -20,6 +20,16 @@ import {
 import {getModel} from './helpers/modelHelpers';
 import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
 
+// Media types that the model is expected to generate.
+// https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash-image
+const GENERATED_FILE_ACCEPTED_MEDIA_TYPES = [
+  'image/jpeg',
+  'image/png',
+  'image/webp',
+  'image/heic',
+  'image/heif',
+];
+
 /**
  * Performs all the steps necessary to generate a chat response:
  * - Checks user input for safety
@@ -83,7 +93,11 @@ export async function generateChatResponse(
   // Upload generated assets, if any.
   const assets: ChatAsset[] = [];
   for (const file of files) {
-    const asset = await generatedFileToAsset(file, buildAssetUrl);
+    const asset = await generatedFileToAsset(
+      file,
+      buildAssetUrl,
+      GENERATED_FILE_ACCEPTED_MEDIA_TYPES
+    );
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
