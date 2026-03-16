@@ -2,9 +2,9 @@ import {type GeneratedFile, Output} from 'ai';
 import z from 'zod/v3';
 
 import {generateText} from '@cdo/apps/aiGateway';
-import {moderateImage} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import {prepareGeneratedFile} from './fileHelpers';

@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {moderateImage} from '@cdo/apps/lab2/utils/moderateImage';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -12,6 +11,7 @@ import FlaggedImageModal from '@cdo/apps/sharedComponents/FlaggedImageModal';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {

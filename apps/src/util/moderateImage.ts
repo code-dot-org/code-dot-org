@@ -11,7 +11,7 @@ const LABS_WITH_IMAGE_MODERATION = [
   'poetry',
 ];
 
-const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
+export const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 
 // Azure Content Moderator requires both dimensions to be at least this size.
 const MIN_MODERATION_DIMENSION = 128;

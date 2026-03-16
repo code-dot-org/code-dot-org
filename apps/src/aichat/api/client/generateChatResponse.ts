@@ -3,6 +3,7 @@ import {type ModelMessage} from 'ai';
 import {generateText} from '@cdo/apps/aiGateway';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {ALLOWED_IMAGE_FILE_EXTENSIONS} from '@cdo/apps/util/moderateImage';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -19,16 +20,6 @@ import {
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
 import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
-
-// Media types that the model is expected to generate.
-// https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/gemini/2-5-flash-image
-const GENERATED_FILE_ACCEPTED_MEDIA_TYPES = [
-  'image/jpeg',
-  'image/png',
-  'image/webp',
-  'image/heic',
-  'image/heif',
-];
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -96,7 +87,7 @@ export async function generateChatResponse(
     const asset = await generatedFileToAsset(
       file,
       buildAssetUrl,
-      GENERATED_FILE_ACCEPTED_MEDIA_TYPES
+      ALLOWED_IMAGE_FILE_EXTENSIONS
     );
     assets.push(asset);
     if (file.mediaType.startsWith('image/')) {
