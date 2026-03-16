@@ -7,8 +7,6 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -156,7 +154,6 @@ export default class AssetManager extends React.Component {
 
   /**
    * Called when user initiates an upload.
-   * If the file is an image, log event.
    * @param data - Upload data from jquery.fileupload
    */
   onUploadStart = data => {
@@ -166,20 +163,6 @@ export default class AssetManager extends React.Component {
       this.setState({statusMessage: 'Error: No file selected for upload.'});
       return;
     }
-    const isImage = [
-      'image/png',
-      'image/jpeg',
-      'image/jpg',
-      'image/gif',
-    ].includes(file.type);
-
-    if (isImage) {
-      analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
-        UploaderType: 'Asset Uploader',
-        ProjectType: this.state.projectType,
-      });
-    }
-
     this.setState({statusMessage: 'Uploading...'});
     data.submit();
   };

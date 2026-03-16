@@ -1,5 +1,5 @@
-import Button from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import {
   Position,
   Handle,
@@ -183,14 +183,16 @@ function AiNode({
         rows={10}
       />
       <div className={styles.fileUploadContainer}>
-        <Button
-          size="xs"
-          color="gray"
-          type="secondary"
-          text="Upload File"
-          onClick={onDeviceUploadClick}
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="extraSmall"
           className={styles.uploadButton}
-        />
+          onClick={onDeviceUploadClick}
+          type="button"
+        >
+          {'Upload File'}
+        </MuiButton>
         <FileInput />
         {uploadedFileCount > 0 && (
           <span>

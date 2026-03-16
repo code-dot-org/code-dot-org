@@ -20,19 +20,6 @@ Parameters:
     Type: String
     Default: <%=rack_env?(:production) ? 'studio' : "#{stack_name}-studio" %>
     Description: Subdomain name for learning platform ("Dashboard").
-  HourOfCodeBaseDomainName:
-    Type: String
-    Default: hourofcode.com
-    Description: Hour Of Code base domain name.
-  HourOfCodeHostedZoneId:
-    Type: String
-    # Default to ID for `hourofcode.com`
-    Default: Z3TQLAV9VNIB0G
-    Description: Route 53 Hosted Zone ID for Hour of Code base domain name.
-  HourOfCodeSubdomainName:
-    Type: String
-    Default: <%=rack_env?(:production) ? '\'\'' : stack_name %>
-    Description: Subdomain name for Hour Of Code site.
   CodeprojectsBaseDomainName:
     Type: String
     Default: <%=rack_env?(:production) ? 'codeprojects.org' : "#{stack_name}.codeprojects.org" %>
@@ -73,31 +60,6 @@ Parameters:
     Type: String
 <% end -%>
 Resources:
-
-  HourOfCodeCertificate:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-<% if rack_env?(:production) -%>
-      DomainName: !Sub "${HourOfCodeBaseDomainName}"
-      SubjectAlternativeNames:
-        - !Sub "www.${HourOfCodeBaseDomainName}"
-      ValidationMethod: DNS
-      DomainValidationOptions:
-        - DomainName: !Sub "${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-        - DomainName: !Sub "www.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-<% else -%>
-      DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-      SubjectAlternativeNames:
-        - !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-      ValidationMethod: DNS
-      DomainValidationOptions:
-        - DomainName: !Sub "${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-        - DomainName: !Sub "www.${HourOfCodeSubdomainName}.${HourOfCodeBaseDomainName}"
-          HostedZoneId: !Ref HourOfCodeHostedZoneId
-<% end -%>
 
   # ---------------------------------------------
   # Stack-specific IAM permissions
@@ -317,10 +279,7 @@ Resources:
 
 <% if load_balancer -%>
   # ---------------------------------------------
-  # Load Balancers
-  #
-  # TODO
-  # - hourofcode.com and csedweek.org load balancers should be added to this template.
+  # Load Balancer - supports both learning platform ("studio") and Code Projects sites.
   # ---------------------------------------------
 <% raise "LoadBalancer name [#{stack_name}] cannot be longer than 32 characters" if stack_name.length > 32 -%>
 
@@ -371,7 +330,6 @@ Resources:
       Properties:
         Certificates:
           - CertificateArn: <%=certificate_arn%>
-          - CertificateArn: !Ref HourOfCodeCertificate
         ListenerArn: !GetAtt HTTPSListener.ListenerArn
 
   ALBTargetGroup:

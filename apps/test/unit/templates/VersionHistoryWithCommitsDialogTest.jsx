@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
@@ -44,6 +45,25 @@ describe('VersionHistoryWithCommitsDialog', () => {
   });
 
   describe('using the sources api', () => {
+    const runAndUpdate = callback => {
+      act(() => {
+        callback();
+      });
+      wrapper.update();
+    };
+
+    const clickButtonAt = index => {
+      runAndUpdate(() => {
+        wrapper.find('Button').at(index).simulate('click');
+      });
+    };
+
+    const clickLastButton = () => {
+      runAndUpdate(() => {
+        wrapper.find('Button').last().simulate('click');
+      });
+    };
+
     beforeEach(() => {
       sinon.stub(sourcesApi, 'ajax');
       sinon.stub(sourcesApi, 'restorePreviousFileVersion');
@@ -62,18 +82,26 @@ describe('VersionHistoryWithCommitsDialog', () => {
         isOpen: true,
       },
       finishVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
-        wrapper.update();
+        runAndUpdate(() =>
+          sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE)
+        );
       },
       failVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[3]();
-        wrapper.update();
+        runAndUpdate(() => sourcesApi.ajax.firstCall.args[3]());
       },
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
-      finishRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
-      failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
+      finishRestoreVersion: () => {
+        runAndUpdate(() =>
+          sourcesApi.restorePreviousFileVersion.firstCall.args[2]()
+        );
+      },
+      failRestoreVersion: () => {
+        runAndUpdate(() =>
+          sourcesApi.restorePreviousFileVersion.firstCall.args[3]()
+        );
+      },
+      clickButtonAt,
+      clickLastButton,
     });
   });
 
@@ -84,6 +112,8 @@ describe('VersionHistoryWithCommitsDialog', () => {
     restoreSpy,
     finishRestoreVersion,
     failRestoreVersion,
+    clickButtonAt,
+    clickLastButton,
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
@@ -128,14 +158,14 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
       expect(restoreSpy()).not.to.have.been.called;
 
-      wrapper.find('Button').at(3).simulate('click');
+      clickButtonAt(3);
       expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(3).simulate('click');
+      clickButtonAt(3);
 
       failRestoreVersion();
       expect(wrapper.text()).to.include('An error occurred.');
@@ -144,7 +174,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      wrapper.find('Button').at(3).simulate('click');
+      clickButtonAt(3);
       expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
@@ -156,7 +186,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('Button').last().simulate('click');
+      clickLastButton();
 
       // Expect confirmation to show
       assert(
@@ -174,7 +204,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('Button').last().simulate('click');
+      clickLastButton();
 
       // Expect confirmation to show
       assert(
@@ -187,7 +217,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       );
 
       // Click "Cancel"
-      wrapper.find('Button').last().simulate('click');
+      clickLastButton();
 
       // Rendered two version rows
       expect(wrapper.find('VersionWithCommit')).to.have.length(2);
@@ -200,7 +230,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       finishVersionHistoryLoad();
 
       // Click "Start Over"
-      wrapper.find('Button').last().simulate('click');
+      clickLastButton();
 
       expect(wrapper.find('.template-level-warning')).to.exist;
     });
@@ -225,8 +255,8 @@ describe('VersionHistoryWithCommitsDialog', () => {
           />
         );
         finishVersionHistoryLoad();
-        wrapper.find('Button').last().simulate('click');
-        wrapper.find('Button').at(1).simulate('click');
+        clickLastButton();
+        clickButtonAt(1);
       });
 
       afterEach(async () => {

@@ -79,13 +79,6 @@ class CourseOverview extends Component {
           'unit group name': props.name,
         }
       );
-    } else if (props.userType === 'student') {
-      analyticsReporter.sendEvent(
-        EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_STUDENT_EVENT,
-        {
-          'unit group name': props.name,
-        }
-      );
     } else {
       analyticsReporter.sendEvent(
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_SIGNED_OUT_USER_EVENT,

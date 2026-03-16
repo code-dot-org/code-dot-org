@@ -1,7 +1,6 @@
-import Button from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import {RadioButton} from '@code-dot-org/component-library/radioButton';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -162,13 +161,17 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
       {/* Because weblab2 does not have a 'Run' button to indicate that they have submitted their answer,
         we display a 'Submit answer button. */}
       {showSubmitButton && (
-        <Button
-          onClick={onSubmitAnswer}
-          text="Submit Answer"
-          size="s"
-          className={moduleStyles.submitButton}
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
           disabled={predictAnswerLocked || !hasAnswer}
-        />
+          className={moduleStyles.submitButton}
+          onClick={onSubmitAnswer}
+          type="button"
+        >
+          {'Submit Answer'}
+        </MuiButton>
       )}
       <PredictResetButton />
     </div>

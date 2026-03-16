@@ -339,12 +339,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [startAi]);
 
   const handleGenerateClick = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_BACKGROUND_GENERATED, {
-      emojis: inputs,
-    });
-
     startGenerating();
-  }, [startGenerating, inputs]);
+  }, [startGenerating]);
 
   const onClose = useCallback(() => dispatch(closeAiModal()), [dispatch]);
 
@@ -555,15 +551,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
   }, [currentAiModalField, onClose, inputs]);
 
   const handleOnClose = useCallback(() => {
-    analyticsReporter.sendEvent(EVENTS.DANCE_PARTY_AI_MODAL_CLOSED, {
-      emojis: inputs,
-      mode,
-      currentToggle,
-      generatingStep: generatingProgress.step,
-    });
-
     onClose();
-  }, [inputs, mode, currentToggle, generatingProgress.step, onClose]);
+  }, [onClose]);
 
   const showUseButton =
     mode === DanceAiModalMode.RESULTS &&

@@ -2179,24 +2179,25 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
+  const shouldLogLevelActivity = () =>
+    !runButtonWasClicked && !config.level.isProjectLevel;
+
+  const logLevelActivity = () => {
+    analyticsReporter.sendEvent(EVENTS.LEVEL_ACTIVITY, {
+      signedIn: config.isSignedIn,
+      unitName: config.scriptName,
+      levelId: config.serverLevelId,
+      levelName: config.level.name,
+    });
+    runButtonWasClicked = true;
+  };
+
   // Modify throttledRunClick to include metrics logging
   const originalThrottledRunClick = throttledRunClick;
   throttledRunClick = () => {
     originalThrottledRunClick();
-    let eventName;
-    if (!!config.level.isProjectLevel) {
-      eventName = EVENTS.PROJECT_ACTIVITY;
-    } else {
-      eventName = EVENTS.LEVEL_ACTIVITY;
-    }
-    if (!runButtonWasClicked) {
-      analyticsReporter.sendEvent(eventName, {
-        signedIn: config.isSignedIn,
-        unitName: config.scriptName,
-        levelId: config.serverLevelId,
-        levelName: config.level.name,
-      });
-      runButtonWasClicked = true;
+    if (shouldLogLevelActivity()) {
+      logLevelActivity();
     }
   };
 
