@@ -97,7 +97,7 @@ GIT
       nio4r (~> 2.0)
 
 PATH
-  remote: ..
+  remote: .
   glob: {,dashboard/}engines/*/*.gemspec
   specs:
     cdo_contentful (0.1.0)
