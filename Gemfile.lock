@@ -98,7 +98,7 @@ GIT
 
 PATH
   remote: .
-  glob: **/engines/*/*.gemspec
+  glob: {,dashboard/}engines/*/*.gemspec
   specs:
     cdo_contentful (0.1.0)
       contentful (~> 2.18)
@@ -344,7 +344,7 @@ GEM
       fiber-annotation
       fiber-local
       json
-    contentful (2.18.0)
+    contentful (2.19.0)
       http (> 0.8, < 6.0)
       multi_json (~> 1.15)
     crack (0.4.5)
