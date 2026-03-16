@@ -1,0 +1,108 @@
+name 'self-paced-TCaAI-L6-Lesson9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Milestone 5 Lesson Overviews
+
+## Lesson 9: Refining Our Product
+
+#### Lesson 9 focuses on revision and user testing. Students stress-test their Responsible AI Use Guides using both AI-generated feedback and human peer feedback. They refine their claims, strengthen evidence, and improve visual communication in preparation for final submission.
+
+### 📝 **Lesson Overview**
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block; width: 100%">
+<a href="https://studio.code.org/courses/aid-thinking-critically-about-ai-2025/units/1/lessons/9" target="blank" rel="noopener noreferrer">
+Access Lesson 9: Refining Our Product
+</a>
+</p>
+
+<!-- Warm Up -->
+<details style="background-color: #ececec; padding: 12px; margin-top: 15px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Warm Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt; margin-top: 0;">
+Students rate their current stance on a 1–5 scale (1 = AI is risky/unhelpful, 5 = AI is safe/essential) and compare it to where they began the unit.
+</p>
+<p style="font-size: 13pt;">
+<b>Discuss</b>: How has your perspective toward AI evolved? Encourage students to reference specific investigations that shifted their thinking.
+</p>
+<p style="font-size: 13pt; margin-bottom: 0;">
+<b>Introduce the lesson objective</b>: strengthening their guide through multiple forms of feedback.
+</p>
+</div>
+</details>
+
+<!-- Activity -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Activity (35 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+
+<p style="font-size: 14pt"><b>🤖 AI Feedback Test</b></p>
+
+<p style="font-size: 13pt; margin-top: 0;">
+Students choose one of three AI bot personas to review their guide. Each bot challenges logic, evidence, or clarity. Students record at least one suggestion to adopt and one to reject, then revise their guide accordingly.
+</p>
+
+<p style="font-size: 13pt;">
+Encourage students to respond thoughtfully rather than automatically accepting or dismissing the bot’s critique. Ask: “What rule is being challenged? How can you strengthen it with clearer evidence?”
+</p>
+
+<p style="font-size: 14pt"><b>👥 Peer Review Triangles</b></p>
+
+<p style="font-size: 13pt;">
+Students form groups of three and rotate roles:
+</p>
+
+<ul style="font-size: 13pt; margin-top: 5px;">
+<li><strong>Reader</strong>: Evaluates clarity and readability</li>
+<li><strong>Skeptic</strong>: Challenges evidence and logic</li>
+<li><strong>Designer</strong>: Suggests visual improvements</li>
+</ul>
+
+<p style="font-size: 13pt;">
+Students compare AI feedback with peer feedback and discuss how each type contributed differently to strengthening their product.
+</p>
+
+<p style="font-size: 14pt"><b>🎨 Finalizing the Product</b></p>
+
+<p style="font-size: 13pt;">
+Students refine visuals and may use generative AI to create icons or imagery that make their guidance easy to interpret at a glance (for example, traffic-light systems or human vs. AI contribution scales).
+</p>
+
+<p style="font-size: 13pt; margin-bottom: 0;">
+The goal is a polished, evidence-based guide that is both logically strong and audience-friendly.
+</p>
+
+</div>
+</details>
+
+<!-- Wrap Up -->
+<details style="background-color: #ececec; padding: 12px; margin-bottom: 15px; border-radius: 6px;">
+<summary style="font-size: 13pt; font-weight: bold;">
+Wrap Up (5 minutes)
+</summary>
+<div style="margin-top: 12px; font-size: 13pt; line-height: 1.4;">
+<p style="font-size: 13pt; margin-top: 0;">
+Students respond in their Learning Logs: Which feedback was harder to hear, AI or peer, and why?
+</p>
+<p style="font-size: 13pt; margin-bottom: 0;">
+Close by reinforcing that AI excels at spotting logical gaps, while humans excel at understanding tone, nuance, and social context.
+</p>
+</div>
+</details>
+
+### 🧾 **What to Prepare**:
+* #### Ensure students bring their Milestone 5 Learning Log.
+* #### Preview AI persona levels and Sketch Lab image tools.
+* #### Plan Peer Review Triangle groupings.
+* #### Review expectations for incorporating feedback into revisions.
+
+### 💡 **Tips for Teaching**:
+* #### Push students to cite specific evidence when revising rules.
+* #### Encourage nuance - avoid broad “always” or “never” claims.
+* #### Challenge students to defend their choices when they reject feedback.
+MARKDOWN

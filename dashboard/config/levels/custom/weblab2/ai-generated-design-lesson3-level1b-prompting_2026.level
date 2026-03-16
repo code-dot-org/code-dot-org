@@ -1,0 +1,55 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-10T18:26:36.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## The High-Score Hub: Designing for Alex\r\n\r\n**The User:** Alex wants an online marketplace app for trading vintage video games. She wants the site to feel retro, like it's from the 1980s.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n1. What is the goal?\r\n> What information (e.g., game title, condition, trade value) does the marketplace track for each video game listing?\r\n\r\n2. What are the constraints?\r\n> What specific fonts, colors, and layout style should the page use to look like a retro arcade game?\r\n\r\n3. What are the edge cases?\r\n> How should the website handle a \"Sold Out\" item or a blurry user-uploaded photo?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqwElaoRX309s+kb2KI\nu5Zkxr2RaxqUcfpzOz5ACyIE60yUORzRLItSXu9YGVACk5NcuHs+w/Hix5mY\nSCChPZ0j9d1s3VKvGjWN3ebczFD4M00fqJPp0M4MPYshfYV1AX0aJ4rV3mXf\nQ1q9Q+3qxJyphRNV34NRKmEqs89t3wfObeGF2DZ+kJ9xpN8mZ2y3t/jRK6qu\nUVoK5onlSrG8ihMftxix3W8asfXt42RyG/IA+JI3Ru3YZZnzHzCHZH6Rnjw5\n53gd8nNQ68dv8UTy5Zp+eBJKV23eE3D0ard9+w6bKX13GjEEGCr9tpXB4gZM\nsXZCzdantTVY+BxSdzRO4FOGhfwNfRbSOcqF6uXP+2PQg1et2eJKn8nNUVds\npEAMLgut/R3BfKktyUgfivO7SmZv1s1NjVkb17TfXKjIkV7mg7jVZjTFl1Wr\nYvIQwqtK0bVud893NZqPhYzLgpDbS00s5+azIH4wuU4NqvqJDDyWwSJ1LJW0\nLfDvWfpEQnlw8F+0f9/oIYfYOFy5yJPuIAVLYIzyr+Pj9mi6dTwmObpYqGml\nr5jybEZfSeomJ8DwdtTcPWJr1XFsgHhUO5BFgzYPuf3hwXT/Gz9FXJs9i2Cm\nbNHI9fpduNRyQCzyEJqhMJSD7Xr43gs8tJjAiRl+oh2MvXdtajDsaU1eg/LM\n+7tlag6HIjjElSw0SvDjsNt1wTkr1KfJQG7WyJ/3zLXhqGJOskTEoGU+v4BU\nv/azl57+4wtTOeOpRWs/dZLf6M+HDKXfAcDh6fRDPjxXFagjEtDVdXjlWzgc\nZ6TeoLasai0Qv0sAQgCrcWyPkn/J2PyD88gstKDsBz+qA93HjAy8RzStsOfe\nG99RGS2hhM/h+4M6ec53PLMjOpFKL/xC7WBbZ7YIe/LFofzU4hlQ/DELALn2\nMcU46uwD8ffP1La6xlidmNV7qX53oxRo7muWDm/czQ+2bwINwe/qBtkKfH0u\nk4j0y/0G2L9CmuAkVq3/S6brWHpDm/I3HJtFZbkIkuU27cA=\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning.",
+    "display_name": "The High-Score Hub",
+    "bubble_choice_description": "Alex needs a community marketplace app for trading vintage video games.",
+    "thumbnail_url": "https://images.code.org/9834a71e171e7585a55619c0c45ef962-high_score_hub.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T18:26:36.817+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1-prompting_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1-prompting_2026\"},{\"changed_at\":\"2026-03-10 18:29:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:05 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:09 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:49:36 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 19:02:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

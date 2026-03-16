@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Excalidraw, serializeAsJSON} from '@excalidraw/excalidraw';
 import {
   ExcalidrawElement,
@@ -12,6 +12,7 @@ import {
   ExcalidrawInitialDataState,
   DataURL,
 } from '@excalidraw/excalidraw/types/types';
+import {Button as MuiButton} from '@mui/material';
 import cloneDeep from 'lodash/cloneDeep';
 import React, {useEffect, useCallback, useRef, useState, useMemo} from 'react';
 
@@ -32,6 +33,7 @@ import SourcesContainer, {
   useSources,
 } from '@cdo/apps/lab2/views/SourcesContainer';
 import {commonI18n} from '@cdo/apps/types/locale';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useDialogControl} from '../lab2/views/dialogs';
@@ -40,6 +42,7 @@ import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
+import useSketchlabShepherdTour from './useSketchlabShepherdTour';
 import {
   handleSaveToBackpack,
   generateNewExternalFiles,
@@ -325,6 +328,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
+  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
+    experiments.SHEPHERD_PRODUCT_TOURS
+  );
+  useSketchlabShepherdTour();
+
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
   );
@@ -332,9 +340,11 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   return (
     <BackpackAPIContext.Provider value={backpackContext}>
       <div className={moduleStyles.sketchlabContainer}>
-        <IntroJSTourWrapper enabled={true}>
-          <SketchlabTourSteps />
-        </IntroJSTourWrapper>
+        {!showShepherdProductTours && (
+          <IntroJSTourWrapper enabled={true}>
+            <SketchlabTourSteps />
+          </IntroJSTourWrapper>
+        )}
         <div style={{width: leftPanelWidth}} className={panelClassName}>
           <ResourcePanel
             levelProperties={levelProperties}
@@ -389,18 +399,22 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
             headerContent={<WorkspaceHeader />}
             rightHeaderContent={
               !readonlyWorkspace && (
-                <Button
-                  text={commonI18n.startOver()}
-                  iconRight={{
-                    iconStyle: 'solid',
-                    iconName: 'arrow-rotate-left',
-                  }}
-                  color={'gray'}
+                <MuiButton
+                  variant="outlined"
+                  color="tertiary"
+                  size="extraSmall"
                   onClick={onClickStartOver}
-                  ariaLabel={commonI18n.startOver()}
-                  size={'xs'}
-                  type="secondary"
-                />
+                  aria-label={commonI18n.startOver()}
+                  type="button"
+                  endIcon={
+                    <FontAwesomeV6Icon
+                      iconStyle="solid"
+                      iconName="arrow-rotate-left"
+                    />
+                  }
+                >
+                  {commonI18n.startOver()}
+                </MuiButton>
               )
             }
           >

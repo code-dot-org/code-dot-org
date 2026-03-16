@@ -185,7 +185,7 @@ const FreeResponseStudentResponseRow: React.FC<
         <FeedbackToggle
           onThumbsUpClick={() => handleFeedbackClick(true)}
           onThumbsDownClick={() => handleFeedbackClick(false)}
-          size="xs"
+          size="extraSmall"
           color="gray"
         />
       </div>

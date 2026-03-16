@@ -2,6 +2,7 @@ import {type FilePart, type GeneratedFile} from 'ai';
 
 import {AssetSource, ChatAsset} from '@cdo/apps/aichat/types';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {createUuid} from '@cdo/apps/utils';
 
 const extensionMap: Record<string, string> = {
   // Images
@@ -49,8 +50,7 @@ export async function generatedFileToAsset(
   file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string
 ): Promise<ChatAsset> {
-  const extension = file.mediaType.split('/')[1];
-  const filename = `generated-file-${Date.now()}.${extension}`;
+  const {filename, fileBuffer} = prepareGeneratedFile(file);
   const asset: ChatAsset = {
     filename,
     source: AssetSource.PROJECT,
@@ -58,13 +58,26 @@ export async function generatedFileToAsset(
   const assetUrl = buildAssetUrl(asset);
 
   // Upload file contents to assetUrl
-  const arrayBuffer = file.uint8Array.buffer.slice(
-    file.uint8Array.byteOffset,
-    file.uint8Array.byteOffset + file.uint8Array.byteLength
-  ) as ArrayBuffer;
-  await HttpClient.put(assetUrl, arrayBuffer, true, {
+  await HttpClient.put(assetUrl, fileBuffer, true, {
     'Content-Type': file.mediaType,
   });
 
   return asset;
+}
+
+interface PreparedFile {
+  filename: string;
+  fileBuffer: Uint8Array<ArrayBuffer>;
+  mediaType: string;
+  extension: string;
+}
+
+/**
+ * Extracts the buffer and derives filename/extension from a model-generated file.
+ */
+export function prepareGeneratedFile(file: GeneratedFile): PreparedFile {
+  const fileBuffer = file.uint8Array.slice();
+  const extension = file.mediaType.split('/')[1];
+  const filename = `generated-file-${createUuid()}.${extension}`;
+  return {filename, fileBuffer, mediaType: file.mediaType, extension};
 }

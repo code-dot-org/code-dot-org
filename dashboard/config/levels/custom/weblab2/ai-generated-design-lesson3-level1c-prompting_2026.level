@@ -1,0 +1,55 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-10T18:42:47.000Z",
+  "level_num": "custom",
+  "user_id": 1574,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## The Cozy Nook: Designing for Jada\r\n\r\n**The User:** Jada owns \"The Purr-fect Page,\" a cat café and bookstore where customers can rent cozy reading nooks. She needs a booking system with a \"Cottagecore\" vibe.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n1. What is the goal? \r\n> What information (e.g., cat names, available time slots, waitlist) does the booking system keep track of?\r\n\r\n2. What are the constraints?\r\n> What specific fonts, colors, and text should the page use to feel cozy?\r\n\r\n3. What are the edge cases?\r\n> How should the website handle a situation where all the reading nooks are booked or all the cats are asleep?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "designer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqwElaoRX309s+kb2KI\nu5Zkxr2RaxqUcfpzOz5ACyIE60yUORzRLItSXu9YGVACk5NcuHs+w/Hix5mY\nSCChPZ0jzjHqrbuNhS7LL/hMWo6PPXswi9ga9Bbd/S6oKlaFeJiz5h5K3W5k\nEimREMfwfHeEJUZruYhBoZBiTT0tHybGa0Hf8RVeKRWajkWqzjmV/sh4mdun\ncWGi0v4PYQKV+DNwT9Eb6UI/AYnMeAqVRgw1igs0tvqnyL7WMAUrlW7Hw9BK\n2Fo6H8Wb4YBJcRXQG+5N4mg4KpPg55mNViiVbClz5DN+rJv4lXQZi0tqAMgR\nkC3GA3BkKohYKmNq7AA0lJ2Lgqw1F9KU55c0zpsE49XzyUePg8LlXTsubwnf\nZe6S+UIJfJ0wNqAOUp0w8cnVI5F7B0E3XsGE4RNWWKFam+ILN6E45+wM57F9\nxF+5l9+aHMlAnUZmjvXJYCYwLC2WuvW789W+mOz4t5LBu44sSiN/jdnH8WaA\neoYubmj+qRGaX8q8es1axnL3DjMetIQ98Ur0W9kvzt1+zTgzOCCoxoViEmYc\ngfA/fwvasbGgd8CusbPlK4K7nDnZVJ5Ic1nsv2fMHyanjJWXA8ZbeR6jNheu\n806jdeSqDlwUqkSUMCIGdA4M0LCg5vEDwTYqOZ++hedSJggr0Q7WC9JSqS9c\nhmnrvROlpEKyuW2Xogkygj0DmyeUWFyA9Kz4DZmBrabgNs+Tj7ObXpAKOxd7\nGhwqAtf3Pk1N2Qc7KQjb7Sg1PItSD7arWFYM2tlKqjH0Fjh+1FFbVt0RrTU9\nG6qZDcsX1AHHErn0Ro1LXI6fJYkDKTEdwp/h6ZKex4AXdtVFNI6dIURFetn0\nt3b1lxacaLzX00qwheqcTo4K3yuRz2kFnAxmCWl4hV1pZm0AEHs5goyczdkt\nxtteKp7vSAZh6L4hT7XZpq4IoCspRvoQX1CPFNGbZHDnFMkWfnSeH9q0dLFV\nTP6zQbGpk7f3UzDQ8PBOKoQsTP03ty9K33E79LENHXup7FL/kXFp/uiv9VU/\nISYQ4zxHR/otUsuOpBA2ZqzWfvEwDdG1MVIDYvXDNzzNfOrhhmY=\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
+    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning.",
+    "display_name": "The Cozy Nook",
+    "bubble_choice_description": "Jada needs a booking system for her cat cafe and bookstore.",
+    "thumbnail_url": "https://images.code.org/4ede02e93e65d672efbd74e869f04392-cozy_nook.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10T18:42:47.841+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1b-prompting_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1b-prompting_2026\"},{\"changed_at\":\"2026-03-10 18:44:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:49:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 19:03:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

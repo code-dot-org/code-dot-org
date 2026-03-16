@@ -1,0 +1,34 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2026-03-13T12:09:48.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "Scenario 1:\n\n> \"I clicked 'Buy', but the loading icon just spun forever.\" \n",
+        "imageUrl": "https://images.code.org/4b8c15d5dbd05eb034a6d22827c5948a-blackwheel.jpg",
+        "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-390e8e7c-f793-4b86-9970-dcd069d1a1ca"
+      },
+      {
+        "text": "Scenario 2:\n\n> \"The page loaded, but the seat map is blank.\"\n",
+        "imageUrl": "https://images.code.org/0dbc238bf1dfe18ba083e1da6de9f198-Screenshot 2026-02-10 at 4.10.15 PM.png",
+        "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-6573f734-9aec-4409-8ea6-9a5547388b73",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "Scenario 3:\n\n> \"I clicked my profile and the whole app just crashed.\"",
+        "imageUrl": "https://images.code.org/ebd05083bb0b1bf1ba66da6b77bf7c73-Screenshot 2026-02-25 at 5.21.51 PM.png",
+        "key": "designing-reliable-apps-lesson7-panel1-2025-pilot-8d8f470a-3c65-4899-af9c-96e9017bcf8c",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:09:48.105+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson7-panel1-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson7-panel1-2025-pilot\"}]"
+}]]></config>
+</Panels>

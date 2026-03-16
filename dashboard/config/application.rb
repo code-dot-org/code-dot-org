@@ -26,6 +26,12 @@ require 'cdo/pycall'
 # vite_ruby knows where to find the frontend code.
 ENV["VITE_RUBY_ROOT"] = vite_dir
 
+# Our CI process runs a custom build step before assets:precompile, so we skip
+# Vite Ruby's automatic extension and install hooks to avoid redundant/conflicting builds.
+# These must be set before Bundler.require loads vite_ruby, which checks them at load time.
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_EXTENSION"] = "true"
+ENV["VITE_RUBY_SKIP_ASSETS_PRECOMPILE_INSTALL"] = "true"
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)

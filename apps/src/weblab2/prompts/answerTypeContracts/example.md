@@ -1,4 +1,4 @@
-### Example
+### example
 - **Guarantee**: tiny **different-context** snippet (≤5 lines) with placeholders to teach a pattern (non-runnable `txt` fence).
 - If using functions, functions must use **arrow notation** (e.g., `const handleClick = () => { … }`), never the `function` keyword.
 - Use a `txt` fence (never `javascript`), and

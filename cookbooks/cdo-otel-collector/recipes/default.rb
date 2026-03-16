@@ -1,0 +1,83 @@
+#
+# Cookbook Name:: cdo-otel-collector
+#
+# Installs and configures the OpenTelemetry Contrib Collector
+# See: https://opentelemetry.io/docs/collector/installation/
+
+unless node['cdo-otel-collector']['enabled']
+  # Disable and stop the service if the collector is installed.
+  # The binary is intentionally left in place so that re-enabling
+  # (setting 'enabled' back to true) only needs to restart the service and
+  # re-apply config — it does not require reinstalling the collector.
+  service 'otelcol-contrib' do
+    action [:disable, :stop]
+    supports status: true
+    only_if {File.exist?('/usr/bin/otelcol-contrib')}
+  end
+
+  # Skip all installation and configuration steps when disabled.
+  # If re-enabled later, Chef will converge the full recipe on the next run:
+  # the install package is guarded by not_if, so it won't re-run, but all
+  # config templates will be re-applied and the service will be re-enabled.
+  return
+end
+
+# Fetches the DataDog API Key via AWS Secrets manager (used by the datadog exporter)
+datadog_api_key = secret(name: "#{node.chef_environment}/cdo/datadog_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
+
+otelcol_version = node['cdo-otel-collector']['otelcol_version']
+deb_filename = "otelcol-contrib_#{otelcol_version}_linux_amd64.deb"
+deb_path = "#{Chef::Config[:file_cache_path]}/#{deb_filename}"
+
+# Download the OTel Contrib .deb package from the official GitHub release,
+# verifying the SHA256 checksum published in the release's checksums.txt.
+remote_file deb_path do
+  source "https://github.com/open-telemetry/opentelemetry-collector-releases/releases/download/v#{otelcol_version}/#{deb_filename}"
+  checksum node['cdo-otel-collector']['otelcol_deb_sha256']
+  mode '0644'
+  action :create
+end
+
+# Install via dpkg
+dpkg_package 'otelcol-contrib' do
+  source deb_path
+  version otelcol_version
+  action :install
+end
+
+# Ensure the otelcol-contrib configuration directory exists
+directory '/etc/otelcol-contrib' do
+  owner 'otelcol-contrib'
+  group 'otelcol-contrib'
+  mode '0755'
+  action :create
+end
+
+# Configure the OpenTelemetry Collector
+template '/etc/otelcol-contrib/config.yaml' do
+  source 'otel-config.yaml.erb'
+  owner 'otelcol-contrib'
+  group 'otelcol-contrib'
+  mode '0600'
+  variables({
+              site: node['cdo-otel-collector']['site'],
+              datadog_api_key: datadog_api_key,
+              prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
+              prometheus_region: node['cdo-otel-collector']['prometheus_region']
+            }
+)
+  notifies :restart, 'service[otelcol-contrib]', :delayed
+end
+
+# Allow OTel Collector to read the syslog
+group 'syslog' do
+  action :modify
+  members 'otelcol-contrib'
+  append true
+end
+
+# Manage the otelcol-contrib service
+service 'otelcol-contrib' do
+  action [:enable, :start]
+  supports restart: true, status: true
+end

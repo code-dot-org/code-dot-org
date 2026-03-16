@@ -5,13 +5,11 @@ import React from 'react';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-import {atRiskAgeGatedSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {detectNetworkAvailability} from '@cdo/apps/util/detectNetworkAvailability';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import {AgeGatedSectionsBanner} from '../../policy_compliance/AgeGatedSectionsModal/AgeGatedSectionsBanner';
 import {
   asyncLoadTeacherHomepageSectionData,
   asyncLoadCoteacherInvite,
@@ -55,17 +53,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
   ] = React.useState<boolean>(true);
 
   const dispatch = useAppDispatch();
-
-  const [CAPmodalOpen, setCAPModalOpen] = React.useState(false);
-  const toggleCAPModal = () => {
-    setCAPModalOpen(!CAPmodalOpen);
-  };
-
-  const ageGatedSections = useAppSelector(atRiskAgeGatedSections);
-
-  const shouldDisplayAtRiskAgeGatedWarning = () => {
-    return ageGatedSections?.length > 0;
-  };
 
   React.useEffect(() => {
     dispatch(asyncLoadTeacherHomepageSectionData());
@@ -222,14 +209,6 @@ const TeacherHomepage: React.FC<TeacherHomepageProps> = ({studioUrlPrefix}) => {
               selectedArchiveToggle={selectedArchiveToggle}
               setSelectedArchiveToggle={onArchiveToggleChange}
             />
-
-            {shouldDisplayAtRiskAgeGatedWarning() && (
-              <AgeGatedSectionsBanner
-                toggleModal={toggleCAPModal}
-                modalOpen={CAPmodalOpen}
-                ageGatedSections={ageGatedSections}
-              />
-            )}
 
             <CoteacherInviteNotification
               isForPl={false}

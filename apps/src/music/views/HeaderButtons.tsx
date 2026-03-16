@@ -1,6 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {memo, useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
@@ -199,14 +198,18 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
       )}
       {/* Skip to Project button. */}
       {skipUrl && (
-        <Button
-          text={commonI18n.skipToProject()}
-          type="tertiary"
-          color="black"
-          size="xs"
-          iconRight={{iconStyle: 'solid', iconName: 'arrow-right'}}
+        <MuiButton
+          variant="text"
+          color="secondary"
+          size="extraSmall"
           onClick={onClickSkip}
-        />
+          type="button"
+          endIcon={
+            <FontAwesomeV6Icon iconStyle="solid" iconName="arrow-right" />
+          }
+        >
+          {commonI18n.skipToProject()}
+        </MuiButton>
       )}
     </div>
   );

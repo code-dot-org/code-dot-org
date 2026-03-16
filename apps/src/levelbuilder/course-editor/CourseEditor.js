@@ -433,7 +433,7 @@ class CourseEditor extends Component {
               <option value={NumberedUnitsType.custom}>Custom</option>
             </select>
           </label>
-          <label>
+          <div style={styles.marginBottom}>
             <div>
               The dropdown(s) below represent the ordered set of units in this
               course. To remove a unit, just set the dropdown to the default
@@ -453,7 +453,7 @@ class CourseEditor extends Component {
               unitNames={unitNames}
               allowMajorCurriculumChanges={allowMajorCurriculumChanges}
             />
-          </label>
+          </div>
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
@@ -487,6 +487,9 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10,
+  },
+  marginBottom: {
+    marginBottom: 5,
   },
 };
 

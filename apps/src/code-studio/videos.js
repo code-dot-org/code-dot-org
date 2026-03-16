@@ -3,8 +3,6 @@ import _ from 'lodash';
 import React from 'react';
 import videojs from 'video.js';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import i18n from '@cdo/locale';
 
@@ -61,29 +59,9 @@ var currentVideoOptions;
 // This is a good candidate to circle back to and refactor.
 window.onYouTubeIframeAPIReady = function () {
   // requires there be an iframe#video present on the page
-  const player = new YT.Player('video', {
+  new YT.Player('video', {
     events: {
-      onReady: function (event) {
-        analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, {
-          url: location.href,
-          video: player.getVideoUrl(),
-        });
-      },
       onStateChange: function (state) {
-        const amplitudeEventMap = {
-          [YT.PlayerState.PLAYING]: EVENTS.VIDEO_STARTED,
-          [YT.PlayerState.PAUSED]: EVENTS.VIDEO_PAUSED,
-          [YT.PlayerState.ENDED]: EVENTS.VIDEO_ENDED,
-        };
-
-        const amplitudeEvent = amplitudeEventMap[state.data];
-        if (amplitudeEvent) {
-          analyticsReporter.sendEvent(amplitudeEvent, {
-            url: location.href,
-            video: player.getVideoUrl(),
-          });
-        }
-
         if (state.data === YT.PlayerState.ENDED) {
           onVideoEnded();
         }
@@ -102,7 +80,6 @@ function createVideo(options) {
   const videoDiv = $('<iframe id="video"/>').addClass('video-player').attr({
     src: options.src,
     allowfullscreen: 'true',
-    scrolling: 'no',
   });
 
   const videoTabContainerDiv = $("<div id='videoTabContainer'></div>").append(
@@ -421,12 +398,6 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
 
   var fallbackPlayerID = 'fallbackPlayer' + Date.now();
 
-  analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
-    url: location.href,
-    forced: !!videoInfo.force_fallback,
-    video: videoInfo.download,
-  });
-
   // If we have want the video player to be at 100% width & 100% height, then
   // let's assume we are attaching to a container that is relative, and we want
   // to expand to its edges.  This is currently implemented by a standalone
@@ -509,24 +480,7 @@ function addFallbackVideoPlayer(videoInfo, playerWidth, playerHeight) {
     }
   );
 
-  const analyticsData = {
-    url: location.href,
-    video: videoInfo.download,
-    fallback: 'code.org',
-  };
-
-  videoPlayer.on('ready', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_LOADED, analyticsData)
-  );
-  videoPlayer.on('play', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_STARTED, analyticsData)
-  );
-  videoPlayer.on('pause', () =>
-    analyticsReporter.sendEvent(EVENTS.VIDEO_PAUSED, analyticsData)
-  );
-
   videoPlayer.on('ended', () => {
-    analyticsReporter.sendEvent(EVENTS.VIDEO_ENDED, analyticsData);
     onVideoEnded();
   });
   showFallbackPlayerCaptionLink(videoInfo.inDialog);

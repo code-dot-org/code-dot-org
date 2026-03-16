@@ -2,8 +2,6 @@ import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {moderateImage} from '@cdo/apps/lab2/utils';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
 
 export const enum analyticsEvents {
@@ -30,7 +28,7 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  appName?: string;
+  appName: string;
   isBlockedAbuse?: boolean;
   onImageFlagged?: (
     file: File,
@@ -173,14 +171,12 @@ export const useFileUploader = ({
           }
         };
       } else {
-        analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
-          UploaderType: 'Lab2 File Uploader',
-          ProjectType: appName,
-        });
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
-            const moderationStatus = await moderateImage(file, ext, appName);
+            const moderationStatus = await moderateImage(file, ext, appName, {
+              uploaderType: 'Lab2FileUploader',
+            });
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
                 const url = await uploadExternalFile(file);

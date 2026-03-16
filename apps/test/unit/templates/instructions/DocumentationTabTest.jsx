@@ -1,7 +1,6 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, waitFor} from '@testing-library/react';
 import React from 'react';
 
-import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
 
 const ENVIRONMENT = 'javalab';
@@ -68,14 +67,13 @@ describe('DocumentationTabTest', () => {
     },
   ];
 
-  // Convenience method; tests can use "await processEventLoop()" to wait for
-  // all items in the event loop to be processed.
-  const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
-
   beforeEach(() => {
-    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy = jest.spyOn(window, 'fetch').mockImplementation();
     fetchSpy.mockReturnValue(
-      Promise.resolve({ok: true, json: () => fakeDocumentation})
+      Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(fakeDocumentation),
+      })
     );
   });
 
@@ -86,40 +84,55 @@ describe('DocumentationTabTest', () => {
   it('shows spinner while loading', async () => {
     const promise = new Promise(() => {});
     fetchSpy.mockReturnValue(promise);
-    const wrapper = mount(
+
+    render(
       <UnconnectedDocumentationTab programmingEnvironment={ENVIRONMENT} />
     );
-    await processEventLoop();
-    expect(wrapper.find(Spinner).length).toBe(1);
+
+    await waitFor(() => {
+      expect(document.querySelector('#uitest-spinner')).not.toBeNull();
+    });
   });
 
   it('shows default class if it exists', async () => {
     const defaultClass = 'Painter';
-    const wrapper = mount(
+    render(
       <UnconnectedDocumentationTab
         programmingEnvironment={ENVIRONMENT}
         defaultClassKey={defaultClass}
       />
     );
-    await processEventLoop();
-    wrapper.update();
-    expect(wrapper.find(Spinner).length).toBe(0);
-    const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).toBe(defaultClass);
+
+    await waitFor(() => {
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+    await waitFor(() => {
+      expect(document.querySelector('#uitest-spinner')).toBeNull();
+    });
+    await waitFor(() => {
+      expect(document.querySelector('select').value).toBe(defaultClass);
+    });
   });
 
   it('shows first class if default does not exist', async () => {
     const defaultClass = 'badDefault';
-    const wrapper = mount(
+    render(
       <UnconnectedDocumentationTab
         programmingEnvironment={ENVIRONMENT}
         defaultClassKey={defaultClass}
       />
     );
-    await processEventLoop();
-    wrapper.update();
-    expect(wrapper.find(Spinner).length).toBe(0);
-    const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).toBe(fakeDocumentation[0].docs[0].key);
+
+    await waitFor(() => {
+      expect(fetchSpy).toHaveBeenCalled();
+    });
+    await waitFor(() => {
+      expect(document.querySelector('#uitest-spinner')).toBeNull();
+    });
+    await waitFor(() => {
+      expect(document.querySelector('select').value).toBe(
+        fakeDocumentation[0].docs[0].key
+      );
+    });
   });
 });

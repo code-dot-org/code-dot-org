@@ -1,0 +1,14 @@
+name 'thinking-critically-about-ai-preassessment-q11_2026-pilot'
+
+question 'A student posts publicly on social media about their hobbies, school, neighborhood, and daily routines. How might an AI system use this information in ways the student didn\'t expect?'
+
+wrong 'AI systems cannot access publicly posted social media data.'
+wrong 'The AI would only use this data to recommend better social media posts.'
+right 'An AI could combine these details to build a detailed profile of the student, even if none of the pieces seemed private on their own.'
+wrong 'Sharing information publicly on social media means it can never be used by AI.'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN

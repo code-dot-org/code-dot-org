@@ -1,0 +1,44 @@
+# Following the "Sparse checkout pegasus PR", see:
+# See: https://github.com/code-dot-org/code-dot-org/pull/65825
+#
+# Translated from pegasus/sparse-patterns/no-pegasus-content from that PR.
+# Keep this file semantically aligned with that sparse-checkout source.
+#
+# Sparse-checkout negation and .dockerignore negation have opposite meaning, and
+# Docker requires explicit ancestor-directory reincludes to preserve a few deep
+# files under an otherwise excluded tree.
+#
+# See also: ENV HAS_PEGASUS_CONTENT='false' set in ./code-dot-org.dockerfile
+
+pegasus/sites/*
+pegasus/sites/**/*
+pegasus/sites.v3/*
+pegasus/sites.v3/**/*
+
+# TODO: move pegasus/test/test_optimize.rb to lib/test or dashboard/test
+!pegasus/sites.v3/code.org/
+pegasus/sites.v3/code.org/*
+!pegasus/sites.v3/code.org/public/
+pegasus/sites.v3/code.org/public/*
+!pegasus/sites.v3/code.org/public/images/
+pegasus/sites.v3/code.org/public/images/*
+!pegasus/sites.v3/code.org/public/images/animated-examples/
+pegasus/sites.v3/code.org/public/images/animated-examples/*
+!pegasus/sites.v3/code.org/public/images/animated-examples/flappy-game-space.gif
+!pegasus/sites.v3/code.org/public/images/logo.png
+
+# TODO: move pegasus/test/test_graphics.rb to lib/test or dashboard/test
+!pegasus/sites.v3/code.org/public/images/avatars/
+pegasus/sites.v3/code.org/public/images/avatars/*
+!pegasus/sites.v3/code.org/public/images/avatars/flag_sphere.png
+!pegasus/sites.v3/code.org/public/images/homepage/
+pegasus/sites.v3/code.org/public/images/homepage/*
+!pegasus/sites.v3/code.org/public/images/homepage/kids4_2x.jpg
+
+!pegasus/sites.v3/hourofcode.com/
+pegasus/sites.v3/hourofcode.com/*
+!pegasus/sites.v3/hourofcode.com/public/
+pegasus/sites.v3/hourofcode.com/public/*
+!pegasus/sites.v3/hourofcode.com/public/images/
+pegasus/sites.v3/hourofcode.com/public/images/*
+!pegasus/sites.v3/hourofcode.com/public/images/hour-of-code-logo.png
