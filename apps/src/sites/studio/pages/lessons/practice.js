@@ -8,9 +8,17 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const lessonPracticeData = getScriptData('lessonPracticeData');
+  console.log('lessonPracticeData', lessonPracticeData);
   createReactRoot(
     <Provider store={getStore()}>
-      <LessonPractice lessonPracticeData={lessonPracticeData} />
+      <LessonPractice
+        lessonName={lessonPracticeData.lessonName}
+        lessonSummary={lessonPracticeData.lessonSummary}
+        vocabulary={lessonPracticeData.vocabulary}
+        bonusLevels={lessonPracticeData.bonusLevels}
+        sectionId={lessonPracticeData.sectionId}
+        userId={lessonPracticeData.userId}
+      />
     </Provider>,
     document.getElementById('lesson-practice-container')
   );

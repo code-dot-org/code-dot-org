@@ -6,7 +6,13 @@ const PracticeOptions: FC<{
   selectedOption: string;
   onChange: (option: string) => void;
   showVocabularyOption: boolean;
-}> = ({selectedOption, onChange, showVocabularyOption}) => {
+  showBonusLevelsOption: boolean;
+}> = ({
+  selectedOption,
+  onChange,
+  showVocabularyOption,
+  showBonusLevelsOption,
+}) => {
   const practiceOptions = [
     {
       value: 'summary',
@@ -28,6 +34,13 @@ const PracticeOptions: FC<{
       icon: 'comment',
       prompt: 'I want to chat with the tutor about the lesson.',
       show: true,
+    },
+    {
+      value: 'bonus-levels',
+      label: 'Bonus Levels',
+      icon: 'star',
+      prompt: 'I want to practice bonus levels.',
+      show: showBonusLevelsOption,
     },
   ];
 
