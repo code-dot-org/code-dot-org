@@ -13,8 +13,8 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     subject(:begin_tutorial_request) {get "/api/hour/begin/#{tutorial_code}"}
 
     let(:tutorial_code) {'tutorial_code'}
-    let(:tutorial_path) {'/expected/tutorial_path'}
-    let(:tutorial_primary_ref) {OpenStruct.new(fields: {primary_target: tutorial_path})}
+    let(:tutorial_url) {'https://studio.code.org/expected/tutorial_url'}
+    let(:tutorial_primary_ref) {OpenStruct.new(fields: {primary_target: tutorial_url})}
     let(:tutorial) {OpenStruct.new(tutorial_id: tutorial_code, primary_link_ref: tutorial_primary_ref)}
 
     let(:pegasus_db_mock) {double(:pegasus_db)}
@@ -39,16 +39,16 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     it 'redirects to tutorial URL' do
       begin_tutorial_request
       must_respond_with :found
-      must_redirect_to tutorial_path
+      must_redirect_to tutorial_url
     end
 
     context 'when tutorial primary link has relative url' do
-      let(:tutorial_path) {'/relative/tutorial_path'}
+      let(:tutorial_url) {'/relative/tutorial_url'}
 
       it 'redirects to tutorial URL on code.org domain' do
         begin_tutorial_request
         must_respond_with :found
-        must_redirect_to '/relative/tutorial_path'
+        must_redirect_to 'https://test.code.org/relative/tutorial_url'
       end
     end
 
@@ -79,7 +79,7 @@ class HocLegacy::TutorialsControllerTest < ActionDispatch::IntegrationTest
     end
 
     context 'when tutorial primary link has no url' do
-      let(:tutorial_path) {''}
+      let(:tutorial_url) {''}
 
       it 'returns error 404' do
         begin_tutorial_request
