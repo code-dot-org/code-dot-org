@@ -8,6 +8,15 @@ as deploy real production/test/etc instances to a k8s cluster.
 This makes debugging your production infra setup really easy: its just like what you're running
 locally.
 
+
+## Setting up skaffold
+
+We recommend adding `export SKAFFOLD_CACHE_ARTIFACTS=false` to your `~/.zprofile` or `~/.zshrc`.
+Alternatively you can pass the `--cache-artifacts=false` flag to every skaffold invocation.
+
+Skaffold's caching feature doesn't work well with many small files, and actually adds time
+to builds instead of saving them.
+
 ## Running dashboard using skaffold
 
 ### First time setup
