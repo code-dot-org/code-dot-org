@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-16 06:46:04 UTC",
+    "serialized_at": "2026-03-17 06:46:26 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -2920,7 +2920,7 @@
       "key": "1cc10781-8c2d-4c0a-872e-2a680a070d74",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students quickly recall the difference between HTML and CSS by visualizing what happens when styling is removed. They connect this idea to brand clarity and user experience — realizing that CSS gives identity and consistency to a site.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show a webpage styled with CSS. Pose the question: \"If we removed the CSS stylesheet, what would be left?\" Students sketch a quick version of the same page without CSS and annotate their sketches with reasoning (e.g., \"Text still shows but without color,\" \"Images stack vertically,\" \"No clear brand identity\"). After sketching, have a few students share what they noticed. Encourage students to connect their observations to how CSS communicates tone and brand consistency.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for misconceptions like \"nothing will show.\" Prompt with: \"Would the content still exist without CSS?\" or \"What happens to layout and colors if CSS is gone?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does CSS turn a brand kit or design idea into a real web page?*\n- *What do developers and designers need to communicate clearly when styling a page?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their understanding of CSS to real-world design workflows. The goal is to get students to recognize that CSS isn't just about color or font — it's about translating design decisions into code and ensuring collaboration between designers and developers."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students quickly recall the difference between HTML and CSS by visualizing what happens when styling is removed. They connect this idea to brand clarity and user experience — realizing that CSS gives identity and consistency to a site.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Show a webpage styled with CSS. Pose the question: \"If we removed the CSS stylesheet, what would be left?\" Students sketch a quick version of the same page without CSS and annotate their sketches with reasoning (e.g., \"Text still shows but without color,\" \"Images stack vertically,\" \"No clear brand identity\"). After sketching, have a few students share what they noticed. Encourage students to connect their observations to how CSS communicates tone and brand consistency.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Watch for misconceptions like \"nothing will show.\" Prompt with: \"Would the content still exist without CSS?\" or \"What happens to layout and colors if CSS is gone?\"\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does CSS turn a brand kit or design idea into a real web page?*\n- *What do designers need to communicate clearly when styling a page?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their understanding of CSS to real-world design workflows. The goal is to get students to recognize that CSS isn't just about color or font — it's about translating design decisions into code and ensuring clear communication when turning designs into webpages.\n"
       },
       "seeding_key": {
         "activity_section.key": "1cc10781-8c2d-4c0a-872e-2a680a070d74",
@@ -2931,7 +2931,7 @@
       "key": "4913604d-744f-4fa8-82bb-568c20ae5899",
       "position": 2,
       "properties": {
-        "description": "When a designer creates a layout or brand kit, it's not automatically ready for the web. CSS is how front-end developers bring those visuals to life — they translate colors, spacing, and typography into code. This handoff between design and development is part of what you'll practice today — testing how well AI follows design instructions.",
+        "description": "When a designer creates a layout or brand kit, it's not automatically ready for the web. CSS is how those visual design decisions are brought to life on a webpage — translating colors, spacing, and typography into a consistent look and feel.",
         "remarks": true
       },
       "seeding_key": {
@@ -2954,7 +2954,7 @@
       "key": "725b8d5c-cbcb-4f21-974a-49cf08d9f7f8",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Establish students' role as front-end web designers who translate brand kits into live, coded web pages using CSS.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as front-end designers using AI as their coding partner. Designers define the vision, and front-end developers ensure it's executed correctly in code — responsibly, accessibly, and on brand. As front-end developers, they also check whether their pages still work well across different screen sizes. This is called responsive design, which means a page adjusts so it remains readable and usable on phones, tablets, and laptops.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Establish students' role as front-end web designers who translate brand kits into live, coded web pages using CSS.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that students will act as front-end designers using AI as their coding partner. \n\nDesigners define the vision and ensure it is carried through consistently on the page — checking that colors, fonts, and layout match the intended brand and work well across screen sizes. This is called responsive design, which means a page adjusts so it remains readable and usable on phones, tablets, and laptops.\n",
         "duration": "15",
         "name": "Style Sheets",
         "tips": [
@@ -2995,12 +2995,12 @@
       "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students that they practiced this “Prompt Like a Designer” routine in Lesson 3. Review the three requirements and explain that they’ll use the same structure again in the next level before prompting AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students prompt AI to generate and apply a basic CSS stylesheet.\n- Level 3: Students prompt AI to apply brand colors and fonts to key regions (header, nav, main, footer) and refine for accuracy.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students provided the stylesheet as context to the AI and prompted the AI to generate new HTML with their stylesheet linked in the `<head>`. Have students explain what they notice about the AI's code and why it made those styling choices.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students that they practiced this “Prompt Like a Designer” routine in Lesson 3. Review the three requirements and explain that they’ll use the same structure again in the next level before prompting AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students review how to add context (prompt, webpage, and design) so AI can generate more accurate results.\n- Level 3: Students use their plan to prompt AI to generate a CSS stylesheet, apply their brand’s colors and fonts, and refine the styling as needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students prompted AI to generate a separate CSS file and update the HTML to link the stylesheet in the <head>.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
         "progression_name": "Apply a Stylesheet",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Encourage students to \"debug like a developer.\" If the AI's output doesn't look right, they should describe why instead of just retrying the prompt. This models safe, reflective use of AI tools — not just trust in automation. If time allows, connect back to the Front-End Designer role: \"This is the testing phase — where developers validate the AI's work before the site goes live.\""
+            "markdown": "Encourage students to \"debug like a designer.\" If the AI's output doesn't look right, they should describe why instead of just retrying the prompt.\nIf time allows, connect back to the Front-End Designer role: \"This is the testing phase — where developers validate the AI's work before the site goes live.\"\n"
           }
         ]
       },
@@ -3024,7 +3024,7 @@
       "key": "334832a8-868c-44f9-ab42-48736fbf0c38",
       "position": 6,
       "properties": {
-        "description": "When developers use AI tools, they don't assume every output is correct — they check what changed, why it changed, and whether it still fits the brand's tone and user needs. You're doing the same thing here: validating the AI's choices.",
+        "description": "When designers use AI tools, they don’t assume every output is correct — they check what changed, why it changed, and whether it still fits their design goals.",
         "remarks": true
       },
       "seeding_key": {
@@ -3036,7 +3036,7 @@
       "key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 4 and choose one challenge to complete. Encourage them to think like developers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 4 and choose one challenge to complete. Encourage them to think like designers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
         "duration": "15",
         "name": "Style Choice Challenge",
         "progression_name": "Styling Challenge",
@@ -3053,23 +3053,10 @@
       }
     },
     {
-      "key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
-      "position": 8,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students that reference levels at the end of the lesson show how to add context and save prompts in AI Tutor.",
-        "name": "Reference Materials",
-        "progression_name": "Reference: Adding Context and Saving Prompts"
-      },
-      "seeding_key": {
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f",
-        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
-      }
-    },
-    {
       "key": "e47d35e9-a804-4d15-b9cf-7b9c8891a5e1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Invite students to reflect on their learning by responding to the prompts on the slide. Ask them to share quick responses out loud or record them on sticky notes, a shared board, or a digital tool. Help students connect today's lesson to the larger story of how design becomes code. They should recognize that CSS translates brand identity into real web pages, and that AI acts as a coding assistant, not an automatic expert.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
         "activity_section.key": "e47d35e9-a804-4d15-b9cf-7b9c8891a5e1",
@@ -5303,7 +5290,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level5_2026-v3"
+          "ai-generated-design-lesson6-level2_2026-v2"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -5311,7 +5298,7 @@
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level5_2026-v3"
+        "ai-generated-design-lesson6-level2_2026-v2"
       ]
     },
     {
@@ -5325,7 +5312,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2025-v2"
+          "ai-generated-design-lesson6-level3_2026-v3"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -5333,7 +5320,7 @@
         "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
       },
       "level_keys": [
-        "ai-generated-design-lesson6-level2_2025-v2"
+        "ai-generated-design-lesson6-level3_2026-v3"
       ]
     },
     {
@@ -5382,72 +5369,6 @@
     },
     {
       "chapter": 24,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Reference: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level1_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level1_2026"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 7,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Reference: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level2_2026"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 8,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Reference: Adding Context and Saving Prompts"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level3_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level3_2026"
-      ]
-    },
-    {
-      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5468,7 +5389,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5490,7 +5411,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5512,7 +5433,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5534,7 +5455,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5556,7 +5477,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5578,7 +5499,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5600,7 +5521,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5622,7 +5543,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5644,7 +5565,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5666,7 +5587,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5688,7 +5609,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5710,7 +5631,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5732,7 +5653,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5754,7 +5675,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5776,7 +5697,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5798,7 +5719,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5820,7 +5741,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5842,7 +5763,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5864,7 +5785,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5886,7 +5807,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5908,7 +5829,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5930,7 +5851,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5952,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6205,9 +6126,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level5_2026-v3",
+        "level.key": "ai-generated-design-lesson6-level2_2026-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level5_2026-v3"
+          "ai-generated-design-lesson6-level2_2026-v2"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -6217,9 +6138,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level2_2025-v2",
+        "level.key": "ai-generated-design-lesson6-level3_2026-v3",
         "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2025-v2"
+          "ai-generated-design-lesson6-level3_2026-v3"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -6249,42 +6170,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level1_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level1_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level3_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level3_2026"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "3de630aa-00f3-43ae-bbc5-5b45a7afad8f"
       }
     },
     {

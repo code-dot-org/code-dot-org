@@ -90,14 +90,14 @@ class AllVocabulariesEditor extends Component {
     return (
       <div style={styles.actionsColumn}>
         <div onMouseDown={() => this.handleEdit(rowData)} style={styles.edit}>
-          <i className="fa-solid fa-pen-to-square" />
+          <i className="fa fa-edit" />
         </div>
         <div
           onMouseDown={() => this.setState({vocabularyForDeletion: rowData})}
           style={styles.remove}
           className={'unit-test-destroy-vocabulary'}
         >
-          <i className="fa-solid fa-trash" />
+          <i className="fa fa-trash" />
         </div>
       </div>
     );
@@ -139,7 +139,7 @@ class AllVocabulariesEditor extends Component {
             type="button"
             className="unit-test-add-vocabulary"
           >
-            <i className="fa-solid fa-plus" style={{marginRight: 7}} />
+            <i className="fa fa-plus" style={{marginRight: 7}} />
             Create New Vocabulary
           </a>
         </div>

@@ -43,21 +43,21 @@ export default function OrderableList({
               <i
                 onClick={() => moveItem(idx, 'up')}
                 style={styles.controlButton}
-                className="fa-solid fa-caret-up"
+                className="fa fa-caret-up"
               />
             )}
             {idx !== list.length - 1 && (
               <i
                 onClick={() => moveItem(idx, 'down')}
                 style={styles.controlButton}
-                className="fa-solid fa-caret-down"
+                className="fa fa-caret-down"
               />
             )}
             {checkItemDeletionAllowed(item) && (
               <i
                 onClick={() => removeItem(idx)}
                 style={styles.controlButton}
-                className="fa-solid fa-trash"
+                className="fa fa-trash"
               />
             )}
           </div>

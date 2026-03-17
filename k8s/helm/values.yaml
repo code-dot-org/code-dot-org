@@ -11,8 +11,9 @@ RAILS_ENV:
 
 locals.yml:
 
-# Provide access to AWS Secrets Manager secrets via k8s secrets? Enables ESO
-use_aws_secrets_manager: false
+# Require the k8s secret `cdo-external-secrets` to exist before bootup
+# Aka: "Require AWS Secrets Manager access to boot" mode
+require_external_secrets: false
 
 healthChecks:
   enabled: false
@@ -39,8 +40,6 @@ services:
     enabled: false
   minio:
     enabled: false
-    username:
-    password:
     runSetupS3Job: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args
@@ -54,6 +53,8 @@ user:
   home: /home/code-dot-org
   allowSudo: false
 
+# Use the AWS creds from your local machine inside the dashboard container
+# Tip: activate with the skaffold local-dev profile: `skaffold dev -p local-dev`
 localDev:
   mounts:
     mountDotAWS: false

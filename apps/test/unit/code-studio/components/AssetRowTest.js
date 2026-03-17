@@ -42,7 +42,7 @@ describe('AssetRow', () => {
         </table>
       );
 
-      expect(wrapper.find('i.fa-regular.fa-trash-can')).toHaveLength(1);
+      expect(wrapper.find('i.fa.fa-trash-o')).toHaveLength(1);
     });
 
     it('does not display the delete button for normal action if hideDelete is true', () => {

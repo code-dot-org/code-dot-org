@@ -88,7 +88,7 @@ class AddLevelFilters extends Component {
           </select>
         </label>
         <button type="button" onClick={this.handleSearch}>
-          <FontAwesome icon="magnifying-glass" />
+          <FontAwesome icon="search" />
         </button>
       </div>
     );
