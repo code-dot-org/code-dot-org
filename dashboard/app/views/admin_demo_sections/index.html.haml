@@ -1,0 +1,7 @@
+%meta{name: "csrf-token", content: form_authenticity_token}
+
+#demo-sections-container
+
+%script{src: webpack_asset_path('js/admin_demo_sections/index.js'), data: @script_data}
+
+= render partial: 'home/admin'

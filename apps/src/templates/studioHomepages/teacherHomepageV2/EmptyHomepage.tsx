@@ -18,7 +18,7 @@ interface EmptyHomepageProps {
   showHiddenOnly: boolean;
 }
 
-const SECTIONS_API = '/api/v1/sections';
+const DEMO_SECTIONS_API = '/api/v1/sections/demo';
 
 const DEMO_SECTION: Section = {
   aiTutorEnabled: false,
@@ -58,13 +58,8 @@ export const EmptyHomepage: React.FC<EmptyHomepageProps> = ({
     }
 
     const response = await HttpClient.post(
-      SECTIONS_API,
-      JSON.stringify({
-        name: section.name,
-        login_type: section.loginType,
-        participant_type: section.participantType,
-        grades: section.grades,
-      }),
+      `${DEMO_SECTIONS_API}/aif`,
+      undefined,
       true,
       {'Content-Type': 'application/json'}
     );
@@ -75,7 +70,7 @@ export const EmptyHomepage: React.FC<EmptyHomepageProps> = ({
     dispatch(sectionHasNewData());
 
     return data.id;
-  }, [section, dispatch]);
+  }, [dispatch]);
 
   if (showHiddenOnly) {
     return (

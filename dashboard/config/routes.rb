@@ -218,6 +218,7 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          post 'demo/:section_type', to: 'sections#create_demo'
         end
       end
     end
@@ -739,6 +740,12 @@ Dashboard::Application.routes.draw do
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
+      end
+
+      resources :admin_demo_sections, only: [:index, :create, :destroy], path: :demo_sections do
+        collection do
+          get :lookup_users
+        end
       end
 
       get :styleguide, to: redirect('/styleguide/'), as: 'admin_styleguide'
