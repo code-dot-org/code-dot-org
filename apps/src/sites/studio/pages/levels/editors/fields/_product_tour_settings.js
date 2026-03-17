@@ -7,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const initialSettings = getScriptData('producttoursettings');
-  const appName = getScriptData('appname');
+  const appName = getScriptData('appname') ?? '';
 
   createReactRoot(
     <EditProductTourSettings
