@@ -14,7 +14,9 @@ describe('SendLesson', () => {
     );
 
     expect(wrapper.find('Button').length).toEqual(1);
-    expect(wrapper.find('Button').at(0).props().icon).toEqual('share-square');
+    expect(wrapper.find('Button').at(0).props().icon).toEqual(
+      'share-from-square'
+    );
   });
 
   it('opens the SendLessonDialog when the button is clicked', () => {
