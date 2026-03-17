@@ -23,9 +23,9 @@ export default class BooleanPropertyRow extends React.Component {
   render() {
     let classes = 'custom-checkbox fa';
     if (this.state.isChecked) {
-      classes += ' fa-check-square-o';
+      classes += ' fa-regular fa-check-square';
     } else {
-      classes += ' fa-square-o';
+      classes += ' fa-regular fa-square';
     }
 
     return (
