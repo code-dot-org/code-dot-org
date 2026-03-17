@@ -10,9 +10,9 @@ class Queries::Lti
   # Returns the LTI user id for a particular code.org user and LTI integration
   def self.lti_user_ids(user, lti_integration)
     user.lti_user_identities.
-        where(lti_integration_id: lti_integration.id).
-        pluck(:subject).
-        presence
+      where(lti_integration_id: lti_integration.id).
+      pluck(:subject).
+      presence
   end
 
   def self.lti_user_identity(user, lti_integration)

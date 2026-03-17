@@ -78,10 +78,10 @@ class InactiveTeacherDeletionWarningMailer
     # Filter teachers who haven't been emailed yet or need a re-send,
     # and exclude already processed teachers, then limit to batch size
     result.
-    where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
-    or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
-    where.not(id: processed_teacher_ids).
-    limit(BATCH_SIZE)
+      where(user_data_retention_status: {deletion_warning_email_sent_at: nil}).
+      or(result.where(user_data_retention_status: {deletion_warning_email_sent_at: ..inactive_since})).
+      where.not(id: processed_teacher_ids).
+      limit(BATCH_SIZE)
   end
 
   private def upload_metrics(id)

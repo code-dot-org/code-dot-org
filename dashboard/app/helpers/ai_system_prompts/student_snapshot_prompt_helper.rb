@@ -321,7 +321,7 @@ Levels: [{
 
   def self.get_user_level_interactions(level, student_id, unit_id)
     user_level_interactions = UserLevelInteraction.where(user_id: student_id, level_id: level.id).
-                                                  order(:created_at)
+      order(:created_at)
 
     return {} unless user_level_interactions.any?
 
