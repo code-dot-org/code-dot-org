@@ -65,7 +65,7 @@ if (testType('unit')) {
 // `npx karma start --testType=integration`
 if (testType('integration')) {
   describe('integration tests', function () {
-    // throwOnConsoleErrorsEverywhere();
+    throwOnConsoleErrorsEverywhere();
     clearTimeoutsBetweenTests();
     stubFirehose();
 
