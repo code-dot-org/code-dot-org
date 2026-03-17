@@ -12,6 +12,7 @@ const ERROR_ALLOW_LIST = [
   'uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead',
   'Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead',
   'findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node',
+  '`ReactDOMTestUtils.act` is deprecated in favor of `React.act`. Import `act` from `react` instead of `react-dom/test-utils`',
 ];
 
 /**
