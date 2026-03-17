@@ -109,7 +109,7 @@ Levels: [{
     level_number = get_level_number(level, script_level, parent_script_level, parent_level_display_text)
 
     level_data = {
-      'Level Number'=> level_number.to_s,
+      'Level Number' => level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }
@@ -158,7 +158,7 @@ Levels: [{
 
     level_data = {
       "Assessment Level" => "weight this more heavily towards student mastery",
-      'Level Number'=> level_number.to_s,
+      'Level Number' => level_number.to_s,
       "Level Type" => LEVEL_TYPE_PROMPTS[level.type] || level.type || '',
       "Number of attempts" => user_level&.attempts || 0
     }

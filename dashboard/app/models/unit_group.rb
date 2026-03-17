@@ -252,7 +252,7 @@ class UnitGroup < ApplicationRecord
 
   def update_original_scripts(original_scripts)
     return if original_scripts.nil?
-    original_scripts  = original_scripts.reject(&:empty?)
+    original_scripts = original_scripts.reject(&:empty?)
     original_units_objects = original_scripts.map {|s| Unit.find_by_name!(s)}
 
     # Treat the seed as the source of truth
