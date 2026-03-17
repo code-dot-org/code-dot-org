@@ -34,6 +34,7 @@ declare global {
   }
 }
 
+// CodeMirror5-compatible adapter used to migrate existing usages of initializeCodeMirror (which uses CM5).
 interface CodeMirrorLegacyAdapter {
   getValue: () => string;
   setValue: (value: string) => void;
@@ -262,12 +263,14 @@ function initializeCodeMirror6(
         if (callback) {
           callback(adapter, update);
         }
+
+        updatePreview();
       }
+
       if (onUpdateLinting) {
         const diagnostics = getLintDiagnostics(update.state);
         onUpdateLinting(getErrorMessages(diagnostics));
       }
-      updatePreview();
     }),
   ];
 
