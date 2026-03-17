@@ -12,6 +12,7 @@
 const ERROR_ALLOW_LIST = [
   "Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot",
   'uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead',
+  'uses the legacy contextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() with static contextType instead.',
   'Support for defaultProps will be removed from function components in a future major release. Use JavaScript default parameters instead',
   'Support for string refs will be removed in a future major release. We recommend using useRef() or createRef() instead. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-string-ref',
   'findDOMNode is deprecated and will be removed in the next major release. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node',
