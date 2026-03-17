@@ -13,13 +13,14 @@ describe('ProgressionDetails', () => {
     };
   });
 
-  it('renders without errors', () => {
+  it('renders default props and ProgressLevelSet', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
-    expect(wrapper.exists()).toBe(true);
+    expect(wrapper.find('Connect(ProgressLevelSet)').length).toBe(1);
   });
 
   it('can show level details dialog after bubble click', () => {
     const wrapper = shallow(<ProgressionDetails {...defaultProps} />);
+    expect(wrapper.find('Connect(ProgressLevelSet)').length).toBe(1);
     wrapper.instance().handleBubbleClick({id: 1});
     expect(wrapper.find('Connect(LevelDetailsDialog)').length).toBe(1);
   });

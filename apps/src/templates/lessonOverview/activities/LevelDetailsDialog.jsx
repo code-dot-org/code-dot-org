@@ -13,6 +13,7 @@ import styleConstants from '@cdo/apps/styleConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
+import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {windowOpen} from '@cdo/apps/utils';
@@ -219,8 +220,10 @@ class LevelDetailsDialog extends Component {
 
     // Reset highlighting
     if (previousSelected.name === clonedScriptLevel.level.name) {
+      // The script level was selected so reset highlighted on the script level
       clonedScriptLevel.highlighted = false;
     } else {
+      // A sublevel was selected - find the sublevel and reset highlighted on it
       const clonedPreviousSelected = clonedScriptLevel.sublevels.find(
         sublevel => sublevel.name === previousSelected.name
       );
@@ -228,12 +231,14 @@ class LevelDetailsDialog extends Component {
     }
 
     if (clickedObject.level) {
+      // A script level was clicked on so we set highlighted on the cloned script level
       clonedScriptLevel.highlighted = true;
       this.setState({
         selectedLevel: clickedObject.level,
         scriptLevel: clonedScriptLevel,
       });
     } else {
+      // A sublevel was clicked so find the cloned version of the sublevel and set highlighted to true
       const clonedNewSelected = clonedScriptLevel.sublevels.find(
         sublevel => sublevel.name === clickedObject.name
       );
@@ -243,6 +248,21 @@ class LevelDetailsDialog extends Component {
         scriptLevel: clonedScriptLevel,
       });
     }
+  };
+
+  renderBubbleChoiceBubbles = () => {
+    const {scriptLevel} = this.state;
+    if (scriptLevel.level.type !== 'BubbleChoice') {
+      return null;
+    }
+    return (
+      <ProgressBubbleSet
+        levels={[scriptLevel]}
+        disabled={false}
+        onBubbleClick={this.handleBubbleChoiceBubbleClick}
+        showSublevels={true}
+      />
+    );
   };
 
   render() {
@@ -265,6 +285,7 @@ class LevelDetailsDialog extends Component {
         style={{...levelSpecificStyling}}
       >
         <h1>{level.display_name || scriptLevel.name || level.name}</h1>
+        {this.renderBubbleChoiceBubbles()}
         <div className="level-details">{preview}</div>
         <DialogFooter rightAlign>
           <Button
