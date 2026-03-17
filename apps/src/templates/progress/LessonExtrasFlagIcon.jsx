@@ -22,8 +22,11 @@ class LessonExtrasFlagIcon extends React.PureComponent {
 
     return (
       <span className="fa-stack fa-1x" style={sizeStyle}>
-        <i className="fa fa-flag fa-stack-1x fa-inverse" />
-        <i className="fa fa-flag-checkered fa-stack-1x" style={colorStyle} />
+        <i className="fa-solid fa-flag fa-stack-1x fa-inverse" />
+        <i
+          className="fa-solid fa-flag-checkered fa-stack-1x"
+          style={colorStyle}
+        />
       </span>
     );
   }

@@ -149,7 +149,7 @@ export class UnconnectedJavalabSettings extends Component {
         handleClose={this.handleClickOutside}
       >
         <JavalabButton
-          icon={<FontAwesome icon="cog" />}
+          icon={<FontAwesome icon="gear" />}
           text={msg.settings()}
           className={classNames(
             style.buttonWhite,
