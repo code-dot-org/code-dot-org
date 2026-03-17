@@ -77,7 +77,7 @@ class LessonGroup extends React.Component {
     const hasLessonGroupInfo = description || bigQuestions;
 
     return (
-      <div className={styles.main} id="lesson-group">
+      <div className={classnames(styles.main, 'lesson-group')}>
         <div
           className={classnames(styles.header, {
             [styles.headerBlue]: isPlc,
