@@ -41,7 +41,7 @@ const getAnswerJsonSchema = (): JsonObjectSchema => {
           additionalProperties: false,
         },
         description:
-          '`text`, `html`, `css`, or `js` fences. Limit to one language (text, html, css, or js) across the entire list. ' +
+          '`text`, `html`, `css`, `js` or `json` fences. Limit to one language (text, html, css, js, or json) across the entire list. ' +
           'The list can be empty. Code should be formatted with appropriate newlines and indentation. ' +
           'When providing modifications to a file in the student code, provide the entire contents of the file. ' +
           'Code should be formatted with appropriate newlines and indentation.',
@@ -85,13 +85,14 @@ export const acceptRejectAnswerTypes = [
   'buildHTML',
   'buildCSS',
   'buildJavaScript',
+  'buildJSON',
 ];
 
-const acceptRejectCodeFileTypes = ['html', 'css', 'js'];
+const acceptRejectCodeFileTypes = ['html', 'css', 'js', 'json'];
 
 /**
  * Validates that all files have file types that are supported in the accept-reject flow.
- * Returns true if all files are html, css, or js files.
+ * Returns true if all files are of supported types, false otherwise.
  */
 export const isAcceptRejectCodeFileTypes = (
   files: Array<{name: string}>
