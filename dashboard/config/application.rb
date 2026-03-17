@@ -44,7 +44,6 @@ module Dashboard
     # Manually configure some values to match defaults for the next version of
     # Rails; see config/initializers/new_framework_defaults_7_0.rb for more.
     # TODO infra: remove these values once we're loading defaults for 7.0 above
-    config.action_controller.raise_on_open_redirects = true
     config.active_support.disable_to_s_conversion = true
     config.active_support.executor_around_test_case = true
 
