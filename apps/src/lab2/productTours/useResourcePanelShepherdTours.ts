@@ -15,11 +15,13 @@ import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/us
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
+import {ProductTour, isTourEnabledOnLevel} from './productToursPerLab';
 import {createValidationTourSteps} from './validationTourShepherdSteps';
 
 interface UseResourcePanelShepherdToursParams {
-  isOnboardingTourEnabled: boolean;
-  isValidationTourEnabled: boolean;
+  appName: string | undefined;
+  productToursForLevel: string[] | undefined;
+  isStandaloneCollapsed?: boolean;
   hasValidationConditions: boolean | undefined;
   validationSettings: ValidationSettings | undefined;
 }
@@ -37,8 +39,9 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
   });
 
 const useResourcePanelShepherdTours = ({
-  isOnboardingTourEnabled,
-  isValidationTourEnabled,
+  appName,
+  productToursForLevel,
+  isStandaloneCollapsed,
   hasValidationConditions,
   validationSettings,
 }: UseResourcePanelShepherdToursParams) => {
@@ -53,6 +56,15 @@ const useResourcePanelShepherdTours = ({
   useLifecycleNotifier(LifecycleEvent.LevelLoadCompleted, () => {
     setIsLevelLoading(false);
   });
+
+  const isOnboardingTourEnabled = useMemo(() => {
+    const isEnabledOnLevel = isTourEnabledOnLevel(
+      ProductTour.ResourcePanelOnboarding,
+      appName ?? '',
+      productToursForLevel
+    );
+    return isEnabledOnLevel && !isStandaloneCollapsed && !isLevelLoading;
+  }, [appName, productToursForLevel, isStandaloneCollapsed, isLevelLoading]);
 
   // ONBOARDING TOUR
   const [onboardingTourSeen, setOnboardingTourSeen] = useState(
@@ -75,7 +87,7 @@ const useResourcePanelShepherdTours = ({
   const {tour: onboardingTour} = useLab2ProductTour({
     getSteps: createOnboardingTourSteps,
     localStorageKey: RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN,
-    tourAvailable: isOnboardingTourEnabled && !isLevelLoading,
+    tourAvailable: isOnboardingTourEnabled,
     onStart: onTourStart(RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME),
     onComplete: onOnboardingTourComplete,
     onCancel: onOnboardingTourCancel,
@@ -87,14 +99,19 @@ const useResourcePanelShepherdTours = ({
   const showValidationTour = useMemo(
     () =>
       (!isLevelLoading &&
-        isValidationTourEnabled &&
+        isTourEnabledOnLevel(
+          ProductTour.ResourcePanelValidation,
+          appName ?? '',
+          productToursForLevel
+        ) &&
         !!hasValidationConditions &&
         !!validationSettings &&
         onboardingTourSeen) ||
       false,
     [
       isLevelLoading,
-      isValidationTourEnabled,
+      appName,
+      productToursForLevel,
       hasValidationConditions,
       validationSettings,
       onboardingTourSeen,

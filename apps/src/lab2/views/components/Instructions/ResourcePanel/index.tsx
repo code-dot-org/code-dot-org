@@ -130,8 +130,6 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
-  isValidationTourEnabled?: boolean;
-  isOnboardingTourEnabled?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
@@ -163,8 +161,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
-  isValidationTourEnabled,
-  isOnboardingTourEnabled,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
@@ -212,13 +208,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
-  useResourcePanelShepherdTours({
-    isOnboardingTourEnabled:
-      (isOnboardingTourEnabled && !isStandaloneCollapsed) || false,
-    isValidationTourEnabled: isValidationTourEnabled || false,
-    hasValidationConditions,
-    validationSettings,
-  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -240,6 +229,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor') === 'true';
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
+  useResourcePanelShepherdTours({
+    appName,
+    productToursForLevel: instructionsProps.levelProperties.productTours,
+    isStandaloneCollapsed,
+    hasValidationConditions,
+    validationSettings,
+  });
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {

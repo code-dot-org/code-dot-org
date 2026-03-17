@@ -39,10 +39,10 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
 // Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
 export function isTourEnabledOnLevel(
   tour: ProductTour,
-  appName: AppName,
+  appName: string,
   productTours: string[] | undefined
 ): boolean {
-  const isAvailableForLab = ToursPerLab[appName]?.some(
+  const isAvailableForLab = ToursPerLab[appName as AppName]?.some(
     config => config.name === tour
   );
   if (!isAvailableForLab) return false;
