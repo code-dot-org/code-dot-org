@@ -3,13 +3,23 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
+import {
+  BubbleShape,
+  BubbleSize,
+  getBubbleUrl,
+} from '@cdo/apps/templates/progress/BubbleFactory';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import ProgressBubbleSet from './ProgressBubbleSet';
-import {getIconForLevel} from './progressHelpers';
-import ProgressPill from './ProgressPill';
+import {getIconForLevel, isLevelAssessment} from './progressHelpers';
+import {levelProgressStyle, hoverStyle} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 
 /**
@@ -64,20 +74,78 @@ class ProgressLevelSet extends React.Component {
       }
     }
 
+    // Pill rendering (inlined from ProgressPill)
+    const userId = queryParams('user_id');
+    const pillLinksToLevel =
+      !disabled && !onBubbleClick && levels.length === 1;
+    const pillUrl = pillLinksToLevel
+      ? getBubbleUrl(levels[0].url, userId, selectedSectionId)
+      : undefined;
+    const pillOnClick =
+      !multiLevelStep && !disabled && !pillUrl
+        ? () => onBubbleClick(levels[0])
+        : undefined;
+
+    const firstLevel = levels[0];
+    const pillStyle = {
+      ...pillStyles.levelPill,
+      ...((pillUrl || pillOnClick) ? hoverStyle : {}),
+      ...(!multiLevelStep
+        ? levelProgressStyle(firstLevel.status, firstLevel.kind)
+        : {}),
+    };
+
+    const iconMarginStyle = isRtl
+      ? pillStyles.iconMarginRTL
+      : pillStyles.iconMargin;
+    const textStyle = progressStyle
+      ? pillStyles.textProgressStyle
+      : pillStyles.text;
+
+    const hasKeepWorkingFeedback =
+      firstLevel['teacherFeedbackReviewState'] === ReviewStates.keepWorking;
+    const displayBadge =
+      !multiLevelStep &&
+      (hasKeepWorkingFeedback || isLevelAssessment(firstLevel));
+
     return (
       <table style={styles.table}>
         <tbody>
           <tr>
             <td style={styles.col1}>
-              <ProgressPill
-                levels={levels}
-                icon={icon}
-                text={pillText}
-                disabled={disabled}
-                selectedSectionId={selectedSectionId}
-                progressStyle={progressStyle}
-                onSingleLevelClick={onBubbleClick}
-              />
+              <a
+                href={pillUrl}
+                style={{textDecoration: 'none'}}
+                className="uitest-ProgressPill"
+                onClick={pillOnClick}
+                aria-label={`Level ${pillText}`}
+              >
+                <div style={pillStyle}>
+                  {icon && <FontAwesome icon={icon} />}
+                  {pillText && (
+                    <div
+                      className="ProgressPillTextAndIcon"
+                      style={{
+                        ...textStyle,
+                        ...(icon ? iconMarginStyle : {}),
+                      }}
+                    >
+                      {pillText}
+                    </div>
+                  )}
+                  {displayBadge && (
+                    <BubbleBadge
+                      badgeType={
+                        hasKeepWorkingFeedback
+                          ? BadgeType.keepWorking
+                          : BadgeType.assessment
+                      }
+                      bubbleSize={BubbleSize.full}
+                      bubbleShape={BubbleShape.pill}
+                    />
+                  )}
+                </div>
+              </a>
             </td>
             <td style={col2Style}>
               <a href={url} onClick={onClick}>
@@ -160,6 +228,51 @@ const styles = {
     height: 10,
     width: 10,
     borderRadius: 10,
+  },
+};
+
+const pillStyles = {
+  levelPill: {
+    textAlign: 'center',
+    justifyContent: 'center',
+    borderWidth: 2,
+    borderStyle: 'solid',
+    borderColor: color.lighter_gray,
+    color: color.charcoal,
+    display: 'flex',
+    fontSize: 16,
+    ...fontConstants['main-font-semi-bold'],
+    borderRadius: 20,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 6,
+    paddingBottom: 6,
+    minWidth: 70,
+    lineHeight: '18px',
+    marginTop: 3,
+    marginBottom: 3,
+    position: 'relative',
+  },
+  text: {
+    display: 'inline-block',
+    ...fontConstants['main-font-semi-bold'],
+    letterSpacing: -0.12,
+  },
+  textProgressStyle: {
+    display: 'inline-block',
+    ...fontConstants['main-font-semi-bold'],
+    fontSize: 12,
+    letterSpacing: -0.12,
+    width: 120,
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+  },
+  iconMargin: {
+    marginLeft: 10,
+  },
+  iconMarginRTL: {
+    marginRight: 10,
   },
 };
 

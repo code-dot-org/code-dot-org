@@ -17,9 +17,9 @@ describe('ProgressLevelSet', function () {
       />
     );
 
-    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('.uitest-ProgressPill').length).toEqual(1);
     expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(0);
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1');
+    expect(wrapper.find('.ProgressPillTextAndIcon').text()).toEqual('1');
   });
 
   it('has a pill and no link for a single level with an onBubbleClick prop', () => {
@@ -32,10 +32,10 @@ describe('ProgressLevelSet', function () {
       />
     );
 
-    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('.uitest-ProgressPill').length).toEqual(1);
     expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(0);
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1');
-    expect(wrapper.find('a').props().href).not.toBeDefined();
+    expect(wrapper.find('.ProgressPillTextAndIcon').text()).toEqual('1');
+    expect(wrapper.find('.uitest-ProgressPill').props().href).not.toBeDefined();
   });
 
   it('has a pill and bubbles when we have multiple levels', () => {
@@ -47,9 +47,9 @@ describe('ProgressLevelSet', function () {
       />
     );
 
-    expect(wrapper.find('Connect(ProgressPill)').length).toEqual(1);
+    expect(wrapper.find('.uitest-ProgressPill').length).toEqual(1);
     expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(1);
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('1-3');
+    expect(wrapper.find('.ProgressPillTextAndIcon').text()).toEqual('1-3');
   });
 
   it('renders a pill with no text when first level is unplugged', () => {
@@ -62,7 +62,7 @@ describe('ProgressLevelSet', function () {
         disabled={false}
       />
     );
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('');
+    expect(wrapper.find('.ProgressPillTextAndIcon').length).toEqual(0);
   });
 
   it('renders a pill with no text when last level is unplugged', () => {
@@ -75,7 +75,7 @@ describe('ProgressLevelSet', function () {
         disabled={false}
       />
     );
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual('');
+    expect(wrapper.find('.ProgressPillTextAndIcon').length).toEqual(0);
   });
 
   it('renders a pill with unplugged text when only level is unplugged', () => {
@@ -89,7 +89,7 @@ describe('ProgressLevelSet', function () {
         disabled={false}
       />
     );
-    expect(wrapper.find('Connect(ProgressPill)').props().text).toEqual(
+    expect(wrapper.find('.ProgressPillTextAndIcon').text()).toEqual(
       'Unplugged Activity'
     );
   });
