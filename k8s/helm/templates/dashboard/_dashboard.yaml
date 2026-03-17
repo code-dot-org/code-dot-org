@@ -51,6 +51,30 @@ spec:
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
           {{- end }}
 
+
+        envFrom:
+          # Inject our Secrets as CDO_* ENV vars (both from helm and AWS Secrets Manager) 
+          #
+          # See: k8s/docs/kubernetes-secrets.md
+          #
+          # Order matters, starting with lowest precedence secret sources first:
+
+          # Secrets synced from the outside world by the External Secrets Operator
+          # See: https://github.com/external-secrets/external-secrets
+          #
+          # Typically, in our setup, the source will be the AWS Secrets Manager.
+          # See: cdo-external-secrets.tf, which defines the sync operation.
+          - prefix: CDO_
+            secretRef:
+              name: cdo-external-secrets
+              optional: {{ not .Values.require_external_secrets }}
+
+          # Secrets defined locally in this helm chart
+          # Comes second, so Helm-managed local service secrets can override AWS-synced ones.
+          - prefix: CDO_
+            secretRef:
+              name: cdo-local-secrets
+
         securityContext:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
 
