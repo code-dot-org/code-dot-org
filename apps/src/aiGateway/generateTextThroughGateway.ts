@@ -100,4 +100,4 @@ const generateTextThroughGateway = async <
   }
 };
 
-export {generateTextThroughGateway as generateText};
+export default generateTextThroughGateway;
