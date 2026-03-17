@@ -101,6 +101,7 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
       CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN:
         from_secret: CONTENTFUL_CS_FOR_ALL_ACCESS_TOKEN
+      RUBYOPT: '-W:deprecated'
     commands:
       # Cached data gets restored by the root user, so we need to reassign
       - sudo chown -R ci:ci .
