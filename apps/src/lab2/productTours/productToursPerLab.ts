@@ -6,8 +6,9 @@ export enum ProductTour {
   SketchlabIntro = 'sketchlab_intro',
 }
 
-interface ProductTourConfig {
+export interface ProductTourConfig {
   name: ProductTour;
+  displayName: string;
   // If the tour is enabled based on a level setting or not. If true, the tour will only be triggered
   // when the user first reaches a level with the tour enabled. If false, the tour will be triggered the first time
   // the user reaches a lab that has that tour available.
@@ -18,12 +19,26 @@ interface ProductTourConfig {
 // available for all lab2 labs (see UniversalLab2ProductTours below).
 export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
   pythonlab: [
-    {name: ProductTour.ResourcePanelValidation, triggeredByLevel: true},
+    {
+      name: ProductTour.ResourcePanelValidation,
+      displayName: 'Resource panel validation',
+      triggeredByLevel: true,
+    },
   ],
-  sketchlab: [{name: ProductTour.SketchlabIntro, triggeredByLevel: false}],
+  sketchlab: [
+    {
+      name: ProductTour.SketchlabIntro,
+      displayName: 'Sketchlab intro',
+      triggeredByLevel: false,
+    },
+  ],
 };
 
 // Tours available in all lab2 labs.
 export const UniversalLab2ProductTours: ProductTourConfig[] = [
-  {name: ProductTour.ResourcePanelOnboarding, triggeredByLevel: true},
+  {
+    name: ProductTour.ResourcePanelOnboarding,
+    displayName: 'Resource panel onboarding',
+    triggeredByLevel: true,
+  },
 ];
