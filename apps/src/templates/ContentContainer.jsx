@@ -1,13 +1,9 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
-
 import FontAwesome from '../legacySharedComponents/FontAwesome';
-import styleConstants from '../styleConstants';
-import color from '../util/color';
 
 import moduleStyles from './content-container.module.scss';
 
@@ -16,9 +12,6 @@ import moduleStyles from './content-container.module.scss';
 // sub-sections on a page because it was built to reuse the styling and
 // functionality of a heading and the option to show a link. You can find an
 // example of its use on studio.code.org/home.
-
-const contentWidth = styleConstants['content-width'];
-const linkBoxLineHeight = '26 px';
 
 class ContentContainer extends Component {
   static propTypes = {
@@ -48,17 +41,26 @@ class ContentContainer extends Component {
 
     const showLinkTop = responsiveSize === 'lg' && link && linkText;
     const showLinkBottom = responsiveSize !== 'lg' && link && linkText;
-    const boxStyles = styles.boxResponsive;
-    const bottomMargin = hideBottomMargin ? '' : styles.bottomMargin;
 
     return (
-      <div style={[boxStyles, bottomMargin]}>
+      <div
+        className={classNames(
+          moduleStyles.boxResponsive,
+          !hideBottomMargin && moduleStyles.bottomMargin
+        )}
+      >
         {(heading || (link && linkText)) && (
           <div
-            className={moduleStyles.contentContainerHeading}
-            style={styles.headingBox}
+            className={classNames(
+              moduleStyles.contentContainerHeading,
+              moduleStyles.headingBox
+            )}
           >
-            <h4 style={isRtl ? styles.headingTextRtl : styles.headingText}>
+            <h4
+              className={
+                isRtl ? moduleStyles.headingTextRtl : moduleStyles.headingText
+              }
+            >
               {heading}
             </h4>
             {showLinkTop && (
@@ -66,18 +68,20 @@ class ContentContainer extends Component {
             )}
           </div>
         )}
-        {description && <div style={styles.description}>{description}</div>}
-        <div style={styles.children}>
+        {description && (
+          <div className={moduleStyles.description}>{description}</div>
+        )}
+        <div className={moduleStyles.children}>
           {React.Children.map(this.props.children, (child, index) => {
             return <div key={index}>{child}</div>;
           })}
         </div>
         {showLinkBottom && (
-          <div style={styles.standaloneLinkBox}>
+          <div className={moduleStyles.standaloneLinkBox}>
             <Link link={link} linkText={linkText} isRtl={isRtl} bottom={true} />
           </div>
         )}
-        <div style={styles.clear} />
+        <div className={moduleStyles.clear} />
       </div>
     );
   }
@@ -93,23 +97,29 @@ class Link extends Component {
 
   render() {
     const {link, linkText, isRtl, bottom} = this.props;
-    let linkBoxStyle;
+    let linkBoxClass;
     if (isRtl) {
-      linkBoxStyle = bottom ? styles.linkBoxRtlBottom : styles.linkBoxRtl;
+      linkBoxClass = bottom
+        ? moduleStyles.linkBoxRtlBottom
+        : moduleStyles.linkBoxRtl;
     } else {
-      linkBoxStyle = bottom ? styles.linkBoxBottom : styles.linkBox;
+      linkBoxClass = bottom ? moduleStyles.linkBoxBottom : moduleStyles.linkBox;
     }
     const icon = isRtl ? 'chevron-left' : 'chevron-right';
 
     return (
-      <div style={linkBoxStyle}>
-        <a style={styles.linkTag} href={link}>
+      <div className={linkBoxClass}>
+        <a className={moduleStyles.linkTag} href={link}>
           <span style={{display: 'inline-block'}}>
-            {isRtl && <FontAwesome icon={icon} style={styles.chevronRtl} />}
+            {isRtl && (
+              <FontAwesome icon={icon} className={moduleStyles.chevronRtl} />
+            )}
           </span>
-          <div style={styles.linkToViewAll}>{linkText}</div>
+          <div className={moduleStyles.linkToViewAll}>{linkText}</div>
           <span style={{display: 'inline-block'}}>
-            {!isRtl && <FontAwesome icon={icon} style={styles.chevron} />}
+            {!isRtl && (
+              <FontAwesome icon={icon} className={moduleStyles.chevron} />
+            )}
           </span>
         </a>
       </div>
@@ -117,109 +127,7 @@ class Link extends Component {
   }
 }
 
-const styles = {
-  box: {
-    width: contentWidth,
-  },
-  boxResponsive: {
-    width: '100%',
-  },
-  bottomMargin: {
-    marginBottom: 60,
-  },
-  headingBox: {
-    paddingRight: 10,
-    paddingTop: 10,
-    overflow: 'hidden',
-    zIndex: 2,
-    position: 'relative',
-  },
-  headingText: {
-    fontSize: 24,
-    lineHeight: '26px',
-    color: color.neutral_dark,
-    float: 'left',
-    paddingRight: 20,
-  },
-  headingTextRtl: {
-    fontSize: 24,
-    lineHeight: '26px',
-    color: color.neutral_dark,
-    float: 'right',
-    paddingLeft: 20,
-  },
-  standaloneLinkBox: {
-    paddingTop: 10,
-    position: 'relative',
-    clear: 'both',
-  },
-  linkBox: {
-    display: 'inline',
-    position: 'absolute',
-    bottom: 20,
-    right: 0,
-    lineHeight: linkBoxLineHeight,
-  },
-  linkBoxRtl: {
-    display: 'inline',
-    float: 'left',
-    paddingLeft: 10,
-    position: 'absolute',
-    bottom: 20,
-    left: 0,
-    lineHeight: linkBoxLineHeight,
-  },
-  linkBoxBottom: {
-    display: 'inline',
-    left: 0,
-  },
-  linkBoxRtlBottom: {
-    display: 'inline',
-    right: 0,
-  },
-  description: {
-    fontSize: 14,
-    lineHeight: '22px',
-    ...fontConstants['main-font-regular'],
-    zIndex: 2,
-    color: color.neutral_dark,
-    width: '100%',
-    marginTop: -10,
-    marginBottom: 10,
-    clear: 'both',
-  },
-  linkTag: {
-    textDecoration: 'none',
-  },
-  linkToViewAll: {
-    fontSize: 14,
-    ...fontConstants['main-font-semi-bold'],
-    marginTop: -2,
-    display: 'inline',
-  },
-  chevron: {
-    display: 'inline',
-    fontSize: 10,
-    fontWeight: 'bold',
-    marginLeft: 15,
-  },
-  chevronRtl: {
-    display: 'inline',
-    color: color.neutral_dark,
-    fontSize: 10,
-    fontWeight: 'bold',
-    marginRight: 15,
-  },
-  children: {
-    justifyContent: 'space-between',
-    flexWrap: 'wrap',
-  },
-  clear: {
-    clear: 'both',
-  },
-};
-
 export default connect(state => ({
   responsiveSize: state.responsive.responsiveSize,
   isRtl: state.isRtl,
-}))(Radium(ContentContainer));
+}))(ContentContainer);

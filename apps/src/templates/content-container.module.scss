@@ -1,6 +1,122 @@
+@use "color.scss";
+@import '@code-dot-org/component-library-styles/font';
+
 .contentContainerHeading {
   a:hover {
     //We need !important to overwrite the default state inline style (inline hover state is not working, unfortunately)
     text-decoration: underline !important;
   }
+}
+
+.boxResponsive {
+  width: 100%;
+}
+
+.bottomMargin {
+  margin-bottom: 60px;
+}
+
+.headingBox {
+  padding-right: 10px;
+  padding-top: 10px;
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+}
+
+.headingText {
+  font-size: 24px;
+  line-height: 26px;
+  color: color.$neutral_dark;
+  float: left;
+  padding-right: 20px;
+}
+
+.headingTextRtl {
+  font-size: 24px;
+  line-height: 26px;
+  color: color.$neutral_dark;
+  float: right;
+  padding-left: 20px;
+}
+
+.standaloneLinkBox {
+  padding-top: 10px;
+  position: relative;
+  clear: both;
+}
+
+.linkBox {
+  display: inline;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  line-height: 26px;
+}
+
+.linkBoxRtl {
+  display: inline;
+  float: left;
+  padding-left: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  line-height: 26px;
+}
+
+.linkBoxBottom {
+  display: inline;
+  left: 0;
+}
+
+.linkBoxRtlBottom {
+  display: inline;
+  right: 0;
+}
+
+.description {
+  @include main-font-regular;
+  font-size: 14px;
+  line-height: 22px;
+  z-index: 2;
+  color: color.$neutral_dark;
+  width: 100%;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  clear: both;
+}
+
+.linkTag {
+  text-decoration: none;
+}
+
+.linkToViewAll {
+  @include main-font-semi-bold;
+  font-size: 14px;
+  margin-top: -2px;
+  display: inline;
+}
+
+.chevron {
+  display: inline;
+  font-size: 10px;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.chevronRtl {
+  display: inline;
+  color: color.$neutral_dark;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.children {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.clear {
+  clear: both;
 }
