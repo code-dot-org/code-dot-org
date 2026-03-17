@@ -5,7 +5,6 @@
 import classNames from 'classnames';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -438,11 +437,11 @@ class JsDebugger extends React.Component {
     return (
       <div
         id="debug-area"
-        style={[
-          {transition: debugAreaTransitionValue},
-          this.props.style,
-          {height},
-        ]}
+        style={{
+          transition: debugAreaTransitionValue,
+          ...this.props.style,
+          height,
+        }}
         onTransitionEnd={this.onTransitionEnd}
         ref={root => (this.root = root)}
       >
@@ -652,4 +651,4 @@ export default connect(
     open,
     close,
   }
-)(Radium(JsDebugger));
+)(JsDebugger);
