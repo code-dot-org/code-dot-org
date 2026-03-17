@@ -112,6 +112,12 @@ processors:
           - set(span.attributes["error.stack"], attributes["exception.stacktrace"])
             where name == "exception" and attributes["exception.stacktrace"] != nil
 
+  # Probabilistic sampler controlling APM trace volume. Hashes the trace ID to make a consistent
+  # per-trace decision — all spans within a trace are kept or dropped together. Does not apply to
+  # the spanmetrics pipeline so RED metrics remain accurate at full volume.
+  probabilistic_sampler:
+    sampling_percentage: <%= @apm_trace_sample_rate %>
+
   # Resource processor to add additional resource attributes
   resource:
     attributes:
@@ -174,7 +180,7 @@ service:
     # Traces pipeline
     traces:
       receivers: [otlp]
-      processors: [resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
+      processors: [resource, transform/datadog_errors, transform/rails_resource_name_from_rack, probabilistic_sampler, batch]
       exporters: [datadog]
 
     # Metrics pipeline

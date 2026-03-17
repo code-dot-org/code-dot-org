@@ -11,5 +11,10 @@ default['cdo-otel-collector'] = {
   # Prometheus remote write URL. Leave empty to disable the Prometheus pipeline.
   'prometheus_remote_write_url' => '',
   # AWS region for SigV4 signing of Prometheus remote write requests.
-  'prometheus_region' => 'us-east-1'
+  'prometheus_region' => 'us-east-1',
+  # Sampling percentage for APM traces as a float (0.0–100.0). The sampler hashes the trace ID to make
+  # a consistent per-trace decision, so all spans within a trace are kept or dropped together.
+  # Applied in the main traces pipeline before APM exporters; the spanmetrics pipeline is unaffected
+  # so RED metrics remain accurate. Default 100.0 = send all traces.
+  'apm_trace_sample_rate' => 100.0
 }
