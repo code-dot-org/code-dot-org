@@ -43,3 +43,9 @@ variable "region" {
   description = "AWS region (e.g. us-east-1). Used to construct Secrets Manager ARNs."
   type        = string
 }
+
+variable "aws_secrets_manager_refresh_interval" {
+  description = "How often ESO should refresh secrets from AWS Secrets Manager for this environment."
+  type        = string
+  default     = "5m"
+}
