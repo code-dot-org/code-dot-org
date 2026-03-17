@@ -12,7 +12,6 @@ import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
-import FocusAreaIndicator from './FocusAreaIndicator';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
@@ -226,7 +225,6 @@ class ProgressLesson extends React.Component {
         {viewAs === ViewType.Instructor && !this.props.isMiniView && (
           <ProgressLessonTeacherInfo lesson={lesson} lessonUrl={lessonUrl} />
         )}
-        {lesson.isFocusArea && <FocusAreaIndicator />}
       </div>
     );
   }

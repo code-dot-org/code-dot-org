@@ -10,7 +10,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import FocusAreaIndicator from './FocusAreaIndicator';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {
   lessonIsLockedForAllStudents,
@@ -118,11 +117,9 @@ function SummaryProgressRow({
           <ProgressBubbleSet
             levels={levels}
             disabled={isLockedForUser}
-            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
             lessonName={lesson.name}
           />
         )}
-        {lesson.isFocusArea && <FocusAreaIndicator />}
       </td>
     </tr>
   );
@@ -192,11 +189,6 @@ export const styles = {
   },
   unlockedIcon: {
     color: color.orange,
-  },
-  focusAreaMargin: {
-    // Our focus area indicator is absolutely positioned. Add a margin when it's
-    // there so that it wont overlap dots.
-    marginRight: 130,
   },
   opaque: {
     opacity: 1,
