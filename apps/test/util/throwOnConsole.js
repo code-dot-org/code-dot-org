@@ -7,6 +7,8 @@
  * Thank you!
  */
 
+// These are warnings that React surfaces in React 18 as console.error messages.
+// Please do not add to this list!
 const ERROR_ALLOW_LIST = [
   "Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot",
   'uses the legacy childContextTypes API which is no longer supported and will be removed in the next major release. Use React.createContext() instead',
