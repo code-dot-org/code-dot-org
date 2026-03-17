@@ -22,8 +22,18 @@ unless node['cdo-otel-collector']['enabled']
   return
 end
 
-# Fetches the DataDog API Key via AWS Secrets manager (used by the datadog exporter)
-datadog_api_key = secret(name: "#{node.chef_environment}/cdo/datadog_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
+apm_backend = node['cdo-otel-collector']['apm_backend']
+
+# Fetch the APM backend's credential from AWS Secrets Manager. The secret name follows
+# the standard <env>/cdo/<service>_<credential> convention.
+apm_api_key = case apm_backend
+              when 'newrelic'
+                secret(name: "#{node.chef_environment}/cdo/newrelic_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
+              when 'sentry'
+                secret(name: "#{node.chef_environment}/cdo/sentry_auth_token", service: :aws_secrets_manager, version: 'AWSCURRENT')
+              else # datadog
+                secret(name: "#{node.chef_environment}/cdo/datadog_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
+              end
 
 otelcol_version = node['cdo-otel-collector']['otelcol_version']
 deb_filename = "otelcol-contrib_#{otelcol_version}_linux_amd64.deb"
@@ -60,8 +70,11 @@ template '/etc/otelcol-contrib/config.yaml' do
   group 'otelcol-contrib'
   mode '0600'
   variables({
-              site: node['cdo-otel-collector']['site'],
-              datadog_api_key: datadog_api_key,
+              apm_backend: apm_backend,
+              apm_api_key: apm_api_key,
+              datadog_site: node['cdo-otel-collector']['datadog_site'],
+              newrelic_otlp_endpoint: node['cdo-otel-collector']['newrelic_otlp_endpoint'],
+              sentry_otlp_endpoint: node['cdo-otel-collector']['sentry_otlp_endpoint'],
               prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
               prometheus_region: node['cdo-otel-collector']['prometheus_region'],
               apm_trace_sample_rate: node['cdo-otel-collector']['apm_trace_sample_rate']
