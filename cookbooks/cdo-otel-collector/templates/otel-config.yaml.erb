@@ -160,10 +160,6 @@ exporters:
     endpoint: <%= @prometheus_remote_write_url %>
     auth:
       authenticator: sigv4auth/prometheus
-    resource_to_telemetry_conversion:
-      enabled: true
-    target_info:
-      enabled: true
 <% end %>
 
 service:
