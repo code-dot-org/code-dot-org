@@ -10,7 +10,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import ProgressBubbleSet from './ProgressBubbleSet';
 import {
   lessonIsLockedForAllStudents,
   lessonIsLockedForUser,
@@ -110,17 +109,7 @@ function SummaryProgressRow({
           ...styles.col2,
           ...(isLockedForUser && styles.fadedCol),
         }}
-      >
-        {levels.length === 0 ? (
-          i18n.lessonContainsNoLevels()
-        ) : (
-          <ProgressBubbleSet
-            levels={levels}
-            disabled={isLockedForUser}
-            lessonName={lesson.name}
-          />
-        )}
-      </td>
+      />
     </tr>
   );
 }
@@ -169,9 +158,6 @@ export const styles = {
     paddingLeft: 20,
     paddingRight: 20,
   },
-  // When we set our opacity on the row element instead of on individual tds,
-  // there are weird interactions with our tooltips in Chrome, and borders end
-  // up disappearing.
   fadedCol: {
     opacity: 0.6,
   },

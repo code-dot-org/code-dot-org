@@ -69,18 +69,6 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.find('td').at(0).text()).not.toContain('3.');
     });
 
-    it('disables bubbles when locked', () => {
-      const wrapper = setUp({
-        lesson: fakeLesson('Maze', 1, true),
-        viewAs: ViewType.Participant,
-        lessonIsLockedForUser: () => true,
-      });
-
-      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
-        true
-      );
-    });
-
     it('has a lock icon when lockable and locked for user', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
@@ -113,30 +101,6 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.props().style.borderStyle).toEqual('dashed');
       expect(wrapper.find('td').at(0).props().style.opacity).toEqual(undefined);
       expect(wrapper.find('td').at(1).props().style.opacity).toEqual(undefined);
-    });
-
-    it('does not disable bubbles when lockable lesson and unlocked for instructor', () => {
-      const wrapper = setUp({
-        lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => false,
-        lessonIsLockedForAllStudents: () => true,
-      });
-
-      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
-        false
-      );
-    });
-
-    // It will be locked for the instructor if they are a not a verified teacher
-    it('disables bubbles when locked for instructor', () => {
-      const wrapper = setUp({
-        lesson: fakeLesson('Maze', 1, true),
-        lessonIsLockedForUser: () => true,
-      });
-
-      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
-        true
-      );
     });
 
     it('has a lock icon when lockable and locked for user', () => {

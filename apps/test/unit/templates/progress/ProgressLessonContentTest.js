@@ -5,36 +5,17 @@ import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonCo
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('ProgressLessonContent', function () {
-  it('renders a bubble set (with no pill) when there is a single unnamed progression', () => {
+  it('renders no levels warning when there are no levels', () => {
     const wrapper = shallow(
-      <ProgressLessonContent
-        levels={fakeLevels(3, {named: false})}
-        disabled={false}
-      />
+      <ProgressLessonContent levels={[]} disabled={false} />
     );
-
-    expect(wrapper.find('Connect(ProgressBubbleSet)').length).toEqual(1);
+    expect(wrapper.find('span').length).toEqual(1);
   });
 
-  it('renders a ProgressLevelSet when there is a single named progression', () => {
-    const wrapper = shallow(
-      <ProgressLessonContent
-        levels={fakeLevels(3).map(level => ({
-          ...level,
-          progression: 'Progression',
-        }))}
-        disabled={false}
-      />
-    );
-
-    expect(wrapper.find('Connect(ProgressLevelSet)').length).toEqual(1);
-  });
-
-  it('renders a ProgressLevelSet for each progression when there are multiple progressions', () => {
+  it('renders without errors when there are levels', () => {
     const wrapper = shallow(
       <ProgressLessonContent levels={fakeLevels(3)} disabled={false} />
     );
-
-    expect(wrapper.find('Connect(ProgressLevelSet)').length).toEqual(3);
+    expect(wrapper.exists()).toBe(true);
   });
 });

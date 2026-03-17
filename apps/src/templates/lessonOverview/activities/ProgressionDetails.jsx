@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import LevelDetailsDialog from './LevelDetailsDialog';
@@ -52,8 +51,6 @@ export default class ProgressionDetails extends Component {
   };
 
   render() {
-    const {section} = this.props;
-
     return (
       <div>
         {this.state.previewingLevel && (
@@ -62,17 +59,7 @@ export default class ProgressionDetails extends Component {
             handleClose={() => this.setState({previewingLevel: null})}
           />
         )}
-        <div style={styles.progressionBox}>
-          <ProgressLevelSet
-            name={section.progressionName}
-            levels={section.scriptLevels.map(scriptLevel =>
-              this.convertScriptLevelForProgression(scriptLevel)
-            )}
-            disabled={false}
-            selectedSectionId={null}
-            onBubbleClick={this.handleBubbleClick}
-          />
-        </div>
+        <div style={styles.progressionBox} />
       </div>
     );
   }
@@ -82,8 +69,5 @@ const styles = {
   progressionBox: {
     margin: '10px, 0px',
     padding: '0px 10px 10px 10px',
-  },
-  description: {
-    marginTop: 10,
   },
 };
