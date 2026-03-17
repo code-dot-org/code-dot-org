@@ -2,6 +2,9 @@ import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {
+  ProductTour,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
+import {
   createNewFileThunk,
   saveFileThunk,
 } from '@cdo/apps/lab2/redux/lab2ProjectReduxThunks';
@@ -152,8 +155,16 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
         versionHistoryProps={{startSources}}
         aiTutorMultimodalEnabled={aiTutorMultimodalEnabled}
         aiTutorChatButtonData={aiTutorChatButtonData}
-        isValidationTourEnabled={appName === 'pythonlab'}
-        isOnboardingTourEnabled={true}
+        isValidationTourEnabled={
+          levelProperties.productTours?.includes(
+            ProductTour.ResourcePanelValidation
+          ) || false
+        }
+        isOnboardingTourEnabled={
+          levelProperties.productTours?.includes(
+            ProductTour.ResourcePanelOnboarding
+          ) || false
+        }
         aiTutorResponseSchemaSettings={aiTutorResponseSchemaSettings}
         documentationUrl={
           appName === 'pythonlab' ? '/docs/ide/pythonlab' : undefined // For now, only python lab supports documentation.
