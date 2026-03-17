@@ -613,11 +613,6 @@ const EVENTS = {
   RESOURCE_PANEL_INSTRUCTIONS_DRAWER_RESIZED_DECREASED:
     'Resource Panel Instructions Drawer Resized Decreased',
 
-  // IntroJS flows
-  INTROJS_FLOW_STARTED: 'IntroJS Flow Started',
-  INTROJS_FLOW_EXIT: 'IntroJS Flow Exited',
-  INTROJS_FLOW_COMPLETED: 'IntroJS Flow Completed',
-
   // Generic Intro flow events
   INTRO_FLOW_STARTED: 'Intro Flow Started',
   INTRO_FLOW_EXIT: 'Intro Flow Exited',
