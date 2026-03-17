@@ -60,8 +60,8 @@ class SoundListEntry extends React.Component {
       ? styles.selected
       : styles.notSelected;
     const playIcon = this.state.isPlaying
-      ? 'fa-pause-circle'
-      : 'fa-play-circle';
+      ? 'fa-circle-pause'
+      : 'fa-circle-play';
 
     return (
       <div
@@ -72,7 +72,7 @@ class SoundListEntry extends React.Component {
         <div className={styles.icon}>
           <i
             onClick={this.clickSoundControl}
-            className={'fa ' + playIcon + ' fa-2x'}
+            className={'fa-solid ' + playIcon + ' fa-2x'}
           />
         </div>
         <div className={styles.metadata}>

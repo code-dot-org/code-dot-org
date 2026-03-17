@@ -254,7 +254,8 @@ const LoginTypeSelection: React.FunctionComponent<{
               type="submit"
               startIcon={
                 <FontAwesomeV6Icon
-                  iconName="brands fa-google"
+                  iconFamily="brands"
+                  iconName="google"
                   iconStyle="solid"
                 />
               }
@@ -273,8 +274,9 @@ const LoginTypeSelection: React.FunctionComponent<{
               type="submit"
               startIcon={
                 <FontAwesomeV6Icon
-                  iconName="brands fa-microsoft"
-                  iconStyle="light"
+                  iconFamily="brands"
+                  iconName="microsoft"
+                  iconStyle="regular"
                 />
               }
             >
@@ -310,7 +312,11 @@ const LoginTypeSelection: React.FunctionComponent<{
               onClick={() => selectOauthLoginType('clever')}
               type="submit"
               startIcon={
-                <FontAwesomeV6Icon iconName="kit fa-clever" iconStyle="solid" />
+                <FontAwesomeV6Icon
+                  iconFamily="kit"
+                  iconName="clever"
+                  iconStyle="solid"
+                />
               }
             >
               {locale.sign_up_clever()}
