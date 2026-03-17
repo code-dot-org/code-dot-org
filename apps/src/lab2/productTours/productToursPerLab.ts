@@ -15,30 +15,40 @@ export interface ProductTourConfig {
   triggeredByLevel: boolean;
 }
 
-// List of tours available for each lab, not including tours that are
-// available for all lab2 labs (see UniversalLab2ProductTours below).
-export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
-  pythonlab: [
-    {
-      name: ProductTour.ResourcePanelValidation,
-      displayName: 'Resource panel validation',
-      triggeredByLevel: true,
-    },
-  ],
-  sketchlab: [
-    {
-      name: ProductTour.SketchlabIntro,
-      displayName: 'Sketchlab intro',
-      triggeredByLevel: false,
-    },
-  ],
-};
-
-// Tours available in all lab2 labs.
-export const UniversalLab2ProductTours: ProductTourConfig[] = [
-  {
+const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
+  [ProductTour.ResourcePanelOnboarding]: {
     name: ProductTour.ResourcePanelOnboarding,
     displayName: 'Resource panel onboarding',
     triggeredByLevel: true,
   },
-];
+  [ProductTour.ResourcePanelValidation]: {
+    name: ProductTour.ResourcePanelValidation,
+    displayName: 'Resource panel validation',
+    triggeredByLevel: true,
+  },
+  [ProductTour.SketchlabIntro]: {
+    name: ProductTour.SketchlabIntro,
+    displayName: 'Sketchlab intro',
+    triggeredByLevel: false,
+  },
+};
+
+// These tour configurations are used to determine which tours should be shown in the level editor for a given lab.
+// The tour implementation itself is responsible for correctly using the configuration to determine if the tour
+// is available on a given level.
+
+// List of tours available for each lab.
+export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
+  aichat: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
+  dance: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
+  music: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
+  pythonlab: [
+    ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
+    ProductTourConfigurations[ProductTour.ResourcePanelValidation],
+  ],
+  sketchlab: [
+    ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
+    ProductTourConfigurations[ProductTour.SketchlabIntro],
+  ],
+  weblab2: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
+};

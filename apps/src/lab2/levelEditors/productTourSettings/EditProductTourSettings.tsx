@@ -4,23 +4,13 @@ import React, {useState} from 'react';
 
 import {
   ProductTour,
-  ProductTourConfig,
   ToursPerLab,
-  UniversalLab2ProductTours,
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {AppName} from '@cdo/apps/lab2/types';
 
 interface EditProductTourSettingsProps {
   initialSettings: string[] | null;
   appName: string;
-}
-
-function getAvailableTours(appName: string): ProductTourConfig[] {
-  const labTours = ToursPerLab[appName as AppName] ?? [];
-  const universalTours = UniversalLab2ProductTours.filter(
-    config => config.triggeredByLevel
-  );
-  return [...universalTours, ...labTours];
 }
 
 const EditProductTourSettings: React.FunctionComponent<
@@ -30,7 +20,7 @@ const EditProductTourSettings: React.FunctionComponent<
     initialSettings ?? []
   );
 
-  const availableTours = getAvailableTours(appName);
+  const availableTours = ToursPerLab[appName as AppName] ?? [];
 
   const handleTourToggle = (tour: ProductTour) => {
     setSelectedTours(prev =>
