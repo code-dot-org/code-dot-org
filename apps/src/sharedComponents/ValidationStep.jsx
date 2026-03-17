@@ -132,7 +132,8 @@ function iconFor(stepStatus) {
     case Status.WAITING:
       return (
         <FontAwesome
-          icon="clock-o"
+          icon="clock"
+          iconStyle="regular"
           className="fa-fw"
           style={iconStyle}
           title="waiting"

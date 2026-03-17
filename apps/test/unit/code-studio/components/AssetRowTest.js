@@ -54,7 +54,7 @@ describe('AssetRow', () => {
         </table>
       );
 
-      expect(wrapper.find('i.fa.fa-trash-o')).toHaveLength(0);
+      expect(wrapper.find('i.fa-regular.fa-trash-can')).toHaveLength(0);
     });
   });
 });
