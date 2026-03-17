@@ -210,7 +210,7 @@ class AnimationPicker extends React.Component {
       if (moderationStatus === 'flagged') {
         this.setState({showFlaggedModal: true});
       } else {
-        this.props.onUploadStart(this.state.pendingUploadData);
+        this.props.onUploadStart(data);
       }
     } catch (err) {
       MetricsReporter.logError('Error moderating uploaded image: ' + err);

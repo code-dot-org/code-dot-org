@@ -49,9 +49,16 @@ const scaleFileForModeration = (file: File): Promise<File> => {
         const canvas = document.createElement('canvas');
         canvas.width = Math.ceil(width * scale);
         canvas.height = Math.ceil(height * scale);
-        canvas
-          .getContext('2d')!
-          .drawImage(img, 0, 0, canvas.width, canvas.height);
+        const ctx = canvas.getContext('2d')!;
+        if (!ctx) {
+          reject(
+            new Error(
+              'Unable to get 2D canvas context for image moderation scaling'
+            )
+          );
+          return;
+        }
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         canvas.toBlob(blob => {
           if (!blob) {
             reject(new Error('Canvas toBlob returned null'));
@@ -80,13 +87,17 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
+  const extToCompare = ext.toLowerCase();
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
-    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(ext)
+    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(extToCompare)
   ) {
     return 'skipped';
   }
-  const dimensions = [{name: 'UploaderType', value: uploaderType}];
+  const dimensions = [
+    {name: 'UploaderType', value: uploaderType},
+    {name: 'AppName', value: appName},
+  ];
   MetricsReporter.incrementCounter('ModerateCustomImage.Attempt', dimensions);
   analyticsReporter.sendEvent(moderateEvent, {
     UploaderType: uploaderType,
