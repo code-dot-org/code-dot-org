@@ -38,7 +38,7 @@ export default class SendLesson extends React.Component {
           onClick={this.openDialog}
           text={i18n.sendLessonButton()}
           icon="share-from-square"
-          iconClassName="fa-regular"
+          iconStyleProp="regular"
           color={Button.ButtonColor.gray}
           style={this.props.buttonStyle}
         />

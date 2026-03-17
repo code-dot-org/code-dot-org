@@ -31,6 +31,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
       <Button
         text={i18n.showAllLessons()}
         icon="eye"
+        iconStyleProp="regular"
         color={Button.ButtonColor.gray}
         onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, false)}
       />
