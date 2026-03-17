@@ -33,9 +33,10 @@ module Cdo
       @max_interval = max_interval
       @min_interval = min_interval
       @log = log
+      @flushing = false
 
       @task = RescheduledTask.new(0.0) {flush_batch}.
-        with_observer {schedule_flush}
+        with_observer {schedule_flush unless @flushing}
 
       @buffer = []
       @buffer.extend(MonitorMixin)
@@ -78,6 +79,7 @@ module Cdo
     # @param [Float] timeout seconds to wait for buffered objects to finish flushing.
     def flush!(timeout = Float::INFINITY)
       reset_if_forked
+      @flushing = true
       timeout_at = now + timeout
       until (wait = timeout_at - now) < 0 || @buffer.empty?
         @log.debug "Flushing #{self.class}, waiting #{wait} seconds"
@@ -85,6 +87,9 @@ module Cdo
         # Block until the pending flush is completed or timeout is reached.
         @task.wait(wait.infinite? ? nil : wait)
       end
+    ensure
+      @flushing = false
+      schedule_flush unless @buffer.empty?
     end
 
     # Extend ScheduledTask to support rescheduling after being executed.
