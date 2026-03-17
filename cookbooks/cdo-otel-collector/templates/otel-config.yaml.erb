@@ -20,33 +20,13 @@ receivers:
           static_configs:
             - targets: ["0.0.0.0:8888"]
 
-  # Reads Ubuntu formatted syslog
-  # TODO: Replace with rsyslog implementation using standardized log format to eliminate reliance on Regex.
-  filelog/syslog:
-    include:
-      - /var/log/syslog
-    start_at: end
-    include_file_name: true
-    include_file_path: true
-    operators:
-      - type: regex_parser
-        regex: '^(?P<timestamp>\w{3}\s+\d+\s+\d{2}:\d{2}:\d{2})\s+(?P<hostname>\S+)\s+(?P<process>[^\[:\s]+)\[(?P<pid>\d+)\]:\s+(?P<message>.*)$'
-        timestamp:
-          parse_from: attributes.timestamp
-          layout: '%b %d %H:%M:%S'
-          location: Local
-      - type: move
-        from: attributes.message
-        to: body
-      - type: move
-        from: attributes.hostname
-        to: resource["host.name"]
-      - type: move
-        from: attributes.process
-        to: attributes["process.name"]
-      - type: move
-        from: attributes.pid
-        to: attributes["process.pid"]
+  # Syslog receiver listening for RFC 3164 (Ubuntu/rsyslog default) messages forwarded
+  # by rsyslog over TCP. Natively parses hostname, appname, proc_id, and message body
+  # without regex. Requires rsyslog to forward to 127.0.0.1:54526 (e.g. via omfwd).
+  syslog:
+    tcp:
+      listen_address: "127.0.0.1:54526"
+    protocol: rfc3164
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
 connectors:
@@ -208,7 +188,7 @@ service:
 
     # Logs pipeline
     logs:
-      receivers: [filelog/syslog, otlp]
+      receivers: [syslog, otlp]
       processors: [resourcedetection/system, resource, batch]
       exporters: [datadog]
 

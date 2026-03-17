@@ -70,11 +70,22 @@ template '/etc/otelcol-contrib/config.yaml' do
   notifies :restart, 'service[otelcol-contrib]', :delayed
 end
 
-# Allow OTel Collector to read the syslog
-group 'syslog' do
-  action :modify
-  members 'otelcol-contrib'
-  append true
+# Add an rsyslog forwarding rule so rsyslog pipes syslog to the OTel syslog receiver.
+# Numbered 51 so it loads after cdo-syslog's 50-default.conf file-output rule.
+# The rsyslog service is declared with action :nothing so the notify works whether or
+# not cdo-syslog is also in the run list. If cdo-syslog is present its service resource
+# wins; if not, this one handles the restart.
+template '/etc/rsyslog.d/51-otelcol.conf' do
+  source 'rsyslog-otelcol.conf.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+  notifies :restart, 'service[rsyslog]', :delayed
+end
+
+service 'rsyslog' do
+  action :nothing
+  supports restart: true, status: true
 end
 
 # Manage the otelcol-contrib service

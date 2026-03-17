@@ -18,6 +18,7 @@ The following ports must be locally accessible:
 
 - **4317** (TCP): OTLP gRPC receiver
 - **4318** (TCP): OTLP HTTP receiver
+- **54526** (TCP): syslog receiver (listens for rsyslog forwarding)
 
 ## Attributes
 
@@ -27,6 +28,7 @@ The following ports must be locally accessible:
 | `node['cdo-otel-collector']['site']` | `datadoghq.com` | DataDog site for the exporter |
 | `node['cdo-otel-collector']['otelcol_version']` | `0.147.0` | OTel Contrib version to install |
 | `node['cdo-otel-collector']['otelcol_deb_sha256']` | *(see attributes/default.rb)* | SHA256 of the linux_amd64 .deb (must match the version) |
+| `node['cdo-otel-collector']['apm_trace_sample_rate']` | `100.0` | APM trace sampling percentage (float, 0.0–100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
 
 When upgrading `otelcol_version`, update `otelcol_deb_sha256` to match the corresponding entry in the release's `otelcol-contrib_checksums.txt`.
 
@@ -48,11 +50,22 @@ This cookbook is automatically included when using the `cdo-apps` cookbook. The 
 
 The DataDog API Key is retrieved via AWS Secrets Manager using the standard secret naming convention and is used by the DataDog exporter.
 
+## Syslog Integration
+
+When co-deployed with `cdo-syslog`, this cookbook adds an rsyslog forwarding rule that
+pipes syslog to the OTel syslog receiver. This requires no changes to `cdo-syslog`.
+
+The recipe manages `/etc/rsyslog.d/51-otelcol.conf` (numbered after `cdo-syslog`'s
+`50-default.conf`) and restarts rsyslog when the file changes. The syslog receiver uses
+RFC 3164 (Ubuntu/rsyslog default) over TCP on `127.0.0.1:54526`. rsyslog continues
+writing to `/var/log/syslog` as normal — the two rules are independent.
+
 ## Configuration Files
 
 The cookbook creates and manages:
 
 - `/etc/otelcol-contrib/config.yaml` - OpenTelemetry Collector configuration
+- `/etc/rsyslog.d/51-otelcol.conf` - rsyslog forwarding rule to the syslog receiver
 
 ## Service Management
 
