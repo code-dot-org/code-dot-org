@@ -267,7 +267,7 @@ export class RegionalPartnerMiniContact extends React.Component {
               </MuiButton>
             )}
             {this.state.submitting && (
-              <span className="fa-solid fa-spin fa-spinner" />
+              <span className="fa fa-spin fa-spinner" />
             )}{' '}
           </div>
         </FormGroup>

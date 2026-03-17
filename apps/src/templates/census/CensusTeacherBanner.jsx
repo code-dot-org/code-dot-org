@@ -145,12 +145,12 @@ export default function CensusTeacherBanner({
         <div style={styles.share}>
           <a href={facebookShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
-              <i className="fa-brands fa-facebook-f" /> Share on Facebook
+              <i className="fa fa-facebook" /> Share on Facebook
             </button>
           </a>
           <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
-              <i className="fa-brands fa-x-twitter" /> Share on Twitter
+              <i className="fa fa-twitter" /> Share on Twitter
             </button>
           </a>
         </div>

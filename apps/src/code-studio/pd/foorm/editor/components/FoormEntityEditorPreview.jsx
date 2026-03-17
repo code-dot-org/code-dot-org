@@ -22,7 +22,7 @@ class FoormEntityEditorPreview extends Component {
     return this.props.errorMessages.map((errorMessage, i) => {
       return (
         <div style={styles.errorMessage} key={i}>
-          <FontAwesome icon="triangle-exclamation" /> {errorMessage}
+          <FontAwesome icon="exclamation-triangle" /> {errorMessage}
         </div>
       );
     });

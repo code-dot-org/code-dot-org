@@ -106,7 +106,7 @@ class StudentTable extends React.Component {
                       rel="noopener noreferrer"
                       className={styles.linkIcon}
                     >
-                      <FontAwesome icon="arrow-up-right-from-square" />
+                      <FontAwesome icon="external-link" />
                     </a>
                   </div>
                 </div>

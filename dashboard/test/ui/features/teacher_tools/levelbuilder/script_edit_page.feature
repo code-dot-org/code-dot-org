@@ -36,7 +36,7 @@ Scenario: Save changes to a unit
   And element ".uitest-lesson-token-contents:last" contains text "Temp Lesson Without Lesson Plan"
 
   # delete one lesson. this didn't work with jquery click or mousedown for some reason
-  And I press the child number 1 of class ".fa-xmark"
+  And I press the child number 1 of class ".fa-times"
   And I wait until element ".modal-body" is visible
   And element ".modal-body button:last" contains text "Delete"
   And I click selector ".modal-body button:last"
@@ -58,9 +58,9 @@ Scenario: Navigate from unit edit page for migrated unit to lesson edit page
   And I view the temp unit edit page
 
   # Open the lesson edit page
-  And I wait until element ".fa-pen" is visible
-  Then I scroll the ".fa-pen" element into view
-  And I click ".fa-pen"
+  And I wait until element ".fa-pencil" is visible
+  Then I scroll the ".fa-pencil" element into view
+  And I click ".fa-pencil"
   And I switch tabs
   And I wait until element "#edit-container" is visible
 

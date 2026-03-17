@@ -126,7 +126,7 @@ class DataTableView extends React.Component {
               className={dataStyles.link}
               onClick={() => onViewChange(DataView.OVERVIEW)}
             >
-              <FontAwesome icon="circle-arrow-left" />
+              <FontAwesome icon="arrow-circle-left" />
               &nbsp;{msg.backToData()}
             </a>
           </span>
