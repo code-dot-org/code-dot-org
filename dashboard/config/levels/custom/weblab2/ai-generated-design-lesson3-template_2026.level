@@ -5,7 +5,24 @@
   "level_num": "custom",
   "user_id": 18762,
   "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "prompt.md",
+          "contents": "**1. What is the goal?**\n\n\n**2. What are the constraints?**\n\n\n**3. What are the edge cases?**",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
   },
-  "published": true
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-10 18:25:34 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:25:59 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

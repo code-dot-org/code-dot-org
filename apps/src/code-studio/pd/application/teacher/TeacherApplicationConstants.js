@@ -37,6 +37,9 @@ const styles = {
   error: {
     color: color.red,
   },
+  smallMarginBottom: {
+    marginBottom: 5,
+  },
 };
 
 function getProgramInfo(program) {

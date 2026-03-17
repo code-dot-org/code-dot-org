@@ -1,11 +1,6 @@
 module LangfuseHelper
   include LevelsHelper
 
-  TUTOR_LANGFUSE_SECRET_KEY = CDO.tutor_langfuse_secret_key
-  TUTOR_LANGFUSE_PUBLIC_KEY = CDO.tutor_langfuse_public_key
-  TA_LANGFUSE_SECRET_KEY = CDO.ta_langfuse_secret_key
-  TA_LANGFUSE_PUBLIC_KEY = CDO.ta_langfuse_public_key
-
   def self.fetch_prompt(prompt_name)
     response = client.fetch_prompt(prompt_name)
 
@@ -37,11 +32,11 @@ module LangfuseHelper
   end
 
   def self.tutor_client
-    LangfuseClientHelper::Client.new(TUTOR_LANGFUSE_SECRET_KEY, TUTOR_LANGFUSE_PUBLIC_KEY)
+    LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
   end
 
   def self.ta_client
-    LangfuseClientHelper::Client.new(TA_LANGFUSE_SECRET_KEY, TA_LANGFUSE_PUBLIC_KEY)
+    LangfuseClientHelper::Client.new(CDO.ta_langfuse_secret_key, CDO.ta_langfuse_public_key)
   end
 
   private_class_method :tutor_client, :ta_client

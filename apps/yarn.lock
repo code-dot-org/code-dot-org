@@ -3919,6 +3919,7 @@ __metadata:
   dependencies:
     tldts: "npm:^7.0.23"
   peerDependencies:
+    ky: ^1.14.3
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
   languageName: node
   linkType: soft
@@ -5139,6 +5140,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.7.5":
+  version: 1.7.5
+  resolution: "@floating-ui/core@npm:1.7.5"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.11"
+  checksum: 10/fecdc9b3ce93f02bf78a6114b93730a4cb9fa8234c62f9a949016186297a039c9f9cd3c5c81ff74b93ebddf0b32048c4af7a528afe7904b75423ed2e7491b888
+  languageName: node
+  linkType: hard
+
 "@floating-ui/dom@npm:^0.5.2":
   version: 0.5.4
   resolution: "@floating-ui/dom@npm:0.5.4"
@@ -5155,6 +5165,23 @@ __metadata:
     "@floating-ui/core": "npm:^1.7.0"
     "@floating-ui/utils": "npm:^0.2.9"
   checksum: 10/9c3561981ea389fe39b7095d7a3771fd906580eedc43fda0eb554faa5f2f9756169fef1824d66198314a41c7f8d63e56bc7f5b24fc528471c9e6bc43cafa6a00
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.7.5":
+  version: 1.7.6
+  resolution: "@floating-ui/dom@npm:1.7.6"
+  dependencies:
+    "@floating-ui/core": "npm:^1.7.5"
+    "@floating-ui/utils": "npm:^0.2.11"
+  checksum: 10/84dff2ffdf85c8b92d7edafc543c55869abbeaeb3007fa983159467e050153b507a0f5fe8e84f88c3f28c35a82de9df9c20a6eef5560cbba3afae19141444ff2
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.11":
+  version: 0.2.11
+  resolution: "@floating-ui/utils@npm:0.2.11"
+  checksum: 10/72150138ba1c274d757a1da85233202fa9fdfd2272ec1fb0883eb0ffdf138863af81573049ed2c20b98adb4b7ae2236065541ce14037fe328955089831a678d5
   languageName: node
   linkType: hard
 
@@ -11663,6 +11690,7 @@ __metadata:
     schema-dts: "npm:^1.1.5"
     script-loader: "npm:^0.7.2"
     seedrandom: "npm:2.4.2"
+    shepherd.js: "npm:^15.2.1"
     sinon: "npm:^11.0.0"
     sinon-chai: "npm:^3.1.0"
     slate: "npm:^0.81.0"
@@ -14141,6 +14169,13 @@ canvg@gabelerner/canvg:
   version: 0.1.4
   resolution: "deep-is@npm:0.1.4"
   checksum: 10/ec12d074aef5ae5e81fa470b9317c313142c9e8e2afe3f8efa124db309720db96d1d222b82b84c834e5f87e7a614b44a4684b6683583118b87c833b3be40d4d8
+  languageName: node
+  linkType: hard
+
+"deepmerge-ts@npm:^7.1.5":
+  version: 7.1.5
+  resolution: "deepmerge-ts@npm:7.1.5"
+  checksum: 10/f86d1a0b3b803cbae749ebaabf2c6db388abec57d77a4003829ecf987504f3c93b01d1ff86ef89a5d56e2b06d7402ea2a7502f0d044f19e036ada1f543e78d3d
   languageName: node
   linkType: hard
 
@@ -28184,6 +28219,16 @@ canvg@gabelerner/canvg:
   version: 0.1.1
   resolution: "shellwords@npm:0.1.1"
   checksum: 10/c122808ca53c828747ee69503755a5d35d8c1493e943d15ebfd6fe028517ec1af6f8a4c2dc9d995b0df75bd4246382c0dd2dc792a82ce5a6448307a643fc5a38
+  languageName: node
+  linkType: hard
+
+"shepherd.js@npm:^15.2.1":
+  version: 15.2.1
+  resolution: "shepherd.js@npm:15.2.1"
+  dependencies:
+    "@floating-ui/dom": "npm:^1.7.5"
+    deepmerge-ts: "npm:^7.1.5"
+  checksum: 10/4a3a66119a3ea00a61786549e1e4a8d8abfd5a8e27be612486b30d28b9ee6ef27db885e1e0256953bfed3d3ee91b0c36f24a5dff81a2fe063f1fa40c6adbe86f
   languageName: node
   linkType: hard
 

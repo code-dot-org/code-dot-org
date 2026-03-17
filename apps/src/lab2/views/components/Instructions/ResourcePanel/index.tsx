@@ -21,8 +21,8 @@ import {ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
-import IntroJSTourWrapper from '@cdo/apps/lab2/views/components/IntroJSTourWrapper';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useRubric} from '@cdo/apps/lab2/views/components/rubrics/RubricWrapper';
 import StudentRubricView from '@cdo/apps/lab2/views/components/rubrics/StudentRubricView';
 import {useExtraLinksButtonContext} from '@cdo/apps/lab2/views/LabViewsRenderer';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -30,14 +30,12 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 import {findFirstFocusableElement} from '@cdo/apps/util/findFirstFocusableElement';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import '@cdo/apps/lab2/introjs.scss';
 
-import {useRubric} from '../../rubrics/RubricWrapper';
 import ForTeachersOnly from '../ForTeachersOnly';
 import Instructions, {InstructionsProps} from '../InstructionsV2';
 import NavigationArea from '../NavigationArea';
 
-import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionDrawer';
+import AiTutorChatWithInstructionDrawer from './AiTutorChatWithInstructionsDrawer/AiTutorChatWithInstructionDrawer';
 import BackpackHeaderButtons from './Backpack/BackpackHeaderButtons';
 import BackpackPanel from './Backpack/BackpackPanel';
 import {
@@ -45,15 +43,16 @@ import {
   resourcePanelTabsElementId,
   resourcePanelLinksElementId,
 } from './constants';
-import CopyrightButton from './CopyrightButton';
-import DisclaimerButton from './DisclaimerButton';
-import OnboardingTourSteps from './OnboardingTourSteps';
-import ResourcePanelExtraLinks from './ResourcePanelExtraLinks';
-import setFooterVisibility from './setFooterVisibility';
-import SettingsPanel from './SettingsPanel';
+import CopyrightButton from './Footer/CopyrightButton';
+import DisclaimerButton from './Footer/DisclaimerButton';
+import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
+import setFooterVisibility from './Footer/setFooterVisibility';
+import SettingsPanel from './Footer/SettingsPanel';
+import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
 import {Tabs} from './types';
-import ValidationPanel, {ValidationSettings} from './ValidationPanel';
-import ValidationTourSteps from './ValidationTourSteps';
+import ValidationPanel, {
+  ValidationSettings,
+} from './Validation/ValidationPanel';
 import {VersionHistoryPanel} from './VersionHistory';
 
 import styles from './styles.module.scss';
@@ -213,6 +212,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
+  useResourcePanelShepherdTours({
+    isOnboardingTourEnabled:
+      (isOnboardingTourEnabled && !isStandaloneCollapsed) || false,
+    isValidationTourEnabled: isValidationTourEnabled || false,
+    hasValidationConditions,
+    validationSettings,
+  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -506,17 +512,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         id={resourcePanelInstructionsElementId}
         className={classNames(styles.resourcePanel, className)}
       >
-        <IntroJSTourWrapper enabled={isOnboardingTourEnabled}>
-          <OnboardingTourSteps />
-        </IntroJSTourWrapper>
-        <IntroJSTourWrapper enabled={isValidationTourEnabled}>
-          <ValidationTourSteps
-            hasValidationConditions={hasValidationConditions}
-            hasValidationSettings={!!validationSettings}
-            setCurrentTab={setCurrentTab}
-            onValidate={validationSettings?.onValidate}
-          />
-        </IntroJSTourWrapper>
         <div
           className={classNames(
             styles.sidebar,
@@ -599,6 +594,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                           : undefined,
                       }}
                       aria-label={tabInfo[tab].title}
+                      id={`resource-panel-tab-button-${tab}`}
                     />
                   </div>
                 </WithTooltip>

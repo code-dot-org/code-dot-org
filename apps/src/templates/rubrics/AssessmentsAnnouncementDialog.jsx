@@ -1,5 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useEffect} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -78,13 +77,16 @@ export default function AssessmentsAnnouncementDialog() {
         >
           {i18n.aiAssessmentsAnnouncementBody()}
         </Typography>
-        <Button
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="large"
           className="learn-more-button"
-          text={i18n.learnMore()}
           onClick={handleButtonClick}
-          type="primary"
-          size="l"
-        />
+          type="button"
+        >
+          {i18n.learnMore()}
+        </MuiButton>
       </div>
     </AccessibleDialog>
   );

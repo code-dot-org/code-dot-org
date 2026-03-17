@@ -12,9 +12,14 @@ import styles from './lesson-materials.module.scss';
 type ResourceRowProps = {
   unitNumber: number | null;
   resource: Resource;
+  callback?: () => void;
 };
 
-const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
+const ResourceRow: React.FC<ResourceRowProps> = ({
+  unitNumber,
+  resource,
+  callback = () => {},
+}) => {
   const resourceDisplayText = () => {
     if (!resource.type) {
       return resource.name;
@@ -47,7 +52,12 @@ const ResourceRow: React.FC<ResourceRowProps> = ({unitNumber, resource}) => {
           variant="body2"
           gutterBottom
         >
-          <a href={resource.url} target="_blank" rel="noopener noreferrer">
+          <a
+            href={resource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={callback}
+          >
             {resourceDisplayText()}
           </a>
         </Typography>

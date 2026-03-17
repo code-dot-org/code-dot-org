@@ -235,7 +235,6 @@ if (projectKeys.length > 0 && (inExperiment || isLive)) {
    */
   const locale = get('language_') || 'en';
   if (!locale.startsWith('en')) {
-    set('language_', 'en-US');
     set('language_', 'en-US', {domain: '.code.org'});
     window.location.reload();
   } else {
