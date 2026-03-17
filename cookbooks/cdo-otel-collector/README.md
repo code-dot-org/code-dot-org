@@ -4,7 +4,7 @@ This cookbook installs and configures the [OpenTelemetry Contrib Collector](http
 
 ## Overview
 
-The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to DataDog for visualization and analysis. APM stats (request/error/duration metrics per service and resource) are computed directly by the DataDog exporter.
+The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to a configurable APM backend. Supported backends are **Datadog** (default), **New Relic**, and **Sentry**. The active backend is controlled by the `apm_backend` attribute.
 
 ## Requirements
 
@@ -25,12 +25,25 @@ The following ports must be locally accessible:
 | Attribute | Default | Description |
 |---|---|---|
 | `node['cdo-otel-collector']['enabled']` | `false` | Enable/disable the collector |
-| `node['cdo-otel-collector']['site']` | `datadoghq.com` | DataDog site for the exporter |
 | `node['cdo-otel-collector']['otelcol_version']` | `0.147.0` | OTel Contrib version to install |
 | `node['cdo-otel-collector']['otelcol_deb_sha256']` | *(see attributes/default.rb)* | SHA256 of the linux_amd64 .deb (must match the version) |
-| `node['cdo-otel-collector']['apm_trace_sample_rate']` | `100.0` | APM trace sampling percentage (float, 0.0–100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
+| `node['cdo-otel-collector']['apm_trace_sample_rate']` | `100.0` | APM trace sampling percentage (float, 0.0-100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
+| `node['cdo-otel-collector']['apm_backend']` | `'datadog'` | APM backend: `'datadog'`, `'newrelic'`, or `'sentry'` |
+| `node['cdo-otel-collector']['datadog_site']` | `'datadoghq.com'` | **(Datadog)** DataDog site. See [DataDog site docs](https://docs.datadoghq.com/getting_started/site/). |
+| `node['cdo-otel-collector']['newrelic_otlp_endpoint']` | `'https://otlp.nr-data.net:4317'` | **(New Relic)** OTLP/gRPC endpoint. EU accounts use `https://otlp.eu01.nr-data.net:4317`. |
+| `node['cdo-otel-collector']['sentry_otlp_endpoint']` | `''` | **(Sentry)** OTLP/HTTP endpoint. Construct from your DSN: `https://o<org_id>.ingest.sentry.io/api/<project_id>/otlp/` |
 
 When upgrading `otelcol_version`, update `otelcol_deb_sha256` to match the corresponding entry in the release's `otelcol-contrib_checksums.txt`.
+
+## APM Backends
+
+Each backend requires its credential to be stored in AWS Secrets Manager under `<env>/cdo/<secret_name>`:
+
+| Backend | Secret name | Notes |
+|---|---|---|
+| `datadog` | `datadog_api_key` | Applies Datadog-specific processors for error tracking and resource naming |
+| `newrelic` | `newrelic_api_key` | Standard OTLP/gRPC; no backend-specific processors |
+| `sentry` | `sentry_auth_token` | Standard OTLP/HTTP; no backend-specific processors |
 
 ## Usage
 
@@ -48,7 +61,7 @@ This cookbook is automatically included when using the `cdo-apps` cookbook. The 
 
 ### Secret Configuration
 
-The DataDog API Key is retrieved via AWS Secrets Manager using the standard secret naming convention and is used by the DataDog exporter.
+The APM backend credential is retrieved via AWS Secrets Manager using the standard `<env>/cdo/<secret_name>` naming convention. See the **APM Backends** table above for the secret name required by each backend.
 
 ## Syslog Integration
 
@@ -123,4 +136,6 @@ sudo otelcol-contrib validate --config /etc/otelcol-contrib/config.yaml
 - [OpenTelemetry Collector Installation](https://opentelemetry.io/docs/collector/installation/)
 - [OTel Contrib Releases](https://github.com/open-telemetry/opentelemetry-collector-releases/releases)
 - [DataDog Exporter](https://github.com/open-telemetry/opentelemetry-collector-contrib/tree/main/exporter/datadogexporter)
+- [New Relic OTLP Configuration](https://docs.newrelic.com/docs/opentelemetry/best-practices/opentelemetry-otlp/)
+- [Sentry OpenTelemetry Integration](https://docs.sentry.io/product/sentry-basics/integrate-backend/opentelemetry/)
 - [Chef Cookbook Documentation](https://docs.chef.io/cookbooks/)
