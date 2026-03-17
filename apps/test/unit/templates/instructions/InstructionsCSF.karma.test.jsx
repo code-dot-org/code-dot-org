@@ -1,6 +1,7 @@
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -19,7 +20,13 @@ import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
+import {allowConsoleErrors} from '../../../util/testUtils';
+
 describe('InstructionsCSF', () => {
+  allowConsoleErrors();
+
+  let wrapper;
+
   beforeEach(() => {
     stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
@@ -37,28 +44,37 @@ describe('InstructionsCSF', () => {
   });
 
   afterEach(() => {
+    if (wrapper) {
+      wrapper.unmount();
+      wrapper = undefined;
+    }
     restoreRedux();
   });
 
   it('can change feedback when rendering different blockly blocks', async () => {
-    const wrapper = mount(
+    wrapper = mount(
       <Provider store={getStore()}>
         <InstructionsCSF {...DEFAULT_PROPS} />
       </Provider>,
       {attachTo: document.getElementById('container')} // needed for getScrollTarget
     );
 
-    failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
+    await failWithMessage(
+      'Repeat block: <xml><block type="controls_repeat"/></xml>'
+    );
     wrapper.update();
     await assertFeedbackContainsText(wrapper, '>repeat</text>');
 
-    failWithMessage('If block: <xml><block type="controls_if"/></xml>');
+    await failWithMessage('If block: <xml><block type="controls_if"/></xml>');
     wrapper.update();
     await assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
-  function failWithMessage(message) {
-    getStore().dispatch(setFeedback({message, isFailure: true}));
+  async function failWithMessage(message) {
+    await act(async () => {
+      getStore().dispatch(setFeedback({message, isFailure: true}));
+      await Promise.resolve();
+    });
   }
 
   async function assertFeedbackContainsText(wrapper, text) {
