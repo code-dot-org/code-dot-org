@@ -56,16 +56,10 @@ export function isTourEnabledOnLevel(
 
 // List of tours available for each lab.
 export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
-  aichat: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
-  dance: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
-  music: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
   pythonlab: [
     ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
-  sketchlab: [
-    ProductTourConfigurations[ProductTour.ResourcePanelOnboarding],
-    ProductTourConfigurations[ProductTour.SketchlabIntro],
-  ],
+  sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
   weblab2: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
 };

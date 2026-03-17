@@ -10,7 +10,10 @@ $(document).ready(function () {
   const appName = getScriptData('appname');
 
   createReactRoot(
-    <EditProductTourSettings initialSettings={initialSettings} appName={appName} />,
+    <EditProductTourSettings
+      initialSettings={initialSettings}
+      appName={appName}
+    />,
     document.getElementById('product-tour-settings-editor')
   );
 });

@@ -10,17 +10,19 @@ import {AppName} from '@cdo/apps/lab2/types';
 
 interface EditProductTourSettingsProps {
   initialSettings: string[] | null;
-  appName: string;
+  appName: string | undefined;
 }
 
 const EditProductTourSettings: React.FunctionComponent<
   EditProductTourSettingsProps
-> = ({initialSettings, appName}) => {
+> = ({initialSettings, appName = ''}) => {
   const [selectedTours, setSelectedTours] = useState<string[]>(
     initialSettings ?? []
   );
 
-  const availableTours = ToursPerLab[appName as AppName] ?? [];
+  const availableTours =
+    ToursPerLab[appName as AppName]?.filter(tour => tour.triggeredByLevel) ??
+    [];
 
   const handleTourToggle = (tour: ProductTour) => {
     setSelectedTours(prev =>
