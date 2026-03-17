@@ -33,9 +33,26 @@ const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
   },
 };
 
+// Returns true if the given tour should be shown for the given level and lab.
+// Tours with triggeredByLevel=true require the tour to be available on the lab
+// and present in the level's productTours field.
+// Tours with triggeredByLevel=false are shown whenever the user first reaches a lab that has the tour available.
+export function isTourEnabledOnLevel(
+  tour: ProductTour,
+  appName: AppName,
+  productTours: string[] | undefined
+): boolean {
+  const isAvailableForLab = ToursPerLab[appName]?.some(
+    config => config.name === tour
+  );
+  if (!isAvailableForLab) return false;
+  const config = ProductTourConfigurations[tour];
+  if (!config.triggeredByLevel) return true;
+  return productTours?.includes(tour) ?? false;
+}
+
 // These tour configurations are used to determine which tours should be shown in the level editor for a given lab.
-// The tour implementation itself is responsible for correctly using the configuration to determine if the tour
-// is available on a given level.
+// The tour implementation itself is responsible for using isTourEnabledOnLevel to correctly show the tour.
 
 // List of tours available for each lab.
 export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
