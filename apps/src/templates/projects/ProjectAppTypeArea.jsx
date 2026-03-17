@@ -181,7 +181,7 @@ class ProjectAppTypeArea extends React.Component {
           size="small"
           href="#top"
           startIcon={
-            <FontAwesomeV6Icon iconStyle="solid" iconName="circle-chevron-up" />
+            <FontAwesomeV6Icon iconStyle="solid" iconName="chevron-circle-up" />
           }
         >
           {i18n.backToTop()}
@@ -204,17 +204,11 @@ class ProjectAppTypeArea extends React.Component {
             onClick={this.viewMore}
           >
             {this.props.isDetailView && (
-              <i
-                className="fa-solid fa-angle-left"
-                style={styles.iconPaddingRight}
-              />
+              <i className="fa fa-angle-left" style={styles.iconPaddingRight} />
             )}
             {this.props.labViewMoreString}
             {!this.props.isDetailView && (
-              <i
-                className="fa-solid fa-angle-right"
-                style={styles.iconPaddingLeft}
-              />
+              <i className="fa fa-angle-right" style={styles.iconPaddingLeft} />
             )}
           </span>
         )}

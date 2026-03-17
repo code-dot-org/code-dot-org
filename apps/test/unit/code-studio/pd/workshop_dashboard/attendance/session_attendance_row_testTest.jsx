@@ -41,7 +41,7 @@ describe('SessionAttendanceRow', () => {
           <td>No</td>
           <td>
             <div>
-              <i className="fa-regular fa-square" />
+              <i className="fa fa-square-o" />
             </div>
           </td>
         </tr>
@@ -68,7 +68,7 @@ describe('SessionAttendanceRow', () => {
           <td>No</td>
           <td>
             <div>
-              <i className="fa-regular fa-square-check" />
+              <i className="fa fa-check-square-o" />
             </div>
           </td>
         </tr>

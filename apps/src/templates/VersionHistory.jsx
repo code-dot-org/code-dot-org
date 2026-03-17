@@ -128,10 +128,7 @@ export default class VersionHistory extends React.Component {
       title = i18n.versionHistory_header();
       body = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i
-            className="fa-solid fa-spinner fa-spin"
-            style={{fontSize: '32px'}}
-          />
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {

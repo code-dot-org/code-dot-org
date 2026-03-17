@@ -67,7 +67,7 @@ class IFrameEmbedOverlay extends Component {
                 this.props.playButtonStyle,
               ]}
             >
-              <span className="fa-solid fa-play" style={styles.playButton} />
+              <span className="fa fa-play" style={styles.playButton} />
             </div>
           </div>
         )}

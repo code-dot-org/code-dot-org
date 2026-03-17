@@ -134,7 +134,7 @@ class VisualizationResizeBar extends React.Component {
     return (
       <div
         id="visualizationResizeBar"
-        className="fa-solid fa-ellipsis-vertical"
+        className="fa fa-ellipsis-v"
         style={{
           ...(this.props.hidden && commonStyles.hidden),
         }}
