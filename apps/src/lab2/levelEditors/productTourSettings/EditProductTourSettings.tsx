@@ -30,6 +30,14 @@ const EditProductTourSettings: React.FunctionComponent<
     );
   };
 
+  if (availableTours.length === 0) {
+    return (
+      <Typography variant="body3">
+        No level-triggered product tours are available for this lab.
+      </Typography>
+    );
+  }
+
   return (
     <div>
       <Typography variant="body3" gutterBottom>
@@ -42,21 +50,15 @@ const EditProductTourSettings: React.FunctionComponent<
         type="hidden"
         value={JSON.stringify(selectedTours)}
       />
-      {availableTours.length === 0 ? (
-        <Typography variant="body3">
-          No level-triggered product tours are available for this lab.
-        </Typography>
-      ) : (
-        availableTours.map(({name, displayName}) => (
-          <Checkbox
-            key={name}
-            label={displayName}
-            checked={selectedTours.includes(name)}
-            onChange={() => handleTourToggle(name)}
-            name={name}
-          />
-        ))
-      )}
+      {availableTours.map(({name, displayName}) => (
+        <Checkbox
+          key={name}
+          label={displayName}
+          checked={selectedTours.includes(name)}
+          onChange={() => handleTourToggle(name)}
+          name={name}
+        />
+      ))}
     </div>
   );
 };
