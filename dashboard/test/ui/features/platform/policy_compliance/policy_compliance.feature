@@ -72,7 +72,7 @@ Feature: Policy Compliance
 
     # Have the student pick a state (outside the policy region)
     Given I select the "Alabama" option in dropdown "user_us_state"
-    Then I click "#submit-update"
+    Then I click "#submit-update" to load a new page
     Then I wait until element "div#account-update-success" is visible
 
     # Right now, we have to assert that the experiment is active
