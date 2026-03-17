@@ -11,11 +11,9 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
-import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
-import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -192,6 +190,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
     dispatch(setShowModalType(modalToShow()));
   }, [isUserTeacher, dispatch]);
 
+  useEffect(() => {
+    dispatch(clearHasSetInitialCustomizations());
+  }, [dispatch, currentLevelId]);
+
   const onCloseModal = useCallback(() => {
     // We only want to show the teacher onboarding modal the first time a teacher user
     // interacts with the aichat tool. Thus, we store a value in local storage when
@@ -283,10 +285,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       });
     }
   }, [dialogControl, resetProject]);
-
-  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
-    dispatch(clearHasSetInitialCustomizations());
-  });
 
   // Only recreate modelParameters when relevant customizations are updated.
   const modelParameters: ModelParameters = useMemo(() => {
