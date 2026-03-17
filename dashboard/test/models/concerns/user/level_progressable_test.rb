@@ -642,11 +642,7 @@ class LevelProgressableTest < ActiveSupport::TestCase
     let(:lesson_group) {create(:lesson_group, script: script)}
     let(:lesson) {create(:lesson, script: script, lesson_group: lesson_group)}
     let!(:script_levels) do
-      [
-        create(:script_level, script: script, lesson: lesson, levels: [create(:level)]),
-        create(:script_level, script: script, lesson: lesson, levels: [create(:level)]),
-        create(:script_level, script: script, lesson: lesson, levels: [create(:level)]),
-      ]
+      3.times.map { create(:script_level, script: script, lesson: lesson, levels: [create(:level)]) }
     end
 
     before do

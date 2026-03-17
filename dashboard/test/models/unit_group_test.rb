@@ -106,7 +106,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
@@ -165,7 +165,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
     unit_group.student_resources = [create(:resource, course_version: course_version)]
 
     serialization = unit_group.serialize
@@ -211,7 +211,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     create(:unit_group_unit, unit_group: unit_group, position: 1, script: create(:script, name: "unit1"))
     create(:unit_group_unit, unit_group: unit_group, position: 2, script: create(:script, name: "unit2"))
     create(:unit_group_unit, unit_group: unit_group, position: 3, script: create(:script, name: "unit3"))
-    unit_group.resources = [create(:resource, course_version: course_version), create(:resource, course_version: course_version)]
+    unit_group.resources = create_list(:resource, 2, course_version: course_version)
 
     serialization = unit_group.serialize
     unit_group.original_units.each {|u| u.update!(original_unit_group: nil)}

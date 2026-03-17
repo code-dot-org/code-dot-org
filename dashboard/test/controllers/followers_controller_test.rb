@@ -138,9 +138,7 @@ class FollowersControllerTest < ActionController::TestCase
     sign_in @student
     section = create(:section, login_type: 'email')
 
-    500.times do
-      create(:follower, section: section)
-    end
+    create_list(:follower, 500, section: section)
 
     assert_does_not_create(Follower) do
       get :student_user_new, params: {section_code: section.code}
