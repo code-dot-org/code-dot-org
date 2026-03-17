@@ -1,5 +1,4 @@
-import Button, {LinkButton} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {useNavigate, NavLink} from 'react-router-dom';
 
@@ -64,10 +63,27 @@ const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
         </NavLink>
       );
     } else if (showNoCurriculumAssigned) {
-      return <LinkButton href="/catalog" text={i18n.browseCurriculum()} />;
+      return (
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          href="/catalog"
+        >
+          {i18n.browseCurriculum()}
+        </MuiButton>
+      );
     } else {
       return (
-        <Button onClick={navigateToCoursePage} text={i18n.assignAUnit()} />
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          onClick={navigateToCoursePage}
+          type="button"
+        >
+          {i18n.assignAUnit()}
+        </MuiButton>
       );
     }
   };

@@ -1,4 +1,4 @@
-import Button, {buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -41,14 +41,15 @@ class ImageResourceCard extends Component {
             </div>
             <div style={styles.description}>{description}</div>
           </div>
-          <Button
-            useAsLink={true}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
+            aria-label={buttonText}
             href={link}
-            ariaLabel={buttonText}
-            color={buttonColors.purple}
-            text={buttonText}
-            size="s"
-          />
+          >
+            {buttonText}
+          </MuiButton>
         </div>
         <img style={styles.image} src={this.getImage()} alt={altText} />
       </div>

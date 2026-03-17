@@ -418,19 +418,3 @@ export const studentShape = PropTypes.shape({
   secretPictureUrl: PropTypes.string,
   secretWords: PropTypes.string,
 });
-
-/**
- * @param {object} state - state.teacherSections in redux tree
- * @return {array} A list of sections which have students at risk of being age
- * gated by CAP.
- */
-export function atRiskAgeGatedSections(state) {
-  state = getRoot(state);
-  // Convert from a Map to an Array.
-  const sections = Object.values(state.sections || {});
-  // Only non-archived sections can be at risk.
-  // Select only the sections which have students at risk.
-  return sections.filter(
-    section => !section.hidden && section.atRiskAgeGatedDate
-  );
-}

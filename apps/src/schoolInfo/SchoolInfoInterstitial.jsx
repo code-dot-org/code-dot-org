@@ -1,4 +1,4 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 
@@ -125,25 +125,29 @@ export default function SchoolInfoInterstitial({
           <SchoolDataInputs {...schoolInfo} />
         </div>
         <div style={styles.bottom}>
-          <Button
-            text={i18n.dismiss()}
-            onClick={dismissSchoolInfoForm}
-            size="m"
-            type="secondary"
+          <MuiButton
+            variant="outlined"
+            color="tertiary"
+            size="medium"
             id="dismiss-button"
-            color="gray"
+            onClick={dismissSchoolInfoForm}
             style={styles.button}
-          />
-          <Button
-            text={i18n.save()}
-            onClick={handleSchoolInfoSubmit}
-            size="m"
-            type="primary"
-            id="save-button"
-            color="purple"
+            type="button"
+          >
+            {i18n.dismiss()}
+          </MuiButton>
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
             disabled={saveDisabled}
+            id="save-button"
+            onClick={handleSchoolInfoSubmit}
             style={styles.button}
-          />
+            type="button"
+          >
+            {i18n.save()}
+          </MuiButton>
         </div>
       </div>
     </BaseDialog>

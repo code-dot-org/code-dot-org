@@ -69,7 +69,10 @@ export async function performClientApiChatCompletion(
     assets,
   };
 
-  if (status === AiRequestExecutionStatus.MODEL_PROFANITY) {
+  if (
+    status === AiRequestExecutionStatus.MODEL_PROFANITY ||
+    status === AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED
+  ) {
     return [
       {...updatedUserMessage, status: AiInteractionStatus.ERROR},
       {

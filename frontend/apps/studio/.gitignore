@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-/public/vite*
+/public/vite
+/public/frontend-studio
 tmp

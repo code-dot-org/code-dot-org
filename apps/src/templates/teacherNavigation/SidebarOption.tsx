@@ -7,9 +7,6 @@ import classNames from 'classnames';
 import React from 'react';
 import {NavLink, generatePath} from 'react-router-dom';
 
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
-
 import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
@@ -33,12 +30,6 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   pathKey,
   showErrorIcon,
 }) => {
-  const reportMetric = (path: string) => () => {
-    analyticsReporter.sendEvent(EVENTS.NAVIGATE_TO_PAGE, {
-      nextPage: path,
-    });
-  };
-
   return (
     <NavLink
       key={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
@@ -51,7 +42,6 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}
-      onClick={reportMetric(pathKey)}
     >
       <div className={styles.iconContainer}>
         <FontAwesomeV6Icon

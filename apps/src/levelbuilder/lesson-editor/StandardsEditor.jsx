@@ -28,7 +28,7 @@ function StandardsEditor(props) {
           className="unit-test-remove-standard"
           onMouseDown={() => handleRemoveStandardDialogOpen(rowData)}
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );
@@ -170,9 +170,9 @@ function StandardsEditor(props) {
           </option>
         ))}
       </select>
-      <label>
+      <div style={styles.sectionLabel}>
         <strong>Select a Standard to add</strong>
-      </label>
+      </div>
       <SearchBox
         // Specify a key in order to force this component to remount when
         // framework changes. Otherwise, it may return stale results when
@@ -217,6 +217,9 @@ StandardsEditor.propTypes = {
 };
 
 const styles = {
+  sectionLabel: {
+    marginBottom: 5,
+  },
   actionsColumn: {
     display: 'flex',
     justifyContent: 'space-evenly',

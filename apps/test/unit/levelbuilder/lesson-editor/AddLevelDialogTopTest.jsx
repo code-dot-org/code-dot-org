@@ -24,7 +24,7 @@ describe('AddLevelDialogTop', () => {
         {
           conceptDifficulty: '',
           concepts: '',
-          icon: 'fa fa-list-ul',
+          icon: 'fa-solid fa-list-ul',
           id: 22300,
           is_concept_level: false,
           kind: 'puzzle',

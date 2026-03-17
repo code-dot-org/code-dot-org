@@ -1,5 +1,6 @@
 import * as BlocklyCore from 'blockly/core';
 
+import CdoFieldVariable from '@cdo/apps/blockly/addons/cdoFieldVariable';
 import {getCategoryBlocksJson} from '@cdo/apps/blockly/utils/';
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -45,7 +46,7 @@ const getNewVariableButtonWithCallback = (
 ) => {
   const callbackkey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackkey, () => {
-    Blockly.FieldVariable.variableNamePrompt({
+    CdoFieldVariable.variableNamePrompt({
       promptText: commonI18n.renameThisPromptTitle(),
       confirmButtonLabel: commonI18n.create(),
       defaultText: '',

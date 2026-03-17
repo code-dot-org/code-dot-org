@@ -5,13 +5,12 @@ description 'description here'
 markdown <<MARKDOWN
 # How Does an App Get Live Data? Intro to APIs
 
-<img src="https://images.code.org/ec00814b3780812d00fe6876a97daedc-image-1770743841734.png" alt="partly cloudy weather icon" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/ec00814b3780812d00fe6876a97daedc-image-1770743841734.png" alt="partly cloudy weather icon" width="250px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
 #### Many apps show information that doesn’t come from their own code.
 #### Weather apps, maps, music apps, and sports apps often pull data from somewhere else.
 #### So how does an app “ask” another service for information?
 
-#### In this level, you’ll learn what an API is and how it helps apps communicate with other systems.
 
 <div style="clear:both;"></div>
 
@@ -63,14 +62,6 @@ Many apps don’t store all the information they show. Instead, they pull live d
 
 <div style="clear:both;"></div>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your thinking:</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-    <p style="font-size: 14pt;">
-The app doesn’t “grab” data magically—it follows a predictable pattern: a <strong>request</strong> goes out, and a <strong>response</strong> comes back. The app is the <strong>client</strong>, and the service providing the data is the <strong>server</strong>.
-</p>
-</div>
-</details>
 
 ---
 

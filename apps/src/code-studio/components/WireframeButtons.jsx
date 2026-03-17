@@ -84,7 +84,7 @@ const ViewCodeButton = () => (
       className="WireframeButtons_button"
       href={project.getProjectUrl('/view')}
     >
-      <i className="fa fa-code" /> {i18n.viewCode()}
+      <i className="fa-solid fa-code" /> {i18n.viewCode()}
     </a>
   </span>
 );
@@ -92,7 +92,7 @@ const ViewCodeButton = () => (
 const NewProjectButton = ({url}) => (
   <span style={{display: 'inline-block'}}>
     <a className="WireframeButtons_button" href={url}>
-      <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
+      <i className="fa-solid fa-pen-to-square" /> {i18n.makeMyOwn()}
     </a>
   </span>
 );
@@ -106,7 +106,7 @@ const SendToPhoneButton = ({active, onClick}) => (
       className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
       onClick={onClick}
     >
-      <i className="fa fa-mobile" /> {i18n.sendToPhone()}
+      <i className="fa-solid fa-mobile-screen-button" /> {i18n.sendToPhone()}
     </a>
   </span>
 );

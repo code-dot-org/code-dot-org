@@ -1,6 +1,8 @@
 import {type ModelMessage} from 'ai';
 
-import {generateText} from '@cdo/apps/aiGateway/generateTextThroughProxyOrGateway';
+import {generateText} from '@cdo/apps/aiGateway';
+import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {AiRequestExecutionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {
@@ -16,7 +18,7 @@ import {
   formatSystemMessages,
 } from './helpers/messageHelpers';
 import {getModel} from './helpers/modelHelpers';
-import {isTextSafe} from './helpers/safetyHelpers';
+import {isTextSafe, isImageSafe} from './helpers/safetyHelpers';
 
 /**
  * Performs all the steps necessary to generate a chat response:
@@ -54,16 +56,28 @@ export async function generateChatResponse(
   }
 
   // Generate a response with the model.
-  const {text, files} = await generateText({
+  const {text, files, finishReason, response} = await generateText({
     model: getModel(modelParameters.selectedModelId),
     messages,
     temperature: modelParameters.temperature,
   });
 
-  // Check model text output for safety.
-  const modelOutputSafe = await isTextSafe(text);
-  if (!modelOutputSafe) {
-    return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
+  if (['content-filter', 'other'].includes(finishReason)) {
+    // Gemini stores moderation information in a non-standard place so we need to dig into the raw HTTP body.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const candidate = (response.body as any)?.candidates?.[0];
+
+    return {
+      response: `Blocked reason: ${candidate?.finishReason}. ${candidate?.finishMessage}`,
+      status: AiRequestExecutionStatus.MODEL_PROFANITY,
+    };
+  }
+
+  if (finishReason !== 'stop') {
+    return {
+      response: `Unexpected finish reason: ${finishReason}`,
+      status: AiRequestExecutionStatus.FAILURE,
+    };
   }
 
   // Upload generated assets, if any.
@@ -71,6 +85,23 @@ export async function generateChatResponse(
   for (const file of files) {
     const asset = await generatedFileToAsset(file, buildAssetUrl);
     assets.push(asset);
+    if (file.mediaType.startsWith('image/')) {
+      sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
+      // Check generated images for safety.
+      const imageSafe = await isImageSafe(file);
+      if (!imageSafe) {
+        return {
+          response: text,
+          status: AiRequestExecutionStatus.MODEL_IMAGE_FLAGGED,
+        };
+      }
+    }
+  }
+
+  // Check model text output for safety.
+  const modelOutputSafe = await isTextSafe(text);
+  if (!modelOutputSafe) {
+    return {response: text, status: AiRequestExecutionStatus.MODEL_PROFANITY};
   }
 
   return {response: text, assets, status: AiRequestExecutionStatus.SUCCESS};

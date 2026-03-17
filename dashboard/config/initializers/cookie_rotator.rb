@@ -1,23 +1,20 @@
+# Temporary cookie rotator to facilitate updating the digest class for key
+# generators from SHA1 (the Rails 6.1 default) to SHA256 (the Rails 7.0
+# default). Will read cookies from either the new or the old format, while
+# consistently writing out to the new format.
+#
+# TODO infra: remove this after 40 days in production (as determined by
+# CDO.dashboard_session_ttl_days)
+#
 # Based on instructions at
 # https://guides.rubyonrails.org/v7.0/upgrading_ruby_on_rails.html#key-generator-digest-class-changing-to-use-sha256
 # and
 # https://guides.rubyonrails.org/v7.0/security.html#rotating-encrypted-and-signed-cookies-configurations
+#
+# See dashboard/config/initializers/new_framework_defaults_7_0.rb for more context
 Rails.application.config.after_initialize do
   Rails.application.config.action_dispatch.cookies_rotations.tap do |cookies|
-    authenticated_encrypted_cookie_salt = Rails.application.config.action_dispatch.authenticated_encrypted_cookie_salt
-    signed_cookie_salt = Rails.application.config.action_dispatch.signed_cookie_salt
-
-    secret_key_base = Rails.application.secret_key_base
-
-    key_generator = ActiveSupport::KeyGenerator.new(
-      secret_key_base, iterations: 1000, hash_digest_class: OpenSSL::Digest::SHA1
-    )
-    key_len = ActiveSupport::MessageEncryptor.key_len
-
-    old_encrypted_secret = key_generator.generate_key(authenticated_encrypted_cookie_salt, key_len)
-    old_signed_secret = key_generator.generate_key(signed_cookie_salt)
-
-    cookies.rotate :encrypted, old_encrypted_secret
-    cookies.rotate :signed, old_signed_secret
+    cookies.rotate :encrypted, digest: OpenSSL::Digest::SHA1
+    cookies.rotate :signed, digest: OpenSSL::Digest::SHA1
   end
 end

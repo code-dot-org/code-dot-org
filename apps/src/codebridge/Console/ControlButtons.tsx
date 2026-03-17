@@ -1,8 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import CodebridgeRegistry from '@codebridge/CodebridgeRegistry';
 import WithConditionalTooltip from '@codebridge/components/WithConditionalTooltip';
 import {MiniApps} from '@codebridge/constants';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -18,9 +19,7 @@ import {
   setHasError,
 } from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils/analyticsReporterHelper';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {logUserLevelInteraction} from '@cdo/apps/userLevelInteractionsLogger/userLevelInteractionsApi';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {UserLevelInteractions} from '@cdo/generated-scripts/sharedConstants';
@@ -73,7 +72,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = () => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_RUN_CLICK);
       logUserLevelInteraction({
         levelId: levelId,
         scriptId: scriptId,
@@ -137,14 +135,17 @@ const ControlButtons: React.FunctionComponent = () => {
   return (
     <div className={moduleStyles.controlButtons}>
       {isRunning ? (
-        <Button
-          text={codebridgeI18n.stop()}
-          onClick={handleStop}
-          color={'destructive'}
-          iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-          size={'xs'}
+        <MuiButton
+          variant="contained"
+          color="error"
+          size="extraSmall"
           className={moduleStyles.controlButton}
-        />
+          onClick={handleStop}
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="square" />}
+        >
+          {codebridgeI18n.stop()}
+        </MuiButton>
       ) : (
         <WithConditionalTooltip
           iconName={disabledCodeActionsIcon}
@@ -157,16 +158,19 @@ const ControlButtons: React.FunctionComponent = () => {
             tooltipId: 'code-actions-tooltip',
           }}
         >
-          <Button
-            id="uitest-codebridge-run"
-            text={codebridgeI18n.run()}
-            onClick={handleRun}
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="extraSmall"
             disabled={!!disabledCodeActionsTooltip}
-            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            size={'xs'}
-            type={'primary'}
             className={moduleStyles.controlButton}
-          />
+            id="uitest-codebridge-run"
+            onClick={handleRun}
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconStyle="solid" iconName="play" />}
+          >
+            {codebridgeI18n.run()}
+          </MuiButton>
         </WithConditionalTooltip>
       )}
     </div>

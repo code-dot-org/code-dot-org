@@ -38,7 +38,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
     levelProperties,
     onRun,
     onStop,
-    AiTutorResponseView,
     hiddenContextCallback,
     startSources,
     aiTutorSystemPrompt,
@@ -143,7 +142,6 @@ export const InfoPanel: React.FunctionComponent<InfoPanelProps> = ({
           isValidating,
           isValidateDisabled: !hasLoadedEnvironment || isRunning,
         }}
-        AiTutorResponseView={AiTutorResponseView}
         className={moduleStyles.instructionsContainer}
         headerClassName={moduleStyles.infoPanelHeader}
         levelProperties={levelProperties}

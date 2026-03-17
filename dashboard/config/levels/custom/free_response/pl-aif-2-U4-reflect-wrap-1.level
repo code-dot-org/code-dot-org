@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2026-03-09T19:43:24.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "title": "Revisiting the Final Project",
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "\r\n\r\n## Tap for More: Explore-Style App\r\n\r\n#### In the *Tap for More* project, students design an interactive explore-style app that fetches live data from an external API and presents it in a grid of cards with a detail view. Inspired by apps like Pinterest, Yelp, TikTok, and news feeds, students curate content and design how users explore and learn more about individual items.\r\n\r\n<img src=\"https://images.code.org/b6518963d37d9630807dcd0085aa5036-image-1770400989649.png\" alt=\"Sample explore-style app with grid of cards and detail view\" width=\"750px\" style=\"display:block; margin-left:auto; margin-right:auto; border-radius:10px;\"><br>\r\n\r\n<p style=\"font-size:14pt;\">\r\n  <a href=\"https://erikdillaman.github.io/U5_Project_Prototype_One/\" target=\"_blank\" rel=\"noopener noreferrer\">Explore a sample student project</a>\r\n</p>\r\n\r\n---\r\n\r\n## How the Unit Builds Toward This Project\r\n\r\n#### Across the lessons, students progressively develop the skills they need to succeed:\r\n\r\n- #### Use **`async/await`** to manage asynchronous API calls\r\n- #### Parse and work with **JSON data structures**\r\n- #### Implement **error handling** to prevent app crashes\r\n- #### Communicate system status using **loading indicators, empty states, and error messages**\r\n- #### Design defensively to keep apps usable when data is **delayed, incomplete, or unavailable**\r\n- #### Reflect on the reliability, ownership, and risks of relying on **external data sources**\r\n\r\n#### Each concept appears first in isolation, then comes together in the final project where students integrate data, logic, and user experience design.\r\n\r\n---\r\n\r\n<p style=\"font-size:18px; background-color:#F5F7F8; padding:10px; border-left:5px solid #8148B2; display:inline-block;\">\r\n  ➡️ <strong>Optional:</strong> Open the <a href=\"#\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"text-decoration:none; font-weight:bold;\">Project Lesson Plan</a> to see more details on the project.\r\n</p>\r\n\r\n---\r\n\r\n## Reflection\r\n\r\n>#### What is one way this project pushes students to think beyond “does the code work?” and instead consider reliability, user experience, or data ownership? How might you help students recognize that shift?\r\n\r\n<div style=\"display:flex; align-items:left; margin:20px 0px 30px 0px\">\r\n\r\n  <a href=\"https://forum.code.org\" target=\"_blank\" rel=\"noopener noreferrer\">\r\n    <img src=\"https://images.code.org/7dbe63a051fbad4ef262d6ab710e2966-image-1731959037460.png\" style=\"width:auto; height:100px;\" alt=\"A browser with two text boxes, both including an avatar and lines of text.\">\r\n  </a>\r\n\r\n<div style=\"background-color:#007786; border-radius:20px; color:#000000; width:80%; margin-left:5%; margin-right:5%; padding:10px 10px 5px 10px;\">\r\n\r\n<p style=\"color:white; line-height:1.5; margin-left:10px; margin-right:10px; font-size:18px\"><b>Post to the Code.org Forum</b></p>\r\n\r\n<p style=\"color:white; line-height:1.2; margin-left:10px; margin-right:10px; font-size:18px\">\r\n      Share your response and read other educators' ideas on the forum! Click on the icon to the left to join the conversation.\r\n    </p>\r\n\r\n  </div>\r\n</div>\r\n",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18982,
+    "name_suffix": "_2023",
+    "encrypted": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "stay_on_level_after_submit": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-09T19:43:24.860+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U4-reflect-wrap-3\\\"\"],\"cloned_from\":\"pl-aif-2-U4-reflect-wrap-3\"},{\"changed_at\":\"2026-03-09 20:02:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-09 20:05:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

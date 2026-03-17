@@ -74,8 +74,11 @@ const ChildLevelEditor: React.FC<ChildLevelEditorProps> = ({
   return (
     <div>
       <div className={styles.fieldRow}>
-        <label>Display Name</label>
+        <label htmlFor={`child-level-display-name-${index}`}>
+          Display Name
+        </label>
         <input
+          id={`child-level-display-name-${index}`}
           type="text"
           value={childLevelDisplayName}
           onChange={e => setChildLevelDisplayName(e.target.value)}
@@ -87,7 +90,7 @@ const ChildLevelEditor: React.FC<ChildLevelEditorProps> = ({
         handleDescriptionChange={setChildLevelDescription}
       />
       <div className={styles.fieldRow}>
-        <label>Thumbnail URL</label>
+        <p className={styles.marginBottom}>Thumbnail URL</p>
         <ImageInput
           updateImageUrl={setChildLevelThumbnailUrl}
           initialImageUrl={childLevelThumbnailUrl}

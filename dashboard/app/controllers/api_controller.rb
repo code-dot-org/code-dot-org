@@ -95,6 +95,8 @@ class ApiController < ApplicationController
 
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = CleverSection.find_by(code: CleverSection.code_for_section(course_id))
+    return head :forbidden if section.present? && !section_instructor?(section)
 
     query_clever_service("sections/#{course_id}/users?role=student") do |students|
       section = CleverSection.from_service(course_id, current_user.id, students, course_name)
@@ -114,6 +116,8 @@ class ApiController < ApplicationController
     return head :forbidden unless current_user
     course_id = params[:courseId].to_s
     course_name = params[:courseName].to_s
+    section = GoogleClassroomSection.find_by(code: GoogleClassroomSection.code_for_section(course_id))
+    return head :forbidden if section.present? && !section_instructor?(section)
 
     query_google_classroom_service do |service|
       students = []
@@ -198,6 +202,7 @@ class ApiController < ApplicationController
       section_hash[section.id] = {
         section_id: section.id,
         section_name: section.name,
+        ai_chat_access_level: section.ai_chat_access_level,
         lessons: script.lessons.each_with_object({}) do |lesson, lesson_hash|
           lesson_state = lesson.lockable_state(section.students)
           lesson_hash[lesson.id] = lesson_state unless lesson_state.nil?
@@ -639,6 +644,11 @@ class ApiController < ApplicationController
     rescue Google::Apis::ClientError, Google::Apis::AuthorizationError => exception
       render status: :forbidden, json: {error: exception}
     end
+  end
+
+  private def section_instructor?(section)
+    return false unless current_user
+    section&.instructors&.exists?(id: current_user.id)
   end
 
   # Gets progress-related app_options for the given script and level for the

@@ -33,7 +33,7 @@ export default function RubricEditor({
         onClick={addNewConcept}
         size={Button.ButtonSize.narrow}
         icon="plus-circle"
-        iconClassName="fa fa-plus-circle"
+        iconClassName="fa-solid fa-circle-plus"
         id="ui-test-add-new-concept-button"
       />
     </div>

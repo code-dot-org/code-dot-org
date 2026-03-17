@@ -48,14 +48,15 @@ class PauseButton extends React.Component {
         disabled={!this.props.isRunning}
         className="no-focus-outline"
         id="pauseButton"
+        aria-label={this.props.isPaused ? 'Play' : 'Pause'}
       >
         <div style={styles.container}>
           <i
             style={iconStyle}
             className={
               this.props.isPaused
-                ? 'fa fa-fw fa-play-circle'
-                : 'fa fa-fw fa-pause-circle'
+                ? 'fa-solid fa-fw fa-circle-play'
+                : 'fa-solid fa-fw fa-circle-pause'
             }
           />
         </div>

@@ -10,6 +10,8 @@ module MysqlCheckIndexUsed
   class NoIndexUsedException < StandardError; end
 
   # Copy/extend logic in AbstractMySQLAdapter#execute, and AbstractAdapter#log.
+  # See https://github.com/rails/rails/blob/v7.0.10/activerecord/lib/active_record/connection_adapters/abstract_mysql_adapter.rb#L639-L648
+  # and https://github.com/rails/rails/blob/v7.0.10/activerecord/lib/active_record/connection_adapters/abstract_adapter.rb#L742-L756
   def execute(sql, name = nil, async: false)
     materialize_transactions
     mark_transaction_written_if_write(sql)

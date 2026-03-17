@@ -73,7 +73,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let button = wrapper.find('[id="confirmImportButton"]').at(0);
-      expect(button.prop('text')).toContain('i18n-import');
+      expect(button.prop('children')).toContain('i18n-import');
     });
   });
 });
