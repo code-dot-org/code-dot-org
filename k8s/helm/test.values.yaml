@@ -1,0 +1,4 @@
+RAILS_ENV: test
+healthChecks:
+  enabled: true
+
