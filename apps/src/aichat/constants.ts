@@ -51,3 +51,10 @@ export const AI_SETTINGS_SUPPORT_LINK =
 
 export const TEACHER_DISABLED_AI_CHAT_MESSAGE =
   'Your teacher has not enabled this tool.';
+
+// Image types that assets bucket and safety moderation support.
+export const ACCEPTED_IMAGE_MEDIA_TYPES = [
+  'image/jpeg',
+  'image/png',
+  'image/gif',
+];
