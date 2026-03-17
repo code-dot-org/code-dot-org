@@ -44,7 +44,6 @@ class Weblab2 < Level
     level_system_prompt
     ai_tutor_prompt_settings
     widget2
-    product_tours
   )
 
   def self.create_from_level_builder(params, level_params)
