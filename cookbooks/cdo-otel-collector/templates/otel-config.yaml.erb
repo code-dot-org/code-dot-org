@@ -160,6 +160,8 @@ exporters:
     endpoint: <%= @prometheus_remote_write_url %>
     auth:
       authenticator: sigv4auth/prometheus
+    external_labels:
+      deployment_environment: <%= node.chef_environment %>
 <% end %>
 
 service:
