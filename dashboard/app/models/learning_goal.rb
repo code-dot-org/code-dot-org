@@ -26,7 +26,7 @@ class LearningGoal < ApplicationRecord
   def validate_ai_config
     if ai_enabled && !CDO.aws_s3_emulated
       script_level = rubric.get_script_level
-      if script_level
+      if script_level&.script&.name == 'allthethings'
         script = script_level.script
         puts "DEBUG validate_ai_config: script_level.script_id=#{script_level.script_id} script.ai_rubric_s3_config=#{script.ai_rubric_s3_config.inspect}"
         puts "DEBUG validate_ai_config: script.reload.ai_rubric_s3_config=#{script.reload.ai_rubric_s3_config.inspect}"

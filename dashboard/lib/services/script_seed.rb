@@ -310,11 +310,13 @@ module Services
       # for more models than just Unit, in which case we should probably
       # reassess the pattern being used here.
       imported_script = Unit.find_by!(name: script_to_import.name)
-      puts "DEBUG import_script find_by_name: id=#{imported_script.id} ai_rubric_s3_config=#{imported_script.ai_rubric_s3_config.inspect}"
-      by_id = Unit.find(imported_script.id)
-      puts "DEBUG import_script find_by_id: ai_rubric_s3_config=#{by_id.ai_rubric_s3_config.inspect}"
-      by_id_reloaded = by_id.reload
-      puts "DEBUG import_script find_by_id_reloaded: ai_rubric_s3_config=#{by_id_reloaded.ai_rubric_s3_config.inspect}"
+      if imported_script.name == 'allthethings'
+        puts "DEBUG import_script find_by_name: id=#{imported_script.id} ai_rubric_s3_config=#{imported_script.ai_rubric_s3_config.inspect}"
+        by_id = Unit.find(imported_script.id)
+        puts "DEBUG import_script find_by_id: ai_rubric_s3_config=#{by_id.ai_rubric_s3_config.inspect}"
+        by_id_reloaded = by_id.reload
+        puts "DEBUG import_script find_by_id_reloaded: ai_rubric_s3_config=#{by_id_reloaded.ai_rubric_s3_config.inspect}"
+      end
       imported_script.run_callbacks(:save)
       return imported_script
     end
