@@ -1,13 +1,10 @@
 import $ from 'jquery';
-import queryString from 'query-string';
 import React from 'react';
 import {Provider} from 'react-redux';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {getStore} from '@cdo/apps/redux';
+import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -21,14 +18,9 @@ function showHomepage() {
   const homepageData = JSON.parse(script.dataset.homepage);
   const isEnglish = homepageData.isEnglish;
   const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
-  registerReducers({locales, mapbox: mapboxReducer, currentUser});
   const store = getStore();
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
   store.dispatch(setLocaleCode(homepageData.localeCode));
-
-  if (homepageData.mapboxAccessToken) {
-    store.dispatch(setMapboxAccessToken(homepageData.mapboxAccessToken));
-  }
 
   const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
     <ParentalPermissionBanner
