@@ -599,22 +599,18 @@ db_credential_reader: !StackSecret
 db_proxy_admin:
 
 db_writer: !Secret
-reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
 pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
-reporting_db_reader: <%=reporting_db_writer%>
 
 # Default DB-specific endpoints to base endpoint plus db name.
 dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
 pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
 pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
-pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
-pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
