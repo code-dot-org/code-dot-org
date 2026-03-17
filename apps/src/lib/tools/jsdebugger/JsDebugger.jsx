@@ -447,10 +447,11 @@ class JsDebugger extends React.Component {
       >
         <div
           id="debugResizeBar"
-          className="fa-solid fa-ellipsis"
           onMouseDown={this.onMouseDownDebugResizeBar}
           ref={debugResizeBar => (this._debugResizeBar = debugResizeBar)}
-        />
+        >
+          <i className="fa-solid fa-ellipsis" />
+        </div>
         <PaneHeader
           id="debug-area-header"
           hasFocus={hasFocus}
