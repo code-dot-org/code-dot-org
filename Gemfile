@@ -119,7 +119,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '~> 4.0'
+  gem 'eyes_selenium', '~> 6.0.4' # required for Ruby 3.2 support
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -272,7 +272,7 @@ gem 'aws-sdk-comprehend'
 gem 'aws-sdk-core', '>= 3.239.2'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
-gem 'aws-sdk-ec2'
+gem 'aws-sdk-ec2', '~> 1.424.0' # required for Ruby 3.2 support
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
