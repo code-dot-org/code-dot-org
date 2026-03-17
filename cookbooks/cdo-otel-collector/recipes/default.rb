@@ -63,7 +63,8 @@ template '/etc/otelcol-contrib/config.yaml' do
               site: node['cdo-otel-collector']['site'],
               datadog_api_key: datadog_api_key,
               prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
-              prometheus_region: node['cdo-otel-collector']['prometheus_region']
+              prometheus_region: node['cdo-otel-collector']['prometheus_region'],
+              apm_trace_sample_rate: node['cdo-otel-collector']['apm_trace_sample_rate']
             }
 )
   notifies :restart, 'service[otelcol-contrib]', :delayed
