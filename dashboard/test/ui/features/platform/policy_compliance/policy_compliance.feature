@@ -1,6 +1,5 @@
 @no_mobile
 Feature: Policy Compliance
-  @pegasus_content
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"
     Given CPA all user lockout phase
