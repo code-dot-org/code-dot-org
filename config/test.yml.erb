@@ -151,7 +151,7 @@ sources_s3_directory: <%= "sources_circle/#{ENV['CI_BUILD_NUMBER']}" %>
 saucelabs_tunnel_name: cdo-tunnel-<%= ENV['CI_BUILD_NUMBER'] %>
 
 # we run eyes features in CI, but skip comparing visual diffs
-disable_all_eyes_running: true
+disable_all_eyes_running: false
 
 # The number of puma workers in CI has been optimized to minimize ui test time
 # for drone workers running on m7i.4xlarge instances.
