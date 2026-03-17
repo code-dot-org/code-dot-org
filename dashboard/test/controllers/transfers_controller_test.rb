@@ -247,7 +247,7 @@ class TransfersControllerTest < ActionController::TestCase
   end
 
   test "returns an error when the new_section will be over it's section capacity" do
-    create_list(:follower, 500, section: @picture_section)
+    create_list(:follower, 500, section: @picture_section) # rubocop:disable FactoryBot/ExcessiveCreateList
 
     post :create, params: @params
     assert_response :forbidden
