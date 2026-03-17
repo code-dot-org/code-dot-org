@@ -1,13 +1,14 @@
 import {type GeneratedFile, Output} from 'ai';
 import z from 'zod/v3';
 
+import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/constants';
 import {generateText} from '@cdo/apps/aiGateway';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import {prepareGeneratedFile, ACCEPTED_IMAGE_MEDIA_TYPES} from './fileHelpers';
+import {prepareGeneratedFile} from './fileHelpers';
 import {getModel} from './modelHelpers';
 
 const outputSchema = Output.object({

@@ -17,13 +17,6 @@ const mediaTypeToExtensionMap: Record<string, string> = {
   'application/pdf': 'pdf',
 };
 
-// Image types that safety moderation supports.
-export const ACCEPTED_IMAGE_MEDIA_TYPES = [
-  'image/jpeg',
-  'image/png',
-  'image/gif',
-];
-
 // Derived reverse map. `jpeg` is added as an alias since both `jpg` and
 // `jpeg` are valid extensions for `image/jpeg`.
 const extensionToMediaTypeMap: Record<string, string> = {
@@ -40,7 +33,7 @@ const extensionToMediaTypeMap: Record<string, string> = {
  * @param accepts - The set of media types this call site expects. If mediaType
  *   is not in this list, an error is thrown.
  */
-export function convertMediaTypeToExtension(
+function convertMediaTypeToExtension(
   mediaType: string,
   accepts: string[]
 ): string {

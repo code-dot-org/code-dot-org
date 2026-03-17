@@ -1,6 +1,6 @@
 import {type ModelMessage} from 'ai';
 
-import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/api/client/helpers/fileHelpers';
+import {ACCEPTED_IMAGE_MEDIA_TYPES} from '@cdo/apps/aichat/constants';
 import {generateText} from '@cdo/apps/aiGateway';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
