@@ -280,15 +280,15 @@ Resources:
               - 'bedrock:InvokeModel'
               - 'bedrock:GetInferenceProfile'
             Resource:
-              - 'arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-20250514-v1:0'
+              - 'arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0'
           - Effect: Allow
             Action:
               - 'bedrock:InvokeModel'
             Resource:
-              - 'arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-20250514-v1:0'
+              - 'arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-5-20250929-v1:0'
             Condition:
               StringLike:
-                bedrock:InferenceProfileArn: arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-20250514-v1:0
+                bedrock:InferenceProfileArn: arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0
 
 
 

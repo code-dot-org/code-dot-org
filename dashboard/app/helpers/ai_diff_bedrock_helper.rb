@@ -3,8 +3,8 @@ module AiDiffBedrockHelper
 
   MAX_TOKENS = 1500
   TEMP = 0.5
-  MODEL_ID = 'us.anthropic.claude-sonnet-4-20250514-v1:0'
-  MODEL_ARN = 'arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-20250514-v1:0'
+  MODEL_ID = 'us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+  MODEL_ARN = 'arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0'
   # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
   KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
@@ -250,6 +250,7 @@ module AiDiffBedrockHelper
         text << "\n- [Link #{index+1}](#{url})"
       end
     end
+
     {
       content: text,
       raw_content: response.output.text,
