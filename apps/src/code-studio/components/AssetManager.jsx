@@ -338,10 +338,7 @@ export default class AssetManager extends React.Component {
     if (this.state.assets === null || this.state.starterAssets === null) {
       assetList = (
         <div style={{margin: '1em 0', textAlign: 'center'}}>
-          <i
-            className="fa-solid fa-spinner fa-spin"
-            style={{fontSize: '32px'}}
-          />
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (

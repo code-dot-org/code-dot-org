@@ -111,7 +111,7 @@ const FolderPanelRow: React.FunctionComponent<FolderPanelRowProps> = ({
           <div className={styles.previewContainer}>
             <FontAwesome
               title={undefined}
-              icon={'circle-play'}
+              icon={'play-circle'}
               className={classNames(
                 styles.preview,
                 isPlayingPreview && styles.previewPlaying

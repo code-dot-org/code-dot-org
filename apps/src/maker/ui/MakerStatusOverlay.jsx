@@ -152,7 +152,7 @@ class WaitingToConnect extends Component {
   render() {
     return (
       <Overlay {...this.props}>
-        <Icon icon="gear" spin />
+        <Icon icon="cog" spin />
         <Text>{applabI18n.makerWaitingForConnect()}</Text>
       </Overlay>
     );
@@ -167,7 +167,7 @@ class UnsupportedBrowser extends Component {
   render() {
     return (
       <Overlay {...this.props}>
-        <Icon icon="triangle-exclamation" />
+        <Icon icon="exclamation-triangle" />
         <Text>
           {applabI18n.makerLevelRequires()}
           <br />
@@ -194,7 +194,7 @@ class BoardNotFound extends Component {
   render() {
     return (
       <Overlay {...this.props}>
-        <Icon icon="triangle-exclamation" />
+        <Icon icon="exclamation-triangle" />
         <Text>{applabI18n.makerCheckPluggedIn()}</Text>
         <UniformWidth>
           <OverlayButton

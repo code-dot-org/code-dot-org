@@ -143,7 +143,7 @@ function Comment({
         <a onClick={onClickWrapper} key={index} className="comment-menu-item">
           <span
             style={styles.icon}
-            className={'fa-solid fa-fw fa-' + item.iconClass}
+            className={'fa fa-fw fa-' + item.iconClass}
           />
           <span style={styles.text}>{item.text}</span>
         </a>

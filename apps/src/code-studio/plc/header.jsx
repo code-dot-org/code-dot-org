@@ -32,17 +32,11 @@ export default class PlcHeader extends React.Component {
     return (
       <div style={breadcrumbStyle.container} className="uitest-plcbreadcrumb">
         <a href={this.props.course_view_path}>My Learning Plan</a>
-        <span
-          className="fa-solid fa-caret-right"
-          style={breadcrumbStyle.icon}
-        />
+        <span className="fa fa-caret-right" style={breadcrumbStyle.icon} />
         {this.props.page_name ? (
           <span>
             <a href={this.props.unit_view_path}>{this.props.unit_name}</a>
-            <span
-              className="fa-solid fa-caret-right"
-              style={breadcrumbStyle.icon}
-            />
+            <span className="fa fa-caret-right" style={breadcrumbStyle.icon} />
             <span style={breadcrumbStyle.currentPage}>
               {this.props.page_name}
             </span>

@@ -38,7 +38,7 @@ export default function AiConfidenceBox({aiConfidence}) {
         <p className={style.labelThree}>
           {aiConfidenceText}
           <span data-tip data-for="info-tip">
-            <FontAwesome icon="circle-info" className={style.infoTipIcon} />
+            <FontAwesome icon="info-circle" className={style.infoTipIcon} />
           </span>
         </p>
         <ReactTooltip id="info-tip" effect="solid">

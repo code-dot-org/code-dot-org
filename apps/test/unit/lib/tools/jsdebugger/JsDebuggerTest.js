@@ -91,8 +91,8 @@ describe('The JSDebugger component', () => {
 
   const debugAreaEl = () => root.find('#debug-area');
   const paneHeader = () => root.find('PaneHeader');
-  const closeIcon = () => paneHeader().find('.fa-circle-chevron-down');
-  const openIcon = () => paneHeader().find('.fa-circle-chevron-up');
+  const closeIcon = () => paneHeader().find('.fa-chevron-circle-down');
+  const openIcon = () => paneHeader().find('.fa-chevron-circle-up');
   const resizeBar = () => root.find('#debugResizeBar');
   const watchersResizeBar = () => root.find('#watchersResizeBar');
   const debugConsole = () => root.find('#debug-console');

@@ -53,16 +53,15 @@ DeleteWarningDialog.propTypes = {
   deleteGuide: PropTypes.func,
 };
 
-const MiniIconButton = ({icon, iconStyle, alt, func, href}) => (
+const MiniIconButton = ({icon, alt, func, href}) => (
   <TextLink
     onClick={func}
     href={href}
-    icon={<FontAwesome icon={icon} iconStyle={iconStyle} title={alt} />}
+    icon={<FontAwesome icon={icon} title={alt} />}
   />
 );
 MiniIconButton.propTypes = {
   icon: FontAwesome.propTypes.icon,
-  iconStyle: PropTypes.string,
   alt: PropTypes.string,
   func: PropTypes.func,
   href: PropTypes.string,
@@ -198,8 +197,7 @@ export default function ReferenceGuideEditAll(props) {
           return [
             <div key={`${guide.key}-actions`} className="actions-box">
               <MiniIconButton
-                icon="pen-to-square"
-                iconStyle="regular"
+                icon="pencil-square-o"
                 alt="edit"
                 href={`${baseUrl}/${guide.key}/edit`}
               />

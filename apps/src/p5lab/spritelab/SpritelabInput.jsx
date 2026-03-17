@@ -109,7 +109,7 @@ class SpritelabInput extends React.Component {
               onClick={this.onTextSubmit}
               disabled={disabled}
             >
-              <i className="fa-solid fa-check" />
+              <i className="fa fa-check" />
             </button>
           </div>
         );
@@ -164,7 +164,7 @@ class SpritelabInput extends React.Component {
         <div style={styles.prompt}>
           {numPrompts > 1 && (
             <span style={styles.circle} className="fa-stack">
-              <i className="fa-solid fa-circle fa-stack-2x" />
+              <i className="fa fa-circle fa-stack-2x" />
               <strong className="fa-stack-1x" style={styles.number}>
                 {numPrompts}
               </strong>

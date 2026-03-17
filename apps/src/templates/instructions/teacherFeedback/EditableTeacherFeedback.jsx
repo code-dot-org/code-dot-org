@@ -200,10 +200,7 @@ export class EditableTeacherFeedback extends Component {
   renderError(errorText) {
     return (
       <span>
-        <i
-          className="fa-solid fa-triangle-exclamation"
-          style={styles.errorIcon}
-        />
+        <i className="fa fa-warning" style={styles.errorIcon} />
         {errorText}
       </span>
     );
