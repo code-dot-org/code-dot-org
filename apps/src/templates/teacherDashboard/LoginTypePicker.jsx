@@ -168,7 +168,7 @@ class LoginTypePicker extends Component {
         {showStudentsToSectionPermissionWarning && (
           <p>
             <span
-              className="fa-solid fa-triangle-exclamation"
+              className="fa fa-exclamation-triangle"
               aria-hidden="true"
               style={style.warningIcon}
             />

@@ -46,8 +46,9 @@ module Dashboard
     # https://guides.rubyonrails.org/v7.0/upgrading_ruby_on_rails.html#new-activesupport-cache-serialization-format
     # for more.
     # TODO infra: remove these values once we're loading defaults for 7.0 above
-    config.active_support.disable_to_s_conversion = true
     config.active_support.cache_format_version = 7.0
+    config.active_support.disable_to_s_conversion = true
+    config.active_support.executor_around_test_case = true
 
     # Convert cookies from old (:marshall) to new (:json) default format
     # TODO infra: remove this override after 40 days in production (as

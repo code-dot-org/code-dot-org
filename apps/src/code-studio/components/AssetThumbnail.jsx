@@ -5,12 +5,12 @@ import {assets as assetsApi} from '@cdo/apps/clientApi';
 import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
-  image: 'fa-regular fa-image',
-  audio: 'fa-solid fa-music',
-  video: 'fa-solid fa-video',
-  pdf: 'fa-regular fa-file-pdf',
-  doc: 'fa-regular fa-file-lines',
-  unknown: 'fa-solid fa-question',
+  image: 'fa fa-picture-o',
+  audio: 'fa fa-music',
+  video: 'fa fa-video-camera',
+  pdf: 'fa fa-file-pdf-o',
+  doc: 'fa fa-file-text-o',
+  unknown: 'fa fa-question',
 };
 
 const assetThumbnailStyle = {
@@ -137,14 +137,14 @@ const AudioThumbnail = class extends React.Component {
 
   render() {
     const playIcon = this.props.isPlaying
-      ? 'fa-circle-pause'
-      : 'fa-circle-play';
+      ? 'fa-pause-circle'
+      : 'fa-play-circle';
 
     return (
       <div style={{...styles.wrapper, ...styles.audioWrapper}}>
         <i
           onClick={this.props.clickSoundControl}
-          className={'fa-solid ' + playIcon + ' fa-4x'}
+          className={'fa ' + playIcon + ' fa-4x'}
           style={styles.audioIcon}
         />
       </div>

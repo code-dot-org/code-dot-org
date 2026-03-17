@@ -61,7 +61,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
     onClick={onClick}
     {...HTMLAttributes}
   >
-    <FontAwesomeV6Icon iconName={'xmark'} />
+    <FontAwesomeV6Icon iconName={'close'} />
   </button>
 );
 

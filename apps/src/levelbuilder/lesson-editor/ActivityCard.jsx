@@ -185,10 +185,7 @@ class ActivityCard extends Component {
                 type="button"
                 key={section.key + 'add'}
               >
-                <i
-                  style={{marginRight: 7}}
-                  className="fa-solid fa-circle-plus"
-                />
+                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
                 Activity Section
               </button>
             </React.Fragment>

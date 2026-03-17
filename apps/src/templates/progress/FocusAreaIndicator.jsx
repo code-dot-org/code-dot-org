@@ -66,7 +66,7 @@ const FocusAreaIndicator = () => (
       <div style={styles.text}>Focus Area</div>
       <a href={window.location.pathname + '/preview-assignments'}>
         <div style={styles.focusAreaIcon} data-tip data-for="focus-area">
-          <FontAwesome icon="pen" />
+          <FontAwesome icon="pencil" />
         </div>
       </a>
     </div>
