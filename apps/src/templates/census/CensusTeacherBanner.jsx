@@ -150,7 +150,7 @@ export default function CensusTeacherBanner({
           </a>
           <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
             <button type="button" style={styles.shareButton}>
-              <i className="fa-brands fa-x-twitter" /> Share on Twitter
+              <i className="fa-brands fa-x-twitter" /> Share on X
             </button>
           </a>
         </div>
