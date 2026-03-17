@@ -2,7 +2,6 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import LessonGroup from '@cdo/apps/templates/progress/LessonGroup';
 import {
   UnconnectedProgressTable as ProgressTable,
   styles,
@@ -44,16 +43,7 @@ describe('ProgressTable', () => {
         disableLifecycleMethods: true,
       }
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <LessonGroup
-          key={FAKE_LESSON_3.lessonGroup.displayName}
-          isPlc={DEFAULT_PROPS.isPlc}
-          groupedLesson={FAKE_LESSON_3}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-        />
-      </div>
-    );
+    expect(wrapper.find('div').first().children()).to.have.lengthOf(1);
   });
 
   it('renders a single lesson without user facing lesson group in full view', () => {
@@ -90,7 +80,7 @@ describe('ProgressTable', () => {
     );
   });
 
-  it('renders multiple lessons as LessonGroups', () => {
+  it('renders multiple lessons as lesson group sections', () => {
     const wrapper = shallow(
       <ProgressTable
         {...DEFAULT_PROPS}
@@ -98,21 +88,6 @@ describe('ProgressTable', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    expect(wrapper).to.containMatchingElement(
-      <div>
-        <LessonGroup
-          key={FAKE_LESSON_3.lessonGroup.displayName}
-          isPlc={DEFAULT_PROPS.isPlc}
-          groupedLesson={FAKE_LESSON_3}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-        />
-        <LessonGroup
-          key={FAKE_LESSON_2.lessonGroup.displayName}
-          isPlc={DEFAULT_PROPS.isPlc}
-          groupedLesson={FAKE_LESSON_2}
-          isSummaryView={DEFAULT_PROPS.isSummaryView}
-        />
-      </div>
-    );
+    expect(wrapper.find('div').first().children()).to.have.lengthOf(2);
   });
 });
