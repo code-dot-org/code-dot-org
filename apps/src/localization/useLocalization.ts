@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useCallback, useEffect} from 'react';
 
 import localization from './Localization';
 
