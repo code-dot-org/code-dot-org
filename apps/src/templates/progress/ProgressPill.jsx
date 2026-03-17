@@ -90,8 +90,12 @@ class ProgressPill extends React.Component {
         ? () => onSingleLevelClick(firstLevel)
         : undefined;
 
+    const isHovered = this.state && this.state.isHovered;
+    const hoverRules =
+      hoverStyle && (hoverStyle[':hover'] ? hoverStyle[':hover'] : hoverStyle);
+
     const dynamicStyle = {
-      ...((url || onClick) && hoverStyle),
+      ...((url || onClick) && isHovered && hoverRules),
       ...(!multiLevelStep &&
         levelProgressStyle(firstLevel.status, firstLevel.kind)),
     };
@@ -127,6 +131,8 @@ class ProgressPill extends React.Component {
           {...tooltipProps}
           className={moduleStyles.levelPill}
           style={dynamicStyle}
+          onMouseEnter={() => this.setState({isHovered: true})}
+          onMouseLeave={() => this.setState({isHovered: false})}
         >
           {icon && <FontAwesome icon={icon} />}
           {text && (
