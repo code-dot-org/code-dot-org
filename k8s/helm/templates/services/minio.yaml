@@ -1,4 +1,3 @@
-# We use MinIO to emulate S3 in dev/testing environments.
 {{- if .Values.services.minio.enabled }}
 apiVersion: v1
 kind: Service
@@ -43,9 +42,15 @@ spec:
           containerPort: 9001
         env:
         - name: MINIO_ROOT_USER
-          value: "{{ .Values.services.minio.username }}"
+          valueFrom:
+            secretKeyRef:
+              name: cdo-local-secrets
+              key: _minio_root_user
         - name: MINIO_ROOT_PASSWORD
-          value: "{{ .Values.services.minio.password }}"
+          valueFrom:
+            secretKeyRef:
+              name: cdo-local-secrets
+              key: _minio_root_password
         volumeMounts:
         - name: minio-data
           mountPath: /data
@@ -143,9 +148,15 @@ spec:
             echo "setup-s3 COMPLETE"
         env:
         - name: AWS_ACCESS_KEY_ID
-          value: "local-development"
+          valueFrom:
+            secretKeyRef:
+              name: cdo-local-secrets
+              key: _minio_root_user
         - name: AWS_SECRET_ACCESS_KEY
-          value: "allstudents"
+          valueFrom:
+            secretKeyRef:
+              name: cdo-local-secrets
+              key: _minio_root_password
         - name: AWS_DEFAULT_REGION
           value: "us-east-1"
         - name: AWS_S3_ENDPOINT_URL

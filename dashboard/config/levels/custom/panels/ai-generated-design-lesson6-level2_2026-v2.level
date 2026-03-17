@@ -1,0 +1,41 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-17T05:34:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "How To: Add Image Context",
+    "offer_browser_tts": "false",
+    "panels": [
+      {
+        "text": "# How To: Add Context for AI\n\nAI works best when it can see your design.\n\nAdding files like your prompt, webpage, or brand kit helps AI generate styling that matches your ideas.",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-90f598cf-70ae-4ddf-8788-cdd69b931239",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Step 1:\n\nIf you created a sketch or design, save it to your Backpack.\n\nThen add it to your project so it appears in your file list.",
+        "imageUrl": "https://images.code.org/0a439dcb542c150eaf9b7733f075a728-ezgif-185cc191d23927e2 (1).gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-fe585fd5-6be2-4d90-84a9-e04d332f1182",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "## Step 2:\n\nAdd the files you want AI to use as context.\n\nThis might include:\n- your plan or notes\n- your code files\n- any images or designs you're working with",
+        "imageUrl": "https://images.code.org/5234d75c4bc059243612b68e3d4de56d-ezgif-1c2f07bb672a7d76.gif",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-dcaeae89-d30c-404b-b479-06bfe7f8cc6c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "## Step 3:\n\nIn the prompt box, describe what’s happening in the file and what you want AI to do. Mention the file name directly so it knows to use it as context.\n\nExample:\n“In the attached screenshot, you can see the brand kit. The button doesn’t match the secondary color. Can you suggest how I should update it to align with the brand kit?”\n\nThen send your prompt and review the result.",
+        "imageUrl": "https://images.code.org/d41e07beb6a74a5c9067897bdbf27ad5-Pasted Graphic 15.png",
+        "key": "ai-generated-design-onboarding-image-context-test-2025-6f5fae24-4402-428b-ba31-5bb8cc8526be"
+      }
+    ],
+    "name_suffix": "_2026"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-17T05:34:57.346+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson6-level1_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson6-level1_2026\"},{\"changed_at\":\"2026-03-17 06:18:57 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Panels>
