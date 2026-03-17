@@ -12,6 +12,7 @@ import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 
 import {lessonIsVisible} from './progressHelpers';
+
 import styles from './lesson-group.module.scss';
 
 /**

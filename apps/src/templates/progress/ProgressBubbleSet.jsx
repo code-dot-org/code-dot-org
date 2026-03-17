@@ -8,9 +8,10 @@ import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
 
 import ProgressBubble from './ProgressBubble';
-import moduleStyles from './progress-bubble-set.module.scss';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+
+import moduleStyles from './progress-bubble-set.module.scss';
 
 // Deprecated in favor of ProgressTableDetailCell
 // component will be removed as part of https://codedotorg.atlassian.net/browse/LP-1606

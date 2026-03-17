@@ -7,8 +7,9 @@ import i18n from '@cdo/locale';
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
-import moduleStyles from './progress-level-set.module.scss';
 import {levelWithProgressType} from './progressTypes';
+
+import moduleStyles from './progress-level-set.module.scss';
 
 /**
  * A set of one or more levels that are part of the same progression

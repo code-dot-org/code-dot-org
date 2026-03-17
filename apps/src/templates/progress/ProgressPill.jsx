@@ -15,8 +15,9 @@ import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {isLevelAssessment} from './progressHelpers';
 import {levelProgressStyle, hoverStyle} from './progressStyles';
-import moduleStyles from './progress-pill.module.scss';
 import {levelWithProgressType} from './progressTypes';
+
+import moduleStyles from './progress-pill.module.scss';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being
@@ -130,7 +131,9 @@ class ProgressPill extends React.Component {
           {icon && <FontAwesome icon={icon} />}
           {text && (
             <div
-              className={`ProgressPillTextAndIcon ${textClass}${icon ? ` ${iconMarginClass}` : ''}`}
+              className={`ProgressPillTextAndIcon ${textClass}${
+                icon ? ` ${iconMarginClass}` : ''
+              }`}
             >
               {text}
             </div>
