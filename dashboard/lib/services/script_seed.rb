@@ -238,10 +238,6 @@ module Services
 
         seed_context.lesson_groups = import_lesson_groups(lesson_groups_data, seed_context)
         seed_context.lessons = import_lessons(lessons_data, seed_context)
-        first_lesson_script = seed_context.lessons.first.script
-        puts "imported lessons. first_lesson_script name=#{first_lesson_script.name} ai_rubric_s3_config=#{first_lesson_script.ai_rubric_s3_config.inspect}"
-        puts "same object as seed_context.script? #{first_lesson_script.equal?(seed_context.script)}"
-        puts "seed_context.script.ai_rubric_s3_config=#{seed_context.script.ai_rubric_s3_config.inspect}"
         seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
         seed_context.activity_sections = import_activity_sections(activity_sections_data, seed_context)
 
@@ -297,6 +293,12 @@ module Services
       columns_to_update = get_columns(Unit) - [:original_unit_group_id]
       Unit.import! [script_to_import], on_duplicate_key_update: columns_to_update
 
+      # activerecord-import executes a raw SQL UPDATE that bypasses ActiveRecord
+      # lifecycle hooks, including query cache invalidation. Clear the query cache
+      # so that subsequent lookups via ID (e.g. lesson.script) return fresh data
+      # instead of a stale cached row that predates this import.
+      ActiveRecord::Base.connection.clear_query_cache
+
       # activerecord-import doesn't trigger callbacks for imported models, and
       # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
       # so we invoke it manually.
@@ -309,7 +311,6 @@ module Services
       # reassess the pattern being used here.
       imported_script = Unit.find_by!(name: script_to_import.name)
       imported_script.run_callbacks(:save)
-      puts "import_script: name=#{imported_script.name} ai_rubric_s3_config=#{imported_script.ai_rubric_s3_config.inspect}"
       return imported_script
     end
 

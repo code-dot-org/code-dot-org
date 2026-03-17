@@ -23,7 +23,6 @@ class AiRubricConfig
   # name of the lesson directory within the S3 release dir used for AI evaluation.
   # For example: {"CSD U3 Sprites scene challenge_2024" => "csd3-2023-L11"}
   def self.get_lesson_s3_name(script_level)
-    puts "get_lesson_s3_name: script_level.script.name=#{script_level.script.name} script_level.script.ai_rubric_s3_config=#{script_level.script.ai_rubric_s3_config.inspect}"
     script_level&.script&.ai_rubric_s3_config.try(:[], script_level&.level&.name)
   end
 

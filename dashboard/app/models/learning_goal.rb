@@ -25,7 +25,6 @@ class LearningGoal < ApplicationRecord
   validate :validate_ai_config
   def validate_ai_config
     if ai_enabled && !CDO.aws_s3_emulated
-      puts "learning_goal.validate_ai_config: learning_goal=#{learning_goal}"
       lesson_s3_name = AiRubricConfig.get_lesson_s3_name(rubric.get_script_level)
       s3_learning_goals = AiRubricConfig.get_s3_learning_goals(lesson_s3_name)
       unless s3_learning_goals.include?(learning_goal)
