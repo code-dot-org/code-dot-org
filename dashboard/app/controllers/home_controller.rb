@@ -122,6 +122,8 @@ class HomeController < ApplicationController
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
 
+    @force_race_interstitial = params[:forceRaceInterstitial]
+
     @homepage_data = {}
     @homepage_data[:isEnglish] = request.language == 'en'
     @homepage_data[:locale] = Unit.locale_english_name_map[request.locale]
