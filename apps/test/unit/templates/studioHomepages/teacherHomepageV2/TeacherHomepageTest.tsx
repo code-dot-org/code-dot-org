@@ -223,6 +223,7 @@ describe('TeacherHomepage', () => {
 
     await screen.findByText('Picture password', {}, {timeout: 5000});
     screen.getByRole('button', {name: 'Cancel'});
+    // This is a hail mary quick flakiness mitigation attempt. If we see continued failures, we should look for underlying causes.
   }, 25000);
 
   it('teaching/archived toggle', async () => {
