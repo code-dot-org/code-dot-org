@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import ProgressBubbleSet from './ProgressBubbleSet';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
+import moduleStyles from './progress-level-set.module.scss';
 import {levelWithProgressType} from './progressTypes';
 
 /**
@@ -43,7 +41,7 @@ class ProgressLevelSet extends React.Component {
     const onClick = multiLevelStep ? undefined : () => onBubbleClick(levels[0]);
 
     // Adjust column styles if locale is RTL
-    const col2Style = isRtl ? styles.col2RTL : styles.col2;
+    const col2Class = isRtl ? moduleStyles.col2RTL : moduleStyles.col2;
 
     let pillText, icon;
     let progressStyle = false;
@@ -65,10 +63,10 @@ class ProgressLevelSet extends React.Component {
     }
 
     return (
-      <table style={styles.table}>
+      <table className={moduleStyles.table}>
         <tbody>
           <tr>
-            <td style={styles.col1}>
+            <td>
               <ProgressPill
                 levels={levels}
                 icon={icon}
@@ -79,22 +77,22 @@ class ProgressLevelSet extends React.Component {
                 onSingleLevelClick={onBubbleClick}
               />
             </td>
-            <td style={col2Style}>
+            <td className={col2Class}>
               <a href={url} onClick={onClick}>
-                <div style={{...styles.nameText, ...styles.text}}>{name}</div>
+                <div className={moduleStyles.nameText}>{name}</div>
               </a>
             </td>
           </tr>
           {multiLevelStep && (
             <tr>
               <td>
-                <div style={styles.linesAndDot}>
-                  <div style={styles.verticalLine} />
-                  <div style={styles.horizontalLine} />
-                  <div style={styles.dot} />
+                <div className={moduleStyles.linesAndDot}>
+                  <div className={moduleStyles.verticalLine} />
+                  <div className={moduleStyles.horizontalLine} />
+                  <div className={moduleStyles.dot} />
                 </div>
               </td>
-              <td style={styles.col2}>
+              <td className={moduleStyles.col2}>
                 <ProgressBubbleSet
                   levels={levels}
                   disabled={disabled}
@@ -111,60 +109,8 @@ class ProgressLevelSet extends React.Component {
   }
 }
 
-const styles = {
-  table: {
-    marginTop: 12,
-  },
-  nameText: {
-    color: color.charcoal,
-  },
-  text: {
-    display: 'inline-block',
-    ...fontConstants['main-font-semi-bold'],
-    fontSize: 14,
-    letterSpacing: -0.12,
-  },
-  col2: {
-    paddingLeft: 20,
-  },
-  col2RTL: {
-    paddingRight: 20,
-  },
-  linesAndDot: {
-    whiteSpace: 'nowrap',
-    marginLeft: '50%',
-    marginRight: 14,
-  },
-  verticalLine: {
-    display: 'inline-block',
-    backgroundColor: color.lighter_gray,
-    height: 15,
-    width: 3,
-    position: 'relative',
-    bottom: 2,
-  },
-  horizontalLine: {
-    display: 'inline-block',
-    backgroundColor: color.lighter_gray,
-    position: 'relative',
-    top: -2,
-    height: 3,
-    width: '100%',
-  },
-  dot: {
-    display: 'inline-block',
-    position: 'relative',
-    left: -2,
-    top: 1,
-    backgroundColor: color.lighter_gray,
-    height: 10,
-    width: 10,
-    borderRadius: 10,
-  },
-};
-
 export const UnconnectedProgressLevelSet = ProgressLevelSet;
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(ProgressLevelSet));
+}))(ProgressLevelSet);

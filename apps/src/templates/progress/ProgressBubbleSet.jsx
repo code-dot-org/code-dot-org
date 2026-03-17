@@ -2,13 +2,13 @@
  * An ordered set of progress bubbles.
  */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import color from '@cdo/apps/util/color';
 
 import ProgressBubble from './ProgressBubble';
+import moduleStyles from './progress-bubble-set.module.scss';
 import {DOT_SIZE, DIAMOND_DOT_SIZE} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
 
@@ -38,17 +38,17 @@ class ProgressBubbleSet extends React.Component {
 
     // Adjust background styles if locale is RTL
     const backgroundFirstStyle = isRtl
-      ? styles.backgroundLast
-      : styles.backgroundFirst;
+      ? inlineStyles.backgroundLast
+      : inlineStyles.backgroundFirst;
     const backgroundLastStyle = isRtl
-      ? styles.backgroundFirst
-      : styles.backgroundLast;
+      ? inlineStyles.backgroundFirst
+      : inlineStyles.backgroundLast;
 
     const backgroundStyleProp = {
-      ...styles.background,
-      ...(level.isConceptLevel && styles.backgroundDiamond),
-      ...(isSublevel && styles.backgroundSublevel),
-      ...(level.isUnplugged && styles.backgroundPill),
+      ...inlineStyles.background,
+      ...(level.isConceptLevel && inlineStyles.backgroundDiamond),
+      ...(isSublevel && inlineStyles.backgroundSublevel),
+      ...(level.isUnplugged && inlineStyles.backgroundPill),
       ...(!isSublevel && index === 0 && backgroundFirstStyle),
       ...(!isSublevel &&
         !level.sublevels &&
@@ -57,14 +57,14 @@ class ProgressBubbleSet extends React.Component {
     };
 
     const containerStyleProp = {
-      ...styles.container,
-      ...(level.isUnplugged && styles.pillContainer),
-      ...(level.isConceptLevel && styles.diamondContainer),
-      ...(isSublevel && styles.containerSublevel),
+      ...inlineStyles.container,
+      ...(level.isUnplugged && inlineStyles.pillContainer),
+      ...(level.isConceptLevel && inlineStyles.diamondContainer),
+      ...(isSublevel && inlineStyles.containerSublevel),
     };
 
     return (
-      <div style={styles.withBackground} key={index}>
+      <div className={moduleStyles.withBackground} key={index}>
         <div style={backgroundStyleProp} />
         <div style={containerStyleProp}>
           <ProgressBubble
@@ -85,7 +85,7 @@ class ProgressBubbleSet extends React.Component {
   render() {
     const {levels, style, showSublevels} = this.props;
     return (
-      <div style={{...styles.main, ...style}}>
+      <div className={moduleStyles.main} style={style}>
         {levels.map((level, index) => {
           return (
             <span key={index}>
@@ -107,15 +107,7 @@ class ProgressBubbleSet extends React.Component {
   }
 }
 
-const styles = {
-  main: {
-    position: 'relative',
-    display: 'inline-block',
-  },
-  withBackground: {
-    display: 'inline-block',
-    position: 'relative',
-  },
+const inlineStyles = {
   background: {
     height: 10,
     backgroundColor: color.lighter_gray,
@@ -162,4 +154,4 @@ export const UnconnectedProgressBubbleSet = ProgressBubbleSet;
 
 export default connect(state => ({
   isRtl: state.isRtl,
-}))(Radium(ProgressBubbleSet));
+}))(ProgressBubbleSet);
