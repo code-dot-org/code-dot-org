@@ -189,7 +189,7 @@ export default class SubmissionsDownloadForm extends React.Component {
                               From
                               <span data-for="date-tooltip" data-tip>
                                 <FontAwesome
-                                  icon="question-circle"
+                                  icon="circle-question"
                                   iconStyle="regular"
                                   style={styles.questionTooltip}
                                 />

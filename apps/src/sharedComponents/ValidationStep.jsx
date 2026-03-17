@@ -173,7 +173,8 @@ function iconFor(stepStatus) {
     case Status.UNKNOWN:
       return (
         <FontAwesome
-          icon="question-circle"
+          icon="circle-question"
+          iconStyle="regular"
           className="fa-fw"
           style={iconStyle}
         />

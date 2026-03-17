@@ -12,7 +12,7 @@ export default function ModalHelpTip({children}) {
   return (
     <span data-for={id} data-tip>
       <FontAwesome
-        icon="question-circle"
+        icon="circle-question"
         iconStyle="regular"
         style={{cursor: 'pointer', marginLeft: '0.5em', marginRight: '0.5em'}}
       />
