@@ -240,6 +240,8 @@ module Services
         seed_context.lessons = import_lessons(lessons_data, seed_context)
         first_lesson_script = seed_context.lessons.first.script
         puts "imported lessons. first_lesson_script name=#{first_lesson_script.name} ai_rubric_s3_config=#{first_lesson_script.ai_rubric_s3_config.inspect}"
+        puts "same object as seed_context.script? #{first_lesson_script.equal?(seed_context.script)}"
+        puts "seed_context.script.ai_rubric_s3_config=#{seed_context.script.ai_rubric_s3_config.inspect}"
         seed_context.lesson_activities = import_lesson_activities(lesson_activities_data, seed_context)
         seed_context.activity_sections = import_activity_sections(activity_sections_data, seed_context)
 
