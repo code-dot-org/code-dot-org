@@ -4,7 +4,7 @@ import Shepherd, {StepOptions, Tour} from 'shepherd.js';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
-interface UseProductTourProps {
+export interface UseProductTourProps {
   getSteps: (tour: Tour) => StepOptions[];
   localStorageKey: string;
   tourAvailable: boolean;
@@ -13,6 +13,10 @@ interface UseProductTourProps {
   onCancel?: (currentStepIndex: number) => void;
   additionalStepOptions?: Partial<StepOptions>;
 }
+
+// Universal flag to hide any product tour via URL parameter.
+// Useful for unit tests, internal users, etc.
+const TOUR_HIDDEN_FLAG = 'hideProductTours';
 
 // Sets up a product tour using Shepherd.js: https://docs.shepherdjs.dev/guides/usage/
 // A tour will only be returned if the localStorageKey is not set to 'yes' and tourAvailable is true,
@@ -29,7 +33,9 @@ const useProductTour = ({
 }: UseProductTourProps) => {
   const tour = useMemo(() => {
     const tourSeen = tryGetLocalStorage(localStorageKey, 'no');
-    if (!tourAvailable || tourSeen === 'yes') {
+    const urlParams = new URLSearchParams(window.location.search);
+    const allToursHidden = urlParams.get(TOUR_HIDDEN_FLAG) === 'true';
+    if (!tourAvailable || tourSeen === 'yes' || allToursHidden) {
       return null;
     }
     const tour = new Shepherd.Tour({

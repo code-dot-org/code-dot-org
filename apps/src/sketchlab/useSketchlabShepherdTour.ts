@@ -1,17 +1,15 @@
 import {offset} from '@floating-ui/dom';
 import {useEffect, useMemo, useState} from 'react';
 
+import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import useProductTour from '@cdo/apps/sharedComponents/productTour/useProductTour';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
-import experiments from '@cdo/apps/util/experiments';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
+import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
 import {createSketchlabTourSteps} from './sketchlabShepherdTourSteps';
 
-const SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY =
-  'sketchlabOnboardingTourV2Seen';
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
 const onTourStart = () =>
@@ -31,18 +29,11 @@ const onTourCancel = (stepIndex: number) =>
   });
 
 const useSketchlabShepherdTour = () => {
-  const showShepherdProductTours = experiments.isEnabledAllowingQueryString(
-    experiments.SHEPHERD_PRODUCT_TOURS
-  );
-
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
-    const tourSeen = tryGetLocalStorage(
-      SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
-      'no'
-    );
-    if (tourSeen === 'yes' || !showShepherdProductTours) {
+    const tourSeen = tryGetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'no');
+    if (tourSeen === 'yes') {
       return;
     }
     const checkToolbarReady = () => {
@@ -68,7 +59,7 @@ const useSketchlabShepherdTour = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, [showShepherdProductTours]);
+  }, []);
 
   const additionalStepOptions = useMemo(
     () => ({
@@ -79,10 +70,10 @@ const useSketchlabShepherdTour = () => {
     []
   );
 
-  const {tour} = useProductTour({
+  const {tour} = useLab2ProductTour({
     getSteps: createSketchlabTourSteps,
-    localStorageKey: SKETCHLAB_SHEPHERD_TOUR_LOCAL_STORAGE_KEY,
-    tourAvailable: showShepherdProductTours && isToolbarReady,
+    localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
+    tourAvailable: isToolbarReady,
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,
