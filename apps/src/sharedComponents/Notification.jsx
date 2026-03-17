@@ -65,10 +65,10 @@ const Notification = ({
   const desktop = responsiveSize === undefined || responsiveSize === 'lg';
 
   const icons = {
-    information: 'circle-info',
-    success: 'circle-check',
-    failure: 'triangle-exclamation',
-    warning: 'triangle-exclamation',
+    information: 'info-circle',
+    success: 'check-circle',
+    failure: 'exclamation-triangle',
+    warning: 'exclamation-triangle',
     bullhorn: 'bullhorn',
     bullhorn_yellow: 'bullhorn',
     feedback: 'envelope',
@@ -106,7 +106,7 @@ const Notification = ({
               {tooltipText ? (
                 <span>
                   <span data-tip data-for={tooltipId} style={styles.tooltip}>
-                    <FontAwesome icon="circle-info" />
+                    <FontAwesome icon="info-circle" />
                   </span>
                   <ReactTooltip id={tooltipId} effect="solid">
                     <p style={styles.tooltipText}>{tooltipText}</p>
@@ -165,7 +165,7 @@ const Notification = ({
         </div>
         {dismissible && (
           <div style={styles.dismiss}>
-            <FontAwesome icon="xmark" onClick={handleDismiss} />
+            <FontAwesome icon="times" onClick={handleDismiss} />
           </div>
         )}
       </div>

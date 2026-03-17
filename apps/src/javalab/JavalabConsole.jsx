@@ -239,7 +239,7 @@ class JavalabConsole extends React.Component {
               onClick={() => {
                 clearConsoleLogs();
               }}
-              iconClass="fa-solid fa-eraser"
+              iconClass="fa fa-eraser"
               label={javalabMsg.clearConsole()}
             />
           </PaneSection>

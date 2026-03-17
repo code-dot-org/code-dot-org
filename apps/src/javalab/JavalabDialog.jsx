@@ -52,10 +52,7 @@ export default class JavalabDialog extends Component {
           <div style={styles.message}>{message}</div>
           <div style={styles.buttons}>
             {showSpinner && (
-              <i
-                className="fa-solid fa-spin fa-spinner"
-                style={styles.spinner}
-              />
+              <i className="fa fa-spin fa-spinner" style={styles.spinner} />
             )}
             {closeButtonText && (
               <button
