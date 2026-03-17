@@ -94,8 +94,7 @@ export async function generateChatResponse(
       );
     } catch (error) {
       // Log and skip files with unsupported or unrecognized media types so the
-      // text response is still returned to the user. The error is surfaced in
-      // the console locally and tracked in production monitoring.
+      // text response is still returned to the user.
       Lab2Registry.getInstance()
         .getMetricsReporter()
         .logError('Skipping unsupported generated file type', error as Error);
