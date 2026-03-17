@@ -106,7 +106,7 @@ const useResourcePanelShepherdTours = ({
         ) &&
         !!hasValidationConditions &&
         !!validationSettings &&
-        onboardingTourSeen) ||
+        (!isOnboardingTourEnabled || onboardingTourSeen)) ||
       false,
     [
       isLevelLoading,
@@ -114,6 +114,7 @@ const useResourcePanelShepherdTours = ({
       productToursForLevel,
       hasValidationConditions,
       validationSettings,
+      isOnboardingTourEnabled,
       onboardingTourSeen,
     ]
   );
