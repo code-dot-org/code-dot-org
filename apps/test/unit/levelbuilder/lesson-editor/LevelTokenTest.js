@@ -112,8 +112,8 @@ describe('LevelTokenContents', () => {
         allowMajorCurriculumChanges={true}
       />
     );
-    expect(wrapper.find('.fa-up-down').length).toBe(1);
-    expect(wrapper.find('.fa-xmark').length).toBe(1);
+    expect(wrapper.find('.fa-arrows-v').length).toBe(1);
+    expect(wrapper.find('.fa-times').length).toBe(1);
   });
 
   it('shows assessment indicator when assessment', () => {

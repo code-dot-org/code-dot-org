@@ -54,7 +54,7 @@ const PredictSummary: React.FunctionComponent = () => {
       {responseCount !== null && numStudents !== null && (
         <div className={moduleStyles.responses}>
           <div className={moduleStyles.responseIcon}>
-            <i className="fa-solid fa-user" />
+            <i className="fa fa-user" />
           </div>
           <div>
             <span className={moduleStyles.responseCount}>

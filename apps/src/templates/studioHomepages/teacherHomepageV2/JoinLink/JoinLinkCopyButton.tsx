@@ -115,7 +115,7 @@ const JoinLinkCopyButton: React.FC<JoinLinkCopyButtonProps> = ({
             aria-label={i18n.whyWithQuestionMark()}
             type="button"
           >
-            <FontAwesomeV6Icon iconName="circle-question" iconStyle="regular" />
+            <FontAwesomeV6Icon iconName="question-circle" iconStyle="regular" />
           </button>
         </Typography>
       </div>

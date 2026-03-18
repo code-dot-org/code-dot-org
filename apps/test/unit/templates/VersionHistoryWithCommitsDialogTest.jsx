@@ -119,10 +119,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       assert(
         wrapper.containsMatchingElement(
-          <i
-            className="fa-solid fa-spinner fa-spin"
-            style={{fontSize: '32px'}}
-          />
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         )
       );
     });
@@ -141,10 +138,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       // Spinner goes away
       assert(
         !wrapper.containsMatchingElement(
-          <i
-            className="fa-solid fa-spinner fa-spin"
-            style={{fontSize: '32px'}}
-          />
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         )
       );
 
@@ -271,10 +265,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       it('immediately renders spinner', () => {
         expect(
           wrapper.containsMatchingElement(
-            <i
-              className="fa-solid fa-spinner fa-spin"
-              style={{fontSize: '32px'}}
-            />
+            <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
           )
         );
       });

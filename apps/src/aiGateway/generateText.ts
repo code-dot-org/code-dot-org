@@ -63,6 +63,11 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
   } as GenerateTextResult<TOOLS, OUTPUT>;
 };
 
+/**
+ * Fulfills the AI SDK generateText API through the AI Gateway.
+ * This involves serializing the SDK's output schema, calling the gateway,
+ * and rehydrating the response back into the SDK's output format.
+ */
 const generateTextThroughGateway = async <
   TOOLS extends SDKTools = SDKTools,
   OUTPUT extends SDKOutput = SDKOutput
@@ -100,4 +105,4 @@ const generateTextThroughGateway = async <
   }
 };
 
-export {generateTextThroughGateway as generateText};
+export default generateTextThroughGateway;

@@ -59,7 +59,7 @@ export default function AssignmentVersionMenuItem(props) {
                   numLanguages: courseVersion.locales.length,
                 })}
                 &nbsp;
-                <FontAwesome icon="circle-info" style={style.infoCircle} />
+                <FontAwesome icon="info-circle" style={style.infoCircle} />
               </span>
               <ReactTooltip id={tooltipId} place="right">
                 {courseVersion.locales.join(', ')}
