@@ -6,9 +6,9 @@
 }
 
 .nameText {
+  @include main-font-semi-bold;
   color: $charcoal;
   display: inline-block;
-  @include main-font-semi-bold;
   font-size: 14px;
   letter-spacing: -0.12px;
 }

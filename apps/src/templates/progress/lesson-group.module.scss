@@ -6,10 +6,10 @@
 }
 
 .header {
+  @include main-font-semi-bold;
   padding: 20px;
   background-color: $dark_charcoal;
   font-size: 18px;
-  @include main-font-semi-bold;
   color: white;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;

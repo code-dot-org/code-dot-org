@@ -2,6 +2,7 @@
 @import 'font.scss';
 
 .levelPill {
+  @include main-font-semi-bold;
   text-align: center;
   justify-content: center;
   border-width: 2px;
@@ -10,7 +11,6 @@
   color: $charcoal;
   display: flex;
   font-size: 16px;
-  @include main-font-semi-bold;
   border-radius: 20px;
   padding-left: 10px;
   padding-right: 10px;
@@ -24,14 +24,14 @@
 }
 
 .text {
-  display: inline-block;
   @include main-font-semi-bold;
+  display: inline-block;
   letter-spacing: -0.12px;
 }
 
 .textProgressStyle {
-  display: inline-block;
   @include main-font-semi-bold;
+  display: inline-block;
   font-size: 12px;
   letter-spacing: -0.12px;
   width: 120px;
