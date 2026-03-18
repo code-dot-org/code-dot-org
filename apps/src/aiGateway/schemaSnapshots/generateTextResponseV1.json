@@ -27,47 +27,6 @@
       "additionalProperties": false
     },
     "output": {},
-    "toolCalls": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "toolCallId": {
-            "type": "string"
-          },
-          "toolName": {
-            "type": "string"
-          },
-          "input": {}
-        },
-        "required": [
-          "toolCallId",
-          "toolName"
-        ],
-        "additionalProperties": false
-      }
-    },
-    "toolResults": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "toolCallId": {
-            "type": "string"
-          },
-          "toolName": {
-            "type": "string"
-          },
-          "input": {},
-          "output": {}
-        },
-        "required": [
-          "toolCallId",
-          "toolName"
-        ],
-        "additionalProperties": false
-      }
-    },
     "warnings": {
       "type": "array",
       "items": {}

@@ -1,16 +1,56 @@
 import z from 'zod/v3';
 
 // ---------------------------------------------------------------------------
-// Shared sub-schemas
+// Message content parts
 // ---------------------------------------------------------------------------
 
-// Basic message envelope — role is one of the four SDK roles, content is
-// left as unknown because it can be a plain string or a complex multimodal
-// array (TextPart | FilePart | ...) depending on the role.
-const MessageSchema = z.object({
-  role: z.enum(['system', 'user', 'assistant', 'tool']),
-  content: z.unknown(),
+// A plain text part — the most common message content type.
+const TextPartSchema = z.object({
+  type: z.literal('text'),
+  text: z.string(),
 });
+
+// A file part (image or document) — `data` is always a base64 string after
+// assetToFilePart() serialises the binary.
+const FilePartSchema = z.object({
+  type: z.literal('file'),
+  data: z.string(), // base64-encoded file contents
+  mediaType: z.string(),
+  filename: z.string().optional(),
+});
+
+// System messages always carry a plain string.
+const SystemMessageSchema = z.object({
+  role: z.literal('system'),
+  content: z.string(),
+});
+
+// User and assistant messages carry either a plain string or an array of
+// content parts (text + optional file attachments).
+const ContentPartsSchema = z.union([
+  z.string(),
+  z.array(z.union([TextPartSchema, FilePartSchema])),
+]);
+
+const UserMessageSchema = z.object({
+  role: z.literal('user'),
+  content: ContentPartsSchema,
+});
+
+const AssistantMessageSchema = z.object({
+  role: z.literal('assistant'),
+  content: ContentPartsSchema,
+});
+
+const MessageSchema = z.union([
+  SystemMessageSchema,
+  UserMessageSchema,
+  AssistantMessageSchema,
+]);
+
+// ---------------------------------------------------------------------------
+// Other request sub-schemas
+// ---------------------------------------------------------------------------
 
 // The serialized form of an Output schema as sent through the gateway.
 // aiSdkCompatibleGateway#serializeOutputSchema converts Output.object() into
@@ -20,23 +60,11 @@ const SerializedOutputRequestSchema = z.object({
   schema: z.record(z.unknown()).optional(),
 });
 
-// Common envelope for a tool call.  Tool-specific input is unknown/generic
-// because its shape depends on the tool definition.
-const ToolCallSchema = z.object({
-  toolCallId: z.string(),
-  toolName: z.string(),
-  input: z.unknown(),
-});
+// ---------------------------------------------------------------------------
+// Provider-response metadata
+// ---------------------------------------------------------------------------
 
-// Common envelope for a tool result.
-const ToolResultSchema = z.object({
-  toolCallId: z.string(),
-  toolName: z.string(),
-  input: z.unknown(),
-  output: z.unknown(),
-});
-
-// Provider-response metadata returned alongside the generation result.
+// Raw provider-response metadata returned alongside the generation result.
 // The `body` field carries the raw HTTP body from the LLM provider — its
 // shape is provider-specific (e.g. Gemini puts moderation details in
 // body.candidates[0].finishReason/finishMessage).
@@ -77,11 +105,11 @@ const GatewayGenerateTextResponseV1Schema = z.object({
     totalTokens: z.number().optional(),
   }),
   // Parsed structured output when the request included an `output` schema.
-  // The concrete shape depends on the caller-supplied schema, so it remains
-  // unknown here.  Callers cast it (e.g. `output as {classification: string}`).
+  // The concrete shape is determined per-callsite by the OUTPUT generic of
+  // generateText — the wire contract can't capture it, so it stays unknown.
+  // Callers access it via the SDK's typed return value (e.g. result.output
+  // is inferred as {classification: 'OK' | 'INAPPROPRIATE'} in safetyHelpers).
   output: z.unknown().optional(),
-  toolCalls: z.array(ToolCallSchema).optional(),
-  toolResults: z.array(ToolResultSchema).optional(),
   warnings: z.array(z.unknown()).optional(),
   files: z
     .array(

@@ -56,17 +56,9 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
       base64: file.base64,
       uint8Array: base64ToUint8Array(file.base64),
     })),
-    toolCalls: (wire.toolCalls ?? []) as GenerateTextResult<
-      TOOLS,
-      OUTPUT
-    >['toolCalls'],
-    toolResults: (wire.toolResults ?? []) as GenerateTextResult<
-      TOOLS,
-      OUTPUT
-    >['toolResults'],
     warnings: wire.warnings ?? [],
-    // output is unknown in the wire schema; callers cast it to the concrete
-    // type inferred from their OUTPUT generic (e.g. {classification: string}).
+    // output is unknown in the wire schema; callers get the concrete type via
+    // the OUTPUT generic inferred from their generateText() call options.
     output: wire.output as OUTPUT,
     // Restore the Date that was serialised to an ISO string.
     response: wire.response
