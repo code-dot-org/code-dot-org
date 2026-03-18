@@ -77,7 +77,8 @@ template '/etc/otelcol-contrib/config.yaml' do
               sentry_otlp_endpoint: node['cdo-otel-collector']['sentry_otlp_endpoint'],
               prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
               prometheus_region: node['cdo-otel-collector']['prometheus_region'],
-              apm_trace_sample_rate: node['cdo-otel-collector']['apm_trace_sample_rate']
+              apm_trace_sample_rate: node['cdo-otel-collector']['apm_trace_sample_rate'],
+              enable_logs: node['cdo-otel-collector']['enable_logs']
             }
 )
   notifies :restart, 'service[otelcol-contrib]', :delayed
