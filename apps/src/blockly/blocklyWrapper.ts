@@ -236,7 +236,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   fieldsToRegister.forEach(override => {
     const fieldRegistryName = override[0];
     const fieldClass = override[1];
-    blocklyWrapper.fieldRegistry.unregister(fieldRegistryName);
     blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
   });
 
@@ -289,7 +288,6 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.serialization.registry.unregister('procedures');
   blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
