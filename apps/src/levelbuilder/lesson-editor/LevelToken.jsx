@@ -26,14 +26,19 @@ export class UnconnectedLevelToken extends Component {
     handleDragStart: PropTypes.func,
     removeLevel: PropTypes.func.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     // from redux
     toggleExpand: PropTypes.func,
   };
 
   render() {
-    const {draggedLevelPos, scriptLevel, allowMajorCurriculumChanges} =
-      this.props;
+    const {
+      draggedLevelPos,
+      scriptLevel,
+      allowMajorCurriculumChanges,
+      rubricLevelId,
+    } = this.props;
     const springConfig = {stiffness: 1000, damping: 80};
 
     return (
@@ -71,6 +76,7 @@ export class UnconnectedLevelToken extends Component {
               activitySectionPosition={this.props.activitySectionPosition}
               activityPosition={this.props.activityPosition}
               allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+              rubricLevelId={rubricLevelId}
             />
           )
         }
@@ -95,6 +101,7 @@ export class LevelTokenContents extends Component {
     activitySectionPosition: PropTypes.number.isRequired,
     activityPosition: PropTypes.number.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
   };
 
   handleDragStart = e => {
@@ -125,8 +132,13 @@ export class LevelTokenContents extends Component {
   };
 
   render() {
-    const {scriptLevel, allowMajorCurriculumChanges} = this.props;
+    const {scriptLevel, allowMajorCurriculumChanges, rubricLevelId} =
+      this.props;
     const hasVariants = scriptLevel.levels.length > 1;
+    const isRubricLevel =
+      rubricLevelId !== null &&
+      rubricLevelId !== undefined &&
+      String(rubricLevelId) === scriptLevel.activeId;
 
     const activeLevel = hasVariants
       ? scriptLevel.levels.filter(level => {
@@ -201,7 +213,7 @@ export class LevelTokenContents extends Component {
         >
           <i className="fa fa-pencil" />
         </div>
-        {allowMajorCurriculumChanges && (
+        {allowMajorCurriculumChanges && !isRubricLevel && (
           <div style={styles.remove} onMouseDown={this.handleRemove}>
             <i className="fa fa-times" />
           </div>

@@ -116,6 +116,39 @@ describe('LevelTokenContents', () => {
     expect(wrapper.find('.fa-times').length).toBe(1);
   });
 
+  it('hides deletion button when level is referenced by a rubric', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+        rubricLevelId={2001}
+      />
+    );
+    expect(wrapper.find('.fa-times').length).toBe(0);
+  });
+
+  it('shows deletion button when a different level is the rubric level', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+        rubricLevelId={9999}
+      />
+    );
+    expect(wrapper.find('.fa-times').length).toBe(1);
+  });
+
+  it('shows deletion button when there is no rubric level', () => {
+    const wrapper = shallow(
+      <LevelTokenContents
+        {...defaultProps}
+        allowMajorCurriculumChanges={true}
+        rubricLevelId={null}
+      />
+    );
+    expect(wrapper.find('.fa-times').length).toBe(1);
+  });
+
   it('shows assessment indicator when assessment', () => {
     let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
     tempScriptLevel.assessment = true;

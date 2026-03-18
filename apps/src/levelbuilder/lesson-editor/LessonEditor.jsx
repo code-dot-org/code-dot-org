@@ -39,6 +39,7 @@ class LessonEditor extends Component {
     initialLessonData: PropTypes.object,
     unitInfo: PropTypes.object,
     rubricId: PropTypes.number,
+    rubricLevelId: PropTypes.number,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -488,6 +489,7 @@ class LessonEditor extends Component {
           <ActivitiesEditor
             hasLessonPlan={hasLessonPlan}
             allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+            rubricLevelId={this.props.rubricLevelId}
           />
         </CollapsibleEditorSection>
         {!this.hasRubric() && (

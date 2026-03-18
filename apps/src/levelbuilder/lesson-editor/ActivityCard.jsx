@@ -36,6 +36,7 @@ class ActivityCard extends Component {
     collapsed: PropTypes.bool.isRequired,
     hasLessonPlan: PropTypes.bool.isRequired,
     allowMajorCurriculumChanges: PropTypes.bool.isRequired,
+    rubricLevelId: PropTypes.number,
 
     //redux
     addActivitySection: PropTypes.func.isRequired,
@@ -93,6 +94,7 @@ class ActivityCard extends Component {
       updateActivitySectionMetrics,
       hasLessonPlan,
       allowMajorCurriculumChanges,
+      rubricLevelId,
     } = this.props;
 
     let levelsInActivity = 0;
@@ -174,6 +176,7 @@ class ActivityCard extends Component {
                 updateActivitySectionMetrics={updateActivitySectionMetrics}
                 hasLessonPlan={hasLessonPlan}
                 allowMajorCurriculumChanges={allowMajorCurriculumChanges}
+                rubricLevelId={rubricLevelId}
               />
 
               <button
