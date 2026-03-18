@@ -1,0 +1,74 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-17T20:04:07.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Explore Weblab\r\n\r\nTake **5 minutes** to explore Web Lab.\r\n\r\nClick around and see what you can discover. For example, can you figure out how to get AI to make changes to the page?\r\n",
+    "teacher_markdown": "Encourage students to try out as many buttons and features as they can. Remind them not to worry - they can't break anything on the page.\r\n\r\nAs they explore, students should naturally discover:\r\n- Instructions\r\n- File panel\r\n- `index.html` file\r\n- `style.css` file\r\n- `computer.jpg` file\r\n- Code/Preview/Split View tab\r\n- AI Tutor\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "example"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>WebLab Explorer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <nav>\n            <div class=\"logo\">\n                <img src=\"computer.png\" alt=\"Computer and monitor\">\n            </div>\n            <ul class=\"nav-links\">\n                <li><a href=\"#\">Home</a></li>\n                <li><a href=\"#\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n\n    <main>\n        <h1>Hello World</h1>\n        <p>Click around and see what you can figure out about WebLab.</p>\n    </main>\n\n    <footer>\n        <p>&copy; 2026 Student Sandbox</p>\n    </footer>\n</body>\n</html>  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: sans-serif;\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n  text-align: center;\n}\n\nheader {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: white;\n  border-bottom: 1px solid #ddd;\n  padding: 10px 0;\n}\n\nnav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.logo img {\n  height: 30px;\n}\n\n.nav-links {\n  list-style: none;\n  display: flex;\n  gap: 20px;\n  margin: 0;\n  padding: 0;\n}\n\n.nav-links a {\n  text-decoration: none;\n  color: #666;\n  font-weight: bold;\n}\n\nh1 {\n  font-size: 3rem;\n  margin-bottom: 10px;\n  color: #222;\n}\n\np {\n  font-size: 1.2rem;\n  color: #555;\n}\n\nfooter {\n  position: absolute;\n  bottom: 20px;\n  font-size: 0.8rem;\n  color: #999;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "computer.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/9bfffa7a-f761-469e-8ac5-45aa3b0a43d2.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-17 20:07:52 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:08:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:09:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

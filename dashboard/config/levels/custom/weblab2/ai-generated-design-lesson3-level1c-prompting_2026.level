@@ -1,13 +1,14 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-03-10T18:42:47.000Z",
   "level_num": "custom",
   "user_id": 1574,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## The Cozy Nook: Designing for Jada\r\n\r\n**The User:** Jada owns \"The Purr-fect Page,\" a cat café and bookstore where customers can rent cozy reading nooks. She needs a booking system with a \"Cottagecore\" vibe.\r\n\r\n**Your Task:** Write a detailed prompt for AI Tutor to help you generate your web app layout. Your prompt must address the following three questions:\r\n\r\n1. What is the goal? \r\n> What information (e.g., cat names, available time slots, waitlist) does the booking system keep track of?\r\n\r\n2. What are the constraints?\r\n> What specific fonts, colors, and text should the page use to feel cozy?\r\n\r\n3. What are the edge cases?\r\n> How should the website handle a situation where all the reading nooks are booked or all the cats are asleep?",
-    "submittable": "false",
+    "long_instructions": "## The Cozy Nook: Designing for Jada\r\n\r\n**The User:** Jada owns \"The Purr-fect Page,\" a cat café and bookstore where customers can rent cozy reading nooks. She needs a booking system with a \"Cottagecore\" vibe.\r\n\r\n**Step 1.** Prompt AI to generate your web app layout (HTML). Briefly describe what AI changed, e.g. \"Created index.html for garden web app\". Then click **Accept and save version**.\r\n\r\n::: details [**What should I write in my prompt?**]\r\nThink about it:\r\n> What information (e.g., cat names, available time slots, waitlist) does the booking system keep track of?\r\n:::\r\n\r\n**Step 2.** Prompt AI to generate your page style (CSS).\r\n\r\n::: details [**What should I write in my prompt?**]\r\nThink about it:\r\n> What specific fonts, colors, and text should the page use to feel cozy?\r\n:::\r\n\r\n**Step 3.** Add in images to your site.\r\n\r\n**Step 4.** Use the activity guide checklist to brainstorm more features to add to your site.",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -27,29 +28,61 @@
     },
     "start_sources": {
       "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
       },
       "files": {
+        "1": {
+          "id": "1",
+          "name": "black_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1c-prompting_2026/uuid/d550a879-f56a-4e8a-9619-04a6d8092482.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "orange_tabby.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1c-prompting_2026/uuid/913048ae-365d-4e77-95cc-3d49d995984a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "calico_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1c-prompting_2026/uuid/eb978395-4a65-499b-80a7-f3c755bb7466.jpg",
+          "type": "starter",
+          "active": false
+        }
       },
       "openFiles": [
 
       ]
     },
-    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqwElaoRX309s+kb2KI\nu5Zkxr2RaxqUcfpzOz5ACyIE60yUORzRLItSXu9YGVACk5NcuHs+w/Hix5mY\nSCChPZ0jzjHqrbuNhS7LL/hMWo6PPXswi9ga9Bbd/S6oKlaFeJiz5h5K3W5k\nEimREMfwfHeEJUZruYhBoZBiTT0tHybGa0Hf8RVeKRWajkWqzjmV/sh4mdun\ncWGi0v4PYQKV+DNwT9Eb6UI/AYnMeAqVRgw1igs0tvqnyL7WMAUrlW7Hw9BK\n2Fo6H8Wb4YBJcRXQG+5N4mg4KpPg55mNViiVbClz5DN+rJv4lXQZi0tqAMgR\nkC3GA3BkKohYKmNq7AA0lJ2Lgqw1F9KU55c0zpsE49XzyUePg8LlXTsubwnf\nZe6S+UIJfJ0wNqAOUp0w8cnVI5F7B0E3XsGE4RNWWKFam+ILN6E45+wM57F9\nxF+5l9+aHMlAnUZmjvXJYCYwLC2WuvW789W+mOz4t5LBu44sSiN/jdnH8WaA\neoYubmj+qRGaX8q8es1axnL3DjMetIQ98Ur0W9kvzt1+zTgzOCCoxoViEmYc\ngfA/fwvasbGgd8CusbPlK4K7nDnZVJ5Ic1nsv2fMHyanjJWXA8ZbeR6jNheu\n806jdeSqDlwUqkSUMCIGdA4M0LCg5vEDwTYqOZ++hedSJggr0Q7WC9JSqS9c\nhmnrvROlpEKyuW2Xogkygj0DmyeUWFyA9Kz4DZmBrabgNs+Tj7ObXpAKOxd7\nGhwqAtf3Pk1N2Qc7KQjb7Sg1PItSD7arWFYM2tlKqjH0Fjh+1FFbVt0RrTU9\nG6qZDcsX1AHHErn0Ro1LXI6fJYkDKTEdwp/h6ZKex4AXdtVFNI6dIURFetn0\nt3b1lxacaLzX00qwheqcTo4K3yuRz2kFnAxmCWl4hV1pZm0AEHs5goyczdkt\nxtteKp7vSAZh6L4hT7XZpq4IoCspRvoQX1CPFNGbZHDnFMkWfnSeH9q0dLFV\nTP6zQbGpk7f3UzDQ8PBOKoQsTP03ty9K33E79LENHXup7FL/kXFp/uiv9VU/\nISYQ4zxHR/otUsuOpBA2ZqzWfvEwDdG1MVIDYvXDNzzNfOrhhmY=\n",
+    "encrypted_exemplar_sources": "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\nnsAQ/Fv4L5GcrOTtW3M=\n",
     "name_suffix": "_2026",
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "buildHTML"
+        "buildHTML",
+        "buildCSS"
       ],
       "answerTypeCustomizations": {
       }
     },
-    "project_template_level_name": "ai-generated-design-lesson3-template_2026",
-    "teacher_markdown": "Have students read over their prompt to \"see\" their web app in their mind. \r\n\r\nIf their requirements are too vague for them to visualize the webpage, encourage them to add at least one more specific detail to each category. \r\n\r\nThe more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning.",
+    "teacher_markdown": "**Tell AI exactly what you want to see**\r\n- Have students read over their prompt to \"see\" their web app in their mind. \r\n- If their requirements are too vague for them to visualize the webpage, encourage them to add at least one specific detail. The more detailed and specific their prompt, the more likely AI is to build exactly what they are envisioning. \r\n\r\n**Emphasize iteration, not perfection.**  \r\n- The goal is not to “win” the best design — it’s to practice prompting AI and refining work.\r\n- Check that students save AI generated code with clear, short comments (e.g., “Added hero section”)\r\n\r\n**Big Idea Reminder:**  \r\n  - AI is a collaborator, not an autopilot.\r\n  - Prompt clarity matters.",
     "display_name": "The Cozy Nook",
     "bubble_choice_description": "Jada needs a booking system for her cat cafe and bookstore.",
     "thumbnail_url": "https://images.code.org/4ede02e93e65d672efbd74e869f04392-cozy_nook.png"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-10T18:42:47.841+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1b-prompting_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1b-prompting_2026\"},{\"changed_at\":\"2026-03-10 18:44:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:49:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 19:03:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10T18:42:47.841+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1b-prompting_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1b-prompting_2026\"},{\"changed_at\":\"2026-03-10 18:44:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:47:08 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 18:49:35 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 19:03:31 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:20:40 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"project_template_level_name\",\"teacher_markdown\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:27:50 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:32:23 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:33:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:33:58 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:36:27 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 19:36:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:03:11 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
