@@ -10,6 +10,28 @@ variable "region" {
   default     = "us-east-1"
 }
 
+variable "parent_domain" {
+  description = "Parent public Route 53 domain, e.g. code.org, cluster will use a subdomain of this domain"
+  type        = string
+  default     = "code.org"
+
+  validation {
+    condition     = trimspace(var.parent_domain) != ""
+    error_message = "parent_domain must not be empty."
+  }
+}
+
+variable "cluster_subdomain" {
+  description = "Subdomain, e.g. k8s, delegated to the cluster for public service hostnames."
+  type        = string
+  default     = "k8s"
+
+  validation {
+    condition     = trimspace(var.cluster_subdomain) != ""
+    error_message = "cluster_subdomain must not be empty."
+  }
+}
+
 variable "kubernetes_version" {
   description = "Kubernetes version for the EKS cluster."
   type        = string
