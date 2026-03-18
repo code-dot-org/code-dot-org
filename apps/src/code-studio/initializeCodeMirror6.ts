@@ -1,19 +1,10 @@
 import {html} from '@codemirror/lang-html';
-import {esLint, javascript} from '@codemirror/lang-javascript';
-import {json, jsonParseLinter} from '@codemirror/lang-json';
+import {javascript} from '@codemirror/lang-javascript';
+import {json} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {xml} from '@codemirror/lang-xml';
-import {
-  Diagnostic,
-  forEachDiagnostic,
-  lintGutter,
-  linter,
-} from '@codemirror/lint';
 import {EditorState, Extension} from '@codemirror/state';
 import {EditorView, ViewUpdate} from '@codemirror/view';
-import js from '@eslint/js';
-import * as eslint from 'eslint-linter-browserify';
-import globals from 'globals';
 import React from 'react';
 
 import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
@@ -47,11 +38,6 @@ interface CodeMirrorLegacyAdapter {
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
   attachments?: boolean;
-  onUpdateLinting?: (errors: Array<{message: string}>) => void;
-  lintConfig?: {
-    es5?: boolean;
-    disableRecommendedJsConfig?: boolean;
-  };
   preview?: string | Element;
   game?: string;
 }
@@ -61,13 +47,8 @@ type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
     border: '1px solid #eee',
-    backgroundColor: 'white',
   },
 });
-
-interface Options {
-  callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
-}
 
 const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
@@ -81,57 +62,13 @@ function getLanguageExtension(mode: EditorMode): Extension {
   return languageExtensionMap[mode];
 }
 
-const getLintExtension = (
-  mode: EditorMode,
-  lintConfig?: Options['lintConfig']
-): Extension | null => {
-  if (mode === 'json') {
-    return linter(jsonParseLinter());
-  }
-
-  if (mode === 'javascript') {
-    // Our core existing use case is for block editing, which needs to enforce ES5.
-    // It also doesn't want to enforce normal linting rules since the code being edited is often just a snippet that won't run on its own.
-    // So, we allow those existing use cases to override "normal" linting, but still offer the normal config for future use cases that want it.
-    const eslintConfig = {
-      ...(lintConfig?.disableRecommendedJsConfig ? {} : js.configs.recommended),
-      languageOptions: {
-        globals: {
-          ...(lintConfig?.disableRecommendedJsConfig ? {} : globals.browser),
-        },
-        ...(lintConfig?.es5 ? {ecmaVersion: 5, sourceType: 'script'} : {}),
-      },
-    };
-
-    return linter(esLint(new eslint.Linter(), eslintConfig));
-  }
-
-  return null;
-};
-
-const resolveTarget = (target: string | Element): HTMLTextAreaElement => {
+function resolveTarget(target: string | Element): HTMLTextAreaElement {
   const node =
     typeof target === 'string' ? document.getElementById(target) : target;
   if (!(node instanceof HTMLTextAreaElement)) {
     throw new Error('initializeCodeMirror6 target must resolve to a textarea');
   }
   return node;
-};
-
-function getLintDiagnostics(state: EditorState): Diagnostic[] {
-  const diagnostics: Diagnostic[] = [];
-  forEachDiagnostic(state, diagnostic => {
-    diagnostics.push(diagnostic);
-  });
-  return diagnostics;
-}
-
-function getErrorMessages(diagnostics: Diagnostic[]): Array<{message: string}> {
-  return diagnostics
-    .filter(
-      diagnostic => !diagnostic.severity || diagnostic.severity === 'error'
-    )
-    .map(diagnostic => ({message: diagnostic.message}));
 }
 
 function resolvePreviewElement(
@@ -153,8 +90,6 @@ function resolvePreviewElement(
  * @param {!string} mode - editor syntax mode
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
- * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
- * @param {Object} [options.lintConfig] - configuration options for linting (only applicable for javascript mode).
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
  * @param {(string|Element)} [options.preview] - element or id of element to
@@ -168,12 +103,9 @@ function initializeCodeMirror6(
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
-
-  const {callback, attachments, onUpdateLinting, preview, game} = options;
+  const {callback, attachments, preview, game} = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
-  const lintExtension = getLintExtension(mode, options.lintConfig);
-
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -250,27 +182,21 @@ function initializeCodeMirror6(
     getLanguageExtension(mode),
     levelbuilderEditorTheme,
     EditorView.lineWrapping,
-    ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {
         dropListeners.forEach(listener => listener(event));
       },
     }),
     EditorView.updateListener.of(update => {
-      if (update.docChanged) {
-        node.value = update.state.doc.toString();
-        changeListeners.forEach(listener => listener());
-        if (callback) {
-          callback(adapter, update);
-        }
-
-        updatePreview();
+      if (!update.docChanged) {
+        return;
       }
-
-      if (onUpdateLinting) {
-        const diagnostics = getLintDiagnostics(update.state);
-        onUpdateLinting(getErrorMessages(diagnostics));
+      node.value = update.state.doc.toString();
+      changeListeners.forEach(listener => listener());
+      if (callback) {
+        callback(adapter, update);
       }
+      updatePreview();
     }),
   ];
 
