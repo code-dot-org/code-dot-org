@@ -20,11 +20,7 @@ import pageConstants, {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
-import {allowConsoleErrors} from '../../../util/testUtils';
-
 describe('InstructionsCSF', () => {
-  allowConsoleErrors();
-
   let wrapper;
 
   beforeEach(() => {
