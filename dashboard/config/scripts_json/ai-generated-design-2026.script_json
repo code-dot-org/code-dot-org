@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-17 22:34:05 UTC",
+    "serialized_at": "2026-03-18 18:52:52 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -266,7 +266,6 @@
       "relative_position": 10,
       "properties": {
         "overview": "**Why sketch before building?**\n\nIn this lesson, students take on the role of UX Designers to explore how sketches and wireframes help plan structure and user flow before any visual design or AI tools come into play. Through rapid sketching, analysis, and peer feedback, they learn that wireframing emphasizes clarity, consistency, and human decision-making in the design process. The lesson reinforces how designers use abstraction and pattern recognition to stay in control of structure and logic before automation or coding begins.",
-        "preparation": "- (Optional) Print copies of the Wireframe activity guide if your students will not use Sketch Lab on Level 1",
         "student_overview": "**Why sketch before building?**\n\nIn this lesson, you act as a UX Designer to plan how a website or app is organized before any visuals or code are added. By sketching and refining wireframes, you focus on structure, clarity, and the design choices that belong to humans before AI takes over."
       },
       "seeding_key": {
@@ -4186,19 +4185,6 @@
       }
     },
     {
-      "key": "a744ef39-5994-4222-aade-28fc67621dd6",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6",
-        "lesson_activity.key": "6987f845-0307-46f4-95e1-cb23334e7b13"
-      }
-    },
-    {
       "key": "4434fab1-54f0-4982-a9c6-b6b52b788bdc",
       "position": 1,
       "properties": {
@@ -5575,28 +5561,6 @@
     },
     {
       "chapter": 32,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level4_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-level4_2026"
-      ]
-    },
-    {
-      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5582,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5640,7 +5604,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5662,7 +5626,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5684,7 +5648,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5670,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5728,7 +5692,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5750,7 +5714,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5772,7 +5736,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5794,7 +5758,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5816,7 +5780,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5838,7 +5802,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5860,7 +5824,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6257,18 +6221,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson10-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level4_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson11-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson11-level1_2026"
@@ -6479,34 +6431,6 @@
       },
       "seeding_key": {
         "resource.key": "_key_style_critique"
-      }
-    },
-    {
-      "name": "[KEY] T-Chart",
-      "url": "https://docs.google.com/document/d/1UsgIuNI_aNlZaOzr_667iePrqFkUTZiY4KIveI__oo4/edit?tab=t.0#heading=h.bfop92qafrad",
-      "key": "_key_t-chart",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_t-chart"
-      }
-    },
-    {
-      "name": "[KEY] Wireframes (Optional)",
-      "url": "https://docs.google.com/document/d/15XU5Dann9rwYwjrZ3g6r1v0LNzRoFha7feHpjXr_NsA/edit?tab=t.0#heading=h.mhs0fprrl5av",
-      "key": "_key_wireframes_optional_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_wireframes_optional_"
       }
     },
     {
@@ -6782,21 +6706,6 @@
       }
     },
     {
-      "name": "T-Chart",
-      "url": "https://docs.google.com/document/d/1x1lwDYLuzz-w2hm8uInClUFmuwy_w5X3PmIzk1idOtM/edit?tab=t.0#heading=h.10sosi3gwomj",
-      "key": "t-chart",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "t-chart"
-      }
-    },
-    {
       "name": "The User's Experience",
       "url": "https://docs.google.com/presentation/d/1BkwdM0vfy8JYMLajMMxRXGV-K4FzpeVA1TTsc1uIUog/edit?usp=sharing",
       "key": "the_user_s_experience_2",
@@ -6870,7 +6779,7 @@
     },
     {
       "name": "Wireframes",
-      "url": "https://docs.google.com/presentation/d/1K3DYsr0FcrX-LUTglBO-8peHRfh_sqzuvwGGX9qP_YA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tm8zE_n7KOn-tBoq66cr5pID-X0tT_C9zRJvV9gQ6o8/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "wireframes",
       "properties": {
         "audience": "Teacher",
@@ -6881,52 +6790,13 @@
       "seeding_key": {
         "resource.key": "wireframes"
       }
-    },
-    {
-      "name": "Wireframes (Optional)",
-      "url": "https://docs.google.com/document/d/1e-aJd-dGapdKFOf8S9rQxT3TlYyFrXcwORzdtIyw7GI/edit?tab=t.0",
-      "key": "wireframes_optional_",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "wireframes_optional_"
-      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "_key_t-chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "_key_wireframes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "t-chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
         "resource.key": "wireframes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "wireframes_optional_"
       }
     },
     {
@@ -7298,16 +7168,6 @@
       }
     },
     {
-      "key": "versioning",
-      "word": "versioning",
-      "definition": "the general idea of saving a \"working” state of a project so you can safely return to it if a future change causes problems",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "versioning"
-      }
-    },
-    {
       "key": "web_app",
       "word": "Web app",
       "definition": "Interactive tools that connect to the internet and respond to your actions. ",
@@ -7405,12 +7265,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "vocabulary.key": "prompt_engineering"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "vocabulary.key": "versioning"
       }
     },
     {
@@ -7837,7 +7691,7 @@
       }
     },
     {
-      "level_name": "ai-generated-design-lesson3-level8_2026",
+      "level_name": "ai-generated-design-lesson3-sketch-lab-choice_2026",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -7879,19 +7733,6 @@
       "seeding_key": {
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-      "position": 1,
-      "learning_goal": "Critique usability and clarity and apply user-centered design to improve a digital experience.",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8020,54 +7861,6 @@
         "understanding": 3,
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "Does not clearly identify usability issues or explain how the redesign reflects user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Identifies issues or redesign changes, but does not clearly connect them to the user or user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Explains usability issues and describes how the redesign improved the experience, but reasoning may be general.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Clearly explains why the app lacked usability and clarity for the selected user and shows how the redesign improved the experience using user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
