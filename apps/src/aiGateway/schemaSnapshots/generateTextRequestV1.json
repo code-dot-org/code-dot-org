@@ -136,8 +136,149 @@
           "type": "string"
         },
         "schema": {
-          "type": "object",
-          "additionalProperties": {}
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                },
+                "properties": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/properties/output/properties/schema"
+                  }
+                },
+                "required": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": {
+                  "anyOf": [
+                    {
+                      "type": "boolean"
+                    },
+                    {
+                      "$ref": "#/properties/output/properties/schema"
+                    }
+                  ]
+                },
+                "items": {
+                  "anyOf": [
+                    {
+                      "$ref": "#/properties/output/properties/schema"
+                    },
+                    {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/properties/output/properties/schema"
+                      }
+                    }
+                  ]
+                },
+                "enum": {
+                  "type": "array",
+                  "items": {}
+                },
+                "const": {},
+                "anyOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/properties/output/properties/schema"
+                  }
+                },
+                "oneOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/properties/output/properties/schema"
+                  }
+                },
+                "allOf": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/properties/output/properties/schema"
+                  }
+                },
+                "not": {
+                  "$ref": "#/properties/output/properties/schema"
+                },
+                "if": {
+                  "$ref": "#/properties/output/properties/schema"
+                },
+                "then": {
+                  "$ref": "#/properties/output/properties/schema"
+                },
+                "else": {
+                  "$ref": "#/properties/output/properties/schema"
+                },
+                "$ref": {
+                  "type": "string"
+                },
+                "$schema": {
+                  "type": "string"
+                },
+                "$defs": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/properties/output/properties/schema"
+                  }
+                },
+                "description": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "format": {
+                  "type": "string"
+                },
+                "minimum": {
+                  "type": "number"
+                },
+                "maximum": {
+                  "type": "number"
+                },
+                "exclusiveMinimum": {
+                  "type": "number"
+                },
+                "exclusiveMaximum": {
+                  "type": "number"
+                },
+                "minLength": {
+                  "type": "number"
+                },
+                "maxLength": {
+                  "type": "number"
+                },
+                "minItems": {
+                  "type": "number"
+                },
+                "maxItems": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "string"
+                },
+                "default": {}
+              },
+              "additionalProperties": false
+            }
+          ]
         }
       },
       "required": [

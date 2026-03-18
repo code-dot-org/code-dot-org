@@ -49,15 +49,106 @@ const MessageSchema = z.union([
 ]);
 
 // ---------------------------------------------------------------------------
+// JSON Schema meta-schema (draft-07)
+// ---------------------------------------------------------------------------
+
+// A compiled JSON Schema document as produced by zod-to-json-schema.
+// The AI SDK's serializeOutputSchema() converts Output.object() into this
+// shape before the request travels over the wire.  We validate it here so
+// the gateway contract test can catch regressions.
+//
+// The schema is recursive (properties values are themselves JSON Schema
+// documents), so we use z.lazy() and declare the TypeScript type explicitly
+// to satisfy the compiler.
+type JsonSchemaValue =
+  | boolean
+  | {
+      type?: string | string[];
+      properties?: Record<string, JsonSchemaValue>;
+      required?: string[];
+      additionalProperties?: boolean | JsonSchemaValue;
+      items?: JsonSchemaValue | JsonSchemaValue[];
+      enum?: unknown[];
+      const?: unknown;
+      anyOf?: JsonSchemaValue[];
+      oneOf?: JsonSchemaValue[];
+      allOf?: JsonSchemaValue[];
+      not?: JsonSchemaValue;
+      if?: JsonSchemaValue;
+      then?: JsonSchemaValue;
+      else?: JsonSchemaValue;
+      $ref?: string;
+      $schema?: string;
+      $defs?: Record<string, JsonSchemaValue>;
+      description?: string;
+      title?: string;
+      format?: string;
+      minimum?: number;
+      maximum?: number;
+      exclusiveMinimum?: number;
+      exclusiveMaximum?: number;
+      minLength?: number;
+      maxLength?: number;
+      minItems?: number;
+      maxItems?: number;
+      pattern?: string;
+      default?: unknown;
+    };
+
+// eslint-disable-next-line prefer-const
+let JsonSchemaDocumentSchema: z.ZodType<JsonSchemaValue>;
+JsonSchemaDocumentSchema = z.lazy(() =>
+  z.union([
+    z.boolean(),
+    z.object({
+      type: z.union([z.string(), z.array(z.string())]).optional(),
+      properties: z.record(JsonSchemaDocumentSchema).optional(),
+      required: z.array(z.string()).optional(),
+      additionalProperties: z
+        .union([z.boolean(), JsonSchemaDocumentSchema])
+        .optional(),
+      items: z
+        .union([JsonSchemaDocumentSchema, z.array(JsonSchemaDocumentSchema)])
+        .optional(),
+      enum: z.array(z.unknown()).optional(),
+      const: z.unknown().optional(),
+      anyOf: z.array(JsonSchemaDocumentSchema).optional(),
+      oneOf: z.array(JsonSchemaDocumentSchema).optional(),
+      allOf: z.array(JsonSchemaDocumentSchema).optional(),
+      not: JsonSchemaDocumentSchema.optional(),
+      if: JsonSchemaDocumentSchema.optional(),
+      then: JsonSchemaDocumentSchema.optional(),
+      else: JsonSchemaDocumentSchema.optional(),
+      $ref: z.string().optional(),
+      $schema: z.string().optional(),
+      $defs: z.record(JsonSchemaDocumentSchema).optional(),
+      description: z.string().optional(),
+      title: z.string().optional(),
+      format: z.string().optional(),
+      minimum: z.number().optional(),
+      maximum: z.number().optional(),
+      exclusiveMinimum: z.number().optional(),
+      exclusiveMaximum: z.number().optional(),
+      minLength: z.number().optional(),
+      maxLength: z.number().optional(),
+      minItems: z.number().optional(),
+      maxItems: z.number().optional(),
+      pattern: z.string().optional(),
+      default: z.unknown().optional(),
+    }),
+  ])
+);
+
+// ---------------------------------------------------------------------------
 // Other request sub-schemas
 // ---------------------------------------------------------------------------
 
 // The serialized form of an Output schema as sent through the gateway.
 // aiSdkCompatibleGateway#serializeOutputSchema converts Output.object() into
-// this shape before JSON-encoding the request.
+// {type, schema} where `schema` is a compiled JSON Schema draft-07 document.
 const SerializedOutputRequestSchema = z.object({
   type: z.string(),
-  schema: z.record(z.unknown()).optional(),
+  schema: JsonSchemaDocumentSchema.optional(),
 });
 
 // ---------------------------------------------------------------------------
