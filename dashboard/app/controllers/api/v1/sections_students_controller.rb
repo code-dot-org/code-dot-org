@@ -37,6 +37,8 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
     # a student in a section.
     return head :forbidden if @student.teacher?
 
+    return head :forbidden unless can?(:manage, @student)
+
     @student.reset_secrets if params[:secrets] == User::RESET_SECRETS
 
     if @student.update(student_params)

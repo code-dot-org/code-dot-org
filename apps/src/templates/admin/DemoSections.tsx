@@ -20,7 +20,6 @@ interface DemoAssignment {
   demo_type: string;
   section_name: string;
   login_type: string;
-  participant_type: string;
   grades: string[];
   unit_name: string;
   unit_group_name: string;
@@ -35,7 +34,6 @@ interface FormState {
   demo_type: string;
   section_name: string;
   login_type: string;
-  participant_type: string;
   grades: string;
   unit_name: string;
   unit_group_name: string;
@@ -46,7 +44,6 @@ const INITIAL_FORM_STATE: FormState = {
   demo_type: '',
   section_name: '',
   login_type: '',
-  participant_type: '',
   grades: '',
   unit_name: '',
   unit_group_name: '',
@@ -134,7 +131,6 @@ const DemoSections: React.FC<DemoSectionsProps> = ({demo_assignments}) => {
           demo_type: form.demo_type,
           section_name: form.section_name,
           login_type: form.login_type,
-          participant_type: form.participant_type,
           grades: grades,
           unit_name: form.unit_name,
           unit_group_name: form.unit_group_name,
@@ -206,7 +202,6 @@ const DemoSections: React.FC<DemoSectionsProps> = ({demo_assignments}) => {
               <th>Demo Type</th>
               <th>Section Name</th>
               <th>Login Type</th>
-              <th>Participant Type</th>
               <th>Grades</th>
               <th>Unit Name</th>
               <th>Unit Group Name</th>
@@ -220,7 +215,6 @@ const DemoSections: React.FC<DemoSectionsProps> = ({demo_assignments}) => {
                 <td>{da.demo_type}</td>
                 <td>{da.section_name}</td>
                 <td>{da.login_type}</td>
-                <td>{da.participant_type}</td>
                 <td>{da.grades.join(', ')}</td>
                 <td>{da.unit_name}</td>
                 <td>{da.unit_group_name}</td>
@@ -265,12 +259,6 @@ const DemoSections: React.FC<DemoSectionsProps> = ({demo_assignments}) => {
         value={form.login_type}
         placeholder="e.g. word"
         onChange={v => handleChange('login_type', v)}
-      />
-      <FormField
-        label="Participant Type"
-        value={form.participant_type}
-        placeholder="e.g. student"
-        onChange={v => handleChange('participant_type', v)}
       />
       <FormField
         label="Grades (comma-separated)"
@@ -395,7 +383,7 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({
       <Typography variant="body2" color="error" style={{marginTop: 12}}>
         Every teacher will be able to see these students and their projects and
         responses. The students will be unable to log in and only admins will be
-        able to modify the students.
+        able to modify the students. This cannot be undone.
       </Typography>
     </DialogContent>
     <DialogActions>

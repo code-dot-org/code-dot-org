@@ -22,5 +22,9 @@ class DemoAssignment < ApplicationRecord
   validates :demo_type, presence: true, uniqueness: true
   validates :section_name, presence: true
   validates :login_type, presence: true
-  validates :participant_type, presence: true
+
+  # Returns true if the given user id appears in any DemoAssignment's demo_student_ids.
+  def self.demo_student?(user_id)
+    exists?(["JSON_CONTAINS(demo_student_ids, ?)", user_id.to_s])
+  end
 end

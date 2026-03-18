@@ -63,6 +63,7 @@ class Ability
       AidiffThread,
       AidiffMessage,
       AidiffArtifact,
+      DemoAssignment,
     ]
     cannot :index, Level
 
@@ -190,17 +191,17 @@ class Ability
         can [:accept, :decline], SectionInstructor, instructor_id: user.id
         can :manage, :teacher
         can :manage, User do |u|
-          user.students.include?(u)
+          user.students.include?(u) && !DemoAssignment.demo_student?(u.id)
         end
         can [:create, :get_feedback_from_teacher], TeacherFeedback do |feedback|
           user.students.exists?(id: feedback.student_id)
         end
         can :manage, Follower
         can :manage, UserLevel do |user_level|
-          !user.students.where(id: user_level.user_id).empty?
+          !user.students.where(id: user_level.user_id).empty? && !DemoAssignment.demo_student?(user_level.user_id)
         end
         can :create, UserLevelEvaluation do |ule|
-          !user.students.where(id: ule.user_id).empty?
+          !user.students.where(id: ule.user_id).empty? && !DemoAssignment.demo_student?(ule.user_id)
         end
         can :read, Plc::UserCourseEnrollment, user_id: user.id
         can :view_level_solutions, Unit do |script|

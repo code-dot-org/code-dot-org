@@ -13,7 +13,6 @@ class AdminDemoSectionsController < ApplicationController
             demo_type: da.demo_type,
             section_name: da.section_name,
             login_type: da.login_type,
-            participant_type: da.participant_type,
             grades: da.grades,
             unit_name: da.unit_name,
             unit_group_name: da.unit_group_name,
@@ -28,20 +27,34 @@ class AdminDemoSectionsController < ApplicationController
   end
 
   def create
-    da_params = params.permit(:demo_type, :section_name, :login_type, :participant_type, :unit_name, :unit_group_name, grades: [], demo_student_ids: [])
+    da_params = params.permit(:demo_type, :section_name, :login_type, :unit_name, :unit_group_name, grades: [], demo_student_ids: [])
     return head :bad_request if da_params[:demo_type].blank?
+
+    student_ids = (da_params[:demo_student_ids] || []).map(&:to_i)
+    students = User.where(id: student_ids)
+    if students.any? {|s| Policies::Lti.lti?(s)}
+      return render json: {error: 'Demo sections cannot include LTI students'}, status: :bad_request
+    end
 
     begin
       da = DemoAssignment.create!(
         demo_type: da_params[:demo_type],
         section_name: da_params[:section_name],
         login_type: da_params[:login_type],
-        participant_type: da_params[:participant_type],
+        participant_type: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student,
         grades: da_params[:grades] || [],
         unit_name: da_params[:unit_name],
         unit_group_name: da_params[:unit_group_name],
         demo_student_ids: (da_params[:demo_student_ids] || []).map(&:to_i),
       )
+
+      # Prevent login for demo students by clearing credentials
+      students.each do |student|
+        student.authentication_options.destroy_all
+        student.update!(secret_words: nil)
+        student.update!(secret_picture_id: nil)
+        student.update!(encrypted_password: '')
+      end
 
       student_users = User.where(id: da.demo_student_ids).index_by(&:id)
       render json: {
@@ -49,7 +62,6 @@ class AdminDemoSectionsController < ApplicationController
         demo_type: da.demo_type,
         section_name: da.section_name,
         login_type: da.login_type,
-        participant_type: da.participant_type,
         grades: da.grades,
         unit_name: da.unit_name,
         unit_group_name: da.unit_group_name,

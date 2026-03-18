@@ -665,18 +665,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_16_144422) do
     t.index ["demo_type"], name: "index_demo_assignments_on_demo_type", unique: true
   end
 
-  create_table "demo_mode_sessions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.string "persona_name", null: false
-    t.string "signinable_type"
-    t.string "signinable_id"
-    t.datetime "created_at", precision: nil, null: false
-    t.datetime "updated_at", precision: nil, null: false
-    t.string "variant", default: "default", null: false
-    t.string "signinable_password", null: false
-    t.string "status", default: "processing", null: false
-    t.index ["signinable_type", "signinable_id"], name: "index_demo_mode_sessions_on_signinable_type_and_signinable_id"
-  end
-
   create_table "donor_schools", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name"
     t.string "nces_id"
@@ -2517,7 +2505,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_16_144422) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil
