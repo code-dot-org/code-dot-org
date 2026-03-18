@@ -128,16 +128,18 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
       }
     }, [visible, initWorkspace]);
 
-    // Resize Blockly whenever the window resizes.
+    // Resize Blockly whenever the window resizes. The container always
+    // has real layout dimensions (visibility:hidden, not display:none),
+    // so this works even when the Code tab is not active.
     useEffect(() => {
       const onResize = () => {
-        if (workspace.current && visible) {
+        if (workspace.current) {
           Blockly.svgResize(workspace.current);
         }
       };
       window.addEventListener('resize', onResize);
       return () => window.removeEventListener('resize', onResize);
-    }, [visible]);
+    }, []);
 
     // Clean up workspace on unmount.
     useEffect(() => {

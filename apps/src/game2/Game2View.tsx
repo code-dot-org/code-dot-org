@@ -158,8 +158,17 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
             getCode={getCode}
           />
         )}
-        {/* Code panel is always mounted so Blockly workspace persists across tab switches. */}
-        <div style={{display: activeTab === 'Code' ? 'contents' : 'none'}}>
+        {/* Code panel is always mounted so Blockly workspace persists across tab switches.
+            Use visibility instead of display:none so the div retains layout dimensions,
+            preventing Blockly from getting stale cached sizes after window resizes. */}
+        <div style={{
+          visibility: activeTab === 'Code' ? 'visible' : 'hidden',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}>
           <CodePanel
             ref={codePanelRef}
             visible={activeTab === 'Code'}
