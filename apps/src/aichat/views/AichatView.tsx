@@ -138,6 +138,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   }, [currentLevelId, scriptId, channelId]);
 
   useEffect(() => {
+    dispatch(clearHasSetInitialCustomizations());
+  }, [dispatch, currentLevelId]);
+
+  useEffect(() => {
     const studentAiCustomizations = JSON.parse(
       (initialSources?.source as string) || '{}'
     );
@@ -189,10 +193,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
     dispatch(setShowModalType(modalToShow()));
   }, [isUserTeacher, dispatch]);
-
-  useEffect(() => {
-    dispatch(clearHasSetInitialCustomizations());
-  }, [dispatch, currentLevelId]);
 
   const onCloseModal = useCallback(() => {
     // We only want to show the teacher onboarding modal the first time a teacher user
