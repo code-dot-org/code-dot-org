@@ -32,6 +32,7 @@ class LevelsController < ApplicationController
     ExternalLink,
     Fish,
     Flappy,
+    Game2,
     FreeResponse,
     FrequencyAnalysis,
     Gamelab,
@@ -497,6 +498,8 @@ class LevelsController < ApplicationController
         @game = Game.pythonlab
       elsif @type_class == Panels
         @game = Game.panels
+      elsif @type_class == Game2
+        @game = Game.game2
       elsif @type_class == Weblab2
         @game = Game.weblab2
         @widget2_ids = get_widget2_ids

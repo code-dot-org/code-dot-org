@@ -1095,6 +1095,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :game2, parent: :level, class: Game2 do
+    game {Game.game2}
+    level_num {'custom'}
+  end
+
   factory :pythonlab, parent: :level, class: Pythonlab do
     game {Game.pythonlab}
     level_num {'custom'}

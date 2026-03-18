@@ -1,0 +1,12 @@
+<Game2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 76,
+  "created_at": "2026-03-18T00:18:31.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false"
+  }
+}]]></config>
+</Game2>

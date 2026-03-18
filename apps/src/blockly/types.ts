@@ -460,6 +460,7 @@ interface FieldJson {
 
 interface FieldInput extends FieldJson {
   type: 'field_input';
+  text?: string;
 }
 
 interface FieldDropdown extends FieldJson {

@@ -10,6 +10,7 @@
 import {AIChatEntryPoint} from '@cdo/apps/aichat/entrypoint';
 import {BubbleChoiceEntryPoint} from '@cdo/apps/bubbleChoice/entrypoint';
 import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
+import {Game2EntryPoint} from '@cdo/apps/game2/entrypoint';
 import type {Lab2EntryPoint} from '@cdo/apps/lab2/types';
 import {MusicEntryPoint} from '@cdo/apps/music/entrypoint';
 import {PanelsEntryPoint} from '@cdo/apps/panels/entrypoint';
@@ -22,6 +23,7 @@ export const lab2EntryPoints = {
   aichat: AIChatEntryPoint,
   bubble_choice: BubbleChoiceEntryPoint,
   dance: DanceEntryPoint,
+  game2: Game2EntryPoint,
   music: MusicEntryPoint,
   panels: PanelsEntryPoint,
   pythonlab: PythonlabEntryPoint,

@@ -1,0 +1,289 @@
+@import "color.scss";
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: $dark_black;
+  color: $neutral_light;
+}
+
+.tabs {
+  display: flex;
+  flex-shrink: 0;
+  border-bottom: 1px solid $neutral_dark70;
+  background-color: $neutral_dark;
+}
+
+.tab {
+  padding: 10px 24px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: $neutral_dark20;
+  border: none;
+  background: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    color: $neutral_light;
+  }
+
+  &Active {
+    color: $neutral_light;
+    border-bottom-color: $light_primary_500;
+  }
+}
+
+.tabContent {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+}
+
+// Theme panel
+.themePanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 16px;
+
+  .themeInput {
+    width: 400px;
+    max-width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid $neutral_dark70;
+    border-radius: 4px;
+    background-color: $neutral_dark;
+    color: $neutral_light;
+
+    &::placeholder {
+      color: $neutral_dark20;
+    }
+  }
+
+  .themeSubmit {
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: $light_primary_500;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $light_primary_700;
+    }
+  }
+}
+
+// Images panel
+.imagesPanel {
+  padding: 24px;
+}
+
+.imagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+
+.imageCell {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid $neutral_dark70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $neutral_dark;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.addImageCell {
+  cursor: pointer;
+  font-size: 48px;
+  color: $neutral_dark70;
+  transition: color 0.15s, border-color 0.15s;
+  border: 2px dashed $neutral_dark70;
+  background-color: transparent;
+
+  &:hover {
+    color: $light_primary_500;
+    border-color: $light_primary_500;
+  }
+}
+
+// Image generation dialog
+.dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialogBox {
+  background-color: $neutral_dark;
+  border: 1px solid $neutral_dark70;
+  border-radius: 8px;
+  padding: 24px;
+  width: 420px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialogTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: $neutral_light;
+}
+
+.dialogInput {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid $neutral_dark70;
+  border-radius: 4px;
+  background-color: $dark_black;
+  color: $neutral_light;
+
+  &::placeholder {
+    color: $neutral_dark20;
+  }
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.dialogCancel {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+  border: 1px solid $neutral_dark70;
+  border-radius: 4px;
+  color: $neutral_light;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $neutral_light;
+  }
+}
+
+.dialogSubmit {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: $light_primary_500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// World grid
+.worldGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 8px;
+  user-select: none;
+  touch-action: none;
+}
+
+.worldGridRow {
+  display: flex;
+}
+
+.worldGridCell {
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  border: 1px solid $neutral_dark70;
+  background-color: $neutral_dark;
+  cursor: pointer;
+
+  &On {
+    background-color: $neutral_light;
+  }
+}
+
+// Play panel
+.playPanel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $dark_black;
+}
+
+.playCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.playRestart {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: $light_primary_500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background-color: $light_primary_700;
+  }
+}
+
+// Code panel
+.codePanel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

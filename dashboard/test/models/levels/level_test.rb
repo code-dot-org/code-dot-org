@@ -1222,7 +1222,7 @@ class LevelTest < ActiveSupport::TestCase
     assert_equal search_options[:levelOptions].map {|option| option[0]}, [
       "All types", "Aichat", "Ailab", "Applab", "Artist", "Blockly", "Bounce", "BubbleChoice",
       "Craft", "CurriculumReference", "Dancelab", "EvaluationMulti", "External",
-      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Gamelab",
+      "ExternalLink", "Fish", "Flappy", "FreeResponse", "FrequencyAnalysis", "Game2", "Gamelab",
       "GamelabJr", "Javalab", "Karel", "LevelGroup", "Map", "Match", "Maze", "Multi", "Music", "NetSim",
       "Odometer", "Panels", "Pixelation", "Poetry", "PublicKeyCryptography", "Pythonlab", "Sketchlab", "StandaloneVideo",
       "StarWarsGrid", "Studio", "TextCompression", "TextMatch", "Unplugged",
