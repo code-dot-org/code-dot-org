@@ -53,6 +53,7 @@ class ScriptLevel < ApplicationRecord
   validate :anonymous_must_be_assessment
   validate :validate_activity_section_lesson
   validate :validate_activity_section_position
+  before_destroy :check_rubric_references
 
   # Make sure we never create a level that is not an assessment, but is anonymous,
   # as in that case it wouldn't actually be treated as anonymous
@@ -808,5 +809,14 @@ class ScriptLevel < ApplicationRecord
 
   private def build_exemplar_url(path)
     CDO.studio_url(path, CDO.default_scheme) + '?exemplar=true'
+  end
+
+  private def check_rubric_references
+    return unless lesson&.rubric
+    rubric_level_id = lesson.rubric.level_id
+    rubric_level = levels.find {|l| l.id == rubric_level_id}
+    return unless rubric_level
+    errors.add(:base, "Cannot remove level '#{rubric_level.name}' from this lesson because it is referenced by a rubric. Remove the rubric first.")
+    throw(:abort)
   end
 end

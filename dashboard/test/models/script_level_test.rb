@@ -1068,6 +1068,34 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal expected, seeding_key
   end
 
+  test 'cannot destroy script_level if its level is referenced by the lesson rubric' do
+    script_level = create_script_level_with_ancestors
+    level = script_level.level
+    create(:rubric, lesson: script_level.lesson, level: level)
+
+    refute script_level.destroy
+    assert_includes script_level.errors.full_messages.join, 'rubric'
+    assert ScriptLevel.exists?(script_level.id)
+  end
+
+  test 'can destroy script_level when lesson has no rubric' do
+    script_level = create_script_level_with_ancestors
+
+    assert script_level.destroy
+    refute ScriptLevel.exists?(script_level.id)
+  end
+
+  test 'can destroy script_level when lesson rubric references a different level' do
+    script_level = create_script_level_with_ancestors
+    other_level = create(:level)
+    other_script_level = create(:script_level, script: script_level.script, lesson: script_level.lesson, levels: [other_level])
+    create(:rubric, lesson: script_level.lesson, level: other_level)
+
+    assert script_level.destroy
+    refute ScriptLevel.exists?(script_level.id)
+    assert ScriptLevel.exists?(other_script_level.id)
+  end
+
   def create_seed_context(script)
     Services::ScriptSeed::SeedContext.new(
       script: script,
