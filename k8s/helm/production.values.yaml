@@ -1,4 +1,5 @@
 RAILS_ENV: production
+dashboard_workers: 32
 autoscaling:
   enabled: true
   minReplicas: 1

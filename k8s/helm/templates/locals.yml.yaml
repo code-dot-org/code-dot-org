@@ -8,6 +8,7 @@ data:
   locals.yml: |
     build_apps: true
     use_my_apps: true
+    dashboard_workers: {{ .Values.dashboard_workers }}
 
     # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
     # {{- if not .Values.localDev.mounts.mountDotAWS }}
