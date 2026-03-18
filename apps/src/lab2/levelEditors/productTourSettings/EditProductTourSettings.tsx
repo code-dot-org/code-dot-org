@@ -8,6 +8,8 @@ import {
 } from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {AppName} from '@cdo/apps/lab2/types';
 
+import moduleStyles from './edit-predict-tour-settings.module.scss';
+
 interface EditProductTourSettingsProps {
   initialSettings: string[] | null;
   appName: string;
@@ -53,14 +55,23 @@ const EditProductTourSettings: React.FunctionComponent<
         type="hidden"
         value={JSON.stringify(selectedTours)}
       />
-      {availableTours.map(({name, displayName}) => (
-        <Checkbox
-          key={name}
-          label={displayName}
-          checked={selectedTours.includes(name)}
-          onChange={() => handleTourToggle(name)}
-          name={name}
-        />
+      {availableTours.map(({name, displayName, description}) => (
+        <div key={name} className={moduleStyles.tourOption}>
+          <Checkbox
+            label={displayName}
+            checked={selectedTours.includes(name)}
+            onChange={() => handleTourToggle(name)}
+            name={name}
+          />
+          {description && (
+            <Typography
+              variant="body3"
+              className={moduleStyles.descriptionText}
+            >
+              {description}
+            </Typography>
+          )}
+        </div>
       ))}
     </div>
   );

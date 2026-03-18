@@ -13,22 +13,28 @@ export interface ProductTourConfig {
   // when the user first reaches a level with the tour enabled. If false, the tour will be triggered the first time
   // the user reaches a lab that has that tour available.
   triggeredByLevel: boolean;
+  // Description shown to level editors. Not necesarily if triggeredByLevel is false.
+  description?: string;
 }
 
 const ProductTourConfigurations: Record<ProductTour, ProductTourConfig> = {
   [ProductTour.ResourcePanelOnboarding]: {
     name: ProductTour.ResourcePanelOnboarding,
-    displayName: 'Resource panel onboarding',
+    displayName: 'Using the Resource Panel',
     triggeredByLevel: true,
+    description:
+      'Gives users an overview of the different components of the resource panel, including the tabs, extra links and continue button.',
   },
   [ProductTour.ResourcePanelValidation]: {
     name: ProductTour.ResourcePanelValidation,
-    displayName: 'Resource panel validation',
+    displayName: 'Validating Your Work',
     triggeredByLevel: true,
+    description:
+      'Guides users through opening the validation tab and running validation on their code. This tour will only show up if there is validation on the level.',
   },
   [ProductTour.SketchlabIntro]: {
     name: ProductTour.SketchlabIntro,
-    displayName: 'Sketchlab intro',
+    displayName: 'Intro to Sketch Lab',
     triggeredByLevel: false,
   },
 };
