@@ -12,12 +12,10 @@ import {
   RESOURCE_PANEL_VALIDATION_FLOW_V2_NAME,
 } from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 jest.mock('@cdo/apps/lab2/hooks/useLab2ProductTour');
 jest.mock('@cdo/apps/lab2/hooks/useLifecycleNotifier');
-jest.mock('@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable');
 jest.mock('@cdo/apps/lab2/utils', () => ({
   ...jest.requireActual('@cdo/apps/lab2/utils'),
   sendLab2AnalyticsEvent: jest.fn(),
@@ -37,7 +35,6 @@ const mockTryGetLocalStorage = tryGetLocalStorage as jest.MockedFunction<
   typeof tryGetLocalStorage
 >;
 
-// Default ValidationSettings-compatible object for tests.
 const mockValidationSettings = {
   onValidate: jest.fn(),
   onStopValidation: jest.fn(),
@@ -63,17 +60,9 @@ describe('useResourcePanelShepherdTours', () => {
   >;
 
   beforeEach(() => {
+    jest.clearAllMocks();
     Lab2Registry.create();
     lifecycleHandlers = {};
-    mockUseLifecycleNotifier.mockImplementation(
-      (event: LifecycleEvent, callback: (...args: unknown[]) => void) => {
-        lifecycleHandlers[event] = callback;
-      }
-    );
-    mockUseLab2ProductTour.mockReturnValue({tour: null});
-    mockTryGetLocalStorage.mockReturnValue('no');
-    jest.clearAllMocks();
-    // Re-apply after clearAllMocks since it clears mock implementations too.
     mockUseLifecycleNotifier.mockImplementation(
       (event: LifecycleEvent, callback: (...args: unknown[]) => void) => {
         lifecycleHandlers[event] = callback;
@@ -156,15 +145,7 @@ describe('useResourcePanelShepherdTours', () => {
       rerender();
 
       act(() => {
-        lifecycleHandlers[LifecycleEvent.LevelLoadCompleted]?.(
-          {} as never,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined
-        );
+        lifecycleHandlers[LifecycleEvent.LevelLoadCompleted]?.();
       });
       rerender();
 
@@ -379,14 +360,6 @@ describe('useResourcePanelShepherdTours', () => {
           mockUseLab2ProductTour.mock.calls.length - 1
         ][0];
       expect(lastValidationCall.tourAvailable).toBe(true);
-    });
-  });
-
-  describe('useStartTourWhenAvailable', () => {
-    it('is called for both tours', () => {
-      renderHook(() => useResourcePanelShepherdTours(defaultParams));
-
-      expect(useStartTourWhenAvailable).toHaveBeenCalledTimes(2);
     });
   });
 });
