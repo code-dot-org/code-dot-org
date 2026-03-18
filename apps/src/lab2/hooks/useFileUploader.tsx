@@ -1,8 +1,8 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {moderateImage} from '@cdo/apps/lab2/utils';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',

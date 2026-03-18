@@ -4,14 +4,9 @@ import {
 } from 'ai';
 
 import {generateText as generateTextThroughGateway} from '@cdo/apps/aiGateway/aiSdkCompatibleGateway';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import DCDO from '@cdo/apps/dcdo';
 
+import {isAiGatewayEnabled} from './isAiGatewayEnabled';
 import transcribeThroughGateway from './transcribeThroughGateway';
-
-const isAiGatewayEnabled =
-  DCDO.get('ai-gateway-enabled', true) ||
-  queryParams('use-ai-gateway') === 'true';
 
 const generateText = isAiGatewayEnabled
   ? generateTextThroughGateway
@@ -21,4 +16,4 @@ const transcribe = isAiGatewayEnabled
   ? transcribeThroughGateway
   : transcribeThroughProxy;
 
-export {isAiGatewayEnabled, generateText, transcribe};
+export {generateText, transcribe};
