@@ -1253,14 +1253,11 @@ $default-modal-width: 640px;
       vertical-align: middle;
       font-size: 24pt;
 
-      &.fa-facebook, &.fa-facebook-f {
+      &.fa-facebook {
         background-color: $facebook_blue;
       }
       &.fa-twitter {
         background-color: $twitter_blue;
-      }
-      &.fa-x-twitter {
-        background-color: $x_black;
       }
     }
     span {

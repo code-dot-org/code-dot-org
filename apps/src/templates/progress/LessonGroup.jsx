@@ -93,7 +93,7 @@ class LessonGroup extends React.Component {
           {hasLessonGroupInfo && (
             <span>
               <FontAwesome
-                icon="circle-info"
+                icon="info-circle"
                 style={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />

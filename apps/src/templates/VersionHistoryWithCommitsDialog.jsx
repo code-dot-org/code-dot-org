@@ -131,10 +131,7 @@ export default class VersionHistoryWithCommitsDialog extends React.Component {
             ...styles.defaultBody,
           }}
         >
-          <i
-            className="fa-solid fa-spinner fa-spin"
-            style={{fontSize: '32px'}}
-          />
+          <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         </div>
       );
     } else if (this.state.confirmingClearPuzzle) {

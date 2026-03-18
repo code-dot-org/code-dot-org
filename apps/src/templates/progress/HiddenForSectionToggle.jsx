@@ -36,7 +36,6 @@ class HiddenForSectionToggle extends React.Component {
           color={Button.ButtonColor.gray}
           disabled={!hidden}
           icon="eye"
-          iconStyleProp="regular"
           style={{...styles.button, ...styles.leftButton}}
         />
         <Button
@@ -45,7 +44,6 @@ class HiddenForSectionToggle extends React.Component {
           color={Button.ButtonColor.gray}
           disabled={hidden}
           icon="eye-slash"
-          iconStyleProp="regular"
           style={{...styles.button, ...styles.rightButton}}
         />
       </div>

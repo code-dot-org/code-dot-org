@@ -29,7 +29,7 @@ export const HasFocus = () => (
       </PaneSection>
       <PaneButton
         headerHasFocus={true}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="Button"
         isRtl={false}
       />
@@ -48,7 +48,7 @@ export const DoesNotHaveFocus = () => (
       </PaneSection>
       <PaneButton
         headerHasFocus={false}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="Button"
         isRtl={false}
       />
@@ -67,7 +67,7 @@ export const TeacherOnlyWithFocus = () => (
       </PaneSection>
       <PaneButton
         headerHasFocus={true}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="Button"
         isRtl={false}
       />
@@ -86,7 +86,7 @@ export const TeacherOnlyWithoutFocus = () => (
       </PaneSection>
       <PaneButton
         headerHasFocus={false}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="Button"
         isRtl={false}
       />
@@ -99,13 +99,13 @@ export const WithRTLAndLTRButtons = () => (
     <div style={styles.flex}>
       <PaneButton
         headerHasFocus={false}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="ButtonRTL"
         isRtl={true}
       />
       <PaneButton
         headerHasFocus={false}
-        iconClass="fa-solid fa-arrow-down"
+        iconClass="fa fa-arrow-down"
         label="ButtonLTR"
         isRtl={false}
       />

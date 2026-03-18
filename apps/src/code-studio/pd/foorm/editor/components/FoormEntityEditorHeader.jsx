@@ -112,7 +112,7 @@ class FoormEntityEditorHeader extends Component {
               this.state.lastValidated && (
                 <div style={styles.validationInfo}>
                   {this.state.validationError && (
-                    <FontAwesome icon="triangle-exclamation" />
+                    <FontAwesome icon="exclamation-triangle" />
                   )}
                   {`Last validated at ${
                     this.state.lastValidated
