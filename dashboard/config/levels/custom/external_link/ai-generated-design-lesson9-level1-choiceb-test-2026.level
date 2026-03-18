@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-03-17T22:43:03.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Accessibility Audit**\r\n\r\n\r\nAs you explore the website, use these questions to help you find issues:\r\n\r\n1. Is anything hard to read or notice?\r\n\r\n2. Is it easy to click, tap, or interact with the main actions?\r\n\r\n3. Is it clear what you should do next?\r\n\r\n4. Would this page still work well on a phone or tablet?\r\n</p>\r\n<br/>\r\n\r\n<img src=\"https://images.code.org/829c63d0d980c1bb034fa7b32607fb47-mit.png\"/>\r\n\r\n\r\n<br/>",
+    "link_title": "Go to https://www.media.mit.edu/",
+    "url": "https://www.media.mit.edu/",
+    "display_name": "MIT Media Lab News",
+    "bubble_choice_description": "A visually clean and modern site, but does it actually make information easy to find? Investigate how layout and content structure can still create usability challenges.",
+    "thumbnail_url": "https://images.code.org/ccba740b3f00beef0d342b1de407f967-mit.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-17T22:43:03.789+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level1-choicea-test-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level1-choicea-test-2026\"},{\"changed_at\":\"2026-03-17 22:51:21 +0000\",\"changed\":[\"long_instructions\",\"link_title\",\"url\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 22:54:17 +0000\",\"changed\":[\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</ExternalLink>
