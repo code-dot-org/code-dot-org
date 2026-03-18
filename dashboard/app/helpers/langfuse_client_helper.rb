@@ -55,8 +55,8 @@ module LangfuseClientHelper
         headers: {"Content-Type" => "application/json"},
         body: {batch: batch}.to_json
       )
-    rescue => e
-      Rails.logger.warn("Langfuse ingestion error: #{e.message}")
+    rescue => exception
+      Rails.logger.warn("Langfuse ingestion error: #{exception.message}")
       nil
     end
 

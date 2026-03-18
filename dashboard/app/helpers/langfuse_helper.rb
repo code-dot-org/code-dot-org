@@ -23,7 +23,7 @@ module LangfuseHelper
 
   # Sends a trace + generation to the TA Langfuse project for a lesson insight call.
   # Input is keyed identifiers only (not the system prompt) to avoid logging student data.
-  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, unit_id:, section_id:, student_id:, output:, usage:, start_time:, end_time:)
+  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, unit_id:, section_id:, student_id:, snap_shot_prompt:, output:, usage:, start_time:, end_time:)
     ta_client.create_trace_and_generation(
       trace_name: "lesson-insight",
       generation_name: "llm-call",
@@ -42,13 +42,14 @@ module LangfuseHelper
         section_id: section_id,
         student_id: student_id,
         teacher_id: teacher_id,
+        snap_shot_prompt: snap_shot_prompt,
       },
       tags: ["lesson-insight"],
       start_time: start_time,
       end_time: end_time,
     )
-  rescue => e
-    Rails.logger.warn("LangfuseHelper.trace_lesson_insight failed: #{e.message}")
+  rescue => exception
+    Rails.logger.warn("LangfuseHelper.trace_lesson_insight failed: #{exception.message}")
   end
 
   def self.tutor_client

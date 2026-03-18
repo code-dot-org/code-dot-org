@@ -39,6 +39,7 @@ module AiStudentSnapshotHelper
         unit_id: unit_id,
         section_id: section_id,
         student_id: student_id,
+        snap_shot_prompt: AiSystemPrompts::StudentSnapshotPromptHelper.get_student_snapshot_general_prompt(lesson_id, unit_id, student_id, teacher_id, section_id),
         output: content,
         usage: response_body['usage'],
         start_time: start_time,
