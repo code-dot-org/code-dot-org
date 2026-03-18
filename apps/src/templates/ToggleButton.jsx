@@ -1,6 +1,5 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
 
 import styles from './ToggleButtonStyles';
@@ -58,4 +57,4 @@ class ToggleButton extends Component {
   }
 }
 
-export default Radium(ToggleButton);
+export default ToggleButton;

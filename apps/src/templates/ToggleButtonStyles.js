@@ -17,7 +17,7 @@ module.exports = {
     fontSize: 14,
   },
   toggleButtonStyle: {
-    borderRightWidth: '0 !important',
+    borderRightWidth: 0,
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0,
     borderBottomRightRadius: 0,
@@ -28,7 +28,7 @@ module.exports = {
     borderTopLeftRadius: 4,
   },
   lastButtonStyle: {
-    borderRightWidth: '1px !important',
+    borderRightWidth: 1,
     borderBottomRightRadius: 4,
     borderTopRightRadius: 4,
   },
