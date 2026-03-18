@@ -6,12 +6,12 @@
 let imageNames: string[] = [];
 
 export function setImageNames(names: string[]) {
-  imageNames = names;
+  imageNames = names.filter(n => typeof n === 'string' && n.length > 0);
 }
 
 export function getImageOptions(): [string, string][] {
   if (imageNames.length === 0) {
-    return [['(no images)', '']];
+    return [['(no images)', '__none__']];
   }
   return imageNames.map(name => [name, name] as [string, string]);
 }

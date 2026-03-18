@@ -52,8 +52,13 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       parsedInitial.current = {};
     }
     if (parsedInitial.current.images?.length) {
-      setImages(parsedInitial.current.images);
-      imagesRef.current = parsedInitial.current.images;
+      // Migrate legacy entries that lack a name field.
+      const migrated = parsedInitial.current.images.map(img => ({
+        ...img,
+        name: img.name || img.prompt || img.filename,
+      }));
+      setImages(migrated);
+      imagesRef.current = migrated;
     }
     if (parsedInitial.current.blockly) {
       blocklyRef.current = parsedInitial.current.blockly;

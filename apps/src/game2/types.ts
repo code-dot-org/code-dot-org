@@ -11,6 +11,9 @@ export interface Game2Source {
 }
 
 export interface Game2ImageEntry {
+  /** User-facing display name for this image. */
+  name: string;
+  /** Asset filename stored in the project bucket. */
   filename: string;
   prompt?: string;
 }

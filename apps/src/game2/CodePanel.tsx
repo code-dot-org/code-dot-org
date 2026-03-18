@@ -22,6 +22,7 @@ const TOOLBOX: BlocklyCore.utils.toolbox.ToolboxDefinition = {
     {kind: 'block', type: 'Game2_whenStart'},
     {kind: 'block', type: 'Game2_createItem'},
     {kind: 'block', type: 'Game2_setItemBehavior'},
+    {kind: 'block', type: 'Game2_setBackground'},
   ],
 };
 
@@ -48,7 +49,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
 
     // Keep image dropdown options in sync.
     useEffect(() => {
-      setImageNames(images.map(img => img.filename));
+      setImageNames(images.map(img => img.name));
     }, [images]);
 
     // Expose getCode to parent via ref.
@@ -78,12 +79,21 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
         theme: cdoDark,
       } as BlocklyCore.BlocklyOptions);
 
+      // Ensure image names are populated before loading saved blocks.
+      setImageNames(images.map(img => img.name));
+
       // Load saved blocks if available.
       if (initialBlocks && !initialBlocksLoaded.current) {
-        Blockly.serialization.workspaces.load(
-          initialBlocks,
-          workspace.current
-        );
+        try {
+          Blockly.serialization.workspaces.load(
+            initialBlocks,
+            workspace.current
+          );
+        } catch (e) {
+          // Legacy blocks may have incompatible field types — start fresh.
+          console.warn('[Game2] Could not load saved blocks:', e);
+          workspace.current.clear();
+        }
         initialBlocksLoaded.current = true;
       }
 

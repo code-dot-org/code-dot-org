@@ -67,9 +67,14 @@ async function updateAichatRequest(
  */
 export async function generateImage(
   prompt: string,
-  channelId?: string
+  channelId?: string,
+  isSprite = false
 ): Promise<{filename: string; uint8Array: Uint8Array; mediaType: string}> {
-  const requestId = await createAichatRequest(prompt, channelId);
+  const fullPrompt = isSprite
+    ? `${prompt}. Use a solid bright green background for this image.`
+    : prompt;
+
+  const requestId = await createAichatRequest(fullPrompt, channelId);
 
   try {
     const {files} = await generateText({
@@ -77,7 +82,7 @@ export async function generateImage(
       messages: [
         {
           role: 'user',
-          content: prompt,
+          content: fullPrompt,
         },
       ],
     });
@@ -98,20 +103,29 @@ export async function generateImage(
       'Image generated'
     );
 
-    // Remove background (flood-fill from top-left corner) and output as PNG.
-    const rawBlob = new Blob(
-      [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
-      {type: imageFile.mediaType}
-    );
-    const transparentBlob = await removeBackground(rawBlob);
-    const transparentBuffer = await transparentBlob.arrayBuffer();
+    if (isSprite) {
+      // Remove green background (flood-fill from top-left corner) and output as PNG.
+      const rawBlob = new Blob(
+        [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],
+        {type: imageFile.mediaType}
+      );
+      const transparentBlob = await removeBackground(rawBlob);
+      const transparentBuffer = await transparentBlob.arrayBuffer();
 
-    const filename = `generated-${createUuid()}.png`;
+      const filename = `generated-${createUuid()}.png`;
+      return {
+        filename,
+        uint8Array: new Uint8Array(transparentBuffer),
+        mediaType: 'image/png',
+      };
+    }
 
+    const ext = imageFile.mediaType === 'image/png' ? 'png' : 'jpg';
+    const filename = `generated-${createUuid()}.${ext}`;
     return {
       filename,
-      uint8Array: new Uint8Array(transparentBuffer),
-      mediaType: 'image/png',
+      uint8Array: imageFile.uint8Array,
+      mediaType: imageFile.mediaType,
     };
   } catch (error) {
     await updateAichatRequest(

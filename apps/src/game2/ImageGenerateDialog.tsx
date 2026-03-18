@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import moduleStyles from './game2View.module.scss';
 
 interface ImageGenerateDialogProps {
-  onSubmit: (prompt: string) => void;
+  onSubmit: (name: string, prompt: string, isSprite: boolean) => void | Promise<void>;
   onClose: () => void;
 }
 
@@ -11,12 +11,15 @@ const ImageGenerateDialog: React.FunctionComponent<ImageGenerateDialogProps> = (
   onSubmit,
   onClose,
 }) => {
+  const [name, setName] = useState('');
   const [prompt, setPrompt] = useState('');
+  const [isSprite, setIsSprite] = useState(true);
+
+  const canSubmit = name.trim() && prompt.trim();
 
   const handleSubmit = () => {
-    const trimmed = prompt.trim();
-    if (trimmed) {
-      onSubmit(trimmed);
+    if (canSubmit) {
+      onSubmit(name.trim(), prompt.trim(), isSprite);
     }
   };
 
@@ -38,12 +41,28 @@ const ImageGenerateDialog: React.FunctionComponent<ImageGenerateDialogProps> = (
         <input
           className={moduleStyles.dialogInput}
           type="text"
+          placeholder="Name (e.g. cat, tree, hero)"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          onKeyDown={handleKeyDown}
+          autoFocus
+        />
+        <input
+          className={moduleStyles.dialogInput}
+          type="text"
           placeholder="Describe the image you want..."
           value={prompt}
           onChange={e => setPrompt(e.target.value)}
           onKeyDown={handleKeyDown}
-          autoFocus
         />
+        <label className={moduleStyles.dialogCheckbox}>
+          <input
+            type="checkbox"
+            checked={isSprite}
+            onChange={e => setIsSprite(e.target.checked)}
+          />
+          Sprite (with transparency)
+        </label>
         <div className={moduleStyles.dialogActions}>
           <button className={moduleStyles.dialogCancel} onClick={onClose}>
             Cancel
@@ -51,7 +70,7 @@ const ImageGenerateDialog: React.FunctionComponent<ImageGenerateDialogProps> = (
           <button
             className={moduleStyles.dialogSubmit}
             onClick={handleSubmit}
-            disabled={!prompt.trim()}
+            disabled={!canSubmit}
           >
             Generate
           </button>

@@ -97,8 +97,15 @@
   gap: 16px;
 }
 
+.imageItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .imageCell {
   aspect-ratio: 1;
+  width: 100%;
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid $neutral_dark70;
@@ -112,6 +119,17 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+.imageName {
+  padding: 4px 0;
+  font-size: 11px;
+  color: $neutral_dark20;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .addImageCell {
@@ -170,7 +188,20 @@
   color: $neutral_light;
 
   &::placeholder {
-    color: $neutral_dark20;
+    color: $neutral_dark70;
+  }
+}
+
+.dialogCheckbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: $neutral_light;
+  cursor: pointer;
+
+  input {
+    cursor: pointer;
   }
 }
 

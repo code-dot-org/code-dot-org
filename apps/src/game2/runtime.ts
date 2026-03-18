@@ -1,11 +1,19 @@
 import {Game2ImageEntry} from './types';
 
 const GRID_SIZE = 50;
-const MOVE_SPEED = 3;
-const GRAVITY = 0.5;
-const JUMP_VELOCITY = -10;
-const MAX_FALL_SPEED = 12;
-const PLATFORM_MOVE_SPEED = 3;
+
+// How many grid cells are visible across the shorter canvas dimension.
+const VIEWPORT_CELLS = 16;
+
+// Physics constants in grid-cell units per frame.
+const MOVE_SPEED = 0.15;
+const GRAVITY = 0.015;
+const JUMP_VELOCITY = -0.5;
+const MAX_FALL_SPEED = 0.5;
+const PLATFORM_MOVE_SPEED = 0.12;
+
+// Sprite size in grid cells.
+const ITEM_CELLS = 6;
 
 /** Visible-pixel bounding box, as fractions of the image (0–1). */
 interface VisibleBounds {
@@ -15,8 +23,10 @@ interface VisibleBounds {
   bottom: number;
 }
 
+/** All positions/velocities are in grid-cell units. */
 interface GameItem {
-  imageFilename: string;
+  /** User-facing name (matches Game2ImageEntry.name). */
+  name: string;
   x: number;
   y: number;
   vy: number;
@@ -24,10 +34,6 @@ interface GameItem {
   behavior: 'none' | 'move' | 'platform';
 }
 
-/**
- * Scan an image and return the tight bounding box of visible (alpha > 0)
- * pixels, expressed as fractions of image width/height.
- */
 function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
   const w = img.naturalWidth;
   const h = img.naturalHeight;
@@ -68,7 +74,6 @@ function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
   }
 
   if (maxX < minX) {
-    // Fully transparent image — use full bounds.
     return {left: 0, top: 0, right: 1, bottom: 1};
   }
 
@@ -80,22 +85,28 @@ function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
   };
 }
 
-/**
- * Lightweight runtime that renders the world grid + sprite items onto a canvas
- * and executes Blockly-generated JavaScript.
- */
 export class Game2Runtime {
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
   private grid: boolean[][];
   private images: Game2ImageEntry[];
+  /** Keyed by user-facing name. */
   private loadedImages: Map<string, HTMLImageElement> = new Map();
+  /** Keyed by user-facing name. */
   private visibleBounds: Map<string, VisibleBounds> = new Map();
+  private nameToFilename: Map<string, string> = new Map();
   private channelId: string | undefined;
   private items: GameItem[] = [];
+  private backgroundName: string | null = null;
   private animFrame: number | null = null;
   private running = false;
   private keysDown: Set<string> = new Set();
+
+  // Camera in cell units.
+  private camX = 0;
+  private camY = 0;
+
+  private static readonly PARALLAX_FACTOR = 0.3;
 
   constructor(
     canvas: HTMLCanvasElement,
@@ -109,34 +120,42 @@ export class Game2Runtime {
     this.images = images;
     this.channelId = channelId;
 
-    // Pre-load image assets and compute visible bounds once loaded.
     for (const img of images) {
+      this.nameToFilename.set(img.name, img.filename);
       const el = new Image();
       el.crossOrigin = 'anonymous';
       if (channelId) {
         el.src = `/v3/assets/${channelId}/${encodeURIComponent(img.filename)}`;
       }
       el.onload = () => {
-        this.visibleBounds.set(img.filename, computeVisibleBounds(el));
+        this.visibleBounds.set(img.name, computeVisibleBounds(el));
       };
-      this.loadedImages.set(img.filename, el);
+      this.loadedImages.set(img.name, el);
     }
 
     window.addEventListener('keydown', this.onKeyDown);
     window.addEventListener('keyup', this.onKeyUp);
   }
 
-  /** Execute generated Blockly JS and start the game loop. */
+  /** Pixels per cell at the current canvas size. */
+  private get cellPx(): number {
+    return Math.min(this.canvas.width, this.canvas.height) / VIEWPORT_CELLS;
+  }
+
   run(code: string) {
     this.items = [];
+    this.backgroundName = null;
 
-    const itemSize = this.getItemSize();
-    const cx = this.canvas.width / 2 - itemSize / 2;
-    const cy = this.canvas.height / 2 - itemSize / 2;
+    const cx = GRID_SIZE / 2 - ITEM_CELLS / 2;
+    const cy = GRID_SIZE / 2 - ITEM_CELLS / 2;
 
-    const createItem = (imageFilename: string) => {
+    const setBackground = (name: string) => {
+      this.backgroundName = name;
+    };
+
+    const createItem = (name: string) => {
       this.items.push({
-        imageFilename,
+        name,
         x: cx,
         y: cy,
         vy: 0,
@@ -145,9 +164,9 @@ export class Game2Runtime {
       });
     };
 
-    const setItemBehavior = (imageFilename: string, behavior: string) => {
+    const setItemBehavior = (name: string, behavior: string) => {
       for (const item of this.items) {
-        if (item.imageFilename === imageFilename) {
+        if (item.name === name) {
           item.behavior = behavior as GameItem['behavior'];
         }
       }
@@ -155,12 +174,18 @@ export class Game2Runtime {
 
     try {
       // eslint-disable-next-line no-new-func
-      const fn = new Function('createItem', 'setItemBehavior', code);
-      fn(createItem, setItemBehavior);
+      const fn = new Function(
+        'createItem',
+        'setItemBehavior',
+        'setBackground',
+        code
+      );
+      fn(createItem, setItemBehavior, setBackground);
     } catch (e) {
       console.error('[Game2 Runtime] Error executing code:', e);
     }
 
+    this.updateCamera();
     this.running = true;
     this.tick();
   }
@@ -193,49 +218,62 @@ export class Game2Runtime {
       return;
     }
     this.update();
+    this.updateCamera();
     this.render();
     this.animFrame = requestAnimationFrame(this.tick);
   };
 
-  /**
-   * Get the collision rectangle for an item in canvas coordinates.
-   * Uses visible-pixel bounds when available, otherwise falls back to the
-   * full sprite square.
-   */
+  private updateCamera() {
+    const target = this.items.find(
+      i => i.behavior === 'move' || i.behavior === 'platform'
+    );
+    if (!target) {
+      return;
+    }
+
+    const cw = this.canvas.width;
+    const ch = this.canvas.height;
+    const cp = this.cellPx;
+
+    // Viewport size in cells.
+    const vpW = cw / cp;
+    const vpH = ch / cp;
+
+    let cx = target.x + ITEM_CELLS / 2 - vpW / 2;
+    let cy = target.y + ITEM_CELLS / 2 - vpH / 2;
+
+    cx = Math.max(0, Math.min(GRID_SIZE - vpW, cx));
+    cy = Math.max(0, Math.min(GRID_SIZE - vpH, cy));
+
+    this.camX = cx;
+    this.camY = cy;
+  }
+
+  /** Collision rect in cell units for an item at position (x, y). */
   private getCollisionRect(item: GameItem, x: number, y: number) {
-    const size = this.getItemSize();
-    const bounds = this.visibleBounds.get(item.imageFilename);
+    const bounds = this.visibleBounds.get(item.name);
     if (!bounds) {
-      return {x, y, w: size, h: size};
+      return {x, y, w: ITEM_CELLS, h: ITEM_CELLS};
     }
     return {
-      x: x + bounds.left * size,
-      y: y + bounds.top * size,
-      w: (bounds.right - bounds.left) * size,
-      h: (bounds.bottom - bounds.top) * size,
+      x: x + bounds.left * ITEM_CELLS,
+      y: y + bounds.top * ITEM_CELLS,
+      w: (bounds.right - bounds.left) * ITEM_CELLS,
+      h: (bounds.bottom - bounds.top) * ITEM_CELLS,
     };
   }
 
-  /** Check whether a collision rect overlaps any set grid cell. */
+  /** Check whether a cell-unit rect overlaps any set grid cell. */
   private collidesWithGrid(
     rx: number,
     ry: number,
     rw: number,
     rh: number
   ): boolean {
-    const cellW = this.canvas.width / GRID_SIZE;
-    const cellH = this.canvas.height / GRID_SIZE;
-
-    const colStart = Math.max(0, Math.floor(rx / cellW));
-    const colEnd = Math.min(
-      GRID_SIZE - 1,
-      Math.floor((rx + rw - 1) / cellW)
-    );
-    const rowStart = Math.max(0, Math.floor(ry / cellH));
-    const rowEnd = Math.min(
-      GRID_SIZE - 1,
-      Math.floor((ry + rh - 1) / cellH)
-    );
+    const colStart = Math.max(0, Math.floor(rx));
+    const colEnd = Math.min(GRID_SIZE - 1, Math.floor(rx + rw - 0.001));
+    const rowStart = Math.max(0, Math.floor(ry));
+    const rowEnd = Math.min(GRID_SIZE - 1, Math.floor(ry + rh - 0.001));
 
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
@@ -247,7 +285,6 @@ export class Game2Runtime {
     return false;
   }
 
-  /** Convenience: check collision for an item at a given sprite position. */
   private itemCollidesWithGrid(
     item: GameItem,
     x: number,
@@ -257,14 +294,13 @@ export class Game2Runtime {
     return this.collidesWithGrid(rect.x, rect.y, rect.w, rect.h);
   }
 
-  /** Check if the item's collision rect is out of canvas bounds. */
   private itemOutOfBounds(item: GameItem, x: number, y: number): boolean {
     const rect = this.getCollisionRect(item, x, y);
     return (
       rect.x < 0 ||
       rect.y < 0 ||
-      rect.x + rect.w > this.canvas.width ||
-      rect.y + rect.h > this.canvas.height
+      rect.x + rect.w > GRID_SIZE ||
+      rect.y + rect.h > GRID_SIZE
     );
   }
 
@@ -282,7 +318,6 @@ export class Game2Runtime {
   }
 
   private updateMove(item: GameItem) {
-    // Try each axis independently so sliding along walls works.
     let nx = item.x;
     let ny = item.y;
 
@@ -314,7 +349,6 @@ export class Game2Runtime {
   }
 
   private updatePlatform(item: GameItem) {
-    // Horizontal movement (left/right arrows).
     let nx = item.x;
     if (this.keysDown.has('ArrowLeft')) {
       nx -= PLATFORM_MOVE_SPEED;
@@ -329,67 +363,91 @@ export class Game2Runtime {
       item.x = nx;
     }
 
-    // Jump (spacebar) — only when grounded.
     if (this.keysDown.has(' ') && item.grounded) {
       item.vy = JUMP_VELOCITY;
       item.grounded = false;
     }
 
-    // Apply gravity.
     item.vy = Math.min(item.vy + GRAVITY, MAX_FALL_SPEED);
 
-    // Move vertically in small steps for accurate collision.
-    let remainingVy = item.vy;
-    const step = Math.sign(remainingVy);
+    // Step vertically in small increments for accurate collision.
+    const stepSize = 0.05; // cells per sub-step
+    let remaining = Math.abs(item.vy);
+    const dir = Math.sign(item.vy);
     item.grounded = false;
 
-    while (Math.abs(remainingVy) >= 1) {
-      const ny = item.y + step;
+    while (remaining > 0) {
+      const move = Math.min(remaining, stepSize);
+      const ny = item.y + dir * move;
       if (
         this.itemOutOfBounds(item, item.x, ny) ||
         this.itemCollidesWithGrid(item, item.x, ny)
       ) {
-        if (step > 0) {
+        if (dir > 0) {
           item.grounded = true;
         }
         item.vy = 0;
         break;
       }
       item.y = ny;
-      remainingVy -= step;
+      remaining -= move;
     }
 
-    // Also check if still grounded (standing on a surface).
     if (
       !item.grounded &&
       item.vy >= 0 &&
-      (this.itemOutOfBounds(item, item.x, item.y + 1) ||
-        this.itemCollidesWithGrid(item, item.x, item.y + 1))
+      (this.itemOutOfBounds(item, item.x, item.y + 0.01) ||
+        this.itemCollidesWithGrid(item, item.x, item.y + 0.01))
     ) {
       item.grounded = true;
     }
   }
 
-  private getItemSize() {
-    // Size items relative to the grid cell size (6 cells wide/tall).
-    return (Math.min(this.canvas.width, this.canvas.height) / GRID_SIZE) * 6;
-  }
-
   private render() {
     const ctx = this.ctx;
-    const w = this.canvas.width;
-    const h = this.canvas.height;
+    const cw = this.canvas.width;
+    const ch = this.canvas.height;
+    const cp = this.cellPx;
 
-    ctx.clearRect(0, 0, w, h);
+    // Camera offset in pixels.
+    const ox = this.camX * cp;
+    const oy = this.camY * cp;
 
-    // Draw grid.
-    const cellW = w / GRID_SIZE;
-    const cellH = h / GRID_SIZE;
-    for (let r = 0; r < GRID_SIZE; r++) {
-      for (let c = 0; c < GRID_SIZE; c++) {
+    // Background color.
+    ctx.fillStyle = '#121212';
+    ctx.fillRect(0, 0, cw, ch);
+
+    // Parallax background image.
+    if (this.backgroundName) {
+      const bgImg = this.loadedImages.get(this.backgroundName);
+      if (bgImg?.complete && bgImg.naturalWidth > 0) {
+        const pf = Game2Runtime.PARALLAX_FACTOR;
+        const worldPx = GRID_SIZE * cp;
+        const bgSize = Math.max(cw, ch) + worldPx * pf;
+        const bgX = -ox * pf;
+        const bgY = -oy * pf;
+        ctx.drawImage(bgImg, bgX, bgY, bgSize, bgSize);
+      }
+    }
+
+    // Visible grid cell range.
+    const colStart = Math.max(0, Math.floor(this.camX));
+    const colEnd = Math.min(
+      GRID_SIZE - 1,
+      Math.floor(this.camX + cw / cp)
+    );
+    const rowStart = Math.max(0, Math.floor(this.camY));
+    const rowEnd = Math.min(
+      GRID_SIZE - 1,
+      Math.floor(this.camY + ch / cp)
+    );
+
+    // Draw filled grid cells.
+    for (let r = rowStart; r <= rowEnd; r++) {
+      for (let c = colStart; c <= colEnd; c++) {
         if (this.grid[r]?.[c]) {
           ctx.fillStyle = '#F7F8FA';
-          ctx.fillRect(c * cellW, r * cellH, cellW, cellH);
+          ctx.fillRect(c * cp - ox, r * cp - oy, cp, cp);
         }
       }
     }
@@ -397,37 +455,50 @@ export class Game2Runtime {
     // Subtle grid lines.
     ctx.strokeStyle = 'rgba(114,122,131,0.15)';
     ctx.lineWidth = 0.5;
-    for (let r = 0; r <= GRID_SIZE; r++) {
+    for (let r = rowStart; r <= rowEnd + 1; r++) {
+      const sy = r * cp - oy;
       ctx.beginPath();
-      ctx.moveTo(0, r * cellH);
-      ctx.lineTo(w, r * cellH);
+      ctx.moveTo(colStart * cp - ox, sy);
+      ctx.lineTo((colEnd + 1) * cp - ox, sy);
       ctx.stroke();
     }
-    for (let c = 0; c <= GRID_SIZE; c++) {
+    for (let c = colStart; c <= colEnd + 1; c++) {
+      const sx = c * cp - ox;
       ctx.beginPath();
-      ctx.moveTo(c * cellW, 0);
-      ctx.lineTo(c * cellW, h);
+      ctx.moveTo(sx, rowStart * cp - oy);
+      ctx.lineTo(sx, (rowEnd + 1) * cp - oy);
       ctx.stroke();
     }
 
     // Draw items.
-    const itemSize = this.getItemSize();
+    const itemPx = ITEM_CELLS * cp;
     for (const item of this.items) {
-      const imgEl = this.loadedImages.get(item.imageFilename);
+      const dx = item.x * cp - ox;
+      const dy = item.y * cp - oy;
+
+      if (
+        dx + itemPx < 0 ||
+        dy + itemPx < 0 ||
+        dx > cw ||
+        dy > ch
+      ) {
+        continue;
+      }
+
+      const imgEl = this.loadedImages.get(item.name);
       if (imgEl?.complete && imgEl.naturalWidth > 0) {
-        ctx.drawImage(imgEl, item.x, item.y, itemSize, itemSize);
+        ctx.drawImage(imgEl, dx, dy, itemPx, itemPx);
       } else {
-        // Placeholder.
         ctx.fillStyle = '#7B61FF';
-        ctx.fillRect(item.x, item.y, itemSize, itemSize);
+        ctx.fillRect(dx, dy, itemPx, itemPx);
         ctx.fillStyle = '#fff';
         ctx.font = '10px sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(
-          item.imageFilename.slice(0, 12),
-          item.x + itemSize / 2,
-          item.y + itemSize / 2
+          item.name.slice(0, 12),
+          dx + itemPx / 2,
+          dy + itemPx / 2
         );
       }
     }

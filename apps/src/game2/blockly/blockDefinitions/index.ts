@@ -10,6 +10,11 @@ import {
   register as registerCreateItem,
 } from './createItem';
 import {
+  BLOCK_TYPE as SET_BACKGROUND,
+  generator as setBackgroundGenerator,
+  register as registerSetBackground,
+} from './setBackground';
+import {
   BLOCK_TYPE as SET_ITEM_BEHAVIOR,
   generator as setItemBehaviorGenerator,
   register as registerSetItemBehavior,
@@ -31,6 +36,7 @@ interface JsonBlockEntry {
 export const dynamicBlocks: DynamicBlockEntry[] = [
   {type: CREATE_ITEM, register: registerCreateItem, generator: createItemGenerator},
   {type: SET_ITEM_BEHAVIOR, register: registerSetItemBehavior, generator: setItemBehaviorGenerator},
+  {type: SET_BACKGROUND, register: registerSetBackground, generator: setBackgroundGenerator},
 ];
 
 export const jsonBlocks: JsonBlockEntry[] = [whenStart];

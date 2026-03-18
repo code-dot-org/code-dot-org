@@ -20,7 +20,7 @@ const ImagesPanel: React.FunctionComponent<ImagesPanelProps> = ({
   const [generating, setGenerating] = useState(false);
 
   const handleGenerate = useCallback(
-    async (prompt: string) => {
+    async (name: string, prompt: string, isSprite: boolean) => {
       setDialogOpen(false);
       if (!channelId) {
         console.error(
@@ -32,10 +32,11 @@ const ImagesPanel: React.FunctionComponent<ImagesPanelProps> = ({
       try {
         const {filename, uint8Array, mediaType} = await generateImage(
           prompt,
-          channelId
+          channelId,
+          isSprite
         );
         await uploadAssetToProject(channelId, filename, uint8Array, mediaType);
-        onImagesChange([...images, {filename, prompt}]);
+        onImagesChange([...images, {name, filename, prompt}]);
       } finally {
         setGenerating(false);
       }
@@ -54,15 +55,18 @@ const ImagesPanel: React.FunctionComponent<ImagesPanelProps> = ({
           {generating ? '...' : '+'}
         </button>
         {images.map(img => (
-          <div key={img.filename} className={moduleStyles.imageCell}>
-            <img
-              src={
-                channelId
-                  ? `/v3/assets/${channelId}/${encodeURIComponent(img.filename)}`
-                  : ''
-              }
-              alt={img.prompt || img.filename}
-            />
+          <div key={img.filename} className={moduleStyles.imageItem}>
+            <div className={moduleStyles.imageCell}>
+              <img
+                src={
+                  channelId
+                    ? `/v3/assets/${channelId}/${encodeURIComponent(img.filename)}`
+                    : ''
+                }
+                alt={img.name}
+              />
+            </div>
+            <span className={moduleStyles.imageName}>{img.name}</span>
           </div>
         ))}
       </div>
