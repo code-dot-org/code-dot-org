@@ -7,7 +7,6 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
-import * as urlTestModule from '@cdo/apps/code-studio/url_test';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import * as AuthTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
@@ -33,9 +32,6 @@ describe('Certificate', () => {
     window.dashboard = {
       CODE_ORG_URL: '//code.org',
     };
-    sinon
-      .stub(urlTestModule, 'default')
-      .callsFake((url, successCallback = () => {}) => successCallback());
   });
 
   afterEach(() => {
