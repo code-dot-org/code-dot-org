@@ -76,13 +76,7 @@ const DataDocEditAll = props => {
               <div className="actions-box">
                 <TextLink
                   id={`edit_${dataDoc.key}`}
-                  icon={
-                    <FontAwesome
-                      icon={'pen-to-square'}
-                      iconStyle="regular"
-                      title={'edit'}
-                    />
-                  }
+                  icon={<FontAwesome icon={'pencil-square-o'} title={'edit'} />}
                   href={`/data_docs/${dataDoc.key}/edit`}
                 />
                 <TextLink

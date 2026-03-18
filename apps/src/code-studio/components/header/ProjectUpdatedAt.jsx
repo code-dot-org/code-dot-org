@@ -36,7 +36,7 @@ class ProjectUpdatedAt extends React.Component {
           className="project-save-error"
           title={msg.projectSaveErrorTooltip()}
         >
-          <i className="fa-solid fa-triangle-exclamation" />
+          <i className="fa fa-exclamation-triangle" />
           &nbsp;
           {msg.projectSaveError()}
         </span>

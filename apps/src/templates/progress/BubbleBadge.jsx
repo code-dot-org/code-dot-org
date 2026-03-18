@@ -87,8 +87,7 @@ export function AssessmentBadge() {
         style={styles.purple}
       />
       <FontAwesome
-        icon="circle"
-        iconStyle="regular"
+        icon="circle-thin"
         className="fa-stack-2x"
         style={styles.white}
       />

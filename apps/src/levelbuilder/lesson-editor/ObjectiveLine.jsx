@@ -109,14 +109,14 @@ export default onClickOutside(
                 style={styles.save}
                 onMouseDown={() => this.props.onSave(this.state.description)}
               >
-                <i className="fa-solid fa-check" />
+                <i className="fa fa-check" />
               </div>
               <div
                 style={styles.remove}
                 className="unit-test-cancel-edit"
                 onMouseDown={this.handleCancelClick}
               >
-                <i className="fa-solid fa-xmark" />
+                <i className="fa fa-times" />
               </div>
             </td>
           ) : (
@@ -127,14 +127,14 @@ export default onClickOutside(
               }}
             >
               <div style={styles.edit} onMouseDown={this.props.onEditClick}>
-                <i className="fa-solid fa-pen-to-square" />
+                <i className="fa fa-edit" />
               </div>
               <div
                 style={styles.remove}
                 className="unit-test-remove-objective"
                 onMouseDown={this.props.onRemove}
               >
-                <i className="fa-solid fa-trash" />
+                <i className="fa fa-trash" />
               </div>
             </td>
           )}

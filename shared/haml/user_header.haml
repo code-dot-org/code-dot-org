@@ -45,8 +45,8 @@
     %span.create_button
       = I18n.t("#{loc_prefix}new_project_low_cap")
     &nbsp;
-    %i.create_menu_arrow_down{class: "fa-solid fa-plus"}
-    %i.create_menu_arrow_up{class: "fa-solid fa-plus", style: "display: none"}
+    %i.create_menu_arrow_down{class: "fa fa-plus"}
+    %i.create_menu_arrow_up{class: "fa fa-plus", style: "display: none"}
     .create_options{style: 'display: none', dir: language_dir_class}
       - create_drop_down_items.each do |entry|
         %a.project_link_box{id: "create_menu_option_#{entry[:title]}", href: entry[:url]}
@@ -65,7 +65,7 @@
     -# rubocop:disable CustomCops/DashboardDbUsage
     - if current_user.can_pair? && session_pairings.present?
       -# rubocop:enable CustomCops/DashboardDbUsage
-      %i.fa-solid.fa-users.pairing_icon
+      %i.fa.fa-users.pairing_icon
       %span.pairing_name= I18n.t("#{loc_prefix}team")
     - else
       -# rubocop:disable CustomCops/DashboardDbUsage
@@ -73,8 +73,8 @@
       %span.display_name{id: 'header_display_name', data: {id: current_user.id, shortname: short_name, notranslate: ''}}= short_name
       -# rubocop:enable CustomCops/DashboardDbUsage
     &nbsp;
-    %i.user_menu_arrow_down{class: "fa-solid fa-chevron-down"}
-    %i.user_menu_arrow_up{class: "fa-solid fa-chevron-up", style: "display: none"}
+    %i.user_menu_arrow_down{class: "fa fa-chevron-down"}
+    %i.user_menu_arrow_up{class: "fa fa-chevron-up", style: "display: none"}
     .user_options{style: 'display: none', dir: language_dir_class}
       %a.linktag#my-projects{href: CDO.studio_url('projects', ge_region: ge_region)}= I18n.t("#{loc_prefix}my_projects")
       -# rubocop:disable CustomCops/DashboardDbUsage

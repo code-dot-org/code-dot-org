@@ -109,7 +109,7 @@ const DanceAiScore: React.FunctionComponent<DanceAiScoreProps> = ({
                   moduleStyles.resultContentYes
                 )}
               >
-                <i className="fa-solid fa-circle-check" />
+                <i className="fa fa-check-circle" />
               </div>
             )}
             {colors === ScoreColors.NO && (
@@ -119,7 +119,7 @@ const DanceAiScore: React.FunctionComponent<DanceAiScoreProps> = ({
                   moduleStyles.resultContentNo
                 )}
               >
-                <i className="fa-solid fa-circle-xmark" />
+                <i className="fa fa-times-circle" />
               </div>
             )}
           </div>

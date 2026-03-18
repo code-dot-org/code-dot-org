@@ -292,7 +292,7 @@ class BubbleChoice < DSLDefined
   end
 
   def icon
-    'fa-solid fa-sitemap'
+    'fa fa-sitemap'
   end
 
   def clone_with_suffix(new_suffix, editor_experiment: nil)

@@ -18,7 +18,7 @@ export default class SearchBar extends React.Component {
   render() {
     return (
       <div style={styles.searchArea}>
-        <span className="fa-solid fa-magnifying-glass" style={styles.icon} />
+        <span className="fa fa-search" style={styles.icon} />
         <input
           style={styles.input}
           placeholder={this.props.placeholderText}
@@ -29,7 +29,7 @@ export default class SearchBar extends React.Component {
         />
         {this.props.clearButton && (
           <span
-            className="fa-solid fa-xmark"
+            className="fa fa-close"
             style={styles.clearIcon}
             onClick={() => {
               this.searchBox.value = '';
