@@ -311,10 +311,84 @@
 }
 
 // Code panel
-.codePanel {
+.codePanelWrapper {
+  display: flex;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.codePanel {
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.codeGenPane {
+  width: 25%;
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  border-left: 1px solid $neutral_dark70;
+  background-color: $neutral_dark;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.codeGenLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: $neutral_light;
+}
+
+.codeGenInput {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  border: 1px solid $neutral_dark70;
+  border-radius: 4px;
+  background-color: $dark_black;
+  color: $neutral_light;
+  resize: vertical;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: $neutral_dark70;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.codeGenError {
+  font-size: 12px;
+  color: #ff6b6b;
+}
+
+.codeGenSubmit {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: $light_primary_500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+
+  &:hover {
+    background-color: $light_primary_700;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }

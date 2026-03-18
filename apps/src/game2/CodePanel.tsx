@@ -11,6 +11,7 @@ import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 
 import {setImageNames} from './blockly/imageRegistry';
 import {setupGame2BlocklyEnvironment} from './blockly/setup';
+import CodeGeneratePane from './CodeGeneratePane';
 import {Game2ImageEntry} from './types';
 
 import moduleStyles from './game2View.module.scss';
@@ -150,7 +151,34 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
       };
     }, []);
 
-    return <div id={BLOCKLY_DIV_ID} className={moduleStyles.codePanel} />;
+    const handleCodeGenerated = useCallback(
+      (blocklyJson: Record<string, unknown>) => {
+        if (!workspace.current) {
+          return;
+        }
+        // Clear existing blocks and load the AI-generated ones.
+        workspace.current.clear();
+        try {
+          Blockly.serialization.workspaces.load(blocklyJson, workspace.current);
+        } catch (e) {
+          console.warn('[Game2] Could not load generated blocks:', e);
+        }
+        // Notify parent of the change.
+        const state = Blockly.serialization.workspaces.save(workspace.current);
+        onBlocksChange(state);
+      },
+      [onBlocksChange]
+    );
+
+    return (
+      <div className={moduleStyles.codePanelWrapper}>
+        <div id={BLOCKLY_DIV_ID} className={moduleStyles.codePanel} />
+        <CodeGeneratePane
+          images={images}
+          onCodeGenerated={handleCodeGenerated}
+        />
+      </div>
+    );
   }
 );
 

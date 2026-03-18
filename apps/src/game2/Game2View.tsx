@@ -163,16 +163,18 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
           />
         )}
         {/* Code panel is always mounted so Blockly workspace persists across tab switches.
-            Use visibility instead of display:none so the div retains layout dimensions,
-            preventing Blockly from getting stale cached sizes after window resizes. */}
+            Use clip-path to hide it — visibility:hidden alone doesn't clip Blockly's
+            flyout SVG elements. clip-path:inset(100%) hides everything visually while
+            keeping the element in layout flow so Blockly still gets real dimensions. */}
         <div
           style={{
-            visibility: activeTab === 'Code' ? 'visible' : 'hidden',
             position: 'absolute',
             top: 0,
             left: 0,
             width: '100%',
             height: '100%',
+            clipPath: activeTab === 'Code' ? 'none' : 'inset(100%)',
+            pointerEvents: activeTab === 'Code' ? 'auto' : 'none',
           }}
         >
           <CodePanel
