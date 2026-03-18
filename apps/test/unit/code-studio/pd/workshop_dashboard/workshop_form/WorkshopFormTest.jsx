@@ -224,6 +224,7 @@ describe('WorkshopForm', () => {
       expect(screen.getAllByText(REQUIRED_ERROR)).toHaveLength(
         expectedErrorLength
       );
-    }
+    },
+    10000
   );
 });

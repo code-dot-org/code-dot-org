@@ -1,0 +1,40 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-14T22:27:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "explainCode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "long_instructions": "#Scavenger Hunt Challenge\r\n\r\n####Complete as many missions as you can! \r\n\r\nYou must start with **Mission 1**, then you may complete the others in any order. \r\n\r\nAs you go, share what you discovered, what you did, or any output with your thought partner!\r\n\r\nUse your activity guide to keep track of your missions!\r\n\r\n**Mission 1: Build a Page**\r\n\r\n**Mission 2: Style it**\r\n\r\n**Mission 3: Add an Image**\r\n\r\n**Mission 4: Design for the User**\r\n\r\n**Mission 5: Experiment Like a Designer**\r\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-14T22:27:03.221+00:00\",\"changed\":[\"cloned from \\\"lesson3-explore-test\\\"\"],\"cloned_from\":\"lesson3-explore-test\"},{\"changed_at\":\"2026-03-14 22:35:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
