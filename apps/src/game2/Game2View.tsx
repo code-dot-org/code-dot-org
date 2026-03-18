@@ -13,7 +13,7 @@ import WorldPanel, {createEmptyGrid} from './WorldPanel';
 
 import moduleStyles from './game2View.module.scss';
 
-const TABS = ['Theme', 'Images', 'World', 'Code', 'Play'] as const;
+const TABS = ['Description', 'Images', 'World', 'Code', 'Play'] as const;
 type Tab = (typeof TABS)[number];
 
 function parseSource(raw: unknown): Game2Source {
@@ -27,7 +27,7 @@ function parseSource(raw: unknown): Game2Source {
 }
 
 const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
-  const [activeTab, setActiveTab] = useState<Tab>('Theme');
+  const [activeTab, setActiveTab] = useState<Tab>('Description');
   const [images, setImages] = useState<Game2ImageEntry[]>([]);
   const [grid, setGrid] = useState<boolean[][]>(createEmptyGrid);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -143,7 +143,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
         ))}
       </div>
       <div className={moduleStyles.tabContent}>
-        {activeTab === 'Theme' && <ThemePanel />}
+        {activeTab === 'Description' && <ThemePanel />}
         {activeTab === 'Images' && (
           <ImagesPanel
             images={images}

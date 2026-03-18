@@ -16,7 +16,7 @@ const ThemePanel: React.FunctionComponent = () => {
         type="text"
         value={value}
         onChange={e => setValue(e.target.value)}
-        placeholder="Enter a theme..."
+        placeholder="Describe your project..."
       />
       <button
         type="button"
