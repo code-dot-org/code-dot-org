@@ -1,0 +1,9 @@
+name 'pl-ai-101-V2-mod4-with-05a'
+display_name 'Practice'
+description '####**Now it is your turn!** Take some time to plan a new use of AI in your classroom or school. This might be your first time integrating AI into your teaching practice, or you could regularly integrate AI into your instruction - either is totally fine! The goal is to think of something you have not tried before. <br><br>**First**, use AI Chat Lab to help you come up or refine an idea. **Then**, go to the reflection level.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-with-05b'
+level 'pl-ai-101-V2-mod4-with-05'
+
+uses_lab2
