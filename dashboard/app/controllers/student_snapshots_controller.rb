@@ -49,6 +49,37 @@ class StudentSnapshotsController < ApplicationController
     render json: response
   end
 
+  # GET /student_snapshots/student_has_work_in_lesson
+  def student_has_work_in_lesson
+    lesson_id = params[:lesson_id]
+    unit_id = params[:unit_id]
+    student_id = params[:student_id]
+
+    return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id
+
+    begin
+      student = User.find_by(id: student_id)
+      return render json: {error: "Student not found"}, status: :not_found unless student
+
+      lesson = Lesson.find_by(id: lesson_id)
+      return render json: {error: "Lesson not found"}, status: :not_found unless lesson
+
+      unit = Unit.find_by(id: unit_id)
+      return render json: {error: "Unit not found"}, status: :not_found unless unit
+
+      unless student.student_of?(current_user)
+        Rails.logger.warn "Unauthorized access attempt: user #{current_user.id} tried to access student #{student_id} data"
+        return render json: {error: "Unauthorized access to student data"}, status: :forbidden
+      end
+
+      has_work = AiStudentSnapshotHelper.student_has_work_in_lesson?(student_id, lesson_id, unit_id)
+      render json: {has_work: has_work}
+    rescue => exception
+      Rails.logger.error "Error in student_has_work_in_lesson: #{exception.message}"
+      render json: {error: "Internal server error"}, status: :internal_server_error
+    end
+  end
+
   # GET /student_snapshots/cfu_levels/:lesson_id
   # Returns all CFU levels from the specified lesson, including metadata and basic question content.
   # CFU levels are identified by progression: "Check Your Understanding"

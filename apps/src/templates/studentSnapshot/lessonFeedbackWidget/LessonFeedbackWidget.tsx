@@ -83,6 +83,28 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       studentId: number,
       sectionId: number
     ) {
+      // First check if the student has made any progress on the lesson
+      try {
+        const workResponse = await fetch(
+          `/student_snapshots/student_has_work_in_lesson?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}`
+        );
+
+        if (!workResponse.ok) {
+          console.log('No student work found');
+          return null;
+        }
+
+        const workData = await workResponse.json();
+        if (!workData.has_work) {
+          // Return a special object to indicate no work, but don't fetch AI feedback
+          return {hasWork: false};
+        }
+      } catch (error) {
+        console.error('Error checking for student work:', error);
+        console.log('No student work found');
+        return null;
+      }
+
       try {
         const response = await fetch(
           `/student_snapshots/ai_generated_lesson_feedback?lesson_id=${lessonId}&unit_id=${unitId}&student_id=${studentId}&section_id=${sectionId}`
@@ -104,24 +126,38 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       if (!lessonId || !studentId || !unitId || !sectionId) {
         setFeedbackText('');
         setResourceData([DEFAULT_RESOURCE]);
+        setExistingFeedbackData(null);
+        setSavedOrSubmittedTimestamp(null);
         return;
       }
+
+      // Clear all previous lesson feedback data when switching lessons
       setFeedbackText('');
       setResourceData([DEFAULT_RESOURCE]);
+      setExistingFeedbackData(null);
+      setSavedOrSubmittedTimestamp(null);
+
       try {
         const response = await fetch(
           `/lesson_feedbacks/saved_feedback?lesson_id=${lessonId}&student_id=${studentId}`
         );
 
         if (!response.ok) {
-          // Try getting AI feedback from student work.
+          // No existing feedback found for this lesson - try getting AI feedback from student work.
           const aiData = await getAiLessonFeedback(
             lessonId,
             unitId,
             studentId,
             sectionId
           );
-          if (aiData && aiData.record) {
+          if (aiData && aiData.hasWork === false) {
+            // Student has no work, set default message but allow feedback creation
+            // Keep existingFeedbackData as null so we create new record
+            setFeedbackText(
+              "The student has not made any progress on this lesson yet, so we don't have any feedback to share. Check back after the student has worked on the lesson!"
+            );
+            setResourceData([DEFAULT_RESOURCE]);
+          } else if (aiData && aiData.record) {
             const aiGeneratedInitialFeedbackRecord = aiData.record;
             setExistingFeedbackData(aiGeneratedInitialFeedbackRecord);
             setFeedbackText(aiGeneratedInitialFeedbackRecord.saved_feedback);
@@ -158,6 +194,9 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       } catch (error) {
         console.error('Error fetching feedback:', error);
         setResourceData([DEFAULT_RESOURCE]);
+        // Ensure state is cleared on error so we don't use stale feedback data
+        setExistingFeedbackData(null);
+        setSavedOrSubmittedTimestamp(null);
       } finally {
         setIsLoading(false);
       }
@@ -173,7 +212,14 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     payload: LessonFeedbackData,
     feedbackId?: number
   ) => {
-    if (!lessonId || !studentId) return null;
+    if (!lessonId || !studentId) {
+      console.error('Cannot save feedback: missing required IDs', {
+        lessonId,
+        studentId,
+        sectionId,
+      });
+      return null;
+    }
 
     try {
       let response;
@@ -189,26 +235,29 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           body: JSON.stringify(payload),
         });
       } else {
-        // Create new feedback
+        // Create new feedback - always use current prop values
+        const newFeedbackPayload = {
+          lesson_id: lessonId,
+          student_id: studentId,
+          section_id: sectionId,
+          ...payload,
+        };
+
         response = await fetch('/lesson_feedbacks', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'X-CSRF-Token': await getAuthenticityToken(),
           },
-          body: JSON.stringify({
-            lesson_id: lessonId,
-            student_id: studentId,
-            section_id: sectionId,
-            ...payload,
-          }),
+          body: JSON.stringify(newFeedbackPayload),
         });
       }
 
       if (!response.ok) {
         throw new Error('Failed to save feedback');
       }
-      return await response.json();
+      const result = await response.json();
+      return result;
     } catch (err) {
       console.error('Error saving feedback:', err);
       throw err;
@@ -248,6 +297,16 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSaveAsDraft = async () => {
+    // Ensure we have current, valid IDs before saving
+    if (!lessonId || !studentId || !sectionId) {
+      console.error('Missing required IDs for saving feedback:', {
+        lessonId,
+        studentId,
+        sectionId,
+      });
+      return;
+    }
+
     const newFeedbackData = {
       ...existingFeedbackData,
       saved_feedback: feedbackText,
@@ -274,6 +333,16 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSendToStudent = async () => {
+    // Ensure we have current, valid IDs before saving
+    if (!lessonId || !studentId || !sectionId) {
+      console.error('Missing required IDs for sending feedback:', {
+        lessonId,
+        studentId,
+        sectionId,
+      });
+      return;
+    }
+
     const analyticsProperties = getCommonAnalyticsProperties();
 
     analyticsReporter.sendEvent(
@@ -292,13 +361,17 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     // Update local state
     setExistingFeedbackData(newFeedbackData);
 
-    const savedData = await persistFeedbackToBackend(
-      newFeedbackData,
-      existingFeedbackData?.id
-    );
+    try {
+      const savedData = await persistFeedbackToBackend(
+        newFeedbackData,
+        existingFeedbackData?.id
+      );
 
-    setExistingFeedbackData(savedData);
-    setSavedOrSubmittedTimestamp(determineTimeStamp(savedData));
+      setExistingFeedbackData(savedData);
+      setSavedOrSubmittedTimestamp(determineTimeStamp(savedData));
+    } catch (error) {
+      console.error('Failed to send feedback to student:', error);
+    }
   };
 
   const getFormattedTimestamp = () => {
