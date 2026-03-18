@@ -21,6 +21,36 @@ module LangfuseHelper
     end
   end
 
+  # Sends a trace + generation to the TA Langfuse project for a lesson insight call.
+  # Input is keyed identifiers only (not the system prompt) to avoid logging student data.
+  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, unit_id:, section_id:, student_id:, output:, usage:, start_time:, end_time:)
+    ta_client.create_trace_and_generation(
+      trace_name: "lesson-insight",
+      generation_name: "llm-call",
+      model: model,
+      user_id: teacher_id&.to_s,
+      input: {lesson_id: lesson_id, unit_id: unit_id, section_id: section_id},
+      output: output,
+      usage: {
+        input: usage&.dig('prompt_tokens'),
+        output: usage&.dig('completion_tokens'),
+        unit: "TOKENS",
+      },
+      metadata: {
+        lesson_id: lesson_id,
+        unit_id: unit_id,
+        section_id: section_id,
+        student_id: student_id,
+        teacher_id: teacher_id,
+      },
+      tags: ["lesson-insight"],
+      start_time: start_time,
+      end_time: end_time,
+    )
+  rescue => e
+    Rails.logger.warn("LangfuseHelper.trace_lesson_insight failed: #{e.message}")
+  end
+
   def self.tutor_client
     LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
   end

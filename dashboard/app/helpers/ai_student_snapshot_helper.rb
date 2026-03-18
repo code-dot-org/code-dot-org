@@ -17,6 +17,7 @@ module AiStudentSnapshotHelper
   def self.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
     system_prompt = AiSystemPrompts::StudentSnapshotPromptHelper.get_insight_system_prompt(lesson_id, unit_id, student_id, teacher_id, section_id)
     client = Client.new(API_KEY, MODEL)
+    start_time = Time.now
 
     begin
       response = client.request_lesson_insight(system_prompt)
@@ -25,11 +26,26 @@ module AiStudentSnapshotHelper
     rescue StandardError => exception
       raise StandardError.new("Error processing AI lesson insight: #{exception.message}")
     end
+
     if response.code == 200
       response_body = JSON.parse(response.body)
-      response_body = response_body['choices'][0]['message']['content']
-      evaluation =  {status: response.code, json: response_body}
-      return {status: evaluation[:status], json: evaluation[:json]}
+      content = response_body['choices'][0]['message']['content']
+      end_time = Time.now
+
+      LangfuseHelper.trace_lesson_insight(
+        model: MODEL,
+        teacher_id: teacher_id,
+        lesson_id: lesson_id,
+        unit_id: unit_id,
+        section_id: section_id,
+        student_id: student_id,
+        output: content,
+        usage: response_body['usage'],
+        start_time: start_time,
+        end_time: end_time,
+      )
+
+      return {status: response.code, json: content}
     else
       raise StandardError.new("Received status code #{response.code} when processing AI lesson insight: #{response.body}")
     end
