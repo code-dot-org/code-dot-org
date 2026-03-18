@@ -72,7 +72,13 @@ class StudentSnapshotsController < ApplicationController
         return render json: {error: "Unauthorized access to student data"}, status: :forbidden
       end
 
-      has_work = AiStudentSnapshotHelper.student_has_work_in_lesson?(student_id, lesson_id, unit_id)
+      # Check if student has work in this lesson
+      levels = lesson.levels.order(:position)
+      has_work = levels.any? do |level|
+        user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
+        user_level.present? && (user_level.attempts > 0 || user_level.time_spent.to_i > 0)
+      end
+
       render json: {has_work: has_work}
     rescue => exception
       Rails.logger.error "Error in student_has_work_in_lesson: #{exception.message}"

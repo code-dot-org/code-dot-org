@@ -60,16 +60,6 @@ module AiStudentSnapshotHelper
     end
   end
 
-  def self.student_has_work_in_lesson?(student_id, lesson_id, unit_id)
-    lesson = Lesson.find(lesson_id)
-    levels = lesson.levels.order(:position)
-
-    levels.any? do |level|
-      user_level = UserLevel.find_by(user_id: student_id, level_id: level.id, script_id: unit_id)
-      user_level.present? && (user_level.attempts > 0 || user_level.time_spent.to_i > 0)
-    end
-  end
-
   class Client
     attr_accessor :api_key, :model
 
