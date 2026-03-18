@@ -1,0 +1,19 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2026-03-17T23:12:28.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "### **Accessibility Audit**\r\n\r\n\r\nAs you explore the website, use these questions to help you find issues:\r\n\r\n1. Is anything hard to read or notice?\r\n\r\n2. Is it easy to click, tap, or interact with the main actions?\r\n\r\n3. Is it clear what you should do next?\r\n\r\n4. Would this page still work well on a phone or tablet?\r\n</p>\r\n<br/>\r\n\r\n<img src=\"https://images.code.org/48b2d9913b0e5be395b680d66ef76035-NASA.png\"/>\r\n\r\n\r\n<br/>",
+    "link_title": "Go to https://www.nasa.gov/",
+    "url": "https://www.nasa.gov/",
+    "display_name": "NASA",
+    "bubble_choice_description": "A science-focused site with lots of information, images, and navigation options. Explore how layout, menus, and content density affect how easy it is to find what you need.",
+    "thumbnail_url": "https://images.code.org/e31f8d5edf40198748b1f8c83ade79cc-NASA.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-17T23:12:28.596+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level1-choicea-test-2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level1-choicea-test-2026\"},{\"changed_at\":\"2026-03-17 23:13:41 +0000\",\"changed\":[\"long_instructions\",\"link_title\",\"url\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</ExternalLink>
