@@ -24,6 +24,11 @@ end
 
 apm_backend = node['cdo-otel-collector']['apm_backend']
 
+allowed_backends = %w[datadog newrelic sentry]
+unless allowed_backends.include?(apm_backend)
+  Chef::Application.fatal!("Invalid cdo-otel-collector apm_backend '#{apm_backend}'. Allowed values: #{allowed_backends.join(', ')}")
+end
+
 # Fetch the APM backend's credential from AWS Secrets Manager. The secret name follows
 # the standard <env>/cdo/<service>_<credential> convention.
 apm_api_key = case apm_backend
@@ -95,6 +100,7 @@ template '/etc/rsyslog.d/51-otelcol.conf' do
   group 'root'
   mode '0644'
   notifies :restart, 'service[rsyslog]', :delayed
+  only_if { node['cdo-otel-collector']['enable_logs'] }
 end
 
 service 'rsyslog' do

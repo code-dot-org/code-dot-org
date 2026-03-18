@@ -4,7 +4,7 @@ This cookbook installs and configures the [OpenTelemetry Contrib Collector](http
 
 ## Overview
 
-The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to a configurable APM backend. Supported backends are **Datadog** (default), **New Relic**, and **Sentry**. The active backend is controlled by the `apm_backend` attribute.
+The OTel Contrib Collector receives telemetry data (traces, metrics, logs) via OTLP and forwards it to a configurable APM backend. Supported backends are **Datadog**, **New Relic**, and **Sentry** (default). The active backend is controlled by the `apm_backend` attribute.
 
 ## Requirements
 
@@ -27,8 +27,8 @@ The following ports must be locally accessible:
 | `node['cdo-otel-collector']['enabled']` | `false` | Enable/disable the collector |
 | `node['cdo-otel-collector']['otelcol_version']` | `0.147.0` | OTel Contrib version to install |
 | `node['cdo-otel-collector']['otelcol_deb_sha256']` | *(see attributes/default.rb)* | SHA256 of the linux_amd64 .deb (must match the version) |
-| `node['cdo-otel-collector']['apm_trace_sample_rate']` | `100.0` | APM trace sampling percentage (float, 0.0-100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
-| `node['cdo-otel-collector']['apm_backend']` | `'datadog'` | APM backend: `'datadog'`, `'newrelic'`, or `'sentry'` |
+| `node['cdo-otel-collector']['apm_trace_sample_rate']` | `0.1` | APM trace sampling percentage (float, 0.0-100.0). Hashes trace ID for consistent per-trace decisions — all spans in a trace are kept or dropped together. |
+| `node['cdo-otel-collector']['apm_backend']` | `'sentry'` | APM backend: `'datadog'`, `'newrelic'`, or `'sentry'` |
 | `node['cdo-otel-collector']['datadog_site']` | `'datadoghq.com'` | **(Datadog)** DataDog site. See [DataDog site docs](https://docs.datadoghq.com/getting_started/site/). |
 | `node['cdo-otel-collector']['newrelic_otlp_endpoint']` | `'https://otlp.nr-data.net:4317'` | **(New Relic)** OTLP/gRPC endpoint. EU accounts use `https://otlp.eu01.nr-data.net:4317`. |
 | `node['cdo-otel-collector']['sentry_otlp_endpoint']` | `''` | **(Sentry)** OTLP/HTTP endpoint. Construct from your DSN: `https://o<org_id>.ingest.sentry.io/api/<project_id>/otlp/` |
@@ -57,7 +57,7 @@ include_recipe 'cdo-otel-collector'
 
 ### With cdo-apps
 
-This cookbook is automatically included when using the `cdo-apps` cookbook. The DataDog API key should be configured via the secrets management system.
+This cookbook is automatically included when using the `cdo-apps` cookbook. The APM backend credential for the selected `apm_backend` must be configured via the secrets management system (see **APM Backends** and **Secret Configuration** below).
 
 ### Secret Configuration
 

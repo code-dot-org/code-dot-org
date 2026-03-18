@@ -9,9 +9,11 @@
   apm_exporter_name = case @apm_backend
                       when 'newrelic' then 'otlp/newrelic'
                       when 'sentry'   then 'otlphttp/sentry'
-                      else                 'datadog'
+                      when 'datadog'  then 'datadog'
+                      else
+                        raise "Unsupported APM backend: #{@apm_backend.inspect}. Expected 'datadog', 'newrelic', or 'sentry'."
                       end
-  is_datadog_backend = @apm_backend == 'datadog'
+  is_datadog_backend = apm_exporter_name == 'datadog'
 %>
 
 receivers:
@@ -200,7 +202,7 @@ exporters:
 
 <% elsif @apm_backend == 'sentry' %>
   # Sentry exporter via standard OTLP/HTTP.
-  # Authenticates with a Sentry auth token passed as the Authorization header.
+  # Authenticates with a Sentry auth token passed via the x-sentry-auth header.
   # See: https://docs.sentry.io/product/sentry-basics/integrate-backend/opentelemetry/
   otlphttp/sentry:
     endpoint: <%= @sentry_otlp_endpoint %>
