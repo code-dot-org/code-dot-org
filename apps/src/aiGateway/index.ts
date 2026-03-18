@@ -1,5 +1,5 @@
-import generateTextThroughGateway from './generateTextThroughGateway';
-import transcribeThroughGateway from './transcribeThroughGateway';
+import generateTextThroughGateway from './generateText';
+import transcribeThroughGateway from './transcribe';
 
 export {
   generateTextThroughGateway as generateText,
