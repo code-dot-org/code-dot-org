@@ -77,6 +77,19 @@ processors:
     send_batch_max_size: 2048
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+  # Promotes selected resource attributes to metric data point attributes (Prometheus dimensions).
+  # Each statement adds a label that distinguishes metric series across collector instances,
+  # preventing AMP from overwriting series from different hosts or environments.
+  # resource_to_telemetry_conversion is intentionally omitted (defaults false) to avoid
+  # promoting high-cardinality resource attributes as labels.
+  transform/prometheus_labels:
+    error_mode: ignore
+    metric_statements:
+      - context: datapoint
+        statements:
+          - set(attributes["host"], resource.attributes["host.name"])
+          - set(attributes["environment"], resource.attributes["deployment.environment"])
+
   # Keeps only Rack instrumentation spans to feed the spanmetrics/rack_prometheus connector.
   filter/rack_prometheus:
     error_mode: ignore
@@ -160,8 +173,6 @@ exporters:
     endpoint: <%= @prometheus_remote_write_url %>
     auth:
       authenticator: sigv4auth/prometheus
-    external_labels:
-      deployment_environment: <%= node.chef_environment %>
 <% end %>
 
 service:
@@ -197,6 +208,6 @@ service:
     # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
     metrics/rack_prometheus:
       receivers: [spanmetrics/rack_prometheus]
-      processors: []
+      processors: [resource, transform/prometheus_labels]
       exporters: [prometheusremotewrite/rack_prometheus]
 <% end %>
