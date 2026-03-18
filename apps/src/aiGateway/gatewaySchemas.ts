@@ -95,9 +95,7 @@ type JsonSchemaValue =
       default?: unknown;
     };
 
-// eslint-disable-next-line prefer-const
-let JsonSchemaDocumentSchema: z.ZodType<JsonSchemaValue>;
-JsonSchemaDocumentSchema = z.lazy(() =>
+const JsonSchemaDocumentSchema: z.ZodType<JsonSchemaValue> = z.lazy(() =>
   z.union([
     z.boolean(),
     z.object({

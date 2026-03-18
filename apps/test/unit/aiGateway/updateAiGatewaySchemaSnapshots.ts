@@ -18,7 +18,6 @@
 
 import fs from 'fs';
 import path from 'path';
-
 import {zodToJsonSchema} from 'zod-to-json-schema';
 
 import {ALL_GATEWAY_SCHEMA_GROUPS} from '@cdo/apps/aiGateway/gatewaySchemas';
@@ -108,7 +107,9 @@ export function computeUpdate(
   if (narrowing.length > 0 && force) {
     const warnings = narrowing.map(
       c =>
-        `FORCED unknown narrowing on ${new Date().toISOString().slice(0, 10)}: ` +
+        `FORCED unknown narrowing on ${new Date()
+          .toISOString()
+          .slice(0, 10)}: ` +
         `${c.description} — scrutinize this change carefully in PR review`
     );
     return {status: 'force_updated', warnings};
@@ -175,7 +176,9 @@ describe('update AI Gateway schema snapshots', () => {
                 ...currentSchema,
               };
               writeSnapshot(p, withWarnings);
-              console.warn(`  ⚠️   ${label}: FORCE updated (unknown narrowing)`);
+              console.warn(
+                `  ⚠️   ${label}: FORCE updated (unknown narrowing)`
+              );
               outcome.warnings.forEach(w => console.warn(`       ⚠️  ${w}`));
               break;
             }

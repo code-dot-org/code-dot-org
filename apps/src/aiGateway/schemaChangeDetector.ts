@@ -155,8 +155,8 @@ function compareSchemas(
 
   // Array: recurse into items
   if (oldSchema.type === 'array' && currentSchema.type === 'array') {
-    const oldItems = ((oldSchema.items ?? {}) as JsonSchema);
-    const currentItems = ((currentSchema.items ?? {}) as JsonSchema);
+    const oldItems = (oldSchema.items ?? {}) as JsonSchema;
+    const currentItems = (currentSchema.items ?? {}) as JsonSchema;
     results.push(...compareSchemas(oldItems, currentItems, `${path}[]`));
   }
 
@@ -170,8 +170,11 @@ function compareObjectSchemas(
 ): ChangeResult[] {
   const results: ChangeResult[] = [];
 
-  const oldProps = ((oldSchema.properties ?? {}) as Record<string, JsonSchema>);
-  const currentProps = ((currentSchema.properties ?? {}) as Record<string, JsonSchema>);
+  const oldProps = (oldSchema.properties ?? {}) as Record<string, JsonSchema>;
+  const currentProps = (currentSchema.properties ?? {}) as Record<
+    string,
+    JsonSchema
+  >;
   const oldRequired = new Set<string>((oldSchema.required as string[]) ?? []);
   const currentRequired = new Set<string>(
     (currentSchema.required as string[]) ?? []

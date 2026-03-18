@@ -16,7 +16,6 @@
 
 import fs from 'fs';
 import path from 'path';
-
 import {zodToJsonSchema} from 'zod-to-json-schema';
 
 import {ALL_GATEWAY_SCHEMA_GROUPS} from '@cdo/apps/aiGateway/gatewaySchemas';

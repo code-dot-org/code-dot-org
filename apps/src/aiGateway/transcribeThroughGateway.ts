@@ -5,9 +5,7 @@ import {
 
 import HttpClient from '../util/HttpClient';
 
-import {
-  GatewayTranscribeResponseV1Schema,
-} from './gatewaySchemas';
+import {GatewayTranscribeResponseV1Schema} from './gatewaySchemas';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
