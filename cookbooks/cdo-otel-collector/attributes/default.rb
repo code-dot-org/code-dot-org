@@ -16,8 +16,8 @@ default['cdo-otel-collector'] = {
   # Sampling percentage for APM traces as a float (0.0-100.0). The sampler hashes the trace ID to make
   # a consistent per-trace decision, so all spans within a trace are kept or dropped together.
   # Applied in the main traces pipeline before APM exporters; the spanmetrics pipeline is unaffected
-  # so RED metrics remain accurate. Default 100.0 = send all traces.
-  'apm_trace_sample_rate' => 100.0,
+  # so RED metrics remain accurate. Default 0.1 = 1/10th of a percent of traces.
+  'apm_trace_sample_rate' => 0.1,
 
   # APM backend to forward telemetry to. Supported values:
   #   'datadog'  - DataDog exporter (computes APM stats client-side; applies DD-specific processors).
@@ -26,7 +26,11 @@ default['cdo-otel-collector'] = {
   #                Requires secret: <env>/cdo/newrelic_api_key in AWS Secrets Manager.
   #   'sentry'   - Sentry via standard OTLP/HTTP. No DD-specific processors applied.
   #                Requires secret: <env>/cdo/sentry_auth_token in AWS Secrets Manager.
-  'apm_backend' => 'datadog',
+  'apm_backend' => 'sentry',
+
+  # Set to true to enable the logs pipeline (syslog + OTLP logs forwarded to the APM backend).
+  # Disabled by default
+  'enable_logs' => false,
 
   # -- Datadog-specific -----------------------------------------------------------------
   # DataDog site for the exporter (US1 is optimized for AWS operations).

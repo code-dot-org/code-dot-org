@@ -8,7 +8,7 @@
   # New Relic and Sentry consume standard OTLP and do not need those attribute rewrites.
   apm_exporter_name = case @apm_backend
                       when 'newrelic' then 'otlp/newrelic'
-                      when 'sentry'   then 'otlp/sentry'
+                      when 'sentry'   then 'otlphttp/sentry'
                       else                 'datadog'
                       end
   is_datadog_backend = @apm_backend == 'datadog'
@@ -57,7 +57,17 @@ connectors:
       enabled: true
     histogram:
       explicit:
-        buckets: [10ms, 50ms, 100ms, 250ms, 500ms, 1s, 2500ms, 5s, 10s, 30s]
+        buckets:
+          - 10ms
+          - 50ms
+          - 100ms
+          - 250ms
+          - 500ms
+          - 1s
+          - 2500ms
+          - 5s
+          - 10s
+          - 30s
     metrics_flush_interval: 60s
 
 <% end %>
@@ -71,9 +81,11 @@ processors:
   # Detects host.name from the OS at runtime. Runs before the resource processor so that
   # host.name is available for the service.instance.id copy and transform/prometheus_labels.
   resourcedetection/system:
-    detectors: [system]
+    detectors:
+      - system
     system:
-      hostname_sources: [os]
+      hostname_sources:
+        - os
     override: false
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
@@ -190,10 +202,12 @@ exporters:
   # Sentry exporter via standard OTLP/HTTP.
   # Authenticates with a Sentry auth token passed as the Authorization header.
   # See: https://docs.sentry.io/product/sentry-basics/integrate-backend/opentelemetry/
-  otlp/sentry:
+  otlphttp/sentry:
     endpoint: <%= @sentry_otlp_endpoint %>
     headers:
-      Authorization: "Bearer <%= @apm_api_key %>"
+      x-sentry-auth: "sentry sentry_key=<%= @apm_api_key %>"
+    compression: gzip
+    encoding: proto
 
 <% end %>
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
@@ -206,37 +220,73 @@ exporters:
 
 service:
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
-  extensions: [sigv4auth/prometheus]
+  extensions:
+    - sigv4auth/prometheus
 <% end %>
   pipelines:
     # Traces pipeline
     traces:
-      receivers: [otlp]
-      processors: [resourcedetection/system, resource, <%= is_datadog_backend ? 'transform/datadog_errors, transform/rails_resource_name_from_rack, ' : '' %>probabilistic_sampler, batch]
-      exporters: [<%= apm_exporter_name %>]
+      receivers:
+        - otlp
+      processors:
+        - resourcedetection/system
+        - resource
+<% if is_datadog_backend %>
+        - transform/datadog_errors
+        - transform/rails_resource_name_from_rack
+<% end %>
+        - probabilistic_sampler
+        - batch
+      exporters:
+        - <%= apm_exporter_name %>
 
-    # Metrics pipeline
+<% unless @apm_backend == 'sentry' %>
+    # Metrics pipeline (disabled for Sentry — Sentry does not support OTLP metrics ingestion)
     metrics:
-      receivers: [otlp, prometheus]
-      processors: [resourcedetection/system, resource, batch]
-      exporters: [<%= apm_exporter_name %>]
+      receivers:
+        - otlp
+        - prometheus
+      processors:
+        - resourcedetection/system
+        - resource
+        - batch
+      exporters:
+        - <%= apm_exporter_name %>
+<% end %>
 
-    # Logs pipeline
+<% if @enable_logs %>
+    # Logs pipeline (opt-in via enable_logs attribute)
     logs:
-      receivers: [syslog, otlp]
-      processors: [resourcedetection/system, resource, batch]
-      exporters: [<%= apm_exporter_name %>]
+      receivers:
+        - syslog
+        - otlp
+      processors:
+        - resourcedetection/system
+        - resource
+        - batch
+      exporters:
+        - <%= apm_exporter_name %>
+<% end %>
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
     # Rack spans pipeline: filters to Rack spans and feeds the spanmetrics connector
     traces/rack_prometheus:
-      receivers: [otlp]
-      processors: [filter/rack_prometheus]
-      exporters: [spanmetrics/rack_prometheus]
+      receivers:
+        - otlp
+      processors:
+        - filter/rack_prometheus
+      exporters:
+        - spanmetrics/rack_prometheus
 
     # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
     metrics/rack_prometheus:
-      receivers: [spanmetrics/rack_prometheus]
-      processors: [resourcedetection/system, resource, transform/prometheus_labels, batch]
-      exporters: [prometheusremotewrite/rack_prometheus]
+      receivers:
+        - spanmetrics/rack_prometheus
+      processors:
+        - resourcedetection/system
+        - resource
+        - transform/prometheus_labels
+        - batch
+      exporters:
+        - prometheusremotewrite/rack_prometheus
 <% end %>
