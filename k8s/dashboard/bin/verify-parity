@@ -1,0 +1,75 @@
+#!/usr/bin/env ruby
+
+# Verify that kustomize renders are still close enough to the Helm chart.
+#
+# Usage:
+#   k8s/dashboard/bin/verify-parity
+#   k8s/dashboard/bin/verify-parity development staging production
+# With no args, it verifies every target in DashboardKustomize.target_names.
+#
+# For each target, this script:
+# - renders Helm using the target's matching values/release inputs
+# - writes the secret input files kustomize needs, derived from Helm's secret values
+# - renders kustomize for the target
+# - normalizes both outputs and diffs them
+#
+# The comparison is intentionally strict, but some drift is explicitly tolerated.
+# Warnings that say "accepted drift by Seth" are known deviations we decided not
+# to fail on, such as selected naming differences or the Redis secret formatting.
+
+require 'json'
+require 'fileutils'
+require 'tmpdir'
+require 'open3'
+require_relative 'lib/dashboard_kustomize'
+
+targets = ARGV.empty? ? DashboardKustomize.target_names : ARGV
+
+targets.each do |target|
+  helm_docs = DashboardKustomize.render_helm(target)
+  helm_secret_values = DashboardKustomize.parse_secret_values(DashboardKustomize.find_secret_doc(helm_docs))
+  secret_dirs = DashboardKustomize.secret_input_dirs
+
+  Dir.mktmpdir do |tmpdir|
+    backup_root = File.join(tmpdir, 'secret-backup')
+    FileUtils.mkdir_p(backup_root)
+    secret_dirs.each do |secret_dir|
+      next unless Dir.exist?(secret_dir)
+      relative = secret_dir.delete_prefix("#{DashboardKustomize::ROOT}/")
+      backup_dir = File.join(backup_root, relative)
+      FileUtils.mkdir_p(backup_dir)
+      FileUtils.cp_r(Dir.glob(File.join(secret_dir, '*')), backup_dir, preserve: true) unless Dir.empty?(secret_dir)
+    end
+
+    begin
+      DashboardKustomize.write_secret_inputs(target, DashboardKustomize.derive_secret_values(target, helm_secret_values))
+      kustomize_docs = DashboardKustomize.render_kustomize(target)
+
+      warnings = DashboardKustomize.warning_messages(target, helm_docs, kustomize_docs)
+      helm_normalized = DashboardKustomize.normalize_docs_for_parity(target, helm_docs)
+      kustomize_normalized = DashboardKustomize.normalize_docs_for_parity(target, kustomize_docs)
+
+      if helm_normalized != kustomize_normalized
+        helm_json = File.join(tmpdir, 'helm.json')
+        kustomize_json = File.join(tmpdir, 'kustomize.json')
+        File.write(helm_json, JSON.pretty_generate(helm_normalized) + "\n")
+        File.write(kustomize_json, JSON.pretty_generate(kustomize_normalized) + "\n")
+        diff_out, = Open3.capture2('diff', '-u', helm_json, kustomize_json)
+        abort "render parity failed for #{target}:\n#{diff_out}"
+      end
+
+      puts "OK #{target}"
+      warnings.each do |warning|
+        puts "WARN #{target}: #{warning}"
+      end
+    ensure
+      secret_dirs.each do |secret_dir|
+        FileUtils.rm_rf(secret_dir)
+        FileUtils.mkdir_p(secret_dir)
+        relative = secret_dir.delete_prefix("#{DashboardKustomize::ROOT}/")
+        backup_dir = File.join(backup_root, relative)
+        FileUtils.cp_r(Dir.glob(File.join(backup_dir, '*')), secret_dir, preserve: true) if Dir.exist?(backup_dir) && !Dir.empty?(backup_dir)
+      end
+    end
+  end
+end

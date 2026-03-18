@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+components:
+  - ../../components/autoscaling
+namePrefix: autoscale-prod-
+labels:
+  - pairs:
+      app.kubernetes.io/name: cdo
+      app.kubernetes.io/instance: autoscale-prod
+    includeSelectors: true
+    includeTemplates: true
+patches:
+  - path: deployment.patch.yaml
+  - path: hpa.patch.yaml

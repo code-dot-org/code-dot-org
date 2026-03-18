@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          image: ghcr.io/code-dot-org/code-dot-org:replace-me
+          env:
+            - name: RAILS_ENV
+              value: staging
+            - name: RACK_ENV
+              value: staging

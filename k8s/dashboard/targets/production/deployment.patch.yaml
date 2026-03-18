@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          env:
+            - name: RAILS_ENV
+              value: production
+            - name: RACK_ENV
+              value: production
+          envFrom:
+            - prefix: CDO_
+              secretRef:
+                name: cdo-external-secrets
+                optional: false
+            - prefix: CDO_
+              secretRef:
+                name: cdo-local-secrets
