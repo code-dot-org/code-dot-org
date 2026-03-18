@@ -7829,25 +7829,9 @@
   ],
   "rubrics": [
     {
-      "level_name": "ai-generated-design-lesson2-level3_2025-v2",
-      "seeding_key": {
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
       "level_name": "ai-generated-design-lesson3-level8_2026",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "level_name": "ai-generated-design-lesson6-level8_2026-v2",
-      "seeding_key": {
-        "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
