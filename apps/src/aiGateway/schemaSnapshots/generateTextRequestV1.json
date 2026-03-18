@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "properties": {
+    "model": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string"
+    },
+    "prompt": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "array",
+      "items": {}
+    },
+    "system": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "number"
+    },
+    "maxTokens": {
+      "type": "number"
+    },
+    "output": {}
+  },
+  "required": [
+    "model",
+    "token"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
