@@ -157,7 +157,7 @@ export class LevelTokenContents extends Component {
       >
         {allowMajorCurriculumChanges && (
           <div style={styles.reorder} onMouseDown={this.handleDragStart}>
-            <i className="fa-solid fa-up-down" />
+            <i className="fa fa-arrows-v" />
           </div>
         )}
         <span
@@ -199,11 +199,11 @@ export class LevelTokenContents extends Component {
             window.open(activeLevel.url, '_blank', 'noopener,noreferrer');
           }}
         >
-          <i className="fa-solid fa-pen" />
+          <i className="fa fa-pencil" />
         </div>
         {allowMajorCurriculumChanges && (
           <div style={styles.remove} onMouseDown={this.handleRemove}>
-            <i className="fa-solid fa-xmark" />
+            <i className="fa fa-times" />
           </div>
         )}
         {scriptLevel.expand && (

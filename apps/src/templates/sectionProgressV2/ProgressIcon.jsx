@@ -35,7 +35,6 @@ export default function ProgressIcon({itemType}) {
         <FontAwesome
           id={'uitest-' + itemType['icon']}
           icon={itemType['icon']}
-          iconStyle={itemType['iconStyle'] && itemType['iconStyle']}
           className={classNames(
             styles.fontAwesomeIcon,
             styles[`icon-${itemType['color']}`]

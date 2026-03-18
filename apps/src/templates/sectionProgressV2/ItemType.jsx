@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 
 import i18n from '@cdo/locale';
 
-const makeObjectType = (title, icon, color, iconStyle) => ({
+const makeObjectType = (title, icon, color) => ({
   title,
   icon,
   color,
-  iconStyle,
 });
 
 export const ITEM_TYPE = Object.freeze({
@@ -22,7 +21,7 @@ export const ITEM_TYPE = Object.freeze({
     'black'
   ),
   NO_ONLINE_WORK: makeObjectType(i18n.noOnlineWork(), 'dash', 'black'),
-  IN_PROGRESS: makeObjectType(i18n.inProgress(), 'circle', 'green', 'regular'),
+  IN_PROGRESS: makeObjectType(i18n.inProgress(), 'circle-o', 'green'),
   SUBMITTED: makeObjectType(i18n.submitted(), 'circle', 'green'),
   VALIDATED: makeObjectType(i18n.validated(), 'circle-check', 'green'),
 });

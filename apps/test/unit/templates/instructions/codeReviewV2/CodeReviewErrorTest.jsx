@@ -20,7 +20,7 @@ describe('CodeReviewError', () => {
     const wrapper = setUp();
     const icon = wrapper.find(FontAwesome);
     expect(icon).toHaveLength(1);
-    expect(icon.props().icon).toBe('circle-exclamation');
+    expect(icon.props().icon).toBe('exclamation-circle');
   });
 
   it('displays generic error if no messageTitle is passed', () => {

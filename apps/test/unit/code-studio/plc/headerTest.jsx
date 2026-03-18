@@ -21,7 +21,7 @@ describe('PlcHeader', () => {
       wrapper.containsMatchingElement(
         <div>
           <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
-          <span className="fa-solid fa-caret-right" />
+          <span className="fa fa-caret-right" />
           <span>{TEST_UNIT_NAME}</span>
         </div>
       )
@@ -42,10 +42,10 @@ describe('PlcHeader', () => {
       wrapper.containsMatchingElement(
         <div>
           <a href={TEST_COURSE_VIEW_PATH}>My Learning Plan</a>
-          <span className="fa-solid fa-caret-right" />
+          <span className="fa fa-caret-right" />
           <span>
             <a href={TEST_UNIT_VIEW_PATH}>{TEST_UNIT_NAME}</a>
-            <span className="fa-solid fa-caret-right" />
+            <span className="fa fa-caret-right" />
             <span>{TEST_PAGE_NAME}</span>
           </span>
         </div>

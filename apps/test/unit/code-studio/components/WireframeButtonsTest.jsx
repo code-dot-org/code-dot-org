@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -38,11 +37,7 @@ describe('WireframeButtons', () => {
       );
       expect(wrapper.find(SendToPhone)).to.be.empty;
 
-      wrapper
-        .find(FontAwesomeV6Icon)
-        .filterWhere(n => n.prop('iconName') === 'mobile-screen-button')
-        .closest('a')
-        .simulate('click');
+      wrapper.find('.fa-mobile').simulate('click');
       expect(wrapper.find(SendToPhone)).not.to.be.empty;
     });
   });
@@ -61,8 +56,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/s/artist">
-            <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-            {i18n.makeMyOwn()}
+            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );
@@ -71,8 +65,7 @@ describe('WireframeButtons', () => {
       expect(wrapper).to.containMatchingElement(
         <span>
           <a className="WireframeButtons_button" href="/p/artist">
-            <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-            {i18n.makeMyOwn()}
+            <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
           </a>
         </span>
       );
@@ -83,7 +76,7 @@ describe('WireframeButtons', () => {
     const VIEW_CODE_BUTTON_TEMPLATE = (
       <span>
         <a className="WireframeButtons_button">
-          <FontAwesomeV6Icon iconName="code" /> {i18n.viewCode()}
+          <i className="fa fa-code" /> {i18n.viewCode()}
         </a>
       </span>
     );

@@ -10,24 +10,15 @@ import React from 'react';
  *
  * @deprecated use DSCO FontAwesomeV6Icon instead
  */
-export default function FontAwesome({
-  icon,
-  iconStyle = undefined,
-  className,
-  title,
-  ...props
-}) {
-  const prefix = iconStyle ? `fa-${iconStyle}` : 'fa-solid';
+export default function FontAwesome({icon, className, title, ...props}) {
   const newProps = _.assign({}, props, {
-    className: `${prefix} fa-${icon} ${className ? className : ''}`,
+    className: `fa fa-${icon} ${className ? className : ''}`,
   });
   return <i {...newProps} title={title} />;
 }
 
 FontAwesome.propTypes = {
   icon: PropTypes.string.isRequired,
-  /** Icon style prefix: 'solid', 'regular', 'brands', etc. Defaults to 'fa-solid'. */
-  iconStyle: PropTypes.string,
   className: PropTypes.string,
   title: PropTypes.string,
   // Title should be used for semantic icons. If not given, the screenreader will not read the icon

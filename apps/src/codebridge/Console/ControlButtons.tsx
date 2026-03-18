@@ -129,8 +129,8 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
   const disabledCodeActionsIcon = !hasLoadedEnvironment
-    ? 'fa-spinner fa-spin fa-solid'
-    : 'fa-circle-question fa-regular';
+    ? 'fa-spinner fa-spin'
+    : 'fa-question-circle-o';
 
   return (
     <div className={moduleStyles.controlButtons}>

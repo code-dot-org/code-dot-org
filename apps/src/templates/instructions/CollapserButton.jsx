@@ -42,7 +42,7 @@ class CollapserButton extends Component {
         ) : (
           <FontAwesome
             icon={
-              this.props.collapsed ? 'circle-chevron-down' : 'circle-chevron-up'
+              this.props.collapsed ? 'chevron-circle-down' : 'chevron-circle-up'
             }
             style={
               this.props.isRtl ? styles.collapseIconRtl : styles.collapseIcon

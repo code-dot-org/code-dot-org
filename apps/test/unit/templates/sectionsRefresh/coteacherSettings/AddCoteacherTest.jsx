@@ -68,7 +68,7 @@ describe('AddCoteacher', () => {
       .filterWhere(node => node.props().variant === 'figcaption')
       .at(0);
     expect(caption.text()).to.include('The T-rex ate everyone');
-    expect(wrapper.find('FontAwesome').props().icon).to.include('circle-info');
+    expect(wrapper.find('FontAwesome').props().icon).to.include('info-circle');
   });
   it('disables add button when max coteachers reached', () => {
     const wrapper = shallow(

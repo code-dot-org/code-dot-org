@@ -31,7 +31,7 @@
 
 - if can? :create, Level
   = link_to new_level_path, class: 'new-level' do
-    %i.fa-solid.fa-circle-plus
+    %i.fa.fa-plus-circle
     = t('crud.new_model', model: Level.model_name.human)
 
 %h1 Levels
@@ -64,26 +64,26 @@
         %td.controls-column
           - if can? :edit, level
             = link_to edit_level_path(level), title: t('crud.edit') do
-              %i.fa-solid.fa-fw.fa-pencil
+              %i.fa.fa-fw.fa-pencil
           - else
-            %i.fa-solid.fa-fw
+            %i.fa.fa-fw
 
           - if can? :destroy, level
             = link_to level, title: t('crud.destroy'), method: :delete, data: { confirm: t('crud.confirm') } do
-              %i.fa-solid.fa-fw.fa-trash
+              %i.fa.fa-fw.fa-trash
           - else
-            %i.fa-solid.fa-fw
+            %i.fa.fa-fw
 
           - if can? :clone, level
             = link_to '', title: 'Clone', onclick: "$('#clone_#{level.id}').toggle(); return false;" do
-              %i.fa-solid.fa-fw.fa-copy
+              %i.fa.fa-fw.fa-copy
             %div{class: 'clone_level', id: "clone_#{level.id}", style: 'display: none;'}
               = form_tag clone_level_path(level), method: :post, remote: true do
                 = label_tag 'New name:'
                 = text_field_tag :name, level.name
                 = submit_tag 'Clone'
           - else
-            %i.fa-solid.fa-fw
+            %i.fa.fa-fw
 
         -# Level name column, linked to view action if permitted
         %td

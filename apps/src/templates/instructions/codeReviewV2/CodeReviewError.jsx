@@ -11,7 +11,7 @@ const CodeReviewError = ({messageTitle, messageText, style = {}}) => {
   const text = messageText || javalabMsg.genericErrorMessage();
   return (
     <div style={{...styles.saveStatus, ...style}}>
-      <FontAwesome icon="circle-exclamation" style={styles.iconError} />
+      <FontAwesome icon="exclamation-circle" style={styles.iconError} />
       <div>
         <p style={styles.messageTitle}>{title}</p>
         <p style={styles.messageText}>{text}</p>
