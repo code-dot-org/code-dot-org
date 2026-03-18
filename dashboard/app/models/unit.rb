@@ -358,7 +358,7 @@ class Unit < ApplicationRecord
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
-    return false if CDO.running_web_application?
+    return false unless CDO.running_web_application?
     true
   end
 
