@@ -5,6 +5,9 @@ import {
 
 import HttpClient from '../util/HttpClient';
 
+import {
+  GatewayTranscribeResponseV1Schema,
+} from './gatewaySchemas';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
@@ -34,7 +37,11 @@ async function transcribeThroughGateway(
     formData
   );
 
-  return await response.json();
+  const wire = GatewayTranscribeResponseV1Schema.parse(await response.json());
+
+  // The SDK's TranscriptionResult requires `warnings` to be an array;
+  // default to empty if the gateway omits it.
+  return {...wire, warnings: wire.warnings ?? []};
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {

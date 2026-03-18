@@ -26,13 +26,47 @@
       ],
       "additionalProperties": false
     },
+    "output": {},
     "toolCalls": {
       "type": "array",
-      "items": {}
+      "items": {
+        "type": "object",
+        "properties": {
+          "toolCallId": {
+            "type": "string"
+          },
+          "toolName": {
+            "type": "string"
+          },
+          "input": {}
+        },
+        "required": [
+          "toolCallId",
+          "toolName"
+        ],
+        "additionalProperties": false
+      }
     },
     "toolResults": {
       "type": "array",
-      "items": {}
+      "items": {
+        "type": "object",
+        "properties": {
+          "toolCallId": {
+            "type": "string"
+          },
+          "toolName": {
+            "type": "string"
+          },
+          "input": {},
+          "output": {}
+        },
+        "required": [
+          "toolCallId",
+          "toolName"
+        ],
+        "additionalProperties": false
+      }
     },
     "warnings": {
       "type": "array",
@@ -56,6 +90,33 @@
         ],
         "additionalProperties": false
       }
+    },
+    "response": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "modelId": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "body": {}
+      },
+      "required": [
+        "id",
+        "timestamp",
+        "modelId"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

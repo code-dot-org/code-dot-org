@@ -2,19 +2,16 @@ import {generateText, type GenerateTextResult} from 'ai';
 
 import HttpClient from '../util/HttpClient';
 
+import {
+  GatewayGenerateTextResponseV1Schema,
+  type GatewayGenerateTextRequestV1,
+  type GatewayGenerateTextResponseV1,
+} from './gatewaySchemas';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
 type SDKOutput = NonNullable<SDKOptions['output']>;
-
-type SerializableAIResponse<
-  TOOLS extends SDKTools = SDKTools,
-  OUTPUT extends SDKOutput = SDKOutput
-> = Omit<GenerateTextResult<TOOLS, OUTPUT>, 'text' | 'files'> & {
-  text?: string;
-  files?: {mediaType: string; base64: string}[];
-};
 
 const base64ToUint8Array = (base64: string): Uint8Array => {
   const binaryString = atob(base64);
@@ -48,18 +45,33 @@ const serializeOutputSchema = async (output?: SDKOptions['output']) => {
 };
 
 const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
-  serialized: SerializableAIResponse<TOOLS, OUTPUT>
+  wire: GatewayGenerateTextResponseV1
 ): GenerateTextResult<TOOLS, OUTPUT> => {
   return {
-    ...serialized,
-    toolCalls: serialized.toolCalls ?? [],
-    toolResults: serialized.toolResults ?? [],
-    warnings: serialized.warnings ?? [],
-    files: serialized.files?.map(file => ({
+    ...wire,
+    // Restore types that don't survive JSON serialisation.
+    text: wire.text ?? '',
+    files: wire.files?.map(file => ({
       mediaType: file.mediaType,
       base64: file.base64,
       uint8Array: base64ToUint8Array(file.base64),
     })),
+    toolCalls: (wire.toolCalls ?? []) as GenerateTextResult<
+      TOOLS,
+      OUTPUT
+    >['toolCalls'],
+    toolResults: (wire.toolResults ?? []) as GenerateTextResult<
+      TOOLS,
+      OUTPUT
+    >['toolResults'],
+    warnings: wire.warnings ?? [],
+    // output is unknown in the wire schema; callers cast it to the concrete
+    // type inferred from their OUTPUT generic (e.g. {classification: string}).
+    output: wire.output as OUTPUT,
+    // Restore the Date that was serialised to an ISO string.
+    response: wire.response
+      ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
+      : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
   } as GenerateTextResult<TOOLS, OUTPUT>;
 };
 
@@ -74,26 +86,26 @@ const generateTextThroughGateway = async <
 
     const serializedOutput = await serializeOutputSchema(options.output);
 
-    const payload = {
+    const payload: GatewayGenerateTextRequestV1 = {
       ...restOptions,
       model: getModelString(model),
-      output: serializedOutput,
+      output: serializedOutput as GatewayGenerateTextRequestV1['output'],
     };
 
     const token = await fetchAccessToken();
 
-    const response = await HttpClient.post(
+    const httpResponse = await HttpClient.post(
       AI_GATEWAY_URL,
       JSON.stringify({...payload, token}),
       false,
       {'Content-Type': 'application/json'}
     );
 
-    const data = await (response.json() as Promise<
-      SerializableAIResponse<TOOLS, OUTPUT>
-    >);
+    const wire = GatewayGenerateTextResponseV1Schema.parse(
+      await httpResponse.json()
+    );
 
-    return rehydrateAIResponse<TOOLS, OUTPUT>(data);
+    return rehydrateAIResponse<TOOLS, OUTPUT>(wire);
   } catch (error) {
     console.error('Fetch error:', error);
     throw error;
