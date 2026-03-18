@@ -10,6 +10,7 @@
   gap: 0.5rem;
   transition: outline 0.2s ease-in;
   cursor: text;
+  overflow-y: auto;
 
   @include mixins.border-styles($border-color: var(--borders-neutral-strong));
 
@@ -40,6 +41,10 @@
 
   // Chat Actions container styles
   .chatActionsContainer {
+    flex-shrink: 0;
+    position: sticky;
+    bottom: 0;
+    background: var(--background-neutral-primary);
     display: flex;
     justify-content: space-between;
 
