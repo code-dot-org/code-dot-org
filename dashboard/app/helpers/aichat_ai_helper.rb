@@ -156,10 +156,10 @@ module AichatAiHelper
   end
 
   # Create an instance of the appropriate ai-client-derived class based on model id.
-  def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil, langfuse_reporter = nil)
+  def self.create_ai_client_instance(client_type, model_id, usage_reporter = nil)
     # We assume it's one of the Vertex models if not ChatGPT.
     if model_id == SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]
-      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter, langfuse_reporter)
+      return AichatOpenaiResponsesClient.new(CDO.openai_student_learning_api_key, SharedConstants::AICHAT_MODEL_VERSION, usage_reporter)
     else
 
       # We use separate keys per-client for Gemini so that we can more easily allocate donated credits appropriately.
@@ -169,7 +169,7 @@ module AichatAiHelper
       api_key = client_type == SharedConstants::AI_CHAT_CLIENT_TYPES[:AI_TUTOR] ?
         CDO.google_vertex_ai_tutor_service_account_key : CDO.google_vertex_ai_chat_service_account_key
 
-      return AichatGeminiClient.new(api_key, model_id, usage_reporter, langfuse_reporter)
+      return AichatGeminiClient.new(api_key, model_id, usage_reporter)
     end
   end
 
@@ -209,13 +209,11 @@ module AichatAiHelper
 
     usage_reporter = AichatAiUsageReporter.new(model_id, user_id, project_id, level_id)
 
-    langfuse_reporter = AichatLangfuseReporter.new(model_id, user_id, level_id, client_type)
-
     use_legacy = DCDO.get('aichat_disable_vertex_ai', false)
 
     client = use_legacy ?
       create_ai_client_instance_legacy(client_type, model_id, usage_reporter)
-      : create_ai_client_instance(client_type, model_id, usage_reporter, langfuse_reporter)
+      : create_ai_client_instance(client_type, model_id, usage_reporter)
 
     config, request, context = get_config_request_context(stored_messages, new_message, temperature, system_prompt, retrieval_contexts,  model_id, level_id, encrypted_channel_id, user_id, project_id, client_type, json_schema)
 

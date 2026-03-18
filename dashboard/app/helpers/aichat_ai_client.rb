@@ -35,31 +35,21 @@ class AichatAiClient
 
     usage = get_usage_from_body(response_body)
 
-    end_time = Time.now
-    response_time = end_time - start_time
+    response_time = Time.now - start_time
 
     usage_reporter&.report_usage_and_throttling_metrics(usage, config, request, context, response_time)
-
-    langfuse_reporter&.report(
-      input: extract_user_message_text(request),
-      output: response_text,
-      usage: usage,
-      start_time: start_time,
-      end_time: end_time
-    )
 
     raise StandardError.new("Unexpected response from AI API: #{http_response.body}") unless response_text
 
     response_text
   end
 
-  attr_accessor :api_key, :model, :usage_reporter, :langfuse_reporter
+  attr_accessor :api_key, :model, :usage_reporter
 
-  def initialize(api_key, model, usage_reporter = nil, langfuse_reporter = nil)
+  def initialize(api_key, model, usage_reporter = nil)
     @api_key = api_key
     @model = model
     @usage_reporter = usage_reporter
-    @langfuse_reporter = langfuse_reporter
   end
 
   # The following methods MUST be Implemented By Derived class.
@@ -111,11 +101,5 @@ class AichatAiClient
 
   private def raise_not_implemented_error
     raise NotImplementedError, "This method must be implemented in the derived class"
-  end
-
-  # Extract text content from the user's request message parts.
-  # Only text parts are joined; file parts are omitted to avoid logging binary data.
-  private def extract_user_message_text(request)
-    request.select {|part| part[:type] == 'text'}.map {|part| part[:content]}.join("\n")
   end
 end
