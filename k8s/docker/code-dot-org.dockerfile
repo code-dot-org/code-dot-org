@@ -146,8 +146,6 @@ COPY --chown=${UID} --parents ./config/development.yml.erb ./
 # grunt lint-entry-points => apps/script/checkEntryPoints.js => ./dashboard/app/views
 COPY --chown=${UID} ./dashboard/app/views/ ./dashboard/app/views/
 
-ENV HAS_PEGASUS_CONTENT='false'
-
 # yarn build resolves @cdo/static and @cdo/i18n aliases at compile time, so
 # reuse those split assets here without reintroducing them from the host context.
 COPY --chown=${UID} --link \
@@ -177,7 +175,7 @@ FROM code-dot-org-core
 # ################################################################################
 
 RUN \
-  # We don't copy in .git (huge), but `bundle exec rake install` references .git in 
+  # We don't copy in .git (huge), but `bundle exec rake install` references .git in
   # a couple places, like git hooks, and fails without it, create a blank .git for now
   git init -b staging --quiet
 

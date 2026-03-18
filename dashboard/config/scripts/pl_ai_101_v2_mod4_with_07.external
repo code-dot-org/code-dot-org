@@ -1,0 +1,38 @@
+name 'pl-ai-101-V2-mod4-with-07'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Alternatives for Restricted Environments
+
+#### If students cannot directly access AI tools, there are still effective ways to teach with AI:
+
+#### **Teacher-led demonstrations**: Model AI use in front of the class to make thinking visible.
+* #### Project AI interactions and walk through them together
+* #### Model how to ask effective questions and refine prompts
+* #### Show how responses change based on different inputs
+* #### Think aloud while evaluating accuracy, bias, and usefulness
+
+#### **Analysis and critique of AI outputs**: Use AI-generated content as material for student thinking.
+* #### Provide drafts, explanations, or worked examples for students to analyze
+* #### Ask students to critique, revise, or improve AI responses
+* #### Compare AI-generated work with student work to identify strengths and limitations
+
+#### **Simulation and structured practice**: Engage students in AI-like thinking without the tool itself.
+* #### Have students role-play as the “AI” and the “user” to explore how prompts shape responses
+* #### Practice evaluating responses and deciding what is useful or not
+
+## Student-Friendly AI Tools
+#### Some tools are specifically designed for educational settings and may better align with school requirements. These tools can provide a safer entry point for integrating AI into classrooms.
+
+#### For example, **Khanmigo (Khan Academy)** is designed for guided learning, with built-in scaffolds and guardrails.
+
+#### When looking at student-friendly AI tools, look for ones that:
+* #### Prioritize student privacy
+* #### Offer teacher controls or dashboards
+* #### Focus on learning support rather than answer-giving
+
+#### **When in doubt always follow school and district guidelines.**
+
+
+MARKDOWN

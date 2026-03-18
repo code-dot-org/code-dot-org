@@ -10,14 +10,12 @@ import {
 } from '@cdo/apps/aichat/redux/slice';
 import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {isAiGatewayEnabled} from '@cdo/apps/aiGateway';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
-import {ValueOf} from '@cdo/apps/types/utils';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
@@ -29,6 +27,7 @@ import {
 
 import {postAichatCompletionMessage} from '../../aichatApi';
 import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import supportsClientApi from '../../api/supportsClientApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -48,9 +47,6 @@ import {getNewRemoveId} from '../utils';
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
-
-const useClientApi = (modelId: ValueOf<typeof AiChatModelIds>) =>
-  isAiGatewayEnabled && modelId === AiChatModelIds.GEMINI_2_5_FLASH_IMAGE;
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -176,7 +172,7 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      if (useClientApi(modelParameters.selectedModelId)) {
+      if (supportsClientApi(modelParameters.selectedModelId)) {
         const levelProperties = state.lab.levelProperties;
         const levelName = levelProperties?.name;
         const levelSystemPrompt =
