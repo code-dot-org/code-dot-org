@@ -735,7 +735,6 @@ module Services
     end
 
     def self.import_learning_goals(learning_goals_data, seed_context)
-      puts "import_learning_goals"
       learning_goals_to_import = learning_goals_data.map do |learning_goal_data|
         rubric = seed_context.lessons.find {|l| l.key == learning_goal_data['seeding_key']['lesson.key']}.rubric
         raise 'No rubric found' if rubric.nil?
