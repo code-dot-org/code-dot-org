@@ -1,12 +1,14 @@
-require_relative './test_helper'
+require_relative '../../test_helper'
 require 'active_support/cache'
 require 'active_job'
-require_relative '../router'
 require 'dynamic_config/gatekeeper'
 require 'rmagick'
+require 'cdo/rack/optimize'
 
 class OptimizeTest < Minitest::Test
   include Rack::Test::Methods
+
+  FIXTURES_DIR = File.expand_path('../../../fixtures', __FILE__).freeze
 
   def setup
     require 'cdo/optimizer'
@@ -15,10 +17,15 @@ class OptimizeTest < Minitest::Test
   end
 
   def app
+    fixtures_dir = FIXTURES_DIR
     Rack::Builder.app do
-      require 'cdo/rack/optimize'
       use Rack::Optimize
-      run Documents
+      run lambda {|env|
+        path = File.join(fixtures_dir, env['PATH_INFO'])
+        content = File.binread(path)
+        content_type = Rack::Mime.mime_type(File.extname(path))
+        [200, {'Content-Type' => content_type, 'Content-Length' => content.bytesize.to_s}, [content]]
+      }
     end
   end
 
@@ -45,7 +52,7 @@ class OptimizeTest < Minitest::Test
   end
 
   def test_optimize_anigif
-    gif = '/images/animated-examples/flappy-game-space.gif'
+    gif = '/images/flappy-game-space.gif'
     unoptimized_size = 1_712_373
     optimized_size = 1_197_026
 
