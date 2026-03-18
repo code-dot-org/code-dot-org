@@ -136,7 +136,9 @@ $tabs-default-spacing: 4px;
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.625rem;
-  min-height: 0;
+  flex-shrink: 0;
+  max-height: 100%;
+  overflow-y: auto;
   border-top: variables.$default-border;
   background: var(--background-neutral-secondary);
 
