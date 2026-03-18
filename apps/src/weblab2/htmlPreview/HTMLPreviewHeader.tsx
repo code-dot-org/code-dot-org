@@ -31,7 +31,6 @@ interface HTMLPreviewHeaderProps {
   onStopPreview: () => void;
   isStopEnabled: boolean;
   fetchFileSearchOptions: (value: string) => Promise<string[]>;
-  isShareView?: boolean;
 }
 
 export const HTMLPreviewHeader: React.FC<HTMLPreviewHeaderProps> = ({
