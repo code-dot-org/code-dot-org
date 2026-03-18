@@ -1,7 +1,6 @@
 # We skip because the test server and drone won't localize for some reason right now
 @skip
 @no_mobile
-@pegasus_content
 Feature: Global Edition - Farsi Headers when Signed Out
   Background:
     Given I am on "http://studio.code.org"
