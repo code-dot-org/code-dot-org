@@ -288,6 +288,7 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
+  blocklyWrapper.serialization.registry.unregister('procedures');
   blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
