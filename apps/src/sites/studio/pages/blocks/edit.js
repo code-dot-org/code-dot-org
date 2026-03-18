@@ -5,7 +5,7 @@ import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibrary
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {loadBlocksToWorkspace} from '@cdo/apps/blockly/utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import initializeCodeMirror6 from '@cdo/apps/code-studio/initializeCodeMirror6';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import animationList, {
   setInitialAnimationList,
@@ -65,18 +65,14 @@ function initializeEditPage(defaultSprites) {
   );
 
   const helperCodeElement = document.getElementById('block_helper_code');
-  configEditor = initializeCodeMirror6(blockConfigElement, 'json', {
+  configEditor = initializeCodeMirror(blockConfigElement, 'application/json', {
     callback: validateBlockConfig,
     onUpdateLinting: onUpdateLinting,
   });
 
-  helperEditor = initializeCodeMirror6(helperCodeElement, 'javascript', {
+  helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting,
-    lintConfig: {
-      es5: true,
-      disableRecommendedJsConfig: true,
-    },
   });
   poolField.addEventListener('change', updateBlockPreview);
 
@@ -89,7 +85,7 @@ function initializeEditPage(defaultSprites) {
   $('.alert.alert-success').delay(5000).fadeOut(1000);
 }
 
-function onUpdateLinting(errors) {
+function onUpdateLinting(_, errors) {
   if (errors.length) {
     hasLintingErrors = true;
   } else {
