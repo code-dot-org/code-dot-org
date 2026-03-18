@@ -173,7 +173,6 @@ export class Game2Runtime {
     };
 
     try {
-      // eslint-disable-next-line no-new-func
       const fn = new Function(
         'createItem',
         'setItemBehavior',
@@ -285,11 +284,7 @@ export class Game2Runtime {
     return false;
   }
 
-  private itemCollidesWithGrid(
-    item: GameItem,
-    x: number,
-    y: number
-  ): boolean {
+  private itemCollidesWithGrid(item: GameItem, x: number, y: number): boolean {
     const rect = this.getCollisionRect(item, x, y);
     return this.collidesWithGrid(rect.x, rect.y, rect.w, rect.h);
   }
@@ -432,15 +427,9 @@ export class Game2Runtime {
 
     // Visible grid cell range.
     const colStart = Math.max(0, Math.floor(this.camX));
-    const colEnd = Math.min(
-      GRID_SIZE - 1,
-      Math.floor(this.camX + cw / cp)
-    );
+    const colEnd = Math.min(GRID_SIZE - 1, Math.floor(this.camX + cw / cp));
     const rowStart = Math.max(0, Math.floor(this.camY));
-    const rowEnd = Math.min(
-      GRID_SIZE - 1,
-      Math.floor(this.camY + ch / cp)
-    );
+    const rowEnd = Math.min(GRID_SIZE - 1, Math.floor(this.camY + ch / cp));
 
     // Draw filled grid cells.
     for (let r = rowStart; r <= rowEnd; r++) {
@@ -476,12 +465,7 @@ export class Game2Runtime {
       const dx = item.x * cp - ox;
       const dy = item.y * cp - oy;
 
-      if (
-        dx + itemPx < 0 ||
-        dy + itemPx < 0 ||
-        dx > cw ||
-        dy > ch
-      ) {
+      if (dx + itemPx < 0 || dy + itemPx < 0 || dx > cw || dy > ch) {
         continue;
       }
 
@@ -495,11 +479,7 @@ export class Game2Runtime {
         ctx.font = '10px sans-serif';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(
-          item.name.slice(0, 12),
-          dx + itemPx / 2,
-          dy + itemPx / 2
-        );
+        ctx.fillText(item.name.slice(0, 12), dx + itemPx / 2, dy + itemPx / 2);
       }
     }
   }

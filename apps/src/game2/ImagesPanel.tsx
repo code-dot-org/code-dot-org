@@ -1,9 +1,10 @@
 import React, {useCallback, useState} from 'react';
 
 import ImageGenerateDialog from './ImageGenerateDialog';
-import moduleStyles from './game2View.module.scss';
 import {generateImage, uploadAssetToProject} from './imageGeneration';
 import {Game2ImageEntry} from './types';
+
+import moduleStyles from './game2View.module.scss';
 
 interface ImagesPanelProps {
   images: Game2ImageEntry[];
@@ -48,6 +49,7 @@ const ImagesPanel: React.FunctionComponent<ImagesPanelProps> = ({
     <div className={moduleStyles.imagesPanel}>
       <div className={moduleStyles.imagesGrid}>
         <button
+          type="button"
           className={`${moduleStyles.imageCell} ${moduleStyles.addImageCell}`}
           onClick={() => setDialogOpen(true)}
           disabled={generating}
@@ -60,7 +62,9 @@ const ImagesPanel: React.FunctionComponent<ImagesPanelProps> = ({
               <img
                 src={
                   channelId
-                    ? `/v3/assets/${channelId}/${encodeURIComponent(img.filename)}`
+                    ? `/v3/assets/${channelId}/${encodeURIComponent(
+                        img.filename
+                      )}`
                     : ''
                 }
                 alt={img.name}

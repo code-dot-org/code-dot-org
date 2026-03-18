@@ -1,8 +1,9 @@
 import React, {useCallback, useEffect, useRef} from 'react';
 
-import moduleStyles from './game2View.module.scss';
 import {Game2Runtime} from './runtime';
 import {Game2ImageEntry} from './types';
+
+import moduleStyles from './game2View.module.scss';
 
 interface PlayPanelProps {
   grid: boolean[][];
@@ -70,7 +71,11 @@ const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
   return (
     <div className={moduleStyles.playPanel}>
       <canvas ref={canvasRef} className={moduleStyles.playCanvas} />
-      <button className={moduleStyles.playRestart} onClick={startGame}>
+      <button
+        type="button"
+        className={moduleStyles.playRestart}
+        onClick={startGame}
+      >
         Restart
       </button>
     </div>

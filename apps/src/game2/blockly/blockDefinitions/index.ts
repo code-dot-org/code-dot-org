@@ -34,9 +34,21 @@ interface JsonBlockEntry {
 }
 
 export const dynamicBlocks: DynamicBlockEntry[] = [
-  {type: CREATE_ITEM, register: registerCreateItem, generator: createItemGenerator},
-  {type: SET_ITEM_BEHAVIOR, register: registerSetItemBehavior, generator: setItemBehaviorGenerator},
-  {type: SET_BACKGROUND, register: registerSetBackground, generator: setBackgroundGenerator},
+  {
+    type: CREATE_ITEM,
+    register: registerCreateItem,
+    generator: createItemGenerator,
+  },
+  {
+    type: SET_ITEM_BEHAVIOR,
+    register: registerSetItemBehavior,
+    generator: setItemBehaviorGenerator,
+  },
+  {
+    type: SET_BACKGROUND,
+    register: registerSetBackground,
+    generator: setBackgroundGenerator,
+  },
 ];
 
 export const jsonBlocks: JsonBlockEntry[] = [whenStart];

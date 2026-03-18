@@ -1,4 +1,4 @@
-import React, {useCallback, useRef, useState} from 'react';
+import React, {useCallback, useRef} from 'react';
 
 import moduleStyles from './game2View.module.scss';
 
@@ -63,7 +63,9 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
           {row.map((cell, c) => (
             <div
               key={c}
-              className={`${moduleStyles.worldGridCell} ${cell ? moduleStyles.worldGridCellOn : ''}`}
+              className={`${moduleStyles.worldGridCell} ${
+                cell ? moduleStyles.worldGridCellOn : ''
+              }`}
               onPointerDown={() => handlePointerDown(r, c)}
               onPointerEnter={() => handlePointerEnter(r, c)}
             />

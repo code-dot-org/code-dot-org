@@ -8,9 +8,10 @@ import CodePanel, {CodePanelHandle} from './CodePanel';
 import ImagesPanel from './ImagesPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
-import WorldPanel, {createEmptyGrid} from './WorldPanel';
-import moduleStyles from './game2View.module.scss';
 import {Game2ImageEntry, Game2Source} from './types';
+import WorldPanel, {createEmptyGrid} from './WorldPanel';
+
+import moduleStyles from './game2View.module.scss';
 
 const TABS = ['Theme', 'Images', 'World', 'Code', 'Play'] as const;
 type Tab = (typeof TABS)[number];
@@ -130,8 +131,11 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       <div className={moduleStyles.tabs}>
         {TABS.map(tab => (
           <button
+            type="button"
             key={tab}
-            className={`${moduleStyles.tab} ${activeTab === tab ? moduleStyles.tabActive : ''}`}
+            className={`${moduleStyles.tab} ${
+              activeTab === tab ? moduleStyles.tabActive : ''
+            }`}
             onClick={() => setActiveTab(tab)}
           >
             {tab}
@@ -161,14 +165,16 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
         {/* Code panel is always mounted so Blockly workspace persists across tab switches.
             Use visibility instead of display:none so the div retains layout dimensions,
             preventing Blockly from getting stale cached sizes after window resizes. */}
-        <div style={{
-          visibility: activeTab === 'Code' ? 'visible' : 'hidden',
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%',
-          height: '100%',
-        }}>
+        <div
+          style={{
+            visibility: activeTab === 'Code' ? 'visible' : 'hidden',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+          }}
+        >
           <CodePanel
             ref={codePanelRef}
             visible={activeTab === 'Code'}

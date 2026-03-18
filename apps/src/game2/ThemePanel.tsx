@@ -18,7 +18,11 @@ const ThemePanel: React.FunctionComponent = () => {
         onChange={e => setValue(e.target.value)}
         placeholder="Enter a theme..."
       />
-      <button className={moduleStyles.themeSubmit} onClick={handleSubmit}>
+      <button
+        type="button"
+        className={moduleStyles.themeSubmit}
+        onClick={handleSubmit}
+      >
         Submit
       </button>
     </div>

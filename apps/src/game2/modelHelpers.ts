@@ -1,4 +1,5 @@
 import {createGoogleGenerativeAI} from '@ai-sdk/google';
+
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 const googleProvider = createGoogleGenerativeAI({

@@ -17,15 +17,9 @@ export function register() {
     init: function () {
       this.appendDummyInput()
         .appendField('Set item')
-        .appendField(
-          new CdoFieldDropdown(getImageOptions),
-          'IMAGE'
-        )
+        .appendField(new CdoFieldDropdown(getImageOptions), 'IMAGE')
         .appendField('behavior')
-        .appendField(
-          new CdoFieldDropdown(BEHAVIOR_OPTIONS),
-          'BEHAVIOR'
-        );
+        .appendField(new CdoFieldDropdown(BEHAVIOR_OPTIONS), 'BEHAVIOR');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setStyle(BlockStyles.BEHAVIOR);

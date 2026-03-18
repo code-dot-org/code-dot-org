@@ -3,14 +3,17 @@ import React, {useState} from 'react';
 import moduleStyles from './game2View.module.scss';
 
 interface ImageGenerateDialogProps {
-  onSubmit: (name: string, prompt: string, isSprite: boolean) => void | Promise<void>;
+  onSubmit: (
+    name: string,
+    prompt: string,
+    isSprite: boolean
+  ) => void | Promise<void>;
   onClose: () => void;
 }
 
-const ImageGenerateDialog: React.FunctionComponent<ImageGenerateDialogProps> = ({
-  onSubmit,
-  onClose,
-}) => {
+const ImageGenerateDialog: React.FunctionComponent<
+  ImageGenerateDialogProps
+> = ({onSubmit, onClose}) => {
   const [name, setName] = useState('');
   const [prompt, setPrompt] = useState('');
   const [isSprite, setIsSprite] = useState(true);
@@ -64,10 +67,15 @@ const ImageGenerateDialog: React.FunctionComponent<ImageGenerateDialogProps> = (
           Sprite (with transparency)
         </label>
         <div className={moduleStyles.dialogActions}>
-          <button className={moduleStyles.dialogCancel} onClick={onClose}>
+          <button
+            type="button"
+            className={moduleStyles.dialogCancel}
+            onClick={onClose}
+          >
             Cancel
           </button>
           <button
+            type="button"
             className={moduleStyles.dialogSubmit}
             onClick={handleSubmit}
             disabled={!canSubmit}

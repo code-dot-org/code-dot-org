@@ -11,8 +11,9 @@ import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 
 import {setImageNames} from './blockly/imageRegistry';
 import {setupGame2BlocklyEnvironment} from './blockly/setup';
-import moduleStyles from './game2View.module.scss';
 import {Game2ImageEntry} from './types';
+
+import moduleStyles from './game2View.module.scss';
 
 const BLOCKLY_DIV_ID = 'game2-blockly-div';
 
@@ -114,7 +115,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
           }
         }
       );
-    }, [initialBlocks, onBlocksChange]);
+    }, [images, initialBlocks, onBlocksChange]);
 
     // Initialize workspace when the panel becomes visible.
     useEffect(() => {

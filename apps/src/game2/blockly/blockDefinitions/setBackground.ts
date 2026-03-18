@@ -11,10 +11,7 @@ export function register() {
     init: function () {
       this.appendDummyInput()
         .appendField('Set background')
-        .appendField(
-          new CdoFieldDropdown(getImageOptions),
-          'IMAGE'
-        );
+        .appendField(new CdoFieldDropdown(getImageOptions), 'IMAGE');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setStyle(BlockStyles.SETUP);
