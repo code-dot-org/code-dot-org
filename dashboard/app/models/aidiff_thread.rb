@@ -4,9 +4,9 @@
 #
 #  id              :bigint           not null, primary key
 #  user_id         :bigint           not null
-#  external_id     :text(65535)      not null
-#  llm_version     :text(65535)      not null
-#  title           :text(65535)
+#  external_id     :text(16777215)   not null
+#  llm_version     :text(16777215)   not null
+#  title           :text(16777215)
 #  unit_id         :integer
 #  lesson_id       :integer
 #  created_at      :datetime         not null
@@ -23,7 +23,7 @@
 class AidiffThread < ApplicationRecord
   belongs_to :user
   has_one :aidiff_artifact
-  has_many :aidiff_messages
+  has_many :aidiff_messages, :dependent => :destroy
 
   validates :context_type, inclusion: {in: SharedConstants::AI_DIFF_CONTEXT.values}
 
