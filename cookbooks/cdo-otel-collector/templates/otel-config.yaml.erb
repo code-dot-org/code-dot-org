@@ -197,6 +197,6 @@ service:
     # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
     metrics/rack_prometheus:
       receivers: [spanmetrics/rack_prometheus]
-      processors: [resource, batch]
+      processors: []
       exporters: [prometheusremotewrite/rack_prometheus]
 <% end %>
