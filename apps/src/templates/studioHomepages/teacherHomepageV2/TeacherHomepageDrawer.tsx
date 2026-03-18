@@ -304,7 +304,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
     }
   };
 
-  const onDrawerClose = (participate: boolean = false) => {
+  const onDrawerClose = (afeParticipate: boolean = false) => {
     if (schoolInfoInterstitialOpen) {
       analyticsReporter.sendEvent(EVENTS.SCHOOL_INTERSTITIAL_DISMISS, {});
     } else if (schoolInfoConfirmationOpen) {
@@ -315,7 +315,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       HttpClient.post(
         '/dashboardapi/v1/users/me/dismiss_donor_teacher_banner',
         JSON.stringify({
-          participate: participate,
+          participate: afeParticipate,
           source: 'teacher_home',
         }),
         true,
@@ -325,7 +325,7 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
       ).catch(error => console.error(error));
 
       // redirect to form on amazon-future-engineer page if user accepted
-      if (participate) {
+      if (afeParticipate) {
         window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
       }
     }
