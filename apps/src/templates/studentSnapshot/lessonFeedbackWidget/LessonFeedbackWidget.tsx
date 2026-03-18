@@ -297,16 +297,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSaveAsDraft = async () => {
-    // Ensure we have current, valid IDs before saving
-    if (!lessonId || !studentId || !sectionId) {
-      console.error('Missing required IDs for saving feedback:', {
-        lessonId,
-        studentId,
-        sectionId,
-      });
-      return;
-    }
-
     const newFeedbackData = {
       ...existingFeedbackData,
       saved_feedback: feedbackText,
@@ -333,16 +323,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
   };
 
   const handleSendToStudent = async () => {
-    // Ensure we have current, valid IDs before saving
-    if (!lessonId || !studentId || !sectionId) {
-      console.error('Missing required IDs for sending feedback:', {
-        lessonId,
-        studentId,
-        sectionId,
-      });
-      return;
-    }
-
     const analyticsProperties = getCommonAnalyticsProperties();
 
     analyticsReporter.sendEvent(
