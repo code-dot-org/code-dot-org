@@ -740,7 +740,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
 
         {mode === DanceAiModalMode.GENERATED && (
           <div id="check-area" className={moduleStyles.checkArea}>
-            <i className="fa fa-check-circle" />
+            <i className="fa-solid fa-circle-check" />
           </div>
         )}
 

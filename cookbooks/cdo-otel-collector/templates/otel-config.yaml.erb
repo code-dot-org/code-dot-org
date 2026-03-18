@@ -76,7 +76,28 @@ processors:
     send_batch_size: 1024
     send_batch_max_size: 2048
 
+  # Detects host.name from the OS at runtime. Runs before the resource processor so that
+  # host.name is available for the service.instance.id copy and transform/prometheus_labels.
+  resourcedetection/system:
+    detectors: [system]
+    system:
+      hostname_sources: [os]
+    override: false
+
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
+  # Promotes selected resource attributes to metric data point attributes (Prometheus dimensions).
+  # Each statement adds a label that distinguishes metric series across collector instances,
+  # preventing AMP from overwriting series from different hosts or environments.
+  # resource_to_telemetry_conversion is intentionally omitted (defaults false) to avoid
+  # promoting high-cardinality resource attributes as labels.
+  transform/prometheus_labels:
+    error_mode: ignore
+    metric_statements:
+      - context: datapoint
+        statements:
+          - set(attributes["host"], resource.attributes["host.name"])
+          - set(attributes["environment"], resource.attributes["deployment.environment"])
+
   # Keeps only Rack instrumentation spans to feed the spanmetrics/rack_prometheus connector.
   filter/rack_prometheus:
     error_mode: ignore
@@ -160,10 +181,6 @@ exporters:
     endpoint: <%= @prometheus_remote_write_url %>
     auth:
       authenticator: sigv4auth/prometheus
-    resource_to_telemetry_conversion:
-      enabled: true
-    target_info:
-      enabled: true
 <% end %>
 
 service:
@@ -174,19 +191,19 @@ service:
     # Traces pipeline
     traces:
       receivers: [otlp]
-      processors: [resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
+      processors: [resourcedetection/system, resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
       exporters: [datadog]
 
     # Metrics pipeline
     metrics:
       receivers: [otlp, prometheus]
-      processors: [resource, batch]
+      processors: [resourcedetection/system, resource, batch]
       exporters: [datadog]
 
     # Logs pipeline
     logs:
       receivers: [filelog/syslog, otlp]
-      processors: [resource, batch]
+      processors: [resourcedetection/system, resource, batch]
       exporters: [datadog]
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
@@ -199,6 +216,6 @@ service:
     # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
     metrics/rack_prometheus:
       receivers: [spanmetrics/rack_prometheus]
-      processors: [resource, batch]
+      processors: [resourcedetection/system, resource, transform/prometheus_labels, batch]
       exporters: [prometheusremotewrite/rack_prometheus]
 <% end %>
