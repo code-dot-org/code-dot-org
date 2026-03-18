@@ -76,6 +76,14 @@ processors:
     send_batch_size: 1024
     send_batch_max_size: 2048
 
+  # Detects host.name from the OS at runtime. Runs before the resource processor so that
+  # host.name is available for the service.instance.id copy and transform/prometheus_labels.
+  resourcedetection/system:
+    detectors: [system]
+    system:
+      hostname_sources: [os]
+    override: false
+
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
   # Promotes selected resource attributes to metric data point attributes (Prometheus dimensions).
   # Each statement adds a label that distinguishes metric series across collector instances,
@@ -183,19 +191,19 @@ service:
     # Traces pipeline
     traces:
       receivers: [otlp]
-      processors: [resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
+      processors: [resourcedetection/system, resource, transform/datadog_errors, transform/rails_resource_name_from_rack, batch]
       exporters: [datadog]
 
     # Metrics pipeline
     metrics:
       receivers: [otlp, prometheus]
-      processors: [resource, batch]
+      processors: [resourcedetection/system, resource, batch]
       exporters: [datadog]
 
     # Logs pipeline
     logs:
       receivers: [filelog/syslog, otlp]
-      processors: [resource, batch]
+      processors: [resourcedetection/system, resource, batch]
       exporters: [datadog]
 
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
@@ -208,6 +216,6 @@ service:
     # RED metrics pipeline: receives generated metrics from spanmetrics and ships to Prometheus
     metrics/rack_prometheus:
       receivers: [spanmetrics/rack_prometheus]
-      processors: [resource, transform/prometheus_labels]
+      processors: [resourcedetection/system, resource, transform/prometheus_labels]
       exporters: [prometheusremotewrite/rack_prometheus]
 <% end %>
