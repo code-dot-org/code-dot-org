@@ -13,6 +13,10 @@ name: k8s-stitch-multiplatform-image
 
 on:
   workflow_call:
+    outputs:
+      docker_tag:
+        description: "Docker tag for the final multi-platform image"
+        value: ${{ inputs.docker_tag }}
     inputs:
       docker_tags_json:
         description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
