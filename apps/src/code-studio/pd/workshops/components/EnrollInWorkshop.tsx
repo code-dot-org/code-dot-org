@@ -1,7 +1,7 @@
 import Alert from '@code-dot-org/component-library/alert';
-import Button, {LinkButton} from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Link from '@code-dot-org/component-library/link';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {
@@ -87,13 +87,17 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
   const renderEnrollmentAction = () => {
     if (isFull) {
       return (
-        <Button
-          className={moduleStyles.fullWidthButton}
-          size="m"
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled
-          text="Workshop is full"
+          className={moduleStyles.fullWidthButton}
           onClick={() => null}
-        />
+          type="button"
+        >
+          {'Workshop is full'}
+        </MuiButton>
       );
     }
 
@@ -104,29 +108,35 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             This workshop's registration is managed externally by the regional
             partner.
           </Typography>
-          <LinkButton
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loadingPosition="end"
+            className={moduleStyles.fullWidthButton}
             href={customRegistrationLink}
             target="_blank"
-            className={moduleStyles.fullWidthButton}
-            type="primary"
-            size="m"
-            text="Go to partner enrollment"
-            iconRight={{iconName: 'up-right-from-square'}}
-          />
+            endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
+          >
+            {'Go to partner enrollment'}
+          </MuiButton>
         </>
       );
     }
 
     if (isStudent || isSignedOut) {
       return (
-        <LinkButton
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
+          loadingPosition="end"
           className={moduleStyles.fullWidthButton}
-          type="primary"
-          size="m"
           href={buildEnrollButtonLink(`/professional-learning/workshops/${id}`)}
-          text={isStudent ? 'Switch to teacher account' : 'Sign-in to enroll'}
-          iconRight={{iconName: 'right-to-bracket'}}
-        />
+          endIcon={<FontAwesomeV6Icon iconName="right-to-bracket" />}
+        >
+          {isStudent ? 'Switch to teacher account' : 'Sign-in to enroll'}
+        </MuiButton>
       );
     }
 
@@ -159,15 +169,18 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
         {isUserEnrolled && userEnrollment?.code ? (
           <CancelWorkshopEnrollment enrollmentCode={userEnrollment.code} />
         ) : (
-          <Button
-            className={moduleStyles.fullWidthButton}
-            type="primary"
-            size="m"
-            isPending={isSubmitting}
-            onClick={handleClick}
-            text="Enroll in this workshop"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="medium"
+            loading={isSubmitting}
             disabled={isMissingUserInfo(userInfo)}
-          />
+            className={moduleStyles.fullWidthButton}
+            onClick={handleClick}
+            type="button"
+          >
+            {'Enroll in this workshop'}
+          </MuiButton>
         )}
       </div>
     );
