@@ -196,7 +196,9 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           color="primary"
           size="medium"
           onClick={handlePrimaryButtonClick}
-          type="button"
+          href={pegasus('/resources/amazon-future-engineer#eligibility')}
+          target="_blank"
+          rel="noopener noreferrer"
           endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
         >
           {i18n.learnMore()}
@@ -323,11 +325,6 @@ export const TeacherHomepageDrawer: React.FC<TeacherHomepageDrawerProps> = ({
           'Content-Type': 'application/json',
         }
       ).catch(error => console.error(error));
-
-      // redirect to form on amazon-future-engineer page if user accepted
-      if (afeParticipate) {
-        window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
-      }
     }
     setSchoolInfoInterstitialOpen(false);
     setSchoolInfoConfirmationOpen(false);
