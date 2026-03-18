@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-16 18:48:03 UTC",
+    "serialized_at": "2026-03-17 18:51:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -436,6 +436,18 @@
       "seeding_key": {
         "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1",
         "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "97e91a12-98b6-4262-baca-7999551ca15c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -1014,6 +1026,39 @@
       "seeding_key": {
         "activity_section.key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb",
         "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "212ff842-fe52-495b-8340-d1d20f1b7d14",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prompting with ROPE"
+      },
+      "seeding_key": {
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
+      }
+    },
+    {
+      "key": "2ce72469-a87f-4625-9c71-5498901b3ac4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Add Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
+      }
+    },
+    {
+      "key": "d295e465-768f-4b72-aa9f-8396ba11b423",
+      "position": 3,
+      "properties": {
+        "progression_name": "Versioning"
+      },
+      "seeding_key": {
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
       }
     }
   ],
@@ -2174,6 +2219,72 @@
       "level_keys": [
         "all-the-aif-things-web-lab-tutor-ai-prompt-mode-jamila"
       ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting with ROPE"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1_2026-prompting"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level1_2026-prompting"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-add-images"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-panel2_2026-add-images"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Versioning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-version-control"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-panel2_2026-version-control"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -2739,6 +2850,42 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level1_2026-prompting",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1_2026-prompting"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-panel2_2026-add-images",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-add-images"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-panel2_2026-version-control",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-version-control"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423"
       }
     }
   ],
