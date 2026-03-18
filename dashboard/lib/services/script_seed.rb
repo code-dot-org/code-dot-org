@@ -293,11 +293,11 @@ module Services
       columns_to_update = get_columns(Unit) - [:original_unit_group_id]
       Unit.import! [script_to_import], on_duplicate_key_update: columns_to_update
 
-      # activerecord-import executes a raw SQL UPDATE that bypasses ActiveRecord
-      # lifecycle hooks, including query cache invalidation. Clear the query cache
-      # so that subsequent lookups via ID (e.g. lesson.script) return fresh data
-      # instead of a stale cached row that predates this import.
-      ActiveRecord::Base.connection.clear_query_cache
+      # activerecord-import bypasses ActiveRecord lifecycle hooks, so the
+      # Unit model's in-memory script_cache (used by ScriptLevel#script)
+      # may still hold a stale object from before the import. Remove it so
+      # subsequent lookups return fresh data.
+      Unit.remove_from_cache(script_to_import.name)
 
       # activerecord-import doesn't trigger callbacks for imported models, and
       # Scripts rely on the after_save hook to invoke `generate_plc_objects`,
@@ -310,13 +310,6 @@ module Services
       # for more models than just Unit, in which case we should probably
       # reassess the pattern being used here.
       imported_script = Unit.find_by!(name: script_to_import.name)
-      if imported_script.name == 'allthethings'
-        puts "DEBUG import_script find_by_name: id=#{imported_script.id} ai_rubric_s3_config=#{imported_script.ai_rubric_s3_config.inspect}"
-        by_id = Unit.find(imported_script.id)
-        puts "DEBUG import_script find_by_id: ai_rubric_s3_config=#{by_id.ai_rubric_s3_config.inspect}"
-        by_id_reloaded = by_id.reload
-        puts "DEBUG import_script find_by_id_reloaded: ai_rubric_s3_config=#{by_id_reloaded.ai_rubric_s3_config.inspect}"
-      end
       imported_script.run_callbacks(:save)
       return imported_script
     end

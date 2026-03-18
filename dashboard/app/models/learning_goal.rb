@@ -25,13 +25,7 @@ class LearningGoal < ApplicationRecord
   validate :validate_ai_config
   def validate_ai_config
     if ai_enabled && !CDO.aws_s3_emulated
-      script_level = rubric.get_script_level
-      if script_level&.script&.name == 'allthethings'
-        script = script_level.script
-        puts "DEBUG validate_ai_config: script_level.script_id=#{script_level.script_id} script.ai_rubric_s3_config=#{script.ai_rubric_s3_config.inspect}"
-        puts "DEBUG validate_ai_config: script.reload.ai_rubric_s3_config=#{script.reload.ai_rubric_s3_config.inspect}"
-      end
-      lesson_s3_name = AiRubricConfig.get_lesson_s3_name(script_level)
+      lesson_s3_name = AiRubricConfig.get_lesson_s3_name(rubric.get_script_level)
       s3_learning_goals = AiRubricConfig.get_s3_learning_goals(lesson_s3_name)
       unless s3_learning_goals.include?(learning_goal)
         errors.add(:learning_goal, "no valid AI config in S3 for ai-enabled learning goal '#{learning_goal}'")
