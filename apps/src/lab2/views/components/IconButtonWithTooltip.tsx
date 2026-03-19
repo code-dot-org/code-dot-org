@@ -14,8 +14,8 @@ interface IconButtonWithTooltipProps {
   id: string;
   label: string;
   icon: FontAwesomeV6IconProps;
-  variant: IconButtonProps['variant'];
-  color: IconButtonProps['color'];
+  variant?: IconButtonProps['variant'];
+  color?: IconButtonProps['color'];
   size?: IconButtonProps['size'];
   tooltipSize: TooltipProps['size'];
   tooltipDirection: TooltipProps['direction'];
@@ -66,12 +66,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
         [onClick, containerRef]
       );
 
-      const iconElement = (
-        <FontAwesomeV6Icon
-          iconName={icon.iconName}
-          iconStyle={icon.iconStyle}
-        />
-      );
+      const iconElement = <FontAwesomeV6Icon {...icon} />;
 
       const tooltipProps = {
         tooltipId: `${id}-tooltip`,
@@ -95,6 +90,7 @@ const IconButtonWithTooltip: React.FunctionComponent<IconButtonWithTooltipProps>
               disabled={disabled}
               href={href}
               target={target}
+              rel={target === '_blank' ? 'noopener noreferrer' : undefined}
             >
               {iconElement}
             </MuiIconButton>

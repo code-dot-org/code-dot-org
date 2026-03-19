@@ -51,6 +51,9 @@ const RawJsonEditor: React.FunctionComponent<RawJsonEditorProps> = ({
             editing ? onUpdate(currentValueString, true) : setEditing(true);
           }}
           type="button"
+          startIcon={
+            <FontAwesomeV6Icon iconName={editing ? 'circle-check' : 'edit'} />
+          }
         >
           {editing ? 'Done' : 'Edit'}
         </MuiButton>

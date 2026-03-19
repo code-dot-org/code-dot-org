@@ -116,6 +116,7 @@ const EnrollInWorkshop: React.FC<EnrollInWorkshopProps> = ({
             className={moduleStyles.fullWidthButton}
             href={customRegistrationLink}
             target="_blank"
+            rel="noopener noreferrer"
             endIcon={<FontAwesomeV6Icon iconName="up-right-from-square" />}
           >
             {'Go to partner enrollment'}

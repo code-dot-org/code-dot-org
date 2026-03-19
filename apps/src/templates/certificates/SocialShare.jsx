@@ -61,6 +61,7 @@ export default function SocialShare({
           variant="contained"
           color="primary"
           size="small"
+          aria-label={i18n.shareToLinkedIn()}
           onClick={e => onShare(e, 'linkedin')}
           style={{backgroundColor: color.linkedin_blue}}
           href={linkedShareUrl}
@@ -80,6 +81,7 @@ export default function SocialShare({
           variant="contained"
           color="primary"
           size="small"
+          aria-label={i18n.shareToFacebook()}
           onClick={e => onShare(e, 'facebook')}
           style={{backgroundColor: color.facebook_blue}}
           href={facebookShareUrl}
@@ -98,6 +100,7 @@ export default function SocialShare({
           variant="contained"
           color="primary"
           size="small"
+          aria-label={i18n.shareToTwitter()}
           onClick={e => onShare(e, 'twitter')}
           style={{backgroundColor: color.x_black}}
           href={twitterShareUrl}

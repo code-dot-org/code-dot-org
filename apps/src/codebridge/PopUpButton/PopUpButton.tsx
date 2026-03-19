@@ -202,6 +202,7 @@ export const PopUpButton = ({
   return (
     <>
       <MuiIconButton
+        id={id}
         variant="text"
         color="tertiary"
         size="extraSmall"
