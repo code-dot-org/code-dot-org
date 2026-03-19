@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-17 22:34:05 UTC",
+    "serialized_at": "2026-03-19 05:27:28 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -248,7 +248,7 @@
       "relative_position": 9,
       "properties": {
         "overview": "**How can we make sites usable for everyone?**\n\nIn this lesson, students explore how accessible design ensures that digital experiences work for everyone, regardless of ability. They analyze real-world accessibility challenges and AI-generated designs to understand how bias and inaccessibility can be replicated through training data. By applying the POUR framework, students practice identifying accessibility issues and writing AI prompts that make designs more inclusive—reinforcing empathy, user-centered thinking, and the importance of human oversight in guiding AI.",
-        "preparation": "- Print copies of the Web Page Features activity guide (one for each student)",
+        "preparation": "- Print copies of the Accessibility and Design activity guide (one for each student)",
         "student_overview": "**How can we make sites usable for everyone?**\n\nIn this lesson, you explore how to design websites and apps that work for everyone. By examining common accessibility issues and using the POUR framework, you learn how designers and AI can create more inclusive digital experiences when guided by human empathy and clear design choices."
       },
       "seeding_key": {
@@ -265,9 +265,8 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "overview": "**Why sketch before building?**\n\nIn this lesson, students take on the role of UX Designers to explore how sketches and wireframes help plan structure and user flow before any visual design or AI tools come into play. Through rapid sketching, analysis, and peer feedback, they learn that wireframing emphasizes clarity, consistency, and human decision-making in the design process. The lesson reinforces how designers use abstraction and pattern recognition to stay in control of structure and logic before automation or coding begins.",
-        "preparation": "- (Optional) Print copies of the Wireframe activity guide if your students will not use Sketch Lab on Level 1",
-        "student_overview": "**Why sketch before building?**\n\nIn this lesson, you act as a UX Designer to plan how a website or app is organized before any visuals or code are added. By sketching and refining wireframes, you focus on structure, clarity, and the design choices that belong to humans before AI takes over."
+        "overview": "**Why sketch before building?**\n\nIn this lesson, students take on the role of UX Designers to explore how sketches and wireframes help plan structure and user flow before visual design or full development begins. Through rapid sketching, comparison, and peer feedback, they learn that wireframing emphasizes clarity, organization, and making design decisions that others — including AI tools — can understand and build from.",
+        "student_overview": "**Why sketch before building?**\n\nIn this lesson, you act as a UX Designer to plan how a website or app is organized before any visuals or code are added. By sketching and improving wireframes, you focus on structure, clarity, and making your design easy for others — including AI tools — to understand and build."
       },
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
@@ -698,7 +697,7 @@
       "key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00",
       "position": 1,
       "properties": {
-        "duration": 15,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -712,7 +711,7 @@
       "key": "e6828936-7e57-4ebb-8923-13f83efc67b6",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -740,7 +739,7 @@
       "key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1",
       "position": 1,
       "properties": {
-        "duration": 15,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -754,7 +753,7 @@
       "key": "d77b8110-2057-474e-a7c9-2bab358b0b68",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -3012,10 +3011,59 @@
       }
     },
     {
-      "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
+      "key": "4ee7375f-5e58-4707-8a4d-299f7ee11e56",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly remind students that they practiced this “Prompt Like a Designer” routine in Lesson 3. Review the three requirements and explain that they’ll use the same structure again in the next level before prompting AI.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students review how to add context (prompt, webpage, and design) so AI can generate more accurate results.\n- Level 3: Students use their plan to prompt AI to generate a CSS stylesheet, apply their brand’s colors and fonts, and refine the styling as needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students prompted AI to generate a separate CSS file and update the HTML to link the stylesheet in the <head>.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three requirements that students need to include when writing AI prompts. Explain that they'll get more detailed guidance and examples in the following slides.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ee7375f-5e58-4707-8a4d-299f7ee11e56",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "c935358f-8216-4d32-ab4d-9d0170af1166",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it clearly defines the goal for the styling.\n\nThey should recognize that:\n- Prompt #1 is too vague (“look modern and professional”)\n- Prompt #2 gives a specific styling goal (colors, fonts, and which parts of the page to style)\n\nHelp students see the difference between:\n- a vague goal → unclear results\n- a specific goal → more predictable, accurate results",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The more specific students can get in drafting their prompt the less back and forth they will have to do with AI later in the development process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c935358f-8216-4d32-ab4d-9d0170af1166",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "706e0bdf-1c08-4eff-921f-5196dbbdbf49",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it provides clear, specific constraints like a dark color scheme and simple font style.\n\nThey should recognize that:\n- “nice” and “easy to read” in Prompt #1 are subjective\n- AI may interpret those differently than the student intended\n\nHelp students understand:\n- Constraints = clear rules AI must follow\n- More specific constraints lead to more predictable and consistent results\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it defines specific problems to avoid in the design.\n\nThey should recognize:\n- Prompt #1 is vague and doesn’t prevent issues\n- Prompt #2 anticipates what could go wrong (contrast, readability, spacing)\n\nHelp students understand:\n- Edge cases = what to avoid\n- Strong prompts don’t just say what to do — they also say what should not happen"
+      },
+      "seeding_key": {
+        "activity_section.key": "706e0bdf-1c08-4eff-921f-5196dbbdbf49",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "be1edc60-506d-41a2-973d-3f830001b6e6",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "be1edc60-506d-41a2-973d-3f830001b6e6",
+        "lesson_activity.key": "c96e3610-ec79-4376-b1b9-33779c8442f0"
+      }
+    },
+    {
+      "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
+      "position": 8,
+      "properties": {
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students review how to add context (prompt, webpage, and design) so AI can generate more accurate results.\n- Level 3: Students use their plan to prompt AI to generate a CSS stylesheet, apply their brand’s colors and fonts, and refine the styling as needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students prompted AI to generate a separate CSS file and update the HTML to link the stylesheet in the <head>.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
         "progression_name": "Apply a Stylesheet",
         "tips": [
           {
@@ -3031,7 +3079,7 @@
     },
     {
       "key": "eb19e8c6-032e-459a-a171-d7d33faf20d8",
-      "position": 5,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What did the AI change in your CSS — and why?*\n- *Did it make any styling choices you wouldn't have made yourself?*\n- *How do you know if its output matches your brand goals?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on how AI interprets prompts and makes automated styling decisions. They consider when AI-generated CSS aligns with their intent and when it diverges. The goal is for students to see themselves as responsible reviewers, not passive users — understanding that AI can enhance efficiency but still requires human judgment for accuracy, accessibility, and design intent."
       },
@@ -3042,7 +3090,7 @@
     },
     {
       "key": "334832a8-868c-44f9-ab42-48736fbf0c38",
-      "position": 6,
+      "position": 10,
       "properties": {
         "description": "When designers use AI tools, they don’t assume every output is correct — they check what changed, why it changed, and whether it still fits their design goals.",
         "remarks": true
@@ -3054,7 +3102,7 @@
     },
     {
       "key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
-      "position": 7,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 4 and choose one challenge to complete. Encourage them to think like designers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
         "duration": "15",
@@ -3687,7 +3735,7 @@
       "key": "c22a64c6-9423-4e72-97b9-ff33ebcbf990",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students build empathy for users with different visual abilities and recognize how design choices—like color, contrast, and text size—impact accessibility. They connect these challenges to how both human designers and AI tools must think differently to create inclusive web apps."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students analyze how layout and visual organization affect a user’s ability to locate information and complete a task on a website."
       },
       "seeding_key": {
         "activity_section.key": "c22a64c6-9423-4e72-97b9-ff33ebcbf990",
@@ -3695,11 +3743,20 @@
       }
     },
     {
-      "key": "4a01e198-7a5e-4180-b026-d35817918be3",
+      "key": "0f0f963a-6afd-4ad4-ae49-dbdc05b90ab5",
       "position": 2,
       "properties": {
-        "description": "Today we'll step into the shoes of users who see the web differently and explore how both people and AI systems can design for accessibility.",
-        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0f0f963a-6afd-4ad4-ae49-dbdc05b90ab5",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
+      "key": "4a01e198-7a5e-4180-b026-d35817918be3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What would you click first to start your pizza order?*\n- *What clues on the page tell you \"this is the ordering area\"?*\n- *What’s one thing that makes it harder to locate what you need?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that the layout makes it difficult to quickly locate key actions or information. They may point out competing elements, unclear starting points, or labels that do not clearly guide the ordering process. Students should begin recognizing how visual hierarchy, grouping, and clear sections help users understand where to go next.\n"
       },
       "seeding_key": {
         "activity_section.key": "4a01e198-7a5e-4180-b026-d35817918be3",
@@ -3707,16 +3764,20 @@
       }
     },
     {
-      "key": "5da2349c-3a1d-4300-9b6b-ab2387ea71a9",
-      "position": 3,
+      "key": "d61f7fb3-6258-4e42-b171-55d94212e2ff",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Low Vision Experience\" and “Color Blindness Experience” videos.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What stood out about the challenges these users faced?*\n- *What mistakes might AI make if it doesn't consider these challenges?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify specific usability barriers, such as difficulty reading small or low-contrast text, confusing navigation, or reliance on color alone. Students should explain how these issues affect a user's experience (for example, not being able to find a button or read important text). Students should recognize that AI might reproduce inaccessible patterns — for instance, choosing poor color contrast, omitting alt text, or generating layouts that assume perfect vision.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "You can also provide students with the link to Project Lima and have them experience these accessibility issues firsthand. Have students choose at least one of the three experiences to try. Encourage them to spend a few minutes exploring the chosen experience(s). Observe students as they engage with the simulations. After exploring, ask: What was the hardest part of that experience? or How did that simulation make you feel as a user? Connect their emotions to the earlier questions about AI and design responsibility."
-          }
-        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d61f7fb3-6258-4e42-b171-55d94212e2ff",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
+      "key": "5da2349c-3a1d-4300-9b6b-ab2387ea71a9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the \"Web Accessibility Perspectives: Clear Layout and Design\" video.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Questions to consider with the video:** \n- *What made the first pizza site confusing?*\n- *What changed to make the improved version easier?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that clear layout and organization help users quickly understand where to start and what to do next. They should identify specific design changes—such as clearer headings and labels, navigation bar, and consistent styling—that make the improved site easier to navigate and use."
       },
       "seeding_key": {
         "activity_section.key": "5da2349c-3a1d-4300-9b6b-ab2387ea71a9",
@@ -3724,8 +3785,29 @@
       }
     },
     {
+      "key": "23546aa1-18a3-418e-b5e2-e3169675d5c1",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "23546aa1-18a3-418e-b5e2-e3169675d5c1",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
+      "key": "69efbd19-2330-4000-9689-b51d15a2c5d5",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Where would you go first to start an order now?*\n- *What parts of the page are easier to locate?*\n- *What design choices help guide you through the steps?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should notice that the improved layout organizes the page into clear sections and highlights key actions. They may point out that steps like Find Store, Create Pizza, and Add Sides are grouped and labeled clearly, making it easier to understand where to begin and what to do next. Students should recognize that visual hierarchy, consistent layout, and grouping help users locate information quickly and complete tasks more easily.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "69efbd19-2330-4000-9689-b51d15a2c5d5",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
       "key": "0ba9b7fa-06a2-4c69-9140-200b28f3c0cd",
-      "position": 4,
+      "position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -3734,8 +3816,47 @@
       }
     },
     {
+      "key": "b073e951-5c29-4fb9-a8ee-3e771c3fe8d1",
+      "position": 9,
+      "properties": {
+        "description": "AI tools can generate layouts that look correct but still include usability issues. Designers need to review AI-generated designs and identify problems that could make a site harder to use.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b073e951-5c29-4fb9-a8ee-3e771c3fe8d1",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
+      "key": "f622eaa6-3517-4dad-8f6d-f1da80018cae",
+      "position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f622eaa6-3517-4dad-8f6d-f1da80018cae",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
+      "key": "736b3094-e797-4c8f-b773-a90534b2df3a",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What could go wrong if no one fixed these designs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that poor design can prevent users from completing tasks, cause confusion or frustration, and lead users to abandon the site. They may mention difficulty finding information, making mistakes, or being unable to use the site at all. This reinforces that accessibility issues have real consequences and that designs—whether created by humans or AI—must be reviewed and improved to ensure they are usable.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students focus only on aesthetics (e.g., “it looks messy”), prompt them to consider the impact on the user: Can the user complete the task? What might cause them to give up? Connect this to AI by reminding students that AI-generated designs can include these same issues, so designers need to review and improve them.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "736b3094-e797-4c8f-b773-a90534b2df3a",
+        "lesson_activity.key": "3b8d79cc-63d7-4dc0-9eca-0dcb4b8c2e00"
+      }
+    },
+    {
       "key": "065f87af-df88-49cc-8c0a-e7ea6957ed5c",
-      "position": 5,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -3748,8 +3869,8 @@
       "key": "cb46e8e6-1cf5-47ba-aea5-23be69181d45",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students are introduced to the accessibility challenges that exist across the web and learn how those issues influence AI-generated designs. They explore the real-world role of the Inclusive Designer and understand why human judgment is essential in guiding AI toward more accessible outcomes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read the key stat aloud to emphasize its scale. Then, highlight the examples of common issues (low contrast text, missing alt text, unlabeled forms, empty links/buttons).",
-        "duration": "5",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students are introduced to the accessibility challenges that exist across the web and learn how those issues influence AI-generated designs. They explore the real-world role of the Inclusive Designer and understand why human judgment is essential in guiding AI toward more accessible outcomes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that nearly 95% of websites have accessibility issues and highlight examples of common issues (low contrast text, missing alt text, unlabeled forms, empty links/buttons).\n",
+        "duration": "10",
         "name": "How Accessible is the Web?"
       },
       "seeding_key": {
@@ -3758,11 +3879,26 @@
       }
     },
     {
-      "key": "63e7bb2c-2c47-481e-9f04-92e0f9752851",
+      "key": "3a096998-9f72-4364-8026-05af2c557169",
       "position": 2,
       "properties": {
-        "description": "AI design tools are trained on the same web we just looked at, which means they inherit its strengths and its flaws. Let's talk about what that could mean for accessibility.",
-        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3a096998-9f72-4364-8026-05af2c557169",
+        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
+      }
+    },
+    {
+      "key": "63e7bb2c-2c47-481e-9f04-92e0f9752851",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the diagram to explain how accessibility issues in web data can appear in AI-generated designs. Emphasize that AI learns patterns from existing websites, so issues in those sites can be reproduced in AI-generated outputs.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI “knows better” than humans. Emphasize that AI does not judge quality—it learns patterns from existing data, including flawed or inaccessible designs.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "63e7bb2c-2c47-481e-9f04-92e0f9752851",
@@ -3770,45 +3906,20 @@
       }
     },
     {
-      "key": "30942fb9-6204-4bfb-950c-eab89f290c60",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *If most websites have accessibility issues, what might AI learn from that data?*\n- *How could those patterns show up in AI-generated layouts or code?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that AI systems learn from existing examples on the web. If most of those examples are inaccessible, the AI will also learn and reproduce those same barriers. Students should start connecting data quality to AI output quality. Students should identify concrete ways inaccessibility could appear in AI work. Students should see that AI can generate polished-looking designs that still fail real users.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Inclusive Designer role.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the “Thinking Accessibility in UX Design” video."
-      },
-      "seeding_key": {
-        "activity_section.key": "30942fb9-6204-4bfb-950c-eab89f290c60",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
-      "key": "eb16cf5e-81ba-435f-be4c-aefb04969ae1",
+      "key": "15a97075-533e-4ddd-aed2-7722c19f6274",
       "position": 4,
       "properties": {
-        "description": "Today, you'll get to practice thinking like an Inclusive Designer. You'll look at an AI-generated webpage, test it for accessibility, and then use what you find to guide the AI toward better, more inclusive design choices.",
-        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "eb16cf5e-81ba-435f-be4c-aefb04969ae1",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
-      "key": "646d7a0a-1649-4d92-acff-f343a3547802",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how to use the POUR framework (Perceivable, Operable, Understandable, Robust) to describe and organize accessibility issues they observed in AI-generated layouts.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/pair of students a copy of the Accessibility in Design activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the POUR Principles.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Levels 1 and 2: Students review and define POUR Principle.\n- Level 3: Students identify at least two to three accessibility issues on the provided web page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they examine the page. Prompt them with questions like: 'What POUR principle does this issue relate to?' or 'How might this issue affect a user with low vision?' Ensure they are focusing on issues like low contrast text, missing alt text, and tiny buttons. Ensure students use the Accessibility Prompt Builder in their Unit Guide to write AI prompts that suggest fixes for the issues they identified.",
-        "duration": "20",
-        "name": "The POUR Principle"
-      },
-      "seeding_key": {
-        "activity_section.key": "646d7a0a-1649-4d92-acff-f343a3547802",
+        "activity_section.key": "15a97075-533e-4ddd-aed2-7722c19f6274",
         "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
       }
     },
     {
       "key": "b032dedb-f25d-418f-82cd-de2e8088e0b4",
-      "position": 6,
+      "position": 5,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 1. Students explore one of the provided websites and identify potential usability or accessibility issues that could make it harder for a user to locate information or complete a task.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, prompt them with questions like:\n- \"What is the main task a user might want to complete on this page?\"\n- \"Is it easy to tell where to start?\"\n- \"Is anything hard to read, interact with, or understand?\"\nEncourage students to be specific about what part of the design causes the issue.\n\n",
         "progression_name": "Accessibility Audit"
       },
       "seeding_key": {
@@ -3817,95 +3928,78 @@
       }
     },
     {
-      "key": "53d0f84e-a9c7-47c2-9e16-4e0882bdd3a4",
-      "position": 7,
+      "key": "6a41a4e9-2d19-4728-82fc-f4a2570c3e4e",
+      "position": 6,
       "properties": {
-        "progression_name": "Fix Accessibility Issues",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students were absent for the previous lesson where they created site maps/apps, make sure they are aware of the AI Prompt in the instructions that will provide a site map for them. Emphasize that the goal is not necessarily to 'solve' every issue, but to practice identifying problems and communicating them effectively through prompts. This is a key skill for working with AI and for accessibility design in general."
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the POUR Principles as rules for making website accessible. Explain that each letter represents a type of issue designers use to evaluate websites: Perceivable, Operable, Understandable, and Robust. Direct students to record the definition in their Unit Guide."
       },
       "seeding_key": {
-        "activity_section.key": "53d0f84e-a9c7-47c2-9e16-4e0882bdd3a4",
+        "activity_section.key": "6a41a4e9-2d19-4728-82fc-f4a2570c3e4e",
         "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
       }
     },
     {
-      "key": "a957d2c4-7506-4727-b67f-50fc37f009db",
+      "key": "201f9741-6975-4c80-9251-06bea885bc50",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the perceivable. Direct students to fill in the vocab definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the operable. Direct students to fill in the vocab definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define the understandable. Direct students to fill in the vocab definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**Define the robust. Direct students to fill in the vocab definition in their Unit Guide.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "201f9741-6975-4c80-9251-06bea885bc50",
+        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
+      }
+    },
+    {
+      "key": "fc802641-5841-4518-9dfd-e03ac16f8aa3",
       "position": 8,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "a957d2c4-7506-4727-b67f-50fc37f009db",
+        "activity_section.key": "fc802641-5841-4518-9dfd-e03ac16f8aa3",
         "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
       }
     },
     {
-      "key": "bd913774-0194-4540-a189-6dce8385e60b",
+      "key": "845557f7-b87c-4793-90b1-b484cf68fb3f",
       "position": 9,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Why do we need a framework like POUR when designing for accessibility?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should understand that POUR provides a structured approach to ensure digital products are usable by everyone. Guide them to see it as a checklist or a set of guiding principles that help designers systematically consider different aspects of accessibility. Emphasize that it helps ensure inclusivity and usability across a wide range of user needs and abilities."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how to use the POUR framework (Perceivable, Operable, Understandable, Robust) to describe and organize accessibility issues they observed in AI-generated layouts.\n\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Accessibility in Design activity guide.\n",
+        "duration": "20",
+        "name": "The POUR Principle"
       },
       "seeding_key": {
-        "activity_section.key": "bd913774-0194-4540-a189-6dce8385e60b",
+        "activity_section.key": "845557f7-b87c-4793-90b1-b484cf68fb3f",
         "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
       }
     },
     {
-      "key": "433a4c94-8701-42d4-b508-86981dfcb0a7",
+      "key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de",
       "position": 10,
       "properties": {
-        "description": "Now we'll use these principles to start identifying issues and prompting AI to fix them.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "433a4c94-8701-42d4-b508-86981dfcb0a7",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
-      "key": "97961015-fc2a-438d-ad78-2382993d71dd",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 4. Students apply accessibility principles to their own apps from Lesson 8 by revisiting them with a user persona who has an accessibility constraint.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Remind them to be specific in their prompts, referencing the POUR principles. Ask students to explain how their user's constraint makes certain aspects of their app challenging. Prompt them to connect specific design elements to potential accessibility barriers.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 5."
-      },
-      "seeding_key": {
-        "activity_section.key": "97961015-fc2a-438d-ad78-2382993d71dd",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
-      "key": "8252879a-218a-4d83-a560-d4d85c0a010d",
-      "position": 12,
-      "properties": {
-        "progression_name": "Apply Accessibility Principles"
-      },
-      "seeding_key": {
-        "activity_section.key": "8252879a-218a-4d83-a560-d4d85c0a010d",
-        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
-      }
-    },
-    {
-      "key": "4eb39b41-cf4c-471e-8fd8-54286965668b",
-      "position": 13,
-      "properties": {
-        "progression_name": "Check for Understanding",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students identify at least two to three accessibility issues on the provided web page.\n- **Level 3:** Students apply accessibility principles to their own apps from Lesson 8\n- **Level 4:** Students complete a check for understanding.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they identify accessibility issues and apply the POUR principles. Prompt them with questions like: “What POUR principle does this issue relate to?” or “How might this issue affect a user with this constraint?” Encourage students to be specific in their prompts, clearly describing the issue and referencing the relevant POUR principle. Push them to connect specific design elements (e.g., contrast, labels, button size) to real user challenges. Ensure students use the Accessibility Prompt Builder to generate and refine prompts that communicate issues clearly, rather than trying to fix everything at once.\n",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "Encourage students to connect their suggested change to the idea of empathy and how would this change make life easier for their user."
+            "type": "assessmentOpportunity",
+            "markdown": "Levels 2 and 4 can serve as a formative assessment. Collect student responses to gauge their understanding of applying the POUR framework and user-centered design principles.\n"
           },
           {
-            "type": "assessmentOpportunity",
-            "markdown": "This prompt can serve as a formative assessment. Collect student responses to gauge their understanding of applying the POUR framework and user-centered design principles."
+            "type": "teachingTip",
+            "markdown": "If students were absent for the previous lesson where they created site maps/apps, make sure they are aware of the AI Prompt in the instructions that will provide a site map for them. Emphasize that the goal is not necessarily to \"solve\" every issue, but to practice identifying problems and communicating them effectively through prompts. This is a key skill for working with AI and for accessibility design in general.\n"
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4eb39b41-cf4c-471e-8fd8-54286965668b",
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de",
+        "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
+      }
+    },
+    {
+      "key": "30942fb9-6204-4bfb-950c-eab89f290c60",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "30942fb9-6204-4bfb-950c-eab89f290c60",
         "lesson_activity.key": "e6828936-7e57-4ebb-8923-13f83efc67b6"
       }
     },
@@ -3913,7 +4007,7 @@
       "key": "2f82b4de-d2f8-4331-be82-fae001199b5d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently, then invite a few volunteers to share. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary.\n"
       },
       "seeding_key": {
         "activity_section.key": "2f82b4de-d2f8-4331-be82-fae001199b5d",
@@ -3924,7 +4018,7 @@
       "key": "c1494fe9-3302-4722-bdd6-cca685175003",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students experience the purpose of quick, low-fidelity sketches by focusing on structure and function rather than visual design. This reinforces abstraction (ignoring unnecessary details), decomposition (breaking the page into parts), and pattern recognition (noticing common layouts)."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that low-fidelity wireframes are easier to change than high-fidelity designs, and begin to understand why designers plan structure before building.\n"
       },
       "seeding_key": {
         "activity_section.key": "c1494fe9-3302-4722-bdd6-cca685175003",
@@ -3932,10 +4026,21 @@
       }
     },
     {
-      "key": "58208ff8-5047-4657-9285-d713c57bdc34",
+      "key": "77a27c2f-9440-4214-ab11-6f6bfc3017e0",
       "position": 2,
       "properties": {
-        "description": "Designers often start by sketching rough layouts to plan how information will be organized. The goal right now is speed and clarity — not polished design. Focus on the big pieces that make a homepage work: navigation, sections, and where content will go.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which is easier to change?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to notice that the wireframe on the right is easier to change because it focuses only on structure, not visual details. Students should understand that designers use \"low-fidelity\" sketches to quickly test and revise layout and user flow before adding visuals or code. This reinforces that planning structure is a human decision-making step that happens before AI or developers build the final product."
+      },
+      "seeding_key": {
+        "activity_section.key": "77a27c2f-9440-4214-ab11-6f6bfc3017e0",
+        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
+      }
+    },
+    {
+      "key": "58208ff8-5047-4657-9285-d713c57bdc34",
+      "position": 3,
+      "properties": {
+        "description": "The version on the right is called a wireframe — designers use it to plan structure because it's much easier to change before anything is fully built.",
         "remarks": true
       },
       "seeding_key": {
@@ -3944,14 +4049,24 @@
       }
     },
     {
-      "key": "0483791b-70f6-4719-a7f3-e72cb97bc7b9",
-      "position": 3,
+      "key": "63a5a9d7-cafa-4f94-a5d1-c39cd54fadbc",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough home page for a fictional music playlist app. It should include basic navigation, key sections, a short paragraph, and an image gallery.",
+      },
+      "seeding_key": {
+        "activity_section.key": "63a5a9d7-cafa-4f94-a5d1-c39cd54fadbc",
+        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
+      }
+    },
+    {
+      "key": "0483791b-70f6-4719-a7f3-e72cb97bc7b9",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define wireframe as a low-fidelity, structural layout showing content and functionality without colors, images, or visual styling. Use the blueprint analogy: just like an architect sketches a blueprint before building, designers create wireframes to plan structure and layout before adding visuals. Explain that this step keeps humans in the loop — designers decide structure and logic, while AI or developers handle styling and details later.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Emphasize speed over perfection. Encourage students to use rough lines, boxes, and placeholders. They should avoid details like colors, specific photos, or exact wording. This keeps attention on structure — a core idea in abstraction."
+            "markdown": "Ask students what other kinds of jobs use \"blueprints\" or rough drafts before building the final version. This helps them connect the idea of planning structure first — a core design principle — to the broader concept of human decision-making before automation.\n"
           }
         ]
       },
@@ -3962,7 +4077,7 @@
     },
     {
       "key": "b50fb357-8b35-4632-b295-e925cc0643d9",
-      "position": 4,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -3971,85 +4086,8 @@
       }
     },
     {
-      "key": "23948cc9-e7c9-43d8-8ee0-03c85adee88f",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough About page for the same fictional music playlist app. The page should include a short description of the app, a section for team or creator information, and navigation that links back to the homepage.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "As students sketch the second page, ask them to reuse layout patterns — designers look for consistency across pages to improve navigation and flow. Remind students that they are focusing on structure and layout, not visual design — this continues the practice of abstraction (ignoring details that don't affect structure) and decomposition (breaking each page into functional sections)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "23948cc9-e7c9-43d8-8ee0-03c85adee88f",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
-      "key": "1741c777-b1ab-4a83-8610-44fd193840be",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "1741c777-b1ab-4a83-8610-44fd193840be",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
-      "key": "24643ebb-c037-454c-a969-0b064d2e8c76",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What choices did you make about what to include or leave out?*\n- *Which parts of your sketch feel like human design choices, and which could AI handle later?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to reflect on how they made structural decisions (abstraction) and how these choices connect to the designer's role in a human-in-the-loop workflow. Students should recognize that:\n- Sketching focuses on what's essential for structure and function, not polished visuals.\n- Designers make early layout and content decisions before AI or developers build — that's what keeps humans in control of the creative process."
-      },
-      "seeding_key": {
-        "activity_section.key": "24643ebb-c037-454c-a969-0b064d2e8c76",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
-      "key": "3591223f-8ab0-4254-8640-97e3315adb80",
-      "position": 8,
-      "properties": {
-        "description": "When designers start a project, they make big decisions about structure and function — not about visuals or colors. That's because AI or developers can handle those details later. What you just created is actually your first wireframe — a quick sketch that helps plan structure before any visuals or code come into play. Let's take a look at what wireframes include — and what they leave out.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "3591223f-8ab0-4254-8640-97e3315adb80",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
-      "key": "4b3f459e-13a0-404b-afbe-a297dc50eb68",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define wireframe as a low-fidelity, structural layout showing content and functionality without colors, images, or visual styling. Use the blueprint analogy: just like an architect sketches a blueprint before building, designers create wireframes to plan structure and layout before adding visuals. Explain that this step keeps humans in the loop — designers decide structure and logic, while AI or developers handle styling and details later.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Ask students what other kinds of jobs use \"blueprints\" or rough drafts before building the final version. This helps them connect the idea of planning structure first — a core design principle — to the broader concept of human decision-making before automation."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4b3f459e-13a0-404b-afbe-a297dc50eb68",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
-      "key": "6fa6a95c-e3d0-4001-8542-1367131e6de1",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "6fa6a95c-e3d0-4001-8542-1367131e6de1",
-        "lesson_activity.key": "e4eb8b14-12fb-444a-bc04-2e2b989b70a1"
-      }
-    },
-    {
       "key": "ac154cab-acab-4a46-a46c-708e45535a4d",
-      "position": 11,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -4062,7 +4100,9 @@
       "key": "23059e05-9a98-4646-9748-63040a889557",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students create low-fidelity wireframes for multiple pages of a single app, ensuring consistency in key UI elements. They map a logical user flow and think like UX Designers deciding structure before AI builds.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"UI Design: When to Wireframe\"\n\nQuestions to consider with video:\n- Why do UX Designers start with sketches before designing?\n- What problems could skipping this step create later?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Help students understand that wireframing is about clarity and complexity, not polish. Students should recognize that:\n- Pros use sketches to think through structure and user flow before design.\n- Wireframing saves time by revealing layout or usability issues early.\n- This early planning is a human decision step — designers make structure decisions before AI or tools automate visuals.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Display both the high-fidelity mockup and a low-fidelity wireframe of the same web app with extras removed. Facilitate a brief discussion about which would be easier to change and why. Explain that designers sketch in low fidelity because it's faster and easier to adjust structure before visuals are added. This step keeps humans in control of key decisions before AI or developers build.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students begin creating low-fidelity wireframes by focusing on structure and layout, understanding that clear wireframes will be used to guide AI in building their webpage in the next lesson.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with a blank sheet of paper, or have students take out a sheet if they have one.",
+        "duration": "15",
+        "name": "Wireframe Sketch Sprint "
       },
       "seeding_key": {
         "activity_section.key": "23059e05-9a98-4646-9748-63040a889557",
@@ -4070,23 +4110,171 @@
       }
     },
     {
-      "key": "8e5e0af6-b615-4ee4-95ba-784a3c011cd0",
+      "key": "9b74ff46-5258-4af4-a2d2-6a4bb610f98c",
       "position": 2,
       "properties": {
-        "description": "You're the UX Designer deciding structure before AI or developers build. Your job is to make the layout clear and consistent so that anyone — or any AI tool — could understand how the app works. That's part of keeping humans in the loop.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch a rough home page for a fictional music playlist app. It should include basic navigation, key sections, a short paragraph, and an image gallery.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize speed and clarity over perfection. Encourage students to use shapes like boxes and lines to represent content. They should avoid details like colors, specific photos, or exact wording. This keeps attention on structure — a core idea in abstraction.\n\nIf students get stuck, prompt them: \"Where would a user click first? What would they see next?\"\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b74ff46-5258-4af4-a2d2-6a4bb610f98c",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "3caa91e6-da89-42c5-8de8-25ccf365a8fe",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students quickly turn to a partner and compare their sketches. Prompt them to identify: what they chose to include (navigation, sections, layout) and what they left out (colors, images, detailed text). Keep this brief — about 30–60 seconds.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students get stuck, prompt: \"Did you include colors? Real images? Exact wording?\" This helps them notice they focused on structure.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3caa91e6-da89-42c5-8de8-25ccf365a8fe",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "d6aef63b-e37a-48ee-bd9a-0d0c243ca7fb",
+      "position": 4,
+      "properties": {
+        "description": "If you left out things like colors, exact images, or detailed text, that's exactly right — you're thinking like a designer. In previous lessons, you made mood boards and brand kits to decide how your site should look — colors, fonts, and style. Now, you're focusing on how your page is structured — where things go and how a user moves through it. What you just created is your first wireframe — a plan for structure. So what kinds of components do low-fidelity wireframes usually include? Let's take a quick look.\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "8e5e0af6-b615-4ee4-95ba-784a3c011cd0",
+        "activity_section.key": "d6aef63b-e37a-48ee-bd9a-0d0c243ca7fb",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "5a35ce7c-9add-48a3-b9ce-d78e4119af28",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly introduce these as the common building blocks of wireframes. Point to a few key examples on the slide and name their purpose:\n- Navigation / Header → how users navigate between pages\n- Image / Video placeholders → where media will go\n- Text blocks → where information will appear\n- Buttons / inputs → how users interact\n\nEmphasize that these are simple, reusable shapes used to quickly plan layout — not final design. Keep this quick, focusing on recognition, not memorization. Let students know they can refer to these components in their Unit Guide at any time. Prompt students to consider what their sketch might be missing based on these components.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Avoid explaining every component in detail. Focus on a few core ones (navigation, sections, media, actions). If time allows, ask: \"Which of these did you already include in your sketch?\" This helps students connect the components to their own work and that they may have already used some of these in their Round 1 sketches; now we're just making them more intentional.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5a35ce7c-9add-48a3-b9ce-d78e4119af28",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "304c695b-7c05-4a56-8e18-41727e534ff1",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students compare the wireframe and final webpage and identify what stayed the same and what changed. Prompt them to consider which parts of the finished webpage come from structure and which come from visual design. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this brief. Avoid turning this into a full discussion — the goal is quick noticing so students can apply what they see in Round 2.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "304c695b-7c05-4a56-8e18-41727e534ff1",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "ce9ebc48-7921-4ef0-8230-dbf1afec291a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students one minute to sketch an About page for the same app. Prompt them to use the wireframe components from the previous slide to make their layout clearer and more structured. Remind them they can refer to the components in their Unit Guide if needed. Encourage students to think about how users would move between this page and their homepage — designers look for consistency across pages to improve navigation and flow.\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they are focusing on structure and layout, not visual design — this continues the practice of abstraction (ignoring details that don't affect structure) and decomposition (breaking each page into functional sections).\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ce9ebc48-7921-4ef0-8230-dbf1afec291a",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "c0c1890b-d74d-4512-8e0b-3fa484964257",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students briefly compare their own Round 1 and Round 2 sketches (or compare with a partner). Prompt them to notice what became clearer or more organized and where they used wireframe components more intentionally.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this fast — this is a quick reflection, not a full discussion. If students struggle, prompt: “What’s easier to understand in your second sketch?”\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c0c1890b-d74d-4512-8e0b-3fa484964257",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "62fa376b-1af5-492c-beb1-e3bd31983be9",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Connect students' experience from the sketch activities to the ideas on the slide. Explain that when students sketched their pages, they were making decisions about structure and how users move through the app — not focusing on colors or visuals. Emphasize that this is exactly what designers do when creating wireframes: planning structure first so the final product works well before any styling or tools are applied. Then transition students to applying this thinking to their own app.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "62fa376b-1af5-492c-beb1-e3bd31983be9",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "908bd0dc-df9b-46b6-b705-215a6711a326",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students create low-fidelity wireframes for multiple pages of an app, focusing on clear structure and how users move between pages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two. ",
+        "duration": "20",
+        "name": "Wireframe an App Idea "
+      },
+      "seeding_key": {
+        "activity_section.key": "908bd0dc-df9b-46b6-b705-215a6711a326",
+        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
+      }
+    },
+    {
+      "key": "45862666-94c2-4c89-85d7-38e8f5adc416",
+      "position": 11,
+      "properties": {
+        "description": "You're now the UX Designers planning your app. Your job is to decide the structure: how pages are organized and how users move through them. Make your wireframes clear and easy to understand so someone else, or AI, could build your app from them. Next class, you'll use our AI tool to build your webpage from this — so clarity matters.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "45862666-94c2-4c89-85d7-38e8f5adc416",
         "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
       }
     },
     {
       "key": "680e9565-15c8-4f93-94ee-76c65da3ae5d",
-      "position": 3,
+      "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students create two wireframes each for a chosen a web app idea in Sketch Lab\n- Level 2: Students read the vocabulary definition for wireframe.\n- Level 3: Students add their own explanation or example of wireframe to the vocab free response.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students have chosen an app idea and understand its basic purpose. Look for consistent navigation and layout across pages. Prompt pairs to discuss why consistency is important for user experience. If groups struggle, remind them that AI can assist later with text or visuals — but humans design the structure first. Ask probing questions about how consistency helps users move through their app or why their layout make sense for their user persona.",
-        "progression_name": "Wireframe an App Idea"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 10, Level 1. Students create two wireframes each for a chosen a web app idea in Sketch Lab. Students can optionally use the AI Wireframe Partner to get additional support or ideas for their wireframes.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students have chosen a clear app idea and are creating multiple pages for it. Look for clear navigation between pages and logical connections between sections. Prompt students to think about user flow: \"How would a user move from one page to another?\" or \"What would they click first, then next?\" If groups struggle, remind them that AI can help later with visuals or content, but they are responsible for designing how the app works.",
+        "progression_name": "Wireframe an App Idea",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize clear structure and connections between pages. Consistent navigation helps users understand how the app works and reinforces pattern recognition. \n"
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use students' wireframes in Sketch Lab to formatively assess student progress on lesson objectives. Check whether students can:\n- Create a low-fidelity wireframe for their web app's pages.\n- Map a user journey across pages in their wireframes.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "680e9565-15c8-4f93-94ee-76c65da3ae5d",
@@ -4094,53 +4282,20 @@
       }
     },
     {
-      "key": "3a627c77-c0b1-4c15-a851-7e7292c30472",
-      "position": 4,
-      "properties": {
-        "progression_name": "Vocab: Wireframe",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize consistency across wireframes — this reinforces pattern recognition. If time allows, have students later prompt AI to generate a sample layout and compare it with their designs. This makes the human vs. AI interpretation explicit and previews upcoming AI lessons."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use Level 1 to formatively assess student progress on lesson objectives. Check whether students can:\n- Create a low-fidelity wireframe for their web app's pages.\n- Map a user journey across pages in their wireframes."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "3a627c77-c0b1-4c15-a851-7e7292c30472",
-        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
-      }
-    },
-    {
-      "key": "3b5c034e-56c2-427d-9f30-838f404acf3f",
-      "position": 5,
+      "key": "b0061ae0-85e3-4dad-a094-ad4d01f25e87",
+      "position": 13,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "3b5c034e-56c2-427d-9f30-838f404acf3f",
-        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
-      }
-    },
-    {
-      "key": "ed265a9f-dbae-42e2-89ca-4a43fc86bf97",
-      "position": 6,
-      "properties": {
-        "description": "Now it's time to share your work and get feedback from your classmates. Remember — your goal isn't just to hear what they like, but to learn how clearly your design communicates structure and flow.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ed265a9f-dbae-42e2-89ca-4a43fc86bf97",
+        "activity_section.key": "b0061ae0-85e3-4dad-a094-ad4d01f25e87",
         "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
       }
     },
     {
       "key": "577f5bcc-c787-45a3-bb01-3e53000d9224",
-      "position": 7,
+      "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have pairs share their user journey and wireframes with another pair. Students place sticky-note comments using the sentence starters. Encourage students to focus on clarity and usability, not visuals or polish.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to the feedback being exchanged. Ensure students are providing specific and constructive feedback. Guide them if their feedback is too vague or not helpful.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**  Have pairs share their wireframes and user flow with another pair. Students place sticky-note feedback using the sentence starters. Emphasize that feedback should focus on clarity, navigation, and how easily a user can move through the app. When finished, give students a brief moment to reflect on their feedback and consider what our AI tool would need to understand their wireframes clearly.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Listen to the feedback being exchanged. Ensure students are giving specific feedback (e.g., “I’m not sure how a user gets from this page to the next”). Prompt students to focus on user flow and clarity, not visual details.\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -4155,7 +4310,7 @@
     },
     {
       "key": "0b2ea0f5-fc3d-4154-a850-a1e7980b7fa6",
-      "position": 8,
+      "position": 15,
       "properties": {
       },
       "seeding_key": {
@@ -4164,21 +4319,16 @@
       }
     },
     {
-      "key": "fe541a9e-1487-4cfd-bbde-6df5f7839f3b",
-      "position": 9,
-      "properties": {
-        "description": "**Discuss:** Click the animated slide to display the prompts.\n- *How does wireframing make design work faster and clearer?*\n- *What design decisions must always stay human?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Encourage students to recognize that wireframing improves both clarity and efficiency by allowing designers to plan structure and fix problems early, before visuals or coding begin. Students should also understand that some decisions—like layout, usability, and user flow—must remain human choices because they require reasoning, empathy, and ethical awareness. This conversation reinforces the idea that humans lead the creative and structural stages of design, while AI can assist later with details and automation."
-      },
-      "seeding_key": {
-        "activity_section.key": "fe541a9e-1487-4cfd-bbde-6df5f7839f3b",
-        "lesson_activity.key": "d77b8110-2057-474e-a7c9-2bab358b0b68"
-      }
-    },
-    {
       "key": "a35f6492-77a7-4cf9-9d8b-78322a260f6d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students reflect on \"Glows\", \"Grows\", and \"Want to Knows\".\n- Glows: Which choices helped make your wireframe clear and easy to understand — for users or for AI later in the process?\n- Grows: What's one thing you could improve next time you wireframe?\n- Want-to-Knows: What questions do you still have about wireframing or the design process?\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:**Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently, then invite a few volunteers to share. As students respond, press them to explain why sketching first improves clarity and structure, not just that it is faster or easier, and guide them to connect their answers to planning layout, user flow, and making their designs easier for others to understand.\n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students give vague answers (e.g., “it’s easier”), prompt with questions like, “What specifically becomes easier?” or “How does sketching help someone else understand your design?” to push for more precise reasoning.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a35f6492-77a7-4cf9-9d8b-78322a260f6d",
@@ -4186,15 +4336,13 @@
       }
     },
     {
-      "key": "a744ef39-5994-4222-aade-28fc67621dd6",
+      "key": "6eb4d802-da29-47dd-a76c-7c6cbd5938ae",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 4 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Key Vocabulary."
       },
       "seeding_key": {
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6",
+        "activity_section.key": "6eb4d802-da29-47dd-a76c-7c6cbd5938ae",
         "lesson_activity.key": "6987f845-0307-46f4-95e1-cb23334e7b13"
       }
     },
@@ -5491,7 +5639,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Fix Accessibility Issues"
       },
       "bonus": false,
       "seeding_key": {
@@ -5501,7 +5648,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "53d0f84e-a9c7-47c2-9e16-4e0882bdd3a4"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       },
       "level_keys": [
         "ai-generated-design-lesson9-level3_2026"
@@ -5510,10 +5657,9 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Apply Accessibility Principles"
       },
       "bonus": false,
       "seeding_key": {
@@ -5523,7 +5669,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8252879a-218a-4d83-a560-d4d85c0a010d"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       },
       "level_keys": [
         "ai-generated-design-lesson9-level4_2026"
@@ -5532,10 +5678,9 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -5545,7 +5690,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4eb39b41-cf4c-471e-8fd8-54286965668b"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       },
       "level_keys": [
         "ai-generated-design-lesson9-level5_2026"
@@ -5575,28 +5720,6 @@
     },
     {
       "chapter": 32,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level4_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson10-level4_2026"
-      ]
-    },
-    {
-      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5741,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5640,7 +5763,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5662,7 +5785,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5684,7 +5807,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5829,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5728,7 +5851,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5750,7 +5873,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5772,7 +5895,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5794,7 +5917,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5816,7 +5939,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5838,7 +5961,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 43,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5860,7 +5983,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6216,7 +6339,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "53d0f84e-a9c7-47c2-9e16-4e0882bdd3a4"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       }
     },
     {
@@ -6228,7 +6351,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8252879a-218a-4d83-a560-d4d85c0a010d"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       }
     },
     {
@@ -6240,7 +6363,7 @@
         "lesson.key": "Lesson 9: Accessibility in Design",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "4eb39b41-cf4c-471e-8fd8-54286965668b"
+        "activity_section.key": "dac81e6d-dafd-499b-bebd-e2f1d555a2de"
       }
     },
     {
@@ -6253,18 +6376,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "680e9565-15c8-4f93-94ee-76c65da3ae5d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson10-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson10-level4_2026"
-        ],
-        "lesson.key": "Lesson 10: Wireframes",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "a744ef39-5994-4222-aade-28fc67621dd6"
       }
     },
     {
@@ -6427,7 +6538,7 @@
   "resources": [
     {
       "name": "[KEY] Accessibility in Design",
-      "url": "https://docs.google.com/document/d/1eSmJ-1YjVAZQq_XKf6pQfq7uJxuWvi3BiGG5BfTyV4s/edit?tab=t.0#heading=h.10sosi3gwomj",
+      "url": "https://docs.google.com/document/d/1yvvdnTGJ5Zn9pWsFiN6tjU22Qyv-8e4yfHdjKk8LSHQ/edit?usp=drive_link",
       "key": "_key_accessibility_in_design",
       "properties": {
         "audience": "Verified Teacher",
@@ -6482,34 +6593,6 @@
       }
     },
     {
-      "name": "[KEY] T-Chart",
-      "url": "https://docs.google.com/document/d/1UsgIuNI_aNlZaOzr_667iePrqFkUTZiY4KIveI__oo4/edit?tab=t.0#heading=h.bfop92qafrad",
-      "key": "_key_t-chart",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_t-chart"
-      }
-    },
-    {
-      "name": "[KEY] Wireframes (Optional)",
-      "url": "https://docs.google.com/document/d/15XU5Dann9rwYwjrZ3g6r1v0LNzRoFha7feHpjXr_NsA/edit?tab=t.0#heading=h.mhs0fprrl5av",
-      "key": "_key_wireframes_optional_",
-      "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "type": "Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "_key_wireframes_optional_"
-      }
-    },
-    {
       "name": "A Day in the Life of a Software Test Engineer at GM",
       "url": "https://www.youtube.com/shorts/nhjlf8oM9Cc",
       "key": "a_day_in_the_life_of_a_software_test_engineer_at_gm",
@@ -6525,7 +6608,7 @@
     },
     {
       "name": "Accessibility in Design",
-      "url": "https://docs.google.com/presentation/d/1udj_ubguL5l-YH43bTMV2hvofc7IK_R8NEzXEl1ViX0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17rI0I1ArAN6On_L_nDyEaxjjo2rvvEkiGB_byHUP9Gk/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "accessibility_in_design",
       "properties": {
         "audience": "Teacher",
@@ -6539,7 +6622,7 @@
     },
     {
       "name": "Accessibility in Design",
-      "url": "https://docs.google.com/document/d/1uivaCrthrm4y9g5mZztxxwqRdBZ756UqmetDLyAkS1Y/edit?tab=t.0#heading=h.xe9cnc3216z0",
+      "url": "https://docs.google.com/document/d/1-gOT9aQKoFnJSypCHNDFXw_AmarNc_mdCKVRrtWR8e4/edit?tab=t.0#heading=h.xe9cnc3216z0",
       "key": "accessibility_in_design_1",
       "properties": {
         "audience": "Student",
@@ -6782,21 +6865,6 @@
       }
     },
     {
-      "name": "T-Chart",
-      "url": "https://docs.google.com/document/d/1x1lwDYLuzz-w2hm8uInClUFmuwy_w5X3PmIzk1idOtM/edit?tab=t.0#heading=h.10sosi3gwomj",
-      "key": "t-chart",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "t-chart"
-      }
-    },
-    {
       "name": "The User's Experience",
       "url": "https://docs.google.com/presentation/d/1BkwdM0vfy8JYMLajMMxRXGV-K4FzpeVA1TTsc1uIUog/edit?usp=sharing",
       "key": "the_user_s_experience_2",
@@ -6870,7 +6938,7 @@
     },
     {
       "name": "Wireframes",
-      "url": "https://docs.google.com/presentation/d/1K3DYsr0FcrX-LUTglBO-8peHRfh_sqzuvwGGX9qP_YA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tm8zE_n7KOn-tBoq66cr5pID-X0tT_C9zRJvV9gQ6o8/edit?slide=id.gca418c6afa_0_1070#slide=id.gca418c6afa_0_1070",
       "key": "wireframes",
       "properties": {
         "audience": "Teacher",
@@ -6881,52 +6949,13 @@
       "seeding_key": {
         "resource.key": "wireframes"
       }
-    },
-    {
-      "name": "Wireframes (Optional)",
-      "url": "https://docs.google.com/document/d/1e-aJd-dGapdKFOf8S9rQxT3TlYyFrXcwORzdtIyw7GI/edit?tab=t.0",
-      "key": "wireframes_optional_",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
-        "embeddability_type": "embed_and_resource_dropdown",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "wireframes_optional_"
-      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
         "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "_key_t-chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "_key_wireframes_optional_"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "t-chart"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
         "resource.key": "wireframes"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 10: Wireframes",
-        "resource.key": "wireframes_optional_"
       }
     },
     {
@@ -7208,9 +7237,29 @@
       }
     },
     {
+      "key": "operable",
+      "word": "Operable",
+      "definition": "users can interact with the website and its features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "operable"
+      }
+    },
+    {
+      "key": "perceivable",
+      "word": "Perceivable",
+      "definition": "users can see or hear the information on the website",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "perceivable"
+      }
+    },
+    {
       "key": "pour_principles",
       "word": "POUR principles",
-      "definition": "a framework for thinking about accessibility: Perceivable, Operable, Understandable, Robust",
+      "definition": " four rules for making websites accessible: Perceivable, Operable, Understandable, and Robust for all users.",
       "properties": {
       },
       "seeding_key": {
@@ -7248,6 +7297,16 @@
       }
     },
     {
+      "key": "robust",
+      "word": "Robust",
+      "definition": "the website works in different situations and with different tools",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "robust"
+      }
+    },
+    {
       "key": "site_map",
       "word": "site map",
       "definition": "shows how web pages are organized and connected",
@@ -7265,6 +7324,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "style_sheet"
+      }
+    },
+    {
+      "key": "understandable",
+      "word": "Understandable",
+      "definition": "users can figure out what to do and how to do with the website",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "understandable"
       }
     },
     {
@@ -7295,16 +7364,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "user_profile"
-      }
-    },
-    {
-      "key": "versioning",
-      "word": "versioning",
-      "definition": "the general idea of saving a \"working” state of a project so you can safely return to it if a future change causes problems",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "versioning"
       }
     },
     {
@@ -7409,12 +7468,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "vocabulary.key": "versioning"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Lesson 4: Finding Your Style",
         "vocabulary.key": "mood_board"
       }
@@ -7452,7 +7505,31 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "operable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "perceivable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
         "vocabulary.key": "pour_principles"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "robust"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Lesson 9: Accessibility in Design",
+        "vocabulary.key": "understandable"
       }
     }
   ],
@@ -7837,7 +7914,7 @@
       }
     },
     {
-      "level_name": "ai-generated-design-lesson3-level8_2026",
+      "level_name": "ai-generated-design-lesson3-sketch-lab-choice_2026",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -7879,19 +7956,6 @@
       "seeding_key": {
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-      "position": 1,
-      "learning_goal": "Critique usability and clarity and apply user-centered design to improve a digital experience.",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8020,54 +8084,6 @@
         "understanding": 3,
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "Does not clearly identify usability issues or explain how the redesign reflects user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Identifies issues or redesign changes, but does not clearly connect them to the user or user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Explains usability issues and describes how the redesign improved the experience, but reasoning may be general.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Clearly explains why the app lacked usability and clarity for the selected user and shows how the redesign improved the experience using user-centered design.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "4341a09b-b347-472d-b82e-8d6bcdb0f03a",
-        "lesson.key": "Lesson 2: The User's Experience",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }

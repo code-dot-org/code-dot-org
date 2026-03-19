@@ -15,7 +15,7 @@ const EmptyStudentChatHistory: React.FunctionComponent = () => {
           <strong>No activity to show</strong>
         </Typography>
         <Typography variant="body4">
-          There were no interactions with AI Tutor on this level.
+          There have been no chat interactions on this level.
         </Typography>
       </div>
     </div>
