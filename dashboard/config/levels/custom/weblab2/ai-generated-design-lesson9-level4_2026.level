@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "ai-generated-design-lesson8-level4-template-test_2026",
-    "long_instructions": "##Apply POUR to Your Own App\r\n1. Inspect your own app or page and identify 2-3 accessibility issues using the POUR framework.\r\n\r\n2. Use the accessibility prompts in the Prompt Playbook to write AI prompts that suggest fixes.\r\n\r\n3. Run your prompts in the AI and revise your app or page by applying at least 1–2 accessibility improvements.\r\n",
+    "long_instructions": "##Apply POUR to Your Own App\r\n1. Inspect your own app or page and identify 2-3 accessibility issues using the POUR framework.\r\n\r\n2. Use the accessibility prompts in the [Prompt Playbook](https://studio.code.org/docs/ide/prompting-playbook/classes/accessibility-prompts) to write AI prompts that suggest fixes.\r\n\r\n3. Run your prompts in the AI and revise your app or page by applying at least 1–2 accessibility improvements.\r\n",
     "submittable": "true",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
@@ -44,6 +44,6 @@
       }
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:03.096+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level4_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level4_2025\"},{\"changed_at\":\"2026-03-17 20:38:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:02:56 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:06:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:03.096+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level4_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level4_2025\"},{\"changed_at\":\"2026-03-17 20:38:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:02:56 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:06:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-18 21:02:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 23:45:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
