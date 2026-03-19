@@ -21,4 +21,13 @@ class JitPlConcept < ApplicationRecord
   serialized_attrs %w(
     text_content
   )
+
+  def serialize
+    {
+      id: id,
+      name: name,
+      display_name: display_name,
+      text_content: text_content,
+    }
+  end
 end
