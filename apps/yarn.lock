@@ -8775,6 +8775,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/mime-types@npm:^3":
+  version: 3.0.1
+  resolution: "@types/mime-types@npm:3.0.1"
+  checksum: 10/96534e23b2180e5396a1e6a44f51ec59e349bd43daed4b5cb4548493126e9641cdc65f8292477e80c5e6063cf625330dae8edaf31357553b60baa23c32a8bafd
+  languageName: node
+  linkType: hard
+
 "@types/mime@npm:*":
   version: 3.0.4
   resolution: "@types/mime@npm:3.0.4"
@@ -11478,6 +11485,7 @@ __metadata:
     "@types/jest": "npm:^29.5.12"
     "@types/jquery": "npm:^3.5.16"
     "@types/js-cookie": "npm:^3.0.6"
+    "@types/mime-types": "npm:^3"
     "@types/mocha": "npm:^10.0.1"
     "@types/papaparse": "npm:^5.3.14"
     "@types/qrcode.react": "npm:^1.0.5"
@@ -11606,6 +11614,7 @@ __metadata:
     memoize-one: "npm:^5.1.1"
     merge: "npm:^2.1.1"
     messageformat: "npm:2.3.0"
+    mime-types: "npm:^3.0.2"
     ml-knn: "npm:^3.0.0"
     mocha: "npm:^10.6.0"
     mock-firmata: "npm:0.2.0"
@@ -22352,6 +22361,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"mime-db@npm:^1.54.0":
+  version: 1.54.0
+  resolution: "mime-db@npm:1.54.0"
+  checksum: 10/9e7834be3d66ae7f10eaa69215732c6d389692b194f876198dca79b2b90cbf96688d9d5d05ef7987b20f749b769b11c01766564264ea5f919c88b32a29011311
+  languageName: node
+  linkType: hard
+
 "mime-db@npm:~1.30.0":
   version: 1.30.0
   resolution: "mime-db@npm:1.30.0"
@@ -22381,6 +22397,15 @@ canvg@gabelerner/canvg:
   dependencies:
     mime-db: "npm:1.52.0"
   checksum: 10/89aa9651b67644035de2784a6e665fc685d79aba61857e02b9c8758da874a754aed4a9aced9265f5ed1171fd934331e5516b84a7f0218031b6fa0270eca1e51a
+  languageName: node
+  linkType: hard
+
+"mime-types@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "mime-types@npm:3.0.2"
+  dependencies:
+    mime-db: "npm:^1.54.0"
+  checksum: 10/9db0ad31f5eff10ee8f848130779b7f2d056ddfdb6bda696cb69be68d486d33a3457b4f3f9bdeb60d0736edb471bd5a7c0a384375c011c51c889fd0d5c3b893e
   languageName: node
   linkType: hard
 

@@ -1,0 +1,10 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#product-tour-settings-container"}}
+  Product Tour Settings
+
+#product-tour-settings-container.in.collapse
+  #product-tour-settings-editor
+
+- content_for :body_scripts do
+  %script{src: webpack_asset_path('js/levels/editors/fields/_product_tour_settings.js'),
+        data: {producttoursettings: @level.properties["product_tours"].to_json,
+               appname: @level.game&.app.to_json}}
