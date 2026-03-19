@@ -1,7 +1,9 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  kitIcons,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
+import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
@@ -539,25 +541,29 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   hideDelayMs={hideTooltipDelayMs}
                   hideOnFirstLeave={true}
                 >
-                  <Button
+                  <MuiIconButton
+                    variant="text"
+                    color="tertiary"
+                    size="medium"
                     className={styles.resourcePanelButton}
                     onClick={() =>
                       dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
                     }
-                    isIconOnly={true}
-                    icon={{
-                      iconName: isStandaloneCollapsed
-                        ? 'arrow-right-from-line'
-                        : 'arrow-left-from-line',
-                    }}
-                    color={'gray'}
-                    type={'tertiary'}
                     aria-label={
                       isStandaloneCollapsed
                         ? lab2I18n.expand()
                         : lab2I18n.collapse()
                     }
-                  />
+                    type="button"
+                  >
+                    <FontAwesomeV6Icon
+                      iconName={
+                        isStandaloneCollapsed
+                          ? 'arrow-right-from-line'
+                          : 'arrow-left-from-line'
+                      }
+                    />
+                  </MuiIconButton>
                 </WithTooltip>
               )}
             </div>
@@ -576,26 +582,28 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   key={`tooltip-${tab}`}
                 >
                   <div id={`resource-panel-tab-${tab}`}>
-                    <Button
+                    <MuiIconButton
+                      variant="text"
+                      color="tertiary"
+                      size="medium"
                       className={classNames(
                         styles.tabButton,
                         tab === currentTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
-                      onClick={() => onClickTab(tab)}
-                      key={tab}
-                      color={'gray'}
-                      type={'tertiary'}
-                      isIconOnly={true}
-                      icon={{
-                        iconName: tabInfo[tab].icon,
-                        iconFamily: kitIcons.has(tabInfo[tab].icon)
-                          ? 'kit'
-                          : undefined,
-                      }}
-                      aria-label={tabInfo[tab].title}
                       id={`resource-panel-tab-button-${tab}`}
-                    />
+                      onClick={() => onClickTab(tab)}
+                      aria-label={tabInfo[tab].title}
+                      type="button"
+                      key={tab}
+                    >
+                      <FontAwesomeV6Icon
+                        iconName={tabInfo[tab].icon}
+                        iconFamily={
+                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
+                        }
+                      />
+                    </MuiIconButton>
                   </div>
                 </WithTooltip>
               ))}
