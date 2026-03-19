@@ -1,0 +1,8 @@
+name 'hoai-web-design-v2-11'
+display_name 'Prompting Puzzles'
+description 'Prompting Puzzles'
+
+sublevels
+level 'hoai-web-design-v2-11a'
+
+uses_lab2
