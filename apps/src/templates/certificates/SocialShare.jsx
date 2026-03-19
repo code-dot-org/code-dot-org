@@ -10,6 +10,20 @@ import i18n from '@cdo/locale';
 
 import moduleStyles from './social_share.module.scss';
 
+// Avoids setting state on unmounted components in tests, which produce console.error messsages from React.
+function testAvailability(url, setAvailability) {
+  let isMounted = true;
+  testImageAccess(url, () => {
+    if (isMounted) {
+      setAvailability(true);
+    }
+  });
+
+  return () => {
+    isMounted = false;
+  };
+}
+
 export default function SocialShare({
   facebook,
   twitter,
@@ -24,20 +38,21 @@ export default function SocialShare({
   const [isLinkedinAvailable, setIsLinkedinAvailable] = useState(false);
 
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
-      () => setIsFacebookAvailable(true)
+      setIsFacebookAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess('https://x.com/favicon.ico' + '?' + Math.random(), () =>
-      setIsTwitterAvailable(true)
+    return testAvailability(
+      'https://x.com/favicon.ico' + '?' + Math.random(),
+      setIsTwitterAvailable
     );
   }, []);
   useEffect(() => {
-    testImageAccess(
+    return testAvailability(
       'https://www.linkedin.com/favicon.ico' + '?' + Math.random(),
-      () => setIsLinkedinAvailable(true)
+      setIsLinkedinAvailable
     );
   }, []);
 
