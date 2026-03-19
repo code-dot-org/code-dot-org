@@ -131,7 +131,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         return;
       }
 
-      // Clear all previous lesson feedback data when switching lessons
       setFeedbackText('');
       setResourceData([DEFAULT_RESOURCE]);
       setExistingFeedbackData(null);
@@ -213,11 +212,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     feedbackId?: number
   ) => {
     if (!lessonId || !studentId) {
-      console.error('Cannot save feedback: missing required IDs', {
-        lessonId,
-        studentId,
-        sectionId,
-      });
       return null;
     }
 
@@ -256,8 +250,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
       if (!response.ok) {
         throw new Error('Failed to save feedback');
       }
-      const result = await response.json();
-      return result;
+      return await response.json();
     } catch (err) {
       console.error('Error saving feedback:', err);
       throw err;
