@@ -148,6 +148,7 @@ Scenario: Check for Understanding summaries eyes
 
   Given I create an authorized teacher-associated student named "Sally"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/"
+  And The header is finished animating
   And I type "sample response" into ".free-response > textarea"
   And I press ".submitButton" using jQuery to load a new page
 
@@ -159,6 +160,7 @@ Scenario: Check for Understanding summaries eyes
 
   When I sign in as "Teacher_Sally" and go home
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1/summary"
+  And The header is finished animating
 
   And I wait until element "#summary-container" is visible
 
