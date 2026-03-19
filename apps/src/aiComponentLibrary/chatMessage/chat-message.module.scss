@@ -8,6 +8,7 @@ $assistant-color: $brand_primary_light;
 $bot-container-size: 32px;
 $icon-message-gap: 8px;
 $icon-overlay-padding-right: 8px;
+$vertical-gap: 0.375rem;
 
 %message {
   @extend %markdown-styles;
@@ -189,10 +190,10 @@ json-video {
 .messageAndHeader {
   display: flex;
   flex-direction: column;
-  gap: $icon-message-gap;
+  gap: $vertical-gap;
 }
 
 .grid {
   display: grid;
-  gap: $icon-message-gap;
+  gap: $vertical-gap $icon-message-gap;
 }
