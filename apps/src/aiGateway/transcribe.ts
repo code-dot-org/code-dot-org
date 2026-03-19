@@ -42,7 +42,7 @@ async function transcribeThroughGateway(
   return {
     ...wire,
     warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
-  };
+  } as unknown as TranscriptionResult;
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {
