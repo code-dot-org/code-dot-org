@@ -11,3 +11,4 @@ labels:
     includeTemplates: true
 patches:
   - path: deployment.patch.yaml
+  - path: locals.yml.patch.yaml

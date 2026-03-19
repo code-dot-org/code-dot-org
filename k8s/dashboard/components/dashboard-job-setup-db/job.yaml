@@ -28,6 +28,9 @@ spec:
               value: development
           envFrom:
             - prefix: CDO_
+              configMapRef:
+                name: cdo-locals.yml
+            - prefix: CDO_
               secretRef:
                 name: cdo-external-secrets
                 optional: true
@@ -36,14 +39,6 @@ spec:
                 name: cdo-local-secrets
           securityContext:
             allowPrivilegeEscalation: true
-          volumeMounts:
-            - mountPath: /code-dot-org/locals.yml
-              name: locals-yml
-              subPath: locals.yml
-      volumes:
-        - name: locals-yml
-          configMap:
-            name: cdo-locals.yml
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000

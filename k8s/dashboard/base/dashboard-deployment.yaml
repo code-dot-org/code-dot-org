@@ -28,12 +28,19 @@ spec:
               value: MISSING_RAILS_ENV
           envFrom:
             - prefix: CDO_
+              configMapRef:
+                name: cdo-locals.yml
+            - prefix: CDO_
               secretRef:
                 name: cdo-external-secrets
                 optional: true
             - prefix: CDO_
               secretRef:
                 name: cdo-local-secrets
+          resources:
+            limits:
+              cpu: 4
+              memory: 16.00Gi
           securityContext:
             allowPrivilegeEscalation: false
           ports:
@@ -63,14 +70,6 @@ spec:
             httpGet:
               path: /health_check
               port: http
-          volumeMounts:
-            - mountPath: /code-dot-org/locals.yml
-              name: locals-yml
-              subPath: locals.yml
-      volumes:
-        - name: locals-yml
-          configMap:
-            name: cdo-locals.yml
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000

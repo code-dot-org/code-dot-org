@@ -14,3 +14,4 @@ labels:
 patches:
   - path: deployment.patch.yaml
   - path: hpa.patch.yaml
+  - path: locals.yml.patch.yaml

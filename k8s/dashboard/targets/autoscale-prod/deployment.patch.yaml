@@ -15,9 +15,16 @@ spec:
               value: production
           envFrom:
             - prefix: CDO_
+              configMapRef:
+                name: cdo-locals.yml
+            - prefix: CDO_
               secretRef:
                 name: cdo-external-secrets
                 optional: false
             - prefix: CDO_
               secretRef:
                 name: cdo-local-secrets
+          resources:
+            limits:
+              cpu: 47.68
+              memory: 185.92Gi

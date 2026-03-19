@@ -8,7 +8,6 @@ components:
   - ../../components/minio
 patches:
   - path: deployment.patch.yaml
-  - path: locals.yml.patch.yaml
 labels:
   - pairs:
       app.kubernetes.io/name: cdo

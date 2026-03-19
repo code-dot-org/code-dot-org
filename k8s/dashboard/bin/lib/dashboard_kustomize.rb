@@ -19,6 +19,8 @@ module DashboardKustomize
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
   LOCAL_SECRET_NAME = 'cdo-local-secrets'.freeze
+  LOCALS_CONFIGMAP_NAME = 'cdo-locals.yml'.freeze
+  LOCALS_VOLUME_NAME = 'locals-yml'.freeze
   NAME_FIELDS = %w[name volumeName claimName].freeze
   RELEASE_NAME_FIELDS = %w[name serviceName volumeName claimName].freeze
   EMPTY_VALUES = [{}, []].freeze
@@ -102,31 +104,25 @@ module DashboardKustomize
       release_name: 'staging',
       namespace: 'staging',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'env-types', 'staging.values.yaml'),
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'releases', 'staging', 'values.yaml')
-      ],
-      helm_set: []
+      helm_values: [File.join(ROOT, '..', 'helm', 'staging.values.yaml')],
+      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
       namespace: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'env-types', 'levelbuilder.values.yaml'),
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'releases', 'levelbuilder', 'values.yaml')
-      ],
-      helm_set: []
+      helm_values: [File.join(ROOT, '..', 'helm', 'levelbuilder.values.yaml')],
+      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'autoscale-prod' => {
       release_name: 'autoscale-prod',
       namespace: 'production',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'env-types', 'production.values.yaml'),
-        File.join(ROOT, '..', 'k8s-gitops', 'apps', 'cdo', 'releases', 'autoscale-prod', 'values.yaml')
-      ],
-      helm_set: []
+      helm_values: [File.join(ROOT, '..', 'helm', 'production.values.yaml')],
+      helm_set: [
+        ['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me'],
+        ['--set', 'autoscaling.minReplicas=3']
+      ]
     }
   }.freeze
 
@@ -324,6 +320,8 @@ module DashboardKustomize
     copy = deep_copy(doc)
     strip_ignored_labels!(copy)
     normalize_secret!(copy)
+    normalize_locals_configmap!(copy)
+    normalize_locals_delivery_drift!(copy)
     copy['metadata']&.delete('labels') if copy['kind'] == 'HorizontalPodAutoscaler'
     normalize_statefulset_volume_claim_templates!(copy)
     normalize_order_insensitive_lists!(copy)
@@ -387,6 +385,10 @@ module DashboardKustomize
       warnings << 'accepted drift by Seth: netsim_redis_groups format differs (Helm YAML block vs kustomize JSON string)'
     end
 
+    if locals_config_drift?(helm_docs, kustomize_docs)
+      warnings << 'accepted drift by Seth: locals config differs from Helm (split ConfigMap env vars instead of mounted locals.yml file)'
+    end
+
     warnings
   end
 
@@ -394,6 +396,13 @@ module DashboardKustomize
     docs.find do |doc|
       doc['kind'] == 'Secret' &&
         doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
+    end
+  end
+
+  module_function def find_locals_doc(docs)
+    docs.find do |doc|
+      doc['kind'] == 'ConfigMap' &&
+        doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'locals.yml'
     end
   end
 
@@ -427,6 +436,8 @@ module DashboardKustomize
       _mysql_root_password
       _redis_password
       _minio_root_password
+      _minio_root_user
+      aws_s3_access_key_id
       aws_s3_secret_access_key
       db_credential_admin
       db_credential_writer
@@ -455,6 +466,14 @@ module DashboardKustomize
 
     helm_value != kustomize_value &&
       canonicalize_netsim_redis_groups(helm_value) == canonicalize_netsim_redis_groups(kustomize_value)
+  end
+
+  module_function def locals_config_drift?(helm_docs, kustomize_docs)
+    helm_locals = find_locals_doc(helm_docs)
+    kustomize_locals = find_locals_doc(kustomize_docs)
+    return false unless helm_locals && kustomize_locals
+
+    locals_uses_blob?(helm_locals) || workload_uses_locals_volume?(helm_docs) || workload_uses_locals_env_from?(kustomize_docs)
   end
 
   module_function def normalize_release_name_drift!(obj, target)
@@ -503,21 +522,65 @@ module DashboardKustomize
     return unless doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
 
     values = doc['stringData'] || {}
-    values['_mysql_root_password'] = '<mysql-root-password>' if values.key?('_mysql_root_password')
-    values['_redis_password'] = '<redis-password>' if values.key?('_redis_password')
-    values['_minio_root_password'] = '<minio-root-password>' if values.key?('_minio_root_password')
-    values['aws_s3_secret_access_key'] = '<minio-root-password>' if values.key?('aws_s3_secret_access_key')
+    accepted_keys = %w(
+      _mysql_root_password
+      _redis_password
+      _minio_root_password
+      _minio_root_user
+      aws_s3_access_key_id
+      aws_s3_secret_access_key
+      db_writer
+      db_reader
+      reporting_db_writer
+      reporting_db_reader
+      db_credential_admin
+      db_credential_writer
+      db_credential_reader
+      redis_url
+    )
 
-    %w[db_writer db_reader reporting_db_writer reporting_db_reader redis_url].each do |key|
-      values[key] = canonicalize_url_secret_value(values[key]) if values.key?(key)
-    end
-
-    %w[db_credential_admin db_credential_writer db_credential_reader].each do |key|
-      values[key] = canonicalize_db_credential(values[key]) if values.key?(key)
-    end
-
+    accepted_keys.each {|key| values.delete(key)}
     values['netsim_redis_groups'] = canonicalize_netsim_redis_groups(values['netsim_redis_groups']) if values.key?('netsim_redis_groups')
     doc['stringData'] = values
+  end
+
+  module_function def normalize_locals_configmap!(doc)
+    return unless doc['kind'] == 'ConfigMap'
+    return unless doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'locals.yml'
+
+    data = doc['data'] || {}
+    doc['data'] =
+      if data.key?('locals.yml')
+        canonicalize_locals_data(YAML.safe_load(data['locals.yml']) || {})
+      else
+        canonicalize_locals_data(data)
+      end
+  end
+
+  module_function def normalize_locals_delivery_drift!(doc)
+    containers = doc.dig('spec', 'template', 'spec', 'containers')
+    return unless containers.is_a?(Array)
+
+    containers.each do |container|
+      if container['envFrom'].is_a?(Array)
+        container['envFrom'].reject! do |entry|
+          locals_configmap_name?(entry.dig('configMapRef', 'name'))
+        end
+      end
+
+      if container['volumeMounts'].is_a?(Array)
+        container['volumeMounts'].reject! do |mount|
+          mount['name'] == LOCALS_VOLUME_NAME || mount['mountPath'] == '/code-dot-org/locals.yml'
+        end
+      end
+    end
+
+    volumes = doc.dig('spec', 'template', 'spec', 'volumes')
+    return unless volumes.is_a?(Array)
+
+    volumes.reject! do |volume|
+      volume['name'] == LOCALS_VOLUME_NAME || locals_configmap_name?(volume.dig('configMap', 'name'))
+    end
   end
 
   module_function def canonicalize_url_secret_value(value)
@@ -552,6 +615,54 @@ module DashboardKustomize
     JSON.generate(canonical)
   rescue Psych::SyntaxError
     value
+  end
+
+  module_function def canonicalize_locals_data(values)
+    values.each_with_object({}) do |(key, value), result|
+      result[key.to_s] = canonicalize_locals_value(value)
+    end
+  end
+
+  module_function def canonicalize_locals_value(value)
+    return YAML.safe_load(value) if value.is_a?(String)
+
+    value
+  rescue Psych::SyntaxError
+    value
+  end
+
+  module_function def locals_uses_blob?(doc)
+    (doc['data'] || {}).key?('locals.yml')
+  end
+
+  module_function def locals_configmap_name?(name)
+    name.is_a?(String) && name.end_with?(LOCALS_CONFIGMAP_NAME)
+  end
+
+  module_function def workload_uses_locals_volume?(docs)
+    docs.any? do |doc|
+      containers = doc.dig('spec', 'template', 'spec', 'containers')
+      next false unless containers.is_a?(Array)
+
+      containers.any? do |container|
+        (container['volumeMounts'] || []).any? do |mount|
+          mount['name'] == LOCALS_VOLUME_NAME || mount['mountPath'] == '/code-dot-org/locals.yml'
+        end
+      end
+    end
+  end
+
+  module_function def workload_uses_locals_env_from?(docs)
+    docs.any? do |doc|
+      containers = doc.dig('spec', 'template', 'spec', 'containers')
+      next false unless containers.is_a?(Array)
+
+      containers.any? do |container|
+        (container['envFrom'] || []).any? do |entry|
+          locals_configmap_name?(entry.dig('configMapRef', 'name'))
+        end
+      end
+    end
   end
 
   module_function def extract_relevant_names(obj, result = [])

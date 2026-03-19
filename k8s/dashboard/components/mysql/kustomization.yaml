@@ -3,6 +3,8 @@ kind: Component
 resources:
   - service.yaml
   - statefulset.yaml
+patches:
+  - path: locals.yml.patch.yaml
 secretGenerator:
   - name: cdo-local-secrets
     behavior: merge

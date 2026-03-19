@@ -12,3 +12,7 @@ spec:
               value: test
             - name: RACK_ENV
               value: test
+          resources:
+            limits:
+              cpu: 96.85
+              memory: 377.65Gi

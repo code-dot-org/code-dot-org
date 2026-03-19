@@ -5,28 +5,28 @@ metadata:
   labels:
     app.kubernetes.io/component: locals.yml
 data:
-  locals.yml: |
-    build_apps: true
-    use_my_apps: true
+  build_apps: "true"
+  use_my_apps: "true"
 
-    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
-    #
+  # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
+  #
 
-    # These are secrets that cause exceptions booting our dashbaord app in development
-    # We hope to get rid of needing these overrides soon, see:
-    # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
-    cloudfront_key_pair_id:
-    cloudfront_private_key:
-    slack_bot_token:
-    properties_encryption_key:
-    openai_lesson_summaries_api_key:
-    elevenlabs_api_key:
-    openai_student_learning_api_key:
-    langfuse_secret_key:
-    langfuse_public_key:
-    openai_measures_of_learning_api_key:
+  # These are secrets that cause exceptions booting our dashbaord app in development
+  # We hope to get rid of needing these overrides soon, see:
+  # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
+  cloudfront_key_pair_id: ""
+  cloudfront_private_key: ""
+  slack_bot_token: ""
+  properties_encryption_key: ""
+  openai_lesson_summaries_api_key: ""
+  elevenlabs_api_key: ""
+  openai_student_learning_api_key: ""
+  langfuse_secret_key: ""
+  langfuse_public_key: ""
+  openai_measures_of_learning_api_key: ""
 
-    #
+  #
 
-    # Local service non-secret configuration. Append-only so we do not mix these
-    # values into the legacy locals.yml sections above.
+  # Local service non-secret configuration. Append-only so we do not mix these
+  # values into the legacy locals.yml sections above.
+  dashboard_workers: "0"

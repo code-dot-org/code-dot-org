@@ -13,3 +13,7 @@ spec:
               value: staging
             - name: RACK_ENV
               value: staging
+          resources:
+            limits:
+              cpu: 14.9
+              memory: 58.10Gi
