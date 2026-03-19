@@ -6,6 +6,7 @@ import {ToursPerLab} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {AppName} from '@cdo/apps/lab2/types';
 
 import styles from './student-resources-panel.module.scss';
+import '@cdo/apps/sharedComponents/productTour/shepherd.scss';
 
 interface StudentResourcesPanelProps {
   appName: string;
