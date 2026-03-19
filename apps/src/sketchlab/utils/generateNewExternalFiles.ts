@@ -1,3 +1,5 @@
+import {extension as mimeToExtension} from 'mime-types';
+
 import {
   getAppOptionsEditingExemplar,
   getIsStartMode,
@@ -7,19 +9,6 @@ import {
   ExcalidrawFilesWithOptionalData,
   SketchlabProjectFile,
 } from '@cdo/apps/lab2/types';
-
-const MIME_TO_EXT = {
-  'image/svg+xml': 'svg',
-  'image/png': 'png',
-  'image/jpeg': 'jpg',
-  'image/gif': 'gif',
-  'image/webp': 'webp',
-  'image/bmp': 'bmp',
-  'image/x-icon': 'ico',
-  'image/avif': 'avif',
-  'image/jfif': 'jfif',
-  'application/octet-stream': 'bin',
-};
 
 export const generateNewExternalFiles = (
   newFileIds: string[],
@@ -32,7 +21,7 @@ export const generateNewExternalFiles = (
   if (newFileIds.length && excalidrawFiles) {
     newFileIds.forEach(fileId => {
       const newFile = excalidrawFiles[fileId];
-      const extension = MIME_TO_EXT[newFile.mimeType];
+      const extension = mimeToExtension(newFile.mimeType);
       const filenameWithExtension = `${fileId}.${extension}`;
       const isStarterAssetOrExemplar = !!(
         getIsStartMode() || getAppOptionsEditingExemplar()
