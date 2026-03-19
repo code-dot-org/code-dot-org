@@ -11,6 +11,7 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
+import {ToursPerLab} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import useResourcePanelShepherdTours from '@cdo/apps/lab2/productTours/useResourcePanelShepherdTours';
 import {
   isReadOnlyWorkspace,
@@ -18,7 +19,7 @@ import {
   isReadOnlyPredictLevel,
 } from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {setIsStandaloneCollapsed} from '@cdo/apps/lab2/redux/lab2ViewRedux';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {AppName, ProjectSources} from '@cdo/apps/lab2/types';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
@@ -335,11 +336,16 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
       );
     }
 
-    tabMap[Tabs.StudentResources] = <StudentResourcesPanel />;
+    if (ToursPerLab[appName as AppName]?.length) {
+      tabMap[Tabs.StudentResources] = (
+        <StudentResourcesPanel appName={appName} />
+      );
+    }
 
     return tabMap;
   }, [
     sidebarOnly,
+    appName,
     levelProperties,
     instructionsProps,
     hasValidationConditions,
