@@ -13,7 +13,8 @@ export interface ProductTourConfig {
   // when the user first reaches a level with the tour enabled. If false, the tour will be triggered the first time
   // the user reaches a lab that has that tour available.
   triggeredByLevel: boolean;
-  // Description shown to level editors. Not necesarily if triggeredByLevel is false.
+  // Description shown to level editors. Not necessary if triggeredByLevel is false, because the
+  // tour will not be shown on the level edit page.
   description?: string;
 }
 
