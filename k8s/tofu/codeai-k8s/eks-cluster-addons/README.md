@@ -36,3 +36,8 @@ Each test takes about 5 minutes.
 ```bash
 ./test/test-nlb.sh
 ```
+
+### Gateway API + ExternalDNS (public HTTP by ALB address, then DNS)
+```bash
+./test/test-gateway-http.sh
+```

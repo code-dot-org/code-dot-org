@@ -1,0 +1,3 @@
+# Oauth 2.0 Client ID: https://console.cloud.google.com/auth/clients
+dex_google_client_id     = "replace-me.apps.googleusercontent.com"
+dex_google_client_secret = "replace-me"

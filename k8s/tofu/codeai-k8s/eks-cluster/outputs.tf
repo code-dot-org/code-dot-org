@@ -57,3 +57,8 @@ output "cluster_subdomain_route53_zone_id" {
   description = "Route 53 hosted zone ID for cluster subdomain (e.g. k8s.code.org)."
   value       = aws_route53_zone.cluster_subdomain.zone_id
 }
+
+output "cluster_subdomain_wildcard_certificate_arn" {
+  description = "ACM wildcard certificate ARN for cluster-hosted services (e.g. *.k8s.code.org)."
+  value       = aws_acm_certificate_validation.cluster_subdomain_wildcard.certificate_arn
+}
