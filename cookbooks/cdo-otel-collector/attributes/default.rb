@@ -26,6 +26,9 @@ default['cdo-otel-collector'] = {
   #                Requires secret: <env>/cdo/newrelic_api_key in AWS Secrets Manager.
   #   'sentry'   - Sentry via standard OTLP/HTTP. No DD-specific processors applied.
   #                Requires secret: <env>/cdo/sentry_auth_token in AWS Secrets Manager.
+  #   'splunk'   - Splunk Observability Cloud via OTLP/HTTP with realm-specific endpoints.
+  #                Requires secret: <env>/cdo/splunk_access_token in AWS Secrets Manager.
+  #                Note: logs pipeline is not supported for this backend (Splunk uses HEC, not OTLP).
   'apm_backend' => 'sentry',
 
   # Set to true to enable the logs pipeline (syslog + OTLP logs forwarded to the APM backend).
@@ -46,5 +49,11 @@ default['cdo-otel-collector'] = {
   # -- Sentry-specific ------------------------------------------------------------------
   # OTLP/HTTP endpoint for Sentry. Construct from your project DSN found in Sentry under
   # Settings > Projects > <project> > Client Keys (DSN):
-  'sentry_otlp_endpoint' => ''
+  'sentry_otlp_endpoint' => '',
+
+  # -- Splunk Observability Cloud-specific ----------------------------------------------
+  # Splunk realm (e.g. us0, us1, eu0, ap0). Determines the ingest endpoint region.
+  # Find your realm in Splunk Observability Cloud under Settings > General Settings.
+  # Used to construct: https://ingest.<realm>.signalfx.com/{traces,metrics} endpoints.
+  'splunk_realm' => ''
 }

@@ -5,13 +5,14 @@
   # Resolve the exporter name and whether Datadog-specific processors are needed.
   # Datadog uses a first-party exporter that computes APM stats (RED metrics by service/resource)
   # client-side and expects Datadog-specific span attributes for error tracking and resource naming.
-  # New Relic and Sentry consume standard OTLP and do not need those attribute rewrites.
+  # New Relic, Sentry, and Splunk consume standard OTLP and do not need those attribute rewrites.
   apm_exporter_name = case @apm_backend
                       when 'newrelic' then 'otlp/newrelic'
                       when 'sentry'   then 'otlphttp/sentry'
+                      when 'splunk'   then 'otlphttp/splunk'
                       when 'datadog'  then 'datadog'
                       else
-                        raise "Unsupported APM backend: #{@apm_backend.inspect}. Expected 'datadog', 'newrelic', or 'sentry'."
+                        raise "Unsupported APM backend: #{@apm_backend.inspect}. Expected 'datadog', 'newrelic', 'sentry', or 'splunk'."
                       end
   is_datadog_backend = apm_exporter_name == 'datadog'
 %>
@@ -211,6 +212,20 @@ exporters:
     compression: gzip
     encoding: proto
 
+<% elsif @apm_backend == 'splunk' %>
+  # Splunk Observability Cloud exporter via OTLP/HTTP.
+  # Splunk uses separate realm-scoped endpoints per signal type (no unified OTLP endpoint).
+  # Logs are not supported via OTLP for Splunk — Splunk uses HEC for log ingestion.
+  # enable_logs must remain false when using this backend.
+  # Auth via X-SF-Token header containing the Splunk Observability Cloud access token.
+  # See: https://help.splunk.com/en/splunk-observability-cloud/manage-data/splunk-distribution-of-the-opentelemetry-collector/get-started-with-the-splunk-distribution-of-the-opentelemetry-collector/collector-components/exporters/otlphttp-exporter
+  otlphttp/splunk:
+    traces_endpoint: "https://ingest.<%= @splunk_realm %>.signalfx.com/v2/trace/otlp"
+    metrics_endpoint: "https://ingest.<%= @splunk_realm %>.signalfx.com/v2/datapoint/otlp"
+    headers:
+      X-SF-Token: <%= @apm_api_key %>
+    compression: gzip
+
 <% end %>
 <% if @prometheus_remote_write_url && !@prometheus_remote_write_url.empty? %>
   # Prometheus Remote Write exporter for Amazon Managed Prometheus.
@@ -256,8 +271,9 @@ service:
         - <%= apm_exporter_name %>
 <% end %>
 
-<% if @enable_logs %>
-    # Logs pipeline (opt-in via enable_logs attribute)
+<% if @enable_logs && @apm_backend != 'splunk' %>
+    # Logs pipeline (opt-in via enable_logs attribute).
+    # Not available for the splunk backend — Splunk uses HEC for log ingestion, not OTLP.
     logs:
       receivers:
         - syslog

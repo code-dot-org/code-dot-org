@@ -24,7 +24,7 @@ end
 
 apm_backend = node['cdo-otel-collector']['apm_backend']
 
-allowed_backends = %w[datadog newrelic sentry]
+allowed_backends = %w[datadog newrelic sentry splunk]
 unless allowed_backends.include?(apm_backend)
   Chef::Application.fatal!("Invalid cdo-otel-collector apm_backend '#{apm_backend}'. Allowed values: #{allowed_backends.join(', ')}")
 end
@@ -36,6 +36,8 @@ apm_api_key = case apm_backend
                 secret(name: "#{node.chef_environment}/cdo/newrelic_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
               when 'sentry'
                 secret(name: "#{node.chef_environment}/cdo/sentry_auth_token", service: :aws_secrets_manager, version: 'AWSCURRENT')
+              when 'splunk'
+                secret(name: "#{node.chef_environment}/cdo/splunk_access_token", service: :aws_secrets_manager, version: 'AWSCURRENT')
               else # datadog
                 secret(name: "#{node.chef_environment}/cdo/datadog_api_key", service: :aws_secrets_manager, version: 'AWSCURRENT')
               end
@@ -80,6 +82,7 @@ template '/etc/otelcol-contrib/config.yaml' do
               datadog_site: node['cdo-otel-collector']['datadog_site'],
               newrelic_otlp_endpoint: node['cdo-otel-collector']['newrelic_otlp_endpoint'],
               sentry_otlp_endpoint: node['cdo-otel-collector']['sentry_otlp_endpoint'],
+              splunk_realm: node['cdo-otel-collector']['splunk_realm'],
               prometheus_remote_write_url: node['cdo-otel-collector']['prometheus_remote_write_url'],
               prometheus_region: node['cdo-otel-collector']['prometheus_region'],
               apm_trace_sample_rate: node['cdo-otel-collector']['apm_trace_sample_rate'],
