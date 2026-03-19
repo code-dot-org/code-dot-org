@@ -13,14 +13,6 @@ A build option to not include pegasus files from the build would help substantia
 Additionally, this one is particularly important because docker builds chew through hundreds of GB
 of disk space quite quickly when the base image is so large.
 
-### Get multiplatform layer-cached GH actions building
-
-And make it so when you run `skaffold dev` for the first time, by default its pulling either the most
-recent docker layer cache from your branch, or failing that from staging. Make this work on both
-x86_64 and arm64.
-
-This would save 20 minutes (on an M2) for first time usage.
-
 ## Snapshot seeded DB in GH actions, download in dev
 
 Have GH action snapshot the seeded DB, and re-use that seed in dev. Ideally, have GH actions compute
@@ -34,10 +26,8 @@ we have existing (broken?) code that does this, and it could be repurposed.
 Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
 include prometheus as a helm chart dependency??
 
-### ArgoCD
+## Tofu EKS Cluster
 
-Get an ArgoCD setup for prod-like environments.
-
-### CloudFormation
-
-CloudFormation scripts to create a new prod-like EKS cluster.
+In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
+`Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
+the Gateway-based direction.
