@@ -6,7 +6,7 @@ import {Game2ImageEntry} from './types';
 import moduleStyles from './game2View.module.scss';
 
 interface PlayPanelProps {
-  grid: boolean[][];
+  grid: string[][];
   images: Game2ImageEntry[];
   channelId: string | undefined;
   getCode: () => string;

@@ -1,14 +1,17 @@
-import {
-  BlockJson,
-  ExtendedBlock,
-  GeneratorFunction,
-} from '@cdo/apps/blockly/types';
+import {ExtendedBlock, GeneratorFunction} from '@cdo/apps/blockly/types';
 
 import {
   BLOCK_TYPE as CREATE_ITEM,
   generator as createItemGenerator,
   register as registerCreateItem,
 } from './createItem';
+import decreaseScore from './decreaseScore';
+import increaseScore from './increaseScore';
+import {
+  BLOCK_TYPE as REMOVE_ITEM,
+  generator as removeItemGenerator,
+  register as registerRemoveItem,
+} from './removeItem';
 import {
   BLOCK_TYPE as SET_BACKGROUND,
   generator as setBackgroundGenerator,
@@ -19,16 +22,25 @@ import {
   generator as setItemBehaviorGenerator,
   register as registerSetItemBehavior,
 } from './setItemBehavior';
+import startScoring from './startScoring';
+import {
+  BLOCK_TYPE as WHEN_COLLIDE,
+  extendedOptions as whenCollideExtended,
+  generator as whenCollideGenerator,
+  register as registerWhenCollide,
+} from './whenCollide';
 import whenStart from './whenStart';
 
 interface DynamicBlockEntry {
   type: string;
   register: () => void;
   generator: GeneratorFunction;
+  extendedOptions?: Partial<ExtendedBlock>;
 }
 
 interface JsonBlockEntry {
-  definition: BlockJson;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  definition: Record<string, any>;
   generator: GeneratorFunction;
   extendedOptions?: Partial<ExtendedBlock>;
 }
@@ -49,6 +61,22 @@ export const dynamicBlocks: DynamicBlockEntry[] = [
     register: registerSetBackground,
     generator: setBackgroundGenerator,
   },
+  {
+    type: REMOVE_ITEM,
+    register: registerRemoveItem,
+    generator: removeItemGenerator,
+  },
+  {
+    type: WHEN_COLLIDE,
+    register: registerWhenCollide,
+    generator: whenCollideGenerator,
+    extendedOptions: whenCollideExtended,
+  },
 ];
 
-export const jsonBlocks: JsonBlockEntry[] = [whenStart];
+export const jsonBlocks: JsonBlockEntry[] = [
+  whenStart,
+  startScoring,
+  increaseScore,
+  decreaseScore,
+];

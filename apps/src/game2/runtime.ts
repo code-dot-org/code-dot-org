@@ -1,4 +1,5 @@
 import {Game2ImageEntry} from './types';
+import {SOLID_CELL} from './WorldPanel';
 
 const GRID_SIZE = 50;
 
@@ -14,6 +15,11 @@ const PLATFORM_MOVE_SPEED = 0.12;
 
 // Sprite size in grid cells.
 const ITEM_CELLS = 6;
+
+// Particle system constants.
+const PARTICLE_COUNT = 12;
+const PARTICLE_LIFETIME = 30; // frames
+const PARTICLE_SPEED = 0.25; // cells per frame
 
 /** Visible-pixel bounding box, as fractions of the image (0–1). */
 interface VisibleBounds {
@@ -32,6 +38,16 @@ interface GameItem {
   vy: number;
   grounded: boolean;
   behavior: 'none' | 'move' | 'platform';
+}
+
+interface Particle {
+  x: number; // cell units
+  y: number;
+  vx: number;
+  vy: number;
+  life: number; // frames remaining
+  maxLife: number;
+  color: string;
 }
 
 function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
@@ -88,7 +104,8 @@ function computeVisibleBounds(img: HTMLImageElement): VisibleBounds {
 export class Game2Runtime {
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
-  private grid: boolean[][];
+  private sourceGrid: string[][];
+  private grid: string[][];
   private images: Game2ImageEntry[];
   /** Keyed by user-facing name. */
   private loadedImages: Map<string, HTMLImageElement> = new Map();
@@ -102,6 +119,16 @@ export class Game2Runtime {
   private running = false;
   private keysDown: Set<string> = new Set();
 
+  // Scoring state.
+  private scoringEnabled = false;
+  private score = 0;
+
+  // Collision callbacks: itemName → list of callbacks.
+  private collisionHandlers: Map<string, (() => void)[]> = new Map();
+
+  // Active particles for removal puff effect.
+  private particles: Particle[] = [];
+
   // Camera in cell units.
   private camX = 0;
   private camY = 0;
@@ -110,13 +137,14 @@ export class Game2Runtime {
 
   constructor(
     canvas: HTMLCanvasElement,
-    grid: boolean[][],
+    grid: string[][],
     images: Game2ImageEntry[],
     channelId: string | undefined
   ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
-    this.grid = grid;
+    this.sourceGrid = grid;
+    this.grid = grid.map(row => [...row]);
     this.images = images;
     this.channelId = channelId;
 
@@ -145,6 +173,13 @@ export class Game2Runtime {
   run(code: string) {
     this.items = [];
     this.backgroundName = null;
+    this.scoringEnabled = false;
+    this.score = 0;
+    this.collisionHandlers.clear();
+    this.particles = [];
+
+    // Deep-copy from the original grid so runtime removals don't persist.
+    this.grid = this.sourceGrid.map(row => [...row]);
 
     const cx = GRID_SIZE / 2 - ITEM_CELLS / 2;
     const cy = GRID_SIZE / 2 - ITEM_CELLS / 2;
@@ -172,21 +207,140 @@ export class Game2Runtime {
       }
     };
 
+    const startScoring = () => {
+      this.scoringEnabled = true;
+      this.score = 0;
+    };
+
+    const increaseScore = (amount: number) => {
+      this.score += amount;
+    };
+
+    const decreaseScore = (amount: number) => {
+      this.score -= amount;
+    };
+
+    const whenCollide = (name: string, callback: () => void) => {
+      if (!this.collisionHandlers.has(name)) {
+        this.collisionHandlers.set(name, []);
+      }
+      this.collisionHandlers.get(name)!.push(callback);
+    };
+
+    const removeItem = (name: string) => {
+      this.removeItemByName(name);
+    };
+
     try {
       const fn = new Function(
         'createItem',
         'setItemBehavior',
         'setBackground',
+        'startScoring',
+        'increaseScore',
+        'decreaseScore',
+        'whenCollide',
+        'removeItem',
         code
       );
-      fn(createItem, setItemBehavior, setBackground);
+      fn(
+        createItem,
+        setItemBehavior,
+        setBackground,
+        startScoring,
+        increaseScore,
+        decreaseScore,
+        whenCollide,
+        removeItem
+      );
     } catch (e) {
       console.error('[Game2 Runtime] Error executing code:', e);
     }
 
+    // Instantiate items placed on the world grid.
+    this.instantiateGridItems();
+
     this.updateCamera();
     this.running = true;
     this.tick();
+  }
+
+  /**
+   * For items created by code that also appear on the grid, update their
+   * starting position to the first grid placement. Items that only exist
+   * on the grid (not created by code) are rendered as part of the grid
+   * cells and are NOT instantiated as movable GameItems.
+   */
+  private instantiateGridItems() {
+    const codeItemNames = new Set(this.items.map(i => i.name));
+    const gridPlacements = new Map<string, {row: number; col: number}>();
+
+    for (let r = 0; r < this.grid.length; r++) {
+      for (let c = 0; c < (this.grid[r]?.length ?? 0); c++) {
+        const cell = this.grid[r][c];
+        if (cell && cell !== SOLID_CELL && !gridPlacements.has(cell)) {
+          gridPlacements.set(cell, {row: r, col: c});
+        }
+      }
+    }
+
+    for (const [name, pos] of gridPlacements) {
+      if (codeItemNames.has(name)) {
+        // Code created this item — use the grid placement as starting position.
+        for (const item of this.items) {
+          if (item.name === name) {
+            item.x = pos.col;
+            item.y = pos.row;
+            break;
+          }
+        }
+      }
+      // If code didn't create this item, it stays as grid decoration only.
+    }
+  }
+
+  /**
+   * Remove all items (GameItems + grid cells) of the given name,
+   * spawning puff particles at each removed location.
+   */
+  private removeItemByName(name: string) {
+    // Remove code-created items with puff.
+    for (let i = this.items.length - 1; i >= 0; i--) {
+      if (this.items[i].name === name) {
+        this.spawnPuff(
+          this.items[i].x + ITEM_CELLS / 2,
+          this.items[i].y + ITEM_CELLS / 2
+        );
+        this.items.splice(i, 1);
+      }
+    }
+
+    // Remove grid-placed cells.
+    for (let r = 0; r < this.grid.length; r++) {
+      for (let c = 0; c < (this.grid[r]?.length ?? 0); c++) {
+        if (this.grid[r][c] === name) {
+          this.spawnPuff(c + 0.5, r + 0.5);
+          this.grid[r][c] = '';
+        }
+      }
+    }
+  }
+
+  private spawnPuff(cx: number, cy: number) {
+    const colors = ['#FFFFFF', '#FFD700', '#FF8C00', '#FF4500'];
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      const angle = (Math.PI * 2 * i) / PARTICLE_COUNT + Math.random() * 0.3;
+      const speed = PARTICLE_SPEED * (0.5 + Math.random() * 0.5);
+      this.particles.push({
+        x: cx,
+        y: cy,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: PARTICLE_LIFETIME,
+        maxLife: PARTICLE_LIFETIME,
+        color: colors[Math.floor(Math.random() * colors.length)],
+      });
+    }
   }
 
   stop() {
@@ -238,14 +392,14 @@ export class Game2Runtime {
     const vpW = cw / cp;
     const vpH = ch / cp;
 
-    let cx = target.x + ITEM_CELLS / 2 - vpW / 2;
-    let cy = target.y + ITEM_CELLS / 2 - vpH / 2;
+    let camCx = target.x + ITEM_CELLS / 2 - vpW / 2;
+    let camCy = target.y + ITEM_CELLS / 2 - vpH / 2;
 
-    cx = Math.max(0, Math.min(GRID_SIZE - vpW, cx));
-    cy = Math.max(0, Math.min(GRID_SIZE - vpH, cy));
+    camCx = Math.max(0, Math.min(GRID_SIZE - vpW, camCx));
+    camCy = Math.max(0, Math.min(GRID_SIZE - vpH, camCy));
 
-    this.camX = cx;
-    this.camY = cy;
+    this.camX = camCx;
+    this.camY = camCy;
   }
 
   /** Collision rect in cell units for an item at position (x, y). */
@@ -262,7 +416,7 @@ export class Game2Runtime {
     };
   }
 
-  /** Check whether a cell-unit rect overlaps any set grid cell. */
+  /** Check whether a cell-unit rect overlaps any solid grid cell. */
   private collidesWithGrid(
     rx: number,
     ry: number,
@@ -276,7 +430,7 @@ export class Game2Runtime {
 
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
-        if (this.grid[r]?.[c]) {
+        if (this.grid[r]?.[c] === SOLID_CELL) {
           return true;
         }
       }
@@ -299,7 +453,75 @@ export class Game2Runtime {
     );
   }
 
+  /** Check whether two axis-aligned rects overlap. */
+  private rectsOverlap(
+    ax: number,
+    ay: number,
+    aw: number,
+    ah: number,
+    bx: number,
+    by: number,
+    bw: number,
+    bh: number
+  ): boolean {
+    return ax < bx + bw && ax + aw > bx && ay < by + bh && ay + ah > by;
+  }
+
+  /**
+   * Check collisions between the controlled item and all grid-placed
+   * item cells + code-created items of a given name.
+   */
+  private checkItemCollisions(controlled: GameItem) {
+    const cr = this.getCollisionRect(controlled, controlled.x, controlled.y);
+
+    // Check against grid-placed item cells.
+    const colStart = Math.max(0, Math.floor(cr.x) - 1);
+    const colEnd = Math.min(GRID_SIZE - 1, Math.ceil(cr.x + cr.w) + 1);
+    const rowStart = Math.max(0, Math.floor(cr.y) - 1);
+    const rowEnd = Math.min(GRID_SIZE - 1, Math.ceil(cr.y + cr.h) + 1);
+
+    const collidedNames = new Set<string>();
+
+    for (let r = rowStart; r <= rowEnd; r++) {
+      for (let c = colStart; c <= colEnd; c++) {
+        const cell = this.grid[r]?.[c];
+        if (cell && cell !== SOLID_CELL) {
+          // Cell occupies a 1×1 area at (c, r).
+          if (this.rectsOverlap(cr.x, cr.y, cr.w, cr.h, c, r, 1, 1)) {
+            collidedNames.add(cell);
+          }
+        }
+      }
+    }
+
+    // Check against code-created items (but not the controlled item itself).
+    for (const other of this.items) {
+      if (other === controlled) {
+        continue;
+      }
+      const or = this.getCollisionRect(other, other.x, other.y);
+      if (this.rectsOverlap(cr.x, cr.y, cr.w, cr.h, or.x, or.y, or.w, or.h)) {
+        collidedNames.add(other.name);
+      }
+    }
+
+    // Fire collision handlers.
+    for (const name of collidedNames) {
+      const handlers = this.collisionHandlers.get(name);
+      if (handlers) {
+        for (const handler of handlers) {
+          handler();
+        }
+      }
+    }
+  }
+
   private update() {
+    // Find the controlled item for collision checking.
+    const controlled = this.items.find(
+      i => i.behavior === 'move' || i.behavior === 'platform'
+    );
+
     for (const item of this.items) {
       if (item.behavior === 'none') {
         continue;
@@ -308,6 +530,24 @@ export class Game2Runtime {
         this.updateMove(item);
       } else if (item.behavior === 'platform') {
         this.updatePlatform(item);
+      }
+    }
+
+    // Check collision events for the controlled item.
+    if (controlled) {
+      this.checkItemCollisions(controlled);
+    }
+
+    // Update particles.
+    for (let i = this.particles.length - 1; i >= 0; i--) {
+      const p = this.particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vx *= 0.95;
+      p.vy *= 0.95;
+      p.life--;
+      if (p.life <= 0) {
+        this.particles.splice(i, 1);
       }
     }
   }
@@ -431,12 +671,35 @@ export class Game2Runtime {
     const rowStart = Math.max(0, Math.floor(this.camY));
     const rowEnd = Math.min(GRID_SIZE - 1, Math.floor(this.camY + ch / cp));
 
-    // Draw filled grid cells.
+    // Draw filled grid cells (solid blocks and placed items).
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
-        if (this.grid[r]?.[c]) {
+        const cell = this.grid[r]?.[c];
+        if (!cell) {
+          continue;
+        }
+        if (cell === SOLID_CELL) {
           ctx.fillStyle = '#F7F8FA';
           ctx.fillRect(c * cp - ox, r * cp - oy, cp, cp);
+        } else {
+          // Placed item cell — draw 30% bigger than the cell, centered.
+          const imgEl = this.loadedImages.get(cell);
+          const scale = 1.3;
+          const size = cp * scale;
+          const offset = (size - cp) / 2;
+          if (imgEl?.complete && imgEl.naturalWidth > 0) {
+            ctx.drawImage(
+              imgEl,
+              c * cp - ox - offset,
+              r * cp - oy - offset,
+              size,
+              size
+            );
+          } else {
+            // Fallback colored square.
+            ctx.fillStyle = '#7B61FF';
+            ctx.fillRect(c * cp - ox, r * cp - oy, cp, cp);
+          }
         }
       }
     }
@@ -459,7 +722,7 @@ export class Game2Runtime {
       ctx.stroke();
     }
 
-    // Draw items.
+    // Draw items (code-created and grid-instantiated sprites).
     const itemPx = ITEM_CELLS * cp;
     for (const item of this.items) {
       const dx = item.x * cp - ox;
@@ -481,6 +744,40 @@ export class Game2Runtime {
         ctx.textBaseline = 'middle';
         ctx.fillText(item.name.slice(0, 12), dx + itemPx / 2, dy + itemPx / 2);
       }
+    }
+
+    // Draw particles.
+    for (const p of this.particles) {
+      const px = p.x * cp - ox;
+      const py = p.y * cp - oy;
+      const alpha = p.life / p.maxLife;
+      const radius = cp * 0.3 * alpha;
+      ctx.globalAlpha = alpha;
+      ctx.fillStyle = p.color;
+      ctx.beginPath();
+      ctx.arc(px, py, radius, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // Draw score HUD.
+    if (this.scoringEnabled) {
+      const fontSize = Math.max(16, cp * 1.2);
+      ctx.font = `bold ${fontSize}px sans-serif`;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'top';
+      const text = `Score: ${this.score}`;
+      const padding = 10;
+      const x = cw - padding;
+      const y = padding;
+
+      // Drop shadow.
+      ctx.fillStyle = 'rgba(0,0,0,0.6)';
+      ctx.fillText(text, x + 2, y + 2);
+
+      // Main text.
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(text, x, y);
     }
   }
 }

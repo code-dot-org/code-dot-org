@@ -246,12 +246,77 @@
   }
 }
 
+// World layout
+.worldContainer {
+  display: flex;
+  height: 100%;
+}
+
+.worldPalette {
+  width: 140px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 4px;
+  border-right: 1px solid $neutral_dark70;
+  background-color: $neutral_dark;
+  overflow-y: auto;
+}
+
+.worldPaletteLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: $neutral_dark20;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 4px;
+}
+
+.worldPaletteItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  color: $neutral_light;
+  font-size: 12px;
+  text-align: left;
+
+  &:hover {
+    border-color: $neutral_dark70;
+  }
+
+  &Selected {
+    border-color: $light_primary_500;
+    background-color: rgba(255 255 255 / 0.05);
+  }
+}
+
+.worldPaletteSwatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.worldPaletteItemName {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 // World grid
 .worldGrid {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
   height: 100%;
   padding: 8px;
   user-select: none;
@@ -271,7 +336,7 @@
   cursor: pointer;
 
   &On {
-    background-color: $neutral_light;
+    border-color: transparent;
   }
 }
 
@@ -293,7 +358,7 @@
 
 .playRestart {
   position: absolute;
-  top: 12px;
+  top: 48px;
   right: 12px;
   padding: 6px 16px;
   font-size: 13px;

@@ -6,8 +6,17 @@ export interface Game2Source {
   // Blockly workspace state (JSON serialization format).
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blockly?: Record<string, any>;
-  // 50x50 world grid. true = on, false/missing = off.
-  grid?: boolean[][];
+  /**
+   * 50x50 world grid.
+   *
+   * New format: string[][] where each cell is one of:
+   *   - '' (empty)
+   *   - 'solid' (default impassable block)
+   *   - an image name (placed item)
+   *
+   * Legacy format: boolean[][] — migrated at load time.
+   */
+  grid?: (string | boolean)[][];
 }
 
 export interface Game2ImageEntry {

@@ -25,6 +25,11 @@ const TOOLBOX: BlocklyCore.utils.toolbox.ToolboxDefinition = {
     {kind: 'block', type: 'Game2_createItem'},
     {kind: 'block', type: 'Game2_setItemBehavior'},
     {kind: 'block', type: 'Game2_setBackground'},
+    {kind: 'block', type: 'Game2_startScoring'},
+    {kind: 'block', type: 'Game2_increaseScore'},
+    {kind: 'block', type: 'Game2_decreaseScore'},
+    {kind: 'block', type: 'Game2_whenCollide'},
+    {kind: 'block', type: 'Game2_removeItem'},
   ],
 };
 

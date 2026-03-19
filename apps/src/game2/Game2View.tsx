@@ -9,11 +9,11 @@ import ImagesPanel from './ImagesPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
 import {Game2ImageEntry, Game2Source} from './types';
-import WorldPanel, {createEmptyGrid} from './WorldPanel';
+import WorldPanel, {createEmptyGrid, migrateGrid} from './WorldPanel';
 
 import moduleStyles from './game2View.module.scss';
 
-const TABS = ['Description', 'Images', 'World', 'Code', 'Play'] as const;
+const TABS = ['Description', 'Items', 'World', 'Code', 'Play'] as const;
 type Tab = (typeof TABS)[number];
 
 function parseSource(raw: unknown): Game2Source {
@@ -29,10 +29,10 @@ function parseSource(raw: unknown): Game2Source {
 const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   const [activeTab, setActiveTab] = useState<Tab>('Description');
   const [images, setImages] = useState<Game2ImageEntry[]>([]);
-  const [grid, setGrid] = useState<boolean[][]>(createEmptyGrid);
+  const [grid, setGrid] = useState<string[][]>(createEmptyGrid);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyRef = useRef<Record<string, any> | undefined>(undefined);
-  const gridRef = useRef<boolean[][]>(grid);
+  const gridRef = useRef<string[][]>(grid);
   const imagesRef = useRef<Game2ImageEntry[]>(images);
   const initializedRef = useRef(false);
   const codePanelRef = useRef<CodePanelHandle>(null);
@@ -65,8 +65,10 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       blocklyRef.current = parsedInitial.current.blockly;
     }
     if (parsedInitial.current.grid?.length) {
-      setGrid(parsedInitial.current.grid);
-      gridRef.current = parsedInitial.current.grid;
+      // Migrate legacy boolean[][] to string[][].
+      const migrated = migrateGrid(parsedInitial.current.grid);
+      setGrid(migrated);
+      gridRef.current = migrated;
     }
     initializedRef.current = true;
   }, [initialSources]);
@@ -81,7 +83,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       updatedImages?: Game2ImageEntry[];
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       updatedBlockly?: Record<string, any>;
-      updatedGrid?: boolean[][];
+      updatedGrid?: string[][];
     } = {}) => {
       const source: Game2Source = {
         images: updatedImages ?? imagesRef.current,
@@ -114,7 +116,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   );
 
   const handleGridChange = useCallback(
-    (updatedGrid: boolean[][]) => {
+    (updatedGrid: string[][]) => {
       setGrid(updatedGrid);
       gridRef.current = updatedGrid;
       saveProject({updatedGrid});
@@ -144,7 +146,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       </div>
       <div className={moduleStyles.tabContent}>
         {activeTab === 'Description' && <ThemePanel />}
-        {activeTab === 'Images' && (
+        {activeTab === 'Items' && (
           <ImagesPanel
             images={images}
             channelId={channelId}
@@ -152,7 +154,11 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
           />
         )}
         {activeTab === 'World' && (
-          <WorldPanel grid={grid} onGridChange={handleGridChange} />
+          <WorldPanel
+            grid={grid}
+            images={images}
+            onGridChange={handleGridChange}
+          />
         )}
         {activeTab === 'Play' && (
           <PlayPanel

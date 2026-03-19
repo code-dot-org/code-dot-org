@@ -7,8 +7,11 @@ export function setupGame2BlocklyEnvironment() {
     return;
   }
 
-  for (const {type, register, generator} of dynamicBlocks) {
+  for (const {type, register, generator, extendedOptions} of dynamicBlocks) {
     register();
+    if (extendedOptions) {
+      Object.assign(Blockly.Blocks[type], extendedOptions);
+    }
     Blockly.getGenerator().forBlock[type] = generator;
   }
 
