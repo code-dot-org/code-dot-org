@@ -11,6 +11,7 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
     And I close the instructions overlay if it exists
+    And The header is finished animating
     # hack to deflake "free response" scenario below
     And element ".uitest-attachment" is not visible
     Then I see no difference for "initial load" using stitch mode "<stitch_mode>"

@@ -211,6 +211,7 @@ When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
+    And The header is finished animating
     And I close the instructions overlay if it exists
   GHERKIN
 end

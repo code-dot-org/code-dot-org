@@ -13,6 +13,7 @@ Scenario: CSD and CSP Top Instructions
   Then I see no difference for "teacher in applab level with rubric after viewing rubric"
 
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/38/levels/2"
+  And The header is finished animating
   And I wait until element ".user_menu" is visible
   And I wait until element "iframe" is visible
   And I switch to the first iframe

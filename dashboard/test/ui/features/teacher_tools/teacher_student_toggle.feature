@@ -7,6 +7,7 @@ Scenario: Toggle on Multi Level
   Given I create an authorized teacher-associated student named "Daenerys"
   Then I sign in as "Teacher_Daenerys"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/1"
+  And The header is finished animating
   And I see no difference for "page load"
   And I wait to see ".submitButton"
   Then I click selector ".uitest-viewAsStudent"
@@ -50,6 +51,7 @@ Scenario: Toggle on Lockable Level
   Then I sign in as "Teacher_Joffrey"
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1?noautoplay=true"
+  And The header is finished animating
   And I wait until element ".level-group" is visible
   And element "#locked-lesson" is not visible
   And I see no difference for "page load"
@@ -74,6 +76,7 @@ Scenario: Toggle on Lockable Level
   Then I unlock the lesson for students
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1?noautoplay=true"
+  And The header is finished animating
   And I wait until element ".level-group" is visible
   And element "#locked-lesson" is not visible
   Then I click selector ".show-handle .fa-chevron-left"
