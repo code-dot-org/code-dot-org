@@ -6,11 +6,6 @@
   box-sizing: border-box;
 }
 
-.section {
-  border-radius: 4px;
-  padding: 12px;
-}
-
 .sectionHeading {
   display: flex;
   align-items: center;
@@ -52,7 +47,4 @@
   border-radius: 4px;
   border: 1px solid var(--borders-neutral-strong);
   background: var(--background-neutral-primary);
-  // width: 24px;
-  // height: 24px;
-  // box-sizing: border-box;
 }
