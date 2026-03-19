@@ -100,7 +100,7 @@ template '/etc/rsyslog.d/51-otelcol.conf' do
   group 'root'
   mode '0644'
   notifies :restart, 'service[rsyslog]', :delayed
-  only_if { node['cdo-otel-collector']['enable_logs'] }
+  only_if {node['cdo-otel-collector']['enable_logs']}
 end
 
 service 'rsyslog' do
