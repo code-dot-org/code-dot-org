@@ -185,7 +185,7 @@ const GatewayGenerateTextRequestV1Schema = z.object({
 // generateText response — JSON body returned from AI_GATEWAY_URL
 // ---------------------------------------------------------------------------
 
-const GatewayGenerateTextResponseV1Schema = z.object({
+export const GatewayGenerateTextResponseV1Schema = z.object({
   text: z.string().optional(),
   finishReason: z.string(),
   usage: z.object({
@@ -229,7 +229,7 @@ const GatewayTranscribeRequestV1Schema = z.object({
 // transcribe response — JSON body returned from AI_GATEWAY_URL/transcribe
 // ---------------------------------------------------------------------------
 
-const GatewayTranscribeResponseV1Schema = z.object({
+export const GatewayTranscribeResponseV1Schema = z.object({
   text: z.string(),
   segments: z.array(z.unknown()).optional(),
   language: z.string().optional(),

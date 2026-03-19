@@ -4,7 +4,6 @@ import HttpClient from '../util/HttpClient';
 
 import {
   GatewayGenerateTextResponseV1Schema,
-  type GatewayGenerateTextRequestV1,
   type GatewayGenerateTextResponseV1,
 } from './gatewaySchemas';
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
@@ -64,7 +63,7 @@ const rehydrateAIResponse = <TOOLS extends SDKTools, OUTPUT extends SDKOutput>(
     response: wire.response
       ? {...wire.response, timestamp: new Date(wire.response.timestamp)}
       : (undefined as unknown as GenerateTextResult<TOOLS, OUTPUT>['response']),
-  } as GenerateTextResult<TOOLS, OUTPUT>;
+  } as unknown as GenerateTextResult<TOOLS, OUTPUT>;
 };
 
 /**
@@ -83,17 +82,16 @@ const generateTextThroughGateway = async <
 
     const serializedOutput = await serializeOutputSchema(options.output);
 
-    const payload: GatewayGenerateTextRequestV1 = {
-      ...restOptions,
-      model: getModelString(model),
-      output: serializedOutput as GatewayGenerateTextRequestV1['output'],
-    };
-
     const token = await fetchAccessToken();
 
     const httpResponse = await HttpClient.post(
       AI_GATEWAY_URL,
-      JSON.stringify({...payload, token}),
+      JSON.stringify({
+        ...restOptions,
+        model: getModelString(model),
+        output: serializedOutput,
+        token,
+      }),
       false,
       {'Content-Type': 'application/json'}
     );
