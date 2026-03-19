@@ -36,9 +36,7 @@ interface UseSketchlabTourParams {
   productTours: string[] | undefined;
 }
 
-const useSketchlabTour = ({
-  productTours,
-}: UseSketchlabTourParams) => {
+const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
