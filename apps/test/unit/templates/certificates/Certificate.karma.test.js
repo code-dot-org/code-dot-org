@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -24,6 +25,7 @@ function wrapperWithParams(params) {
 
 describe('Certificate', () => {
   let storedWindowDashboard;
+  let wrapper;
 
   beforeEach(() => {
     storedWindowDashboard = window.dashboard;
@@ -33,6 +35,11 @@ describe('Certificate', () => {
   });
 
   afterEach(() => {
+    if (wrapper) {
+      wrapper.unmount();
+      wrapper = undefined;
+    }
+    sinon.restore();
     window.dashboard = storedWindowDashboard;
   });
 
@@ -47,7 +54,6 @@ describe('Certificate', () => {
     });
 
     afterEach(() => {
-      sinon.restore();
       server.restore();
     });
 
@@ -62,7 +68,7 @@ describe('Certificate', () => {
         [200, {'Content-Type': 'application/json'}, JSON.stringify(data)]
       );
 
-      const wrapper = wrapperWithParams({
+      wrapper = wrapperWithParams({
         certificateData: [
           {
             courseName: 'dance',
@@ -93,7 +99,10 @@ describe('Certificate', () => {
       // `personalizeHocCertificate` awaits the authenticity token before issuing the ajax request.
       // Give the microtask queue a chance to flush so the request is created before responding with the fake server.
       await new Promise(resolve => setTimeout(resolve));
-      server.respond();
+      await act(async () => {
+        server.respond();
+        await Promise.resolve();
+      });
 
       wrapper.update();
       image = wrapper.find('#uitest-certificate img');
@@ -108,7 +117,7 @@ describe('Certificate', () => {
     });
 
     it('passes down full urls to SocialShare', () => {
-      const wrapper = wrapperWithParams({
+      wrapper = wrapperWithParams({
         certificateData: [
           {
             courseName: 'dance',
@@ -124,7 +133,7 @@ describe('Certificate', () => {
   });
 
   it('renders swiper for multiple certificates', () => {
-    const wrapper = wrapperWithParams({
+    wrapper = wrapperWithParams({
       certificateData: [
         {
           courseName: 'csd1-2023',
@@ -147,7 +156,7 @@ describe('Certificate', () => {
   });
 
   it('does not render swiper for single certificate', () => {
-    const wrapper = wrapperWithParams({
+    wrapper = wrapperWithParams({
       certificateData: [
         {
           courseName: 'csd1-2023',
