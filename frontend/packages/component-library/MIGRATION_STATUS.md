@@ -81,3 +81,49 @@ Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` an
 4. Mark the DSCO component as `@deprecated` with a clear migration path.
 5. Update this document.
 6. Optionally, create a codemod in `codemods/` for automated migration of consumers.
+
+## Migration Strategy
+
+Each DSCO component follows a 4-step migration lifecycle:
+
+1. **Create MUI style overrides** — Match the DSCO component's visual appearance using MUI theme overrides in `src/themes/code.org/styleOverrides/`. This ensures MUI components look identical to their DSCO counterparts so consumers can swap with no visual regressions.
+
+2. **Migrate `/apps` consumers** — Replace all DSCO imports in `/apps` with MUI equivalents. Use a codemod where possible (see `codemods/`). Once all `/apps` consumers are migrated, add an ESLint `no-restricted-imports` rule to prevent new usage of the deprecated DSCO component.
+
+3. **Inside-out replacement** — Replace DSCO Button/Typography usage _inside_ other DSCO components that haven't been migrated yet. This breaks internal dependency chains so deprecated components aren't kept alive by other DSCO components that still import them.
+
+4. **Delete DSCO source** — Once all consumers (both `/apps` and internal DSCO components) are migrated, remove the DSCO component source code entirely.
+
+## Internal Dependency Blockers
+
+The following DSCO components still use `Button` or `Typography` internally, blocking full removal of those deprecated components. These need the "inside-out replacement" (step 3 above) before we can delete the DSCO source.
+
+### Button internal consumers (8)
+
+| DSCO Component     | Migration Status |
+| ------------------ | ---------------- |
+| `Dialog`           | Not Started      |
+| `Modal`            | Not Started      |
+| `Slider`           | Not Started      |
+| `HeroBanner`       | N/A              |
+| `ActionBlock`      | Not Started      |
+| `CustomDropdown`   | Not Started      |
+| `CheckboxDropdown` | Not Started      |
+| `Video`            | N/A              |
+
+### Typography internal consumers (11)
+
+| DSCO Component         | Migration Status |
+| ---------------------- | ---------------- |
+| `Checkbox`             | Not Started      |
+| `RadioButton`          | Not Started      |
+| `Toggle`               | Not Started      |
+| `Accordion`            | Not Started      |
+| `ActionBlock`          | Not Started      |
+| `FullWidthActionBlock` | Not Started      |
+| `Dialog`               | Not Started      |
+| `HeroBanner`           | N/A              |
+| `Modal`                | Not Started      |
+| `Popover`              | Not Started      |
+| `SimpleList`           | Not Started      |
+| `Video`                | N/A              |
