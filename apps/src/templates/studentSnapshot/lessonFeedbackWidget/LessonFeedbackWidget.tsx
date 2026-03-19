@@ -130,7 +130,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         setSavedOrSubmittedTimestamp(null);
         return;
       }
-
       setFeedbackText('');
       setResourceData([DEFAULT_RESOURCE]);
       setExistingFeedbackData(null);
@@ -211,9 +210,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
     payload: LessonFeedbackData,
     feedbackId?: number
   ) => {
-    if (!lessonId || !studentId) {
-      return null;
-    }
+    if (!lessonId || !studentId) return null;
 
     try {
       let response;
@@ -229,7 +226,7 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
           body: JSON.stringify(payload),
         });
       } else {
-        // Create new feedback - always use current prop values
+        // Create new feedback
         const newFeedbackPayload = {
           lesson_id: lessonId,
           student_id: studentId,
