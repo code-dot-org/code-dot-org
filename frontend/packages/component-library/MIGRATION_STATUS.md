@@ -75,12 +75,13 @@ Custom MUI type augmentations are defined in `src/themes/code.org/types.d.ts` an
 
 ## How to Migrate a Component
 
-1. Create MUI style overrides in `src/themes/code.org/styleOverrides/`.
-2. Add the overrides to `STYLE_OVERRIDES` in `styleOverrides/index.ts`.
-3. Add any necessary type augmentations to `types.d.ts`.
-4. Mark the DSCO component as `@deprecated` with a clear migration path.
-5. Update this document.
-6. Optionally, create a codemod in `codemods/` for automated migration of consumers.
+1. **Discuss with the design team** — Before starting a new component migration, coordinate with the design team (including Moshe and Mark) to align on visual expectations and any design adjustments needed for the MUI equivalent.
+2. Create MUI style overrides in `src/themes/code.org/styleOverrides/`.
+3. Add the overrides to `STYLE_OVERRIDES` in `styleOverrides/index.ts`.
+4. Add any necessary type augmentations to `types.d.ts`.
+5. Mark the DSCO component as `@deprecated` with a clear migration path.
+6. Update this document.
+7. Optionally, create a codemod in `codemods/` for automated migration of consumers.
 
 ## Migration Strategy
 
@@ -93,6 +94,10 @@ Each DSCO component follows a 4-step migration lifecycle:
 3. **Inside-out replacement** — Replace DSCO Button/Typography usage _inside_ other DSCO components that haven't been migrated yet. This breaks internal dependency chains so deprecated components aren't kept alive by other DSCO components that still import them.
 
 4. **Delete DSCO source** — Once all consumers (both `/apps` and internal DSCO components) are migrated, remove the DSCO component source code entirely.
+
+## Building New MUI Components
+
+When creating a completely new MUI component for the design system (i.e. not migrating an existing DSCO component), discuss it with the design team (Moshe and Mark) before starting implementation. This ensures the component follows existing design system patterns and that we maintain a high-quality, high-integrity design system.
 
 ## Internal Dependency Blockers
 
