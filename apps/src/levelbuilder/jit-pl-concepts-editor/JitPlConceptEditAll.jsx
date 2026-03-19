@@ -67,7 +67,10 @@ const JitPlConceptEditAll = props => {
           onConfirm={() => deleteConcept()}
         />
       )}
-      <div className="guides-table" style={{gridTemplateColumns: '100px 1fr 1fr'}}>
+      <div
+        className="guides-table"
+        style={{gridTemplateColumns: '100px 1fr 1fr'}}
+      >
         <span className="header">Actions</span>
         <span className="header">Name</span>
         <span className="header">Display Name</span>
