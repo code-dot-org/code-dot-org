@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tutor Prompt Tool</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 13px;
+      background: #0f1117;
+      color: #e2e8f0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #1a1d2e;
+      border-bottom: 1px solid #2d3a50;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-shrink: 0;
+    }
+    header h1 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #93c5fd;
+      white-space: nowrap;
+    }
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+    .control-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .control-group label {
+      color: #94a3b8;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    select {
+      background: #0f1117;
+      color: #e2e8f0;
+      border: 1px solid #2d3a50;
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    select:focus { outline: none; border-color: #3b82f6; }
+
+    .header-actions {
+      display: flex;
+      gap: 8px;
+    }
+    button {
+      background: #1e3a5f;
+      color: #93c5fd;
+      border: 1px solid #2d5a9e;
+      border-radius: 4px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    button:hover { background: #2d5a9e; }
+    button.danger { background: #3b1a1a; color: #fca5a5; border-color: #7f1d1d; }
+    button.danger:hover { background: #7f1d1d; }
+
+    /* ── Main layout ── */
+    main {
+      display: grid;
+      grid-template-columns: 480px 1fr;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── Left panel ── */
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #2d3a50;
+      overflow: hidden;
+    }
+
+    /* Templates section */
+    .templates-section {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #2d3a50;
+      min-height: 0;
+      flex: 1;
+    }
+    .section-header {
+      padding: 8px 12px 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      flex-shrink: 0;
+    }
+    .template-tabs {
+      display: flex;
+      border-bottom: 1px solid #2d3a50;
+      flex-shrink: 0;
+    }
+    .tab-btn {
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid transparent;
+      border-radius: 0;
+      color: #64748b;
+      padding: 6px 12px;
+      font-size: 11px;
+      font-weight: 500;
+      cursor: pointer;
+      margin-bottom: -1px;
+    }
+    .tab-btn:hover { color: #94a3b8; background: transparent; }
+    .tab-btn.active { color: #93c5fd; border-bottom-color: #3b82f6; }
+
+    .template-editor {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+    }
+    .template-hint {
+      font-size: 11px;
+      color: #475569;
+      margin-bottom: 4px;
+      flex-shrink: 0;
+    }
+    .template-hint code {
+      background: #1e293b;
+      padding: 1px 4px;
+      border-radius: 3px;
+      font-family: "SF Mono", "Fira Code", monospace;
+      color: #7dd3fc;
+    }
+    textarea {
+      flex: 1;
+      width: 100%;
+      background: #0d1117;
+      color: #e2e8f0;
+      border: 1px solid #2d3a50;
+      border-radius: 4px;
+      padding: 8px;
+      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+      font-size: 11.5px;
+      line-height: 1.5;
+      resize: none;
+      min-height: 0;
+    }
+    textarea:focus { outline: none; border-color: #3b82f6; }
+
+    /* Studio data section */
+    .studio-section {
+      flex-shrink: 0;
+      border-top: 1px solid #2d3a50;
+      overflow-y: auto;
+      max-height: 340px;
+    }
+    .studio-key-badge {
+      font-family: "SF Mono", monospace;
+      font-size: 10px;
+      background: #1e293b;
+      color: #7dd3fc;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+    }
+    .studio-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 8px 12px 12px;
+    }
+    .field-label {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .field-label textarea {
+      height: 70px;
+      flex: none;
+    }
+    .field-label textarea.code-area { height: 110px; font-size: 11px; }
+    .checkboxes {
+      display: flex;
+      gap: 16px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: #94a3b8;
+      cursor: pointer;
+    }
+    input[type="checkbox"] { cursor: pointer; accent-color: #3b82f6; }
+
+    .no-data-msg {
+      padding: 12px;
+      color: #475569;
+      font-size: 12px;
+      font-style: italic;
+    }
+
+    /* ── Right panel (output) ── */
+    .right-panel {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .output-header {
+      padding: 8px 12px 6px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #64748b;
+      border-bottom: 1px solid #2d3a50;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .char-count {
+      color: #475569;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    #output-area {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 16px;
+    }
+    #output-text {
+      font-family: "SF Mono", "Fira Code", "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    /* Section dividers in output */
+    .output-section {
+      margin-bottom: 0;
+    }
+    .output-section-label {
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #334155;
+      margin-bottom: 4px;
+      padding: 2px 0;
+      border-bottom: 1px solid #1e293b;
+    }
+    .output-section-text {
+      font-family: "SF Mono", "Fira Code", monospace;
+      font-size: 12px;
+      line-height: 1.65;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin-bottom: 16px;
+    }
+    .separator {
+      border: none;
+      border-top: 1px dashed #1e293b;
+      margin: 12px 0;
+    }
+
+    /* Toast notification */
+    #toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e3a5f;
+      color: #93c5fd;
+      border: 1px solid #2d5a9e;
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 12px;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+    #toast.show { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🤖 AI Tutor Prompt Tool</h1>
+  <div class="controls">
+    <div class="control-group">
+      <label for="levelSelect">Level:</label>
+      <select id="levelSelect"></select>
+    </div>
+    <div class="control-group">
+      <label for="stateSelect">State:</label>
+      <select id="stateSelect"></select>
+    </div>
+  </div>
+  <div class="header-actions">
+    <button id="copyBtn">Copy Output</button>
+    <button id="resetTemplatesBtn" class="danger">Reset Templates</button>
+  </div>
+</header>
+
+<main>
+  <!-- ── Left Panel ── -->
+  <div class="left-panel">
+
+    <!-- Templates -->
+    <div class="templates-section">
+      <div class="section-header">Templates</div>
+      <div class="template-tabs">
+        <button class="tab-btn active" data-tab="system">System Prompt</button>
+        <button class="tab-btn" data-tab="instructions">Instructions</button>
+        <button class="tab-btn" data-tab="code">Code Context</button>
+        <button class="tab-btn" data-tab="state">State Context</button>
+      </div>
+      <div class="template-editor">
+        <div class="template-hint" id="tpl-hint"></div>
+        <textarea id="tpl-textarea" spellcheck="false"></textarea>
+      </div>
+    </div>
+
+    <!-- Studio Data Editor -->
+    <div class="studio-section">
+      <div class="section-header">
+        Studio Data
+        <span class="studio-key-badge" id="studioKeyBadge"></span>
+      </div>
+      <div id="studioEditorArea">
+        <div class="no-data-msg">Select a level and state to edit studio data.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Right Panel ── -->
+  <div class="right-panel">
+    <div class="output-header">
+      Live Output
+      <span class="char-count" id="charCount"></span>
+    </div>
+    <div id="output-area">
+      <div id="output-content"></div>
+    </div>
+  </div>
+</main>
+
+<div id="toast">Copied to clipboard!</div>
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// DATA — mirrors neighborhoodLevelData.ts and neighborhoodStudioData.ts
+// Update these when the TS source files change.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const LEVEL_DATA = {
+  "aif-pl-objects-create-L17-2-python_2025": {
+    label: "Create a Painter + move (objects-create L17)",
+    longInstructions: `## Do This:
+
+1. Create a \`Painter\` using
+
+   \`\`\`
+   painter_name = Painter()
+   \`\`\`
+
+   For example:
+
+   \`\`\`
+   alicia = Painter()
+   \`\`\`
+
+2. Move the \`Painter\` forward **one space** using
+
+   \`\`\`
+   painter_name.move()
+   \`\`\`
+
+   For example:
+
+   \`\`\`
+   alicia.move()
+   \`\`\`
+
+---
+
+**Coding Tip**
+
+You can name the \`Painter\` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.`,
+    startingCode: `from neighborhood import Painter
+
+# Your code here`,
+  },
+
+  "aif-pl-conditional1-L10-python_2025": {
+    label: "Add if is_facing_west() (conditional1 L10)",
+    longInstructions: `## Do This:
+
+1. Read the existing code to see what the \`Painter\` currently does.
+
+2. Add an \`if\` statement to check if the \`Painter\` \`is_facing_west()\`
+
+3. Move the \`paint("blue")\` command inside the \`if\` statement so it only runs when the condition is true.
+
+4. Run the program to check your result.
+
+---
+
+**Coding Tip**
+
+Use this format for writing an \`if\` statement:
+
+\`\`\`
+if condition:
+   do_something()
+\`\`\`
+
+For this problem, your condition will be \`is_facing_west()\``,
+    startingCode: `from neighborhood import Painter
+
+my_painter = Painter(0, 0, "East", 10)
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.paint("blue")`,
+  },
+
+  "aif-pl-two-waySelection-L16-python_2025": {
+    label: "Fix if + add else for two-way selection (L16)",
+    longInstructions: `## Do This:
+
+1. Read the program. Notice how the \`Painter\` moves forward, turns right, then enters a \`while\` loop.
+
+   * Inside the loop, the \`Painter\` checks if it can move.
+
+   * If it can, it turns left and keeps moving.
+
+   * If it can't move east, the code still tries to move forward anyway.
+
+2. Modify the \`if\` statement so the \`Painter\` only turns and moves if it \`can_move("east")\`
+
+3. Add an \`else\` statement so the \`Painter\` only moves forward if it **can't** move east.
+
+---
+
+**Coding Tip**
+
+Use \`else\` to control what happens when a condition is false. This way, the \`Painter\` only chooses *one* path, never both.`,
+    startingCode: `from neighborhood import Painter
+
+my_painter = Painter(0, 0, "East", 10)
+my_painter.move()
+my_painter.turn_left()
+
+while my_painter.can_move():
+    if my_painter.can_move():
+        my_painter.turn_left()
+        my_painter.move()
+    my_painter.move()`,
+  },
+};
+
+const STATES = [
+  { key: 'START',         label: 'START — Just started' },
+  { key: 'STRUGGLING',    label: 'STRUGGLING — Completely lost' },
+  { key: 'SYNTAX_ERRORS', label: 'SYNTAX_ERRORS — Code won\'t run' },
+  { key: 'RUNTIME_ERRORS',label: 'RUNTIME_ERRORS — Crashes at runtime' },
+  { key: 'GOOD_PROGRESS', label: 'GOOD_PROGRESS — Solid partial solution' },
+  { key: 'ALMOST_THERE',  label: 'ALMOST_THERE — One small fix away' },
+];
+
+const STATE_DESCRIPTIONS = {
+  START:         'The student has just opened the level and has not made any changes yet.',
+  STRUGGLING:    'The student is completely lost and attempting random things with no clear strategy.',
+  SYNTAX_ERRORS: 'The student has written code that cannot run due to syntax errors.',
+  RUNTIME_ERRORS:'The student\'s code runs but crashes with a runtime error.',
+  GOOD_PROGRESS: 'The student is making solid progress but the solution is not yet complete.',
+  ALMOST_THERE:  'The student is very close to the correct answer with only a minor issue remaining.',
+};
+
+const STUDIO_DATA = {
+  // aif-pl-objects-create-L17-2-python_2025
+  'aif-pl-objects-create-L17-2-python_2025_START': {
+    studentCode: `from neighborhood import Painter\n\n# Your code here`,
+    consoleOutput: '', hasRun: false, hasEdited: false, validationResults: '',
+  },
+  'aif-pl-objects-create-L17-2-python_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter\n\nPainter\nmove`,
+    consoleOutput: `NameError: name 'move' is not defined`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-objects-create-L17-2-python_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(\nmy_painter.move()`,
+    consoleOutput: `SyntaxError: '(' was never closed (line 3)`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-objects-create-L17-2-python_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter()\nmy_painter.Move()`,
+    consoleOutput: `AttributeError: 'Painter' object has no attribute 'Move'. Did you mean: 'move'?`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-objects-create-L17-2-python_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter()`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-objects-create-L17-2-python_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter()\nmy_painter.move()\nmy_painter.move()`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+
+  // aif-pl-conditional1-L10-python_2025
+  'aif-pl-conditional1-L10-python_2025_START': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nmy_painter.paint("blue")`,
+    consoleOutput: '', hasRun: false, hasEdited: false, validationResults: '',
+  },
+  'aif-pl-conditional1-L10-python_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nif west:\n    my_painter.paint("blue")`,
+    consoleOutput: `NameError: name 'west' is not defined`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-conditional1-L10-python_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nif my_painter.is_facing_west()\n    my_painter.paint("blue")`,
+    consoleOutput: `SyntaxError: expected ':' after condition (line 7)`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-conditional1-L10-python_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nif my_painter.is_facing_west():\n    my_painter.paint(blue)`,
+    consoleOutput: `NameError: name 'blue' is not defined`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-conditional1-L10-python_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nif my_painter.is_facing_west():\n    pass\nmy_painter.paint("blue")`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-conditional1-L10-python_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\nmy_painter.turn_left()\nif my_painter.is_facing_west():\n    my_painter.paint("red")`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+
+  // aif-pl-two-waySelection-L16-python_2025
+  'aif-pl-two-waySelection-L16-python_2025_START': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move():\n        my_painter.turn_left()\n        my_painter.move()\n    my_painter.move()`,
+    consoleOutput: '', hasRun: false, hasEdited: false, validationResults: '',
+  },
+  'aif-pl-two-waySelection-L16-python_2025_STRUGGLING': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move():\n        my_painter.turn_left()\n        my_painter.move()\n    my_painter.move()\nelse:\n    my_painter.move()`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-two-waySelection-L16-python_2025_SYNTAX_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move("east"):\n        my_painter.turn_left()\n        my_painter.move()\n    else\n        my_painter.move()`,
+    consoleOutput: `SyntaxError: expected ':' after 'else' (line 11)`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-two-waySelection-L16-python_2025_RUNTIME_ERRORS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move("east"):\n        my_painter.turn_left()\n        my_painter.move()\n    else:\n        my_painter.Move()`,
+    consoleOutput: `AttributeError: 'Painter' object has no attribute 'Move'. Did you mean: 'move'?`,
+    hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-two-waySelection-L16-python_2025_GOOD_PROGRESS': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move("east"):\n        my_painter.turn_left()\n        my_painter.move()\n    my_painter.move()`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+  'aif-pl-two-waySelection-L16-python_2025_ALMOST_THERE': {
+    studentCode: `from neighborhood import Painter\n\nmy_painter = Painter(0, 0, "East", 10)\nmy_painter.move()\nmy_painter.turn_left()\n\nwhile my_painter.can_move():\n    if my_painter.can_move("east"):\n        my_painter.move()\n    else:\n        my_painter.move()`,
+    consoleOutput: '', hasRun: true, hasEdited: true, validationResults: '',
+  },
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DEFAULT TEMPLATES
+// Variables: {{levelInstructions}}, {{studentCode}}, {{consoleOutput}},
+//            {{hasRunStatement}}, {{hasEditedStatement}}, {{validationResults}},
+//            {{stateLabel}}, {{stateDescription}}
+// ─────────────────────────────────────────────────────────────────────────────
+
+const DEFAULT_TEMPLATES = {
+  system:
+`You are an AI Computer Science Tutor that supports students through scaffolded learning, metacognitive reflection, and problem-solving strategies. Target the reading age of an American 7th grader. By default, when a student asks a question, you should respond with a clarifying question, a small hint, or a reflective nudge—to help them take the next step without solving the task for them. Do not give them the whole answer directly. If the student appears frustrated, you may include syntax or pseudocode. If the student explicitly asks for a HINT, provide a tip that nudges them forward to take the next step. If they ask for an EXAMPLE, give a short (1–3 line) conceptual code snippet from a different context that illustrates the relevant idea without solving the actual task. If they request DOCUMENTATION, share 1–3 concise and relevant references formatted with a clear keyword, short explanation and example code. Always work within the provided instructions, student code, and question, and tailor your support to encourage confidence, independence, and thoughtful programming.`,
+
+  instructions:
+`Here are the instructions for this level:
+
+{{levelInstructions}}`,
+
+  code:
+`Here is the student's current code:
+\`\`\`
+{{studentCode}}
+\`\`\`
+{{hasRunStatement}}
+{{hasEditedStatement}}
+{{consoleSection}}
+{{validationSection}}`,
+
+  state:
+`Student state: {{stateLabel}}
+{{stateDescription}}`,
+};
+
+const TEMPLATE_HINTS = {
+  system: 'No variables — edit the tutor persona and behavior.',
+  instructions: 'Variables: <code>{{levelInstructions}}</code>',
+  code: 'Variables: <code>{{studentCode}}</code> <code>{{consoleSection}}</code> <code>{{hasRunStatement}}</code> <code>{{hasEditedStatement}}</code> <code>{{validationSection}}</code>',
+  state: 'Variables: <code>{{stateLabel}}</code> <code>{{stateDescription}}</code>',
+};
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────────────────────────────────
+
+const STORAGE_KEY_TPL  = 'aiTutorTool_templates_v1';
+const STORAGE_KEY_DATA = 'aiTutorTool_studioData_v1';
+
+let currentTab = 'system';
+let templates  = loadTemplates();
+let studioData = loadStudioData();
+let currentLevel = Object.keys(LEVEL_DATA)[0];
+let currentState = STATES[0].key;
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PERSISTENCE
+// ─────────────────────────────────────────────────────────────────────────────
+
+function loadTemplates() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_TPL);
+    return saved ? { ...DEFAULT_TEMPLATES, ...JSON.parse(saved) } : { ...DEFAULT_TEMPLATES };
+  } catch { return { ...DEFAULT_TEMPLATES }; }
+}
+
+function saveTemplates() {
+  localStorage.setItem(STORAGE_KEY_TPL, JSON.stringify(templates));
+}
+
+function loadStudioData() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY_DATA);
+    return saved ? { ...STUDIO_DATA, ...JSON.parse(saved) } : { ...STUDIO_DATA };
+  } catch { return { ...STUDIO_DATA }; }
+}
+
+function saveStudioData() {
+  localStorage.setItem(STORAGE_KEY_DATA, JSON.stringify(studioData));
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TEMPLATE RENDERING
+// ─────────────────────────────────────────────────────────────────────────────
+
+function renderTemplate(tpl, vars) {
+  return tpl.replace(/\{\{(\w+)\}\}/g, (_, key) =>
+    vars[key] !== undefined ? vars[key] : `{{${key}}}`
+  );
+}
+
+function buildVars(levelId, stateKey) {
+  const level = LEVEL_DATA[levelId];
+  const dataKey = `${levelId}_${stateKey}`;
+  const data = studioData[dataKey];
+
+  if (!level || !data) return null;
+
+  const hasRunStatement  = data.hasRun    ? '' : 'The student has not run the code yet.';
+  const hasEditedStatement = data.hasEdited ? '' : 'The student has not edited the code yet.';
+  const consoleSection   = data.consoleOutput
+    ? `Here is the output from the student's debug console:\n\`\`\`\n${data.consoleOutput}\n\`\`\``
+    : '';
+  const validationSection = data.validationResults
+    ? `Here are the validation test results (JSON):\n${data.validationResults}`
+    : '';
+
+  return {
+    levelInstructions:  level.longInstructions,
+    studentCode:        data.studentCode,
+    consoleSection,
+    hasRunStatement,
+    hasEditedStatement,
+    validationSection,
+    stateLabel:        stateKey,
+    stateDescription:  STATE_DESCRIPTIONS[stateKey] || '',
+  };
+}
+
+function assembleOutput(levelId, stateKey) {
+  const vars = buildVars(levelId, stateKey);
+  if (!vars) return null;
+
+  return [
+    { label: '1. System Prompt', text: templates.system },
+    { label: '2. Instructions Context', text: renderTemplate(templates.instructions, vars) },
+    { label: '3. Code Context', text: renderTemplate(templates.code, vars) },
+    { label: '4. State Context', text: renderTemplate(templates.state, vars) },
+  ];
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DOM RENDERING
+// ─────────────────────────────────────────────────────────────────────────────
+
+function renderOutput() {
+  const sections = assembleOutput(currentLevel, currentState);
+  const container = document.getElementById('output-content');
+  const charCountEl = document.getElementById('charCount');
+
+  if (!sections) {
+    container.innerHTML = '<span style="color:#475569;font-size:12px;">No data for this level/state combination.</span>';
+    charCountEl.textContent = '';
+    return;
+  }
+
+  let totalChars = 0;
+  container.innerHTML = sections.map(({ label, text }) => {
+    // Trim leading/trailing blank lines produced by empty variable slots
+    const trimmed = text.replace(/\n(\s*\n){2,}/g, '\n\n').trim();
+    totalChars += trimmed.length;
+    return `<div class="output-section">
+      <div class="output-section-label">${label}</div>
+      <div class="output-section-text">${escHtml(trimmed)}</div>
+    </div>`;
+  }).join('<hr class="separator">');
+
+  charCountEl.textContent = `${totalChars.toLocaleString()} chars`;
+}
+
+function renderStudioEditor() {
+  const dataKey = `${currentLevel}_${currentState}`;
+  const data = studioData[dataKey];
+  const badge = document.getElementById('studioKeyBadge');
+  const area = document.getElementById('studioEditorArea');
+
+  badge.textContent = dataKey;
+
+  if (!data) {
+    area.innerHTML = '<div class="no-data-msg">No studio data for this combination.</div>';
+    return;
+  }
+
+  area.innerHTML = `
+    <div class="studio-fields">
+      <label class="field-label">
+        Student Code
+        <textarea id="f-studentCode" class="code-area" spellcheck="false">${escHtml(data.studentCode)}</textarea>
+      </label>
+      <label class="field-label">
+        Console Output
+        <textarea id="f-consoleOutput" spellcheck="false">${escHtml(data.consoleOutput || '')}</textarea>
+      </label>
+      <div class="checkboxes">
+        <label class="checkbox-label">
+          <input type="checkbox" id="f-hasRun" ${data.hasRun ? 'checked' : ''}> Has Run
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="f-hasEdited" ${data.hasEdited ? 'checked' : ''}> Has Edited
+        </label>
+      </div>
+      <label class="field-label">
+        Validation Results (JSON)
+        <textarea id="f-validationResults" spellcheck="false">${escHtml(data.validationResults || '')}</textarea>
+      </label>
+    </div>`;
+
+  // Wire up studio field changes
+  ['studentCode', 'consoleOutput', 'validationResults'].forEach(field => {
+    document.getElementById(`f-${field}`).addEventListener('input', e => {
+      studioData[dataKey][field] = e.target.value;
+      saveStudioData();
+      renderOutput();
+    });
+  });
+  ['hasRun', 'hasEdited'].forEach(field => {
+    document.getElementById(`f-${field}`).addEventListener('change', e => {
+      studioData[dataKey][field] = e.target.checked;
+      saveStudioData();
+      renderOutput();
+    });
+  });
+}
+
+function renderTemplateEditor() {
+  const textarea = document.getElementById('tpl-textarea');
+  const hint     = document.getElementById('tpl-hint');
+  textarea.value = templates[currentTab];
+  hint.innerHTML = TEMPLATE_HINTS[currentTab];
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INIT
+// ─────────────────────────────────────────────────────────────────────────────
+
+function init() {
+  // Populate level dropdown
+  const levelSel = document.getElementById('levelSelect');
+  Object.entries(LEVEL_DATA).forEach(([id, lvl]) => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = lvl.label;
+    levelSel.appendChild(opt);
+  });
+
+  // Populate state dropdown
+  const stateSel = document.getElementById('stateSelect');
+  STATES.forEach(({ key, label }) => {
+    const opt = document.createElement('option');
+    opt.value = key;
+    opt.textContent = label;
+    stateSel.appendChild(opt);
+  });
+
+  // Level / State change
+  levelSel.addEventListener('change', e => {
+    currentLevel = e.target.value;
+    renderStudioEditor();
+    renderOutput();
+  });
+  stateSel.addEventListener('change', e => {
+    currentState = e.target.value;
+    renderStudioEditor();
+    renderOutput();
+  });
+
+  // Template tabs
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Save current tab before switching
+      templates[currentTab] = document.getElementById('tpl-textarea').value;
+      saveTemplates();
+
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentTab = btn.dataset.tab;
+      renderTemplateEditor();
+    });
+  });
+
+  // Template textarea edits → live update
+  document.getElementById('tpl-textarea').addEventListener('input', e => {
+    templates[currentTab] = e.target.value;
+    saveTemplates();
+    renderOutput();
+  });
+
+  // Copy output button
+  document.getElementById('copyBtn').addEventListener('click', () => {
+    const sections = assembleOutput(currentLevel, currentState);
+    if (!sections) return;
+    const full = sections
+      .map(s => s.text.replace(/\n(\s*\n){2,}/g, '\n\n').trim())
+      .join('\n\n---\n\n');
+    navigator.clipboard.writeText(full).then(() => showToast('Copied to clipboard!'));
+  });
+
+  // Reset templates
+  document.getElementById('resetTemplatesBtn').addEventListener('click', () => {
+    if (!confirm('Reset all 4 templates to defaults? This cannot be undone.')) return;
+    templates = { ...DEFAULT_TEMPLATES };
+    localStorage.removeItem(STORAGE_KEY_TPL);
+    renderTemplateEditor();
+    renderOutput();
+  });
+
+  // Initial render
+  renderTemplateEditor();
+  renderStudioEditor();
+  renderOutput();
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+init();
+</script>
+</body>
+</html>

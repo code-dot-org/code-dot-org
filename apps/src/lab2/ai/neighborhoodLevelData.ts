@@ -12,6 +12,7 @@ export const painterDocumentation = {"category_key": "neighborhood", "content": 
 export const neighborhoodLevelData: Record<string, {
   unitId: string;
   longInstructions?: string;
+  startingCode?: string;
   documentationUrl: string;
 }> = {
   "aif-pl-conditional1-L10-python_2025": {
@@ -38,6 +39,13 @@ if condition:
 \`\`\`
 
 For this problem, your condition will be \`is_facing_west()\``,
+    startingCode: `from neighborhood import Painter
+
+my_painter = Painter(0, 0, "East", 10)
+my_painter.move()
+my_painter.turn_left()
+my_painter.turn_left()
+my_painter.paint("blue")`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
   "aif-pl-conditionals2-L11-python_2025": {
@@ -49,6 +57,17 @@ For this problem, your condition will be \`is_facing_west()\``,
 2. Modify the \`if\` statement that checks whether the \`Painter\` \`can_move("south")\`
 
 3. Run the program to see if the \`Painter\` turns right through the opening in the wall.`,
+    startingCode: `from neighborhood import Painter
+
+my_painter = Painter(0, 0, "East", 10)
+my_painter.move()
+
+while my_painter.can_move():
+    if my_painter.can_move():
+        my_painter.turn_left()
+        my_painter.turn_left()
+        my_painter.turn_left()
+    my_painter.move()`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
   "aif-pl-object-predict-L16-2-python_2025": {
@@ -65,9 +84,9 @@ For this problem, your condition will be \`is_facing_west()\``,
    \`\`\`
    painter_name = Painter()
    \`\`\`
-   
+
    For example:
-   
+
    \`\`\`
    alicia = Painter()
    \`\`\`
@@ -79,9 +98,9 @@ For this problem, your condition will be \`is_facing_west()\``,
    \`\`\`
    painter_name.move()
    \`\`\`
-   
+
    For example:
-   
+
    \`\`\`
    alicia.move()
    \`\`\`
@@ -91,6 +110,9 @@ For this problem, your condition will be \`is_facing_west()\``,
 <i class="fa-solid fa-laptop"></i> **Coding Tip**
 
 You can name the \`Painter\` whatever you want! Give it a name that is meaningful to you, like your own name, your best friend's name, your pet's name, or the name of someone you look up to.`,
+    startingCode: `from neighborhood import Painter
+
+# Your code here`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
   "aif-pl-two-waySelection-L16-python_2025": {
@@ -100,9 +122,9 @@ You can name the \`Painter\` whatever you want! Give it a name that is meaningfu
 1. Read the program. Notice how the \`Painter\` moves forward, turns right, then enters a \`while\` loop.
 
    * Inside the loop, the \`Painter\` checks if it can move.
-   
+
    * If it can, it turns left and keeps moving.
-   
+
    * If it can't move east, the code still tries to move forward anyway.
 
 2. Modify the \`if\` statement so the \`Painter\` only turns and moves if it \`can_move("east")\`
@@ -118,6 +140,17 @@ You can name the \`Painter\` whatever you want! Give it a name that is meaningfu
 <i class="fa-solid fa-laptop"></i> **Coding Tip**
 
 Use \`else\` to control what happens when a condition is false. This way, the \`Painter\` only chooses *one* path, never both.`,
+    startingCode: `from neighborhood import Painter
+
+my_painter = Painter(0, 0, "East", 10)
+my_painter.move()
+my_painter.turn_left()
+
+while my_painter.can_move():
+    if my_painter.can_move():
+        my_painter.turn_left()
+        my_painter.move()
+    my_painter.move()`,
     documentationUrl: "/docs/ide/pythonlab/classes/painter/get_serialized",
   },
   "aif-pl-while1-L3-Python_2025": {
