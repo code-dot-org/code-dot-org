@@ -5,11 +5,12 @@ import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodePanel, {CodePanelHandle} from './CodePanel';
+import {createEmptyGrid, migrateGrid} from './gridConstants';
 import ImagesPanel from './ImagesPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
 import {Game2ImageEntry, Game2Source} from './types';
-import WorldPanel, {createEmptyGrid, migrateGrid} from './WorldPanel';
+import WorldPanel from './WorldPanel';
 
 import moduleStyles from './game2View.module.scss';
 
@@ -153,13 +154,17 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
             onImagesChange={handleImagesChange}
           />
         )}
-        {activeTab === 'World' && (
+        <div
+          style={{
+            display: activeTab === 'World' ? 'contents' : 'none',
+          }}
+        >
           <WorldPanel
             grid={grid}
             images={images}
             onGridChange={handleGridChange}
           />
-        )}
+        </div>
         {activeTab === 'Play' && (
           <PlayPanel
             grid={grid}

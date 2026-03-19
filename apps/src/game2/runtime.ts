@@ -1,5 +1,5 @@
+import {SOLID_CELL} from './gridConstants';
 import {Game2ImageEntry} from './types';
-import {SOLID_CELL} from './WorldPanel';
 
 const GRID_SIZE = 50;
 

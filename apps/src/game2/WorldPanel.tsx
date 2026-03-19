@@ -1,40 +1,15 @@
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
+import {SOLID_CELL} from './gridConstants';
 import {Game2ImageEntry} from './types';
+import WorldGeneratePane from './WorldGeneratePane';
 
 import moduleStyles from './game2View.module.scss';
-
-export const GRID_SIZE = 50;
-
-/** The default solid/impassable cell type. */
-export const SOLID_CELL = 'solid';
 
 interface WorldPanelProps {
   grid: string[][];
   images: Game2ImageEntry[];
   onGridChange: (grid: string[][]) => void;
-}
-
-export function createEmptyGrid(): string[][] {
-  return Array.from({length: GRID_SIZE}, () => Array(GRID_SIZE).fill(''));
-}
-
-/**
- * Migrate a legacy boolean grid to the new string format.
- * true → 'solid', false → ''
- */
-export function migrateGrid(raw: (string | boolean)[][]): string[][] {
-  return raw.map(row =>
-    row.map(cell => {
-      if (cell === true) {
-        return SOLID_CELL;
-      }
-      if (cell === false || cell === undefined || cell === null) {
-        return '';
-      }
-      return String(cell);
-    })
-  );
 }
 
 /**
@@ -116,11 +91,18 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
     painting.current = false;
   }, []);
 
+  const handleWorldGenerated = useCallback(
+    (newGrid: string[][]) => {
+      onGridChange(newGrid);
+    },
+    [onGridChange]
+  );
+
   return (
     <div className={moduleStyles.worldContainer}>
       {/* Item palette */}
       <div className={moduleStyles.worldPalette}>
-        <div className={moduleStyles.worldPaletteLabel}>Brush</div>
+        <div className={moduleStyles.worldPaletteLabel}>Item</div>
         <button
           type="button"
           className={`${moduleStyles.worldPaletteItem} ${
@@ -183,6 +165,11 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
           </div>
         ))}
       </div>
+
+      <WorldGeneratePane
+        images={images}
+        onWorldGenerated={handleWorldGenerated}
+      />
     </div>
   );
 };
