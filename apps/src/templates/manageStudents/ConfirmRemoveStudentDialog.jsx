@@ -1,4 +1,3 @@
-import {buttonColors} from '@code-dot-org/component-library/button';
 import {Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -96,7 +95,7 @@ export default class ConfirmRemoveStudentDialog extends React.Component {
           )}
           <ConfirmCancelFooter
             confirmText={i18n.removeStudent()}
-            confirmColor={buttonColors.destructive}
+            confirmColor="error"
             onConfirm={onConfirm}
             onCancel={onCancel}
             disableConfirm={!!disabled}
