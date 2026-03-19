@@ -550,6 +550,10 @@ namespace :seed do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
+  timed_task_with_logging jit_pl_concepts: :environment do
+    JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)
+  end
+
   # Seeds the data in school_districts
   timed_task_with_logging school_districts: :environment do
     SchoolDistrict.seed_all
@@ -652,7 +656,7 @@ namespace :seed do
     end
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 

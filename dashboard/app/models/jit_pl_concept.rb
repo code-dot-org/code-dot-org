@@ -18,6 +18,8 @@ class JitPlConcept < ApplicationRecord
   has_and_belongs_to_many :lessons, join_table: :jit_pl_concepts_lessons
   has_and_belongs_to_many :rubrics, join_table: :jit_pl_concepts_rubrics
 
+  validates_uniqueness_of :name, case_sensitive: false
+
   serialized_attrs %w(
     text_content
   )
@@ -29,5 +31,44 @@ class JitPlConcept < ApplicationRecord
       display_name: display_name,
       text_content: text_content,
     }
+  end
+
+  def file_path
+    Rails.root.join("config/jit_pl_concepts/#{name}.json")
+  end
+
+  def write_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, JSON.pretty_generate(serialize))
+  end
+
+  def remove_serialization
+    return unless Rails.application.config.levelbuilder_mode
+    FileUtils.rm_f(file_path)
+  end
+
+  def self.seed_all(dashboard_root = '.')
+    records_to_be_removed = all.pluck(:id)
+    Dir.glob(Rails.root.join("#{dashboard_root}/config/jit_pl_concepts/**/*.json")).each do |path|
+      records_to_be_removed -= [JitPlConcept.seed_record(path)]
+    end
+    where(id: records_to_be_removed).destroy_all
+  end
+
+  def self.properties_from_file(content)
+    config = JSON.parse(content)
+    {
+      name: config['name'],
+      display_name: config['display_name'],
+      text_content: config['text_content'],
+    }
+  end
+
+  def self.seed_record(file_path)
+    properties = properties_from_file(File.read(file_path))
+    concept = JitPlConcept.find_or_initialize_by(name: properties[:name])
+    concept.update! properties
+    concept.id
   end
 end

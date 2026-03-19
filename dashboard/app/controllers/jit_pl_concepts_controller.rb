@@ -12,6 +12,7 @@ class JitPlConceptsController < ApplicationController
   def create
     @concept = JitPlConcept.new(jit_pl_concept_params)
     if @concept.save
+      @concept.write_serialization
       redirect_to edit_jit_pl_concept_path(@concept)
     else
       render status: :bad_request, json: @concept.errors
@@ -31,11 +32,13 @@ class JitPlConceptsController < ApplicationController
   # PUT /jit_pl_concepts/:id
   def update
     @concept.update!(jit_pl_concept_params)
+    @concept.write_serialization
     render json: @concept.serialize.to_json
   end
 
   # DELETE /jit_pl_concepts/:id
   def destroy
+    @concept.remove_serialization
     @concept.destroy!
     render status: :ok, plain: "Destroyed JitPlConcept #{@concept.id}"
   end
