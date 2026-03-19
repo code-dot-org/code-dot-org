@@ -68,16 +68,14 @@ export const useFileUploader = (
     (eventName: string, payload: Record<string, string>) => {
       switch (eventName) {
         case analyticsEvents.UPLOAD_FAILED: {
-          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
             ...payload,
-            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
           });
           return;
         }
         case analyticsEvents.UPLOAD_UNACCEPTED_FILE: {
-          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_FAILED, {
+          sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
             ...payload,
-            fileType: payload.fileName.split('.').pop()?.toLowerCase() || '',
           });
         }
       }

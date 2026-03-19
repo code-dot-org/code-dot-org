@@ -129,8 +129,8 @@ export const useFileUploader = ({
 
       if (!isValidMimeType(file.type, validMimeTypes)) {
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
-          name: file.name,
-          type: file.type,
+          fileName: file.name,
+          fileType: file.name.split('.').pop()?.toLowerCase() || '',
         });
         const fileType = file.name.split('.').pop() || '';
         errorCallback(
@@ -153,8 +153,8 @@ export const useFileUploader = ({
                 ? reader.result
                 : bufferToString(reader.result);
             sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-              name: file.name,
-              type: file.type,
+              fileName: file.name,
+              fileType: file.name.split('.').pop()?.toLowerCase() || '',
             });
             callback(
               file.name,
@@ -182,7 +182,6 @@ export const useFileUploader = ({
                 const url = await uploadExternalFile(file);
                 sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
                   name: file.name,
-                  type: file.type,
                 });
                 callback(file.name, '', url, callbackArgs.current, true);
               };
@@ -197,7 +196,6 @@ export const useFileUploader = ({
           const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
             name: file.name,
-            type: file.type,
           });
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
