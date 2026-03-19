@@ -116,7 +116,7 @@ describe('LevelTokenContents', () => {
     expect(wrapper.find('.fa-times').length).toBe(1);
   });
 
-  it('hides deletion button when level is referenced by a rubric', () => {
+  it('shows lock icon (not delete button) when level is referenced by a rubric', () => {
     const wrapper = shallow(
       <LevelTokenContents
         {...defaultProps}
@@ -125,6 +125,7 @@ describe('LevelTokenContents', () => {
       />
     );
     expect(wrapper.find('.fa-times').length).toBe(0);
+    expect(wrapper.find('.fa-lock').length).toBe(1);
   });
 
   it('shows deletion button when a different level is the rubric level', () => {

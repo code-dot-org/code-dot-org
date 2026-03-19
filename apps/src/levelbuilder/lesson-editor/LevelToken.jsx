@@ -218,6 +218,14 @@ export class LevelTokenContents extends Component {
             <i className="fa fa-times" />
           </div>
         )}
+        {allowMajorCurriculumChanges && isRubricLevel && (
+          <div
+            style={styles.rubricLock}
+            title="This level is referenced by the lesson's rubric. Remove the rubric first."
+          >
+            <i className="fa fa-lock" />
+          </div>
+        )}
         {scriptLevel.expand && (
           <LevelTokenDetails
             scriptLevel={scriptLevel}
@@ -282,6 +290,18 @@ const styles = {
     borderTopRightRadius: borderRadius,
     borderBottomRightRadius: borderRadius,
     cursor: 'pointer',
+  },
+  rubricLock: {
+    fontSize: 14,
+    display: 'table-cell',
+    color: '#888',
+    background: '#ddd',
+    border: '1px solid #bbb',
+    boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
+    padding: '7px 13px',
+    borderTopRightRadius: borderRadius,
+    borderBottomRightRadius: borderRadius,
+    cursor: 'not-allowed',
   },
   edit: {
     fontSize: 14,
