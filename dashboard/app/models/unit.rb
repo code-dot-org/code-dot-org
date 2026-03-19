@@ -347,11 +347,18 @@ class Unit < ApplicationRecord
   @@unit_cache = nil
   UNIT_CACHE_KEY = 'script-cache'.freeze
 
-  # Caching is disabled when editing units and levels or running unit tests.
+  # Caching is enabled when:
+  #  - running inside a rails web application server, and
+  #  - rails code reloading is disabled (cache_classes is true), and
+  #  - editing units and levels is disabled (levelbuilder_mode is false)
+  #
+  # Caching is disabled when:
+  # - in unit tests, except when Unit.should_cache? is explicitly stubbed, or
+  # - in rake tasks, cronjobs or rails console
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
-    return false if ENV['UNIT_TEST'] || ENV['CI']
+    return false unless CDO.running_web_application?
     true
   end
 
