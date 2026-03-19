@@ -48,7 +48,7 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
-import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
+import useResourcePanelTours from './productTours/useResourcePanelTours';
 import {Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
@@ -212,7 +212,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
-  useResourcePanelShepherdTours({
+  useResourcePanelTours({
     isOnboardingTourEnabled:
       (isOnboardingTourEnabled && !isStandaloneCollapsed) || false,
     isValidationTourEnabled: isValidationTourEnabled || false,

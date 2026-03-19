@@ -39,7 +39,7 @@ import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContex
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
 import {SketchlabSources, SerializedExcalidrawState} from './types';
-import useSketchlabShepherdTour from './useSketchlabShepherdTour';
+import useSketchlabTour from './useSketchlabTour';
 import {
   handleSaveToBackpack,
   generateNewExternalFiles,
@@ -325,7 +325,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
     };
   }, [dispatch]);
 
-  useSketchlabShepherdTour();
+  useSketchlabTour();
 
   const teacherViewingStudent = Boolean(
     useAppSelector(state => state.progress.viewAsUserId)
