@@ -204,7 +204,10 @@ When /^I switch to the default content$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps 'When I click selector "#overlay" if it exists'
+  steps <<-GHERKIN
+    When I click selector "#overlay" if it exists'
+    And I wait for 0.5 seconds
+  GHERKIN
 end
 
 When /^I wait for the lab page to fully load$/ do
