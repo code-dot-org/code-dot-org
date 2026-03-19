@@ -49,6 +49,7 @@ import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
 import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
+import StudentResourcesPanel from './StudentResources/StudentResourcesPanel';
 import {Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
@@ -116,6 +117,7 @@ const tabInfo: {[key in Tabs]: {title: string; icon: string}} = {
     title: 'Backpack',
     icon: 'backpack',
   },
+  [Tabs.StudentResources]: {title: 'Resources', icon: 'compass'},
 };
 
 type ResourcePanelProps = InstructionsProps & {
@@ -336,6 +338,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
         />
       );
     }
+
+    tabMap[Tabs.StudentResources] = <StudentResourcesPanel />;
 
     return tabMap;
   }, [
