@@ -1,5 +1,6 @@
 import {extension as mimeToExtension} from 'mime-types';
 
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getAppOptionsEditingExemplar,
   getIsStartMode,
@@ -22,6 +23,14 @@ export const generateNewExternalFiles = (
     newFileIds.forEach(fileId => {
       const newFile = excalidrawFiles[fileId];
       const extension = mimeToExtension(newFile.mimeType);
+      if (!extension) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logWarning(
+            `Skipping file ${fileId}: unsupported mime type "${newFile.mimeType}"`
+          );
+        return;
+      }
       const filenameWithExtension = `${fileId}.${extension}`;
       const isStarterAssetOrExemplar = !!(
         getIsStartMode() || getAppOptionsEditingExemplar()
