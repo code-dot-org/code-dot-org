@@ -25,6 +25,7 @@ class ToggleButton extends Component {
         type="button"
         role="tab"
         aria-selected={String(this.props.active)}
+        tabIndex={this.props.active ? 0 : -1}
         id={this.props.id}
         style={this.getStyle()}
         className={this.props.className || ''}

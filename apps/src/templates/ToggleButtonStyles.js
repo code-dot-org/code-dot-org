@@ -50,10 +50,4 @@ module.exports = {
     color: color.light_black,
     boxShadow: '0px 1px 5px ' + color.shadow,
   },
-  hiddenStyle: {
-    display: 'none',
-  },
-  iconStyle: {
-    margin: '0 0.3em',
-  },
 };
