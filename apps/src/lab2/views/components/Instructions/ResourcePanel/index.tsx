@@ -619,13 +619,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="documentation"
                 label={commonI18n.documentation()}
                 icon={{iconName: 'book', iconStyle: 'solid'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             )}
             {aiTutorVisible && <DisclaimerButton theme={theme} />}
@@ -635,13 +635,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="settings"
                 label={commonI18n.settings()}
                 icon={{iconName: 'gear'}}
-                type="tertiary"
-                color="gray"
+                variant="text"
+                color="tertiary"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
-                buttonSize="s"
+                size="small"
               />
             </div>
           </div>
