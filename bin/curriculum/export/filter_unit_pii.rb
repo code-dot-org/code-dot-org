@@ -65,7 +65,7 @@ def get_evals_filename(pattern)
 end
 
 def filter_file_pii(filename, type)
-  command = "SKIP_SCRIPT_PRELOAD=1 bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
+  command = "bundle exec ruby #{File.join(__dir__, 'filter_file_pii.rb')} " \
     "-i #{$options[:input_dir]} -o #{$options[:output_dir]} -f #{filename} -t #{type}"
   puts "command: #{command}"
   system(command)
