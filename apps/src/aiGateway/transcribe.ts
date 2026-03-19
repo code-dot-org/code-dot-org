@@ -39,7 +39,10 @@ async function transcribeThroughGateway(
 
   // The SDK's TranscriptionResult requires `warnings` to be an array;
   // default to empty if the gateway omits it.
-  return {...wire, warnings: wire.warnings ?? []};
+  return {
+    ...wire,
+    warnings: (wire.warnings ?? []) as TranscriptionResult['warnings'],
+  };
 }
 
 async function audioToBlob(audio: TranscribeOptions['audio']): Promise<Blob> {
