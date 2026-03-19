@@ -35,26 +35,26 @@ Feature: Code review V2
     # Log in as another student and review their peer
     Given I sign in as "student_1"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
-    And The header is finished animating
     And I load the review tab
     And I load the code review for peer number 1 in the list
+    And The header is finished animating
     Then I see no difference for "student code reviewing peer" using stitch mode "none"
     And I sign out using jquery
 
     # Log in as the teacher and look at the student's review
     Given I sign in as "Code Review Teacher"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
-    And The header is finished animating
     And I load student number 1's project from the blue teacher panel
     And I load the review tab
+    And The header is finished animating
     Then I see no difference for "teacher code reviewing student" using stitch mode "none"
     And I sign out using jquery
 
     # Log in as code review owner and close the code review
     Given I sign in as "student_0"
     And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/2?noautoplay=true"
-    And The header is finished animating
     And I load the review tab
+    And The header is finished animating
     Then I see no difference for "student viewing own code review" using stitch mode "none"
     And I press ".uitest-close-code-review" using jQuery
     And I wait until element ".uitest-open-code-review" is visible

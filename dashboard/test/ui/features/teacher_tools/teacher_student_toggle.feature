@@ -13,6 +13,7 @@ Scenario: Toggle on Multi Level
   Then I click selector ".uitest-viewAsStudent"
   And I see no difference for "view as student"
   Then I click selector ".uitest-viewAsTeacher"
+  And The header is finished animating
   And I see no difference for "view as teacher"
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
@@ -51,17 +52,18 @@ Scenario: Toggle on Lockable Level
   Then I sign in as "Teacher_Joffrey"
 
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lockable/1/levels/1/page/1?noautoplay=true"
-  And The header is finished animating
   And I wait until element ".level-group" is visible
   And element "#locked-lesson" is not visible
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
   And I wait until element "#locked-lesson" is visible
+  And The header is finished animating
   And I see no difference for "view as student while locked" using stitch mode "none"
   Then I click selector ".uitest-viewAsTeacher"
   And element "#locked-lesson" is not visible
   And element ".level-group" is visible
+  And The header is finished animating
   And I see no difference for "view as teacher while locked"
 
   # Click the first student
@@ -82,6 +84,7 @@ Scenario: Toggle on Lockable Level
   Then I click selector ".show-handle .fa-chevron-left"
   Then I click selector ".uitest-viewAsStudent"
   And element "#locked-lesson" is not visible
+  And The header is finished animating
   And I see no difference for "view as student while unlocked"
 
   Then I click selector ".uitest-viewAsTeacher"
