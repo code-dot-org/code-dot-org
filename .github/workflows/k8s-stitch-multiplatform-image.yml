@@ -17,6 +17,9 @@ on:
       codeai_docker_image_ref:
         description: "Fully qualified docker image reference for the final multi-platform image"
         value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag:
+        description: "Docker tag for the final multi-platform image"
+        value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_tag }}
     inputs:
       docker_tags_json:
         description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
@@ -32,6 +35,7 @@ jobs:
     name: stitch multi-platform image
     outputs:
       codeai_docker_image_ref: ${{ steps.export-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag: ${{ steps.export-image.outputs.codeai_docker_tag }}
 
     # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
@@ -74,3 +78,4 @@ jobs:
         id: export-image
         run: |
           echo "codeai_docker_image_ref=$MULTI_PLATFORM_IMAGE" >> "$GITHUB_OUTPUT"
+          echo "codeai_docker_tag=${{ inputs.docker_tag }}" >> "$GITHUB_OUTPUT"

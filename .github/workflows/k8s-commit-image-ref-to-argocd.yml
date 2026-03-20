@@ -9,6 +9,9 @@ on:
       codeai_docker_image_ref:
         required: true
         type: string
+      codeai_docker_tag:
+        required: true
+        type: string
     secrets:
       K8S_GITOPS_REPO_WRITE_TOKEN:
         required: true
@@ -31,6 +34,7 @@ jobs:
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
           CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+          CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
           K8S_GITOPS_REPO_WRITE_TOKEN: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
         # if you're on vscode install this to get syntax highlighting in here:
@@ -39,15 +43,19 @@ jobs:
           # We'll throw an error if we can't find a values.yaml for these branches
           UPDATE_OR_ERROR_BRANCHES = %w[staging test levelbuilder production]
 
-          # This is the code-dot-org repo branch that was committed to / merged into
+          # This is the code-dot-org repo branch that was committed to / merged into.
           BRANCH_NAME = ENV.fetch("BRANCH_NAME")
+
+          # We normalize deployment names with the same rule as docker tags in k8s-skaffold-build.yml
+          DEPLOYMENT_NAME = BRANCH_NAME.gsub(/[^a-zA-Z0-9_.-]/, '-')
 
           # This is the newly built docker image + tag that we'll be writing to values.yaml
           CODEAI_DOCKER_IMAGE_REF = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
+          CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
           abort('ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.') if CODEAI_DOCKER_IMAGE_REF.strip.empty?
 
           # This is the values.yaml file in k8s-gitops repo that we'll update the `image: ` line in:
-          DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{BRANCH_NAME}/values.yaml"
+          DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{DEPLOYMENT_NAME}/values.yaml"
 
           # This is the updated line that we'll write to $DEPLOYMENT_VALUES_YAML:
           UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-image-ref-to-argocd.yml\n"
@@ -62,9 +70,9 @@ jobs:
             unless File.exist?(DEPLOYMENT_VALUES_YAML)
               values_yaml_was_not_found_msg = "Tried to update image ref, but no values.yaml was found at: https://github.com/code-dot-org/k8s-gitops/tree/main/#{DEPLOYMENT_VALUES_YAML}"
               if UPDATE_OR_ERROR_BRANCHES.include?(BRANCH_NAME)
-                abort("ERROR: deployment of `#{BRANCH_NAME}` failed! #{values_yaml_was_not_found_msg}")
+                abort("ERROR: deployment `#{DEPLOYMENT_NAME}` failed! #{values_yaml_was_not_found_msg}")
               else
-                puts "::notice::Skipping deployment of `#{BRANCH_NAME}`. #{values_yaml_was_not_found_msg}"
+                puts "::notice::Skipping deployment `#{DEPLOYMENT_NAME}`. #{values_yaml_was_not_found_msg}"
                 exit 0
               end
             end
@@ -96,12 +104,12 @@ jobs:
 
             puts "Committing #{DEPLOYMENT_VALUES_YAML} to k8s-gitops repo"
             system! 'git', 'commit', '-m', <<~MSG.chomp
-              codeai #{BRANCH_NAME} => #{CODEAI_DOCKER_IMAGE_REF}
+              #{DEPLOYMENT_VALUES_YAML} => #{CODEAI_DOCKER_TAG}
             MSG
 
             # Push to https://github.com/code-dot-org/k8s-gitops
             puts "Pushing to https://github.com/code-dot-org/k8s-gitops"
             system! 'git push origin HEAD:main'
 
-            puts "Success: committed+pushed newly built docker image ref #{CODEAI_DOCKER_IMAGE_REF} to #{DEPLOYMENT_VALUES_YAML} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
+            puts "Success: committed+pushed newly built docker image tag #{CODEAI_DOCKER_TAG} to #{DEPLOYMENT_VALUES_YAML} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
           end

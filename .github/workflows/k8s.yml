@@ -39,6 +39,7 @@ jobs:
     with:
       branch_name: ${{ github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
