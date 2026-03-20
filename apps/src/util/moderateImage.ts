@@ -86,7 +86,10 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
+  const fileExtension =
+    file.name.lastIndexOf('.') < 0
+      ? ''
+      : file.name.split('.').pop()?.toLowerCase() || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
     !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)

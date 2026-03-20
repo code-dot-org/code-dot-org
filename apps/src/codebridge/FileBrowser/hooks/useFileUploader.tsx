@@ -77,6 +77,7 @@ export const useFileUploader = (
           sendLab2AnalyticsEvent(EVENTS.CODEBRIDGE_UPLOAD_UNACCEPTED_FILE, {
             ...payload,
           });
+          return;
         }
       }
     },
