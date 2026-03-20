@@ -29,9 +29,9 @@ tofu apply -var-file="tofu.tfvars"
 
 3. Now that you've created a new Google Cloud service account, you **need to get a Google Workspace superadmin to bless it**:
   - This will allow Dex's SSO system read-only access to employee's google groups (e.g. engineering@code.org), which Dex needs to know what permissions to grant them.
-  - Provide a Google Workspace super admin (e.g. infra manager) with:
-    1. Service Account Client ID, from tofu output value `google_service_account_client_id`
-    1. Requested OAuth Scope: `https://www.googleapis.com/auth/admin.directory.group.readonly`
+  - **Provide a Google Workspace super admin** (e.g. infra manager) with:
+    1. **Service Account Client ID, from `tofu apply` output value `google_service_account_client_id`** (at the end of tofu apply output)
+    1. **Requested OAuth Scope: `https://www.googleapis.com/auth/admin.directory.group.readonly`**
   - Request super admin manage your service account's domain wide delegation:
     1. Excerpted from: https://developers.google.com/workspace/guides/create-credentials#optional_set_up_domain-wide_delegation_for_a_service_account
     1. Open Google Workspace Admin console: Security > Access and data control > API controls

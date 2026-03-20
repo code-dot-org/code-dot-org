@@ -9,3 +9,9 @@ variable "google_email_with_groups_readonly_scope" {
   description = "Google Workspace user Dex impersonates for group lookups. This user needs at least the Groups Reader role."
   type        = string
 }
+
+variable "google_workspace_domains" {
+  description = "Google Workspace domains allowed to sign in via Dex."
+  type        = list(string)
+  default     = ["code.org"]
+}
