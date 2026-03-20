@@ -38,7 +38,7 @@ resource "helm_release" "argocd" {
         # admin.enabled=true causes the argocd chart to generate a plaintext password admin login
         # we use Google SSO with google group roles infrastructure@code.org etc mapped to admin
         "admin.enabled" = false
-        
+
         url = "https://${local.argocd_hostname}"
         "oidc.config" = yamlencode({
           name         = "Dex"
@@ -84,6 +84,16 @@ resource "helm_release" "argocd" {
           "alb.ingress.kubernetes.io/listen-ports"     = "[{\"HTTP\":80},{\"HTTPS\":443}]"
           "alb.ingress.kubernetes.io/ssl-redirect"     = "443"
           "alb.ingress.kubernetes.io/backend-protocol" = "HTTP"
+        }
+      }
+    }
+
+    repoServer = {
+      resources = {
+        requests = {
+          # The default Fargate ephemeral storage per pod (20GB) is too small
+          # for a single checkout of the code-dot-org repo 🤪
+          "ephemeral-storage" = "100Gi"
         }
       }
     }

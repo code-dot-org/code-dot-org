@@ -25,10 +25,7 @@ aws eks update-kubeconfig --region us-east-1 --name "$(tofu output -raw cluster_
 ## First time cluster setup
 
 1. Tofu module `../../codeai-k8s-dex` needs to have been applied at least once (its shared by all clusters)
-1. Setup tofu.tfvars:
-   1. `cp tofu.tfvars.example tofu.tfvars`
-   1. Follow inline comments to choose the right values.
-1. Run tofu apply: `AWS_PROFILE=codeorg-admin tofu apply -var-file="tofu.tfvars"`
+1. Run tofu apply: `AWS_PROFILE=codeorg-admin tofu apply`
 
 ## Smoke Tests
 

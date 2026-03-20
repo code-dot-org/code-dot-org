@@ -23,11 +23,10 @@ AWS_PROFILE=codeorg-admin tofu apply
 
 1. Tofu module `../../codeai-k8s-dex` needs to have been applied at least once (its shared by all clusters)
 1. Apply tofu module `../eks-cluster/` before this one
-1. Setup tofu.tfvars:
-   1. `cp tofu.tfvars.example tofu.tfvars`
-   1. Follow [Setting up Google OAuth Client for SSO](#setting-up-google-oauth-client-for-sso) to set dex_* values.
-   1. Follow inline comments to choose the remaining values
-1. Run `AWS_PROFILE=codeorg-admin tofu apply -var-file="tofu.tfvars"`
+1. Review and edit `terraform.tfvars`:
+   1. Follow [Setting up Google OAuth Client for SSO](#setting-up-google-oauth-client-for-sso) to set `dex_` variables.
+1. Run: `AWS_PROFILE=codeorg-admin tofu apply`
+1. **Remove `dex_google_client_secret` from `terraform.tfvars`** before you forget and commit it.
 
 ### Setting up Google OAuth Client for SSO
 
@@ -48,8 +47,9 @@ to this cluster and Google doesn't allow wildcards in redirect urls.
    1. Add the redirect url from step 2 as an `Authorized redirect URI`
    1. Create the client
    1. Note the client secret and client id to use in the next step
-1. Edit `tofu.tfvars` (copy of tofu.tfvars.example):
-   1. set `dex_google_client_id` and `dex_google_client_secret`
+1. Edit `terraform.tfvars`:
+   1. set `dex_google_client_id`
+   1. set `dex_google_client_secret` to bootstrap the secret into AWS Secrets Manager at `k8s/tofu/${cluster_name}/dex_google_client_secret`; the same apply reads it back from there, but DO NOT COMMIT this line.
 1. Continue [First time cluster setup](#first-time-cluster-setup)
 
 ## Smoke Tests

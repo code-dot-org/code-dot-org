@@ -76,7 +76,7 @@ resource "helm_release" "dex" {
           name = "Google"
           config = {
             clientID               = var.dex_google_client_id
-            clientSecret           = var.dex_google_client_secret
+            clientSecret           = local.dex_google_client_secret
             redirectURI            = local.dex_google_redirect_url
             hostedDomains          = local.google_workspace_domains
             groups                 = ["engineers@code.org", "infrastructure@code.org", "platform@code.org", "product@code.org", "all@code.org"]

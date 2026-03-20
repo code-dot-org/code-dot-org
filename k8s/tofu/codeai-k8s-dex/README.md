@@ -9,7 +9,7 @@ to run this once at first bootstrap, not per-cluster created.
 
 ## Usage
 
-1. Copy `tofu.tfvars.example` to tofu.tfvars and fill in values
+1. Review and edit `terraform.tfvars` as needed
 
 2. Run:
 
@@ -24,7 +24,7 @@ gcloud auth login
 tofu init
 
 export GOOGLE_OAUTH_ACCESS_TOKEN="$(gcloud auth print-access-token)"
-tofu apply -var-file="tofu.tfvars"
+tofu apply
 ```
 
 3. Now that you've created a new Google Cloud service account, you **need to get a Google Workspace superadmin to bless it**:

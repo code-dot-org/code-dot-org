@@ -36,6 +36,12 @@ In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed t
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
 
+### Manage ArgoCD with ArgoCD
+
+Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
+`ServerSideApply=true` requirement for self-management:
+<https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
+
 ### Dex
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`

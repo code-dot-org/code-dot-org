@@ -4,7 +4,8 @@ variable "dex_google_client_id" {
 }
 
 variable "dex_google_client_secret" {
-  description = "Google OAuth client secret for Dex."
+  description = "Optional Google OAuth client secret for Dex. If set, we upload it to AWS Secrets Manager. If not set, we download it from AWS Secrets Manager."
   type        = string
   sensitive   = true
+  default     = null
 }
