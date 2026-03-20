@@ -3,16 +3,20 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
 import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
+import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const JitPlConceptFormEditor = props => {
-  const {conceptId, originalName, originalDisplayName, originalTextContent, resources} =
-    props;
+const JitPlConceptFormEditor = ({
+  conceptId,
+  originalName,
+  originalDisplayName,
+  originalTextContent,
+  resources,
+}) => {
   const [name, setName] = useState(originalName);
   const [displayName, setDisplayName] = useState(originalDisplayName);
   const [textContent, setTextContent] = useState(originalTextContent);
