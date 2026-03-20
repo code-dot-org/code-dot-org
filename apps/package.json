@@ -396,6 +396,7 @@
     "survey-react": "^1.9.28",
     "swiper": "^11.0.5",
     "timers-browserify": "^2.0.12",
+    "tldraw": "^4.5.3",
     "tone": "14.7.77",
     "uglify-js": "^3.18.0",
     "unified": "~9.2.0",
