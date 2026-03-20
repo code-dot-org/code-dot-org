@@ -1,3 +1,4 @@
+import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
@@ -156,7 +157,7 @@ const UserChatMessageEditor: React.FunctionComponent<
       }
       const files = Array.from(e.clipboardData.items)
         .filter(({type}) =>
-          ACCEPTED_FILE_TYPES.includes(`.${type.split('/')[1]}`)
+          ACCEPTED_FILE_TYPES.includes(`.${mimeToExtension(type) || ''}`)
         )
         .map(item => item.getAsFile())
         .filter(item => item !== null);
