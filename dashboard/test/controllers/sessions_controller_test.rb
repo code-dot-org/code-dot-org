@@ -51,13 +51,21 @@ class SessionsControllerTest < ActionController::TestCase
     end
   end
 
-  test "teachers go to specified return to url after signing in" do
+  test 'teachers go to specified return to path after signing in' do
     teacher = create(:teacher)
-    session[:user_return_to] = user_return_to = '//test.code.org/the-return-to-url'
+    session[:user_return_to] = user_return_to = '/the-return-to-url'
     create_session_for_user(teacher)
     assert_signed_in_as teacher
     assert_redirected_to user_return_to
   end
+
+  # TODO infra: uncomment this test once we've enabled `raise_on_open_redirects`
+  # test 'teachers will not return to a url on a different host after signing in' do
+  #   teacher = create(:teacher)
+  #   session[:user_return_to] = 'https://some-other-site.com/the-return-to-url'
+  #   create_session_for_user(teacher)
+  #   assert_response :not_found
+  # end
 
   test 'signing in as user via username' do
     user = create(:user, birthday: Date.new(2010, 1, 3), email: 'my@email.xx')
@@ -141,13 +149,13 @@ class SessionsControllerTest < ActionController::TestCase
 
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "if you're not signed in you can still sign out" do
     delete :destroy
 
-    assert_redirected_to '//test.code.org'
+    assert_redirected_to root_path
   end
 
   test "facebook users go to generic oauth sign out page after logging out" do
