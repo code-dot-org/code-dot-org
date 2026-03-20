@@ -60,19 +60,12 @@ rescue Exception => exception
   return ''
 end
 
-def all_msgs_tagged_skip_ci?(msgs)
-  msgs = msgs.downcase
-  !msgs.empty? && msgs.all? {|msg| msg.include?('[skip ci]') || msg.include?('[ci skip]')}
-end
-
 def build
   Dir.chdir(deploy_dir) do
-    manually_started = File.file?(STARTED)
-    return 0 unless RakeUtils.git_updates_available? || manually_started || !CDO.daemon
+    return 0 unless RakeUtils.git_updates_available? || File.file?(STARTED) || !CDO.daemon
     FileUtils.touch STARTED
 
     RakeUtils.git_fetch
-    git_update_msgs = `git log --format=%B%x00 HEAD..@{u}`.split("\0")
     count = RakeUtils.git_update_count
     RakeUtils.git_pull if count > 0
     count = [1, count].max
@@ -83,14 +76,6 @@ def build
     git_revision = RakeUtils.git_revision
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-
-    if all_msgs_tagged_skip_ci?(git_update_msgs) && !manually_started
-      # pull to ack changes even if we skip, no cronlooping:
-      RakeUtils.git_pull
-      ChatClient.log "<b>build skipped</b>, all commits were tagged with [skip ci] or [ci skip]", color: 'green'
-      FileUtils.rm STARTED if File.file?(STARTED)
-      return 0
-    end
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
