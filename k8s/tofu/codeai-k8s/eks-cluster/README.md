@@ -1,11 +1,13 @@
 # eks-cluster
 
-Creates the EKS Fargate cluster along with required VPC subnets, NAT gateways, IAM.
+Creates the EKS Fargate cluster along with required VPC subnets, NAT gateways, IAM, and
+some k8s CRDs that will be requires for the next phase module. 
+
 Apply this first, before `../eks-cluster-addons/`.
 
-See `tofu.tfvars.example` to override defaults (region, VPC ID, CIDR blocks, etc.).
-
 ## Usage
+
+If this is the **first time you've setup this cluster**, follow [first time cluster setup](#first-time-cluster-setup)
 
 ```bash
 tofu init
@@ -19,6 +21,14 @@ Configure `kubectl` to reach the new cluster:
 ```bash
 aws eks update-kubeconfig --region us-east-1 --name "$(tofu output -raw cluster_name)"
 ```
+
+## First time cluster setup
+
+1. Tofu module `../../codeai-k8s-dex` needs to have been applied at least once (its shared by all clusters)
+1. Setup tofu.tfvars:
+   1. `cp tofu.tfvars.example tofu.tfvars`
+   1. Follow inline comments to choose the right values.
+1. Run tofu apply: `AWS_PROFILE=codeorg-admin tofu apply -var-file="tofu.tfvars"`
 
 ## Smoke Tests
 

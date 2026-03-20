@@ -55,16 +55,27 @@ variable "cluster_readonly_role_arns" {
   ]
 }
 
-variable "vpc_id" {
-  description = "Existing VPC ID to use for EKS and subnet resources."
-  type        = string
-  default     = "vpc-6e98810a"
+variable "create_new_vpc" {
+  description = "Create a new VPC and Internet Gateway or re-use existing ones?"
+  type        = bool
 }
 
-variable "internet_gateway_id" {
-  description = "Internet Gateway attached to the existing VPC for public subnet routes."
+variable "existing_vpc_id" {
+  description = "Existing VPC ID to use for EKS, create_new_vpc must be false."
   type        = string
-  default     = "igw-04a32960"
+  default     = null
+}
+
+variable "existing_internet_gateway_id" {
+  description = "Internet Gateway attached to the existing VPC for public subnet routes, create_new_vpc must be false."
+  type        = string
+  default     = null
+}
+
+variable "create_new_vpc_cidr" {
+  description = "CIDR block for the VPC when create_new_vpc is true."
+  type        = string
+  default     = "10.0.0.0/16"
 }
 
 variable "public_subnet_1_cidr" {

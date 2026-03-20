@@ -31,3 +31,8 @@ include prometheus as a helm chart dependency??
 In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
+
+### Dex
+
+In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+to a non-personal email.

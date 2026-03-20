@@ -35,7 +35,7 @@ output "cluster_oidc_issuer_url" {
 
 output "vpc_id" {
   description = "VPC ID used by the cluster"
-  value       = var.vpc_id
+  value       = local.vpc_id
 }
 
 output "cluster_region" {
