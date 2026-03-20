@@ -15,7 +15,12 @@ interface StudentResourcesPanelProps {
 const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
   appName,
 }) => {
+  const [isTourRunning, setIsTourRunning] = React.useState(false);
   const tours = ToursPerLab[appName as AppName] ?? [];
+
+  const startTour = (tourName: string) => {
+    if (isTourRunning) return;
+  };
 
   return (
     <div className={styles.panel}>
@@ -34,7 +39,7 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
           </Typography>
           <IconButton
             size="extraSmall"
-            onClick={() => console.log(`Playing tour: ${tour.name}`)}
+            onClick={() => startTour(tour.name)}
             aria-label={`Play ${tour.displayName}`}
             className={styles.tourPlayButton}
           >
