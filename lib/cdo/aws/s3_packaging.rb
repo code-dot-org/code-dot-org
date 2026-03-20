@@ -172,11 +172,10 @@ class S3Packaging
     ) while Dir[glob].sum {|f| File.size(f)} > max_size_bytes
   end
 
-  private def warn_packages_differ(diff_output, dir1, dir2)
-    diff_dir = File.join(Dir.home, 'generated-different-packages')
+  private def warn_packages_differ(diff_output, dir1, dir2, max_size_gb: 20, diff_dir: File.join(Dir.home, 'generated-different-packages'))
     FileUtils.mkdir_p(diff_dir)
 
-    delete_oldest_file_until_smaller_than("#{diff_dir}/*.diff", max_size_gb: 20)
+    delete_oldest_file_until_smaller_than("#{diff_dir}/*.diff", max_size_gb: max_size_gb)
 
     timestamp = Time.now.utc.strftime('%Y%m%dT%H%M%SZ')
     diff_path = "#{diff_dir}/s3-vs-local-#{timestamp}.diff"
