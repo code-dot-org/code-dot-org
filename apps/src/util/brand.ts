@@ -26,7 +26,8 @@ export function getCurrentBrand(): BrandCode {
   try {
     const cookieName = environmentSpecificCookieName(BRAND_COOKIE_NAME);
     const match = document.cookie
-      .split('; ')
+      .split(';')
+      .map(row => row.trim())
       .find(row => row.startsWith(`${cookieName}=`));
 
     if (match) {

@@ -19,6 +19,7 @@ describe('brand utilities', () => {
     jest.clearAllMocks();
     Object.defineProperty(document, 'cookie', {
       writable: true,
+      configurable: true,
       value: '',
     });
   });
