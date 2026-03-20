@@ -312,13 +312,15 @@ module Cdo
       rack_env?(:test) && dashboard_hostname == 'test-studio.code.org' && chef_managed
     end
 
-    # Identify whether we are executing within a web application server as most of our Ruby classes and modules
-    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb).
-    # Some components may operate differently within a web application server, such as using a database proxy to
-    # connect to the database. We use the `puma` web application server in most environments, except development, where
-    # we use `thin`.
+    # Identify whether we are executing within a puma web application server as most of our Ruby classes and modules
+    # can also be executed in Ruby shell scripts (cron jobs), ActiveJob consumers, or in interactive Ruby tools (irb,
+    # rails console). Some components may operate differently within a web application server. For example, database
+    # timeouts are shorter when executing within a web application server.
     def running_web_application?
-      %w(puma thin).include?(File.basename($0))
+      program = $PROGRAM_NAME.to_s
+      # Child puma processes have program names like `puma: cluster worker 0: 971 [dashboard]`.
+      # Be careful to NOT match command line tools like `pumactl` or a script that happens to start with the name `puma_`.
+      program == 'puma' || program.start_with?('puma:')
     end
 
     # Whether we are executing within a web application server on the
