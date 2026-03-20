@@ -1,3 +1,6 @@
-# Oauth 2.0 Client ID: https://console.cloud.google.com/auth/clients
-dex_google_client_id     = "replace-me.apps.googleusercontent.com"
+# Google OAuth 2.0 Client ID, from: https://console.cloud.google.com/auth/clients
+#
+# See: [README.md](./README.md#setting-up-google-oauth-client-for-sso)
+# for instructions on setting this up in a new cluster.
+dex_google_client_id     = "254945981659-9p8ctpobals7gmah0ptlt70t29eflira.apps.googleusercontent.com"
 dex_google_client_secret = "replace-me"

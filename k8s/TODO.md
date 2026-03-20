@@ -2,6 +2,10 @@
 
 ## Performance improvements
 
+### Use jemalloc
+
+Use `jemalloc` in k8s workloads where it helps reduce allocator fragmentation / RSS growth.
+
 ### Reduce repo size
 
 With our regular "giant repo with lots of files" it takes `skaffold dev` about **3 minutes to start**

@@ -13,6 +13,8 @@ locals {
   
   # Align with gateway_api_version in: ../eks-cluster/gateway-api-crds.tf:
   aws_load_balancer_controller_chart_version = "1.17.1"
+  cluster_version                            = data.terraform_remote_state.eks_cluster.outputs.cluster_version
+  vpc_id                                     = data.terraform_remote_state.eks_cluster.outputs.vpc_id
 
   # The AWS IA module's built-in IAM policy lags the controller chart and is
   # missing several permissions required by AWS LBC v2.17.1.
@@ -70,7 +72,7 @@ module "aws_load_balancer_controller_addon" {
     set = [
       {
         name  = "region"
-        value = var.region
+        value = local.cluster_region
       },
       {
         name  = "vpcId"
