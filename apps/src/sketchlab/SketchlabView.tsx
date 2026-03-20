@@ -40,6 +40,7 @@ import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
+import SketchLabTldrawView from './SketchLabTldrawView';
 import SketchlabTourSteps from './sketchlabTourSteps';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import useSketchlabShepherdTour from './useSketchlabShepherdTour';
@@ -437,12 +438,17 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
   );
 };
 
-export default (props: LabProps<LevelProperties>) => (
-  <SourcesContainer
-    {...props}
-    defaultSources={DEFAULT_SOURCES}
-    key={props.levelProperties.id}
-  >
-    <SketchlabView levelProperties={props.levelProperties} />
-  </SourcesContainer>
-);
+export default (props: LabProps<LevelProperties>) => {
+  if (experiments.isEnabled(experiments.TLDRAW)) {
+    return <SketchLabTldrawView {...props} />;
+  }
+  return (
+    <SourcesContainer
+      {...props}
+      defaultSources={DEFAULT_SOURCES}
+      key={props.levelProperties.id}
+    >
+      <SketchlabView levelProperties={props.levelProperties} />
+    </SourcesContainer>
+  );
+};

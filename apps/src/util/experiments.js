@@ -66,6 +66,8 @@ experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Enable new shepherd.js based product tours for select features (resource panel onboarding and validation)
 experiments.SHEPHERD_PRODUCT_TOURS = 'shepherd-product-tours';
 
+// Experiment for using tldraw in place of Excalidraw in Sketchlab
+experiments.TLDRAW = 'useTldraw';
 /**
  * This was a gamified version of the finish dialog, built in 2018,
  * but never fully shipped.
