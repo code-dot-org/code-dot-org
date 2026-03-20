@@ -16,8 +16,11 @@ const StudentResourcesPanel: React.FC<StudentResourcesPanelProps> = ({
   appName,
 }) => {
   const [isTourRunning, setIsTourRunning] = React.useState(false);
+  // TODO: only show tours we can run (for example, only show validation on python lab levels with validation)
   const tours = ToursPerLab[appName as AppName] ?? [];
 
+  // TODO: build the tour using productTourHelpers.createTourWithSteps and start it.
+  // We should only start one tour at a time.
   const startTour = (tourName: string) => {
     if (isTourRunning) return;
   };
