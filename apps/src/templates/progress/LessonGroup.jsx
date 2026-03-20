@@ -1,19 +1,19 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import color from '@cdo/apps/util/color';
 
 import {lessonIsVisible} from './progressHelpers';
+
+import styles from './lesson-group.module.scss';
 
 /**
  * A component that shows a group of lessons. That group has a name and is
@@ -64,7 +64,7 @@ class LessonGroup extends React.Component {
       this.props.groupedLesson.lessonGroup;
 
     // Adjust styles if locale is RTL
-    const headingTextStyle = isRtl ? styles.headingTextRTL : styles.headingText;
+    const headingTextClass = isRtl ? styles.headingTextRTL : styles.headingText;
 
     const TableType = isSummaryView
       ? SummaryProgressTable
@@ -77,24 +77,23 @@ class LessonGroup extends React.Component {
     const hasLessonGroupInfo = description || bigQuestions;
 
     return (
-      <div style={styles.main} className="lesson-group">
+      <div className={classnames(styles.main, 'lesson-group')}>
         <div
-          style={[
-            styles.header,
-            isPlc && styles.headerBlue,
-            this.state.collapsed && styles.bottom,
-          ]}
+          className={classnames(styles.header, {
+            [styles.headerBlue]: isPlc,
+            [styles.bottom]: this.state.collapsed,
+          })}
           onClick={this.toggleCollapsed}
         >
           <FontAwesome
             icon={this.state.collapsed ? 'caret-right' : 'caret-down'}
           />
-          <span style={headingTextStyle}>{displayName}</span>
+          <span className={headingTextClass}>{displayName}</span>
           {hasLessonGroupInfo && (
             <span>
               <FontAwesome
-                icon="circle-info"
-                style={styles.lessonGroupInfo}
+                icon="info-circle"
+                className={styles.lessonGroupInfo}
                 onClick={this.openLessonGroupInfoDialog}
               />
               <div className="print-only">
@@ -115,11 +114,9 @@ class LessonGroup extends React.Component {
         </div>
         {!this.state.collapsed && (
           <div
-            style={[
-              styles.contents,
-              isPlc && styles.contentsBlue,
-              styles.bottom,
-            ]}
+            className={classnames(styles.contents, styles.bottom, {
+              [styles.contentsBlue]: isPlc,
+            })}
           >
             <TableType groupedLesson={this.props.groupedLesson} />
           </div>
@@ -128,45 +125,6 @@ class LessonGroup extends React.Component {
     );
   }
 }
-
-const styles = {
-  main: {
-    marginBottom: 20,
-  },
-  header: {
-    padding: 20,
-    backgroundColor: color.dark_charcoal,
-    fontSize: 18,
-    ...fontConstants['main-font-semi-bold'],
-    color: 'white',
-    borderTopLeftRadius: 4,
-    borderTopRightRadius: 4,
-    cursor: 'pointer',
-  },
-  headerBlue: {
-    backgroundColor: color.cyan,
-  },
-  headingText: {
-    marginLeft: 10,
-  },
-  headingTextRTL: {
-    marginRight: 10,
-  },
-  contents: {
-    backgroundColor: color.lighter_gray,
-    padding: 20,
-  },
-  contentsBlue: {
-    backgroundColor: color.lightest_cyan,
-  },
-  bottom: {
-    borderBottomLeftRadius: 4,
-    borderBottomRightRadius: 4,
-  },
-  lessonGroupInfo: {
-    padding: 10,
-  },
-};
 
 export const UnconnectedLessonGroup = LessonGroup;
 
@@ -177,4 +135,4 @@ export default connect((state, ownProps) => ({
   hasVisibleLesson: ownProps.groupedLesson.lessons.some(lesson =>
     lessonIsVisible(lesson, state, state.viewAs)
   ),
-}))(Radium(LessonGroup));
+}))(LessonGroup);

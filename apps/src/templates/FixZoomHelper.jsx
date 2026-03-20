@@ -87,10 +87,7 @@ export default class FixZoomHelper extends React.Component {
       return (
         <div onClick={this.onButtonClick} style={{...styles.button, top, left}}>
           <div style={styles.buttonIcon}>
-            <span
-              style={styles.icon}
-              className="fa-solid fa-magnifying-glass-minus"
-            />
+            <span style={styles.icon} className="fa fa-search-minus" />
             &nbsp;
           </div>
           <div style={styles.buttonText}>{i18n.fixZoomHelperZoomOut()}</div>
@@ -105,9 +102,9 @@ export default class FixZoomHelper extends React.Component {
           <div onClick={this.onHelperClick} style={styles.helper} />
           <div style={{...styles.helperInner, top, left}}>
             <div style={styles.helperInnerIcons}>
-              <span className="fa-regular fa-circle-arrow-right" />
+              <span className="fa fa-arrow-circle-o-right" />
               &nbsp;
-              <span className="fa-regular fa-circle-arrow-left" />
+              <span className="fa fa-arrow-circle-o-left" />
             </div>
             {i18n.fixZoomHelperPinch()}
             <br />

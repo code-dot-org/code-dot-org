@@ -72,7 +72,7 @@ class ListItemButtons extends React.Component {
             >
               <i
                 key="trash"
-                className="fa-regular fa-trash-can"
+                className="fa fa-trash-o"
                 style={{...styles.icon, ...styles.trash}}
                 onClick={this.openDeleteDialog}
               />
@@ -84,7 +84,7 @@ class ListItemButtons extends React.Component {
             >
               <i
                 key="clone"
-                className="fa-solid fa-clone"
+                className="fa fa-clone"
                 style={styles.icon}
                 onClick={props.onCloneClick}
               />

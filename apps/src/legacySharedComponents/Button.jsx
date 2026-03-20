@@ -62,7 +62,6 @@ class Button extends React.Component {
     color: PropTypes.oneOf(Object.values(ButtonColor)),
     styleAsText: PropTypes.bool,
     icon: PropTypes.string,
-    iconStyleProp: PropTypes.string,
     iconClassName: PropTypes.string,
     iconStyle: PropTypes.object,
     target: PropTypes.string,
@@ -98,7 +97,6 @@ class Button extends React.Component {
       text,
       styleAsText,
       icon,
-      iconStyleProp,
       iconClassName,
       iconStyle,
       target,
@@ -201,7 +199,6 @@ class Button extends React.Component {
           {icon && (
             <FontAwesome
               icon={icon}
-              iconStyle={iconStyleProp}
               className={classNames(iconClassName, moduleStyles.icon)}
               style={{...iconStyle}}
             />

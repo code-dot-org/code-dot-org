@@ -155,7 +155,7 @@ export default {
 
   create: function () {
     const element = document.createElement('label');
-    element.setAttribute('class', 'img-upload fa-solid fa-camera');
+    element.setAttribute('class', 'img-upload fa fa-camera');
     element.style.margin = '0';
     element.style.borderStyle = 'solid';
     element.style.overflow = 'hidden';

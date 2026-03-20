@@ -98,7 +98,7 @@ export default class ProgressLegend extends Component {
     const column1 = [
       <td key={_.uniqueId()} />,
       <td key={_.uniqueId()}>
-        {this.getLevelDetails('file-lines', i18n.text())}
+        {this.getLevelDetails('file-text', i18n.text())}
       </td>,
       <td key={_.uniqueId()}>
         {this.getLevelDetails('scissors', i18n.unplugged())}
@@ -107,7 +107,9 @@ export default class ProgressLegend extends Component {
     ];
     const column2 = [
       <td key={_.uniqueId()} />,
-      <td key={_.uniqueId()}>{this.getLevelDetails('video', i18n.video())}</td>,
+      <td key={_.uniqueId()}>
+        {this.getLevelDetails('video-camera', i18n.video())}
+      </td>,
       <td key={_.uniqueId()}>
         {this.getLevelDetails('desktop', i18n.online())}
         {this.getLevelDetails('check-circle', i18n.progressLegendAssessment())}

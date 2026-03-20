@@ -112,7 +112,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('with a spinning gear', () => {
-      expect(wrapper).to.have.descendants('i.fa-gear.fa-spin');
+      expect(wrapper).to.have.descendants('i.fa-cog.fa-spin');
     });
 
     it('and waiting text', () => {
@@ -138,7 +138,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('with a warning sign', () => {
-      expect(wrapper).to.have.descendants('i.fa-triangle-exclamation');
+      expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
     });
 
     it('and error text', () => {
@@ -170,7 +170,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('with a warning sign', () => {
-      expect(wrapper).to.have.descendants('i.fa-triangle-exclamation');
+      expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
     });
 
     it('and error text', () => {
