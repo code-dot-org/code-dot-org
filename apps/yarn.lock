@@ -9864,6 +9864,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tldraw/assets@npm:^4.5.3":
+  version: 4.5.3
+  resolution: "@tldraw/assets@npm:4.5.3"
+  dependencies:
+    "@tldraw/utils": "npm:4.5.3"
+  checksum: 10/1d9c5a73ff3f92084d75ac5fb98e5d3159f6fa4c51b2014b11fe6701e1ff6d6e1597d020087cd5ee63fef0f4f98be8c83c3e8d9c8222cc05fd55204bf8f98233
+  languageName: node
+  linkType: hard
+
 "@tldraw/editor@npm:4.5.3":
   version: 4.5.3
   resolution: "@tldraw/editor@npm:4.5.3"
@@ -13256,6 +13265,7 @@ __metadata:
     "@testing-library/react": "npm:^12.1.5"
     "@testing-library/react-hooks": "npm:^8.0.1"
     "@testing-library/user-event": "npm:^14.4.3"
+    "@tldraw/assets": "npm:^4.5.3"
     "@types/chai": "npm:^4.3.5"
     "@types/htmlhint": "npm:^1.1.5"
     "@types/jest": "npm:^29.5.12"

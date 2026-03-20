@@ -205,6 +205,8 @@ const APPLICATION_ALIASES = {
   // In other words, only bundle one copy of React (the one specified in this file)
   // and not the one specified by linked dependencies.
   react: p('node_modules/react'),
+  // tldraw ships both CJS and ESM versions, we specifically want to use ESM.
+  tldraw$: p('node_modules/tldraw/dist-esm/index.mjs'),
 };
 
 const LOCALE_ALIASES = {

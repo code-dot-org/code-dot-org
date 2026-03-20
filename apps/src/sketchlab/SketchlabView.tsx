@@ -439,7 +439,7 @@ const SketchlabView: React.FC<LabProps<LevelProperties>> = ({
 };
 
 export default (props: LabProps<LevelProperties>) => {
-  if (experiments.isEnabled(experiments.TLDRAW)) {
+  if (experiments.isEnabledAllowingQueryString(experiments.TLDRAW)) {
     return <SketchLabTldrawView {...props} />;
   }
   return (

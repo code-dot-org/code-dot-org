@@ -1,3 +1,4 @@
+import {getAssetUrlsByMetaUrl} from '@tldraw/assets/urls';
 import React from 'react';
 import {Tldraw} from 'tldraw';
 import 'tldraw/tldraw.css';
@@ -65,7 +66,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
           headerContent={<WorkspaceHeader />}
         >
           <div style={{height: '100%', position: 'relative'}}>
-            <Tldraw />
+            <Tldraw assetUrls={getAssetUrlsByMetaUrl()} />
           </div>
         </PanelContainer>
       </div>

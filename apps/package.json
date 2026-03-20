@@ -260,6 +260,7 @@
     "@statsig/js-client": "^3.25.5",
     "@statsig/session-replay": "^3.25.5",
     "@statsig/web-analytics": "^3.25.5",
+    "@tldraw/assets": "^4.5.3",
     "@types/htmlhint": "^1.1.5",
     "@types/papaparse": "^5.3.14",
     "@types/qrcode.react": "^1.0.5",
