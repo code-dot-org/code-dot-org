@@ -181,7 +181,8 @@ export const useFileUploader = ({
               const uploadFunction = async () => {
                 const url = await uploadExternalFile(file);
                 sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                  name: file.name,
+                  fileName: file.name,
+                  fileType: file.name.split('.').pop()?.toLowerCase() || '',
                 });
                 callback(file.name, '', url, callbackArgs.current, true);
               };
@@ -195,7 +196,8 @@ export const useFileUploader = ({
           // and images that are deemed safe, upload directly to assets.
           const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-            name: file.name,
+            fileName: file.name,
+            fileType: file.name.split('.').pop()?.toLowerCase() || '',
           });
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {
