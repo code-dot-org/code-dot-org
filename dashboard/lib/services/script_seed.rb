@@ -708,7 +708,6 @@ module Services
         raise 'No lesson found' if lesson.nil?
 
         level = lesson.levels.find {|l| l.name == rubric_data['level_name']}
-        raise "No level found #{rubric_data['level_name']}" if level.nil?
 
         rubric_attrs = rubric_data.except('seeding_key', 'level_name')
         rubric_attrs['lesson_id'] = lesson.id
