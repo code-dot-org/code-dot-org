@@ -2,12 +2,12 @@
   <config><![CDATA[{
   "published": true,
   "game_id": 74,
-  "created_at": "2026-03-18T19:52:39.000Z",
+  "created_at": "2026-03-19T13:02:13.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Exploring Our Editor\r\n\r\nThis is Web Lab 2 - a tool we'll be using to make websites. This level is all about exploring how this tool works.\r\n\r\n**Do This:**\r\n- Ask AI Tutor \"How is this site coded?\"\r\n- Switch between different files in the project (for example: view the `vision.txt` file)\r\n- Highlight a line of code and click \"Add to AI Tutor Chat\", then ask AI Tutor to explain it\r\n- Change a word in the code editor so it also changes something in the preview\r\n- Resize one of the panels to make the workspace bigger or smaller\r\n- Make the preview \"full screen\"\r\n\r\nOnce you've completed most of these tasks, press Continue to go to the next level.\r\n\r\n**Challenge:** This website has a _bug_ in the last part of the website. Use AI Tutor to help you find the bug and see if you can fix it!",
+    "long_instructions": "Katie wants to be a web designer, and really loves otters. She made this website with the help of AI. First she created a `vision.txt` file, and then AI Tutor made a website based on her request. Soon we'll try the same process.\r\n\r\n**Do This:** look at her website and **notice** patterns in the code that help create her site. Try using AI Tutor for help by highlighting text and clicking \"Add to AI Tutor Chat\" to ask how different snippets of code work. This is one way to collaborate with your AI assistant - asking it to explain new things!\r\n\r\n![](https://images.code.org/ec812ef088420ec3556220200feb53d9-image-1773896469655.png)\r\n\r\n**Challenge:** This website has a _bug_ in the last part of the website. Use AI Tutor to help you find the bug and see if you can fix it!",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -30,7 +30,6 @@
         "explainCode"
       ],
       "answerTypeCustomizations": {
-        "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript."
       }
     },
     "start_sources": {
@@ -68,6 +67,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:39.328+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:52:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:55:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 05:03:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 13:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:34:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:41:59 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-19T13:02:13.202+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-2\\\"\"],\"cloned_from\":\"hoai-web-design-v2-2\"},{\"changed_at\":\"2026-03-19 13:02:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>
