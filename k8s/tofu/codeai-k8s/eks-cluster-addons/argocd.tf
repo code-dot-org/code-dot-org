@@ -57,7 +57,7 @@ resource "helm_release" "argocd" {
       rbac = {
         "policy.csv" = join("\n", [
           "g, all@code.org, role:readonly",
-          "g, platform@code.org, role:readonly",
+          "g, trusted-contributors@code.org, role:readonly",
           "g, product@code.org, role:readonly",
           "g, engineers@code.org, role:admin",
           "g, infrastructure@code.org, role:admin",

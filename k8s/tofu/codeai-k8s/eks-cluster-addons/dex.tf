@@ -79,7 +79,7 @@ resource "helm_release" "dex" {
             clientSecret           = local.dex_google_client_secret
             redirectURI            = local.dex_google_redirect_url
             hostedDomains          = local.google_workspace_domains
-            groups                 = ["engineers@code.org", "infrastructure@code.org", "platform@code.org", "product@code.org", "all@code.org"]
+            groups                 = ["engineers@code.org", "infrastructure@code.org", "trusted-contributors@code.org", "product@code.org", "all@code.org"]
             serviceAccountFilePath = "/etc/dex/google/codeai-k8s-dex.json"
             domainToAdminEmail = {
               for domain in local.google_workspace_domains :
