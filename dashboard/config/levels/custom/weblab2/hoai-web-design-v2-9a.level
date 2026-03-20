@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-18T21:34:26.000Z",
   "level_num": "custom",
@@ -31,8 +30,11 @@
       ],
       "answerTypeCustomizations": {
       }
-    }
+    },
+    "display_name": "Headers",
+    "bubble_choice_description": "Learn about Header elements, like `<h1>`, `<h3`>, etc"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:34:26.476+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 21:34:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:34:26.476+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 21:34:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-20 18:17:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

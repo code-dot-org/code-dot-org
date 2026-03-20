@@ -11,7 +11,7 @@
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
-    "initial_view_mode": "split",
+    "initial_view_mode": "preview",
     "predict_settings": {
       "isPredictLevel": false,
       "solution": "",
@@ -28,13 +28,7 @@
         "buildHTML",
         "buildCSS",
         "ask",
-        "hint",
-        "debug",
-        "example",
-        "explainCode",
-        "documentation",
-        "pseudocode",
-        "testCase"
+        "debug"
       ],
       "answerTypeCustomizations": {
       }
@@ -201,6 +195,6 @@
     "long_instructions": "## Webpage Responsiveness\r\n\r\nChoose a website and improve how it works across different screen sizes.\r\n\r\n### Step 1: Test\r\n- Select a website.\r\n- Resize the browser window and toggle between **Desktop** and **Mobile**.\r\n- Identify issues using the **Responsiveness Checklist** in your Unit Guide.\r\n\r\n### Step 2: Fix\r\n- Choose **1–2 issues** to focus on.\r\n- Use AI to fix them.\r\n- Save your work with a clear version name (e.g. **V2 – fixed navigation on mobile**).\r\n\r\n### Step 3: Improve\r\n- Continue testing and refining across screen sizes.\r\n- Make at least **2 improvements** that make the site easier to use on mobile.\r\n\r\n:::details [Need help prompting AI?]\r\n- “Make the layout stack into a single column on small screens.”  \r\n- “Ensure images scale to fit without overflowing.”  \r\n- “Adjust font size and spacing for readability on mobile.”  \r\n:::",
     "teacher_markdown": "## Webpage Responsiveness\r\n\r\nStudents select one site and improve how it functions across different screen sizes using AI and the Unit Guide checklist.\r\n\r\n---\r\n\r\n### Test for Responsiveness\r\n\r\n1. Students select one of the provided websites.\r\n\r\n2. Students resize the browser window and toggle between **Desktop** and **Mobile**.\r\n\r\n3. Students identify issues using the **Responsiveness Checklist** in their Unit Guide.\r\n\r\nCirculate: Look for students to name specific issues (e.g., “nav runs off screen,” “cards don’t stack,” “text is too small”), not just general statements like “it looks bad.”\r\n\r\n---\r\n\r\n### Fix Key Issues\r\n\r\n1. Students choose **1–2 responsiveness issues** to focus on.\r\n\r\n2. Students use AI to update the CSS and/or HTML.\r\n\r\n3. Students save their work with a clear version name (e.g. **V2 – fixed card layout on mobile**).\r\n\r\nCirculate: Ask:\r\n- “What exactly is breaking?”\r\n- “What should happen instead on a smaller screen?”\r\n- “How will you know your fix worked?”\r\n\r\n---\r\n\r\n### Iterate and Improve\r\n\r\n1. Students continue testing and refining across screen sizes.\r\n\r\n2. Students make at least **2 improvements** that improve usability on mobile.\r\n\r\nCirculate: Push students to retest after each change. Look for students to:\r\n- resize again\r\n- compare before/after\r\n- adjust based on results\r\n\r\n---\r\n\r\n### Teaching Tip\r\n\r\nEmphasize that responsiveness is not automatic. AI can generate layouts, but students must test and refine to ensure the site works across devices.\r\n\r\n---\r\n\r\n### Assessment Opportunity\r\n\r\nUse the final reflection level to assess whether students can:\r\n- identify a specific responsiveness issue\r\n- explain why it occurred\r\n- describe how they fixed it\r\n- explain how the fix improves usability"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-20 08:08:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-20 08:38:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-20 08:08:45 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-20 08:38:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-20 15:51:12 +0000\",\"changed\":[\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>
