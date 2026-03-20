@@ -12,7 +12,7 @@ import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/us
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
-import {createSketchlabTourSteps} from './sketchlabShepherdTourSteps';
+import {createSketchlabTourSteps} from './sketchlabTourSteps';
 
 const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
 
@@ -32,13 +32,11 @@ const onTourCancel = (stepIndex: number) =>
     step: stepIndex.toString(),
   });
 
-interface UseSketchlabShepherdTourParams {
+interface UseSketchlabTourParams {
   productTours: string[] | undefined;
 }
 
-const useSketchlabShepherdTour = ({
-  productTours,
-}: UseSketchlabShepherdTourParams) => {
+const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
@@ -99,4 +97,4 @@ const useSketchlabShepherdTour = ({
   useStartTourWhenAvailable(tour);
 };
 
-export default useSketchlabShepherdTour;
+export default useSketchlabTour;
