@@ -236,6 +236,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   fieldsToRegister.forEach(override => {
     const fieldRegistryName = override[0];
     const fieldClass = override[1];
+    try {
+      blocklyWrapper.fieldRegistry.unregister(fieldRegistryName);
+    } catch (_e) {
+      // Not yet registered; safe to skip unregister.
+    }
     blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
   });
 
@@ -274,7 +279,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     CdoConnectionChecker,
     true /* opt_allowOverrides */
   );
-  blocklyWrapper.serialization.registry.unregister('blocks');
+  try {
+    blocklyWrapper.serialization.registry.unregister('blocks');
+  } catch (_e) {
+    // Not yet registered; safe to skip unregister.
+  }
   blocklyWrapper.serialization.registry.register(
     'blocks',
     new CdoBlockSerializer()
@@ -288,7 +297,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
 
   blocklyWrapper.procedureSerializer = procedureSerializer;
   // Register the shareable procedures serializer, used for the modal function editor.
-  blocklyWrapper.serialization.registry.unregister('procedures');
+  try {
+    blocklyWrapper.serialization.registry.unregister('procedures');
+  } catch (_e) {
+    // Not yet registered; safe to skip unregister.
+  }
   blocklyWrapper.serialization.registry.register(
     'procedures',
     procedureSerializer
