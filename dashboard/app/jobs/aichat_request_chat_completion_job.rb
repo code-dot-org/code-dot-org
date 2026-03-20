@@ -27,6 +27,14 @@ class AichatRequestChatCompletionJob < ApplicationJob
     request = arguments.first[:request]
     locale = arguments.first[:locale]
 
+    Honeybadger.context(
+      model_id: request.model_customizations['selectedModelId'],
+      client_type: request.model_customizations['clientType'],
+      user_id: request.user_id,
+      level_id: request.level_id,
+      locale: locale
+    )
+
     AichatAiHelper.handle_error("AichatRequestChatCompletionJob", exception, request, locale)
 
     # Report metrics for the failed job (after_perform doesn't run on failure).
