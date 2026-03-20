@@ -128,6 +128,42 @@
   --text-warning-secondary: var(--sentiment-warning-70);
 }
 
+/* Alternative brand — Light theme overrides
+   Replaces the purple brand ramp with a pink ramp.
+   Activated by setting data-brand="codeai" on the <html> element.
+*/
+[data-brand='codeai']:root,
+[data-brand='codeai'][data-theme='Light'] {
+  --background-brand-purple-extra-light: var(--brand-pink-5);
+  --background-brand-purple-hover: var(--brand-pink-10);
+  --background-brand-purple-light: var(--brand-pink-10);
+  --background-brand-purple-primary: var(--brand-pink-50);
+  --background-brand-purple-primary-fixed: var(--brand-pink-50);
+  --background-brand-purple-strong: var(--brand-pink-70);
+  --borders-brand-purple-light: var(--brand-pink-10);
+  --borders-brand-purple-primary: var(--brand-pink-50);
+  --borders-brand-purple-strong: var(--brand-pink-70);
+  --text-brand-purple-primary: var(--brand-pink-50);
+  --text-brand-purple-primary-fixed: var(--brand-pink-50);
+  --text-brand-purple-secondary: var(--brand-pink-70);
+}
+
+/* Alternative brand — Dark theme overrides */
+[data-brand='codeai'][data-theme='Dark'] {
+  --background-brand-purple-extra-light: var(--brand-pink-90);
+  --background-brand-purple-hover: var(--brand-pink-80);
+  --background-brand-purple-light: var(--brand-pink-80);
+  --background-brand-purple-primary: var(--brand-pink-50);
+  --background-brand-purple-primary-fixed: var(--brand-pink-50);
+  --background-brand-purple-strong: var(--brand-pink-40);
+  --borders-brand-purple-light: var(--brand-pink-80);
+  --borders-brand-purple-primary: var(--brand-pink-40);
+  --borders-brand-purple-strong: var(--brand-pink-70);
+  --text-brand-purple-primary: var(--text-neutral-primary);
+  --text-brand-purple-primary-fixed: var(--brand-pink-40);
+  --text-brand-purple-secondary: var(--text-neutral-tertiary);
+}
+
 /* Dark Theme Semantic Colors */
 [data-theme='Dark'] {
   --background-accent-orange-light: var(--accent-orange-90);

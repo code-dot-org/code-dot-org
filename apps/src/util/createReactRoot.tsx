@@ -5,7 +5,7 @@ import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
 import ReactDOM from 'react-dom';
 
-import {getMuiThemeForBrand} from './brand';
+import {getCurrentBrand, getMuiThemeForBrand} from './brand';
 
 /**
  * Global bootstrapper function that wraps rendered DOM trees with configured providers
@@ -31,7 +31,17 @@ export function createReactRoot(
     );
   }
 
-  const theme = getMuiThemeForBrand();
+  const brand = getCurrentBrand();
+
+  // Expose the brand on <html> so CSS variable overrides in colors.css can
+  // target [data-brand='codeai'] and swap the brand colour ramp.
+  if (brand === 'codeai') {
+    document.documentElement.dataset.brand = brand;
+  } else {
+    delete document.documentElement.dataset.brand;
+  }
+
+  const theme = getMuiThemeForBrand(brand);
 
   ReactDOM.render(
     <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>,
