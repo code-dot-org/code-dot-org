@@ -17,33 +17,33 @@ jobs:
   skaffold-build:
     if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
     name: skaffold build
-    uses: ./.github/workflows/k8s_skaffold_build.yml
+    uses: ./.github/workflows/k8s-skaffold-build.yml
     # only run on PRs where the source branch is *k8s*:
     secrets: inherit
 
   # Step 2: stitch the platform specific images into a multi-platform image
   stitch-multiplatform-image:
     name: stitch multi-platform image
-    uses: ./.github/workflows/k8s_stitch_multiplatform_image.yml
+    uses: ./.github/workflows/k8s-stitch-multiplatform-image.yml
     needs: skaffold-build
     with:
       docker_tags_json: ${{ toJSON(needs.skaffold-build.outputs) }}
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
-  update-argocd:
-    name: update k8s/argocd with new docker tags
-    uses: ./.github/workflows/k8s_update_argocd.yml
+  commit-image-ref-to-argocd:
+    name: commit new codeai docker image ref to k8s-gitops repo => trigger argocd
+    uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
     needs: stitch-multiplatform-image
     if: github.event_name == 'push'
     with:
       branch_name: ${{ github.ref_name }}
-      docker_tag: ${{ needs.stitch-multiplatform-image.outputs.docker_tag }}
+      codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
     secrets: inherit
 
-# Grant the GITHUB_TOKEN the necessary permissions to publish to GitHub Packages
+# Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
 permissions:
-  # permission to modify our git repo to writeback argocd manifests
-  contents: write
+  # permission to checkout this repo in the build workflow
+  contents: read
   # permission to publish container images to ghcr.io
   packages: write

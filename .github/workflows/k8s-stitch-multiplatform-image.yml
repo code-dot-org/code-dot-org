@@ -1,4 +1,4 @@
-# In a previous step (see: ./k8s_skaffold_build.yml) we built the docker image for multiple
+# In a previous step (see: ./k8s-skaffold-build.yml) we built the docker image for multiple
 # architectures (e.g. amd64, arm64) in parallel on a GH runner for that specific architecture.
 #
 # The resulting build artifacts are multiple tagged single-architecture docker images, for example:
@@ -14,9 +14,9 @@ name: k8s-stitch-multiplatform-image
 on:
   workflow_call:
     outputs:
-      docker_tag:
-        description: "Docker tag for the final multi-platform image"
-        value: ${{ inputs.docker_tag }}
+      codeai_docker_image_ref:
+        description: "Fully qualified docker image reference for the final multi-platform image"
+        value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_image_ref }}
     inputs:
       docker_tags_json:
         description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
@@ -30,6 +30,8 @@ on:
 jobs:
   stitch-multi-platform:
     name: stitch multi-platform image
+    outputs:
+      codeai_docker_image_ref: ${{ steps.export-image.outputs.codeai_docker_image_ref }}
 
     # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
@@ -67,3 +69,8 @@ jobs:
           # Use imagetools to stitch all platform-specific images into one multi-platform image
           # $MULTI_PLATFORM_IMAGE is the final multi-platform image name, e.g. code-dot-org:my-branch
           docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
+
+      - name: Export stitched image ref
+        id: export-image
+        run: |
+          echo "codeai_docker_image_ref=$MULTI_PLATFORM_IMAGE" >> "$GITHUB_OUTPUT"

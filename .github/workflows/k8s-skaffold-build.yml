@@ -12,7 +12,7 @@
 # - code-dot-org:my-branch-amd64
 # - code-dot-org:my-branch-arm64
 #
-# In a later step (see: ./k8s_stitch_multiplatform_image.yml) we stitch the per-architecture
+# In a later step (see: ./k8s-stitch-multiplatform-image.yml) we stitch the per-architecture
 # images together into a single multi-platform image, e.g.:
 # - code-dot-org:my-branch
 #
