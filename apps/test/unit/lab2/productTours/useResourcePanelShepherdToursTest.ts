@@ -4,7 +4,7 @@ import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProductTour} from '@cdo/apps/lab2/productTours/productToursPerLab';
-import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
+import useResourcePanelShepherdTours from '@cdo/apps/lab2/productTours/useResourcePanelShepherdTours';
 import {LifecycleEvent, sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {
   RESOURCE_PANEL_ONBOARDING_FLOW_V2_NAME,
@@ -53,7 +53,7 @@ const defaultParams = {
   validationSettings: mockValidationSettings,
 };
 
-describe('useResourcePanelTours', () => {
+describe('useResourcePanelShepherdTours', () => {
   // Capture lifecycle callbacks so we can trigger them in tests.
   let lifecycleHandlers: Partial<
     Record<LifecycleEvent, (...args: unknown[]) => void>
@@ -74,7 +74,7 @@ describe('useResourcePanelTours', () => {
 
   describe('onboarding tour availability', () => {
     it('enables the onboarding tour when all conditions are met', () => {
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const onboardingCall = mockUseLab2ProductTour.mock.calls[0][0];
       expect(onboardingCall.tourAvailable).toBe(true);
@@ -82,7 +82,7 @@ describe('useResourcePanelTours', () => {
 
     it('disables the onboarding tour when isStandaloneCollapsed is true', () => {
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           isStandaloneCollapsed: true,
         })
@@ -94,7 +94,7 @@ describe('useResourcePanelTours', () => {
 
     it('disables the onboarding tour when the tour is not in productToursForLevel', () => {
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           productToursForLevel: [],
         })
@@ -106,7 +106,7 @@ describe('useResourcePanelTours', () => {
 
     it('disables the onboarding tour when appName is not configured for the tour', () => {
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           appName: 'music',
         })
@@ -117,7 +117,9 @@ describe('useResourcePanelTours', () => {
     });
 
     it('disables the onboarding tour while level is loading', () => {
-      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+      const {rerender} = renderHook(() =>
+        useResourcePanelShepherdTours(defaultParams)
+      );
 
       act(() => {
         lifecycleHandlers[LifecycleEvent.LevelLoadStarted]?.(1);
@@ -133,7 +135,9 @@ describe('useResourcePanelTours', () => {
     });
 
     it('re-enables the onboarding tour after level load completes', () => {
-      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+      const {rerender} = renderHook(() =>
+        useResourcePanelShepherdTours(defaultParams)
+      );
 
       act(() => {
         lifecycleHandlers[LifecycleEvent.LevelLoadStarted]?.(1);
@@ -160,7 +164,7 @@ describe('useResourcePanelTours', () => {
         key === RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN ? 'yes' : 'no'
       );
 
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const validationCall = mockUseLab2ProductTour.mock.calls[1][0];
       expect(validationCall.tourAvailable).toBe(true);
@@ -168,7 +172,7 @@ describe('useResourcePanelTours', () => {
 
     it('enables the validation tour when onboarding tour is not enabled or seen', () => {
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           productToursForLevel: ['resource_panel_validation'], // Onboarding tour not in productTours, so not enabled.
         })
@@ -180,7 +184,7 @@ describe('useResourcePanelTours', () => {
 
     it('disables the validation tour when onboarding tour is enabled but not yet seen', () => {
       // Onboarding not seen — both tours enabled on level, so validation is blocked.
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const validationCall = mockUseLab2ProductTour.mock.calls[1][0];
       expect(validationCall.tourAvailable).toBe(false);
@@ -192,7 +196,7 @@ describe('useResourcePanelTours', () => {
       );
 
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           hasValidationConditions: false,
         })
@@ -208,7 +212,7 @@ describe('useResourcePanelTours', () => {
       );
 
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           validationSettings: undefined,
         })
@@ -223,7 +227,9 @@ describe('useResourcePanelTours', () => {
         key === RESOURCE_PANEL_PINNED_BUTTON_ONBOARDING_TOUR_SEEN ? 'yes' : 'no'
       );
 
-      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+      const {rerender} = renderHook(() =>
+        useResourcePanelShepherdTours(defaultParams)
+      );
 
       act(() => {
         lifecycleHandlers[LifecycleEvent.LevelLoadStarted]?.(1);
@@ -243,7 +249,7 @@ describe('useResourcePanelTours', () => {
       );
 
       renderHook(() =>
-        useResourcePanelTours({
+        useResourcePanelShepherdTours({
           ...defaultParams,
           productToursForLevel: ['resource_panel_onboarding'],
         })
@@ -256,7 +262,7 @@ describe('useResourcePanelTours', () => {
 
   describe('analytics callbacks', () => {
     it('sends INTRO_FLOW_STARTED event with the onboarding flow name on tour start', () => {
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const {onStart} = mockUseLab2ProductTour.mock.calls[0][0];
       onStart?.();
@@ -268,7 +274,7 @@ describe('useResourcePanelTours', () => {
     });
 
     it('sends INTRO_FLOW_COMPLETED event with the onboarding flow name on tour complete', () => {
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const {onComplete} = mockUseLab2ProductTour.mock.calls[0][0];
       act(() => {
@@ -282,7 +288,7 @@ describe('useResourcePanelTours', () => {
     });
 
     it('sends INTRO_FLOW_EXIT event with the onboarding flow name and step on tour cancel', () => {
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const {onCancel} = mockUseLab2ProductTour.mock.calls[0][0];
       act(() => {
@@ -296,7 +302,7 @@ describe('useResourcePanelTours', () => {
     });
 
     it('sends INTRO_FLOW_STARTED event with the validation flow name on validation tour start', () => {
-      renderHook(() => useResourcePanelTours(defaultParams));
+      renderHook(() => useResourcePanelShepherdTours(defaultParams));
 
       const {onStart} = mockUseLab2ProductTour.mock.calls[1][0];
       onStart?.();
@@ -313,7 +319,9 @@ describe('useResourcePanelTours', () => {
       // Start with onboarding tour not seen.
       mockTryGetLocalStorage.mockReturnValue('no');
 
-      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+      const {rerender} = renderHook(() =>
+        useResourcePanelShepherdTours(defaultParams)
+      );
 
       // Validation is initially blocked by onboarding.
       expect(mockUseLab2ProductTour.mock.calls[1][0].tourAvailable).toBe(false);
@@ -335,7 +343,9 @@ describe('useResourcePanelTours', () => {
     it('unblocks the validation tour after onboarding tour is cancelled', () => {
       mockTryGetLocalStorage.mockReturnValue('no');
 
-      const {rerender} = renderHook(() => useResourcePanelTours(defaultParams));
+      const {rerender} = renderHook(() =>
+        useResourcePanelShepherdTours(defaultParams)
+      );
 
       expect(mockUseLab2ProductTour.mock.calls[1][0].tourAvailable).toBe(false);
 
