@@ -1,5 +1,6 @@
 import instructions, {
   toggleInstructionsCollapsed,
+  setInstructionsRenderedHeightAndCollapsed,
   setInstructionsRenderedHeight,
   setInstructionsMaxHeightAvailable,
   setInstructionsMaxHeightNeeded,
@@ -102,6 +103,57 @@ describe('instructions', () => {
         renderedHeight: 200,
         expandedHeight: 0,
         allowResize: true,
+      });
+    });
+
+    it('setInstructionsRenderedHeightAndCollapsed updates collapse and height in one pass', () => {
+      var initialState, newState;
+      initialState = {
+        isCollapsed: false,
+        renderedHeight: 300,
+        expandedHeight: 300,
+        allowResize: true,
+      };
+      newState = reducer(
+        initialState,
+        setInstructionsRenderedHeightAndCollapsed(50, true)
+      );
+      assert.deepEqual(newState, {
+        isCollapsed: true,
+        renderedHeight: 50,
+        expandedHeight: 300,
+        allowResize: true,
+      });
+
+      newState = reducer(
+        newState,
+        setInstructionsRenderedHeightAndCollapsed(250, false)
+      );
+      assert.deepEqual(newState, {
+        isCollapsed: false,
+        renderedHeight: 250,
+        expandedHeight: 250,
+        allowResize: true,
+      });
+    });
+
+    it('setInstructionsRenderedHeightAndCollapsed still updates collapse when allowResize is false', () => {
+      var initialState, newState;
+      initialState = {
+        isCollapsed: false,
+        renderedHeight: 300,
+        expandedHeight: 300,
+        allowResize: false,
+      };
+      newState = reducer(
+        initialState,
+        setInstructionsRenderedHeightAndCollapsed(50, true)
+      );
+      assert.deepEqual(newState, {
+        isCollapsed: true,
+        renderedHeight: 300,
+        expandedHeight: 300,
+        allowResize: false,
       });
     });
 
