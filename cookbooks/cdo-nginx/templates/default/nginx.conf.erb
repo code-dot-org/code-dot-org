@@ -26,9 +26,35 @@ http {
   client_max_body_size 4G;
   keepalive_timeout 30;
 
+  # Copy Accept-Language header to X-Varnish-Accept-Language.
+  # TODO: Update application code to read Accept-Language instead of X-Varnish-Accept-Language.
+  proxy_set_header X-Varnish-Accept-Language $http_accept_language;
+
+  # studio.code.org: serve LTI and JWKs routes directly, redirect everything else to codeai.org
+  server {
+    listen 80;
+    server_name studio.code.org;
+
+    location /lti/ {
+      proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
+      proxy_set_header Host $http_host;
+    }
+
+    location /oauth/jwks {
+      proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
+      proxy_set_header Host $http_host;
+    }
+
+    location / {
+      return 301 https://codeai.org$request_uri;
+    }
+  }
+
+  # codeai.org: primary domain, all traffic to Rails
   server {
     listen 80 default_server deferred;
-    server_name _;
+    server_name codeai.org _;
+
     location / {
       proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
       proxy_set_header Host $http_host;
@@ -43,6 +69,7 @@ http {
       proxy_set_header Connection "upgrade";
     }
   }
+
   server {
     listen <%= node['cdo-apps']['dashboard']['port'] %> default deferred;
     server_name dashboard_proxy;
@@ -51,10 +78,37 @@ http {
       proxy_set_header Host $http_host;
     }
   }
+
+  # studio.code.org SSL: serve LTI and JWKs routes directly, redirect everything else to codeai.org
   server {
-    server_name ssl_proxy;
+    server_name studio.code.org;
     listen 443 ssl;
     <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
+
+    location /lti/ {
+      proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-Forwarded-Proto https;
+    }
+
+    location /oauth/jwks {
+      proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
+      proxy_set_header Host $http_host;
+      proxy_set_header X-Forwarded-Proto https;
+    }
+
+    location / {
+      return 301 https://codeai.org$request_uri;
+    }
+  }
+
+  # codeai.org SSL: primary domain, all traffic to Rails
+  # TODO: configure ssl_certificate cookbook to provision/reference the codeai.org cert
+  server {
+    server_name codeai.org _;
+    listen 443 ssl;
+    <%= render 'nginx.erb', cookbook: 'ssl_certificate' %>
+
     location / {
       proxy_pass http://unix:<%= @run_dir %>/dashboard.sock;
       proxy_set_header Host $http_host;

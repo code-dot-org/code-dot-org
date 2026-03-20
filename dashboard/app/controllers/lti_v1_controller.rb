@@ -52,13 +52,15 @@ class LtiV1Controller < ApplicationController
       Clients::LtiLogger.log_event('Error writing state and nonce to cache', {lti_integration_id: lti_integration[:id], exception: exception})
       return render status: :internal_server_error
     end
+    puts "Request host: #{request.host}"
 
     auth_redirect_url = URI(lti_integration[:auth_redirect_url])
     auth_redirect_url.query = {
       scope: 'openid',
       response_type: 'id_token',
       client_id: lti_integration[:client_id],
-      redirect_uri: CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme),
+      # redirect_uri: CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme),
+      redirect_uri: "#{request.protocol}#{request.host_with_port}/lti/v1/authenticate",
       login_hint:  params[:login_hint],
       lti_message_hint: params[:lti_message_hint].to_s, # Required by Canvas
       state: state_and_nonce[:state],

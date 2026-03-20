@@ -65,6 +65,8 @@ Dashboard::Application.configure do
   require 'syslog/logger'
   config.logger = Syslog::Logger.new 'dashboard', Syslog::LOG_LOCAL0
 
+  config.hosts << "codeai.org"
+
   # don't act like a levelbuilder by default
   config.levelbuilder_mode = CDO.with_default(false).levelbuilder_mode
 
