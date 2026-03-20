@@ -22,6 +22,7 @@ class JitPlConceptTest < ActiveSupport::TestCase
     assert_equal 'recursion', serialized[:name]
     assert_equal 'Recursion', serialized[:display_name]
     assert_equal 'A function calling itself.', serialized[:text_content]
+    assert_equal [], serialized[:resources]
   end
 
   test "text_content is stored in properties" do
@@ -58,6 +59,17 @@ class JitPlConceptTest < ActiveSupport::TestCase
 
     assert_equal 'Variables Updated', concept.display_name
     assert_equal 'New content', concept.text_content
+  end
+
+  test "serialize includes associated resources" do
+    concept = create(:jit_pl_concept)
+    resource = create(:resource, name: 'My Resource')
+    concept.resources << resource
+
+    serialized = concept.serialize
+    assert_equal 1, serialized[:resources].length
+    assert_equal resource.id, serialized[:resources].first[:id]
+    assert_equal resource.name, serialized[:resources].first[:name]
   end
 
   test "seed_all removes concepts with no corresponding file" do

@@ -30,6 +30,7 @@ class JitPlConcept < ApplicationRecord
       name: name,
       display_name: display_name,
       text_content: text_content,
+      resources: resources.map(&:summarize_for_lesson_edit),
     }
   end
 
@@ -40,7 +41,11 @@ class JitPlConcept < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, JSON.pretty_generate(serialize))
+    File.write(file_path, JSON.pretty_generate({
+      name: name,
+      display_name: display_name,
+      text_content: text_content,
+    }))
   end
 
   def remove_serialization

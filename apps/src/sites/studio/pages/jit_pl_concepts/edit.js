@@ -2,13 +2,22 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import JitPlConceptFormEditor from '@cdo/apps/levelbuilder/jit-pl-concepts-editor/JitPlConceptFormEditor';
-import {getStore} from '@cdo/apps/redux';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
+  registerReducers({
+    resources: createResourcesReducer('jitPlConceptResource'),
+  });
   const store = getStore();
-  const {id, name, display_name, text_content} = getScriptData('jitPlConcept');
+  const {id, name, display_name, text_content, resources} =
+    getScriptData('jitPlConcept');
+
+  store.dispatch(initResources('jitPlConceptResource', resources || []));
 
   createReactRoot(
     <Provider store={store}>

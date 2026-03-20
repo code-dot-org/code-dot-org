@@ -1,14 +1,17 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import {connect} from 'react-redux';
 
 import SaveBar from '@cdo/apps/levelbuilder/SaveBar';
+import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {navigateToHref} from '@cdo/apps/utils';
 
 const JitPlConceptFormEditor = props => {
-  const {conceptId, originalName, originalDisplayName, originalTextContent} =
+  const {conceptId, originalName, originalDisplayName, originalTextContent, resources} =
     props;
   const [name, setName] = useState(originalName);
   const [displayName, setDisplayName] = useState(originalDisplayName);
@@ -29,6 +32,7 @@ const JitPlConceptFormEditor = props => {
         name: name,
         display_name: displayName,
         text_content: textContent,
+        resource_ids: resources.map(r => r.id),
       },
     })
       .done(() => {
@@ -71,6 +75,13 @@ const JitPlConceptFormEditor = props => {
         handleMarkdownChange={e => setTextContent(e.target.value)}
         markdown={textContent || ''}
       />
+      <h2>Resources</h2>
+      {/* TODO: create a dedicated JIT PL course version and use its ID here */}
+      <ResourcesEditor
+        courseVersionId={1}
+        resourceContext="jitPlConceptResource"
+        resources={resources}
+      />
       <br />
       <SaveBar
         handleSave={save}
@@ -97,6 +108,9 @@ JitPlConceptFormEditor.propTypes = {
   originalName: PropTypes.string,
   originalDisplayName: PropTypes.string,
   originalTextContent: PropTypes.string,
+  resources: PropTypes.arrayOf(resourceShape).isRequired,
 };
 
-export default JitPlConceptFormEditor;
+export default connect(state => ({resources: state.resources}))(
+  JitPlConceptFormEditor
+);

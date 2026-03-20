@@ -88,6 +88,31 @@ class JitPlConceptsControllerTest < ActionController::TestCase
     assert_equal 'Updated text', response_data['text_content']
   end
 
+  test 'resources are saved when updating a concept' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    resource = create(:resource)
+
+    put :update, params: {id: @concept.id, name: @concept.name, resource_ids: [resource.id]}
+    assert_response :ok
+
+    @concept.reload
+    assert_equal [resource.id], @concept.resources.map(&:id)
+  end
+
+  test 'resources are removed when updating a concept with empty resource_ids' do
+    sign_in @levelbuilder
+    JitPlConcept.any_instance.stubs(:write_serialization)
+    resource = create(:resource)
+    @concept.resources << resource
+
+    put :update, params: {id: @concept.id, name: @concept.name, resource_ids: []}
+    assert_response :ok
+
+    @concept.reload
+    assert_empty @concept.resources
+  end
+
   test 'edit page renders 404 when concept is not found' do
     sign_in @levelbuilder
     get :edit, params: {id: 0}

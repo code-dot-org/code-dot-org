@@ -32,6 +32,7 @@ class JitPlConceptsController < ApplicationController
   # PUT /jit_pl_concepts/:id
   def update
     @concept.update!(jit_pl_concept_params)
+    @concept.resources = Resource.where(id: params[:resource_ids] || [])
     @concept.write_serialization
     render json: @concept.serialize.to_json
   end
@@ -43,15 +44,13 @@ class JitPlConceptsController < ApplicationController
     render status: :ok, plain: "Destroyed JitPlConcept #{@concept.id}"
   end
 
-  private
-
-  def set_jit_pl_concept
+  private def set_jit_pl_concept
     @concept = JitPlConcept.find(params[:id])
   rescue ActiveRecord::RecordNotFound
     render :not_found
   end
 
-  def jit_pl_concept_params
+  private def jit_pl_concept_params
     params.permit(:name, :display_name, :text_content)
   end
 end
