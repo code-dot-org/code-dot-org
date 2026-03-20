@@ -14,11 +14,11 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-import {createOnboardingTourSteps} from './onboardingTourSteps';
+import {createOnboardingTourSteps} from './onboardingTourShepherdSteps';
 import {ProductTour, isTourEnabledOnLevel} from './productToursPerLab';
-import {createValidationTourSteps} from './validationTourSteps';
+import {createValidationTourSteps} from './validationTourShepherdSteps';
 
-interface UseResourcePanelToursParams {
+interface UseResourcePanelShepherdToursParams {
   appName: string | undefined;
   productToursForLevel: string[] | undefined;
   isStandaloneCollapsed?: boolean;
@@ -38,13 +38,13 @@ const onTourCancel = (flowName: string) => (stepIndex: number) =>
     step: stepIndex.toString(),
   });
 
-const useResourcePanelTours = ({
+const useResourcePanelShepherdTours = ({
   appName,
   productToursForLevel,
   isStandaloneCollapsed,
   hasValidationConditions,
   validationSettings,
-}: UseResourcePanelToursParams) => {
+}: UseResourcePanelShepherdToursParams) => {
   // We track level load state to avoid starting tours while the level is still loading.
   // This can cause multiple tours to show up if we load one for the previous level and
   // then one for the new level.
@@ -131,4 +131,4 @@ const useResourcePanelTours = ({
   useStartTourWhenAvailable(validationTour);
 };
 
-export default useResourcePanelTours;
+export default useResourcePanelShepherdTours;
