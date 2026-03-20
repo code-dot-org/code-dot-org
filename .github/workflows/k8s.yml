@@ -9,6 +9,10 @@ on:
   # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
   push:
     branches:
+      # Disabled while we get used to this:
+      # - staging
+      # - levelbuilder
+      - test
       - production
   pull_request:
 
@@ -35,7 +39,6 @@ jobs:
     name: commit new codeai docker image ref to k8s-gitops repo => trigger argocd
     uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
     needs: stitch-multiplatform-image
-    if: github.event_name == 'push'
     with:
       branch_name: ${{ github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
