@@ -80,9 +80,8 @@ const JitPlConceptFormEditor = ({
         markdown={textContent || ''}
       />
       <h2>Resources</h2>
-      {/* TODO: create a dedicated JIT PL course version and use its ID here */}
       <ResourcesEditor
-        courseVersionId={1}
+        forJitPl
         resourceContext="jitPlConceptResource"
         resources={resources}
       />

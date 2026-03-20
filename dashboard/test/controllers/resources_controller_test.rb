@@ -59,6 +59,25 @@ class ResourcesControllerTest < ActionController::TestCase
     assert_includes(@response.body, "course version not found")
   end
 
+  test 'can create resource with for_jit_pl param' do
+    sign_in @levelbuilder
+    unit_group = create(:unit_group, name: 'just-in-time-pl')
+    course_version = create(:course_version, content_root: unit_group)
+    assert_creates(Resource) do
+      post :create, params: {name: 'jit resource', url: 'code.org', forJitPl: true}
+      assert_response :success
+    end
+    response_resource = JSON.parse(@response.body)
+    assert_equal course_version.id, Resource.find_by_key(response_resource['key']).course_version_id
+  end
+
+  test 'resource creation fails with for_jit_pl when unit group not found' do
+    sign_in @levelbuilder
+    post :create, params: {name: 'jit resource', url: 'code.org', forJitPl: true}
+    assert_response 400
+    assert_includes(@response.body, "JIT PL course version not found")
+  end
+
   class AuthTests < ActionController::TestCase
     setup do
       course_version = create(:course_version)

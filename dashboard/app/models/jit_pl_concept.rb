@@ -41,13 +41,14 @@ class JitPlConcept < ApplicationRecord
   def write_serialization
     return unless Rails.application.config.levelbuilder_mode
     FileUtils.mkdir_p(File.dirname(file_path))
-    File.write(file_path, JSON.pretty_generate(
-                            {
-                              name: name,
-                              display_name: display_name,
-                              text_content: text_content,
-                            }
-                          )
+    File.write(file_path, JSON.pretty_generate({
+                                                 name: name,
+                                                 display_name: display_name,
+                                                 text_content: text_content,
+                                                 resources: resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
+                                                 jit_pl_concepts_resources: resources.map {|r| {seeding_key: {'concept.name' => name, 'resource.key' => r.key}}},
+                                               }
+                                              )
     )
   end
 
@@ -70,13 +71,29 @@ class JitPlConcept < ApplicationRecord
       name: config['name'],
       display_name: config['display_name'],
       text_content: config['text_content'],
+      resources: config['resources'] || [],
+      jit_pl_concepts_resources: config['jit_pl_concepts_resources'] || [],
     }
+  end
+
+  def self.jit_pl_course_version
+    UnitGroup.find_by(name: 'just-in-time-pl')&.course_version
   end
 
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
     concept = JitPlConcept.find_or_initialize_by(name: properties[:name])
-    concept.update! properties
+    concept.update! properties.slice(:name, :display_name, :text_content)
+
+    jit_pl_course_version = self.jit_pl_course_version
+    properties[:resources].each do |resource_data|
+      resource = Resource.find_or_initialize_by(key: resource_data['key'], course_version: jit_pl_course_version)
+      resource.update!(name: resource_data['name'], url: resource_data['url'], properties: resource_data['properties'])
+    end
+
+    resource_keys = properties[:jit_pl_concepts_resources].map {|r| r['seeding_key']['resource.key']}
+    concept.resources = Resource.where(key: resource_keys, course_version: jit_pl_course_version)
+
     concept.id
   end
 end

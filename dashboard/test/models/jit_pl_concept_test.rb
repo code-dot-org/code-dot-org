@@ -72,6 +72,49 @@ class JitPlConceptTest < ActiveSupport::TestCase
     assert_equal resource.name, serialized[:resources].first[:name]
   end
 
+  test "properties_from_file correctly parses resource and join table data written by write_serialization" do
+    concept = create(:jit_pl_concept, name: 'loops')
+    resource = create(:resource, name: 'My Resource')
+    concept.resources << resource
+
+    # Build the file content the same way write_serialization does
+    file_content = JSON.pretty_generate({
+                                          name: concept.name,
+                                          display_name: concept.display_name,
+                                          text_content: concept.text_content,
+                                          resources: concept.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
+                                          jit_pl_concepts_resources: concept.resources.map {|r| {seeding_key: {'concept.name' => concept.name, 'resource.key' => r.key}}},
+                                        }
+    )
+
+    properties = JitPlConcept.properties_from_file(file_content)
+
+    assert_equal 1, properties[:resources].length
+    assert_equal resource.key, properties[:resources].first['key']
+    assert_equal resource.name, properties[:resources].first['name']
+    assert_equal 1, properties[:jit_pl_concepts_resources].length
+    assert_equal 'loops', properties[:jit_pl_concepts_resources].first['seeding_key']['concept.name']
+    assert_equal resource.key, properties[:jit_pl_concepts_resources].first['seeding_key']['resource.key']
+  end
+
+  test "properties_from_file parses resources and join table" do
+    data = {
+      name: 'loops',
+      display_name: 'Loops',
+      text_content: 'Repeating code.',
+      resources: [{key: 'my-resource', name: 'My Resource', url: 'http://example.com', properties: {}}],
+      jit_pl_concepts_resources: [{seeding_key: {'concept.name' => 'loops', 'resource.key' => 'my-resource'}}]
+    }
+
+    properties = JitPlConcept.properties_from_file(data.to_json)
+
+    assert_equal 'loops', properties[:name]
+    assert_equal 1, properties[:resources].length
+    assert_equal 'my-resource', properties[:resources].first['key']
+    assert_equal 1, properties[:jit_pl_concepts_resources].length
+    assert_equal 'my-resource', properties[:jit_pl_concepts_resources].first['seeding_key']['resource.key']
+  end
+
   test "seed_all removes concepts with no corresponding file" do
     concept_to_keep = create(:jit_pl_concept)
     concept_to_remove = create(:jit_pl_concept)
