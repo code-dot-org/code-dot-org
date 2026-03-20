@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-19 05:27:28 UTC",
+    "serialized_at": "2026-03-19 18:19:35 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -4494,19 +4494,6 @@
       }
     },
     {
-      "key": "8fad44d7-1152-4851-9273-959114635bb6",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 4 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "8fad44d7-1152-4851-9273-959114635bb6",
-        "lesson_activity.key": "97c3c98d-c0de-4928-aae2-63003824c35a"
-      }
-    },
-    {
       "key": "09295084-9bd4-4f74-b1e9-ae47b4b846fd",
       "position": 1,
       "properties": {
@@ -5046,6 +5033,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-preassessment_2026"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -5068,6 +5058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson1-level1_v3_2026"
+        ],
         "progression": "Paper App Prototype Activity Guide"
       },
       "bonus": false,
@@ -5090,6 +5083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level1_2025-v3"
+        ],
         "progression": "Usability Checklist"
       },
       "bonus": false,
@@ -5112,6 +5108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level2_2025-v2"
+        ],
         "progression": "App Redesign"
       },
       "bonus": false,
@@ -5134,6 +5133,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson2-level3_2025-v2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -5156,6 +5158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level1-explore_2026"
+        ],
         "progression": "Explore a Web Page"
       },
       "bonus": false,
@@ -5178,6 +5183,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-level1_2026"
+        ],
         "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
@@ -5200,6 +5208,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson3-sketch-lab-choice_2026"
+        ],
         "progression": "Plan Your AI Prompt"
       },
       "bonus": false,
@@ -5222,6 +5233,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level1_v3_2026"
+        ],
         "progression": "Style Critique Activity Guide"
       },
       "bonus": false,
@@ -5244,6 +5258,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level1_2026"
+        ],
         "progression": "Mood Board Design"
       },
       "bonus": false,
@@ -5266,6 +5283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level2_v2026"
+        ],
         "progression": "Mood Board Design"
       },
       "bonus": false,
@@ -5288,6 +5308,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson4-level3-v2_2026"
+        ],
         "progression": "Mood Board Design"
       },
       "bonus": false,
@@ -5310,6 +5333,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level1_v3_2026"
+        ],
         "progression": "Brand Analysis"
       },
       "bonus": false,
@@ -5332,6 +5358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level2_2026"
+        ],
         "progression": "Create a Brand Kit"
       },
       "bonus": false,
@@ -5354,6 +5383,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson5-level5_2026"
+        ],
         "progression": "Create a Brand Kit"
       },
       "bonus": false,
@@ -5376,6 +5408,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level4_2026-v4"
+        ],
         "progression": "Apply a Stylesheet"
       },
       "bonus": false,
@@ -5398,6 +5433,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level2_2026-v2"
+        ],
         "progression": "Apply a Stylesheet"
       },
       "bonus": false,
@@ -5420,6 +5458,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level3_2026-v3"
+        ],
         "progression": "Apply a Stylesheet"
       },
       "bonus": false,
@@ -5442,6 +5483,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level4_2025-v2"
+        ],
         "progression": "Styling Challenge"
       },
       "bonus": false,
@@ -5464,6 +5508,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson6-level8_2026-v2"
+        ],
         "progression": "Styling Challenge"
       },
       "bonus": false,
@@ -5486,6 +5533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson7-level1_choice_2026"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5507,6 +5557,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level1_2026"
+        ],
         "progression": "Create a Site Map and User Flow"
       },
       "bonus": false,
@@ -5529,6 +5582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level2_2026"
+        ],
         "progression": "Create a Site Map and User Flow"
       },
       "bonus": false,
@@ -5551,6 +5607,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson8-level7_2026"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5573,28 +5632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Build Your Web App with AI"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-panel_2026"
+        "level_keys": [
+          "ai-generated-design-lesson8-level8_2026"
         ],
-        "lesson.key": "Lesson 8: Site Maps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson8-panel_2026"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
         "progression": "Build Your Web App with AI"
       },
       "bonus": false,
@@ -5612,11 +5652,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level1-test-2026"
+        ],
         "progression": "Accessibility Audit"
       },
       "bonus": false,
@@ -5634,11 +5677,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level3_2026"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5655,11 +5701,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level4_2026"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5676,11 +5725,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson9-level5_2026"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5697,11 +5749,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson10-level1_2026"
+        ],
         "progression": "Wireframe an App Idea"
       },
       "bonus": false,
@@ -5719,11 +5774,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson11-level1_2026"
+        ],
         "progression": "Generate from a Wireframe"
       },
       "bonus": false,
@@ -5741,77 +5799,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Refine, Debug, Iterate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level2_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "b07a6727-159a-48bd-94ef-061d9b944b1f"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson11-level2_2026"
-      ]
-    },
-    {
-      "chapter": 34,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Check for Understanding"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level3_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "9a464937-69c2-4b14-a586-48439f336030"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson11-level3_2026"
-      ]
-    },
-    {
-      "chapter": 35,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level4_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8fad44d7-1152-4851-9273-959114635bb6"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson11-level4_2026"
-      ]
-    },
-    {
-      "chapter": 36,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level1_2026"
+        ],
         "progression": "Web App Responsiveness"
       },
       "bonus": false,
@@ -5829,11 +5824,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level4_2026"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5851,11 +5849,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson12-level5_2026"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5873,11 +5874,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level1_2026"
+        ],
         "progression": "Milestone 1: Define Your Magazine"
       },
       "bonus": false,
@@ -5895,11 +5899,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level2_2026"
+        ],
         "progression": "Milestone 2: Build Your First Draft"
       },
       "bonus": false,
@@ -5917,11 +5924,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level3_2026"
+        ],
         "progression": "Milestone 3: Refine and Align"
       },
       "bonus": false,
@@ -5939,11 +5949,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level4_2026"
+        ],
         "progression": "Milestone 4: Test and Finalize"
       },
       "bonus": false,
@@ -5961,11 +5974,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-lesson13-level5_2026"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -5983,11 +5999,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ai-generated-design-postassessment_2026"
+        ],
         "progression": "End of Unit Assessment"
       },
       "bonus": false,
@@ -6296,18 +6315,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson8-panel_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson8-panel_2026"
-        ],
-        "lesson.key": "Lesson 8: Site Maps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-generated-design-lesson8-level8_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson8-level8_2026"
@@ -6388,42 +6395,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "ed08db48-f3e6-40a8-81f1-093f71598511"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson11-level2_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level2_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "b07a6727-159a-48bd-94ef-061d9b944b1f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson11-level3_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level3_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "9a464937-69c2-4b14-a586-48439f336030"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson11-level4_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson11-level4_2026"
-        ],
-        "lesson.key": "Lesson 11: From Wireframes to Layouts",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "8fad44d7-1152-4851-9273-959114635bb6"
       }
     },
     {
@@ -7906,6 +7877,14 @@
   ],
   "rubrics": [
     {
+      "level_name": "ai-generated-design-lesson11-level1_2026",
+      "seeding_key": {
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
       "level_name": "ai-generated-design-lesson2-level3_2025-v2",
       "seeding_key": {
         "lesson.key": "Lesson 2: The User's Experience",
@@ -7956,6 +7935,32 @@
       "seeding_key": {
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+      "position": 1,
+      "learning_goal": "Prompt Planning & Alignment",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+      "position": 2,
+      "learning_goal": "Evaluation of AI Output",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8026,6 +8031,19 @@
       }
     },
     {
+      "key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+      "position": 3,
+      "learning_goal": "Prompt Refinement & Debugging",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
       "key": "fd8625f7-991f-48f1-9e4f-a51bdc58ed2d",
       "position": 2,
       "learning_goal": "Evaluate and refine AI-generated output.",
@@ -8084,6 +8102,102 @@
         "understanding": 3,
         "learning_goal.key": "0eb3cd3e-8820-42f9-abe2-b330728ce653",
         "lesson.key": "Lesson 6: Intro to CSS",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The prompt is vague or unrelated to the wireframe, resulting in output that does not reflect the intended layout.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The prompt includes some reference to the wireframe but lacks clarity or key constraints, leading to partial alignment in the output.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The prompt includes relevant structure and constraints from the wireframe, producing output that mostly aligns with the intended layout.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The prompt clearly reflects the wireframe’s structure, constraints, and accessibility needs, resulting in output that closely aligns with the intended layout.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1878647e-8e99-4480-ac6f-70bca1685c44",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not meaningfully compare the AI output to the wireframe.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Identifies matches or mismatches superficially or with limited connection to the wireframe.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Identifies relevant matches and mismatches, with mostly accurate comparisons to the wireframe.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Clearly identifies multiple meaningful matches and mismatches between the AI output and wireframe, focusing on layout and structure.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "1fd23b3a-995a-46c7-977a-7cfb184cef23",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8324,6 +8438,54 @@
         "understanding": 3,
         "learning_goal.key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Does not attempt or is unable to revise the prompt to improve the output.  ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Attempts to revise the prompt but changes are unclear, unfocused, or do not improve alignment.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Selects a mismatch and revises the prompt in a way that improves alignment with the wireframe.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Selects a specific mismatch and uses targeted prompt revisions to significantly improve alignment with the wireframe.  \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ec2f38c0-aab8-4c43-ab4f-52bff8b984cd",
+        "lesson.key": "Lesson 11: From Wireframes to Layouts",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
