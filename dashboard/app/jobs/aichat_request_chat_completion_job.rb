@@ -68,6 +68,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
+      rescue AichatAiHelper::ModelRateLimitedError
+        return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], nil]
       end
     else
       begin
