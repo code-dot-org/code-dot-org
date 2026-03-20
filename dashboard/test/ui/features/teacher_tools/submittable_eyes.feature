@@ -5,8 +5,8 @@ Feature: Submittable level
 Scenario: Submittable level
   When I open my eyes to test "submittable level"
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/9/levels/3?noautoplay=true"
-  And The header is finished animating
   And I wait to see ".submitButton"
+  And The header is finished animating
   And I see no difference for "initial load"
   And I click selector ".answerbutton[index=0]"
   And I click selector ".submitButton"

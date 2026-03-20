@@ -9,6 +9,7 @@ Scenario: Fallback player
   Given I am on "http://studio.code.org/flappy/1?force_youtube_fallback"
   When I wait to see "#x-close"
   Then I see ".video-js"
+  And The header is finished animating
   And I see no difference for "fallback video player for level"
   And I close my eyes
 
@@ -17,6 +18,7 @@ Scenario: Fallback player for unplugged
   When I open my eyes to test "fallback player for unplugged"
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/55/levels/1?force_youtube_fallback"
   When I wait to see ".vjs-big-play-button"
+  And The header is finished animating
   And I see no difference for "fallback video player for unplugged"
   And I close my eyes
 
@@ -25,6 +27,7 @@ Scenario: Fallback player for embedded
   When I open my eyes to test "fallback player for embedded"
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1?force_youtube_fallback=1"
   When I wait to see ".vjs-big-play-button"
+  And The header is finished animating
   And I see no difference for "fallback video player for embedded"
   And I close my eyes
 
