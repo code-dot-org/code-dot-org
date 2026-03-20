@@ -23,8 +23,8 @@ export default function setBlocklyGlobal() {
     blocklyLocaleMap['en-us'];
   BlocklyCore.setLocale(messages);
   // Blockly v12+ uses fetch() to preload audio files during inject(), passing
-  // relative URLs that node-fetch rejects in the Jest/Node environment.
+  // relative URLs that fail in test environments (Jest/Node and Karma).
   // Stub the load method to prevent those fetch calls in tests.
-  BlocklyCore.WorkspaceAudio.prototype.load = jest.fn().mockResolvedValue();
+  BlocklyCore.WorkspaceAudio.prototype.load = () => Promise.resolve();
   window.Blockly = initializeBlocklyWrapper(BlocklyCore);
 }
