@@ -3,10 +3,10 @@
 #============================================================
 
 locals {
-  google_groups_admin_email          = data.terraform_remote_state.codeai_k8s_dex.outputs.google_email_with_groups_readonly_scope
-  google_workspace_domains           = data.terraform_remote_state.codeai_k8s_dex.outputs.google_workspace_domains
+  google_groups_admin_email           = data.terraform_remote_state.codeai_k8s_dex.outputs.google_email_with_groups_readonly_scope
+  google_workspace_domains            = data.terraform_remote_state.codeai_k8s_dex.outputs.google_workspace_domains
   dex_google_service_account_key_json = data.terraform_remote_state.codeai_k8s_dex.outputs.google_service_account_key_json
-  dex_google_redirect_url            = "https://${local.dex_hostname}/callback"
+  dex_google_redirect_url             = "https://${local.dex_hostname}/callback"
 
   # Kubernetes write-only secret fields need a separate revision trigger to update on key rotation.
   dex_google_service_account_key_revision = parseint(substr(md5(local.dex_google_service_account_key_json), 0, 8), 16)
@@ -39,15 +39,21 @@ resource "kubernetes_secret_v1" "dex_google_service_account" {
 }
 
 resource "helm_release" "dex" {
-  name             = "dex"
-  repository       = "https://charts.dexidp.io"
-  chart            = "dex"
-  version          = "0.24.0"
-  namespace        = "dex"
+  name       = "dex"
+  repository = "https://charts.dexidp.io"
+  chart      = "dex"
+  version    = "0.24.0"
+  namespace  = "dex"
 
   values = [yamlencode({
     config = {
       issuer = "https://${local.dex_hostname}"
+
+      web = {
+        # Kargo performs OIDC discovery and token exchange from the browser
+        # against Dex, so Dex must allow the Kargo UI origin for CORS.
+        allowedOrigins = ["https://${local.kargo_hostname}"]
+      }
 
       storage = {
         type = "kubernetes"
