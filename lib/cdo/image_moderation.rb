@@ -1,4 +1,5 @@
 require 'cdo/azure_content_moderator'
+require 'cdo/azure_ai_content_safety'
 require 'honeybadger/ruby'
 require 'cdo/firehose'
 
@@ -23,6 +24,16 @@ module ImageModeration
   end
 
   def self.moderate_image(image_data, content_type, image_url = nil)
-    # TODO: Implement AI Content Safety moderation
+    return :everyone unless CDO.azure_ai_content_safety_key
+    AzureAiContentSafety.new(
+      endpoint: CDO.azure_ai_content_safety_endpoint,
+      api_key: CDO.azure_ai_content_safety_key
+    ).moderate_image(image_data, content_type, image_url)
+  rescue AzureAiContentSafety::AzureError => exception
+    # If something goes wrong with the image moderation service our fallback
+    # behavior is to allow everything through, but we also want to notify
+    # Honeybadger so that we can figure out exactly what is going wrong.
+    Honeybadger.notify(exception)
+    :unknown
   end
 end

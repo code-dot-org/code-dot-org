@@ -1085,6 +1085,37 @@ class FilesApi < Sinatra::Base
   end
 
   #
+  # POST /v3/images/moderate-ai-content-safety
+  #
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return a JSON rating.
+  # Possible ratings: [:everyone|:racy|:adult|:unknown]
+  #
+  post %r{/v3/images/moderate-ai-content-safety$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    image_stream = StringIO.new(raw)
+
+    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    content_type_header = request.content_type
+
+    # Validate allowed content types
+    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
+      status 400
+      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
+    end
+
+    # Optionally record the URL for metrics, if passed as a query param.
+    image_url = params['image_url']
+
+    rating = ImageModeration.moderate_image(image_stream, content_type_header, image_url)
+
+    {rating: rating.to_s}.to_json
+  end
+
+  #
   # Returns the (parsed) manifest associated with the given encrypted_channel_id.
   #
   private def get_manifest(bucket, encrypted_channel_id)
