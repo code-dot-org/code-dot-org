@@ -96,19 +96,6 @@ resource "helm_release" "argocd" {
           "ephemeral-storage" = "100Gi"
         }
       }
-
-      containerSecurityContext = {
-        runAsNonRoot             = false
-        runAsUser                = 0
-        readOnlyRootFilesystem   = true
-        allowPrivilegeEscalation = false
-        seccompProfile = {
-          type = "RuntimeDefault"
-        }
-        capabilities = {
-          drop = ["ALL"]
-        }
-      }
     }
   })]
 
