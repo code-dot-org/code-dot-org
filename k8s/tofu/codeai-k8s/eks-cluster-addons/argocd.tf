@@ -19,6 +19,12 @@ resource "helm_release" "argocd" {
       params = {
         # TLS terminates at the ALB, so argocd-server should speak plain HTTP to the ingress backend:
         "server.insecure" = true
+
+        # Only raise these if repo-server work starts succeeding after we bump
+        # ARGOCD_EXEC_TIMEOUT, but the API server or application-controller
+        # still give up waiting on repo-server RPCs.
+        # "server.repo.server.timeout.seconds"     = "600"
+        # "controller.repo.server.timeout.seconds" = "600"
       }
 
       cm = {
@@ -89,11 +95,28 @@ resource "helm_release" "argocd" {
     }
 
     repoServer = {
+      extraEnv = [
+        {
+          name  = "ARGOCD_EXEC_TIMEOUT"
+          value = "10m"
+        }
+      ]
+
       resources = {
+        # TODO: Local concurrent-fetch benchmarking showed that moving from 1 CPU / 4Gi
+        # to 2 CPU / 8Gi cut a large code-dot-org fetch by about 3 minutes out of
+        # roughly 15 minutes. Consider that bump for full production usage.
         requests = {
+          cpu                 = "1000m"
+          memory              = "4Gi"
           # The default Fargate ephemeral storage per pod (20GB) is too small
           # for a single checkout of the code-dot-org repo 🤪
-          "ephemeral-storage" = "100Gi"
+          "ephemeral-storage" = "40Gi"
+        }
+        limits = {
+          cpu                 = "1000m"
+          memory              = "4Gi"
+          "ephemeral-storage" = "40Gi"
         }
       }
     }

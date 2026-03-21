@@ -45,6 +45,16 @@ Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, foll
 `ServerSideApply=true` requirement for self-management:
 <https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
 
+### GitHub Actions image refs
+
+Update the `k8s-*.yml` GitHub Actions workflows so pushed Docker tags include the commit hash in
+addition to the branch name.
+
+Also update the GitOps writeback flow to commit an image ref that includes the Git hash (or similar
+immutable build identity), instead of only writing branch-like tags such as:
+
+`image: ghcr.io/code-dot-org/code-dot-org:k8s-kargo # updated by k8s-commit-image-ref-to-argocd.yml`
+
 ### Dex
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
