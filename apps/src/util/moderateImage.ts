@@ -1,6 +1,7 @@
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 
 const LABS_WITH_IMAGE_MODERATION = [
@@ -106,17 +107,35 @@ export const moderateImage = async (
   });
   try {
     const fileToModerate = await scaleFileForModeration(file);
-    const response = await HttpClient.post(
-      `/v3/images/moderate-ai-content-safety`,
-      fileToModerate,
-      true,
-      {'Content-Type': fileToModerate.type || 'application/octet-stream'}
+    const useAiContentSafety = experiments.isEnabledAllowingQueryString(
+      experiments.AI_CONTENT_SAFETY
     );
+    const endpoint = useAiContentSafety
+      ? '/v3/images/moderate-ai-content-safety'
+      : '/v3/images/moderate';
+    const response = await HttpClient.post(endpoint, fileToModerate, true, {
+      'Content-Type': fileToModerate.type || 'application/octet-stream',
+    });
     const json = await response.json();
     console.log('json: ', json);
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
-    if (json?.rating === 'everyone' || json?.rating === 'unknown') {
-      return 'ok';
+    if (useAiContentSafety) {
+      // Azure AI Content Safety
+      const CATEGORY_SEVERITY_LEVEL_BLOCKED = 2;
+      const categories = json?.categoriesAnalysis;
+      if (
+        categories?.every(
+          (category: {severity: number}) =>
+            category?.severity < CATEGORY_SEVERITY_LEVEL_BLOCKED
+        )
+      ) {
+        return 'ok';
+      }
+    } else {
+      // Azure Content Moderator
+      if (json?.rating === 'everyone' || json?.rating === 'unknown') {
+        return 'ok';
+      }
     }
     MetricsReporter.incrementCounter('ModerateCustomImage.Flagged', dimensions);
     analyticsReporter.sendEvent(flaggedEvent, {
