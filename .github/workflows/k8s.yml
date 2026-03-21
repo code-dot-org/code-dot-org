@@ -9,10 +9,9 @@ on:
   # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
   push:
     branches:
-      # Disabled while we get used to this:
-      # - staging
-      # - levelbuilder
+      - staging
       - test
+      - levelbuilder
       - production
   pull_request:
 
