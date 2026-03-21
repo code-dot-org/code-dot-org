@@ -15,7 +15,9 @@ const LABS_WITH_IMAGE_MODERATION = [
 const ALLOWED_IMAGE_FILE_EXTENSIONS = ['jpg', 'jpeg', 'png', 'gif'];
 
 // Azure Content Moderator requires both dimensions to be at least this size.
-const MIN_MODERATION_DIMENSION = 128;
+const MIN_MODERATION_DIMENSION_CONTENT_MODERATOR = 128;
+// Azure AI Content Safety requires both dimensions to be at least this size.
+const MIN_MODERATION_DIMENSION_AI_CONTENT_SAFETY = 50;
 
 interface AnalyticsData {
   uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
@@ -28,24 +30,31 @@ interface AnalyticsData {
  * MIN_MODERATION_DIMENSION, otherwise returns the original file unchanged.
  * The copy is only used for the moderation API call — callers still upload
  * the original file.
+ * TODO: Once we migrate to the new moderation API, we'll scale the file to min size on the backend.
  */
-const scaleFileForModeration = (file: File): Promise<File> => {
+const scaleFileForModeration = (
+  file: File,
+  useAiContentSafety: boolean
+): Promise<File> => {
   return new Promise((resolve, reject) => {
+    const minModerationDimension = useAiContentSafety
+      ? MIN_MODERATION_DIMENSION_AI_CONTENT_SAFETY
+      : MIN_MODERATION_DIMENSION_CONTENT_MODERATOR;
     const reader = new FileReader();
     reader.onload = () => {
       const img = new Image();
       img.onload = () => {
         const {width, height} = img;
         if (
-          width >= MIN_MODERATION_DIMENSION &&
-          height >= MIN_MODERATION_DIMENSION
+          width >= minModerationDimension &&
+          height >= minModerationDimension
         ) {
           resolve(file);
           return;
         }
         const scale = Math.max(
-          MIN_MODERATION_DIMENSION / width,
-          MIN_MODERATION_DIMENSION / height
+          minModerationDimension / width,
+          minModerationDimension / height
         );
         const canvas = document.createElement('canvas');
         canvas.width = Math.ceil(width * scale);
@@ -106,9 +115,12 @@ export const moderateImage = async (
     levelPath: window.location.pathname,
   });
   try {
-    const fileToModerate = await scaleFileForModeration(file);
     const useAiContentSafety = experiments.isEnabledAllowingQueryString(
       experiments.AI_CONTENT_SAFETY
+    );
+    const fileToModerate = await scaleFileForModeration(
+      file,
+      useAiContentSafety
     );
     const endpoint = useAiContentSafety
       ? '/v3/images/moderate-ai-content-safety'
