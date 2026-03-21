@@ -1,4 +1,4 @@
-# In a previous step (see: ./k8s_skaffold_build.yml) we built the docker image for multiple
+# In a previous step (see: ./k8s-skaffold-build.yml) we built the docker image for multiple
 # architectures (e.g. amd64, arm64) in parallel on a GH runner for that specific architecture.
 #
 # The resulting build artifacts are multiple tagged single-architecture docker images, for example:
@@ -13,6 +13,13 @@ name: k8s-stitch-multiplatform-image
 
 on:
   workflow_call:
+    outputs:
+      codeai_docker_image_ref:
+        description: "Fully qualified docker image reference for the final multi-platform image"
+        value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag:
+        description: "Docker tag for the final multi-platform image"
+        value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_tag }}
     inputs:
       docker_tags_json:
         description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
@@ -26,6 +33,9 @@ on:
 jobs:
   stitch-multi-platform:
     name: stitch multi-platform image
+    outputs:
+      codeai_docker_image_ref: ${{ steps.export-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag: ${{ steps.export-image.outputs.codeai_docker_tag }}
 
     # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
@@ -39,10 +49,10 @@ jobs:
         shell: bash -ex {0}
     steps:
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
+        uses: docker/setup-buildx-action@v4.0.0
 
       - name: Login to GitHub Container Registry
-        uses: docker/login-action@v3
+        uses: docker/login-action@v4.0.0
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -63,3 +73,9 @@ jobs:
           # Use imagetools to stitch all platform-specific images into one multi-platform image
           # $MULTI_PLATFORM_IMAGE is the final multi-platform image name, e.g. code-dot-org:my-branch
           docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
+
+      - name: Export stitched image ref
+        id: export-image
+        run: |
+          echo "codeai_docker_image_ref=$MULTI_PLATFORM_IMAGE" >> "$GITHUB_OUTPUT"
+          echo "codeai_docker_tag=${{ inputs.docker_tag }}" >> "$GITHUB_OUTPUT"
