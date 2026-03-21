@@ -1103,9 +1103,8 @@ class FilesApi < Sinatra::Base
       return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
-    rating = ImageModeration.moderate_image(image_stream, content_type_header)
-
-    {rating: rating.to_s}.to_json
+    result = ImageModeration.moderate_image(image_stream, content_type_header)
+    result.to_json
   end
 
   #

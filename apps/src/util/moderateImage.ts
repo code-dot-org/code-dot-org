@@ -107,12 +107,13 @@ export const moderateImage = async (
   try {
     const fileToModerate = await scaleFileForModeration(file);
     const response = await HttpClient.post(
-      `/v3/images/moderate`,
+      `/v3/images/moderate-ai-content-safety`,
       fileToModerate,
       true,
       {'Content-Type': fileToModerate.type || 'application/octet-stream'}
     );
     const json = await response.json();
+    console.log('json: ', json);
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
     if (json?.rating === 'everyone' || json?.rating === 'unknown') {
       return 'ok';
