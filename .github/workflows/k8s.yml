@@ -35,6 +35,8 @@ jobs:
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
+  # Step 3: commit+push the new docker image ref to a deployment values.yaml file in the
+  # k8s-gitops repo, which is constantly monitored by ArgoCD to sync deployments/deploy
   commit-image-ref-to-argocd:
     name: commit image ref to argocd
     uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
