@@ -9,31 +9,46 @@ on:
   # PRs down to PRs where the source-branch is *k8s* using `if:` blocks below.
   push:
     branches:
+      - staging
+      - test
+      - levelbuilder
       - production
   pull_request:
 
 jobs:
   # Step 1: build platform specific docker images: amd64, arm64, using `skaffold build`
   skaffold-build:
-    name: skaffold build
-    uses: ./.github/workflows/k8s_skaffold_build.yml
-    # only run on PRs where the source branch is *k8s*:
     if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
+    name: skaffold build
+    uses: ./.github/workflows/k8s-skaffold-build.yml
+    # only run on PRs where the source branch is *k8s*:
     secrets: inherit
 
   # Step 2: stitch the platform specific images into a multi-platform image
   stitch-multiplatform-image:
     name: stitch multi-platform image
-    uses: ./.github/workflows/k8s_stitch_multiplatform_image.yml
+    uses: ./.github/workflows/k8s-stitch-multiplatform-image.yml
     needs: skaffold-build
-    # only run on PRs where the source branch is *k8s*:
-    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
     with:
       docker_tags_json: ${{ toJSON(needs.skaffold-build.outputs) }}
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
-# Grant the GITHUB_TOKEN the necessary permissions to publish to GitHub Packages
+  # Step 3: commit+push the new docker image ref to a deployment values.yaml file in the
+  # k8s-gitops repo, which is constantly monitored by ArgoCD to sync deployments/deploy
+  commit-image-ref-to-argocd:
+    name: commit image ref to argocd
+    uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
+    needs: stitch-multiplatform-image
+    with:
+      branch_name: ${{ github.head_ref || github.ref_name }}
+      codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+    secrets: inherit
+
+# Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
 permissions:
+  # permission to checkout this repo in the build workflow
   contents: read
+  # permission to publish container images to ghcr.io
   packages: write
