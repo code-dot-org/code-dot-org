@@ -40,7 +40,7 @@ jobs:
     uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
     needs: stitch-multiplatform-image
     with:
-      branch_name: ${{ github.ref_name }}
+      branch_name: ${{ github.head_ref || github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
     secrets: inherit
