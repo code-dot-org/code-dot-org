@@ -1,5 +1,11 @@
-variable "region" {
-  description = "AWS region for the cluster and supporting resources."
+variable "dex_google_client_id" {
+  description = "Google OAuth client ID for Dex."
   type        = string
-  default     = "us-east-1"
+}
+
+variable "dex_google_client_secret" {
+  description = "Optional Google OAuth client secret for Dex. If set, we upload it to AWS Secrets Manager. If not set, we download it from AWS Secrets Manager."
+  type        = string
+  sensitive   = true
+  default     = null
 }
