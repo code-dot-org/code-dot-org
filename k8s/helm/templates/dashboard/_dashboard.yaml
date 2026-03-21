@@ -8,6 +8,21 @@
 {{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
 {{- $isJob := eq (.kind | default "Deployment") "Job" }}
 
+# Calculate CPU and memory limits from the original environment sizing table.
+# Weighted across all environments, floored to 2 decimal places:
+# - 808 GiB / 139 workers = 5.81 GiB per worker
+# - 208 CPU / 139 workers = 1.49 CPU per worker
+# Lowest limits we'll set: 4 CPU and 16 GiB RAM.
+{{- $dashboardWorkers := int (default 0 .Values.dashboard_workers) }}
+{{- $memoryLimitGi := mulf $dashboardWorkers 5.81 }}
+{{- if lt $memoryLimitGi 16.0 }}
+{{- $memoryLimitGi = 16.0 }}
+{{- end }}
+{{- $cpuLimit := mulf $dashboardWorkers 1.49 }}
+{{- if lt $cpuLimit 4.0 }}
+{{- $cpuLimit = 4.0 }}
+{{- end }}
+
 apiVersion: {{ .apiVersion | default "apps/v1" }}
 kind: {{ .kind | default "Deployment" }}
 metadata:
@@ -79,6 +94,10 @@ spec:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
 
         {{- if $isDeployment }}
+        resources:
+          limits:
+            cpu: {{ $cpuLimit }}
+            memory: {{ printf "%.2fGi" $memoryLimitGi }}
         ports:
         - name: http
           containerPort: 3000

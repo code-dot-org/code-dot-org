@@ -2,6 +2,10 @@ import {offset} from '@floating-ui/dom';
 import {useEffect, useMemo, useState} from 'react';
 
 import useLab2ProductTour from '@cdo/apps/lab2/hooks/useLab2ProductTour';
+import {
+  ProductTour,
+  isTourEnabledOnLevel,
+} from '@cdo/apps/lab2/productTours/productToursPerLab';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
@@ -28,7 +32,13 @@ const onTourCancel = (stepIndex: number) =>
     step: stepIndex.toString(),
   });
 
-const useSketchlabShepherdTour = () => {
+interface UseSketchlabShepherdTourParams {
+  productTours: string[] | undefined;
+}
+
+const useSketchlabShepherdTour = ({
+  productTours,
+}: UseSketchlabShepherdTourParams) => {
   // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
   const [isToolbarReady, setIsToolbarReady] = useState(false);
   useEffect(() => {
@@ -73,7 +83,13 @@ const useSketchlabShepherdTour = () => {
   const {tour} = useLab2ProductTour({
     getSteps: createSketchlabTourSteps,
     localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
-    tourAvailable: isToolbarReady,
+    tourAvailable:
+      isToolbarReady &&
+      isTourEnabledOnLevel(
+        ProductTour.SketchlabIntro,
+        'sketchlab',
+        productTours
+      ),
     onStart: onTourStart,
     onComplete: onTourComplete,
     onCancel: onTourCancel,

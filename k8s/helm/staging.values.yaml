@@ -1,0 +1,4 @@
+RAILS_ENV: staging
+dashboard_workers: 10
+healthChecks:
+  enabled: true

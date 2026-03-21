@@ -25960,8 +25960,28 @@ en:
           title: Designing Reliable Apps with AI and APIs
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit builds students' capacity to develop apps that depend on external data sources, progressing from foundational concepts to a substantial independent project. Early lessons establish the core mental models — the request/response cycle, the structure of JSON, and the difference between synchronous and asynchronous execution — using concrete analogies and hands-on API exploration before students write any code of their own. The middle lessons shift toward implementation: students learn to fetch data using async/await, render it dynamically with loops, and handle real-world messiness when backend data changes or is missing. Lesson 9 introduces human-centered reliability as a design principle, asking students to think beyond the "happy path" and deliberately design loading, empty, and error states. The unit culminates in Lesson 11, a five-day Explore-Style App Project structured around four milestones — API connection, interactive reveal, defensive design, and documentation — that gives students a professional-grade workflow and a portfolio-worthy deliverable. Throughout, AI is positioned as a debugging and refinement collaborator, with the rubric and milestone structure designed to keep students in the driver's seat on design and logic decisions.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
+          student_description: |-
+            In this unit, you'll learn how to build apps that feel alive — apps that pull real, up-to-date information from the internet rather than relying on data you hard-coded yourself. You'll start by exploring how apps communicate with external services through APIs and JSON, then dig into the mechanics of asynchronous programming: why apps sometimes have to wait for data, and how professional developers keep the experience smooth while that happens. From there, you'll practice rendering dynamic content on the page, designing for the full range of outcomes a user might encounter — a successful result, an empty search, a slow connection, or an outright error — and building interfaces that keep users informed and in control no matter what. The unit ends with a multi-day project where you design and build your own Explore-Style app: a real, working application that fetches live data from an API of your choosing, responds to user interaction, and handles the unexpected like a professional.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
         web-apps-with-ai-capstone-project-pilot-2025:
           lessons: {}
           lesson_groups:
@@ -25971,8 +25991,32 @@ en:
           title: Web Apps with AI Capstone Project
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
+          student_description: |-
+            This unit is the capstone of AI Foundations Semester 2, where you synthesize your learning to design and build a complete web app with a clear purpose and audience. You integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with your values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
         aif2-tutor-pilot-2025:
           lesson_groups:
             lessonGroup-2:
@@ -27061,6 +27105,10 @@ en:
               name: Messing Around
             lesson-2:
               name: Progression Idea 2
+            lesson-3:
+              name: Templates
+            lesson-4:
+              name: Progression V2
           lesson_groups: {}
           name: hoai-web-lab-intro-test
           title: HoAI Web Lab Intro
