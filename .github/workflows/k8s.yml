@@ -36,7 +36,7 @@ jobs:
     secrets: inherit
 
   commit-image-ref-to-argocd:
-    name: commit new codeai docker image ref to k8s-gitops repo => trigger argocd
+    name: commit image ref to argocd
     uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
     needs: stitch-multiplatform-image
     with:
