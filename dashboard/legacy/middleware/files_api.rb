@@ -1076,10 +1076,7 @@ class FilesApi < Sinatra::Base
       return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
-    # Optionally record the URL for metrics, if passed as a query param.
-    image_url = params['image_url']
-
-    rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+    rating = ImageModeration.rate_image(image_stream, content_type_header)
 
     {rating: rating.to_s}.to_json
   end
@@ -1088,7 +1085,6 @@ class FilesApi < Sinatra::Base
   # POST /v3/images/moderate-ai-content-safety
   #
   # Moderate an image upload via ImageModeration using Azure AI Content Safety and return a JSON rating.
-  # Possible ratings: [:everyone|:racy|:adult|:unknown]
   #
   post %r{/v3/images/moderate-ai-content-safety$} do
     content_type :json
@@ -1107,10 +1103,7 @@ class FilesApi < Sinatra::Base
       return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
-    # Optionally record the URL for metrics, if passed as a query param.
-    image_url = params['image_url']
-
-    rating = ImageModeration.moderate_image(image_stream, content_type_header, image_url)
+    rating = ImageModeration.moderate_image(image_stream, content_type_header)
 
     {rating: rating.to_s}.to_json
   end

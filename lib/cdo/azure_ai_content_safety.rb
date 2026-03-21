@@ -32,25 +32,19 @@ class AzureAiContentSafety
   #
   # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - one of image/gif, image/jpeg, image/png
-  # @param [String] image_url (optional) - Only used for metrics
   # @returns [:everyone|:racy|:adult]
   # @raise [AzureAiContentSafety::RequestFailed] when the request is not successful.
   # @raise [AzureAiContentSafety::UnsupportedContentType] when the content type is unsupported.
   #
-  def moderate_image(image_data, content_type, image_url = nil)
+  def moderate_image(image_data, content_type)
     raise UnsupportedContentType.new("Cannot accept content-type #{content_type}") unless %w(
       image/gif
       image/jpeg
       image/png
     ).include? content_type
 
-    request_start_time = Time.now
     result = make_request(image_data)
-    request_duration = Time.now - request_start_time
-
-    rating = rating_from_azure_result(result)
-    report_response(image_url, rating, result, request_duration)
-    rating
+    rating_from_azure_result(result)
   end
 
   #
@@ -103,25 +97,6 @@ class AzureAiContentSafety
     else
       :everyone
     end
-  end
-
-  private def report_response(image_url, rating, data, request_duration)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'azure-ai-content-safety',
-        study_group: 'v1',
-        event: 'moderation-result',
-        data_string: rating.to_s,
-        data_json: {
-          categoriesAnalysis: data['categoriesAnalysis'],
-          RequestDuration: request_duration,
-          ImageUrl: image_url,
-          AdultSeverityThresholdUsed: adult_severity_threshold,
-          RacySeverityThresholdUsed: racy_severity_threshold,
-        }.to_json
-      }
-    )
   end
 
   #
