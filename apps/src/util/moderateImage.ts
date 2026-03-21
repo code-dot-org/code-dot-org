@@ -1,3 +1,5 @@
+import {extension as mimeToExtension} from 'mime-types';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -86,10 +88,7 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  const fileExtension =
-    file.name.lastIndexOf('.') < 0
-      ? ''
-      : file.name.split('.').pop()?.toLowerCase() || '';
+  const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
     !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
