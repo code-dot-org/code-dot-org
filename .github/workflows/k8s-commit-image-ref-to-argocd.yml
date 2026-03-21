@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout k8s-gitops
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
         with:
           repository: code-dot-org/k8s-gitops
           ref: main
