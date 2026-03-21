@@ -1,3 +1,7 @@
+# WARNING: AGENTIC SPEW AHEAD, NO HUMANS ALLOWED
+
+Notes to get back on track debugging gnar gnar issue after vacation.
+
 # Argo CD Repo-Server Disk Fill Investigation
 
 ## Summary
