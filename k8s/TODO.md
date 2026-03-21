@@ -32,6 +32,9 @@ include prometheus as a helm chart dependency??
 
 ## Tofu EKS Cluster
 
+See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
+repo-server disk-fill investigation notes.
+
 In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.
