@@ -9,3 +9,17 @@ variable "dex_google_client_secret" {
   sensitive   = true
   default     = null
 }
+
+variable "kargo_k8s_gitops_repo_username" {
+  description = "Optional Git username for Kargo pushes to k8s-gitops. Set it to upload; omit it to read from AWS Secrets Manager."
+  type        = string
+  sensitive   = true
+  default     = null
+}
+
+variable "kargo_k8s_gitops_repo_password" {
+  description = "Optional Git password or PAT for Kargo pushes to k8s-gitops. Set it to upload; omit it to read from AWS Secrets Manager."
+  type        = string
+  sensitive   = true
+  default     = null
+}

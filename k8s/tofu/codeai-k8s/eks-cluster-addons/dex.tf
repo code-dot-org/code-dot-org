@@ -66,6 +66,18 @@ resource "helm_release" "dex" {
           name         = "Argo CD"
           secret       = random_password.dex_client_secret_argocd.result
           redirectURIs = ["https://${local.argocd_hostname}/auth/callback"]
+        },
+        {
+          id           = local.kargo_hostname
+          name         = "Kargo"
+          public       = true
+          redirectURIs = ["https://${local.kargo_hostname}/login"]
+        },
+        {
+          id           = "${local.kargo_hostname}-cli"
+          name         = "Kargo CLI"
+          public       = true
+          redirectURIs = ["http://localhost/auth/callback"]
         }
       ]
 

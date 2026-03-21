@@ -68,6 +68,10 @@ jobs:
           SINGLE_ARCH_IMAGES=$(jq -r --arg prefix "$IMAGE_NAME" 'to_entries | map(select(.key | test("^docker_tag_")) | "\($prefix):\(.value)") | join(" ")' <<< "$DOCKER_TAGS_JSON")
           echo "SINGLE_ARCH_IMAGES=$SINGLE_ARCH_IMAGES" >> "$GITHUB_ENV"
 
+      - name: Require both arch images
+        run: |
+          jq -e '.docker_tag_amd64 and .docker_tag_arm64' <<< '${{ inputs.docker_tags_json }}' >/dev/null
+
       - name: Stitch platform images into a multi-platform image
         run: |
           # Use imagetools to stitch all platform-specific images into one multi-platform image

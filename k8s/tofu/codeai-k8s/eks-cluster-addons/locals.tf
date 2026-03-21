@@ -8,5 +8,6 @@ locals {
   ingress_certificate_arn = data.terraform_remote_state.eks_cluster.outputs.cluster_subdomain_wildcard_certificate_arn
 
   argocd_hostname = "argocd.${local.cluster_subdomain}"
+  kargo_hostname  = "kargo.${local.cluster_subdomain}"
   dex_hostname    = "dex.${local.cluster_subdomain}"
 }
