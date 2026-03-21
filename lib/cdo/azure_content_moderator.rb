@@ -1,5 +1,4 @@
 require 'net/http'
-require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 #
@@ -40,20 +39,14 @@ class AzureContentModerator
   #
   def rate_image(image_data, content_type, image_url = nil)
     raise UnsupportedContentType.new("Cannot accept content-type #{content_type}") unless %w(
-      image/bmp
       image/gif
       image/jpeg
       image/png
     ).include? content_type
 
-    report_request(image_url)
-
-    request_start_time = Time.now
     result = make_request(image_data, content_type)
-    request_duration = Time.now - request_start_time
 
     rating = rating_from_azure_result(result)
-    report_response(image_url, rating, result, request_duration)
     rating
   end
 
