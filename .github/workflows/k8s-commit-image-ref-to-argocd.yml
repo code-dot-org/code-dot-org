@@ -18,7 +18,7 @@ on:
 
 jobs:
   commit-image-ref-to-argocd:
-    name: commit new codeai docker image ref to k8s-gitops repo => trigger argocd
+    name: commit image ref to argocd
     runs-on: ubuntu-latest
     steps:
       - name: Checkout k8s-gitops
