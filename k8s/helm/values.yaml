@@ -19,6 +19,9 @@ require_external_secrets: false
 healthChecks:
   enabled: false
 
+resources:
+  ephemeralStorage: 30Gi
+
 autoscaling:
   enabled: false
   minReplicas: 1
