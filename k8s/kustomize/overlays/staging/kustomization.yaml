@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ../../base
 components:
-  - git::https://github.com/code-dot-org/k8s-gitops//apps/codeai/envTypes/components/staging
+  - git::https://github.com/code-dot-org/k8s-gitops//apps/codeai/envTypes/staging
