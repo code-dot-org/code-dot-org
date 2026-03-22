@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: cdo-locals.yml
-data:
-  dashboard_workers: "32"
