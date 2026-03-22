@@ -1,7 +1,7 @@
 # Default configuration, overridden by:
 # - development.values.yml
 # - production.values.yml
-# argocd-detect-probe: code-dot-org run 5 at 2026-03-22T10:15:51Z
+# argocd-detect-probe: code-dot-org run 6 at 2026-03-22T10:19:45Z
 
 image: code-dot-org:latest
 command: ["bin/dashboard-server"]
