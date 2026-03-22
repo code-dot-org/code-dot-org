@@ -356,10 +356,16 @@
   height: 100%;
 }
 
-.playRestart {
+.playControls {
   position: absolute;
   top: 48px;
   right: 12px;
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.playRestart {
   padding: 6px 16px;
   font-size: 13px;
   font-weight: 600;
@@ -368,10 +374,31 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 10;
 
   &:hover {
     background-color: $light_primary_700;
+  }
+}
+
+.playDebugToggle {
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  background-color: rgb(255 255 255 / 0.1);
+  color: $neutral_dark20;
+  border: 1px solid $neutral_dark70;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(255 255 255 / 0.15);
+    color: $neutral_light;
+  }
+
+  &On {
+    background-color: rgb(0 255 136 / 0.15);
+    color: #0F8;
+    border-color: #0F8;
   }
 }
 

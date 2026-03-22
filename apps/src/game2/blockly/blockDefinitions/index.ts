@@ -7,6 +7,7 @@ import {
 } from './createItem';
 import decreaseScore from './decreaseScore';
 import increaseScore from './increaseScore';
+import jump from './jump';
 import {
   BLOCK_TYPE as REMOVE_ITEM,
   generator as removeItemGenerator,
@@ -22,6 +23,7 @@ import {
   generator as setItemBehaviorGenerator,
   register as registerSetItemBehavior,
 } from './setItemBehavior';
+import showText from './showText';
 import startScoring from './startScoring';
 import {
   BLOCK_TYPE as WHEN_COLLIDE,
@@ -79,4 +81,6 @@ export const jsonBlocks: JsonBlockEntry[] = [
   startScoring,
   increaseScore,
   decreaseScore,
+  showText,
+  jump,
 ];

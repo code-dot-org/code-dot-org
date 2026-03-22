@@ -52,6 +52,12 @@ Available instructions (indent with two spaces under their parent block):
   removeItem "<imageName>"
     — Removes all instances of the named item from the play area with a puff effect.
 
+  showText "<message>"
+    — Shows a text message at the bottom center of the screen for 3 seconds then fades away.
+
+  jump
+    — Makes the player jump (only works when in "platform" mode and on the ground).
+
 Top-level event blocks (NOT indented under whenStarts):
 
   whenCollide "<imageName>"
@@ -137,6 +143,15 @@ function parseInstruction(line: string): Record<string, unknown> | null {
   const removeMatch = line.match(/^removeItem\s+"(.+)"$/);
   if (removeMatch) {
     return {type: 'Game2_removeItem', fields: {IMAGE: removeMatch[1]}};
+  }
+
+  const showTextMatch = line.match(/^showText\s+"(.+)"$/);
+  if (showTextMatch) {
+    return {type: 'Game2_showText', fields: {TEXT: showTextMatch[1]}};
+  }
+
+  if (line === 'jump') {
+    return {type: 'Game2_jump'};
   }
 
   return null;

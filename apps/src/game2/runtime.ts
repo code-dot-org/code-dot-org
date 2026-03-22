@@ -4,22 +4,29 @@ import {Game2ImageEntry} from './types';
 const GRID_SIZE = 50;
 
 // How many grid cells are visible across the shorter canvas dimension.
-const VIEWPORT_CELLS = 16;
+const VIEWPORT_CELLS = 7.5;
 
 // Physics constants in grid-cell units per frame.
-const MOVE_SPEED = 0.15;
-const GRAVITY = 0.015;
-const JUMP_VELOCITY = -0.5;
-const MAX_FALL_SPEED = 0.5;
-const PLATFORM_MOVE_SPEED = 0.12;
+const MOVE_SPEED = 0.075;
+const GRAVITY = 0.0075;
+const JUMP_VELOCITY = -0.25;
+const MAX_FALL_SPEED = 0.25;
+const PLATFORM_MOVE_SPEED = 0.06;
 
-// Sprite size in grid cells.
-const ITEM_CELLS = 6;
+// Sprite size in grid cells (same as a single grid cell).
+const ITEM_CELLS = 1;
+
+// Solid cells only occupy the bottom portion of the grid cell.
+const SOLID_TOP = 0.8; // fraction of cell height where the solid starts
 
 // Particle system constants.
 const PARTICLE_COUNT = 12;
 const PARTICLE_LIFETIME = 30; // frames
 const PARTICLE_SPEED = 0.25; // cells per frame
+
+// Text overlay constants (assumes ~60 fps).
+const TEXT_DISPLAY_FRAMES = 180; // 3 seconds
+const TEXT_FADE_FRAMES = 15; // quick fade at the end
 
 /** Visible-pixel bounding box, as fractions of the image (0–1). */
 interface VisibleBounds {
@@ -38,6 +45,11 @@ interface GameItem {
   vy: number;
   grounded: boolean;
   behavior: 'none' | 'move' | 'platform';
+}
+
+interface TextOverlay {
+  text: string;
+  framesRemaining: number;
 }
 
 interface Particle {
@@ -128,6 +140,10 @@ export class Game2Runtime {
 
   // Active particles for removal puff effect.
   private particles: Particle[] = [];
+  private textOverlays: TextOverlay[] = [];
+
+  // Debug overlay.
+  private debugEnabled = false;
 
   // Camera in cell units.
   private camX = 0;
@@ -139,7 +155,8 @@ export class Game2Runtime {
     canvas: HTMLCanvasElement,
     grid: string[][],
     images: Game2ImageEntry[],
-    channelId: string | undefined
+    channelId: string | undefined,
+    imageCache?: Map<string, HTMLImageElement>
   ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
@@ -150,6 +167,17 @@ export class Game2Runtime {
 
     for (const img of images) {
       this.nameToFilename.set(img.name, img.filename);
+
+      // Reuse cached image element if available.
+      const cached = imageCache?.get(img.filename);
+      if (cached) {
+        this.loadedImages.set(img.name, cached);
+        if (cached.complete && cached.naturalWidth > 0) {
+          this.visibleBounds.set(img.name, computeVisibleBounds(cached));
+        }
+        continue;
+      }
+
       const el = new Image();
       el.crossOrigin = 'anonymous';
       if (channelId) {
@@ -177,6 +205,7 @@ export class Game2Runtime {
     this.score = 0;
     this.collisionHandlers.clear();
     this.particles = [];
+    this.textOverlays = [];
 
     // Deep-copy from the original grid so runtime removals don't persist.
     this.grid = this.sourceGrid.map(row => [...row]);
@@ -231,6 +260,19 @@ export class Game2Runtime {
       this.removeItemByName(name);
     };
 
+    const showText = (text: string) => {
+      this.textOverlays.push({text, framesRemaining: TEXT_DISPLAY_FRAMES});
+    };
+
+    const jump = () => {
+      for (const item of this.items) {
+        if (item.behavior === 'platform' && item.grounded) {
+          item.vy = JUMP_VELOCITY;
+          item.grounded = false;
+        }
+      }
+    };
+
     try {
       const fn = new Function(
         'createItem',
@@ -241,6 +283,8 @@ export class Game2Runtime {
         'decreaseScore',
         'whenCollide',
         'removeItem',
+        'showText',
+        'jump',
         code
       );
       fn(
@@ -251,7 +295,9 @@ export class Game2Runtime {
         increaseScore,
         decreaseScore,
         whenCollide,
-        removeItem
+        removeItem,
+        showText,
+        jump
       );
     } catch (e) {
       console.error('[Game2 Runtime] Error executing code:', e);
@@ -343,6 +389,23 @@ export class Game2Runtime {
     }
   }
 
+  /** Return loaded image elements keyed by filename for reuse across restarts. */
+  getImageCache(): Map<string, HTMLImageElement> {
+    const cache = new Map<string, HTMLImageElement>();
+    for (const [name, el] of this.loadedImages) {
+      const filename = this.nameToFilename.get(name);
+      if (filename) {
+        cache.set(filename, el);
+      }
+    }
+    return cache;
+  }
+
+  toggleDebug() {
+    this.debugEnabled = !this.debugEnabled;
+    return this.debugEnabled;
+  }
+
   stop() {
     this.running = false;
     if (this.animFrame !== null) {
@@ -354,6 +417,10 @@ export class Game2Runtime {
   }
 
   private onKeyDown = (e: KeyboardEvent) => {
+    const tag = (e.target as HTMLElement)?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') {
+      return;
+    }
     if (
       ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)
     ) {
@@ -416,7 +483,10 @@ export class Game2Runtime {
     };
   }
 
-  /** Check whether a cell-unit rect overlaps any solid grid cell. */
+  /**
+   * Check whether a cell-unit rect overlaps any solid grid cell.
+   * Solid cells only occupy the bottom portion: y range [r + SOLID_TOP, r + 1].
+   */
   private collidesWithGrid(
     rx: number,
     ry: number,
@@ -431,7 +501,11 @@ export class Game2Runtime {
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
         if (this.grid[r]?.[c] === SOLID_CELL) {
-          return true;
+          // Solid occupies (c, r + SOLID_TOP) to (c + 1, r + 1).
+          const solidY = r + SOLID_TOP;
+          if (rx < c + 1 && rx + rw > c && ry < r + 1 && ry + rh > solidY) {
+            return true;
+          }
         }
       }
     }
@@ -536,6 +610,14 @@ export class Game2Runtime {
     // Check collision events for the controlled item.
     if (controlled) {
       this.checkItemCollisions(controlled);
+    }
+
+    // Update text overlays.
+    for (let i = this.textOverlays.length - 1; i >= 0; i--) {
+      this.textOverlays[i].framesRemaining--;
+      if (this.textOverlays[i].framesRemaining <= 0) {
+        this.textOverlays.splice(i, 1);
+      }
     }
 
     // Update particles.
@@ -652,15 +734,23 @@ export class Game2Runtime {
     ctx.fillStyle = '#121212';
     ctx.fillRect(0, 0, cw, ch);
 
-    // Parallax background image.
+    // Parallax background image — sized relative to the canvas, not the world.
     if (this.backgroundName) {
       const bgImg = this.loadedImages.get(this.backgroundName);
       if (bgImg?.complete && bgImg.naturalWidth > 0) {
         const pf = Game2Runtime.PARALLAX_FACTOR;
-        const worldPx = GRID_SIZE * cp;
-        const bgSize = Math.max(cw, ch) + worldPx * pf;
-        const bgX = -ox * pf;
-        const bgY = -oy * pf;
+        // Extra pixels the background extends beyond the canvas for parallax travel.
+        const parallaxExtra = Math.max(cw, ch) * pf;
+        const bgSize = Math.max(cw, ch) + parallaxExtra;
+        // Normalize camera position to 0–1 across the scrollable range.
+        const vpW = cw / cp;
+        const vpH = ch / cp;
+        const maxCamX = Math.max(1, GRID_SIZE - vpW);
+        const maxCamY = Math.max(1, GRID_SIZE - vpH);
+        const normX = this.camX / maxCamX;
+        const normY = this.camY / maxCamY;
+        const bgX = -normX * parallaxExtra;
+        const bgY = -normY * parallaxExtra;
         ctx.drawImage(bgImg, bgX, bgY, bgSize, bgSize);
       }
     }
@@ -680,21 +770,17 @@ export class Game2Runtime {
         }
         if (cell === SOLID_CELL) {
           ctx.fillStyle = '#F7F8FA';
-          ctx.fillRect(c * cp - ox, r * cp - oy, cp, cp);
+          ctx.fillRect(
+            c * cp - ox,
+            r * cp - oy + cp * SOLID_TOP,
+            cp,
+            cp * (1 - SOLID_TOP)
+          );
         } else {
-          // Placed item cell — draw 30% bigger than the cell, centered.
+          // Placed item cell — same size as the grid cell.
           const imgEl = this.loadedImages.get(cell);
-          const scale = 1.3;
-          const size = cp * scale;
-          const offset = (size - cp) / 2;
           if (imgEl?.complete && imgEl.naturalWidth > 0) {
-            ctx.drawImage(
-              imgEl,
-              c * cp - ox - offset,
-              r * cp - oy - offset,
-              size,
-              size
-            );
+            ctx.drawImage(imgEl, c * cp - ox, r * cp - oy, cp, cp);
           } else {
             // Fallback colored square.
             ctx.fillStyle = '#7B61FF';
@@ -760,9 +846,30 @@ export class Game2Runtime {
     }
     ctx.globalAlpha = 1;
 
+    // Draw text overlays (bottom-center, fade out at end).
+    for (const overlay of this.textOverlays) {
+      let alpha = 1;
+      if (overlay.framesRemaining < TEXT_FADE_FRAMES) {
+        alpha = overlay.framesRemaining / TEXT_FADE_FRAMES;
+      }
+      ctx.globalAlpha = alpha;
+      ctx.font = 'bold 24px sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      const tx = cw / 2;
+      const ty = ch - 40;
+      // Drop shadow.
+      ctx.fillStyle = 'rgba(0,0,0,0.6)';
+      ctx.fillText(overlay.text, tx + 2, ty + 2);
+      // Main text.
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fillText(overlay.text, tx, ty);
+    }
+    ctx.globalAlpha = 1;
+
     // Draw score HUD.
     if (this.scoringEnabled) {
-      const fontSize = Math.max(16, cp * 1.2);
+      const fontSize = 18;
       ctx.font = `bold ${fontSize}px sans-serif`;
       ctx.textAlign = 'right';
       ctx.textBaseline = 'top';
@@ -778,6 +885,48 @@ export class Game2Runtime {
       // Main text.
       ctx.fillStyle = '#FFFFFF';
       ctx.fillText(text, x, y);
+    }
+
+    // Debug overlay.
+    if (this.debugEnabled) {
+      this.renderDebug(ctx, cw, ch);
+    }
+  }
+
+  private renderDebug(ctx: CanvasRenderingContext2D, cw: number, ch: number) {
+    const player = this.items.find(
+      i => i.behavior === 'move' || i.behavior === 'platform'
+    );
+
+    const lines: string[] = [];
+    if (player) {
+      lines.push(`mode: ${player.behavior}`);
+      lines.push(`x: ${player.x.toFixed(2)}  y: ${player.y.toFixed(2)}`);
+      lines.push(`vy: ${player.vy.toFixed(4)}  grounded: ${player.grounded}`);
+    } else {
+      lines.push('no player item');
+    }
+    lines.push(`cam: ${this.camX.toFixed(2)}, ${this.camY.toFixed(2)}`);
+    lines.push(`items: ${this.items.length}`);
+
+    const fontSize = 12;
+    const lineHeight = 16;
+    const padding = 8;
+    const panelHeight = lines.length * lineHeight + padding * 2;
+    const panelWidth = 200;
+    const px = padding;
+    const py = ch - panelHeight - padding;
+
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
+    ctx.fillRect(px, py, panelWidth, panelHeight);
+
+    ctx.font = `${fontSize}px monospace`;
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'top';
+    ctx.fillStyle = '#00FF88';
+
+    for (let i = 0; i < lines.length; i++) {
+      ctx.fillText(lines[i], px + padding, py + padding + i * lineHeight);
     }
   }
 }

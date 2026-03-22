@@ -147,32 +147,29 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
       </div>
       <div className={moduleStyles.tabContent}>
         {activeTab === 'Description' && <ThemePanel />}
-        {activeTab === 'Items' && (
+        <div style={{display: activeTab === 'Items' ? 'contents' : 'none'}}>
           <ImagesPanel
             images={images}
             channelId={channelId}
             onImagesChange={handleImagesChange}
           />
-        )}
-        <div
-          style={{
-            display: activeTab === 'World' ? 'contents' : 'none',
-          }}
-        >
+        </div>
+        <div style={{display: activeTab === 'World' ? 'contents' : 'none'}}>
           <WorldPanel
             grid={grid}
             images={images}
             onGridChange={handleGridChange}
           />
         </div>
-        {activeTab === 'Play' && (
+        <div style={{display: activeTab === 'Play' ? 'contents' : 'none'}}>
           <PlayPanel
+            visible={activeTab === 'Play'}
             grid={grid}
             images={images}
             channelId={channelId}
             getCode={getCode}
           />
-        )}
+        </div>
         {/* Code panel is always mounted so Blockly workspace persists across tab switches.
             Use clip-path to hide it — visibility:hidden alone doesn't clip Blockly's
             flyout SVG elements. clip-path:inset(100%) hides everything visually while

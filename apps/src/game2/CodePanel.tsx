@@ -30,6 +30,8 @@ const TOOLBOX: BlocklyCore.utils.toolbox.ToolboxDefinition = {
     {kind: 'block', type: 'Game2_decreaseScore'},
     {kind: 'block', type: 'Game2_whenCollide'},
     {kind: 'block', type: 'Game2_removeItem'},
+    {kind: 'block', type: 'Game2_showText'},
+    {kind: 'block', type: 'Game2_jump'},
   ],
 };
 
