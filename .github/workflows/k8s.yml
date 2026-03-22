@@ -34,12 +34,19 @@ jobs:
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
+  # In parallel with skaffold: verify our kustomize and helm packages, etc
+  validate:
+    name: validate
+    uses: ./.github/workflows/k8s-validate.yml
+
   # Step 3: commit+push the new docker image ref to a deployment values.yaml file in the
   # k8s-gitops repo, which is constantly monitored by ArgoCD to sync deployments/deploy
   commit-image-ref-to-argocd:
     name: commit image ref to argocd
     uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
-    needs: stitch-multiplatform-image
+    needs:
+      - stitch-multiplatform-image
+      - validate
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
