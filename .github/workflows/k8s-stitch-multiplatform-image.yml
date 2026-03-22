@@ -2,12 +2,12 @@
 # architectures (e.g. amd64, arm64) in parallel on a GH runner for that specific architecture.
 #
 # The resulting build artifacts are multiple tagged single-architecture docker images, for example:
-# - code-dot-org:git-0cc4cd87f40ae6-amd64
-# - code-dot-org:git-0cc4cd87f40ae6-arm64
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-amd64
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-arm64
 #
 # This step uses `docker buildx imagetools` to stitch the single-architecture images into one final
 # multi-platform docker image, for example:
-# - code-dot-org:git-0cc4cd87f40ae6
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
 #
 # and then tags the same manifest with a branch-name alias, e.g.:
 # - code-dot-org:staging
@@ -84,7 +84,7 @@ jobs:
       - name: Stitch platform images into a multi-platform image
         run: |
           # Use imagetools to stitch all platform-specific images into one multi-platform image
-          # $MULTI_PLATFORM_IMAGE is the canonical final multi-platform image name, e.g. code-dot-org:git-0cc4cd87f40ae6
+          # $MULTI_PLATFORM_IMAGE is the canonical final multi-platform image name, e.g. code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
           docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
 
       - name: Tag the stitched image with the branch alias
