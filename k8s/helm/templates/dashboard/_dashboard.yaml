@@ -115,7 +115,7 @@ spec:
           containerPort: 9000
         {{- end }}
 
-        {{- if (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
+        {{- if and $isDeployment (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
         startupProbe:
           failureThreshold: 300
           periodSeconds: 1
