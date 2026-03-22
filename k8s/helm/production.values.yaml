@@ -1,9 +1,0 @@
-RAILS_ENV: production
-dashboard_workers: 32
-autoscaling:
-  enabled: true
-  minReplicas: 1
-  maxReplicas: 10
-healthChecks:
-  enabled: true
-require_external_secrets: true
