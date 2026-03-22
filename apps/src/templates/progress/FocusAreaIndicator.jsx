@@ -3,69 +3,22 @@
  * a focus area. Note: This is English only.
  */
 
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import color from '@cdo/apps/util/color';
 
-const styles = {
-  main: {
-    display: 'inline-block',
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    whiteSpace: 'nowrap',
-  },
-  arrowContainer: {
-    display: 'inline-block',
-    position: 'relative',
-    top: 10,
-  },
-  leftArrow: {
-    display: 'inline-block',
-    width: 0,
-    height: 0,
-    borderStyle: 'solid',
-    borderWidth: '17px 20px 17px',
-    borderColor: `transparent ${color.cyan} transparent transparent`,
-  },
-  focusArea: {
-    display: 'inline-block',
-    backgroundColor: color.cyan,
-    color: color.white,
-    height: 34,
-    lineHeight: '34px',
-    position: 'relative',
-    top: -3,
-  },
-  text: {
-    display: 'inline-block',
-  },
-  focusAreaIcon: {
-    display: 'inline-block',
-    color: color.white,
-    lineHeight: '13px',
-    padding: 5,
-    marginLeft: 5,
-    marginRight: 5,
-    borderRadius: 4,
-    ':hover': {
-      backgroundColor: color.default_blue,
-    },
-  },
-};
+import styles from './focus-area-indicator.module.scss';
 
 const FocusAreaIndicator = () => (
-  <div style={styles.main}>
-    <div style={styles.arrowContainer}>
-      <div style={styles.leftArrow} />
+  <div className={styles.main}>
+    <div className={styles.arrowContainer}>
+      <div className={styles.leftArrow} />
     </div>
-    <div style={styles.focusArea}>
-      <div style={styles.text}>Focus Area</div>
+    <div className={styles.focusArea}>
+      <div className={styles.text}>Focus Area</div>
       <a href={window.location.pathname + '/preview-assignments'}>
-        <div style={styles.focusAreaIcon} data-tip data-for="focus-area">
+        <div className={styles.focusAreaIcon} data-tip data-for="focus-area">
           <FontAwesome icon="pencil" />
         </div>
       </a>
@@ -76,4 +29,4 @@ const FocusAreaIndicator = () => (
   </div>
 );
 
-export default Radium(FocusAreaIndicator);
+export default FocusAreaIndicator;

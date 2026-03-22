@@ -27105,6 +27105,10 @@ en:
               name: Messing Around
             lesson-2:
               name: Progression Idea 2
+            lesson-3:
+              name: Templates
+            lesson-4:
+              name: Progression V2
           lesson_groups: {}
           name: hoai-web-lab-intro-test
           title: HoAI Web Lab Intro
