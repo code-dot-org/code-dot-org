@@ -3,16 +3,4 @@ kind: Kustomization
 resources:
   - ../../base
 components:
-  - ../../components/autoscaling
-namePrefix: production-
-labels:
-  - pairs:
-      app.kubernetes.io/name: cdo
-      app.kubernetes.io/instance: production
-    includeSelectors: true
-    includeTemplates: true
-patches:
-  - path: deployment.patch.yaml
-  # Enable these when gitops envType values start setting dashboard_workers again.
-  # - path: locals.yml.patch.yaml
-  # - path: deployment.resources.patch.yaml
+  - git::https://github.com/code-dot-org/k8s-gitops//apps/codeai/envTypes/components/production
