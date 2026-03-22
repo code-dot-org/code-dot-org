@@ -34,11 +34,14 @@ jobs:
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
-  # Step 3: commit+push the new docker image ref to a deployment values.yaml file in the
-  # k8s-gitops repo, which is constantly monitored by ArgoCD to sync deployments/deploy
-  commit-image-ref-to-argocd:
-    name: commit image ref to argocd
-    uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
+  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
+  # for kargo to discover
+  #
+  # Kargo is then responsible for promoting the change to ArgoCD codeai 
+  # deployments in apps/codeai/deployments/*
+  commit-to-kargo-warehouse:
+    name: commit to kargo warehouse
+    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs: stitch-multiplatform-image
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
