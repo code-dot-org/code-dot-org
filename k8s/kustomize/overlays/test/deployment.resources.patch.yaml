@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          resources:
+            requests:
+              cpu: 96.85
+              memory: 377.65Gi
+              ephemeral-storage: 30Gi
+            limits:
+              cpu: 96.85
+              memory: 377.65Gi
+              ephemeral-storage: 30Gi

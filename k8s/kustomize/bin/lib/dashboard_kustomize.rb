@@ -4,12 +4,14 @@ require 'json'
 require 'open3'
 require 'securerandom'
 require 'shellwords'
+require 'tmpdir'
 require 'yaml'
 
 module DashboardKustomize
   ROOT = File.expand_path('../..', __dir__)
   HELM_VALUES = File.join(ROOT, '..', 'helm', 'values.yaml')
   CHART_PATH = File.join(ROOT, '..', 'helm')
+  GITOPS_ENVTYPES_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/envTypes'.freeze
   MYSQL_SECRET_DIR = File.join(ROOT, 'components', 'mysql')
   REDIS_SECRET_DIR = File.join(ROOT, 'components', 'redis')
   MINIO_SECRET_DIR = File.join(ROOT, 'components', 'minio')
@@ -31,7 +33,7 @@ module DashboardKustomize
     'cdo-minio-setup-s3-job' => 'minio-setup-s3-job'
   }.freeze
 
-  TARGETS = {
+  OVERLAYS = {
     'development' => {
       release_name: 'cdo',
       namespace: nil,
@@ -90,48 +92,38 @@ module DashboardKustomize
       release_name: 'cdo',
       namespace: nil,
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [File.join(ROOT, '..', 'helm', 'production.values.yaml')],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml"],
       helm_set: []
     },
     'test' => {
       release_name: 'cdo',
       namespace: nil,
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [File.join(ROOT, '..', 'helm', 'test.values.yaml')],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml"],
       helm_set: []
     },
     'staging' => {
       release_name: 'staging',
       namespace: 'staging',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [File.join(ROOT, '..', 'helm', 'staging.values.yaml')],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
       namespace: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [File.join(ROOT, '..', 'helm', 'levelbuilder.values.yaml')],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
-    'autoscale-prod' => {
-      release_name: 'autoscale-prod',
-      namespace: 'production',
-      services: {mysql: false, redis: false, minio: false},
-      helm_values: [File.join(ROOT, '..', 'helm', 'production.values.yaml')],
-      helm_set: [
-        ['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me'],
-        ['--set', 'autoscaling.minReplicas=3']
-      ]
-    }
   }.freeze
 
-  module_function def target_names
-    TARGETS.keys
+  module_function def overlay_names
+    OVERLAYS.keys
   end
 
-  module_function def target_config(target)
-    TARGETS.fetch(target) {raise ArgumentError, "unknown target: #{target}"}
+  module_function def overlay_config(overlay)
+    OVERLAYS.fetch(overlay) {raise ArgumentError, "unknown overlay: #{overlay}"}
   end
 
   module_function def component_name(release_name, component)
@@ -146,8 +138,42 @@ module DashboardKustomize
     [MYSQL_SECRET_DIR, REDIS_SECRET_DIR, MINIO_SECRET_DIR]
   end
 
-  module_function def helm_command(target)
-    config = target_config(target)
+  module_function def remote_path?(path)
+    path.start_with?('http://', 'https://')
+  end
+
+  module_function def with_materialized_helm_values(paths)
+    Dir.mktmpdir do |tmpdir|
+      materialized = paths.map.with_index do |path, index|
+        next path unless remote_path?(path)
+
+        local_path = File.join(tmpdir, "values-#{index}.yaml")
+        stdout, stderr, status = Open3.capture3('curl', '-fsSL', path)
+        raise "failed to fetch helm values from #{path}:\n#{stderr}" unless status.success?
+
+        File.write(local_path, stdout)
+        local_path
+      end
+      yield materialized
+    end
+  end
+
+  module_function def render_helm(overlay)
+    config = overlay_config(overlay)
+    stdout = nil
+    stderr = nil
+    status = nil
+
+    with_materialized_helm_values(config[:helm_values]) do |helm_values|
+      patched_config = config.merge(helm_values: helm_values)
+      stdout, stderr, status = Open3.capture3(*helm_command_from_config(patched_config))
+    end
+    raise "helm template failed for #{overlay}:\n#{stderr}" unless status.success?
+
+    parse_yaml_stream(stdout)
+  end
+
+  module_function def helm_command_from_config(config)
     cmd = ['helm', 'template', config[:release_name], CHART_PATH, '-f', HELM_VALUES]
     config[:helm_values].each do |path|
       cmd.push('-f', path)
@@ -158,17 +184,14 @@ module DashboardKustomize
     cmd
   end
 
-  module_function def render_helm(target)
-    stdout, stderr, status = Open3.capture3(*helm_command(target))
-    raise "helm template failed for #{target}:\n#{stderr}" unless status.success?
-
-    parse_yaml_stream(stdout)
+  module_function def helm_command(overlay)
+    helm_command_from_config(overlay_config(overlay))
   end
 
-  module_function def render_kustomize(target)
-    path = File.join(ROOT, 'targets', target)
+  module_function def render_kustomize(overlay)
+    path = File.join(ROOT, 'overlays', overlay)
     stdout, stderr, status = Open3.capture3('kustomize', 'build', path)
-    raise "kustomize build failed for #{target}:\n#{stderr}" unless status.success?
+    raise "kustomize build failed for #{overlay}:\n#{stderr}" unless status.success?
 
     parse_yaml_stream(stdout)
   end
@@ -218,8 +241,8 @@ module DashboardKustomize
     }
   end
 
-  module_function def derive_secret_values(target, existing = {})
-    config = target_config(target)
+  module_function def derive_secret_values(overlay, existing = {})
+    config = overlay_config(overlay)
     values = seed_values(existing)
     release_name = config[:release_name]
 
@@ -251,8 +274,8 @@ module DashboardKustomize
     values
   end
 
-  module_function def write_secret_inputs(target, values)
-    config = target_config(target)
+  module_function def write_secret_inputs(overlay, values)
+    config = overlay_config(overlay)
 
     if config.dig(:services, :mysql)
       write_env_file(MYSQL_SECRET_DIR, 'cdo-local-secret-mysql.secret.env', MYSQL_SECRET_ENV_ORDER, values)
@@ -287,12 +310,12 @@ module DashboardKustomize
     FileUtils.rm_f(path)
   end
 
-  module_function def load_existing_secret_values(target, from_file: nil)
+  module_function def load_existing_secret_values(overlay, from_file: nil)
     doc =
       if from_file
         YAML.safe_load_file(from_file)
       else
-        read_cluster_secret(target_config(target)[:namespace])
+        read_cluster_secret(overlay_config(overlay)[:namespace])
       end
     parse_secret_values(doc)
   end
@@ -302,10 +325,10 @@ module DashboardKustomize
         sort_by {|doc| [doc['kind'].to_s, doc.dig('metadata', 'namespace').to_s, doc.dig('metadata', 'name').to_s]}
   end
 
-  module_function def normalize_docs_for_parity(target, docs)
+  module_function def normalize_docs_for_parity(overlay, docs)
     normalized_docs = normalize_docs(docs).map do |doc|
       copy = deep_copy(doc)
-      normalize_release_name_drift!(copy, target)
+      normalize_release_name_drift!(copy, overlay)
       normalize_local_secret_name_drift!(copy)
       normalize_local_secret_value_drift!(copy)
       deep_sort(copy)
@@ -360,12 +383,12 @@ module DashboardKustomize
     doc['stringData'] = values
   end
 
-  module_function def warning_messages(target, helm_docs, kustomize_docs)
+  module_function def warning_messages(overlay, helm_docs, kustomize_docs)
     warnings = []
     helm_secret = parse_secret_values(find_secret_doc(helm_docs))
     kustomize_secret = parse_secret_values(find_local_secret_doc(kustomize_docs))
 
-    if production_or_test_target?(target) && release_name_drift?(target, helm_docs, kustomize_docs)
+    if production_or_test_overlay?(overlay) && release_name_drift?(overlay, helm_docs, kustomize_docs)
       warnings << 'accepted drift by Seth: release naming differs from Helm for production/test resources'
     end
 
@@ -406,19 +429,19 @@ module DashboardKustomize
     end
   end
 
-  module_function def production_or_test_target?(target)
-    ['production', 'test'].include?(target)
+  module_function def production_or_test_overlay?(overlay)
+    ['production', 'test'].include?(overlay)
   end
 
-  module_function def release_prefix_for(target)
-    return 'production-' if target == 'production'
-    return 'test-' if target == 'test'
+  module_function def release_prefix_for(overlay)
+    return 'production-' if overlay == 'production'
+    return 'test-' if overlay == 'test'
 
     nil
   end
 
-  module_function def release_name_drift?(target, helm_docs, kustomize_docs)
-    return false unless production_or_test_target?(target)
+  module_function def release_name_drift?(overlay, helm_docs, kustomize_docs)
+    return false unless production_or_test_overlay?(overlay)
 
     normalize_docs(helm_docs) != normalize_docs(kustomize_docs)
   end
@@ -476,8 +499,8 @@ module DashboardKustomize
     locals_uses_blob?(helm_locals) || workload_uses_locals_volume?(helm_docs) || workload_uses_locals_env_from?(kustomize_docs)
   end
 
-  module_function def normalize_release_name_drift!(obj, target)
-    prefix = release_prefix_for(target)
+  module_function def normalize_release_name_drift!(obj, overlay)
+    prefix = release_prefix_for(overlay)
     return unless prefix
 
     case obj
@@ -486,13 +509,13 @@ module DashboardKustomize
         if RELEASE_NAME_FIELDS.include?(key) && value.is_a?(String) && value.start_with?(prefix)
           obj[key] = value.delete_prefix(prefix)
         elsif key == 'app.kubernetes.io/instance' && value.is_a?(String)
-          obj[key] = target_config(target)[:release_name]
+          obj[key] = overlay_config(overlay)[:release_name]
         else
-          normalize_release_name_drift!(value, target)
+          normalize_release_name_drift!(value, overlay)
         end
       end
     when Array
-      obj.each {|value| normalize_release_name_drift!(value, target)}
+      obj.each {|value| normalize_release_name_drift!(value, overlay)}
     end
   end
 

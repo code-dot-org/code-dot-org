@@ -11,4 +11,6 @@ labels:
     includeTemplates: true
 patches:
   - path: deployment.patch.yaml
-  - path: locals.yml.patch.yaml
+  # Enable these when gitops envType values start setting dashboard_workers again.
+  # - path: locals.yml.patch.yaml
+  # - path: deployment.resources.patch.yaml

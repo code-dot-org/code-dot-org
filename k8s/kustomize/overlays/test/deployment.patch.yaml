@@ -7,13 +7,8 @@ spec:
     spec:
       containers:
         - name: dashboard
-          image: ghcr.io/code-dot-org/code-dot-org:replace-me
           env:
             - name: RAILS_ENV
-              value: staging
+              value: test
             - name: RACK_ENV
-              value: staging
-          resources:
-            limits:
-              cpu: 14.9
-              memory: 58.10Gi
+              value: test

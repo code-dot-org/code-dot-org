@@ -33,14 +33,19 @@ spec:
             - prefix: CDO_
               secretRef:
                 name: cdo-external-secrets
-                optional: true
+                optional: false
             - prefix: CDO_
               secretRef:
                 name: cdo-local-secrets
           resources:
+            requests:
+              cpu: 2
+              memory: 8.00Gi
+              ephemeral-storage: 30Gi
             limits:
-              cpu: 4
-              memory: 16.00Gi
+              cpu: 2
+              memory: 8.00Gi
+              ephemeral-storage: 30Gi
           securityContext:
             allowPrivilegeEscalation: false
           ports:

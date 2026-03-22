@@ -8,6 +8,13 @@ components:
   - ../../components/minio
 patches:
   - path: deployment.patch.yaml
+  - target:
+      kind: Deployment
+      name: cdo-dashboard
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/envFrom/1/secretRef/optional
+        value: true
 labels:
   - pairs:
       app.kubernetes.io/name: cdo

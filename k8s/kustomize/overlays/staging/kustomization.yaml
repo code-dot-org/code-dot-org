@@ -2,13 +2,15 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - ../../base
-namePrefix: test-
+namePrefix: staging-
 labels:
   - pairs:
       app.kubernetes.io/name: cdo
-      app.kubernetes.io/instance: test
+      app.kubernetes.io/instance: staging
     includeSelectors: true
     includeTemplates: true
 patches:
   - path: deployment.patch.yaml
-  - path: locals.yml.patch.yaml
+  # Enable these when gitops envType values start setting dashboard_workers again.
+  # - path: locals.yml.patch.yaml
+  # - path: deployment.resources.patch.yaml

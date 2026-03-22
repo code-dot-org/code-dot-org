@@ -9,10 +9,6 @@ spec:
         - name: dashboard
           env:
             - name: RAILS_ENV
-              value: test
+              value: production
             - name: RACK_ENV
-              value: test
-          resources:
-            limits:
-              cpu: 96.85
-              memory: 377.65Gi
+              value: production

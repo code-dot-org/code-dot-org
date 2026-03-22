@@ -3,14 +3,14 @@
 # Verify that kustomize renders are still close enough to the Helm chart.
 #
 # Usage:
-#   k8s/dashboard/bin/verify-parity
-#   k8s/dashboard/bin/verify-parity development staging production
-# With no args, it verifies every target in DashboardKustomize.target_names.
+#   k8s/kustomize/bin/verify-parity
+#   k8s/kustomize/bin/verify-parity development staging production
+# With no args, it verifies every overlay in DashboardKustomize.overlay_names.
 #
-# For each target, this script:
-# - renders Helm using the target's matching values/release inputs
+# For each overlay, this script:
+# - renders Helm using the overlay's matching values/release inputs
 # - writes the secret input files kustomize needs, derived from Helm's secret values
-# - renders kustomize for the target
+# - renders kustomize for the overlay
 # - normalizes both outputs and diffs them
 #
 # The comparison is intentionally strict, but some drift is explicitly tolerated.
@@ -23,10 +23,10 @@ require 'tmpdir'
 require 'open3'
 require_relative 'lib/dashboard_kustomize'
 
-targets = ARGV.empty? ? DashboardKustomize.target_names : ARGV
+overlays = ARGV.empty? ? DashboardKustomize.overlay_names : ARGV
 
-targets.each do |target|
-  helm_docs = DashboardKustomize.render_helm(target)
+overlays.each do |overlay|
+  helm_docs = DashboardKustomize.render_helm(overlay)
   helm_secret_values = DashboardKustomize.parse_secret_values(DashboardKustomize.find_secret_doc(helm_docs))
   secret_dirs = DashboardKustomize.secret_input_dirs
 
@@ -42,12 +42,12 @@ targets.each do |target|
     end
 
     begin
-      DashboardKustomize.write_secret_inputs(target, DashboardKustomize.derive_secret_values(target, helm_secret_values))
-      kustomize_docs = DashboardKustomize.render_kustomize(target)
+      DashboardKustomize.write_secret_inputs(overlay, DashboardKustomize.derive_secret_values(overlay, helm_secret_values))
+      kustomize_docs = DashboardKustomize.render_kustomize(overlay)
 
-      warnings = DashboardKustomize.warning_messages(target, helm_docs, kustomize_docs)
-      helm_normalized = DashboardKustomize.normalize_docs_for_parity(target, helm_docs)
-      kustomize_normalized = DashboardKustomize.normalize_docs_for_parity(target, kustomize_docs)
+      warnings = DashboardKustomize.warning_messages(overlay, helm_docs, kustomize_docs)
+      helm_normalized = DashboardKustomize.normalize_docs_for_parity(overlay, helm_docs)
+      kustomize_normalized = DashboardKustomize.normalize_docs_for_parity(overlay, kustomize_docs)
 
       if helm_normalized != kustomize_normalized
         helm_json = File.join(tmpdir, 'helm.json')
@@ -55,12 +55,12 @@ targets.each do |target|
         File.write(helm_json, JSON.pretty_generate(helm_normalized) + "\n")
         File.write(kustomize_json, JSON.pretty_generate(kustomize_normalized) + "\n")
         diff_out, = Open3.capture2('diff', '-u', helm_json, kustomize_json)
-        abort "render parity failed for #{target}:\n#{diff_out}"
+        abort "render parity failed for #{overlay}:\n#{diff_out}"
       end
 
-      puts "OK #{target}"
+      puts "OK #{overlay}"
       warnings.each do |warning|
-        puts "WARN #{target}: #{warning}"
+        puts "WARN #{overlay}: #{warning}"
       end
     ensure
       secret_dirs.each do |secret_dir|

@@ -10,10 +10,6 @@ spec:
           image: ghcr.io/code-dot-org/code-dot-org:replace-me
           env:
             - name: RAILS_ENV
-              value: levelbuilder
+              value: staging
             - name: RACK_ENV
-              value: levelbuilder
-          resources:
-            limits:
-              cpu: 40.23
-              memory: 156.87Gi
+              value: staging
