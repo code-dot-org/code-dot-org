@@ -146,9 +146,9 @@ const SmallFooter = (props: SmallFooterProps) => {
   );
 
   const clickBaseCopyright = useCallback(
-    (e: MouseEvent) => {
-      e.preventDefault();
-      e.stopPropagation();
+    (e?: MouseEvent) => {
+      e?.preventDefault();
+      e?.stopPropagation();
 
       if (menuState === MenuStates.MINIMIZING) {
         return;
