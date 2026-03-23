@@ -1,4 +1,0 @@
-RAILS_ENV: levelbuilder
-dashboard_workers: 27
-healthChecks:
-  enabled: true

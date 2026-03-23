@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1alpha1
+kind: Component
+resources:
+  - persistentvolumeclaim.yaml
+  - persistentvolume.yaml
+  - persistentvolumeclaim-gcloud.yaml
+  - persistentvolume-gcloud.yaml
+patches:
+  - path: deployment-mount.patch.yaml
+    target:
+      kind: Deployment
+      name: cdo-dashboard
+  - path: deployment-mount-gcloud.patch.yaml
+    target:
+      kind: Deployment
+      name: cdo-dashboard

@@ -88,7 +88,6 @@ interface PreparedFile {
   filename: string;
   fileBuffer: Uint8Array<ArrayBuffer>;
   mediaType: string;
-  extension: string;
 }
 
 /**
@@ -101,5 +100,5 @@ export function prepareGeneratedFile(
   const fileBuffer = file.uint8Array.slice();
   const extension = convertMediaTypeToExtension(file.mediaType, accepts);
   const filename = `generated-file-${createUuid()}.${extension}`;
-  return {filename, fileBuffer, mediaType: file.mediaType, extension};
+  return {filename, fileBuffer, mediaType: file.mediaType};
 }
