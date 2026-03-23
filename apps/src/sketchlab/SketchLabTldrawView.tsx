@@ -52,22 +52,22 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     console.log('registering editor');
   }, []);
 
-  // useEffect(() => {
-  //   if (tldrawEditor) {
-  //     console.log('editor is ready, registering listener');
-  //     const unsubscribe = tldrawEditor.store.listen(
-  //       () => {
-  //         const currentSnapshot = getSnapshot(tldrawEditor.store);
-  //         const serializedSnapshot = JSON.stringify(currentSnapshot.document);
-  //         updateSources({source: serializedSnapshot});
-  //       },
-  //       {source: 'all', scope: 'document'}
-  //     );
-  //     return () => {
-  //       unsubscribe();
-  //     };
-  //   }
-  // }, [tldrawEditor, updateSources]);
+  useEffect(() => {
+    if (tldrawEditor) {
+      console.log('editor is ready, registering listener');
+      const unsubscribe = tldrawEditor.store.listen(
+        () => {
+          const currentSnapshot = getSnapshot(tldrawEditor.store);
+          const serializedSnapshot = JSON.stringify(currentSnapshot.document);
+          updateSources({source: serializedSnapshot});
+        },
+        {source: 'all', scope: 'document'}
+      );
+      return () => {
+        unsubscribe();
+      };
+    }
+  }, [tldrawEditor, updateSources]);
 
   const {
     leftPanelWidth,
