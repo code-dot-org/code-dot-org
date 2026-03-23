@@ -42,8 +42,8 @@ jobs:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
+  # Step 3: publish the frozen Kustomize snapshot and legacy-gitflow metadata
+  # into the k8s-gitops repo for Kargo to discover.
   #
   # Kargo is then responsible for promoting the change to ArgoCD codeai
   # deployments in apps/codeai/deployments/*
@@ -55,7 +55,9 @@ jobs:
       - validate
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
+      source_commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
     secrets: inherit
 

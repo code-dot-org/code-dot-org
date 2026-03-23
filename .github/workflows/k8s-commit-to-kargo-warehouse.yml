@@ -6,7 +6,13 @@ on:
       branch_name:
         required: true
         type: string
+      source_commit_sha:
+        required: true
+        type: string
       codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_image_digest:
         required: true
         type: string
       codeai_docker_tag:
@@ -21,6 +27,12 @@ jobs:
     name: commit to kargo warehouse
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code-dot-org
+        uses: actions/checkout@v6.0.2
+        with:
+          path: code-dot-org
+          ref: ${{ inputs.source_commit_sha }}
+
       - name: Checkout k8s-gitops
         uses: actions/checkout@v6.0.2
         with:
@@ -29,36 +41,42 @@ jobs:
           path: k8s-gitops
           token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
-      - name: Update codeai deployment image
+      - name: Publish codeai freight and legacy gitflow metadata
         shell: ruby {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
+          SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
           CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+          CODEAI_DOCKER_IMAGE_DIGEST: ${{ inputs.codeai_docker_image_digest }}
           CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
           K8S_GITOPS_REPO_WRITE_TOKEN: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
         # if you're on vscode install this to get syntax highlighting in here:
         # https://marketplace.visualstudio.com/items?itemName=harrydowning.yaml-embedded-languages
         run: | # ruby
-          # We'll throw an error if we can't find a values.yaml for these branches
-          UPDATE_OR_ERROR_BRANCHES = %w[staging test levelbuilder production]
+          require "fileutils"
+          require "tmpdir"
+          require "time"
+          require "yaml"
 
-          # This is the code-dot-org repo branch that was committed to / merged into.
+          # The frozen release snapshot is published exactly once, from staging.
+          # Later legacy branch merges only update coexistence gate metadata.
+          FREIGHT_SOURCE_BRANCHES = %w[staging]
+          LEGACY_GITFLOW_BRANCHES = %w[staging test levelbuilder production]
+
           BRANCH_NAME = ENV.fetch("BRANCH_NAME")
-
-          # We normalize deployment names with the same rule as docker tags in k8s-skaffold-build.yml
-          DEPLOYMENT_NAME = BRANCH_NAME.gsub(/[^a-zA-Z0-9_.-]/, '-')
-
-          # This is the newly built docker image ref that we'll be writing to values.yaml.
+          SOURCE_COMMIT_SHA = ENV.fetch("SOURCE_COMMIT_SHA")
           CODEAI_DOCKER_IMAGE_REF = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
+          CODEAI_DOCKER_IMAGE_DIGEST = ENV.fetch("CODEAI_DOCKER_IMAGE_DIGEST")
           CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
-          abort('ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.') if CODEAI_DOCKER_IMAGE_REF.strip.empty?
+          abort("ERROR: SOURCE_COMMIT_SHA must be a full 40-character SHA.") unless /\A[0-9a-f]{40}\z/.match?(SOURCE_COMMIT_SHA)
+          abort("ERROR: CODEAI_DOCKER_TAG must match git-<full-sha>.") unless CODEAI_DOCKER_TAG == "git-#{SOURCE_COMMIT_SHA}"
+          abort("ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.") if CODEAI_DOCKER_IMAGE_REF.strip.empty?
+          abort("ERROR: CODEAI_DOCKER_IMAGE_DIGEST is empty, refusing to write back.") if CODEAI_DOCKER_IMAGE_DIGEST.strip.empty?
 
-          # This is the values.yaml file in k8s-gitops repo that we'll update the `image: ` line in:
-          DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{DEPLOYMENT_NAME}/values.yaml"
-
-          # This is the updated line that we'll write to $DEPLOYMENT_VALUES_YAML:
-          UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-to-kargo-warehouse.yml\n"
+          RELEASE_TAG = CODEAI_DOCKER_TAG
+          NOW = Time.now.utc.iso8601
+          SOURCE_KUSTOMIZE_DIR = "code-dot-org/k8s/kustomize"
 
           def system!(*cmd)
             ok = system(*cmd)
@@ -66,50 +84,95 @@ jobs:
             raise "Command failed (exitstatus=#{Process.last_status&.exitstatus}): #{rendered_cmd}" unless ok
           end
 
+          def write_yaml(path, payload)
+            FileUtils.mkdir_p(File.dirname(path))
+            File.write(path, YAML.dump(payload))
+          end
+
+          def replace_tree(source_dir, destination_dir)
+            FileUtils.rm_rf(destination_dir)
+            FileUtils.mkdir_p(destination_dir)
+            children = Dir.children(source_dir).map {|entry| File.join(source_dir, entry) }
+            FileUtils.cp_r(children, destination_dir) unless children.empty?
+          end
+
+          publish_freight = FREIGHT_SOURCE_BRANCHES.include?(BRANCH_NAME)
+          publish_legacy_gate = LEGACY_GITFLOW_BRANCHES.include?(BRANCH_NAME)
+
+          unless publish_freight || publish_legacy_gate
+            puts "::notice::Skipping warehouse publish for branch #{BRANCH_NAME.inspect}; no freight or legacy-gitflow metadata is defined for it."
+            exit 0
+          end
+
           Dir.chdir("k8s-gitops") do
-            unless File.exist?(DEPLOYMENT_VALUES_YAML)
-              values_yaml_was_not_found_msg = "Tried to update image ref, but no values.yaml was found at: https://github.com/code-dot-org/k8s-gitops/tree/main/#{DEPLOYMENT_VALUES_YAML}"
-              if UPDATE_OR_ERROR_BRANCHES.include?(BRANCH_NAME)
-                abort("ERROR: deployment `#{DEPLOYMENT_NAME}` failed! #{values_yaml_was_not_found_msg}")
-              else
-                puts "::notice::Skipping deployment `#{DEPLOYMENT_NAME}`. #{values_yaml_was_not_found_msg}"
-                exit 0
+            changed_paths = []
+
+            if publish_freight
+              abort("ERROR: #{SOURCE_KUSTOMIZE_DIR} was not found in the checked out source tree.") unless Dir.exist?(File.join("..", SOURCE_KUSTOMIZE_DIR))
+
+              Dir.mktmpdir("codeai-freight-") do |tmpdir|
+                release_dir = File.join(tmpdir, RELEASE_TAG)
+                replace_tree(File.join("..", SOURCE_KUSTOMIZE_DIR), File.join(release_dir, "kustomize"))
+                write_yaml(
+                  File.join(release_dir, "freight.yaml"),
+                  {
+                    "schemaVersion" => "v1",
+                    "revision" => SOURCE_COMMIT_SHA,
+                    "tag" => RELEASE_TAG,
+                    "image" => {
+                      "ref" => CODEAI_DOCKER_IMAGE_REF,
+                      "digest" => CODEAI_DOCKER_IMAGE_DIGEST,
+                    },
+                    "packageType" => "kustomize",
+                    "createdAt" => NOW,
+                  }
+                )
+
+                historical_release_dir = File.join("warehouses", "codeai", "freight", RELEASE_TAG)
+                current_release_dir = File.join("warehouses", "codeai", "freight", "current")
+                replace_tree(release_dir, historical_release_dir)
+                replace_tree(release_dir, current_release_dir)
+                changed_paths.concat([historical_release_dir, current_release_dir])
               end
             end
 
-            # Update values.yaml file line `image: *` with the newly built docker image's ref
-            updated_line = false
-            File.write(DEPLOYMENT_VALUES_YAML,
-              File.readlines(DEPLOYMENT_VALUES_YAML)
-                .map do |line|
-                  if line.start_with?('image: ')
-                    updated_line = true
-                    UPDATED_DOCKER_IMAGE_LINE
-                  else
-                    line
-                  end
-                end
-                .then { |lines| updated_line ? lines : [UPDATED_DOCKER_IMAGE_LINE] + lines }
-                .join
-            )
+            if publish_legacy_gate
+              gate_payload = {
+                "revision" => SOURCE_COMMIT_SHA,
+                "tag" => RELEASE_TAG,
+                "mergedAt" => NOW,
+              }
+
+              legacy_current_path = File.join("warehouses", "codeai", "legacy-gitflow", BRANCH_NAME, "current.yaml")
+              legacy_release_path = File.join("warehouses", "codeai", "legacy-gitflow", BRANCH_NAME, "merged", "#{RELEASE_TAG}.yaml")
+              write_yaml(legacy_current_path, gate_payload)
+              write_yaml(legacy_release_path, gate_payload)
+              changed_paths.concat([legacy_current_path, legacy_release_path])
+            end
 
             system! 'git config user.name "github-actions[bot]"'
             system! 'git config user.email "41898282+github-actions[bot]@users.noreply.github.com"'
-            system! 'git', 'add', DEPLOYMENT_VALUES_YAML
+            system! 'git', 'add', *changed_paths.uniq
 
             if system('git diff --cached --quiet')
-              puts "Success: no diff of #{DEPLOYMENT_VALUES_YAML} detected, no commit+push needed."
+              puts "Success: warehouse metadata for #{RELEASE_TAG} was already up to date, no commit+push needed."
               exit 0
             end
 
-            puts "Committing #{DEPLOYMENT_VALUES_YAML} to k8s-gitops repo"
+            commit_subject =
+              if publish_freight
+                "Publish CodeAI freight #{RELEASE_TAG}"
+              else
+                "Record CodeAI #{BRANCH_NAME} merge #{RELEASE_TAG}"
+              end
+
             system! 'git', 'commit', '-m', <<~MSG.chomp
-              #{DEPLOYMENT_VALUES_YAML} => #{CODEAI_DOCKER_TAG}
+              #{commit_subject}
             MSG
 
             # Push to https://github.com/code-dot-org/k8s-gitops
             puts "Pushing to https://github.com/code-dot-org/k8s-gitops"
             system! 'git push origin HEAD:main'
 
-            puts "Success: committed+pushed newly built docker image tag #{CODEAI_DOCKER_TAG} to #{DEPLOYMENT_VALUES_YAML} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
+            puts "Success: committed+pushed warehouse metadata for #{RELEASE_TAG} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
           end
