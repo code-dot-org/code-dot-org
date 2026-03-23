@@ -2,12 +2,15 @@
 # architectures (e.g. amd64, arm64) in parallel on a GH runner for that specific architecture.
 #
 # The resulting build artifacts are multiple tagged single-architecture docker images, for example:
-# - code-dot-org:my-branch-amd64
-# - code-dot-org:my-branch-arm64
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-amd64
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-arm64
 #
 # This step uses `docker buildx imagetools` to stitch the single-architecture images into one final
 # multi-platform docker image, for example:
-# - code-dot-org:my-branch
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
+#
+# and then tags the same manifest with a branch-name alias, e.g.:
+# - code-dot-org:staging
 
 name: k8s-stitch-multiplatform-image
 
@@ -21,6 +24,10 @@ on:
         description: "Docker tag for the final multi-platform image"
         value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_tag }}
     inputs:
+      branch_tag_alias:
+        description: "Branch-name tag alias for the final multi-platform image"
+        required: true
+        type: string
       docker_tags_json:
         description: "JSON object like: { docker_tag_amd64: $TAG_FOR_AMD64, ...etc... }"
         required: true
@@ -43,6 +50,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      BRANCH_TAG_ALIAS: ${{ inputs.branch_tag_alias }}
       MULTI_PLATFORM_IMAGE: ghcr.io/${{ github.repository_owner }}/code-dot-org:${{ inputs.docker_tag }}
     defaults:
       run:
@@ -67,6 +75,7 @@ jobs:
           DOCKER_TAGS_JSON='${{ inputs.docker_tags_json }}'
           SINGLE_ARCH_IMAGES=$(jq -r --arg prefix "$IMAGE_NAME" 'to_entries | map(select(.key | test("^docker_tag_")) | "\($prefix):\(.value)") | join(" ")' <<< "$DOCKER_TAGS_JSON")
           echo "SINGLE_ARCH_IMAGES=$SINGLE_ARCH_IMAGES" >> "$GITHUB_ENV"
+          echo "NORMALIZED_BRANCH_TAG_ALIAS=${BRANCH_TAG_ALIAS//[^a-zA-Z0-9_.-]/-}" >> "$GITHUB_ENV"
 
       - name: Require both arch images
         run: |
@@ -75,8 +84,12 @@ jobs:
       - name: Stitch platform images into a multi-platform image
         run: |
           # Use imagetools to stitch all platform-specific images into one multi-platform image
-          # $MULTI_PLATFORM_IMAGE is the final multi-platform image name, e.g. code-dot-org:my-branch
+          # $MULTI_PLATFORM_IMAGE is the canonical final multi-platform image name, e.g. code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
           docker buildx imagetools create -t $MULTI_PLATFORM_IMAGE $SINGLE_ARCH_IMAGES
+
+      - name: Tag the stitched image with the branch alias
+        run: |
+          docker buildx imagetools create -t "$IMAGE_NAME:$NORMALIZED_BRANCH_TAG_ALIAS" $MULTI_PLATFORM_IMAGE
 
       - name: Export stitched image ref
         id: export-image
