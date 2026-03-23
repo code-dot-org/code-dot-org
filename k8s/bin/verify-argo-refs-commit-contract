@@ -1,0 +1,71 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "optparse"
+require "time"
+require "yaml"
+
+SOURCE_REPO = "https://github.com/code-dot-org/code-dot-org.git"
+SOURCE_PATH = "k8s/helm"
+DEPLOYMENT_KEYS = %w[envType namespace targetRevision].freeze
+
+options = {}
+
+OptionParser.new do |parser|
+  parser.on("--build-lock-dir PATH") {|value| options[:build_lock_dir] = value}
+  parser.on("--gitops-root PATH") {|value| options[:gitops_root] = value}
+  parser.on("--source-git-commit SHA") {|value| options[:git_commit] = value}
+  parser.on("--image-ref REF") {|value| options[:image_ref] = value}
+  parser.on("--image-digest DIGEST") {|value| options[:image_digest] = value}
+end.parse!
+
+%i[build_lock_dir git_commit image_ref image_digest].each do |key|
+  abort("missing required option: #{key}") if options[key].to_s.strip.empty?
+end
+
+release_id = "git-#{options[:git_commit]}"
+historical_path = File.join(options[:build_lock_dir], "#{release_id}.yaml")
+current_path = File.join(options[:build_lock_dir], "current.yaml")
+
+abort("missing #{historical_path}") unless File.exist?(historical_path)
+abort("missing #{current_path}") unless File.exist?(current_path)
+
+historical_body = File.read(historical_path)
+current_body = File.read(current_path)
+
+abort("current.yaml does not match #{release_id}.yaml") unless historical_body == current_body
+
+payload = YAML.safe_load(current_body)
+abort("unexpected build-lock payload") unless payload.is_a?(Hash)
+abort("expected releaseId #{release_id}") unless payload["releaseId"] == release_id
+abort("expected gitCommit #{options[:git_commit]}") unless payload["gitCommit"] == options[:git_commit]
+abort("expected image.ref #{options[:image_ref]}") unless payload.dig("image", "ref") == options[:image_ref]
+abort("expected image.digest #{options[:image_digest]}") unless payload.dig("image", "digest") == options[:image_digest]
+abort("image tag must be #{release_id}") unless options[:image_ref].end_with?(":#{release_id}")
+abort("image digest must be sha256:...") unless options[:image_digest].match?(/\Asha256:[0-9a-f]{64}\z/)
+abort("expected packaging.kind helm") unless payload.dig("packaging", "kind") == "helm"
+abort("expected packaging.sourceRepo #{SOURCE_REPO}") unless payload.dig("packaging", "sourceRepo") == SOURCE_REPO
+abort("expected packaging.sourcePath #{SOURCE_PATH}") unless payload.dig("packaging", "sourcePath") == SOURCE_PATH
+Time.iso8601(payload.fetch("createdAt"))
+
+exit 0 unless options[:gitops_root]
+
+application_set_path = File.join(options[:gitops_root], "apps/codeai/applicationset.yaml")
+application_set = YAML.safe_load_file(application_set_path)
+source = application_set.fetch("spec").fetch("template").fetch("spec").fetch("sources").first
+abort("ApplicationSet must use targetRevision template") unless source["targetRevision"] == "{{targetRevision}}"
+abort("ApplicationSet must deploy code-dot-org/k8s/helm") unless source["path"] == "k8s/helm"
+
+deployment_glob = File.join(options[:gitops_root], "apps/codeai/deployments/*/deployment.yaml")
+Dir.glob(deployment_glob).sort.each do |path|
+  deployment = YAML.safe_load_file(path)
+  DEPLOYMENT_KEYS.each do |key|
+    abort("#{path} is missing #{key}") if deployment[key].to_s.strip.empty?
+  end
+end
+
+values_glob = File.join(options[:gitops_root], "apps/codeai/deployments/*/values.yaml")
+Dir.glob(values_glob).sort.each do |path|
+  values = YAML.safe_load_file(path)
+  abort("#{path} is missing image") if values["image"].to_s.strip.empty?
+end

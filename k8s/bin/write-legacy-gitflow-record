@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "fileutils"
+require "optparse"
+require "time"
+require "yaml"
+
+options = {
+  merged_at: Time.now.utc.iso8601
+}
+
+OptionParser.new do |parser|
+  parser.on("--legacy-env ENV") {|value| options[:legacy_env] = value}
+  parser.on("--git-commit SHA") {|value| options[:git_commit] = value}
+  parser.on("--output-dir PATH") {|value| options[:output_dir] = value}
+  parser.on("--merged-at ISO8601") {|value| options[:merged_at] = value}
+end.parse!
+
+%i[legacy_env git_commit output_dir].each do |key|
+  abort("missing required option: #{key}") if options[key].to_s.strip.empty?
+end
+
+abort("unsupported legacy env #{options[:legacy_env]}") unless %w[staging test levelbuilder production].include?(options[:legacy_env])
+
+tag = "git-#{options[:git_commit]}"
+payload = {
+  "revision" => options[:git_commit],
+  "tag" => tag,
+  "mergedAt" => options[:merged_at]
+}
+
+body = YAML.dump(payload).delete_prefix("---\n")
+merged_dir = File.join(options[:output_dir], "merged")
+historical_path = File.join(merged_dir, "#{tag}.yaml")
+current_path = File.join(options[:output_dir], "current.yaml")
+
+FileUtils.mkdir_p(merged_dir)
+
+if File.exist?(historical_path) && File.read(historical_path) != body
+  abort("refusing to rewrite #{historical_path} with different contents")
+end
+
+File.write(historical_path, body)
+File.write(current_path, body)
+
+abort("legacy gitflow files differ after write") unless File.read(historical_path) == File.read(current_path)
+
+puts historical_path
+puts current_path

@@ -1,0 +1,61 @@
+name: k8s-commit-legacy-gitflow-metadata
+
+on:
+  workflow_call:
+    inputs:
+      legacy_env:
+        required: true
+        type: string
+      source_git_commit:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  commit-legacy-gitflow-metadata:
+    name: commit legacy gitflow metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6.0.2
+        with:
+          path: code-dot-org
+
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Write legacy gitflow metadata
+        env:
+          LEGACY_ENV: ${{ inputs.legacy_env }}
+          SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
+        run: |
+          code-dot-org/k8s/bin/write-legacy-gitflow-record \
+            --legacy-env "$LEGACY_ENV" \
+            --git-commit "$SOURCE_GIT_COMMIT" \
+            --output-dir "k8s-gitops/warehouses/codeai/legacy-gitflow/$LEGACY_ENV"
+
+      - name: Commit and push legacy gitflow metadata
+        working-directory: k8s-gitops
+        env:
+          LEGACY_ENV: ${{ inputs.legacy_env }}
+          SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "warehouses/codeai/legacy-gitflow/$LEGACY_ENV/current.yaml" \
+            "warehouses/codeai/legacy-gitflow/$LEGACY_ENV/merged/git-${SOURCE_GIT_COMMIT}.yaml"
+
+          if git diff --cached --quiet; then
+            echo "Success: no legacy gitflow diff detected, no commit+push needed."
+            exit 0
+          fi
+
+          git commit -m "Record legacy ${LEGACY_ENV} merge git-${SOURCE_GIT_COMMIT}"
+          git push origin HEAD:main

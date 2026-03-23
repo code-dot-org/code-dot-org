@@ -7,6 +7,9 @@ name: k8s-validate
 
 on:
   workflow_call:
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
 
 jobs:
   validate:
@@ -19,18 +22,44 @@ jobs:
           sparse-checkout: |
             k8s
 
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
       - name: Setup Helm
         uses: azure/setup-helm@v4
         with:
           version: v3.19.0
 
-      - name: Setup Kustomize
+      - name: Generate representative build-lock record
         run: |
-          KUSTOMIZE_VERSION=v5.8.1
-          ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
-          curl -fsSLo /tmp/kustomize.tar.gz "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VERSION}/kustomize_${KUSTOMIZE_VERSION}_linux_${ARCH}.tar.gz"
-          tar -xzf /tmp/kustomize.tar.gz -C /tmp
-          sudo install /tmp/kustomize /usr/local/bin/kustomize
+          SOURCE_GIT_COMMIT=$(git rev-parse HEAD)
+          IMAGE_REF="ghcr.io/${{ github.repository_owner }}/code-dot-org:git-${SOURCE_GIT_COMMIT}"
+          IMAGE_DIGEST="sha256:$(printf '0%.0s' $(seq 1 64))"
+          k8s/bin/write-build-lock-record \
+            --git-commit "$SOURCE_GIT_COMMIT" \
+            --image-ref "$IMAGE_REF" \
+            --image-digest "$IMAGE_DIGEST" \
+            --output-dir /tmp/codeai-build-lock
 
-      - name: Verify kustomize/helm parity
-        run: k8s/kustomize/bin/verify-parity
+      - name: Verify Helm thin-lock contract
+        run: |
+          SOURCE_GIT_COMMIT=$(git rev-parse HEAD)
+          IMAGE_REF="ghcr.io/${{ github.repository_owner }}/code-dot-org:git-${SOURCE_GIT_COMMIT}"
+          IMAGE_DIGEST="sha256:$(printf '0%.0s' $(seq 1 64))"
+          k8s/bin/verify-argo-refs-commit-contract \
+            --build-lock-dir /tmp/codeai-build-lock \
+            --gitops-root k8s-gitops \
+            --source-git-commit "$SOURCE_GIT_COMMIT" \
+            --image-ref "$IMAGE_REF" \
+            --image-digest "$IMAGE_DIGEST"
+
+      - name: Helm template smoke render
+        run: |
+          helm template staging ./k8s/helm \
+            -f k8s-gitops/apps/codeai/envTypes/staging.values.yaml \
+            -f k8s-gitops/apps/codeai/deployments/staging/values.yaml >/dev/null
