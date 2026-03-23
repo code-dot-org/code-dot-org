@@ -23,6 +23,9 @@ on:
       codeai_docker_tag:
         description: "Docker tag for the final multi-platform image"
         value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_tag }}
+      codeai_docker_digest:
+        description: "Registry digest for the final multi-platform image"
+        value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_digest }}
     inputs:
       branch_tag_alias:
         description: "Branch-name tag alias for the final multi-platform image"
@@ -43,6 +46,7 @@ jobs:
     outputs:
       codeai_docker_image_ref: ${{ steps.export-image.outputs.codeai_docker_image_ref }}
       codeai_docker_tag: ${{ steps.export-image.outputs.codeai_docker_tag }}
+      codeai_docker_digest: ${{ steps.export-image.outputs.codeai_docker_digest }}
 
     # while we're experimental, we /never/ want to block a normal PR:
     continue-on-error: true
@@ -94,5 +98,8 @@ jobs:
       - name: Export stitched image ref
         id: export-image
         run: |
+          IMAGE_DIGEST=$(docker buildx imagetools inspect "$MULTI_PLATFORM_IMAGE" | sed -n 's/^Digest: //p' | head -n1)
+          test -n "$IMAGE_DIGEST"
           echo "codeai_docker_image_ref=$MULTI_PLATFORM_IMAGE" >> "$GITHUB_OUTPUT"
           echo "codeai_docker_tag=${{ inputs.docker_tag }}" >> "$GITHUB_OUTPUT"
+          echo "codeai_docker_digest=$IMAGE_DIGEST" >> "$GITHUB_OUTPUT"

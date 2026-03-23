@@ -19,11 +19,6 @@ jobs:
           sparse-checkout: |
             k8s
 
-      - name: Setup Helm
-        uses: azure/setup-helm@v4
-        with:
-          version: v3.19.0
-
       - name: Setup Kustomize
         run: |
           KUSTOMIZE_VERSION=v5.8.1
@@ -32,5 +27,5 @@ jobs:
           tar -xzf /tmp/kustomize.tar.gz -C /tmp
           sudo install /tmp/kustomize /usr/local/bin/kustomize
 
-      - name: Verify kustomize/helm parity
-        run: k8s/kustomize/bin/verify-helm-parity
+      - name: Verify shared kustomize base renders
+        run: kustomize build k8s/kustomize/base >/dev/null

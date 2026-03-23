@@ -37,26 +37,37 @@ jobs:
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
 
-  # In parallel with skaffold: verify our kustomize and helm packages, etc
+  # In parallel with skaffold: verify the shared kustomize package inputs.
   validate:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
-  #
-  # Kargo is then responsible for promoting the change to ArgoCD codeai
-  # deployments in apps/codeai/deployments/*
-  commit-to-kargo-warehouse:
-    name: commit to kargo warehouse
-    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
+  publish-release-capsule:
+    name: publish release capsule
+    uses: ./.github/workflows/k8s-publish-release-capsule.yml
     needs:
       - stitch-multiplatform-image
       - validate
     with:
-      branch_name: ${{ github.head_ref || github.ref_name }}
+      source_commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+      codeai_docker_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_digest }}
+      publish: ${{ github.event_name == 'push' }}
+    secrets: inherit
+
+  # On legacy gitflow merges, record the observed git-<full-commit-sha> so
+  # downstream Kargo stages can gate against the old rollout narrative.
+  record-legacy-gitflow:
+    if: github.event_name == 'push'
+    name: record legacy gitflow
+    uses: ./.github/workflows/k8s-record-legacy-gitflow.yml
+    needs:
+      - publish-release-capsule
+      - validate
+    with:
+      branch_name: ${{ github.head_ref || github.ref_name }}
+      source_commit_sha: ${{ github.sha }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
