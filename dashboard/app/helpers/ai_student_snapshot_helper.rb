@@ -150,6 +150,4 @@ module AiStudentSnapshotHelper
     # TODO before merge: CHANGE TO NEW KEY
     Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
-
-  private_class_method :client
 end

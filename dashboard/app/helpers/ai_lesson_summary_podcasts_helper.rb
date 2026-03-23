@@ -68,6 +68,4 @@ module AiLessonSummaryPodcastsHelper
   def self.client
     Client.new(CDO.elevenlabs_api_key, MODEL)
   end
-
-  private_class_method :client
 end

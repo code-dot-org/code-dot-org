@@ -139,6 +139,4 @@ module AiLessonSummariesHelper
   def self.client
     Client.new(CDO.openai_lesson_summaries_api_key, MODEL)
   end
-
-  private_class_method :client
 end
