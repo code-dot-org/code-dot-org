@@ -1,0 +1,175 @@
+name: k8s-commit-to-kargo-warehouse
+
+on:
+  workflow_call:
+    inputs:
+      branch_name:
+        required: true
+        type: string
+      codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_tag:
+        required: true
+        type: string
+      codeai_docker_digest:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  commit-to-kargo-warehouse:
+    name: commit to kargo warehouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code-dot-org
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Update build lock and legacy branch metadata
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+          CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
+          CODEAI_DOCKER_DIGEST: ${{ inputs.codeai_docker_digest }}
+        run: | # ruby
+          require 'fileutils'
+          require 'open3'
+          require 'pathname'
+          require 'psych'
+          require 'time'
+
+          LEGACY_BRANCHES = %w[staging test levelbuilder production].freeze
+          SOURCE_REPO = 'https://github.com/code-dot-org/code-dot-org.git'.freeze
+          SOURCE_PATH = 'k8s/helm'.freeze
+          GITOPS_ROOT = Pathname('k8s-gitops')
+          BUILDS_DIR = Pathname('warehouses/codeai/builds')
+          LEGACY_DIR = Pathname('warehouses/codeai/legacy-gitflow')
+
+          BRANCH_NAME = ENV.fetch('BRANCH_NAME')
+          CODEAI_DOCKER_IMAGE_REF = ENV.fetch('CODEAI_DOCKER_IMAGE_REF')
+          CODEAI_DOCKER_TAG = ENV.fetch('CODEAI_DOCKER_TAG')
+          CODEAI_DOCKER_DIGEST = ENV.fetch('CODEAI_DOCKER_DIGEST')
+          RELEASE_SHA = `git rev-parse HEAD`.strip
+          RELEASE_TAG = "git-#{RELEASE_SHA}"
+          NOW = Time.now.utc.iso8601
+
+          def system!(*cmd, chdir: nil)
+            stdout, stderr, status = Open3.capture3(*cmd, chdir: chdir)
+            return stdout if status.success?
+
+            rendered_cmd = cmd.map(&:inspect).join(' ')
+            raise <<~MSG
+              Command failed (exitstatus=#{status.exitstatus}): #{rendered_cmd}
+              stdout:
+              #{stdout}
+              stderr:
+              #{stderr}
+            MSG
+          end
+
+          def yaml_dump(hash)
+            Psych.dump(hash).sub(/\A---\s*\n/, '')
+          end
+
+          def write_yaml(path, payload)
+            FileUtils.mkdir_p(path.dirname)
+            File.write(path, yaml_dump(payload))
+          end
+
+          def add_if_exists(paths, path)
+            paths << path.to_s if File.exist?(path)
+          end
+
+          unless CODEAI_DOCKER_IMAGE_REF.end_with?(":#{CODEAI_DOCKER_TAG}")
+            abort("ERROR: image ref #{CODEAI_DOCKER_IMAGE_REF.inspect} does not end with tag #{CODEAI_DOCKER_TAG.inspect}")
+          end
+
+          if BRANCH_NAME == 'staging'
+            unless CODEAI_DOCKER_TAG == RELEASE_TAG
+              abort("ERROR: expected immutable docker tag #{RELEASE_TAG.inspect}, got #{CODEAI_DOCKER_TAG.inspect}")
+            end
+
+            build_lock = {
+              'schemaVersion' => 'v1',
+              'releaseId' => RELEASE_TAG,
+              'gitCommit' => RELEASE_SHA,
+              'image' => {
+                'ref' => CODEAI_DOCKER_IMAGE_REF,
+                'digest' => CODEAI_DOCKER_DIGEST,
+              },
+              'packaging' => {
+                'kind' => 'helm',
+                'sourceRepo' => SOURCE_REPO,
+                'sourcePath' => SOURCE_PATH,
+              },
+              'createdAt' => NOW,
+            }
+
+            historical_lock = GITOPS_ROOT.join(BUILDS_DIR, "#{RELEASE_TAG}.yaml")
+            current_lock = GITOPS_ROOT.join(BUILDS_DIR, 'current.yaml')
+            write_yaml(historical_lock, build_lock)
+            write_yaml(current_lock, build_lock)
+          end
+
+          unless LEGACY_BRANCHES.include?(BRANCH_NAME)
+            puts "Skipping k8s-gitops writeback for non-legacy branch #{BRANCH_NAME.inspect}"
+            exit 0
+          end
+
+          legacy_current = {
+            'revision' => RELEASE_SHA,
+            'tag' => RELEASE_TAG,
+            'mergedAt' => NOW,
+          }
+          write_yaml(GITOPS_ROOT.join(LEGACY_DIR, BRANCH_NAME, 'current.yaml'), legacy_current)
+
+          Dir.glob(GITOPS_ROOT.join(BUILDS_DIR, 'git-*.yaml').to_s).sort.each do |path|
+            release_tag = File.basename(path, '.yaml')
+            release_sha = release_tag.delete_prefix('git-')
+            next unless system('git', 'merge-base', '--is-ancestor', release_sha, 'HEAD')
+
+            merged_record = GITOPS_ROOT.join(LEGACY_DIR, BRANCH_NAME, 'merged', "#{release_tag}.yaml")
+            next if File.exist?(merged_record)
+
+            write_yaml(merged_record, {
+              'revision' => release_sha,
+              'tag' => release_tag,
+              'mergedAt' => NOW,
+            })
+          end
+
+          Dir.chdir('k8s-gitops') do
+            system!('git', 'config', 'user.name', 'github-actions[bot]')
+            system!('git', 'config', 'user.email', '41898282+github-actions[bot]@users.noreply.github.com')
+
+            paths_to_add = []
+            add_if_exists(paths_to_add, BUILDS_DIR.join('current.yaml'))
+            add_if_exists(paths_to_add, BUILDS_DIR.join("#{RELEASE_TAG}.yaml"))
+            add_if_exists(paths_to_add, LEGACY_DIR.join(BRANCH_NAME, 'current.yaml'))
+            Dir.glob(LEGACY_DIR.join(BRANCH_NAME, 'merged', 'git-*.yaml').to_s).sort.each do |path|
+              paths_to_add << path
+            end
+
+            system!('git', 'add', *paths_to_add)
+
+            if system('git', 'diff', '--cached', '--quiet')
+              puts 'Success: no k8s-gitops diff detected, no commit+push needed.'
+              exit 0
+            end
+
+            system!('git', 'commit', '-m', "Update Kargo warehouse for #{BRANCH_NAME} => #{RELEASE_TAG}")
+            system!('git', 'push', 'origin', 'HEAD:main')
+          end

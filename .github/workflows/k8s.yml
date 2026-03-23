@@ -39,11 +39,11 @@ jobs:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref to a deployment values.yaml file in the
-  # k8s-gitops repo, which is constantly monitored by ArgoCD to sync deployments/deploy
-  commit-image-ref-to-argocd:
-    name: commit image ref to argocd
-    uses: ./.github/workflows/k8s-commit-image-ref-to-argocd.yml
+  # Step 3: write the immutable build lock that Kargo promotes, plus legacy-branch
+  # gate metadata used while the legacy gitflow branches remain the release signal.
+  commit-build-lock-to-kargo-warehouse:
+    name: commit build lock to kargo warehouse
+    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs:
       - stitch-multiplatform-image
       - validate
@@ -51,6 +51,7 @@ jobs:
       branch_name: ${{ github.head_ref || github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+      codeai_docker_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_digest }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
