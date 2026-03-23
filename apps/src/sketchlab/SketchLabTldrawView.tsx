@@ -32,17 +32,6 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   const [tldrawEditor, setTldrawEditor] = useState<Editor | null>(null);
   const {currentSources, updateSources} = useSources<SketchlabTldrawSources>();
 
-  const parseSnapshot = (snapshotStr: string | undefined) => {
-    if (!snapshotStr) {
-      return undefined;
-    }
-    try {
-      return JSON.parse(snapshotStr) as TLStoreSnapshot;
-    } catch (e) {
-      console.log('Error parsing snapshot', e);
-      return undefined;
-    }
-  };
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
   const assetStore = useMemo(
@@ -53,7 +42,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
 
   const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
-    parseSnapshot(currentSources?.source)
+    currentSources?.source
   );
 
   const initializeEditor = useCallback((editor: Editor) => {
@@ -68,9 +57,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
       // https://tldraw.dev/reference/store/Store#listen
       const unsubscribe = tldrawEditor.store.listen(
         () => {
-          const currentSnapshot = getSnapshot(tldrawEditor.store);
-          const serializedSnapshot = JSON.stringify(currentSnapshot.document);
-          updateSources({source: serializedSnapshot});
+          updateSources({source: getSnapshot(tldrawEditor.store).document});
         },
         // We are only listening to 'document' changes because 'session' changes are things like cursor location,
         // etc. We won't save those.

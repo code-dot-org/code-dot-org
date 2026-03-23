@@ -79,10 +79,16 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
+// Simple structural type for tldraw snapshots. TLStoreSnapshot (= StoreSnapshot<TLRecord>)
+// is assignable to this, but we avoid importing tldraw's complex recursive types here
+// to prevent TS2589 (excessively deep type instantiation) errors in Immer/Redux.
+export type TldrawSource = {store: unknown; schema: unknown};
+
 export type Source =
   | BlocklySource
   | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+  | ExcalidrawSourceWithExternalFiles
+  | TldrawSource;
 
 export interface SaveSourceOptions {
   projectType?: string;
