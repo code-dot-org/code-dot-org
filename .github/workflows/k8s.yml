@@ -30,7 +30,9 @@ jobs:
   stitch-multiplatform-image:
     name: stitch multi-platform image
     uses: ./.github/workflows/k8s-stitch-multiplatform-image.yml
-    needs: skaffold-build
+    needs:
+      - skaffold-build
+      - validate
     with:
       branch_tag_alias: ${{ github.head_ref || github.ref_name }}
       docker_tags_json: ${{ toJSON(needs.skaffold-build.outputs) }}
