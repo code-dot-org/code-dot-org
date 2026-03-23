@@ -110,7 +110,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
             className: classNames(canRecord && styles.hide),
           }}
         >
-          <div>
+          <div className={styles.microphoneButtonContainer}>
             <MuiIconButton
               variant="outlined"
               size="extraSmall"

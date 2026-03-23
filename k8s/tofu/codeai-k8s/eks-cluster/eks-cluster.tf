@@ -12,7 +12,7 @@ module "eks" {
   kms_key_administrators = var.cluster_admin_role_arns
 
   # See: ./eks-cluster-networking.tf
-  vpc_id = var.vpc_id
+  vpc_id = local.vpc_id
   subnet_ids = [
     aws_subnet.public_1.id,
     aws_subnet.public_2.id,
