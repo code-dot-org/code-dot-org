@@ -14,10 +14,15 @@ image_tag = ENV.fetch('CODEAI_DOCKER_TAG')
 gitops_root = File.expand_path(ENV.fetch('K8S_GITOPS_ROOT'))
 created_at = ENV.fetch('CREATED_AT', Time.now.utc.iso8601)
 git_commit = ENV.fetch('GIT_COMMIT', image_tag.delete_prefix('git-'))
+image_digest = ENV.fetch('CODEAI_DOCKER_IMAGE_DIGEST', nil)
 
 expected_release_tag = "git-#{git_commit}"
 abort("Expected CODEAI_DOCKER_TAG=#{expected_release_tag}, got #{image_tag}") if image_tag != expected_release_tag
 abort("Expected CODEAI_DOCKER_IMAGE_REF to end with :#{image_tag}") unless image_ref.end_with?(":#{image_tag}")
+if branch_name == RELEASE_BRANCH
+  abort('Expected CODEAI_DOCKER_IMAGE_DIGEST to be set for release metadata') if image_digest.to_s.empty?
+  abort("Expected CODEAI_DOCKER_IMAGE_DIGEST to look like sha256:<64 hex>, got #{image_digest}") unless image_digest.match?(/\Asha256:[0-9a-f]{64}\z/)
+end
 
 def write_yaml(path, payload)
   FileUtils.mkdir_p(File.dirname(path))
@@ -31,7 +36,7 @@ if branch_name == RELEASE_BRANCH
     'gitCommit' => git_commit,
     'image' => {
       'ref' => image_ref,
-      'digest' => ENV['CODEAI_DOCKER_IMAGE_DIGEST'] || ''
+      'digest' => image_digest
     },
     'packaging' => {
       'kind' => 'kustomize',

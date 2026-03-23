@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v6.0.2
         with:
           sparse-checkout: |
+            .github/workflows
             k8s
 
       - name: Checkout k8s-gitops
