@@ -134,6 +134,9 @@ class Ability
       # A user can review the code of other_user if they are the other_user's teacher or if
       # they're in a shared section with code review turned on and they're in the same code review group
       can :code_review, User do |other_user|
+        # Demo students are shared across teachers; block code review to prevent
+        # cross-teacher visible comments on shared projects.
+        next false if Policies::DemoSections.demo_student?(other_user.id)
         return true if other_user.student_of?(user)
 
         in_shared_section_with_code_review = user.shared_sections_with(other_user).any?(&:code_review_enabled?)

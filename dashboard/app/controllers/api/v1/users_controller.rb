@@ -297,8 +297,10 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     return head :unauthorized unless current_user&.teacher?
     target_user = User.find_by_id(params[:user_id])
 
-    unless target_user&.student_of?(current_user)
-      return head :unauthorized
+    # can?(:manage, target_user) blocks demo students, whose User record is
+    # shared across teachers and should not be modified.
+    unless target_user&.student_of?(current_user) && can?(:manage, target_user)
+      return head :forbidden
     end
 
     target_user.ai_tutor_access_denied = !to_bool(params[:ai_tutor_access])
