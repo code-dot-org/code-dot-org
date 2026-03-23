@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-03-10T14:55:56.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "AI Research Chat",
-    "long_instructions": "##AI Research Chat\r\n\r\n_How to use this tool:_\r\n* **Ask \"Why\" and \"How\"**: If a concept in your mini-lesson is confusing, ask the AI to explain it simply or provide an example.\r\n* **Explore Tradeoffs**: Ask the AI to help you weigh the pros and cons of your specific topic to see all sides of the issue.\r\n* **Test Your Ideas**: Share your initial thoughts and ask the AI for feedback or different perspectives.\r\n* **Make the Final Call**: Use the AT as a thinking partner to gather information, but remember that you make the final decision.",
+    "long_instructions": "##AI Research Chat\r\n\r\n_How to use this tool:_\r\n* **Ask \"Why\" and \"How\"**: If a concept in your mini-lesson is confusing, ask the AI to explain it simply or provide an example.\r\n* **Explore Tradeoffs**: Ask the AI to help you weigh the pros and cons of your specific topic to see all sides of the issue.\r\n* **Test Your Ideas**: Share your initial thoughts and ask the AI for feedback or different perspectives.\r\n* **Make the Final Call**: Use the AI as a thinking partner to gather information, but remember that you make the final decision.",
     "bubble_choice_description": "Use this AI Research Chat to further explore any of the ideas that you encountered in your mini-lesson.",
     "thumbnail_url": "https://images.code.org/bf2d7778ba27a8de22c13673d8b7bd2a-search.png",
     "offer_browser_tts": "false",
@@ -49,7 +50,6 @@
     },
     "name_suffix": "_2026-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:56.614+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level3d_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level3d_2026-test\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:56.614+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level3d_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level3d_2026-test\"},{\"changed_at\":\"2026-03-20 22:54:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>
