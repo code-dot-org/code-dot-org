@@ -10,9 +10,19 @@ import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon
 import {IconButton as MuiIconButton} from '@mui/material';
 import _ from 'lodash';
 import debounce from 'lodash/debounce';
-import React, {useCallback, useRef, useEffect, useState} from 'react';
+import React, {
+  useCallback,
+  useRef,
+  useEffect,
+  useState,
+  type ChangeEvent,
+  type CSSProperties,
+  type MouseEvent,
+} from 'react';
 
-import localization from '@cdo/apps/localization';
+import localization, {
+  type LocalizationChangeEvent,
+} from '@cdo/apps/localization';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog/index';
 import I18nDropdown from '@cdo/apps/sharedComponents/footer/I18nDropdown/index';
@@ -26,6 +36,15 @@ const MenuStates = {
 };
 
 export type MenuState = (typeof MenuStates)[keyof typeof MenuStates];
+
+export interface SmallFooterStyles {
+  smallFooter: CSSProperties;
+  base: CSSProperties;
+  baseFullWidth: CSSProperties;
+  moreMenu: CSSProperties;
+  version: CSSProperties;
+  listItem?: CSSProperties;
+}
 
 export interface SmallFooterProps {
   i18nDropdownInBase: boolean;
@@ -43,6 +62,7 @@ export interface SmallFooterProps {
     link: string;
     copyright: boolean;
     newWindow: boolean;
+    key: string;
   }[];
   phoneFooter: boolean;
   className: string;
@@ -58,15 +78,15 @@ const SmallFooter = (props: SmallFooterProps) => {
   const [baseWidth, setBaseWidth] = useState<number>(0);
   const [baseHeight, setBaseHeight] = useState<number>(0);
   const [currentLocale, setCurrentLocale] = useState<string>(
-    localization.isLocalizeJS() ? 'en' : props.currentLocale
+    localization.isLocalizeJS() ? 'en' : props.currentLocale || 'en-US'
   );
   const [localeOptions, setLocaleOptions] = useState<
     SmallFooterProps['localeOptions']
-  >(localization.isLocalizeJS() ? [] : props.localeOptions);
+  >(localization.isLocalizeJS() ? [] : props.localeOptions || []);
   const ref = useRef<HTMLDivElement>(null);
 
   const onLocaleUpdate = useCallback(
-    info => {
+    (info: LocalizationChangeEvent) => {
       setLocaleOptions(localization.locales);
       setCurrentLocale(info.locale);
     },
@@ -93,55 +113,8 @@ const SmallFooter = (props: SmallFooterProps) => {
     };
   }, [captureBaseElementDimensions, onLocaleUpdate]);
 
-  const clickBase = useCallback(
-    e => {
-      if (props.copyrightInBase) {
-        // When we have multiple items in our base row, ignore clicks to the
-        // row that aren't on those particular items
-        return;
-      }
-      clickBaseMenu(e);
-    },
-    [clickBaseMenu, props.copyrightInBase]
-  );
-
-  const clickBaseCopyright = useCallback(
-    e => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      if (menuState === MenuStates.MINIMIZING) {
-        return;
-      }
-
-      if (menuState === MenuStates.COPYRIGHT) {
-        setMenuState(MenuStates.MINIMIZED);
-        return;
-      }
-
-      setMenuState(MenuStates.COPYRIGHT);
-    },
-    [menuState, setMenuState]
-  );
-
-  const clickMenuCopyright = useCallback(
-    event => {
-      event.stopPropagation();
-      setMenuState(MenuStates.COPYRIGHT);
-    },
-    [setMenuState]
-  );
-
-  const closeCopyrightDialog = useCallback(
-    e => {
-      e?.stopPropagation();
-      setMenuState(MenuStates.MINIMIZED);
-    },
-    [setMenuState]
-  );
-
   const clickBaseMenu = useCallback(
-    e => {
+    (e: MouseEvent) => {
       e.stopPropagation();
       if (menuState === MenuStates.MINIMIZING) {
         return;
@@ -160,7 +133,54 @@ const SmallFooter = (props: SmallFooterProps) => {
     [menuState, setMenuState]
   );
 
-  const styles = {
+  const clickBase = useCallback(
+    (e: MouseEvent) => {
+      if (props.copyrightInBase) {
+        // When we have multiple items in our base row, ignore clicks to the
+        // row that aren't on those particular items
+        return;
+      }
+      clickBaseMenu(e);
+    },
+    [clickBaseMenu, props.copyrightInBase]
+  );
+
+  const clickBaseCopyright = useCallback(
+    (e: MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+
+      if (menuState === MenuStates.MINIMIZING) {
+        return;
+      }
+
+      if (menuState === MenuStates.COPYRIGHT) {
+        setMenuState(MenuStates.MINIMIZED);
+        return;
+      }
+
+      setMenuState(MenuStates.COPYRIGHT);
+    },
+    [menuState, setMenuState]
+  );
+
+  const clickMenuCopyright = useCallback(
+    (e: MouseEvent) => {
+      e.stopPropagation();
+      setMenuState(MenuStates.COPYRIGHT);
+    },
+    [setMenuState]
+  );
+
+  const closeCopyrightDialog = useCallback(
+    (e: ChangeEvent) => {
+      e.stopPropagation();
+      setMenuState(MenuStates.MINIMIZED);
+    },
+    [setMenuState]
+  );
+
+  const styles: SmallFooterStyles = {
     smallFooter: {
       fontSize: props.fontSize,
     },
@@ -227,7 +247,7 @@ const SmallFooter = (props: SmallFooterProps) => {
     }
   };
 
-  const renderMoreMenu = styles => {
+  const renderMoreMenu = (styles: SmallFooterStyles) => {
     const channelId = props.channel;
     const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
     if (alreadyReportedAbuse) {
@@ -271,7 +291,7 @@ const SmallFooter = (props: SmallFooterProps) => {
       >
         {props.i18nDropdownInBase && (
           <I18nDropdown
-            localeUrl={props.localeUrl}
+            localeUrl={props.localeUrl || ''}
             selected={currentLocale}
             options={localeOptions}
           />
