@@ -42,23 +42,6 @@ jobs:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
-  #
-  # Kargo is then responsible for promoting the change to ArgoCD codeai
-  # deployments in apps/codeai/deployments/*
-  commit-to-kargo-warehouse:
-    name: commit to kargo warehouse
-    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
-    needs:
-      - stitch-multiplatform-image
-      - validate
-    with:
-      branch_name: ${{ github.head_ref || github.ref_name }}
-      codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
-      codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
-    secrets: inherit
-
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
 permissions:
   # permission to checkout this repo in the build workflow

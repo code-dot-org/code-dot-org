@@ -37,7 +37,7 @@ on:
         description: "Docker tag for arm64 architecture"
         value: ${{ jobs.build.outputs.docker_tag_arm64 }}
       docker_tag:
-        description: "Docker tag"
+        description: "Immutable docker tag in the form git-<full-commit-sha>"
         value: ${{ jobs.build.outputs.docker_tag }}
 
 jobs:
@@ -82,11 +82,12 @@ jobs:
 
           if [[ "$APPEND_ARCHITECTURE_TO_DOCKER_TAG" == "true" ]]; then
             ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
-            DOCKER_TAG="${DOCKER_TAG}-${ARCH}"
-            echo "docker_tag_${ARCH}=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
+            DOCKER_TAG_ARCH="${DOCKER_TAG}-${ARCH}"
+            echo "docker_tag_${ARCH}=$DOCKER_TAG_ARCH" >> "$GITHUB_OUTPUT"
+            echo "DOCKER_TAG=$DOCKER_TAG_ARCH" >> $GITHUB_ENV
+          else
+            echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
           fi
-          
-          echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
 
       # GitHub Runners didn't have a big enough disk for our giant Docker images
       # but fortunately they have an empty tmp disk mounted at /mnt, we just need
