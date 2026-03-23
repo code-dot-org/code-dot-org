@@ -1,4 +1,4 @@
-import {TLAsset, TLAssetStore} from 'tldraw';
+import {TLAsset, TLAssetId, TLAssetStore, TLStoreSnapshot} from 'tldraw';
 
 import {
   getAppOptionsEditingExemplar,
@@ -19,19 +19,33 @@ const MIME_TO_EXT: Record<string, string> = {
   'application/octet-stream': 'bin',
 };
 
-// TODO: also handle deleting images.
 export function createTldrawAssetStore(
   channelId: string,
-  levelName: string
+  levelName: string,
+  initialSnapshot?: TLStoreSnapshot
 ): TLAssetStore {
+  // Maps assetId -> uploaded src URL so remove() can find the right URL without
+  // needing access to the editor. Pre-populated from the snapshot so assets
+  // uploaded in previous sessions are covered.
+  const srcByAssetId = new Map<TLAssetId, string>();
+  if (initialSnapshot) {
+    for (const record of Object.values(initialSnapshot.store)) {
+      const r = record as {
+        typeName?: string;
+        id?: TLAssetId;
+        props?: {src?: string};
+      };
+      if (r.typeName === 'asset' && r.id && r.props?.src) {
+        srcByAssetId.set(r.id, r.props.src);
+      }
+    }
+  }
+
   return {
     async upload(asset: TLAsset, file: File) {
-      console.log({asset, file});
       const extension =
         MIME_TO_EXT[file.type] ?? file.name.split('.').pop() ?? 'bin';
-      // asset.id is prefixed with "asset:", e.g. "asset:some-uuid"
-      const assetId = asset.id.replace(/^asset:/, '');
-      const filenameWithExtension = `${assetId}.${extension}`;
+      const filename = `${asset.id.replace(/^asset:/, '')}.${extension}`;
 
       const isStarterAssetOrExemplar = !!(
         getIsStartMode() || getAppOptionsEditingExemplar()
@@ -40,21 +54,36 @@ export function createTldrawAssetStore(
       if (isStarterAssetOrExemplar) {
         const uploadUrl = `/level_starter_assets/${encodeURIComponent(
           levelName
-        )}/uuid/${filenameWithExtension}`;
+        )}/uuid/${filename}`;
         const bodyData = new FormData();
         bodyData.append('files[]', file);
         await HttpClient.post(uploadUrl, bodyData, true);
+        srcByAssetId.set(asset.id, uploadUrl);
         return {src: uploadUrl};
       } else {
-        const uploadUrl = `/v3/assets/${channelId}/${filenameWithExtension}`;
+        const uploadUrl = `/v3/assets/${channelId}/${filename}`;
         await HttpClient.put(uploadUrl, file);
-        console.log(`Uploaded asset to ${uploadUrl}`);
+        srcByAssetId.set(asset.id, uploadUrl);
         return {src: uploadUrl};
       }
     },
 
     resolve(asset: TLAsset) {
       return asset.props.src ?? null;
+    },
+
+    // TODO: this may never be called. Images aren't deleted immediately when a user removes them from the
+    // editor, so tldraw can do 'undo'. How can we ensure we clean up old assets effectively?
+    async remove(assetIds: TLAssetId[]) {
+      for (const assetId of assetIds) {
+        const src = srcByAssetId.get(assetId);
+        // Only delete student-owned assets (/v3/assets/...). Level starter
+        // assets (/level_starter_assets/...) are shared and must not be deleted.
+        if (src?.startsWith('/v3/assets/')) {
+          await HttpClient.delete(src, true);
+          srcByAssetId.delete(assetId);
+        }
+      }
     },
   };
 }

@@ -49,16 +49,21 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
 
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+  const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
+    isValidSnapshot(currentSources?.source) ? currentSources.source : undefined
+  );
+
   const assetStore = useMemo(
-    () => createTldrawAssetStore(channelId, levelProperties.name),
+    () =>
+      createTldrawAssetStore(
+        channelId,
+        levelProperties.name,
+        initialSnapshotRef.current
+      ),
     [channelId, levelProperties.name]
   );
 
   const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
-
-  const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
-    isValidSnapshot(currentSources?.source) ? currentSources.source : undefined
-  );
 
   const initializeEditor = useCallback((editor: Editor) => {
     setTldrawEditor(editor);
