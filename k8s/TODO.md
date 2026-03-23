@@ -2,6 +2,10 @@
 
 ## Performance improvements
 
+### Use jemalloc
+
+Use `jemalloc` in k8s workloads where it helps reduce allocator fragmentation / RSS growth.
+
 ### Reduce repo size
 
 With our regular "giant repo with lots of files" it takes `skaffold dev` about **3 minutes to start**
@@ -12,14 +16,6 @@ A build option to not include pegasus files from the build would help substantia
 
 Additionally, this one is particularly important because docker builds chew through hundreds of GB
 of disk space quite quickly when the base image is so large.
-
-### Get multiplatform layer-cached GH actions building
-
-And make it so when you run `skaffold dev` for the first time, by default its pulling either the most
-recent docker layer cache from your branch, or failing that from staging. Make this work on both
-x86_64 and arm64.
-
-This would save 20 minutes (on an M2) for first time usage.
 
 ## Snapshot seeded DB in GH actions, download in dev
 
@@ -34,10 +30,32 @@ we have existing (broken?) code that does this, and it could be repurposed.
 Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
 include prometheus as a helm chart dependency??
 
-### ArgoCD
+## Tofu EKS Cluster
 
-Get an ArgoCD setup for prod-like environments.
+See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
+repo-server disk-fill investigation notes.
 
-### CloudFormation
+In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
+`Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
+the Gateway-based direction.
 
-CloudFormation scripts to create a new prod-like EKS cluster.
+### Manage ArgoCD with ArgoCD
+
+Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
+`ServerSideApply=true` requirement for self-management:
+<https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
+
+### GitHub Actions image refs
+
+Update the `k8s-*.yml` GitHub Actions workflows so pushed Docker tags include the commit hash in
+addition to the branch name.
+
+Also update the GitOps writeback flow to commit an image ref that includes the Git hash (or similar
+immutable build identity), instead of only writing branch-like tags such as:
+
+`image: ghcr.io/code-dot-org/code-dot-org:k8s-kargo # updated by k8s-commit-image-ref-to-argocd.yml`
+
+### Dex
+
+In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+to a non-personal email.

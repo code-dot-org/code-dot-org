@@ -1,6 +1,7 @@
 # Default configuration, overridden by:
 # - development.values.yml
 # - production.values.yml
+# argocd-detect-probe: code-dot-org run 1 at 2026-03-21T16:14:30-10:00
 
 image: code-dot-org:latest
 command: ["bin/dashboard-server"]
@@ -18,6 +19,9 @@ require_external_secrets: false
 
 healthChecks:
   enabled: false
+
+resources:
+  ephemeralStorage: 30Gi
 
 autoscaling:
   enabled: false
