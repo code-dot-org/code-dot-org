@@ -153,7 +153,6 @@ namespace :ci do
             "--ci " \
             "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
-            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end
