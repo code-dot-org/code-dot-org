@@ -23,7 +23,7 @@ import '../build/locales/en_us/flappy_locale.js';
 import '../build/locales/en_us/lab2_locale.js';
 import '../build/locales/en_us/weblab2_locale.js';
 
-import Adapter from '@cfaester/enzyme-adapter-react-18';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
