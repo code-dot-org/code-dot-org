@@ -3,14 +3,18 @@
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
 #
-# IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
+# IF YOU MODIFY THIS FILE, also fix its sibling ../../../skaffold.yaml in the same
 # way until we decide between Helm and Kustomize.
 
 apiVersion: skaffold/v4beta13
 kind: Config
 build:
+  hooks:
+    before:
+      - command: ["./bin/generate-cdo-local-secrets"]
   artifacts:
   - image: code-dot-org
+    context: ../..
     sync:
       infer:
         # rerun watching
@@ -23,14 +27,18 @@ build:
         - '**/*.json'
     custom:
       buildCommand: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org.dockerfile \
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org.dockerfile" \
           --build-arg CODE_DOT_ORG_CORE="$CODE_DOT_ORG_CORE" \
           --build-arg CODE_DOT_ORG_DB_SEED="$CODE_DOT_ORG_DB_SEED" \
           --build-arg CODE_DOT_ORG_PEGASUS="$CODE_DOT_ORG_PEGASUS" \
           --build-arg CODE_DOT_ORG_STATIC="$CODE_DOT_ORG_STATIC"
       dependencies:
         dockerfile:
-          path: k8s/docker/code-dot-org.dockerfile
+          path: ../docker/code-dot-org.dockerfile
     requires:
     - image: code-dot-org-core
       alias: CODE_DOT_ORG_CORE
@@ -41,116 +49,102 @@ build:
     - image: code-dot-org-static
       alias: CODE_DOT_ORG_STATIC
   - image: code-dot-org-core
+    context: ../..
     custom:
       # skaffold sync only works when the user is root 😤:
       # https://github.com/GoogleContainerTools/skaffold/issues/2479
       # If we find a solution, we can drop this override:
       buildCommand: |
-        k8s/bin/docker-buildx -f k8s/docker/code-dot-org-core.dockerfile \
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-core.dockerfile" \
           --build-arg USERNAME=root \
           --build-arg UID=0 \
           --build-arg GID=0
       dependencies:
         dockerfile:
-          path: k8s/docker/code-dot-org-core.dockerfile
+          path: ../docker/code-dot-org-core.dockerfile
   - image: code-dot-org-pegasus
+    context: ../..
     custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-pegasus.dockerfile
+      buildCommand: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-pegasus.dockerfile"
       dependencies:
         dockerfile:
-          path: k8s/docker/code-dot-org-pegasus.dockerfile
+          path: ../docker/code-dot-org-pegasus.dockerfile
   - image: code-dot-org-static
+    context: ../..
     custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-static.dockerfile
+      buildCommand: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-static.dockerfile"
       dependencies:
         dockerfile:
-          path: k8s/docker/code-dot-org-static.dockerfile
+          path: ../docker/code-dot-org-static.dockerfile
   - image: code-dot-org-db-seed
+    context: ../..
     custom:
-      buildCommand: k8s/bin/docker-buildx -f k8s/docker/code-dot-org-db-seed.dockerfile
+      buildCommand: |
+        K8S_DIR="$BUILD_CONTEXT/k8s"
+        if [ ! -x "$K8S_DIR/bin/docker-buildx" ]; then
+          K8S_DIR="$(cd "$BUILD_CONTEXT/../.." && pwd)"
+        fi
+        "$K8S_DIR/bin/docker-buildx" -f "$K8S_DIR/docker/code-dot-org-db-seed.dockerfile"
       dependencies:
         dockerfile:
-          path: k8s/docker/code-dot-org-db-seed.dockerfile
+          path: ../docker/code-dot-org-db-seed.dockerfile
+
+manifests:
+  kustomize:
+    paths:
+      - overlays/skaffold
 
 deploy:
-  helm:
-    releases:
-      - name: cdo
-        chartPath: ./k8s/helm
-        setValueTemplates:
-          image: "{{.IMAGE_FULLY_QUALIFIED_code_dot_org}}"
-          # skaffold sync only works when the user is root 😤:
-          # https://github.com/GoogleContainerTools/skaffold/issues/2479
-          # If we find a solution, we can drop this override:
-          user.username: root
-          user.uid: "0"
-          user.gid: "0"
-          user.home: /home/root
-        valuesFiles:
-          # This list will be extended by skaffold profiles e.g.: k8s/helm/development.values.yaml
-          - k8s/helm/values.yaml
+  kubectl: {}
 
 profiles:
-
-- name: development
-  activation:
-    - command: dev
-    - command: debug
-    - kubeContext: docker-desktop
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/valuesFiles/-
-      value: k8s/helm/development.values.yaml
-    # These have to be patches vs in values.yml because they inject local env vars:
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.home
-      value: '{{ cmd "sh" "-c" "echo $HOME" }}'
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.skaffoldStorage
-      value: '{{ cmd "sh" "-c" "echo $PWD/skaffoldStorage" }}'
-    - op: add
-      path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.AWS_PROFILE
-      value: '{{ cmd "sh" "-c" "echo $AWS_PROFILE" }}'
 
 # Mount local machine credential directories into the dashboard container so it can
 # use your local AWS and gcloud credentials. To use: `skaffold dev -p local-dev`
 - name: local-dev
   patches:
     - op: add
-      path: /deploy/helm/releases/0/setValues
-      value:
-        localDev:
-          mounts:
-            mountDotAWS: true
-            mountDotConfigGcloud: true
+      path: /manifests/kustomize/paths/-
+      value: overlays/skaffold-local-dev
 
 # Populates Dashboard DB (rake dashboard:setup_db)
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-db
   patches:
       - op: add
-        path: /deploy/helm/releases/0/setValueTemplates/dashboardJob
-        value:
-          enabled: true
-          name: setup-db
-          args: ["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]
+        path: /manifests/kustomize/paths/-
+        value: overlays/setup-db
 
 # Create standard cdo-v3-* S3 buckets in minio.
 # Run: skaffold dev --trigger=manual -p setup-db -p setup-s3
 - name: setup-s3
   patches:
       - op: add
-        path: /deploy/helm/releases/0/setValueTemplates/services.minio.runSetupS3Job
-        value: true
+        path: /manifests/kustomize/paths/-
+        value: overlays/setup-s3
 
 # Mimic allows us to run a light-weight stubbed version of our huge repo. Its great for
 # fast iterative development of our k8s docker files and helm charts.
 #
 # To use:
-# 1. First-time: skaffold dev -p mimic --cache-artifacts=false
-# 2. Run: skaffold dev -p mimic
+# 1. First-time: cd k8s/kustomize && skaffold dev -p mimic --cache-artifacts=false
+# 2. Run: cd k8s/kustomize && skaffold dev -p mimic
 #
-# For details, see: ./k8s/mimic/README.md
+# For details, see: ../mimic/README.md
 - name: mimic
   patches:
     # Create the k8s/mimic/cdo-no-symlinks dir to serve as the build context for the
@@ -158,42 +152,41 @@ profiles:
     # have been replaced by copies of the real files, because docker doesn't follow
     # symlinks outside its root build context.
     - op: add
-      path: /build/hooks
+      path: /build/hooks/before/-
       value:
-        before:
-          - command: ["k8s/mimic/bin/update-cdo-no-symlinks.sh"]
+        command: ["../mimic/bin/update-cdo-no-symlinks.sh"]
     # Artifact 0 (code-dot-org)
-    - op: add
+    - op: replace
       path: /build/artifacts/0/context
-      value: k8s/mimic/cdo-no-symlinks
+      value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/0/image
       value: mimic
     # Artifact 1 (code-dot-org-core)
-    - op: add
+    - op: replace
       path: /build/artifacts/1/context
-      value: k8s/mimic/cdo-no-symlinks
+      value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/1/image
       value: mimic-core
     # Artifact 2 (code-dot-org-pegasus)
-    - op: add
+    - op: replace
       path: /build/artifacts/2/context
-      value: k8s/mimic/cdo-no-symlinks
+      value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/2/image
       value: mimic-pegasus
     # Artifact 3 (code-dot-org-static)
-    - op: add
+    - op: replace
       path: /build/artifacts/3/context
-      value: k8s/mimic/cdo-no-symlinks
+      value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/3/image
       value: mimic-static
     # Artifact 4 (code-dot-org-db-seed)
-    - op: add
+    - op: replace
       path: /build/artifacts/4/context
-      value: k8s/mimic/cdo-no-symlinks
+      value: ../mimic/cdo-no-symlinks
     - op: replace
       path: /build/artifacts/4/image
       value: mimic-db-seed
@@ -210,10 +203,10 @@ profiles:
     - op: replace
       path: /build/artifacts/0/requires/3/image
       value: mimic-static
-    # Update the docker image passed to helm
+    # Update the deployment image name so Skaffold can rewrite it to mimic.
     - op: replace
-      path: /deploy/helm/releases/0/setValueTemplates/image
-      value: "{{.IMAGE_FULLY_QUALIFIED_mimic}}"
+      path: /manifests/kustomize/paths/0
+      value: overlays/skaffold-mimic
 
 portForward:
 - resourceType: Service
@@ -240,3 +233,9 @@ portForward:
   resourceName: cdo-minio
   port: console
   localPort: 29001
+
+# Kustomize gaps:
+# - The old Helm `local-dev` profile injected dynamic host paths and AWS_PROFILE via Skaffold templating.
+#   I did not find a clean Kustomize-native equivalent without introducing generated local overlay files, so
+#   `overlays/skaffold-local-dev` is intentionally not implemented yet.
+# - `mimic` + `setup-db` / `setup-s3` would still use the non-mimic job image unless we add dedicated mimic job overlays.

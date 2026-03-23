@@ -1,4 +1,4 @@
-name: k8s-commit-image-ref-to-argocd
+name: k8s-commit-to-kargo-warehouse
 
 on:
   workflow_call:
@@ -17,8 +17,8 @@ on:
         required: true
 
 jobs:
-  commit-image-ref-to-argocd:
-    name: commit image ref to argocd
+  commit-to-kargo-warehouse:
+    name: commit to kargo warehouse
     runs-on: ubuntu-latest
     steps:
       - name: Checkout k8s-gitops
@@ -49,7 +49,7 @@ jobs:
           # We normalize deployment names with the same rule as docker tags in k8s-skaffold-build.yml
           DEPLOYMENT_NAME = BRANCH_NAME.gsub(/[^a-zA-Z0-9_.-]/, '-')
 
-          # This is the newly built docker image + tag that we'll be writing to values.yaml
+          # This is the newly built docker image ref that we'll be writing to values.yaml.
           CODEAI_DOCKER_IMAGE_REF = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
           CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
           abort('ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.') if CODEAI_DOCKER_IMAGE_REF.strip.empty?
@@ -58,7 +58,7 @@ jobs:
           DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{DEPLOYMENT_NAME}/values.yaml"
 
           # This is the updated line that we'll write to $DEPLOYMENT_VALUES_YAML:
-          UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-image-ref-to-argocd.yml\n"
+          UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-to-kargo-warehouse.yml\n"
 
           def system!(*cmd)
             ok = system(*cmd)
