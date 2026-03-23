@@ -11,7 +11,7 @@ CODE_DOT_ORG_ROOT = Pathname(ENV.fetch('CODE_DOT_ORG_ROOT', Dir.pwd))
 GITOPS_ROOT = Pathname(ENV.fetch('K8S_GITOPS_ROOT', CODE_DOT_ORG_ROOT.join('k8s-gitops').to_s))
 KUSTOMIZE_ROOT = CODE_DOT_ORG_ROOT.join('k8s/kustomize')
 SOURCE_PATH = 'k8s/kustomize'
-RESOURCE_REF_REGEX = %r{\Agithub\.com/code-dot-org/code-dot-org//#{Regexp.escape(SOURCE_PATH)}/base\?ref=[0-9a-f]{40}\z}
+RESOURCE_REF_REGEX = %r{\Agithub\.com/code-dot-org/code-dot-org//#{Regexp.escape(SOURCE_PATH)}/base\?ref=[0-9a-f]{40}&timeout=120s\z}
 
 def load_yaml(path)
   Psych.safe_load_file(path)
@@ -43,7 +43,7 @@ def run!(*command, chdir: nil)
 end
 
 def ensure_kustomization_build(path)
-  run!('kustomize', 'build', path.to_s)
+  run!({'GIT_LFS_SKIP_SMUDGE' => '1'}, 'kustomize', 'build', path.to_s)
 end
 
 assert(KUSTOMIZE_ROOT.join('base/kustomization.yaml').exist?, 'missing k8s/kustomize/base/kustomization.yaml')
@@ -78,7 +78,7 @@ deployment_dirs.each do |deployment|
 
   assert(resources.is_a?(Array) && resources.length == 1, "#{wrapper_path} must define exactly one resource")
   assert(resources.first.match?(RESOURCE_REF_REGEX), "#{wrapper_path} resource must pin code-dot-org base by full sha")
-  assert(components == ["../../envTypes/#{metadata['envType']}"], "#{wrapper_path} must reference ../../envTypes/#{metadata['envType']}")
+  assert(components == ["../../../envTypes/#{metadata['envType']}"], "#{wrapper_path} must reference ../../../envTypes/#{metadata['envType']}")
   assert(images.is_a?(Array) && images.length == 1, "#{wrapper_path} must define exactly one image rewrite")
   image = images.first
   assert(image['name'] == 'code-dot-org', "#{wrapper_path} image name must be code-dot-org")
@@ -138,21 +138,43 @@ Dir.mktmpdir('build-lock') do |tmpdir|
   assert(build_lock.dig('image', 'ref') == 'ghcr.io/code-dot-org/code-dot-org:git-0123456789abcdef0123456789abcdef01234567', 'build-lock image.ref must match immutable git tag')
   assert(build_lock.dig('image', 'digest') == 'sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef', 'build-lock image.digest must match the stitched image digest')
 
-  env['BRANCH_NAME'] = 'test'
-  run!(env, 'ruby', KUSTOMIZE_ROOT.join('bin/write-build-lock').to_s, chdir: CODE_DOT_ORG_ROOT.to_s)
-  legacy_current_path = gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/current.yaml')
-  legacy_merged_path = gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/merged/git-0123456789abcdef0123456789abcdef01234567.yaml')
-  assert(legacy_current_path.exist?, 'write-build-lock must produce legacy current.yaml for test merges')
-  assert(legacy_merged_path.exist?, 'write-build-lock must produce legacy merged marker for test merges')
+  Dir.mktmpdir('legacy-merge-repo') do |repo_tmp|
+    repo_root = Pathname(repo_tmp)
+    run!('git', 'init', '-b', 'test', chdir: repo_root.to_s)
+    run!('git', 'config', 'user.name', 'Codex', chdir: repo_root.to_s)
+    run!('git', 'config', 'user.email', 'codex@example.com', chdir: repo_root.to_s)
 
-  wrapper_path = GITOPS_ROOT.join('apps/codeai/deployments/staging/deploy/kustomization.yaml')
-  wrapper = load_yaml(wrapper_path)
-  Dir.mktmpdir('wrapper-smoke', GITOPS_ROOT.to_s) do |wrapper_tmp|
-    smoke_wrapper_path = Pathname(wrapper_tmp).join('kustomization.yaml')
-    smoke_wrapper = wrapper.dup
-    smoke_wrapper['resources'] = [KUSTOMIZE_ROOT.join('base').relative_path_from(smoke_wrapper_path.dirname).to_s]
-    smoke_wrapper['components'] = [GITOPS_ROOT.join('apps/codeai/envTypes/staging').relative_path_from(smoke_wrapper_path.dirname).to_s]
-    File.write(smoke_wrapper_path, YAML.dump(smoke_wrapper))
-    ensure_kustomization_build(smoke_wrapper_path.dirname)
+    File.write(repo_root.join('README.md'), "base\n")
+    run!('git', 'add', 'README.md', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'base', chdir: repo_root.to_s)
+
+    run!('git', 'checkout', '-b', 'staging', chdir: repo_root.to_s)
+    File.write(repo_root.join('STAGING.txt'), "staging release\n")
+    run!('git', 'add', 'STAGING.txt', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'staging release', chdir: repo_root.to_s)
+    upstream_release_commit = run!('git', 'rev-parse', 'HEAD', chdir: repo_root.to_s).strip
+
+    run!('git', 'checkout', 'test', chdir: repo_root.to_s)
+    File.write(repo_root.join('TEST.txt'), "test branch\n")
+    run!('git', 'add', 'TEST.txt', chdir: repo_root.to_s)
+    run!('git', 'commit', '-m', 'test branch', chdir: repo_root.to_s)
+    run!('git', 'merge', '--no-ff', 'staging', '-m', 'merge staging into test', chdir: repo_root.to_s)
+    merge_commit = run!('git', 'rev-parse', 'HEAD', chdir: repo_root.to_s).strip
+
+    env['BRANCH_NAME'] = 'test'
+    env['GIT_COMMIT'] = merge_commit
+    env['CODEAI_DOCKER_TAG'] = "git-#{merge_commit}"
+    env['CODEAI_DOCKER_IMAGE_REF'] = "ghcr.io/code-dot-org/code-dot-org:git-#{merge_commit}"
+    run!(env, 'ruby', KUSTOMIZE_ROOT.join('bin/write-build-lock').to_s, chdir: repo_root.to_s)
+
+    legacy_current_path = gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/current.yaml')
+    legacy_current = load_yaml(legacy_current_path)
+    assert(legacy_current_path.exist?, 'write-build-lock must produce legacy current.yaml for test merges')
+    assert(legacy_current['revision'] == upstream_release_commit, 'legacy current.yaml must track the merged-in release commit')
+    assert(legacy_current['tag'] == "git-#{upstream_release_commit}", 'legacy current.yaml tag must track the merged-in release commit')
+    assert(gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/merged', "git-#{upstream_release_commit}.yaml").exist?, 'write-build-lock must key the merged marker from the merged-in release commit')
+    assert(!gitops_tmp.join('warehouses/codeai/legacy-gitflow/test/merged', "git-#{merge_commit}.yaml").exist?, 'write-build-lock must not key the merged marker from the downstream merge commit')
   end
+
+  ensure_kustomization_build(GITOPS_ROOT.join('apps/codeai/deployments/staging/deploy'))
 end
