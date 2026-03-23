@@ -1,5 +1,5 @@
 import {getAssetUrlsByMetaUrl} from '@tldraw/assets/urls';
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {Editor, getSnapshot, Tldraw, TLStoreSnapshot} from 'tldraw';
 import 'tldraw/tldraw.css';
 
@@ -41,6 +41,8 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
       return undefined;
     }
   };
+  const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
+
   const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
     parseSnapshot(currentSources?.source)
   );
@@ -50,22 +52,22 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     console.log('registering editor');
   }, []);
 
-  useEffect(() => {
-    if (tldrawEditor) {
-      console.log('editor is ready, registering listener');
-      const unsubscribe = tldrawEditor.store.listen(
-        () => {
-          const currentSnapshot = getSnapshot(tldrawEditor.store);
-          const serializedSnapshot = JSON.stringify(currentSnapshot.document);
-          updateSources({source: serializedSnapshot});
-        },
-        {source: 'all', scope: 'document'}
-      );
-      return () => {
-        unsubscribe();
-      };
-    }
-  }, [tldrawEditor, updateSources]);
+  // useEffect(() => {
+  //   if (tldrawEditor) {
+  //     console.log('editor is ready, registering listener');
+  //     const unsubscribe = tldrawEditor.store.listen(
+  //       () => {
+  //         const currentSnapshot = getSnapshot(tldrawEditor.store);
+  //         const serializedSnapshot = JSON.stringify(currentSnapshot.document);
+  //         updateSources({source: serializedSnapshot});
+  //       },
+  //       {source: 'all', scope: 'document'}
+  //     );
+  //     return () => {
+  //       unsubscribe();
+  //     };
+  //   }
+  // }, [tldrawEditor, updateSources]);
 
   const {
     leftPanelWidth,
@@ -111,7 +113,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
         >
           <div style={{height: '100%', position: 'relative'}}>
             <Tldraw
-              assetUrls={getAssetUrlsByMetaUrl()}
+              assetUrls={assetUrls}
               onMount={initializeEditor}
               snapshot={initialSnapshotRef.current}
             />
