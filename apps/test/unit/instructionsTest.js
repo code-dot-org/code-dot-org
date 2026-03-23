@@ -1,5 +1,4 @@
 import instructions, {
-  toggleInstructionsCollapsed,
   setInstructionsRenderedHeightAndCollapsed,
   setInstructionsRenderedHeight,
   setInstructionsMaxHeightAvailable,
@@ -22,39 +21,6 @@ describe('instructions', () => {
     it('starts out uncollapsed', () => {
       var state = reducer(undefined, {});
       assert.strictEqual(state.isCollapsed, false);
-    });
-
-    it('toggles isCollapsed', () => {
-      var initialState, newState;
-
-      // start collapsed
-      initialState = {
-        isCollapsed: false,
-        longInstructions: 'foo',
-      };
-      newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, true);
-
-      // start uncollapsed
-      initialState = {
-        isCollapsed: true,
-        longInstructions: 'foo',
-      };
-      newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, false);
-    });
-
-    it('will collapse even if no long instructions', () => {
-      var initialState, newState;
-
-      // start collapsed
-      initialState = {
-        isCollapsed: false,
-        shortInstructions: 'short',
-        longInstructions: undefined,
-      };
-      newState = reducer(initialState, toggleInstructionsCollapsed());
-      assert.strictEqual(newState.isCollapsed, true);
     });
 
     it('setInstructionsRenderedHeight updates rendered and expanded height if not collapsed', () => {

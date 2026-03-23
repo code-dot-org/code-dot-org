@@ -8,8 +8,6 @@
 import {trySetLocalStorage, tryGetLocalStorage} from '../utils';
 
 const SET_CONSTANTS = 'instructions/SET_CONSTANTS';
-const TOGGLE_INSTRUCTIONS_COLLAPSED =
-  'instructions/TOGGLE_INSTRUCTIONS_COLLAPSED';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT =
   'instructions/SET_INSTRUCTIONS_RENDERED_HEIGHT';
 const SET_INSTRUCTIONS_RENDERED_HEIGHT_AND_COLLAPSED =
@@ -125,12 +123,6 @@ export default function reducer(state = {...instructionsInitialState}, action) {
       muteBackgroundMusic,
       unmuteBackgroundMusic,
       programmingEnvironment,
-    });
-  }
-
-  if (action.type === TOGGLE_INSTRUCTIONS_COLLAPSED) {
-    return Object.assign({}, state, {
-      isCollapsed: !state.isCollapsed,
     });
   }
 
@@ -279,13 +271,6 @@ export const setInstructionsConstants = ({
 export const setInstructionsRenderedHeight = height => ({
   type: SET_INSTRUCTIONS_RENDERED_HEIGHT,
   height,
-});
-
-/**
- * Toggles whether instructions are currently collapsed.
- */
-export const toggleInstructionsCollapsed = () => ({
-  type: TOGGLE_INSTRUCTIONS_COLLAPSED,
 });
 
 export const setInstructionsRenderedHeightAndCollapsed = (
