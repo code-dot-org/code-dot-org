@@ -19,8 +19,9 @@ import {createTldrawAssetStore} from './utils/createTldrawAssetStore';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
-// TLStoreSnapshot requires { store: object, schema: object }. We validate at runtime
-// because sources could be stale/invalid (e.g. old serialized strings, partial data).
+// TLStoreSnapshot requires { store: object, schema: object }.
+// We could have an invalid source if we have excalidraw data stored.
+// todo: actually migrate the old data.
 function isValidSnapshot(
   source: SketchlabTldrawSources['source'] | undefined
 ): source is TLStoreSnapshot {
@@ -43,7 +44,6 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const themeSetting = useThemeSetting('sketchlab');
-  //const tldrawEditorRef = useRef<Editor | null>(null);
   const [tldrawEditor, setTldrawEditor] = useState<Editor | null>(null);
   const {currentSources, updateSources} = useSources<SketchlabTldrawSources>();
 
