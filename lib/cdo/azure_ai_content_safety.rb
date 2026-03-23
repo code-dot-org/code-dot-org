@@ -29,6 +29,8 @@ class AzureAiContentSafety
   #   {"categoriesAnalysis"=>[{"category"=>"Sexual","severity"=>0}, {"category"=>"Hate","severity"=>0},
   #   {"category"=>"SelfHarm","severity"=>0}, {"category"=>"Violence","severity"=>0}]}, or
   #   null if the image is not moderated
+  #   The severity value increases with the severity of the input content and possible values are:
+  #   0 (safe), 2 (low), 4 (medium), 6 (high)
   # @raise [AzureAiContentSafety::RequestFailed] when the request is not successful.
   # @raise [AzureAiContentSafety::UnsupportedContentType] when the content type is unsupported.
   #

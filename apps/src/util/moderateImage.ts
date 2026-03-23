@@ -130,7 +130,6 @@ export const moderateImage = async (
       'Content-Type': fileToModerate.type || 'application/octet-stream',
     });
     const json = await response.json();
-    console.log('json: ', json);
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
     if (useAiContentSafety) {
       // Azure AI Content Safety
@@ -141,6 +140,8 @@ export const moderateImage = async (
       // If any category's severity level is greater than or equal to the severity level blocked value,
       // the image is flagged. If all categories' severity levels are less than the severity level blocked value,
       // the image is 'ok'
+      // The severity value increases with the severity of the input content:
+      // 0 (safe), 2 (low), 4 (medium), 6 (high)
       const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
         Hate: 2,
         SelfHarm: 2,
