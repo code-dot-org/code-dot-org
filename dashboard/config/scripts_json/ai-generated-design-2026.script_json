@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-19 18:19:35 UTC",
+    "serialized_at": "2026-03-20 23:01:04 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1961,7 +1961,7 @@
       "key": "8b12435b-3b71-447a-a1e9-95202b68370a",
       "position": 13,
       "properties": {
-        "progression_name": "Explore a Web Page"
+        "progression_name": "Web Lab"
       },
       "seeding_key": {
         "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a",
@@ -3429,6 +3429,7 @@
       "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1. Students choose a scenario, build a persona, and draft a problem statement. The AI Design Partner is optional and should be used to strengthen clarity, to not generate everything for them. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, listen for whether their personas feel specific and realistic (not generic like \"a student who is busy\"). Check that problem statements focus on a need, not a solution. If students write something like \"needs an app that … \", ask \"What is the actual need underneath that?\"",
+        "progression_name": "User Persona and Problem Statement",
         "tips": [
           {
             "type": "teachingTip",
@@ -3977,6 +3978,7 @@
       "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 9, Level 2 to complete Levels 2 through 4.\n- **Level 2:** Students identify at least two to three accessibility issues on the provided web page.\n- **Level 3:** Students apply accessibility principles to their own apps from Lesson 8\n- **Level 4:** Students complete a check for understanding.\n\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe students as they identify accessibility issues and apply the POUR principles. Prompt them with questions like: “What POUR principle does this issue relate to?” or “How might this issue affect a user with this constraint?” Encourage students to be specific in their prompts, clearly describing the issue and referencing the relevant POUR principle. Push them to connect specific design elements (e.g., contrast, labels, button size) to real user challenges. Ensure students use the Accessibility Prompt Builder to generate and refine prompts that communicate issues clearly, rather than trying to fix everything at once.\n",
+        "progression_name": "Accessibility Issues and Fixes",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -5003,18 +5005,6 @@
       }
     },
     {
-      "key": "edccd685-a867-4e8f-97eb-22c9dcd77ed2",
-      "position": 10,
-      "properties": {
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "edccd685-a867-4e8f-97eb-22c9dcd77ed2",
-        "lesson_activity.key": "f2a59972-b9d7-464e-a0e1-c5e0c9593331"
-      }
-    },
-    {
       "key": "c3e49134-9fb6-4735-a599-27958772c0c3",
       "position": 1,
       "properties": {
@@ -5161,7 +5151,7 @@
         "level_keys": [
           "ai-generated-design-lesson3-level1-explore_2026"
         ],
-        "progression": "Explore a Web Page"
+        "progression": "Web Lab"
       },
       "bonus": false,
       "seeding_key": {
@@ -5179,56 +5169,6 @@
     },
     {
       "chapter": 7,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson3-level1_2026"
-        ],
-        "progression": "Plan Your AI Prompt"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson3-level1_2026"
-        ],
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson3-level1_2026"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson3-sketch-lab-choice_2026"
-        ],
-        "progression": "Plan Your AI Prompt"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson3-sketch-lab-choice_2026"
-        ],
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson3-sketch-lab-choice_2026"
-      ]
-    },
-    {
-      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5253,7 +5193,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5278,7 +5218,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5303,7 +5243,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 10,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5328,7 +5268,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5353,7 +5293,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5378,7 +5318,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5403,7 +5343,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5428,7 +5368,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5453,7 +5393,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5478,7 +5418,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 17,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5503,7 +5443,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 18,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
@@ -5528,14 +5468,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson7-level1_choice_2026"
-        ]
+        ],
+        "progression": "User Persona and Problem Statement"
       },
       "bonus": false,
       "seeding_key": {
@@ -5552,7 +5493,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5577,7 +5518,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5602,7 +5543,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5627,7 +5568,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5652,7 +5593,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5677,14 +5618,15 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson9-level3_2026"
-        ]
+        ],
+        "progression": "Accessibility Issues and Fixes"
       },
       "bonus": false,
       "seeding_key": {
@@ -5701,14 +5643,15 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson9-level4_2026"
-        ]
+        ],
+        "progression": "Accessibility Issues and Fixes"
       },
       "bonus": false,
       "seeding_key": {
@@ -5725,14 +5668,15 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson9-level5_2026"
-        ]
+        ],
+        "progression": "Accessibility Issues and Fixes"
       },
       "bonus": false,
       "seeding_key": {
@@ -5749,7 +5693,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5774,7 +5718,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5799,7 +5743,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5824,7 +5768,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5849,7 +5793,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5874,7 +5818,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5899,7 +5843,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5924,7 +5868,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5949,7 +5893,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5974,32 +5918,7 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson13-level5_2026"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson13-level5_2026"
-        ],
-        "lesson.key": "Lesson 13: Digital Magazine Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "edccd685-a867-4e8f-97eb-22c9dcd77ed2"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson13-level5_2026"
-      ]
-    },
-    {
-      "chapter": 40,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6095,30 +6014,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson3-level1_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson3-level1_2026"
-        ],
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson3-sketch-lab-choice_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson3-sketch-lab-choice_2026"
-        ],
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a"
       }
     },
     {
@@ -6479,18 +6374,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "63452eec-ca7f-4bd8-97ea-ae2a5b7b1345"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson13-level5_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson13-level5_2026"
-        ],
-        "lesson.key": "Lesson 13: Digital Magazine Project",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "edccd685-a867-4e8f-97eb-22c9dcd77ed2"
       }
     },
     {
@@ -7893,7 +7776,7 @@
       }
     },
     {
-      "level_name": "ai-generated-design-lesson3-sketch-lab-choice_2026",
+      "level_name": "iterating-with-ai-lesson9-level1-test-2025",
       "seeding_key": {
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -7968,7 +7851,7 @@
     {
       "key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
       "position": 2,
-      "learning_goal": "Evaluate and refine AI-generated output.",
+      "learning_goal": "Refine prompts to improve results",
       "ai_enabled": false,
       "tips": null,
       "seeding_key": {
@@ -8005,9 +7888,22 @@
       }
     },
     {
+      "key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+      "position": 3,
+      "learning_goal": "Evaluate and improve AI-generated output",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
       "key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
       "position": 1,
-      "learning_goal": "Plan a clear and intentional AI prompt.",
+      "learning_goal": "Use AI to generate a web page",
       "ai_enabled": false,
       "tips": null,
       "seeding_key": {
@@ -8204,7 +8100,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Student accepts AI output without evaluating or refining.",
+      "teacher_description": "Student does not revise prompts or relies on a single vague prompt.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8216,7 +8112,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Student accepts AI output with little evidence of review or refinement.",
+      "teacher_description": "Student attempts prompting but makes minimal or unclear revisions.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8228,7 +8124,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Student reviews output and makes at least one meaningful adjustment through re-prompting.\n",
+      "teacher_description": "Student revises at least one prompt to improve the webpage.\n\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8240,7 +8136,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Student reviews AI output, identifies strengths or gaps, and revises their prompt to better align with user needs.\n\n",
+      "teacher_description": "Student writes clear and specific prompts and revises them multiple times to improve both structure and style.\n\n\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -8348,7 +8244,55 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Prompt is incomplete or lacks meaningful design intent.",
+      "teacher_description": "Student accepts AI output without evaluating or refining it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student accepts AI output with little evidence of review or improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student reviews output and makes at least one meaningful improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reviews AI output, identifies strengths and issues, and makes meaningful improvements that better match their goal or user needs.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student is unable to generate a webpage using AI.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -8360,7 +8304,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "Prompt lists basic features but lacks clarity, constraints, or edge cases.",
+      "teacher_description": "Student generates a webpage using AI but it is incomplete, unclear, or only includes structure or style.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,
@@ -8372,7 +8316,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Prompt includes most requirements and some constraints. Edge cases may be partially addressed.",
+      "teacher_description": "Student uses AI to generate a webpage with both structure and style that mostly reflects a chosen topic.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -8384,7 +8328,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Prompt clearly indicates user needs, requirements, constraints, and edge cases. Design intent is specific and purposeful.",
+      "teacher_description": "Student uses AI to generate both structure (HTML) and style (CSS) that clearly reflects a chosen topic and includes multiple relevant sections.\n",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,

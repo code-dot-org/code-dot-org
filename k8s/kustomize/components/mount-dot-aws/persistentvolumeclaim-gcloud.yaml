@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: dot-config-gcloud
+  labels:
+    app.kubernetes.io/component: dot-config-gcloud
+spec:
+  resources:
+    requests:
+      storage: 5Mi
+  accessModes:
+    - ReadWriteMany
+  storageClassName: hostpath
+  volumeName: dot-config-gcloud
