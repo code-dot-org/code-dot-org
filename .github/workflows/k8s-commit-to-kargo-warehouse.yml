@@ -56,6 +56,7 @@ jobs:
         # https://marketplace.visualstudio.com/items?itemName=harrydowning.yaml-embedded-languages
         run: | # ruby
           require "fileutils"
+          require "find"
           require "time"
           require "yaml"
 
@@ -84,8 +85,7 @@ jobs:
           CURRENT_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/current"
           RELEASE_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/#{RELEASE_TAG}"
 
-          created_at = Time.now.utc.iso8601
-          freight_yaml = {
+          EXPECTED_FREIGHT = {
             "schemaVersion" => "v1",
             "revision" => SOURCE_COMMIT_SHA,
             "tag" => RELEASE_TAG,
@@ -94,8 +94,7 @@ jobs:
               "digest" => CODEAI_DOCKER_IMAGE_DIGEST,
             },
             "packageType" => "helm",
-            "createdAt" => created_at,
-          }.to_yaml(line_width: -1)
+          }.freeze
 
           def system!(*cmd)
             ok = system(*cmd)
@@ -103,16 +102,77 @@ jobs:
             raise "Command failed (exitstatus=#{Process.last_status&.exitstatus}): #{rendered_cmd}" unless ok
           end
 
-          def rebuild_freight_dir(relative_dir, freight_yaml:, source_helm_dir:)
+          def snapshot_tree(root)
+            entries = {}
+
+            Find.find(root) do |path|
+              next if path == root
+
+              relative_path = path.delete_prefix("#{root}/")
+              if File.directory?(path)
+                entries[relative_path] = :directory
+              else
+                entries[relative_path] = [:file, File.binread(path)]
+              end
+            end
+
+            entries
+          end
+
+          def validate_existing_freight!(relative_dir, expected_freight:, source_helm_dir:)
+            freight_path = File.join(relative_dir, "freight.yaml")
+            helm_path = File.join(relative_dir, "helm")
+
+            abort("ERROR: existing frozen freight is missing #{freight_path}") unless File.exist?(freight_path)
+            abort("ERROR: existing frozen freight is missing #{helm_path}") unless Dir.exist?(helm_path)
+
+            actual_freight = YAML.load_file(freight_path)
+            comparable_freight = actual_freight.reject {|key, _value| key == "createdAt" }
+
+            unless comparable_freight == expected_freight
+              abort <<~MSG
+                ERROR: existing frozen freight at #{relative_dir} does not match the current workflow inputs.
+                Expected: #{expected_freight.inspect}
+                Actual:   #{comparable_freight.inspect}
+              MSG
+            end
+
+            unless snapshot_tree(source_helm_dir) == snapshot_tree(helm_path)
+              abort("ERROR: existing frozen freight at #{relative_dir} does not match #{source_helm_dir}; refusing to mutate historical freight.")
+            end
+          end
+
+          def rebuild_freight_dir(relative_dir, freight_hash:, source_helm_dir:)
             FileUtils.rm_rf(relative_dir)
             FileUtils.mkdir_p("#{relative_dir}/helm")
-            File.write("#{relative_dir}/freight.yaml", freight_yaml)
+            File.write("#{relative_dir}/freight.yaml", freight_hash.to_yaml(line_width: -1))
             FileUtils.cp_r("#{source_helm_dir}/.", "#{relative_dir}/helm")
           end
 
+          def mirror_freight_dir(source_relative_dir, destination_relative_dir)
+            FileUtils.rm_rf(destination_relative_dir)
+            FileUtils.mkdir_p(destination_relative_dir)
+            FileUtils.cp_r("#{source_relative_dir}/.", destination_relative_dir)
+          end
+
           Dir.chdir("k8s-gitops") do
-            rebuild_freight_dir(CURRENT_RELATIVE_DIR, freight_yaml: freight_yaml, source_helm_dir: SOURCE_HELM_DIR)
-            rebuild_freight_dir(RELEASE_RELATIVE_DIR, freight_yaml: freight_yaml, source_helm_dir: SOURCE_HELM_DIR)
+            release_freight_exists = Dir.exist?(RELEASE_RELATIVE_DIR)
+
+            if release_freight_exists
+              validate_existing_freight!(
+                RELEASE_RELATIVE_DIR,
+                expected_freight: EXPECTED_FREIGHT,
+                source_helm_dir: SOURCE_HELM_DIR,
+              )
+            else
+              rebuild_freight_dir(
+                RELEASE_RELATIVE_DIR,
+                freight_hash: EXPECTED_FREIGHT.merge("createdAt" => Time.now.utc.iso8601),
+                source_helm_dir: SOURCE_HELM_DIR,
+              )
+            end
+
+            mirror_freight_dir(RELEASE_RELATIVE_DIR, CURRENT_RELATIVE_DIR)
 
             system! 'git config user.name "github-actions[bot]"'
             system! 'git config user.email "41898282+github-actions[bot]@users.noreply.github.com"'
