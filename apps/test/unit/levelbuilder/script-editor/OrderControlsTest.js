@@ -12,15 +12,18 @@ describe('OrderControls', () => {
       move,
       remove,
       name: 'My Lesson',
+      isDeleteable: true,
     };
   });
   it('renders default props', () => {
     const wrapper = mount(<OrderControls {...defaultProps} />);
     expect(wrapper.find('.fa-trash')).toHaveLength(1);
+    expect(wrapper.find('.fa-lock')).toHaveLength(0);
   });
   it('shows confirmation dialog before deleting', () => {
     const wrapper = mount(<OrderControls {...defaultProps} />);
     expect(wrapper.find('.fa-trash')).toHaveLength(1);
+    expect(wrapper.find('.fa-lock')).toHaveLength(0);
 
     wrapper.find('.fa-trash').simulate('mousedown');
     expect(wrapper.find('.modal')).toHaveLength(1);
@@ -44,5 +47,12 @@ describe('OrderControls', () => {
     cancelButton.simulate('click');
     expect(remove).not.toHaveBeenCalled();
     expect(wrapper.find('.modal')).toHaveLength(0);
+  });
+  it('does not show delete button when not deleteable', () => {
+    const wrapper = mount(
+      <OrderControls {...defaultProps} isDeleteable={false} />
+    );
+    expect(wrapper.find('.fa-trash')).toHaveLength(0);
+    expect(wrapper.find('.fa-lock')).toHaveLength(1);
   });
 });

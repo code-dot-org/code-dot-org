@@ -457,13 +457,6 @@ class ActivitySectionCard extends Component {
                       String(rubricLevelId) === String(scriptLevel.activeId)
                   )
                 }
-                hasRubricLevel={
-                  rubricLevelId &&
-                  activitySection.scriptLevels.some(
-                    scriptLevel =>
-                      String(rubricLevelId) === String(scriptLevel.activeId)
-                  )
-                }
               />
             )}
           </label>

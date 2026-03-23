@@ -32,9 +32,7 @@ export default class OrderControls extends Component {
   };
 
   handleRemove = () => {
-    if (this.props.isDeleteable) {
-      this.setState({showConfirm: true});
-    }
+    this.setState({showConfirm: true});
   };
 
   handleConfirm = () => {
