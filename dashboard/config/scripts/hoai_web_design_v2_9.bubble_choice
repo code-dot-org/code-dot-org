@@ -4,5 +4,9 @@ description 'Choose at least one HTML element to learn more about with AI Tutor'
 
 sublevels
 level 'hoai-web-design-v2-9a'
+level 'hoai-web-design-v2-9b'
+level 'hoai-web-design-v2-9c'
+level 'hoai-web-design-v2-9d'
+level 'hoai-web-design-v2-9e'
 
 uses_lab2
