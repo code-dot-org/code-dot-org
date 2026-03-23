@@ -90,7 +90,7 @@ const DanceAiModalHeader: React.FunctionComponent<DanceAiModalHeaderProps> = ({
           type="button"
           onClick={onClose}
         >
-          <i className="fa-solid fa-xmark" aria-hidden={true} />
+          <i className="fa fa-close" aria-hidden={true} />
           <span className="sr-only">{i18n.danceAiModalClose()}</span>
         </button>
       </div>

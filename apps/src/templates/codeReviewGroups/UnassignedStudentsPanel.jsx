@@ -20,7 +20,7 @@ export default function UnassignedStudentsPanel({
         <JavalabButton
           id="uitest-unassign-all-button"
           onClick={onUnassignAllClick}
-          icon={<FontAwesome icon="xmark" />}
+          icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}
           inlineStyle={styles.button}
           isHorizontal

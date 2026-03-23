@@ -167,9 +167,7 @@ export class ImportScreensDialog extends React.Component {
           }
           disabled={this.props.isImporting}
         >
-          {this.props.isImporting && (
-            <span className="fa-solid fa-spin fa-spinner" />
-          )}
+          {this.props.isImporting && <span className="fa fa-spin fa-spinner" />}
           {this.props.isImporting && ' '}
           Import
         </Confirm>

@@ -27105,6 +27105,10 @@ en:
               name: Messing Around
             lesson-2:
               name: Progression Idea 2
+            lesson-3:
+              name: Templates
+            lesson-4:
+              name: Progression V2
           lesson_groups: {}
           name: hoai-web-lab-intro-test
           title: HoAI Web Lab Intro
@@ -27123,3 +27127,42 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-and-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          name: ai-and-algorithmic-decisions-2026
+          title: AI and Algorithmic Decisions
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This unit introduces students to JavaScript as they learn to bring their previously designed web pages to life through interactive features, clear logic, and purposeful decision-making. Students develop skills with event handlers, variables, conditional statements, functions, and DOM manipulation while building confidence in debugging and using AI as a strategic collaborator. Human-centered design and simple systems thinking are woven throughout as students consider user needs, trade-offs, and the values reflected in the logic they create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+          student_description: |-
+            In this unit, you learn how to make your web pages actually respond to people using JavaScript. You create buttons that react when clicked, track user choices with variables, make decisions with `if` and `else` statements, and update the page so it changes right in front of you. You plan your ideas with flowcharts, use AI as a coding partner to help you debug and brainstorm, and learn how developers think when they build features for real apps.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.

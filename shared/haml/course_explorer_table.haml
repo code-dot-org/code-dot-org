@@ -229,7 +229,7 @@
                 %button.course-explorer-gray-button{style: "font-size: 12px"}
                   View course
         .arrow_box_close{style: "position: absolute; right: 10px; top: 0px; cursor: pointer", data: {courseindex: course[:regular_order]}}
-          %i.fa-solid.fa-xmark{"aria-hidden" => "true"}
+          %i.fa.fa-times{"aria-hidden" => "true"}
 
 -#
   We support two courses on the same line.  This is the index of the first of
@@ -247,8 +247,8 @@
                 .title
                   =course[:name]
               .arrow
-                %i.arrow-down{class: "fa-solid fa-caret-down"}
-                %i.arrow-up{class: "fa-solid fa-caret-up"}
+                %i.arrow-down{class: "fa fa-caret-down"}
+                %i.arrow-up{class: "fa fa-caret-up"}
               - if course[:range] || course[:announcement]
                 %br/
                 = course[:range]
@@ -307,8 +307,8 @@
                 .title
                   =course[:name]
               .arrow
-                %i.arrow-down{class: "fa-solid fa-caret-down"}
-                %i.arrow-up{class: "fa-solid fa-caret-up"}
+                %i.arrow-down{class: "fa fa-caret-down"}
+                %i.arrow-up{class: "fa fa-caret-up"}
           %div{style: "width: 968px;"}
             - if course_index == index_course_first_same_line
             - elsif course_index == index_course_first_same_line + 1

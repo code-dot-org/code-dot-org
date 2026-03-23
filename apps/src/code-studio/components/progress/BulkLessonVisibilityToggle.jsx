@@ -31,7 +31,6 @@ function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
       <Button
         text={i18n.showAllLessons()}
         icon="eye"
-        iconStyleProp="regular"
         color={Button.ButtonColor.gray}
         onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, false)}
       />
@@ -42,7 +41,7 @@ function BulkLessonVisibilityToggle({lessons, sectionId, unitName}) {
         onClick={() => toggleHiddenLessons(unitName, sectionId, lessons, true)}
       />
       <span data-tip data-for={tooltipId}>
-        <FontAwesome icon="circle-info" className={style.infoTipIcon} />
+        <FontAwesome icon="info-circle" className={style.infoTipIcon} />
       </span>
       <ReactTooltip id={tooltipId} effect="solid">
         <p>{i18n.bulkLessonVisibilityToggleTip()}</p>

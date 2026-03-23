@@ -1,4 +1,3 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -85,7 +84,7 @@ const ViewCodeButton = () => (
       className="WireframeButtons_button"
       href={project.getProjectUrl('/view')}
     >
-      <FontAwesomeV6Icon iconName="code" /> {i18n.viewCode()}
+      <i className="fa fa-code" /> {i18n.viewCode()}
     </a>
   </span>
 );
@@ -93,8 +92,7 @@ const ViewCodeButton = () => (
 const NewProjectButton = ({url}) => (
   <span style={{display: 'inline-block'}}>
     <a className="WireframeButtons_button" href={url}>
-      <FontAwesomeV6Icon iconName="pen-to-square" iconStyle="regular" />{' '}
-      {i18n.makeMyOwn()}
+      <i className="fa fa-pencil-square-o" /> {i18n.makeMyOwn()}
     </a>
   </span>
 );
@@ -108,7 +106,7 @@ const SendToPhoneButton = ({active, onClick}) => (
       className={active ? 'WireframeButtons_active' : 'WireframeButtons_button'}
       onClick={onClick}
     >
-      <FontAwesomeV6Icon iconName="mobile-screen-button" /> {i18n.sendToPhone()}
+      <i className="fa fa-mobile" /> {i18n.sendToPhone()}
     </a>
   </span>
 );

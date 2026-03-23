@@ -1,4 +1,0 @@
-RAILS_ENV: test
-dashboard_workers: 65
-healthChecks:
-  enabled: true

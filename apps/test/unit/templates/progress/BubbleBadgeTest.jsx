@@ -89,10 +89,7 @@ describe('BubbleBadge', () => {
     it('has a purple background', () => {
       const wrapper = mount(<AssessmentBadge />);
       expect(
-        wrapper
-          .find('FontAwesome[icon="circle"]')
-          .filterWhere(n => n.prop('iconStyle') !== 'regular')
-          .props().style.color
+        wrapper.find('FontAwesome[icon="circle"]').props().style.color
       ).toBe(color.purple);
     });
 
@@ -104,9 +101,7 @@ describe('BubbleBadge', () => {
     describe('displays a white border when hasWhiteBorder is true', () => {
       it('has a exclamation icon', () => {
         const wrapper = mount(<AssessmentBadge hasWhiteBorder={true} />);
-        expect(
-          wrapper.find('FontAwesome[icon="circle"][iconStyle="regular"]')
-        ).toHaveLength(1);
+        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).toHaveLength(1);
       });
     });
   });

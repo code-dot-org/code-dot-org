@@ -46,14 +46,14 @@ export default function AllCodeDocs({programmingEnvironments, allCategories}) {
         <div style={styles.newLinks}>
           <TextLink
             href="/programming_environments/new"
-            icon={<i className="fa-solid fa-circle-plus" aria-hidden="true" />}
+            icon={<i className="fa fa-plus-circle" aria-hidden="true" />}
             text="New IDE"
             iconBefore
             openInNewTab
           />
           <TextLink
             href="/programming_expressions/new"
-            icon={<i className="fa-solid fa-circle-plus" aria-hidden="true" />}
+            icon={<i className="fa fa-plus-circle" aria-hidden="true" />}
             text="New Code Doc"
             iconBefore
             openInNewTab

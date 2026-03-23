@@ -70,7 +70,7 @@ const AiTutorVersionActions: React.FC<AiTutorVersionActionsProps> = ({
             startIcon={
               <FontAwesomeV6Icon
                 iconStyle="solid"
-                iconName="xmark"
+                iconName="close"
                 title="Reject"
               />
             }
