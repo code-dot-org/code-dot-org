@@ -27,9 +27,7 @@ export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
   const {lessonName, lessonSummary, vocabulary, scriptId, lessonPosition} =
     lessonPracticeData;
 
-  const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
-    null
-  );
+  const [selectedOption, setSelectedOption] = useState<PracticeOption>(null);
 
   return (
     <>

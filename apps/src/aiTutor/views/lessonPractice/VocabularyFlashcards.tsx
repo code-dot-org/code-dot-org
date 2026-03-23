@@ -79,7 +79,12 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
               elevation={4}
             >
               <CardContent>
-                <Typography variant="h6" component="p" align="center" color="text.secondary">
+                <Typography
+                  variant="h6"
+                  component="p"
+                  align="center"
+                  color="text.secondary"
+                >
                   Word
                 </Typography>
                 <Typography variant="h4" align="center">
@@ -102,7 +107,22 @@ const VocabularyFlashcards: FC<VocabularyFlashcardsProps> = ({vocabulary}) => {
               elevation={4}
             >
               <CardContent>
-                <Typography variant="h6" component="p" align="center" color="text.secondary">
+                <Typography
+                  variant="h6"
+                  component="p"
+                  align="center"
+                  color="text.secondary"
+                
+              }}
+              elevation={4}
+            >
+              <CardContent>
+                <Typography
+                  variant="h6"
+                  component="p"
+                  align="center"
+                  color="text.secondary"
+                >
                   Definition
                 </Typography>
                 <Typography variant="h5" align="center">
