@@ -6,6 +6,7 @@ import React, {ReactElement} from 'react';
 import ReactDOM from 'react-dom';
 
 import {getCurrentBrand, getMuiThemeForBrand} from './brand';
+import {BrandProvider} from './BrandContext';
 
 /**
  * Global bootstrapper function that wraps rendered DOM trees with configured providers
@@ -44,7 +45,9 @@ export function createReactRoot(
   const theme = getMuiThemeForBrand(brand);
 
   ReactDOM.render(
-    <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>,
+    <BrandProvider brand={brand}>
+      <MuiThemeProvider theme={theme}>{component}</MuiThemeProvider>
+    </BrandProvider>,
     containerElement
   );
 }
