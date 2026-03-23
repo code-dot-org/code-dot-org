@@ -31,7 +31,7 @@ export class CollectorGemCounter extends React.Component {
               ...styles.checkmark,
               visibility: showCheckmark ? 'visible' : 'hidden',
             }}
-            className="fa fa-check"
+            className="fa-solid fa-check"
             aria-hidden="true"
           />
         </div>

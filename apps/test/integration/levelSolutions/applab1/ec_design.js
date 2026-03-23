@@ -425,7 +425,7 @@ module.exports = {
 
         ReactTestUtils.Simulate.click(toggleHidden);
 
-        assert.equal($(toggleHidden).hasClass('fa-check-square-o'), true);
+        assert.equal($(toggleHidden).hasClass('fa-square-check'), true);
         assert.equal(isFaded('#design_button1'), true);
         assert.equal(isHidden('#button1'), false);
 
