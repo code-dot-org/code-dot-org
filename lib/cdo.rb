@@ -7,6 +7,12 @@ require 'cdo/secrets_config'
 ##
 ##########
 module Cdo
+  class << self
+    attr_accessor :execution_context
+  end
+
+  self.execution_context = nil # Default context; may be overridden in puma.rb, active_job_backend.rb, bin/cronjob, etc.
+
   class Impl < Config
     prepend SecretsConfig
     include Singleton
@@ -317,10 +323,7 @@ module Cdo
     # rails console). Some components may operate differently within a web application server. For example, database
     # timeouts are shorter when executing within a web application server.
     def running_web_application?
-      program = $PROGRAM_NAME.to_s
-      # Child puma processes have program names like `puma: cluster worker 0: 971 [dashboard]`.
-      # Be careful to NOT match command line tools like `pumactl` or a script that happens to start with the name `puma_`.
-      program == 'puma' || program.start_with?('puma:')
+      Cdo.execution_context == :web_application
     end
 
     # Whether we are executing within a web application server on the
