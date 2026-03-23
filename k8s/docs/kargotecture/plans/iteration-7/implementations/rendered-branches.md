@@ -5,7 +5,8 @@
 - `code-dot-org` branch: `kargo/rendered-branches/helm`, PR `#71565`
 - `k8s-gitops` branch: `kargo/rendered-branches/helm`, PR `#4`
 - `code-dot-org` repo: `Cumulative Lines Added: 285 (added: 213, deleted: 72)` across 4 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 569 (added: 469, deleted: 100)` across 23 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 575 (added: 475, deleted: 100)` across 23 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:
@@ -27,7 +28,8 @@ Final freight complexity:
 - `code-dot-org` branch: `kargo/rendered-branches/kustomize`, PR `#71568`
 - `k8s-gitops` branch: `kargo/rendered-branches/kustomize`, PR `#9`
 - `code-dot-org` repo: `Cumulative Lines Added: 440 (added: 342, deleted: 98)` across 9 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 600 (added: 498, deleted: 102)` across 24 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 606 (added: 504, deleted: 102)` across 24 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:

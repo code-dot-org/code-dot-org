@@ -6,6 +6,7 @@
 - `k8s-gitops` branch: `kargo/argo-refs-code-dot-org-commit/helm`, PR `#1`
 - `code-dot-org` repo: `Cumulative Lines Added: 457 (added: 364, deleted: 93)` across 8 files
 - `k8s-gitops` repo: `Cumulative Lines Added: 319 (added: 256, deleted: 63)` across 21 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:
@@ -27,6 +28,7 @@ Final freight complexity:
 - `k8s-gitops` branch: `kargo/argo-refs-code-dot-org-commit/kustomize`, PR `#3`
 - `code-dot-org` repo: `Cumulative Lines Added: 447 (added: 370, deleted: 77)` across 11 files
 - `k8s-gitops` repo: `Cumulative Lines Added: 539 (added: 464, deleted: 75)` across 27 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:

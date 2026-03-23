@@ -6,6 +6,7 @@
 - `k8s-gitops` branch: `kargo/oci-release-capsule/helm`, PR `#6`
 - `code-dot-org` repo: `Cumulative Lines Added: 524 (added: 388, deleted: 136)` across 10 files
 - `k8s-gitops` repo: `Cumulative Lines Added: 1340 (added: 1277, deleted: 63)` across 35 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:
@@ -28,6 +29,7 @@ Final freight complexity:
 - `k8s-gitops` branch: `kargo/oci-release-capsule/kustomize`, PR `#8`
 - `code-dot-org` repo: `Cumulative Lines Added: 890 (added: 799, deleted: 91)` across 10 files
 - `k8s-gitops` repo: `Cumulative Lines Added: 1261 (added: 1207, deleted: 54)` across 26 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:

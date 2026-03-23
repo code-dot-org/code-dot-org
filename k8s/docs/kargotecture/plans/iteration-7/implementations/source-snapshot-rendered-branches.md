@@ -4,13 +4,15 @@
 
 - `code-dot-org` branch: `kargo/source-snapshot-rendered-branches/helm`, PR `#71566`
 - `k8s-gitops` branch: `kargo/source-snapshot-rendered-branches/helm`, PR `#5`
-- `code-dot-org` repo: `Cumulative Lines Added: 202 (added: 148, deleted: 54)` across 6 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 460 (added: 367, deleted: 93)` across 25 files
+- `code-dot-org` repo: `Cumulative Lines Added: 218 (added: 164, deleted: 54)` across 6 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 517 (added: 424, deleted: 93)` across 25 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Partial
 
 What landed:
 - `code-dot-org` adds workflow changes plus a small amount of Helm package shaping.
 - `k8s-gitops` adds the freight Warehouse, ApplicationSets, envType values files, rendered-branch stages, and the expected snapshot-oriented render path from `warehouses/codeai/freight/current/helm`.
+- The legacy-gitflow coexistence module is now present end-to-end: `code-dot-org` writes merged gate markers and downstream stages parse them before promotion.
 - `review-infra-changes` exists and follows the rendered-branch review pattern.
 
 Missing or suspicious:
@@ -28,12 +30,14 @@ Final freight complexity:
 - `code-dot-org` branch: `kargo/source-snapshot-rendered-branches/kustomize`, PR `#71570`
 - `k8s-gitops` branch: `kargo/source-snapshot-rendered-branches/kustomize`, PR `#10`
 - `code-dot-org` repo: `Cumulative Lines Added: 165 (added: 121, deleted: 44)` across 3 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 536 (added: 449, deleted: 87)` across 26 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 542 (added: 455, deleted: 87)` across 26 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Partial
 
 What landed:
 - `k8s-gitops` carries most of the implementation: a Git Warehouse over `warehouses/codeai/freight`, deploy-entrypoint Kustomizations, envType patches, a shared wrapper template, and rendered-branch stages.
 - Staging/test/levelbuilder render from the frozen snapshot under `warehouses/codeai/freight/current/kustomize`.
+- The downstream stages now also enforce the legacy-gitflow merged-marker gate before promotion.
 - `review-infra-changes` exists and follows the expected rendered-branch flow.
 
 Missing or suspicious:

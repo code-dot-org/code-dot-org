@@ -5,12 +5,14 @@
 - `code-dot-org` branch: `kargo/common-case-rendered-branches/helm`, PR `#71562`
 - `k8s-gitops` branch: `kargo/common-case-rendered-branches/helm`, PR `#2`
 - `code-dot-org` repo: `Cumulative Lines Added: 153 (added: 11, deleted: 142)` across 5 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 469 (added: 396, deleted: 73)` across 20 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 525 (added: 452, deleted: 73)` across 20 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:
 - `code-dot-org` mostly removes writeback-oriented workflow behavior instead of adding new packaging machinery.
 - `k8s-gitops` adds the image+git Warehouse, ApplicationSet changes, full rendered-branch stage flow, and a rollout analysis template for `test`.
+- `k8s-gitops` now also enforces downstream promotion gates against matching `warehouses/codeai/legacy-gitflow/<env>/merged/git-<sha>.yaml` records on `main`.
 - `review-infra-changes` renders to a PR branch, waits for review, and `production` updates Argo CD to the reviewed `stage/production` commit.
 
 Missing or suspicious:
@@ -26,12 +28,14 @@ Final freight complexity:
 - `code-dot-org` branch: `kargo/common-case-rendered-branches/kustomize`, PR `#71567`
 - `k8s-gitops` branch: `kargo/common-case-rendered-branches/kustomize`, PR `#7`
 - `code-dot-org` repo: `Cumulative Lines Added: 157 (added: 14, deleted: 143)` across 5 files
-- `k8s-gitops` repo: `Cumulative Lines Added: 530 (added: 418, deleted: 112)` across 23 files
+- `k8s-gitops` repo: `Cumulative Lines Added: 621 (added: 518, deleted: 103)` across 23 files
+- `Legacy gitflow gate implemented?` Yes
 - `Implementation looks complete?` Mostly complete
 
 What landed:
 - `k8s-gitops` adds the same common-case Warehouse shape plus Kustomize envType components, a shared deploy wrapper template, rendered stage branches, and a service-health analysis template.
 - Stages sparse-check out `k8s/kustomize`, copy GitOps-side env inputs, run `kustomize-build`, and publish rendered output to `stage/*`.
+- Downstream stages now gate promotion on matching `warehouses/codeai/legacy-gitflow/<env>/merged/git-<full-commit-sha>.yaml` records from `main`.
 - `production` is intentionally thin: it points Argo CD at the reviewed render commit captured from `review-infra-changes`.
 
 Missing or suspicious:
