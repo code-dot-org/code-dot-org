@@ -147,6 +147,7 @@ const SmallFooter = (props: SmallFooterProps) => {
 
   const clickBaseCopyright = useCallback(
     (e?: MouseEvent) => {
+      console.log('attempting', e);
       e?.preventDefault();
       e?.stopPropagation();
 
