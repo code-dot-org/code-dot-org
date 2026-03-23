@@ -10,10 +10,12 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {useSources} from '../lab2/views/SourcesContainer';
 
 import {SketchlabTldrawSources} from './types';
+import {createTldrawAssetStore} from './utils/createTldrawAssetStore';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -41,6 +43,13 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
       return undefined;
     }
   };
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
+  const assetStore = useMemo(
+    () => createTldrawAssetStore(channelId, levelProperties.name),
+    [channelId, levelProperties.name]
+  );
+
   const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
 
   const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
@@ -55,12 +64,17 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   useEffect(() => {
     if (tldrawEditor) {
       console.log('editor is ready, registering listener');
+      // listen method returns a method you can use to unsubscribe, so we return that from the effect.
+      // https://tldraw.dev/reference/store/Store#listen
       const unsubscribe = tldrawEditor.store.listen(
         () => {
           const currentSnapshot = getSnapshot(tldrawEditor.store);
           const serializedSnapshot = JSON.stringify(currentSnapshot.document);
           updateSources({source: serializedSnapshot});
         },
+        // We are only listening to 'document' changes because 'session' changes are things like cursor location,
+        // etc. We won't save those.
+        // https://tldraw.dev/sdk-features/store#Saving-state
         {source: 'all', scope: 'document'}
       );
       return () => {
@@ -114,7 +128,11 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
           <div style={{height: '100%', position: 'relative'}}>
             <Tldraw
               assetUrls={assetUrls}
+              assets={assetStore}
               onMount={initializeEditor}
+              // docs for snapshot: https://tldraw.dev/reference/editor/TLStoreBaseOptions#snapshot
+              // We may be able to use snapshot in conjunction with migrations to migrate old excalidraw
+              // data: https://tldraw.dev/sdk-features/persistence#Migrations
               snapshot={initialSnapshotRef.current}
             />
           </div>
