@@ -42,7 +42,7 @@ jobs:
           path: k8s-gitops
           token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
-      - name: Publish frozen codeai freight
+      - name: Publish frozen codeai freight and legacy-gitflow metadata
         shell: ruby {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
@@ -69,6 +69,7 @@ jobs:
           CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
 
           RELEASE_TAG = "git-#{SOURCE_COMMIT_SHA}"
+          LEGACY_GITFLOW_RELATIVE_DIR = "warehouses/codeai/legacy-gitflow"
           abort("ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write freight.") if CODEAI_DOCKER_IMAGE_REF.strip.empty?
           abort("ERROR: CODEAI_DOCKER_IMAGE_DIGEST is empty, refusing to write freight.") if CODEAI_DOCKER_IMAGE_DIGEST.strip.empty?
           abort("ERROR: CODEAI_DOCKER_TAG=#{CODEAI_DOCKER_TAG.inspect} did not match expected #{RELEASE_TAG.inspect}.") unless CODEAI_DOCKER_TAG == RELEASE_TAG
@@ -80,10 +81,13 @@ jobs:
 
           SOURCE_HELM_DIR = File.expand_path("code-dot-org/k8s/helm", Dir.pwd)
           abort("ERROR: expected Helm source at #{SOURCE_HELM_DIR}") unless Dir.exist?(SOURCE_HELM_DIR)
+          MERGED_AT = `git -C code-dot-org show -s --format=%cI HEAD`.strip
+          abort("ERROR: unable to determine mergedAt for #{RELEASE_TAG}.") if MERGED_AT.empty?
 
           FREIGHT_RELATIVE_DIR = "warehouses/codeai/freight"
           CURRENT_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/current"
           RELEASE_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/#{RELEASE_TAG}"
+          LEGACY_BRANCH_RELATIVE_DIR = "#{LEGACY_GITFLOW_RELATIVE_DIR}/#{BRANCH_NAME}"
 
           EXPECTED_FREIGHT = {
             "schemaVersion" => "v1",
@@ -94,6 +98,11 @@ jobs:
               "digest" => CODEAI_DOCKER_IMAGE_DIGEST,
             },
             "packageType" => "helm",
+          }.freeze
+          EXPECTED_LEGACY_GATE = {
+            "revision" => SOURCE_COMMIT_SHA,
+            "tag" => RELEASE_TAG,
+            "mergedAt" => MERGED_AT,
           }.freeze
 
           def system!(*cmd)
@@ -155,6 +164,12 @@ jobs:
             FileUtils.cp_r("#{source_relative_dir}/.", destination_relative_dir)
           end
 
+          def write_legacy_gate_dir(relative_dir, gate_hash:, release_tag:)
+            FileUtils.mkdir_p(File.join(relative_dir, "merged"))
+            File.write(File.join(relative_dir, "current.yaml"), gate_hash.to_yaml(line_width: -1))
+            File.write(File.join(relative_dir, "merged", "#{release_tag}.yaml"), gate_hash.to_yaml(line_width: -1))
+          end
+
           Dir.chdir("k8s-gitops") do
             release_freight_exists = Dir.exist?(RELEASE_RELATIVE_DIR)
 
@@ -173,10 +188,11 @@ jobs:
             end
 
             mirror_freight_dir(RELEASE_RELATIVE_DIR, CURRENT_RELATIVE_DIR)
+            write_legacy_gate_dir(LEGACY_BRANCH_RELATIVE_DIR, gate_hash: EXPECTED_LEGACY_GATE, release_tag: RELEASE_TAG)
 
             system! 'git config user.name "github-actions[bot]"'
             system! 'git config user.email "41898282+github-actions[bot]@users.noreply.github.com"'
-            system! "git", "add", CURRENT_RELATIVE_DIR, RELEASE_RELATIVE_DIR
+            system! "git", "add", CURRENT_RELATIVE_DIR, RELEASE_RELATIVE_DIR, LEGACY_BRANCH_RELATIVE_DIR
 
             if system("git diff --cached --quiet")
               puts "Success: no diff in #{CURRENT_RELATIVE_DIR} or #{RELEASE_RELATIVE_DIR}, no commit+push needed."
