@@ -205,7 +205,7 @@ end
 
 When /^I close the instructions overlay if it exists$/ do
   steps <<-GHERKIN
-    When I click selector "#overlay" if it exists'
+    When I click selector "#overlay" if it exists
     And I wait for 0.5 seconds
   GHERKIN
 end
