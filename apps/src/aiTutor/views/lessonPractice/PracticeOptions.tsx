@@ -26,6 +26,12 @@ const PracticeOptions: FC<{
       icon: 'comment',
       show: true,
     },
+    {
+      value: 'agentic-chat',
+      label: 'WIP Agentic Chat with Tutor',
+      icon: 'robot',
+      show: true,
+    },
   ];
 
   return (

@@ -36,12 +36,12 @@ const PresentationView: React.FunctionComponent = () => {
         | number
         | boolean;
     } = {
-      'Model Name': modelName,
-      Overview: overview,
-      'Training Data': trainingData,
-      'System Prompt': systemPrompt,
-      Temperature: temperature,
-      'Retrieval Used': retrievalContexts.length > 0,
+      modelName: modelName,
+      overview: overview,
+      trainingData: trainingData,
+      systemPrompt: systemPrompt,
+      temperature: temperature,
+      retrievalUsed: retrievalContexts.length > 0,
     };
     const technicalInfo = TECHNICAL_INFO_FIELDS.map(field => {
       if (typeof technicalInfoData[field] === 'boolean') {

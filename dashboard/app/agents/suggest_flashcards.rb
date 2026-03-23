@@ -9,6 +9,7 @@ class SuggestFlashcards < RubyLLM::Tool
   end
 
   def initialize(vocabulary)
+    puts "Initializing SuggestFlashcards tool with #{vocabulary.size} vocabulary words"
     @vocabulary = vocabulary.map do |v|
       {id: v.id.to_s, word: v.word, definition: v.definition}
     end

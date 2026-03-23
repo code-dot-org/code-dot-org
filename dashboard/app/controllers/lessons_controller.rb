@@ -101,6 +101,7 @@ class LessonsController < ApplicationController
     raise ActiveRecord::RecordNotFound unless @lesson
 
     @lesson_practice_data = {
+      lessonId: @lesson.id,
       lessonName: @lesson.localized_name,
       lessonSummary: @lesson.properties['student_overview'] || '',
       vocabulary: @lesson.vocabularies.map {|v| {id: v.id.to_s, word: v.word, definition: v.definition}},

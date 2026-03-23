@@ -1,7 +1,13 @@
-import {Box, CircularProgress, Stack, TextField, Typography} from '@mui/material';
+import {
+  Box,
+  Button,
+  CircularProgress,
+  Stack,
+  TextField,
+  Typography,
+} from '@mui/material';
 import React, {FC, useCallback, useRef, useState} from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
@@ -23,14 +29,12 @@ interface AssistantMessage extends ChatHistoryMessage {
 type ChatEntry = ChatHistoryMessage | AssistantMessage;
 
 interface LessonPracticeChatWorkspaceProps {
-  scriptId: string;
-  lessonPosition: number;
+  lessonId: number;
   vocabulary: VocabularyItem[];
 }
 
 const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
-  scriptId,
-  lessonPosition,
+  lessonId,
   vocabulary,
 }) => {
   const [messages, setMessages] = useState<ChatEntry[]>([]);
@@ -38,7 +42,7 @@ const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-
+  console.log('Rendering LessonPracticeChatWorkspace with lessonId', lessonId);
   const sendMessage = useCallback(async () => {
     const text = inputText.trim();
     if (!text || isLoading) return;
@@ -60,12 +64,13 @@ const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
           'Content-Type': 'application/json',
           'X-CSRF-Token':
             (
-              document.querySelector('meta[name="csrf-token"]') as HTMLMetaElement
+              document.querySelector(
+                'meta[name="csrf-token"]'
+              ) as HTMLMetaElement
             )?.content || '',
         },
         body: JSON.stringify({
-          script_id: scriptId,
-          lesson_position: lessonPosition,
+          lesson_id: lessonId,
           message: text,
           history,
         }),
@@ -93,7 +98,7 @@ const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
       setIsLoading(false);
       inputRef.current?.focus();
     }
-  }, [inputText, isLoading, messages, scriptId, lessonPosition]);
+  }, [inputText, isLoading, messages, lessonId]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -104,7 +109,10 @@ const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
 
   const flashcardsForMessage = (msg: ChatEntry): VocabularyItem[] => {
     const assistantMsg = msg as AssistantMessage;
-    if (!assistantMsg.showFlashcards || !assistantMsg.flashcardVocabularyIds?.length) {
+    if (
+      !assistantMsg.showFlashcards ||
+      !assistantMsg.flashcardVocabularyIds?.length
+    ) {
       return [];
     }
     const ids = new Set(assistantMsg.flashcardVocabularyIds);
@@ -161,12 +169,13 @@ const LessonPracticeChatWorkspace: FC<LessonPracticeChatWorkspaceProps> = ({
           disabled={isLoading}
         />
         <Button
-          __useDeprecatedTag
-          color={Button.ButtonColor.brandSecondaryDefault}
-          text="Send"
-          onClick={sendMessage}
+          onClick={() => {
+            sendMessage();
+          }}
           disabled={!inputText.trim() || isLoading}
-        />
+        >
+          Send
+        </Button>
       </Stack>
     </Stack>
   );

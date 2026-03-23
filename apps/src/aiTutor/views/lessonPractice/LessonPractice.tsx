@@ -1,8 +1,12 @@
 import {Typography} from '@mui/material';
 import React, {FC, useState} from 'react';
 
+import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
 
 import GenericStudentLessonSummary from './GenericStudentLessonSummary';
 import LessonPracticeChatWorkspace from './LessonPracticeChatWorkspace';
@@ -11,21 +15,19 @@ import VocabularyFlashcards from './VocabularyFlashcards';
 
 import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
 
-type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
+type PracticeOption = 'summary' | 'flashcards' | 'chat' | 'agentic-chat' | null;
 
 interface LessonPracticeData {
   lessonName: string;
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
-  scriptId: string;
-  lessonPosition: number;
+  lessonId: number;
 }
 
 export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
   lessonPracticeData,
 }) => {
-  const {lessonName, lessonSummary, vocabulary, scriptId, lessonPosition} =
-    lessonPracticeData;
+  const {lessonName, lessonSummary, vocabulary, lessonId} = lessonPracticeData;
 
   const [selectedOption, setSelectedOption] = useState<PracticeOption>(null);
 
@@ -51,9 +53,14 @@ export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
         <VocabularyFlashcards vocabulary={vocabulary} />
       )}
       {selectedOption === 'chat' && (
+        <ChatWorkspace
+          modelParameters={baseModelParameters}
+          clientType={AiChatClientTypes.AI_TUTOR}
+        />
+      )}
+      {selectedOption === 'agentic-chat' && (
         <LessonPracticeChatWorkspace
-          scriptId={scriptId}
-          lessonPosition={lessonPosition}
+          lessonId={lessonId}
           vocabulary={vocabulary}
         />
       )}

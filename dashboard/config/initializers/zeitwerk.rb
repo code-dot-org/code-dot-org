@@ -5,5 +5,6 @@
 Rails.autoloaders.main&.inflector&.inflect(
   "afe_enrollment" => "AFEEnrollment",
   "csta_enrollment" => "CSTAEnrollment",
-  "studio_ec" => "StudioEC"
+  "studio_ec" => "StudioEC",
+  "lesson_practice_ai_tutor" => "LessonPracticeAITutor"
 )

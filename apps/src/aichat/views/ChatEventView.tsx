@@ -27,13 +27,14 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 import styles from './chatWorkspace.module.scss';
 
 const chatEventDescriptionsOwner = {
-  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
-  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
+  CLEAR_CHAT: 'clearChatOwner',
+  LOAD_LEVEL: 'loadLevelOwner',
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 const chatEventDescriptionsStudent = {
-  CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
-  LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
+  CLEAR_CHAT: 'clearChat',
+
+  LOAD_LEVEL: 'loadLevel',
 } as const satisfies {[key in ChatEventDescriptionKey]: string};
 
 interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {

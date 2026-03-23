@@ -4,10 +4,9 @@ class LessonPracticeAiTutorController < ApplicationController
   # POST /lesson_practice_ai_tutor/chat
   #
   # Params:
-  #   script_id:       string - script name or ID (e.g., "csp1-2023")
-  #   lesson_position: integer - lesson relative_position within the script
-  #   message:         string - the student's new message
-  #   history:         array of {role: "user"|"assistant", content: string}
+  #   lesson_id: integer - the lesson's ID
+  #   message:   string - the student's new message
+  #   history:   array of {role: "user"|"assistant", content: string}
   #
   # Returns:
   #   response:                 string - the tutor's reply
@@ -16,18 +15,20 @@ class LessonPracticeAiTutorController < ApplicationController
   def chat
     lesson = find_lesson
     return render status: :not_found, json: {error: "Lesson not found"} unless lesson
-
+    puts "Received chat message for lesson '#{lesson.localized_name}': #{params[:message]}"
     vocabulary_tool = SuggestFlashcards.new(lesson.vocabularies)
     agent = LessonPracticeAITutor.for_lesson(lesson, vocabulary_tool)
 
     # Replay conversation history so the agent has context
-    Array(params[:history]).each do |msg|
-      role = msg[:role].to_sym
-      next unless [:user, :assistant].include?(role)
-      agent.add_message(role: role, content: msg[:content].to_s)
-    end
+    # Array(params[:history]).each do |msg|
+    #   role = msg[:role].to_sym
+    #   next unless [:user, :assistant].include?(role)
+    #   agent.add_message(role: role, content: msg[:content].to_s)
+    # end
 
     response = agent.ask(params[:message].to_s)
+
+    puts "AI Tutor response: #{response.content}"
 
     render json: {
       response: response.content,
@@ -42,10 +43,6 @@ class LessonPracticeAiTutorController < ApplicationController
   private
 
   def find_lesson
-    script = Script.get_from_cache(params[:script_id]) rescue nil
-    return nil unless script
-    script.lessons.find do |l|
-      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
-    end
+    Lesson.find_by(id: params[:lesson_id])
   end
 end

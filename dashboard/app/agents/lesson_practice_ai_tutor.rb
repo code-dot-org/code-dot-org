@@ -12,6 +12,7 @@ class LessonPracticeAITutor < RubyLLM::Agent
   #   response = agent.ask("What does 'algorithm' mean?")
   #   agent.flashcard_tool.called? # => true if it suggested flashcards
   def self.for_lesson(lesson, vocabulary_tool)
+    puts "Initializing LessonPracticeAITutor for lesson '#{lesson.localized_name}' with #{lesson.vocabularies.size} vocab words"
     agent = chat
 
     vocab_list = lesson.vocabularies.map do |v|
@@ -21,7 +22,7 @@ class LessonPracticeAITutor < RubyLLM::Agent
     system_prompt = build_system_prompt(lesson.localized_name, vocab_list)
 
     # Set the lesson-specific system prompt on the underlying chat
-    agent.chat.with_instructions(system_prompt)
+    agent.with_instructions(system_prompt)
     agent.with_tool(vocabulary_tool)
 
     agent
@@ -29,16 +30,16 @@ class LessonPracticeAITutor < RubyLLM::Agent
 
   def self.build_system_prompt(lesson_name, vocab_list)
     vocab_section = if vocab_list.present?
-      <<~VOCAB
-        Vocabulary for this lesson:
-        #{vocab_list}
+                      <<~VOCAB
+                        Vocabulary for this lesson:
+                        #{vocab_list}
 
-        When the student asks about vocabulary words, definitions, or wants to study terms,
-        use the suggest_flashcards tool with the relevant vocabulary IDs from the list above.
-      VOCAB
-    else
-      ""
-    end
+                        When the student asks about vocabulary words, definitions, or wants to study terms,
+                        use the suggest_flashcards tool with the relevant vocabulary IDs from the list above.
+                      VOCAB
+                    else
+                      ""
+                    end
 
     <<~PROMPT
       You are a friendly and encouraging AI tutor helping a student review their lesson.
