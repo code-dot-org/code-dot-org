@@ -1,0 +1,60 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-20T23:22:34.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Lists\r\n\r\nIn this level, we'll use AI Tutor to help us understand lists and generate new content for our webpage.\r\n\r\n**Do This:**\r\n1) Ask AI Tutor to explain how lists work in HTML\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n2) Ask AI Tutor to add new content that uses a list to this page. Use specific language, like \"unordered list\" or `<li>`, to make sure AI follows your vision.\r\n\r\nOnce you've added your own content: press the Continue button!",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildHTML",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildHTML": "- Only generate list and paragraph elements. Follow the patterns in the current index.html file\n- Only generate HTML when the user asks for it\n- NEVER add a style.css link to the head",
+        "documentation": "- Keep explanations simple and friendly"
+      }
+    },
+    "display_name": "Lists",
+    "bubble_choice_description": "Learn about List elements, like `<ol>`, `<ul>`, `<li>`, etc",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    <p>Different ways to say Hello:</p>\n    <ul>\n      <li>Hello</li>\n      <li>Hola</li>\n      <li>Bonjour</li>\n      <li>Gutentag</li>\n    </ul>\n\n    <p>How to bake a cake:</p>\n    <ol>\n      <li>Preheat oven to 350°F (175°C).</li>\n      <li>Mix dry ingredients in a large bowl.</li>\n      <li>Add wet ingredients and mix until smooth.</li>\n      <li>Pour batter into a greased pan.</li>\n      <li>Bake for 30-40 minutes.</li>\n    </ol>\n\n    \n  </body>\n</html>\n  ",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/3df2816cd7dfa12f7911ee52f3e04138-Screenshot 2025-04-02 at 7.44.05 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:22:34.612+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-9a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-9a\"},{\"changed_at\":\"2026-03-20 23:24:28 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-20 23:30:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-20 23:30:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 06:49:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:06:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-22 07:27:43 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

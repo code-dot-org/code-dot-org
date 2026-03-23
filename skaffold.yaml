@@ -2,6 +2,9 @@
 # for code.org development with one command: `skaffold dev`
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
+#
+# IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
+# way until we decide between Helm and Kustomize.
 
 apiVersion: skaffold/v4beta13
 kind: Config
@@ -88,18 +91,6 @@ deploy:
           - k8s/helm/values.yaml
 
 profiles:
-
-- name: production
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/valuesFiles/-
-      value: k8s/helm/production.values.yaml
-
-- name: test
-  patches:
-    - op: add
-      path: /deploy/helm/releases/0/valuesFiles/-
-      value: k8s/helm/test.values.yaml
 
 - name: development
   activation:

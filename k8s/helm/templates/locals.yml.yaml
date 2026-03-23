@@ -10,9 +10,6 @@ data:
     use_my_apps: true
     dashboard_workers: {{ .Values.dashboard_workers }}
 
-    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
-    # {{- if not .Values.localDev.mounts.mountDotAWS }}
-
     # These are secrets that cause exceptions booting our dashbaord app in development
     # We hope to get rid of needing these overrides soon, see:
     # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
@@ -22,12 +19,6 @@ data:
     properties_encryption_key:
     openai_lesson_summaries_api_key:
     elevenlabs_api_key:
-    openai_student_learning_api_key:
-    langfuse_secret_key:
-    langfuse_public_key:
-    openai_measures_of_learning_api_key:
-
-    # {{- end }}
 
     # Local service non-secret configuration. Append-only so we do not mix these
     # values into the legacy locals.yml sections above.
