@@ -9,8 +9,8 @@
 # Verify that kustomize renders are still close enough to the Helm chart.
 #
 # Usage:
-#   k8s/kustomize/bin/verify-parity
-#   k8s/kustomize/bin/verify-parity development staging production
+#   k8s/kustomize/bin/verify-helm-parity
+#   k8s/kustomize/bin/verify-helm-parity development staging production
 # With no args, it verifies every overlay in DashboardKustomize.overlay_names.
 #
 # For each overlay, this script:

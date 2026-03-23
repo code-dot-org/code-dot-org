@@ -1,4 +1,4 @@
-# This overlay exists only so `verify-parity` can reference remote envType
+# This overlay exists only so `verify-helm-parity` can reference remote envType
 # overlays and so Skaffold can run locally with server-shaped parameters.
 #
 # Do not include this directory in scoped sources for Kargo or Argo deploys.
