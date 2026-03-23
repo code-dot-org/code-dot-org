@@ -68,7 +68,8 @@ class AichatRequestChatCompletionJob < ApplicationJob
         response = make_openai_request(request)
       rescue OpenaiUserInputResponseTimeout => exception
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_TIMEOUT], exception.message]
-      rescue AichatAiHelper::ModelRateLimitedError
+      rescue AichatAiHelper::ModelRateLimitedError => exception
+        Honeybadger.notify(exception, context: {request_id: request.id, model: request.model_customizations['selectedModelId'], client_type: request.model_customizations['clientType'], level_id: request.level_id})
         return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], nil]
       end
     else
