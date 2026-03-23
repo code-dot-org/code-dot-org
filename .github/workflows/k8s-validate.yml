@@ -1,7 +1,7 @@
 # Use this workflow to do any validation of k8s related files, this could
 # be linting, simple tests, etc. This runs in parallel with the skaffold
-# build, but before we commit to k8s-gitops our changes, so anything
-# that's faster than that won't hold up the overall flow.
+# build, so anything faster than the image build won't hold up the overall
+# flow.
 
 name: k8s-validate
 
