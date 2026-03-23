@@ -451,6 +451,19 @@ class ActivitySectionCard extends Component {
                 remove={this.handleRemoveActivitySection}
                 item={this.props.activitySection}
                 itemType={'activitySection'}
+                isDeleteable={
+                  !activitySection.scriptLevels.some(
+                    scriptLevel =>
+                      String(rubricLevelId) === String(scriptLevel.activeId)
+                  )
+                }
+                hasRubricLevel={
+                  rubricLevelId &&
+                  activitySection.scriptLevels.some(
+                    scriptLevel =>
+                      String(rubricLevelId) === String(scriptLevel.activeId)
+                  )
+                }
               />
             )}
           </label>

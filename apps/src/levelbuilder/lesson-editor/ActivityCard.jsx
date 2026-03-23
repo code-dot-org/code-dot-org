@@ -85,6 +85,17 @@ class ActivityCard extends Component {
     );
   };
 
+  hasRubricLevel = () => {
+    const {activity, rubricLevelId} = this.props;
+    if (!rubricLevelId) return false;
+
+    return activity.activitySections.some(activitySection =>
+      activitySection.scriptLevels.some(
+        scriptLevel => String(rubricLevelId) === String(scriptLevel.activeId)
+      )
+    );
+  };
+
   render() {
     const {
       activity,
@@ -148,6 +159,7 @@ class ActivityCard extends Component {
                   remove={this.handleRemoveActivity}
                   item={this.props.activity}
                   itemType={'activity'}
+                  isDeleteable={!this.hasRubricLevel()}
                 />
               )}
           </div>
