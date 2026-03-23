@@ -19,6 +19,21 @@ import {createTldrawAssetStore} from './utils/createTldrawAssetStore';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
+// TLStoreSnapshot requires { store: object, schema: object }. We validate at runtime
+// because sources could be stale/invalid (e.g. old serialized strings, partial data).
+function isValidSnapshot(
+  source: SketchlabTldrawSources['source'] | undefined
+): source is TLStoreSnapshot {
+  return (
+    typeof source === 'object' &&
+    source !== null &&
+    'store' in source &&
+    typeof source.store === 'object' &&
+    'schema' in source &&
+    typeof source.schema === 'object'
+  );
+}
+
 const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
@@ -42,7 +57,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
 
   const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
-    currentSources?.source
+    isValidSnapshot(currentSources?.source) ? currentSources.source : undefined
   );
 
   const initializeEditor = useCallback((editor: Editor) => {
