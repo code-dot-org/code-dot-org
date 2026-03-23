@@ -30,6 +30,11 @@ we have existing (broken?) code that does this, and it could be repurposed.
 Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
 include prometheus as a helm chart dependency??
 
+## Kargo
+
+- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
+- set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
+
 ## Tofu EKS Cluster
 
 See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
@@ -49,5 +54,3 @@ Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, foll
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
-
-- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
