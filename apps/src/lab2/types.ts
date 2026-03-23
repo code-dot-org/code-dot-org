@@ -233,6 +233,7 @@ export interface LevelProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  productTours?: string[];
   submittable?: boolean;
   disableEditRunForSubmission?: boolean;
   finishUrl?: string;
