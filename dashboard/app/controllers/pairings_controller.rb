@@ -27,7 +27,7 @@ class PairingsController < ApplicationController
         id: section.id,
         name: section.name,
         students:
-          (section.students - [current_user]).map do |student|
+          (section.students - [current_user]).reject {|s| Policies::DemoSections.demo_student?(s.id)}.map do |student|
             {id: student.id, name: student.name}
           end
       }

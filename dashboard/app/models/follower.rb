@@ -51,6 +51,7 @@ class Follower < ApplicationRecord
 
   after_create :assign_script
   def assign_script
+    return if Policies::DemoSections.demo_student?(student_user_id)
     student_user.assign_script(section.script, section.unit_group) if section.script
   end
 
@@ -58,6 +59,8 @@ class Follower < ApplicationRecord
   def remove_given_and_family_name
     # Ignore a deleted student
     return unless student_user
+    # Never modify demo students.
+    return if Policies::DemoSections.demo_student?(student_user_id)
 
     # If the student is in zero sections, and has a given and/or family name set,
     # remove the given and/or family name.

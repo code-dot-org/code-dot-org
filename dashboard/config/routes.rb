@@ -206,7 +206,6 @@ Dashboard::Application.routes.draw do
         member do
           post 'join'
           post 'leave'
-          post 'update_sharing_disabled'
           get 'code_review_groups'
           post 'code_review_groups', to: 'sections#set_code_review_groups'
           post 'code_review_enabled', to: 'sections#set_code_review_enabled'
@@ -218,6 +217,7 @@ Dashboard::Application.routes.draw do
           get 'valid_course_offerings'
           get 'available_participant_types'
           get 'require_captcha'
+          post 'demo/:section_type', to: 'sections#create_demo'
         end
       end
     end

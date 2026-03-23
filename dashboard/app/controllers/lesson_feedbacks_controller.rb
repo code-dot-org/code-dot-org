@@ -48,10 +48,10 @@ class LessonFeedbacksController < ApplicationController
     return head :not_found unless student
     return head :forbidden unless student.student_of?(current_user)
 
-    feedback = LessonFeedback.find_by!(
-      student_id: params[:student_id],
-      lesson_id: params[:lesson_id]
-    )
+    query = {student_id: params[:student_id], lesson_id: params[:lesson_id]}
+    # For demo students, only show feedback from the current teacher to avoid cross-teacher leakage.
+    query[:teacher_id] = current_user.id if Policies::DemoSections.demo_student?(student.id)
+    feedback = LessonFeedback.find_by!(query)
 
     render json: feedback
   end

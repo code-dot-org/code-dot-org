@@ -33,10 +33,14 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
     # Setting CSRF token header allows us to access the token manually in subsequent POST requests.
     headers['csrf-token'] = form_authenticity_token
 
+    student_id = params.require(:student_id)
+    # For demo students, only show feedback from the current teacher to avoid cross-teacher leakage.
+    teacher_id = Policies::DemoSections.demo_student?(student_id.to_i) ? current_user.id : nil
     @level_feedbacks = TeacherFeedback.get_latest_feedbacks_received(
-      params.require(:student_id),
+      student_id,
       params.require(:level_id),
-      params.require(:script_id)
+      params.require(:script_id),
+      teacher_id
     )
 
     @level_feedbacks.each do |feedback|
@@ -87,6 +91,8 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
   end
 
   private def reset_progress_for_keep_working(teacher_feedback)
+    student = User.find(teacher_feedback.student_id)
+    return unless can?(:manage, student)
     UserLevel.update_best_result(
       teacher_feedback.student_id,
       teacher_feedback.level_id,
