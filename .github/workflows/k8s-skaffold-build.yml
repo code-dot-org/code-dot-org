@@ -8,13 +8,13 @@
 # of forking out to native runners and merging back into a single final multi-platform image
 # as a later step.
 #
-# Per-architecture images are tagged with the exact source commit and architecture, e.g.:
-# - code-dot-org:git-<sha>-amd64
-# - code-dot-org:git-<sha>-arm64
+# Per-architecture images are tagged with a git-SHA-derived tag and architecture, e.g.:
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-amd64
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-arm64
 #
 # In a later step (see: ./k8s-stitch-multiplatform-image.yml) we stitch the per-architecture
 # images together into a single multi-platform image, e.g.:
-# - code-dot-org:git-<sha>
+# - code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
 #
 # The "real action" in this file is the final `skaffold build` command which does the
 # actual docker build and push, see /skaffold.yaml for details on what images are built
@@ -24,6 +24,11 @@ name: k8s-skaffold-build
 
 on:
   workflow_call:
+    inputs:
+      source_commit_sha:
+        description: "Source repo commit SHA to use as the canonical docker tag"
+        required: true
+        type: string
     outputs:
       docker_tag_amd64:
         description: "Docker tag for amd64 architecture"
@@ -49,7 +54,7 @@ jobs:
         runs-on: [ubuntu-latest, skaffold-arm64]
     env:
       SKAFFOLD_DEFAULT_REPO: ghcr.io/${{ github.repository_owner }}
-      SOURCE_GIT_COMMIT: ${{ github.event.pull_request.head.sha || github.sha }}
+      SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
       # build docker images with -amd64 or -arm64 suffix, we'll stitch them together later:
       APPEND_ARCHITECTURE_TO_DOCKER_TAG: true
     outputs:
@@ -65,14 +70,14 @@ jobs:
       # This step computes the correct per-architecture docker tag for this runner.
       #
       # For example, on the arm64 runner, this will set:
-      # outputs.docker_tag_arm64=code-dot-org:git-<sha>-arm64
+      # outputs.docker_tag_arm64=code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa-arm64
       #
       # Additionally, it computes the docker tag for the final multi-platform image e.g.:
-      # outputs.docker_tag=code-dot-org:git-<sha>
+      # outputs.docker_tag=code-dot-org:git-0cc4cd87f40ae6f7f8f112233445566778899aa
       - name: Setup Docker Tags
         id: docker_tags
         run: |
-          DOCKER_TAG="git-${SOURCE_GIT_COMMIT}"
+          DOCKER_TAG="git-${SOURCE_COMMIT_SHA}"
           echo "docker_tag=$DOCKER_TAG" >> "$GITHUB_OUTPUT"
 
           if [[ "$APPEND_ARCHITECTURE_TO_DOCKER_TAG" == "true" ]]; then

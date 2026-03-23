@@ -1,0 +1,70 @@
+name: k8s-commit-to-kargo-warehouse
+
+on:
+  workflow_call:
+    inputs:
+      source_git_commit:
+        required: true
+        type: string
+      codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_image_digest:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  commit-to-kargo-warehouse:
+    name: commit to kargo warehouse
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6.0.2
+        with:
+          path: code-dot-org
+
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Write CodeAI build-lock files
+        env:
+          SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
+          CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+          CODEAI_DOCKER_IMAGE_DIGEST: ${{ inputs.codeai_docker_image_digest }}
+        run: |
+          code-dot-org/k8s/bin/write-build-lock-record \
+            --git-commit "$SOURCE_GIT_COMMIT" \
+            --image-ref "$CODEAI_DOCKER_IMAGE_REF" \
+            --image-digest "$CODEAI_DOCKER_IMAGE_DIGEST" \
+            --output-dir k8s-gitops/warehouses/codeai/builds
+
+          code-dot-org/k8s/bin/verify-argo-refs-commit-contract \
+            --build-lock-dir k8s-gitops/warehouses/codeai/builds \
+            --source-git-commit "$SOURCE_GIT_COMMIT" \
+            --image-ref "$CODEAI_DOCKER_IMAGE_REF" \
+            --image-digest "$CODEAI_DOCKER_IMAGE_DIGEST"
+
+      - name: Commit and push build-lock metadata
+        working-directory: k8s-gitops
+        env:
+          SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add warehouses/codeai/builds/current.yaml "warehouses/codeai/builds/git-${SOURCE_GIT_COMMIT}.yaml"
+
+          if git diff --cached --quiet; then
+            echo "Success: no build-lock diff detected, no commit+push needed."
+            exit 0
+          fi
+
+          git commit -m "Publish CodeAI build-lock git-${SOURCE_GIT_COMMIT}"
+          git push origin HEAD:main

@@ -35,6 +35,14 @@ jobs:
         with:
           version: v3.19.0
 
+      - name: Setup Kustomize
+        run: |
+          KUSTOMIZE_VERSION=v5.8.1
+          ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+          curl -fsSLo /tmp/kustomize.tar.gz "https://github.com/kubernetes-sigs/kustomize/releases/download/kustomize%2F${KUSTOMIZE_VERSION}/kustomize_${KUSTOMIZE_VERSION}_linux_${ARCH}.tar.gz"
+          tar -xzf /tmp/kustomize.tar.gz -C /tmp
+          sudo install /tmp/kustomize /usr/local/bin/kustomize
+
       - name: Generate representative build-lock record
         run: |
           SOURCE_GIT_COMMIT=$(git rev-parse HEAD)
@@ -63,3 +71,6 @@ jobs:
           helm template staging ./k8s/helm \
             -f k8s-gitops/apps/codeai/envTypes/staging.values.yaml \
             -f k8s-gitops/apps/codeai/deployments/staging/values.yaml >/dev/null
+
+      - name: Verify kustomize/helm parity
+        run: k8s/kustomize/bin/verify-helm-parity

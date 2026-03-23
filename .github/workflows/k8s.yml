@@ -21,6 +21,8 @@ jobs:
     if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
     name: skaffold build
     uses: ./.github/workflows/k8s-skaffold-build.yml
+    with:
+      source_commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
     # only run on PRs where the source branch is *k8s*:
     secrets: inherit
 
@@ -30,6 +32,7 @@ jobs:
     uses: ./.github/workflows/k8s-stitch-multiplatform-image.yml
     needs: skaffold-build
     with:
+      branch_tag_alias: ${{ github.head_ref || github.ref_name }}
       docker_tags_json: ${{ toJSON(needs.skaffold-build.outputs) }}
       docker_tag: ${{ needs.skaffold-build.outputs.docker_tag }}
     secrets: inherit
@@ -41,10 +44,10 @@ jobs:
     secrets: inherit
 
   # Step 3: publish the thin build-lock Freight record for staging releases.
-  commit-build-lock-to-kargo-warehouse:
+  commit-to-kargo-warehouse:
     if: github.event_name == 'push' && github.ref_name == 'staging'
-    name: commit build-lock to kargo warehouse
-    uses: ./.github/workflows/k8s-commit-build-lock-to-kargo-warehouse.yml
+    name: commit to kargo warehouse
+    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs:
       - stitch-multiplatform-image
       - validate
