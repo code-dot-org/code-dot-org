@@ -265,7 +265,6 @@ const SmallFooter = (props: SmallFooterProps) => {
         >
           <a
             href={item.link}
-            ref={item.copyright ? 'menuCopyright' : undefined}
             target={item.newWindow ? '_blank' : '_parent'}
             onClick={item.copyright ? clickMenuCopyright : undefined}
           >
