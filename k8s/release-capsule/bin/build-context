@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+require_env() {
+  local name="$1"
+  if [[ -z "${!name:-}" ]]; then
+    echo "missing required environment variable: ${name}" >&2
+    exit 1
+  fi
+}
+
+require_env RELEASE_GIT_COMMIT
+require_env RELEASE_IMAGE_REPO
+require_env RELEASE_IMAGE_TAG
+require_env RELEASE_IMAGE_DIGEST
+require_env RELEASE_PROVENANCE_FILE
+require_env RELEASE_SBOM_FILE
+
+output_root="${RELEASE_OUTPUT_ROOT:-release-capsule-build}"
+release_dir="${output_root}/git-${RELEASE_GIT_COMMIT}"
+package_dir="${release_dir}/package"
+metadata_dir="${release_dir}/metadata"
+
+if [[ ! -f k8s/helm/Chart.yaml ]]; then
+  echo "run from the repository root so k8s/helm is available" >&2
+  exit 1
+fi
+
+rm -rf "${release_dir}"
+mkdir -p "${package_dir}" "${metadata_dir}"
+
+cp -R k8s/helm "${package_dir}/helm"
+cp "${RELEASE_PROVENANCE_FILE}" "${metadata_dir}/provenance.json"
+cp "${RELEASE_SBOM_FILE}" "${metadata_dir}/sbom.json"
+
+cat > "${release_dir}/release.yaml" <<EOF
+gitCommit: ${RELEASE_GIT_COMMIT}
+image:
+  repoURL: ${RELEASE_IMAGE_REPO}
+  tag: ${RELEASE_IMAGE_TAG}
+  digest: ${RELEASE_IMAGE_DIGEST}
+package:
+  kind: helm
+  path: package/helm
+metadata:
+  sbomPath: metadata/sbom.json
+  provenancePath: metadata/provenance.json
+EOF

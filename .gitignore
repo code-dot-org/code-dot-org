@@ -113,6 +113,7 @@ dashboard/brakeman_security_report.htm
 .pdm-python
 
 skaffold-build-tags.json
+release-capsule-build/
 
 # claude
 .claude/worktrees
@@ -123,4 +124,3 @@ CLAUDE.local.md
 # agent skills standard: https://agentskills.io/
 .agents/**/*.local.*
 .agents/skills/*.local
-

@@ -19,6 +19,29 @@ jobs:
           sparse-checkout: |
             k8s
 
+      - name: Verify release capsule build context
+        run: |
+          mkdir -p /tmp/release-capsule
+          cat > /tmp/release-capsule/provenance.json <<'EOF'
+          {"buildType":"github-actions","workflow":"k8s"}
+          EOF
+          cat > /tmp/release-capsule/sbom.json <<'EOF'
+          {"bomFormat":"CycloneDX","specVersion":"1.5","components":[]}
+          EOF
+
+          RELEASE_GIT_COMMIT=0123456789abcdef0123456789abcdef01234567 \
+          RELEASE_IMAGE_REPO=ghcr.io/code-dot-org/code-dot-org \
+          RELEASE_IMAGE_TAG=git-0123456789abcdef0123456789abcdef01234567 \
+          RELEASE_IMAGE_DIGEST=sha256:0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef \
+          RELEASE_PROVENANCE_FILE=/tmp/release-capsule/provenance.json \
+          RELEASE_SBOM_FILE=/tmp/release-capsule/sbom.json \
+          k8s/release-capsule/bin/build-context
+
+          test -f release-capsule-build/git-0123456789abcdef0123456789abcdef01234567/release.yaml
+          test -f release-capsule-build/git-0123456789abcdef0123456789abcdef01234567/package/helm/Chart.yaml
+          test -f release-capsule-build/git-0123456789abcdef0123456789abcdef01234567/metadata/provenance.json
+          test -f release-capsule-build/git-0123456789abcdef0123456789abcdef01234567/metadata/sbom.json
+
       - name: Setup Helm
         uses: azure/setup-helm@v4
         with:

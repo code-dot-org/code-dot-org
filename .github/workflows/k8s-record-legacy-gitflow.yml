@@ -1,0 +1,73 @@
+name: k8s-record-legacy-gitflow
+
+on:
+  workflow_call:
+    inputs:
+      branch_name:
+        required: true
+        type: string
+      git_commit:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  record-legacy-gitflow-merge:
+    if: contains(fromJSON('["staging","test","levelbuilder","production"]'), inputs.branch_name)
+    name: record legacy gitflow merge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Write legacy gitflow metadata
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ inputs.git_commit }}
+        run: | # ruby
+          require "fileutils"
+          require "time"
+
+          branch_name = ENV.fetch("BRANCH_NAME")
+          git_commit = ENV.fetch("GIT_COMMIT")
+          release_tag = "git-#{git_commit}"
+          merged_at = Time.now.utc.iso8601
+          base_dir = File.join("k8s-gitops", "warehouses", "codeai", "legacy-gitflow", branch_name)
+          merged_dir = File.join(base_dir, "merged")
+          current_path = File.join(base_dir, "current.yaml")
+          merged_path = File.join(merged_dir, "#{release_tag}.yaml")
+
+          FileUtils.mkdir_p(merged_dir)
+
+          payload = <<~YAML
+            revision: #{git_commit}
+            tag: #{release_tag}
+            mergedAt: #{merged_at}
+          YAML
+
+          File.write(current_path, payload)
+          File.write(merged_path, payload)
+
+      - name: Commit and push legacy gitflow metadata
+        run: |
+          cd k8s-gitops
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "warehouses/codeai/legacy-gitflow/${{ inputs.branch_name }}/current.yaml" \
+            "warehouses/codeai/legacy-gitflow/${{ inputs.branch_name }}/merged/git-${{ inputs.git_commit }}.yaml"
+
+          if git diff --cached --quiet; then
+            echo "No legacy gitflow metadata changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Record legacy ${{ inputs.branch_name }} merge for git-${{ inputs.git_commit }}"
+          git push origin HEAD:main

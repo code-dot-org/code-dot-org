@@ -1,0 +1,129 @@
+name: k8s-publish-release-capsule
+
+on:
+  workflow_call:
+    inputs:
+      codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_tag:
+        required: true
+        type: string
+      codeai_docker_digest:
+        required: true
+        type: string
+      git_commit:
+        required: true
+        type: string
+    outputs:
+      codeai_release_capsule_ref:
+        description: "Tagged OCI release capsule reference"
+        value: ${{ jobs.publish-release-capsule.outputs.codeai_release_capsule_ref }}
+      codeai_release_capsule_tag:
+        description: "Tag for the OCI release capsule"
+        value: ${{ jobs.publish-release-capsule.outputs.codeai_release_capsule_tag }}
+
+jobs:
+  publish-release-capsule:
+    name: publish release capsule
+    runs-on: ubuntu-latest
+    outputs:
+      codeai_release_capsule_ref: ${{ steps.export-ref.outputs.codeai_release_capsule_ref }}
+      codeai_release_capsule_tag: ${{ steps.export-ref.outputs.codeai_release_capsule_tag }}
+    permissions:
+      contents: read
+      packages: write
+    env:
+      CODEAI_IMAGE_REPO: ghcr.io/${{ github.repository_owner }}/code-dot-org
+      CAPSULE_REPO: ghcr.io/${{ github.repository_owner }}/codeai-release-capsule
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v6.0.2
+        with:
+          sparse-checkout: |
+            k8s
+
+      - name: Generate image SBOM
+        uses: anchore/sbom-action@v0
+        with:
+          image: ${{ inputs.codeai_docker_image_ref }}
+          registry-username: ${{ github.actor }}
+          registry-password: ${{ secrets.GITHUB_TOKEN }}
+          format: cyclonedx-json
+          output-file: release-capsule-sbom.json
+          upload-artifact: false
+
+      - name: Write provenance metadata
+        run: |
+          jq -n \
+            --arg repo "${GITHUB_REPOSITORY}" \
+            --arg sha "${{ inputs.git_commit }}" \
+            --arg tag "${{ inputs.codeai_docker_tag }}" \
+            --arg imageRef "${{ inputs.codeai_docker_image_ref }}" \
+            --arg imageDigest "${{ inputs.codeai_docker_digest }}" \
+            --arg workflow "${GITHUB_WORKFLOW}" \
+            --arg runId "${GITHUB_RUN_ID}" \
+            --arg runAttempt "${GITHUB_RUN_ATTEMPT}" \
+            --arg ref "${GITHUB_REF}" \
+            '{
+              schemaVersion: "1.0",
+              buildType: "github-actions",
+              source: {
+                repository: $repo,
+                revision: $sha,
+                ref: $ref
+              },
+              image: {
+                ref: $imageRef,
+                tag: $tag,
+                digest: $imageDigest
+              },
+              workflow: {
+                name: $workflow,
+                runId: $runId,
+                runAttempt: $runAttempt
+              }
+            }' > release-capsule-provenance.json
+
+      - name: Build capsule context
+        env:
+          RELEASE_GIT_COMMIT: ${{ inputs.git_commit }}
+          RELEASE_IMAGE_REPO: ${{ env.CODEAI_IMAGE_REPO }}
+          RELEASE_IMAGE_TAG: ${{ inputs.codeai_docker_tag }}
+          RELEASE_IMAGE_DIGEST: ${{ inputs.codeai_docker_digest }}
+          RELEASE_PROVENANCE_FILE: release-capsule-provenance.json
+          RELEASE_SBOM_FILE: release-capsule-sbom.json
+        run: k8s/release-capsule/bin/build-context
+
+      - name: Install ORAS
+        run: |
+          ORAS_VERSION=1.3.0
+          ARCH=$(uname -m | sed -e 's/x86_64/amd64/' -e 's/aarch64/arm64/')
+          curl -fsSLo /tmp/oras.tar.gz "https://github.com/oras-project/oras/releases/download/v${ORAS_VERSION}/oras_${ORAS_VERSION}_linux_${ARCH}.tar.gz"
+          tar -xzf /tmp/oras.tar.gz -C /tmp oras
+          sudo install /tmp/oras /usr/local/bin/oras
+
+      - name: Login to GitHub Container Registry
+        run: |
+          printf '%s' "${{ secrets.GITHUB_TOKEN }}" | oras login ghcr.io \
+            --username "${{ github.actor }}" \
+            --password-stdin
+
+      - name: Push OCI release capsule
+        run: |
+          CREATED_AT="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          oras push "${CAPSULE_REPO}:${{ inputs.codeai_docker_tag }}" \
+            --artifact-type application/vnd.code-dot-org.release-capsule.v1+json \
+            --annotation "org.opencontainers.image.created=${CREATED_AT}" \
+            --annotation "org.opencontainers.image.description=Immutable release capsule for code-dot-org Helm deploys" \
+            --annotation "org.opencontainers.image.revision=${{ inputs.git_commit }}" \
+            --annotation "org.opencontainers.image.source=https://github.com/${GITHUB_REPOSITORY}" \
+            --annotation "org.opencontainers.image.title=codeai-release-capsule" \
+            --annotation "org.opencontainers.image.version=${{ inputs.codeai_docker_tag }}" \
+            "./release-capsule-build/${{ inputs.codeai_docker_tag }}"
+
+      - name: Export capsule ref
+        id: export-ref
+        run: |
+          echo "codeai_release_capsule_ref=${CAPSULE_REPO}:${{ inputs.codeai_docker_tag }}" >> "$GITHUB_OUTPUT"
+          echo "codeai_release_capsule_tag=${{ inputs.codeai_docker_tag }}" >> "$GITHUB_OUTPUT"
