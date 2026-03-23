@@ -11,7 +11,15 @@ import SketchLabTldrawView from './SketchLabTldrawView';
 
 export default (props: LabProps<LevelProperties>) => {
   if (experiments.isEnabledAllowingQueryString(experiments.TLDRAW)) {
-    return <SketchLabTldrawView {...props} />;
+    return (
+      <SourcesContainer
+        {...props}
+        defaultSources={DEFAULT_SOURCES}
+        key={props.levelProperties.id}
+      >
+        <SketchLabTldrawView {...props} />
+      </SourcesContainer>
+    );
   }
   return (
     <SourcesContainer

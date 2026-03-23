@@ -1,6 +1,6 @@
 import {getAssetUrlsByMetaUrl} from '@tldraw/assets/urls';
-import React from 'react';
-import {Tldraw} from 'tldraw';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import {Editor, getSnapshot, Tldraw, TLStoreSnapshot} from 'tldraw';
 import 'tldraw/tldraw.css';
 
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -10,6 +10,10 @@ import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/Resource
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import WorkspaceHeader from '@cdo/apps/lab2/views/components/WorkspaceHeader';
+
+import {useSources} from '../lab2/views/SourcesContainer';
+
+import {SketchlabTldrawSources} from './types';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
@@ -22,6 +26,46 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
   const themeSetting = useThemeSetting('sketchlab');
+  //const tldrawEditorRef = useRef<Editor | null>(null);
+  const [tldrawEditor, setTldrawEditor] = useState<Editor | null>(null);
+  const {currentSources, updateSources} = useSources<SketchlabTldrawSources>();
+
+  const parseSnapshot = (snapshotStr: string | undefined) => {
+    if (!snapshotStr) {
+      return undefined;
+    }
+    try {
+      return JSON.parse(snapshotStr) as TLStoreSnapshot;
+    } catch (e) {
+      console.log('Error parsing snapshot', e);
+      return undefined;
+    }
+  };
+  const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
+    parseSnapshot(currentSources?.source)
+  );
+
+  const initializeEditor = useCallback((editor: Editor) => {
+    setTldrawEditor(editor);
+    console.log('registering editor');
+  }, []);
+
+  useEffect(() => {
+    if (tldrawEditor) {
+      console.log('editor is ready, registering listener');
+      const unsubscribe = tldrawEditor.store.listen(
+        () => {
+          const currentSnapshot = getSnapshot(tldrawEditor.store);
+          const serializedSnapshot = JSON.stringify(currentSnapshot.document);
+          updateSources({source: serializedSnapshot});
+        },
+        {source: 'all', scope: 'document'}
+      );
+      return () => {
+        unsubscribe();
+      };
+    }
+  }, [tldrawEditor, updateSources]);
 
   const {
     leftPanelWidth,
@@ -49,7 +93,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
         <ResourcePanel
           levelProperties={levelProperties}
           isRunning={false}
-          hasRun={false}
+          hasRun={true}
           hasEdited={false}
           settings={[themeSetting]}
         />
@@ -66,7 +110,11 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
           headerContent={<WorkspaceHeader />}
         >
           <div style={{height: '100%', position: 'relative'}}>
-            <Tldraw assetUrls={getAssetUrlsByMetaUrl()} />
+            <Tldraw
+              assetUrls={getAssetUrlsByMetaUrl()}
+              onMount={initializeEditor}
+              snapshot={initialSnapshotRef.current}
+            />
           </div>
         </PanelContainer>
       </div>

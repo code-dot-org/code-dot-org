@@ -1,5 +1,6 @@
 import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
 import {AppState} from '@excalidraw/excalidraw/types/types';
+import {TLStoreSnapshot} from '@tldraw/editor';
 
 import {
   ExcalidrawSourceWithExternalFiles,
@@ -15,4 +16,8 @@ export interface SerializedExcalidrawState {
 
 export interface SketchlabSources extends ProjectSources {
   source: ExcalidrawSourceWithExternalFiles;
+}
+
+export interface SketchlabTldrawSources extends ProjectSources {
+  source: string;
 }
