@@ -6,10 +6,10 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodePanel, {CodePanelHandle} from './CodePanel';
 import {createEmptyGrid, migrateGrid} from './gridConstants';
-import ImagesPanel from './ImagesPanel';
+import ItemsPanel from './ItemsPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
-import {Game2ImageEntry, Game2Source} from './types';
+import {Game2ItemEntry, Game2Source} from './types';
 import WorldPanel from './WorldPanel';
 
 import moduleStyles from './game2View.module.scss';
@@ -29,12 +29,13 @@ function parseSource(raw: unknown): Game2Source {
 
 const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   const [activeTab, setActiveTab] = useState<Tab>('Description');
-  const [images, setImages] = useState<Game2ImageEntry[]>([]);
+  const [items, setItems] = useState<Game2ItemEntry[]>([]);
   const [grid, setGrid] = useState<string[][]>(createEmptyGrid);
+  const [itemGenerating, setItemGenerating] = useState(false);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyRef = useRef<Record<string, any> | undefined>(undefined);
   const gridRef = useRef<string[][]>(grid);
-  const imagesRef = useRef<Game2ImageEntry[]>(images);
+  const itemsRef = useRef<Game2ItemEntry[]>(items);
   const initializedRef = useRef(false);
   const codePanelRef = useRef<CodePanelHandle>(null);
 
@@ -53,14 +54,22 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     } catch {
       parsedInitial.current = {};
     }
-    if (parsedInitial.current.images?.length) {
-      // Migrate legacy entries that lack a name field.
-      const migrated = parsedInitial.current.images.map(img => ({
-        ...img,
-        name: img.name || img.prompt || img.filename,
-      }));
-      setImages(migrated);
-      imagesRef.current = migrated;
+    // Support legacy sources that used "images" instead of "items".
+    const parsed = parsedInitial.current as Game2Source & {
+      images?: Game2ItemEntry[];
+    };
+    const rawItems = parsed.items ?? parsed.images ?? [];
+    if (rawItems.length) {
+      // Migrate legacy entries that lack a name field or use old imageType key.
+      const migrated = rawItems.map(
+        (img: Game2ItemEntry & {imageType?: Game2ItemEntry['itemType']}) => ({
+          ...img,
+          name: img.name || img.prompt || img.filename,
+          itemType: img.itemType ?? img.imageType,
+        })
+      );
+      setItems(migrated);
+      itemsRef.current = migrated;
     }
     if (parsedInitial.current.blockly) {
       blocklyRef.current = parsedInitial.current.blockly;
@@ -77,17 +86,17 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
   // Save all state to project sources.
   const saveProject = useCallback(
     ({
-      updatedImages,
+      updatedItems,
       updatedBlockly,
       updatedGrid,
     }: {
-      updatedImages?: Game2ImageEntry[];
+      updatedItems?: Game2ItemEntry[];
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       updatedBlockly?: Record<string, any>;
       updatedGrid?: string[][];
     } = {}) => {
       const source: Game2Source = {
-        images: updatedImages ?? imagesRef.current,
+        items: updatedItems ?? itemsRef.current,
         blockly: updatedBlockly ?? blocklyRef.current,
         grid: updatedGrid ?? gridRef.current,
       };
@@ -98,13 +107,31 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     []
   );
 
-  const handleImagesChange = useCallback(
-    (updatedImages: Game2ImageEntry[]) => {
-      setImages(updatedImages);
-      imagesRef.current = updatedImages;
-      saveProject({updatedImages});
+  const handleItemsChange = useCallback(
+    (updatedItems: Game2ItemEntry[]) => {
+      setItems(updatedItems);
+      itemsRef.current = updatedItems;
+      saveProject({updatedItems});
     },
     [saveProject]
+  );
+
+  const handleDeleteItem = useCallback(
+    (name: string) => {
+      const updatedItems = items.filter(img => img.name !== name);
+      setItems(updatedItems);
+      itemsRef.current = updatedItems;
+
+      // Remove from the grid too.
+      const updatedGrid = grid.map(row =>
+        row.map(cell => (cell === name ? '' : cell))
+      );
+      setGrid(updatedGrid);
+      gridRef.current = updatedGrid;
+
+      saveProject({updatedItems, updatedGrid});
+    },
+    [items, grid, saveProject]
   );
 
   const handleBlocksChange = useCallback(
@@ -142,22 +169,32 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
             onClick={() => setActiveTab(tab)}
           >
             {tab}
+            {tab === 'Items' && itemGenerating && (
+              <i
+                className="fa fa-spinner fa-spin"
+                style={{marginLeft: 6, fontSize: 12}}
+              />
+            )}
           </button>
         ))}
       </div>
       <div className={moduleStyles.tabContent}>
         {activeTab === 'Description' && <ThemePanel />}
         <div style={{display: activeTab === 'Items' ? 'contents' : 'none'}}>
-          <ImagesPanel
-            images={images}
+          <ItemsPanel
+            items={items}
             channelId={channelId}
-            onImagesChange={handleImagesChange}
+            onGeneratingChange={setItemGenerating}
+            onItemsChange={handleItemsChange}
+            onDeleteItem={handleDeleteItem}
           />
         </div>
         <div style={{display: activeTab === 'World' ? 'contents' : 'none'}}>
           <WorldPanel
+            visible={activeTab === 'World'}
             grid={grid}
-            images={images}
+            items={items}
+            channelId={channelId}
             onGridChange={handleGridChange}
           />
         </div>
@@ -165,7 +202,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
           <PlayPanel
             visible={activeTab === 'Play'}
             grid={grid}
-            images={images}
+            items={items}
             channelId={channelId}
             getCode={getCode}
           />
@@ -188,7 +225,7 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
           <CodePanel
             ref={codePanelRef}
             visible={activeTab === 'Code'}
-            images={images}
+            items={items}
             initialBlocks={parsedInitial.current.blockly}
             onBlocksChange={handleBlocksChange}
           />

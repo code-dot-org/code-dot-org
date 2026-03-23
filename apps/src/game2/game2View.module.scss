@@ -86,42 +86,111 @@
   }
 }
 
-// Images panel
-.imagesPanel {
-  padding: 24px;
+// Items panel
+.itemsPanelLayout {
+  display: flex;
+  height: 100%;
 }
 
-.imagesGrid {
+.itemsPanel {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.itemSidePane {
+  width: 25%;
+  min-width: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  border-left: 1px solid $neutral_dark70;
+  background-color: $neutral_dark;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.itemsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   gap: 16px;
 }
 
-.imageItem {
+.itemEntry {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.imageCell {
+.itemCell {
   aspect-ratio: 1;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
-  border: 1px solid $neutral_dark70;
+  border: 2px solid $neutral_dark70;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $neutral_dark;
+  position: relative;
+  cursor: pointer;
 
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
+  &Selected {
+    border-color: $light_primary_500;
+  }
 }
 
-.imageName {
+.itemSpinnerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0 0 0 / 0.5);
+  color: #fff;
+  z-index: 1;
+}
+
+.itemDeleteBtn {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: rgb(0 0 0 / 0.6);
+  color: #fff;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0;
+  transition: opacity 0.15s;
+
+  .itemCell:hover & {
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: rgb(255 60 60 / 0.8);
+  }
+}
+
+.itemName {
   padding: 4px 0;
   font-size: 11px;
   color: $neutral_dark20;
@@ -132,7 +201,7 @@
   max-width: 100%;
 }
 
-.addImageCell {
+.addItemCell {
   cursor: pointer;
   font-size: 48px;
   color: $neutral_dark70;
@@ -192,16 +261,30 @@
   }
 }
 
-.dialogCheckbox {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
+.dialogSelect {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 4px 20px 4px 8px;
+  font-size: 13px;
+  min-height: 36px;
+  box-sizing: border-box;
+  font-family: inherit;
+  border: 1px solid $neutral_dark70;
+  border-radius: 4px;
+  background-color: $dark_black;
   color: $neutral_light;
+  -webkit-text-fill-color: $neutral_light;
+  color-scheme: dark;
   cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23F7F8FA' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  opacity: 1;
 
-  input {
-    cursor: pointer;
+  option {
+    background-color: $dark_black;
+    color: $neutral_light;
+    -webkit-text-fill-color: $neutral_light;
   }
 }
 
@@ -302,6 +385,7 @@
   height: 14px;
   border-radius: 3px;
   flex-shrink: 0;
+  object-fit: cover;
 }
 
 .worldPaletteItemName {
@@ -310,34 +394,20 @@
   white-space: nowrap;
 }
 
-// World grid
+// World grid (canvas-based)
 .worldGrid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   flex: 1;
   height: 100%;
-  padding: 8px;
+  position: relative;
   user-select: none;
   touch-action: none;
 }
 
-.worldGridRow {
-  display: flex;
-}
-
-.worldGridCell {
-  width: 10px;
-  height: 10px;
-  box-sizing: border-box;
-  border: 1px solid $neutral_dark70;
-  background-color: $neutral_dark;
+.worldCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
-
-  &On {
-    border-color: transparent;
-  }
 }
 
 // Play panel

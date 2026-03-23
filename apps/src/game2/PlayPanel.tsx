@@ -1,14 +1,14 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {Game2Runtime} from './runtime';
-import {Game2ImageEntry} from './types';
+import {Game2ItemEntry} from './types';
 
 import moduleStyles from './game2View.module.scss';
 
 interface PlayPanelProps {
   visible: boolean;
   grid: string[][];
-  images: Game2ImageEntry[];
+  items: Game2ItemEntry[];
   channelId: string | undefined;
   getCode: () => string;
 }
@@ -16,19 +16,16 @@ interface PlayPanelProps {
 const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
   visible,
   grid,
-  images,
+  items,
   channelId,
   getCode,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const runtimeRef = useRef<Game2Runtime | null>(null);
-  const imageCacheRef = useRef<Map<string, HTMLImageElement>>(new Map());
   const [debugOn, setDebugOn] = useState(false);
 
   const startGame = useCallback(() => {
-    // Harvest image cache from previous runtime before stopping it.
     if (runtimeRef.current) {
-      imageCacheRef.current = runtimeRef.current.getImageCache();
       runtimeRef.current.stop();
       runtimeRef.current = null;
     }
@@ -46,20 +43,14 @@ const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
     }
 
     const code = getCode();
-    const runtime = new Game2Runtime(
-      canvas,
-      grid,
-      images,
-      channelId,
-      imageCacheRef.current
-    );
+    const runtime = new Game2Runtime(canvas, grid, items, channelId);
     runtimeRef.current = runtime;
     // Restore debug state across restarts.
     if (debugOn) {
       runtime.toggleDebug();
     }
     runtime.run(code);
-  }, [grid, images, channelId, getCode, debugOn]);
+  }, [grid, items, channelId, getCode, debugOn]);
 
   const handleToggleDebug = useCallback(() => {
     if (runtimeRef.current) {
@@ -71,12 +62,29 @@ const PlayPanel: React.FunctionComponent<PlayPanelProps> = ({
   }, []);
 
   const hasStartedRef = useRef(false);
+  const needsRestartRef = useRef(false);
 
-  // Auto-start when the panel first becomes visible.
+  // Track when grid/items/code change while not visible — restart on return.
+  const prevGridRef = useRef(grid);
+  const prevItemsRef = useRef(items);
   useEffect(() => {
-    if (visible && !hasStartedRef.current) {
-      hasStartedRef.current = true;
-      startGame();
+    if (grid !== prevGridRef.current || items !== prevItemsRef.current) {
+      prevGridRef.current = grid;
+      prevItemsRef.current = items;
+      if (!visible) {
+        needsRestartRef.current = true;
+      }
+    }
+  }, [grid, items, visible]);
+
+  // Auto-start when the panel first becomes visible, or restart if needed.
+  useEffect(() => {
+    if (visible) {
+      if (!hasStartedRef.current || needsRestartRef.current) {
+        hasStartedRef.current = true;
+        needsRestartRef.current = false;
+        startGame();
+      }
     }
   }, [visible, startGame]);
 

@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 
 import {generateCodeFromPrompt} from './codeGeneration';
-import {Game2ImageEntry} from './types';
+import {Game2ItemEntry} from './types';
 
 import moduleStyles from './game2View.module.scss';
 
 interface CodeGeneratePaneProps {
-  images: Game2ImageEntry[];
+  items: Game2ItemEntry[];
   onCodeGenerated: (blocklyJson: Record<string, unknown>) => void;
 }
 
 const CodeGeneratePane: React.FunctionComponent<CodeGeneratePaneProps> = ({
-  images,
+  items,
   onCodeGenerated,
 }) => {
   const [prompt, setPrompt] = useState('');
@@ -25,7 +25,7 @@ const CodeGeneratePane: React.FunctionComponent<CodeGeneratePaneProps> = ({
     setError(null);
     setLoading(true);
     try {
-      const blocklyJson = await generateCodeFromPrompt(prompt.trim(), images);
+      const blocklyJson = await generateCodeFromPrompt(prompt.trim(), items);
       onCodeGenerated(blocklyJson);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));

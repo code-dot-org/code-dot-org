@@ -2,7 +2,7 @@ import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {getImageOptions} from '../imageRegistry';
+import {getBackgroundOptions} from '../imageRegistry';
 
 export const BLOCK_TYPE = 'Game2_setBackground';
 
@@ -11,7 +11,7 @@ export function register() {
     init: function () {
       this.appendDummyInput()
         .appendField('Set background')
-        .appendField(new CdoFieldDropdown(getImageOptions), 'IMAGE');
+        .appendField(new CdoFieldDropdown(getBackgroundOptions), 'IMAGE');
       this.setPreviousStatement(true, null);
       this.setNextStatement(true, null);
       this.setStyle(BlockStyles.SETUP);

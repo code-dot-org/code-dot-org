@@ -2,7 +2,7 @@ import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import {BlockStyles} from '@cdo/apps/blockly/constants';
 import {ExtendedBlock, GeneratorFunction} from '@cdo/apps/blockly/types';
 
-import {getImageOptions} from '../imageRegistry';
+import {getSpriteOptions} from '../imageRegistry';
 
 export const BLOCK_TYPE = 'Game2_whenCollide';
 
@@ -11,7 +11,7 @@ export function register() {
     init: function () {
       this.appendDummyInput()
         .appendField('When I collide with')
-        .appendField(new CdoFieldDropdown(getImageOptions), 'IMAGE');
+        .appendField(new CdoFieldDropdown(getSpriteOptions), 'IMAGE');
       this.setNextStatement(true, null);
       this.setStyle(BlockStyles.EVENT);
     },

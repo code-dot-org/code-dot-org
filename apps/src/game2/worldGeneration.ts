@@ -8,17 +8,22 @@ import {
   AiChatClientTypes,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {createEmptyGrid, GRID_SIZE, SOLID_CELL} from './gridConstants';
-import {Game2ImageEntry} from './types';
+import {
+  createEmptyGrid,
+  GRID_COLS,
+  GRID_ROWS,
+  SOLID_CELL,
+} from './gridConstants';
+import {Game2ItemEntry} from './types';
 
-function buildSystemPrompt(images: Game2ImageEntry[]): string {
+function buildSystemPrompt(items: Game2ItemEntry[]): string {
   const itemNames =
-    images.length > 0 ? images.map(i => `"${i.name}"`).join(', ') : '(none)';
+    items.length > 0 ? items.map(i => `"${i.name}"`).join(', ') : '(none)';
 
-  return `You are a level designer for a side-scrolling platform game on a ${GRID_SIZE}x${GRID_SIZE} grid.
+  return `You are a level designer for a side-scrolling platform game on a ${GRID_COLS}x${GRID_ROWS} grid.
 Row 0 is the top, row ${
-    GRID_SIZE - 1
-  } is the bottom. Column 0 is the left, column ${GRID_SIZE - 1} is the right.
+    GRID_ROWS - 1
+  } is the bottom. Column 0 is the left, column ${GRID_COLS - 1} is the right.
 
 You output ONLY a JSON object with filled cell coordinates — no markdown, no explanation.
 
@@ -35,7 +40,7 @@ Output format (strict JSON, no trailing commas):
 Valid types:
 - "solid" — an impassable platform block the player stands on or bumps into.
 ${
-  images.length > 0
+  items.length > 0
     ? `- Item names (${itemNames}) — collectible/interactive sprites placed on the grid.`
     : ''
 }
@@ -44,22 +49,23 @@ Design guidelines:
 - This is a side-scrolling platformer. The player starts roughly in the middle and needs to navigate upward.
 - Create interesting platform layouts with varying heights, gaps to jump across, and multiple paths.
 - Place a solid ground near row ${
-    GRID_SIZE - 5
+    GRID_ROWS - 5
   } spanning most columns as a starting floor.
 - Add platforms at various heights above, getting higher as the player progresses.
 - Platforms should be 3-8 blocks wide, with gaps of 3-6 blocks between them.
 - Include some vertical wall sections (2-4 blocks tall) for variety.
 ${
-  images.length > 0
+  items.length > 0
     ? `- Scatter item sprites on top of platforms every so often (every 5-10 platforms). Place items 1 row ABOVE a solid block so they sit on the platform surface.`
     : ''
 }
 - Keep the design interesting but playable — every platform should be reachable by jumping.
-- Aim for roughly 200-400 solid cells total for a good density.
+- Aim for roughly 100-200 solid cells total for a good density.
 
 Rules:
 - Output ONLY valid JSON. No markdown fences, no comments, no explanation.
-- Row and column values must be integers in the range 0 to ${GRID_SIZE - 1}.
+- Row values must be integers in the range 0 to ${GRID_ROWS - 1}.
+- Column values must be integers in the range 0 to ${GRID_COLS - 1}.
 - Every cell must have a valid type.
 `;
 }
@@ -69,10 +75,10 @@ Rules:
  */
 function parseWorldResponse(
   responseText: string,
-  images: Game2ImageEntry[]
+  items: Game2ItemEntry[]
 ): string[][] {
   const grid = createEmptyGrid();
-  const validNames = new Set([SOLID_CELL, ...images.map(i => i.name)]);
+  const validNames = new Set([SOLID_CELL, ...items.map(i => i.name)]);
 
   // Extract JSON from the response (strip markdown fences if present).
   let jsonText = responseText.trim();
@@ -96,9 +102,9 @@ function parseWorldResponse(
       typeof c === 'number' &&
       typeof t === 'string' &&
       r >= 0 &&
-      r < GRID_SIZE &&
+      r < GRID_ROWS &&
       c >= 0 &&
-      c < GRID_SIZE &&
+      c < GRID_COLS &&
       validNames.has(t)
     ) {
       grid[r][c] = t;
@@ -113,9 +119,9 @@ function parseWorldResponse(
  */
 export async function generateWorld(
   userPrompt: string,
-  images: Game2ImageEntry[]
+  items: Game2ItemEntry[]
 ): Promise<string[][]> {
-  const systemPrompt = buildSystemPrompt(images);
+  const systemPrompt = buildSystemPrompt(items);
 
   const newUserMessage: PendingChatMessage = {
     role: Role.USER,
@@ -150,5 +156,5 @@ export async function generateWorld(
     throw new Error('No response from AI');
   }
 
-  return parseWorldResponse(assistantMessage.chatMessageText, images);
+  return parseWorldResponse(assistantMessage.chatMessageText, items);
 }

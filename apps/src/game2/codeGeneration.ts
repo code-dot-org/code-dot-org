@@ -8,19 +8,17 @@ import {
   AiChatClientTypes,
 } from '@cdo/generated-scripts/sharedConstants';
 
-import {Game2ImageEntry} from './types';
+import {Game2ItemEntry} from './types';
 
 /**
  * Build the system prompt that teaches the AI about our pseudocode format.
  */
 function buildSystemPrompt(
-  images: Game2ImageEntry[],
+  items: Game2ItemEntry[],
   behaviors: string[]
 ): string {
   const imageNames =
-    images.length > 0
-      ? images.map(i => `"${i.name}"`).join(', ')
-      : '(none yet)';
+    items.length > 0 ? items.map(i => `"${i.name}"`).join(', ') : '(none yet)';
 
   return `You are a code generator for a simple block-based game engine.
 You output ONLY pseudocode — no markdown, no explanation, no commentary.
@@ -50,7 +48,7 @@ Available instructions (indent with two spaces under their parent block):
     — Subtracts the given integer from the score.
 
   removeItem "<imageName>"
-    — Removes all instances of the named item from the play area with a puff effect.
+    — Removes all instances of the named item or block from the play area with a puff effect.
 
   showText "<message>"
     — Shows a text message at the bottom center of the screen for 3 seconds then fades away.
@@ -58,10 +56,17 @@ Available instructions (indent with two spaces under their parent block):
   jump
     — Makes the player jump (only works when in "platform" mode and on the ground).
 
+  bigJump
+    — Makes the player do a big jump, twice as high as a regular jump.
+
 Top-level event blocks (NOT indented under whenStarts):
 
   whenCollide "<imageName>"
     — Fires when the controlled sprite touches items of this type.
+    — Indent the handler body with two spaces under this line.
+
+  whenJumpPressed
+    — Fires when the player presses the jump key (spacebar).
     — Indent the handler body with two spaces under this line.
 
 Available image names: ${imageNames}
@@ -92,7 +97,7 @@ const BEHAVIOR_VALUES = ['none', 'move', 'platform'];
  * A parsed top-level block with its child statements.
  */
 interface ParsedBlock {
-  type: 'whenStarts' | 'whenCollide';
+  type: 'whenStarts' | 'whenCollide' | 'whenJumpPressed';
   image?: string; // for whenCollide
   children: Record<string, unknown>[];
 }
@@ -154,6 +159,10 @@ function parseInstruction(line: string): Record<string, unknown> | null {
     return {type: 'Game2_jump'};
   }
 
+  if (line === 'bigJump') {
+    return {type: 'Game2_bigJump'};
+  }
+
   return null;
 }
 
@@ -205,6 +214,12 @@ export function pseudocodeToBlocklyJson(
       continue;
     }
 
+    if (trimmed === 'whenJumpPressed') {
+      current = {type: 'whenJumpPressed', children: []};
+      topBlocks.push(current);
+      continue;
+    }
+
     // Indented line belongs to current block.
     if (isIndented && current) {
       const instruction = parseInstruction(trimmed);
@@ -242,6 +257,17 @@ export function pseudocodeToBlocklyJson(
         whenCollideBlock.next = {block: chain};
       }
       workspaceBlocks.push(whenCollideBlock);
+    } else if (block.type === 'whenJumpPressed') {
+      const whenJumpBlock: Record<string, unknown> = {
+        type: 'Game2_whenJumpPressed',
+        x: 20,
+        y: yPos,
+      };
+      const chain = chainBlocks(block.children);
+      if (chain) {
+        whenJumpBlock.next = {block: chain};
+      }
+      workspaceBlocks.push(whenJumpBlock);
     }
     yPos += 200;
   }
@@ -259,9 +285,9 @@ export function pseudocodeToBlocklyJson(
  */
 export async function generateCodeFromPrompt(
   userPrompt: string,
-  images: Game2ImageEntry[]
+  items: Game2ItemEntry[]
 ): Promise<Record<string, unknown>> {
-  const systemPrompt = buildSystemPrompt(images, BEHAVIOR_VALUES);
+  const systemPrompt = buildSystemPrompt(items, BEHAVIOR_VALUES);
 
   const newUserMessage: PendingChatMessage = {
     role: Role.USER,

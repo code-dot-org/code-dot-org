@@ -68,11 +68,14 @@ async function updateAichatRequest(
 export async function generateImage(
   prompt: string,
   channelId?: string,
-  isSprite = false
+  itemType: 'sprite' | 'block' | 'background' = 'sprite'
 ): Promise<{filename: string; uint8Array: Uint8Array; mediaType: string}> {
-  const fullPrompt = isSprite
-    ? `${prompt}. Use a solid bright green background for this image.`
-    : prompt;
+  let fullPrompt = prompt;
+  if (itemType === 'block') {
+    fullPrompt = `${prompt}. Use a solid bright green background. The image content must extend to all four edges with no padding or empty pixels.`;
+  } else if (itemType === 'sprite') {
+    fullPrompt = `${prompt}. Use a plain solid bright green (#00FF00) background that extends to all edges. Do not include any scenery, ground, sky, or other background elements — only the subject on a flat green background.`;
+  }
 
   const requestId = await createAichatRequest(fullPrompt, channelId);
 
@@ -103,7 +106,7 @@ export async function generateImage(
       'Image generated'
     );
 
-    if (isSprite) {
+    if (itemType === 'sprite' || itemType === 'block') {
       // Remove green background (flood-fill from top-left corner) and output as PNG.
       const rawBlob = new Blob(
         [new Uint8Array(imageFile.uint8Array).buffer as ArrayBuffer],

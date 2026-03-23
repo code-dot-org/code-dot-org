@@ -9,10 +9,10 @@ import React, {
 
 import cdoDark from '@cdo/apps/blockly/themes/cdoDark';
 
-import {setImageNames} from './blockly/imageRegistry';
+import {setItemEntries} from './blockly/imageRegistry';
 import {setupGame2BlocklyEnvironment} from './blockly/setup';
 import CodeGeneratePane from './CodeGeneratePane';
-import {Game2ImageEntry} from './types';
+import {Game2ItemEntry} from './types';
 
 import moduleStyles from './game2View.module.scss';
 
@@ -28,10 +28,12 @@ const TOOLBOX: BlocklyCore.utils.toolbox.ToolboxDefinition = {
     {kind: 'block', type: 'Game2_startScoring'},
     {kind: 'block', type: 'Game2_increaseScore'},
     {kind: 'block', type: 'Game2_decreaseScore'},
+    {kind: 'block', type: 'Game2_whenJumpPressed'},
     {kind: 'block', type: 'Game2_whenCollide'},
     {kind: 'block', type: 'Game2_removeItem'},
     {kind: 'block', type: 'Game2_showText'},
     {kind: 'block', type: 'Game2_jump'},
+    {kind: 'block', type: 'Game2_bigJump'},
   ],
 };
 
@@ -41,7 +43,7 @@ export interface CodePanelHandle {
 
 interface CodePanelProps {
   visible: boolean;
-  images: Game2ImageEntry[];
+  items: Game2ItemEntry[];
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   initialBlocks?: Record<string, any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -49,7 +51,7 @@ interface CodePanelProps {
 }
 
 const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
-  ({visible, images, initialBlocks, onBlocksChange}, ref) => {
+  ({visible, items, initialBlocks, onBlocksChange}, ref) => {
     const workspace = useRef<BlocklyCore.WorkspaceSvg | null>(null);
     const initialBlocksLoaded = useRef(false);
 
@@ -58,8 +60,8 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
 
     // Keep image dropdown options in sync.
     useEffect(() => {
-      setImageNames(images.map(img => img.name));
-    }, [images]);
+      setItemEntries(items);
+    }, [items]);
 
     // Expose getCode to parent via ref.
     useImperativeHandle(
@@ -89,7 +91,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
       } as BlocklyCore.BlocklyOptions);
 
       // Ensure image names are populated before loading saved blocks.
-      setImageNames(images.map(img => img.name));
+      setItemEntries(items);
 
       // Load saved blocks if available.
       if (initialBlocks && !initialBlocksLoaded.current) {
@@ -123,7 +125,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
           }
         }
       );
-    }, [images, initialBlocks, onBlocksChange]);
+    }, [items, initialBlocks, onBlocksChange]);
 
     // Initialize workspace when the panel becomes visible.
     useEffect(() => {
@@ -180,10 +182,7 @@ const CodePanel = forwardRef<CodePanelHandle, CodePanelProps>(
     return (
       <div className={moduleStyles.codePanelWrapper}>
         <div id={BLOCKLY_DIV_ID} className={moduleStyles.codePanel} />
-        <CodeGeneratePane
-          images={images}
-          onCodeGenerated={handleCodeGenerated}
-        />
+        <CodeGeneratePane items={items} onCodeGenerated={handleCodeGenerated} />
       </div>
     );
   }

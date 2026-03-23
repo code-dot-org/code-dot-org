@@ -1,10 +1,10 @@
-import {SOLID_CELL} from './gridConstants';
-import {Game2ImageEntry} from './types';
+import {GRID_COLS, GRID_ROWS, SOLID_CELL} from './gridConstants';
+import {renderGrid} from './gridRenderer';
+import {assetUrl, getCachedImage} from './imageCache';
+import {Game2ItemEntry, Game2ItemType} from './types';
 
-const GRID_SIZE = 50;
-
-// How many grid cells are visible across the shorter canvas dimension.
-const VIEWPORT_CELLS = 7.5;
+// The covering axis shows 110% of the grid, allowing only minimal scrolling.
+const VIEWPORT_OVERFLOW = 1.1;
 
 // Physics constants in grid-cell units per frame.
 const MOVE_SPEED = 0.075;
@@ -13,8 +13,10 @@ const JUMP_VELOCITY = -0.25;
 const MAX_FALL_SPEED = 0.25;
 const PLATFORM_MOVE_SPEED = 0.06;
 
-// Sprite size in grid cells (same as a single grid cell).
-const ITEM_CELLS = 1;
+// Sprite size in grid cells: sprites are 2x a single grid cell.
+const SPRITE_CELLS = 2;
+// Block/solid pieces are 1 cell.
+const BLOCK_CELLS = 1;
 
 // Solid cells only occupy the bottom portion of the grid cell.
 const SOLID_TOP = 0.8; // fraction of cell height where the solid starts
@@ -38,18 +40,25 @@ interface VisibleBounds {
 
 /** All positions/velocities are in grid-cell units. */
 interface GameItem {
-  /** User-facing name (matches Game2ImageEntry.name). */
+  /** User-facing name (matches Game2ItemEntry.name). */
   name: string;
   x: number;
   y: number;
   vy: number;
   grounded: boolean;
   behavior: 'none' | 'move' | 'platform';
+  /** True when the sprite should be drawn flipped horizontally. */
+  facingLeft: boolean;
 }
 
 interface TextOverlay {
   text: string;
   framesRemaining: number;
+  totalFrames: number;
+  /** Starting screen-pixel X when created. */
+  startX: number;
+  /** Starting screen-pixel Y when created. */
+  startY: number;
 }
 
 interface Particle {
@@ -118,12 +127,15 @@ export class Game2Runtime {
   private ctx: CanvasRenderingContext2D;
   private sourceGrid: string[][];
   private grid: string[][];
-  private images: Game2ImageEntry[];
+  private itemEntries: Game2ItemEntry[];
   /** Keyed by user-facing name. */
   private loadedImages: Map<string, HTMLImageElement> = new Map();
   /** Keyed by user-facing name. */
   private visibleBounds: Map<string, VisibleBounds> = new Map();
   private nameToFilename: Map<string, string> = new Map();
+  private itemTypeMap: Map<string, Game2ItemType> = new Map();
+  /** Name of the first 'block' type item, used to render solid cells. */
+  private blockItemName: string | null = null;
   private channelId: string | undefined;
   private items: GameItem[] = [];
   private backgroundName: string | null = null;
@@ -137,6 +149,10 @@ export class Game2Runtime {
 
   // Collision callbacks: itemName → list of callbacks.
   private collisionHandlers: Map<string, (() => void)[]> = new Map();
+  // Jump event callbacks (fired once per spacebar press).
+  private jumpHandlers: (() => void)[] = [];
+  /** Track which item names the player is currently colliding with (for edge detection). */
+  private activeCollisions: Set<string> = new Set();
 
   // Active particles for removal puff effect.
   private particles: Particle[] = [];
@@ -154,38 +170,36 @@ export class Game2Runtime {
   constructor(
     canvas: HTMLCanvasElement,
     grid: string[][],
-    images: Game2ImageEntry[],
-    channelId: string | undefined,
-    imageCache?: Map<string, HTMLImageElement>
+    items: Game2ItemEntry[],
+    channelId: string | undefined
   ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d')!;
     this.sourceGrid = grid;
     this.grid = grid.map(row => [...row]);
-    this.images = images;
+    this.itemEntries = items;
     this.channelId = channelId;
 
-    for (const img of images) {
+    for (const img of items) {
       this.nameToFilename.set(img.name, img.filename);
+      const imgType = img.itemType ?? 'sprite';
+      this.itemTypeMap.set(img.name, imgType);
+      if (imgType === 'block' && !this.blockItemName) {
+        this.blockItemName = img.name;
+      }
 
-      // Reuse cached image element if available.
-      const cached = imageCache?.get(img.filename);
-      if (cached) {
-        this.loadedImages.set(img.name, cached);
-        if (cached.complete && cached.naturalWidth > 0) {
-          this.visibleBounds.set(img.name, computeVisibleBounds(cached));
-        }
+      if (!channelId) {
         continue;
       }
-
-      const el = new Image();
-      el.crossOrigin = 'anonymous';
-      if (channelId) {
-        el.src = `/v3/assets/${channelId}/${encodeURIComponent(img.filename)}`;
-      }
-      el.onload = () => {
+      const url = assetUrl(channelId, img.filename);
+      const el = getCachedImage(url);
+      if (el.complete && el.naturalWidth > 0) {
         this.visibleBounds.set(img.name, computeVisibleBounds(el));
-      };
+      } else {
+        el.onload = () => {
+          this.visibleBounds.set(img.name, computeVisibleBounds(el));
+        };
+      }
       this.loadedImages.set(img.name, el);
     }
 
@@ -193,9 +207,22 @@ export class Game2Runtime {
     window.addEventListener('keyup', this.onKeyUp);
   }
 
-  /** Pixels per cell at the current canvas size. */
+  /**
+   * Pixels per cell at the current canvas size.
+   *
+   * The covering axis (whichever of width/height needs more cells to fill
+   * the screen) shows VIEWPORT_OVERFLOW × the grid dimension, so the world
+   * is slightly larger than the screen and scrolls only a tiny bit.
+   * The other axis scales proportionally.
+   */
   private get cellPx(): number {
-    return Math.min(this.canvas.width, this.canvas.height) / VIEWPORT_CELLS;
+    const cw = this.canvas.width;
+    const ch = this.canvas.height;
+    // cells-per-pixel for each axis if that axis were the covering one.
+    const pxPerCellW = cw / (GRID_COLS * VIEWPORT_OVERFLOW);
+    const pxPerCellH = ch / (GRID_ROWS * VIEWPORT_OVERFLOW);
+    // Use the larger value so the world fills the covering axis.
+    return Math.max(pxPerCellW, pxPerCellH);
   }
 
   run(code: string) {
@@ -204,14 +231,16 @@ export class Game2Runtime {
     this.scoringEnabled = false;
     this.score = 0;
     this.collisionHandlers.clear();
+    this.activeCollisions.clear();
+    this.jumpHandlers = [];
     this.particles = [];
     this.textOverlays = [];
 
     // Deep-copy from the original grid so runtime removals don't persist.
     this.grid = this.sourceGrid.map(row => [...row]);
 
-    const cx = GRID_SIZE / 2 - ITEM_CELLS / 2;
-    const cy = GRID_SIZE / 2 - ITEM_CELLS / 2;
+    const cx = GRID_COLS / 2 - SPRITE_CELLS / 2;
+    const cy = GRID_ROWS / 2 - SPRITE_CELLS / 2;
 
     const setBackground = (name: string) => {
       this.backgroundName = name;
@@ -225,6 +254,7 @@ export class Game2Runtime {
         vy: 0,
         grounded: false,
         behavior: 'none',
+        facingLeft: false,
       });
     };
 
@@ -261,16 +291,60 @@ export class Game2Runtime {
     };
 
     const showText = (text: string) => {
-      this.textOverlays.push({text, framesRemaining: TEXT_DISPLAY_FRAMES});
+      const cp = this.cellPx;
+      const ox = this.camX * cp;
+      const oy = this.camY * cp;
+      const cw = this.canvas.width;
+      const ch = this.canvas.height;
+
+      // Position relative to the player, upper-right.
+      const player = this.items.find(
+        i => i.behavior === 'move' || i.behavior === 'platform'
+      );
+      let sx = cw / 2 + 40;
+      let sy = ch / 2 - 40;
+      if (player) {
+        sx = (player.x + SPRITE_CELLS) * cp - ox + 20;
+        sy = player.y * cp - oy - 20;
+      }
+
+      // If too near the top, push down so the float-up is still visible.
+      const floatDistance = 60;
+      if (sy - floatDistance < 10) {
+        sy = floatDistance + 10;
+      }
+      // Clamp horizontally.
+      sx = Math.min(sx, cw - 20);
+
+      this.textOverlays.push({
+        text,
+        framesRemaining: TEXT_DISPLAY_FRAMES,
+        totalFrames: TEXT_DISPLAY_FRAMES,
+        startX: sx,
+        startY: sy,
+      });
     };
 
     const jump = () => {
       for (const item of this.items) {
-        if (item.behavior === 'platform' && item.grounded) {
+        if (item.behavior === 'platform') {
           item.vy = JUMP_VELOCITY;
           item.grounded = false;
         }
       }
+    };
+
+    const bigJump = () => {
+      for (const item of this.items) {
+        if (item.behavior === 'platform') {
+          item.vy = JUMP_VELOCITY * 2;
+          item.grounded = false;
+        }
+      }
+    };
+
+    const whenJumpPressed = (callback: () => void) => {
+      this.jumpHandlers.push(callback);
     };
 
     try {
@@ -285,6 +359,8 @@ export class Game2Runtime {
         'removeItem',
         'showText',
         'jump',
+        'bigJump',
+        'whenJumpPressed',
         code
       );
       fn(
@@ -297,7 +373,9 @@ export class Game2Runtime {
         whenCollide,
         removeItem,
         showText,
-        jump
+        jump,
+        bigJump,
+        whenJumpPressed
       );
     } catch (e) {
       console.error('[Game2 Runtime] Error executing code:', e);
@@ -354,8 +432,8 @@ export class Game2Runtime {
     for (let i = this.items.length - 1; i >= 0; i--) {
       if (this.items[i].name === name) {
         this.spawnPuff(
-          this.items[i].x + ITEM_CELLS / 2,
-          this.items[i].y + ITEM_CELLS / 2
+          this.items[i].x + SPRITE_CELLS / 2,
+          this.items[i].y + SPRITE_CELLS / 2
         );
         this.items.splice(i, 1);
       }
@@ -389,18 +467,6 @@ export class Game2Runtime {
     }
   }
 
-  /** Return loaded image elements keyed by filename for reuse across restarts. */
-  getImageCache(): Map<string, HTMLImageElement> {
-    const cache = new Map<string, HTMLImageElement>();
-    for (const [name, el] of this.loadedImages) {
-      const filename = this.nameToFilename.get(name);
-      if (filename) {
-        cache.set(filename, el);
-      }
-    }
-    return cache;
-  }
-
   toggleDebug() {
     this.debugEnabled = !this.debugEnabled;
     return this.debugEnabled;
@@ -425,6 +491,12 @@ export class Game2Runtime {
       ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', ' '].includes(e.key)
     ) {
       e.preventDefault();
+      // Fire jump handlers on the keydown edge (not repeat).
+      if (e.key === ' ' && !e.repeat && this.running) {
+        for (const handler of this.jumpHandlers) {
+          handler();
+        }
+      }
       this.keysDown.add(e.key);
     }
   };
@@ -459,11 +531,11 @@ export class Game2Runtime {
     const vpW = cw / cp;
     const vpH = ch / cp;
 
-    let camCx = target.x + ITEM_CELLS / 2 - vpW / 2;
-    let camCy = target.y + ITEM_CELLS / 2 - vpH / 2;
+    let camCx = target.x + SPRITE_CELLS / 2 - vpW / 2;
+    let camCy = target.y + SPRITE_CELLS / 2 - vpH / 2;
 
-    camCx = Math.max(0, Math.min(GRID_SIZE - vpW, camCx));
-    camCy = Math.max(0, Math.min(GRID_SIZE - vpH, camCy));
+    camCx = Math.max(0, Math.min(GRID_COLS - vpW, camCx));
+    camCy = Math.max(0, Math.min(GRID_ROWS - vpH, camCy));
 
     this.camX = camCx;
     this.camY = camCy;
@@ -473,19 +545,28 @@ export class Game2Runtime {
   private getCollisionRect(item: GameItem, x: number, y: number) {
     const bounds = this.visibleBounds.get(item.name);
     if (!bounds) {
-      return {x, y, w: ITEM_CELLS, h: ITEM_CELLS};
+      return {x, y, w: SPRITE_CELLS, h: SPRITE_CELLS};
     }
     return {
-      x: x + bounds.left * ITEM_CELLS,
-      y: y + bounds.top * ITEM_CELLS,
-      w: (bounds.right - bounds.left) * ITEM_CELLS,
-      h: (bounds.bottom - bounds.top) * ITEM_CELLS,
+      x: x + bounds.left * SPRITE_CELLS,
+      y: y + bounds.top * SPRITE_CELLS,
+      w: (bounds.right - bounds.left) * SPRITE_CELLS,
+      h: (bounds.bottom - bounds.top) * SPRITE_CELLS,
     };
+  }
+
+  /** Whether a grid cell value represents a solid/platform surface. */
+  private isSolidCell(cell: string): boolean {
+    if (cell === SOLID_CELL) {
+      return true;
+    }
+    return this.itemTypeMap.get(cell) === 'block';
   }
 
   /**
    * Check whether a cell-unit rect overlaps any solid grid cell.
-   * Solid cells only occupy the bottom portion: y range [r + SOLID_TOP, r + 1].
+   * Uses visible bounds of the block image when available, otherwise
+   * falls back to the bottom portion of the cell.
    */
   private collidesWithGrid(
     rx: number,
@@ -494,14 +575,29 @@ export class Game2Runtime {
     rh: number
   ): boolean {
     const colStart = Math.max(0, Math.floor(rx));
-    const colEnd = Math.min(GRID_SIZE - 1, Math.floor(rx + rw - 0.001));
+    const colEnd = Math.min(GRID_COLS - 1, Math.floor(rx + rw - 0.001));
     const rowStart = Math.max(0, Math.floor(ry));
-    const rowEnd = Math.min(GRID_SIZE - 1, Math.floor(ry + rh - 0.001));
+    const rowEnd = Math.min(GRID_ROWS - 1, Math.floor(ry + rh - 0.001));
 
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
-        if (this.grid[r]?.[c] === SOLID_CELL) {
-          // Solid occupies (c, r + SOLID_TOP) to (c + 1, r + 1).
+        const cell = this.grid[r]?.[c];
+        if (!cell || !this.isSolidCell(cell)) {
+          continue;
+        }
+        // Determine the block image to use for bounds.
+        const blockName = cell === SOLID_CELL ? this.blockItemName : cell;
+        const blockBounds = blockName && this.visibleBounds.get(blockName);
+        if (blockBounds) {
+          const bx = c + blockBounds.left * BLOCK_CELLS;
+          const by = r + blockBounds.top * BLOCK_CELLS;
+          const bw = (blockBounds.right - blockBounds.left) * BLOCK_CELLS;
+          const bh = (blockBounds.bottom - blockBounds.top) * BLOCK_CELLS;
+          if (rx < bx + bw && rx + rw > bx && ry < by + bh && ry + rh > by) {
+            return true;
+          }
+        } else {
+          // Fallback: solid occupies bottom portion.
           const solidY = r + SOLID_TOP;
           if (rx < c + 1 && rx + rw > c && ry < r + 1 && ry + rh > solidY) {
             return true;
@@ -522,8 +618,8 @@ export class Game2Runtime {
     return (
       rect.x < 0 ||
       rect.y < 0 ||
-      rect.x + rect.w > GRID_SIZE ||
-      rect.y + rect.h > GRID_SIZE
+      rect.x + rect.w > GRID_COLS ||
+      rect.y + rect.h > GRID_ROWS
     );
   }
 
@@ -550,9 +646,9 @@ export class Game2Runtime {
 
     // Check against grid-placed item cells.
     const colStart = Math.max(0, Math.floor(cr.x) - 1);
-    const colEnd = Math.min(GRID_SIZE - 1, Math.ceil(cr.x + cr.w) + 1);
+    const colEnd = Math.min(GRID_COLS - 1, Math.ceil(cr.x + cr.w) + 1);
     const rowStart = Math.max(0, Math.floor(cr.y) - 1);
-    const rowEnd = Math.min(GRID_SIZE - 1, Math.ceil(cr.y + cr.h) + 1);
+    const rowEnd = Math.min(GRID_ROWS - 1, Math.ceil(cr.y + cr.h) + 1);
 
     const collidedNames = new Set<string>();
 
@@ -560,8 +656,27 @@ export class Game2Runtime {
       for (let c = colStart; c <= colEnd; c++) {
         const cell = this.grid[r]?.[c];
         if (cell && cell !== SOLID_CELL) {
-          // Cell occupies a 1×1 area at (c, r).
-          if (this.rectsOverlap(cr.x, cr.y, cr.w, cr.h, c, r, 1, 1)) {
+          // Compute the actual collision rect for this grid-placed item,
+          // accounting for sprite scale and visible bounds.
+          const isSprite =
+            (this.itemTypeMap.get(cell) ?? 'sprite') === 'sprite';
+          const scale = isSprite ? SPRITE_CELLS : 1;
+          const bounds = this.visibleBounds.get(cell);
+          let ix, iy, iw, ih;
+          if (bounds) {
+            const offset = (scale - 1) / 2;
+            ix = c - offset + bounds.left * scale;
+            iy = r - offset + bounds.top * scale;
+            iw = (bounds.right - bounds.left) * scale;
+            ih = (bounds.bottom - bounds.top) * scale;
+          } else {
+            const offset = (scale - 1) / 2;
+            ix = c - offset;
+            iy = r - offset;
+            iw = scale;
+            ih = scale;
+          }
+          if (this.rectsOverlap(cr.x, cr.y, cr.w, cr.h, ix, iy, iw, ih)) {
             collidedNames.add(cell);
           }
         }
@@ -579,15 +694,21 @@ export class Game2Runtime {
       }
     }
 
-    // Fire collision handlers.
+    // Fire collision handlers only on the *entering* edge: when a collision
+    // starts but wasn't active last frame.
     for (const name of collidedNames) {
-      const handlers = this.collisionHandlers.get(name);
-      if (handlers) {
-        for (const handler of handlers) {
-          handler();
+      if (!this.activeCollisions.has(name)) {
+        const handlers = this.collisionHandlers.get(name);
+        if (handlers) {
+          for (const handler of handlers) {
+            handler();
+          }
         }
       }
     }
+
+    // Update the active set for next frame.
+    this.activeCollisions = collidedNames;
   }
 
   private update() {
@@ -640,9 +761,11 @@ export class Game2Runtime {
 
     if (this.keysDown.has('ArrowLeft')) {
       nx -= MOVE_SPEED;
+      item.facingLeft = true;
     }
     if (this.keysDown.has('ArrowRight')) {
       nx += MOVE_SPEED;
+      item.facingLeft = false;
     }
     if (
       !this.itemOutOfBounds(item, nx, item.y) &&
@@ -669,9 +792,11 @@ export class Game2Runtime {
     let nx = item.x;
     if (this.keysDown.has('ArrowLeft')) {
       nx -= PLATFORM_MOVE_SPEED;
+      item.facingLeft = true;
     }
     if (this.keysDown.has('ArrowRight')) {
       nx += PLATFORM_MOVE_SPEED;
+      item.facingLeft = false;
     }
     if (
       !this.itemOutOfBounds(item, nx, item.y) &&
@@ -680,10 +805,7 @@ export class Game2Runtime {
       item.x = nx;
     }
 
-    if (this.keysDown.has(' ') && item.grounded) {
-      item.vy = JUMP_VELOCITY;
-      item.grounded = false;
-    }
+    // Spacebar jump is handled by the whenJumpPressed event block.
 
     item.vy = Math.min(item.vy + GRAVITY, MAX_FALL_SPEED);
 
@@ -745,8 +867,8 @@ export class Game2Runtime {
         // Normalize camera position to 0–1 across the scrollable range.
         const vpW = cw / cp;
         const vpH = ch / cp;
-        const maxCamX = Math.max(1, GRID_SIZE - vpW);
-        const maxCamY = Math.max(1, GRID_SIZE - vpH);
+        const maxCamX = Math.max(1, GRID_COLS - vpW);
+        const maxCamY = Math.max(1, GRID_ROWS - vpH);
         const normX = this.camX / maxCamX;
         const normY = this.camY / maxCamY;
         const bgX = -normX * parallaxExtra;
@@ -755,61 +877,24 @@ export class Game2Runtime {
       }
     }
 
-    // Visible grid cell range.
-    const colStart = Math.max(0, Math.floor(this.camX));
-    const colEnd = Math.min(GRID_SIZE - 1, Math.floor(this.camX + cw / cp));
-    const rowStart = Math.max(0, Math.floor(this.camY));
-    const rowEnd = Math.min(GRID_SIZE - 1, Math.floor(this.camY + ch / cp));
-
-    // Draw filled grid cells (solid blocks and placed items).
-    for (let r = rowStart; r <= rowEnd; r++) {
-      for (let c = colStart; c <= colEnd; c++) {
-        const cell = this.grid[r]?.[c];
-        if (!cell) {
-          continue;
-        }
-        if (cell === SOLID_CELL) {
-          ctx.fillStyle = '#F7F8FA';
-          ctx.fillRect(
-            c * cp - ox,
-            r * cp - oy + cp * SOLID_TOP,
-            cp,
-            cp * (1 - SOLID_TOP)
-          );
-        } else {
-          // Placed item cell — same size as the grid cell.
-          const imgEl = this.loadedImages.get(cell);
-          if (imgEl?.complete && imgEl.naturalWidth > 0) {
-            ctx.drawImage(imgEl, c * cp - ox, r * cp - oy, cp, cp);
-          } else {
-            // Fallback colored square.
-            ctx.fillStyle = '#7B61FF';
-            ctx.fillRect(c * cp - ox, r * cp - oy, cp, cp);
-          }
-        }
-      }
-    }
-
-    // Subtle grid lines.
-    ctx.strokeStyle = 'rgba(114,122,131,0.15)';
-    ctx.lineWidth = 0.5;
-    for (let r = rowStart; r <= rowEnd + 1; r++) {
-      const sy = r * cp - oy;
-      ctx.beginPath();
-      ctx.moveTo(colStart * cp - ox, sy);
-      ctx.lineTo((colEnd + 1) * cp - ox, sy);
-      ctx.stroke();
-    }
-    for (let c = colStart; c <= colEnd + 1; c++) {
-      const sx = c * cp - ox;
-      ctx.beginPath();
-      ctx.moveTo(sx, rowStart * cp - oy);
-      ctx.lineTo(sx, (rowEnd + 1) * cp - oy);
-      ctx.stroke();
-    }
+    // Draw grid cells using the shared renderer (no grid lines in play mode).
+    renderGrid({
+      ctx,
+      grid: this.grid,
+      cellPx: cp,
+      offsetX: ox,
+      offsetY: oy,
+      canvasWidth: cw,
+      canvasHeight: ch,
+      loadedImages: this.loadedImages,
+      blockImageName: this.blockItemName,
+      itemTypeMap: this.itemTypeMap,
+      spriteScale: SPRITE_CELLS,
+      showGridLines: false,
+    });
 
     // Draw items (code-created and grid-instantiated sprites).
-    const itemPx = ITEM_CELLS * cp;
+    const itemPx = SPRITE_CELLS * cp;
     for (const item of this.items) {
       const dx = item.x * cp - ox;
       const dy = item.y * cp - oy;
@@ -820,7 +905,15 @@ export class Game2Runtime {
 
       const imgEl = this.loadedImages.get(item.name);
       if (imgEl?.complete && imgEl.naturalWidth > 0) {
-        ctx.drawImage(imgEl, dx, dy, itemPx, itemPx);
+        if (item.facingLeft) {
+          ctx.save();
+          ctx.translate(dx + itemPx, dy);
+          ctx.scale(-1, 1);
+          ctx.drawImage(imgEl, 0, 0, itemPx, itemPx);
+          ctx.restore();
+        } else {
+          ctx.drawImage(imgEl, dx, dy, itemPx, itemPx);
+        }
       } else {
         ctx.fillStyle = '#7B61FF';
         ctx.fillRect(dx, dy, itemPx, itemPx);
@@ -846,21 +939,24 @@ export class Game2Runtime {
     }
     ctx.globalAlpha = 1;
 
-    // Draw text overlays (bottom-center, fade out at end).
+    // Draw text overlays (float upward from player, fade out at end).
+    const floatDistance = 60; // total pixels to float up over lifetime
     for (const overlay of this.textOverlays) {
       let alpha = 1;
       if (overlay.framesRemaining < TEXT_FADE_FRAMES) {
         alpha = overlay.framesRemaining / TEXT_FADE_FRAMES;
       }
+      const progress = 1 - overlay.framesRemaining / overlay.totalFrames;
+      const tx = overlay.startX;
+      const ty = overlay.startY - floatDistance * progress;
+
       ctx.globalAlpha = alpha;
-      ctx.font = 'bold 24px sans-serif';
-      ctx.textAlign = 'center';
+      ctx.font = 'bold 18px sans-serif';
+      ctx.textAlign = 'left';
       ctx.textBaseline = 'bottom';
-      const tx = cw / 2;
-      const ty = ch - 40;
       // Drop shadow.
       ctx.fillStyle = 'rgba(0,0,0,0.6)';
-      ctx.fillText(overlay.text, tx + 2, ty + 2);
+      ctx.fillText(overlay.text, tx + 1, ty + 1);
       // Main text.
       ctx.fillStyle = '#FFFFFF';
       ctx.fillText(overlay.text, tx, ty);

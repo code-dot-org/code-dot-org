@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 
-import {Game2ImageEntry} from './types';
+import {Game2ItemEntry} from './types';
 import {generateWorld} from './worldGeneration';
 
 import moduleStyles from './game2View.module.scss';
 
 interface WorldGeneratePaneProps {
-  images: Game2ImageEntry[];
+  items: Game2ItemEntry[];
   onWorldGenerated: (grid: string[][]) => void;
 }
 
 const WorldGeneratePane: React.FunctionComponent<WorldGeneratePaneProps> = ({
-  images,
+  items,
   onWorldGenerated,
 }) => {
   const [prompt, setPrompt] = useState('');
@@ -25,7 +25,7 @@ const WorldGeneratePane: React.FunctionComponent<WorldGeneratePaneProps> = ({
     setError(null);
     setLoading(true);
     try {
-      const grid = await generateWorld(prompt.trim(), images);
+      const grid = await generateWorld(prompt.trim(), items);
       onWorldGenerated(grid);
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));

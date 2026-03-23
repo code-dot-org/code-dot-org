@@ -1,5 +1,6 @@
 import {ExtendedBlock, GeneratorFunction} from '@cdo/apps/blockly/types';
 
+import bigJump from './bigJump';
 import {
   BLOCK_TYPE as CREATE_ITEM,
   generator as createItemGenerator,
@@ -31,6 +32,7 @@ import {
   generator as whenCollideGenerator,
   register as registerWhenCollide,
 } from './whenCollide';
+import whenJumpPressed from './whenJumpPressed';
 import whenStart from './whenStart';
 
 interface DynamicBlockEntry {
@@ -78,9 +80,11 @@ export const dynamicBlocks: DynamicBlockEntry[] = [
 
 export const jsonBlocks: JsonBlockEntry[] = [
   whenStart,
+  whenJumpPressed,
   startScoring,
   increaseScore,
   decreaseScore,
   showText,
   jump,
+  bigJump,
 ];
