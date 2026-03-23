@@ -6,7 +6,13 @@ on:
       branch_name:
         required: true
         type: string
+      source_commit_sha:
+        required: true
+        type: string
       codeai_docker_image_ref:
+        required: true
+        type: string
+      codeai_docker_image_digest:
         required: true
         type: string
       codeai_docker_tag:
@@ -21,6 +27,13 @@ jobs:
     name: commit to kargo warehouse
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code-dot-org deploy source
+        uses: actions/checkout@v6.0.2
+        with:
+          sparse-checkout: |
+            k8s/helm
+          path: code-dot-org
+
       - name: Checkout k8s-gitops
         uses: actions/checkout@v6.0.2
         with:
@@ -29,36 +42,60 @@ jobs:
           path: k8s-gitops
           token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
-      - name: Update codeai deployment image
+      - name: Publish frozen codeai freight
         shell: ruby {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
+          SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
           CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
+          CODEAI_DOCKER_IMAGE_DIGEST: ${{ inputs.codeai_docker_image_digest }}
           CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
           K8S_GITOPS_REPO_WRITE_TOKEN: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
         # if you're on vscode install this to get syntax highlighting in here:
         # https://marketplace.visualstudio.com/items?itemName=harrydowning.yaml-embedded-languages
         run: | # ruby
-          # We'll throw an error if we can't find a values.yaml for these branches
-          UPDATE_OR_ERROR_BRANCHES = %w[staging test levelbuilder production]
+          require "fileutils"
+          require "time"
+          require "yaml"
 
-          # This is the code-dot-org repo branch that was committed to / merged into.
+          MANAGED_BRANCHES = %w[staging test levelbuilder production]
+
           BRANCH_NAME = ENV.fetch("BRANCH_NAME")
-
-          # We normalize deployment names with the same rule as docker tags in k8s-skaffold-build.yml
-          DEPLOYMENT_NAME = BRANCH_NAME.gsub(/[^a-zA-Z0-9_.-]/, '-')
-
-          # This is the newly built docker image ref that we'll be writing to values.yaml.
+          SOURCE_COMMIT_SHA = ENV.fetch("SOURCE_COMMIT_SHA")
           CODEAI_DOCKER_IMAGE_REF = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
+          CODEAI_DOCKER_IMAGE_DIGEST = ENV.fetch("CODEAI_DOCKER_IMAGE_DIGEST")
           CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
-          abort('ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.') if CODEAI_DOCKER_IMAGE_REF.strip.empty?
 
-          # This is the values.yaml file in k8s-gitops repo that we'll update the `image: ` line in:
-          DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{DEPLOYMENT_NAME}/values.yaml"
+          RELEASE_TAG = "git-#{SOURCE_COMMIT_SHA}"
+          abort("ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write freight.") if CODEAI_DOCKER_IMAGE_REF.strip.empty?
+          abort("ERROR: CODEAI_DOCKER_IMAGE_DIGEST is empty, refusing to write freight.") if CODEAI_DOCKER_IMAGE_DIGEST.strip.empty?
+          abort("ERROR: CODEAI_DOCKER_TAG=#{CODEAI_DOCKER_TAG.inspect} did not match expected #{RELEASE_TAG.inspect}.") unless CODEAI_DOCKER_TAG == RELEASE_TAG
 
-          # This is the updated line that we'll write to $DEPLOYMENT_VALUES_YAML:
-          UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-to-kargo-warehouse.yml\n"
+          unless MANAGED_BRANCHES.include?(BRANCH_NAME)
+            puts "::notice::Skipping warehouse publish for branch #{BRANCH_NAME.inspect}. Managed branches: #{MANAGED_BRANCHES.join(', ')}"
+            exit 0
+          end
+
+          SOURCE_HELM_DIR = File.expand_path("code-dot-org/k8s/helm", Dir.pwd)
+          abort("ERROR: expected Helm source at #{SOURCE_HELM_DIR}") unless Dir.exist?(SOURCE_HELM_DIR)
+
+          FREIGHT_RELATIVE_DIR = "warehouses/codeai/freight"
+          CURRENT_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/current"
+          RELEASE_RELATIVE_DIR = "#{FREIGHT_RELATIVE_DIR}/#{RELEASE_TAG}"
+
+          created_at = Time.now.utc.iso8601
+          freight_yaml = {
+            "schemaVersion" => "v1",
+            "revision" => SOURCE_COMMIT_SHA,
+            "tag" => RELEASE_TAG,
+            "image" => {
+              "ref" => CODEAI_DOCKER_IMAGE_REF,
+              "digest" => CODEAI_DOCKER_IMAGE_DIGEST,
+            },
+            "packageType" => "helm",
+            "createdAt" => created_at,
+          }.to_yaml(line_width: -1)
 
           def system!(*cmd)
             ok = system(*cmd)
@@ -66,50 +103,33 @@ jobs:
             raise "Command failed (exitstatus=#{Process.last_status&.exitstatus}): #{rendered_cmd}" unless ok
           end
 
-          Dir.chdir("k8s-gitops") do
-            unless File.exist?(DEPLOYMENT_VALUES_YAML)
-              values_yaml_was_not_found_msg = "Tried to update image ref, but no values.yaml was found at: https://github.com/code-dot-org/k8s-gitops/tree/main/#{DEPLOYMENT_VALUES_YAML}"
-              if UPDATE_OR_ERROR_BRANCHES.include?(BRANCH_NAME)
-                abort("ERROR: deployment `#{DEPLOYMENT_NAME}` failed! #{values_yaml_was_not_found_msg}")
-              else
-                puts "::notice::Skipping deployment `#{DEPLOYMENT_NAME}`. #{values_yaml_was_not_found_msg}"
-                exit 0
-              end
-            end
+          def rebuild_freight_dir(relative_dir, freight_yaml:, source_helm_dir:)
+            FileUtils.rm_rf(relative_dir)
+            FileUtils.mkdir_p("#{relative_dir}/helm")
+            File.write("#{relative_dir}/freight.yaml", freight_yaml)
+            FileUtils.cp_r("#{source_helm_dir}/.", "#{relative_dir}/helm")
+          end
 
-            # Update values.yaml file line `image: *` with the newly built docker image's ref
-            updated_line = false
-            File.write(DEPLOYMENT_VALUES_YAML,
-              File.readlines(DEPLOYMENT_VALUES_YAML)
-                .map do |line|
-                  if line.start_with?('image: ')
-                    updated_line = true
-                    UPDATED_DOCKER_IMAGE_LINE
-                  else
-                    line
-                  end
-                end
-                .then { |lines| updated_line ? lines : [UPDATED_DOCKER_IMAGE_LINE] + lines }
-                .join
-            )
+          Dir.chdir("k8s-gitops") do
+            rebuild_freight_dir(CURRENT_RELATIVE_DIR, freight_yaml: freight_yaml, source_helm_dir: SOURCE_HELM_DIR)
+            rebuild_freight_dir(RELEASE_RELATIVE_DIR, freight_yaml: freight_yaml, source_helm_dir: SOURCE_HELM_DIR)
 
             system! 'git config user.name "github-actions[bot]"'
             system! 'git config user.email "41898282+github-actions[bot]@users.noreply.github.com"'
-            system! 'git', 'add', DEPLOYMENT_VALUES_YAML
+            system! "git", "add", CURRENT_RELATIVE_DIR, RELEASE_RELATIVE_DIR
 
-            if system('git diff --cached --quiet')
-              puts "Success: no diff of #{DEPLOYMENT_VALUES_YAML} detected, no commit+push needed."
+            if system("git diff --cached --quiet")
+              puts "Success: no diff in #{CURRENT_RELATIVE_DIR} or #{RELEASE_RELATIVE_DIR}, no commit+push needed."
               exit 0
             end
 
-            puts "Committing #{DEPLOYMENT_VALUES_YAML} to k8s-gitops repo"
-            system! 'git', 'commit', '-m', <<~MSG.chomp
-              #{DEPLOYMENT_VALUES_YAML} => #{CODEAI_DOCKER_TAG}
+            puts "Committing #{RELEASE_TAG} freight snapshot to k8s-gitops repo"
+            system! "git", "commit", "-m", <<~MSG.chomp
+              Publish codeai freight #{RELEASE_TAG}
             MSG
 
-            # Push to https://github.com/code-dot-org/k8s-gitops
             puts "Pushing to https://github.com/code-dot-org/k8s-gitops"
-            system! 'git push origin HEAD:main'
+            system! "git", "push", "origin", "HEAD:main"
 
-            puts "Success: committed+pushed newly built docker image tag #{CODEAI_DOCKER_TAG} to #{DEPLOYMENT_VALUES_YAML} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
+            puts "Success: committed+pushed freight #{RELEASE_TAG} to #{FREIGHT_RELATIVE_DIR} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
           end
