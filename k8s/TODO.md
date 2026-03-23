@@ -49,3 +49,5 @@ Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, foll
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
+
+- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
