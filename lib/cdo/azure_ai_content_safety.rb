@@ -26,7 +26,9 @@ class AzureAiContentSafety
   # @param [IO] image_data - binary image data to be rated
   # @param [String] content_type - one of image/gif, image/jpeg, image/png
   # @returns [Hash] the categoriesAnalysis response from Azure, e.g.:
-  #   {"categoriesAnalysis"=>[{"category"=>"Sexual","severity"=>0}, ...]}
+  #   {"categoriesAnalysis"=>[{"category"=>"Sexual","severity"=>0}, {"category"=>"Hate","severity"=>0},
+  #   {"category"=>"SelfHarm","severity"=>0}, {"category"=>"Violence","severity"=>0}]}, or
+  #   null if the image is not moderated
   # @raise [AzureAiContentSafety::RequestFailed] when the request is not successful.
   # @raise [AzureAiContentSafety::UnsupportedContentType] when the content type is unsupported.
   #

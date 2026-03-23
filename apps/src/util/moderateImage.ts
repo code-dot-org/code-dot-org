@@ -133,12 +133,25 @@ export const moderateImage = async (
     MetricsReporter.incrementCounter('ModerateCustomImage.Success', dimensions);
     if (useAiContentSafety) {
       // Azure AI Content Safety
-      const CATEGORY_SEVERITY_LEVEL_BLOCKED = 2;
+      if (json === null) {
+        return 'skipped';
+      }
+      // Severity level blocked by category.
+      // If any category's severity level is greater than or equal to the severity level blocked value,
+      // the image is flagged. If all categories' severity levels are less than the severity level blocked value,
+      // the image is 'ok'
+      const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
+        Hate: 2,
+        SelfHarm: 2,
+        Sexual: 2,
+        Violence: 2,
+      };
       const categories = json?.categoriesAnalysis;
       if (
         categories?.every(
-          (category: {severity: number}) =>
-            category?.severity < CATEGORY_SEVERITY_LEVEL_BLOCKED
+          (category: {severity: number; category: string}) =>
+            category?.severity <
+            CATEGORY_SEVERITY_LEVEL_BLOCKED[category?.category]
         )
       ) {
         return 'ok';
