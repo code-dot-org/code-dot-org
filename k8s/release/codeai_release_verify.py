@@ -12,6 +12,7 @@ def validate(payload):
     image = payload.get("image") or {}
     capsule = payload.get("capsule") or {}
     release = payload.get("release") or {}
+    approved = payload.get("approved") or {}
 
     image_tag = image.get("tag", "")
     release_tag = release.get("imageTag", "")
@@ -19,10 +20,11 @@ def validate(payload):
     release_git_commit = release.get("gitCommit", "")
     package_kind = release.get("packageKind", "")
     package_path = release.get("packagePath", "")
+    package_digest = release.get("packageDigest", "")
 
     match = TAG_PATTERN.match(image_tag)
     if not match:
-      return failure(f"image tag is not a canonical git tag: {image_tag}")
+        return failure(f"image tag is not a canonical git tag: {image_tag}")
 
     expected_commit = match.group(1)
     if release_tag != image_tag:
@@ -35,8 +37,21 @@ def validate(payload):
         return failure("package kind must be kustomize")
     if not package_path.startswith("package/"):
         return failure("package path must stay under package/")
+    if not re.match(r"^sha256:[0-9a-f]{64}$", package_digest):
+        return failure("package digest must be a sha256 digest")
     if capsule.get("tag") != image_tag:
         return failure("capsule tag mismatch")
+    if approved:
+        if approved.get("gitCommit") != release_git_commit:
+            return failure("git commit mismatch between approved release metadata and capsule release.yaml")
+        if approved.get("imageDigest") != release_digest:
+            return failure("image digest mismatch between approved release metadata and capsule release.yaml")
+        if approved.get("packageKind") != package_kind:
+            return failure("package kind mismatch between approved release metadata and capsule release.yaml")
+        if approved.get("packagePath") != package_path:
+            return failure("package path mismatch between approved release metadata and capsule release.yaml")
+        if approved.get("packageDigest") != package_digest:
+            return failure("package digest mismatch between approved release metadata and capsule release.yaml")
 
     return {
         "ok": True,
@@ -45,6 +60,7 @@ def validate(payload):
             "gitCommit": release_git_commit,
             "packageKind": package_kind,
             "packagePath": package_path,
+            "packageDigest": package_digest,
         },
     }
 
@@ -57,6 +73,7 @@ def failure(reason):
             "gitCommit": "",
             "packageKind": "",
             "packagePath": "",
+            "packageDigest": "",
         },
     }
 

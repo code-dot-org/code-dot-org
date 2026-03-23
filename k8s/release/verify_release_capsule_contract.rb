@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'fileutils'
+require 'digest'
 require 'open3'
 require 'optparse'
 require 'tmpdir'
@@ -14,6 +15,7 @@ module ReleaseCapsuleContract
     ['image', 'digest'],
     ['package', 'kind'],
     ['package', 'path'],
+    ['package', 'digest'],
     ['metadata', 'sbomPath'],
     ['metadata', 'provenancePath']
   ].freeze
@@ -63,6 +65,9 @@ module ReleaseCapsuleContract
     raise "image digest mismatch" unless release.dig('image', 'digest') == options.fetch(:image_digest)
     raise "package kind mismatch" unless release.dig('package', 'kind') == 'kustomize'
     raise "package path must stay under package/" unless release.dig('package', 'path').start_with?('package/')
+    unless release.dig('package', 'digest').match?(/\Asha256:[0-9a-f]{64}\z/)
+      raise "package digest must be a sha256 digest"
+    end
   end
 
   module_function def validate_paths!(release, options)
@@ -73,6 +78,7 @@ module ReleaseCapsuleContract
 
     raise "missing package path #{package_dir}" unless File.exist?(File.join(package_dir, 'base', 'kustomization.yaml'))
     raise "missing components dir #{File.join(package_dir, 'components')}" unless Dir.exist?(File.join(package_dir, 'components'))
+    raise "package digest mismatch" unless directory_digest(package_dir) == release.dig('package', 'digest')
     raise "missing SBOM #{sbom_path}" unless File.file?(sbom_path)
     raise "missing provenance #{provenance_path}" unless File.file?(provenance_path)
   end
@@ -113,6 +119,30 @@ module ReleaseCapsuleContract
       raise "kustomize build failed for #{deployment}: #{stderr}" unless status.success?
       raise "kustomize build returned no manifests for #{deployment}" if stdout.strip.empty?
     end
+  end
+
+  module_function def directory_digest(root)
+    digest = Digest::SHA256.new
+
+    Dir.glob(File.join(root, '**', '*'), File::FNM_DOTMATCH).sort.each do |path|
+      next if path.end_with?('/.', '/..')
+
+      relative_path = path.delete_prefix("#{root}/")
+      if File.directory?(path)
+        digest << "dir\0#{relative_path}\0"
+        next
+      end
+
+      digest << "file\0#{relative_path}\0"
+      File.open(path, 'rb') do |file|
+        while (chunk = file.read(16 * 1024))
+          digest << chunk
+        end
+      end
+      digest << "\0"
+    end
+
+    "sha256:#{digest.hexdigest}"
   end
 end
 

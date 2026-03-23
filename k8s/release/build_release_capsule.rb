@@ -5,6 +5,7 @@ require 'json'
 require 'optparse'
 require 'time'
 require 'yaml'
+require 'digest'
 
 module ReleaseCapsule
   module_function def run!(argv)
@@ -23,9 +24,9 @@ module ReleaseCapsule
     metadata_dir = File.join(output_dir, 'metadata')
     FileUtils.mkdir_p(metadata_dir)
 
-    release = build_release(options)
+    release = build_release(options, package_dir)
     File.write(File.join(output_dir, 'release.yaml'), release.to_yaml(line_width: -1))
-    File.write(File.join(metadata_dir, 'provenance.json'), JSON.pretty_generate(build_provenance(options)))
+    File.write(File.join(metadata_dir, 'provenance.json'), JSON.pretty_generate(build_provenance(options, release)))
     File.write(File.join(metadata_dir, 'sbom.json'), JSON.pretty_generate(build_sbom(options)))
   end
 
@@ -87,7 +88,7 @@ module ReleaseCapsule
     FileUtils.cp_r(source, destination)
   end
 
-  module_function def build_release(options)
+  module_function def build_release(options, package_dir)
     {
       'schemaVersion' => options.fetch(:schema_version),
       'gitCommit' => options.fetch(:commit_sha),
@@ -98,7 +99,8 @@ module ReleaseCapsule
       },
       'package' => {
         'kind' => options.fetch(:package_kind),
-        'path' => options.fetch(:package_path)
+        'path' => options.fetch(:package_path),
+        'digest' => directory_digest(package_dir)
       },
       'metadata' => {
         'sbomPath' => options.fetch(:sbom_path),
@@ -107,7 +109,7 @@ module ReleaseCapsule
     }
   end
 
-  module_function def build_provenance(options)
+  module_function def build_provenance(options, release)
     {
       'schemaVersion' => 'codeai-release-provenance/v1alpha1',
       'buildTime' => build_time(options),
@@ -125,6 +127,11 @@ module ReleaseCapsule
           'repoURL' => options.fetch(:image_repo),
           'tag' => options.fetch(:image_tag),
           'digest' => options.fetch(:image_digest)
+        },
+        'package' => {
+          'kind' => release.dig('package', 'kind'),
+          'path' => release.dig('package', 'path'),
+          'digest' => release.dig('package', 'digest')
         },
         'capsule' => {
           'repoURL' => options[:capsule_repo],
@@ -151,6 +158,30 @@ module ReleaseCapsule
 
   module_function def build_time(options)
     Time.parse(options[:build_time] || Time.now.utc.iso8601).utc.iso8601
+  end
+
+  module_function def directory_digest(root)
+    digest = Digest::SHA256.new
+
+    Dir.glob(File.join(root, '**', '*'), File::FNM_DOTMATCH).sort.each do |path|
+      next if path.end_with?('/.', '/..')
+
+      relative_path = path.delete_prefix("#{root}/")
+      if File.directory?(path)
+        digest << "dir\0#{relative_path}\0"
+        next
+      end
+
+      digest << "file\0#{relative_path}\0"
+      File.open(path, 'rb') do |file|
+        while (chunk = file.read(16 * 1024))
+          digest << chunk
+        end
+      end
+      digest << "\0"
+    end
+
+    "sha256:#{digest.hexdigest}"
   end
 end
 
