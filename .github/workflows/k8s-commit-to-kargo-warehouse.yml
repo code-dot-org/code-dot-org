@@ -12,6 +12,9 @@ on:
       codeai_docker_image_digest:
         required: true
         type: string
+      legacy_env:
+        required: false
+        type: string
     secrets:
       K8S_GITOPS_REPO_WRITE_TOKEN:
         required: true
@@ -52,19 +55,35 @@ jobs:
             --image-ref "$CODEAI_DOCKER_IMAGE_REF" \
             --image-digest "$CODEAI_DOCKER_IMAGE_DIGEST"
 
+      - name: Write legacy gitflow metadata
+        if: ${{ inputs.legacy_env != '' }}
+        env:
+          LEGACY_ENV: ${{ inputs.legacy_env }}
+          SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
+        run: |
+          code-dot-org/k8s/bin/write-legacy-gitflow-record \
+            --legacy-env "$LEGACY_ENV" \
+            --git-commit "$SOURCE_GIT_COMMIT" \
+            --output-dir "k8s-gitops/warehouses/codeai/legacy-gitflow/$LEGACY_ENV"
+
       - name: Commit and push build-lock metadata
         working-directory: k8s-gitops
         env:
+          LEGACY_ENV: ${{ inputs.legacy_env }}
           SOURCE_GIT_COMMIT: ${{ inputs.source_git_commit }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add warehouses/codeai/builds/current.yaml "warehouses/codeai/builds/git-${SOURCE_GIT_COMMIT}.yaml"
+          if [ -n "$LEGACY_ENV" ]; then
+            git add "warehouses/codeai/legacy-gitflow/$LEGACY_ENV/current.yaml" \
+              "warehouses/codeai/legacy-gitflow/$LEGACY_ENV/merged/git-${SOURCE_GIT_COMMIT}.yaml"
+          fi
 
           if git diff --cached --quiet; then
-            echo "Success: no build-lock diff detected, no commit+push needed."
+            echo "Success: no metadata diff detected, no commit+push needed."
             exit 0
           fi
 
-          git commit -m "Publish CodeAI build-lock git-${SOURCE_GIT_COMMIT}"
+          git commit -m "Publish CodeAI metadata git-${SOURCE_GIT_COMMIT}"
           git push origin HEAD:main

@@ -55,10 +55,11 @@ jobs:
       source_git_commit: ${{ github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
       codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
+      legacy_env: staging
     secrets: inherit
 
   commit-legacy-gitflow-metadata:
-    if: github.event_name == 'push' && contains(fromJSON('["staging","test","levelbuilder","production"]'), github.ref_name)
+    if: github.event_name == 'push' && contains(fromJSON('["test","levelbuilder","production"]'), github.ref_name)
     name: commit legacy gitflow metadata
     uses: ./.github/workflows/k8s-commit-legacy-gitflow-metadata.yml
     with:
