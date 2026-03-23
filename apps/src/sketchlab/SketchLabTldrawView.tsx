@@ -1,6 +1,12 @@
 import {getAssetUrlsByMetaUrl} from '@tldraw/assets/urls';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
-import {Editor, getSnapshot, Tldraw, TLStoreSnapshot} from 'tldraw';
+import {
+  Editor,
+  getSnapshot,
+  Tldraw,
+  TLStoreSnapshot,
+  TLUiOverrides,
+} from 'tldraw';
 import 'tldraw/tldraw.css';
 
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
@@ -34,6 +40,16 @@ function isValidSnapshot(
     typeof source.schema === 'object'
   );
 }
+
+const uiOverrides: TLUiOverrides = {
+  actions(_editor, actions) {
+    // Remove insert-embed action which allows users to insert potentially unsafe URLs,
+    // and could be generally confusing.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const {'insert-embed': _unused, ...rest} = actions;
+    return rest;
+  },
+};
 
 const MIN_INFO_PANEL_WIDTH = 250;
 const INITIAL_INFO_PANEL_WIDTH = 290;
@@ -137,6 +153,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
               assetUrls={assetUrls}
               assets={assetStore}
               onMount={initializeEditor}
+              overrides={uiOverrides}
               // docs for snapshot: https://tldraw.dev/reference/editor/TLStoreBaseOptions#snapshot
               // We may be able to use snapshot in conjunction with migrations to migrate old excalidraw
               // data: https://tldraw.dev/sdk-features/persistence#Migrations

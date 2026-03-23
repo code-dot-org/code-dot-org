@@ -39,6 +39,7 @@ export function createTldrawAssetStore(
         srcByAssetId.set(r.id, r.props.src);
       }
     }
+    console.log({srcByAssetId});
   }
 
   return {
@@ -75,6 +76,7 @@ export function createTldrawAssetStore(
     // TODO: this may never be called. Images aren't deleted immediately when a user removes them from the
     // editor, so tldraw can do 'undo'. How can we ensure we clean up old assets effectively?
     async remove(assetIds: TLAssetId[]) {
+      console.log('Removing assets with IDs:', assetIds);
       for (const assetId of assetIds) {
         const src = srcByAssetId.get(assetId);
         // Only delete student-owned assets (/v3/assets/...). Level starter
