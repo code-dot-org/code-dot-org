@@ -31,8 +31,23 @@ resource "kubernetes_manifest" "cdo_external_secrets" {
       dataFrom = [
         {
           find = {
-            path = "${var.environment_type}/cdo"
+            # Pair `find.path` with name matching so ESO uses BatchGetSecretValue
+            # instead of listing every secret and fetching them one by one.
+            path = "${var.environment_type}/cdo/"
+            name = {
+              regexp = "^${var.environment_type}/cdo/.*$"
+            }
           }
+          # Strip the {env}/cdo/ prefix so Secret keys match CDO.* names such as
+          # db_writer instead of staging_cdo_db_writer after ESO conversion.
+          rewrite = [
+            {
+              regexp = {
+                source = "^${var.environment_type}/cdo/(.*)$"
+                target = "$1"
+              }
+            }
+          ]
         }
       ]
     }
@@ -83,8 +98,19 @@ resource "kubernetes_manifest" "cdo_external_secrets_cluster_external_secret" {
         dataFrom = [
           {
             find = {
-              path = "${var.environment_type}/cdo"
+              path = "${var.environment_type}/cdo/"
+              name = {
+                regexp = "^${var.environment_type}/cdo/.*$"
+              }
             }
+            rewrite = [
+              {
+                regexp = {
+                  source = "^${var.environment_type}/cdo/(.*)$"
+                  target = "$1"
+                }
+              }
+            ]
           }
         ]
       }
