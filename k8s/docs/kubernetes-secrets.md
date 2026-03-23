@@ -12,7 +12,7 @@ Let's say we want to fetch `staging/cdo/db_writer` from our dashboard pod (aka "
    - `staging/cdo/*`
    - `CfnStack/staging/*`
 1. OpenTofu provisions an `ExternalSecret` which configures the External Secrets Operator to periodically sync AWS secrets matching `staging/cdo/*` into Kubernetes Secret `cdo-external-secrets` (see: [`cdo-external-secrets.tf`](../tofu/codeai-k8s/eks-cluster-addons/modules/eso-per-env/cdo-external-secrets.tf))
-   - While syncing it removes the `staging/cdo` prefix from AWS Secrets Manager secret keynames
+   - While syncing it rewrites keys to remove the `staging/cdo/` prefix from AWS Secrets Manager secret names
    - The sync refreshes every 5 minutes
 1. So now we have in our Kubernetes cluster in the `staging` namespace a Kubernetes Secret `cdo-external-secrets` with 50+ child keys, one of which is `db_writer`
 1. When a dashboard pod launches, its manifest specifies that Kubernetes secret `cdo-external-secrets`'s sub-keys, including `db_writer`, will be mapped onto its environment variables, each with a `CDO_` prefix. (see: [`_dashboard.yaml`](../helm/templates/dashboard/_dashboard.yaml))

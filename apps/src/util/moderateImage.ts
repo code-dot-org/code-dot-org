@@ -1,3 +1,5 @@
+import {extension as mimeToExtension} from 'mime-types';
+
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import MetricsReporter from '@cdo/apps/metrics/MetricsReporter';
@@ -79,7 +81,6 @@ const scaleFileForModeration = (file: File): Promise<File> => {
 
 export const moderateImage = async (
   file: File,
-  ext: string,
   appName: string,
   {
     uploaderType = 'n/a',
@@ -87,10 +88,10 @@ export const moderateImage = async (
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
-  const extToCompare = ext.toLowerCase();
+  const fileExtension = mimeToExtension(file.type) || '';
   if (
     !LABS_WITH_IMAGE_MODERATION.includes(appName ?? '') ||
-    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(extToCompare)
+    !ALLOWED_IMAGE_FILE_EXTENSIONS.includes(fileExtension)
   ) {
     return 'skipped';
   }
