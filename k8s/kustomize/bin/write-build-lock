@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'fileutils'
+require 'time'
+require 'yaml'
+
+RELEASE_BRANCH = 'staging'
+LEGACY_BRANCHES = %w[staging test levelbuilder production].freeze
+
+branch_name = ENV.fetch('BRANCH_NAME')
+image_ref = ENV.fetch('CODEAI_DOCKER_IMAGE_REF')
+image_tag = ENV.fetch('CODEAI_DOCKER_TAG')
+gitops_root = File.expand_path(ENV.fetch('K8S_GITOPS_ROOT'))
+created_at = ENV.fetch('CREATED_AT', Time.now.utc.iso8601)
+git_commit = ENV.fetch('GIT_COMMIT', image_tag.delete_prefix('git-'))
+
+expected_release_tag = "git-#{git_commit}"
+abort("Expected CODEAI_DOCKER_TAG=#{expected_release_tag}, got #{image_tag}") if image_tag != expected_release_tag
+abort("Expected CODEAI_DOCKER_IMAGE_REF to end with :#{image_tag}") unless image_ref.end_with?(":#{image_tag}")
+
+def write_yaml(path, payload)
+  FileUtils.mkdir_p(File.dirname(path))
+  File.write(path, YAML.dump(payload))
+end
+
+if branch_name == RELEASE_BRANCH
+  payload = {
+    'schemaVersion' => 'v1',
+    'releaseId' => image_tag,
+    'gitCommit' => git_commit,
+    'image' => {
+      'ref' => image_ref,
+      'digest' => ENV['CODEAI_DOCKER_IMAGE_DIGEST'] || ''
+    },
+    'packaging' => {
+      'kind' => 'kustomize',
+      'sourceRepo' => 'https://github.com/code-dot-org/code-dot-org.git',
+      'sourcePath' => 'k8s/kustomize'
+    },
+    'createdAt' => created_at
+  }
+
+  builds_dir = File.join(gitops_root, 'warehouses/codeai/builds')
+  historical_path = File.join(builds_dir, "#{image_tag}.yaml")
+  current_path = File.join(builds_dir, 'current.yaml')
+  rendered = YAML.dump(payload)
+  FileUtils.mkdir_p(builds_dir)
+  File.write(historical_path, rendered)
+  File.write(current_path, rendered)
+end
+
+if LEGACY_BRANCHES.include?(branch_name)
+  payload = {
+    'revision' => git_commit,
+    'tag' => image_tag,
+    'mergedAt' => created_at
+  }
+  branch_dir = File.join(gitops_root, 'warehouses/codeai/legacy-gitflow', branch_name)
+  write_yaml(File.join(branch_dir, 'current.yaml'), payload)
+  write_yaml(File.join(branch_dir, 'merged', "#{image_tag}.yaml"), payload)
+end

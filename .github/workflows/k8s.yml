@@ -49,6 +49,7 @@ jobs:
   # deployments in apps/codeai/deployments/*
   commit-to-kargo-warehouse:
     name: commit to kargo warehouse
+    if: github.event_name == 'push'
     uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs:
       - stitch-multiplatform-image
@@ -56,6 +57,7 @@ jobs:
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
     secrets: inherit
 

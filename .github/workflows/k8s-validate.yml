@@ -1,7 +1,5 @@
-# Use this workflow to do any validation of k8s related files, this could
-# be linting, simple tests, etc. This runs in parallel with the skaffold
-# build, but before we commit to k8s-gitops our changes, so anything
-# that's faster than that won't hold up the overall flow.
+# Use this workflow to validate the source-driven Kustomize package and the
+# GitOps wrapper contract before release metadata is published.
 
 name: k8s-validate
 
@@ -13,16 +11,21 @@ jobs:
     name: validate
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout sources
+      - name: Checkout code-dot-org sources
         uses: actions/checkout@v6.0.2
         with:
           sparse-checkout: |
             k8s
 
-      - name: Setup Helm
-        uses: azure/setup-helm@v4
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
         with:
-          version: v3.19.0
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          sparse-checkout: |
+            apps/codeai
+            apps/kargo-project-codeai
 
       - name: Setup Kustomize
         run: |
@@ -32,5 +35,5 @@ jobs:
           tar -xzf /tmp/kustomize.tar.gz -C /tmp
           sudo install /tmp/kustomize /usr/local/bin/kustomize
 
-      - name: Verify kustomize/helm parity
-        run: k8s/kustomize/bin/verify-helm-parity
+      - name: Verify thin-lock Kustomize contract
+        run: ruby k8s/kustomize/bin/verify-contract
