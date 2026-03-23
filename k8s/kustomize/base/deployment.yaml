@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: cdo-dashboard
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: cdo-dashboard
+    spec:
+      containers:
+        - name: dashboard
+          image: code-dot-org:replace-me
+          imagePullPolicy: IfNotPresent
+          envFrom:
+            - configMapRef:
+                name: cdo-locals.yml
+          ports:
+            - containerPort: 3000
+              name: http

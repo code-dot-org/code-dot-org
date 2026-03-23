@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(cd "$(dirname "$0")/../../.." && pwd)"
+kustomize build "$repo_root/k8s/kustomize/base" >/dev/null

@@ -1,7 +1,5 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - dashboard-deployment.yaml
-  - dashboard-service.yaml
-  - locals.yml.yaml
-  - cdo-local-secrets.yaml
+  - deployment.yaml
+  - locals-configmap.yaml

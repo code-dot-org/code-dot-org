@@ -48,6 +48,7 @@ jobs:
   # Kargo is then responsible for promoting the change to ArgoCD codeai
   # deployments in apps/codeai/deployments/*
   commit-to-kargo-warehouse:
+    if: github.event_name == 'push'
     name: commit to kargo warehouse
     uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
     needs:
@@ -55,8 +56,9 @@ jobs:
       - validate
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
+      git_commit: ${{ github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
-      codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+      codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages
