@@ -3,7 +3,7 @@ require 'webmock/minitest'
 
 class AiLessonSummaryPodcastsHelperTest < ActionView::TestCase
   setup do
-    @api_key = CDO.elevenlabs_api_key
+    @api_key = 'test-elevenlabs-api-key'
     @model = 'eleven_v3'
     @voice_id = 'Fc5CaIGWKvLHapoOSM2K'
     @test_script = "[energetic] You're listening to AI Teaching Assistant's Daily Byte, your quick check-in before class."

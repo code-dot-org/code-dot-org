@@ -11,7 +11,7 @@ class AiLessonSummariesHelperTest < ActionView::TestCase
     @model = 'gpt-4'
 
     # Mock CDO constants
-    CDO.stubs(:openai_lesson_summary_api_key).returns(@api_key)
+    CDO.stubs(:openai_lesson_summaries_api_key).returns(@api_key)
     SharedConstants.stubs(:EVALUATE_STUDENT_LEARNING_MODEL_VERSION).returns(@model)
 
     # Mock DCDO timeouts
