@@ -82,6 +82,6 @@ class AzureAiContentSafety
       #{result.dig('error', 'code')}
     ERROR
   rescue
-    "Request to Azure AI Content Safety failed with status #{response.try?(:code)}"
+    "Request to Azure AI Content Safety failed with status #{response.code}"
   end
 end

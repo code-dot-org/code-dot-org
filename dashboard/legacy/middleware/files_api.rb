@@ -1084,7 +1084,8 @@ class FilesApi < Sinatra::Base
   #
   # POST /v3/images/moderate-ai-content-safety
   #
-  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return a JSON rating.
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
+  # moderation result as JSON. Returns null if the moderation service is unavailable.
   #
   post %r{/v3/images/moderate-ai-content-safety$} do
     content_type :json

@@ -1,12 +1,11 @@
 require 'cdo/azure_content_moderator'
 require 'cdo/azure_ai_content_safety'
 require 'honeybadger/ruby'
-require 'cdo/firehose'
 
 module ImageModeration
   # Returns a content rating from an external service.
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/bmp, image/gif, image/jpeg, image/png
+  # @param [String] content_type - image/gif, image/jpeg, image/png
   # @return [:everyone|:racy|:adult|:unknown] Whether the image is suitable for everyone
   def self.rate_image(image_data, content_type)
     return :everyone unless CDO.azure_content_moderation_key

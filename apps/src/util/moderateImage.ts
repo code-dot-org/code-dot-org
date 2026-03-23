@@ -29,7 +29,7 @@ interface AnalyticsData {
 
 /**
  * Returns a scaled-up PNG copy of the file if either dimension is below
- * MIN_MODERATION_DIMENSION, otherwise returns the original file unchanged.
+ * the required minimum size for the selected service, otherwise returns the original file unchanged.
  * The copy is only used for the moderation API call — callers still upload
  * the original file.
  * TODO: Once we migrate to the new moderation API, we'll scale the file to min size on the backend.

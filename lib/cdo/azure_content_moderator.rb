@@ -28,7 +28,7 @@ class AzureContentModerator
   # from Azure Content Moderation and returns a rating category.
   #
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - one of image/bmp, image/gif, image/jpeg, image/png
+  # @param [String] content_type - one of image/gif, image/jpeg, image/png
   # @returns [:everyone|:racy|:adult]
   # @raise [AzureContentModerator::RequestFailed] when the request is not
   #   successful.
@@ -53,7 +53,7 @@ class AzureContentModerator
   # Sends a request to Azure to moderate the image.
   #
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/bmp, image/gif, image/jpeg, image/png
+  # @param [String] content_type - image/gif, image/jpeg, image/png
   # @returns [Hash] the parsed response from Azure
   # @raise [AzureContentModerator::RequestFailed] when the request is not
   #   successful.
