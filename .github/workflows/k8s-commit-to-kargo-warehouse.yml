@@ -6,6 +6,9 @@ on:
       branch_name:
         required: true
         type: string
+      source_commit_sha:
+        required: true
+        type: string
       codeai_docker_image_ref:
         required: true
         type: string
@@ -28,7 +31,6 @@ jobs:
         uses: actions/checkout@v6.0.2
         with:
           fetch-depth: 0
-
       - name: Checkout k8s-gitops
         uses: actions/checkout@v6.0.2
         with:
@@ -41,6 +43,7 @@ jobs:
         shell: ruby {0}
         env:
           BRANCH_NAME: ${{ inputs.branch_name }}
+          SOURCE_COMMIT_SHA: ${{ inputs.source_commit_sha }}
           CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
           CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
           CODEAI_DOCKER_DIGEST: ${{ inputs.codeai_docker_digest }}
@@ -59,10 +62,12 @@ jobs:
           LEGACY_DIR = Pathname('warehouses/codeai/legacy-gitflow')
 
           BRANCH_NAME = ENV.fetch('BRANCH_NAME')
+          SOURCE_COMMIT_SHA = ENV.fetch('SOURCE_COMMIT_SHA')
           CODEAI_DOCKER_IMAGE_REF = ENV.fetch('CODEAI_DOCKER_IMAGE_REF')
           CODEAI_DOCKER_TAG = ENV.fetch('CODEAI_DOCKER_TAG')
           CODEAI_DOCKER_DIGEST = ENV.fetch('CODEAI_DOCKER_DIGEST')
-          RELEASE_SHA = `git rev-parse HEAD`.strip
+          HEAD_SHA = `git rev-parse HEAD`.strip
+          RELEASE_SHA = SOURCE_COMMIT_SHA
           RELEASE_TAG = "git-#{RELEASE_SHA}"
           NOW = Time.now.utc.iso8601
 
@@ -95,6 +100,10 @@ jobs:
 
           unless CODEAI_DOCKER_IMAGE_REF.end_with?(":#{CODEAI_DOCKER_TAG}")
             abort("ERROR: image ref #{CODEAI_DOCKER_IMAGE_REF.inspect} does not end with tag #{CODEAI_DOCKER_TAG.inspect}")
+          end
+
+          if LEGACY_BRANCHES.include?(BRANCH_NAME) && HEAD_SHA != RELEASE_SHA
+            abort("ERROR: expected source commit #{RELEASE_SHA.inspect} to match checked out branch head #{HEAD_SHA.inspect} for #{BRANCH_NAME.inspect}")
           end
 
           if BRANCH_NAME == 'staging'
@@ -130,7 +139,7 @@ jobs:
           end
 
           legacy_current = {
-            'revision' => RELEASE_SHA,
+            'revision' => HEAD_SHA,
             'tag' => RELEASE_TAG,
             'mergedAt' => NOW,
           }

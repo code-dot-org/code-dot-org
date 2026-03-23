@@ -40,7 +40,7 @@ jobs:
           sudo install /tmp/kustomize /usr/local/bin/kustomize
 
       - name: Verify kustomize/helm parity
-        run: k8s/kustomize/bin/verify-parity
+        run: k8s/kustomize/bin/verify-helm-parity
 
       - name: Validate rendered-branch contract
         shell: ruby {0}

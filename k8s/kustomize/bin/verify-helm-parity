@@ -1,14 +1,38 @@
+#!/usr/bin/env ruby
+
+# WARNING: VIBE CODED TRASH TEST FILE: NO HUMAN SHOULD EVER TRY TO READ THIS
+#
+# This file only has to survive while we decide between helm and kustomize.
+# Then its job is done and you can delete it. If we've already decided
+# frikkin delete it!!!! You'll also have to remove it from k8s-validate.yml
+
+# Verify that kustomize renders are still close enough to the Helm chart.
+#
+# Usage:
+#   k8s/kustomize/bin/verify-helm-parity
+#   k8s/kustomize/bin/verify-helm-parity development staging production
+# With no args, it verifies every overlay in DashboardKustomize.overlay_names.
+#
+# For each overlay, this script:
+# - renders Helm using the overlay's matching values/release inputs
+# - writes the secret input files kustomize needs, derived from Helm's secret values
+# - renders kustomize for the overlay
+# - normalizes both outputs and diffs them
+#
+# The comparison is intentionally strict, but some drift is explicitly tolerated.
+# Warnings that say "accepted drift by Seth" are known deviations we decided not
+# to fail on, such as selected naming differences or the Redis secret formatting.
+
 require 'base64'
 require 'fileutils'
 require 'json'
 require 'open3'
 require 'securerandom'
-require 'shellwords'
 require 'tmpdir'
 require 'yaml'
 
 module DashboardKustomize
-  ROOT = File.expand_path('../..', __dir__)
+  ROOT = File.expand_path('..', __dir__)
   HELM_VALUES = File.join(ROOT, '..', 'helm', 'values.yaml')
   CHART_PATH = File.join(ROOT, '..', 'helm')
   GITOPS_ENVTYPES_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/envTypes'.freeze
@@ -16,7 +40,6 @@ module DashboardKustomize
   REDIS_SECRET_DIR = File.join(ROOT, 'components', 'redis')
   MINIO_SECRET_DIR = File.join(ROOT, 'components', 'minio')
   IGNORE_LABELS = ['helm.sh/chart', 'app.kubernetes.io/managed-by'].freeze
-  BASE_SECRET_ENV_ORDER = ['_mysql_root_password', '_redis_password', '_minio_root_password', '_minio_root_user'].freeze
   MYSQL_SECRET_ENV_ORDER = %w(_mysql_root_password db_writer db_reader reporting_db_writer reporting_db_reader db_credential_admin db_credential_writer db_credential_reader).freeze
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
@@ -36,14 +59,56 @@ module DashboardKustomize
   OVERLAYS = {
     'development' => {
       release_name: 'cdo',
-      namespace: nil,
       services: {mysql: true, redis: true, minio: true},
       helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
       helm_set: []
     },
+    'setup-db' => {
+      release_name: 'cdo',
+      services: {mysql: true, redis: true, minio: true},
+      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
+      helm_set: [
+        ['--set', 'dashboardJob.enabled=true'],
+        ['--set', 'dashboardJob.name=setup-db'],
+        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
+        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}]
+      ],
+      kustomize_paths: [
+        File.join(ROOT, 'overlays', 'skaffold'),
+        File.join(ROOT, 'overlays', 'setup-db')
+      ]
+    },
+    'setup-s3' => {
+      release_name: 'cdo',
+      services: {mysql: true, redis: true, minio: true},
+      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
+      helm_set: [
+        ['--set', 'services.minio.runSetupS3Job=true']
+      ],
+      kustomize_paths: [
+        File.join(ROOT, 'overlays', 'skaffold'),
+        File.join(ROOT, 'overlays', 'setup-s3')
+      ]
+    },
+    'setup-db-setup-s3' => {
+      release_name: 'cdo',
+      services: {mysql: true, redis: true, minio: true},
+      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
+      helm_set: [
+        ['--set', 'dashboardJob.enabled=true'],
+        ['--set', 'dashboardJob.name=setup-db'],
+        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
+        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}],
+        ['--set', 'services.minio.runSetupS3Job=true']
+      ],
+      kustomize_paths: [
+        File.join(ROOT, 'overlays', 'skaffold'),
+        File.join(ROOT, 'overlays', 'setup-db'),
+        File.join(ROOT, 'overlays', 'setup-s3')
+      ]
+    },
     'mount-dot-aws' => {
       release_name: 'cdo',
-      namespace: nil,
       services: {mysql: true, redis: true, minio: true},
       helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
       helm_set: [
@@ -54,64 +119,26 @@ module DashboardKustomize
         ['--set-string', 'localDev.mounts.AWS_PROFILE=default']
       ]
     },
-    'development-setup-db' => {
-      release_name: 'cdo',
-      namespace: nil,
-      services: {mysql: true, redis: true, minio: true},
-      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
-      helm_set: [
-        ['--set', 'dashboardJob.enabled=true'],
-        ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
-        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}]
-      ]
-    },
-    'development-setup-s3' => {
-      release_name: 'cdo',
-      namespace: nil,
-      services: {mysql: true, redis: true, minio: true},
-      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
-      helm_set: [
-        ['--set', 'services.minio.runSetupS3Job=true']
-      ]
-    },
-    'development-setup-db-setup-s3' => {
-      release_name: 'cdo',
-      namespace: nil,
-      services: {mysql: true, redis: true, minio: true},
-      helm_values: [File.join(ROOT, '..', 'helm', 'development.values.yaml')],
-      helm_set: [
-        ['--set', 'dashboardJob.enabled=true'],
-        ['--set', 'dashboardJob.name=setup-db'],
-        ['--set-json', 'dashboardJob.command=["zsh","-c"]'],
-        ['--set-json', %{dashboardJob.args=["cd dashboard && rake dashboard:setup_db && echo 'setup-db COMPLETE'"]}],
-        ['--set', 'services.minio.runSetupS3Job=true']
-      ]
-    },
     'production' => {
       release_name: 'cdo',
-      namespace: nil,
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml"],
       helm_set: []
     },
     'test' => {
       release_name: 'cdo',
-      namespace: nil,
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml"],
       helm_set: []
     },
     'staging' => {
       release_name: 'staging',
-      namespace: 'staging',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
-      namespace: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
@@ -184,16 +211,16 @@ module DashboardKustomize
     cmd
   end
 
-  module_function def helm_command(overlay)
-    helm_command_from_config(overlay_config(overlay))
-  end
-
   module_function def render_kustomize(overlay)
-    path = File.join(ROOT, 'overlays', overlay)
-    stdout, stderr, status = Open3.capture3('kustomize', 'build', path)
-    raise "kustomize build failed for #{overlay}:\n#{stderr}" unless status.success?
+    config = overlay_config(overlay)
+    paths = config[:kustomize_paths] || [File.join(ROOT, 'overlays', overlay)]
 
-    parse_yaml_stream(stdout)
+    paths.flat_map do |path|
+      stdout, stderr, status = Open3.capture3('kustomize', 'build', path)
+      raise "kustomize build failed for #{overlay} (#{path}):\n#{stderr}" unless status.success?
+
+      parse_yaml_stream(stdout)
+    end
   end
 
   module_function def parse_yaml_stream(text)
@@ -215,16 +242,6 @@ module DashboardKustomize
       values[key] = value.to_s
     end
     values
-  end
-
-  module_function def read_cluster_secret(namespace)
-    cmd = ['kubectl']
-    cmd.push('-n', namespace) if namespace && !namespace.empty?
-    cmd.push('get', 'secret', 'cdo-local-secrets', '-o', 'yaml')
-    stdout, _, status = Open3.capture3(*cmd)
-    return nil unless status.success?
-
-    YAML.safe_load(stdout)
   end
 
   module_function def random_alnum(length)
@@ -310,16 +327,6 @@ module DashboardKustomize
     FileUtils.rm_f(path)
   end
 
-  module_function def load_existing_secret_values(overlay, from_file: nil)
-    doc =
-      if from_file
-        YAML.safe_load_file(from_file)
-      else
-        read_cluster_secret(overlay_config(overlay)[:namespace])
-      end
-    parse_secret_values(doc)
-  end
-
   module_function def normalize_docs(docs)
     docs.map {|doc| normalize_doc(doc)}.
         sort_by {|doc| [doc['kind'].to_s, doc.dig('metadata', 'namespace').to_s, doc.dig('metadata', 'name').to_s]}
@@ -331,6 +338,7 @@ module DashboardKustomize
       normalize_release_name_drift!(copy, overlay)
       normalize_local_secret_name_drift!(copy)
       normalize_local_secret_value_drift!(copy)
+      normalize_skaffold_root_user_drift!(overlay, copy)
       deep_sort(copy)
     end
 
@@ -410,6 +418,10 @@ module DashboardKustomize
 
     if locals_config_drift?(helm_docs, kustomize_docs)
       warnings << 'accepted drift by Seth: locals config differs from Helm (split ConfigMap env vars instead of mounted locals.yml file)'
+    end
+
+    if skaffold_root_user_drift?(overlay, helm_docs, kustomize_docs)
+      warnings << 'accepted drift by Seth: skaffold overlays run dashboard as root for sync support'
     end
 
     warnings
@@ -497,6 +509,26 @@ module DashboardKustomize
     return false unless helm_locals && kustomize_locals
 
     locals_uses_blob?(helm_locals) || workload_uses_locals_volume?(helm_docs) || workload_uses_locals_env_from?(kustomize_docs)
+  end
+
+  module_function def skaffold_root_user_drift?(overlay, helm_docs, kustomize_docs)
+    return false unless %w(setup-db setup-s3 setup-db-setup-s3).include?(overlay)
+
+    helm_by_identity = normalize_docs(helm_docs).each_with_object({}) do |doc, result|
+      result[[doc['kind'], doc.dig('metadata', 'namespace'), doc.dig('metadata', 'name')]] = doc
+    end
+
+    normalize_docs(kustomize_docs).any? do |doc|
+      helm_doc = helm_by_identity[[doc['kind'], doc.dig('metadata', 'namespace'), doc.dig('metadata', 'name')]]
+      next false unless helm_doc
+
+      helm_security = helm_doc.dig('spec', 'template', 'spec', 'securityContext')
+      kustomize_security = doc.dig('spec', 'template', 'spec', 'securityContext')
+      next false unless helm_security.is_a?(Hash) && kustomize_security.is_a?(Hash)
+
+      helm_security.slice('runAsUser', 'runAsGroup', 'fsGroup') !=
+        kustomize_security.slice('runAsUser', 'runAsGroup', 'fsGroup')
+    end
   end
 
   module_function def normalize_release_name_drift!(obj, overlay)
@@ -606,18 +638,20 @@ module DashboardKustomize
     end
   end
 
+  module_function def normalize_skaffold_root_user_drift!(overlay, doc)
+    return unless %w(setup-db setup-s3 setup-db-setup-s3).include?(overlay)
+
+    security_context = doc.dig('spec', 'template', 'spec', 'securityContext')
+    return unless security_context.is_a?(Hash)
+
+    %w(runAsUser runAsGroup fsGroup).each {|key| security_context.delete(key)}
+    doc.dig('spec', 'template', 'spec')&.delete('securityContext') if security_context.empty?
+  end
+
   module_function def canonicalize_url_secret_value(value)
     return value unless value.is_a?(String)
 
     value.sub(/:(?<secret>[^:@\/]+)@/, ':<secret>@')
-  end
-
-  module_function def canonicalize_db_credential(value)
-    parsed = JSON.parse(value)
-    parsed['password'] = '<secret>' if parsed.is_a?(Hash) && parsed.key?('password')
-    JSON.generate(parsed)
-  rescue JSON::ParserError
-    value
   end
 
   module_function def canonicalize_netsim_redis_groups(value)
@@ -764,6 +798,57 @@ module DashboardKustomize
       obj.map {|value| deep_sort(value)}
     else
       obj
+    end
+  end
+end
+
+overlays = ARGV.empty? ? DashboardKustomize.overlay_names : ARGV
+
+overlays.each do |overlay|
+  helm_docs = DashboardKustomize.render_helm(overlay)
+  helm_secret_values = DashboardKustomize.parse_secret_values(DashboardKustomize.find_secret_doc(helm_docs))
+  secret_dirs = DashboardKustomize.secret_input_dirs
+
+  Dir.mktmpdir do |tmpdir|
+    backup_root = File.join(tmpdir, 'secret-backup')
+    FileUtils.mkdir_p(backup_root)
+    secret_dirs.each do |secret_dir|
+      next unless Dir.exist?(secret_dir)
+      relative = secret_dir.delete_prefix("#{DashboardKustomize::ROOT}/")
+      backup_dir = File.join(backup_root, relative)
+      FileUtils.mkdir_p(backup_dir)
+      FileUtils.cp_r(Dir.glob(File.join(secret_dir, '*')), backup_dir, preserve: true) unless Dir.empty?(secret_dir)
+    end
+
+    begin
+      DashboardKustomize.write_secret_inputs(overlay, DashboardKustomize.derive_secret_values(overlay, helm_secret_values))
+      kustomize_docs = DashboardKustomize.render_kustomize(overlay)
+
+      warnings = DashboardKustomize.warning_messages(overlay, helm_docs, kustomize_docs)
+      helm_normalized = DashboardKustomize.normalize_docs_for_parity(overlay, helm_docs)
+      kustomize_normalized = DashboardKustomize.normalize_docs_for_parity(overlay, kustomize_docs)
+
+      if helm_normalized != kustomize_normalized
+        helm_json = File.join(tmpdir, 'helm.json')
+        kustomize_json = File.join(tmpdir, 'kustomize.json')
+        File.write(helm_json, JSON.pretty_generate(helm_normalized) + "\n")
+        File.write(kustomize_json, JSON.pretty_generate(kustomize_normalized) + "\n")
+        diff_out, = Open3.capture2('diff', '-u', helm_json, kustomize_json)
+        abort "render parity failed for #{overlay}:\n#{diff_out}"
+      end
+
+      puts "OK #{overlay}"
+      warnings.each do |warning|
+        puts "WARN #{overlay}: #{warning}"
+      end
+    ensure
+      secret_dirs.each do |secret_dir|
+        FileUtils.rm_rf(secret_dir)
+        FileUtils.mkdir_p(secret_dir)
+        relative = secret_dir.delete_prefix("#{DashboardKustomize::ROOT}/")
+        backup_dir = File.join(backup_root, relative)
+        FileUtils.cp_r(Dir.glob(File.join(backup_dir, '*')), secret_dir, preserve: true) if Dir.exist?(backup_dir) && !Dir.empty?(backup_dir)
+      end
     end
   end
 end

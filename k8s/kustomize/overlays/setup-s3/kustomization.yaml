@@ -1,9 +1,6 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-resources:
-  - ../development
 components:
-  - ../../components/dashboard-job-setup-db
   - ../../components/minio-setup-s3-job
 labels:
   - pairs:
