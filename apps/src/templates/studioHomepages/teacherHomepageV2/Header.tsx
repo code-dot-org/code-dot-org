@@ -53,6 +53,28 @@ export const Header: React.FC<HeaderProps> = ({
     dispatch(beginEditingSection());
   };
 
+  const createDemoSection = async (sectionType: string) => {
+    try {
+      const response = await fetch(`/api/v1/sections/demo/${sectionType}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        window.location.href = `/teacher_dashboard/sections/${data.id}/progress`;
+      } else {
+        throw new Error(`HTTP ${response.status} ${response.statusText}`);
+      }
+    } catch (e) {
+      console.error(e);
+      setFlash([['alert', 'Failed to create demo section.']]);
+    }
+  };
+
   const syncCleverSections = async () => {
     try {
       const response = await fetch('/api/v1/roster/clever/sections/sync', {
@@ -118,6 +140,18 @@ export const Header: React.FC<HeaderProps> = ({
             size="s"
             labelText={i18n.moreOptions()}
             options={[
+              {
+                label: 'Create AI Foundations Demo',
+                icon: {iconName: 'plus', iconStyle: 'solid'},
+                value: 'createDemoAif',
+                onClick: () => createDemoSection('aif'),
+              },
+              {
+                label: 'Create CS Discoveries Demo',
+                icon: {iconName: 'plus', iconStyle: 'solid'},
+                value: 'createDemoCsd',
+                onClick: () => createDemoSection('csd'),
+              },
               {
                 label: i18n.archiveAllSections(),
                 icon: {iconName: 'gear', iconStyle: 'solid'},

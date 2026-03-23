@@ -43,10 +43,10 @@ class Policies::DemoSections
   #     csd:
   #       - 1068
 
-  def self.get(demo_type)
+  def self.get(demo_type:)
     config = DEMO_SECTION_TYPES[demo_type.to_sym]
     return nil unless config
-    config.merge(demo_student_ids: demo_student_ids(demo_type))
+    OpenStruct.new(config.merge(demo_student_ids: demo_student_ids(demo_type)))
   end
 
   def self.demo_student_ids(demo_type)
