@@ -103,8 +103,6 @@ namespace :seed do
     coursed-2017
     coursee-2017
     coursef-2017
-    pre-express-2017
-    express-2017
     coursea-2019
     coursec-2019
     coursee-2019
@@ -332,8 +330,6 @@ namespace :seed do
        coursed-2017
        coursee-2017
        coursef-2017
-       pre-express-2017
-       express-2017
        coursea-2019
        coursec-2019
        coursee-2019
