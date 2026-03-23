@@ -2,6 +2,9 @@
 # for code.org development with one command: `skaffold dev`
 #
 # This is currently an experimental feature, see: k8s/experimental.yaml
+#
+# IF YOU MODIFY THIS FILE, also fix its sibling k8s/kustomize/skaffold.yaml in the same
+# way until we decide between Helm and Kustomize.
 
 apiVersion: skaffold/v4beta13
 kind: Config
