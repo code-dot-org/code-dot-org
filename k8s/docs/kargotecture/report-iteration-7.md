@@ -9,7 +9,7 @@ This report summarizes the final live iteration 7 finalist set:
 - [OCI Release Capsule](./plans/iteration-7/oci-release-capsule.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71563) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71569))
 
 The detailed plans live in:
-- [`k8s/docs/kargo-architecture/plans/iteration-7/`](./plans/iteration-7/)
+- [`k8s/docs/kargotecture/plans/iteration-7/`](./plans/iteration-7/)
 
 The ranking file lives in:
 - [Iteration 7 rankings](./plans/iteration-7/rankings.md)
@@ -268,11 +268,11 @@ with environment policy and deploy wrappers living in `k8s-gitops`.
 ## Detailed Plans and Rankings
 
 - Iteration 7 rankings:
-  [`k8s/docs/kargo-architecture/plans/iteration-7/rankings.md`](./plans/iteration-7/rankings.md)
+  [`k8s/docs/kargotecture/plans/iteration-7/rankings.md`](./plans/iteration-7/rankings.md)
 - Iteration 7 notes:
-  [`k8s/docs/kargo-architecture/plans/iteration-7/NOTES.md`](./plans/iteration-7/NOTES.md)
+  [`k8s/docs/kargotecture/plans/iteration-7/NOTES.md`](./plans/iteration-7/NOTES.md)
 - Finalist plans:
-  [`k8s/docs/kargo-architecture/plans/iteration-7/`](./plans/iteration-7/)
+  [`k8s/docs/kargotecture/plans/iteration-7/`](./plans/iteration-7/)
 
 ## Weighted Rankings Table
 

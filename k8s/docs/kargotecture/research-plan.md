@@ -5,16 +5,16 @@ Produce a multi-pass Kargo system planning doc set for CodeAI.
 
 Final deliverables:
 - Approved research-plan snapshot:
-  - `k8s/docs/kargo-architecture/research-plan.md`
+  - `k8s/docs/kargotecture/research-plan.md`
 - Iteration summary reports:
-  - `k8s/docs/kargo-architecture/report-iteration-${N}.md`
+  - `k8s/docs/kargotecture/report-iteration-${N}.md`
 - Iteration outputs:
-  - `k8s/docs/kargo-architecture/plans/iteration-${N}/*.md`
-  - `k8s/docs/kargo-architecture/plans/iteration-${N}/rankings.md`
-  - `k8s/docs/kargo-architecture/plans/iteration-${N}/NOTES.md`
+  - `k8s/docs/kargotecture/plans/iteration-${N}/*.md`
+  - `k8s/docs/kargotecture/plans/iteration-${N}/rankings.md`
+  - `k8s/docs/kargotecture/plans/iteration-${N}/NOTES.md`
 - Prior iteration snapshots:
-  - `k8s/docs/kargo-architecture/plans/iteration-1/*`
-  - `k8s/docs/kargo-architecture/plans/iteration-2/*`
+  - `k8s/docs/kargotecture/plans/iteration-1/*`
+  - `k8s/docs/kargotecture/plans/iteration-2/*`
   - `...`
 
 This work should be iterative and creative. Treat the whole system as editable:
@@ -34,30 +34,30 @@ The user will not mind if planning takes 2 hours, as long as each iteration is s
 ## Step 1
 Before doing any `make_plans` research/iteration work, write the finally approved research plan **verbatim** to:
 
-- `k8s/docs/kargo-architecture/research-plan.md`
+- `k8s/docs/kargotecture/research-plan.md`
 
 This file becomes the canonical instruction sheet for the planning effort.
 
 Before each stage of every `make_plans` iteration:
-- load `k8s/docs/kargo-architecture/research-plan.md` freshly into context
+- load `k8s/docs/kargotecture/research-plan.md` freshly into context
 
 If context gets compacted:
-- reload `k8s/docs/kargo-architecture/research-plan.md` again before continuing
+- reload `k8s/docs/kargotecture/research-plan.md` again before continuing
 
 Treat this as mandatory process, not optional housekeeping.
 
 ## Deliverables
 ### Canonical iteration output
 For each `make_plans` iteration, write the plan set directly to:
-- `k8s/docs/kargo-architecture/plans/iteration-${N}/`
+- `k8s/docs/kargotecture/plans/iteration-${N}/`
 
 This iteration directory is the canonical output for iteration `N`.
 
 Do not maintain a separate "latest working set" in:
-- `k8s/docs/kargo-architecture/plans/*.md`
-- `k8s/docs/kargo-architecture/plans/rankings.md`
+- `k8s/docs/kargotecture/plans/*.md`
+- `k8s/docs/kargotecture/plans/rankings.md`
 
-Do not write files to top-level `k8s/docs/kargo-architecture/plans/` first and then copy them into an iteration directory. Author the iteration output directly inside `iteration-${N}/`.
+Do not write files to top-level `k8s/docs/kargotecture/plans/` first and then copy them into an iteration directory. Author the iteration output directly inside `iteration-${N}/`.
 
 Each iteration directory must contain:
 - that iteration’s plan docs
@@ -76,7 +76,7 @@ Think of `NOTES.md` as a research-advisor meeting note.
 
 ### Iteration summary reports
 As the final step of each `make_plans` iteration, write:
-- `k8s/docs/kargo-architecture/report-iteration-${N}.md`
+- `k8s/docs/kargotecture/report-iteration-${N}.md`
 
 Each iteration report should:
 - start with:
@@ -86,8 +86,8 @@ Each iteration report should:
   - Best for Kargo Native
 - present the ranked idea list for that iteration
   - in each idea include the weighted ranking from rankings.md
-  - link each idea directly to its detailed plan doc in `k8s/docs/kargo-architecture/plans/iteration-${N}/`
-- link directly to `k8s/docs/kargo-architecture/plans/iteration-${N}/rankings.md`
+  - link each idea directly to its detailed plan doc in `k8s/docs/kargotecture/plans/iteration-${N}/`
+- link directly to `k8s/docs/kargotecture/plans/iteration-${N}/rankings.md`
 - include cross-cutting add-ons / variations
 - avoid a long appendix
 - at the bottom put a weighted rankings table, example:
@@ -115,7 +115,7 @@ Put final weighted values in **bold** unlike this example.
 
 
 ## Detailed Plan Requirements
-Each plan doc in `k8s/docs/kargo-architecture/plans/iteration-${N}/` must be self-contained and implementable on its own.
+Each plan doc in `k8s/docs/kargotecture/plans/iteration-${N}/` must be self-contained and implementable on its own.
 
 Each plan doc must include:
 - Title
@@ -149,18 +149,18 @@ Run this loop multiple times:
 
 ### `make_plans` loop
 1. Before starting iteration `N`, read:
-- `k8s/docs/kargo-architecture/research-plan.md`
-- all prior `k8s/docs/kargo-architecture/plans/iteration-*/rankings.md`
-- all prior `k8s/docs/kargo-architecture/plans/iteration-*/NOTES.md`
+- `k8s/docs/kargotecture/research-plan.md`
+- all prior `k8s/docs/kargotecture/plans/iteration-*/rankings.md`
+- all prior `k8s/docs/kargotecture/plans/iteration-*/NOTES.md`
 - enough of the prior iteration plan docs to avoid repeating the same ping-pong edits
 
 2. Create or update the iteration working set directly in:
-- `k8s/docs/kargo-architecture/plans/iteration-${N}/`
+- `k8s/docs/kargotecture/plans/iteration-${N}/`
 
-Do not use top-level `k8s/docs/kargo-architecture/plans/*.md` as an intermediate or mirrored output location.
+Do not use top-level `k8s/docs/kargotecture/plans/*.md` as an intermediate or mirrored output location.
 
 3. Before each major stage within the iteration, reload:
-- `k8s/docs/kargo-architecture/research-plan.md`
+- `k8s/docs/kargotecture/research-plan.md`
 
 Major stages include at least:
 - research sweep
@@ -175,7 +175,7 @@ Major stages include at least:
 4. Compare and contrast all current plans.
 
 5. Score all current plans and write:
-- `k8s/docs/kargo-architecture/plans/iteration-${N}/rankings.md`
+- `k8s/docs/kargotecture/plans/iteration-${N}/rankings.md`
 
 6. After ranking, explicitly generate new ideas:
 - propose at least 1-2 new candidate ideas, hybrids, or reframings if the ranking or comparison suggests a gap
@@ -188,15 +188,15 @@ Major stages include at least:
 - add 1–2 new plans if comparison/ranking or idea generation reveals a missing hybrid or better framing
 
 8. Ensure the whole iteration is written directly into:
-- `k8s/docs/kargo-architecture/plans/iteration-${N}/`
+- `k8s/docs/kargotecture/plans/iteration-${N}/`
 
 All plan docs and rankings for that iteration should already live there; do not keep a duplicated top-level copy.
 
 9. Write:
-- `k8s/docs/kargo-architecture/plans/iteration-${N}/NOTES.md`
+- `k8s/docs/kargotecture/plans/iteration-${N}/NOTES.md`
 
 10. As the final step of the iteration, write:
-- `k8s/docs/kargo-architecture/report-iteration-${N}.md`
+- `k8s/docs/kargotecture/report-iteration-${N}.md`
 
 11. Read the latest rankings, notes, and iteration report before deciding whether another iteration is warranted.
 
@@ -323,19 +323,19 @@ Every detailed plan doc must make concrete decisions for:
 
 ## Acceptance Criteria
 This is done when:
-- the approved research plan has first been written verbatim to `k8s/docs/kargo-architecture/research-plan.md`
+- the approved research plan has first been written verbatim to `k8s/docs/kargotecture/research-plan.md`
 - the `make_plans` loop has been run multiple times
 - each new iteration reads prior iteration rankings and notes first
-- each iteration reloads `k8s/docs/kargo-architecture/research-plan.md` before each major stage
-- after any context compaction, `k8s/docs/kargo-architecture/research-plan.md` is reloaded before continuing
+- each iteration reloads `k8s/docs/kargotecture/research-plan.md` before each major stage
+- after any context compaction, `k8s/docs/kargotecture/research-plan.md` is reloaded before continuing
 - each iteration writes:
-  - detailed plans directly in `k8s/docs/kargo-architecture/plans/iteration-${N}/`
-  - `k8s/docs/kargo-architecture/plans/iteration-${N}/rankings.md`
-  - `k8s/docs/kargo-architecture/plans/iteration-${N}/NOTES.md`
-  - `k8s/docs/kargo-architecture/report-iteration-${N}.md`
+  - detailed plans directly in `k8s/docs/kargotecture/plans/iteration-${N}/`
+  - `k8s/docs/kargotecture/plans/iteration-${N}/rankings.md`
+  - `k8s/docs/kargotecture/plans/iteration-${N}/NOTES.md`
+  - `k8s/docs/kargotecture/report-iteration-${N}.md`
 - there are at least 6 detailed plans, with no upper cap if more strong plans appear
 - there is a final iteration rankings file in the final iteration directory
-- there is a latest iteration report at `k8s/docs/kargo-architecture/report-iteration-${N}.md`
+- there is a latest iteration report at `k8s/docs/kargotecture/report-iteration-${N}.md`
 - the iteration report clearly links directly to plan docs and `rankings.md` in the matching iteration directory
 - every plan explicitly covers whether it breaks or awkwardizes Skaffold/local-dev
 - every plan explicitly defines freight and promotion shape
@@ -345,9 +345,9 @@ This is done when:
 - the latest iteration report clearly identifies the best KISS, reviewability, future-Kustomize, and Kargo Native options
 
 ## Assumptions / Defaults
-- Use `k8s/docs/kargo-architecture/plans/iteration-${N}/` as the canonical output location for each iteration's detailed plans.
-- Do not maintain a duplicated top-level `k8s/docs/kargo-architecture/plans/*.md` latest mirror.
-- Use `k8s/docs/kargo-architecture/report-iteration-${N}.md` for the report written at the end of each iteration.
+- Use `k8s/docs/kargotecture/plans/iteration-${N}/` as the canonical output location for each iteration's detailed plans.
+- Do not maintain a duplicated top-level `k8s/docs/kargotecture/plans/*.md` latest mirror.
+- Use `k8s/docs/kargotecture/report-iteration-${N}.md` for the report written at the end of each iteration.
 - Use the weights above exactly unless later user feedback changes them.
 - Keep iterating until the plan set feels saturated rather than arbitrarily stopping after one pass.
 - If changes are still being made, prefer continuing for a couple more iterations even if the last step was only incrementally better.
