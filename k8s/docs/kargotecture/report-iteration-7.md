@@ -77,7 +77,7 @@ while still keeping `Source Snapshot + Rendered Branches` extremely close.
 
 ## Ranked Ideas
 
-### 1. [Common-Case Freight + Rendered Branches](./plans/iteration-7/common-case-rendered-branches.md)
+### 1. [Common-Case Freight + Rendered Branches](./plans/iteration-7/common-case-rendered-branches.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71562) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71567))
 `Iteration 7 Weighted: **42.6**`
 
 Let Kargo assemble one Freight from the real image and the real source commit,
@@ -86,7 +86,7 @@ cleanest long-lived answer because it keeps the rendered review gate we want
 while removing both the synthetic build-lock layer and the package snapshot
 archive layer.
 
-### 2. [Source Snapshot (Helm or Kustomize) + Rendered Branches](./plans/iteration-7/source-snapshot-rendered-branches.md)
+### 2. [Source Snapshot (Helm or Kustomize) + Rendered Branches](./plans/iteration-7/source-snapshot-rendered-branches.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71566) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71570))
 `Iteration 7 Weighted: **41.5**`
 
 Freeze the deploy package once per release, then render every stage from that
@@ -94,7 +94,7 @@ frozen snapshot into rendered branches. This remains the strongest explicit
 release-payload design and the cleanest frozen-input review model, but it keeps
 more system furniture than the winner.
 
-### 3. [Rendered Branches from a Thin Lock](./plans/iteration-7/rendered-branches.md)
+### 3. [Rendered Branches from a Thin Lock](./plans/iteration-7/rendered-branches.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71565) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71568))
 `Iteration 7 Weighted: **39.1**`
 
 Keep a tiny build-lock record, but make every promotion render real
@@ -102,14 +102,14 @@ stage-specific output into stage branches. This is still the strongest
 explicit-control variant, but the build-lock stays as permanent machinery
 without buying enough extra simplicity over `Common-Case`.
 
-### 4. [Argo Refs code-dot-org Commit](./plans/iteration-7/argo-refs-code-dot-org-commit.md)
+### 4. [Argo Refs code-dot-org Commit](./plans/iteration-7/argo-refs-code-dot-org-commit.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71561) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71564))
 `Iteration 7 Weighted: **33.8**`
 
 Write one tiny release record and let Argo deploy source pinned to the promoted
 commit. This is attractive on pure source-driven simplicity, but it gives up
 the final rendered review surface that the higher-ranked plans preserve.
 
-### 5. [OCI Release Capsule](./plans/iteration-7/oci-release-capsule.md)
+### 5. [OCI Release Capsule](./plans/iteration-7/oci-release-capsule.md) ([Helm](https://github.com/code-dot-org/code-dot-org/pull/71563) | [Kustomize](https://github.com/code-dot-org/code-dot-org/pull/71569))
 `Iteration 7 Weighted: **31.2**`
 
 Make one immutable OCI artifact the center of release truth, then render from
