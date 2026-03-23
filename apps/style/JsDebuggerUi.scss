@@ -13,14 +13,6 @@
   text-align: center;
   cursor: ns-resize;
   white-space: nowrap;
-
-  i {
-    width: 100%;
-    height: $resize-bar-width;
-    line-height: $resize-bar-width;
-    font-size: 24px;
-    cursor: ns-resize;
-  }
 }
 
 #debug-buttons {

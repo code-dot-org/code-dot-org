@@ -137,7 +137,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               __useDeprecatedTag
               href={lesson.lesson_feedback_url}
               text={i18n.rateThisLesson()}
-              icon="chart-column"
+              icon="bar-chart"
               color={Button.ButtonColor.gray}
               target="_blank"
               style={styles.button}

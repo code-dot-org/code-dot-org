@@ -23,7 +23,7 @@ const lockableNoPlanYesUrl = {
   id: 123,
   levels: [1, 2, 3, 4].map(id => ({
     ids: [id],
-    icon: 'fa-check-square',
+    icon: 'fa-check-square-o',
     kind: LevelKind.assessment,
     url: '/foo/bar',
   })),

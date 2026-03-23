@@ -108,8 +108,7 @@ export default function UnitCalendarGrid({
               <div className={styles.keySection}>
                 <div className={styles.keyCell}>
                   <FontAwesome
-                    icon="square"
-                    iconStyle="regular"
+                    icon="square-o"
                     style={{
                       color: color.teal,
                     }}
