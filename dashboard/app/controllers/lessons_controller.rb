@@ -3,7 +3,7 @@ class LessonsController < ApplicationController
 
   skip_authorize_resource only: :level_properties_by_id
 
-  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id]
+  before_action :require_levelbuilder_mode_or_test_env, except: [:index, :show, :student_lesson_plan, :level_properties, :level_properties_by_id, :practice]
   before_action :disallow_legacy_script_levels, only: [:edit, :update]
   before_action :disable_session_for_cached_pages, only: [:show]
   before_action :redirect_to_canonical_path, only: [:show, :student_lesson_plan]
@@ -87,6 +87,26 @@ class LessonsController < ApplicationController
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan(unit_group_unit: unit_group_unit)
     @script_name = script.name
+  end
+
+  # GET /s/:script_name_or_id/lessons/:lesson_position/practice
+  # GET /courses/:course_course_name/units/:unit_position/lessons/:lesson_position/practice
+  def practice
+    unit_context = get_unit_context(params)
+    script = unit_context[:unit]
+
+    @lesson = script.lessons.find do |l|
+      l.has_lesson_plan && l.relative_position == params[:lesson_position].to_i
+    end
+    raise ActiveRecord::RecordNotFound unless @lesson
+
+    @lesson_practice_data = {
+      lessonName: @lesson.localized_name,
+      lessonSummary: @lesson.properties['student_overview'] || '',
+      vocabulary: @lesson.vocabularies.map {|v| {id: v.id.to_s, word: v.word, definition: v.definition}},
+      scriptId: script.name,
+      lessonPosition: @lesson.relative_position,
+    }
   end
 
   # GET /s/:script_name_or_id/lessons/:lesson_position/edit
