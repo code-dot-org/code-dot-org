@@ -1,6 +1,6 @@
 name 'hoai-web-design-v2-9'
 display_name 'Learn more about an HTML Element'
-description 'Choose at least one HTML element to learn more about with AI Tutor'
+description 'Choose at least one HTML element to learn more about with AI Tutor. Once you\'ve explored one: you can either choose more elements to explore, or continue to the next level.'
 
 sublevels
 level 'hoai-web-design-v2-9a'
