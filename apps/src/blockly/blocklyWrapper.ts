@@ -244,6 +244,27 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
   });
 
+  // @blockly/plugin-scroll-options reads svgBlockCanvas_.getAttribute('transform')
+  // to compute scroll deltas during drag. In Blockly v12+, WorkspaceSvg.translate()
+  // uses layerManager.translateLayers() which sets style.transform (CSS) instead of
+  // the SVG transform attribute, so the attribute is never set and the plugin throws.
+  // Patch translate() to keep the SVG attribute in sync using scrollX/scrollY
+  // (without the absoluteLeft/absoluteTop offset) so the plugin can compute correct
+  // scroll deltas.
+  const originalTranslate = blocklyWrapper.WorkspaceSvg.prototype.translate;
+  blocklyWrapper.WorkspaceSvg.prototype.translate = function (
+    x: number,
+    y: number
+  ) {
+    originalTranslate.call(this, x, y);
+    if (this.svgBlockCanvas_) {
+      this.svgBlockCanvas_.setAttribute(
+        'transform',
+        `translate(${this.scrollX},${this.scrollY})`
+      );
+    }
+  };
+
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   blocklyWrapper.Trashcan = CdoTrashcan as any;
