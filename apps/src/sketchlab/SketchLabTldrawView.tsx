@@ -63,6 +63,19 @@ const INITIAL_INFO_PANEL_WIDTH = 290;
 const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
+// TODOs:
+// Buggy/non-ideal behavior:
+// 1. I've occasionally seen issues where switching levels overwrites the new level with the
+//    previous level's snapshot.
+//    Could this be due to the debounce when listening for snapshot saves?
+// 2. The tldraw UI sticks around when switching levels (zoom options, dropdown menu, etc.) We should hide/unmount this.
+// Features to be implemented:
+// 1. Start over/version history
+// 2. Start mode, including checking if starter asset code in createTldrawAssetStore is working as expected.
+// 3. Exemplars (editing and viewing)
+// 4. Backpack (lower priority)
+// Generally, this needs more testing and validation to ensure it is working as expected!
+// We also need to determine a clear migration path from excalidraw. Can we just turn on tldraw one day for all users?
 const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
 }) => {
@@ -105,9 +118,6 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     }
   }, [tldrawEditor]);
 
-  // TODO: I've occasionally seen issues where switching levels overwrites the new level with the
-  // previous level's snapshot.
-  // Could this be due to the debounce?
   useEffect(() => {
     if (!tldrawEditor) return;
 
