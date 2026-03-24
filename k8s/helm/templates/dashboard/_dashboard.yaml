@@ -62,6 +62,8 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: RACK_ENV
             value: {{ .Values.RAILS_ENV }}
+          - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
+            value: "1"
           {{- if .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
