@@ -9018,12 +9018,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-is@npm:^17.0.2":
-  version: 17.0.7
-  resolution: "@types/react-is@npm:17.0.7"
+"@types/react-is@npm:^18.3.1":
+  version: 18.3.1
+  resolution: "@types/react-is@npm:18.3.1"
   dependencies:
-    "@types/react": "npm:^17"
-  checksum: 10/a8f11067795dbcf54a54d5fdc1977816be155fd04051e850f7c85dbbad83897f846dd3e474d56bd12a7055e0ae1825185f41c6f56342fd5cd31a08df3b3fbfff
+    "@types/react": "npm:^18"
+  checksum: 10/ccb79d6e196a5232cde8ccb255ec97e062801a3dafeff3816130fb5ad6b9a87f7c0806ab35bc00890a229773228ef217d0390839b68c705d3add2f798b5fcf82
   languageName: node
   linkType: hard
 
@@ -11480,7 +11480,7 @@ __metadata:
     "@types/react-bootstrap": "npm:^0.32.36"
     "@types/react-csv": "npm:^1.1.10"
     "@types/react-dom": "npm:^18.0.11"
-    "@types/react-is": "npm:^17.0.2"
+    "@types/react-is": "npm:^18.3.1"
     "@types/react-router-dom": "npm:^5.3.3"
     "@types/react-select": "npm:^1.2.1"
     "@types/react-typist": "npm:^2.0.6"
@@ -11636,7 +11636,7 @@ __metadata:
     react-google-charts: "npm:2"
     react-idle-timer: "npm:^4.2.7"
     react-inspector: "npm:2.3.1"
-    react-is: "npm:^17.0.2"
+    react-is: "npm:^18.3.1"
     react-lazy-load: "npm:~3.0.13"
     react-loading-skeleton: "npm:^3.1.0"
     react-motion: "npm:^0.5.2"
