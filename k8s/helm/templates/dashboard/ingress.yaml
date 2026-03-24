@@ -5,10 +5,6 @@ metadata:
   labels:
     {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
     code.ai/dns-name: {{ .Values.dnsName }}
-  annotations:
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect: "443"
 spec:
   rules:
     - http:

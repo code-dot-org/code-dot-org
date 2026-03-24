@@ -5,10 +5,6 @@ metadata:
   labels:
     app.kubernetes.io/component: dashboard
     code.ai/dns-name: studio-development
-  annotations:
-    alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80},{"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect: "443"
 spec:
   rules:
     - http:
