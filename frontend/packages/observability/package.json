@@ -1,0 +1,65 @@
+{
+  "name": "@code-dot-org/observability",
+  "version": "0.0.0",
+  "private": true,
+  "keywords": [
+    "observability",
+    "rum",
+    "monitoring",
+    "code.org"
+  ],
+  "homepage": "https://github.com/code-dot-org/code-dot-org/blob/staging/frontend/packages/observability/#readme",
+  "bugs": {
+    "url": "https://github.com/code-dot-org/code-dot-org/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-dot-org/code-dot-org.git",
+    "directory": "frontend/packages/observability"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run",
+    "clean": "rimraf dist .turbo"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "peerDependencies": {
+    "@datadog/browser-logs": "*",
+    "@datadog/browser-rum": "*",
+    "@sentry/browser": "*"
+  },
+  "devDependencies": {
+    "@code-dot-org/lint-config": "workspace:*",
+    "@datadog/browser-logs": "^6.31.0",
+    "@datadog/browser-rum": "^6.31.0",
+    "@sentry/browser": "*",
+    "@types/node": "^20",
+    "@vitejs/plugin-react": "^5.0.4",
+    "eslint": "^9.39.1",
+    "fast-check": "^3.0.0",
+    "prettier": "3.4.2",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vite-plugin-externalize-deps": "^0.10.0",
+    "vitest": "^4.0.17"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
