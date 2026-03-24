@@ -23,7 +23,7 @@ module LangfuseHelper
 
   # Sends a trace + generation to the TA Langfuse project for a lesson insight call.
   # Input is keyed identifiers only (not the system prompt) to avoid logging student data.
-  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, unit_id:, section_id:, student_id:, snap_shot_prompt:, output:, usage:, start_time:, end_time:)
+  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, lesson_name:, unit_id:, unit_name:, section_id:, student_id:, system_prompt:, output:, usage:, start_time:, end_time:)
     ta_client.create_trace_and_generation(
       trace_name: "lesson-insight",
       generation_name: "llm-call",
@@ -38,11 +38,13 @@ module LangfuseHelper
       },
       metadata: {
         lesson_id: lesson_id,
+        lesson_name: lesson_name,
         unit_id: unit_id,
+        unit_name: unit_name,
         section_id: section_id,
         student_id: student_id,
         teacher_id: teacher_id,
-        snap_shot_prompt: snap_shot_prompt,
+        system_prompt: system_prompt,
       },
       tags: ["lesson-insight"],
       start_time: start_time,
