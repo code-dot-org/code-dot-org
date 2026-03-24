@@ -81,7 +81,7 @@ class AzureAiContentSafety
       #{result.dig('error', 'message')}
       #{result.dig('error', 'code')}
     ERROR
-  rescue
+  rescue JSON::ParserError
     "Request to Azure AI Content Safety failed with status #{response.code}"
   end
 end

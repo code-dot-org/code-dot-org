@@ -21,6 +21,19 @@ const MIN_MODERATION_DIMENSION_CONTENT_MODERATOR = 128;
 // Azure AI Content Safety requires both dimensions to be at least this size.
 const MIN_MODERATION_DIMENSION_AI_CONTENT_SAFETY = 50;
 
+// Severity level blocked by category for AI Content Safety.
+// If any category's severity level is greater than or equal to the severity level blocked value,
+// the image is flagged. If all categories' severity levels are less than the severity level blocked value,
+// the image is 'ok'
+// The severity value increases with the severity of the input content:
+// 0 (safe), 2 (low), 4 (medium), 6 (high)
+const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
+  Hate: 2,
+  SelfHarm: 2,
+  Sexual: 2,
+  Violence: 2,
+};
+
 interface AnalyticsData {
   uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
   moderateEvent?: string;
@@ -136,18 +149,6 @@ export const moderateImage = async (
       if (json === null) {
         return 'skipped';
       }
-      // Severity level blocked by category.
-      // If any category's severity level is greater than or equal to the severity level blocked value,
-      // the image is flagged. If all categories' severity levels are less than the severity level blocked value,
-      // the image is 'ok'
-      // The severity value increases with the severity of the input content:
-      // 0 (safe), 2 (low), 4 (medium), 6 (high)
-      const CATEGORY_SEVERITY_LEVEL_BLOCKED: Record<string, number> = {
-        Hate: 2,
-        SelfHarm: 2,
-        Sexual: 2,
-        Violence: 2,
-      };
       const categories = json?.categoriesAnalysis;
       if (
         categories?.every(
