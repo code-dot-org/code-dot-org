@@ -4,8 +4,8 @@ import React, {FC, useState} from 'react';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 import experiments from '@cdo/apps/util/experiments';
+import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
 
@@ -17,14 +17,19 @@ import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tu
 
 type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
 
-export const LessonPractice: FC<{
+export type LessonPracticeData = {
   lessonName: string;
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
-}> = ({lessonName, lessonSummary, vocabulary}) => {
+};
+
+export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
+  lessonPracticeData: {lessonName, lessonSummary, vocabulary},
+}) => {
   const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
     null
   );
+  const hasVocabulary = vocabulary && vocabulary.length > 0;
 
   if (!experiments.isEnabled(experiments.AI_TUTOR_LESSON_PRACTICE)) {
     return null;
@@ -43,12 +48,12 @@ export const LessonPractice: FC<{
       <PracticeOptions
         selectedOption={selectedOption || ''}
         onChange={option => setSelectedOption(option as PracticeOption)}
-        showVocabularyOption={vocabulary.length > 0}
+        showVocabularyOption={hasVocabulary}
       />
       {selectedOption === 'summary' && (
         <GenericStudentLessonSummary lessonSummary={lessonSummary} />
       )}
-      {selectedOption === 'flashcards' && vocabulary.length > 0 && (
+      {selectedOption === 'flashcards' && hasVocabulary && (
         <VocabularyFlashcards vocabulary={vocabulary} />
       )}
       {selectedOption === 'chat' && (
