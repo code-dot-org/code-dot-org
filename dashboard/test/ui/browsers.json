@@ -38,8 +38,8 @@
   {
     "name": "Safari",
     "browserName": "Safari",
-    "browserVersion": "17",
-    "platformName": "macOS 13"
+    "browserVersion": "14",
+    "platformName": "macOS 11.00"
   },
   {
     "name": "Firefox",

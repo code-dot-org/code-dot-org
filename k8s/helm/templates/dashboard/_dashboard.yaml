@@ -8,22 +8,6 @@
 {{- $isDeployment := eq (.kind | default "Deployment") "Deployment" }}
 {{- $isJob := eq (.kind | default "Deployment") "Job" }}
 
-# Calculate CPU and memory resources from the original environment sizing table.
-# Weighted across all environments, floored to 2 decimal places:
-# - 808 GiB / 139 workers = 5.81 GiB per worker
-# - 208 CPU / 139 workers = 1.49 CPU per worker
-# Lowest resources we'll set: 2 CPU and 8 GiB RAM.
-{{- $dashboardWorkers := int (default 0 .Values.dashboard_workers) }}
-{{- $memoryGi := mulf $dashboardWorkers 5.81 }}
-{{- if lt $memoryGi 8.0 }}
-{{- $memoryGi = 8.0 }}
-{{- end }}
-{{- $cpu := mulf $dashboardWorkers 1.49 }}
-{{- if lt $cpu 2.0 }}
-{{- $cpu = 2.0 }}
-{{- end }}
-{{- $memory := printf "%.2fGi" $memoryGi }}
-
 apiVersion: {{ .apiVersion | default "apps/v1" }}
 kind: {{ .kind | default "Deployment" }}
 metadata:
@@ -62,8 +46,6 @@ spec:
             value: {{ .Values.RAILS_ENV }}
           - name: RACK_ENV
             value: {{ .Values.RAILS_ENV }}
-          - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
-            value: "1"
           {{- if .Values.localDev.mounts.mountDotAWS }}
           - name: AWS_PROFILE
             value: {{ .Values.localDev.mounts.AWS_PROFILE }}
@@ -97,19 +79,6 @@ spec:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
 
         {{- if $isDeployment }}
-        resources:
-          requests:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
-            {{- if .Values.resources.ephemeralStorage }}
-            ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
-            {{- end }}
-          limits:
-            cpu: {{ $cpu }}
-            memory: {{ $memory }}
-            {{- if .Values.resources.ephemeralStorage }}
-            ephemeral-storage: {{ .Values.resources.ephemeralStorage }}
-            {{- end }}
         ports:
         - name: http
           containerPort: 3000
@@ -117,7 +86,7 @@ spec:
           containerPort: 9000
         {{- end }}
 
-        {{- if and $isDeployment (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
+        {{- if (.healthChecksEnabled | default .Values.healthChecks.enabled) }}
         startupProbe:
           failureThreshold: 300
           periodSeconds: 1

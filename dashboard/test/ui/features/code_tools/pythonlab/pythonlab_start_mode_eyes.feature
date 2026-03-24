@@ -14,7 +14,6 @@ Background:
   And I wait until element "a:contains([s]tart)" is visible
   Then I click selector "a:contains([s]tart)" to load a new page
   And I wait to see "#uitest-codebridge-run"
-  And I wait until "#uitest-codebridge-run" is not disabled
 
 Scenario: Basic Start mode
   When I open my eyes to test "Python Lab start mode"

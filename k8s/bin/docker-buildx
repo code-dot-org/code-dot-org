@@ -35,9 +35,9 @@ for platform in ${PLATFORMS//,/ }; do
 done
 
 # We --cache-to and --cache-from a different image name than we --push to
-# so cache artifacts cannot be mistaken for deployable images in the main repo.
-# Keep the tag the same, but swap to a sibling image name for the registry cache.
-CACHE_IMAGE_NAME="${IMAGE_REPO}-buildcache:${IMAGE_TAG}"
+# because the --cache image will be an OCI tarball, and docker cannot pull
+# from that. We want to use a different tag (or repo, or image) for the cache.
+CACHE_IMAGE_NAME="$IMAGE-cache"
 cache_from="--cache-from type=registry,ref=$CACHE_IMAGE_NAME"
 
 # Building for multiple platforms requires pushing to a registry

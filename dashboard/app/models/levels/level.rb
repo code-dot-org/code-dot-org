@@ -110,7 +110,6 @@ class Level < ApplicationRecord
     stay_on_level_after_submit
     skill_keys
     additional_ai_evaluation_instructions
-    product_tours
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495

@@ -34,13 +34,11 @@ export class VisualizationOverlay extends React.Component {
     mouseY: -1,
   };
 
-  rootRef = React.createRef();
-
   componentDidMount() {
     /** @type {SVGMatrix} */
     this.screenSpaceToAppSpaceTransform = null;
     /** @private {SVGPoint} Build a reusable position point for efficient transforms */
-    this.mousePos_ = this.rootRef.current.createSVGPoint();
+    this.mousePos_ = this.refs.root.createSVGPoint();
     this.recalculateTransform();
 
     // Note: This is currently used within a ProtectedStatefulDiv, so we need
@@ -69,7 +67,7 @@ export class VisualizationOverlay extends React.Component {
   }
 
   recalculateTransform = () => {
-    const svg = this.rootRef.current;
+    const svg = this.refs.root;
     if (!svg) {
       return;
     }
@@ -128,7 +126,7 @@ export class VisualizationOverlay extends React.Component {
   render() {
     return (
       <svg
-        ref={this.rootRef}
+        ref="root"
         id="visualizationOverlay"
         className={this.props.className}
         width={this.props.width}

@@ -1,9 +1,0 @@
-name 'ai-and-algorithmic-decisions-lesson4-level8_2026'
-display_name 'Mini-Hackathon'
-description 'Design and test your own mini-app by writing small, reusable functions that make something on the screen come to life.'
-
-sublevels
-level 'ai-and-algorithmic-decisions-lesson4-level8a_2026'
-level 'ai-and-algorithmic-decisions-lesson4-level8b_2026'
-level 'ai-and-algorithmic-decisions-lesson4-level8c_2026'
-level 'ai-and-algorithmic-decisions-lesson4-level8d_2026'

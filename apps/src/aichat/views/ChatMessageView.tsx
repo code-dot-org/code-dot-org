@@ -225,8 +225,6 @@ export function getChatMessageDisplayText(
       return commonI18n.aiChatUserInputTooLargeMessage();
     case Status.MODEL_TIMEOUT:
       return commonI18n.aiChatTimeout();
-    case Status.MODEL_RATE_LIMITED:
-      return commonI18n.aiChatModelRateLimited();
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
     default:
@@ -239,9 +237,7 @@ function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
     (role === Role.ASSISTANT &&
-      (status === Status.ERROR ||
-        status === Status.MODEL_TIMEOUT ||
-        status === Status.MODEL_RATE_LIMITED))
+      (status === Status.ERROR || status === Status.MODEL_TIMEOUT))
   ) {
     return 'danger';
   }

@@ -67,7 +67,7 @@ class LtiV1Controller < ApplicationController
       prompt: 'none',
     }.to_query
 
-    redirect_to(auth_redirect_url.to_s, allow_other_host: true)
+    redirect_to auth_redirect_url.to_s
   end
 
   def authenticate

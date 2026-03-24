@@ -9,10 +9,8 @@
 #pardot_private_key: localoverride
 #openai_student_learning_api_key: localoverride
 #openai_measures_of_learning_api_key: localoverride
-#tutor_langfuse_secret_key: localoverride
-#ta_langfuse_secret_key: localoverride
-#tutor_langfuse_public_key: localoverride
-#ta_langfuse_public_key: localoverride
+#langfuse_secret_key: localoverride
+#langfuse_public_key: localoverride
 #google_gemini_ai_chat_lab_api_key: localoverride
 #google_gemini_ai_tutor_api_key: localoverride
 #ai_gateway_auth_key: localoverride
@@ -20,7 +18,6 @@
 #ai_gateway_auth_key_passphrase: localoverride
 #google_vertex_ai_tutor_service_account_key: localoverride
 #google_vertex_ai_chat_service_account_key: localoverride
-#azure_ai_content_safety_key: localoverride
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true

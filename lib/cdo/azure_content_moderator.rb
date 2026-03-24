@@ -1,4 +1,5 @@
 require 'net/http'
+require 'cdo/firehose'
 require 'dynamic_config/dcdo'
 
 #
@@ -28,7 +29,8 @@ class AzureContentModerator
   # from Azure Content Moderation and returns a rating category.
   #
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - one of image/gif, image/jpeg, image/png
+  # @param [String] content_type - one of image/bmp, image/gif, image/jpeg, image/png
+  # @param [String] image_url (optional) - Only used for metrics
   # @returns [:everyone|:racy|:adult]
   # @raise [AzureContentModerator::RequestFailed] when the request is not
   #   successful.
@@ -36,16 +38,22 @@ class AzureContentModerator
   #   made because the specified content type cannot be moderated by this
   #   service.
   #
-  def rate_image(image_data, content_type)
+  def rate_image(image_data, content_type, image_url = nil)
     raise UnsupportedContentType.new("Cannot accept content-type #{content_type}") unless %w(
+      image/bmp
       image/gif
       image/jpeg
       image/png
     ).include? content_type
 
+    report_request(image_url)
+
+    request_start_time = Time.now
     result = make_request(image_data, content_type)
+    request_duration = Time.now - request_start_time
 
     rating = rating_from_azure_result(result)
+    report_response(image_url, rating, result, request_duration)
     rating
   end
 
@@ -53,7 +61,7 @@ class AzureContentModerator
   # Sends a request to Azure to moderate the image.
   #
   # @param [IO] image_data - binary image data to be rated
-  # @param [String] content_type - image/gif, image/jpeg, image/png
+  # @param [String] content_type - image/bmp, image/gif, image/jpeg, image/png
   # @returns [Hash] the parsed response from Azure
   # @raise [AzureContentModerator::RequestFailed] when the request is not
   #   successful.
@@ -90,6 +98,43 @@ class AzureContentModerator
     else
       :everyone
     end
+  end
+
+  # Report to Firehose that we're about to make a request to Azure
+  private def report_request(image_url)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'azure-content-moderation',
+        study_group: 'v1',
+        event: 'moderation-request',
+        data_json: {
+          ImageUrl: image_url
+        }.to_json
+      }
+    )
+  end
+
+  # Report the response we got from Azure to Firehose
+  private def report_response(image_url, rating, data, request_duration)
+    FirehoseClient.instance.put_record(
+      :analysis,
+      {
+        study: 'azure-content-moderation',
+        study_group: 'v1',
+        event: 'moderation-result',
+        data_string: rating.to_s,
+        data_json: data.
+          slice(ADULT_SCORE, IS_ADULT, RACY_SCORE, IS_RACY).
+          merge(
+            RequestDuration: request_duration,
+            ImageUrl: image_url,
+            RacyThresholdUsed: racy_threshold,
+            AdultThresholdUsed: adult_threshold,
+          ).
+          to_json
+      }
+    )
   end
 
   #

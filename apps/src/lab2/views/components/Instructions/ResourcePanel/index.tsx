@@ -11,7 +11,6 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -49,6 +48,7 @@ import DisclaimerButton from './Footer/DisclaimerButton';
 import ResourcePanelExtraLinks from './Footer/ResourcePanelExtraLinks';
 import setFooterVisibility from './Footer/setFooterVisibility';
 import SettingsPanel from './Footer/SettingsPanel';
+import useResourcePanelShepherdTours from './productTours/useResourcePanelShepherdTours';
 import {Tabs} from './types';
 import ValidationPanel, {
   ValidationSettings,
@@ -130,6 +130,8 @@ type ResourcePanelProps = InstructionsProps & {
   aiTutorChatButtonData?: ChatButtonData[];
   /** If the navigation area in the footer should be styled as a "bubble", like instructions content. */
   styleNavigationAsBubble?: boolean;
+  isValidationTourEnabled?: boolean;
+  isOnboardingTourEnabled?: boolean;
   aiTutorSystemPrompt?: string;
   aiTutorResponseSchemaSettings?: ResponseSchemaSettings;
   documentationUrl?: string;
@@ -161,6 +163,8 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
   // Default hideNavigation to true since most labs pin the navigation area to bottom.
   hideNavigation: hideInstructionsNavigation = true,
   styleNavigationAsBubble = false,
+  isValidationTourEnabled,
+  isOnboardingTourEnabled,
   aiTutorSystemPrompt,
   aiTutorResponseSchemaSettings,
   documentationUrl,
@@ -208,6 +212,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     []
   );
   const [backpackRefreshKey, setBackpackRefreshKey] = useState(0);
+  useResourcePanelShepherdTours({
+    isOnboardingTourEnabled:
+      (isOnboardingTourEnabled && !isStandaloneCollapsed) || false,
+    isValidationTourEnabled: isValidationTourEnabled || false,
+    hasValidationConditions,
+    validationSettings,
+  });
 
   // Tooltip should disappear quickly.
   const hideTooltipDelayMs = 10;
@@ -229,13 +240,6 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor') === 'true';
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
-  useResourcePanelTours({
-    appName,
-    productToursForLevel: instructionsProps.levelProperties.productTours,
-    isStandaloneCollapsed,
-    hasValidationConditions,
-    validationSettings,
-  });
 
   // Build available tabs based on level information.
   const availableTabs = useMemo(() => {

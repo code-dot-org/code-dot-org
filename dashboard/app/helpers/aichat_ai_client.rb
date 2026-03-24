@@ -29,7 +29,6 @@ class AichatAiClient
 
     response_body = JSON.parse(http_response.body)
 
-    raise AichatAiHelper::ModelRateLimitedError if http_response.code == 429
     raise_possible_response_errors_from_body(response_body)
 
     response_text = extract_text_response_from_body(response_body)

@@ -12,24 +12,10 @@ terraform {
       version = ">= 2.13.0, < 3.0.0"
     }
 
-    random = {
-      source  = "hashicorp/random"
-      version = ">= 3.6.0"
-    }
-
     kubernetes = {
       source  = "hashicorp/kubernetes"
       version = ">= 2.24.0"
     }
 
-    kubectl = {
-      source  = "alekc/kubectl"
-      version = "~> 2.1"
-    }
-
-    github = {
-      source  = "integrations/github"
-      version = "~> 6.0"
-    }
   }
 }

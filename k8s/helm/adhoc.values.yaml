@@ -1,4 +1,0 @@
-RAILS_ENV: adhoc
-dashboard_workers: 5
-healthChecks:
-  enabled: true

@@ -6,7 +6,7 @@ describe AWS::EC2 do
 
   # Reset memoized variables to ensure fresh metadata lookups
   before do
-    [:@instance_id, :@region, :@account_id].each do |var|
+    [:@instance_id, :@region].each do |var|
       described_class.remove_instance_variable(var) if described_class.instance_variable_defined?(var)
     end
   end
@@ -56,53 +56,6 @@ describe AWS::EC2 do
         returns(mock_region_resp)
 
       _(described_class.region).must_equal 'us-west-2'
-    end
-  end
-
-  describe '.account_id' do
-    let(:mock_token_resp) {mock {stubs(code: '200', body: 'test_token')}}
-
-    before do
-      # Common stub for the token request needed by all metadata calls
-      described_class.stubs(:http_request).
-        with {|method, uri, _| method == Net::HTTP::Put && uri.path.include?('token')}.
-        returns(mock_token_resp)
-    end
-
-    it 'returns current AWS Account ID by parsing the identity-credentials JSON' do
-      json_body = {
-        'Code' => 'Success',
-        'LastUpdated' => '2023-10-27T10:00:00Z',
-        'AccountId' => '123456789012'
-      }.to_json
-
-      mock_info_resp = mock {stubs(code: '200', body: json_body)}
-
-      described_class.stubs(:http_request).
-        with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials/ec2/info')}.
-        returns(mock_info_resp)
-
-      _(described_class.account_id).must_equal '123456789012'
-    end
-
-    it 'returns nil if the metadata response is invalid JSON' do
-      mock_bad_resp = mock {stubs(code: '200', body: 'not-json-content')}
-
-      described_class.stubs(:http_request).
-        with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials')}.
-        returns(mock_bad_resp)
-
-      _(described_class.account_id).must_be_nil
-    end
-
-    it 'returns nil if the metadata service returns a 404' do
-      mock_404_resp = mock {stubs(code: '404', body: 'Not Found')}
-
-      described_class.stubs(:http_request).
-        with {|method, uri, _| method == Net::HTTP::Get && uri.path.include?('identity-credentials')}.
-        returns(mock_404_resp)
-
-      _(described_class.account_id).must_be_nil
     end
   end
 end

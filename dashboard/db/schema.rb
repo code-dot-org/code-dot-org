@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_02_26_192420) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -171,27 +171,27 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["aidiff_message_id"], name: "index_aidiff_message_feedbacks_on_aidiff_message_id", unique: true
   end
 
-  create_table "aidiff_messages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "aidiff_thread_id", null: false
-    t.text "external_id", size: :medium, null: false
+    t.text "external_id", null: false
     t.integer "role", null: false
-    t.text "content", size: :medium, null: false
+    t.text "content", null: false
     t.boolean "is_preset", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "preset_chip_text", size: :medium
-    t.text "raw_content", size: :medium
+    t.text "preset_chip_text"
+    t.text "raw_content"
     t.json "source_links"
     t.boolean "is_artifact_candidate", default: false
     t.string "artifact_candidate_type"
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
-  create_table "aidiff_threads", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "external_id", size: :medium, null: false
-    t.text "llm_version", size: :medium, null: false
-    t.text "title", size: :medium
+    t.text "external_id", null: false
+    t.text "llm_version", null: false
+    t.text "title"
     t.integer "unit_id"
     t.integer "lesson_id"
     t.datetime "created_at", null: false

@@ -58,6 +58,10 @@ javabuilder_key_password: !Secret
 
 pardot_private_key: !Secret
 
+redshift_host: !Secret
+redshift_password: !Secret
+redshift_username: !Secret
+
 slack_bot_token: !Secret
 
 # JSON Web Key Set and private key data, configured in locals.yml
@@ -82,10 +86,8 @@ google_vertex_ai_tutor_service_account_key: !Secret
 google_vertex_ai_chat_service_account_key: !Secret
 
 # Credentials for Langfuse API
-tutor_langfuse_secret_key: !Secret
-tutor_langfuse_public_key: !Secret
-ta_langfuse_secret_key: !Secret
-ta_langfuse_public_key: !Secret
+langfuse_secret_key: !Secret
+langfuse_public_key: !Secret
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true

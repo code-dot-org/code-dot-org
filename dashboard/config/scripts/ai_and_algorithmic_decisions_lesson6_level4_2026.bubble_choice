@@ -1,8 +1,0 @@
-name 'ai-and-algorithmic-decisions-lesson6-level4_2026'
-display_name 'Coding Functions with Parameters'
-description 'Code a function that takes in one or more parameters to update the display.'
-
-sublevels
-level 'ai-and-algorithmic-decisions-lesson6-level4a_2026'
-level 'ai-and-algorithmic-decisions-lesson6-level4b_2026'
-level 'ai-and-algorithmic-decisions-lesson6-level4c_2026'

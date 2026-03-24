@@ -53,12 +53,13 @@
 specificity to override DSCO styles */
 .collapseButton.collapseButton {
   margin-inline-start: 0.75rem;
+  background: var(--background-neutral-primary);
   position: relative;
   z-index: 1;
-  color: var(--text-neutral-tertiary);
 
-  &:not(:hover, :active, :focus-visible) {
-    background: var(--background-neutral-primary);
+  span,
+  i {
+    color: var(--text-neutral-quaternary);
   }
 }
 

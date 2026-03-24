@@ -198,8 +198,10 @@ class AnimationPicker extends React.Component {
     this.setState({pendingUploadData: data});
 
     try {
+      const ext = file.name.split('.').pop()?.toLowerCase() || '';
       const moderationStatus = await moderateImage(
         file,
+        ext,
         this.props.projectType,
         {
           uploaderType: 'AnimationPicker',

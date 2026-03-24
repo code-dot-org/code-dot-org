@@ -1,6 +1,5 @@
 require 'net/http'
 require 'uri'
-require 'json'
 require 'active_support/core_ext/integer/time'
 
 module AWS
@@ -21,21 +20,6 @@ module AWS
     def self.region
       return @region if defined?(@region) && @region
       @region = fetch_metadata('placement/region')
-    end
-
-    # AWS Account ID of the compute resource (EC2, Lambda, ECS Task) that we're currently executing in.
-    def self.account_id
-      return @account_id if defined?(@account_id) && @account_id
-
-      response = fetch_metadata('identity-credentials/ec2/info')
-      return nil unless response
-
-      begin
-        parsed_info = JSON.parse(response)
-        @account_id = parsed_info['AccountId']
-      rescue JSON::ParserError
-        nil
-      end
     end
 
     private_class_method def self.fetch_metadata(path)

@@ -11,9 +11,11 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import FlowLab from '@cdo/apps/flowlab/views/flow/FlowLab';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
 import {useLevelActivityMetrics} from '@cdo/apps/lab2/hooks/useLevelActivityMetrics';
+import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {isProjectTemplateLevel} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {LabProps} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils';
 import TeacherViewingStudentProjectAlert from '@cdo/apps/lab2/views/alerts/teacherViewingStudentProject';
 import IconButtonWithTooltip from '@cdo/apps/lab2/views/components/IconButtonWithTooltip';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
@@ -136,10 +138,6 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       channelId,
     });
   }, [currentLevelId, scriptId, channelId]);
-
-  useEffect(() => {
-    dispatch(clearHasSetInitialCustomizations());
-  }, [dispatch, currentLevelId]);
 
   useEffect(() => {
     const studentAiCustomizations = JSON.parse(
@@ -285,6 +283,10 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
       });
     }
   }, [dialogControl, resetProject]);
+
+  useLifecycleNotifier(LifecycleEvent.LevelLoadStarted, () => {
+    dispatch(clearHasSetInitialCustomizations());
+  });
 
   // Only recreate modelParameters when relevant customizations are updated.
   const modelParameters: ModelParameters = useMemo(() => {

@@ -14,10 +14,15 @@ import {
 
 import {OPEN_ENDED_LAB2_PROJECT_TYPES} from '@cdo/apps/constants';
 import {
+  getPublicCaching,
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 
 import {
   setProjectUpdatedAt,
@@ -27,7 +32,7 @@ import {
 } from '../code-studio/projectRedux';
 import {queryParams, updateQueryParam} from '../code-studio/utils';
 import {RootState} from '../types/redux';
-import {NetworkError} from '../util/HttpClient';
+import HttpClient, {NetworkError} from '../util/HttpClient';
 import {AppDispatch} from '../util/reduxHooks';
 
 import Lab2Registry from './Lab2Registry';
@@ -40,7 +45,13 @@ import ProjectManagerFactory from './projects/ProjectManagerFactory';
 import {getPredictResponse} from './projects/userLevelsApi';
 import {setProjectTooLarge} from './redux/lab2ProjectRedux';
 import {isReadOnlyWorkspace} from './redux/lab2ReduxSelectors';
-import {Channel, LevelProperties, ProjectSources, Validation} from './types';
+import {
+  Channel,
+  LevelProperties,
+  ProjectSources,
+  PartialUserAppOptions,
+  Validation,
+} from './types';
 import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
@@ -117,6 +128,7 @@ export const setUpWithLevel = createAsyncThunk<
     levelId: number;
     scriptId?: number;
     levelProperties: LevelProperties;
+    userAppOptionsPath?: string;
     channelId?: string;
     userId?: number;
   },
@@ -142,6 +154,20 @@ export const setUpWithLevel = createAsyncThunk<
     const levelProperties = payload.levelProperties;
 
     Lab2Registry.getInstance().setAppName(levelProperties.appName);
+
+    // If we are cached, and there is a user app options path because we are in a script
+    // level, then make an async call to the server to find out whether the user is an
+    // instructor, and if they are, then update the user role.  This is needed for the
+    // teacher panel to appear in cached levels.
+    if (getPublicCaching()) {
+      if (payload.userAppOptionsPath) {
+        loadUserAppOptions(payload.userAppOptionsPath).then(result => {
+          if (result.isInstructor) {
+            thunkAPI.dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+          }
+        });
+      }
+    }
 
     if (!levelProperties.usesProjects) {
       // If projects are disabled on this level, we can skip loading projects data.
@@ -471,6 +497,15 @@ function setProjectAndLevelData(
       data.sharingDisabled,
       data.isTeacherOfProjectOwner
     );
+}
+
+async function loadUserAppOptions(
+  userAppOptionsPath: string
+): Promise<PartialUserAppOptions> {
+  const response = await HttpClient.fetchJson<PartialUserAppOptions>(
+    userAppOptionsPath
+  );
+  return response.value;
 }
 
 async function cleanUpProjectManager() {

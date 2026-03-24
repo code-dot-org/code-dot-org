@@ -1,6 +1,5 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-02-24T18:12:03.000Z",
   "level_num": "custom",
@@ -8,8 +7,8 @@
   "properties": {
     "encrypted": "false",
     "project_template_level_name": "ai-generated-design-lesson8-level4-template-test_2026",
-    "long_instructions": "##Apply POUR to Your Own App\r\n1. Inspect your own app or page and identify 2-3 accessibility issues using the POUR framework.\r\n\r\n2. Use the accessibility prompts in the [Prompt Playbook](https://studio.code.org/docs/ide/prompting-playbook/classes/accessibility-prompts) to write AI prompts that suggest fixes.\r\n\r\n3. Run your prompts in the AI and revise your app or page by applying at least 1–2 accessibility improvements.\r\n",
-    "submittable": "true",
+    "long_instructions": "##Apply Accessibility Principles to Your Own App\r\n- Choose one of the following **personas with an accessibility constraint**:\r\n    - **User A**: Low vision → may struggle with color contrast.\r\n    - **User B**: Motor difficulty → may need larger buttons or simplified navigation.\r\n    - **User C**: Screen reader use → needs alt text and semantic headings.\r\n- Inspect your own app/page using **POUR framework** to identify at least 2–3 accessibility issues.\r\n- Use the **Accessibility Prompt Builder** (in your Activity Guide) to draft AI prompts for fixes.\r\n- Document issues identified and the AI prompts drafted to fix them and save to **Backpack**\r\n",
+    "submittable": "false",
     "hide_share_and_remix": "false",
     "disable_edit_run_for_submission": "false",
     "widget_view": "false",
@@ -27,23 +26,9 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "name_suffix": "_2026",
-    "teacher_markdown": "### Example issues students might identify\r\n- **Perceivable:** low color contrast, missing alt text, text that is difficult to read\r\n- **Operable:** buttons that are too small, hard-to-use navigation, interactions that are difficult to complete\r\n- **Understandable:** unclear labels, confusing instructions, inconsistent layout\r\n- **Robust:** missing semantic headings, poor structure for screen readers, elements that may not work well across devices\r\n\r\n\r\n### What to look for\r\nStudents do not need to fix every issue they identify. The goal is for them to:\r\n1. identify real accessibility concerns in their own work,\r\n2. connect those concerns to the POUR framework, and\r\n3. apply at least 1-2 meaningful improvements.\r\n",
-    "ai_tutor_prompt_settings": {
-      "answerTypes": [
-        "buildHTML",
-        "buildCSS",
-        "ask",
-        "hint",
-        "debug",
-        "example",
-        "explainCode",
-        "documentation"
-      ],
-      "answerTypeCustomizations": {
-      }
-    }
+    "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:03.096+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level4_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level4_2025\"},{\"changed_at\":\"2026-03-17 20:38:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:02:56 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-17 21:06:02 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-18 21:02:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 23:45:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:03.096+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson9-level4_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson9-level4_2025\"}]"
 }]]></config>
 </Weblab2>

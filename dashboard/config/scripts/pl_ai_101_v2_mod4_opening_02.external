@@ -3,13 +3,13 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Bringing AI to the Classroom
+# Bringing AI to Students
 
-#### Whe we talk about bringing AI to the students in your school and classroom we can talk about teaching with AI or teaching about AI. 
+#### Whe we talk about bringing AI to the students in your school and classroom we can talk about teaching WITH AI or teaching ABOUT AI. 
 
 
 <br>
-<p style="text-align:center"><img src="https://images.code.org/b83679a5c60b1c90831a4b35461b5103-Screenshot 2026-03-11 at 1.06.25 PM.png" alt="Potential benefits and risks of AI in education."></p>
+<p style="text-align:center;"><img src="https://images.code.org/b83679a5c60b1c90831a4b35461b5103-Screenshot 2026-03-11 at 1.06.25 PM.png" alt="Potential benefits and risks of AI in education."></p>
 
 *Image: TeachAI*
 
@@ -18,45 +18,46 @@ markdown <<MARKDOWN
 
 <body style="margin:0; padding:20px; background-color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
 <div style="max-width:980px; margin:0 auto;">
-<div style="display:flex; flex-wrap:nowrap; gap:16px;">
+<div style="display:flex; flex-wrap:wrap; gap:16px;">
 
-<div style="flex:1; min-width:0; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">with</span> AI</div>
+<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">WITH</span> AI</div>
 <div style="padding:14px 16px 16px 16px;">
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">💬</div><div style="font-size:16px; color:#333333;"><strong>Using AI to support learning</strong> by asking questions, clarifying ideas, and exploring examples</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">💬</div><div style="font-size:16px; color:#333333;"><strong>Asking AI questions</strong> to clarify concepts and explore examples</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧩</div><div style="font-size:16px; color:#333333;"><strong>Getting help with tasks</strong> like brainstorming, drafting, or problem-solving</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔁</div><div style="font-size:16px; color:#333333;"><strong>Iterating on work</strong> by comparing, critiquing, and improving AI suggestions</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔁</div><div style="font-size:16px; color:#333333;"><strong>Improving work with AI feedback</strong> by revising, editing, and refining ideas</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧩</div><div style="font-size:16px; color:#333333;"><strong>Getting scaffolded support</strong> such as hints, step-by-step guidance, or examples</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📊</div><div style="font-size:16px; color:#333333;"><strong>Checking understanding</strong> through practice questions, explanations, and self-quizzing</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📊</div><div style="font-size:16px; color:#333333;"><strong>Checking understanding</strong> through practice questions and self-quizzing</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🎯</div><div style="font-size:16px; color:#333333;"><strong>Using AI purposefully</strong> to support learning—not replace thinking</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🎯</div><div style="font-size:16px; color:#333333;"><strong>Using AI purposefully</strong> to enhance — not replace — their own thinking</div></div>
 
-<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📝</div><div style="font-size:16px; color:#333333;"><strong>Reflecting on AI use</strong> and maintaining ownership of ideas and final work</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">📝</div><div style="font-size:16px; color:#333333;"><strong>Documenting and reflecting</strong> on how AI contributed to their learning</div></div>
+
+<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div><div style="font-size:16px; color:#333333;"><strong>Maintaining ownership</strong> of ideas, decisions, and final work</div></div>
 
 </div>
 </div>
 
-
-<div style="flex:1; min-width:0; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
-<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">about</span> AI</div>
+<div style="flex:1 1 320px; background-color:#F7F8FA; border-radius:6px; box-sizing:border-box; overflow:hidden;">
+<div style="background-color:#8C52BA; color:#ffffff; padding:10px 14px; font-weight:600; font-size:20px;">Teaching <span style="opacity:0.95;">ABOUT</span> AI</div>
 <div style="padding:14px 16px 16px 16px;">
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div><div style="font-size:16px; color:#333333;"><strong>Understanding how AI works</strong> (data, models, training, and prediction)</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧠</div><div style="font-size:16px; color:#333333;"><strong>Explaining core ideas</strong> (data, models, training, prediction, limitations)</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔍</div><div style="font-size:16px; color:#333333;"><strong>Analyzing AI outputs</strong> for accuracy, bias, limitations, and reliability</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧪</div><div style="font-size:16px; color:#333333;"><strong>Building skills to evaluate AI</strong> (accuracy, evidence, bias, hallucinations)</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🗣️</div><div style="font-size:16px; color:#333333;"><strong>Learning how to interact with AI</strong> through prompting, iteration, and interpreting results</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🗣️</div><div style="font-size:16px; color:#333333;"><strong>Practicing effective prompting and iteration</strong> with reflection and documentation</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧑‍⚖️</div><div style="font-size:16px; color:#333333;"><strong>Exploring ethical and societal impacts</strong> (privacy, fairness, labor, misinformation)</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🧑‍⚖️</div><div style="font-size:16px; color:#333333;"><strong>Discussing ethics and impacts</strong> (privacy, fairness, labor, misinformation)</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🛡️</div><div style="font-size:16px; color:#333333;"><strong>Learning responsible AI use</strong> including transparency, citation, and policies</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🛡️</div><div style="font-size:16px; color:#333333;"><strong>Teaching safe and responsible use</strong> (policies, citation, transparency)</div></div>
 
-<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔬</div><div style="font-size:16px; color:#333333;"><strong>Exploring AI through examples</strong> using simple models, datasets, or simulations</div></div>
+<div style="display:flex; align-items:flex-start; margin-bottom:10px;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🔬</div><div style="font-size:16px; color:#333333;"><strong>Hands-on exploration</strong> with simple models, datasets, and real examples</div></div>
 
-<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🌍</div><div style="font-size:16px; color:#333333;"><strong>Connecting AI to disciplines</strong> like computer science, data science, math, science, and social studies</div></div>
+<div style="display:flex; align-items:flex-start;"><div style="width:30px; height:30px; border-radius:50%; background-color:#e0f4f7; display:flex; align-items:center; justify-content:center; font-size:16px; margin-right:10px;">🌍</div><div style="font-size:16px; color:#333333;"><strong>Preparing students for an AI-shaped future</strong> as informed users and creators</div></div>
 
 </div>
 </div>

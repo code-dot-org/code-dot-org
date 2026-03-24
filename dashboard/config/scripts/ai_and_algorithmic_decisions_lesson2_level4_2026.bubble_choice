@@ -1,9 +1,0 @@
-name 'ai-and-algorithmic-decisions-lesson2-level4_2026'
-display_name 'Mini-App Build'
-description 'Plan and build a tiny, polished app that responds to button clicks with clear UI changes'
-
-sublevels
-level 'ai-and-algorithmic-decisions-lesson2-level4a_2026'
-level 'ai-and-algorithmic-decisions-lesson2-level4b_2026'
-level 'ai-and-algorithmic-decisions-lesson2-level4c_2026'
-level 'ai-and-algorithmic-decisions-lesson2-level4d_2026'

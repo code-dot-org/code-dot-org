@@ -1,4 +1,3 @@
-import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -129,13 +128,13 @@ export const useFileUploader = ({
       }
 
       if (!isValidMimeType(file.type, validMimeTypes)) {
-        const extension = mimeToExtension(file.type) || '';
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
-          fileName: file.name,
-          fileType: extension,
+          name: file.name,
+          type: file.type,
         });
+        const fileType = file.name.split('.').pop() || '';
         errorCallback(
-          codebridgeI18n.invalidFileType({fileType: extension}),
+          codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
           callbackArgs.current
         );
         return;
@@ -154,8 +153,8 @@ export const useFileUploader = ({
                 ? reader.result
                 : bufferToString(reader.result);
             sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-              fileName: file.name,
-              fileType: file.name.split('.').pop()?.toLowerCase() || '',
+              name: file.name,
+              type: file.type,
             });
             callback(
               file.name,
@@ -175,15 +174,15 @@ export const useFileUploader = ({
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
-            const moderationStatus = await moderateImage(file, appName, {
+            const moderationStatus = await moderateImage(file, ext, appName, {
               uploaderType: 'Lab2FileUploader',
             });
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
                 const url = await uploadExternalFile(file);
                 sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                  fileName: file.name,
-                  fileType: file.name.split('.').pop()?.toLowerCase() || '',
+                  name: file.name,
+                  type: file.type,
                 });
                 callback(file.name, '', url, callbackArgs.current, true);
               };
@@ -197,8 +196,8 @@ export const useFileUploader = ({
           // and images that are deemed safe, upload directly to assets.
           const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-            fileName: file.name,
-            fileType: file.name.split('.').pop()?.toLowerCase() || '',
+            name: file.name,
+            type: file.type,
           });
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {

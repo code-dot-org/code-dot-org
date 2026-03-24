@@ -1,7 +1,6 @@
 import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -21,8 +20,6 @@ import InstructionsCSF from '@cdo/apps/templates/instructions/InstructionsCSF';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
 describe('InstructionsCSF', () => {
-  let wrapper;
-
   beforeEach(() => {
     stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
@@ -40,37 +37,28 @@ describe('InstructionsCSF', () => {
   });
 
   afterEach(() => {
-    if (wrapper) {
-      wrapper.unmount();
-      wrapper = undefined;
-    }
     restoreRedux();
   });
 
   it('can change feedback when rendering different blockly blocks', async () => {
-    wrapper = mount(
+    const wrapper = mount(
       <Provider store={getStore()}>
         <InstructionsCSF {...DEFAULT_PROPS} />
       </Provider>,
       {attachTo: document.getElementById('container')} // needed for getScrollTarget
     );
 
-    await failWithMessage(
-      'Repeat block: <xml><block type="controls_repeat"/></xml>'
-    );
+    failWithMessage('Repeat block: <xml><block type="controls_repeat"/></xml>');
     wrapper.update();
     await assertFeedbackContainsText(wrapper, '>repeat</text>');
 
-    await failWithMessage('If block: <xml><block type="controls_if"/></xml>');
+    failWithMessage('If block: <xml><block type="controls_if"/></xml>');
     wrapper.update();
     await assertFeedbackContainsText(wrapper, '>if</text>');
   });
 
-  async function failWithMessage(message) {
-    await act(async () => {
-      getStore().dispatch(setFeedback({message, isFailure: true}));
-      await Promise.resolve();
-    });
+  function failWithMessage(message) {
+    getStore().dispatch(setFeedback({message, isFailure: true}));
   }
 
   async function assertFeedbackContainsText(wrapper, text) {

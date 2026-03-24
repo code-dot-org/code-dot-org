@@ -8,7 +8,6 @@ class OpenaiUserInputResponseTimeout < StandardError; end
 
 module AichatAiHelper
   TOKEN_THROTTLING_PREFIX = "aichat/tokens/".freeze
-  class ModelRateLimitedError < StandardError; end
 
   def self.get_api_model(model_id)
     # For now we just assume it's one of the gemini models if not 'gpt-4o-mini'.

@@ -84,8 +84,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     }
   }, [showAiTutorVersionActions]);
 
-  const isAssistant = role === Role.ASSISTANT;
-
   return (
     <div
       className={classNames(
@@ -94,65 +92,64 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
         'uitest-chat-message'
       )}
     >
-      <div className={moduleStyles.grid}>
-        {isAssistant && (
-          <div
-            className={classNames(
-              moduleStyles.botIconWrapper,
-              isTA && moduleStyles.botIconContainerWithOverlay
-            )}
-          >
-            <div className={classNames(moduleStyles.botIconContainer)}>
-              <img
-                src={aiBotOutlineIcon}
-                alt={commonI18n.aiChatBotIconAlt()}
-                className={moduleStyles.botIcon}
-              />
-            </div>
-            {isTA && (
-              <div className={moduleStyles.botOverlay}>
-                <span>{'TA'}</span>
-              </div>
-            )}
-          </div>
-        )}
-        <div className={moduleStyles.messageAndHeader}>
-          {header && <div className={moduleStyles.header}>{header}</div>}
-          {(text || postText) && (
+      <div className={moduleStyles.messageWithChildren}>
+        {header && <div>{header}</div>}
+        <div className={moduleStyles[`container-${role}`]}>
+          {role === Role.ASSISTANT && (
             <div
               className={classNames(
-                moduleStyles[`message-${role}`],
-                customStyles && customStyles[`message-${role}`],
-                messageStyle === 'danger' && moduleStyles.danger,
-                messageStyle === 'warning' && moduleStyles.warning
+                isTA && moduleStyles.botIconContainerWithOverlay
               )}
-              aria-label={
-                role === Role.ASSISTANT
-                  ? commonI18n.aiChatMessageBot()
-                  : commonI18n.aiChatMessageUser()
-              }
             >
-              {role === Role.ASSISTANT ? (
-                <div className={moduleStyles.assistantMessageContent}>
-                  <SafeMarkdown
-                    markdown={text}
-                    rehypeMap={rehypeMap}
-                    openExternalLinksInNewTab
-                  />
-                  {showAiTutorVersionActions && (
-                    <AiTutorVersionActions files={aiTutorVersionFiles} />
-                  )}
-                  {postText}
+              <div className={classNames(moduleStyles.botIconContainer)}>
+                <img
+                  src={aiBotOutlineIcon}
+                  alt={commonI18n.aiChatBotIconAlt()}
+                  className={moduleStyles.botIcon}
+                />
+              </div>
+              {isTA && (
+                <div className={moduleStyles.botOverlay}>
+                  <span>{'TA'}</span>
                 </div>
-              ) : (
-                <p>{text}</p>
               )}
             </div>
           )}
+          <div
+            className={classNames(
+              moduleStyles[`message-${role}`],
+              customStyles && customStyles[`message-${role}`],
+              messageStyle === 'danger' && moduleStyles.danger,
+              messageStyle === 'warning' && moduleStyles.warning
+            )}
+            aria-label={
+              role === Role.ASSISTANT
+                ? commonI18n.aiChatMessageBot()
+                : commonI18n.aiChatMessageUser()
+            }
+          >
+            {role === Role.ASSISTANT ? (
+              <div className={moduleStyles.assistantMessageContent}>
+                <SafeMarkdown
+                  markdown={text}
+                  rehypeMap={rehypeMap}
+                  openExternalLinksInNewTab
+                />
+                {showAiTutorVersionActions && (
+                  <AiTutorVersionActions files={aiTutorVersionFiles} />
+                )}
+                {postText}
+              </div>
+            ) : (
+              <p>{text}</p>
+            )}
+          </div>
         </div>
         {footer && (
           <div
-            className={classNames(isAssistant && moduleStyles.assistantFooter)}
+            className={
+              isTA ? moduleStyles.footerWithOverlay : moduleStyles.footer
+            }
           >
             {footer}
           </div>

@@ -104,7 +104,7 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
-      const imageSafe = await isImageSafe(file, buildAssetUrl(asset));
+      const imageSafe = await isImageSafe(file);
       if (!imageSafe) {
         return {
           response: text,

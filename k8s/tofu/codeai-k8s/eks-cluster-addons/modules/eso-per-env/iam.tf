@@ -31,16 +31,6 @@ data "aws_iam_policy_document" "eso_trust" {
 
 data "aws_iam_policy_document" "eso_secrets" {
   statement {
-    effect = "Allow"
-    actions = [
-      "secretsmanager:ListSecrets",
-      "secretsmanager:BatchGetSecretValue",
-    ]
-
-    resources = ["*"]
-  }
-
-  statement {
     effect  = "Allow"
     actions = ["secretsmanager:GetSecretValue"]
 
@@ -53,9 +43,11 @@ data "aws_iam_policy_document" "eso_secrets" {
       ] : []
     )
 
-    # WARNING: setting secretsmanager:VersionStage = "AWSCURRENT" broke BatchGetSecretValue
-    # with a very clearly visible error. But if you add this constraint again, be sure to
-    # test that external secrets don't error out on sync.
+    condition {
+      test     = "StringEquals"
+      variable = "secretsmanager:VersionStage"
+      values   = ["AWSCURRENT"]
+    }
   }
 }
 

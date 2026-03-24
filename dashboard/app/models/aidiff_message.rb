@@ -4,14 +4,14 @@
 #
 #  id                      :bigint           not null, primary key
 #  aidiff_thread_id        :bigint           not null
-#  external_id             :text(16777215)   not null
+#  external_id             :text(65535)      not null
 #  role                    :integer          not null
-#  content                 :text(16777215)   not null
+#  content                 :text(65535)      not null
 #  is_preset               :boolean          not null
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
-#  preset_chip_text        :text(16777215)
-#  raw_content             :text(16777215)
+#  preset_chip_text        :text(65535)
+#  raw_content             :text(65535)
 #  source_links            :json
 #  is_artifact_candidate   :boolean          default(FALSE)
 #  artifact_candidate_type :string(255)

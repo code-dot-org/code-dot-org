@@ -56,7 +56,7 @@ class StudentLessonOverview extends Component {
             >
               {`< ${lesson.unit.displayName}`}
             </a>
-            <div style={{display: 'flex', alignItems: 'center'}}>
+            <div>
               {lesson.studentLessonPlanPdfUrl && (
                 <Button
                   __useDeprecatedTag

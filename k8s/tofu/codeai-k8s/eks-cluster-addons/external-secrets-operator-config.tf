@@ -22,10 +22,6 @@
 
 data "aws_caller_identity" "current" {}
 
-locals {
-  cluster_oidc_issuer_url = data.terraform_remote_state.eks_cluster.outputs.cluster_oidc_issuer_url
-}
-
 module "eso_per_env" {
   for_each = toset(["production", "staging", "test", "levelbuilder"])
   source   = "./modules/eso-per-env"
@@ -35,7 +31,7 @@ module "eso_per_env" {
   cluster_oidc_issuer_url           = local.cluster_oidc_issuer_url
   oidc_provider_arn                 = local.oidc_provider_arn
   aws_account_id                    = data.aws_caller_identity.current.account_id
-  region                            = local.cluster_region
+  region                            = var.region
 }
 
 #------------------------------------------------------------
@@ -51,5 +47,5 @@ module "eso_per_adhoc" {
   cluster_oidc_issuer_url           = local.cluster_oidc_issuer_url
   oidc_provider_arn                 = local.oidc_provider_arn
   aws_account_id                    = data.aws_caller_identity.current.account_id
-  region                            = local.cluster_region
+  region                            = var.region
 }

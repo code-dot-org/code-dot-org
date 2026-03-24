@@ -45,11 +45,11 @@
       "availableModelIds": [
         "gemini-2.5-flash-image"
       ],
-      "multimodalEnabled": true
+      "multimodalEnabled": false
     },
     "long_instructions": "#Step 1: Generate It.\r\n\r\n1. Create three images using nearly the same prompt.\r\n\r\n\t- Which one looks most real at first glance?\r\n\r\n#Step 2: Stress Test It.\r\n\r\n2. Push the image toward real-world details.\r\n\r\n\t- Show people actually using it\r\n\r\n\t- Add labels or text\r\n\r\n\t- Put it in a real setting\r\n\r\n\t- Zoom in on details\r\n\r\n**Does it stay consistent?\r\nOr does it start to fall apart?**",
     "name_suffix": "_2026-pilot"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:54.734+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level1b_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level1b_2026-test\"},{\"changed_at\":\"2026-03-10 22:53:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2026-03-19 19:39:35 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2026-03-19 19:40:58 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:54.734+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level1b_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level1b_2026-test\"},{\"changed_at\":\"2026-03-10 22:53:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
 </Aichat>

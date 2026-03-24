@@ -25,7 +25,6 @@ export interface UserMessageEditorProps {
   editorContainerClassName?: string;
   customPlaceholder?: string;
   speechToTextEnabled?: boolean;
-  onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
   children?: React.ReactNode;
 }
 
@@ -45,7 +44,6 @@ const UserMessageEditor = React.forwardRef<
       customPlaceholder,
       showSubmitLabel = false,
       speechToTextEnabled = false,
-      onPaste,
       children,
     },
     externalInputRef
@@ -126,7 +124,6 @@ const UserMessageEditor = React.forwardRef<
           aria-label={commonI18n.aiUserMessagePlaceholder()}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          onPaste={onPaste}
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}

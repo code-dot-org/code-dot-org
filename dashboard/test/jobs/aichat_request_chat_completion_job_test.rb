@@ -75,19 +75,6 @@ class AichatRequestChatCompletionJobTest < ActiveJob::TestCase
     assert_equal model_response, request.response
   end
 
-  test 'execution status is set to MODEL_RATE_LIMITED when model returns 429' do
-    AichatAiHelper.expects(:get_openai_assistant_response).raises(AichatAiHelper::ModelRateLimitedError)
-    chatgpt_customizations = @model_customizations.merge({selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:CHATGPT]})
-
-    request = create(:aichat_request, user_id: @student.id, model_customizations: chatgpt_customizations)
-    perform_enqueued_jobs do
-      AichatRequestChatCompletionJob.perform_later(request: request, locale: @locale)
-    end
-
-    assert_equal SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_RATE_LIMITED], request.reload.execution_status
-    assert_nil request.response
-  end
-
   test 'execution status is set to FAILURE and an exception is raised if an unexpected error occurs' do
     error_message = 'error'
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).raises(StandardError.new(error_message))

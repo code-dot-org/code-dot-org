@@ -5,9 +5,11 @@
  */
 
 import React, {useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
 import header from '@cdo/apps/code-studio/header';
 import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import {getUserAppOptionsPath} from '@cdo/apps/code-studio/progressReduxSelectors';
 import useLifecycleNotifier from '@cdo/apps/lab2/hooks/useLifecycleNotifier';
 import {setUpWithLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -41,6 +43,8 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     state => state.lab.channel && state.lab.channel.isOwner
   );
 
+  const userAppOptionsPath = useSelector(getUserAppOptionsPath);
+
   const dispatch = useAppDispatch();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
@@ -67,6 +71,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           userId,
           scriptId,
           levelProperties,
+          userAppOptionsPath,
           channelId,
         })
       );
@@ -76,7 +81,15 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // An early return could happen if the level is changed mid-load.
       promise?.abort();
     };
-  }, [channelId, currentLevelId, scriptId, levelProperties, dispatch, userId]);
+  }, [
+    channelId,
+    currentLevelId,
+    scriptId,
+    levelProperties,
+    userAppOptionsPath,
+    dispatch,
+    userId,
+  ]);
 
   useEffect(() => {
     window.addEventListener('beforeunload', event => {

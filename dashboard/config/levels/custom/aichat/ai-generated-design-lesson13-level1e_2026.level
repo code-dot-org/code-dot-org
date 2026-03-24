@@ -1,13 +1,12 @@
 <Aichat>
   <config><![CDATA[{
-  "published": true,
   "game_id": 71,
   "created_at": "2026-02-24T18:14:10.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Wireframing Chatbot\r\n\r\nUse this bot to plan your website’s structure and layout. It will guide you through what to include on each page and help you prepare to sketch your wireframes.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I want to plan out my website pages, but I’m not sure what to put on each one. Can you help me organize my ideas for the Home, About, and Article pages?\r\n\r\n>Can you help me describe what my Homepage and one other page might look like in words so I can sketch them later?\r\n:::",
+    "long_instructions": "#Wireframing Chatbot\r\n\r\nUse this bot to plan your website’s structure and layout. It will guide you in describing what goes on each page and help you prepare to sketch wireframes on paper.\r\n\r\n:::details [<i class=\"fa fa-briefcase\" aria-hidden=\"true\"></i> **Need a starting prompt?**]\r\n>I want to plan out my website pages, but I’m not sure what to put on each one. Can you help me organize my ideas for the Home, About, and Article pages?\r\n\r\n>Can you help me describe what my Homepage and one other page might look like in words so I can sketch them later?\r\n:::",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -50,6 +49,7 @@
     "display_name": "AI Chat",
     "name_suffix": "_2026"
   },
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.121+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1e_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1e_2025\"},{\"changed_at\":\"2026-03-20 17:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-20 17:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:14:10.121+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson13-level1e_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson13-level1e_2025\"}]"
 }]]></config>
 </Aichat>

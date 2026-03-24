@@ -3,7 +3,7 @@ Feature: Viewing and dismissing the login callout
 
 @no_mobile
 Scenario: Should be able to clear cookies and session storage to see callout again
-  Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/4/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is visible
   And I dismiss the login reminder
@@ -16,6 +16,6 @@ Scenario: Should be able to clear cookies and session storage to see callout aga
 
 @as_student
 Scenario: Should not see callout on CSF coursea lesson if logged in
-  Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
+  Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/4/levels/2?noautoplay=true"
   And I wait for the lab page to fully load
   And element ".uitest-signincallout" is not visible

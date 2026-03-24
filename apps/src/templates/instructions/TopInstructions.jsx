@@ -20,7 +20,7 @@ import i18n from '@cdo/locale';
 
 import commonStyles from '../../commonStyles';
 import {
-  setInstructionsRenderedHeightAndCollapsed,
+  toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
   setInstructionsRenderedHeight,
   setAllowInstructionsResize,
@@ -90,7 +90,7 @@ class TopInstructions extends Component {
     ttsLongInstructionsUrl: PropTypes.string,
     isCollapsed: PropTypes.bool.isRequired,
     noVisualization: PropTypes.bool.isRequired,
-    setInstructionsRenderedHeightAndCollapsed: PropTypes.func,
+    toggleInstructionsCollapsed: PropTypes.func,
     setInstructionsRenderedHeight: PropTypes.func.isRequired,
     setInstructionsMaxHeightNeeded: PropTypes.func.isRequired,
     documentationUrl: PropTypes.string,
@@ -415,19 +415,20 @@ class TopInstructions extends Component {
    */
   handleClickCollapser = () => {
     const {
-      setInstructionsRenderedHeightAndCollapsed,
+      toggleInstructionsCollapsed,
       isCollapsed,
       noInstructionsWhenCollapsed,
       expandedHeight,
     } = this.props;
 
-    const nextIsCollapsed = !isCollapsed;
-    const nextHeight =
-      nextIsCollapsed && noInstructionsWhenCollapsed
+    toggleInstructionsCollapsed();
+
+    // adjust rendered height based on next collapsed state
+    const height =
+      !isCollapsed && noInstructionsWhenCollapsed
         ? HEADER_HEIGHT
         : expandedHeight;
-
-    setInstructionsRenderedHeightAndCollapsed(nextHeight, nextIsCollapsed);
+    this.props.setInstructionsRenderedHeight(height);
   };
 
   /**
@@ -942,8 +943,8 @@ export default connect(
     taRubric: state.instructions.taRubric,
   }),
   dispatch => ({
-    setInstructionsRenderedHeightAndCollapsed(height, isCollapsed) {
-      dispatch(setInstructionsRenderedHeightAndCollapsed(height, isCollapsed));
+    toggleInstructionsCollapsed() {
+      dispatch(toggleInstructionsCollapsed());
     },
     setInstructionsRenderedHeight(height) {
       dispatch(setInstructionsRenderedHeight(height));

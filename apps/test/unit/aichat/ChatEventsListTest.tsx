@@ -23,7 +23,7 @@ jest.mock('@cdo/apps/aichat/views/WaitingAnimation', () => {
 // Mock redux hooks to avoid real store; only selector value matters here
 let mockPending = false;
 jest.mock('@cdo/apps/util/reduxHooks', () => ({
-  ...jest.requireActual('@cdo/apps/util/reduxHooks'),
+  __esModule: true,
   useAppSelector: () => mockPending,
   useAppDispatch: () => () => {},
 }));

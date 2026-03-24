@@ -18,7 +18,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_does_not_create Pd::Attendance do
       get :attend, params: {session_code: @session.code}
     end
-    assert_redirected_to root_path
+    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
     assert flash[:notice]
     assert flash[:notice].start_with? "You can't attend this workshop because you organized it."
   end
@@ -31,7 +31,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_does_not_create Pd::Attendance do
       get :attend, params: {session_code: @session.code}
     end
-    assert_redirected_to root_path
+    assert_redirected_to CDO.studio_url('/', CDO.default_scheme)
     assert flash[:notice]
     assert flash[:notice].start_with? "You can't attend this workshop because you organized it."
   end

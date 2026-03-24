@@ -362,9 +362,6 @@ class UsersHelperTest < ActionView::TestCase
     # for user_2
     sublevel1_user_level_2 = create(:user_level, user: user_2, level: sublevel1_contained_level, script: script, best_result: ActivityConstants::BEST_PASS_RESULT, time_spent: 180)
     sublevel2_user_level_2 = create(:user_level, user: user_2, level: sublevel2, script: script, best_result: 20, time_spent: 300)
-    # Travel forward to ensure teacher_feedback.updated_at > user_level.updated_at,
-    # making the teacher_feedback_new flag deterministically true.
-    travel 1.second
     create(:teacher_feedback, student: user_2, teacher: teacher, level: sublevel2, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
     create(:teacher_feedback, student: user_3, teacher: teacher, level: sublevel1, script: script, review_state: TeacherFeedback::REVIEW_STATES.keepWorking)
     create(:teacher_feedback, student: user_3, teacher: teacher, level: sublevel2, script: script, comment: 'Better get working on this one!')
@@ -406,16 +403,14 @@ class UsersHelperTest < ActionView::TestCase
             result: 20,
             last_progress_at: sublevel2_last_progress_2,
             time_spent: 300,
-            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
-            teacher_feedback_new: true
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
           },
           level.id => {
             status: LEVEL_STATUS.passed,
             result: 20,
             last_progress_at: sublevel2_last_progress_2,
             time_spent: 480, # sum of time spent on sublevels
-            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking,
-            teacher_feedback_new: true
+            teacher_feedback_review_state: TeacherFeedback::REVIEW_STATES.keepWorking
           }
         },
         user_3.id => {
@@ -450,7 +445,6 @@ class UsersHelperTest < ActionView::TestCase
     assert_equal expected_progress[0][user_3.id], progress[user_3.id]
 
     assert_equal expected_progress[1], last_progress_times
-    travel_back
   end
 
   def test_level_with_best_progress_one_level

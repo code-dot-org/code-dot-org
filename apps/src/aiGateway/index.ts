@@ -1,7 +1,19 @@
-import generateTextThroughGateway from './generateText';
-import transcribeThroughGateway from './transcribe';
+import {
+  generateText as generateTextThroughProxy,
+  experimental_transcribe as transcribeThroughProxy,
+} from 'ai';
 
-export {
-  generateTextThroughGateway as generateText,
-  transcribeThroughGateway as transcribe,
-};
+import {generateText as generateTextThroughGateway} from '@cdo/apps/aiGateway/aiSdkCompatibleGateway';
+
+import {isAiGatewayEnabled} from './isAiGatewayEnabled';
+import transcribeThroughGateway from './transcribeThroughGateway';
+
+const generateText = isAiGatewayEnabled
+  ? generateTextThroughGateway
+  : generateTextThroughProxy;
+
+const transcribe = isAiGatewayEnabled
+  ? transcribeThroughGateway
+  : transcribeThroughProxy;
+
+export {generateText, transcribe};

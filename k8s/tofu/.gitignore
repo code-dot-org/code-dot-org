@@ -5,9 +5,9 @@
 *.tfstate
 *.tfstate.*
 
-# Local CLI variable override files
-*.local.tfvars
-*.local.auto.tfvars
+# CLI variable files with local values
+*.tfvars
+*.tfvars.json
 
 # Plan files
 *.tfplan

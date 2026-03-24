@@ -50,7 +50,7 @@ class ReportAbuseController < ApplicationController
       )
       update_abuse_score
     end
-    redirect_to 'https://support.code.org', allow_other_host: true
+    redirect_to "https://support.code.org"
   end
 
   def report_abuse_form

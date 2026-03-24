@@ -1,7 +1,5 @@
 require 'singleton'
 
-# DEPRECATED - Use `Cdo::Redshift`, instead, which utilizes the Redshift Data API to execute SQL statements.
-
 # A thin wrapper around PG, providing a mechanism to execute SQL commands on our AWS Redshift
 # instance.
 class RedshiftClient

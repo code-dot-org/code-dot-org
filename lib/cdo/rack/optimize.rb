@@ -1,5 +1,4 @@
 require 'cdo/optimizer'
-require 'cdo/pegasus/string'
 require 'rack/cache'
 
 # Rack middleware that applies an optimizing filter pass on response content.
