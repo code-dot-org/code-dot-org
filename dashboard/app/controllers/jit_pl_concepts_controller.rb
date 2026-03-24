@@ -1,6 +1,7 @@
 class JitPlConceptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env
   before_action :set_jit_pl_concept, only: [:edit, :update, :destroy]
+  before_action :edit_all, only: [:edit_all]
   authorize_resource
 
   # GET /jit_pl_concepts/new
