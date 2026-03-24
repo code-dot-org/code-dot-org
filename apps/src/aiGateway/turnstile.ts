@@ -3,6 +3,7 @@ import DCDO from '@cdo/apps/dcdo';
 const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
+const CHALLENGE_TIMEOUT_MS = 30_000;
 
 declare global {
   interface Window {
@@ -18,7 +19,6 @@ declare global {
 }
 
 let scriptLoadPromise: Promise<void> | null = null;
-let activeWidgetId: string | null = null;
 
 function loadTurnstileScript(): Promise<void> {
   if (scriptLoadPromise) return scriptLoadPromise;
@@ -53,33 +53,106 @@ function getOrCreateContainer(): HTMLElement {
 }
 
 function getSiteKey(): string {
-  return (DCDO.get('ai-gateway-turnstile-site-key', undefined) as unknown as string) ?? '';
+  return (
+    (DCDO.get('ai-gateway-turnstile-site-key', undefined) as unknown as string) ?? ''
+  );
 }
 
-export async function getTurnstileToken(): Promise<string> {
-  await loadTurnstileScript();
+class TurnstileManager {
+  private widgetId: string | null = null;
+  private pendingResolve: ((token: string) => void) | null = null;
+  private pendingReject: ((err: Error) => void) | null = null;
+  // All calls are serialized through this chain — only one challenge runs at a time,
+  // which means widgetId/pendingResolve/pendingReject are always owned by exactly one
+  // execution context and never need additional locking.
+  private chain: Promise<unknown> = Promise.resolve();
 
-  return new Promise((resolve, reject) => {
-    const container = getOrCreateContainer();
+  getToken(): Promise<string> {
+    // Ensure the script is loaded before queuing, so script errors propagate to callers.
+    const result = this.chain.then(
+      () => loadTurnstileScript().then(() => this.runChallenge()),
+      () => loadTurnstileScript().then(() => this.runChallenge())
+    );
+    // Absorb resolve/reject so the chain always advances for the next caller.
+    this.chain = result.then(
+      () => {},
+      () => {}
+    );
+    return result;
+  }
 
-    if (activeWidgetId) {
-      window.turnstile.remove(activeWidgetId);
-      activeWidgetId = null;
-    }
+  // Called by Turnstile's callback — the only external entry point besides getToken.
+  handleToken(token: string) {
+    this.pendingResolve?.(token);
+  }
 
-    // widgetId is assigned synchronously by render() before the async callback fires
-    const widgetId = window.turnstile.render(container, {
-      sitekey: getSiteKey(),
-      callback: (token: string) => {
-        activeWidgetId = null;
-        resolve(token);
-      },
+  private runChallenge(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      let settled = false;
+
+      const settle = (fn: () => void) => {
+        if (settled) return;
+        settled = true;
+        this.pendingResolve = null;
+        this.pendingReject = null;
+        fn();
+      };
+
+      const timeout = setTimeout(() => {
+        settle(() => {
+          if (this.widgetId) {
+            window.turnstile.remove(this.widgetId);
+            this.widgetId = null;
+          }
+          reject(new Error('Turnstile challenge timed out'));
+        });
+      }, CHALLENGE_TIMEOUT_MS);
+
+      this.pendingResolve = (token: string) =>
+        settle(() => {
+          clearTimeout(timeout);
+          resolve(token);
+        });
+      this.pendingReject = (err: Error) =>
+        settle(() => {
+          clearTimeout(timeout);
+          reject(err);
+        });
+
+      if (this.widgetId) {
+        // Verify the widget is still live in the DOM before attempting a reset.
+        const container = document.getElementById(CONTAINER_ID);
+        if (container?.hasChildNodes()) {
+          window.turnstile.reset(this.widgetId);
+          return;
+        }
+        // Widget was detached (e.g. DOM was cleared) — fall through to re-render.
+        this.widgetId = null;
+      }
+
+      const container = getOrCreateContainer();
+      // Evict any orphaned Turnstile content we don't have a handle on.
+      container.innerHTML = '';
+
+      const widgetId = window.turnstile.render(container, {
+        sitekey: getSiteKey(),
+        callback: (token: string) => this.handleToken(token),
+      });
+
+      if (!widgetId) {
+        settle(() => {
+          clearTimeout(timeout);
+          reject(new Error('Turnstile failed to render widget'));
+        });
+      } else {
+        this.widgetId = widgetId;
+      }
     });
+  }
+}
 
-    if (!widgetId) {
-      reject(new Error('Turnstile failed to render widget'));
-    } else {
-      activeWidgetId = widgetId;
-    }
-  });
+const manager = new TurnstileManager();
+
+export async function getTurnstileToken(): Promise<string> {
+  return manager.getToken();
 }
