@@ -54,3 +54,7 @@ Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, foll
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
+
+## Helm / Kustomize parity
+
+- Allow `verify-helm-parity` to still check parity when `k8s-gitops` / kustomize + helm charts are modified locally, so we can verify them before we commit.
