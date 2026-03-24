@@ -101,6 +101,21 @@ profiles:
     - op: add
       path: /deploy/helm/releases/0/valuesFiles/-
       value: k8s/helm/development.values.yaml
+    # In development mode we auto-generate passwords for the cluster-local MySQL/Redis/MinIO
+    # 
+    # Please note that to change these passwords you BOTH have to delete/edit cdo-local-secrets.env
+    # AND you have to delete the persistent volume associated with that service, because
+    # changing the password in helm after first create typically does not modify the
+    # password in the service's root volume.
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/services.mysql.password
+      value: '{{ cmd "./k8s/bin/cdo-local-secrets" "MYSQL_ROOT_PASSWORD" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/services.redis.password
+      value: '{{ cmd "./k8s/bin/cdo-local-secrets" "REDIS_PASSWORD" }}'
+    - op: add
+      path: /deploy/helm/releases/0/setValueTemplates/services.minio.password
+      value: '{{ cmd "./k8s/bin/cdo-local-secrets" "MINIO_ROOT_PASSWORD" }}'
     # These have to be patches vs in values.yml because they inject local env vars:
     - op: add
       path: /deploy/helm/releases/0/setValueTemplates/localDev.mounts.hostPaths.home
