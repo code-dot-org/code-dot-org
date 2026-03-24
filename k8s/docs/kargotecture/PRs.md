@@ -1,0 +1,30 @@
+- `helm/argo-refs-code-dot-org-commit`
+  - [code-dot-org #71561](https://github.com/code-dot-org/code-dot-org/pull/71561)
+  - [k8s-gitops #1](https://github.com/code-dot-org/k8s-gitops/pull/1)
+- `helm/common-case-rendered-branches`
+  - [code-dot-org #71562](https://github.com/code-dot-org/code-dot-org/pull/71562)
+  - [k8s-gitops #2](https://github.com/code-dot-org/k8s-gitops/pull/2)
+- `helm/oci-release-capsule`
+  - [code-dot-org #71563](https://github.com/code-dot-org/code-dot-org/pull/71563)
+  - [k8s-gitops #6](https://github.com/code-dot-org/k8s-gitops/pull/6)
+- `helm/rendered-branches`
+  - [code-dot-org #71565](https://github.com/code-dot-org/code-dot-org/pull/71565)
+  - [k8s-gitops #4](https://github.com/code-dot-org/k8s-gitops/pull/4)
+- `helm/source-snapshot-rendered-branches`
+  - [code-dot-org #71566](https://github.com/code-dot-org/code-dot-org/pull/71566)
+  - [k8s-gitops #5](https://github.com/code-dot-org/k8s-gitops/pull/5)
+- `kustomize/argo-refs-code-dot-org-commit`
+  - [code-dot-org #71564](https://github.com/code-dot-org/code-dot-org/pull/71564)
+  - [k8s-gitops #3](https://github.com/code-dot-org/k8s-gitops/pull/3)
+- `kustomize/common-case-rendered-branches`
+  - [code-dot-org #71567](https://github.com/code-dot-org/code-dot-org/pull/71567)
+  - [k8s-gitops #7](https://github.com/code-dot-org/k8s-gitops/pull/7)
+- `kustomize/oci-release-capsule`
+  - [code-dot-org #71569](https://github.com/code-dot-org/code-dot-org/pull/71569)
+  - [k8s-gitops #8](https://github.com/code-dot-org/k8s-gitops/pull/8)
+- `kustomize/rendered-branches`
+  - [code-dot-org #71568](https://github.com/code-dot-org/code-dot-org/pull/71568)
+  - [k8s-gitops #9](https://github.com/code-dot-org/k8s-gitops/pull/9)
+- `kustomize/source-snapshot-rendered-branches`
+  - [code-dot-org #71570](https://github.com/code-dot-org/code-dot-org/pull/71570)
+  - [k8s-gitops #10](https://github.com/code-dot-org/k8s-gitops/pull/10)

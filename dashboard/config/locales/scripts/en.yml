@@ -27166,3 +27166,104 @@ en:
             - Use AI as a collaborative partner to brainstorm, debug, and refine code.
             - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
             - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+        pl-facilitators-aif2-intro-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-intro-2026
+          title: 'Teaching AI Foundations S2: An Overview'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-aif2-ai-generated-design-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-ai-generated-design-2026
+          title: Teaching AI-Generated Design
+          description_audience: ''
+          description_short: ''
+          description: |+
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Suggested Time: 60 minutes**
+
+
+          student_description: |+
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Suggested Time: 60 minutes**
+
+
+        pl-facilitators-aif2-ai-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-ai-algorithmic-decisions-2026
+          title: Teaching AI and Algorithmic Decisions
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 75 minutes**
+        pl-facilitators-aif2-data-driven-systems-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-data-driven-systems-2026
+          title: Teaching Data-Driven Systems
+          description_audience: ''
+          description_short: ''
+          description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+        pl-facilitators-iterating-with-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-iterating-with-ai-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-designing-reliable-apps-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-designing-reliable-apps-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-web-apps-ai-capstone-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-web-apps-ai-capstone-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

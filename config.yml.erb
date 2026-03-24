@@ -211,6 +211,10 @@ crowdin_project_test_mapping:
 azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
 azure_content_moderation_key:
 
+# Azure AI Content Safety
+azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
+azure_ai_content_safety_key: !Secret
+
 # Credentials for SauceLabs.com, used for running selenium tests against
 # multiple browsers
 saucelabs_username:
@@ -552,20 +556,14 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
