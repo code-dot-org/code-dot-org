@@ -163,7 +163,7 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       it 'should NOT redirect to landing path for allow listed paths' do
         get destroy_user_session_path
 
-        assert_redirected_to '//test.code.org'
+        assert_redirected_to root_path
       end
     end
   end

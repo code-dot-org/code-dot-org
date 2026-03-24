@@ -105,6 +105,14 @@ PATH
       rails (~> 7.0.8)
       zeitwerk (~> 2.6.7)
     hoc_legacy (0.0.0)
+    observability (0.1.0)
+      opentelemetry-exporter-otlp (~> 0.31.1)
+      opentelemetry-instrumentation-all (= 0.85.0)
+      opentelemetry-sdk (~> 1.10)
+      rails (~> 7.0.8)
+      sentry-opentelemetry (~> 6.5)
+      sentry-rails (~> 6.5)
+      sentry-ruby (~> 6.5)
 
 GEM
   remote: https://rubygems.org/
@@ -283,6 +291,9 @@ GEM
     aws-sdk-rds (1.124.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
+    aws-sdk-redshiftdataapiservice (1.66.0)
+      aws-sdk-core (~> 3, >= 3.239.1)
+      aws-sigv4 (~> 1.5)
     aws-sdk-route53 (1.52.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
@@ -496,7 +507,7 @@ GEM
       google-apis-core (>= 0.9.1, < 2.a)
     google-apis-youtube_v3 (0.25.0)
       google-apis-core (>= 0.9.1, < 2.a)
-    google-protobuf (4.33.5)
+    google-protobuf (4.33.6)
       bigdecimal
       rake (>= 13)
     google_drive (3.0.7)
@@ -703,7 +714,8 @@ GEM
       uri
     open_uri_redirections (0.2.1)
     openssl (3.3.1)
-    opentelemetry-api (1.7.0)
+    opentelemetry-api (1.8.0)
+      logger
     opentelemetry-common (0.23.0)
       opentelemetry-api (~> 1.0)
     opentelemetry-exporter-otlp (0.31.1)
@@ -1072,6 +1084,16 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    sentry-opentelemetry (6.5.0)
+      opentelemetry-sdk (~> 1.0)
+      sentry-ruby (~> 6.5.0)
+    sentry-rails (6.5.0)
+      railties (>= 5.2.0)
+      sentry-ruby (~> 6.5.0)
+    sentry-ruby (6.5.0)
+      bigdecimal
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      logger
     sequel (5.67.0)
     set (1.1.0)
     signet (0.17.0)
@@ -1225,6 +1247,7 @@ DEPENDENCIES
   aws-sdk-firehose
   aws-sdk-glue
   aws-sdk-rds
+  aws-sdk-redshiftdataapiservice
   aws-sdk-route53
   aws-sdk-s3 (~> 1.113)
   aws-sdk-sagemaker
@@ -1311,6 +1334,7 @@ DEPENDENCIES
   net-http-persistent
   newrelic_rpm (~> 8.3)
   nokogiri (~> 1.18.9)
+  observability!
   observer
   octokit
   oj (~> 3.10)
@@ -1322,9 +1346,6 @@ DEPENDENCIES
   omniauth-rails_csrf_protection (~> 1.0.2)
   open_uri_redirections
   openssl (>= 3.3.1)
-  opentelemetry-exporter-otlp (~> 0.31.1)
-  opentelemetry-instrumentation-all (= 0.85.0)
-  opentelemetry-sdk (~> 1.10)
   os
   parallel
   parallel_tests
