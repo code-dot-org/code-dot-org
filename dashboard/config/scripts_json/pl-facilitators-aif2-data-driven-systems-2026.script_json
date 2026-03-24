@@ -1,0 +1,1641 @@
+{
+  "script": {
+    "name": "pl-facilitators-aif2-data-driven-systems-2026",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2026-03-24 03:58:28 UTC",
+    "hide_within_course": false,
+    "published_state": "in_development",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "pl-facilitators-aif2-data-driven-systems-2026"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Teaching Data-Driven Systems",
+      "name": "Teaching Data-Driven Systems",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n* #### Model core data-structure skills in Web Lab\n* #### Teach common array and object operations\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n#### **Suggested Time:** 75 minutes",
+        "student_overview": "#### **By the end of this professional learning module, you will be able to:**\n\n* #### Explain how arrays, objects, and schemas organize real-world data and support clear, predictable program design\n* #### Model core data-structure skills in Web Lab\n* #### Teach common array and object operations\n* #### Guide students in using AI-generated scaffolds responsibly, emphasizing accountability for both data choices and code\n\n#### **Suggested Time:** 75 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d",
+      "position": 1,
+      "properties": {
+        "duration": 75
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d",
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Intro to Data-Driven Systems"
+      },
+      "seeding_key": {
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    },
+    {
+      "key": "7ea0b6c6-c455-4abf-8306-24a14012d066",
+      "position": 2,
+      "properties": {
+        "progression_name": "Data Structures"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    },
+    {
+      "key": "c289eb26-7f27-4ab1-937b-f5adcf35de20",
+      "position": 3,
+      "properties": {
+        "progression_name": "Array Methods"
+      },
+      "seeding_key": {
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    },
+    {
+      "key": "026b8551-1b49-4616-8824-a4c86aa8d320",
+      "position": 4,
+      "properties": {
+        "progression_name": "Objects"
+      },
+      "seeding_key": {
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    },
+    {
+      "key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f",
+      "position": 5,
+      "properties": {
+        "progression_name": "Filter, Search, and Sort"
+      },
+      "seeding_key": {
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    },
+    {
+      "key": "2237c73c-89ad-4c6f-b519-4e149521eabd",
+      "position": 6,
+      "properties": {
+        "progression_name": "Final Thoughts"
+      },
+      "seeding_key": {
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd",
+        "lesson_activity.key": "25f7c8ff-9d6d-4347-83c7-b549ca78b87d"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Data-Driven Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-Intro-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-Intro-1_2026"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Data-Driven Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl=aif-2-U3-curriculum-overview-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      },
+      "level_keys": [
+        "pl=aif-2-U3-curriculum-overview-2_2026"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Data-Driven Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U3-class-context_2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      },
+      "level_keys": [
+        "pl_sandbox_aif-2-U3-class-context_2-2_2026"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Intro to Data-Driven Systems"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-project-overview-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-project-overview-4_2026"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structure-array-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-data-structure-array-1_2026"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-syntax-panel-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-syntax-panel-2_2026"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structures-array-practice-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-data-structures-array-practice-3_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structures-array-debug-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-data-structures-array-debug-4_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-schema-fields-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-schema-fields-5_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-parallel-arrays-5-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-parallel-arrays-5-2_2026"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-schema-practice-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-schema-practice-6_2026"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-weblab-schema-7_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-weblab-schema-7_2026"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Data Structures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-privacy-discussion-8_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-privacy-discussion-8_2026"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-methods-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-methods-1_2026"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-weblab-array-methods-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-weblab-array-methods-2_2026"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-reflectionmd-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-reflectionmd-3_2026"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-method-choice-level_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-method-choice-level_2026"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Array Methods"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-method-CFU_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-method-CFU_2026"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-check-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-CFU-check-6_2026"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-first-object-weblab-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-first-object-weblab-2_2026"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-object-syntax-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-object-syntax-3_2026"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-to-object-weblab-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-array-to-object-weblab-4_2026"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-lists-of-objects-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-lists-of-objects-5_2026"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-list-of-objects-weblab-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-list-of-objects-weblab-6_2026"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-datasets-with-arrays-7_2026"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-debugging-data-weblab-26_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-debugging-data-weblab-26_2026"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-render-DOM-9_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-render-DOM-9_2026"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "aif-2-U3-map-with-objects-weblab-10_2026"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 29,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CHAT-12_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-CHAT-12_2026"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 30,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "progression": "Objects"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-map-13_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-CFU-map-13_2026"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 31,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-function-1_2026"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 32,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-function-1-2_2026"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 33,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-weblab-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-filter-weblab-5_2026"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 34,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-serching-function-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-serching-function-2_2026"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 35,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-search-function-2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-search-function-2-2_2026"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 36,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-sorting-function-2_2026"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 37,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-sorting-function-2-2_2026"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 38,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-pipeline-4_2026"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 39,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif2-U3-pipeline-weblab_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif2-U3-pipeline-weblab_2026"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 40,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Filter, Search, and Sort"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-CFU_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-pipeline-CFU_2026"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 41,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Thoughts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-wrap-project-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-wrap-project-1_2026"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 42,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Thoughts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-lesson-resources-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-lesson-resources-2_2026"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 43,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Thoughts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-final-level_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-final-level_2026"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-Intro-1_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-Intro-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl=aif-2-U3-curriculum-overview-2_2026",
+        "script_level.level_keys": [
+          "pl=aif-2-U3-curriculum-overview-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl_sandbox_aif-2-U3-class-context_2-2_2026",
+        "script_level.level_keys": [
+          "pl_sandbox_aif-2-U3-class-context_2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-project-overview-4_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-project-overview-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2d342f5d-8e7e-4170-a080-ebac2c4a91d1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-data-structure-array-1_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structure-array-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-array-syntax-panel-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-syntax-panel-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-data-structures-array-practice-3_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structures-array-practice-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-data-structures-array-debug-4_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-data-structures-array-debug-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-schema-fields-5_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-schema-fields-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-parallel-arrays-5-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-parallel-arrays-5-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-schema-practice-6_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-schema-practice-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-weblab-schema-7_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-weblab-schema-7_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-privacy-discussion-8_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-privacy-discussion-8_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "7ea0b6c6-c455-4abf-8306-24a14012d066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-array-methods-1_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-methods-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-weblab-array-methods-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-weblab-array-methods-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-reflectionmd-3_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-reflectionmd-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-array-method-choice-level_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-method-choice-level_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-array-method-CFU_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-method-CFU_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "c289eb26-7f27-4ab1-937b-f5adcf35de20"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-CFU-check-6_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-check-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-first-object-weblab-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-first-object-weblab-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-object-syntax-3_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-object-syntax-3_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-array-to-object-weblab-4_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-array-to-object-weblab-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-lists-of-objects-5_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-lists-of-objects-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-list-of-objects-weblab-6_2026",
+        "script_level.level_keys": [
+          "pl-aif-list-of-objects-weblab-6_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-datasets-with-arrays-7_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-datasets-with-arrays-7_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-debugging-data-weblab-26_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-debugging-data-weblab-26_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-render-DOM-9_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-render-DOM-9_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "aif-2-U3-map-with-objects-weblab-10_2026",
+        "script_level.level_keys": [
+          "aif-2-U3-map-with-objects-weblab-10_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-CHAT-12_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CHAT-12_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-CFU-map-13_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-CFU-map-13_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "026b8551-1b49-4616-8824-a4c86aa8d320"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-function-1_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-function-1-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-function-1-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-filter-weblab-5_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-filter-weblab-5_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-serching-function-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-serching-function-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-search-function-2-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-search-function-2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-sorting-function-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-sorting-function-2-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-sorting-function-2-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-pipeline-4_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-4_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif2-U3-pipeline-weblab_2026",
+        "script_level.level_keys": [
+          "pl-aif2-U3-pipeline-weblab_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-pipeline-CFU_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-pipeline-CFU_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "6fd27d9e-3e36-4ff8-bc9d-7db5894d633f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-wrap-project-1_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-wrap-project-1_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-lesson-resources-2_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-lesson-resources-2_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-final-level_2026",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-final-level_2026"
+        ],
+        "lesson.key": "Teaching Data-Driven Systems",
+        "lesson_group.key": "",
+        "script.name": "pl-facilitators-aif2-data-driven-systems-2026",
+        "activity_section.key": "2237c73c-89ad-4c6f-b519-4e149521eabd"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

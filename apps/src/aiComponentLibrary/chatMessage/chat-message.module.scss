@@ -8,6 +8,7 @@ $assistant-color: $brand_primary_light;
 $bot-container-size: 32px;
 $icon-message-gap: 8px;
 $icon-overlay-padding-right: 8px;
+$vertical-gap: 0.375rem;
 
 %message {
   @extend %markdown-styles;
@@ -69,12 +70,6 @@ $icon-overlay-padding-right: 8px;
   }
 }
 
-.messageWithChildren {
-  display: flex;
-  flex-direction: column;
-  gap: 0.375rem;
-}
-
 .message-user {
   @extend %message;
   background-color: var(--background-neutral-secondary);
@@ -113,21 +108,9 @@ $icon-overlay-padding-right: 8px;
   justify-content: flex-end;
 }
 
-%container {
-  display: flex;
-  flex-direction: row;
-  gap: $icon-message-gap;
-}
-
-.container-assistant {
-  @extend %container;
-  align-items: flex-end;
-  justify-content: flex-start;
-}
-
-.container-user {
-  @extend %container;
-  justify-content: flex-end;
+.botIconWrapper {
+  grid-column: 1;
+  align-self: end;
 }
 
 .botIconContainer {
@@ -149,12 +132,8 @@ $icon-overlay-padding-right: 8px;
   padding-top: 3px;
 }
 
-.footer {
-  margin-inline-start: $bot-container-size + $icon-message-gap;
-}
-
-.footerWithOverlay {
-  margin-inline-start: $bot-container-size + $icon-message-gap + $icon-overlay-padding-right;
+.assistantFooter {
+  grid-column: 2;
 }
 
 .botIcon {
@@ -206,4 +185,15 @@ $icon-overlay-padding-right: 8px;
 
 json-video {
   margin: 15px 0;
+}
+
+.messageAndHeader {
+  display: flex;
+  flex-direction: column;
+  gap: $vertical-gap;
+}
+
+.grid {
+  display: grid;
+  gap: $vertical-gap $icon-message-gap;
 }

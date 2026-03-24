@@ -6,56 +6,35 @@ metadata:
     {{ include "cdo.labels" (merge (dict "component" "locals.yml") .) | nindent 4 }}
 data:
   locals.yml: |
+    build_apps: true
+    use_my_apps: true
+    dashboard_workers: {{ .Values.dashboard_workers }}
 
+    # These are secrets that cause exceptions booting our dashbaord app in development
+    # We hope to get rid of needing these overrides soon, see:
+    # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
+    cloudfront_key_pair_id:
+    cloudfront_private_key:
+    slack_bot_token:
+    properties_encryption_key:
+    openai_lesson_summaries_api_key:
+    elevenlabs_api_key:
+
+    # Local service non-secret configuration. Append-only so we do not mix these
+    # values into the legacy locals.yml sections above.
     {{- if .Values.services.mysql.enabled }}
-    db_writer: 'mysql://root@{{ include "cdo.fullname" (merge (dict "component" "mysql") .) }}/'
-    {{- end }}
-
-    # TO SUPPORT THE NEXT GEN DB CONFIGURATIONS WE SHOULD INJECT THESE VALUES
-    # for each of three sql users: reader, writer, admin
-    #
-    # # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
-    # db_cluster_id: !StackSecret
-    # db_endpoint_writer: !StackSecret
-    # db_endpoint_writer_port: !StackSecret
-    # db_endpoint_proxy_writer: !StackSecret
-    # db_endpoint_proxy_writer_port: !StackSecret
-    # db_endpoint_proxy_reader: !StackSecret
-    # db_endpoint_proxy_reader_port: !StackSecret
-    # db_endpoint_proxy_reporting: !StackSecret
-    # db_endpoint_proxy_reporting_port: !StackSecret
-    # # Database credentials (username & password) are stored in an AWS Secret in a JSON format required by RDS Proxy:
-    # # https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-proxy-setup.html#rds-proxy-secrets-arns
-    # db_credential_admin: !StackSecret
-    # db_credential_writer: !StackSecret
-    # db_credential_reader: !StackSecret
-    
-    # db_credential_${sql_user}
-    # structure is: {
-    #   "username": "root",
-    #   "password": ""
-    # }
-    
-    {{- if .Values.services.redis.enabled }}
-    redis_url: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379/0
-    netsim_redis_groups:
-    - master: redis://{{ include "cdo.fullname" (merge (dict "component" "redis") .) }}:6379
+    db_cluster_id: {{ include "cdo.mysqlServiceName" . }}
+    db_endpoint_writer: {{ include "cdo.mysqlServiceName" . }}
+    db_endpoint_writer_port: 3306
+    db_endpoint_proxy_writer: {{ include "cdo.mysqlServiceName" . }}
+    db_endpoint_proxy_writer_port: 3306
+    db_endpoint_proxy_reader: {{ include "cdo.mysqlServiceName" . }}
+    db_endpoint_proxy_reader_port: 3306
+    db_endpoint_proxy_reporting: {{ include "cdo.mysqlServiceName" . }}
+    db_endpoint_proxy_reporting_port: 3306
     {{- end }}
 
     {{- if .Values.services.minio.enabled }}
-    aws_s3_endpoint: http://{{ include "cdo.fullname" (merge (dict "component" "minio") .) }}:9000
-    aws_s3_access_key_id: {{ .Values.services.minio.username }}
-    aws_s3_secret_access_key: {{ .Values.services.minio.password }}
+    aws_s3_endpoint: http://{{ include "cdo.minioServiceName" . }}:9000
     aws_s3_emulated: true
     {{- end }}
-
-    build_apps: true
-    use_my_apps: true
-
-    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
-    # {{- if not .Values.localDev.mounts.mountDotAWS }}
-    cloudfront_key_pair_id: ''
-    cloudfront_private_key: ''
-    slack_bot_token: ''
-    properties_encryption_key: ''
-    # {{- end }}

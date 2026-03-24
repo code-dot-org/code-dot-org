@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-23T11:27:36.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Spacing\r\n\r\nNotice that there is a new section of our webpage called `<style>`. This defines the rules for how the webpage should look.\r\n\r\nIn this level, we'll use AI Tutor to help us understand `padding` and `margin` and add spacing to our webpage.\r\n\r\n**Do This:**\r\n1) Ask AI Tutor to explain how `padding` and `margin` work in CSS\r\n    - You can send AI Tutor a message directly, or highlight the code and select \"Add to AI Tutor\"\r\n2) Ask AI Tutor to add `padding` and `margin` to each contact card section. \r\n    - Use specific language, like \"`margin`\" or \"`padding` in px\", to make sure AI follows your vision.\r\n\r\n\r\nOnce you've added spacing to the contact cards: press the Continue button!",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "explainCode",
+        "buildCSS",
+        "documentation"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- ONLY add styles to the `<style>` tag in the head of the document. Follow the pattern already in the index.html file.\n- Do not use relative units for spacing; only use px.\n- Focus on the CSS tags emphasized in this level; do not add additional tags unless explicitly asked to.",
+        "documentation": "- Keep explanations simple and friendly",
+        "explainCode": "- Keep explanations simple and friendly"
+      }
+    },
+    "display_name": "Exploring Spacing",
+    "bubble_choice_description": "Learn the rules for how to add space around and within elements",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      header {\n        margin: 20px;\n        padding: 10px;\n        background-color: #e8f4f8;\n        border-radius: 10px;\n      }\n    </style>\n  </head>\n  <body>\n    <header>\n      <h1>My Contacts</h1>\n      <p>Here are some important people to know. Each card below has their name, role, and how to reach them.</p>\n    </header>\n\n    <section>\n      <h2>Ms. Rivera</h2>\n      <p>Role: School Counselor</p>\n      <p>Email: rivera@westview.edu</p>\n      <p>Office: Room 104</p>\n    </section>\n\n    <section>\n      <h2>Mr. Okafor</h2>\n      <p>Role: Web Design Teacher</p>\n      <p>Email: okafor@westview.edu</p>\n      <p>Office: Room 212</p>\n    </section>\n\n    <section>\n      <h2>Dr. Patel</h2>\n      <p>Role: Principal</p>\n      <p>Email: patel@westview.edu</p>\n      <p>Office: Main Building</p>\n    </section>\n\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "thumbnail_url": "https://images.code.org/965f2e5f46e56baf8cc9a91a90606f78-Screenshot 2025-04-02 at 7.41.54 AM.png"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-23T11:27:36.459+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10d\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10d\"},{\"changed_at\":\"2026-03-23 11:28:41 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:30:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-23 11:31:19 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

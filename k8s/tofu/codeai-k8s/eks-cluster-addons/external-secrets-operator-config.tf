@@ -6,20 +6,25 @@
 #
 # Creates:
 # 1) A namespace-scoped aws-secrets-manager-store SecretStore per environment_type (production, staging, test, levelbuilder)
-# 2) An adhoc-* scoped aws-secretes-manager-store-adhoc ClusterSecretStore for adhocs
-# 3) An IAM role for each secret store restricting it to read secrets with pattern cdo/${environment_type}/* from AWS Secrets Manager
+# 2) An adhoc-* scoped aws-secrets-manager-store-adhoc ClusterSecretStore for adhocs
+# 3) A cdo-external-secrets ExternalSecret per single-namespace env type, plus a ClusterExternalSecret fanout for adhoc namespaces
+# 4) An IAM role for each secret store restricting it to read secrets with pattern cdo/${environment_type}/* from AWS Secrets Manager
 
 # Note we configure ESO here, but actually install the helm chart earlier in:
 # ../eks-cluster/external-secrets-operator.tf
 
-# For the helm chart that actually triggers secrets to be synced, see:
-# ../helm/templates/aws-secrets-manager.yaml
+# For the OpenTofu resource that actually triggers secrets to be synced, see:
+# ./modules/eso-per-env/cdo-external-secrets.tf
 
 #------------------------------------------------------------
 # Per-environment SecretStore + IAM role
 #------------------------------------------------------------
 
 data "aws_caller_identity" "current" {}
+
+locals {
+  cluster_oidc_issuer_url = data.terraform_remote_state.eks_cluster.outputs.cluster_oidc_issuer_url
+}
 
 module "eso_per_env" {
   for_each = toset(["production", "staging", "test", "levelbuilder"])
@@ -30,7 +35,7 @@ module "eso_per_env" {
   cluster_oidc_issuer_url           = local.cluster_oidc_issuer_url
   oidc_provider_arn                 = local.oidc_provider_arn
   aws_account_id                    = data.aws_caller_identity.current.account_id
-  region                            = var.region
+  region                            = local.cluster_region
 }
 
 #------------------------------------------------------------
@@ -46,5 +51,5 @@ module "eso_per_adhoc" {
   cluster_oidc_issuer_url           = local.cluster_oidc_issuer_url
   oidc_provider_arn                 = local.oidc_provider_arn
   aws_account_id                    = data.aws_caller_identity.current.account_id
-  region                            = var.region
+  region                            = local.cluster_region
 }

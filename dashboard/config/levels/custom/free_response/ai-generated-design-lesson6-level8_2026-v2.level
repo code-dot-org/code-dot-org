@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Check For Understanding",
-    "long_instructions": "Think about one specific styling change you made to improve your page. Write 1–2 sentences explaining how you refined your prompt and how the final change better reflects your brand and improves usability using this sentence frame:\r\n\r\n> I improved my design by ..., which helped my page ...",
+    "long_instructions": "Think about one specific styling change you made to improve your page. Write 1–2 sentences explaining how you refined your prompt and how the final change better reflects your brand and improves usability using this sentence frame:\r\n\r\n> I improved my design by ... This helped my page by ...",
     "stay_on_level_after_submit": "false",
     "height": "300",
     "allow_user_uploads": "false",
@@ -21,7 +21,7 @@
     "name_suffix": "_2026",
     "teacher_markdown": "## Assessment Level — Teaching Tips\r\n\r\n- **Push for specificity.**  \r\n  If students write something vague like “I changed the colors,” prompt them to name the exact element they changed (e.g., buttons, headings, card spacing).\r\n\r\n- **Require connection to prompting.**  \r\n  Make sure students explain how they refined or clarified their prompt, not just what changed visually.\r\n\r\n- **Check for CSS understanding.**  \r\n  If students describe structural changes, redirect them to explain how CSS controlled styling (not HTML structure).\r\n\r\n- **Look for usability impact.**  \r\n  Ask: “How did this change make the page clearer, more readable, or more consistent with the brand?”"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-08T21:57:56.601+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level7_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level7_2026\"},{\"changed_at\":\"2026-03-08 22:06:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:17:19 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:35:03 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:56:20 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-03-08T21:57:56.601+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson2-level7_2026\\\"\"],\"cloned_from\":\"ai-generated-design-lesson2-level7_2026\"},{\"changed_at\":\"2026-03-08 22:06:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:17:19 +0000\",\"changed\":[\"name\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:35:03 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-09 04:56:20 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-17 15:24:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

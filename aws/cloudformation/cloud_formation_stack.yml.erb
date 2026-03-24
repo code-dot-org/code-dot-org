@@ -242,6 +242,12 @@ Resources:
               - 'bedrock:InvokeModel'
             Resource:
               - 'arn:aws:bedrock:us-east-1::foundation-model/anthropic.claude-3-sonnet-20240229-v1:0'
+          # Allow Frontend and Daemon servers to write to Amazon Managed Prometheus (AMP)
+          # TODO: Replace with SSM - https://codedotorg.atlassian.net/browse/INF-2079
+          - Effect: Allow
+            Action:
+              - 'aps:RemoteWrite'
+            Resource: '*'
 
   # ---------------------------------------------
   # Frontend Servers
@@ -498,48 +504,30 @@ Resources:
               - Effect: Allow
                 Action: iam:PassRole
                 Resource: !Sub "arn:aws:iam::${AWS::AccountId}:role/admin/CloudFormationService"
-<% if rack_env?(:production) -%>
-        # Grant scheduled processes (Export to Redshift, etc.) permission to clone/delete RDS clusters.
-        - PolicyName: CloneDeleteRDSClusters
+<% if rack_env?(:production) || rack_env?(:test) -%>
+        # Permit cron jobs on test and production daemon servers to utilize the `etl_client` SQL user to carry out data
+        # integration tasks and to monitor status of Zero ETL Integrations.
+        - PolicyName: RedshiftDataAPI
           PolicyDocument:
             Statement:
               - Effect: Allow
                 Action:
-                  - 'rds:DescribeDBClusters'
-                  - 'rds:RestoreDBClusterToPointInTime'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:subgrp:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:DeleteDBCluster'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:CreateDBInstance'
-                  - 'rds:DeleteDBInstance'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:db:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster:*"
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:DescribeDBInstances'
+                  - 'redshift-data:BatchExecuteStatement'
+                  - 'redshift-data:CancelStatement'
+                  - 'redshift-data:DescribeStatement'
+                  - 'redshift-data:ExecuteStatement'
+                  - 'redshift-data:GetStatementResult'
+                  - 'redshift-data:ListStatements'
+                  - 'redshift-data:ListTables'
                 Resource: '*'
               - Effect: Allow
-                Action:
-                  - 'rds:CopyDBClusterParameterGroup'
-                  - 'rds:DeleteDBClusterParameterGroup'
+                Action: 'redshift:GetClusterCredentials'
                 Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:cluster-pg:*"
-              - Effect: Allow
-                Action:
-                  - 'rds:CopyDBParameterGroup'
-                  - 'rds:DeleteDBParameterGroup'
-                Resource:
-                  - !Sub "arn:aws:rds:${AWS::Region}:${AWS::AccountId}:pg:*"
+                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${DATA_STACK_NAME}-RedshiftCluster/etl_client"
+                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/dashboard"
+                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/<%=rack_env%>_learningplatform_mysql_zeroetl"
+<% end -%>
+<% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
           PolicyDocument:
             Statement:
