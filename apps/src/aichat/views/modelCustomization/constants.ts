@@ -23,54 +23,54 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: {
 }[] = [
   {
     property: 'botName',
-    label: 'botName',
-    editTooltip: 'botNameTooltip',
+    label: aichatI18n.modelCard_botNameHeader(),
+    editTooltip: aichatI18n.modelCard_botNameEditTooltip(),
     displayTooltip: '',
   },
   {
     property: 'description',
-    label: 'description',
+    label: aichatI18n.modelCard_descriptionHeader(),
     icon: 'memo',
-    editTooltip:'descriptionTooltip'
-    displayTooltip: '',
+    editTooltip: aichatI18n.modelCard_descriptionEditTooltip(),
+    displayTooltip: aichatI18n.modelCard_descriptionDisplayTooltip(),
   },
   {
     property: 'intendedUse',
-    label: 'intendedUse',
+    label: aichatI18n.modelCard_intendedUseHeader(),
     icon: 'bullseye-pointer',
-    editTooltip: 'intendedUseTooltip',
-    displayTooltip: 'intendedUseDisplayTooltip',
+    editTooltip: aichatI18n.modelCard_intendedUseEditTooltip(),
+    displayTooltip: aichatI18n.modelCard_intendedUseDisplayTooltip(),
   },
   {
     property: 'limitationsAndWarnings',
-    label: 'limitationsAndWarnings',
+    label: aichatI18n.modelCard_limitationsHeaader(),
     icon: 'diamond-exclamation',
-    editTooltip: 'limitationsAndWarningsTooltip',
-    displayTooltip: 'limitationsAndWarningsDisplayTooltip',
+    editTooltip: aichatI18n.modelCard_limitationsEditTooltip(),
+    displayTooltip: aichatI18n.modelCard_limitationsDisplayTooltip(),
   },
   {
     property: 'testingAndEvaluation',
-    label: 'testingAndEvaluation',
+    label: aichatI18n.modelCard_testingHeader(),
     icon: 'vial-circle-check',
-    editTooltip: 'testingAndEvaluationTooltip',
-    displayTooltip: 'testingAndEvaluationDisplayTooltip',
+    editTooltip: aichatI18n.modelCard_testingEditTooltip(),
+    displayTooltip: aichatI18n.modelCard_testingDisplayTooltip(),
   },
   {
     property: 'exampleTopics',
-    label: 'exampleTopics',
+    label: aichatI18n.modelCard_exampleTopicsHeader(),
     icon: 'message-lines',
-    editTooltip: 'exampleTopicsTooltip',
-    displayTooltip: 'exampleTopicsDisplayTooltip',
+    editTooltip: aichatI18n.modelCard_exampleTopicsEditTooltip(),
+    displayTooltip: aichatI18n.modelCard_exampleTopicsDisplayTooltip(),
   },
 ];
 
 export const TECHNICAL_INFO_FIELDS = [
-  'modelName',
-  'overview',
-  'trainingData',
-  'systemPrompt',
-  'temperature',
-  'retrievalUsed',
+  aichatI18n.technicalInfoHeader_modelName(),
+  aichatI18n.technicalInfoHeader_overview(),
+  aichatI18n.technicalInfoHeader_trainingData(),
+  aichatI18n.technicalInfoHeader_systemPrompt(),
+  aichatI18n.technicalInfoHeader_temperature(),
+  aichatI18n.technicalInfoHeader_retrievalUsed(),
 ] as const;
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
@@ -112,11 +112,11 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
 export const AI_CUSTOMIZATIONS_LABELS: {
   [key in keyof AiCustomizations]: string;
 } = {
-  selectedModelId: 'selectedModelId',
-  temperature: 'temperature',
-  systemPrompt: 'systemPrompt',
-  retrievalContexts: 'retrievalContexts',
-  modelCardInfo: 'modelCardInfo',
+  selectedModelId: aichatI18n.aiCustomizations_selectedModel(),
+  temperature: aichatI18n.aiCustomizations_temperature(),
+  systemPrompt: aichatI18n.aiCustomizations_systemPrompt(),
+  retrievalContexts: aichatI18n.aiCustomizations_retrieval(),
+  modelCardInfo: aichatI18n.aiCustomizations_modelCardInfo(),
 };
 
 // Model customization fields that are checked for toxicity before updating.

@@ -18,9 +18,15 @@ import FilePreview from './FilePreview';
 import styles from './staged-files-preview.module.scss';
 
 const alerts = {
-  uploadFailed: ['uploadFailed', 'danger'] as const,
-  fileLimitExceeded: ['fileLimitExceeded', 'warning'] as const,
-  sizeLimitExceeded: ['sizeLimitExceeded', 'danger'] as const,
+  uploadFailed: [aichatI18n.uploadFailedAlert(), 'danger'] as const,
+  fileLimitExceeded: [
+    aichatI18n.uploadFileLimitExceededAlert({maximum: MAX_NUM_FILES}),
+    'warning',
+  ] as const,
+  sizeLimitExceeded: [
+    aichatI18n.uploadSizeLimitExceededAlert({maximum: MAX_FILE_SIZE_MB}),
+    'danger',
+  ] as const,
 } satisfies {[key: string]: [string, AlertProps['type']]};
 
 interface StagedFilesPreviewProps {
