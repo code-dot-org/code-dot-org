@@ -32,6 +32,7 @@ import {
 } from './utils/migrateExcalidrawToTldraw';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
+const UPDATE_SOURCES_DEBOUNCE_MS = 200;
 
 // TLStoreSnapshot requires { store: object, schema: object }.
 function isValidSnapshot(
@@ -105,22 +106,40 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
   }, [tldrawEditor]);
 
   useEffect(() => {
-    if (tldrawEditor) {
-      // listen method returns a method you can use to unsubscribe, so we return that from the effect.
-      // https://tldraw.dev/reference/store/Store#listen
-      const unsubscribe = tldrawEditor.store.listen(
-        () => {
-          updateSources({source: getSnapshot(tldrawEditor.store).document});
-        },
-        // We are only listening to 'document' changes because 'session' changes are things like cursor location,
-        // etc. We won't save those.
-        // https://tldraw.dev/sdk-features/store#Saving-state
-        {source: 'all', scope: 'document'}
+    if (!tldrawEditor) return;
+
+    const saveSnapshot = () => {
+      updateSources({source: getSnapshot(tldrawEditor.store).document});
+    };
+
+    // Tldraw fires updates on every change, which can be very frequent (dragging, drawing, etc.),
+    // so we debounce to avoid flooding updateSources with re-renders and deep-equality checks.
+    let debounceTimer: number | undefined;
+    const handleChange = () => {
+      window.clearTimeout(debounceTimer);
+      debounceTimer = window.setTimeout(
+        saveSnapshot,
+        UPDATE_SOURCES_DEBOUNCE_MS
       );
-      return () => {
-        unsubscribe();
-      };
-    }
+    };
+
+    // listen method returns a method you can use to unsubscribe, so we return that from the effect.
+    // https://tldraw.dev/reference/store/Store#listen
+    // We are only listening to 'document' changes because 'session' changes are things like cursor location,
+    // etc. We won't save those.
+    // https://tldraw.dev/sdk-features/store#Saving-state
+    const unsubscribe = tldrawEditor.store.listen(handleChange, {
+      source: 'all',
+      scope: 'document',
+    });
+
+    return () => {
+      unsubscribe();
+      // Flush any pending debounced update so in-app level navigation
+      // doesn't lose the last edit before the timer fires.
+      window.clearTimeout(debounceTimer);
+      saveSnapshot();
+    };
   }, [tldrawEditor, updateSources]);
 
   const {
