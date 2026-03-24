@@ -26,15 +26,19 @@ import {getAiCustomizationsLabels} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
-const chatEventDescriptionsOwner = {
+const getChatEventDescriptionsOwner = (): {
+  [key in ChatEventDescriptionKey]: string;
+} => ({
   CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChatOwner(),
   LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevelOwner(),
-} as const satisfies {[key in ChatEventDescriptionKey]: string};
+});
 
-const chatEventDescriptionsStudent = {
+const getChatEventDescriptionsStudent = (): {
+  [key in ChatEventDescriptionKey]: string;
+} => ({
   CLEAR_CHAT: aichatI18n.chatEventDescriptions_clearChat(),
   LOAD_LEVEL: aichatI18n.chatEventDescriptions_loadLevel(),
-} as const satisfies {[key in ChatEventDescriptionKey]: string};
+});
 
 interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
   event: ChatEvent;
@@ -95,8 +99,8 @@ const ChatEventView = forwardRef<HTMLDivElement, ChatEventViewProps>(
     const dispatch = useAppDispatch();
 
     const chatEventDescriptions = isTeacherView
-      ? chatEventDescriptionsStudent
-      : chatEventDescriptionsOwner;
+      ? getChatEventDescriptionsStudent()
+      : getChatEventDescriptionsOwner();
 
     // Only wrap chat messages in a focusable div for keyboard navigation
     if (isChatMessage(event)) {
