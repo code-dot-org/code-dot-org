@@ -19,6 +19,8 @@ const MIME_TO_EXT: Record<string, string> = {
   'application/octet-stream': 'bin',
 };
 
+// TODO: if you change levels quickly after adding an image the asset doesn't always save.
+// Probably need to do something similar to what we did in excalidraw.
 export function createTldrawAssetStore(
   channelId: string,
   levelName: string,
