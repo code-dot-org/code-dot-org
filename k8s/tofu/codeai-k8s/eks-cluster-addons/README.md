@@ -26,10 +26,10 @@ AWS_PROFILE=codeorg-admin tofu apply
 1. Apply tofu module `../eks-cluster/` before this one
 1. Review and edit `terraform.tfvars`:
    1. Follow [Bootstrapping Google OAuth Client for SSO](#bootstrapping-google-oauth-client-for-sso) to set `dex_*` variables.
-   1. Follow [Bootstrapping Kargo git credentials](#bootstrapping-kargo-git-credentials) to set `kargo_*` variables.
+   1. Follow [Bootstrapping Kargo secrets](#bootstrapping-kargo-secrets) to set `kargo_*` variables.
 
 1. Run: `AWS_PROFILE=codeorg-admin tofu apply`
-1. **Remove `dex_google_client_secret` and `kargo_k8s_gitops_repo_password` from `terraform.tfvars`** before you forget and commit them.
+1. **Remove `dex_google_client_secret`, `kargo_k8s_gitops_repo_password`, and `kargo_github_org_webhook_secret` from `terraform.tfvars`** before you forget and commit them.
 
 ### Bootstrapping Google OAuth Client for SSO
 
@@ -57,9 +57,14 @@ to this cluster and Google doesn't allow wildcards in redirect urls.
 1. Continue [First time cluster setup](#first-time-cluster-setup)
 After bootstrap, this module reads the credentials from AWS Secrets Manager.
 
-### Bootstrapping Kargo git credentials
+### Bootstrapping Kargo secrets
 
-Kargo needs Git credentials so it can push deployment updates to `code-dot-org/k8s-gitops`.
+Kargo needs two GitHub-related secrets:
+
+1. Git credentials so it can push deployment updates to `code-dot-org/k8s-gitops`
+1. A webhook secret so GitHub can send org webhooks to Kargo. Kargo doesn't require this, but our setup depends on it for perf finding new changes, so you gotta do it ;-)
+
+#### Git credentials
 
 1. Select a GitHub username (deploy-code-org) + create a GitHub personal access token (PAT)
    with write access to `code-dot-org/k8s-gitops`
@@ -73,6 +78,21 @@ Kargo needs Git credentials so it can push deployment updates to `code-dot-org/k
 After bootstrap, this module reads the credentials from AWS Secrets Manager and the
 External Secrets Operator (ESO) syncs them into Kubernetes secret `kargo-k8s-gitops`
 in namespace `kargo-shared-resources`.
+
+#### GitHub webhook secret
+
+1. Generate a random secret, for example:
+   `openssl rand -hex 32`
+1. Put that value in `terraform.tfvars` as `kargo_github_org_webhook_secret`
+   and do not commit it.
+1. Run `AWS_PROFILE=codeorg-admin tofu apply` with GitHub credentials that can
+   manage organization webhooks for `code-dot-org`.
+1. Remove `kargo_github_org_webhook_secret` from `terraform.tfvars`.
+
+After bootstrap, Tofu stores the secret in AWS Secrets Manager, ESO syncs it into
+Kubernetes secret `github-org-webhook-secret` in namespace
+`kargo-system-resources`, and Tofu manages the GitHub organization webhook that
+points at Kargo.
 
 ## Smoke Tests
 
