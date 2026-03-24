@@ -9,8 +9,13 @@ provider "aws" {
 
 provider "github" {}
 
+provider "github" {
+  alias = "code_dot_org"
+  owner = "code-dot-org"
+}
+
 provider "kubernetes" {
-  host                   = local.cluster_endpoint
+  host = local.cluster_endpoint
   cluster_ca_certificate = base64decode(
     data.terraform_remote_state.eks_cluster.outputs.cluster_certificate_authority_data
   )
@@ -27,7 +32,7 @@ data "aws_eks_cluster_auth" "this" {
 }
 
 provider "kubectl" {
-  host                   = local.cluster_endpoint
+  host = local.cluster_endpoint
   cluster_ca_certificate = base64decode(
     data.terraform_remote_state.eks_cluster.outputs.cluster_certificate_authority_data
   )
@@ -37,7 +42,7 @@ provider "kubectl" {
 
 provider "helm" {
   kubernetes {
-    host                   = local.cluster_endpoint
+    host = local.cluster_endpoint
     cluster_ca_certificate = base64decode(
       data.terraform_remote_state.eks_cluster.outputs.cluster_certificate_authority_data
     )
