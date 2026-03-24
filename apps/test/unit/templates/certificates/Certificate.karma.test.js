@@ -39,6 +39,7 @@ describe('Certificate', () => {
       wrapper.unmount();
       wrapper = undefined;
     }
+    sinon.restore();
     window.dashboard = storedWindowDashboard;
   });
 
@@ -53,7 +54,6 @@ describe('Certificate', () => {
     });
 
     afterEach(() => {
-      sinon.restore();
       server.restore();
     });
 

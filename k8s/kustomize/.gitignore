@@ -1,0 +1,3 @@
+components/mysql/*.secret.env
+components/redis/*.secret.env
+components/minio/*.secret.env

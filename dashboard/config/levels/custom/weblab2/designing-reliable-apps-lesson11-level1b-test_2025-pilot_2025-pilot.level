@@ -1,0 +1,62 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:52.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "# Explore and Test Your API\r\n\r\n**Goal**: Choose an API and confirm it works in your project before building your list view.\r\n\r\n1. **Choose Your API:** Select an API from the [curated list](https://studio.code.org/docs/ide/applab/expressions/startWebRequest) that fits your app idea and audience.\r\n2. **Make a Simple Fetch Call:** Write a basic fetch request using the API URL.\r\n3. **Inspect the Network Tab:** Check the Network tab to view the response data.\r\n4. **Identify Key Fields:** Locate 2 to 4 fields you will display in your card view, such as title, image, description, or id. Confirm they exist in the response.\r\n\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "code",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "display_name": "Explore & Choose Your Dataset",
+    "bubble_choice_description": "Test your API inside your project before building your list view. Make a simple fetch call, inspect the Network tab, and identify the fields you will display on your cards. ***(supports completing Milestone 1 tasks)***.",
+    "thumbnail_url": "https://images.code.org/ba2b8431c524d5db87fbdecfe0aaf95f-laptop2.jpg",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "buildJavaScript",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:52.132+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-level1b-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>
