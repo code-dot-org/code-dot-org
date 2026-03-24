@@ -1,30 +1,30 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: gateway-test
+  name: __TEST_NAMESPACE__
 ---
 apiVersion: gateway.k8s.aws/v1beta1
 kind: LoadBalancerConfiguration
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   scheme: internet-facing
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: hello-gateway
   template:
     metadata:
       labels:
-        app: hello
+        app: hello-gateway
     spec:
       containers:
         - name: hello
@@ -35,11 +35,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   selector:
-    app: hello
+    app: hello-gateway
   ports:
     - port: 80
       targetPort: 80
@@ -47,33 +47,26 @@ spec:
 apiVersion: gateway.k8s.aws/v1beta1
 kind: TargetGroupConfiguration
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   targetReference:
-    name: hello
+    name: hello-gateway
   defaultConfiguration:
     targetType: ip
 ---
 apiVersion: gateway.networking.k8s.io/v1
-kind: GatewayClass
-metadata:
-  name: aws-alb
-spec:
-  controllerName: gateway.k8s.aws/alb
----
-apiVersion: gateway.networking.k8s.io/v1
 kind: Gateway
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   gatewayClassName: aws-alb
   infrastructure:
     parametersRef:
       group: gateway.k8s.aws
       kind: LoadBalancerConfiguration
-      name: hello
+      name: hello-gateway
   listeners:
     - name: http
       protocol: HTTP
@@ -85,19 +78,19 @@ spec:
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: hello
-  namespace: gateway-test
+  name: hello-gateway
+  namespace: __TEST_NAMESPACE__
 spec:
   parentRefs:
-    - name: hello
+    - name: hello-gateway
       sectionName: http
   hostnames:
-    - hello.k8s.code.org
+    - __TEST_HOSTNAME__
   rules:
     - matches:
         - path:
             type: PathPrefix
             value: /
       backendRefs:
-        - name: hello
+        - name: hello-gateway
           port: 80

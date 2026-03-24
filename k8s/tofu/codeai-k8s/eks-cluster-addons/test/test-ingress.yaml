@@ -1,7 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: __TEST_NAMESPACE__
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello
+  namespace: __TEST_NAMESPACE__
 spec:
   replicas: 1
   selector:
@@ -22,6 +28,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: hello
+  namespace: __TEST_NAMESPACE__
 spec:
   selector:
     app: hello
@@ -33,13 +40,14 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: hello
+  namespace: __TEST_NAMESPACE__
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
 spec:
-  ingressClassName: alb
   rules:
-    - http:
+    - host: __TEST_HOSTNAME__
+      http:
         paths:
           - path: /
             pathType: Prefix

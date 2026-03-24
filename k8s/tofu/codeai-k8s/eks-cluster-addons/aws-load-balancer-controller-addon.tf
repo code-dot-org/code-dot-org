@@ -10,7 +10,7 @@ locals {
   #    https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/v2.17.1/docs/guide/gateway/gateway.md?plain=1#L19
   # 2. Find Helm Chart version (e.g. v1.17.1) here:
   #    https://github.com/kubernetes-sigs/aws-load-balancer-controller/blob/v2.17.1/helm/aws-load-balancer-controller/Chart.yaml#L1-L9
-  
+
   # Align with gateway_api_version in: ../eks-cluster/gateway-api-crds.tf:
   aws_load_balancer_controller_chart_version = "1.17.1"
   cluster_version                            = data.terraform_remote_state.eks_cluster.outputs.cluster_version
@@ -66,7 +66,7 @@ module "aws_load_balancer_controller_addon" {
   enable_aws_load_balancer_controller = true
 
   aws_load_balancer_controller = {
-    chart_version = local.aws_load_balancer_controller_chart_version
+    chart_version     = local.aws_load_balancer_controller_chart_version
     policy_statements = local.aws_load_balancer_controller_policy_statements
 
     set = [
@@ -77,6 +77,10 @@ module "aws_load_balancer_controller_addon" {
       {
         name  = "vpcId"
         value = local.vpc_id
+      },
+      {
+        name  = "ingressClass"
+        value = "aws-alb"
       },
       {
         name  = "ingressClassConfig.default"
