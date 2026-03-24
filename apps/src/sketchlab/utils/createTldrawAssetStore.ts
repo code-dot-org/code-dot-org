@@ -28,6 +28,14 @@ export function createTldrawAssetStore(
   // needing access to the editor. Pre-populated from the snapshot so assets
   // uploaded in previous sessions are covered.
   const srcByAssetId = new Map<TLAssetId, string>();
+
+  // Maps assetId -> blob URL for assets whose upload is still in-flight.
+  // resolve() returns the blob URL so the image renders immediately without
+  // waiting for the server-side PUT to complete. Blob URLs live for the page
+  // session and are freed automatically on unload, so no explicit revocation
+  // is needed. This is relevant when converting from Excalidraw,
+  // which can require multiple uploads and can result in a delay before the new URLs work.
+  const blobUrlByAssetId = new Map<TLAssetId, string>();
   if (initialSnapshot) {
     for (const record of Object.values(initialSnapshot.store)) {
       const r = record as {
@@ -64,6 +72,10 @@ export function createTldrawAssetStore(
 
       srcByAssetId.set(asset.id, uploadUrl);
 
+      // Create a blob URL so resolve() can return something immediately while
+      // the upload is in-flight.
+      blobUrlByAssetId.set(asset.id, URL.createObjectURL(file));
+
       // Fire the upload in the background without awaiting it. The browser
       // will keep the in-flight request alive even if the component unmounts.
       if (isStarterAssetOrExemplar) {
@@ -82,7 +94,13 @@ export function createTldrawAssetStore(
     },
 
     resolve(asset: TLAsset) {
-      return asset.props.src ?? null;
+      // Return the blob URL while the upload is still in-flight so the image
+      // renders immediately without waiting for the server PUT to complete.
+      // Falls back to the stored server URL once the blob URL is no longer
+      // available (e.g. after a page refresh).
+      return (
+        blobUrlByAssetId.get(asset.id as TLAssetId) ?? asset.props.src ?? null
+      );
     },
 
     // TODO: this may never be called. Images aren't deleted immediately when a user removes them from the
