@@ -1,3 +1,5 @@
+import DCDO from '@cdo/apps/dcdo';
+
 const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
@@ -49,8 +51,7 @@ function getOrCreateContainer(): HTMLElement {
 }
 
 function getSiteKey(): string {
-  const el = document.querySelector('script[data-turnstile-site-key]');
-  return el ? (el as HTMLElement).dataset.turnstileSiteKey ?? '' : '';
+  return DCDO.get('turnstile-site-key', '');
 }
 
 export async function getTurnstileToken(): Promise<string> {

@@ -68,7 +68,8 @@ class DCDOBase < DynamicConfigBase
       'sketchlab-s3-image-storage': DCDO.get('sketchlab-s3-image-storage', true),
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
-      'datadog-enabled': DCDO.get('datadog-enabled', false)
+      'datadog-enabled': DCDO.get('datadog-enabled', false),
+      'turnstile-site-key': CDO.turnstile_site_key
     }
   end
 end
