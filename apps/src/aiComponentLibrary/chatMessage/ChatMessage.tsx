@@ -116,7 +116,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             )}
           </div>
         )}
-        <div className={moduleStyles.messageAndHeader}>
+        <div className={moduleStyles[`message-and-header-${role}`]}>
           {header && <div className={moduleStyles.header}>{header}</div>}
           {(text || postText) && (
             <div
