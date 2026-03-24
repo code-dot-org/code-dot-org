@@ -4,10 +4,10 @@ import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
 import SourcesContainer from '@cdo/apps/lab2/views/SourcesContainer';
 import experiments from '@cdo/apps/util/experiments';
 
-import SketchLabExcalidrawView, {
-  DEFAULT_SOURCES,
-} from './SketchLabExcalidrawView';
+import SketchLabExcalidrawView from './SketchLabExcalidrawView';
 import SketchLabTldrawView from './SketchLabTldrawView';
+
+export const DEFAULT_SOURCES = {source: {}};
 
 export default (props: LabProps<LevelProperties>) => {
   if (experiments.isEnabledAllowingQueryString(experiments.TLDRAW)) {

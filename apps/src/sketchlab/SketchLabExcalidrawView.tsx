@@ -36,6 +36,7 @@ import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
+import {DEFAULT_SOURCES} from './SketchlabView';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import useSketchlabTour from './useSketchlabTour';
 import {
@@ -58,8 +59,6 @@ const MIN_WORKSPACE_WIDTH = 400;
 const INITIAL_WORKSPACE_WIDTH = 800;
 
 const DEBOUNCED_WORKSPACE_SERIALIZATION_MS = 200;
-
-const DEFAULT_SOURCES = {source: {}};
 
 const SketchLabExcalidrawView: React.FC<LabProps<LevelProperties>> = ({
   levelProperties,
