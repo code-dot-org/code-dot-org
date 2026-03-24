@@ -30,8 +30,8 @@ class Policies::DemoSections
       csd: [],
     },
     adhoc: {
-      aif: [],
-      csd: [],
+      aif: [2, 3],
+      csd: [4, 5],
     },
   }.freeze
 
