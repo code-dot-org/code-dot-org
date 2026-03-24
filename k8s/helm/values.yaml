@@ -9,6 +9,7 @@ args:
 
 # Override to set RAILS_ENV
 RAILS_ENV:
+dnsName: studio-development
 dashboard_workers: 0
 
 locals.yml:
