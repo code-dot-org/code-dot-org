@@ -1,6 +1,7 @@
 # Default configuration, overridden by:
 # - development.values.yml
 # - production.values.yml
+# argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
 image: code-dot-org:latest
 command: ["bin/dashboard-server"]
@@ -8,6 +9,7 @@ args:
 
 # Override to set RAILS_ENV
 RAILS_ENV:
+dashboard_workers: 0
 
 locals.yml:
 
@@ -17,6 +19,9 @@ require_external_secrets: false
 
 healthChecks:
   enabled: false
+
+resources:
+  ephemeralStorage: 30Gi
 
 autoscaling:
   enabled: false

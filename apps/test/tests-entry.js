@@ -5,7 +5,7 @@
 
 import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
