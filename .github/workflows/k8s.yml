@@ -42,21 +42,31 @@ jobs:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
-  #
-  # Kargo is then responsible for promoting the change to ArgoCD codeai
-  # deployments in apps/codeai/deployments/*
-  commit-to-kargo-warehouse:
-    name: commit to kargo warehouse
-    uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
+  # Step 3: publish the matching OCI release capsule. Kargo now promotes the
+  # image and capsule pair instead of a values.yaml mutation on main.
+  publish-release-capsule:
+    if: github.event_name != 'pull_request'
+    name: publish release capsule
+    uses: ./.github/workflows/k8s-publish-release-capsule.yml
     needs:
       - stitch-multiplatform-image
       - validate
     with:
-      branch_name: ${{ github.head_ref || github.ref_name }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
+      codeai_docker_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_digest }}
+      git_commit: ${{ github.sha }}
+    secrets: inherit
+
+  # Separately from packaging, keep the legacy branch merge facts current so
+  # downstream Kargo stages can gate on them during the coexistence period.
+  record-legacy-gitflow-merge:
+    if: github.event_name != 'pull_request'
+    name: record legacy gitflow merge
+    uses: ./.github/workflows/k8s-record-legacy-gitflow.yml
+    with:
+      branch_name: ${{ github.ref_name }}
+      git_commit: ${{ github.sha }}
     secrets: inherit
 
 # Grant the GITHUB_TOKEN the necessary permissions for checkout and publishing to GitHub Packages

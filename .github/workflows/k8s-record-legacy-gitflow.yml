@@ -1,0 +1,138 @@
+name: k8s-record-legacy-gitflow
+
+on:
+  workflow_call:
+    inputs:
+      branch_name:
+        required: true
+        type: string
+      git_commit:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  record-legacy-gitflow-merge:
+    if: contains(fromJSON('["staging","test","levelbuilder","production"]'), inputs.branch_name)
+    name: record legacy gitflow merge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code-dot-org history
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+          path: code-dot-org
+          ref: ${{ inputs.git_commit }}
+
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Resolve promoted release identity
+        id: release
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ inputs.git_commit }}
+        run: | # ruby
+          require "shellwords"
+
+          branch_name = ENV.fetch("BRANCH_NAME")
+          git_commit = ENV.fetch("GIT_COMMIT")
+
+          source_branch = case branch_name
+                          when "staging"
+                            nil
+                          when "test", "levelbuilder", "production"
+                            "staging"
+                          else
+                            nil
+                          end
+
+          def git(*args)
+            command = ["git", "-C", "code-dot-org", *args].map { |arg| Shellwords.escape(arg) }.join(" ")
+            output = `#{command}`
+            raise "Command failed: #{command}" unless $?.success?
+
+            output
+          end
+
+          def promoted_release_commit(commit, source_branch)
+            current_commit = commit
+            source_ref = "from code-dot-org/#{source_branch}"
+
+            loop do
+              parents = git("show", "--no-patch", "--format=%P", current_commit).strip.split
+              return nil if parents.length < 2
+
+              body = git("show", "--no-patch", "--format=%B", current_commit)
+              return parents[1] if body.include?(source_ref)
+
+              current_commit = parents[1]
+            end
+          end
+
+          release_commit = source_branch ? promoted_release_commit(git_commit, source_branch) || git_commit : git_commit
+          release_tag = "git-#{release_commit}"
+
+          File.open(ENV.fetch("GITHUB_OUTPUT"), "a") do |file|
+            file.puts("git_commit=#{release_commit}")
+            file.puts("release_tag=#{release_tag}")
+          end
+
+          if source_branch && release_commit == git_commit
+            warn "Falling back to downstream branch tip #{git_commit} for #{branch_name}; no merge-from-#{source_branch} commit found on the second-parent chain."
+          else
+            puts "Resolved #{branch_name} release identity to #{release_tag}"
+          end
+
+      - name: Write legacy gitflow metadata
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ steps.release.outputs.git_commit }}
+        run: | # ruby
+          require "fileutils"
+          require "time"
+
+          branch_name = ENV.fetch("BRANCH_NAME")
+          git_commit = ENV.fetch("GIT_COMMIT")
+          release_tag = "git-#{git_commit}"
+          merged_at = Time.now.utc.iso8601
+          base_dir = File.join("k8s-gitops", "warehouses", "codeai", "legacy-gitflow", branch_name)
+          merged_dir = File.join(base_dir, "merged")
+          current_path = File.join(base_dir, "current.yaml")
+          merged_path = File.join(merged_dir, "#{release_tag}.yaml")
+
+          FileUtils.mkdir_p(merged_dir)
+
+          payload = <<~YAML
+            revision: #{git_commit}
+            tag: #{release_tag}
+            mergedAt: #{merged_at}
+          YAML
+
+          File.write(current_path, payload)
+          File.write(merged_path, payload)
+
+      - name: Commit and push legacy gitflow metadata
+        run: |
+          cd k8s-gitops
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "warehouses/codeai/legacy-gitflow/${{ inputs.branch_name }}/current.yaml" \
+            "warehouses/codeai/legacy-gitflow/${{ inputs.branch_name }}/merged/${{ steps.release.outputs.release_tag }}.yaml"
+
+          if git diff --cached --quiet; then
+            echo "No legacy gitflow metadata changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Record legacy ${{ inputs.branch_name }} merge for ${{ steps.release.outputs.release_tag }}"
+          git push origin HEAD:main
