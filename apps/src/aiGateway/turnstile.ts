@@ -51,7 +51,7 @@ function getOrCreateContainer(): HTMLElement {
 }
 
 function getSiteKey(): string {
-  return DCDO.get('turnstile-site-key', '');
+  return DCDO.get('ai-gateway-turnstile-site-key', '');
 }
 
 export async function getTurnstileToken(): Promise<string> {
