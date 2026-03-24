@@ -101,6 +101,7 @@ module "aws_load_balancer_controller_addon" {
       {
         name  = "ingressClassParams.spec.sslRedirectPort"
         value = "443"
+        type  = "string"
       },
       {
         name  = "ingressClassConfig.default"
