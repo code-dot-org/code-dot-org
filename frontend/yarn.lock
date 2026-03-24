@@ -1500,6 +1500,32 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@code-dot-org/observability@workspace:packages/observability":
+  version: 0.0.0-use.local
+  resolution: "@code-dot-org/observability@workspace:packages/observability"
+  dependencies:
+    "@code-dot-org/lint-config": "workspace:*"
+    "@datadog/browser-logs": "npm:^6.31.0"
+    "@datadog/browser-rum": "npm:^6.31.0"
+    "@sentry/browser": "npm:*"
+    "@types/node": "npm:^20"
+    "@vitejs/plugin-react": "npm:^5.0.4"
+    eslint: "npm:^9.39.1"
+    fast-check: "npm:^3.0.0"
+    prettier: "npm:3.4.2"
+    rimraf: "npm:^6.0.1"
+    typescript: "npm:~5.9.3"
+    vite: "npm:^7.2.4"
+    vite-plugin-dts: "npm:^4.5.4"
+    vite-plugin-externalize-deps: "npm:^0.10.0"
+    vitest: "npm:^4.0.17"
+  peerDependencies:
+    "@datadog/browser-logs": "*"
+    "@datadog/browser-rum": "*"
+    "@sentry/browser": "*"
+  languageName: unknown
+  linkType: soft
+
 "@code-dot-org/studio@workspace:apps/studio":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/studio@workspace:apps/studio"
@@ -1594,6 +1620,51 @@ __metadata:
   peerDependencies:
     postcss-selector-parser: ^7.0.0
   checksum: 10c0/186b444cabcdcdeb553bfe021f80c58bfe9ef38dcc444f2b1f34a5aab9be063ab4e753022b2d5792049c041c28cfbb78e4b707ec398459300e402030d35c07eb
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-core@npm:6.31.0":
+  version: 6.31.0
+  resolution: "@datadog/browser-core@npm:6.31.0"
+  checksum: 10c0/d764506741136649af9c0e9791fe3c7875f5af15bf1baffb724e1bd95c682677f4a43979735aebe6ac185bb21d74cfad5099e8d419c09cca41a213616250b5f2
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-logs@npm:^6.31.0":
+  version: 6.31.0
+  resolution: "@datadog/browser-logs@npm:6.31.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.31.0"
+  peerDependencies:
+    "@datadog/browser-rum": 6.31.0
+  peerDependenciesMeta:
+    "@datadog/browser-rum":
+      optional: true
+  checksum: 10c0/9f55bc18ee464c9bd96ed134b2d87fc6b82fba3c6143bd8de9de281660207d43025ed32eed695c160d54855141258147730bb392f37b033dfb5bf5c04e4e92d1
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum-core@npm:6.31.0":
+  version: 6.31.0
+  resolution: "@datadog/browser-rum-core@npm:6.31.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.31.0"
+  checksum: 10c0/d0afad920a6b2f44a0882e1757e972c3d10f7f5d4290aaeb800a20a2a9a2b441b6d3fa4a09eff166baa5981074f64baaabadfc5bcef867996b4f835e361a6daa
+  languageName: node
+  linkType: hard
+
+"@datadog/browser-rum@npm:^6.31.0":
+  version: 6.31.0
+  resolution: "@datadog/browser-rum@npm:6.31.0"
+  dependencies:
+    "@datadog/browser-core": "npm:6.31.0"
+    "@datadog/browser-rum-core": "npm:6.31.0"
+  peerDependencies:
+    "@datadog/browser-logs": 6.31.0
+  peerDependenciesMeta:
+    "@datadog/browser-logs":
+      optional: true
+  checksum: 10c0/1f863769e4fd35b6b3167958cc5fef584b8d4fc80d76b410639904f49e98f51b14d7175aed0612a58f035934a02d41661ea0cac71ad15a2176d748d40eccfd9e
   languageName: node
   linkType: hard
 
@@ -5122,6 +5193,64 @@ __metadata:
   version: 0.4.1
   resolution: "@sec-ant/readable-stream@npm:0.4.1"
   checksum: 10c0/64e9e9cf161e848067a5bf60cdc04d18495dc28bb63a8d9f8993e4dd99b91ad34e4b563c85de17d91ffb177ec17a0664991d2e115f6543e73236a906068987af
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/browser-utils@npm:10.45.0":
+  version: 10.45.0
+  resolution: "@sentry-internal/browser-utils@npm:10.45.0"
+  dependencies:
+    "@sentry/core": "npm:10.45.0"
+  checksum: 10c0/911ebcb570bc9ed47959ee225edf5d76472c422d86ec22273f55222b8a391c320da1e9cfddb5786423f85682c7ca7c970107b825eb885947d6940b9bd993304d
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/feedback@npm:10.45.0":
+  version: 10.45.0
+  resolution: "@sentry-internal/feedback@npm:10.45.0"
+  dependencies:
+    "@sentry/core": "npm:10.45.0"
+  checksum: 10c0/d50d6ac5fad8f13a1e31e9173365dc56bc6777485d49e8b0d634b3b889574c2489b24b2e0d5194950dcbcbe25bca9f0474373722a6a4b0a70f19dc23021ebdb4
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/replay-canvas@npm:10.45.0":
+  version: 10.45.0
+  resolution: "@sentry-internal/replay-canvas@npm:10.45.0"
+  dependencies:
+    "@sentry-internal/replay": "npm:10.45.0"
+    "@sentry/core": "npm:10.45.0"
+  checksum: 10c0/8ecd11be0f1eb113d6b79a352ebc9e7cf204f847c8bac4b61fe09b24cfb7c1219bd2a52345a69ce0a16e5876a64543cd0b7a85c7f851195a69d959c61278c153
+  languageName: node
+  linkType: hard
+
+"@sentry-internal/replay@npm:10.45.0":
+  version: 10.45.0
+  resolution: "@sentry-internal/replay@npm:10.45.0"
+  dependencies:
+    "@sentry-internal/browser-utils": "npm:10.45.0"
+    "@sentry/core": "npm:10.45.0"
+  checksum: 10c0/da1a251fd51b14b1d6061e3080e4933728d3b1b7e9f1745202abac42e80661272f54b7f8011fbab2d2df414a342bd4b0dbb889b3dce8e33069a50aff36bf9413
+  languageName: node
+  linkType: hard
+
+"@sentry/browser@npm:*":
+  version: 10.45.0
+  resolution: "@sentry/browser@npm:10.45.0"
+  dependencies:
+    "@sentry-internal/browser-utils": "npm:10.45.0"
+    "@sentry-internal/feedback": "npm:10.45.0"
+    "@sentry-internal/replay": "npm:10.45.0"
+    "@sentry-internal/replay-canvas": "npm:10.45.0"
+    "@sentry/core": "npm:10.45.0"
+  checksum: 10c0/1014dae3e036983eb4f8f7ae29ffe998cbc1f22f0ae6bf8d170718efe1dbe3a78bfcd839fe02f7e63063b237886d569ba85baa3d4a433a05123489475a7c371c
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:10.45.0":
+  version: 10.45.0
+  resolution: "@sentry/core@npm:10.45.0"
+  checksum: 10c0/ee84882df0615857fc716a5d126b93293d0171fc215bd5a8180263fe096b4f375af53e274597db9016ba36edb2e5b519c7b046809fdc9c36f27677381e08fe5f
   languageName: node
   linkType: hard
 
@@ -11398,6 +11527,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fast-check@npm:^3.0.0":
+  version: 3.23.2
+  resolution: "fast-check@npm:3.23.2"
+  dependencies:
+    pure-rand: "npm:^6.1.0"
+  checksum: 10c0/16fcff3c80321ee765e23c3aebd0f6427f175c9c6c1753104ec658970162365dc2d56bda046d815e8f2e90634c07ba7d6f0bcfd327fbd576d98c56a18a9765ed
+  languageName: node
+  linkType: hard
+
 "fast-content-type-parse@npm:^1.1.0":
   version: 1.1.0
   resolution: "fast-content-type-parse@npm:1.1.0"
@@ -17368,7 +17506,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pure-rand@npm:^6.0.0":
+"pure-rand@npm:^6.0.0, pure-rand@npm:^6.1.0":
   version: 6.1.0
   resolution: "pure-rand@npm:6.1.0"
   checksum: 10c0/1abe217897bf74dcb3a0c9aba3555fe975023147b48db540aa2faf507aee91c03bf54f6aef0eb2bf59cc259a16d06b28eca37f0dc426d94f4692aeff02fb0e65

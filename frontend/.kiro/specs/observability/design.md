@@ -110,10 +110,25 @@ The meta tag content is typed as `RuntimeConfig` — a plain interface that make
 
 export type RumProvider = 'newrelic' | 'datadog' | 'sentry' | 'none';
 
+export interface DatadogConfig {
+  applicationId: string;
+  clientToken: string;
+}
+
+export interface NewRelicConfig {
+  licenseKey: string;
+  applicationId: string;
+}
+
+export interface SentryConfig {
+  dsn: string;
+}
+
 export interface ObservabilityConfig {
   rumProvider: RumProvider;
-  datadogApplicationId?: string;
-  datadogClientToken?: string;
+  datadog?: DatadogConfig;
+  newRelic?: NewRelicConfig;
+  sentry?: SentryConfig;
 }
 
 /** Shape of the <meta name="app-config"> content attribute rendered by Rails */
@@ -141,8 +156,9 @@ export class SiteConfig {
     this.appVersion = runtime.appVersion;
     this.observability = {
       rumProvider: runtime.observability?.rumProvider ?? 'none',
-      datadogApplicationId: runtime.observability?.datadogApplicationId,
-      datadogClientToken: runtime.observability?.datadogClientToken,
+      datadog: runtime.observability?.datadog,
+      newRelic: runtime.observability?.newRelic,
+      sentry: runtime.observability?.sentry,
     };
   }
 
@@ -518,17 +534,22 @@ import CodeStudioConfig from '@code-dot-org/core';
 import {createRumClient} from '@code-dot-org/observability';
 import metricsReporter from '@cdo/apps/metrics/MetricsReporter';
 
-const {rumProvider, datadogApplicationId, datadogClientToken} =
-  CodeStudioConfig.observability;
+const {rumProvider, datadog, newRelic, sentry} = CodeStudioConfig.observability;
 
 const rumClient = createRumClient(rumProvider, {
   applicationName: 'studio',
   environment: CodeStudioConfig.environment,
   version: CodeStudioConfig.appVersion,
   providerOptions: {
-    applicationId: datadogApplicationId,
-    clientToken: datadogClientToken,
+    // Datadog
+    applicationId: datadog?.applicationId,
+    clientToken: datadog?.clientToken,
     site: 'datadoghq.com',
+    // New Relic
+    licenseKey: newRelic?.licenseKey,
+    applicationID: newRelic?.applicationId,
+    // Sentry
+    dsn: sentry?.dsn,
   },
 });
 

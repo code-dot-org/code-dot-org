@@ -54,13 +54,17 @@ The goal is a clean separation between the Vite frontend and the Rails backend, 
    ```ts
    observability: {
      rumProvider: 'newrelic' | 'datadog' | 'sentry' | 'none';
-     datadogApplicationId?: string;
-     datadogClientToken?: string;
+     datadog?: { applicationId: string; clientToken: string };
+     newRelic?: { licenseKey: string; applicationId: string };
+     sentry?: { dsn: string };
    }
    ```
    - `rumProvider` SHALL default to `'none'` when the meta tag is absent or the field is missing.
-   - `datadogApplicationId` is sourced from `CDO.datadog_application_id`.
-   - `datadogClientToken` is sourced from `CDO.datadog_client_token`.
+   - `datadog.applicationId` is sourced from `CDO.datadog_application_id`.
+   - `datadog.clientToken` is sourced from `CDO.datadog_client_token`.
+   - `newRelic.licenseKey` is sourced from `CDO.new_relic_license_key`.
+   - `newRelic.applicationId` is sourced from `CDO.new_relic_application_id`.
+   - `sentry.dsn` is sourced from `CDO.sentry_dsn`.
 3. `SiteConfig` SHALL also expose `appVersion?: string` sourced from the meta tag.
 4. If the `<meta name="app-config">` tag is absent or its content is not valid JSON, `SiteConfig` SHALL use safe defaults (e.g. `rumProvider: 'none'`) rather than throwing.
 5. All modules in the app SHALL access config via the existing `CodeStudioConfig` singleton from `@code-dot-org/core` — never directly from `document.querySelector`, `window` globals, or `import.meta.env`.
