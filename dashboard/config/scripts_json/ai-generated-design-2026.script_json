@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-23 12:37:04 UTC",
+    "serialized_at": "2026-03-23 21:17:49 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -7812,19 +7812,6 @@
       }
     },
     {
-      "key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-      "position": 2,
-      "learning_goal": "Refine prompts to improve results",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
       "key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
       "position": 1,
       "learning_goal": "Identify and categorize accessibility issues using POUR",
@@ -7851,32 +7838,6 @@
       }
     },
     {
-      "key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-      "position": 3,
-      "learning_goal": "Evaluate and improve AI-generated output",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-      "position": 1,
-      "learning_goal": "Use AI to generate a web page",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
       "key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
       "position": 2,
       "learning_goal": "Write effective AI prompts that propose accessibility fixes",
@@ -7885,6 +7846,45 @@
       "seeding_key": {
         "learning_goal.key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+      "position": 1,
+      "learning_goal": "Use AI to generate a web page",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+      "position": 2,
+      "learning_goal": "Refine prompts to improve results",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+      "position": 3,
+      "learning_goal": "Evaluate and improve AI-generated output",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8063,54 +8063,6 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Student does not revise prompts or relies on a single vague prompt.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student attempts prompting but makes minimal or unclear revisions.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student revises at least one prompt to improve the webpage.\n\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student writes clear and specific prompts and revises them multiple times to improve both structure and style.\n\n\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
       "teacher_description": "Does not identify relevant accessibility issues, does not use the POUR framework, or gives responses unrelated to the task.",
       "ai_prompt": "",
       "seeding_key": {
@@ -8207,102 +8159,6 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Student accepts AI output without evaluating or refining it.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student accepts AI output with little evidence of review or improvement.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student reviews output and makes at least one meaningful improvement.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student reviews AI output, identifies strengths and issues, and makes meaningful improvements that better match their goal or user needs.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "Student is unable to generate a webpage using AI.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student generates a webpage using AI but it is incomplete, unclear, or only includes structure or style.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student uses AI to generate a webpage with both structure and style that mostly reflects a chosen topic.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student uses AI to generate both structure (HTML) and style (CSS) that clearly reflects a chosen topic and includes multiple relevant sections.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
       "teacher_description": "Does not write usable prompts, or the prompts are unrelated to accessibility improvements.",
       "ai_prompt": "",
       "seeding_key": {
@@ -8345,6 +8201,150 @@
         "understanding": 3,
         "learning_goal.key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student is unable to generate a webpage using AI.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student generates a webpage using AI but it is incomplete, unclear, or only includes structure or style.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student uses AI to generate a webpage with both structure and style that mostly reflects a chosen topic.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student uses AI to generate both structure (HTML) and style (CSS) that clearly reflects a chosen topic and includes multiple relevant sections.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not revise prompts or relies on a single vague prompt.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts prompting but makes minimal or unclear revisions.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student revises at least one prompt to improve the webpage.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes clear and specific prompts and revises them multiple times to improve both structure and style.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student accepts AI output without evaluating or refining it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student accepts AI output with little evidence of review or improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student reviews output and makes at least one meaningful improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reviews AI output, identifies strengths and issues, and makes meaningful improvements that better match their goal or user needs.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
