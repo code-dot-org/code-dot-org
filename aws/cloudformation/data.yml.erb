@@ -60,6 +60,8 @@ Parameters:
 Resources:
   Tableau:
     Type: AWS::Redshift::Cluster
+    Metadata:
+      ForceUpdate: "2026-03-24-v1"
     DeletionPolicy: Retain
     Properties:
       AllowVersionUpgrade: true
@@ -733,8 +735,13 @@ Resources:
           SerdeInfo:
             SerializationLibrary: org.openx.data.jsonserde.JsonSerDe
 Outputs:
+  RedshiftClusterIdentifier:
+    Value: !Ref Tableau
+    Description: "Redshift Cluster Identifier."
+    Export:
+      Name: !Sub "${AWS::StackName}-RedshiftClusterIdentifier"
   RedshiftClusterNamespace:
     Value: !GetAtt Tableau.ClusterNamespaceArn
-    Description: "Redshift Cluster Namespace for Zero-ETL targeting."
+    Description: "Redshift Cluster Namespace ARN for Zero-ETL targeting."
     Export:
       Name: !Sub "${AWS::StackName}-RedshiftClusterNamespace"
