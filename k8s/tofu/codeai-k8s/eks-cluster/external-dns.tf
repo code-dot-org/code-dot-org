@@ -49,7 +49,7 @@ module "external_dns_addon" {
         #
         # For example: `code.ai/dns-name: boo` => boo.k8s.code.org
         #
-        "--fqdn-template={{ with index .Labels \"code.ai/dns-name\" }}{{ . }}{{ else }}ignore{{ end }}.${var.cluster_subdomain}.${var.parent_domain}",
+        "--fqdn-template={{ printf \"{{ with index .Labels %q }}{{ . }}{{ else }}ignore{{ end }}\" \"code.ai/dns-name\" }}.${var.cluster_subdomain}.${var.parent_domain}",
         "--exclude-domains=ignore.${var.cluster_subdomain}.${var.parent_domain}",
       ]
     })]
