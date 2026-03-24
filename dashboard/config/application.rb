@@ -10,6 +10,7 @@ require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
+Dir[File.expand_path('../lib/middleware/**/*.rb', __dir__)].sort.each {|file| require file}
 
 require 'bootstrap-sass'
 require 'cdo/global_edition'
@@ -60,9 +61,6 @@ module Dashboard
       config.middleware.insert_before Rack::Cors, Rack::CookieDCDO
     end
 
-    require 'cdo/rack/global_edition'
-    config.middleware.insert_before Rack::Cors, Rack::GlobalEdition
-
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
@@ -99,6 +97,7 @@ module Dashboard
     end
 
     config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
+    config.middleware.insert_after VarnishEnvironment, Middleware::GlobalEdition
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi

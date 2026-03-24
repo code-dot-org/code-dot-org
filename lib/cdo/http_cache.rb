@@ -116,9 +116,9 @@ class HttpCache
       default_cookies << Rack::GeolocationOverride::KEY
     end
 
-    # Allows setting of Global Edition Region via cookies. See: Rack::GlobalEdition
-    require 'cdo/rack/global_edition'
-    default_cookies << Rack::GlobalEdition::REGION_KEY
+    # Allows setting of Global Edition Region via cookies.
+    require 'cdo/global_edition'
+    default_cookies << Cdo::GlobalEdition::REGION_KEY
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
