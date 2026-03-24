@@ -14,7 +14,7 @@ import {
   PendingChatMessage,
 } from '../../types';
 
-import {generatedFileToAssetAndUrl} from './helpers/fileHelpers';
+import {generatedFileToAsset} from './helpers/fileHelpers';
 import {
   formatChatMessage,
   formatSystemMessages,
@@ -86,16 +86,12 @@ export async function generateChatResponse(
   const assets: ChatAsset[] = [];
   for (const file of files) {
     let asset: ChatAsset;
-    let assetUrl: string;
     try {
-      const {asset: resolvedAsset, assetUrl: resolvedAssetUrl} =
-        await generatedFileToAssetAndUrl(
-          file,
-          buildAssetUrl,
-          ACCEPTED_IMAGE_MEDIA_TYPES // Currently only image files are supported.
-        );
-      asset = resolvedAsset;
-      assetUrl = resolvedAssetUrl;
+      asset = await generatedFileToAsset(
+        file,
+        buildAssetUrl,
+        ACCEPTED_IMAGE_MEDIA_TYPES // Currently only image files are supported.
+      );
     } catch (error) {
       // Log and skip files with unsupported or unrecognized media types so the
       // text response is still returned to the user.
@@ -108,7 +104,7 @@ export async function generateChatResponse(
     if (file.mediaType.startsWith('image/')) {
       sendLab2AnalyticsEvent(EVENTS.MODEL_OUTPUT_IMAGE_CREATED);
       // Check generated images for safety.
-      const imageSafe = await isImageSafe(file, assetUrl);
+      const imageSafe = await isImageSafe(file, buildAssetUrl(asset));
       if (!imageSafe) {
         return {
           response: text,

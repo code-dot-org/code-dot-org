@@ -62,14 +62,13 @@ export async function assetToFilePart(
 }
 
 /**
- * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project
- * and returns the asset and asset URL.
+ * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
  */
-export async function generatedFileToAssetAndUrl(
+export async function generatedFileToAsset(
   file: GeneratedFile,
   buildAssetUrl: (asset: ChatAsset) => string,
   accepts: string[]
-): Promise<{asset: ChatAsset; assetUrl: string}> {
+): Promise<ChatAsset> {
   const {filename, fileBuffer} = prepareGeneratedFile(file, accepts);
   const asset: ChatAsset = {
     filename,
@@ -82,7 +81,7 @@ export async function generatedFileToAssetAndUrl(
     'Content-Type': file.mediaType,
   });
 
-  return {asset, assetUrl};
+  return asset;
 }
 
 interface PreparedFile {
