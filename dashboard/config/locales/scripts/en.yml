@@ -27284,6 +27284,28 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ui-test-course-z-2017:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-course-z-2017
+          title: UI Test Course Z (2017)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ui-test-course-z-2019:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-course-z-2019
+          title: UI Test Course Z (2019)
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         csd1-2026:
           lesson_groups:
             lessonGroup-2:

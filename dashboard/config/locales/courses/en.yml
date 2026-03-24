@@ -6808,6 +6808,18 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'26-'27"
+        ui-test-course-z-2017:
+          title: UI Test Course Z (2017)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2017'
+        ui-test-course-z-2019:
+          title: UI Test Course Z (2019)
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: '2019'
         ai-foundations-exploring-ai-and-cs-2026:
           title: 'AI Foundations: Exploring AI and CS'
           description_short: ''
