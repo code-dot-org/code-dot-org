@@ -115,6 +115,7 @@ const SmallFooter = (props: SmallFooterProps) => {
 
   const clickBaseMenu = useCallback(
     (e: MouseEvent) => {
+      console.log('cbm attempting', e);
       e.stopPropagation();
       if (menuState === MenuStates.MINIMIZING) {
         return;
@@ -135,6 +136,7 @@ const SmallFooter = (props: SmallFooterProps) => {
 
   const clickBase = useCallback(
     (e: MouseEvent) => {
+      console.log('cb attempting', e);
       if (props.copyrightInBase) {
         // When we have multiple items in our base row, ignore clicks to the
         // row that aren't on those particular items
@@ -147,7 +149,7 @@ const SmallFooter = (props: SmallFooterProps) => {
 
   const clickBaseCopyright = useCallback(
     (e?: MouseEvent) => {
-      console.log('attempting', e);
+      console.log('cbc attempting', e);
       e?.preventDefault();
       e?.stopPropagation();
 
@@ -167,6 +169,7 @@ const SmallFooter = (props: SmallFooterProps) => {
 
   const clickMenuCopyright = useCallback(
     (e: MouseEvent) => {
+      console.log('cmc attempting', e);
       e.stopPropagation();
       setMenuState(MenuStates.COPYRIGHT);
     },
@@ -174,8 +177,9 @@ const SmallFooter = (props: SmallFooterProps) => {
   );
 
   const closeCopyrightDialog = useCallback(
-    (e: ChangeEvent) => {
-      e.stopPropagation();
+    (e?: ChangeEvent) => {
+      console.log('ccd attempting', e);
+      e?.stopPropagation();
       setMenuState(MenuStates.MINIMIZED);
     },
     [setMenuState]
