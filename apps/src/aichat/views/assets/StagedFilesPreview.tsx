@@ -17,18 +17,6 @@ import FilePreview from './FilePreview';
 
 import styles from './staged-files-preview.module.scss';
 
-const alerts = {
-  uploadFailed: [aichatI18n.uploadFailedAlert(), 'danger'] as const,
-  fileLimitExceeded: [
-    aichatI18n.uploadFileLimitExceededAlert({maximum: MAX_NUM_FILES}),
-    'warning',
-  ] as const,
-  sizeLimitExceeded: [
-    aichatI18n.uploadSizeLimitExceededAlert({maximum: MAX_FILE_SIZE_MB}),
-    'danger',
-  ] as const,
-} satisfies {[key: string]: [string, AlertProps['type']]};
-
 interface StagedFilesPreviewProps {
   buildAssetUrl: (asset: ChatAsset) => string;
 }
@@ -38,6 +26,18 @@ const StagedFilesPreview: React.FC<StagedFilesPreviewProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   const stagedFiles = useAppSelector(state => state.aichat.stagedFiles);
+
+  const alerts: {[key: string]: [string, AlertProps['type']]} = {
+    uploadFailed: [aichatI18n.uploadFailedAlert(), 'danger'],
+    fileLimitExceeded: [
+      aichatI18n.uploadFileLimitExceededAlert({maximum: MAX_NUM_FILES}),
+      'warning',
+    ],
+    sizeLimitExceeded: [
+      aichatI18n.uploadSizeLimitExceededAlert({maximum: MAX_FILE_SIZE_MB}),
+      'danger',
+    ],
+  };
 
   const [alertMessage, style] = useAppSelector(state => {
     if (!state.aichat.stagedFilesAlert) {
