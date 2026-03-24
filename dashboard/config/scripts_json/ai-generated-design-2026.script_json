@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-23 21:17:49 UTC",
+    "serialized_at": "2026-03-24 08:53:41 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -5723,15 +5723,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
-        ],
         "progression": "Web App Responsiveness"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
+          "ai-generated-design-lesson12-level1-v2"
         ],
         "lesson.key": "Lesson 12: Designing for Responsiveness",
         "lesson_group.key": "lessonGroup-3",
@@ -5739,7 +5736,7 @@
         "activity_section.key": "ce2a9c95-0b2c-4c6d-84e5-2428f67c68a0"
       },
       "level_keys": [
-        "ai-generated-design-lesson12-level1_2026"
+        "ai-generated-design-lesson12-level1-v2"
       ]
     },
     {
@@ -6257,9 +6254,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson12-level1_2026",
+        "level.key": "ai-generated-design-lesson12-level1-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
+          "ai-generated-design-lesson12-level1-v2"
         ],
         "lesson.key": "Lesson 12: Designing for Responsiveness",
         "lesson_group.key": "lessonGroup-3",
