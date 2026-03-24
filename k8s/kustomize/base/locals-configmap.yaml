@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cdo-locals.yml
+data:
+  dashboard_workers: "1"
+  stack_name: default

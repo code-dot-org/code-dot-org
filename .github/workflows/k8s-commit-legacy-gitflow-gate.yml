@@ -1,0 +1,191 @@
+name: k8s-commit-legacy-gitflow-gate
+
+on:
+  workflow_call:
+    inputs:
+      branch_name:
+        required: true
+        type: string
+      git_commit:
+        required: true
+        type: string
+    secrets:
+      K8S_GITOPS_REPO_WRITE_TOKEN:
+        required: true
+
+jobs:
+  commit-legacy-gitflow-gate:
+    name: commit legacy gitflow gate metadata
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for required legacy-branch CI
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ inputs.git_commit }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: | # ruby
+          require "json"
+          require "net/http"
+          require "time"
+          require "uri"
+
+          LEGACY_BRANCHES = %w[staging test levelbuilder production].freeze
+          DRONE_CONTEXT_PREFIX = "continuous-integration/drone/".freeze
+          WAIT_FOR_DRONE_BRANCHES = %w[test].freeze
+          POLL_INTERVAL_SECONDS = 30
+          TIMEOUT_SECONDS = 60 * 60
+
+          branch_name = ENV.fetch("BRANCH_NAME")
+          git_commit = ENV.fetch("GIT_COMMIT")
+          repo = ENV.fetch("GITHUB_REPOSITORY")
+          token = ENV.fetch("GITHUB_TOKEN")
+
+          abort("ERROR: unsupported branch #{branch_name.inspect}") unless LEGACY_BRANCHES.include?(branch_name)
+          abort("ERROR: invalid git commit #{git_commit.inspect}") unless git_commit.match?(/\A[0-9a-f]{40}\z/)
+
+          unless WAIT_FOR_DRONE_BRANCHES.include?(branch_name)
+            puts "Skipping external CI wait for #{branch_name}; no additional test gate is required on this branch."
+            exit 0
+          end
+
+          def fetch_json(uri_string, token)
+            uri = URI(uri_string)
+            request = Net::HTTP::Get.new(uri)
+            request["Accept"] = "application/vnd.github+json"
+            request["Authorization"] = "Bearer #{token}"
+            request["X-GitHub-Api-Version"] = "2022-11-28"
+
+            response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+              http.request(request)
+            end
+
+            unless response.is_a?(Net::HTTPSuccess)
+              abort("ERROR: GitHub API request failed (#{response.code}): #{response.body}")
+            end
+
+            JSON.parse(response.body)
+          end
+
+          deadline = Time.now + TIMEOUT_SECONDS
+
+          loop do
+            payload = fetch_json("https://api.github.com/repos/#{repo}/commits/#{git_commit}/status", token)
+            statuses = payload.fetch("statuses", [])
+              .select { |status| status.fetch("context", "").start_with?(DRONE_CONTEXT_PREFIX) }
+
+            latest_statuses = statuses
+              .group_by { |status| status.fetch("context") }
+              .transform_values { |entries| entries.max_by { |entry| Time.parse(entry.fetch("updated_at")) } }
+              .values
+
+            if latest_statuses.any? { |status| %w[failure error].include?(status.fetch("state")) }
+              failed = latest_statuses
+                .select { |status| %w[failure error].include?(status.fetch("state")) }
+                .map { |status| "#{status.fetch('context')}=#{status.fetch('state')}" }
+              abort("ERROR: required Drone status failed for #{git_commit}: #{failed.join(', ')}")
+            end
+
+            if latest_statuses.any? && latest_statuses.all? { |status| status.fetch("state") == "success" }
+              contexts = latest_statuses.map { |status| status.fetch("context") }.sort
+              puts "Required Drone statuses passed for #{git_commit}: #{contexts.join(', ')}"
+              break
+            end
+
+            if Time.now >= deadline
+              observed = latest_statuses.map { |status| "#{status.fetch('context')}=#{status.fetch('state')}" }.sort
+              abort("ERROR: timed out waiting for Drone status on #{git_commit}. Observed: #{observed.join(', ')}")
+            end
+
+            puts "Waiting for Drone status on #{git_commit}; observed #{latest_statuses.length} matching context(s)."
+            sleep POLL_INTERVAL_SECONDS
+          end
+
+      - name: Checkout k8s-gitops
+        uses: actions/checkout@v6.0.2
+        with:
+          repository: code-dot-org/k8s-gitops
+          ref: main
+          path: k8s-gitops
+          token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
+
+      - name: Publish legacy gitflow gate metadata
+        shell: ruby {0}
+        env:
+          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ inputs.git_commit }}
+        run: | # ruby
+          require "fileutils"
+          require "time"
+          require "yaml"
+
+          LEGACY_BRANCHES = %w[staging test levelbuilder production].freeze
+
+          branch_name = ENV.fetch("BRANCH_NAME")
+          git_commit = ENV.fetch("GIT_COMMIT")
+
+          abort("ERROR: unsupported branch #{branch_name.inspect}") unless LEGACY_BRANCHES.include?(branch_name)
+          abort("ERROR: invalid git commit #{git_commit.inspect}") unless git_commit.match?(/\A[0-9a-f]{40}\z/)
+
+          release_id = "git-#{git_commit}"
+
+          def read_yaml(path)
+            return unless File.exist?(path)
+
+            YAML.safe_load(File.read(path), permitted_classes: [], permitted_symbols: [], aliases: false)
+          end
+
+          def write_yaml(path, data)
+            FileUtils.mkdir_p(File.dirname(path))
+            File.write(path, YAML.dump(data))
+          end
+
+          def assert_hash!(name, data, required_keys)
+            abort("ERROR: #{name} was not a YAML mapping") unless data.is_a?(Hash)
+
+            missing = required_keys.reject { |key| data.key?(key) }
+            abort("ERROR: #{name} missing keys: #{missing.join(', ')}") unless missing.empty?
+          end
+
+          def system!(*cmd)
+            ok = system(*cmd)
+            rendered_cmd = cmd.map(&:inspect).join(" ")
+            abort("ERROR: command failed: #{rendered_cmd}") unless ok
+          end
+
+          Dir.chdir("k8s-gitops") do
+            legacy_history_path = "warehouses/codeai/legacy-gitflow/#{branch_name}/merged/#{release_id}.yaml"
+            legacy_current_path = "warehouses/codeai/legacy-gitflow/#{branch_name}/current.yaml"
+
+            existing_legacy = read_yaml(legacy_history_path)
+            now = Time.now.utc.iso8601
+
+            legacy_gate = {
+              "revision" => git_commit,
+              "tag" => release_id,
+              "mergedAt" => existing_legacy&.fetch("mergedAt", nil) || now,
+            }
+
+            write_yaml(legacy_history_path, legacy_gate)
+            write_yaml(legacy_current_path, legacy_gate)
+
+            parsed_legacy_history = read_yaml(legacy_history_path)
+            parsed_legacy_current = read_yaml(legacy_current_path)
+
+            assert_hash!("legacy history", parsed_legacy_history, %w[revision tag mergedAt])
+            assert_hash!("legacy current", parsed_legacy_current, %w[revision tag mergedAt])
+            abort("ERROR: legacy current.yaml diverged from #{legacy_history_path}") unless parsed_legacy_history == parsed_legacy_current
+
+            system!("git", "config", "user.name", "github-actions[bot]")
+            system!("git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+            system!("git", "add", legacy_history_path, legacy_current_path)
+
+            if system("git", "diff", "--cached", "--quiet")
+              puts "Success: legacy gitflow metadata already up to date for #{branch_name} #{release_id}."
+              exit 0
+            end
+
+            system!("git", "commit", "-m", "Publish CodeAI legacy gate #{branch_name} #{release_id}")
+            system!("git", "push", "origin", "HEAD:main")
+          end

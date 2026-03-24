@@ -3,13 +3,13 @@ name: k8s-commit-to-kargo-warehouse
 on:
   workflow_call:
     inputs:
-      branch_name:
+      git_commit:
         required: true
         type: string
       codeai_docker_image_ref:
         required: true
         type: string
-      codeai_docker_tag:
+      codeai_docker_image_digest:
         required: true
         type: string
     secrets:
@@ -17,8 +17,8 @@ on:
         required: true
 
 jobs:
-  commit-to-kargo-warehouse:
-    name: commit to kargo warehouse
+  commit-build-lock-to-kargo-warehouse:
+    name: commit build lock to kargo warehouse
     runs-on: ubuntu-latest
     steps:
       - name: Checkout k8s-gitops
@@ -29,87 +29,96 @@ jobs:
           path: k8s-gitops
           token: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
 
-      - name: Update codeai deployment image
+      - name: Publish build lock metadata
         shell: ruby {0}
         env:
-          BRANCH_NAME: ${{ inputs.branch_name }}
+          GIT_COMMIT: ${{ inputs.git_commit }}
           CODEAI_DOCKER_IMAGE_REF: ${{ inputs.codeai_docker_image_ref }}
-          CODEAI_DOCKER_TAG: ${{ inputs.codeai_docker_tag }}
-          K8S_GITOPS_REPO_WRITE_TOKEN: ${{ secrets.K8S_GITOPS_REPO_WRITE_TOKEN }}
-
-        # if you're on vscode install this to get syntax highlighting in here:
-        # https://marketplace.visualstudio.com/items?itemName=harrydowning.yaml-embedded-languages
+          CODEAI_DOCKER_IMAGE_DIGEST: ${{ inputs.codeai_docker_image_digest }}
         run: | # ruby
-          # We'll throw an error if we can't find a values.yaml for these branches
-          UPDATE_OR_ERROR_BRANCHES = %w[staging test levelbuilder production]
+          require "fileutils"
+          require "time"
+          require "yaml"
 
-          # This is the code-dot-org repo branch that was committed to / merged into.
-          BRANCH_NAME = ENV.fetch("BRANCH_NAME")
+          SOURCE_REPO = "https://github.com/code-dot-org/code-dot-org.git"
+          SOURCE_PATH = "k8s/kustomize"
 
-          # We normalize deployment names with the same rule as docker tags in k8s-skaffold-build.yml
-          DEPLOYMENT_NAME = BRANCH_NAME.gsub(/[^a-zA-Z0-9_.-]/, '-')
+          git_commit = ENV.fetch("GIT_COMMIT")
+          image_ref = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
+          image_digest = ENV.fetch("CODEAI_DOCKER_IMAGE_DIGEST")
 
-          # This is the newly built docker image ref that we'll be writing to values.yaml.
-          CODEAI_DOCKER_IMAGE_REF = ENV.fetch("CODEAI_DOCKER_IMAGE_REF")
-          CODEAI_DOCKER_TAG = ENV.fetch("CODEAI_DOCKER_TAG")
-          abort('ERROR: CODEAI_DOCKER_IMAGE_REF is empty, refusing to write back.') if CODEAI_DOCKER_IMAGE_REF.strip.empty?
+          abort("ERROR: invalid git commit #{git_commit.inspect}") unless git_commit.match?(/\A[0-9a-f]{40}\z/)
+          abort("ERROR: invalid image digest #{image_digest.inspect}") unless image_digest.match?(/\Asha256:[0-9a-f]{64}\z/)
 
-          # This is the values.yaml file in k8s-gitops repo that we'll update the `image: ` line in:
-          DEPLOYMENT_VALUES_YAML = "apps/codeai/deployments/#{DEPLOYMENT_NAME}/values.yaml"
+          release_id = "git-#{git_commit}"
 
-          # This is the updated line that we'll write to $DEPLOYMENT_VALUES_YAML:
-          UPDATED_DOCKER_IMAGE_LINE = "image: #{CODEAI_DOCKER_IMAGE_REF} # updated by k8s-commit-to-kargo-warehouse.yml\n"
+          def read_yaml(path)
+            return unless File.exist?(path)
+
+            YAML.safe_load(File.read(path), permitted_classes: [], permitted_symbols: [], aliases: false)
+          end
+
+          def write_yaml(path, data)
+            FileUtils.mkdir_p(File.dirname(path))
+            File.write(path, YAML.dump(data))
+          end
+
+          def assert_hash!(name, data, required_keys)
+            abort("ERROR: #{name} was not a YAML mapping") unless data.is_a?(Hash)
+
+            missing = required_keys.reject { |key| data.key?(key) }
+            abort("ERROR: #{name} missing keys: #{missing.join(', ')}") unless missing.empty?
+          end
 
           def system!(*cmd)
             ok = system(*cmd)
-            rendered_cmd = cmd.map(&:inspect).join(' ')
-            raise "Command failed (exitstatus=#{Process.last_status&.exitstatus}): #{rendered_cmd}" unless ok
+            rendered_cmd = cmd.map(&:inspect).join(" ")
+            abort("ERROR: command failed: #{rendered_cmd}") unless ok
           end
 
           Dir.chdir("k8s-gitops") do
-            unless File.exist?(DEPLOYMENT_VALUES_YAML)
-              values_yaml_was_not_found_msg = "Tried to update image ref, but no values.yaml was found at: https://github.com/code-dot-org/k8s-gitops/tree/main/#{DEPLOYMENT_VALUES_YAML}"
-              if UPDATE_OR_ERROR_BRANCHES.include?(BRANCH_NAME)
-                abort("ERROR: deployment `#{DEPLOYMENT_NAME}` failed! #{values_yaml_was_not_found_msg}")
-              else
-                puts "::notice::Skipping deployment `#{DEPLOYMENT_NAME}`. #{values_yaml_was_not_found_msg}"
-                exit 0
-              end
-            end
+            build_history_path = "warehouses/codeai/builds/#{release_id}.yaml"
+            build_current_path = "warehouses/codeai/builds/current.yaml"
 
-            # Update values.yaml file line `image: *` with the newly built docker image's ref
-            updated_line = false
-            File.write(DEPLOYMENT_VALUES_YAML,
-              File.readlines(DEPLOYMENT_VALUES_YAML)
-                .map do |line|
-                  if line.start_with?('image: ')
-                    updated_line = true
-                    UPDATED_DOCKER_IMAGE_LINE
-                  else
-                    line
-                  end
-                end
-                .then { |lines| updated_line ? lines : [UPDATED_DOCKER_IMAGE_LINE] + lines }
-                .join
-            )
+            existing_build = read_yaml(build_history_path)
+            now = Time.now.utc.iso8601
 
-            system! 'git config user.name "github-actions[bot]"'
-            system! 'git config user.email "41898282+github-actions[bot]@users.noreply.github.com"'
-            system! 'git', 'add', DEPLOYMENT_VALUES_YAML
+            build_lock = {
+              "schemaVersion" => "v1",
+              "releaseId" => release_id,
+              "gitCommit" => git_commit,
+              "image" => {
+                "ref" => image_ref,
+                "digest" => image_digest,
+              },
+              "packaging" => {
+                "kind" => "kustomize",
+                "sourceRepo" => SOURCE_REPO,
+                "sourcePath" => SOURCE_PATH,
+              },
+              "createdAt" => existing_build&.fetch("createdAt", nil) || now,
+            }
 
-            if system('git diff --cached --quiet')
-              puts "Success: no diff of #{DEPLOYMENT_VALUES_YAML} detected, no commit+push needed."
+            write_yaml(build_history_path, build_lock)
+            write_yaml(build_current_path, build_lock)
+
+            parsed_history = read_yaml(build_history_path)
+            parsed_current = read_yaml(build_current_path)
+
+            assert_hash!("build history", parsed_history, %w[schemaVersion releaseId gitCommit image packaging createdAt])
+            assert_hash!("build current", parsed_current, %w[schemaVersion releaseId gitCommit image packaging createdAt])
+
+            abort("ERROR: build lock current.yaml diverged from #{build_history_path}") unless parsed_history == parsed_current
+
+            system!("git", "config", "user.name", "github-actions[bot]")
+            system!("git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com")
+            system!("git", "add", build_history_path, build_current_path)
+
+            if system("git", "diff", "--cached", "--quiet")
+              puts "Success: build-lock metadata already up to date for #{release_id}."
               exit 0
             end
 
-            puts "Committing #{DEPLOYMENT_VALUES_YAML} to k8s-gitops repo"
-            system! 'git', 'commit', '-m', <<~MSG.chomp
-              #{DEPLOYMENT_VALUES_YAML} => #{CODEAI_DOCKER_TAG}
-            MSG
-
-            # Push to https://github.com/code-dot-org/k8s-gitops
-            puts "Pushing to https://github.com/code-dot-org/k8s-gitops"
-            system! 'git push origin HEAD:main'
-
-            puts "Success: committed+pushed newly built docker image tag #{CODEAI_DOCKER_TAG} to #{DEPLOYMENT_VALUES_YAML} on https://github.com/code-dot-org/k8s-gitops at #{Time.now.utc.strftime('%Y-%m-%dT%H:%M:%SZ')}"
+            system!("git", "commit", "-m", "Publish CodeAI build lock #{release_id}")
+            system!("git", "push", "origin", "HEAD:main")
           end
