@@ -39,6 +39,8 @@
     %script{data: {'statsig-api-client-key-session-replay': CDO.safe_statsig_api_client_key_session_replay}}
     -# for statsig to recognized managed test server
     %script{data: {'managed-test-server': CDO.managed_test_server?.to_s}}
+    -# public site key for Cloudflare Turnstile invisible challenge
+    %script{data: {'turnstile-site-key': CDO.turnstile_site_key}}
     -# user id and type for analytics logging- may not work for cached pages
     %script{data: {'user-id': current_user&.id}}
     %script{data: {'user-type': current_user&.user_type}}

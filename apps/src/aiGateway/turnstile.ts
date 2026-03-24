@@ -1,4 +1,3 @@
-const TURNSTILE_SITE_KEY = '0x4AAAAAACva3yXFGIuj6pR8';
 const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
@@ -49,6 +48,11 @@ function getOrCreateContainer(): HTMLElement {
   return container;
 }
 
+function getSiteKey(): string {
+  const el = document.querySelector('script[data-turnstile-site-key]');
+  return el ? (el as HTMLElement).dataset.turnstileSiteKey ?? '' : '';
+}
+
 export async function getTurnstileToken(): Promise<string> {
   await loadTurnstileScript();
 
@@ -57,7 +61,7 @@ export async function getTurnstileToken(): Promise<string> {
 
     // widgetId is assigned synchronously by render() before the async callback fires
     const widgetId = window.turnstile.render(container, {
-      sitekey: TURNSTILE_SITE_KEY,
+      sitekey: getSiteKey(),
       callback: (token: string) => {
         window.turnstile.reset(widgetId);
         resolve(token);
