@@ -106,7 +106,6 @@ namespace :seed do
     coursea-2019
     coursec-2019
     coursee-2019
-    coursea-2020
     csd3-2023
     interactive-games-animations-2023
     focus-on-creativity3-2023
@@ -333,7 +332,6 @@ namespace :seed do
        coursea-2019
        coursec-2019
        coursee-2019
-       coursea-2020
        csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
