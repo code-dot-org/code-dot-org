@@ -25960,8 +25960,28 @@ en:
           title: Designing Reliable Apps with AI and APIs
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit builds students' capacity to develop apps that depend on external data sources, progressing from foundational concepts to a substantial independent project. Early lessons establish the core mental models — the request/response cycle, the structure of JSON, and the difference between synchronous and asynchronous execution — using concrete analogies and hands-on API exploration before students write any code of their own. The middle lessons shift toward implementation: students learn to fetch data using async/await, render it dynamically with loops, and handle real-world messiness when backend data changes or is missing. Lesson 9 introduces human-centered reliability as a design principle, asking students to think beyond the "happy path" and deliberately design loading, empty, and error states. The unit culminates in Lesson 11, a five-day Explore-Style App Project structured around four milestones — API connection, interactive reveal, defensive design, and documentation — that gives students a professional-grade workflow and a portfolio-worthy deliverable. Throughout, AI is positioned as a debugging and refinement collaborator, with the rubric and milestone structure designed to keep students in the driver's seat on design and logic decisions.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
+          student_description: |-
+            In this unit, you'll learn how to build apps that feel alive — apps that pull real, up-to-date information from the internet rather than relying on data you hard-coded yourself. You'll start by exploring how apps communicate with external services through APIs and JSON, then dig into the mechanics of asynchronous programming: why apps sometimes have to wait for data, and how professional developers keep the experience smooth while that happens. From there, you'll practice rendering dynamic content on the page, designing for the full range of outcomes a user might encounter — a successful result, an empty search, a slow connection, or an outright error — and building interfaces that keep users informed and in control no matter what. The unit ends with a multi-day project where you design and build your own Explore-Style app: a real, working application that fetches live data from an API of your choosing, responds to user interaction, and handles the unexpected like a professional.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Write asynchronous JavaScript using `async/await` to fetch and display data from an external API.
+            - Use `try/catch` blocks to handle errors and provide clear, user-friendly feedback.
+            - Compare local datasets (arrays/objects) with remote API data, recognizing trade-offs in reliability, control, and flexibility.
+            - Design user interfaces that communicate system status through loading indicators, error messages, and empty-result states.
+            - Explain how external APIs position their apps as part of larger systems and consider the implications of depending on outside data sources.
+            - Apply defensive design strategies to ensure apps remain usable and trustworthy even when data is delayed, incomplete, or unavailable.
         web-apps-with-ai-capstone-project-pilot-2025:
           lessons: {}
           lesson_groups:
@@ -25971,8 +25991,32 @@ en:
           title: Web Apps with AI Capstone Project
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            This unit is the capstone of AI Foundations Semester 2, where students synthesize their learning to design and build a complete web app with a clear purpose and audience. They integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with their values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
+          student_description: |-
+            This unit is the capstone of AI Foundations Semester 2, where you synthesize your learning to design and build a complete web app with a clear purpose and audience. You integrate technical fluency, human-centered design, and AI literacy, making choices that are transparent, ethical, and aligned with your values. The focus is not only on producing a finished app but on documenting and reflecting on the process, demonstrating the habits of intentional designers who create technology with clarity, confidence, and care.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Plan a complete web app with a clear audience and purpose.
+            - Design interactive features that integrate local data and external APIs to support user goals.
+            - Write well-structured JavaScript that manages state, processes input, and supports dynamic behaviors.
+            - Apply human-centered design principles to ensure usability, accessibility, and responsiveness.
+            - Analyze their application as a system, explaining how components interact to shape the user experience.
+            - Document their development process, including how prompts and edits evolved during development.
+            - Reflect on the ethical implications of their application and propose strategies to address risks and trade-offs.
+            - Demonstrate the mindset of an intentional designer, showing confidence, adaptability, and values-driven decision-making.
         aif2-tutor-pilot-2025:
           lesson_groups:
             lessonGroup-2:
@@ -27061,6 +27105,10 @@ en:
               name: Messing Around
             lesson-2:
               name: Progression Idea 2
+            lesson-3:
+              name: Templates
+            lesson-4:
+              name: Progression V2
           lesson_groups: {}
           name: hoai-web-lab-intro-test
           title: HoAI Web Lab Intro
@@ -27075,6 +27123,157 @@ en:
           lesson_groups: {}
           name: self-paced-pl-ai-101-v2-mod4
           title: Module 4, Bringing AI to the Classroom
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        ai-and-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Pre-Assessment
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: End of Unit Project
+            lessonGroup-5:
+              display_name: End of Unit Assessment
+          name: ai-and-algorithmic-decisions-2026
+          title: AI and Algorithmic Decisions
+          description_audience: ''
+          description_short: ''
+          description: |-
+            This unit introduces students to JavaScript as they learn to bring their previously designed web pages to life through interactive features, clear logic, and purposeful decision-making. Students develop skills with event handlers, variables, conditional statements, functions, and DOM manipulation while building confidence in debugging and using AI as a strategic collaborator. Human-centered design and simple systems thinking are woven throughout as students consider user needs, trade-offs, and the values reflected in the logic they create.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, students will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+          student_description: |-
+            In this unit, you learn how to make your web pages actually respond to people using JavaScript. You create buttons that react when clicked, track user choices with variables, make decisions with `if` and `else` statements, and update the page so it changes right in front of you. You plan your ideas with flowcharts, use AI as a coding partner to help you debug and brainstorm, and learn how developers think when they build features for real apps.
+
+            <i class="fa-regular fa-bullseye-arrow"></i> **Learning Outcomes:** By the end of this unit, you will be able to . . .
+
+            - Design a user interaction flow that involves conditional logic and considers simple trade-offs between different outcomes.
+            - Model an algorithm using a flowchart to plan the logic of a user interaction.
+            - Write JavaScript that uses event handlers, variables, conditional statements, and functions to control program behavior.
+            - Apply debugging strategies, with and without AI assistance, to persevere through challenges and fix errors in JavaScript code.
+            - Use AI as a collaborative partner to brainstorm, debug, and refine code.
+            - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
+            - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+        ui-test-csf:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-csf
+          title: UI Test CSF
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-aif2-intro-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-intro-2026
+          title: 'Teaching AI Foundations S2: An Overview'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-aif2-ai-generated-design-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-ai-generated-design-2026
+          title: Teaching AI-Generated Design
+          description_audience: ''
+          description_short: ''
+          description: |+
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Suggested Time: 60 minutes**
+
+
+          student_description: |+
+            ## Welcome
+            #### This professional learning module prepares you to teach **Unit 1: AI Generated Design**—a unit where students design and build web apps by combining empathy-driven design thinking with AI-assisted creation.
+
+            #### Here, you will explore and create with Web Lab and learn the skills needed to build websites with AI.
+
+            #### **Suggested Time: 60 minutes**
+
+
+        pl-facilitators-aif2-ai-algorithmic-decisions-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-ai-algorithmic-decisions-2026
+          title: Teaching AI and Algorithmic Decisions
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |-
+            ## Welcome!
+            #### This professional learning module prepares you to teach **Unit 2: AI and Algorithmic Decisions.**  In this unit,  students bring their web apps to life with JavaScript, using AI as a debugging partner and coding coach.
+
+            #### Here, you will prepare to teach event-driven programming, explaining how user interactions drive algorithms and conditional logic in interactive apps.
+
+            #### **Suggested Time: 75 minutes**
+        pl-facilitators-aif2-data-driven-systems-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-aif2-data-driven-systems-2026
+          title: Teaching Data-Driven Systems
+          description_audience: ''
+          description_short: ''
+          description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+          student_description: |
+            ## Welcome!
+            #### This professional learning module prepares you to teach Unit 3: Building Data-Driven Systems with A. In this unit, students expand their skills as developers by creating web apps that organize, display, and manipulate meaningful datasets.
+            #### In this module, you will prepare to teach a unit where students shift from writing isolated interactions to building full web apps that manage and display meaningful datasets through arrays, objects, and schema-informed design.
+
+            #### **Suggested Time: 75 minutes**
+        pl-facilitators-iterating-with-ai-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-iterating-with-ai-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-designing-reliable-apps-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-designing-reliable-apps-2026
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pl-facilitators-web-apps-ai-capstone-2026:
+          lessons: {}
+          lesson_groups: {}
+          name: pl-facilitators-web-apps-ai-capstone-2026
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

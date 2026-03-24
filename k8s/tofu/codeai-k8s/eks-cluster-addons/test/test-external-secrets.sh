@@ -8,13 +8,14 @@ NAMESPACE="staging"
 ADHOC_NAMESPACE="adhoc-addons-test-123"
 SECRET_ONE="addons-test-staging-secret"
 SECRET_TWO="addons-test-cfn-stack-staging-secret"
+SECRET_THREE="addons-test-staging-cdo-fan-in-secret"
 ADHOC_SECRET="addons-test-adhoc-secret"
 POD_NAME="test-external-secrets-reader"
 
 cleanup() {
   kubectl delete -f test-external-secrets-pod.yaml --ignore-not-found >/dev/null 2>&1 || true
   kubectl delete -f test-external-secrets.yaml --ignore-not-found >/dev/null 2>&1 || true
-  kubectl delete secret "${SECRET_ONE}" "${SECRET_TWO}" -n "${NAMESPACE}" --ignore-not-found >/dev/null 2>&1 || true
+  kubectl delete secret "${SECRET_ONE}" "${SECRET_TWO}" "${SECRET_THREE}" -n "${NAMESPACE}" --ignore-not-found >/dev/null 2>&1 || true
   kubectl delete secret "${ADHOC_SECRET}" -n "${ADHOC_NAMESPACE}" --ignore-not-found >/dev/null 2>&1 || true
   kubectl delete namespace "${ADHOC_NAMESPACE}" --ignore-not-found >/dev/null 2>&1 || true
 }
@@ -41,10 +42,10 @@ echo "Applying ExternalSecret test resources..."
 kubectl apply -f test-external-secrets.yaml >/dev/null
 
 echo "Waiting for synced Kubernetes Secrets..."
-for secret_name in "${SECRET_ONE}" "${SECRET_TWO}"; do
+for secret_name in "${SECRET_ONE}" "${SECRET_TWO}" "${SECRET_THREE}"; do
   if ! wait_for_secret "${NAMESPACE}" "${secret_name}"; then
     kubectl get externalsecret -n "${NAMESPACE}" || true
-    kubectl describe externalsecret -n "${NAMESPACE}" addons-test-staging-secret addons-test-cfn-stack-staging-secret | sed -n '1,220p' || true
+    kubectl describe externalsecret -n "${NAMESPACE}" addons-test-staging-secret addons-test-cfn-stack-staging-secret addons-test-staging-cdo-fan-in-secret | sed -n '1,260p' || true
     echo "FAIL ❌: synced Kubernetes Secret did not appear: ${secret_name}"
     exit 1
   fi
@@ -64,7 +65,7 @@ echo "Waiting for verification pod to complete..."
 for _ in {1..60}; do
   phase="$(kubectl get pod "${POD_NAME}" -n "${NAMESPACE}" -o jsonpath='{.status.phase}' 2>/dev/null || true)"
   if [[ "${phase}" == "Succeeded" ]]; then
-    echo "PASS ✅: staging/cdo/contentful_api_key, CfnStack/staging/db_endpoint_proxy_reader_port, and adhoc/cdo/contentful_api_key synced."
+    echo "PASS ✅: direct, fan-in, and adhoc ExternalSecret syncs all succeeded."
     exit 0
   fi
   if [[ "${phase}" == "Failed" ]]; then

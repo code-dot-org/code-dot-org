@@ -1,4 +1,9 @@
-import {AnyAction, Dispatch, ThunkDispatch} from '@reduxjs/toolkit';
+import {
+  AnyAction,
+  createAsyncThunk,
+  Dispatch,
+  ThunkDispatch,
+} from '@reduxjs/toolkit';
 import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux';
 
 import {RootState} from '@cdo/apps/types/redux';
@@ -13,3 +18,8 @@ export type AppDispatch = ThunkDispatch<RootState, undefined, AnyAction> &
 
 export const useAppDispatch: () => AppDispatch = useDispatch;
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
+
+export const createAppAsyncThunk = createAsyncThunk.withTypes<{
+  state: RootState;
+  dispatch: AppDispatch;
+}>();

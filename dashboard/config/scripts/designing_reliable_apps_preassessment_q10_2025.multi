@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-preassessment-q10_2025'
+
+question 'A user tries to load a news feed and gets a blank screen. The developer checks the logs and sees the news provider\'s servers are completely unresponsive. Which type of failure best describes this situation?'
+
+right 'Server failure'
+wrong 'Network failure'
+wrong 'Invalid data error'
+wrong 'Client-side parsing error'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 7
+MARKDOWN
