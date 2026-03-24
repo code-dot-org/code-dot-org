@@ -4,7 +4,7 @@ module AiDiffBedrockHelper
   MAX_TOKENS = 1500
   TEMP = 0.5
   MODEL_ID = 'us.anthropic.claude-sonnet-4-5-20250929-v1:0'
-  MODEL_ARN = 'arn:aws:bedrock:us-east-1:475661607190:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+  MODEL_ARN = "arn:aws:bedrock:us-east-1:#{Aws::STS::Client.new.get_caller_identity.account}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0".freeze
   # TODO: extract this to a secret or other centralized parameter once KB is deployed via cloudformation.
   KB_ID = 'ODWSNBOEZG'
   RETRIEVAL_LIMIT = 10
