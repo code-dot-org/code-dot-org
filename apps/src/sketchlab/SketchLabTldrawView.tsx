@@ -105,6 +105,9 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     }
   }, [tldrawEditor]);
 
+  // TODO: I've occasionally seen issues where switching levels overwrites the new level with the
+  // previous level's snapshot.
+  // Could this be due to the debounce?
   useEffect(() => {
     if (!tldrawEditor) return;
 
