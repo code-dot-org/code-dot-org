@@ -1,0 +1,111 @@
+name: OpenTofu Plan
+
+on:
+  pull_request:
+    branches: [staging]
+    paths:
+      - "**.tf"
+      - "**.tfvars"
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+  pull-requests: write # To post plan output as a PR comment
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace:
+          - k8s/tofu/codeai-k8s/eks-cluster
+          - k8s/tofu/codeai-k8s/eks-cluster-addons
+          - k8s/tofu/codeai-k8s-dex
+    defaults:
+      run:
+        working-directory: ${{ matrix.workspace }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - uses: opentofu/setup-opentofu@v2
+        with:
+          tofu_version: 1.6.0
+          tofu_wrapper: true # Enables steps.*.outputs.stdout capture
+
+      - name: OpenTofu fmt
+        id: fmt
+        run: tofu fmt -check
+        continue-on-error: true
+
+      - name: OpenTofu Init
+        id: init
+        run: tofu init
+
+      - name: OpenTofu Validate
+        id: validate
+        run: tofu validate -no-color
+
+      - name: OpenTofu Plan
+        id: plan
+        run: tofu plan -no-color -out=tfplan
+        continue-on-error: true # Don't fail the step, let the comment show the error
+
+      - name: Post Plan to PR
+        uses: actions/github-script@v7
+        env:
+          PLAN: ${{ steps.plan.outputs.stdout }}
+        with:
+          script: |
+            const output = `#### Workspace: \`${{ matrix.workspace }}\`
+
+            #### OpenTofu Format and Style 🖌\`${{ steps.fmt.outcome }}\`
+            #### OpenTofu Initialization ⚙️\`${{ steps.init.outcome }}\`
+            #### OpenTofu Validation 🤖\`${{ steps.validate.outcome }}\`
+            <details><summary>Validation Output</summary>
+
+            \`\`\`\n
+            ${{ steps.validate.outputs.stdout }}
+            \`\`\`
+
+            </details>
+
+            #### OpenTofu Plan 📖\`${{ steps.plan.outcome }}\`
+
+            <details><summary>Show Plan</summary>
+
+            \`\`\`\n
+            ${process.env.PLAN}
+            \`\`\`
+
+            </details>
+
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`, Workflow: \`${{ github.workflow }}\`*`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
+
+      - name: Set artifact name
+        id: artifact_name
+        run: echo "name=tfplan-$(basename ${{ matrix.workspace }})" >> $GITHUB_OUTPUT
+
+      - name: Upload Plan Artifact
+        if: steps.plan.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.artifact_name.outputs.name }}
+          path: ${{ matrix.workspace }}/tfplan
+          retention-days: 2
+
+      - name: Fail if plan failed
+        if: steps.plan.outcome == 'failure'
+        run: exit 1

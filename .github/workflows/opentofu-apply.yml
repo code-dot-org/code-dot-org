@@ -1,0 +1,55 @@
+name: OpenTofu Apply
+
+on:
+  push:
+    branches: [staging]
+    paths:
+      - "**.tf"
+      - "**.tfvars"
+
+permissions:
+  id-token: write # Required for OIDC
+  contents: read
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        workspace:
+          - k8s/tofu/codeai-k8s/eks-cluster
+          - k8s/tofu/codeai-k8s/eks-cluster-addons
+          - k8s/tofu/codeai-k8s-dex
+    defaults:
+      run:
+        working-directory: ${{ matrix.workspace }}
+    environment: production # Requires manual approval in GitHub environment settings
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - uses: opentofu/setup-opentofu@v2
+        with:
+          tofu_version: 1.6.0
+          tofu_wrapper: true
+
+      - name: Set artifact name
+        id: artifact_name
+        run: echo "name=tfplan-$(basename ${{ matrix.workspace }})" >> $GITHUB_OUTPUT
+
+      - name: Download Plan Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ steps.artifact_name.outputs.name }}
+          path: ${{ matrix.workspace }}
+
+      - name: OpenTofu Init
+        run: tofu init
+
+      - name: OpenTofu Apply
+        run: tofu apply -no-color tfplan
