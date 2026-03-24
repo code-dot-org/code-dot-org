@@ -26,6 +26,8 @@ spec:
               value: development
             - name: RACK_ENV
               value: development
+            - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
+              value: "1"
           envFrom:
             - prefix: CDO_
               configMapRef:
