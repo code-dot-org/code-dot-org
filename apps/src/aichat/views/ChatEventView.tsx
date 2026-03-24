@@ -22,7 +22,7 @@ import {
 } from '../types';
 
 import ChatMessageView, {getChatMessageDisplayText} from './ChatMessageView';
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+import {getAiCustomizationsLabels} from './modelCustomization/constants';
 
 import styles from './chatWorkspace.module.scss';
 
@@ -48,7 +48,7 @@ interface ChatEventViewProps extends React.HTMLAttributes<HTMLDivElement> {
 
 function formatModelUpdateText(update: ModelUpdate): string {
   const {updatedField, updatedValue, timestamp} = update;
-  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField]!;
+  const fieldLabel = getAiCustomizationsLabels()[updatedField]!;
 
   let updatedToText = undefined;
   if (updatedField === 'temperature') {

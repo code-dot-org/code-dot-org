@@ -17,7 +17,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import aichatI18n from '../../locale';
 import {ModelCardInfo} from '../../types';
 
-import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
+import {getModelCardFieldsLabelsIcons} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
 import FieldLabel from './FieldLabel';
 import SaveChangesAlerts from './SaveChangesAlerts';
@@ -60,7 +60,7 @@ const PublishNotes: React.FunctionComponent = () => {
     >
       <div className={modelCustomizationStyles.customizationContainer}>
         {!isReadOnly && <Alert text={alertText} type={type} size="s" />}
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
+        {getModelCardFieldsLabelsIcons().map(data => {
           const {property, label, editTooltip} = data;
           const InputTag = getInputTag(property);
 
