@@ -81,6 +81,30 @@ describe('SummaryProgressRow', () => {
       );
     });
 
+    it('shows lesson resources button when lesson has student_lesson_plan_html_url', () => {
+      const lessonWithUrl = {
+        ...fakeLesson('Maze', 1, false, 3),
+        student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+      };
+      const wrapper = setUp({
+        lesson: lessonWithUrl,
+        viewAs: ViewType.Participant,
+      });
+
+      const button = wrapper.find('Button');
+      expect(button).toHaveLength(1);
+      expect(button.props().href).toEqual('https://example.com/lesson-plan');
+      expect(button.props().className).toEqual('ui-test-lesson-resources');
+    });
+
+    it('does not show lesson resources button when lesson has no student_lesson_plan_html_url', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Participant,
+      });
+
+      expect(wrapper.find('Button')).toHaveLength(0);
+    });
+
     it('has a lock icon when lockable and locked for user', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),
@@ -176,6 +200,19 @@ describe('SummaryProgressRow', () => {
       });
 
       expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('unlock');
+    });
+
+    it('does not show lesson resources button when viewing as instructor', () => {
+      const lessonWithUrl = {
+        ...fakeLesson('Maze', 1, false, 3),
+        student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+      };
+      const wrapper = setUp({
+        lesson: lessonWithUrl,
+        viewAs: ViewType.Instructor,
+      });
+
+      expect(wrapper.find('Button')).toHaveLength(0);
     });
   });
 });
