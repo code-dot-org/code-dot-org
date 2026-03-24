@@ -244,23 +244,11 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
     blocklyWrapper.fieldRegistry.register(fieldRegistryName, fieldClass);
   });
 
-  // @blockly/plugin-scroll-options reads svgBlockCanvas_.getAttribute('transform')
-  // to compute scroll deltas during drag. In Blockly v12.4+, WorkspaceSvg.translate()
-  // uses layerManager.translateLayers() which sets style.transform (CSS) on the block
-  // canvas instead of the SVG transform attribute, so the attribute is never set and
-  // the plugin throws "svgBlockCanvas has no attribute 'transform'".
-  //
-  // Blockly's getRelativeXY() reads BOTH the SVG transform attribute AND the CSS
-  // style.transform (via XY_STYLE_REGEX). If we naively set the SVG attribute without
-  // removing the CSS, getRelativeXY() double-counts the translation, breaking
-  // positionNewBlock() (which uses getOriginOffsetInPixels() → getInjectionDivXY()).
-  //
-  // Fix: set the SVG attribute to the full (x, y) translation values (same as CSS),
-  // then clear the CSS style.transform on svgBlockCanvas_. This makes the block canvas
-  // behave like pre-v12.4 (SVG attribute drives positioning), while keeping the SVG
-  // attribute available for the plugin to read. The plugin only uses the delta between
-  // two successive reads, so including absoluteLeft/Top in the attribute is fine because
-  // it cancels out in the difference.
+  // In Blockly v12.4+, translate() sets style.transform (CSS) on the block canvas via
+  // LayerManager instead of the SVG transform attribute. This breaks
+  // @blockly/plugin-scroll-options, which reads svgBlockCanvas_.getAttribute('transform').
+  // Fix: mirror the full (x,y) translation to the SVG attribute and clear the CSS style
+  // to avoid double-counting in getRelativeXY(), which reads both.
   const originalTranslate = blocklyWrapper.WorkspaceSvg.prototype.translate;
   blocklyWrapper.WorkspaceSvg.prototype.translate = function (
     x: number,
