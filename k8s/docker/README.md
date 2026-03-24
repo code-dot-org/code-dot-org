@@ -23,3 +23,6 @@ The dockerfiles are designed in layers, which allows minimal rebuilds when files
 - code-dot-org-pegasus: contains the pegasus/ directory
 - code-dot-org-db-seed: contains level and script files required for seeding the db
 
+## Maintenance
+
+- Periodically run `update-dockerignore-from-gitignore.rb` to sync `.gitignore` rules into `code-dot-org.dockerfile.dockerignore`. This optimizes build performance.

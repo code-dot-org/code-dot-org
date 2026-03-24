@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          env:
+            - name: AWS_PROFILE
+              value: default
+          volumeMounts:
+            - mountPath: /home/code-dot-org/.aws
+              name: dot-aws
+      volumes:
+        - name: dot-aws
+          persistentVolumeClaim:
+            claimName: dot-aws

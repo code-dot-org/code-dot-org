@@ -1,0 +1,9 @@
+name 'ai-and-algorithmic-decisions-lesson7-level3_2026'
+display_name 'Menu of Accessibility Features'
+description 'A menu of accessibility mini-features that a developer can implement to help a specific users'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson7-level3a_2026'
+level 'ai-and-algorithmic-decisions-lesson7-level3b_2026'
+level 'ai-and-algorithmic-decisions-lesson7-level3c_2026'
+level 'ai-and-algorithmic-decisions-lesson7-level3d_2026'

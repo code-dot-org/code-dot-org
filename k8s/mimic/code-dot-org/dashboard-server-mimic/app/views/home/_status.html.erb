@@ -1,0 +1,10 @@
+<p>
+  Server Status: <%= @server_status %>
+</p>
+
+<ul>
+  <li>DB: <%= @mysql_status[:connected] ? "connected" : "not connected" %>, <%= @mysql_status[:db_name] %> <%= @mysql_status[:db_found] ? "found" : "not found" %>, <%= @mysql_status[:populated] ? "populated" : "not populated" %> (inspected data_docs table)</li>
+  <li>Redis: <%= @redis_status[:connected] ? "connected" : "not connected" %></li>
+  <li>S3 status: <%= @s3_status[:connected] ? "connected" : "not connected" %>, <%= @s3_status[:read] ? "populated (cdo-v3-sources bucket)" : "not populated (cdo-v3-sources bucket)" %></li>
+  <li>Rails.env: <code><%= Rails.env %></code></li>
+</ul>

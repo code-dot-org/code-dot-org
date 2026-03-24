@@ -1,8 +1,0 @@
-.wrapper.flex-container
-  %figure
-    %img{src: "/images/hoc-2024-graphic.png", alt: ""}
-  .text-wrapper
-    %h1=hoc_s("hoc_activities.heading")
-    %p.body-two
-      %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-      != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "/events", howto_url: "/how-to"})

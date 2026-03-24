@@ -2,11 +2,11 @@ Feature: Viewing and dismissing the login callout
 
   @no_mobile
   Scenario: Clicking anywhere should dismiss the login reminder
-    Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/5/levels/3?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
     And element ".uitest-signincallout" is visible
     And I dismiss the login reminder
-    And element ".instructions-markdown p" has text "Use 2 movement blocks to get the Scrat to the acorn."
+    And element ".instructions-markdown p" has text "Draw the foot of the man with one line"
     Then element "#runButton" is visible
     And I delete the cookie named "hide_signin_callout"
     And I clear session storage
@@ -20,7 +20,7 @@ Feature: Viewing and dismissing the login callout
 
   @no_mobile
   Scenario: After dismissing the callout, it should not reappear upon refresh
-    Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/5/levels/3?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
     And element ".uitest-signincallout" is visible
     And I dismiss the login reminder
@@ -31,7 +31,7 @@ Feature: Viewing and dismissing the login callout
 
   @no_mobile
   Scenario: Nested callouts should work as expected
-    Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/2/levels/2?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
     And element ".uitest-signincallout" is visible
     And I dismiss the login reminder
@@ -40,7 +40,7 @@ Feature: Viewing and dismissing the login callout
     And I clear session storage
 
   Scenario: Should be immediately redirected to sign in if pressing sign in button
-    Given I am on "http://studio.code.org/courses/coursea-2020/units/1/lessons/2/levels/2?noautoplay=true"
+    Given I am on "http://studio.code.org/courses/ui-test-csf/units/1/lessons/1/levels/1?noautoplay=true"
     And I wait for the lab page to fully load
     And element ".uitest-signincallout" is visible
     And I click selector ".header_button" if I see it

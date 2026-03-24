@@ -1,0 +1,89 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:07:26.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>San Francisco Weather</title>\n    <link rel=\"stylesheet\" href=\"styles.css\">\n</head>\n<body>\n\n    <div class=\"container\">\n        <main class=\"weather-card-wide\">\n            <div class=\"card-content\">\n                \n                <div class=\"location-group\">\n                    <div class=\"landmark-wrapper\">\n                        <img src=\"sf-landmark.png\" alt=\"San Francisco Golden Gate\" id=\"sfImage\">\n                    </div>\n                    <div class=\"text-group\">\n                        <h1 id=\"cityName\">San Francisco, CA</h1>\n                        <p id=\"description\">Loading forecast...</p>\n                    </div>\n                </div>\n\n                <div class=\"temp-group\">\n                    <span id=\"tempMain\">--</span>\n                </div>\n\n                <div class=\"details-group\">\n                    <div class=\"detail-item\">\n                        Chance of Rain: <strong id=\"rainChance\">--</strong>\n                    </div>\n                    <div class=\"detail-item\">\n                        Wind: <strong id=\"wind\">--</strong>\n                    </div>\n                </div>\n\n            </div>\n        </main>\n    </div>\n\n    <script src=\"script.js\"></script>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "3": {
+          "id": "3",
+          "name": "styles.css",
+          "language": "css",
+          "contents": "body {\n    font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif;\n    margin: 0;\n    background-color: #f0f2f5;\n    color: #333;\n    height: 100vh;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n}\n\n.container {\n    width: 90%;\n    max-width: 900px;\n    display: flex;\n    justify-content: center;\n}\n\n.weather-card-wide {\n    background: #ffffff;\n    border-radius: 12px;\n    box-shadow: 0 4px 20px rgba(0,0,0,0.08);\n    width: 100%;\n    padding: 35px 45px;\n    border: 1px solid #e1e4e8;\n}\n\n.card-content {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.location-group {\n    display: flex;\n    align-items: center;\n    gap: 20px;\n    flex: 1.5;\n}\n\n.icon-wrapper {\n    width: 80px;\n    height: 80px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n\n#weatherIcon {\n    width: 100%;\n    height: auto;\n    border-radius: 8px;\n}\n\n.text-group h1 {\n    margin: 0;\n    font-size: 1.7rem;\n    font-weight: 700;\n}\n\n.text-group p {\n    margin: 5px 0 0 0;\n    color: #666;\n    font-size: 1.1rem;\n    text-transform: capitalize;\n}\n\n.temp-group {\n    flex: 1;\n    text-align: center;\n}\n\n#tempMain {\n    font-size: 5rem;\n    font-weight: 700;\n    letter-spacing: -2px;\n}\n\n.details-group {\n    flex: 1;\n    text-align: right;\n    font-size: 1.1rem;\n    line-height: 1.6;\n}\n\n.detail-item strong {\n    color: #000;\n    font-weight: 600;\n}\n\n.hidden {\n    display: none !important;\n}\n\n/* Responsive adjustments */\n@media (max-width: 768px) {\n    .card-content {\n        flex-direction: column;\n        gap: 30px;\n        text-align: center;\n    }\n    .details-group {\n        text-align: center;\n    }\n}\n\n/* Update or Add these specific classes */\n\n.landmark-wrapper {\n    width: 100px; /* Slightly larger for the landmark */\n    height: 100px;\n    border-radius: 50%; /* Makes it a circle */\n    overflow: hidden; /* Clips the image to the circle */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n\n}\n\n#sfImage {\n    width: 100%;\n    height: 100%;\n    object-fit: cover; /* Ensures the bridge fills the circle nicely */\n}\n\n/* Ensure the rest of your card layout remains the same */",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "script.js",
+          "language": "js",
+          "contents": "const LAT = '37.7749';\nconst LON = '-122.4194';\nconst HEADERS = { 'User-Agent': 'MyWeatherApp/1.0' };\n\nwindow.addEventListener('DOMContentLoaded', () => {\n    fetchNWSWeather();\n});\n\nconst fetchNWSWeather = async () => {\n    try {\n        const pointsResponse = await fetch(`https://api.weather.gov/points/${LAT},${LON}`, { headers: HEADERS });\n        const pointsData = await pointsResponse.json();\n        \n        const forecastUrl = pointsData.properties.forecast;\n        const weatherResponse = await fetch(forecastUrl, { headers: HEADERS });\n        const weatherData = await weatherResponse.json();\n\n        const currentPeriod = weatherData.properties.periods[0];\n        renderUI(currentPeriod);\n    } catch (error) {\n        console.error(\"Fetch Error:\", error);\n        document.getElementById('description').innerText = \"Forecast unavailable\";\n    }\n};\n\nconst renderUI = (period) => {\n    // Basic Weather Text Info\n    document.getElementById('cityName').innerText = \"San Francisco, CA\";\n    document.getElementById('tempMain').innerText = `${period.temperature}°${period.temperatureUnit}`;\n    document.getElementById('description').innerText = period.shortForecast.toLowerCase();\n    \n    // Rain Chance\n    const rainValue = period.probabilityOfPrecipitation?.value || 0;\n    document.getElementById('rainChance').innerText = `${rainValue}%`;\n    \n    // Wind\n    document.getElementById('wind').innerText = `${period.windSpeed} ${period.windDirection || ''}`;\n};",
+          "folderId": "0",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "sf-landmark.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/designing-reliable-apps-lesson1-level1-networks-tab-test-2025-pilot/uuid/30996b5a-53e8-4c4f-978b-8c949f14f5ce.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "4",
+        "3",
+        "5"
+      ]
+    },
+    "encrypted": "false",
+    "long_instructions": "## Browser Scavenger Hunt\r\n\r\nLet's explore this weather app's data! \r\n\r\n#### Do This:\r\n1. Click the **debug panel button** (the bug icon) then toggle to **Network**.\r\n2. Look in the **Response Data** section to find the raw JSON file. \r\n3. Then answer the scavenger hunt questions in your activity guide.\r\n\r\n:::details [**Where do I find the debug panel button?**]\r\nClick the bug icon on the top right of the page. \r\n\r\n<img src=\"https://images.code.org/94dc204b39691b9515108248e0642911-image-1772148344768.25.25 PM.png\" width=\"50\">\r\n:::\r\n",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "disable_edit_run_for_submission": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "ai_tutor_mode": "engineer",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_answer_types": [
+      "buildHTML",
+      "buildCSS",
+      "buildJavaScript",
+      "ask",
+      "hint",
+      "debug",
+      "example",
+      "explainCode",
+      "documentation",
+      "pseudocode"
+    ],
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:07:26.632+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson1-level1-networks-tab-test-2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson1-level1-networks-tab-test-2025-pilot\"}]"
+}]]></config>
+</Weblab2>

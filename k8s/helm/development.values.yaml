@@ -1,0 +1,15 @@
+RAILS_ENV: development
+dashboard_workers: 0
+healthChecks:
+  # Disable this if you want pods to start even if they fail an HTTP health check
+  # can be useful for inspecting what's going wrong.
+  enabled: true
+services:
+  redis:
+    enabled: true
+  mysql:
+    enabled: true
+  minio:
+    enabled: true
+user:
+  allowSudo: true
