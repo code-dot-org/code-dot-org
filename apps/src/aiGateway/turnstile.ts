@@ -60,30 +60,20 @@ function getSiteKey(): string {
 
 class TurnstileManager {
   private widgetId: string | null = null;
-  private pendingResolve: ((token: string) => void) | null = null;
-  private pendingReject: ((err: Error) => void) | null = null;
-  // All calls are serialized through this chain — only one challenge runs at a time,
-  // which means widgetId/pendingResolve/pendingReject are always owned by exactly one
-  // execution context and never need additional locking.
+  // All calls are serialized through this chain — only one challenge runs at a time.
   private chain: Promise<unknown> = Promise.resolve();
 
   getToken(): Promise<string> {
-    // Ensure the script is loaded before queuing, so script errors propagate to callers.
     const result = this.chain.then(
       () => loadTurnstileScript().then(() => this.runChallenge()),
       () => loadTurnstileScript().then(() => this.runChallenge())
     );
-    // Absorb resolve/reject so the chain always advances for the next caller.
+    // Absorb to keep the chain always advancing for subsequent callers.
     this.chain = result.then(
       () => {},
       () => {}
     );
     return result;
-  }
-
-  // Called by Turnstile's callback — the only external entry point besides getToken.
-  handleToken(token: string) {
-    this.pendingResolve?.(token);
   }
 
   private runChallenge(): Promise<string> {
@@ -93,8 +83,6 @@ class TurnstileManager {
       const settle = (fn: () => void) => {
         if (settled) return;
         settled = true;
-        this.pendingResolve = null;
-        this.pendingReject = null;
         fn();
       };
 
@@ -108,35 +96,24 @@ class TurnstileManager {
         });
       }, CHALLENGE_TIMEOUT_MS);
 
-      this.pendingResolve = (token: string) =>
-        settle(() => {
-          clearTimeout(timeout);
-          resolve(token);
-        });
-      this.pendingReject = (err: Error) =>
-        settle(() => {
-          clearTimeout(timeout);
-          reject(err);
-        });
-
+      // Always remove the previous widget and render a fresh one, matching
+      // the behavior of the prior implementation that was known to work.
       if (this.widgetId) {
-        // Verify the widget is still live in the DOM before attempting a reset.
-        const container = document.getElementById(CONTAINER_ID);
-        if (container?.hasChildNodes()) {
-          window.turnstile.reset(this.widgetId);
-          return;
-        }
-        // Widget was detached (e.g. DOM was cleared) — fall through to re-render.
+        window.turnstile.remove(this.widgetId);
         this.widgetId = null;
       }
 
       const container = getOrCreateContainer();
-      // Evict any orphaned Turnstile content we don't have a handle on.
-      container.innerHTML = '';
 
+      // widgetId is assigned synchronously by render() before the async callback fires
       const widgetId = window.turnstile.render(container, {
         sitekey: getSiteKey(),
-        callback: (token: string) => this.handleToken(token),
+        callback: (token: string) => {
+          settle(() => {
+            clearTimeout(timeout);
+            resolve(token);
+          });
+        },
       });
 
       if (!widgetId) {
