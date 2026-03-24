@@ -11,7 +11,11 @@ import 'tldraw/tldraw.css';
 
 import useThemeSetting from '@cdo/apps/lab2/hooks/useThemeSetting';
 import {useVerticalLayout} from '@cdo/apps/lab2/hooks/useVerticalLayout';
-import {LabProps, LevelProperties} from '@cdo/apps/lab2/types';
+import {
+  ExcalidrawSourceWithExternalFiles,
+  LabProps,
+  LevelProperties,
+} from '@cdo/apps/lab2/types';
 import ResourcePanel from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel';
 import ResizeBar from '@cdo/apps/lab2/views/components/layout/ResizeBar';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
@@ -22,12 +26,14 @@ import {useSources} from '../lab2/views/SourcesContainer';
 
 import {SketchlabTldrawSources} from './types';
 import {createTldrawAssetStore} from './utils/createTldrawAssetStore';
+import {
+  isExcalidrawSource,
+  migrateExcalidrawToTldraw,
+} from './utils/migrateExcalidrawToTldraw';
 
 import moduleStyles from './styles/sketchlab-view.module.scss';
 
 // TLStoreSnapshot requires { store: object, schema: object }.
-// We could have an invalid source if we have excalidraw data stored.
-// todo: actually migrate the old data.
 function isValidSnapshot(
   source: SketchlabTldrawSources['source'] | undefined
 ): source is TLStoreSnapshot {
@@ -81,14 +87,25 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
 
   const assetUrls = useMemo(() => getAssetUrlsByMetaUrl(), []);
 
+  const excalidrawSourceRef = useRef(
+    isExcalidrawSource(currentSources?.source) ? currentSources.source : null
+  );
+
   const initializeEditor = useCallback((editor: Editor) => {
     setTldrawEditor(editor);
-    console.log('registering editor');
   }, []);
 
   useEffect(() => {
+    if (tldrawEditor && excalidrawSourceRef.current) {
+      const source =
+        excalidrawSourceRef.current as unknown as ExcalidrawSourceWithExternalFiles;
+      excalidrawSourceRef.current = null;
+      migrateExcalidrawToTldraw(tldrawEditor, source);
+    }
+  }, [tldrawEditor]);
+
+  useEffect(() => {
     if (tldrawEditor) {
-      console.log('editor is ready, registering listener');
       // listen method returns a method you can use to unsubscribe, so we return that from the effect.
       // https://tldraw.dev/reference/store/Store#listen
       const unsubscribe = tldrawEditor.store.listen(
@@ -154,9 +171,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
               assets={assetStore}
               onMount={initializeEditor}
               overrides={uiOverrides}
-              // docs for snapshot: https://tldraw.dev/reference/editor/TLStoreBaseOptions#snapshot
-              // We may be able to use snapshot in conjunction with migrations to migrate old excalidraw
-              // data: https://tldraw.dev/sdk-features/persistence#Migrations
+              // https://tldraw.dev/reference/editor/TLStoreBaseOptions#snapshot
               snapshot={initialSnapshotRef.current}
             />
           </div>
