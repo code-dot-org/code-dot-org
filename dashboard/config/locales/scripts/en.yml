@@ -27166,6 +27166,17 @@ en:
             - Use AI as a collaborative partner to brainstorm, debug, and refine code.
             - Develop a personal framework for deciding when to write code themselves and when to seek AI assistance.
             - Describe how the tasks of planning, writing, and testing interactive code relate to the professional roles of a Front-End Developer and QA Engineer.
+        ui-test-csf:
+          lessons:
+            lesson-1:
+              name: Lesson One
+          lesson_groups: {}
+          name: ui-test-csf
+          title: UI Test CSF
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         pl-facilitators-aif2-intro-2026:
           lessons: {}
           lesson_groups: {}
