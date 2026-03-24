@@ -30,7 +30,9 @@ export async function migrateExcalidrawToTldraw(
         const externalFile = cloned.externalFiles?.[file.id];
         if (externalFile?.url && externalFile.uploaded && !file.dataURL) {
           try {
-            file.dataURL = (await imageUrlToBase64(externalFile.url)) as DataURL;
+            file.dataURL = (await imageUrlToBase64(
+              externalFile.url
+            )) as DataURL;
           } catch {
             // If download fails, tldraw will show a placeholder image.
           }
