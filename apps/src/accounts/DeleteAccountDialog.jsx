@@ -1,3 +1,4 @@
+import {buttonColors} from '@code-dot-org/component-library/button';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -146,7 +147,7 @@ export default class DeleteAccountDialog extends React.Component {
                 ? i18n.deleteAccountDialog_button_studentWarning()
                 : i18n.deleteAccountDialog_button()
             }
-            confirmColor="error"
+            confirmColor={buttonColors.destructive}
             onConfirm={deleteUser}
             onCancel={onCancel}
             disableConfirm={disableConfirm}

@@ -1,6 +1,5 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
@@ -427,28 +426,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                   rows={4}
                   className={moduleStyles.textArea}
                 />
-                <MuiButton
-                  variant="contained"
-                  color="secondary"
-                  size="small"
-                  loadingPosition="end"
+                <Button
+                  ariaLabel={'Continue'}
+                  text={'Continue'}
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconRight={{iconName: 'arrow-right', iconStyle: 'solid'}}
                   onClick={() => {
                     dispatch(continueOrFinishLesson());
                     analyticsReporter.sendEvent('hoai2025-dancer-prompt', {
                       promptText,
                     });
                   }}
-                  aria-label="Continue"
-                  type="button"
-                  endIcon={
-                    <FontAwesomeV6Icon
-                      iconName="arrow-right"
-                      iconStyle="solid"
-                    />
-                  }
-                >
-                  {'Continue'}
-                </MuiButton>
+                />
               </>
             )}
           {isReadOnly && (
@@ -483,28 +474,27 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
             !levelProperties.aiDancerGenerateText &&
             !isReadOnly && (
               <div className={moduleStyles.buttonRow}>
-                <MuiButton
-                  variant="contained"
-                  color="secondary"
-                  size="small"
-                  loading={aiGenerateState === 'generating'}
-                  loadingPosition="start"
-                  disabled={aiGenerateState === 'generating'}
-                  className={moduleStyles.buttonWide}
+                <Button
                   id="generate-dancer-button"
-                  onClick={() => generateDancer()}
-                  aria-label={
+                  ariaLabel={
                     aiGenerateState === 'none'
                       ? 'Generate dancer'
                       : 'Generating dancer'
                   }
-                  type="button"
-                  startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-                >
-                  {aiGenerateState === 'none'
-                    ? 'Generate dancer'
-                    : 'Generating dancer'}
-                </MuiButton>
+                  text={
+                    aiGenerateState === 'none'
+                      ? 'Generate dancer'
+                      : 'Generating dancer'
+                  }
+                  type="primary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
+                  isPending={aiGenerateState === 'generating'}
+                  disabled={aiGenerateState === 'generating'}
+                  onClick={() => generateDancer()}
+                  className={moduleStyles.buttonWide}
+                />
               </div>
             )}
 
@@ -522,12 +512,13 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
           {aiGenerateState === 'reviewing' && (
             <>
               <div className={moduleStyles.buttonRow}>
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="small"
-                  className={moduleStyles.buttonWide}
+                <Button
                   id="back-to-prompt-button"
+                  ariaLabel={'Back to prompt'}
+                  text={'Back to prompt'}
+                  type="secondary"
+                  color="black"
+                  size="s"
                   onClick={() => {
                     analyticsReporter.sendEvent(
                       EVENTS.GENERATE_DANCER_BACK_TO_PROMPT_CLICKED,
@@ -537,26 +528,20 @@ const GenerateDancer: React.FunctionComponent<DancerGenerateProps> = ({
                     );
                     setAiGenerateState('none');
                   }}
-                  aria-label="Back to prompt"
-                  type="button"
-                >
-                  {'Back to prompt'}
-                </MuiButton>
-
-                <MuiButton
-                  variant="outlined"
-                  color="secondary"
-                  size="small"
-                  loadingPosition="start"
                   className={moduleStyles.buttonWide}
+                />
+
+                <Button
                   id="regenerate-button"
+                  ariaLabel={'Regenerate'}
+                  text={'Regenerate'}
+                  type="secondary"
+                  color="black"
+                  size="s"
+                  iconLeft={{iconName: 'sparkles'}}
                   onClick={() => generateDancer(true)}
-                  aria-label="Regenerate"
-                  type="button"
-                  startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-                >
-                  {'Regenerate'}
-                </MuiButton>
+                  className={moduleStyles.buttonWide}
+                />
 
                 {!hasParent && (
                   <NavigationArea

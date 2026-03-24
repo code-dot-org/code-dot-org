@@ -1,5 +1,3 @@
-import {CdoTheme} from '@code-dot-org/component-library/themes';
-import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
@@ -42,10 +40,7 @@ describe('ChangeEmailModal', () => {
     );
 
   beforeEach(() => {
-    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />, {
-      wrappingComponent: MuiThemeProvider,
-      wrappingComponentProps: {theme: CdoTheme},
-    });
+    wrapper = mount(<ChangeEmailModal {...DEFAULT_PROPS} />);
 
     // causing a blank change event to reveal validation messages
     emailInput(wrapper).simulate('change');
@@ -180,11 +175,7 @@ describe('ChangeEmailModal', () => {
 
         it('does not check that password is present if user does not have a password', () => {
           wrapper = mount(
-            <ChangeEmailModal {...DEFAULT_PROPS} isPasswordRequired={false} />,
-            {
-              wrappingComponent: MuiThemeProvider,
-              wrappingComponentProps: {theme: CdoTheme},
-            }
+            <ChangeEmailModal {...DEFAULT_PROPS} isPasswordRequired={false} />
           );
           act(() => {
             wrapper.setState({

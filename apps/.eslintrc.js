@@ -200,11 +200,6 @@ module.exports = {
             message:
               'DSCO Typography is deprecated. Use MUI Typography from @mui/material instead. From the apps directory (cd apps), run: npx jscodeshift -t ./tools/codemod/typography-to-mui.js "src" --parser=tsx --extensions=tsx,ts,jsx,js',
           },
-          {
-            name: '@code-dot-org/component-library/button',
-            message:
-              'DSCO Button is deprecated. Use MUI Button from @mui/material instead. Codemod available: cd frontend/packages/component-library && yarn codemod:buttons <path>',
-          },
         ],
         patterns: [
           {

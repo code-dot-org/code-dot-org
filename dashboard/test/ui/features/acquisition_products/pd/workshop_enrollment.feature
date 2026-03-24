@@ -3,14 +3,14 @@ Feature: Workshop Enrollment
 
 Scenario: Attempting to join workshop signed-out prompts user to sign in
   Given I am a "signed_out" user enrolling in workshop with "unsubmitted" status
-  And I wait until element "a:contains('Create an account')" is visible
+  And I wait until element "span:contains('Create an account')" is visible
 
   # test clean up
   And I delete the workshop
 
 Scenario: Attempting to join workshop as a student prompts user to upgrade account
   Given I am a "student" user enrolling in workshop with "unsubmitted" status
-  And I wait until element "a:contains('Exit and cancel')" is visible
+  And I wait until element "span:contains('Exit and cancel')" is visible
 
   # test clean up
   And I delete the workshop

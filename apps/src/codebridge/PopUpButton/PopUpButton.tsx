@@ -1,6 +1,5 @@
+import Button from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import FocusTrap from 'focus-trap-react';
 import React, {useState, useCallback, useRef, useEffect} from 'react';
@@ -201,21 +200,20 @@ export const PopUpButton = ({
 
   return (
     <>
-      <MuiIconButton
-        id={id}
-        variant="text"
-        color="tertiary"
-        size="extraSmall"
-        disabled={disabled}
-        className={computedButtonStyles}
-        onClick={clickHandler}
-        aria-label={ariaLabel}
-        type="button"
+      <Button
         ref={buttonElementRef}
+        className={computedButtonStyles}
+        size="xs"
+        icon={{iconStyle: 'solid', iconName}}
+        isIconOnly
+        onClick={clickHandler}
+        type={'tertiary'}
+        id={id}
+        disabled={disabled}
+        ariaLabel={ariaLabel}
         aria-expanded={isOpen}
-      >
-        <FontAwesomeV6Icon iconStyle="solid" iconName={iconName} />
-      </MuiIconButton>
+        color={'gray'}
+      />
       {isOpen &&
         // We use a portal so the dropdown can appear above all other elements.
         // The children take a moment to render in the portal, so we need a
