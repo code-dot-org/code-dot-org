@@ -99,14 +99,9 @@ namespace :seed do
     allthettsthings
     artist
     coursea-2017
-    courseb-2017
     coursec-2017
-    coursed-2017
-    coursee-2017
-    coursef-2017
     coursea-2019
     coursec-2019
-    coursee-2019
     csd3-2023
     interactive-games-animations-2023
     focus-on-creativity3-2023
@@ -325,14 +320,9 @@ namespace :seed do
        allthettsthings
        artist
        coursea-2017
-       courseb-2017
        coursec-2017
-       coursed-2017
-       coursee-2017
-       coursef-2017
        coursea-2019
        coursec-2019
-       coursee-2019
        csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
