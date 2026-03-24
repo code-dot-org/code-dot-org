@@ -22,6 +22,9 @@ Parameters:
     Type: CommaDelimitedList
     Default: 6938fd4d98bab03faadb97b34396831e3780aea1, 1c58a3a8518e8759bf075b76b750d4f2df264fcd
     Description: List of thumbprints of GitHub intermediate certificates that sign the certificates used by GitHub Actions.
+  RedshiftAdminSQLUser:
+    Type: String
+    Description: The admin (`SUPERUSER`) SQL user for the Redshift cluster.
 Resources:
   # Admin Service Role for managing all resources in CloudFormation stacks.
   # Only admins can update stacks using this service role.
@@ -477,10 +480,20 @@ roles.each do |name, config| %>
           - Sid: DataAnalystS3ImportExportBucket
             Effect: Allow
             Action:
-              - 's3:*'
+              - 's3:GetObject'
+              - 's3:GetObjectVersion'
+              - 's3:PutObject'
+              - 's3:DeleteObject'
+              - 's3:ListBucket'
+              - 's3:GetBucketLocation'
+              - 's3:ListBucketMultipartUploads'
+              - 's3:AbortMultipartUpload'
+              - 's3:ListMultipartUploadParts'
             Resource:
               - 'arn:aws:s3:::cdo-data-sharing-internal/*'
               - 'arn:aws:s3:::cdo-data-sharing-internal'
+              - 'arn:aws:s3:::cdo-data-sharing/*'
+              - 'arn:aws:s3:::cdo-data-sharing'
               - 'arn:aws:s3:::cdo-census/*'
               - 'arn:aws:s3:::cdo-census'
               - 'arn:aws:s3:::cdo-nces/*'
@@ -664,93 +677,100 @@ roles.each do |name, config| %>
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
 
   EngineerDataPolicy:
-      Type: AWS::IAM::ManagedPolicy
-      Properties:
-        ManagedPolicyName: EngineersDataPolicy
-        Path: /engineering/
-        Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
-        PolicyDocument:
-          Version: 2012-10-17
-          Statement:
-            - Sid: DenyS3BucketDestructiveOperations
-              Effect: Deny
-              Action:
-                - s3:DeleteBucket
-                - s3:DeleteBucketPolicy
-                - s3:DeleteBucketWebsite
-                - s3:PutBucketAcl
-                - s3:PutBucketPolicy
-                - s3:PutBucketPublicAccessBlock
-                - s3:PutLifecycleConfiguration
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: EngineersDataPolicy
+      Path: /engineering/
+      Description: Prevent accidental or malicious deletion of production data in S3, Aurora databases, etc.
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: DenyS3BucketDestructiveOperations
+            Effect: Deny
+            Action:
+              - s3:DeleteBucket
+              - s3:DeleteBucketPolicy
+              - s3:DeleteBucketWebsite
+              - s3:PutBucketAcl
+              - s3:PutBucketPolicy
+              - s3:PutBucketPublicAccessBlock
+              - s3:PutLifecycleConfiguration
 
-                # S3 Batch Operations - prevent mass operations
-                - s3:CreateJob
-                - s3:UpdateJobPriority
-                - s3:UpdateJobStatus
+              # S3 Batch Operations - prevent mass operations
+              - s3:CreateJob
+              - s3:UpdateJobPriority
+              - s3:UpdateJobStatus
 
-                - s3:PutBucketVersioning
-                - s3:PutReplicationConfiguration
-                - s3:PutBucketCORS
-                - s3:PutBucketLogging
-                - s3:PutEncryptionConfiguration
-                - s3:BypassGovernanceRetention
-                - s3:DeleteObjectVersionTagging
-                - s3:PutObjectLegalHold
-                - s3:PutObjectRetention
-              NotResource:
-                - arn:aws:s3:::org.cdn-code.adhoc-*.*
-                - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
-            - Sid: DenyDestructiveRDSOperationsOnProduction
-              Effect: Deny
-              Action:
-                - rds:DeleteDBInstance
-                - rds:DeleteDBCluster
-                - rds:DeleteDBSnapshot
-                - rds:DeleteDBClusterSnapshot
-                - rds:DeleteDBInstanceAutomatedBackup
+              - s3:PutBucketVersioning
+              - s3:PutReplicationConfiguration
+              - s3:PutBucketCORS
+              - s3:PutBucketLogging
+              - s3:PutEncryptionConfiguration
+              - s3:BypassGovernanceRetention
+              - s3:DeleteObjectVersionTagging
+              - s3:PutObjectLegalHold
+              - s3:PutObjectRetention
+            NotResource:
+              - arn:aws:s3:::org.cdn-code.adhoc-*.*
+              - arn:aws:s3:::org.cdn-code.adhoc-*.*/*
+          - Sid: DenyDestructiveRDSOperationsOnProduction
+            Effect: Deny
+            Action:
+              - rds:DeleteDBInstance
+              - rds:DeleteDBCluster
+              - rds:DeleteDBSnapshot
+              - rds:DeleteDBClusterSnapshot
+              - rds:DeleteDBInstanceAutomatedBackup
 
-                - rds:StopDBInstance
-                - rds:StopDBCluster
-                - rds:RebootDBInstance
-                - rds:RebootDBCluster
+              - rds:StopDBInstance
+              - rds:StopDBCluster
+              - rds:RebootDBInstance
+              - rds:RebootDBCluster
 
-                - rds:ModifyDBInstance
-                - rds:ModifyDBCluster
-                - rds:ModifyDBParameterGroup
-                - rds:ModifyDBClusterParameterGroup
-                - rds:ResetDBParameterGroup
-                - rds:ResetDBClusterParameterGroup
+              - rds:ModifyDBInstance
+              - rds:ModifyDBCluster
+              - rds:ModifyDBParameterGroup
+              - rds:ModifyDBClusterParameterGroup
+              - rds:ResetDBParameterGroup
+              - rds:ResetDBClusterParameterGroup
 
-                - rds:RestoreDBInstanceFromDBSnapshot
-                - rds:RestoreDBClusterFromSnapshot
-                - rds:RestoreDBInstanceToPointInTime
-                - rds:RestoreDBClusterToPointInTime
+              - rds:RestoreDBInstanceFromDBSnapshot
+              - rds:RestoreDBClusterFromSnapshot
+              - rds:RestoreDBInstanceToPointInTime
+              - rds:RestoreDBClusterToPointInTime
 
-                - rds:FailoverDBCluster
-                - rds:BacktrackDBCluster
-                - rds:ModifyCurrentDBClusterCapacity
+              - rds:FailoverDBCluster
+              - rds:BacktrackDBCluster
+              - rds:ModifyCurrentDBClusterCapacity
 
-              Resource:
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
-              Condition:
-                StringEquals:
-                  'aws:ResourceTag/environment': 'production'
-            - Sid: DenyTagModificationOnProductionRDS
-              Effect: Deny
-              Action:
-                - rds:RemoveTagsFromResource
-                - rds:AddTagsToResource
-              Resource:
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
-                - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
-              Condition:
-                StringEquals:
-                  'aws:ResourceTag/environment': 'production'
+            Resource:
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+            Condition:
+              StringEquals:
+                'aws:ResourceTag/environment': 'production'
+          - Sid: DenyTagModificationOnProductionRDS
+            Effect: Deny
+            Action:
+              - rds:RemoveTagsFromResource
+              - rds:AddTagsToResource
+            Resource:
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:db:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:snapshot:*'
+              - !Sub 'arn:aws:rds:*:${AWS::AccountId}:cluster-snapshot:*'
+            Condition:
+              StringEquals:
+                'aws:ResourceTag/environment': 'production'
+          - Sid: DenyRedshiftSuperuserAccess
+            Effect: Deny
+            Action:
+              - redshift:GetClusterCredentials
+              - redshift:GetClusterCredentialsWithIAM
+            Resource:
+              - !Sub 'arn:aws:redshift:*:${AWS::AccountId}:dbuser:*/${RedshiftAdminSQLUser}'
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy

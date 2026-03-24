@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2026-02-24T18:10:36.000Z",
   "level_num": "custom",
@@ -9,48 +10,32 @@
     "offer_browser_tts": "false",
     "panels": [
       {
-        "text": "# Prompting Strategies\n\nUse the following as a template: \n>Generate **[HTML/CSS]** code for a **[description of element/layout]**.\n\nLet's try it out!",
-        "imageUrl": "https://images.code.org/d0d640191f6f760db295ce0b16c02a4a-Screenshot 2025-10-22 at 11.42.55 AM.png",
-        "key": "undefined-90113ce4-74f1-4526-80e8-ef55aa169761",
+        "text": "# How To: Prompt AI Tutor\n\nLet's learn how to use AI to create our web page. Read through the following steps, then try it out yourself!",
+        "imageUrl": "https://images.code.org/41a84d3ffd2a38785562ac41aec9b410-ai-curriculum-societal-impacts.png",
+        "key": "ai-generated-design-lesson3-level1_2026-2818636e-1365-4c59-bb17-9b2e6b832ac9",
         "layout": "text-top-left"
       },
       {
-        "text": "# Add Relevant Details\n\nStart your prompt by clarifying the purpose of the element or page layout. \n\nFor example:\n> This is a website for a children's art and painting studio. Create the CSS for a colorful and responsive navigation bar for a website header.\n\nOr\n> Code the HTML for a doctor's office website that features a contact form with input fields for name, email, and message.\n\n\n\n\n\n",
-        "imageUrl": "https://images.code.org/5fb34fd7d4b28de9c14edce208230b89-Screenshot 2025-10-22 at 11.54.36 AM.png",
-        "key": "undefined-58cb06d9-0204-44a2-a976-81208295972a",
+        "text": "# Prompt AI Tutor\n\nTell AI Tutor what you want it to do by typing your message into the chat box. \n\nWhen you're ready, click the purple **Send** arrow or hit **Enter** on your keyboard.\n\n_Note: You may want to minimize the instructions to see your full prompt._",
+        "imageUrl": "https://images.code.org/79c5e362d5efa2b265aeae9207a7c6ec-prompt.gif",
+        "key": "undefined-205a9cb6-4e78-4814-929e-fec9c89b847c",
+        "layout": "text-top-right"
+      },
+      {
+        "text": "#Preview the Output\n\nClick **Preview** to see what AI created. ",
+        "imageUrl": "https://images.code.org/eafff3e027b8c7709c8531fdb2419c28-preview.gif",
+        "key": "ai-generated-design-lesson3-level1_2026-9b8c74a7-b72a-4930-8b41-4cade9e230fe",
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "# Accept / Reject AI Code\n\nIf the code matches what you want, click **Accept**. \n\nWrite a brief message like \"Generated index.html for gardening app\". Then click **Accept and save version**.\n\nIf the code is not quite right, click **Reject** and try re-prompting AI.\n\n",
+        "imageUrl": "https://images.code.org/75cd37fd67d920e6978bebc48fa1e5e4-accept-changes.gif",
+        "key": "ai-generated-design-lesson3-level1_2026-96e6e9af-0122-48a5-a798-ceafe83766a9",
         "layout": "text-bottom-right"
-      },
-      {
-        "text": "# Specify Key Features\n\nList specific elements or content to include.\n\nFor example:\n> On the Contact form, add a \"Send Message\" button at the bottom of the page.\n\nOr\n> Include links in the nav bar to Home, About, Services, Contact.\n",
-        "imageUrl": "https://images.code.org/e95b784a2f9adec0c8e0fdfe1c897a48-Screenshot 2025-10-22 at 12.05.03 PM.png",
-        "key": "undefined-82ae26a2-6d08-4dea-8d3a-dfd24b676e32",
-        "layout": "text-bottom-right"
-      },
-      {
-        "text": "# Detail Styling Requirements\n\nWhen generating CSS code, describe visual aspects that should appear on the site.\n\nFor example:\n>Set the background color: #f5dfef and the font-family: Arial, sans-serif. Add hover effects for links.\n\nOr\n>Center all the text in the cards and make them responsive for mobile and desktop.\n\n",
-        "imageUrl": "https://images.code.org/71b29f83b03a78ba6fb3db5043026f78-Screenshot 2025-10-22 at 12.09.03 PM.png",
-        "key": "undefined-380af436-eac7-4545-a4f9-1981de622ecc",
-        "layout": "text-bottom-right"
-      },
-      {
-        "text": "# List Constraints and Preferences\n\nMention any specific limitations or preferences for the code generated. \n\nFor example:\n> Refactor the CSS code to make it more concise. And avoid inline styles.\n\nOr\n> Use semantic HTML5 tags.",
-        "imageUrl": "https://images.code.org/ffba4f7cae223e61501eb3097dcd7c1c-Screenshot 2025-10-22 at 12.15.47 PM.png",
-        "key": "undefined-1a4a543e-4f17-4634-88fa-8127c92616c0"
-      },
-      {
-        "text": "# Save Version\n\nTo save the current version of your program, navigate to the Version History tab. Give your changes a descriptive name and click \"Save version\".",
-        "imageUrl": "https://images.code.org/d7705422a1ce74b83429d3267cd4e027-save_version.gif",
-        "key": "undefined-205a9cb6-4e78-4814-929e-fec9c89b847c"
-      },
-      {
-        "text": "# Restore a Previous Version\n\nTo restore a previous version of your program, navigate to the Version History tab. Select the version you want to restore and click \"Restore\".",
-        "imageUrl": "https://images.code.org/a95a774bee9a473fd18bc45a163a143d-revert.gif",
-        "key": "ai-generated-design-lesson3-level1-panels-test-2025-649bd13d-64f8-4b90-bede-e0ef37621fe0"
       }
     ],
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:36.856+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:36.856+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson3-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson3-level1_2025\"},{\"changed_at\":\"2026-03-04 22:20:04 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:23:06 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 22:27:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-04 23:32:47 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:06:00 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:36:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:48:39 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 18:59:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:11:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:13:44 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-05 19:16:40 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 21:20:37 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-10 21:20:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:44:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:44:50 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:45:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-12 16:46:07 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-18 18:33:59 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

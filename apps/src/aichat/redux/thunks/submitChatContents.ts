@@ -8,6 +8,7 @@ import {
   updateChatMessageStatus,
   updateRequestId,
 } from '@cdo/apps/aichat/redux/slice';
+import {getAssetUrl} from '@cdo/apps/aichat/utils';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
@@ -18,9 +19,15 @@ import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {createUuid} from '@cdo/apps/utils';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
+import {Weblab2LevelProperties} from '@cdo/apps/weblab2/types';
+import {
+  AiChatModelIds,
+  AiInteractionStatus as Status,
+} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../../aichatApi';
+import {performClientApiChatCompletion} from '../../api/performClientApiChatCompletion';
+import supportsClientApi from '../../api/supportsClientApi';
 import {logChatEvent} from '../../helpers/logChatEvent';
 import {formatUserAddedSelectionContextForPrompt} from '../../helpers/userAddedSelectionContextFormatter';
 import {
@@ -33,6 +40,7 @@ import {
   AiChatClientType,
   AnalyticsProperties,
   UserAddedSelectionContextItem,
+  AichatLevelProperties,
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
@@ -164,13 +172,43 @@ export const submitChatContents = createAsyncThunk(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
       );
 
-      messages = await postAichatCompletionMessage(
-        newUserMessage,
-        chatEventsCurrent.filter(isCompletedChatMessage),
-        {...modelParameters},
-        aichatContext
-      );
+      if (supportsClientApi(modelParameters.selectedModelId)) {
+        const levelProperties = state.lab.levelProperties;
+        const levelName = levelProperties?.name;
+        const levelSystemPrompt =
+          (levelProperties as Weblab2LevelProperties)?.levelSystemPrompt ||
+          (levelProperties as AichatLevelProperties)?.aichatSettings
+            ?.levelSystemPrompt;
 
+        let filteredChatEvents: CompletedChatMessage[] =
+          chatEventsCurrent.filter(isCompletedChatMessage);
+
+        if (
+          modelParameters.selectedModelId ===
+          AiChatModelIds.GEMINI_2_5_FLASH_IMAGE
+        ) {
+          filteredChatEvents = filteredChatEvents.filter(
+            message => message.status === Status.OK
+          );
+        }
+
+        messages = await performClientApiChatCompletion(
+          newUserMessage,
+          filteredChatEvents,
+          modelParameters,
+          aichatContext,
+          (asset: ChatAsset) =>
+            getAssetUrl(asset, aichatContext.channelId, levelName),
+          levelSystemPrompt
+        );
+      } else {
+        messages = await postAichatCompletionMessage(
+          newUserMessage,
+          chatEventsCurrent.filter(isCompletedChatMessage),
+          {...modelParameters},
+          aichatContext
+        );
+      }
       // In milliseconds
       const responseTime = Date.now() - startTime;
       dispatch(

@@ -568,16 +568,21 @@ class LessonTest < ActiveSupport::TestCase
     create(:course_version, course_offering: course_offering0, content_root: course0, key: '2999')
     lesson0 = create(:lesson, script: script0, key: 'foo')
 
-    # measure the query count of the summarize method before checking the result
-    # of related_lessons, so that the count is not artificially reduced by
-    # anything being cached from the call to related_lessons.
     summaries = nil
-    assert_queries(8) do
-      summaries = lesson1.summarize_related_lessons
-    end
 
-    assert_queries(1) do
-      assert_equal [lesson0, lesson2, lesson5, lesson6], lesson1.related_lessons
+    # Avoid using the ActiveRecord query cache so that we can count queries
+    # precisely and consistently.
+    ActiveRecord::Base.connection.uncached do
+      # measure the query count of the summarize method before checking the result
+      # of related_lessons, so that the count is not artificially reduced by
+      # anything being cached from the call to related_lessons.
+      assert_queries(8) do
+        summaries = lesson1.summarize_related_lessons
+      end
+
+      assert_queries(1) do
+        assert_equal [lesson0, lesson2, lesson5, lesson6], lesson1.related_lessons
+      end
     end
 
     assert_equal 4, summaries.count

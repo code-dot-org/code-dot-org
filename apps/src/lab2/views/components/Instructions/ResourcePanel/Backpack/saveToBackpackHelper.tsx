@@ -2,11 +2,11 @@ import React from 'react';
 
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {moderateImage} from '@cdo/apps/lab2/utils/moderateImage';
 import {DialogControlInterface, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import BackpackClientApi from '@cdo/apps/sharedComponents/backpack/BackpackClientApi';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 import {createUuid} from '@cdo/apps/utils';
 
 export const handleSaveSupportFile = async (
@@ -170,11 +170,9 @@ export const fetchAndSaveFile = async ({
       const file = new File([blob], selectedFileName, {type: contentType});
       const appName = Lab2Registry.getInstance().getAppName();
 
-      const moderationStatus = await moderateImage(
-        file,
-        fileType,
-        appName || undefined
-      );
+      const moderationStatus = await moderateImage(file, appName ?? '', {
+        uploaderType: 'Lab2FileUploader',
+      });
       if (moderationStatus === 'flagged') {
         // Callback function so if user accepts flagged image, we can save the image to the project.
         const saveBackpackImageFileToProjectFunction = async () => {

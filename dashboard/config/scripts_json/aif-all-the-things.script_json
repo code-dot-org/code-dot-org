@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-01-16 19:54:55 UTC",
+    "serialized_at": "2026-03-17 18:51:25 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -118,6 +118,36 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "AI Prompt Modes",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Panel Levels - Semester 2",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -394,6 +424,30 @@
       "seeding_key": {
         "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844",
         "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things"
+      }
+    },
+    {
+      "key": "97e91a12-98b6-4262-baca-7999551ca15c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "aif-all-the-things"
       }
@@ -896,6 +950,115 @@
       "seeding_key": {
         "activity_section.key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a",
         "lesson_activity.key": "82a3910b-d8c0-4285-9f77-9308c43ae844"
+      }
+    },
+    {
+      "key": "171a2815-3ae4-447f-b04e-91893b6d9aad",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "171a2815-3ae4-447f-b04e-91893b6d9aad",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "27bb7888-c44f-4ecd-922d-7abe976fc427",
+      "position": 2,
+      "properties": {
+        "progression_name": "AI Prompt - Emma"
+      },
+      "seeding_key": {
+        "activity_section.key": "27bb7888-c44f-4ecd-922d-7abe976fc427",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "8d2db7e5-ff63-4844-9d0a-c49a4c623216",
+      "position": 3,
+      "properties": {
+        "progression_name": "AI Prompt - Erik"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d2db7e5-ff63-4844-9d0a-c49a4c623216",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "b9113c0b-9c9e-40b3-9ea5-4e05c93270c1",
+      "position": 4,
+      "properties": {
+        "progression_name": "AI Prompt - Angelina"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9113c0b-9c9e-40b3-9ea5-4e05c93270c1",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "b2c23ea7-95f3-42e4-abdf-11b3d39b5bfd",
+      "position": 5,
+      "properties": {
+        "progression_name": "AI Prompt - Katie"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2c23ea7-95f3-42e4-abdf-11b3d39b5bfd",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "ea1a9919-3efd-46ed-931d-b67b7d673a22",
+      "position": 6,
+      "properties": {
+        "progression_name": "AI Prompt - Joi"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea1a9919-3efd-46ed-931d-b67b7d673a22",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb",
+      "position": 7,
+      "properties": {
+        "progression_name": "AI Prompt - Jamila"
+      },
+      "seeding_key": {
+        "activity_section.key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb",
+        "lesson_activity.key": "297dc2f7-80fc-48fa-b051-ea415e3e40c1"
+      }
+    },
+    {
+      "key": "212ff842-fe52-495b-8340-d1d20f1b7d14",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prompting with ROPE"
+      },
+      "seeding_key": {
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
+      }
+    },
+    {
+      "key": "2ce72469-a87f-4625-9c71-5498901b3ac4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Add Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
+      }
+    },
+    {
+      "key": "d295e465-768f-4b72-aa9f-8396ba11b423",
+      "position": 3,
+      "properties": {
+        "progression_name": "Versioning"
+      },
+      "seeding_key": {
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423",
+        "lesson_activity.key": "97e91a12-98b6-4262-baca-7999551ca15c"
       }
     }
   ],
@@ -1906,6 +2069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "aif-sem2-u5-l6-prototype"
+        ],
         "progression": "Lesson 6 prototype"
       },
       "bonus": false,
@@ -1920,6 +2086,204 @@
       },
       "level_keys": [
         "aif-sem2-u5-l6-prototype"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Emma"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "27bb7888-c44f-4ecd-922d-7abe976fc427"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Erik"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "8d2db7e5-ff63-4844-9d0a-c49a4c623216"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Angelina"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-angelina"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b9113c0b-9c9e-40b3-9ea5-4e05c93270c1"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode-angelina"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Katie"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-katie"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b2c23ea7-95f3-42e4-abdf-11b3d39b5bfd"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode-katie"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Joi"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-joi"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "ea1a9919-3efd-46ed-931d-b67b7d673a22"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode-joi"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Prompt - Jamila"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-jamila"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb"
+      },
+      "level_keys": [
+        "all-the-aif-things-web-lab-tutor-ai-prompt-mode-jamila"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prompting with ROPE"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1_2026-prompting"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level1_2026-prompting"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Add Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-add-images"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-panel2_2026-add-images"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Versioning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-version-control"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-panel2_2026-version-control"
       ]
     }
   ],
@@ -2414,6 +2778,114 @@
         "lesson_group.key": "",
         "script.name": "aif-all-the-things",
         "activity_section.key": "fddb1b26-2e7f-41cd-bc78-51a91d67957a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "27bb7888-c44f-4ecd-922d-7abe976fc427"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-erik"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "8d2db7e5-ff63-4844-9d0a-c49a4c623216"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode-angelina",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-angelina"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b9113c0b-9c9e-40b3-9ea5-4e05c93270c1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode-katie",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-katie"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "b2c23ea7-95f3-42e4-abdf-11b3d39b5bfd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode-joi",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-joi"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "ea1a9919-3efd-46ed-931d-b67b7d673a22"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "all-the-aif-things-web-lab-tutor-ai-prompt-mode-jamila",
+        "script_level.level_keys": [
+          "all-the-aif-things-web-lab-tutor-ai-prompt-mode-jamila"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "eeff6b56-86cb-41d8-ad69-2a80b1de19cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level1_2026-prompting",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level1_2026-prompting"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "212ff842-fe52-495b-8340-d1d20f1b7d14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-panel2_2026-add-images",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-add-images"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "2ce72469-a87f-4625-9c71-5498901b3ac4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-panel2_2026-version-control",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-panel2_2026-version-control"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "aif-all-the-things",
+        "activity_section.key": "d295e465-768f-4b72-aa9f-8396ba11b423"
       }
     }
   ],

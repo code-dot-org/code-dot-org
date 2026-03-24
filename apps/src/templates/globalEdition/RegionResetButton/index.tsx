@@ -1,10 +1,9 @@
-import Button from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import i18n from '@cdo/locale';
-
 import './style.scss';
 
 const RegionResetButton: React.FC = () => {
@@ -19,16 +18,17 @@ const RegionResetButton: React.FC = () => {
   return (
     <form action={window.location.href} method="post" acceptCharset="UTF-8">
       <input type="hidden" name="ge_region" />
-      <Button
-        id="global-edition-region-reset"
-        className="no-mc"
-        text={i18n.globalEdition_regionResetButton_text()}
-        buttonTagTypeAttribute="submit"
-        type="secondary"
+      <MuiButton
+        variant="outlined"
         color="white"
-        size="s"
+        size="small"
+        className="no-mc"
+        id="global-edition-region-reset"
         onClick={handleClick}
-      />
+        type="submit"
+      >
+        {i18n.globalEdition_regionResetButton_text()}
+      </MuiButton>
     </form>
   );
 };

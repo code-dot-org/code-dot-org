@@ -1,0 +1,19 @@
+name 'self-paced-TCaAI-L1-PBLCFY'
+title 'Check for Understanding'
+description ''
+question 'A teacher is planning to teach Thinking Critically About AI and asks: “What makes this unit truly project-based rather than just a collection of engaging AI lessons?” Which explanation best reflects the design of the unit?'
+wrong 'Students explore AI tools through interactive activities and complete a final project to demonstrate what they learned.'
+right 'Students move through themed milestones where each investigation contributes evidence that shapes and revises a public-facing Responsible AI Use Guide.'
+wrong 'Students collaborate during lessons, discuss ethical issues, and present their opinions about AI at the end of the unit.'
+wrong 'Students learn key AI concepts first and then apply them in a creative project designed to showcase their understanding.'
+
+
+markdown <<MARKDOWN
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+#### **Explanation:** Option B is correct because it captures the core structure of Project-Based Learning as implemented in this unit: students do not complete investigations and then move on to a separate project at the end. Instead, each milestone investigation generates evidence that directly shapes and refines a section of the Responsible AI Use Guide. Learning unfolds iteratively, with students revisiting ideas, incorporating feedback, and strengthening their claims over time.
+MARKDOWN
+
+allow_multiple_attempts true

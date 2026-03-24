@@ -8,6 +8,9 @@ class UnitGroupTest < ActiveSupport::TestCase
   class CachingTests < ActiveSupport::TestCase
     setup do
       File.stubs(:write)
+      # Disable Rails' automatic caching, so we can test our manual caching
+      # logic without interference
+      ActiveRecord::Base.connection.disable_query_cache!
     end
 
     def populate_cache_and_disconnect_db

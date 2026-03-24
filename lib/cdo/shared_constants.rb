@@ -754,6 +754,7 @@ module SharedConstants
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
     MODEL_TIMEOUT: 'model_timeout',
+    MODEL_RATE_LIMITED: 'model_rate_limited',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -803,6 +804,10 @@ module SharedConstants
     USER_INPUT_TOO_LARGE: 1005,
     # The model took too long to respond.
     MODEL_TIMEOUT: 1006,
+    # Model output image flagged.
+    MODEL_IMAGE_FLAGGED: 1007,
+    # The model is currently rate-limited (HTTP 429).
+    MODEL_RATE_LIMITED: 1008,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {
@@ -828,6 +833,7 @@ module SharedConstants
     GEMINI_2_5_FLASH_LITE: "gemini-2.5-flash-lite",
     GEMINI_2_5_PRO: "gemini-2.5-pro",
     GEMINI_3_PRO_PREVIEW: "gemini-3-pro-preview",
+    GEMINI_2_5_FLASH_IMAGE: "gemini-2.5-flash-image",
   }
 
   AI_CHAT_CLIENT_TYPES = {
@@ -1100,7 +1106,8 @@ module SharedConstants
   ].freeze
 
   ALLOWED_IMAGE_HOSTNAME_SUFFIXES = [
-    'picsum.photos' # Placeholder images - Public API
+    'picsum.photos', # Placeholder images - Public API
+    'images.code.org' # Code.org hosted images - Public API
   ].freeze
 
   ALLOWED_FONT_HOSTNAMES = [

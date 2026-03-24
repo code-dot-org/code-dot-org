@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-13T12:10:57.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+      },
+      "openFiles": [
+
+      ]
+    },
+    "encrypted": "false",
+    "display_name": "Write Your README",
+    "long_instructions": "# Write Your README\r\n\r\n**Goal:** Document your app so someone else can understand and use it without you explaining it.\r\n\r\nYour README should include:\r\n\r\n### 1. App Description\r\n\r\n* What is the name of your app?\r\n* What does it do?\r\n* Who is it for?\r\n* What problem or purpose does it serve?\r\n\r\n### 2. How to Use It\r\n\r\n* What does the user see first?\r\n* How does the user interact with the app?\r\n* What happens when they click or search?\r\n\r\n\r\n### 3. Data Attribution\r\n\r\n* What API did you use?\r\n* Include a working link to the API source.\r\n* Briefly explain what kind of data it provides.\r\n\r\n",
+    "bubble_choice_description": "Create a clear README that explains your app’s purpose, how to use it, and which API it depends on. ***(supports completing Milestone 4 tasks)***",
+    "thumbnail_url": "https://images.code.org/102bb7ceaf00d9a6e8ea2343b9baec8a-readership.png",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "project_template_level_name": "designing-reliable-apps-lesson11-template-test_2025-pilot",
+    "name_suffix": "_2025-pilot"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-13T12:10:57.701+00:00\",\"changed\":[\"cloned from \\\"designing-reliable-apps-lesson11-milestone4-4a-test_2025-pilot\\\"\"],\"cloned_from\":\"designing-reliable-apps-lesson11-milestone4-4a-test_2025-pilot\"}]"
+}]]></config>
+</Weblab2>

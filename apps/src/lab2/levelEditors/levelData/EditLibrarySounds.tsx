@@ -1,6 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 
 import MusicLibrary, {Sounds} from '@cdo/apps/music/player/MusicLibrary';
@@ -84,15 +84,19 @@ const EditLibrarySounds: React.FunctionComponent<EditLibrarySoundsProps> = ({
       initiallyCollapsed={false}
     >
       <div className={moduleStyles.indentedContainer}>
-        <Button
-          text="Clear allowed sounds (enable all sounds)"
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="small"
+          disabled={!currentValue}
           onClick={() => {
             onChange(undefined);
           }}
-          size="s"
-          disabled={!currentValue}
-          iconLeft={{iconName: 'ban'}}
-        />
+          type="button"
+          startIcon={<FontAwesomeV6Icon iconName="ban" />}
+        >
+          {'Clear allowed sounds (enable all sounds)'}
+        </MuiButton>
       </div>
       {library.packs.map(pack => {
         if (pack.restricted && pack.id !== selectedPack) {

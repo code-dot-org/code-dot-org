@@ -72,6 +72,7 @@ const CODE_STUDIO_ENTRIES = {
   'essential': './src/sites/studio/pages/essential.js',
   'errors/deprecated_course': './src/sites/studio/pages/errors/deprecated_course.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
+  'layouts/_google_analytics': './src/sites/studio/pages/layouts/_google_analytics.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
   'layouts/_race_interstitial': './src/sites/studio/pages/layouts/_race_interstitial.js',
   'layouts/_section_creation_celebration_dialog': './src/sites/studio/pages/layouts/_section_creation_celebration_dialog.js',
@@ -161,6 +162,7 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
   'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
+  'levels/editors/fields/_product_tour_settings': './src/sites/studio/pages/levels/editors/fields/_product_tour_settings.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_skill_evaluations': './src/sites/studio/pages/levels/editors/fields/_skill_evaluations.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
@@ -198,41 +200,6 @@ const INTERNAL_ENTRIES = {
   'sprite_management/default_sprites_editor': './src/sites/studio/pages/sprite_management/default_sprites_editor.js',
   'sprite_management/release_default_sprites_to_production': './src/sites/studio/pages/sprite_management/release_default_sprites_to_production.js',
   'sprite_management/select_start_animations': './src/sites/studio/pages/sprite_management/select_start_animations.js',
-};
-
-// prettier-ignore
-const PEGASUS_ENTRIES = {
-  // code.org
-  'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-  'code.org/public/helloworld': './src/sites/code.org/pages/public/helloworld.js',
-  'code.org/public/transformersone': './src/sites/code.org/pages/public/transformersone.js',
-  'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-  'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
-  'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
-  'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
-  'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
-  'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
-  'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
-  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
-  'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
-  'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
-  'code.org/views/swiper_page_tools': './src/sites/code.org/pages/views/swiper_page_tools.js',
-  'code.org/views/swiper_page_applab': './src/sites/code.org/pages/views/swiper_page_applab.js',
-  'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
-  'code.org/views/swiper_farsi_page_videos': './src/sites/code.org/pages/views/swiper_farsi_page_videos.js',
-  'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
-  'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
-  'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
-  'code.org/views/tabs_section': './src/sites/code.org/pages/views/tabs_section.js',
-  'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
-  'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
-  'code.org/public/cms-demo': './src/sites/code.org/pages/public/cms-demo.js',
-
-  // hourofcode.com
-  'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-  'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
-  'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
-  'hourofcode.com/views/swiper_page_resources': './src/sites/hourofcode.com/pages/views/swiper_page_resources.js',
 };
 
 // prettier-ignore
@@ -302,6 +269,7 @@ const OTHER_ENTRIES = {
   'gamelab-api': './src/p5lab/gamelab/api-entry.js',
 
   regionalPartnerMiniContact: './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
+  dataDog: './src/instrumentation/dataDog.js',
 };
 
 const LOCALIZATION_ENTRIES = {
@@ -338,7 +306,6 @@ module.exports = {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,

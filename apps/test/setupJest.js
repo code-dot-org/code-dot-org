@@ -23,11 +23,12 @@ import '../build/locales/en_us/flappy_locale.js';
 import '../build/locales/en_us/lab2_locale.js';
 import '../build/locales/en_us/weblab2_locale.js';
 
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import Adapter from '@cfaester/enzyme-adapter-react-18';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';
+import {TransformStream} from 'web-streams-polyfill';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
@@ -90,6 +91,7 @@ global.$ = global.jQuery = $;
 global.IN_UNIT_TEST = true;
 global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
+global.TransformStream = TransformStream;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
 
 jest.mock('@cdo/apps/metrics/firehose', () => ({

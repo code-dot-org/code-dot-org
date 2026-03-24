@@ -1,4 +1,5 @@
 import {Theme, useTheme} from '@code-dot-org/component-library/common/contexts';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useRef} from 'react';
 
@@ -146,16 +147,16 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
     ? undefined
     : validationIndex;
 
-  const [type, color] =
+  const [variant, color] =
     showSecondaryFinishButton && !hasNextLevel
-      ? (['secondary', 'black'] as const)
-      : (['primary', 'purple'] as const);
+      ? (['outlined', 'secondary'] as const)
+      : (['contained', 'primary'] as const);
 
-  const iconRight = useMemo(
+  const endIcon = useMemo(
     () =>
-      hasNextLevel
-        ? ({iconName: 'arrow-right', iconStyle: 'solid'} as const)
-        : undefined,
+      hasNextLevel ? (
+        <FontAwesomeV6Icon iconName="arrow-right" iconStyle="solid" />
+      ) : undefined,
     [hasNextLevel]
   );
 
@@ -287,14 +288,15 @@ const NavigationArea: React.FC<NavigationAreaProps> = ({
           ) : (
             <ContinueButton
               disabled={!continueEnabled}
-              type={type}
+              variant={variant}
               color={color}
-              iconRight={iconRight}
-              text={textVariant === 'simple' ? simpleText : text}
+              endIcon={endIcon}
               tooltipMessage={continueTooltip}
               hideIfDisabled={hideContinueIfDisabled}
               onContinue={onContinue}
-            />
+            >
+              {textVariant === 'simple' ? simpleText : text}
+            </ContinueButton>
           )}
         </div>
         {showTts && feedbackMessage && !hideContinueIfDisabled && (

@@ -1,8 +1,11 @@
-import Button from '@code-dot-org/component-library/button';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
 import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
+
+import SpeechToTextButton from './speechToTextButton/SpeechToTextButton';
 
 import moduleStyles from './user-message-editor.module.scss';
 
@@ -21,8 +24,12 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  speechToTextEnabled?: boolean;
+  onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
   children?: React.ReactNode;
 }
+
+const EditorButtonIcon = () => <FontAwesomeV6Icon iconName="arrow-up" />;
 
 const UserMessageEditor = React.forwardRef<
   HTMLTextAreaElement,
@@ -37,6 +44,8 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      speechToTextEnabled = false,
+      onPaste,
       children,
     },
     externalInputRef
@@ -45,6 +54,7 @@ const UserMessageEditor = React.forwardRef<
     // Track focus state on textarea to apply focus styles to container since
     // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
+    const [isRecording, setIsRecording] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -67,7 +77,20 @@ const UserMessageEditor = React.forwardRef<
         internalInputRef.current.scrollHeight + 2 + 'px'; // Add a couple of pixels to avoid scrollbars.
     }, [userMessage]);
 
-    const icon = {iconName: 'arrow-up'};
+    const editorButtonCommonProps = {
+      variant: 'contained' as const,
+      color: 'primary' as const,
+      size: 'extraSmall' as const,
+      disabled: disabled || !userMessage || userMessageIsEmpty || isRecording,
+      id: 'uitest-chat-submit',
+      onClick: (e: React.MouseEvent) => {
+        e.stopPropagation();
+        onSubmit(userMessage);
+      },
+      'aria-label': commonI18n.submit(),
+      type: 'button' as const,
+      component: 'button' as const,
+    };
 
     return (
       <div
@@ -96,29 +119,40 @@ const UserMessageEditor = React.forwardRef<
           }
           onChange={e => onChange(e.target.value)}
           value={userMessage}
-          disabled={disabled}
+          disabled={disabled || isRecording}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
           aria-label={commonI18n.aiUserMessagePlaceholder()}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
+          onPaste={onPaste}
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}
-          <Button
-            aria-label={commonI18n.submit()}
-            id="uitest-chat-submit"
-            isIconOnly={!showSubmitLabel}
-            size="xs"
-            onClick={e => {
-              e.stopPropagation();
-              onSubmit(userMessage);
-            }}
-            disabled={disabled || !userMessage || userMessageIsEmpty}
-            text={showSubmitLabel ? commonI18n.submit() : undefined}
-            {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
-          />
+          <div className={moduleStyles.actionButtons}>
+            {speechToTextEnabled && (
+              <SpeechToTextButton
+                onTranscribed={text => {
+                  onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
+                  setIsRecording(false);
+                }}
+                onRecordStart={() => setIsRecording(true)}
+              />
+            )}
+            {showSubmitLabel ? (
+              <MuiButton
+                {...editorButtonCommonProps}
+                startIcon={<EditorButtonIcon />}
+              >
+                {commonI18n.submit()}
+              </MuiButton>
+            ) : (
+              <MuiIconButton {...editorButtonCommonProps}>
+                <EditorButtonIcon />
+              </MuiIconButton>
+            )}
+          </div>
         </div>
       </div>
     );

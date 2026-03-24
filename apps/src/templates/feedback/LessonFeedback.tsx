@@ -1,5 +1,5 @@
-import {Button} from '@code-dot-org/component-library/button';
-import {Typography} from '@mui/material';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 
 import LessonRecommendedAction from './LessonRecommendedAction';
@@ -58,15 +58,17 @@ function LessonFeedback({
           </Typography>
         </div>
 
-        <Button
-          onClick={handleGoToLesson}
-          text="Go to Lesson"
-          type="secondary"
-          size="s"
-          iconRight={{iconName: 'arrow-up-right-from-square'}}
-          color="gray"
+        <MuiButton
+          variant="outlined"
+          color="tertiary"
+          size="small"
           disabled={!lessonStartUrl}
-        />
+          onClick={handleGoToLesson}
+          type="button"
+          endIcon={<FontAwesomeV6Icon iconName="arrow-up-right-from-square" />}
+        >
+          {'Go to Lesson'}
+        </MuiButton>
       </div>
       <hr className={styles.lessonFeedbackDivider} />
       <div className={styles.lessonFeedbackBox}>{feedbackText}</div>

@@ -3,11 +3,102 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Understanding AI
+# How AI Works
 
-#### Understanding how AI generates text can help prevent falling into the pitfalls in the previous levels. The most important thing to understand about AI is its relationship to reality. AI models do not perceive the world—they generate text solely based on patterns learned from language.
+#### Understanding how AI works can help you avoid falling into some of the common pitfalls when using AI. Let's take a look at the system mechanics behind those behaviors.
 
-#### Because of this, AI can produce fluent, convincing text, but it depends entirely on humans to supply grounding, verify accuracy, and interpret results. Misunderstandings often occur when users expect AI to “know” facts or reason logically, when in reality it is only producing statistically likely sequences of words.
+#### 👉 Click on each step in the process below to learn more.
+
+>#### **💬 Quick Reflection:** As you're reviewing the text below, think about what questions do you still have about how AI works. Make note of them now - on the next level you'll have a chance to ask AI Chat Lab questions, get clarification, or dive deeper into any specific concepts.
+
+
+
+<br>
+
+<div style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; max-width: 1100px; margin: 0 auto; padding: 12px 18px; position: relative;">
+<div style="position:absolute; left:50%; top:20px; bottom:10px; width:3px; background:#0f766e; transform:translateX(-50%); border-radius:10px;"></div>
+
+<!-- ITEM 1 -->
+<div style="width:50%; padding-right:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; right:-10px; top:16px; width:20px; height:20px; background:white; border:3px solid #0f766e; border-radius:50%; z-index:2;"></div>
+<details>
+<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">1. Training: Learning Patterns in Language</summary>
+<div style="margin-top:10px; background:#f8fafc; padding:16px; border-radius:14px; line-height:1.55;">
+AI models are trained on massive collections of text such as books, articles, and websites. During training, the model repeatedly predicts missing or next words in sentences. When its predictions are incorrect, its internal parameters adjust slightly to improve future predictions.
+<br><br>
+Over time, the system becomes very good at recognizing and reproducing patterns in language.
+<br><br>
+Training does not involve memorizing rules or developing awareness — it is a process of refining statistical pattern recognition at scale.
+</div>
+</details>
+</div>
+
+<!-- ITEM 2 -->
+<div style="width:50%; margin-left:50%; padding-left:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; left:-10px; top:16px; width:20px; height:20px; background:white; border:3px solid #0f766e; border-radius:50%; z-index:2;"></div>
+<details>
+<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">2. Embeddings: Capturing Relationships in Language</summary>
+<div style="margin-top:10px; background:#f8fafc; padding:16px; border-radius:14px; line-height:1.55;">
+As the model trains, it converts words and phrases into numerical representations called <strong>embeddings</strong>.
+<br><br>
+In this system:
+<ul style="margin:8px 0 8px 18px;">
+  <li>Words that frequently appear together are positioned close to one another.</li>
+  <li>Related ideas cluster in a high-dimensional mathematical space.</li>
+  <li>Unrelated concepts are farther apart.</li>
+</ul>
+This structure allows the model to detect similarity, analogy, and thematic connections. For example, words like “teacher,” “student,” and “classroom” tend to cluster together because they often appear in similar contexts.
+<br><br>
+Embeddings allow the model to work with relationships between ideas — not meanings in a human sense, but patterns of association.
+</div>
+</details>
+</div>
+
+<!-- ITEM 3 -->
+<div style="width:50%; padding-right:50px; box-sizing:border-box; position:relative; margin-bottom:40px;">
+<div style="position:absolute; right:-10px; top:16px; width:20px; height:20px; background:white; border:3px solid #0f766e; border-radius:50%; z-index:2;"></div>
+<details>
+<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">3. Next-Token Prediction: Generating Text Step by Step</summary>
+<div style="margin-top:10px; background:#f8fafc; padding:16px; border-radius:14px; line-height:1.55;">
+When you enter a prompt, the model generates text one <strong>token</strong> at a time (a token is typically a word or part of a word).
+<br><br>
+At each step, it:
+<ol style="margin:8px 0 8px 18px;">
+  <li>Looks at the prompt and previously generated words.</li>
+  <li>Calculates probabilities for possible next tokens.</li>
+  <li>Selects one based on those probabilities.</li>
+  <li>Repeats the process.</li>
+</ol>
+
+An internal mechanism called <strong>attention</strong> helps the model weigh which parts of the input are most relevant as it continues generating text. This helps it stay coherent across longer responses and follow instructions.
+<br><br>
+The result is language that can sound logical, structured, and confident — because it mirrors patterns commonly found in similar texts.
+</div>
+</details>
+</div>
+
+<!-- ITEM 4 -->
+<div style="width:50%; margin-left:50%; padding-left:50px; box-sizing:border-box; position:relative;">
+<div style="position:absolute; left:-10px; top:16px; width:20px; height:20px; background:white; border:3px solid #0f766e; border-radius:50%; z-index:2;"></div>
+<details>
+<summary style="cursor:pointer; list-style:none; background:#f1f3f5; padding:12px 14px; border-radius:14px; font-weight:800; font-size:1.15em; box-shadow:0 4px 12px rgba(0,0,0,.07);">4. Steering Output: Temperature and Prompts</summary>
+<div style="margin-top:10px; background:#f8fafc; padding:16px; border-radius:14px; line-height:1.55;">
+Humans influence AI output primarily through the prompts they write. The level of detail, constraints, and framing in a prompt strongly affect the response.
+<br><br>
+AI tools may also adjust internal settings that influence how predictable or varied responses are. One of these settings is called <strong>temperature</strong>:
+<ul style="margin:8px 0 8px 18px;">
+  <li>Lower temperature → more predictable and consistent responses</li>
+  <li>Higher temperature → more varied or creative responses</li>
+</ul>
+In most AI tools, this setting is controlled by the platform rather than the user. Regardless of the setting, temperature affects style and variability — not knowledge or understanding.
+</div>
+</details>
+</div>
+
+</div>
+
+
+<br>
 
 <div style="text-align: center; width: 80%; margin: 0 auto;">
   <p style="
@@ -18,88 +109,9 @@ markdown <<MARKDOWN
     border-right: 5px solid #8148B2;
     display: inline-block;
   ">
-    AI predicts and generates language patterns extremely well, but humans must provide context, verify outputs, and make final decisions.
+    <strong>Key Takeaway:</strong><br>AI generates text by predicting patterns in language. It does not perceive the world or check facts. Humans must provide context, verify outputs, and make final decisions.
   </p>
 </div>
 
----
-
-## How AI Works
-
-#### The following sections explain some of the underlying mechanisms behind how AI works so you can use AI more effectively and responsibly.
-
-
->#### **💬 Quick Reflection:** As you're reviewing the text below, think about what questions do you still have about how AI works. Make note of them now - on the next level you'll have a chance to ask AI Chat Lab questions, get clarification, or dive deeper into any specific concepts.
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em;"><strong>Training: Learning Patterns in Language, Not Facts</strong></summary>
-
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-
-<div style="display:flex;gap:16px;align-items:flex-start;">
-<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
-<div>
-<p>
-
-#### AI models are trained on massive text datasets—books, articles, websites, and conversations. Training does not teach facts, rules, or understanding. Instead, the model learns statistical patterns by predicting missing or next words in sequences. When a prediction is wrong, the model adjusts its internal parameters to improve future predictions.
-#### Crucially, this training does not provide real-world knowledge. The model cannot perceive events or update itself after training. Once complete, its knowledge is frozen; it can only reproduce patterns it saw in its training data, not current or future reality.
-
-</p></div>
-</div>
-</div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em;"><strong>Embeddings: Capturing Relationships in Language</strong></summary>
-
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-
-<div style="display:flex;gap:16px;align-items:flex-start;">
-<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
-<div>
-<p>
-
-#### During training, the model creates embeddings, numerical representations of words and concepts. Words and ideas that frequently appear together, like “teacher,” “student,” and “classroom,” are positioned close together in a high-dimensional space, while unrelated concepts are distant.
-#### Embeddings allow the model to detect patterns of similarity and analogy in text, but they do not convey understanding. The AI does not know what a classroom is—it only knows how words relate statistically. This is why AI can switch between related ideas fluidly, yet still miss important situational or human-relevant context.
-
-</p></div>
-</div>
-</div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em;"><strong>Next-Token Prediction: Generating Text Step by Step</strong></summary>
-
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-
-<div style="display:flex;gap:16px;align-items:flex-start;">
-<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
-<div>
-<p>
-
-#### Once prompted, the model generates language one token at a time, predicting the most probable next word based on the text so far. Attention mechanisms determine which parts of the input should influence each prediction, helping the model maintain coherence across long passages and follow instructions.
-#### However, attention is purely statistical. It does not verify facts, reason about correctness, or assess appropriateness. The model can produce confident explanations, logical step-by-step outputs, or even persuasive arguments without knowing if they are accurate or meaningful.
-
-</p></div>
-</div>
-</div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em;"><strong>Steering Output: Temperature and System Prompts</strong></summary>
-
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
-
-<div style="display:flex;gap:16px;align-items:flex-start;">
-<img src="https://images.code.org/4302af15f049172a62d1df03d6cc8b1d-Screenshot 2026-01-29 at 1.19.23 PM.png" alt="" style="width: 100px; border-radius:8px; flex-shrink:0;">
-<div>
-<p>
-
-#### Finally, humans can shape the model’s outputs using temperature settings and system prompts. Temperature controls randomness: low temperatures produce predictable, conservative outputs, while high temperatures allow creativity and variation. System prompts can set tone, role, or style—for instance, instructing the model to “act as a middle school science teacher.”
-#### These tools influence presentation and style, but not understanding or judgment. A confident, playful, or authoritative tone is a reflection of statistical probabilities, not comprehension. The AI still operates solely on patterns learned from text.
-
-</p></div>
-</div>
-</div>
-</details>
+<br>
 MARKDOWN

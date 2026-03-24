@@ -1,0 +1,23 @@
+# OpenTofu/Terraform working directories
+**/.terraform/
+
+# State files
+*.tfstate
+*.tfstate.*
+
+# Local CLI variable override files
+*.local.tfvars
+*.local.auto.tfvars
+
+# Plan files
+*.tfplan
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

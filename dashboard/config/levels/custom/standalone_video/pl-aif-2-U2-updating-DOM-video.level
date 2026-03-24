@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2026-03-02T19:09:33.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "aif2-pl-updating-the-DOM",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_24",
+    "encrypted": "false",
+    "long_instructions": "## DOM Update\r\n\r\n\r\n#### Let's take a look at what the steps to make a DOM update look like in code. \r\n\r\n#### In this example, we will change the text inside the box when the button is clicked.\r\n \r\n\r\n<img src=\"https://images.code.org/2e8aec64b2c5cd684feae4a7345f7c3a-image-1761933082814.png\" alt=\"sample output with button and textbox\" width=\"550px\" style=\"display: block; margin-left: 0; \">\r\n\r\n\r\n---\r\n\r\n## Activity Preview\r\n\r\n<p style=\"font-size:14pt; margin-top:16px;\">\r\nWatch the video below to see the steps. The video follows the activity on the next level to give you a preview and support. \r\n</p>\r\n\r\n\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2026-03-02T19:09:33.171+00:00\",\"changed\":[\"cloned from \\\"pl-aif-2-U2-variable-debugging-video\\\"\"],\"cloned_from\":\"pl-aif-2-U2-variable-debugging-video\"},{\"changed_at\":\"2026-03-02 19:15:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-11 15:21:57 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2026-03-13 14:40:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah.kennedy@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

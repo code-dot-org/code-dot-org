@@ -1,6 +1,6 @@
 import Alert, {AlertProps} from '@code-dot-org/component-library/alert';
-import Button from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
 
@@ -17,7 +17,7 @@ import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import aichatI18n from '../../locale';
 import {ModelCardInfo} from '../../types';
 
-import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
+import {getModelCardFieldsLabelsIcons} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
 import FieldLabel from './FieldLabel';
 import SaveChangesAlerts from './SaveChangesAlerts';
@@ -49,11 +49,6 @@ const PublishNotes: React.FunctionComponent = () => {
     dispatch(publishModelCard());
   }, [dispatch]);
 
-  const spinnerIconProps: FontAwesomeV6IconProps = {
-    iconName: 'spinner',
-    animationType: 'spin',
-  };
-
   const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
     ? [aichatI18n.modelCard_publishSuccess(), 'success']
     : [aichatI18n.modelCard_publishWarning(), 'warning'];
@@ -65,7 +60,7 @@ const PublishNotes: React.FunctionComponent = () => {
     >
       <div className={modelCustomizationStyles.customizationContainer}>
         {!isReadOnly && <Alert text={alertText} type={type} size="s" />}
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
+        {getModelCardFieldsLabelsIcons().map(data => {
           const {property, label, editTooltip} = data;
           const InputTag = getInputTag(property);
 
@@ -113,32 +108,36 @@ const PublishNotes: React.FunctionComponent = () => {
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <Button
-          id="uitest-publish-notes-save"
-          text={aichatI18n.modelCustomizationSaveButtonText()}
-          iconLeft={
-            saveInProgress && currentSaveType === 'saveModelCard'
-              ? spinnerIconProps
-              : {iconName: 'download'}
-          }
-          type="secondary"
-          color="black"
+        <MuiButton
+          variant="outlined"
+          color="secondary"
+          size="medium"
           disabled={isReadOnly || saveInProgress || !havePropertiesChanged}
+          className={modelCustomizationStyles.updateButton}
+          id="uitest-publish-notes-save"
           onClick={onSave}
-          className={modelCustomizationStyles.updateButton}
-        />
-        <Button
-          id="uitest-publish-notes-publish"
-          text="Publish"
-          iconLeft={
-            saveInProgress && currentSaveType === 'publishModelCard'
-              ? spinnerIconProps
-              : {iconName: 'upload'}
-          }
+          loading={saveInProgress && currentSaveType === 'saveModelCard'}
+          loadingPosition="start"
+          startIcon={<FontAwesomeV6Icon iconName="download" />}
+          type="button"
+        >
+          {aichatI18n.modelCustomizationSaveButtonText()}
+        </MuiButton>
+        <MuiButton
+          variant="contained"
+          color="primary"
+          size="medium"
           disabled={isReadOnly || !hasFilledOutModelCard || saveInProgress}
-          onClick={onPublish}
           className={modelCustomizationStyles.updateButton}
-        />
+          id="uitest-publish-notes-publish"
+          onClick={onPublish}
+          loading={saveInProgress && currentSaveType === 'publishModelCard'}
+          loadingPosition="start"
+          startIcon={<FontAwesomeV6Icon iconName="upload" />}
+          type="button"
+        >
+          {'Publish'}
+        </MuiButton>
       </div>
       <SaveChangesAlerts isReadOnly={isReadOnly} />
     </div>

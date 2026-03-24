@@ -13,7 +13,7 @@ function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
     format,
     exports: 'auto',
-    entryFileNames: format === 'es' ? '[name].mjs' : '[name].js',
+    entryFileNames: format === 'es' ? '[name].mjs' : '[name].cjs',
     preserveModules: true,
     preserveModulesRoot: 'src',
   };
@@ -44,7 +44,7 @@ export default defineConfig({
     sourcemap: true,
     cssCodeSplit: true,
     lib: {
-      entry: 'src/index.ts',
+      entry: ['src/index.ts', 'src/api/index.ts'],
       name: 'core',
     },
     rollupOptions: {

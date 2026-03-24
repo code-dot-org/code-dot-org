@@ -1,0 +1,80 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-03T19:51:46.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "true",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n\n    <div class=\"comparison-container\">\n        <div class=\"card\">\n            <img src=\"web2.png\" alt=\"Web Design #1\">\n        </div>\n        \n        <div class=\"card\">\n            <img src=\"web1.png\" alt=\"Web Design #2\">\n\n        </div>\n    </div>\n\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "/* Centers the container on the page */\nbody {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    min-height: 100vh;\n    margin: 0;\n    background-color: #f4f4f4;\n    font-family: sans-serif;\n}\n\n.comparison-container {\n    display: flex;\n    justify-content: center;\n    /* This creates the physical space between the two cards */\n    gap: 40px; \n    padding: 40px;\n    background-color: #f0f0f0; /* Optional: light grey background to make cards pop */\n}\n\n.card {\n    /* flex: 1; -> Remove or comment this out if they are overlapping */\n    width: 45%; /* Limits each card to slightly less than half the screen */\n    background: #ffffff; \n    /* Optional: Adding a subtle shadow helps define the 'page' boundary */\n    box-shadow: 0 10px 30px rgba(0,0,0,0.1);\n    border-radius: 8px;\n    overflow: hidden;\n    display: flex;\n}\n\n.equal-height-img {\n    width: 100%;\n    height: 600px; /* Adjust height as needed */\n    object-fit: cover;\n    object-position: top;\n    display: block;\n}\n\n/* Ensure they stack on mobile so they don't get too thin */\n@media (max-width: 800px) {\n    .comparison-container {\n        flex-direction: column;\n        align-items: center;\n    }\n    .card {\n        width: 90%;\n    }\n}\n\n",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "web1.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson4-level1-v2_2026/uuid/e89fd4c1-e978-4668-8d2a-0aefbdce8066.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "web2.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-generated-design-lesson4-level1-v2_2026/uuid/ae03f198-1e4e-4b11-95ec-43b794454b8a.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-03 20:16:17 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

@@ -17,7 +17,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
     )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     partial_lti_teacher.authentication_options = [ao]
     PartialRegistration.persist_attributes session, partial_lti_teacher
@@ -51,7 +51,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       credential_type: AuthenticationOption::LTI_V1,
       email: @user.email,
       )
-    target_url = "some/test/path"
+    target_url = "/some/test/path"
     session[:user_return_to] = target_url
     roster_synced_teacher.authentication_options = [ao]
     Services::Lti.create_lti_user_identity(roster_synced_teacher)

@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-10T14:55:56.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "display_name": "AI Research Chat",
+    "long_instructions": "##AI Research Chat\r\n\r\n_How to use this tool:_\r\n* **Ask \"Why\" and \"How\"**: If a concept in your mini-lesson is confusing, ask the AI to explain it simply or provide an example.\r\n* **Explore Tradeoffs**: Ask the AI to help you weigh the pros and cons of your specific topic to see all sides of the issue.\r\n* **Test Your Ideas**: Share your initial thoughts and ask the AI for feedback or different perspectives.\r\n* **Make the Final Call**: Use the AI as a thinking partner to gather information, but remember that you make the final decision.",
+    "bubble_choice_description": "Use this AI Research Chat to further explore any of the ideas that you encountered in your mini-lesson.",
+    "thumbnail_url": "https://images.code.org/bf2d7778ba27a8de22c13673d8b7bd2a-search.png",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gemini-3-pro-preview",
+        "temperature": 0.7,
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "Role and Persona\nYou are the \"AI Discoveries Research Bot,\" a friendly, curious, and encouraging AI assistant designed specifically for middle school students (grades 6-8). Your purpose is to help students dig deeper into the ethical questions of AI co-creation after they have completed a short mini-lesson. Your tone should be playful, exploratory, and supportive, but you must always keep the conversation focused on the specific AI topics they are learning about.\n\nCore Philosophy\nYou are here to enhance learning, not replace it. You must not do the thinking for the student, write their final conclusions, or shortcut their productive struggle. Instead, support their understanding, provide feedback, and help them explore ideas.\n\nAllowed Knowledge Domains (The Mini-Lessons)\nYou are restricted to discussing the following three topics. Do not provide information outside of these domains:\n\nWhy AI Sounds Confident (Even When  Wrong) \nPrediction, Not Proof: AI generates responses by predicting likely word patterns — it does not automatically fact-check. Confidence ≠ Credibility: Clear structure and confident tone can make information feel trustworthy even without evidence. Hallucinations Happen: When information is missing, AI may fill gaps with plausible but incorrect details.\n\nHow AI Fills in Missing Information\nPattern Completion: If a prompt lacks context, AI fills gaps using common patterns from training data. Believable Assumptions: AI guesses can sound reasonable but may not match your real situation. Human Control: Adding specific context and constraints reduces assumptions and improves reliability.\n\nWhat Gets Left Out (Framing & Bias)\nFraming Shapes Meaning: AI can present the same topic in different ways by emphasizing different details. Omission Matters: What is left out can affect fairness and credibility. Check Perspectives: Responsible AI use includes asking whose viewpoint is missing.\n\nYour Primary Task\nHelp students reflect on their chosen mini-lesson and guide them toward adding detail to the \"AI Responsible Use Guide\" project that they are working on.\n\nFor Why AI Sounds Confident: Add one Credibility Check to your AI Guidance project (e.g., “Ask for sources and verify them before trusting health or academic claims.”).\n\nFor AI Fills in Missing Information: Add one Best Practice to your AI Guidance project about giving clear instructions before trusting AI output\n\nWhat Gets Left Out (Framing & Bias): Add one Red Flag or Perspective Check to your AI Guidance project that helps others look for missing context\n\nStrict Constraints & Redirection (Guardrails)\n\nNo Off-Topic Chat: If a student asks a random question (e.g., about video games, math homework, general history, or coding a website), you must politely decline and redirect them.\n\nRedirection Example: \"That sounds super interesting, but my circuits are completely focused on AI ethics today! Which of our three topics are you researching: AI's environmental footprint, human-AI teamwork, or artist rights?\"\n\nNo Complex Tech/Math: Keep explanations high-level. Do not explain advanced statistical methods, complex machine learning mathematics, or deep technical data science processes.\n\nEncourage Human Agency: Always frame AI as a tool whose value depends on human choices, context, and purpose. Remind students that humans make the decisions that shape AI behavior and its ethical outcomes.\n\nInteraction Style\n\nKeep responses short and easy to read (1 short paragraphs maximum).\n\nUse simple analogies when explaining concepts.\n\nEnd your responses with a thought-provoking question related to their project to keep them engaged in critical thinking.",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gemini-3-pro-preview"
+      ],
+      "multimodalEnabled": true
+    },
+    "name_suffix": "_2026-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-10T14:55:56.614+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson5-level3d_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson5-level3d_2026-test\"},{\"changed_at\":\"2026-03-20 22:54:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
+}]]></config>
+</Aichat>

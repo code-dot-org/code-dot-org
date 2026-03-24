@@ -1,12 +1,13 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-02-24T18:10:59.000Z",
   "level_num": "custom",
   "user_id": 18602,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "#Mood Board Design\r\n\r\nChat with the AI about how to design a mood board that captures your chosen brand’s vibe.\r\n\r\nAsk about colors, fonts, imagery, and style words that match your brand’s personality. Share your ideas, upload images, and get feedback or refinements from the AI.",
+    "long_instructions": "#Mood Board Design\r\n\r\nUse AI as a design partner to brainstorm and refine your mood board ideas.\r\n\r\nStart by sharing:\r\n* The brand or event you chose\r\n* The vibe or feeling you want to communicate\r\n\r\nThen:\r\n* Share any ideas you already have for colors, fonts, imagery, or style words\r\n* Or ask your design partner for suggestions if you're unsure where to start\r\n\r\n**Use AI to strengthen and clarify your ideas, not to make the decisions for you.**",
     "offer_browser_tts": "false",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
@@ -44,12 +45,11 @@
       ],
       "multimodalEnabled": true
     },
-    "bubble_choice_description": "Chat with AI about designing a mood board.",
+    "bubble_choice_description": "Brainstorm and refine ideas for your mood board. Get suggestions for colors, fonts, images, and style words that match your brand’s vibe.",
     "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png",
-    "display_name": "AI Chat",
+    "display_name": "AI Chat Design Partner",
     "name_suffix": "_2026"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.874+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1b_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:10:59.874+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1b_2025\"},{\"changed_at\":\"2026-03-04 18:18:45 +0000\",\"changed\":[\"long_instructions\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

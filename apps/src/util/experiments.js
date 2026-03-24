@@ -61,12 +61,12 @@ experiments.WEBLAB2_FULL_URLS = 'weblab2-full-urls';
 experiments.ACCEPT_REJECT_UNIFIED_DIFF = 'accept-reject-unified-diff';
 // Show split diff view in Code Editor.
 experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
-// Show debug panel in Web Lab 2
-experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
 // Show the lesson/<lesson_id>/practice page as a home for a AI Tutor+
 experiments.AI_TUTOR_LESSON_PRACTICE = 'ai-tutor-lesson-practice';
+// Enable AI Content Safety image moderation
+experiments.AI_CONTENT_SAFETY = 'ai-content-safety';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

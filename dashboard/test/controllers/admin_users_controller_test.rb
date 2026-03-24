@@ -182,6 +182,17 @@ class AdminUsersControllerTest < ActionController::TestCase
     refute user_to_delete.reload.deleted?
   end
 
+  test "delete_user_progress requires admin authentication" do
+    sign_in @not_admin
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :forbidden
+  end
+
   generate_admin_only_tests_for :manual_pass_form
 
   test 'manual_pass adds user_level with manual pass' do
@@ -329,6 +340,139 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_raises(ActionController::ParameterMissing) do
       post :delete_progress, params: {user_id: @user.id, script_id: @script.id, reason: ''}
     end
+  end
+
+  test "delete_user_progress validates CSV data structure for unit-specific deletion" do
+    sign_in @admin
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
+    File.expects(:read).returns("Script output")
+
+    post :delete_user_progress, params: {
+      csv_data: [
+        {student_id: '123', unit_name: 'course1'},
+        {student_id: '456', unit_name: 'course2'}
+      ],
+      teacher_id: '789',
+      dry_run: true
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress validates CSV data structure for all-units deletion" do
+    sign_in @admin
+
+    # Mock the system call
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.expects(:read).returns("Script output")
+
+    post :delete_user_progress, params: {
+      csv_data: [
+        {student_id: '123'},
+        {student_id: '456'}
+      ],
+      teacher_id: '789',
+      dry_run: true
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress handles dry_run parameter" do
+    sign_in @admin
+
+    # Test dry run (empty commit flag)
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Dry run output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: true
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal true, response_json['dry_run']
+    assert_equal "Dry run completed successfully", response_json['message']
+  end
+
+  test "delete_user_progress handles actual deletion" do
+    sign_in @admin
+
+    # Test actual deletion (for-real commit flag)
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.stubs(:read).returns("Deletion output")
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456',
+      dry_run: false
+    }
+
+    assert_response :success
+    response_json = JSON.parse(response.body)
+    assert_equal false, response_json['dry_run']
+    assert_equal "Progress deletion completed successfully", response_json['message']
+  end
+
+  test "delete_user_progress cleans up temporary files on success" do
+    sign_in @admin
+
+    temp_file_mock = mock('tempfile')
+    output_file_mock = mock('output_file')
+
+    Tempfile.expects(:new).with(['delete_progress', '.csv']).returns(temp_file_mock)
+    Tempfile.expects(:new).with('script_output').returns(output_file_mock)
+
+    temp_file_mock.expects(:path).returns('/tmp/test.csv').at_least_once
+    output_file_mock.expects(:path).returns('/tmp/output').at_least_once
+
+    CSV.expects(:open).yields(mock('csv').tap {|csv| csv.expects(:<<).twice})
+
+    @controller.stubs(:execute_delete_script).returns(true)
+    File.expects(:read).returns("Success")
+
+    # Verify cleanup calls
+    temp_file_mock.expects(:unlink)
+    output_file_mock.expects(:unlink)
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :success
+  end
+
+  test "delete_user_progress cleans up temporary files on exception" do
+    sign_in @admin
+
+    temp_file_mock = mock('tempfile')
+    output_file_mock = mock('output_file')
+
+    Tempfile.expects(:new).with(['delete_progress', '.csv']).returns(temp_file_mock)
+    Tempfile.expects(:new).with('script_output').returns(output_file_mock)
+
+    temp_file_mock.expects(:path).returns('/tmp/test.csv')
+
+    # Cause an exception during CSV writing
+    CSV.expects(:open).raises(StandardError.new("Test exception"))
+
+    # Verify cleanup still happens
+    temp_file_mock.expects(:unlink)
+    output_file_mock.expects(:unlink)
+
+    post :delete_user_progress, params: {
+      csv_data: [{student_id: '123', unit_name: 'course1'}],
+      teacher_id: '456'
+    }
+
+    assert_response :internal_server_error
+    response_json = JSON.parse(response.body)
+    assert_equal 'Internal server error', response_json['error']
   end
 
   test "delete_progress deletes script progress" do

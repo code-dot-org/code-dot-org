@@ -14,13 +14,13 @@ export const SET_TEMPERATURE_STEP = 0.1;
 export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
-export const MODEL_CARD_FIELDS_LABELS_ICONS: {
+export const getModelCardFieldsLabelsIcons = (): {
   property: keyof ModelCardInfo;
   label: string;
   icon?: string;
   editTooltip: string;
   displayTooltip: string;
-}[] = [
+}[] => [
   {
     property: 'botName',
     label: aichatI18n.modelCard_botNameHeader(),
@@ -64,14 +64,14 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: {
   },
 ];
 
-export const TECHNICAL_INFO_FIELDS = [
+export const getTechnicalInfoFields = (): string[] => [
   aichatI18n.technicalInfoHeader_modelName(),
   aichatI18n.technicalInfoHeader_overview(),
   aichatI18n.technicalInfoHeader_trainingData(),
   aichatI18n.technicalInfoHeader_systemPrompt(),
   aichatI18n.technicalInfoHeader_temperature(),
   aichatI18n.technicalInfoHeader_retrievalUsed(),
-] as const;
+];
 
 export const EMPTY_MODEL_CARD_INFO: ModelCardInfo = {
   botName: '',
@@ -109,15 +109,15 @@ export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   availableModelIds: [modelDescriptions[0].id],
 };
 
-export const AI_CUSTOMIZATIONS_LABELS: {
+export const getAiCustomizationsLabels = (): {
   [key in keyof AiCustomizations]: string;
-} = {
+} => ({
   selectedModelId: aichatI18n.aiCustomizations_selectedModel(),
   temperature: aichatI18n.aiCustomizations_temperature(),
   systemPrompt: aichatI18n.aiCustomizations_systemPrompt(),
   retrievalContexts: aichatI18n.aiCustomizations_retrieval(),
   modelCardInfo: aichatI18n.aiCustomizations_modelCardInfo(),
-};
+});
 
 // Model customization fields that are checked for toxicity before updating.
 export const FIELDS_CHECKED_FOR_TOXICITY = [

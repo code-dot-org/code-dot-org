@@ -1,5 +1,7 @@
-import Button from '@code-dot-org/component-library/button';
-import {FontAwesomeV6IconProps} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useCallback} from 'react';
 
@@ -75,26 +77,25 @@ const AiTutorSidebarSuggestedPrompts: React.FC<
   return (
     <div className={styles['ai-tutor-suggested-prompts-list']}>
       {suggestedPrompts.map(prompt => (
-        <Button
-          className={styles['ai-tutor-suggested-prompt-item']}
-          aria-label={prompt.label}
-          isIconOnly
-          icon={
-            {
-              ...prompt.icon,
-              className: classNames({
-                [styles['icon']]: true,
-                [styles[`icon-${prompt.icon?.iconName}`]]: prompt.icon,
-              }),
-            } as FontAwesomeV6IconProps
-          }
-          onClick={() => handleSubmit(prompt.value, prompt.analyticsProperties)}
+        <MuiButton
           key={prompt.id}
-          size="m"
-          type="primary"
+          variant="contained"
           color="white"
+          size="medium"
+          className={styles['ai-tutor-suggested-prompt-item']}
+          onClick={() => handleSubmit(prompt.value, prompt.analyticsProperties)}
+          aria-label={prompt.label}
+          type="button"
           disabled={!modelParameters}
-        />
+        >
+          <FontAwesomeV6Icon
+            {...(prompt.icon as FontAwesomeV6IconProps)}
+            className={classNames(
+              styles['icon'],
+              prompt.icon?.iconName && styles[`icon-${prompt.icon.iconName}`]
+            )}
+          />
+        </MuiButton>
       ))}
     </div>
   );

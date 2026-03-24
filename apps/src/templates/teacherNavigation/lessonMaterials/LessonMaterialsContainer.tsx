@@ -1,7 +1,6 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import _ from 'lodash';
 import React, {useState, useMemo} from 'react';
 import {useSelector} from 'react-redux';
@@ -88,6 +87,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
   const [canShowPodcasts, setCanShowPodcasts] = useState(false);
   const [audioSummaryTranscript, setAudioSummaryTranscript] =
     useState<string>('');
+  const audioPlayerRef = React.useRef<HTMLAudioElement | null>(null);
 
   const userId = useAppSelector(state => state.currentUser.userId);
 
@@ -250,6 +250,57 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     dispatch(setChatIsOpen(true));
   };
 
+  const handleTranscriptButtonClick = () => {
+    if (showTranscriptDialog) {
+      setShowTranscriptDialog(false);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_CLOSE_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    } else {
+      setShowTranscriptDialog(true);
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_OPEN_TRANSCRIPT, {
+        lesson_id: selectedLesson?.id,
+      });
+    }
+  };
+
+  React.useEffect(() => {
+    const audioPlayer = audioPlayerRef.current;
+    let playStartTime: number;
+    const handlePodcastPlay = () => {
+      playStartTime = Date.now();
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYED, {
+        lesson_id: selectedLesson?.id,
+      });
+    };
+
+    const handlePodcastStop = () => {
+      const play_time = (Date.now() - playStartTime) / 1000;
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_STOPPED, {
+        lesson_id: selectedLesson?.id,
+        time_played: play_time,
+      });
+    };
+
+    const handleSpeedChanged = () => {
+      analyticsReporter.sendEvent(EVENTS.TA_PODCAST_PLAYBACK_SPEED_CHANGED, {
+        lesson_id: selectedLesson?.id,
+        playback_rate: audioPlayer?.playbackRate,
+      });
+    };
+
+    if (audioPlayer) {
+      audioPlayer.addEventListener('play', handlePodcastPlay);
+      audioPlayer.addEventListener('pause', handlePodcastStop);
+      audioPlayer.addEventListener('ratechange', handleSpeedChanged);
+      return () => {
+        audioPlayer.removeEventListener('play', handlePodcastPlay);
+        audioPlayer.removeEventListener('pause', handlePodcastStop);
+        audioPlayer.removeEventListener('ratechange', handleSpeedChanged);
+      };
+    }
+  }, [selectedLesson, canShowLessonSummaries]);
+
   const renderHeader = () => {
     return (
       <div className={styles.lessonMaterialsPageHeader}>
@@ -321,7 +372,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
     if (selectedLesson && experiments.isEnabled(experiments.AI_ARTIFACT)) {
       return (
         <CustomLessonResources
-          unitId={selectedSection.unitId}
+          unitId={selectedUnitId}
           lessonId={selectedLesson.id}
           sectionId={selectedSection.id}
         />
@@ -339,9 +390,9 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             title={i18n.audioTranscript()}
             primaryButtonProps={{
               text: i18n.closeDialog(),
-              onClick: () => setShowTranscriptDialog(false),
+              onClick: () => handleTranscriptButtonClick(),
             }}
-            onClose={() => setShowTranscriptDialog(false)}
+            onClose={() => handleTranscriptButtonClick()}
             closeLabel={i18n.closeTranscript()}
             customContent={
               <div className={styles.transcriptDialogContent}>
@@ -356,30 +407,36 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
             <div className={styles.lessonSummarySection}>
               <div className={styles.lessonSummarySectionHeader}>
                 <div className={styles.lessonSummarySectionTitle}>
-                  <FontAwesomeV6Icon iconName="headphones" iconStyle="solid" />
+                  <FontAwesomeV6Icon
+                    iconFamily="kit"
+                    iconName="solid-flask-sparkle"
+                  />
                   <Typography variant="body2" gutterBottom>
                     {i18n.audioSummary()}
                   </Typography>
                 </div>
-                <Button
-                  type="secondary"
-                  size="xs"
-                  color="black"
+                <MuiButton
+                  variant="outlined"
+                  color="secondary"
+                  size="extraSmall"
                   className={styles.openTranscriptButton}
-                  text={i18n.transcript()}
-                  onClick={() => setShowTranscriptDialog(true)}
-                />
+                  onClick={() => handleTranscriptButtonClick()}
+                  type="button"
+                >
+                  {i18n.transcript()}
+                </MuiButton>
               </div>
               <div className={styles.audioPlayerContainer}>
                 {/* We're including our own custom time-stamped transcript dialog, so no need for media caption. */}
                 {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
                 <audio
                   id="lesson-summary-audio"
+                  ref={audioPlayerRef}
                   src={`/ai_lesson_summary_podcasts/show?lesson_id=${selectedLesson?.id}`}
                   preload="auto"
                   controls
-                  onEnded={() => setFinishedListeningToSummary(true)}
                   className={styles.audioPlayer}
+                  onEnded={() => setFinishedListeningToSummary(true)}
                 />
                 {finishedListeningToSummary && (
                   <FontAwesomeV6Icon
@@ -427,7 +484,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.tipsHeader()}
                 </Typography>
                 <ol>
-                  {aiTALessonSummaryInfo?.tips.map((tip, index) => (
+                  {aiTALessonSummaryInfo?.tips?.map((tip, index) => (
                     <li key={`tip-${index}`}>
                       <Typography variant="body3" gutterBottom>
                         {tip}
@@ -441,7 +498,7 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                   {i18n.commonMisconceptions()}
                 </Typography>
                 <ul>
-                  {aiTALessonSummaryInfo?.misconceptions.map(
+                  {aiTALessonSummaryInfo?.misconceptions?.map(
                     (misconception, index) => (
                       <li key={`misconception-${index}`}>
                         <Typography variant="body3" gutterBottom>
@@ -453,13 +510,16 @@ const LessonMaterialsContainer: React.FC<LessonMaterialsContainerProps> = ({
                 </ul>
               </div>
             </div>
-            <Button
-              type="secondary"
-              color="black"
+            <MuiButton
+              variant="outlined"
+              color="secondary"
+              size="medium"
               className={styles.askAITAButton}
-              text={i18n.questionForAITA()}
               onClick={handleLessonSummaryAskAITAClick}
-            />
+              type="button"
+            >
+              {i18n.questionForAITA()}
+            </MuiButton>
             {!hasCompletedPersonalizationQuiz && (
               <div className={styles.personalizationQuizSection}>
                 <div className={styles.horizontalLine} />

@@ -89,9 +89,6 @@ group :development do
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
   gem 'bootsnap', '>= 1.14.0', require: false
   gem 'localhost'
-
-  # This gem is installed in development only for now while the node version in deployed environments is upgraded.
-  gem "vite_rails", "~> 3.0"
 end
 
 # Rack::Cache middleware used in development/test;
@@ -279,8 +276,10 @@ gem 'aws-sdk-ec2'
 gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
+gem 'aws-sdk-redshiftdataapiservice'
 gem 'aws-sdk-route53'
 gem 'aws-sdk-s3', '~> 1.113'
+gem 'aws-sdk-sagemaker'
 gem 'aws-sdk-sagemakerruntime'
 gem 'aws-sdk-secretsmanager'
 
@@ -416,15 +415,9 @@ gem "webrick", "~> 1.9"
 
 gem 'rubyzip'
 
-gem "opentelemetry-exporter-otlp", "~> 0.31.1"
-gem 'opentelemetry-sdk', '~> 1.10'
-
-# pinned due to rails 7, upgrade on rails 7.1
-gem "opentelemetry-instrumentation-all", "0.85.0"
-
-# Automatically include all rails engines
-Dir[Bundler.root.join('**/engines/*/*.gemspec')].sort.each do |gemspec_path|
-  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '**/engines/*/*.gemspec'
+# Automatically include all rails engines under dashboard/
+Dir[Bundler.root.join('{,dashboard/}engines/*/*.gemspec')].sort.each do |gemspec_path|
+  gem File.basename(gemspec_path, '.gemspec'), path: '.', glob: '{,dashboard/}engines/*/*.gemspec'
 end
 
 # OpenSSL 3.6 broke Ruby's OpenSSL bindings, see: https://github.com/ruby/openssl/issues/949
@@ -435,3 +428,6 @@ gem 'openssl', '>= 3.3.1'
 
 # Used for Clever Client
 gem 'typhoeus', '~> 1.0', '>= 1.0.1'
+
+# Used for Vite integration, only available in development and adhoc at this time.
+gem "vite_rails", "~> 3.0", group: [:development, :adhoc, :staging, :test]

@@ -1,5 +1,5 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
 
@@ -18,7 +18,6 @@ import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import AssessmentsAnnouncementDialog from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
@@ -30,6 +29,8 @@ import UnitCalendarGrid from './UnitCalendarGrid';
 import UnitOverviewActionRow from './UnitOverviewActionRow';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
+
+import styles from './unit-overview.module.scss';
 
 /**
  * Lesson progress component used in level header and script overview.
@@ -178,8 +179,8 @@ class UnitOverview extends React.Component {
         )}
         <div>
           {!this.props.isSingleUnitCourse && this.props.courseLink && (
-            <div className="unit-breadcrumb" style={styles.navArea}>
-              <a href={this.props.courseLink} style={styles.navLink}>
+            <div className={classNames('unit-breadcrumb', styles.navArea)}>
+              <a href={this.props.courseLink} className={styles.navLink}>
                 {`< ${this.props.courseTitle}`}
               </a>
             </div>
@@ -269,18 +270,7 @@ class UnitOverview extends React.Component {
   }
 }
 
-const styles = {
-  navLink: {
-    fontSize: 14,
-    lineHeight: '22px',
-    color: color.purple,
-  },
-  navArea: {
-    padding: '10px 0px',
-  },
-};
-
-export const UnconnectedUnitOverview = Radium(UnitOverview);
+export const UnconnectedUnitOverview = UnitOverview;
 export default connect((state, ownProps) => ({
   scriptId: state.progress.scriptId,
   scriptName: state.progress.scriptName,

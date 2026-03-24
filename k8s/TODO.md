@@ -2,6 +2,10 @@
 
 ## Performance improvements
 
+### Use jemalloc
+
+Use `jemalloc` in k8s workloads where it helps reduce allocator fragmentation / RSS growth.
+
 ### Reduce repo size
 
 With our regular "giant repo with lots of files" it takes `skaffold dev` about **3 minutes to start**
@@ -12,14 +16,6 @@ A build option to not include pegasus files from the build would help substantia
 
 Additionally, this one is particularly important because docker builds chew through hundreds of GB
 of disk space quite quickly when the base image is so large.
-
-### Get multiplatform layer-cached GH actions building
-
-And make it so when you run `skaffold dev` for the first time, by default its pulling either the most
-recent docker layer cache from your branch, or failing that from staging. Make this work on both
-x86_64 and arm64.
-
-This would save 20 minutes (on an M2) for first time usage.
 
 ## Snapshot seeded DB in GH actions, download in dev
 
@@ -34,10 +30,31 @@ we have existing (broken?) code that does this, and it could be repurposed.
 Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
 include prometheus as a helm chart dependency??
 
-### ArgoCD
+## Kargo
 
-Get an ArgoCD setup for prod-like environments.
+- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
+- set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
 
-### CloudFormation
+## Tofu EKS Cluster
 
-CloudFormation scripts to create a new prod-like EKS cluster.
+See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
+repo-server disk-fill investigation notes.
+
+In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
+`Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
+the Gateway-based direction.
+
+### Manage ArgoCD with ArgoCD
+
+Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, follow ArgoCD's
+`ServerSideApply=true` requirement for self-management:
+<https://argo-cd.readthedocs.io/en/latest/operator-manual/declarative-setup/#server-side-apply-requirement>
+
+### Dex
+
+In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
+to a non-personal email.
+
+## Helm / Kustomize parity
+
+- Allow `verify-helm-parity` to still check parity when `k8s-gitops` / kustomize + helm charts are modified locally, so we can verify them before we commit.

@@ -1,4 +1,4 @@
-import {Button, buttonColors} from '@code-dot-org/component-library/button';
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -30,26 +30,30 @@ const HintPrompt = ({
       textToSpeechEnabled={textToSpeechEnabled}
     >
       <p id={'hint-prompt-message'}>{message}</p>
-      <Button
-        id="hint-prompt-yes-button"
-        type="primary"
-        text={msg.yes()}
-        color={buttonColors.white}
-        onClick={onConfirm}
+      <MuiButton
+        variant="contained"
+        color="white"
+        size="medium"
         className={classNames(styles.button, styles.buttonYes)}
-        size="m"
-        ariaLabel={msg.yes()}
-      />
-      <Button
-        id="hint-prompt-no-button"
-        type="primary"
-        text={msg.no()}
-        color={buttonColors.white}
-        onClick={onDismiss}
+        id="hint-prompt-yes-button"
+        onClick={onConfirm}
+        aria-label={msg.yes()}
+        type="button"
+      >
+        {msg.yes()}
+      </MuiButton>
+      <MuiButton
+        variant="contained"
+        color="white"
+        size="medium"
         className={classNames(styles.button)}
-        size="m"
-        ariaLabel={msg.no()}
-      />
+        id="hint-prompt-no-button"
+        onClick={onDismiss}
+        aria-label={msg.no()}
+        type="button"
+      >
+        {msg.no()}
+      </MuiButton>
     </ChatBubble>
   );
 };

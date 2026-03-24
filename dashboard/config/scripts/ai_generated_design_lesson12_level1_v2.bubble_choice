@@ -1,0 +1,9 @@
+name 'ai-generated-design-lesson12-level1-v2'
+display_name 'Web App Responsiveness'
+description '#### Choose a website and complete an responsiveness audit. After you identify responsiveness problems, use AI Chat to fix them!'
+
+sublevels
+level 'ai-generated-design-lesson12-level1a_2026-v2'
+level 'ai-generated-design-lesson12-level1b_2026-v2'
+
+uses_lab2

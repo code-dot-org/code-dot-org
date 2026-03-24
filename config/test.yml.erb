@@ -12,6 +12,7 @@ azure_content_moderation_key: !Secret
 saucelabs_authkey: !Secret
 saucelabs_username: !Secret
 puma_control_server_token: !Secret
+redshift_cluster_id: !Secret
 <% else %>
 
 ##
@@ -104,6 +105,12 @@ use_cookie_dcdo: true
 # Allows Geolocation to be altered via cookies.
 use_geolocation_override: true
 
+# Enables OpenTelemetry instrumentation
+enable_opentelemetry: true
+
+# Enables Sentry error reporting and tracing.
+enable_sentry: true
+
 ##
 ## CI-specific config settings
 ##
@@ -114,7 +121,9 @@ use_geolocation_override: true
 
 # customize build steps in CI
 build_apps: true
+build_studio: true
 use_my_apps: true
+use_my_studio: true
 skip_seed_all: true
 
 # Pass in secrets via env vars, since Drone cannot access secrets directly.

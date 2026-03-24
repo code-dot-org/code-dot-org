@@ -163,8 +163,44 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       it 'should NOT redirect to landing path for allow listed paths' do
         get destroy_user_session_path
 
-        assert_redirected_to '//test.code.org'
+        assert_redirected_to root_path
       end
+    end
+  end
+
+  describe 'persist_brand_params' do
+    let(:cookie_key) {environment_specific_cookie_name(Cdo::Brand::BRAND_COOKIE_NAME)}
+
+    before do
+      DCDO.stubs(:get)
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(true)
+    end
+
+    it 'does nothing when brand router is disabled' do
+      DCDO.stubs(:get).with('brand-router-enabled', false).returns(false)
+      get root_path, params: {brand: 'codeai'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'sets brand cookie from URL param' do
+      get root_path, params: {brand: 'codeai'}
+      assert_equal 'codeai', response.cookies[cookie_key]
+    end
+
+    it 'ignores unknown brand codes' do
+      get root_path, params: {brand: 'unknown'}
+      assert_nil cookies[cookie_key]
+    end
+
+    it 'clears brand cookie on brand-reset' do
+      cookies[cookie_key] = 'codeai'
+      get root_path, params: {'brand-reset' => '1'}
+      assert_nil response.cookies[cookie_key]
+    end
+
+    it 'does not set cookie when no brand param present' do
+      get root_path
+      assert_nil cookies[cookie_key]
     end
   end
 

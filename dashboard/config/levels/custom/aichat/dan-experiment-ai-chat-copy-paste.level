@@ -1,0 +1,52 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2026-03-03T18:43:09.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Web Page Content\r\n\r\nAnswer the prompts from the AI Chat to start building a website around one of your interests",
+    "offer_browser_tts": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gpt-4o-mini",
+        "temperature": 0.5,
+        "systemPrompt": "**Core Instructions:** \nYou are helping a student create a short “website content brief” based on one interest. Ask the 5 questions below *one at a time*, wait for the student’s answer each time, then ask the next. Encourage short answers (1–2 sentences or a few bullets). After the 5th answer, output the final brief in the exact template provided. Do **not** show your hidden reasoning—just ask the questions and then produce the brief.\n\n---\n\n## Ask these 5 questions (one at a time)\n\n1) **Pick one interest** you’d want a website about (a hobby, topic, game, sport, show, music, etc.). What is it?  \n*(Answer in 1 phrase.)*\n\n2) **Three specific things you like about it** — name 3 details (features, moments, parts, or experiences).  \n*(Answer as 3 quick bullets.)*\n\n3) **How it makes you feel** — choose a feeling or two and (optional) why in a few words.  \n*(Example: “excited — I like the challenge.”)*\n\n4) **Recommendations for visitors** — give at least 1 recommendation, such as:  \n  - a beginner tip  \n  - a “must-try” suggestion  \n  - one resource (a site, video, creator, place, or tool)  \n*(Example: \"Try a beginner kit before advanced ones\")*\n\n5) **Tone / personality** for the website writing: pick up to 3 words (examples: “funny, friendly, bold” or “calm, inspiring, thoughtful”).  \n*(Answer in 1 short line.)*\n\n---\n\n## After collecting answers, output ONLY this (filled in)\n\n```txt\nGenerate a website based on the following description of a user's interests. This is the main content of the website:\n- Interest: [User answer]\n- Three specific things I like about this: [User answer]\n- How it makes me feel: [User answer]\n- Recommendations: [User answer]\n\nWhen making the content of the website, use the following tone. Do not put this explicitly on the website content:\n- Tone / Personality: [user answer]\n```\n\n**Additional Instructions:**\n- Don’t add extra questions.\n- Don’t add extra sections to the final output.\n- Keep the student’s wording; lightly clean grammar only if needed.\n- Keep answers compact - no long paragraphs.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "levelSystemPrompt": "",
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gpt-4o-mini"
+      ],
+      "multimodalEnabled": true
+    },
+    "thumbnail_url": "https://images.code.org/cb50057a78bf7c950df533fe4c511fd9-mood-board.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-03T18:43:09.423+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson4-level1b_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson4-level1b_2025\"},{\"changed_at\":\"2026-03-03 18:46:14 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\",\"bubble_choice_description\",\"display_name\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-03 19:16:03 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {memo, useState} from 'react';
 
 import {getLineReferenceText} from '@cdo/apps/aichat/utils';
@@ -135,9 +136,11 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   }
 
   let header;
-  if (!isAssistant && (hasAssets || hasUserAddedSelectionContext)) {
+  if (hasAssets || hasUserAddedSelectionContext) {
     header = (
-      <div className={styles.assetCol}>
+      <div
+        className={classNames(styles.assetCol, isAssistant && styles.assistant)}
+      >
         {hasAssets &&
           assets.map(asset => {
             const filename = asset.filename;
@@ -152,7 +155,14 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
                 {filename.endsWith('.pdf') ? (
                   <FilePreview type="pdf" filename={filename} url={url} />
                 ) : (
-                  <img alt="" className={styles.imagePreview} src={url} />
+                  <img
+                    alt=""
+                    className={classNames(
+                      styles.imagePreview,
+                      isAssistant && styles.assistant
+                    )}
+                    src={url}
+                  />
                 )}
               </button>
             );
@@ -215,6 +225,8 @@ export function getChatMessageDisplayText(
       return commonI18n.aiChatUserInputTooLargeMessage();
     case Status.MODEL_TIMEOUT:
       return commonI18n.aiChatTimeout();
+    case Status.MODEL_RATE_LIMITED:
+      return commonI18n.aiChatModelRateLimited();
     case Status.ERROR:
       return commonI18n.aiChatResponseError();
     default:
@@ -227,7 +239,9 @@ function getMessageStyle(status: ValueOf<typeof Status>, role: Role) {
     status === Status.PROFANITY_VIOLATION ||
     status === Status.USER_INPUT_TOO_LARGE ||
     (role === Role.ASSISTANT &&
-      (status === Status.ERROR || status === Status.MODEL_TIMEOUT))
+      (status === Status.ERROR ||
+        status === Status.MODEL_TIMEOUT ||
+        status === Status.MODEL_RATE_LIMITED))
   ) {
     return 'danger';
   }

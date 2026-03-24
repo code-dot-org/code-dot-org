@@ -1,10 +1,9 @@
+import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useMemo, useRef, useState} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
-import {moderateImage} from '@cdo/apps/lab2/utils';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import UploadsDisabledModal from '@cdo/apps/sharedComponents/UploadsDisabledModal';
+import {moderateImage} from '@cdo/apps/util/moderateImage';
 
 export const enum analyticsEvents {
   UPLOAD_FAILED = 'UPLOAD_FAILED',
@@ -30,7 +29,7 @@ export type FileUploaderProps = {
     eventName: analyticsEvents,
     payload: Record<string, string>
   ) => void;
-  appName?: string;
+  appName: string;
   isBlockedAbuse?: boolean;
   onImageFlagged?: (
     file: File,
@@ -130,13 +129,13 @@ export const useFileUploader = ({
       }
 
       if (!isValidMimeType(file.type, validMimeTypes)) {
+        const extension = mimeToExtension(file.type) || '';
         sendAnalyticsEvent(analyticsEvents.UPLOAD_UNACCEPTED_FILE, {
-          name: file.name,
-          type: file.type,
+          fileName: file.name,
+          fileType: extension,
         });
-        const fileType = file.name.split('.').pop() || '';
         errorCallback(
-          codebridgeI18n.invalidFileType({fileType: file.type || fileType}),
+          codebridgeI18n.invalidFileType({fileType: extension}),
           callbackArgs.current
         );
         return;
@@ -155,8 +154,8 @@ export const useFileUploader = ({
                 ? reader.result
                 : bufferToString(reader.result);
             sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-              name: file.name,
-              type: file.type,
+              fileName: file.name,
+              fileType: file.name.split('.').pop()?.toLowerCase() || '',
             });
             callback(
               file.name,
@@ -173,20 +172,18 @@ export const useFileUploader = ({
           }
         };
       } else {
-        analyticsReporter.sendEvent(EVENTS.UPLOAD_CUSTOM_IMAGE, {
-          UploaderType: 'Lab2 File Uploader',
-          ProjectType: appName,
-        });
         try {
           if (onImageFlagged) {
             const ext = file.name.split('.').pop()?.toLowerCase() || '';
-            const moderationStatus = await moderateImage(file, ext, appName);
+            const moderationStatus = await moderateImage(file, appName, {
+              uploaderType: 'Lab2FileUploader',
+            });
             if (moderationStatus === 'flagged') {
               const uploadFunction = async () => {
                 const url = await uploadExternalFile(file);
                 sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-                  name: file.name,
-                  type: file.type,
+                  fileName: file.name,
+                  fileType: file.name.split('.').pop()?.toLowerCase() || '',
                 });
                 callback(file.name, '', url, callbackArgs.current, true);
               };
@@ -200,8 +197,8 @@ export const useFileUploader = ({
           // and images that are deemed safe, upload directly to assets.
           const url = await uploadExternalFile(file);
           sendAnalyticsEvent(analyticsEvents.UPLOAD_SUCCEEDED, {
-            name: file.name,
-            type: file.type,
+            fileName: file.name,
+            fileType: file.name.split('.').pop()?.toLowerCase() || '',
           });
           callback(file.name, '', url, callbackArgs.current);
         } catch (error) {

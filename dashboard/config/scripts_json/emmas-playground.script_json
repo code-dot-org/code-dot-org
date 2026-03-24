@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2025-11-19 20:32:33 UTC",
+    "serialized_at": "2026-03-02 19:42:25 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -259,6 +259,21 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "AIF Prompt and Output",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -614,6 +629,18 @@
       "seeding_key": {
         "lesson_activity.key": "58180758-0a34-4e09-a4f2-00326dd9922b",
         "lesson.key": "lesson-15",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "199d086a-b0b9-4214-911d-0973af87c291",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "199d086a-b0b9-4214-911d-0973af87c291",
+        "lesson.key": "lesson-16",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -1220,6 +1247,17 @@
       "seeding_key": {
         "activity_section.key": "5bbe737f-9bc9-423c-a431-301e6a95158b",
         "lesson_activity.key": "58180758-0a34-4e09-a4f2-00326dd9922b"
+      }
+    },
+    {
+      "key": "a76c1534-a164-4dec-98e7-0936f3784b8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "AI Tutor Outputs"
+      },
+      "seeding_key": {
+        "activity_section.key": "a76c1534-a164-4dec-98e7-0936f3784b8b",
+        "lesson_activity.key": "199d086a-b0b9-4214-911d-0973af87c291"
       }
     }
   ],
@@ -3223,6 +3261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emma-test-panel-level-for-erik"
+        ],
         "progression": "Test panel level"
       },
       "bonus": false,
@@ -3237,6 +3278,28 @@
       },
       "level_keys": [
         "emma-test-panel-level-for-erik"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "AI Tutor Outputs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "emma-test-aiflab-level"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "a76c1534-a164-4dec-98e7-0936f3784b8b"
+      },
+      "level_keys": [
+        "emma-test-aiflab-level"
       ]
     }
   ],
@@ -4223,6 +4286,18 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground",
         "activity_section.key": "2212b63e-716c-4a6b-91ab-a23235079981"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "emma-test-aiflab-level",
+        "script_level.level_keys": [
+          "emma-test-aiflab-level"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "a76c1534-a164-4dec-98e7-0936f3784b8b"
       }
     }
   ],

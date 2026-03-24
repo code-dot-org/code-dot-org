@@ -1,7 +1,7 @@
-import {Button} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
-import {Typography} from '@mui/material';
+import {Typography, Button as MuiButton} from '@mui/material';
 import React from 'react';
 import {useSelector} from 'react-redux';
 
@@ -102,13 +102,17 @@ export const Header: React.FC<HeaderProps> = ({
           size="s"
         />
         <div className={styles.headerButtonRowRight}>
-          <Button
-            iconLeft={{iconName: 'plus', iconStyle: 'solid'}}
-            text={i18n.newClassSection()}
-            onClick={onSectionCreateButtonClick}
-            size="s"
+          <MuiButton
+            variant="contained"
+            color="primary"
+            size="small"
             className={styles.createSectionButton}
-          />
+            onClick={onSectionCreateButtonClick}
+            type="button"
+            startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+          >
+            {i18n.newClassSection()}
+          </MuiButton>
           <ActionDropdown
             name="More options"
             size="s"

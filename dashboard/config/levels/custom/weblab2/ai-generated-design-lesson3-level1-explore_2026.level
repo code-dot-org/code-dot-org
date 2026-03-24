@@ -1,0 +1,233 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-17T20:04:07.000Z",
+  "level_num": "custom",
+  "user_id": 18762,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Web Lab\r\n\r\n**PART 1: EXPLORE THE TOOL**\r\n\r\n:::details [**What can you discover?**]\r\n\r\n- Take **5 minutes** to explore Web Lab.\r\n- Select the various tabs and see what you can discover. For example, can you figure out how to get AI to make changes to the page?\r\n- Don’t worry — you can’t break anything!\r\n\r\n:::\r\n\r\n***\r\n\r\n**PART 2: SCAVENGER HUNT CHALLENGE**\r\n\r\nTry to complete as many as you can! \r\n\r\nRefer to the Challenge Board activity guide for more information and tips for each challenge. \r\n\r\n:::details [**Challenge 1: Revise the page content**]\r\n\r\n- Can you figure out how to change your webpage to a different topic of your choice?\r\n\r\n:::\r\n\r\n:::details [**Challenge 2: Style it**]\r\n\r\n- Can you figure out how to change the CSS to give your page a different color scheme or visual style?\r\n\r\n:::\r\n\r\n:::details [**Challenge 3: Add images**]\r\n\r\n- Can you figure out how to add images from the `images` folder in the file panel?\r\n\r\n:::\r\n\r\n:::details [**Challenge 4: Design for the user**]\r\n\r\n- Sam uses your app outside in bright sunlight. \r\n- Can you figure out how to improve the page so it works better for Sam?\r\n\r\n:::\r\n\r\n:::details [**Challenge 5: Experiment like a Designer**]\r\n\r\n- Can you ask the AI to make a major design change to your page?\r\n\r\n\r\n:::\r\n",
+    "teacher_markdown": "**Teaching Tips**\r\n\r\n**As students explore:**\r\n- Encourage students to try out as many buttons and features as they can. Remind them not to worry - they can't break anything on the page.\r\n- Students should naturally discover:\r\n  - Instructions\r\n  - File panel\r\n  - `index.html` file\r\n  - `style.css` file\r\n  - `Images` folder with images within\r\n  - Code/Preview/Split View tab\r\n  - AI Tutor\r\n\r\n**Students may try to edit the code directly**  \r\n- Some students may click into the HTML or CSS and try to make changes themselves. Gently redirect them to use AI by asking: *“Can you ask the AI to make that change instead?”* The goal is to guide AI, not write code.\r\n\r\n**Students may use vague prompts and get poor results**  \r\n- Students may type short prompts like “change it” or “make it better.” Encourage them to be more specific by asking: *“What exactly do you want the page to look like?”* Remind them that clearer prompts lead to better results.\r\n\r\n**Students may accept AI output without reviewing it**  \r\n- Students may quickly accept changes without checking the result. Prompt them to preview and reflect first: *“Does this match what you expected?”* Reinforce that they are responsible for deciding whether the AI’s output is good enough.\r\n\r\n\r\n",
+    "submittable": "true",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>WebLab Explorer</title>\n    <link rel=\"stylesheet\" href=\"style.css\">\n</head>\n<body>\n    <header>\n        <nav>\n            <div class=\"logo\">\n                <img src=\"/images/computer.png\" alt=\"Computer and monitor\">\n            </div>\n            <ul class=\"nav-links\">\n                <li><a href=\"#\">Home</a></li>\n                <li><a href=\"#\">About</a></li>\n            </ul>\n        </nav>\n    </header>\n\n    <main>\n        <h1>Hello World</h1>\n        <p>Click around and see what you can figure out about WebLab.</p>\n    </main>\n\n    <footer>\n        <p>&copy; 2026 Student Sandbox</p>\n    </footer>\n</body>\n</html>  ",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "body {\n  margin: 0;\n  font-family: sans-serif;\n  background-color: #f9f9f9;\n  color: #333;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100vh;\n  text-align: center;\n}\n\nheader {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: white;\n  border-bottom: 1px solid #ddd;\n  padding: 10px 0;\n}\n\nnav {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  max-width: 800px;\n  margin: 0 auto;\n  padding: 0 20px;\n}\n\n.logo img {\n  height: 30px;\n}\n\n.nav-links {\n  list-style: none;\n  display: flex;\n  gap: 20px;\n  margin: 0;\n  padding: 0;\n}\n\n.nav-links a {\n  text-decoration: none;\n  color: #666;\n  font-weight: bold;\n}\n\nh1 {\n  font-size: 3rem;\n  margin-bottom: 10px;\n  color: #222;\n}\n\np {\n  font-size: 1.2rem;\n  color: #555;\n}\n\nfooter {\n  position: absolute;\n  bottom: 20px;\n  font-size: 0.8rem;\n  color: #999;\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "computer.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/9bfffa7a-f761-469e-8ac5-45aa3b0a43d2.png",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "orange_tabby.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c06f84be-eca1-4df0-a9f7-4365ef6708bb.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "basil.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/90daddd8-7be2-4f21-8c16-3a775ef8d6f7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "super_plumber.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2b84fada-8635-4422-b4a4-acccef3f7706.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "black_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/1808b9d2-e6a7-40a5-a6bf-89d72a8ba77e.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "cucumber.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2f4e4ea2-d503-4324-9df4-66546309b1f7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "9": {
+          "id": "9",
+          "name": "space.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/a909dc3d-e56a-4dc6-9c5d-576d9022fa41.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "10": {
+          "id": "10",
+          "name": "tomato.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/900b24a3-ce06-4ec3-b923-669f5256eded.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "11": {
+          "id": "11",
+          "name": "zelda.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c10a4c13-7110-4dc4-9c36-cfd4f27ccf03.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "12": {
+          "id": "12",
+          "name": "calico_cat.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/bcc67c99-c95e-4537-acd2-5a12c80e4f01.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "13": {
+          "id": "13",
+          "name": "namibia_desert.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/c439eff4-7aa1-406d-a5e2-25a9a1c68d10.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "14": {
+          "id": "14",
+          "name": "vietnam_sea.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/057ca5f5-c9ce-4a4a-9302-fd140c388262.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "15": {
+          "id": "15",
+          "name": "himeji_castle.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/585589e5-4b3b-415b-998d-14c2f3a16aac.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "fence_dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/3f1503a5-ed83-4048-a046-1b1a4e2949ca.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "relaxo_stuffed_animal.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/2bdfe2b8-b244-418b-9e11-b7b529944095.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "paris_sunset.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/de571063-c653-41c1-b9a0-bc1513b8aae4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "brown_dog.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/b1b06925-9c76-4785-aa45-b1de866494be.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "pokemon_stuffed_animal.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson3-level1-explore_2026/uuid/a34452c2-15fb-49cf-b34a-9c7ba69d2960.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-17 20:07:52 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:08:53 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-17 20:09:17 +0000\",\"changed\":[],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:50:44 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 17:10:20 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 17:22:14 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-03-20 17:24:08 +0000\",\"changed\":[\"submittable\"],\"changed_by_id\":977,\"changed_by_email\":\"kaitie+teacher@code.org\"},{\"changed_at\":\"2026-03-20 17:25:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 18:09:48 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\",\"submittable\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 18:17:39 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 18:25:09 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 18:44:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 18:53:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 19:47:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 20:15:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-21 03:12:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-21 16:20:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-21 16:20:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>

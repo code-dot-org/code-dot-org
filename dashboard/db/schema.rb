@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_02_11_145245) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -171,27 +171,27 @@ ActiveRecord::Schema[7.0].define(version: 2026_02_11_145245) do
     t.index ["aidiff_message_id"], name: "index_aidiff_message_feedbacks_on_aidiff_message_id", unique: true
   end
 
-  create_table "aidiff_messages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_messages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "aidiff_thread_id", null: false
-    t.text "external_id", null: false
+    t.text "external_id", size: :medium, null: false
     t.integer "role", null: false
-    t.text "content", null: false
+    t.text "content", size: :medium, null: false
     t.boolean "is_preset", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "preset_chip_text"
-    t.text "raw_content"
+    t.text "preset_chip_text", size: :medium
+    t.text "raw_content", size: :medium
     t.json "source_links"
     t.boolean "is_artifact_candidate", default: false
     t.string "artifact_candidate_type"
     t.index ["aidiff_thread_id"], name: "index_aidiff_messages_on_aidiff_thread_id"
   end
 
-  create_table "aidiff_threads", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "aidiff_threads", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "external_id", null: false
-    t.text "llm_version", null: false
-    t.text "title"
+    t.text "external_id", size: :medium, null: false
+    t.text "llm_version", size: :medium, null: false
+    t.text "title", size: :medium
     t.integer "unit_id"
     t.integer "lesson_id"
     t.datetime "created_at", null: false
@@ -836,6 +836,70 @@ ActiveRecord::Schema[7.0].define(version: 2026_02_11_145245) do
     t.datetime "updated_at", precision: nil, null: false
     t.index ["script_id", "level_id"], name: "index_hint_view_requests_on_script_id_and_level_id"
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
+  end
+
+  create_table "jit_pl_concepts", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "display_name"
+    t.text "properties"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "jit_pl_concepts_lessons", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_concept_id", null: false
+    t.bigint "lesson_id", null: false
+    t.index ["jit_pl_concept_id", "lesson_id"], name: "index_jit_pl_concepts_lessons_on_jit_pl_concept_id_and_lesson_id", unique: true
+    t.index ["lesson_id", "jit_pl_concept_id"], name: "index_jit_pl_concepts_lessons_on_lesson_id_and_jit_pl_concept_id", unique: true
+  end
+
+  create_table "jit_pl_concepts_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_concept_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["jit_pl_concept_id", "resource_id"], name: "index_concepts_resources_on_concept_id_and_resource_id", unique: true
+    t.index ["resource_id", "jit_pl_concept_id"], name: "index_concepts_resources_on_resource_id_and_concept_id", unique: true
+  end
+
+  create_table "jit_pl_concepts_rubrics", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_concept_id", null: false
+    t.bigint "rubric_id", null: false
+    t.index ["jit_pl_concept_id", "rubric_id"], name: "index_jit_pl_concepts_rubrics_on_jit_pl_concept_id_and_rubric_id", unique: true
+    t.index ["rubric_id", "jit_pl_concept_id"], name: "index_jit_pl_concepts_rubrics_on_rubric_id_and_jit_pl_concept_id", unique: true
+  end
+
+  create_table "jit_pl_exemplars", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.text "properties"
+    t.bigint "jit_pl_concept_id"
+    t.bigint "jit_pl_misconception_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jit_pl_concept_id"], name: "index_jit_pl_exemplars_on_jit_pl_concept_id"
+    t.index ["jit_pl_misconception_id"], name: "index_jit_pl_exemplars_on_jit_pl_misconception_id"
+  end
+
+  create_table "jit_pl_exemplars_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_exemplar_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["jit_pl_exemplar_id", "resource_id"], name: "index_exemplars_resources_on_exemplar_id_and_resource_id", unique: true
+    t.index ["resource_id", "jit_pl_exemplar_id"], name: "index_exemplars_resources_on_resource_id_and_exemplar_id", unique: true
+  end
+
+  create_table "jit_pl_misconceptions", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.string "name"
+    t.json "ai_context"
+    t.text "properties"
+    t.bigint "jit_pl_concept_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["jit_pl_concept_id"], name: "index_jit_pl_misconceptions_on_jit_pl_concept_id"
+  end
+
+  create_table "jit_pl_misconceptions_resources", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "jit_pl_misconception_id", null: false
+    t.bigint "resource_id", null: false
+    t.index ["jit_pl_misconception_id", "resource_id"], name: "index_misconceptions_resources_on_misconception_and_resource_ids", unique: true
+    t.index ["resource_id", "jit_pl_misconception_id"], name: "index_misconceptions_resources_on_resource_and_misconception_ids", unique: true
   end
 
   create_table "learning_goal_ai_evaluation_feedbacks", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -2730,6 +2794,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_02_11_145245) do
   add_foreign_key "census_summaries", "schools"
   add_foreign_key "external_notifications", "users"
   add_foreign_key "hint_view_requests", "users"
+  add_foreign_key "jit_pl_exemplars", "jit_pl_concepts"
+  add_foreign_key "jit_pl_exemplars", "jit_pl_misconceptions"
+  add_foreign_key "jit_pl_misconceptions", "jit_pl_concepts"
   add_foreign_key "learning_goal_ai_evaluations", "learning_goals"
   add_foreign_key "learning_goal_ai_evaluations", "rubric_ai_evaluations"
   add_foreign_key "level_concept_difficulties", "levels"

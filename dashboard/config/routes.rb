@@ -7,7 +7,7 @@ Dashboard::Application.routes.draw do
   draw :api
   draw :marketing
 
-  get "app", to: "app#index"
+  get "app(/*path)", to: "app#index"
 
   # Override Error Codes
   get "404", to: "application#render_404", via: :all
@@ -1254,6 +1254,8 @@ Dashboard::Application.routes.draw do
     post '/javabuilder/access_token_with_override_sources', to: 'javabuilder_sessions#access_token_with_override_sources'
     post '/javabuilder/access_token_with_override_validation', to: 'javabuilder_sessions#access_token_with_override_validation'
 
+    get '/ai_gateway/access_token', to: 'ai_gateway_auth#get_access_token'
+
     resources :sprites, only: [:index], controller: 'sprite_management' do
       collection do
         get 'sprite_upload'
@@ -1354,6 +1356,7 @@ Dashboard::Application.routes.draw do
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
 
+    resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'
     get '/aichat_request/chat_request/:id', to: 'aichat_requests#chat_request'
 
