@@ -4,7 +4,7 @@ import '@code-dot-org/component-library-styles/primitiveColors.css';
 import {CdoTheme} from '@code-dot-org/component-library/themes';
 import {ThemeProvider as MuiThemeProvider} from '@mui/material/styles';
 import React, {ReactElement} from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 /**
  * Global bootstrapper function that wraps rendered DOM trees with configured providers
@@ -30,8 +30,7 @@ export function createReactRoot(
     );
   }
 
-  ReactDOM.render(
-    <MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>,
-    containerElement
+  createRoot(containerElement).render(
+    <MuiThemeProvider theme={CdoTheme}>{component}</MuiThemeProvider>
   );
 }
