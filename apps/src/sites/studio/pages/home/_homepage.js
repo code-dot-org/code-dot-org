@@ -4,7 +4,6 @@ import {Provider} from 'react-redux';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {getStore} from '@cdo/apps/redux';
-import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
@@ -20,7 +19,6 @@ function showHomepage() {
   const studentSpecialAnnouncement = homepageData.studentSpecialAnnouncement;
   const store = getStore();
   store.dispatch(initializeHiddenScripts(homepageData.hiddenScripts));
-  store.dispatch(setLocaleCode(homepageData.localeCode));
 
   const parentalPermissionBanner = homepageData.parentalPermissionBanner && (
     <ParentalPermissionBanner
