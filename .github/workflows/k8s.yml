@@ -42,11 +42,8 @@ jobs:
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
-  # Step 3: commit+push the new docker image ref into the k8s-gitops repo
-  # for kargo to discover.
-  #
-  # Kargo is then responsible for promoting the change to ArgoCD codeai
-  # deployments in apps/codeai/deployments/*
+  # Step 3: commit+push the frozen Helm snapshot and image metadata into the
+  # k8s-gitops warehouse for Kargo to discover and render from.
   commit-to-kargo-warehouse:
     name: commit to kargo warehouse
     uses: ./.github/workflows/k8s-commit-to-kargo-warehouse.yml
@@ -55,7 +52,9 @@ jobs:
       - validate
     with:
       branch_name: ${{ github.head_ref || github.ref_name }}
+      source_commit_sha: ${{ github.event.pull_request.head.sha || github.sha }}
       codeai_docker_image_ref: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_ref }}
+      codeai_docker_image_digest: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_image_digest }}
       codeai_docker_tag: ${{ needs.stitch-multiplatform-image.outputs.codeai_docker_tag }}
     secrets: inherit
 

@@ -77,6 +77,8 @@ Usage:
 {{- index .secret.data .key | b64dec -}}
 {{- else if hasKey . "default" -}}
 {{- .default -}}
+{{- else if and (hasKey . "deterministicValue") .deterministicValue -}}
+{{- .deterministicValue -}}
 {{- else -}}
 {{- randAlphaNum .randLen -}}
 {{- end -}}

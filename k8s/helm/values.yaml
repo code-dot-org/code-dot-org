@@ -29,6 +29,12 @@ autoscaling:
   maxReplicas: 1
   replicasWhenAutoscaleDisabled: 1
 
+renderedBranches:
+  # Rendered-branch promotions need stable manifests, so they can opt into
+  # deterministic placeholders for local service secrets when no existing
+  # Secret can be looked up.
+  deterministicLocalSecrets: false
+
 dashboardJob:
   enabled: false
   name: zsh
