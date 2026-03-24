@@ -72,6 +72,7 @@ namespace :seed do
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-artist
+    ui-test-csf
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
@@ -359,6 +360,7 @@ namespace :seed do
     end
     %w(
       ui-test-artist
+      ui-test-csf
       ui-test-course-2017
       ui-test-course-2019
       ui-test-original-course-2017
