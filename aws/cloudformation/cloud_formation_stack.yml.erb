@@ -523,9 +523,15 @@ Resources:
               - Effect: Allow
                 Action: 'redshift:GetClusterCredentials'
                 Resource:
-                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${DATA_STACK_NAME}-RedshiftCluster/etl_client"
-                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/dashboard"
-                  - !Sub "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${DATA_STACK_NAME}-RedshiftCluster/<%=rack_env%>_learningplatform_mysql_zeroetl"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbuser:${ClusterNamespace}/etl_client"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/dashboard"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
+                  - !Sub
+                    - "arn:aws:redshift:${AWS::Region}:${AWS::AccountId}:dbname:${ClusterNamespace}/<%=rack_env%>_learningplatform_mysql_zeroetl"
+                    - ClusterNamespace: !ImportValue "DATA-production-RedshiftClusterIdentifier"
 <% end -%>
 <% if rack_env?(:production) -%>
         - PolicyName: StopInactiveAdhocInstances
