@@ -43,9 +43,9 @@ const CopyChatHistoryButton: React.FunctionComponent = () => {
       id="copy-chat"
       label={aichatI18n.copyChatButtonText()}
       icon={{iconName: 'copy', iconStyle: 'solid'}}
-      type="tertiary"
-      color="gray"
-      buttonSize="xs"
+      variant="text"
+      color="tertiary"
+      size="extraSmall"
       tooltipSize="xs"
       tooltipDirection="onBottom"
       hideTooltipTail={true}
