@@ -43,6 +43,14 @@ module "external_dns_addon" {
 
       extraArgs = [
         "--aws-zone-type=public",
+
+        # Setup ExternalDNS so if a Service or Ingress has label `code.ai/dns-nam: <host name>`,
+        # ExternalDNS will map it as <host name>.<cluster_subdomain>.<primary_domain>
+        #
+        # For example: `code.ai/dns-name: boo` => boo.k8s.code.org
+        #
+        "--fqdn-template={{ with index .Labels \"code.ai/dns-name\" }}{{ . }}{{ else }}ignore{{ end }}.${var.cluster_subdomain}.${var.parent_domain}",
+        "--exclude-domains=ignore.${var.cluster_subdomain}.${var.parent_domain}",
       ]
     })]
   }

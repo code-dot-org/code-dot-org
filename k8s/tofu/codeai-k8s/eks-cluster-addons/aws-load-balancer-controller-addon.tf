@@ -83,6 +83,18 @@ module "aws_load_balancer_controller_addon" {
         value = "aws-alb"
       },
       {
+        name  = "ingressClassParams.name"
+        value = "aws-alb"
+      },
+      {
+        name  = "ingressClassParams.spec.scheme"
+        value = "internet-facing"
+      },
+      {
+        name  = "ingressClassParams.spec.certificateArn[0]"
+        value = local.ingress_certificate_arn
+      },
+      {
         name  = "ingressClassConfig.default"
         value = "true"
       },
