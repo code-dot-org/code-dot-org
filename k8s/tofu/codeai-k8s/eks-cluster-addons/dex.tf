@@ -83,7 +83,8 @@ resource "helm_release" "dex" {
           id           = "${local.kargo_hostname}-cli"
           name         = "Kargo CLI"
           public       = true
-          redirectURIs = ["http://localhost/auth/callback"]
+          # Leave redirectURIs unset so Dex accepts localhost callbacks on the
+          # ephemeral loopback port that the Kargo CLI binds for SSO login.
         }
       ]
 
