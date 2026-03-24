@@ -19,8 +19,6 @@ const MIME_TO_EXT: Record<string, string> = {
   'application/octet-stream': 'bin',
 };
 
-// TODO: if you change levels quickly after adding an image the asset doesn't always save.
-// Probably need to do something similar to what we did in excalidraw.
 export function createTldrawAssetStore(
   channelId: string,
   levelName: string,
@@ -45,7 +43,7 @@ export function createTldrawAssetStore(
   }
 
   return {
-    async upload(asset: TLAsset, file: File) {
+    upload(asset: TLAsset, file: File) {
       const extension =
         MIME_TO_EXT[file.type] ?? file.name.split('.').pop() ?? 'bin';
       const filename = `${asset.id.replace(/^asset:/, '')}.${extension}`;
@@ -54,21 +52,33 @@ export function createTldrawAssetStore(
         getIsStartMode() || getAppOptionsEditingExemplar()
       );
 
+      // Compute the final URL immediately so we can return it to tldraw right
+      // away. Tldraw will update the asset's src in the store synchronously,
+      // meaning the next snapshot save will already include the correct URL
+      // even if the user navigates away before the upload finishes.
+      const uploadUrl = isStarterAssetOrExemplar
+        ? `/level_starter_assets/${encodeURIComponent(
+            levelName
+          )}/uuid/${filename}`
+        : `/v3/assets/${channelId}/${filename}`;
+
+      srcByAssetId.set(asset.id, uploadUrl);
+
+      // Fire the upload in the background without awaiting it. The browser
+      // will keep the in-flight request alive even if the component unmounts.
       if (isStarterAssetOrExemplar) {
-        const uploadUrl = `/level_starter_assets/${encodeURIComponent(
-          levelName
-        )}/uuid/${filename}`;
         const bodyData = new FormData();
         bodyData.append('files[]', file);
-        await HttpClient.post(uploadUrl, bodyData, true);
-        srcByAssetId.set(asset.id, uploadUrl);
-        return {src: uploadUrl};
+        HttpClient.post(uploadUrl, bodyData, true).catch(err => {
+          console.error('Error uploading starter asset:', err);
+        });
       } else {
-        const uploadUrl = `/v3/assets/${channelId}/${filename}`;
-        await HttpClient.put(uploadUrl, file);
-        srcByAssetId.set(asset.id, uploadUrl);
-        return {src: uploadUrl};
+        HttpClient.put(uploadUrl, file).catch(err => {
+          console.error('Error uploading asset:', err);
+        });
       }
+
+      return Promise.resolve({src: uploadUrl});
     },
 
     resolve(asset: TLAsset) {
