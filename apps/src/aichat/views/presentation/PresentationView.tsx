@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {
-  getModelCardFieldsLabelsIcons,
-  getTechnicalInfoFields,
+  MODEL_CARD_FIELDS_LABELS_ICONS,
+  TECHNICAL_INFO_FIELDS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -30,16 +30,20 @@ const PresentationView: React.FunctionComponent = () => {
   } = modelDescriptions.find(model => model.id === selectedModelId) ?? {};
 
   const technicalInfo = useMemo(() => {
-    const technicalInfoFields = getTechnicalInfoFields();
-    const technicalInfoData: Record<string, string | number | boolean> = {
-      [technicalInfoFields[0]]: modelName,
-      [technicalInfoFields[1]]: overview,
-      [technicalInfoFields[2]]: trainingData,
-      [technicalInfoFields[3]]: systemPrompt,
-      [technicalInfoFields[4]]: temperature,
-      [technicalInfoFields[5]]: retrievalContexts.length > 0,
+    const technicalInfoData: {
+      [key in (typeof TECHNICAL_INFO_FIELDS)[number]]:
+        | string
+        | number
+        | boolean;
+    } = {
+      'Model Name': modelName,
+      Overview: overview,
+      'Training Data': trainingData,
+      'System Prompt': systemPrompt,
+      Temperature: temperature,
+      'Retrieval Used': retrievalContexts.length > 0,
     };
-    const technicalInfo = technicalInfoFields.map(field => {
+    const technicalInfo = TECHNICAL_INFO_FIELDS.map(field => {
       if (typeof technicalInfoData[field] === 'boolean') {
         return `${field}: ${technicalInfoData[field] ? 'Yes' : 'No'}`;
       }
@@ -71,7 +75,7 @@ const PresentationView: React.FunctionComponent = () => {
         {modelCardInfo['botName']}
       </Typography>
       <div className={moduleStyles.modelCardFields}>
-        {getModelCardFieldsLabelsIcons().map(
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(
           ({property, label, icon, displayTooltip}) => {
             if (property === 'botName' || property === 'isPublished') {
               return null;

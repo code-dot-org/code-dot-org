@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 
 import {
   MAX_ASK_ABOUT_TOPICS,
-  getModelCardFieldsLabelsIcons,
+  MODEL_CARD_FIELDS_LABELS_ICONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 
@@ -16,7 +16,7 @@ const ModelCardFields: React.FunctionComponent = () => {
   const exampleTopics = modelCardInfo.exampleTopics;
   return (
     <div className={moduleStyles['model-card-fields']}>
-      {getModelCardFieldsLabelsIcons().map(({property, label}) => {
+      {MODEL_CARD_FIELDS_LABELS_ICONS.map(({property, label}) => {
         if (property === 'exampleTopics' || property === 'isPublished') {
           return null;
         }

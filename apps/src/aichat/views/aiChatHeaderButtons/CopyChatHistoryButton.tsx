@@ -16,7 +16,7 @@ import {
   isModelUpdate,
   isNotification,
 } from '../../types';
-import {getAiCustomizationsLabels} from '../modelCustomization/constants';
+import {AI_CUSTOMIZATIONS_LABELS} from '../modelCustomization/constants';
 
 const CopyChatHistoryButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllVisibleMessages);
@@ -67,7 +67,7 @@ function chatEventToFormattedString(chatEvent: ChatEvent) {
   if (isModelUpdate(chatEvent)) {
     return aichatI18n.copyChatFormatting_modelUpdate({
       timestamp: formattedTimestamp,
-      updatedFieldLabel: getAiCustomizationsLabels()[chatEvent.updatedField]!,
+      updatedFieldLabel: AI_CUSTOMIZATIONS_LABELS[chatEvent.updatedField]!,
     });
   }
 

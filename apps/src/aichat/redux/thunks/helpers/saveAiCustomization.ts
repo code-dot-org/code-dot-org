@@ -6,7 +6,7 @@ import {
   SaveType,
 } from '@cdo/apps/aichat/types';
 import {extractFieldsToCheckForToxicity} from '@cdo/apps/aichat/utils';
-import {getAiCustomizationsLabels} from '@cdo/apps/aichat/views/modelCustomization/constants';
+import {AI_CUSTOMIZATIONS_LABELS} from '@cdo/apps/aichat/views/modelCustomization/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -72,7 +72,7 @@ export const saveAiCustomization = async (
 
 const getToxicityErrorMessage = (flaggedFields: FlaggedField[]) => {
   const fieldLabels = flaggedFields.map(
-    flaggedField => getAiCustomizationsLabels()[flaggedField.field]
+    flaggedField => AI_CUSTOMIZATIONS_LABELS[flaggedField.field]
   );
   return `The following customization(s) have been flagged by our content moderation policy: ${fieldLabels.join(
     ', '
