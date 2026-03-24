@@ -13,16 +13,16 @@ Feature: Looking at a few things with Applitools Eyes - Part 2
     And I close the instructions overlay if it exists
     # hack to deflake "free response" scenario below
     And element ".uitest-attachment" is not visible
-    Then I see no difference for "initial load" using stitch mode "<stitch_mode>"
+    Then I see no difference for "initial load"
     And I close my eyes
     And I sign out
     Examples:
-      | url                                                      | test_name                         | stitch_mode | user_type |
-      | http://studio.code.org/projects/applab/new               | new applab project                | none        | student   |
-      | http://studio.code.org/                                  | logged in student studio homepage | css         | student   |
-      | http://studio.code.org/                                  | logged in teacher studio homepage | css         | teacher   |
-      | http://studio.code.org/courses/allthethingscourse/units/1                    | logged in script progress         | css         | student   |
-      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1       | unplugged video level             | css         | student   |
-      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/14 | no iframe in dsl                  | css         | student   |
-      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/26/levels/1  | rich long assessment              | css         | student   |
-      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1  | free response                     | css         | student   |
+      | url                                                      | test_name                         | user_type |
+      | http://studio.code.org/projects/applab/new               | new applab project                | student   |
+      | http://studio.code.org/                                  | logged in student studio homepage | student   |
+      | http://studio.code.org/                                  | logged in teacher studio homepage | teacher   |
+      | http://studio.code.org/courses/allthethingscourse/units/1                    | logged in script progress         | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/34/levels/1       | unplugged video level             | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/14 | no iframe in dsl                  | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/26/levels/1  | rich long assessment              | student   |
+      | http://studio.code.org/courses/allthethingscourse/units/1/lessons/27/levels/1  | free response                     | student   |
