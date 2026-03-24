@@ -38,6 +38,7 @@ interface AnalyticsData {
   uploaderType?: 'Lab2FileUploader' | 'AnimationPicker' | 'n/a';
   moderateEvent?: string;
   flaggedEvent?: string;
+  assetUrl?: string;
 }
 
 /**
@@ -109,6 +110,7 @@ export const moderateImage = async (
     uploaderType = 'n/a',
     moderateEvent = EVENTS.MODERATE_CUSTOM_IMAGE,
     flaggedEvent = EVENTS.FLAGGED_CUSTOM_IMAGE,
+    assetUrl,
   }: AnalyticsData
 ): Promise<'ok' | 'flagged' | 'skipped'> => {
   const fileExtension = mimeToExtension(file.type) || '';
@@ -170,6 +172,11 @@ export const moderateImage = async (
       UploaderType: uploaderType,
       appName,
       levelPath: window.location.pathname,
+      moderationService: useAiContentSafety
+        ? 'AI Content Safety'
+        : 'Content Moderator',
+      moderationResult: JSON.stringify(json),
+      assetUrl: assetUrl ? `${window.location.origin}${assetUrl}` : undefined,
     });
     return 'flagged';
   } catch (error) {
