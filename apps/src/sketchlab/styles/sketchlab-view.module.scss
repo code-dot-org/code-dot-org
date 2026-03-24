@@ -4,6 +4,14 @@
   display: flex;
 }
 
+// Ensure we respect tldraw's font sizes.
+:global(.tl-container) {
+  p, ol, ul, td {
+    font-size: revert;
+    line-height: revert;
+  }
+}
+
 :global(.excalidraw .dropdown-menu) {
   display: block;
 }
