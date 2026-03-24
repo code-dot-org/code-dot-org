@@ -175,7 +175,7 @@ export const moderateImage = async (
       moderationService: useAiContentSafety
         ? 'AI Content Safety'
         : 'Content Moderator',
-      moderationResult: json,
+      moderationResult: JSON.stringify(json),
       assetUrl: assetUrl ? `${window.location.origin}${assetUrl}` : undefined,
     });
     return 'flagged';

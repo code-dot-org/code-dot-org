@@ -62,7 +62,8 @@ export async function assetToFilePart(
 }
 
 /**
- * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project.
+ * Converts a model generated file to a ChatAsset by uploading the file's contents to the user's project
+ * and returns the asset and asset URL.
  */
 export async function generatedFileToAssetAndUrl(
   file: GeneratedFile,
