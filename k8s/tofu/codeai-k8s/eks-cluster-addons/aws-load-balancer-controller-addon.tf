@@ -95,7 +95,7 @@ module "aws_load_balancer_controller_addon" {
         value = local.ingress_certificate_arn
       },
       {
-        name  = "ingressClassParams.spec.targetType"
+        name  = "defaultTargetType"
         value = "ip"
       },
       {

@@ -78,8 +78,6 @@ cleanup() {
 
   kubectl delete httproute/"${ROUTE_NAME}" gateway/"${GATEWAY_NAME}" \
     service/"${DEPLOYMENT_NAME}" deployment/"${DEPLOYMENT_NAME}" \
-    loadbalancerconfiguration.gateway.k8s.aws/"${DEPLOYMENT_NAME}" \
-    targetgroupconfiguration.gateway.k8s.aws/"${DEPLOYMENT_NAME}" \
     -n "${NAMESPACE}" --ignore-not-found --wait=false >/dev/null 2>&1 || true
   kubectl delete namespace "${NAMESPACE}" --ignore-not-found --wait=false >/dev/null 2>&1 || true
 
@@ -88,8 +86,6 @@ cleanup() {
   wait_until_gone gateway/"${GATEWAY_NAME}" "${NAMESPACE}" || failed=true
   wait_until_gone service/"${DEPLOYMENT_NAME}" "${NAMESPACE}" || failed=true
   wait_until_gone deployment/"${DEPLOYMENT_NAME}" "${NAMESPACE}" || failed=true
-  wait_until_gone loadbalancerconfiguration.gateway.k8s.aws/"${DEPLOYMENT_NAME}" "${NAMESPACE}" || failed=true
-  wait_until_gone targetgroupconfiguration.gateway.k8s.aws/"${DEPLOYMENT_NAME}" "${NAMESPACE}" || failed=true
   namespace_deletion_timestamp="$(
     kubectl get namespace "${NAMESPACE}" -o jsonpath='{.metadata.deletionTimestamp}' 2>/dev/null || true
   )"
@@ -120,10 +116,10 @@ cleanup true
 service_deployment_started_at="$(date +%s)"
 echo "Gateway namespace: ${NAMESPACE}"
 echo "Gateway hostname: ${TEST_HOSTNAME}"
+kubectl create namespace "${NAMESPACE}" >/dev/null
 sed \
-  -e "s|__TEST_NAMESPACE__|${NAMESPACE}|g" \
   -e "s|__TEST_HOSTNAME__|${TEST_HOSTNAME}|g" \
-  test-gateway-http.yaml | kubectl apply -f - >/dev/null
+  test-gateway-http.yaml | kubectl apply -n "${NAMESPACE}" -f - >/dev/null
 kubectl wait --for=condition=available deployment/"${DEPLOYMENT_NAME}" -n "${NAMESPACE}" --timeout=180s >/dev/null
 
 echo "Waiting for Gateway address..."
@@ -152,18 +148,18 @@ fi
 echo "Gateway address: ${gateway_address}"
 echo "HTTPRoute hostname: ${route_host}"
 
-echo "Phase 1: testing Gateway public reachability..."
+echo "Phase 1: testing Gateway public reachability over HTTPS..."
 rm -f /tmp/hello-gateway-phase1-response.txt /tmp/hello-gateway-phase2-response.txt
 phase_1_passed=false
 for _ in {1..60}; do
   gateway_ip="$(dig +short "${gateway_address}" A @1.1.1.1 | head -n1 || true)"
   gateway_ip="${gateway_ip:-${gateway_address}}"
   if [[ -n "${gateway_ip}" ]]; then
-    if curl -fsS --max-time 5 --resolve "${route_host}:80:${gateway_ip}" "http://${route_host}/" >/tmp/hello-gateway-phase1-response.txt 2>/dev/null; then
+    if curl -fsS --max-time 5 --resolve "${route_host}:443:${gateway_ip}" "https://${route_host}/" >/tmp/hello-gateway-phase1-response.txt 2>/dev/null; then
       echo "Resolved assigned address ${gateway_address} via 1.1.1.1 to ${gateway_ip}"
       echo "Response sample:"
       sed -n '1,3p' /tmp/hello-gateway-phase1-response.txt
-      echo "PASS ✅ phase 1: gateway is publicly reachable by its assigned address."
+      echo "PASS ✅ phase 1: gateway is publicly reachable by its assigned address over HTTPS."
       phase_1_passed=true
       break
     fi
@@ -174,7 +170,7 @@ done
 if [[ "${phase_1_passed}" != "true" ]]; then
   kubectl describe gateway "${GATEWAY_NAME}" -n "${NAMESPACE}" | sed -n '1,200p' || true
   kubectl describe httproute "${ROUTE_NAME}" -n "${NAMESPACE}" | sed -n '1,200p' || true
-  echo "FAIL ❌: gateway address exists but the routed HTTP endpoint was not reachable."
+  echo "FAIL ❌: gateway address exists but the routed HTTPS endpoint was not reachable."
   exit 1
 fi
 
@@ -186,13 +182,13 @@ for _ in {1..60}; do
   # then connect to that resolved IP while keeping the public hostname in the URL.
   resolved_ip="$(dig +short "${route_host}" A @1.1.1.1 | head -n1 || true)"
   if [[ -n "${resolved_ip}" ]]; then
-    if curl -fsS --max-time 5 --resolve "${route_host}:80:${resolved_ip}" "http://${route_host}/" >/tmp/hello-gateway-phase2-response.txt 2>/dev/null; then
+    if curl -fsS --max-time 5 --resolve "${route_host}:443:${resolved_ip}" "https://${route_host}/" >/tmp/hello-gateway-phase2-response.txt 2>/dev/null; then
       echo "Resolved ${route_host} via 1.1.1.1 to ${resolved_ip}"
       echo "Response sample:"
       sed -n '1,3p' /tmp/hello-gateway-phase2-response.txt
       elapsed_seconds="$(( $(date +%s) - service_deployment_started_at ))"
-      printf '\nTime from service deployment to externally reachable by HTTP:\n\033[1m%s\033[0m\n\n' "$(format_elapsed "${elapsed_seconds}")"
-      echo "PASS ✅ phase 2: external DNS hostname (${route_host}) was reachable by HTTP."
+      printf '\nTime from service deployment to externally reachable by HTTPS:\n\033[1m%s\033[0m\n\n' "$(format_elapsed "${elapsed_seconds}")"
+      echo "PASS ✅ phase 2: external DNS hostname (${route_host}) was reachable by HTTPS."
       phase_2_passed=true
       break
     fi
@@ -208,5 +204,5 @@ kubectl describe gateway "${GATEWAY_NAME}" -n "${NAMESPACE}" | sed -n '1,200p' |
 kubectl describe httproute "${ROUTE_NAME}" -n "${NAMESPACE}" | sed -n '1,200p' || true
 echo "Gateway address at failure time: ${gateway_address}"
 echo "HTTPRoute hostname at failure time: ${route_host}"
-echo "FAIL ❌: gateway worked, but the public hostname was not reachable."
+echo "FAIL ❌: gateway worked, but the public hostname was not reachable over HTTPS."
 exit 1

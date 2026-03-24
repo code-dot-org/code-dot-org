@@ -106,10 +106,10 @@ cleanup true
 service_deployment_started_at="$(date +%s)"
 echo "Ingress namespace: ${NAMESPACE}"
 echo "Ingress hostname: ${TEST_HOSTNAME}"
+kubectl create namespace "${NAMESPACE}" >/dev/null
 sed \
-  -e "s|__TEST_NAMESPACE__|${NAMESPACE}|g" \
   -e "s|__TEST_HOSTNAME__|${TEST_HOSTNAME}|g" \
-  test-ingress.yaml | kubectl apply -f - >/dev/null
+  test-ingress.yaml | kubectl apply -n "${NAMESPACE}" -f - >/dev/null
 kubectl wait --for=condition=available deployment/hello -n "${NAMESPACE}" --timeout=180s >/dev/null
 
 echo "Waiting for ALB hostname..."
@@ -130,18 +130,18 @@ fi
 
 echo "Ingress host: ${host}"
 
-echo "Phase 1: testing ingress public reachability..."
+echo "Phase 1: testing ingress public reachability over HTTPS..."
 rm -f /tmp/hello-ingress-response.txt
 phase_1_passed=false
 for _ in {1..60}; do
   ingress_ip="$(dig +short "${host}" A @1.1.1.1 | head -n1 || true)"
   ingress_ip="${ingress_ip:-${host}}"
   if [[ -n "${ingress_ip}" ]]; then
-    if curl -fsS --max-time 5 --resolve "${TEST_HOSTNAME}:80:${ingress_ip}" "http://${TEST_HOSTNAME}/" >/tmp/hello-ingress-response.txt 2>/dev/null; then
+    if curl -fsS --max-time 5 --resolve "${TEST_HOSTNAME}:443:${ingress_ip}" "https://${TEST_HOSTNAME}/" >/tmp/hello-ingress-response.txt 2>/dev/null; then
       echo "Resolved assigned address ${host} via 1.1.1.1 to ${ingress_ip}"
       echo "Response sample:"
       sed -n '1,3p' /tmp/hello-ingress-response.txt
-      echo "PASS ✅ phase 1: ingress is publicly reachable by its assigned address."
+      echo "PASS ✅ phase 1: ingress is publicly reachable by its assigned address over HTTPS."
       phase_1_passed=true
       break
     fi
@@ -151,7 +151,7 @@ done
 
 if [[ "${phase_1_passed}" != "true" ]]; then
   kubectl get ingress hello -n "${NAMESPACE}" -o wide
-  echo "FAIL ❌: ingress hostname exists but HTTP was not reachable."
+  echo "FAIL ❌: ingress hostname exists but HTTPS was not reachable."
   exit 1
 fi
 
@@ -159,13 +159,13 @@ echo "Phase 2: testing ExternalDNS hostname..."
 for _ in {1..60}; do
   resolved_ip="$(dig +short "${TEST_HOSTNAME}" A @1.1.1.1 | head -n1 || true)"
   if [[ -n "${resolved_ip}" ]]; then
-    if curl -fsS --max-time 5 --resolve "${TEST_HOSTNAME}:80:${resolved_ip}" "http://${TEST_HOSTNAME}/" >/tmp/hello-ingress-response.txt 2>/dev/null; then
+    if curl -fsS --max-time 5 --resolve "${TEST_HOSTNAME}:443:${resolved_ip}" "https://${TEST_HOSTNAME}/" >/tmp/hello-ingress-response.txt 2>/dev/null; then
       echo "Resolved ${TEST_HOSTNAME} via 1.1.1.1 to ${resolved_ip}"
       echo "Response sample:"
       sed -n '1,3p' /tmp/hello-ingress-response.txt
       elapsed_seconds="$(( $(date +%s) - service_deployment_started_at ))"
-      printf '\nTime from service deployment to externally reachable by HTTP:\n\033[1m%s\033[0m\n\n' "$(format_elapsed "${elapsed_seconds}")"
-      echo "PASS ✅ phase 2: external DNS hostname (${TEST_HOSTNAME}) was reachable by HTTP."
+      printf '\nTime from service deployment to externally reachable by HTTPS:\n\033[1m%s\033[0m\n\n' "$(format_elapsed "${elapsed_seconds}")"
+      echo "PASS ✅ phase 2: external DNS hostname (${TEST_HOSTNAME}) was reachable by HTTPS."
       exit 0
     fi
   fi
@@ -173,5 +173,5 @@ for _ in {1..60}; do
 done
 
 kubectl get ingress hello -n "${NAMESPACE}" -o wide
-echo "FAIL ❌: ingress worked, but the public hostname was not reachable."
+echo "FAIL ❌: ingress worked, but the public hostname was not reachable over HTTPS."
 exit 1
