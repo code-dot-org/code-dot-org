@@ -127,19 +127,18 @@ function SummaryProgressRow({
             )}
             {lesson.isFocusArea && <FocusAreaIndicator />}
           </div>
-          {viewAs === ViewType.Participant &&
-            lesson.student_lesson_plan_html_url && (
-              <Button
-                __useDeprecatedTag
-                className="ui-test-lesson-resources"
-                href={lesson.student_lesson_plan_html_url}
-                text={i18n.lessonResources()}
-                icon="file-text"
-                color="white"
-                target="_blank"
-                style={styles.buttonStyle}
-              />
-            )}
+          {lesson.student_lesson_plan_html_url && (
+            <Button
+              __useDeprecatedTag
+              className="ui-test-lesson-resources"
+              href={lesson.student_lesson_plan_html_url}
+              text={i18n.lessonResources()}
+              icon="file-text"
+              color="white"
+              target="_blank"
+              style={styles.buttonStyle}
+            />
+          )}
         </div>
       </td>
     </tr>
