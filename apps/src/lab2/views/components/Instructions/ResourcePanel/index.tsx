@@ -1,9 +1,7 @@
+import {Button} from '@code-dot-org/component-library/button';
 import {useTheme} from '@code-dot-org/component-library/common/contexts';
-import FontAwesomeV6Icon, {
-  kitIcons,
-} from '@code-dot-org/component-library/fontAwesomeV6Icon';
+import {kitIcons} from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {WithTooltip} from '@code-dot-org/component-library/tooltip';
-import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 
@@ -537,29 +535,25 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   hideDelayMs={hideTooltipDelayMs}
                   hideOnFirstLeave={true}
                 >
-                  <MuiIconButton
-                    variant="text"
-                    color="tertiary"
-                    size="medium"
+                  <Button
                     className={styles.resourcePanelButton}
                     onClick={() =>
                       dispatch(setIsStandaloneCollapsed(!isStandaloneCollapsed))
                     }
+                    isIconOnly={true}
+                    icon={{
+                      iconName: isStandaloneCollapsed
+                        ? 'arrow-right-from-line'
+                        : 'arrow-left-from-line',
+                    }}
+                    color={'gray'}
+                    type={'tertiary'}
                     aria-label={
                       isStandaloneCollapsed
                         ? lab2I18n.expand()
                         : lab2I18n.collapse()
                     }
-                    type="button"
-                  >
-                    <FontAwesomeV6Icon
-                      iconName={
-                        isStandaloneCollapsed
-                          ? 'arrow-right-from-line'
-                          : 'arrow-left-from-line'
-                      }
-                    />
-                  </MuiIconButton>
+                  />
                 </WithTooltip>
               )}
             </div>
@@ -578,28 +572,26 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                   key={`tooltip-${tab}`}
                 >
                   <div id={`resource-panel-tab-${tab}`}>
-                    <MuiIconButton
-                      variant="text"
-                      color="tertiary"
-                      size="medium"
+                    <Button
                       className={classNames(
                         styles.tabButton,
                         tab === currentTab && styles.selected,
                         tab === Tabs.TeachersOnly && styles.teachersOnlyTab
                       )}
-                      id={`resource-panel-tab-button-${tab}`}
                       onClick={() => onClickTab(tab)}
-                      aria-label={tabInfo[tab].title}
-                      type="button"
                       key={tab}
-                    >
-                      <FontAwesomeV6Icon
-                        iconName={tabInfo[tab].icon}
-                        iconFamily={
-                          kitIcons.has(tabInfo[tab].icon) ? 'kit' : undefined
-                        }
-                      />
-                    </MuiIconButton>
+                      color={'gray'}
+                      type={'tertiary'}
+                      isIconOnly={true}
+                      icon={{
+                        iconName: tabInfo[tab].icon,
+                        iconFamily: kitIcons.has(tabInfo[tab].icon)
+                          ? 'kit'
+                          : undefined,
+                      }}
+                      aria-label={tabInfo[tab].title}
+                      id={`resource-panel-tab-button-${tab}`}
+                    />
                   </div>
                 </WithTooltip>
               ))}
@@ -615,13 +607,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="documentation"
                 label={commonI18n.documentation()}
                 icon={{iconName: 'book', iconStyle: 'solid'}}
-                variant="text"
-                color="tertiary"
+                type="tertiary"
+                color="gray"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 href={documentationUrl}
                 theme={theme}
-                size="small"
+                buttonSize="s"
               />
             )}
             {aiTutorVisible && <DisclaimerButton theme={theme} />}
@@ -631,13 +623,13 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
                 id="settings"
                 label={commonI18n.settings()}
                 icon={{iconName: 'gear'}}
-                variant="text"
-                color="tertiary"
+                type="tertiary"
+                color="gray"
                 tooltipSize="xs"
                 tooltipDirection="onRight"
                 onClick={onClickSettingsButton}
                 theme={theme}
-                size="small"
+                buttonSize="s"
               />
             </div>
           </div>

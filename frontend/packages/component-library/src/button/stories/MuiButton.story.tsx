@@ -169,7 +169,13 @@ PendingButton.args = {
   size: 'medium',
   variant: 'contained',
   color: 'primary',
-  loading: true,
+  startIcon: (
+    <FontAwesomeV6Icon
+      iconName="spinner"
+      iconStyle="solid"
+      animationType="spin"
+    />
+  ),
 };
 
 export const ButtonWithIcons = SingleTemplate.bind({});

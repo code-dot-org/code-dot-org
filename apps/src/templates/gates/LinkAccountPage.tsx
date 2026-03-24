@@ -61,7 +61,7 @@ const LinkAccountPage: React.FunctionComponent = () => {
             title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].newAccountDesc}
             buttonText={i18n.createAccount()}
-            variant="outlined"
+            buttonType="secondary"
             href={`/users/sign_up/account_type${returnToUrlParam}`}
           />
           <AccountCard
@@ -70,7 +70,7 @@ const LinkAccountPage: React.FunctionComponent = () => {
             title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
             content={SOURCE_PAGE_TEXT[sourcePageTextKey].existingAccountDesc}
             buttonText={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
-            variant="contained"
+            buttonType="primary"
             href={`/users/sign_in${returnToUrlParam}`}
           />
         </div>

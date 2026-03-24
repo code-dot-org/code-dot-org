@@ -1,5 +1,4 @@
-import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
 import {sample} from 'lodash';
 import React, {useCallback, useEffect, useState} from 'react';
 
@@ -325,28 +324,27 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
       )}
 
       {['none', 'generating', 'generated'].includes(aiGenerateState) && (
-        <MuiButton
-          variant="contained"
-          color="secondary"
-          size="small"
-          loading={aiGenerateState !== 'none'}
-          loadingPosition="start"
-          disabled={aiGenerateState !== 'none'}
+        <Button
           id="generate-code-button"
+          ariaLabel={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          text={
+            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
+          }
+          type="primary"
+          color="black"
+          size="s"
+          iconLeft={{iconName: 'sparkles'}}
+          isPending={aiGenerateState !== 'none'}
+          disabled={aiGenerateState !== 'none'}
           onClick={() => {
             generateSong();
             analyticsReporter.sendEvent('hoai2025-music-prompt', {
               promptText,
             });
           }}
-          aria-label={
-            aiGenerateState === 'none' ? 'Generate code' : 'Generating code'
-          }
-          type="button"
-          startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-        >
-          {aiGenerateState === 'none' ? 'Generate code' : 'Generating code'}
-        </MuiButton>
+        />
       )}
 
       {['listening', 'listened'].includes(aiGenerateState) && (
@@ -366,12 +364,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
 
       {aiGenerateState === 'listened' && (
         <div className={styles.buttonRow}>
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            className={styles.buttonWide}
+          <Button
             id="back-to-prompt-button"
+            ariaLabel={'Back to prompt'}
+            text={'Back to prompt'}
+            type="secondary"
+            color="black"
+            size="s"
             onClick={() => {
               setPlaying(false);
               clearCode(true);
@@ -381,19 +380,17 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 {levelPath: window.location.pathname, packId}
               );
             }}
-            aria-label="Back to prompt"
-            type="button"
-          >
-            {'Back to prompt'}
-          </MuiButton>
-
-          <MuiButton
-            variant="outlined"
-            color="secondary"
-            size="small"
-            loadingPosition="start"
             className={styles.buttonWide}
+          />
+
+          <Button
             id="regenerate-button"
+            ariaLabel={'Regenerate'}
+            text={'Regenerate'}
+            type="secondary"
+            color="black"
+            size="s"
+            iconLeft={{iconName: 'sparkles'}}
             onClick={() => {
               setPlaying(false);
               clearCode(true);
@@ -402,19 +399,16 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 promptText,
               });
             }}
-            aria-label="Regenerate"
-            type="button"
-            startIcon={<FontAwesomeV6Icon iconName="sparkles" />}
-          >
-            {'Regenerate'}
-          </MuiButton>
-
-          <MuiButton
-            variant="contained"
-            color="secondary"
-            size="small"
             className={styles.buttonWide}
+          />
+
+          <Button
             id="use-code-button"
+            ariaLabel={'Use code'}
+            text={'Use code'}
+            type="primary"
+            color="black"
+            size="s"
             onClick={() => {
               // Skip the 'editing' state when showing the three tabs.
               dispatch(setAiGenerateState(hasParent ? 'edited' : 'editing'));
@@ -423,11 +417,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                 {levelPath: window.location.pathname, packId, adlibChoices}
               );
             }}
-            aria-label="Use code"
-            type="button"
-          >
-            {'Use code'}
-          </MuiButton>
+            className={styles.buttonWide}
+          />
         </div>
       )}
 
@@ -463,12 +454,13 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
           />
 
           <div className={styles.buttonRow}>
-            <MuiButton
-              variant="outlined"
-              color="secondary"
-              size="small"
-              className={styles.buttonWide}
+            <Button
               id="back-to-prompt-button"
+              ariaLabel={'Back to prompt'}
+              text={'Back to prompt'}
+              type="secondary"
+              color="black"
+              size="s"
               onClick={() => {
                 setPlaying(false);
                 clearCode(true);
@@ -478,11 +470,8 @@ const GenerateCode: React.FunctionComponent<GenerateCodeProps> = ({
                   {levelPath: window.location.pathname, packId}
                 );
               }}
-              aria-label="Back to prompt"
-              type="button"
-            >
-              {'Back to prompt'}
-            </MuiButton>
+              className={styles.buttonWide}
+            />
             {!hasParent && (
               <NavigationArea
                 levelProperties={levelProperties}

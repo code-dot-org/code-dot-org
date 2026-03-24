@@ -101,7 +101,7 @@ const AccountType: React.FunctionComponent<{
             title={locale.im_a_student()}
             content={locale.explore_courses_and_activities()}
             buttonText={locale.sign_up_as_a_student()}
-            variant="contained"
+            buttonType="primary"
             onClick={() => selectAccountType('student')}
             iconList={[
               locale.save_projects_and_progress(),
@@ -114,7 +114,7 @@ const AccountType: React.FunctionComponent<{
             title={locale.im_a_teacher()}
             content={locale.all_student_account_features()}
             buttonText={locale.sign_up_as_a_teacher()}
-            variant="contained"
+            buttonType="primary"
             onClick={() => selectAccountType('teacher')}
             iconList={[
               locale.create_classroom_sections(),

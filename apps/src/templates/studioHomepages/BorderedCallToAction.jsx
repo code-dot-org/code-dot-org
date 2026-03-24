@@ -1,4 +1,5 @@
-import {Typography, Button as MuiButton} from '@mui/material';
+import {Button} from '@code-dot-org/component-library/button';
+import {Typography} from '@mui/material';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -8,9 +9,11 @@ const BorderedCallToAction = ({
   headingText,
   descriptionText,
   className,
+  buttonType,
   buttonText,
   buttonUrl,
   buttonClass,
+  buttonColor,
   buttonDisabled = false,
   onClick,
   solidBorder,
@@ -31,17 +34,17 @@ const BorderedCallToAction = ({
           {descriptionText}
         </Typography>
       </div>
-      <MuiButton
-        variant="contained"
-        color="primary"
-        size="small"
-        disabled={buttonDisabled}
-        className={buttonClass}
+      <Button
         onClick={onClick}
+        className={buttonClass}
+        color={buttonColor}
+        size={'s'}
+        type={buttonType}
+        text={buttonText}
         href={buttonUrl}
-      >
-        {buttonText}
-      </MuiButton>
+        useAsLink={!!buttonUrl}
+        disabled={buttonDisabled}
+      />
     </div>
   );
 };
@@ -50,9 +53,11 @@ BorderedCallToAction.propTypes = {
   headingText: PropTypes.string.isRequired,
   descriptionText: PropTypes.string.isRequired,
   className: PropTypes.string,
+  buttonType: PropTypes.string,
   buttonText: PropTypes.string.isRequired,
   buttonUrl: PropTypes.string,
   buttonClass: PropTypes.string,
+  buttonColor: PropTypes.string,
   onClick: PropTypes.func,
   solidBorder: PropTypes.bool,
   buttonDisabled: PropTypes.bool,

@@ -1,3 +1,4 @@
+import {ButtonProps as DSCO_ButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {
@@ -91,20 +92,20 @@ const UploadButton: React.FC<UploadButtonProps> = ({
   };
 
   // TODO: Set of legacy DSCO props, remove once Dropdowns are moved to MUI.
-  const DSCO_buttonPropsCommon = {
-    type: 'secondary' as const,
-    color: 'gray' as const,
+  const DSCO_buttonPropsCommon: DSCO_ButtonProps = {
+    type: 'secondary',
+    color: 'gray',
   };
 
-  const DSCO_buttonPropsWithLabel = {
+  const DSCO_buttonPropsWithLabel: DSCO_ButtonProps = {
     ...DSCO_buttonPropsCommon,
     text: aichatI18n.aichatAddFile(),
     iconLeft: {iconName: 'plus'},
   };
 
-  const DSCO_buttonPropsIconOnly = {
+  const DSCO_buttonPropsIconOnly: DSCO_ButtonProps = {
     ...DSCO_buttonPropsCommon,
-    icon: {iconName: 'plus', iconStyle: 'solid' as const},
+    icon: {iconName: 'plus', iconStyle: 'solid'},
   };
 
   const DSCO_commonProps = {

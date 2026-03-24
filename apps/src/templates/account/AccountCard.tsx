@@ -1,5 +1,10 @@
+import {
+  ButtonType,
+  Button,
+  LinkButton,
+  buttonColors,
+} from '@code-dot-org/component-library/button';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {Button as MuiButton, ButtonProps} from '@mui/material';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -18,7 +23,7 @@ const AccountCard: React.FunctionComponent<{
   title: string;
   content: string;
   buttonText: string;
-  variant?: ButtonProps['variant'];
+  buttonType: ButtonType;
   href?: string;
   onClick?: () => void;
   iconList?: string[];
@@ -28,7 +33,7 @@ const AccountCard: React.FunctionComponent<{
   title,
   content,
   buttonText,
-  variant = 'contained',
+  buttonType,
   href,
   onClick,
   iconList,
@@ -67,26 +72,31 @@ const AccountCard: React.FunctionComponent<{
     <div className={styles.buttonWrapper}>
       <CardActions>
         {href ? (
-          <MuiButton
-            variant={variant}
-            color={variant === 'contained' ? 'primary' : 'secondary'}
-            size="medium"
+          <LinkButton
             className={styles.button}
+            color={
+              buttonType === 'primary'
+                ? buttonColors.purple
+                : buttonColors.black
+            }
+            size="m"
+            text={buttonText}
+            type={buttonType}
             href={href}
-          >
-            {buttonText}
-          </MuiButton>
+          />
         ) : (
-          <MuiButton
-            variant={variant}
-            color={variant === 'contained' ? 'primary' : 'secondary'}
-            size="medium"
+          <Button
             className={styles.button}
+            color={
+              buttonType === 'primary'
+                ? buttonColors.purple
+                : buttonColors.black
+            }
+            size="m"
+            text={buttonText}
+            type={buttonType}
             onClick={onClick}
-            type="button"
-          >
-            {buttonText}
-          </MuiButton>
+          />
         )}
       </CardActions>
     </div>
