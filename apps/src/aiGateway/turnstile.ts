@@ -12,11 +12,13 @@ declare global {
         options: {sitekey: string; callback: (token: string) => void}
       ) => string;
       reset: (widgetId: string) => void;
+      remove: (widgetId: string) => void;
     };
   }
 }
 
 let scriptLoadPromise: Promise<void> | null = null;
+let activeWidgetId: string | null = null;
 
 function loadTurnstileScript(): Promise<void> {
   if (scriptLoadPromise) return scriptLoadPromise;
@@ -60,17 +62,24 @@ export async function getTurnstileToken(): Promise<string> {
   return new Promise((resolve, reject) => {
     const container = getOrCreateContainer();
 
+    if (activeWidgetId) {
+      window.turnstile.remove(activeWidgetId);
+      activeWidgetId = null;
+    }
+
     // widgetId is assigned synchronously by render() before the async callback fires
     const widgetId = window.turnstile.render(container, {
       sitekey: getSiteKey(),
       callback: (token: string) => {
-        window.turnstile.reset(widgetId);
+        activeWidgetId = null;
         resolve(token);
       },
     });
 
     if (!widgetId) {
       reject(new Error('Turnstile failed to render widget'));
+    } else {
+      activeWidgetId = widgetId;
     }
   });
 }
