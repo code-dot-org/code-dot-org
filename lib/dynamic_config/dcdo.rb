@@ -69,7 +69,7 @@ class DCDOBase < DynamicConfigBase
       'brand-router-enabled': DCDO.get('brand-router-enabled', false),
       'ai-gateway-enabled': DCDO.get('ai-gateway-enabled', true),
       'datadog-enabled': DCDO.get('datadog-enabled', false),
-      'ai-gateway-turnstile-site-key': CDO.turnstile_site_key
+      'ai-gateway-turnstile-site-key': CDO.ai_gateway_turnstile_site_key
     }
   end
 end
