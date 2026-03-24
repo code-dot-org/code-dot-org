@@ -10,6 +10,11 @@ import {UserAddedSelectionContextItem} from './userAddedSelectionContext';
 
 export type ChatEventDescriptionKey = 'CLEAR_CHAT' | 'LOAD_LEVEL';
 
+export interface ToolCall {
+  name: string;
+  input: Record<string, unknown>;
+}
+
 /** Base type for all chat events that are displayed in the chat workspace or student chat history view */
 interface BaseChatEvent {
   /** UTC timestamp in milliseconds */
@@ -38,6 +43,8 @@ interface BaseChatMessage extends BaseChatEvent {
   userAddedSelectionContext?: UserAddedSelectionContextItem[];
   /** Necessary to update a pending message to completed or to update chatMessageText */
   updateId?: string;
+  /** Tool calls made by the model during this response (e.g. from agent-based completions). */
+  toolCalls?: ToolCall[];
 }
 
 /** Chat message that is being sent to the server for chat completion. Status and request ID are yet undetermined. */

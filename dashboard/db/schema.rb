@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_23_000000) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -101,7 +101,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "request_id"
+    t.integer "lesson_id"
     t.index ["request_id"], name: "index_aichat_events_on_request_id"
+    t.index ["user_id", "lesson_id"], name: "index_aichat_events_on_user_id_and_lesson_id"
     t.index ["user_id", "level_id", "script_id", "id"], name: "index_ace_user_level_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
     t.index ["user_id", "project_id", "id"], name: "index_ace_user_project_id"
@@ -1802,6 +1804,18 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["user_id", "plc_course_id"], name: "index_plc_user_course_enrollments_on_user_id_and_plc_course_id", unique: true
   end
 
+  create_table "portfolio_entries", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.bigint "student_id"
+    t.string "title"
+    t.string "before_asset_url"
+    t.string "before_level_url"
+    t.string "after_asset_url"
+    t.string "after_level_url"
+    t.text "reflection"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "potential_teachers", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -2491,7 +2505,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil

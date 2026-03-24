@@ -14,6 +14,7 @@ export interface ModelParameters {
   systemPrompt: string;
   retrievalContexts: string[];
   responseJsonSchema?: object;
+  lessonId?: number;
 }
 
 /**
@@ -59,6 +60,7 @@ export type AichatContext = {
   currentLevelId: number | null;
   scriptId: number | null;
   channelId: string | undefined;
+  lessonId?: number;
 };
 
 export enum ViewMode {

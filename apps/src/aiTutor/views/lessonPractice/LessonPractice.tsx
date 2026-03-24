@@ -61,6 +61,7 @@ export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
       {selectedOption === 'agentic-chat' && (
         <LessonPracticeChatWorkspace
           lessonId={lessonId}
+          lessonName={lessonName}
           vocabulary={vocabulary}
         />
       )}
