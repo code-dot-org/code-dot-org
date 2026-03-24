@@ -5,6 +5,7 @@ import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
+import experiments from '@cdo/apps/util/experiments';
 
 import {baseModelParameters} from '../../hooks/useAiTutorModelParameters';
 
@@ -25,7 +26,9 @@ export const LessonPractice: FC<{
     null
   );
 
-  console.log('selectedOption', selectedOption);
+  if (!experiments.isEnabled(experiments.AI_TUTOR_LESSON_PRACTICE)) {
+    return null;
+  }
 
   return (
     <>

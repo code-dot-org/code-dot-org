@@ -65,6 +65,8 @@ experiments.ACCEPT_REJECT_SPLIT_DIFF = 'accept-reject-split-diff';
 experiments.WEBLAB2_DEBUG_PANEL = 'weblab2-show-debug';
 // Enable the new teacher dashboard student snapshot page and features
 experiments.STUDENT_SNAPSHOT = 'student-snapshot';
+// Show the lesson/<lesson_id>/practice page as a home for a AI Tutor+
+experiments.AI_TUTOR_LESSON_PRACTICE = 'ai-tutor-lesson-practice';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
