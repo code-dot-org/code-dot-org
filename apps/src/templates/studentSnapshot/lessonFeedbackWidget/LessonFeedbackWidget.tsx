@@ -90,7 +90,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         );
 
         if (!workResponse.ok) {
-          console.log('No student work found');
           return null;
         }
 
@@ -101,7 +100,6 @@ const LessonFeedbackWidget: React.FC<LessonFeedbackWidgetProps> = ({
         }
       } catch (error) {
         console.error('Error checking for student work:', error);
-        console.log('No student work found');
         return null;
       }
 

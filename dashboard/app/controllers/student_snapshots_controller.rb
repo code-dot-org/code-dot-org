@@ -68,7 +68,6 @@ class StudentSnapshotsController < ApplicationController
       return render json: {error: "Unit not found"}, status: :not_found unless unit
 
       unless student.student_of?(current_user)
-        Rails.logger.warn "Unauthorized access attempt: user #{current_user.id} tried to access student #{student_id} data"
         return render json: {error: "Unauthorized access to student data"}, status: :forbidden
       end
 
@@ -80,8 +79,7 @@ class StudentSnapshotsController < ApplicationController
       end
 
       render json: {has_work: has_work}
-    rescue => exception
-      Rails.logger.error "Error in student_has_work_in_lesson: #{exception.message}"
+    rescue
       render json: {error: "Internal server error"}, status: :internal_server_error
     end
   end
