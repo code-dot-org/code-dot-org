@@ -4,7 +4,7 @@ import {
   Editor,
   getSnapshot,
   Tldraw,
-  TLStoreSnapshot,
+  TLEditorSnapshot,
   TLUiOverrides,
 } from 'tldraw';
 import 'tldraw/tldraw.css';
@@ -34,17 +34,17 @@ import {
 import moduleStyles from './styles/sketchlab-view.module.scss';
 const UPDATE_SOURCES_DEBOUNCE_MS = 200;
 
-// TLStoreSnapshot requires { store: object, schema: object }.
+// TLEditorSnapshot requires { document: { store: object, schema: object }, session: object }.
 function isValidSnapshot(
   source: SketchlabTldrawSources['source'] | undefined
-): source is TLStoreSnapshot {
+): source is TLEditorSnapshot {
+  if (typeof source !== 'object' || source === null) return false;
+  const doc = (source as TLEditorSnapshot).document;
   return (
-    typeof source === 'object' &&
-    source !== null &&
-    'store' in source &&
-    typeof source.store === 'object' &&
-    'schema' in source &&
-    typeof source.schema === 'object'
+    typeof doc === 'object' &&
+    doc !== null &&
+    typeof doc.store === 'object' &&
+    typeof doc.schema === 'object'
   );
 }
 
@@ -72,7 +72,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
 
   const channelId =
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
-  const initialSnapshotRef = useRef<TLStoreSnapshot | undefined>(
+  const initialSnapshotRef = useRef<TLEditorSnapshot | undefined>(
     isValidSnapshot(currentSources?.source) ? currentSources.source : undefined
   );
 
@@ -81,7 +81,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
       createTldrawAssetStore(
         channelId,
         levelProperties.name,
-        initialSnapshotRef.current
+        initialSnapshotRef.current?.document
       ),
     [channelId, levelProperties.name]
   );
@@ -109,7 +109,7 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     if (!tldrawEditor) return;
 
     const saveSnapshot = () => {
-      updateSources({source: getSnapshot(tldrawEditor.store).document});
+      updateSources({source: getSnapshot(tldrawEditor.store)});
     };
 
     // Tldraw fires updates on every change, which can be very frequent (dragging, drawing, etc.),
@@ -125,12 +125,8 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
 
     // listen method returns a method you can use to unsubscribe, so we return that from the effect.
     // https://tldraw.dev/reference/store/Store#listen
-    // We are only listening to 'document' changes because 'session' changes are things like cursor location,
-    // etc. We won't save those.
-    // https://tldraw.dev/sdk-features/store#Saving-state
     const unsubscribe = tldrawEditor.store.listen(handleChange, {
       source: 'all',
-      scope: 'document',
     });
 
     return () => {
