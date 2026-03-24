@@ -1,0 +1,209 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-24T05:35:21.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "images",
+          "parentId": "0",
+          "open": true
+        },
+        "2": {
+          "id": "2",
+          "name": "icons",
+          "parentId": "1"
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Pete's Pizza</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header class=\"site-header\">\n    <div class=\"logo-group\">\n      <img src=\"images/icons/home-icon.png\" alt=\"\" class=\"logo-icon\" />\n      <h1>Pete's Pizza</h1>\n    </div>\n\n    <nav class=\"main-nav\" aria-label=\"Main navigation\">\n     <ul>\n      <li><a href=\"index.html\"><img src=\"images/icons/home-icon.png\" class=\"nav-icon\" /> Home</a></li>\n      <li><a href=\"menu.html\"><img src=\"images/icons/menu-icon.png\" class=\"nav-icon\" /> Menu</a></li>\n      <li><a href=\"#\"><img src=\"images/icons/menu-icon.png\" class=\"nav-icon\" /> Specials</a></li>\n      <li><a href=\"#\"><img src=\"images/icons/menu-icon.png\" class=\"nav-icon\" /> Catering</a></li>\n      <li><a href=\"#\"><img src=\"images/icons/menu-icon.png\" class=\"nav-icon\" /> Locations</a></li>\n    </ul>\n    </nav>\n  </header>\n\n  <main>\n    <section class=\"hero\">\n      <div class=\"hero-text\">\n        <p class=\"eyebrow\">Fresh. Hot. Local.</p>\n        <h2>Pizza Night Done Right</h2>\n        <p>\n          From classic pepperoni to veggie-loaded favorites, Pete’s Pizza serves\n          hand-tossed pies made with fresh ingredients and big flavor.\n        </p>\n        <a href=\"menu.html\" class=\"button\">View the Menu</a>\n      </div>\n\n      <div class=\"hero-image\">\n        <img src=\"images/pizza-hero.jpg\" alt=\"Fresh pizza on a wooden table\" />\n      </div>\n    </section>\n\n    <section class=\"featured-menu\">\n      <div class=\"section-heading\">\n        <h2>Popular Pizzas</h2>\n        <p>Customer favorites that keep people coming back.</p>\n      </div>\n\n      <div class=\"card-grid\">\n        <article class=\"pizza-card\">\n          <img src=\"images/pepperoni-card.jpg\" alt=\"Pepperoni pizza\" />\n          <div class=\"card-content\">\n            <h3>Pepperoni Classic</h3>\n            <p>\n              Crispy pepperoni, melted mozzarella, and our signature tomato sauce.\n            </p>\n            <p class=\"price\">$14.99</p>\n          </div>\n        </article>\n\n        <article class=\"pizza-card\">\n          <img src=\"images/veggie-card.jpg\" alt=\"Veggie pizza\" />\n          <div class=\"card-content\">\n            <h3>Garden Veggie</h3>\n            <p>\n              Bell peppers, mushrooms, onions, olives, and a blend of cheeses.\n            </p>\n            <p class=\"price\">$15.99</p>\n          </div>\n        </article>\n\n        <article class=\"pizza-card\">\n          <img src=\"images/combination-card.jpg\" alt=\"Combination pizza\" />\n          <div class=\"card-content\">\n            <h3>House Combination</h3>\n            <p>\n              Pepperoni, sausage, mushrooms, onions, and green peppers on a golden crust.\n            </p>\n            <p class=\"price\">$17.99</p>\n          </div>\n        </article>\n      </div>\n    </section>\n\n    <section class=\"about-preview\">\n      <div class=\"about-text\">\n        <h2>Made for Sharing</h2>\n        <p>\n          Pete’s Pizza has been serving neighborhood families since 1998. We keep\n          it simple: fresh dough, quality toppings, and a warm, welcoming table.\n        </p>\n          <a href=\"menu.html\" class=\"button secondary\">See Full Menu</a>\n      </div>\n\n      <div class=\"about-image\">\n        <img src=\"images/square-pizza-card.jpg\" alt=\"Square pizza ready to serve\" />\n      </div>\n    </section>\n  </main>\n\n  <footer class=\"site-footer\">\n    <div class=\"footer-item\">\n      <img src=\"images/icons/location-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>123 Main Street, Hometown, USA</p>\n    </div>\n\n    <div class=\"footer-item\">\n      <img src=\"images/icons/phone-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>(555) 123-4567</p>\n    </div>\n\n    <div class=\"footer-item\">\n      <img src=\"images/icons/clock-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>Open Daily: 11:00 AM - 10:00 PM</p>\n    </div>\n  </footer>\n</body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "15": {
+          "id": "15",
+          "name": "menu.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\" />\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n  <title>Pete's Pizza - Menu</title>\n  <link rel=\"stylesheet\" href=\"style.css\" />\n</head>\n<body>\n  <header class=\"site-header\">\n    <div class=\"logo-group\">\n      <img src=\"images/icons/home-icon.png\" alt=\"\" class=\"logo-icon\" />\n      <h1>Pete's Pizza</h1>\n    </div>\n\n    <nav class=\"main-nav\" aria-label=\"Main navigation\">\n      <ul>\n        <li><a href=\"index.html\"><img src=\"images/icons/home-icon.png\" alt=\"\" class=\"nav-icon\" /> Home</a></li>\n        <li><a href=\"menu.html\"><img src=\"images/icons/menu-icon.png\" alt=\"\" class=\"nav-icon\" /> Menu</a></li>\n      </ul>\n    </nav>\n  </header>\n\n  <main>\n    <section class=\"menu-hero\">\n      <h2>Our Full Menu</h2>\n      <p>Choose from our classic favorites and specialty pizzas.</p>\n    </section>\n\n    <!-- Classics -->\n    <section class=\"menu-section\">\n      <h3>Classics</h3>\n      <div class=\"card-grid\">\n        <article class=\"pizza-card\">\n          <img src=\"images/pepperoni-card.jpg\" alt=\"Pepperoni pizza\" />\n          <div class=\"card-content\">\n            <h4>Pepperoni Classic</h4>\n            <p>Crispy pepperoni with mozzarella and tomato sauce.</p>\n            <p class=\"price\">$14.99</p>\n          </div>\n        </article>\n\n        <article class=\"pizza-card\">\n          <img src=\"images/combination-card.jpg\" alt=\"Combination pizza\" />\n          <div class=\"card-content\">\n            <h4>House Combination</h4>\n            <p>Pepperoni, sausage, mushrooms, onions, and green peppers.</p>\n            <p class=\"price\">$17.99</p>\n          </div>\n        </article>\n\n        <article class=\"pizza-card\">\n          <img src=\"images/square-pizza-card.jpg\" alt=\"Square pizza\" />\n          <div class=\"card-content\">\n            <h4>Deep Dish Special</h4>\n            <p>Thick crust loaded with cheese and savory toppings.</p>\n            <p class=\"price\">$18.99</p>\n          </div>\n        </article>\n      </div>\n    </section>\n\n    <!-- Veggie Options -->\n    <section class=\"menu-section\">\n      <h3>Veggie Favorites</h3>\n      <div class=\"card-grid\">\n        <article class=\"pizza-card\">\n          <img src=\"images/veggie-card.jpg\" alt=\"Veggie pizza\" />\n          <div class=\"card-content\">\n            <h4>Garden Veggie</h4>\n            <p>Bell peppers, mushrooms, onions, olives, and cheese.</p>\n            <p class=\"price\">$15.99</p>\n          </div>\n        </article>\n\n        <article class=\"pizza-card\">\n          <img src=\"images/veggie-card-2.jpg\" alt=\"Veggie pizza variety\" />\n          <div class=\"card-content\">\n            <h4>Roasted Veggie</h4>\n            <p>Roasted zucchini, eggplant, and tomatoes on a crisp crust.</p>\n            <p class=\"price\">$16.99</p>\n          </div>\n        </article>\n      </div>\n    </section>\n\n    <!-- Special -->\n    <section class=\"menu-section special\">\n      <h3>Today's Special</h3>\n      <p class=\"special-text\">\n        Buy one large pizza and get a second half off. Limited time only!\n      </p>\n    </section>\n  </main>\n\n  <footer class=\"site-footer\">\n    <div class=\"footer-item\">\n      <img src=\"images/icons/location-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>123 Main Street, Hometown, USA</p>\n    </div>\n\n    <div class=\"footer-item\">\n      <img src=\"images/icons/phone-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>(555) 123-4567</p>\n    </div>\n\n    <div class=\"footer-item\">\n      <img src=\"images/icons/clock-icon.png\" alt=\"\" class=\"footer-icon\" />\n      <p>Open Daily: 11:00 AM - 10:00 PM</p>\n    </div>\n  </footer>\n</body>\n</html>",
+          "folderId": "0",
+          "active": false
+        },
+        "16": {
+          "id": "16",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nhtml {\n  font-size: 16px;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, sans-serif;\n  line-height: 1.5;\n  color: #222;\n  background-color: #fff8f3;\n}\n\nimg {\n  display: block;\n  max-width: 100%;\n  height: auto;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n.site-header,\nmain,\n.site-footer {\n  width: min(1100px, calc(100% - 32px));\n  margin: 0 auto;\n}\n\n.site-header {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 24px;\n  padding: 20px 0;\n}\n\n.logo-group {\n  display: flex;\n  align-items: center;\n  gap: 12px;\n}\n\n.logo-icon,\n.nav-icon,\n.footer-icon {\n  width: 24px;\n  height: 24px;\n  flex-shrink: 0;\n}\n\n.logo-group h1 {\n  margin: 0;\n  font-size: 1.75rem;\n  color: #9b1c1c;\n}\n\n.main-nav ul {\n  display: flex;\n  align-items: center;\n  gap: 16px;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  flex-wrap: wrap;\n}\n\n.main-nav a {\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 10px 14px;\n  border-radius: 999px;\n  background-color: #ffffff;\n  font-weight: 600;\n}\n\n.hero,\n.about-preview {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 32px;\n  align-items: center;\n  padding: 32px 0;\n}\n\n.hero-text h2,\n.about-text h2,\n.section-heading h2,\n.menu-hero h2,\n.menu-section h3 {\n  margin-top: 0;\n  line-height: 1.2;\n}\n\n.eyebrow {\n  margin-bottom: 8px;\n  font-weight: 700;\n  color: #9b1c1c;\n  text-transform: uppercase;\n  letter-spacing: 0.08em;\n  font-size: 0.875rem;\n}\n\n.hero-text h2 {\n  margin-bottom: 12px;\n  font-size: 2.5rem;\n}\n\n.hero-text p,\n.about-text p,\n.section-heading p,\n.menu-hero p,\n.menu-section p {\n  margin-top: 0;\n}\n\n.hero-image img,\n.about-image img,\n.pizza-card img {\n  width: 100%;\n  border-radius: 16px;\n}\n\n.button {\n  display: inline-block;\n  padding: 12px 18px;\n  border-radius: 999px;\n  background-color: #9b1c1c;\n  color: #fff;\n  font-weight: 700;\n  margin-top: 8px;\n}\n\n.button.secondary {\n  background-color: #2e5a2e;\n}\n\n.featured-menu,\n.menu-section {\n  padding: 24px 0;\n}\n\n.section-heading,\n.menu-hero {\n  margin-bottom: 20px;\n}\n\n.card-grid {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 24px;\n}\n\n.pizza-card {\n  background-color: #ffffff;\n  border-radius: 16px;\n  overflow: hidden;\n  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);\n}\n\n.card-content {\n  padding: 16px;\n}\n\n.card-content h3,\n.card-content h4 {\n  margin-top: 0;\n  margin-bottom: 8px;\n  line-height: 1.25;\n}\n\n.price {\n  margin-bottom: 0;\n  font-weight: 700;\n  color: #9b1c1c;\n}\n\n.menu-hero {\n  padding: 28px 0 8px;\n}\n\n.special {\n  background-color: #ffe7d6;\n  padding: 24px;\n  border-radius: 16px;\n  margin: 24px 0 40px;\n}\n\n.special-text {\n  margin-bottom: 0;\n  font-weight: 600;\n}\n\n.site-footer {\n  display: grid;\n  grid-template-columns: repeat(3, minmax(0, 1fr));\n  gap: 20px;\n  padding: 32px 0 40px;\n  border-top: 1px solid #e6d7cd;\n}\n\n.footer-item {\n  display: flex;\n  align-items: center;\n  gap: 10px;\n}\n\n.footer-item p {\n  margin: 0;\n}\n\n@media (max-width: 900px) {\n  .hero,\n  .about-preview {\n    grid-template-columns: 1fr;\n  }\n\n  .card-grid {\n    grid-template-columns: repeat(2, minmax(0, 1fr));\n  }\n\n  .site-footer {\n    grid-template-columns: 1fr;\n  }\n}\n\n@media (max-width: 640px) {\n  .site-header,\n  main,\n  .site-footer {\n    min-width: 1100px;\n    margin: 0 auto;\n  }\n\n  .site-header {\n    flex-direction: column;\n    align-items: flex-start;\n  }\n\n  .main-nav ul {\n    gap: 10px;\n    flex-wrap: nowrap;\n  }\n\n  .main-nav a {\n    padding: 10px 12px;\n  }\n\n  .hero-image img {\n    width: 100%;\n    height: 160px;\n    object-fit: fill;\n  }\n\n  body {\n    font-size: 10px;\n  }\n\n  p {\n    line-height: 1.1;\n  }\n\n  .hero,\n  .about-preview {\n    gap: 20px;\n    padding: 24px 0;\n  }\n\n  .hero-text h2 {\n    font-size: 2rem;\n  }\n\n  .card-grid {\n    grid-template-columns: 1fr;\n    gap: 18px;\n  }\n\n  .special {\n    padding: 18px;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "17": {
+          "id": "17",
+          "name": "combination-card.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/66b338c7-e847-4870-9223-8c3422b62d83.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "18": {
+          "id": "18",
+          "name": "mushroom-ham-card.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/e7e667c0-6711-441b-a4d3-b85a9b7b0c7a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "19": {
+          "id": "19",
+          "name": "pizza-hero.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/e7cfb017-7968-4b82-b453-73430c3654da.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "20": {
+          "id": "20",
+          "name": "pepperoni-card.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/1ee1cd08-7e66-43c6-8e0d-1eca2fcec34a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "21": {
+          "id": "21",
+          "name": "veggie-card-2.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/e7812941-9727-4be1-b51d-50d96d94eacc.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "22": {
+          "id": "22",
+          "name": "square-pizza-card.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/28bad5c8-2b29-483e-8c63-2c0843c509c7.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "23": {
+          "id": "23",
+          "name": "veggie-card.jpg",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/424e2c28-9673-4dae-861f-47e647e319a4.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "24": {
+          "id": "24",
+          "name": "phone-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/01985eaa-2378-4e6c-bcce-c877095aa50e.png",
+          "type": "starter",
+          "active": false
+        },
+        "25": {
+          "id": "25",
+          "name": "clock-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/072150c7-91da-48c5-8bb9-288fbf4b9c93.png",
+          "type": "starter",
+          "active": false
+        },
+        "26": {
+          "id": "26",
+          "name": "location-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/c11f72f6-0966-4344-9a1c-07988854310d.png",
+          "type": "starter",
+          "active": false
+        },
+        "27": {
+          "id": "27",
+          "name": "home-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/affa0a0f-6281-4517-9938-6746ccbf35c5.png",
+          "type": "starter",
+          "active": false
+        },
+        "28": {
+          "id": "28",
+          "name": "menu-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/0ba8133c-7801-4711-9564-db7702f9cc99.png",
+          "type": "starter",
+          "active": false
+        },
+        "29": {
+          "id": "29",
+          "name": "contact-icon.png",
+          "contents": "",
+          "folderId": "2",
+          "url": "/level_starter_assets/ai-generated-design-lesson12-level1a_2026-v2/uuid/b16e4bee-d67f-4c45-a2c6-3b5695071c4b.png",
+          "type": "starter",
+          "active": false
+        },
+        "30": {
+          "id": "30",
+          "name": "prompt.md",
+          "contents": "**1. What is the goal?**\n\n\n**2. What are the constraints?**\n\n\n**3. What are the edge cases?**",
+          "folderId": "0",
+          "active": true
+        }
+      },
+      "openFiles": [
+        "30"
+      ]
+    },
+    "long_instructions": "## Webpage Responsiveness\r\n\r\nImprove how a webpage works across different screen sizes.\r\n\r\n### Step 1: Test\r\n- Resize the browser window and switch between **Desktop** and **Mobile** views.\r\n- Identify specific issues using the **Responsiveness Checklist**.\r\n\r\n### Step 2: Plan Your Prompt\r\n- Choose **one issue** to fix.\r\n- In `prompt.md` plan your goal, constraints, and any edge cases to avoid.\r\n- Add `prompt.md` as context in AI.\r\n\r\n### Step 3: Fix\r\n- Use your plan to write your AI prompt.\r\n- Ask AI to fix the issue.\r\n- Describe the changes made and save the new version.\r\n\r\n### Step 4: Improve\r\n- Test your changes across screen sizes.\r\n- If you have time, fix **one more issue**.\r\n\r\n:::details [Need help prompting AI?]\r\n- “On small screens, make the layout stack into a single column while keeping the text readable.”\r\n- “Make the navigation fit on mobile without running off the screen.”\r\n- “Ensure images scale to fit smaller screens without overflowing.”\r\n:::",
+    "teacher_markdown": "### Teaching Tips\r\n\r\nEncourage students to act like test engineers by using the Responsiveness Checklist in their Unit Guide.\r\n\r\n**The Resize Detective:**  \r\nHave students resize their browser and ask: “What changes? What breaks?” Students should name issues using the checklist before prompting AI.\r\n\r\n**The One-Issue Rule:**  \r\nIf students try to fix everything, redirect them to one specific issue (e.g., navigation, text, images).\r\n\r\n**The Small Fix Mindset:**  \r\nIf students are stuck, prompt them to focus on small, clear fixes (e.g., stacking layout, resizing images, wrapping text), not a full redesign.",
+    "display_name": "Pete's Pizza",
+    "bubble_choice_description": "Pete's Pizza has just launched a new website for easier ordering, but users are reporting that the page is breaking on mobile. ",
+    "thumbnail_url": "https://images.code.org/20bc27c5222d93d531339b71fbff7c97-pizza-hero.jpg"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-24T05:35:21.898+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson12-level1a_2026-v2\\\"\"],\"cloned_from\":\"ai-generated-design-lesson12-level1a_2026-v2\"},{\"changed_at\":\"2026-03-24 05:35:35 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Weblab2>
