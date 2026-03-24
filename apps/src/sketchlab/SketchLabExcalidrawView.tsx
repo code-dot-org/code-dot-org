@@ -36,7 +36,7 @@ import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
-import {DEFAULT_SOURCES} from './SketchlabView';
+import {DEFAULT_SOURCES} from './constants';
 import {SketchlabSources, SerializedExcalidrawState} from './types';
 import useSketchlabTour from './useSketchlabTour';
 import {
