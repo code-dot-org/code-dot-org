@@ -12,28 +12,36 @@ import {AudioRecorder} from '@cdo/apps/util/AudioRecorder';
 import styles from './styles.module.scss';
 
 const unknownErrorMessage = 'An unknown error occurred.';
+const timeoutMs = 60000;
 
 interface SpeechToTextButtonProps {
   onTranscribed: (text: string) => void;
   onRecordStart?: () => void;
+  disabled?: boolean;
 }
 
 const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
   onTranscribed,
   onRecordStart,
+  disabled,
 }) => {
   const [isRecording, setIsRecording] = useState(false);
   const [isTranscribing, setIsTranscribing] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string>();
+  const timeoutRef = useRef<NodeJS.Timeout>();
   const recorderRef = useRef<AudioRecorder>(new AudioRecorder());
 
   const onStartRecording = async () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     try {
       setErrorMessage(undefined);
       const startState = await recorderRef.current.start();
       if (startState === 'Started') {
         setIsRecording(true);
         onRecordStart?.();
+        timeoutRef.current = setTimeout(onEndRecording, timeoutMs);
       } else {
         setErrorMessage(
           startState === 'PermissionDenied'
@@ -48,6 +56,9 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
   };
 
   const onEndRecording = async () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     setIsRecording(false);
     setIsTranscribing(true);
     try {
@@ -109,13 +120,14 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
             direction: 'onLeft',
             className: classNames(canRecord && styles.hide),
           }}
+          tooltipOverlayClassName={styles.flexContainer}
         >
-          <div className={styles.microphoneButtonContainer}>
+          <div className={styles.flexContainer}>
             <MuiIconButton
               variant="outlined"
               size="extraSmall"
               onClick={isRecording ? onEndRecording : onStartRecording}
-              disabled={!canRecord || isTranscribing}
+              disabled={!canRecord || isTranscribing || disabled}
               color={isRecording ? 'white' : 'secondary'}
               className={classNames(isRecording && styles.recording)}
             >
