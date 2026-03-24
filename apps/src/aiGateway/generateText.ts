@@ -3,6 +3,7 @@ import {generateText, type GenerateTextResult} from 'ai';
 import HttpClient from '../util/HttpClient';
 
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {getTurnstileToken} from './turnstile';
 
 type SDKOptions = Parameters<typeof generateText>[0];
 type SDKTools = NonNullable<SDKOptions['tools']>;
@@ -85,13 +86,19 @@ const generateTextThroughGateway = async <
       output: serializedOutput,
     };
 
-    const token = await fetchAccessToken();
+    const [token, turnstileToken] = await Promise.all([
+      fetchAccessToken(),
+      getTurnstileToken(),
+    ]);
 
     const response = await HttpClient.post(
       AI_GATEWAY_URL,
       JSON.stringify({...payload, token}),
       false,
-      {'Content-Type': 'application/json'}
+      {
+        'Content-Type': 'application/json',
+        'X-Turnstile-Token': turnstileToken,
+      }
     );
 
     const data = await (response.json() as Promise<

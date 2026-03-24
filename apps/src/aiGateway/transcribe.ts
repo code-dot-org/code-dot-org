@@ -6,6 +6,7 @@ import {
 import HttpClient from '../util/HttpClient';
 
 import {AI_GATEWAY_URL, fetchAccessToken, getModelString} from './shared';
+import {getTurnstileToken} from './turnstile';
 
 type TranscribeOptions = Parameters<typeof transcribe>[0];
 
@@ -17,7 +18,10 @@ async function transcribeThroughGateway(
 ): Promise<TranscriptionResult> {
   const {model, audio, ...restOptions} = options;
 
-  const token = await fetchAccessToken();
+  const [token, turnstileToken] = await Promise.all([
+    fetchAccessToken(),
+    getTurnstileToken(),
+  ]);
 
   const formData = new FormData();
   formData.append('token', token);
@@ -31,7 +35,9 @@ async function transcribeThroughGateway(
 
   const response = await HttpClient.post(
     `${AI_GATEWAY_URL}/transcribe`,
-    formData
+    formData,
+    false,
+    {'X-Turnstile-Token': turnstileToken}
   );
 
   return await response.json();
