@@ -230,19 +230,19 @@ Resources:
               - 'bedrock:Retrieve'
             Resource:
               # TODO: Deploy KB with Cloudformation and !Ref it here
-              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA'
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/1WHRENJ0OA"
           - Effect: Allow
             Action:
               - 'bedrock:Retrieve'
             Resource:
               # TODO: Deploy KB with Cloudformation and !Ref it here
-              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/ODWSNBOEZG'
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/ODWSNBOEZG"
           - Effect: Allow
             Action:
               - 'bedrock:InvokeModel'
               - 'bedrock:GetInferenceProfile'
             Resource:
-              - 'arn:aws:bedrock:us-east-1:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0'
+              - !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0"
           - Effect: Allow
             Action:
               - 'bedrock:InvokeModel'
@@ -250,7 +250,7 @@ Resources:
               - 'arn:aws:bedrock:*::foundation-model/anthropic.claude-sonnet-4-5-20250929-v1:0'
             Condition:
               StringLike:
-                bedrock:InferenceProfileArn: arn:aws:bedrock:us-east-1:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+                bedrock:InferenceProfileArn: !Sub "arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:inference-profile/us.anthropic.claude-sonnet-4-5-20250929-v1:0"
           # Allow Frontend and Daemon servers to write to Amazon Managed Prometheus (AMP)
           # TODO: Replace with SSM - https://codedotorg.atlassian.net/browse/INF-2079
           - Effect: Allow
