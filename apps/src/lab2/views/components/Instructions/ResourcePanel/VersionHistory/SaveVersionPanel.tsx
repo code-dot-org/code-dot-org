@@ -96,6 +96,18 @@ const SaveVersionPanel: React.FC<SaveVersionPanelProps> = ({
           <textarea
             id="commit-description"
             onChange={e => setCommitDescription(e.target.value)}
+            onKeyDown={e => {
+              if (
+                e.key === 'Enter' &&
+                !e.shiftKey &&
+                !disabled &&
+                !isSaving &&
+                commitDescription.trim() !== ''
+              ) {
+                e.preventDefault();
+                onSaveVersion();
+              }
+            }}
             value={commitDescription}
             className={moduleStyles.textArea}
             disabled={disabled}
