@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeController from '@cdo/apps/accounts/ChangeUserTypeController';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -13,14 +14,14 @@ describe('ChangeUserTypeController', () => {
 
   beforeEach(() => {
     stub(utils, 'reload');
-    spy(ReactDOM, 'render');
+    spy(createReactRootModule, 'createReactRoot');
     spy(ReactDOM, 'unmountComponentAtNode');
   });
 
   afterEach(() => {
     controller && controller.hideChangeUserTypeModal();
     utils.reload.restore();
-    ReactDOM.render.restore();
+    createReactRootModule.createReactRoot.restore();
     ReactDOM.unmountComponentAtNode.restore();
   });
 
@@ -111,23 +112,23 @@ describe('ChangeUserTypeController', () => {
       dropdown.val(OTHER_USER_TYPE);
       dropdown.change();
 
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       button.click();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       controller.showChangeUserTypeModal();
       controller.showChangeUserTypeModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('can hide the modal dialog', () => {
       dropdown.val(OTHER_USER_TYPE);
       dropdown.change();
       button.click();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
 
       expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
       controller.hideChangeUserTypeModal();

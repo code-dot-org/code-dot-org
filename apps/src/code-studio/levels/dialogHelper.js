@@ -31,7 +31,7 @@ export function showDialog(component, callback, onHidden) {
     return;
   }
   const div = document.createElement('div');
-  createReactRoot(component, div);
+  createReactRoot(component, div, {flushSync: true});
   const content = div.childNodes[0];
   const dialog = new LegacyDialog({
     // Content is a div with a specific expected structure. See LegacyDialog.

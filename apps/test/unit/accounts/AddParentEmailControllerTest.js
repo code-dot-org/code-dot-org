@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddParentEmailController from '@cdo/apps/accounts/AddParentEmailController';
+import * as createReactRootModule from '@cdo/apps/util/createReactRoot';
 
 import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
@@ -48,33 +49,33 @@ describe('AddParentEmailController', () => {
   describe('controls AddParentEmailModal', () => {
     beforeEach(() => {
       controller = newController();
-      spy(ReactDOM, 'render');
+      spy(createReactRootModule, 'createReactRoot');
       spy(ReactDOM, 'unmountComponentAtNode');
     });
 
     afterEach(() => {
       controller.hideAddParentEmailModal();
-      ReactDOM.render.restore();
+      createReactRootModule.createReactRoot.restore();
       ReactDOM.unmountComponentAtNode.restore();
     });
 
     it('shows on showAddParentEmailModal', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       controller.showAddParentEmailModal();
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('shows when the link is clicked', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(createReactRootModule.createReactRoot).not.to.have.been.called;
       link.click();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(createReactRootModule.createReactRoot).to.have.been.calledOnce;
     });
 
     it('hides on hideAddParentEmailModal', () => {
