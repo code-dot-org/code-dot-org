@@ -6,3 +6,9 @@ resources:
   - dashboard-service.yaml
   - locals.yml.yaml
   - cdo-local-secrets.yaml
+secretGenerator:
+  - name: cdo-local-secrets
+    behavior: merge
+    type: Opaque
+    envs:
+      - cdo-local-secret-overrides.env
