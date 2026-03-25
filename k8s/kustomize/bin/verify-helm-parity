@@ -36,7 +36,6 @@ module DashboardKustomize
   HELM_VALUES = File.join(ROOT, '..', 'helm', 'values.yaml')
   CHART_PATH = File.join(ROOT, '..', 'helm')
   GITOPS_ENVTYPES_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/envTypes'.freeze
-  GITOPS_DEPLOYMENTS_BASE_URL = 'https://raw.githubusercontent.com/code-dot-org/k8s-gitops/main/apps/codeai/deployments'.freeze
   MYSQL_SECRET_DIR = File.join(ROOT, 'components', 'mysql')
   REDIS_SECRET_DIR = File.join(ROOT, 'components', 'redis')
   MINIO_SECRET_DIR = File.join(ROOT, 'components', 'minio')
@@ -121,37 +120,25 @@ module DashboardKustomize
     'production' => {
       release_name: 'production',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        "#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml",
-        "#{GITOPS_DEPLOYMENTS_BASE_URL}/production/values.yaml"
-      ],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml"],
       helm_set: []
     },
     'test' => {
       release_name: 'test',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        "#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml",
-        "#{GITOPS_DEPLOYMENTS_BASE_URL}/test/values.yaml"
-      ],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml"],
       helm_set: []
     },
     'staging' => {
       release_name: 'staging',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        "#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml",
-        "#{GITOPS_DEPLOYMENTS_BASE_URL}/staging/values.yaml"
-      ],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
-      helm_values: [
-        "#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml",
-        "#{GITOPS_DEPLOYMENTS_BASE_URL}/levelbuilder/values.yaml"
-      ],
+      helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml"],
       helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
   }.freeze
