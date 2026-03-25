@@ -1,5 +1,4 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -439,16 +438,16 @@ export const WorkshopEnrollments: FC = () => {
             </Box>
           }
           primaryButtonProps={{
-            text: `Remove enrollment${s}`,
-            size: 's',
+            children: `Remove enrollment${s}`,
+            size: 'small',
             onClick: handleRemoveEnrollments,
-            color: buttonColors.destructive,
+            color: 'error',
           }}
           secondaryButtonProps={{
-            size: 's',
-            text: 'Cancel',
-            type: 'secondary',
-            color: buttonColors.gray,
+            size: 'small',
+            children: 'Cancel',
+            color: 'tertiary',
+            variant: 'outlined',
             onClick: () => {
               setActiveDialog(null);
               setRemoveEnrollmentError('');
@@ -502,16 +501,16 @@ export const WorkshopEnrollments: FC = () => {
             </Box>
           }
           primaryButtonProps={{
-            text: `Move enrollment${s}`,
-            size: 's',
+            children: `Move enrollment${s}`,
+            size: 'small',
             onClick: handleMoveEnrollments,
             disabled: !moveToWorkshopId,
           }}
           secondaryButtonProps={{
-            size: 's',
-            text: 'Cancel',
-            type: 'secondary',
-            color: buttonColors.gray,
+            size: 'small',
+            children: 'Cancel',
+            color: 'tertiary',
+            variant: 'outlined',
             onClick: () => {
               setActiveDialog(null);
               setMoveToWorkshopId('');

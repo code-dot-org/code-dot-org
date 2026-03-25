@@ -174,8 +174,8 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
       primaryButtonProps={{
         onClick: confirmCallback,
         disabled: buttons?.confirm?.disabled,
-        color: isDestructive ? 'destructive' : 'purple',
-        text: buttons?.confirm?.text || commonI18n.dialogOK(),
+        color: isDestructive ? 'error' : 'primary',
+        children: buttons?.confirm?.text || commonI18n.dialogOK(),
         id: 'uitest-generic-dialog-ok',
       }}
       secondaryButtonProps={
@@ -183,15 +183,15 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
           ? {
               onClick: neutralCallback,
               disabled: buttons.neutral.disabled,
-              color: isDestructive ? 'destructive' : 'gray',
-              text: buttons.neutral.text,
+              color: isDestructive ? 'error' : 'tertiary',
+              children: buttons.neutral.text,
             }
           : buttons?.cancel
           ? {
               onClick: cancelCallback,
               disabled: buttons.cancel.disabled,
-              color: theme === 'Dark' ? 'white' : 'gray',
-              text: buttons.cancel.text || commonI18n.cancel(),
+              color: theme === 'Dark' ? 'white' : 'tertiary',
+              children: buttons.cancel.text || commonI18n.cancel(),
             }
           : undefined
       }

@@ -1,5 +1,4 @@
 import Alert, {alertTypes} from '@code-dot-org/component-library/alert';
-import {buttonColors} from '@code-dot-org/component-library/button';
 import {Dialog} from '@code-dot-org/component-library/dialog';
 import Link from '@code-dot-org/component-library/link';
 import Tags from '@code-dot-org/component-library/tags';
@@ -40,7 +39,7 @@ const dialogs = [
     description:
       'Ending this workshop will close the attendance. Are you sure you want to end this workshop now?',
     primaryButtonProps: {
-      color: buttonColors.destructive,
+      color: 'error' as const,
     },
   },
   {
@@ -352,17 +351,17 @@ export const WorkshopStatusSection: React.FC<WorkshopStatusSectionProps> = ({
             title={`${label} Workshop?`}
             description={description}
             primaryButtonProps={{
-              text: `${label} Workshop`,
-              size: 's',
+              children: `${label} Workshop`,
+              size: 'small',
               disabled: isUpdating,
               onClick: generateHandler(stateKey),
               ...primaryButtonProps,
             }}
             secondaryButtonProps={{
-              size: 's',
-              text: 'Cancel',
-              type: 'secondary',
-              color: buttonColors.gray,
+              size: 'small',
+              children: 'Cancel',
+              color: 'tertiary',
+              variant: 'outlined',
               onClick: () => setActiveDialog(null),
               disabled: isUpdating,
             }}
