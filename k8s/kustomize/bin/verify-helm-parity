@@ -43,14 +43,7 @@ module DashboardKustomize
   MYSQL_SECRET_ENV_ORDER = %w(_mysql_root_password db_writer db_reader reporting_db_writer reporting_db_reader db_credential_admin db_credential_writer db_credential_reader).freeze
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
-  NAME_FIELDS = %w[name volumeName claimName].freeze
   EMPTY_VALUES = [{}, []].freeze
-  ACCEPTED_LOCAL_DEV_NAME_ALIASES = {
-    'cdo-dot-aws' => 'dot-aws',
-    'cdo-dot-config-gcloud' => 'dot-config-gcloud',
-    'cdo-dashboard-job-setup-db' => 'dashboard-job-setup-db',
-    'cdo-minio-setup-s3-job' => 'minio-setup-s3-job'
-  }.freeze
 
   OVERLAYS = {
     'development' => {
@@ -353,7 +346,6 @@ module DashboardKustomize
   module_function def normalize_docs_for_parity(overlay, docs)
     normalized_docs = normalize_docs(docs).map do |doc|
       copy = deep_copy(doc)
-      normalize_local_secret_name_drift!(copy)
       normalize_local_secret_value_drift!(copy)
       normalize_skaffold_root_user_drift!(overlay, copy)
       deep_sort(copy)
@@ -411,10 +403,6 @@ module DashboardKustomize
     helm_secret = parse_secret_values(find_secret_doc(helm_docs))
     kustomize_secret = parse_secret_values(find_local_secret_doc(kustomize_docs))
 
-    if local_dev_name_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: some development-only auxiliary resource names differ from Helm'
-    end
-
     if accepted_secret_value_drift?(helm_secret, kustomize_secret)
       warnings << 'accepted drift by Seth: local secret values differ from Helm-generated values'
     end
@@ -458,13 +446,6 @@ module DashboardKustomize
     accepted_keys.any? {|key| helm_secret[key] != kustomize_secret[key]}
   end
 
-  module_function def local_dev_name_drift?(helm_docs, kustomize_docs)
-    helm_names = normalize_docs(helm_docs).flat_map {|doc| extract_relevant_names(doc)}.uniq.sort
-    kustomize_names = normalize_docs(kustomize_docs).flat_map {|doc| extract_relevant_names(doc)}.uniq.sort
-    helm_names != kustomize_names &&
-      helm_names.map {|name| ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(name, name)} == kustomize_names.map {|name| ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(name, name)}
-  end
-
   module_function def redis_group_format_drift?(helm_secret, kustomize_secret)
     helm_value = helm_secret['netsim_redis_groups']
     kustomize_value = kustomize_secret['netsim_redis_groups']
@@ -491,21 +472,6 @@ module DashboardKustomize
 
       helm_security.slice('runAsUser', 'runAsGroup', 'fsGroup') !=
         kustomize_security.slice('runAsUser', 'runAsGroup', 'fsGroup')
-    end
-  end
-
-  module_function def normalize_local_secret_name_drift!(obj)
-    case obj
-    when Hash
-      obj.each do |key, value|
-        if NAME_FIELDS.include?(key) && value.is_a?(String) && ACCEPTED_LOCAL_DEV_NAME_ALIASES.key?(value)
-          obj[key] = ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(value)
-        else
-          normalize_local_secret_name_drift!(value)
-        end
-      end
-    when Array
-      obj.each {|value| normalize_local_secret_name_drift!(value)}
     end
   end
 
@@ -570,19 +536,6 @@ module DashboardKustomize
     JSON.generate(canonical)
   rescue Psych::SyntaxError
     value
-  end
-
-  module_function def extract_relevant_names(obj, result = [])
-    case obj
-    when Hash
-      obj.each do |key, value|
-        result << value if NAME_FIELDS.include?(key) && value.is_a?(String)
-        extract_relevant_names(value, result)
-      end
-    when Array
-      obj.each {|value| extract_relevant_names(value, result)}
-    end
-    result
   end
 
   module_function def remove_empty_hashes!(obj)
