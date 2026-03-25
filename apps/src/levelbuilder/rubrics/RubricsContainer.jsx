@@ -14,9 +14,14 @@ export default function RubricsContainer({
   submittableLevels,
   rubric,
   lessonId,
+  aiRubricS3Config: initialAiRubricS3Config,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
     !!rubric ? rubric.learningGoals : initialLearningGoal
+  );
+
+  const [aiRubricS3Config, setAiRubricS3Config] = useState(
+    initialAiRubricS3Config || {}
   );
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
@@ -147,7 +152,8 @@ export default function RubricsContainer({
       learningGoalList,
       setLearningGoalList,
       selectedLevelForAssessment,
-      lessonId
+      lessonId,
+      aiRubricS3Config
     );
   };
 
@@ -163,6 +169,23 @@ export default function RubricsContainer({
 
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
+  };
+
+  const getSelectedLevelName = () => {
+    const levelId = Number(selectedLevelForAssessment);
+    return submittableLevels.find(l => l.id === levelId)?.name || '';
+  };
+
+  const getAiRubricS3ConfigValue = () => {
+    const levelName = getSelectedLevelName();
+    return levelName ? aiRubricS3Config[levelName] || '' : '';
+  };
+
+  const handleAiRubricS3ConfigChange = newValue => {
+    const levelName = getSelectedLevelName();
+    if (levelName) {
+      setAiRubricS3Config(prev => ({...prev, [levelName]: newValue}));
+    }
   };
 
   const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
@@ -207,6 +230,8 @@ export default function RubricsContainer({
             addNewConcept={addNewConceptHandler}
             deleteLearningGoal={deleteLearningGoal}
             updateLearningGoal={updateLearningGoal}
+            aiRubricS3ConfigValue={getAiRubricS3ConfigValue()}
+            onAiRubricS3ConfigChange={handleAiRubricS3ConfigChange}
           />
           <div style={styles.bottomRow}>
             <Button
@@ -252,6 +277,7 @@ RubricsContainer.propTypes = {
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
+  aiRubricS3Config: PropTypes.object,
 };
 
 const initialLearningGoal = [
