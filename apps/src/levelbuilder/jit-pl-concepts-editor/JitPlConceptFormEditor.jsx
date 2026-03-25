@@ -46,7 +46,10 @@ const JitPlConceptFormEditor = ({
           navigateToHref('/jit_pl_concepts/edit');
         }
       })
-      .fail(err => setError(err.responseText));
+      .fail(err => {
+        setIsSaving(false);
+        setError(err.responseText);
+      });
   };
 
   return (
