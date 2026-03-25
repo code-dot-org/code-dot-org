@@ -43,14 +43,14 @@ const defaultArgs: ActionBlockProps = {
   overline: 'Overline Text',
   background: 'primary',
   primaryButton: {
-    text: 'Primary Button',
+    children: 'Primary Button',
     href: '#',
-    ariaLabel: 'Primary Button aria label',
+    'aria-label': 'Primary Button aria label',
   },
   secondaryButton: {
-    text: 'Secondary Button',
+    children: 'Secondary Button',
     href: '#',
-    ariaLabel: 'Secondary Button aria label',
+    'aria-label': 'Secondary Button aria label',
   },
 };
 
