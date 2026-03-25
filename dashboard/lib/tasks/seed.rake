@@ -102,7 +102,6 @@ namespace :seed do
     courseb-2017
     coursec-2017
     coursea-2019
-    courseb-2019
     coursec-2019
     csd3-2023
     interactive-games-animations-2023
@@ -325,7 +324,6 @@ namespace :seed do
        courseb-2017
        coursec-2017
        coursea-2019
-       courseb-2019
        coursec-2019
        csp-ap
        interactive-games-animations-2023
