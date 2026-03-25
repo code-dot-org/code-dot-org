@@ -829,7 +829,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
               iconClassName={moduleStyles.buttonIcon}
               aria-label={i18n.danceAiModalStartOverButton()}
               title={i18n.danceAiModalStartOverButton()}
-              icon="fast-backward"
+              icon="backward-fast"
             />
           </div>
           <div id="buttons-area-top-right">

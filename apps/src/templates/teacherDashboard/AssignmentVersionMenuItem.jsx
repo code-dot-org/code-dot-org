@@ -42,7 +42,7 @@ export default function AssignmentVersionMenuItem(props) {
           {!courseVersion.is_stable && (
             <span>
               <FontAwesome
-                icon="exclamation-triangle"
+                icon="triangle-exclamation"
                 style={{color: color.light_orange}}
               />
               &nbsp;

@@ -32,7 +32,7 @@ export default function RubricEditor({
         text={'Add new Key Concept'}
         onClick={addNewConcept}
         size={Button.ButtonSize.narrow}
-        icon="plus-circle"
+        icon="circle-plus"
         iconClassName="fa-solid fa-circle-plus"
         id="ui-test-add-new-concept-button"
       />
