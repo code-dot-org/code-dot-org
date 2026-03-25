@@ -31,18 +31,19 @@ data "aws_iam_policy_document" "eso_trust" {
 
 data "aws_iam_policy_document" "eso_secrets" {
   statement {
+    # Secrets Manager does not support resource-level permissions for ListSecrets.
     effect = "Allow"
-    actions = [
-      "secretsmanager:ListSecrets",
-      "secretsmanager:BatchGetSecretValue",
-    ]
+    actions = ["secretsmanager:ListSecrets"]
 
     resources = ["*"]
   }
 
   statement {
     effect  = "Allow"
-    actions = ["secretsmanager:GetSecretValue"]
+    actions = [
+      "secretsmanager:BatchGetSecretValue",
+      "secretsmanager:GetSecretValue",
+    ]
 
     resources = concat(
       [

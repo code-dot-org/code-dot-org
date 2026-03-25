@@ -34,6 +34,13 @@ include prometheus as a helm chart dependency??
 
 - Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
 - set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
+- Install `cert-manager` as a platform Argo app, then enable Kargo admission
+  webhooks. Kargo admission webhooks for resource validation/defaulting are
+  currently disabled because they require TLS and CA wiring for the internal
+  webhook server. Once `cert-manager` is installed and healthy, enable
+  `webhooks.register` and `webhooksServer.enabled`. This is separate from
+  `externalWebhooksServer.enabled`, which is already on for external
+  GitHub/package/push webhooks.
 
 ## Tofu EKS Cluster
 
