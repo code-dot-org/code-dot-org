@@ -9,14 +9,11 @@ export interface Game2Source {
   /**
    * World grid (GRID_COLS × GRID_ROWS).
    *
-   * New format: string[][] where each cell is one of:
+   * Each cell is one of:
    *   - '' (empty)
-   *   - 'solid' (default impassable block)
-   *   - an item name (placed item)
-   *
-   * Legacy format: boolean[][] — migrated at load time.
+   *   - an item name (block-type for platforms, sprite-type for collectibles)
    */
-  grid?: (string | boolean)[][];
+  grid?: string[][];
 }
 
 /** The kind of item asset: sprite (transparent), block (replaces platforms), or background. */
@@ -28,10 +25,5 @@ export interface Game2ItemEntry {
   /** Asset filename stored in the project bucket. */
   filename: string;
   prompt?: string;
-  /** Defaults to 'sprite' for legacy entries without this field. */
   itemType?: Game2ItemType;
 }
-
-// Legacy aliases for backwards compatibility during migration.
-export type Game2ImageType = Game2ItemType;
-export type Game2ImageEntry = Game2ItemEntry;

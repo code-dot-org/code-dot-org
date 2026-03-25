@@ -5,7 +5,7 @@ import {LabProps} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import CodePanel, {CodePanelHandle} from './CodePanel';
-import {createEmptyGrid, migrateGrid} from './gridConstants';
+import {createEmptyGrid} from './gridConstants';
 import ItemsPanel from './ItemsPanel';
 import PlayPanel from './PlayPanel';
 import ThemePanel from './ThemePanel';
@@ -54,31 +54,18 @@ const Game2View: React.FunctionComponent<LabProps> = ({initialSources}) => {
     } catch {
       parsedInitial.current = {};
     }
-    // Support legacy sources that used "images" instead of "items".
-    const parsed = parsedInitial.current as Game2Source & {
-      images?: Game2ItemEntry[];
-    };
-    const rawItems = parsed.items ?? parsed.images ?? [];
-    if (rawItems.length) {
-      // Migrate legacy entries that lack a name field or use old imageType key.
-      const migrated = rawItems.map(
-        (img: Game2ItemEntry & {imageType?: Game2ItemEntry['itemType']}) => ({
-          ...img,
-          name: img.name || img.prompt || img.filename,
-          itemType: img.itemType ?? img.imageType,
-        })
-      );
-      setItems(migrated);
-      itemsRef.current = migrated;
+    const savedItems = parsedInitial.current.items ?? [];
+    if (savedItems.length) {
+      setItems(savedItems);
+      itemsRef.current = savedItems;
     }
     if (parsedInitial.current.blockly) {
       blocklyRef.current = parsedInitial.current.blockly;
     }
     if (parsedInitial.current.grid?.length) {
-      // Migrate legacy boolean[][] to string[][].
-      const migrated = migrateGrid(parsedInitial.current.grid);
-      setGrid(migrated);
-      gridRef.current = migrated;
+      const savedGrid = parsedInitial.current.grid as string[][];
+      setGrid(savedGrid);
+      gridRef.current = savedGrid;
     }
     initializedRef.current = true;
   }, [initialSources]);

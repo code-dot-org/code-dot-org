@@ -1,14 +1,11 @@
 /**
  * Shared grid rendering used by both the World editor and the Play runtime.
  *
- * Draws grid cells (solid blocks and placed items) onto a canvas, with
- * configurable camera offset, grid lines, and highlight.
+ * Draws grid cells (placed items) onto a canvas, with configurable camera
+ * offset, grid lines, and highlight.
  */
-import {GRID_COLS, GRID_ROWS, SOLID_CELL} from './gridConstants';
+import {GRID_COLS, GRID_ROWS} from './gridConstants';
 
-/** Fallback solid-cell colour (bottom portion only). */
-const SOLID_TOP = 0.8;
-const SOLID_FALLBACK_COLOR = '#F7F8FA';
 const ITEM_FALLBACK_COLOR = '#7B61FF';
 
 export interface GridRenderOptions {
@@ -26,11 +23,6 @@ export interface GridRenderOptions {
   // Image lookup ---------------------------------------------------------
   /** Map of image name → loaded HTMLImageElement. */
   loadedImages: Map<string, HTMLImageElement>;
-  /**
-   * For SOLID_CELL cells, the name of the block-type image to use.
-   * If null/undefined, falls back to a white rectangle.
-   */
-  blockImageName?: string | null;
 
   /**
    * Map of item name → type. Sprites are drawn at 2× cell size in play mode.
@@ -59,7 +51,6 @@ export function renderGrid(opts: GridRenderOptions) {
     canvasWidth: cw,
     canvasHeight: ch,
     loadedImages,
-    blockImageName,
     itemTypeMap,
     spriteScale = 1,
     showGridLines = false,
@@ -88,27 +79,17 @@ export function renderGrid(opts: GridRenderOptions) {
         continue;
       }
 
-      if (cell === SOLID_CELL) {
-        const blockImg = blockImageName && loadedImages.get(blockImageName);
-        if (blockImg && blockImg.complete && blockImg.naturalWidth > 0) {
-          ctx.drawImage(blockImg, px, py, cp, cp);
-        } else {
-          ctx.fillStyle = SOLID_FALLBACK_COLOR;
-          ctx.fillRect(px, py + cp * SOLID_TOP, cp, cp * (1 - SOLID_TOP));
-        }
+      const imgEl = loadedImages.get(cell);
+      const isSprite =
+        itemTypeMap && (itemTypeMap.get(cell) ?? 'sprite') === 'sprite';
+      const scale = isSprite ? spriteScale : 1;
+      const size = cp * scale;
+      const offset = (size - cp) / 2;
+      if (imgEl?.complete && imgEl.naturalWidth > 0) {
+        ctx.drawImage(imgEl, px - offset, py - offset, size, size);
       } else {
-        const imgEl = loadedImages.get(cell);
-        const isSprite =
-          itemTypeMap && (itemTypeMap.get(cell) ?? 'sprite') === 'sprite';
-        const scale = isSprite ? spriteScale : 1;
-        const size = cp * scale;
-        const offset = (size - cp) / 2;
-        if (imgEl?.complete && imgEl.naturalWidth > 0) {
-          ctx.drawImage(imgEl, px - offset, py - offset, size, size);
-        } else {
-          ctx.fillStyle = ITEM_FALLBACK_COLOR;
-          ctx.fillRect(px, py, cp, cp);
-        }
+        ctx.fillStyle = ITEM_FALLBACK_COLOR;
+        ctx.fillRect(px, py, cp, cp);
       }
     }
   }

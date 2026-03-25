@@ -1,4 +1,4 @@
-import {GRID_COLS, GRID_ROWS, SOLID_CELL} from './gridConstants';
+import {GRID_COLS, GRID_ROWS} from './gridConstants';
 import {renderGrid} from './gridRenderer';
 import {assetUrl, getCachedImage} from './imageCache';
 import {Game2ItemEntry, Game2ItemType} from './types';
@@ -17,9 +17,6 @@ const PLATFORM_MOVE_SPEED = 0.06;
 const SPRITE_CELLS = 2;
 // Block/solid pieces are 1 cell.
 const BLOCK_CELLS = 1;
-
-// Solid cells only occupy the bottom portion of the grid cell.
-const SOLID_TOP = 0.8; // fraction of cell height where the solid starts
 
 // Particle system constants.
 const PARTICLE_COUNT = 12;
@@ -134,8 +131,6 @@ export class Game2Runtime {
   private visibleBounds: Map<string, VisibleBounds> = new Map();
   private nameToFilename: Map<string, string> = new Map();
   private itemTypeMap: Map<string, Game2ItemType> = new Map();
-  /** Name of the first 'block' type item, used to render solid cells. */
-  private blockItemName: string | null = null;
   private channelId: string | undefined;
   private items: GameItem[] = [];
   private backgroundName: string | null = null;
@@ -182,11 +177,7 @@ export class Game2Runtime {
 
     for (const img of items) {
       this.nameToFilename.set(img.name, img.filename);
-      const imgType = img.itemType ?? 'sprite';
-      this.itemTypeMap.set(img.name, imgType);
-      if (imgType === 'block' && !this.blockItemName) {
-        this.blockItemName = img.name;
-      }
+      this.itemTypeMap.set(img.name, img.itemType ?? 'sprite');
 
       if (!channelId) {
         continue;
@@ -347,6 +338,13 @@ export class Game2Runtime {
       this.jumpHandlers.push(callback);
     };
 
+    const isJumping = (): boolean => {
+      const player = this.items.find(
+        i => i.behavior === 'platform' || i.behavior === 'move'
+      );
+      return !!player && !player.grounded;
+    };
+
     try {
       const fn = new Function(
         'createItem',
@@ -361,6 +359,7 @@ export class Game2Runtime {
         'jump',
         'bigJump',
         'whenJumpPressed',
+        'isJumping',
         code
       );
       fn(
@@ -375,7 +374,8 @@ export class Game2Runtime {
         showText,
         jump,
         bigJump,
-        whenJumpPressed
+        whenJumpPressed,
+        isJumping
       );
     } catch (e) {
       console.error('[Game2 Runtime] Error executing code:', e);
@@ -402,7 +402,7 @@ export class Game2Runtime {
     for (let r = 0; r < this.grid.length; r++) {
       for (let c = 0; c < (this.grid[r]?.length ?? 0); c++) {
         const cell = this.grid[r][c];
-        if (cell && cell !== SOLID_CELL && !gridPlacements.has(cell)) {
+        if (cell && !this.isSolidCell(cell) && !gridPlacements.has(cell)) {
           gridPlacements.set(cell, {row: r, col: c});
         }
       }
@@ -416,6 +416,15 @@ export class Game2Runtime {
             item.x = pos.col;
             item.y = pos.row;
             break;
+          }
+        }
+        // Remove all grid cells of this item so the grid version doesn't
+        // show alongside the player-controlled sprite.
+        for (let r = 0; r < this.grid.length; r++) {
+          for (let c = 0; c < (this.grid[r]?.length ?? 0); c++) {
+            if (this.grid[r][c] === name) {
+              this.grid[r][c] = '';
+            }
           }
         }
       }
@@ -557,9 +566,6 @@ export class Game2Runtime {
 
   /** Whether a grid cell value represents a solid/platform surface. */
   private isSolidCell(cell: string): boolean {
-    if (cell === SOLID_CELL) {
-      return true;
-    }
     return this.itemTypeMap.get(cell) === 'block';
   }
 
@@ -585,9 +591,7 @@ export class Game2Runtime {
         if (!cell || !this.isSolidCell(cell)) {
           continue;
         }
-        // Determine the block image to use for bounds.
-        const blockName = cell === SOLID_CELL ? this.blockItemName : cell;
-        const blockBounds = blockName && this.visibleBounds.get(blockName);
+        const blockBounds = this.visibleBounds.get(cell);
         if (blockBounds) {
           const bx = c + blockBounds.left * BLOCK_CELLS;
           const by = r + blockBounds.top * BLOCK_CELLS;
@@ -597,9 +601,8 @@ export class Game2Runtime {
             return true;
           }
         } else {
-          // Fallback: solid occupies bottom portion.
-          const solidY = r + SOLID_TOP;
-          if (rx < c + 1 && rx + rw > c && ry < r + 1 && ry + rh > solidY) {
+          // Fallback: full cell collision.
+          if (rx < c + 1 && rx + rw > c && ry < r + 1 && ry + rh > r) {
             return true;
           }
         }
@@ -655,7 +658,7 @@ export class Game2Runtime {
     for (let r = rowStart; r <= rowEnd; r++) {
       for (let c = colStart; c <= colEnd; c++) {
         const cell = this.grid[r]?.[c];
-        if (cell && cell !== SOLID_CELL) {
+        if (cell && !this.isSolidCell(cell)) {
           // Compute the actual collision rect for this grid-placed item,
           // accounting for sprite scale and visible bounds.
           const isSprite =
@@ -887,7 +890,6 @@ export class Game2Runtime {
       canvasWidth: cw,
       canvasHeight: ch,
       loadedImages: this.loadedImages,
-      blockImageName: this.blockItemName,
       itemTypeMap: this.itemTypeMap,
       spriteScale: SPRITE_CELLS,
       showGridLines: false,

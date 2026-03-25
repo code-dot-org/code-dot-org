@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 
-import {GRID_COLS, GRID_ROWS, SOLID_CELL} from './gridConstants';
+import {GRID_COLS, GRID_ROWS} from './gridConstants';
 import {renderGrid} from './gridRenderer';
 import {assetUrl, getCachedImage} from './imageCache';
 import {Game2ItemEntry} from './types';
@@ -17,11 +17,10 @@ interface WorldPanelProps {
 }
 
 /**
- * Deterministic palette of distinct colours for items.
- * The first slot is reserved for the solid block.
+ * Deterministic palette of distinct colours for items (used as fallback
+ * when no image is available).
  */
 const ITEM_COLORS = [
-  '#F7F8FA', // solid — white
   '#7B61FF', // purple
   '#FF6B6B', // red
   '#4ECDC4', // teal
@@ -31,6 +30,7 @@ const ITEM_COLORS = [
   '#4D96FF', // blue
   '#C471ED', // violet
   '#FF7EB3', // pink
+  '#F7F8FA', // white
 ];
 
 function getItemColor(index: number): string {
@@ -44,7 +44,7 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
   channelId,
   onGridChange,
 }) => {
-  const [selectedBrush, setSelectedBrush] = useState<string>(SOLID_CELL);
+  const [selectedBrush, setSelectedBrush] = useState<string>('');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const painting = useRef(false);
@@ -60,11 +60,17 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
   /** Loaded image elements keyed by name. */
   const loadedImagesRef = useRef<Map<string, HTMLImageElement>>(new Map());
 
-  // Resolve block image name (first item with type 'block').
-  const blockImageName = useMemo(() => {
-    const block = items.find(i => i.itemType === 'block');
-    return block?.name ?? null;
-  }, [items]);
+  // Auto-select the first block item as the default brush if none selected.
+  useEffect(() => {
+    if (!selectedBrush) {
+      const firstBlock = items.find(i => (i.itemType ?? 'sprite') === 'block');
+      if (firstBlock) {
+        setSelectedBrush(firstBlock.name);
+      } else if (items.length > 0) {
+        setSelectedBrush(items[0].name);
+      }
+    }
+  }, [items, selectedBrush]);
 
   // Filter and sort items by type for grouped palette display.
   const blockItems = useMemo(
@@ -107,12 +113,9 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
       }
       const url = assetUrl(channelId, img.filename);
       const el = getCachedImage(url);
-      if (!el.complete) {
-        el.onload = () => draw();
-      }
       current.set(img.name, el);
     }
-  }, [items, channelId, draw]);
+  }, [items, channelId]);
 
   // Compute cell size to fit the grid in the canvas.
   const getCellPx = useCallback(() => {
@@ -158,14 +161,13 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
       canvasWidth: gridW,
       canvasHeight: gridH,
       loadedImages: loadedImagesRef.current,
-      blockImageName,
       showGridLines: true,
       highlightValue: selectedBrushRef.current,
       emptyCellColor: '#292F36',
     });
 
     ctx.restore();
-  }, [getCellPx, blockImageName]);
+  }, [getCellPx]);
 
   // Size canvas to container and redraw.
   const resize = useCallback(() => {
@@ -282,21 +284,6 @@ const WorldPanel: React.FunctionComponent<WorldPanelProps> = ({
       <div className={moduleStyles.worldPalette}>
         {/* Blocks group */}
         <div className={moduleStyles.worldPaletteLabel}>Blocks</div>
-        <button
-          type="button"
-          className={`${moduleStyles.worldPaletteItem} ${
-            selectedBrush === SOLID_CELL
-              ? moduleStyles.worldPaletteItemSelected
-              : ''
-          }`}
-          onClick={() => setSelectedBrush(SOLID_CELL)}
-        >
-          <span
-            className={moduleStyles.worldPaletteSwatch}
-            style={{backgroundColor: ITEM_COLORS[0]}}
-          />
-          <span className={moduleStyles.worldPaletteItemName}>Solid</span>
-        </button>
         {blockItems.map((img, i) => {
           const url = itemUrlMap.get(img.name);
           return (

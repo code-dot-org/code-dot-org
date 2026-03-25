@@ -20,11 +20,6 @@ export function setItemEntries(
     .map(e => ({name: e.name, itemType: e.itemType ?? 'sprite'}));
 }
 
-/** Backwards-compatible setter — treats all as sprites. */
-export function setItemNames(names: string[]) {
-  setItemEntries(names.map(n => ({name: n, itemType: 'sprite'})));
-}
-
 function entriesToOptions(entries: ItemEntry[]): [string, string][] {
   if (entries.length === 0) {
     return [['(none)', '__none__']];
@@ -47,9 +42,4 @@ export function getSpriteAndBlockOptions(): [string, string][] {
   return entriesToOptions(
     itemEntries.filter(e => e.itemType === 'sprite' || e.itemType === 'block')
   );
-}
-
-/** All items regardless of type (legacy fallback). */
-export function getImageOptions(): [string, string][] {
-  return entriesToOptions(itemEntries);
 }

@@ -7,6 +7,11 @@ import {
   register as registerCreateItem,
 } from './createItem';
 import decreaseScore from './decreaseScore';
+import {
+  BLOCK_TYPE as IF_CONDITION,
+  generator as ifConditionGenerator,
+  register as registerIfCondition,
+} from './ifCondition';
 import increaseScore from './increaseScore';
 import jump from './jump';
 import {
@@ -75,6 +80,11 @@ export const dynamicBlocks: DynamicBlockEntry[] = [
     register: registerWhenCollide,
     generator: whenCollideGenerator,
     extendedOptions: whenCollideExtended,
+  },
+  {
+    type: IF_CONDITION,
+    register: registerIfCondition,
+    generator: ifConditionGenerator,
   },
 ];
 

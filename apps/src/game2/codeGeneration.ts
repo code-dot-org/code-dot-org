@@ -59,6 +59,16 @@ Available instructions (indent with two spaces under their parent block):
   bigJump
     — Makes the player do a big jump, twice as high as a regular jump.
 
+Conditional blocks (can be used anywhere inside other blocks):
+
+  ifJumping
+    — Only executes its indented children if the player is currently in the air.
+    — Indent the body with two additional spaces.
+
+  ifNotJumping
+    — Only executes its indented children if the player is on the ground.
+    — Indent the body with two additional spaces.
+
 Top-level event blocks (NOT indented under whenStarts):
 
   whenCollide "<imageName>"
@@ -222,10 +232,64 @@ export function pseudocodeToBlocklyJson(
 
     // Indented line belongs to current block.
     if (isIndented && current) {
+      // Check for conditional blocks that consume further-indented children.
+      if (trimmed === 'ifJumping' || trimmed === 'ifNotJumping') {
+        // Collect subsequent lines that are more deeply indented.
+        const condBlock: Record<string, unknown> = {
+          type: 'Game2_ifCondition',
+          fields: {
+            CONDITION: trimmed === 'ifJumping' ? 'jumping' : 'not_jumping',
+          },
+        };
+        // Children will be filled by consuming upcoming lines with deeper indent.
+        // Mark this as needing children; they'll be attached below.
+        current.children.push({...condBlock, _collectChildren: true});
+        continue;
+      }
+
+      // Check if the last child is an ifCondition awaiting children.
+      const lastChild = current.children[current.children.length - 1] as
+        | Record<string, unknown>
+        | undefined;
+      // Lines with 4+ leading spaces (deeper indent) are children of the if block.
+      const isDeeplyIndented = rawLine.startsWith('    ');
+      if (lastChild?._collectChildren && isDeeplyIndented) {
+        const instruction = parseInstruction(trimmed);
+        if (instruction) {
+          if (!lastChild._ifChildren) {
+            lastChild._ifChildren = [];
+          }
+          (lastChild._ifChildren as Record<string, unknown>[]).push(
+            instruction
+          );
+        }
+        continue;
+      }
+
+      // Normal instruction at this indent level — stop collecting if children.
+      if (lastChild?._collectChildren) {
+        delete lastChild._collectChildren;
+      }
+
       const instruction = parseInstruction(trimmed);
       if (instruction) {
         current.children.push(instruction);
       }
+    }
+  }
+
+  // Finalize ifCondition blocks: attach collected children as inputs.DO.
+  for (const block of topBlocks) {
+    for (const child of block.children) {
+      const c = child as Record<string, unknown>;
+      if (c.type === 'Game2_ifCondition' && c._ifChildren) {
+        const chain = chainBlocks(c._ifChildren as Record<string, unknown>[]);
+        if (chain) {
+          c.inputs = {DO: {block: chain}};
+        }
+        delete c._ifChildren;
+      }
+      delete c._collectChildren;
     }
   }
 
