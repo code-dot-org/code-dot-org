@@ -819,9 +819,10 @@ export default class Craft {
       suppressDialog
     );
 
-    const image = Craft.initialConfig.level.freePlay
-      ? Craft.gameController.getScreenshot()
-      : null;
+    const image =
+      Craft.initialConfig.level.freePlay && !suppressDialog
+        ? Craft.gameController.getScreenshot()
+        : null;
     // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
     const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
