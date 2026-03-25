@@ -5,11 +5,12 @@ class ResourcesController < ApplicationController
 
   # GET /resources/search
   def search
-    course_version_id = if params[:forJitPl]
-      JitPlConcept.jit_pl_course_version.id
-    else
-      params[:courseVersionId]
-    end
+    course_version_id =
+      if params[:forJitPl]
+        JitPlConcept.jit_pl_course_version.id
+      else
+        params[:courseVersionId]
+      end
     render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], course_version_id)
   end
 

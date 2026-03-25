@@ -546,7 +546,7 @@ namespace :seed do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
-  # Courses must be seeded before JIT PL content because the resources refer 
+  # Courses must be seeded before JIT PL content because the resources refer
   # to a pre-defined JIT PL course.
   JIT_PL_DEPENDENCIES = [:environment, :courses]
 

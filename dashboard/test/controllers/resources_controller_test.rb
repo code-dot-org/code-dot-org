@@ -76,7 +76,7 @@ class ResourcesControllerTest < ActionController::TestCase
     unit_group = create(:unit_group, name: 'just-in-time-pl')
     course_version = create(:course_version, content_root: unit_group)
     jit_resource = create(:resource, name: 'jit resource', course_version: course_version)
-    other_resource = create(:resource, name: 'jit resource', course_version: create(:course_version))
+    create(:resource, name: 'jit resource', course_version: create(:course_version))
 
     ResourcesAutocomplete.stubs(:get_search_matches).with('jit', anything, course_version.id).returns([jit_resource.summarize_for_lesson_edit])
 
