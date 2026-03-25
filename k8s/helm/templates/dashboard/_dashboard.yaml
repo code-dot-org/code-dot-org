@@ -71,6 +71,12 @@ spec:
 
 
         envFrom:
+          # Inject local config as CDO_* ENV vars so it matches kustomize and the
+          # existing Config loader precedence for env-sourced locals.
+          - prefix: CDO_
+            configMapRef:
+              name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
+
           # Inject our Secrets as CDO_* ENV vars (both from helm and AWS Secrets Manager) 
           #
           # See: k8s/docs/kubernetes-secrets.md
@@ -91,7 +97,7 @@ spec:
           # Comes second, so Helm-managed local service secrets can override AWS-synced ones.
           - prefix: CDO_
             secretRef:
-              name: cdo-local-secrets
+              name: {{ include "cdo.localSecretsName" . }}
 
         securityContext:
           allowPrivilegeEscalation: {{ if .Values.user.allowSudo }}true{{ else }}false{{ end }}
@@ -143,10 +149,6 @@ spec:
         {{- end }}
 
         volumeMounts:
-        - mountPath: /code-dot-org/locals.yml
-          name: locals-yml
-          subPath: locals.yml
-
         {{- if .Values.localDev.mounts.mountDotAWS }}
         - mountPath: {{ .Values.user.home }}/.aws
           name: dot-aws
@@ -157,10 +159,6 @@ spec:
         {{- end }}
 
       volumes:
-        - name: locals-yml
-          configMap:
-            name: {{ include "cdo.fullname" (merge (dict "component" "locals.yml") .) }}
-
         {{- if .Values.localDev.mounts.mountDotAWS }}
         - name: dot-aws
           persistentVolumeClaim:

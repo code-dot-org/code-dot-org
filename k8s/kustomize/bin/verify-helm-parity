@@ -43,18 +43,7 @@ module DashboardKustomize
   MYSQL_SECRET_ENV_ORDER = %w(_mysql_root_password db_writer db_reader reporting_db_writer reporting_db_reader db_credential_admin db_credential_writer db_credential_reader).freeze
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
-  LOCAL_SECRET_NAME = 'cdo-local-secrets'.freeze
-  LOCALS_CONFIGMAP_NAME = 'cdo-locals.yml'.freeze
-  LOCALS_VOLUME_NAME = 'locals-yml'.freeze
-  NAME_FIELDS = %w[name volumeName claimName].freeze
-  RELEASE_NAME_FIELDS = %w[name serviceName volumeName claimName].freeze
   EMPTY_VALUES = [{}, []].freeze
-  ACCEPTED_LOCAL_DEV_NAME_ALIASES = {
-    'cdo-dot-aws' => 'dot-aws',
-    'cdo-dot-config-gcloud' => 'dot-config-gcloud',
-    'cdo-dashboard-job-setup-db' => 'dashboard-job-setup-db',
-    'cdo-minio-setup-s3-job' => 'minio-setup-s3-job'
-  }.freeze
 
   OVERLAYS = {
     'development' => {
@@ -120,13 +109,13 @@ module DashboardKustomize
       ]
     },
     'production' => {
-      release_name: 'cdo',
+      release_name: 'production',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml"],
       helm_set: []
     },
     'test' => {
-      release_name: 'cdo',
+      release_name: 'test',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml"],
       helm_set: []
@@ -135,13 +124,13 @@ module DashboardKustomize
       release_name: 'staging',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml"],
-      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
+      helm_set: []
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml"],
-      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
+      helm_set: []
     },
   }.freeze
 
@@ -357,8 +346,6 @@ module DashboardKustomize
   module_function def normalize_docs_for_parity(overlay, docs)
     normalized_docs = normalize_docs(docs).map do |doc|
       copy = deep_copy(doc)
-      normalize_release_name_drift!(copy, overlay)
-      normalize_local_secret_name_drift!(copy)
       normalize_local_secret_value_drift!(copy)
       normalize_skaffold_root_user_drift!(overlay, copy)
       deep_sort(copy)
@@ -373,8 +360,6 @@ module DashboardKustomize
     copy = deep_copy(doc)
     strip_ignored_labels!(copy)
     normalize_secret!(copy)
-    normalize_locals_configmap!(copy)
-    normalize_locals_delivery_drift!(copy)
     copy['metadata']&.delete('labels') if copy['kind'] == 'HorizontalPodAutoscaler'
     normalize_statefulset_volume_claim_templates!(copy)
     normalize_order_insensitive_lists!(copy)
@@ -418,28 +403,12 @@ module DashboardKustomize
     helm_secret = parse_secret_values(find_secret_doc(helm_docs))
     kustomize_secret = parse_secret_values(find_local_secret_doc(kustomize_docs))
 
-    if production_or_test_overlay?(overlay) && release_name_drift?(overlay, helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: release naming differs from Helm for production/test resources'
-    end
-
-    if local_secret_name_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: cdo-local-secrets naming differs from Helm'
-    end
-
-    if local_dev_name_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: some development-only auxiliary resource names differ from Helm'
-    end
-
     if accepted_secret_value_drift?(helm_secret, kustomize_secret)
       warnings << 'accepted drift by Seth: local secret values differ from Helm-generated values'
     end
 
-    if redis_group_format_drift?(helm_secret, kustomize_secret)
+    if netsim_group_format_drift?(helm_secret, kustomize_secret)
       warnings << 'accepted drift by Seth: netsim_redis_groups format differs (Helm YAML block vs kustomize JSON string)'
-    end
-
-    if locals_config_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: locals config differs from Helm (split ConfigMap env vars instead of mounted locals.yml file)'
     end
 
     if skaffold_root_user_drift?(overlay, helm_docs, kustomize_docs)
@@ -454,38 +423,6 @@ module DashboardKustomize
       doc['kind'] == 'Secret' &&
         doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
     end
-  end
-
-  module_function def find_locals_doc(docs)
-    docs.find do |doc|
-      doc['kind'] == 'ConfigMap' &&
-        doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'locals.yml'
-    end
-  end
-
-  module_function def production_or_test_overlay?(overlay)
-    ['production', 'test'].include?(overlay)
-  end
-
-  module_function def release_prefix_for(overlay)
-    return 'production-' if overlay == 'production'
-    return 'test-' if overlay == 'test'
-
-    nil
-  end
-
-  module_function def release_name_drift?(overlay, helm_docs, kustomize_docs)
-    return false unless production_or_test_overlay?(overlay)
-
-    normalize_docs(helm_docs) != normalize_docs(kustomize_docs)
-  end
-
-  module_function def local_secret_name_drift?(helm_docs, kustomize_docs)
-    helm_secret = find_secret_doc(helm_docs)
-    kustomize_secret = find_local_secret_doc(kustomize_docs)
-    return false unless helm_secret && kustomize_secret
-
-    helm_secret.dig('metadata', 'name') != kustomize_secret.dig('metadata', 'name')
   end
 
   module_function def accepted_secret_value_drift?(helm_secret, kustomize_secret)
@@ -509,28 +446,13 @@ module DashboardKustomize
     accepted_keys.any? {|key| helm_secret[key] != kustomize_secret[key]}
   end
 
-  module_function def local_dev_name_drift?(helm_docs, kustomize_docs)
-    helm_names = normalize_docs(helm_docs).flat_map {|doc| extract_relevant_names(doc)}.uniq.sort
-    kustomize_names = normalize_docs(kustomize_docs).flat_map {|doc| extract_relevant_names(doc)}.uniq.sort
-    helm_names != kustomize_names &&
-      helm_names.map {|name| ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(name, name)} == kustomize_names.map {|name| ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(name, name)}
-  end
-
-  module_function def redis_group_format_drift?(helm_secret, kustomize_secret)
+  module_function def netsim_group_format_drift?(helm_secret, kustomize_secret)
     helm_value = helm_secret['netsim_redis_groups']
     kustomize_value = kustomize_secret['netsim_redis_groups']
     return false if helm_value.nil? || kustomize_value.nil?
 
     helm_value != kustomize_value &&
       canonicalize_netsim_redis_groups(helm_value) == canonicalize_netsim_redis_groups(kustomize_value)
-  end
-
-  module_function def locals_config_drift?(helm_docs, kustomize_docs)
-    helm_locals = find_locals_doc(helm_docs)
-    kustomize_locals = find_locals_doc(kustomize_docs)
-    return false unless helm_locals && kustomize_locals
-
-    locals_uses_blob?(helm_locals) || workload_uses_locals_volume?(helm_docs) || workload_uses_locals_env_from?(kustomize_docs)
   end
 
   module_function def skaffold_root_user_drift?(overlay, helm_docs, kustomize_docs)
@@ -550,47 +472,6 @@ module DashboardKustomize
 
       helm_security.slice('runAsUser', 'runAsGroup', 'fsGroup') !=
         kustomize_security.slice('runAsUser', 'runAsGroup', 'fsGroup')
-    end
-  end
-
-  module_function def normalize_release_name_drift!(obj, overlay)
-    prefix = release_prefix_for(overlay)
-    return unless prefix
-
-    case obj
-    when Hash
-      obj.each do |key, value|
-        if RELEASE_NAME_FIELDS.include?(key) && value.is_a?(String) && value.start_with?(prefix)
-          obj[key] = value.delete_prefix(prefix)
-        elsif key == 'app.kubernetes.io/instance' && value.is_a?(String)
-          obj[key] = overlay_config(overlay)[:release_name]
-        else
-          normalize_release_name_drift!(value, overlay)
-        end
-      end
-    when Array
-      obj.each {|value| normalize_release_name_drift!(value, overlay)}
-    end
-  end
-
-  module_function def normalize_local_secret_name_drift!(obj)
-    case obj
-    when Hash
-      if obj['kind'] == 'Secret' && obj.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
-        obj['metadata']['name'] = LOCAL_SECRET_NAME
-      end
-
-      obj.each do |key, value|
-        if NAME_FIELDS.include?(key) && value.is_a?(String) && value.end_with?(LOCAL_SECRET_NAME)
-          obj[key] = LOCAL_SECRET_NAME
-        elsif NAME_FIELDS.include?(key) && value.is_a?(String) && ACCEPTED_LOCAL_DEV_NAME_ALIASES.key?(value)
-          obj[key] = ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(value)
-        else
-          normalize_local_secret_name_drift!(value)
-        end
-      end
-    when Array
-      obj.each {|value| normalize_local_secret_name_drift!(value)}
     end
   end
 
@@ -619,45 +500,6 @@ module DashboardKustomize
     accepted_keys.each {|key| values.delete(key)}
     values['netsim_redis_groups'] = canonicalize_netsim_redis_groups(values['netsim_redis_groups']) if values.key?('netsim_redis_groups')
     doc['stringData'] = values
-  end
-
-  module_function def normalize_locals_configmap!(doc)
-    return unless doc['kind'] == 'ConfigMap'
-    return unless doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'locals.yml'
-
-    data = doc['data'] || {}
-    doc['data'] =
-      if data.key?('locals.yml')
-        canonicalize_locals_data(YAML.safe_load(data['locals.yml']) || {})
-      else
-        canonicalize_locals_data(data)
-      end
-  end
-
-  module_function def normalize_locals_delivery_drift!(doc)
-    containers = doc.dig('spec', 'template', 'spec', 'containers')
-    return unless containers.is_a?(Array)
-
-    containers.each do |container|
-      if container['envFrom'].is_a?(Array)
-        container['envFrom'].reject! do |entry|
-          locals_configmap_name?(entry.dig('configMapRef', 'name'))
-        end
-      end
-
-      if container['volumeMounts'].is_a?(Array)
-        container['volumeMounts'].reject! do |mount|
-          mount['name'] == LOCALS_VOLUME_NAME || mount['mountPath'] == '/code-dot-org/locals.yml'
-        end
-      end
-    end
-
-    volumes = doc.dig('spec', 'template', 'spec', 'volumes')
-    return unless volumes.is_a?(Array)
-
-    volumes.reject! do |volume|
-      volume['name'] == LOCALS_VOLUME_NAME || locals_configmap_name?(volume.dig('configMap', 'name'))
-    end
   end
 
   module_function def normalize_skaffold_root_user_drift!(overlay, doc)
@@ -694,67 +536,6 @@ module DashboardKustomize
     JSON.generate(canonical)
   rescue Psych::SyntaxError
     value
-  end
-
-  module_function def canonicalize_locals_data(values)
-    values.each_with_object({}) do |(key, value), result|
-      result[key.to_s] = canonicalize_locals_value(value)
-    end
-  end
-
-  module_function def canonicalize_locals_value(value)
-    return YAML.safe_load(value) if value.is_a?(String)
-
-    value
-  rescue Psych::SyntaxError
-    value
-  end
-
-  module_function def locals_uses_blob?(doc)
-    (doc['data'] || {}).key?('locals.yml')
-  end
-
-  module_function def locals_configmap_name?(name)
-    name.is_a?(String) && name.end_with?(LOCALS_CONFIGMAP_NAME)
-  end
-
-  module_function def workload_uses_locals_volume?(docs)
-    docs.any? do |doc|
-      containers = doc.dig('spec', 'template', 'spec', 'containers')
-      next false unless containers.is_a?(Array)
-
-      containers.any? do |container|
-        (container['volumeMounts'] || []).any? do |mount|
-          mount['name'] == LOCALS_VOLUME_NAME || mount['mountPath'] == '/code-dot-org/locals.yml'
-        end
-      end
-    end
-  end
-
-  module_function def workload_uses_locals_env_from?(docs)
-    docs.any? do |doc|
-      containers = doc.dig('spec', 'template', 'spec', 'containers')
-      next false unless containers.is_a?(Array)
-
-      containers.any? do |container|
-        (container['envFrom'] || []).any? do |entry|
-          locals_configmap_name?(entry.dig('configMapRef', 'name'))
-        end
-      end
-    end
-  end
-
-  module_function def extract_relevant_names(obj, result = [])
-    case obj
-    when Hash
-      obj.each do |key, value|
-        result << value if NAME_FIELDS.include?(key) && value.is_a?(String)
-        extract_relevant_names(value, result)
-      end
-    when Array
-      obj.each {|value| extract_relevant_names(value, result)}
-    end
-    result
   end
 
   module_function def remove_empty_hashes!(obj)

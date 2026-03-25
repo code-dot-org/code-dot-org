@@ -64,3 +64,7 @@ app.kubernetes.io/component: {{ .component }}
 {{- define "cdo.minioServiceName" -}}
 {{- include "cdo.fullname" (merge (dict "component" "minio") .) -}}
 {{- end }}
+
+{{- define "cdo.localSecretsName" -}}
+{{- include "cdo.fullname" (merge (dict "component" "local-secrets") .) -}}
+{{- end }}
