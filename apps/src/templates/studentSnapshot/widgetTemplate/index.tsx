@@ -1,5 +1,6 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import {ActionDropdownOption} from '@code-dot-org/component-library/dropdown/actionDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Typography} from '@mui/material';
 import React from 'react';
 
@@ -41,11 +42,11 @@ const WidgetTemplate: React.FC<WidgetTemplateProps> = ({
         {settingsOptions.length > 0 && (
           <div>
             <ActionDropdown
+              useIconButton
               triggerButtonProps={{
-                color: 'gray',
-                type: 'secondary',
-                icon: {iconName: 'gear'},
-                isIconOnly: true,
+                color: 'tertiary',
+                variant: 'outlined',
+                children: <FontAwesomeV6Icon iconName="gear" />,
               }}
               name={`${widgetName}-settings-dropdown`}
               labelText={i18n.settings()}

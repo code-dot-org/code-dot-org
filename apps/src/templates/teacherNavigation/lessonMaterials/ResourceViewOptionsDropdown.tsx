@@ -1,4 +1,5 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React, {useMemo} from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -200,14 +201,13 @@ const ResourceViewOptionsDropdown: React.FC<
         size="s"
         menuPlacement="right"
         className={styles.viewOptionsDropdown}
+        useIconButton
         triggerButtonProps={{
-          color: 'black',
-          type: 'tertiary',
-          isIconOnly: true,
-          icon: {
-            iconName: 'ellipsis-vertical',
-            iconStyle: 'solid',
-          },
+          color: 'secondary',
+          variant: 'text',
+          children: (
+            <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
+          ),
         }}
       />
     </div>

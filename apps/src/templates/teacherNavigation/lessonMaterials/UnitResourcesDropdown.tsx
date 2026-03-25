@@ -1,4 +1,5 @@
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import React from 'react';
 
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
@@ -67,14 +68,13 @@ const UnitResourcesDropdown: React.FC<UnitResourcesDropdownProps> = ({
         size="s"
         disabled={disabled}
         menuPlacement="right"
+        useIconButton
         triggerButtonProps={{
-          color: 'gray',
-          type: 'secondary',
-          isIconOnly: true,
-          icon: {
-            iconName: 'ellipsis-vertical',
-            iconStyle: 'solid',
-          },
+          color: 'tertiary',
+          variant: 'outlined',
+          children: (
+            <FontAwesomeV6Icon iconName="ellipsis-vertical" iconStyle="solid" />
+          ),
         }}
       />
     </div>

@@ -159,6 +159,35 @@ WithDestructiveOptionActionDropdown.args = {
   size: 'm',
 };
 
+export const WithButtonTrigger = SingleTemplate.bind({});
+WithButtonTrigger.args = {
+  name: 'button-trigger-dropdown',
+  useIconButton: false,
+  triggerButtonProps: {
+    color: 'primary',
+    variant: 'contained',
+    children: 'Actions',
+    startIcon: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
+  },
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+      onClick: () => console.log('option 1'),
+    },
+    {
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+      onClick: () => console.log('option 2'),
+    },
+  ],
+  labelText: 'Button Trigger Dropdown',
+  disabled: false,
+  size: 'm',
+};
+
 export const GroupOfActionDropdownColors = MultipleTemplate.bind({});
 GroupOfActionDropdownColors.args = {
   components: [
