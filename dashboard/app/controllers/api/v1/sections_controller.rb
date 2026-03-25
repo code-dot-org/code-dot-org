@@ -318,6 +318,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     authorize! :create, Section
 
     config = Policies::DemoSections.get(demo_type: params[:section_type])
+    puts 'lfm', config
     return head :bad_request unless config
 
     unit = Unit.get_from_cache(config.unit_name) if config.unit_name.present?
@@ -339,9 +340,11 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
     end
     return head :bad_request unless section.persisted?
 
+    puts 'lfm created demo section with id: ', section.id
     config.demo_student_ids&.each do |student_id|
       student = User.find_by(id: student_id)
       section.add_student(student) if student
+      puts "lfm added demo student with id: #{student_id} to section, student found: #{!student.nil?}"
     end
 
     render json: section.summarize

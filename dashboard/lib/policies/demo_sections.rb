@@ -3,7 +3,7 @@
 class Policies::DemoSections
   DEMO_SECTION_TYPES = {
     aif: {
-      section_name: 'AI Foundations Demo',
+      section_name: 'My first AI Foundations section',
       login_type: 'word',
       participant_type: 'student',
       grades: ['9', '10', '11', '12'],
@@ -11,7 +11,7 @@ class Policies::DemoSections
       unit_group_name: 'artificial-intelligence-foundations-2025',
     },
     csd: {
-      section_name: 'CS Discoveries Demo',
+      section_name: 'My first CS Discoveries section',
       login_type: 'word',
       participant_type: 'student',
       grades: ['6', '7', '8'],
