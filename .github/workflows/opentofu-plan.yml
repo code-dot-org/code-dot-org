@@ -53,7 +53,7 @@ jobs:
 
       - name: OpenTofu Plan
         id: plan
-        run: tofu plan -no-color -out=tfplan
+        run: tofu plan -no-color
         continue-on-error: true # Don't fail the step, let the comment show the error
 
       - name: Post Plan to PR
@@ -93,18 +93,6 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-
-      - name: Set artifact name
-        id: artifact_name
-        run: echo "name=tfplan-$(basename ${{ matrix.workspace }})" >> $GITHUB_OUTPUT
-
-      - name: Upload Plan Artifact
-        if: steps.plan.outcome == 'success'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ steps.artifact_name.outputs.name }}
-          path: ${{ matrix.workspace }}/tfplan
-          retention-days: 2
 
       - name: Fail if plan failed
         if: steps.plan.outcome == 'failure'
