@@ -43,9 +43,7 @@ module DashboardKustomize
   MYSQL_SECRET_ENV_ORDER = %w(_mysql_root_password db_writer db_reader reporting_db_writer reporting_db_reader db_credential_admin db_credential_writer db_credential_reader).freeze
   REDIS_SECRET_ENV_ORDER = ['_redis_password', 'redis_url', 'netsim_redis_groups'].freeze
   MINIO_SECRET_ENV_ORDER = ['_minio_root_password', '_minio_root_user', 'aws_s3_access_key_id', 'aws_s3_secret_access_key'].freeze
-  LOCAL_SECRET_NAME = 'cdo-local-secrets'.freeze
   NAME_FIELDS = %w[name volumeName claimName].freeze
-  RELEASE_NAME_FIELDS = %w[name serviceName volumeName claimName].freeze
   EMPTY_VALUES = [{}, []].freeze
   ACCEPTED_LOCAL_DEV_NAME_ALIASES = {
     'cdo-dot-aws' => 'dot-aws',
@@ -133,13 +131,13 @@ module DashboardKustomize
       release_name: 'staging',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml"],
-      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
+      helm_set: []
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
       services: {mysql: false, redis: false, minio: false},
       helm_values: ["#{GITOPS_ENVTYPES_BASE_URL}/levelbuilder.values.yaml"],
-      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
+      helm_set: []
     },
   }.freeze
 
@@ -355,7 +353,6 @@ module DashboardKustomize
   module_function def normalize_docs_for_parity(overlay, docs)
     normalized_docs = normalize_docs(docs).map do |doc|
       copy = deep_copy(doc)
-      normalize_release_name_drift!(copy, overlay)
       normalize_local_secret_name_drift!(copy)
       normalize_local_secret_value_drift!(copy)
       normalize_skaffold_root_user_drift!(overlay, copy)
@@ -415,14 +412,6 @@ module DashboardKustomize
     helm_secret = parse_secret_values(find_secret_doc(helm_docs))
     kustomize_secret = parse_secret_values(find_local_secret_doc(kustomize_docs))
 
-    if production_or_test_overlay?(overlay) && release_name_drift?(overlay, helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: release naming differs from Helm for production/test resources'
-    end
-
-    if local_secret_name_drift?(helm_docs, kustomize_docs)
-      warnings << 'accepted drift by Seth: cdo-local-secrets naming differs from Helm'
-    end
-
     if local_dev_name_drift?(helm_docs, kustomize_docs)
       warnings << 'accepted drift by Seth: some development-only auxiliary resource names differ from Helm'
     end
@@ -447,42 +436,6 @@ module DashboardKustomize
       doc['kind'] == 'Secret' &&
         doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
     end
-  end
-
-  module_function def production_or_test_overlay?(overlay)
-    ['production', 'test'].include?(overlay)
-  end
-
-  module_function def release_prefix_for(overlay)
-    return 'production-' if overlay == 'production'
-    return 'test-' if overlay == 'test'
-
-    nil
-  end
-
-  module_function def release_name_drift?(overlay, helm_docs, kustomize_docs)
-    return false unless production_or_test_overlay?(overlay)
-
-    normalized_helm = normalize_docs(helm_docs).map do |doc|
-      copy = deep_copy(doc)
-      normalize_local_secret_name_drift!(copy)
-      deep_sort(copy)
-    end
-    normalized_kustomize = normalize_docs(kustomize_docs).map do |doc|
-      copy = deep_copy(doc)
-      normalize_local_secret_name_drift!(copy)
-      deep_sort(copy)
-    end
-
-    normalized_helm != normalized_kustomize
-  end
-
-  module_function def local_secret_name_drift?(helm_docs, kustomize_docs)
-    helm_secret = find_secret_doc(helm_docs)
-    kustomize_secret = find_local_secret_doc(kustomize_docs)
-    return false unless helm_secret && kustomize_secret
-
-    helm_secret.dig('metadata', 'name') != kustomize_secret.dig('metadata', 'name')
   end
 
   module_function def accepted_secret_value_drift?(helm_secret, kustomize_secret)
@@ -542,37 +495,11 @@ module DashboardKustomize
     end
   end
 
-  module_function def normalize_release_name_drift!(obj, overlay)
-    prefix = release_prefix_for(overlay)
-    return unless prefix
-
-    case obj
-    when Hash
-      obj.each do |key, value|
-        if RELEASE_NAME_FIELDS.include?(key) && value.is_a?(String) && value.start_with?(prefix)
-          obj[key] = value.delete_prefix(prefix)
-        elsif key == 'app.kubernetes.io/instance' && value.is_a?(String)
-          obj[key] = overlay_config(overlay)[:release_name]
-        else
-          normalize_release_name_drift!(value, overlay)
-        end
-      end
-    when Array
-      obj.each {|value| normalize_release_name_drift!(value, overlay)}
-    end
-  end
-
   module_function def normalize_local_secret_name_drift!(obj)
     case obj
     when Hash
-      if obj['kind'] == 'Secret' && obj.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'cdo-local-secrets'
-        obj['metadata']['name'] = LOCAL_SECRET_NAME
-      end
-
       obj.each do |key, value|
-        if NAME_FIELDS.include?(key) && value.is_a?(String) && value.end_with?(LOCAL_SECRET_NAME)
-          obj[key] = LOCAL_SECRET_NAME
-        elsif NAME_FIELDS.include?(key) && value.is_a?(String) && ACCEPTED_LOCAL_DEV_NAME_ALIASES.key?(value)
+        if NAME_FIELDS.include?(key) && value.is_a?(String) && ACCEPTED_LOCAL_DEV_NAME_ALIASES.key?(value)
           obj[key] = ACCEPTED_LOCAL_DEV_NAME_ALIASES.fetch(value)
         else
           normalize_local_secret_name_drift!(value)
