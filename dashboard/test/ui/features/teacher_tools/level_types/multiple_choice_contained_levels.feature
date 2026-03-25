@@ -46,7 +46,7 @@ Scenario: Unauthorized Teacher on Maze with multiple choice contained level
   When I open my eyes to test "maze multi contained level"
   Given I create a teacher-associated student named "Sally"
   And I sign in as "Teacher_Sally" and go home
-  Then I am on "http://studio.code.org/courses/coursee-2019/units/1/lessons/4/levels/2"
+  Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/41/levels/1"
   And I wait for the lab page to fully load
   Then I see no difference for "initial load"
   Then I press "unchecked_0"
