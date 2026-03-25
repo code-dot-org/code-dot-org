@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 
 import LearningGoalItem from './LearningGoalItem';
 import {styles} from './rubricHelper';
@@ -32,6 +33,13 @@ export default function RubricEditor({
       <div style={styles.containerStyle}>
         <label htmlFor="ai_rubric_s3_config">
           AI Rubric S3 config directory name
+          <HelpTip>
+            <p>
+              An engineer must add the appropriate AI rubric configuration to S3
+              and provide you with this directory name before AI can be enabled
+              for any learning goals on this level.
+            </p>
+          </HelpTip>
         </label>
         <input
           id="ai_rubric_s3_config"
