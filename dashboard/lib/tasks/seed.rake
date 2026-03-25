@@ -546,7 +546,11 @@ namespace :seed do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
-  timed_task_with_logging jit_pl_concepts: :environment do
+  # Courses must be seeded before JIT PL content because the resources refer 
+  # to a pre-defined JIT PL course.
+  JIT_PL_DEPENDENCIES = [:environment, :courses]
+
+  timed_task_with_logging jit_pl_concepts: JIT_PL_DEPENDENCIES do
     JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)
   end
 

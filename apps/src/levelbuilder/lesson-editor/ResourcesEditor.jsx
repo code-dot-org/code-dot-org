@@ -285,9 +285,11 @@ class ResourcesEditor extends Component {
               onSearchSelect={this.onSearchSelect}
               searchUrl={'resources/search'}
               constructOptions={this.constructSearchOptions}
-              additionalQueryParams={{
-                courseVersionId: this.props.courseVersionId,
-              }}
+              additionalQueryParams={
+                this.props.forJitPl
+                  ? {forJitPl: true}
+                  : {courseVersionId: this.props.courseVersionId}
+              }
             />
           </div>
           <Table.Provider columns={columns}>

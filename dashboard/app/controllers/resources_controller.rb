@@ -5,7 +5,12 @@ class ResourcesController < ApplicationController
 
   # GET /resources/search
   def search
-    render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], params[:courseVersionId])
+    course_version_id = if params[:forJitPl]
+      JitPlConcept.jit_pl_course_version.id
+    else
+      params[:courseVersionId]
+    end
+    render json: ResourcesAutocomplete.get_search_matches(params[:query], params[:limit], course_version_id)
   end
 
   # PUT /resources
@@ -23,7 +28,7 @@ class ResourcesController < ApplicationController
       include_in_pdf: new_resource_params[:include_in_pdf]
     )
     if params[:forJitPl]
-      course_version = UnitGroup.find_by(name: 'just-in-time-pl')&.course_version
+      course_version = JitPlConcept.jit_pl_course_version
       unless course_version
         render status: :bad_request, json: {error: "JIT PL course version not found"}
         return
