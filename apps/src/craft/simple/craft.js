@@ -732,7 +732,9 @@ Craft.executeUserCode = function () {
     return;
   }
 
-  if (studioApp().hasUnwantedExtraTopBlocks()) {
+  if (Craft.initialConfig.level.freePlay) {
+    this.reportResult(true, true);
+  } else if (studioApp().hasUnwantedExtraTopBlocks()) {
     // immediately check answer instead of executing, which will fail and
     // report top level blocks (rather than executing them)
     this.reportResult(false);
@@ -893,25 +895,34 @@ Craft.executeUserCode = function () {
   );
 };
 
-Craft.getTestResultFrom = function (success, studioTestResults) {
+Craft.getTestResultFrom = function (
+  success,
+  studioTestResults,
+  suppressDialog
+) {
   if (studioTestResults === TestResults.LEVEL_INCOMPLETE_FAIL) {
     return TestResults.APP_SPECIFIC_FAIL;
   }
 
   if (Craft.initialConfig.level.freePlay) {
-    return TestResults.FREE_PLAY;
+    return suppressDialog ? TestResults.LEVEL_STARTED : TestResults.FREE_PLAY;
   }
 
   return studioTestResults;
 };
 
-Craft.reportResult = function (success) {
+Craft.reportResult = function (success, suppressDialog) {
   var studioTestResults = studioApp().getTestResults(success);
-  var testResultType = Craft.getTestResultFrom(success, studioTestResults);
+  var testResultType = Craft.getTestResultFrom(
+    success,
+    studioTestResults,
+    suppressDialog
+  );
 
-  const image = Craft.initialConfig.level.freePlay
-    ? Craft.gameController.getScreenshot()
-    : null;
+  const image =
+    Craft.initialConfig.level.freePlay && !suppressDialog
+      ? Craft.gameController.getScreenshot()
+      : null;
   // Grab the encoded image, stripping out the metadata, e.g. `data:image/png;base64,`
   const encodedImage = image ? encodeURIComponent(image.split(',')[1]) : null;
 
@@ -925,6 +936,10 @@ Craft.reportResult = function (success) {
     // typically delay feedback until response back
     // for things like e.g. crowdsourced hints & hint blocks
     onComplete: function (response) {
+      if (suppressDialog) {
+        return;
+      }
+
       const isSignedIn =
         getStore().getState().currentUser.signInState === SignInState.SignedIn;
       studioApp().displayFeedback({
