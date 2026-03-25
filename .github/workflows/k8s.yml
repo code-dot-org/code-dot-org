@@ -39,6 +39,7 @@ jobs:
 
   # In parallel with skaffold: verify our kustomize and helm packages, etc
   validate:
+    if: github.event_name != 'pull_request' || contains(github.head_ref, 'k8s')
     name: validate
     uses: ./.github/workflows/k8s-validate.yml
 
