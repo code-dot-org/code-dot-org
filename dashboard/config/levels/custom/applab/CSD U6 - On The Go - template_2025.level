@@ -98,7 +98,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:26.872+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - template_2024\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - template_2024\"},{\"changed_at\":\"2026-03-12 22:28:36 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2025-03-12T21:07:26.872+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - On The Go - template_2024\\\"\"],\"cloned_from\":\"CSD U6 - On The Go - template_2024\"},{\"changed_at\":\"2026-03-12 22:28:36 +0000\",\"changed\":[\"makerlab_enabled\",\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-23 19:43:00 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18762,\"changed_by_email\":\"emma.wingreen+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

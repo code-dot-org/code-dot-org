@@ -25,11 +25,13 @@ AWS_PROFILE=codeorg-admin tofu apply
 1. Tofu module `../../codeai-k8s-dex` needs to have been applied at least once (its shared by all clusters)
 1. Apply tofu module `../eks-cluster/` before this one
 1. Review and edit `terraform.tfvars`:
-   1. Follow [Bootstrapping Google OAuth Client for SSO](#bootstrapping-google-oauth-client-for-sso) to set `dex_*` variables.
-   1. Follow [Bootstrapping Kargo git credentials](#bootstrapping-kargo-git-credentials) to set `kargo_*` variables.
+   1. Follow [Bootstrapping Google OAuth Client for SSO](#bootstrapping-google-oauth-client-for-sso)
+      to set `dex_*` variables.
+   1. Follow [Bootstrapping Kargo secrets](#bootstrapping-kargo-secrets) to set `kargo_*` variables.
 
 1. Run: `AWS_PROFILE=codeorg-admin tofu apply`
-1. **Remove `dex_google_client_secret` and `kargo_k8s_gitops_repo_password` from `terraform.tfvars`** before you forget and commit them.
+1. **Remove `dex_google_client_secret`, `kargo_k8s_gitops_repo_password`, and `kargo_github_org_webhook_secret` 
+   from `terraform.tfvars`** before you forget and commit them.
 
 ### Bootstrapping Google OAuth Client for SSO
 
@@ -41,7 +43,8 @@ This has to be setup per-cluster because the redirect url to Dex will need to be
 to this cluster and Google doesn't allow wildcards in redirect urls.
 
 1. Run `tofu init`
-1. To get the redirect url, run: `tofu console <<< 'local.dex_google_redirect_url'`, it should look kinda like https://dex.$subdomain.code.org/callback
+1. To get the redirect url, run: `tofu console <<< 'local.dex_google_redirect_url'`, it should
+   look kinda like https://dex.$subdomain.code.org/callback
 1. Create a new Google OAuth 2.0 Client:
    1. Open `https://console.cloud.google.com/auth/clients`
    1. Click `Create client`
@@ -57,22 +60,30 @@ to this cluster and Google doesn't allow wildcards in redirect urls.
 1. Continue [First time cluster setup](#first-time-cluster-setup)
 After bootstrap, this module reads the credentials from AWS Secrets Manager.
 
-### Bootstrapping Kargo git credentials
+### Bootstrapping Kargo secrets
 
-Kargo needs Git credentials so it can push deployment updates to `code-dot-org/k8s-gitops`.
+Kargo needs two GitHub-related secrets:
+
+1. Git credentials so it can push deployment updates to `code-dot-org/k8s-gitops`
+1. A webhook secret so GitHub can send org webhooks to Kargo. Kargo doesn't require this, but our
+   setup depends on it for refresh performance, so you gotta do it ;-)
+
+#### Git credentials
 
 1. Select a GitHub username (deploy-code-org) + create a GitHub personal access token (PAT)
    with write access to `code-dot-org/k8s-gitops`
-1. Edit `terraform.tfvars`:
-   1. set `kargo_k8s_gitops_repo_username`: github username
-   1. set `kargo_k8s_gitops_repo_password`: PAT to bootstrap the secret into AWS Secrets Manager
-      as `k8s/tofu/${cluster_name}/kargo/gitops_repo_password` but DO NOT COMMIT this line.
-1. Run `AWS_PROFILE=codeorg-admin tofu apply`
-1. Remove both values from `terraform.tfvars`
+   1. Edit `terraform.tfvars`:
+      1. set `kargo_k8s_gitops_repo_username`: github username
+      1. set `kargo_k8s_gitops_repo_password`: PAT to bootstrap the secret into AWS Secrets Manager
+         as `k8s/tofu/${cluster_name}/kargo/gitops_repo_password` but DO NOT COMMIT this line.
+1. Generate a random secret via `openssl rand -hex 32`
+   1. Edit `terraform.tfvars`:
+      1. set `kargo_github_org_webhook_secret`: random secret from above
+1. Continue [First time cluster setup](#first-time-cluster-setup)
 
-After bootstrap, this module reads the credentials from AWS Secrets Manager and the
-External Secrets Operator (ESO) syncs them into Kubernetes secret `kargo-k8s-gitops`
-in namespace `kargo-shared-resources`.
+After bootstrap, Tofu stores the secret in AWS Secrets Manager, ESO syncs it into:
+1. k8s secret `kargo-k8s-gitops` in namespace `kargo-shared-resources`.
+2. k8s secret `github-org-webhook-secret` in namespace `kargo-system-resources`
 
 ## Smoke Tests
 

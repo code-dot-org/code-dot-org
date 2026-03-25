@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: dashboard-job-setup-db
+  name: cdo-dashboard-job-setup-db
   labels:
     app.kubernetes.io/component: dashboard-job-setup-db
 spec:
@@ -26,6 +26,8 @@ spec:
               value: development
             - name: RACK_ENV
               value: development
+            - name: PERMIT_UNKNOWN_PROPERTIES_IN_CDO
+              value: "1"
           envFrom:
             - prefix: CDO_
               configMapRef:

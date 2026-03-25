@@ -30,10 +30,27 @@ we have existing (broken?) code that does this, and it could be repurposed.
 Figure out how to most cleanly inject prometheus into clusters, including dev clusters. Maybe
 include prometheus as a helm chart dependency??
 
+## Kargo
+
+- Create one `github_organization_webhook` in tofu (for both push and package), publish as an AWS secret, synced down to Kargo, and use in new ProjectConfig, then a warehouse with both subscriptions will be nearly instant (+ clone time lol :-P)
+- set `org.opencontainers.image.source=https://github.com/code-dot-org/code-dot-org` and `org.opencontainers.image.revision=<git sha>` OCI tags in `k8s.yml` GH action so Kargo links Freight to source code in the UX, see: <https://docs.kargo.io/user-guide/how-to-guides/working-with-freight#oci-image-annotations>
+- Install `cert-manager` as a platform Argo app, then enable Kargo admission
+  webhooks. Kargo admission webhooks for resource validation/defaulting are
+  currently disabled because they require TLS and CA wiring for the internal
+  webhook server. Once `cert-manager` is installed and healthy, enable
+  `webhooks.register` and `webhooksServer.enabled`. This is separate from
+  `externalWebhooksServer.enabled`, which is already on for external
+  GitHub/package/push webhooks.
+
 ## Tofu EKS Cluster
 
 See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
 repo-server disk-fill investigation notes.
+
+Manage AWS Load Balancer Controller CRDs explicitly in `k8s/tofu/codeai-k8s/eks-cluster/`.
+Helm install creates them, but Helm upgrade does not update them, and we already hit stale
+live CRDs missing newer `IngressClassParams` fields like `certificateArn`, `targetType`,
+and `sslRedirectPort`.
 
 In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
@@ -49,3 +66,7 @@ Move ArgoCD management out of Tofu and into ArgoCD itself. When doing this, foll
 
 In `k8s/tofu/codeai-k8s-dex/tofu.tfvars`, update `google_email_with_groups_readonly_scope`
 to a non-personal email.
+
+## Helm / Kustomize parity
+
+- Allow `verify-helm-parity` to still check parity when `k8s-gitops` / kustomize + helm charts are modified locally, so we can verify them before we commit.
