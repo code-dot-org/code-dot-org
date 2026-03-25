@@ -40,7 +40,8 @@ def main
     SELECT *
     FROM SVV_INTEGRATION_TABLE_STATE
     WHERE target_database = '#{TARGET_DB}'
-      AND (state != 'Synced' AND state != 'ResyncInitiated');
+      AND table_state != 'Synced'
+      AND table_state != 'ResyncInitiated';
   SQL
 
   tables = redshift.execute(table_query)
