@@ -2,9 +2,9 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import {UnconnectedResourcesEditor} from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
 import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 
 const misconceptionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -23,7 +23,9 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
   const addResource = (_context, resource) =>
     setResources(prev => [...prev, resource]);
   const editResource = (_context, resource) =>
-    setResources(prev => prev.map(r => (r.key === resource.key ? resource : r)));
+    setResources(prev =>
+      prev.map(r => (r.key === resource.key ? resource : r))
+    );
   const removeResource = (_context, key) =>
     setResources(prev => prev.filter(r => r.key !== key));
 
