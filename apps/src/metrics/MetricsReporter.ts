@@ -106,7 +106,9 @@ class MetricsReporter {
     // Send to Sentry as a custom metric
     sentryMetrics.distribution(name, value, {
       unit,
-      attributes: Object.fromEntries(metric.dimensions.map(d => [d.name, d.value])),
+      attributes: Object.fromEntries(
+        metric.dimensions.map(d => [d.name, d.value])
+      ),
     });
 
     // Send a version of the metric with and without the browser version dimension
@@ -145,7 +147,7 @@ class MetricsReporter {
   private sendToSentryLogs(level: LogLevel, message: string | object) {
     const msgStr =
       typeof message === 'string' ? message : JSON.stringify(message);
-    const attributes = this.getDeviceInfo();
+    const attributes = this.getDeviceInfo() as Record<string, unknown>;
     if (level === 'INFO') {
       sentryLogger.info(msgStr, attributes);
     } else if (level === 'WARNING') {
