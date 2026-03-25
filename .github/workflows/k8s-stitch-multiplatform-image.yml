@@ -18,10 +18,10 @@ on:
   workflow_call:
     outputs:
       codeai_docker_image_ref:
-        description: "Fully qualified docker image reference for the final multi-platform image"
+        description: "Fully qualified immutable docker image reference for the final multi-platform image"
         value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_image_ref }}
       codeai_docker_tag:
-        description: "Docker tag for the final multi-platform image"
+        description: "Immutable docker tag for the final multi-platform image"
         value: ${{ jobs.stitch-multi-platform.outputs.codeai_docker_tag }}
     inputs:
       branch_tag_alias:
@@ -33,7 +33,7 @@ on:
         required: true
         type: string
       docker_tag:
-        description: "Docker tag for the final multi-platform image e.g. code-dot-org:my-branch"
+        description: "Immutable git docker tag for the final multi-platform image"
         required: true
         type: string
 
