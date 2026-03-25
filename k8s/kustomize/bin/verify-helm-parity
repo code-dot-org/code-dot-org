@@ -125,7 +125,7 @@ module DashboardKustomize
         "#{GITOPS_ENVTYPES_BASE_URL}/production.values.yaml",
         "#{GITOPS_DEPLOYMENTS_BASE_URL}/production/values.yaml"
       ],
-      helm_set: [['--set', 'image=code-dot-org:latest']]
+      helm_set: []
     },
     'test' => {
       release_name: 'test',
@@ -134,13 +134,7 @@ module DashboardKustomize
         "#{GITOPS_ENVTYPES_BASE_URL}/test.values.yaml",
         "#{GITOPS_DEPLOYMENTS_BASE_URL}/test/values.yaml"
       ],
-      helm_set: [
-        ['--set', 'image=code-dot-org:latest'],
-        ['--set-json', 'command=["bin/dashboard-server"]'],
-        ['--set-json', 'args=[]'],
-        ['--set', 'user.uid=1000'],
-        ['--set', 'user.gid=1000']
-      ]
+      helm_set: []
     },
     'staging' => {
       release_name: 'staging',
@@ -149,13 +143,7 @@ module DashboardKustomize
         "#{GITOPS_ENVTYPES_BASE_URL}/staging.values.yaml",
         "#{GITOPS_DEPLOYMENTS_BASE_URL}/staging/values.yaml"
       ],
-      helm_set: [
-        ['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me'],
-        ['--set-json', 'command=["bin/dashboard-server"]'],
-        ['--set-json', 'args=[]'],
-        ['--set', 'user.uid=1000'],
-        ['--set', 'user.gid=1000']
-      ]
+      helm_set: [['--set', 'image=ghcr.io/code-dot-org/code-dot-org:replace-me']]
     },
     'levelbuilder' => {
       release_name: 'levelbuilder',
