@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Defining AI
 
-#### We'll dive into more of the vocabulary around AI in the next module (Module 2, Understanding AI), but here's a quick introduction to some key terms.
+#### We'll dive into more of the vocabulary around AI in the Module 2, Understanding AI, but here's a quick introduction to some key terms.
 
 <div style="background-color: #B7E0E5; border-radius: 10px; padding: 15px; margin: 20px auto; max-width: 85%; box-sizing: border-box; word-wrap: break-word; overflow-wrap: break-word;">
 <p style="font-size: 14pt; margin-top: 12px; line-height: 120%;">📖 <strong>Artificial Intelligence (AI):</strong> A broad term for computer systems designed to perform tasks that usually require human thinking, such as recognizing patterns, making decisions, or understanding language.</p>

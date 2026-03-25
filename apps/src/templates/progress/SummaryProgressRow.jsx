@@ -6,6 +6,7 @@ import ReactTooltip from 'react-tooltip';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -112,17 +113,33 @@ function SummaryProgressRow({
           ...(isLockedForUser && styles.fadedCol),
         }}
       >
-        {levels.length === 0 ? (
-          i18n.lessonContainsNoLevels()
-        ) : (
-          <ProgressBubbleSet
-            levels={levels}
-            disabled={isLockedForUser}
-            style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
-            lessonName={lesson.name}
-          />
-        )}
-        {lesson.isFocusArea && <FocusAreaIndicator />}
+        <div style={styles.col2Content}>
+          <div style={styles.col2Left}>
+            {levels.length === 0 ? (
+              i18n.lessonContainsNoLevels()
+            ) : (
+              <ProgressBubbleSet
+                levels={levels}
+                disabled={isLockedForUser}
+                style={lesson.isFocusArea ? styles.focusAreaMargin : undefined}
+                lessonName={lesson.name}
+              />
+            )}
+            {lesson.isFocusArea && <FocusAreaIndicator />}
+          </div>
+          {lesson.student_lesson_plan_html_url && (
+            <Button
+              __useDeprecatedTag
+              className="ui-test-lesson-resources"
+              href={lesson.student_lesson_plan_html_url}
+              text={i18n.lessonResources()}
+              icon="file-text"
+              color="white"
+              target="_blank"
+              style={styles.buttonStyle}
+            />
+          )}
+        </div>
       </td>
     </tr>
   );
@@ -171,6 +188,18 @@ export const styles = {
     width: '100%',
     paddingLeft: 20,
     paddingRight: 20,
+  },
+  col2Content: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
+  },
+  col2Left: {
+    flex: 1,
+  },
+  buttonStyle: {
+    marginLeft: 10,
+    boxShadow: 'none',
   },
   // When we set our opacity on the row element instead of on individual tds,
   // there are weird interactions with our tooltips in Chrome, and borders end

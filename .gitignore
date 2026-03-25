@@ -112,7 +112,10 @@ dashboard/brakeman_security_report.htm
 .venv
 .pdm-python
 
+# skaffold, part of k8s stack, see skaffold.yaml
 skaffold-build-tags.json
+/cdo-local-secrets.env
+/cdo-local-secrets.env.lock
 
 # claude
 .claude/worktrees
@@ -123,4 +126,3 @@ CLAUDE.local.md
 # agent skills standard: https://agentskills.io/
 .agents/**/*.local.*
 .agents/skills/*.local
-

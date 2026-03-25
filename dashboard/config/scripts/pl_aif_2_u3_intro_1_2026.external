@@ -40,41 +40,7 @@ ___
 
 ---
 
-<div style="
-  margin: 32px 0;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-">
-  <a
-    class="btn btn-large btn-primary"
-    href="https://studio.code.org/form/selfpaced_pd_teaching_programming_in_musiclab_pre_survey"
-    target="_blank"
-    rel="noopener noreferrer"
-    style="white-space: nowrap;"
-  >
-    Take the Pre-Survey
-  </a>
 
-  <div>
-    <div style="
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    ">
-      Help us improve this module
-    </div>
-    <div style="
-      font-size: 16px;
-      line-height: 1.4;
-      color: #555;
-    ">
-      Take a quick pre-survey — it takes fewer than five minutes to complete.
-    </div>
-  </div>
-</div>
-
----
 
 ### **Suggested total time for this module:** 75 minutes
 
