@@ -46,11 +46,11 @@ const SelectAssetsDialog: React.FC<DialogProps & SelectProps> = ({
       title={lab2I18n.library()}
       className={styles.starterAssetsModal}
       primaryButtonProps={{
-        text: lab2I18n.attach(),
+        children: lab2I18n.attach(),
         onClick: primaryOnClick,
         disabled: selectedFiles.length === 0,
       }}
-      secondaryButtonProps={{text: lab2I18n.cancel(), onClick: onClose}}
+      secondaryButtonProps={{children: lab2I18n.cancel(), onClick: onClose}}
       customContent={
         loading ? (
           <Loading />

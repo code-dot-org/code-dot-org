@@ -1,4 +1,5 @@
 import SimpleDropdown from '@code-dot-org/component-library/dropdown/simpleDropdown';
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider, {SliderProps} from '@code-dot-org/component-library/slider';
 import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
@@ -152,17 +153,21 @@ const SetupCustomization: React.FunctionComponent = () => {
     },
     className: styles.temperatureSlider,
     leftButtonProps: {
-      icon: {
-        iconName: 'minus',
-        title: aichatI18n.modelCustomization_sliderDecrease(),
-      },
+      children: (
+        <FontAwesomeV6Icon
+          iconName="minus"
+          title={aichatI18n.modelCustomization_sliderDecrease()}
+        />
+      ),
       ['aria-label']: aichatI18n.modelCustomization_sliderDecrease(),
     },
     rightButtonProps: {
-      icon: {
-        iconName: 'plus',
-        title: aichatI18n.modelCustomization_sliderIncrease(),
-      },
+      children: (
+        <FontAwesomeV6Icon
+          iconName="plus"
+          title={aichatI18n.modelCustomization_sliderIncrease()}
+        />
+      ),
       ['aria-label']: aichatI18n.modelCustomization_sliderIncrease(),
     },
   };

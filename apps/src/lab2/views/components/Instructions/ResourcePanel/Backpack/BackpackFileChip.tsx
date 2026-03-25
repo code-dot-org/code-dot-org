@@ -275,11 +275,10 @@ const BackpackFileChip: React.FC<BackpackFileChipProps> = ({
           labelText={`${fileName} options`}
           size={'xs'}
           triggerButtonProps={{
-            color: 'gray',
-            icon: {iconName: 'ellipsis-vertical'},
-            isIconOnly: true,
-            type: 'tertiary',
-            size: 'xs',
+            color: 'tertiary',
+            children: <FontAwesomeV6Icon iconName="ellipsis-vertical" />,
+            variant: 'text',
+            size: 'extraSmall',
           }}
           menuPlacement="right"
           disabled={disableActions}

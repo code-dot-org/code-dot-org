@@ -83,12 +83,12 @@ const CancelWorkshopEnrollmentButton: React.FC<
           description="Are you sure you want to cancel your registration?"
           primaryButtonProps={{
             onClick: handleCancel,
-            text: 'Yes, cancel registration',
-            color: 'destructive',
+            children: 'Yes, cancel registration',
+            color: 'error',
           }}
           secondaryButtonProps={{
             onClick: () => setShowConfirmation(false),
-            text: 'No, keep registration',
+            children: 'No, keep registration',
           }}
           onClose={() => setShowConfirmation(false)}
         />
