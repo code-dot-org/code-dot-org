@@ -126,6 +126,46 @@ class LibrariesTest < FilesApiTestBase
     assert_equal 400, last_response.status
   end
 
+  def test_no_false_positive_profanity_from_droplet_config_params
+    # Regression test: dropletConfig params like ["hits","atBats"] should NOT
+    # trigger profanity detection. When the raw JSON body was passed directly to
+    # ShareFiltering, syntax characters were stripped and adjacent tokens were
+    # concatenated — turning `"params":["hits","atBats"]` into "paramshitsatBats",
+    # which contains "shits". Only source/name/description should be checked.
+    filename = 'library.json'
+    file_data = JSON.generate(
+      {
+        name: 'Remix',
+        description: 'demo',
+        functions: ['battingAverage'],
+        dropletConfig: [
+          {
+            func: 'battingAverage',
+            category: 'Functions',
+            comment: 'Returns batting average',
+            type: 'either',
+            params: ['hits', 'atBats'],
+            paletteParams: ['hits', 'atBats']
+          }
+        ],
+        source: "function battingAverage(hits, atBats) { return hits / atBats; }"
+      }
+    )
+    file_headers = {'CONTENT_TYPE' => 'application/json'}
+    delete_all_library_versions(filename)
+
+    # ShareFiltering should only be called with the safe text fields, not the raw JSON
+    ShareFiltering.expects(:find_failure).with do |text, _locale|
+      # Must not include raw JSON structure from dropletConfig
+      !text.include?('dropletConfig') && !text.include?('paletteParams')
+    end.returns(nil)
+
+    @api.put_object(filename, file_data, file_headers)
+    assert successful?
+
+    soft_delete(filename)
+  end
+
   #
   # Upload a new version of an library.
   # @param [String] filename of the library
