@@ -1,3 +1,4 @@
+import {IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
 import {
   ChangeEvent,
@@ -7,7 +8,7 @@ import {
   useState,
 } from 'react';
 
-import {Button, ButtonProps} from '@/button';
+import {ComponentLibraryIconButtonProps} from '@/button/muiButtonProps';
 
 import moduleStyles from './slider.module.scss';
 
@@ -54,19 +55,18 @@ export interface SliderProps extends HTMLAttributes<HTMLInputElement> {
   /** Maximum value for the slider
    * @default 100 */
   maxValue?: number;
-  /** Props for the left control button */
-  leftButtonProps?: ButtonProps;
-  /** Props for the right control button */
-  rightButtonProps?: ButtonProps;
+  /** Props for the left control button (MUI IconButton) */
+  leftButtonProps?: ComponentLibraryIconButtonProps;
+  /** Props for the right control button (MUI IconButton) */
+  rightButtonProps?: ComponentLibraryIconButtonProps;
   /** Custom class name */
   className?: string;
 }
 
-const defaultSliderButtonProps: ButtonProps = {
-  type: 'tertiary',
-  color: 'black',
-  isIconOnly: true,
-  size: 'xs',
+const defaultSliderButtonProps: Partial<ComponentLibraryIconButtonProps> = {
+  variant: 'text',
+  color: 'secondary',
+  size: 'extraSmall',
 };
 
 const sliderTrackColorsMap = {
@@ -247,7 +247,8 @@ const Slider: React.FunctionComponent<SliderProps> = ({
 
   const showLabelSection = label || !hideValue;
 
-  const buttonColor = color === 'white' || color === 'aqua' ? 'white' : 'black';
+  const iconButtonColor =
+    color === 'white' || color === 'aqua' ? 'white' : 'secondary';
 
   return (
     <div
@@ -273,9 +274,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
 
       <div className={moduleStyles.sliderMainContainer}>
         {leftButtonProps && (
-          <Button
+          <MuiIconButton
             {...defaultSliderButtonProps}
-            color={buttonColor}
+            color={iconButtonColor}
             onClick={() => handleControlButtonClick('subtract')}
             disabled={disabled}
             {...leftButtonProps}
@@ -326,9 +327,9 @@ const Slider: React.FunctionComponent<SliderProps> = ({
           {/*/!*)}*!/*/}
         </div>
         {rightButtonProps && (
-          <Button
+          <MuiIconButton
             {...defaultSliderButtonProps}
-            color={buttonColor}
+            color={iconButtonColor}
             onClick={() => handleControlButtonClick('add')}
             disabled={disabled}
             {...rightButtonProps}

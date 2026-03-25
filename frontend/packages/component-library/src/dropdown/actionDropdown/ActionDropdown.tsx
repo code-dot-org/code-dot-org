@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import {useCallback, AriaAttributes} from 'react';
 
-import {ButtonProps} from '@/button';
+import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import {useDropdownContext} from '@/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@/common/types';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
@@ -40,7 +40,7 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown options */
   options: ActionDropdownOption[];
   /** ActionDropdown trigger button props */
-  triggerButtonProps?: ButtonProps;
+  triggerButtonProps?: ComponentLibraryButtonProps;
 }
 
 /**
@@ -89,7 +89,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       menuVerticalPlacement={menuVerticalPlacement}
       size={size}
       {...rest}
-      useDSCOButtonAsTrigger
+      useMuiButtonAsTrigger
       triggerButtonProps={triggerButtonProps}
     >
       <ul>

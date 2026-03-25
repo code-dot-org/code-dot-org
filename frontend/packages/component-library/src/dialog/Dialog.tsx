@@ -1,7 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {Button, ButtonProps} from '@/button';
+import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import FontAwesomeV6Icon, {FontAwesomeV6IconProps} from '@/fontAwesomeV6Icon';
 import {BodyTwoText, Heading2} from '@/typography';
 
@@ -23,9 +24,9 @@ export interface DialogProps extends HTMLAttributes<HTMLDivElement> {
   /** Custom bottom content (rendered right after Dialog actions section). */
   customBottomContent?: ReactNode;
   /** Dialog primary button props */
-  primaryButtonProps: ButtonProps;
+  primaryButtonProps: ComponentLibraryButtonProps;
   /** Dialog secondary button props */
-  secondaryButtonProps?: ButtonProps;
+  secondaryButtonProps?: ComponentLibraryButtonProps;
   /** Dialog color mode */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -99,15 +100,15 @@ const Dialog: React.FunctionComponent<DialogProps> = ({
     </div>
     <div className={moduleStyles.dialogActionsSection}>
       {secondaryButtonProps && (
-        <Button
-          type="secondary"
-          color={mode === 'light' ? 'black' : 'white'}
+        <MuiButton
+          variant="outlined"
+          color={mode === 'light' ? 'secondary' : 'white'}
           {...secondaryButtonProps}
         />
       )}
-      <Button
-        type="primary"
-        color={mode === 'light' ? 'purple' : 'white'}
+      <MuiButton
+        variant="contained"
+        color={mode === 'light' ? 'primary' : 'white'}
         {...primaryButtonProps}
       />
     </div>

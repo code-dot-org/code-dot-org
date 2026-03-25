@@ -1,10 +1,10 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 import {useState} from 'react';
 import ReactPlayer from 'react-player';
 import {JsonLd} from 'react-schemaorg';
 import type {VideoObject} from 'schema-dts';
 
-import {Button, LinkButton} from '@/button';
 import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
 import {BodyTwoText, BodyThreeText, Figcaption, StrongText} from '@/typography';
 import Facade from '@/video/Facade';
@@ -150,14 +150,15 @@ const Video: React.FC<VideoProps> = ({
               {errorBody ||
                 'Please enable "Functional Cookies" and refresh the page to play this video.'}
             </BodyThreeText>
-            <Button
+            <MuiButton
               className={moduleStyles.cookieConsentButton}
               onClick={() => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 (window as any).OneTrust.ToggleInfoDisplay();
               }}
-              text={'Cookie Settings'}
-            />
+            >
+              Cookie Settings
+            </MuiButton>
           </div>
         );
     }
@@ -170,20 +171,20 @@ const Video: React.FC<VideoProps> = ({
       <div className={moduleStyles.footer}>
         {showCaption && <Figcaption>{videoTitle}</Figcaption>}
         {videoFallback && (
-          <LinkButton
+          <MuiButton
             className={moduleStyles.download}
-            color="gray"
+            color="tertiary"
             href={videoFallback}
-            iconLeft={{
-              iconName: 'download',
-              iconStyle: 'solid',
-            }}
-            size="xs"
-            text={downloadLabel || 'Download'}
-            type="secondary"
+            startIcon={
+              <FontAwesomeV6Icon iconName="download" iconStyle="solid" />
+            }
+            size="extraSmall"
+            variant="outlined"
             target="_blank"
             rel="noopener noreferrer"
-          />
+          >
+            {downloadLabel || 'Download'}
+          </MuiButton>
         )}
       </div>
 

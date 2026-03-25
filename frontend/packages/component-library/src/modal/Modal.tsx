@@ -1,7 +1,8 @@
+import {Button as MuiButton} from '@mui/material';
 import classnames from 'classnames';
 import {HTMLAttributes, ReactNode} from 'react';
 
-import {GenericButton, GenericButtonProps} from '@/button';
+import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import CustomDialog from '@/dialog/CustomDialog';
 import {BodyTwoText, Heading3} from '@/typography';
 
@@ -20,9 +21,9 @@ export interface ModalProps extends HTMLAttributes<HTMLDivElement> {
    *  for dialog's `aria-describedBy` attribute) */
   customBottomContent?: ReactNode;
   /** Modal primary button props */
-  primaryButtonProps: GenericButtonProps;
+  primaryButtonProps: ComponentLibraryButtonProps;
   /** Modal secondary button props */
-  secondaryButtonProps?: GenericButtonProps;
+  secondaryButtonProps?: ComponentLibraryButtonProps;
   /** @deprecated Modal color mode - use theme provider instead. This prop will be removed in a future version. */
   mode?: 'light' | 'dark';
   /** Custom class name */
@@ -117,15 +118,15 @@ const Modal: React.FunctionComponent<ModalProps> = ({
       <hr />
       <div className={moduleStyles.modalActionsSection}>
         {secondaryButtonProps && (
-          <GenericButton
-            type="secondary"
-            color={mode === 'dark' ? 'white' : 'black'}
+          <MuiButton
+            variant="outlined"
+            color={mode === 'dark' ? 'white' : 'secondary'}
             {...secondaryButtonProps}
           />
         )}
-        <GenericButton
-          type="primary"
-          color={mode === 'dark' ? 'white' : 'purple'}
+        <MuiButton
+          variant="contained"
+          color={mode === 'dark' ? 'white' : 'primary'}
           {...primaryButtonProps}
         />
       </div>

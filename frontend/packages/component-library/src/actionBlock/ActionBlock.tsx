@@ -1,6 +1,7 @@
+import {Button as MuiButton} from '@mui/material';
 import classNames from 'classnames';
 
-import {LinkButton, LinkButtonProps} from '@/button';
+import {ComponentLibraryButtonProps} from '@/button/muiButtonProps';
 import Image, {ImageProps} from '@/image';
 import {
   Heading3,
@@ -49,31 +50,25 @@ export const getDetail = (details?: {label: string; description: string}) => {
 };
 
 export const getButtons = (
-  primaryButton?: LinkButtonProps,
-  secondaryButton?: LinkButtonProps,
+  primaryButton?: ComponentLibraryButtonProps,
+  secondaryButton?: ComponentLibraryButtonProps,
 ) => {
   if (!primaryButton) return null;
   return (
     <div className={moduleStyles.buttonWrapper}>
       {primaryButton && (
-        <LinkButton
-          type="primary"
-          size="m"
-          color="purple"
-          text={primaryButton.text}
-          href={primaryButton.href}
-          ariaLabel={primaryButton.ariaLabel}
+        <MuiButton
+          variant="contained"
+          size="medium"
+          color="primary"
           {...primaryButton}
         />
       )}
       {secondaryButton && (
-        <LinkButton
-          type="secondary"
-          size="m"
-          color="black"
-          text={secondaryButton.text}
-          href={secondaryButton.href}
-          ariaLabel={secondaryButton.ariaLabel}
+        <MuiButton
+          variant="outlined"
+          size="medium"
+          color="secondary"
           {...secondaryButton}
         />
       )}
