@@ -27,7 +27,7 @@ const UploadsDisabledModal: React.FunctionComponent<
         </div>
       }
       primaryButtonProps={{
-        text: i18n.ok(),
+        children: i18n.ok(),
         onClick: onClose,
       }}
     />

@@ -90,7 +90,7 @@ const SkillsEditDialog: React.FC<SkillsEditDialogProps> = ({
     <Modal
       onClose={onClose}
       title="Edit Skill"
-      primaryButtonProps={{onClick: handleSave, text: 'Save'}}
+      primaryButtonProps={{onClick: handleSave, children: 'Save'}}
       customContent={getInputForm()}
     />
   );

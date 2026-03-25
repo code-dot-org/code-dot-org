@@ -57,8 +57,8 @@ const PendingDialog: React.FunctionComponent<PendingDialogProps> = ({
       className={moduleStyles.genericDialog}
       primaryButtonProps={{
         disabled: true,
-        isPending: true,
-        text: 'Loading',
+        loading: true,
+        children: 'Loading',
         onClick: () => {},
       }}
     />

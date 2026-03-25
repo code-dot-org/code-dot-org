@@ -1,3 +1,4 @@
+import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import Slider from '@code-dot-org/component-library/slider';
 import React from 'react';
 
@@ -41,19 +42,23 @@ const NeighborhoodVisualization: React.FunctionComponent<
           hideValue={true}
           leftButtonProps={{
             'aria-label': commonI18n.decreaseSpeed(),
-            icon: {
-              iconName: 'turtle',
-              title: commonI18n.decreaseSpeed(),
-            },
-            size: 's',
+            children: (
+              <FontAwesomeV6Icon
+                iconName="turtle"
+                title={commonI18n.decreaseSpeed()}
+              />
+            ),
+            size: 'small',
           }}
           rightButtonProps={{
             'aria-label': commonI18n.increaseSpeed(),
-            icon: {
-              iconName: 'rabbit',
-              title: commonI18n.increaseSpeed(),
-            },
-            size: 's',
+            children: (
+              <FontAwesomeV6Icon
+                iconName="rabbit"
+                title={commonI18n.increaseSpeed()}
+              />
+            ),
+            size: 'small',
           }}
           className={moduleStyles.slider}
         />
