@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_25_204845) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -173,14 +173,14 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
 
   create_table "aidiff_messages", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "aidiff_thread_id", null: false
-    t.text "external_id", size: :medium, null: false
+    t.text "external_id", size: :long, null: false
     t.integer "role", null: false
-    t.text "content", size: :medium, null: false
+    t.text "content", size: :long, null: false
     t.boolean "is_preset", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "preset_chip_text", size: :medium
-    t.text "raw_content", size: :medium
+    t.text "preset_chip_text", size: :long
+    t.text "raw_content", size: :long
     t.json "source_links"
     t.boolean "is_artifact_candidate", default: false
     t.string "artifact_candidate_type"
@@ -189,9 +189,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
 
   create_table "aidiff_threads", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.text "external_id", size: :medium, null: false
-    t.text "llm_version", size: :medium, null: false
-    t.text "title", size: :medium
+    t.text "external_id", size: :long, null: false
+    t.text "llm_version", size: :long, null: false
+    t.text "title", size: :long
     t.integer "unit_id"
     t.integer "lesson_id"
     t.datetime "created_at", null: false
@@ -1004,6 +1004,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
   end
 
+  create_table "lesson_insights", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id", null: false
+    t.integer "student_id", null: false
+    t.integer "section_id", null: false
+    t.integer "unit_id", null: false
+    t.text "insight_json", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id", "unit_id", "lesson_id", "student_id"], name: "index_lesson_insights_on_section_id_unit_id_lesson_id_student_id", unique: true
+  end
+
   create_table "lessons_opportunity_standards", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "lesson_id", null: false
     t.bigint "standard_id", null: false
@@ -1105,7 +1116,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
-  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "levels_skills", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.bigint "level_id", null: false
     t.bigint "skill_id", null: false
     t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
@@ -2287,7 +2298,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["user_id"], name: "index_sign_ins_on_user_id"
   end
 
-  create_table "skills", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "skills", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.string "description", null: false
     t.text "evaluation_criteria"
     t.string "concept"
@@ -2491,7 +2502,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["unit_group_id", "resource_id"], name: "index_ug_student_resources_on_unit_group_id_and_resource_id", unique: true
   end
 
-  create_table "user_data_retention_statuses", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "user_data_retention_statuses", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "pii_scrubbed_at", precision: nil
     t.datetime "anonymized_at", precision: nil
