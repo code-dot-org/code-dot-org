@@ -110,8 +110,8 @@ const UserMessageEditor = React.forwardRef<
       (userMessage: string) => {
         onSubmit(userMessage, {
           dictationEnabled: speechToTextEnabled,
-          dictationUses: speechToTextCount,
-          dictationMessageCleared: clearedMessageCount,
+          dictationUsageCount: speechToTextCount,
+          dictationMessageClearedCount: clearedMessageCount,
         });
         setSpeechToTextCount(0);
         setClearedMessageCount(0);
