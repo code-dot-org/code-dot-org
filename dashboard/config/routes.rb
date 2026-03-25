@@ -555,6 +555,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
+      collection do
+        get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
+      end
+    end
+
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
