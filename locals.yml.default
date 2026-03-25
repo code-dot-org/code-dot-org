@@ -20,6 +20,7 @@
 #ai_gateway_auth_key_passphrase: localoverride
 #google_vertex_ai_tutor_service_account_key: localoverride
 #google_vertex_ai_chat_service_account_key: localoverride
+#azure_ai_content_safety_key: localoverride
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true

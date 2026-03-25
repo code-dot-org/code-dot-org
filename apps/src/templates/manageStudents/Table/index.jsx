@@ -367,6 +367,7 @@ class ManageStudentsTable extends Component {
         dependsOnThisSectionForLogin={rowData.dependsOnThisSectionForLogin}
         canEdit={!this.isTeacher(rowData.userType)}
         rowData={rowData}
+        syncEnabled={this.props.syncEnabled}
       />
     );
   }

@@ -187,28 +187,50 @@ module DashboardKustomize
 
   module_function def render_helm(overlay)
     config = overlay_config(overlay)
+    secret_values = derive_secret_values(overlay)
     stdout = nil
     stderr = nil
     status = nil
 
     with_materialized_helm_values(config[:helm_values]) do |helm_values|
       patched_config = config.merge(helm_values: helm_values)
-      stdout, stderr, status = Open3.capture3(*helm_command_from_config(patched_config))
+      stdout, stderr, status = Open3.capture3(*helm_command_from_config(patched_config, secret_values))
     end
     raise "helm template failed for #{overlay}:\n#{stderr}" unless status.success?
 
     parse_yaml_stream(stdout)
   end
 
-  module_function def helm_command_from_config(config)
+  module_function def helm_command_from_config(config, secret_values = {})
     cmd = ['helm', 'template', config[:release_name], CHART_PATH, '-f', HELM_VALUES]
     config[:helm_values].each do |path|
       cmd.push('-f', path)
+    end
+    local_service_helm_set(config, secret_values).each do |flag, value|
+      cmd.push(flag, value)
     end
     config[:helm_set].each do |flag, value|
       cmd.push(flag, value)
     end
     cmd
+  end
+
+  module_function def local_service_helm_set(config, secret_values)
+    args = []
+
+    if config.dig(:services, :mysql)
+      args << ['--set-string', "services.mysql.password=#{secret_values.fetch('_mysql_root_password')}"]
+    end
+
+    if config.dig(:services, :redis)
+      args << ['--set-string', "services.redis.password=#{secret_values.fetch('_redis_password')}"]
+    end
+
+    if config.dig(:services, :minio)
+      args << ['--set-string', "services.minio.password=#{secret_values.fetch('_minio_root_password')}"]
+    end
+
+    args
   end
 
   module_function def render_kustomize(overlay)
@@ -254,7 +276,7 @@ module DashboardKustomize
       '_mysql_root_password' => existing['_mysql_root_password'] || random_alnum(24),
       '_redis_password' => existing['_redis_password'] || random_alnum(24),
       '_minio_root_password' => existing['_minio_root_password'] || random_alnum(24),
-      '_minio_root_user' => existing['_minio_root_user'] || 'local-development'
+      '_minio_root_user' => existing['_minio_root_user'] || 'minioadmin'
     }
   end
 

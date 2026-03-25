@@ -40,6 +40,11 @@ include prometheus as a helm chart dependency??
 See `k8s/tofu/eks-addons/TODO.argocd.diskfill.bug.md` for the Argo CD
 repo-server disk-fill investigation notes.
 
+Manage AWS Load Balancer Controller CRDs explicitly in `k8s/tofu/codeai-k8s/eks-cluster/`.
+Helm install creates them, but Helm upgrade does not update them, and we already hit stale
+live CRDs missing newer `IngressClassParams` fields like `certificateArn`, `targetType`,
+and `sslRedirectPort`.
+
 In `k8s/tofu/codeai-k8s/eks-cluster-addons/`, Dex and ArgoCD are still exposed through ALB
 `Ingress` resources. Migrate them to Gateway API so the public entry path is consistent with
 the Gateway-based direction.

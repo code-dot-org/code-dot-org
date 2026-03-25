@@ -4,6 +4,9 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "ai_rubric_s3_config": {
+        "CSD U3 Sprites scene challenge_allthethings": "allthethings-L48"
+      },
       "content_area": "other",
       "curriculum_umbrella": "Other",
       "hideable_lessons": true,
