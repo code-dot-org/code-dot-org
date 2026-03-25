@@ -440,7 +440,7 @@ class FilesApi < Sinatra::Base
         text_to_check = begin
           parsed = JSON.parse(body)
           if parsed.is_a?(Hash) && parsed.key?('source')
-            [parsed['source'], parsed['name'], parsed['description']].compact.join(' ')
+            [ShareFiltering.extract_text_from_js(parsed['source']), parsed['name'], parsed['description']].reject(&:empty?).join(' ')
           else
             body
           end

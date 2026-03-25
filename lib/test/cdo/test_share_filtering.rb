@@ -295,4 +295,59 @@ class ShareFilteringTest < Minitest::Test
     assert_equal true,
       ShareFiltering.should_filter_program(with_indicator, 'playlab')
   end
+
+  # Tests for ShareFiltering.extract_text_from_js
+  # These are the same as the behavior of the TypeScript extractTextFromCode function.
+
+  def test_extract_text_from_js_returns_empty_for_nil
+    assert_equal '', ShareFiltering.extract_text_from_js(nil)
+  end
+
+  def test_extract_text_from_js_returns_empty_for_empty_string
+    assert_equal '', ShareFiltering.extract_text_from_js('')
+  end
+
+  def test_extract_text_from_js_extracts_identifiers
+    result = ShareFiltering.extract_text_from_js('var myVar = 1;')
+    assert_includes result, 'var'
+    assert_includes result, 'myVar'
+  end
+
+  def test_extract_text_from_js_extracts_single_line_comment_text
+    result = ShareFiltering.extract_text_from_js('// this is a comment')
+    assert_includes result, 'this is a comment'
+  end
+
+  def test_extract_text_from_js_extracts_multi_line_comment_text
+    result = ShareFiltering.extract_text_from_js("/* hello\nworld */")
+    assert_includes result, 'hello'
+    assert_includes result, 'world'
+  end
+
+  def test_extract_text_from_js_extracts_string_literal_content
+    result = ShareFiltering.extract_text_from_js('var x = "hello world";')
+    assert_includes result, 'hello world'
+  end
+
+  def test_extract_text_from_js_separates_function_name_and_param
+    # Key regression: `totals(hit)` must NOT become "totalshit" after syntax stripping.
+    result = ShareFiltering.extract_text_from_js('function totals(hits) { return hit; }')
+    refute_includes result, 'totalshits'
+    assert_includes result, 'totals'
+    assert_includes result, 'hits'
+  end
+
+  def test_extract_text_from_js_no_false_positive_from_adjacent_string_literals
+    # `"shi"+"ts"` must not become "shits" after syntax stripping.
+    result = ShareFiltering.extract_text_from_js('var x = "shi"+"ts";')
+    refute_includes result, 'shits'
+    assert_includes result, 'shi'
+    assert_includes result, 'ts'
+  end
+
+  def test_extract_text_from_js_excludes_single_char_identifiers
+    # Single-character identifiers are too noisy to be useful.
+    result = ShareFiltering.extract_text_from_js('for (var i = 0; i < 10; i++) {}')
+    refute_includes result.split, 'i'
+  end
 end

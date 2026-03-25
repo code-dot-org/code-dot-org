@@ -154,10 +154,12 @@ class LibrariesTest < FilesApiTestBase
     file_headers = {'CONTENT_TYPE' => 'application/json'}
     delete_all_library_versions(filename)
 
-    # ShareFiltering should only be called with the safe text fields, not the raw JSON
+    # ShareFiltering should be called with extracted text only — no raw JSON structure,
+    # no dropletConfig metadata, and crucially no concatenated tokens like "paramshitsatBats".
     ShareFiltering.expects(:find_failure).with do |text, _locale|
-      # Must not include raw JSON structure from dropletConfig
-      !text.include?('dropletConfig') && !text.include?('paletteParams')
+      !text.include?('dropletConfig') &&
+        !text.include?('paletteParams') &&
+        !text.include?('paramshitsatBats')
     end.returns(nil)
 
     @api.put_object(filename, file_data, file_headers)

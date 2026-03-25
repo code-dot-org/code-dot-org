@@ -211,6 +211,64 @@ module ShareFiltering
     nil
   end
 
+  # Extracts user-written text from JavaScript source code for profanity/PII filtering.
+  # Contains the same logic as the TypeScript function in apps/src/code-studio/components/libraries/extractTextFromCode.ts.
+  #
+  # Each token is space-separated in the output so that profanity filters which strip
+  # syntax characters cannot concatenate adjacent identifiers into a false positive
+  # (e.g. `totals(hits)` would become "totalshits" if parentheses were simply removed;
+  # this function returns "totals hits" instead).
+  #
+  # @param [String] code JavaScript source code
+  # @return [String] Extracted text content separated by spaces
+  def self.extract_text_from_js(code)
+    return '' unless code.is_a?(String) && !code.empty?
+
+    text_parts = []
+    remaining = code
+
+    # Extract single-line comments, then erase them from remaining code.
+    remaining.scan(/\/\/.*$/) do |comment|
+      cleaned = comment.
+        sub(/^\/\/\s*/, '').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\/.*$/, ' ')
+
+    # Extract multi-line comments, then erase them from remaining code.
+    remaining.scan(/\/\*.*?\*\//m) do |comment|
+      cleaned = comment.
+        gsub(/\A\/\*\s*|\s*\*\/\z/, '').
+        delete('*').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\*.*?\*\//m, ' ')
+
+    # Extract string literal contents, then replace each literal with a space.
+    string_pattern = /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`/
+    remaining.scan(string_pattern) do |str|
+      content = str[1..-2]
+      unescaped = content.
+        gsub(/\\n/, ' ').
+        gsub(/\\t/, ' ').
+        gsub(/\\'/, "'").
+        gsub(/\\"/, '"').
+        gsub(/\\\\/, '')
+      cleaned = unescaped.gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(string_pattern, ' ')
+
+    # Extract identifiers (at least 2 characters) from what remains.
+    remaining.scan(/\b[a-zA-Z_][a-zA-Z0-9_]{1,}\b/) do |identifier|
+      text_parts << identifier
+    end
+
+    text_parts.join(' ').strip
+  end
+
   # Searches for all sources of offenses in text that might be worth flagging.
   # Returns both the error type and the offending text snippet.
   #
