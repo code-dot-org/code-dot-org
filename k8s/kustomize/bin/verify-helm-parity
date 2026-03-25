@@ -407,7 +407,7 @@ module DashboardKustomize
       warnings << 'accepted drift by Seth: local secret values differ from Helm-generated values'
     end
 
-    if redis_group_format_drift?(helm_secret, kustomize_secret)
+    if netsim_group_format_drift?(helm_secret, kustomize_secret)
       warnings << 'accepted drift by Seth: netsim_redis_groups format differs (Helm YAML block vs kustomize JSON string)'
     end
 
@@ -446,7 +446,7 @@ module DashboardKustomize
     accepted_keys.any? {|key| helm_secret[key] != kustomize_secret[key]}
   end
 
-  module_function def redis_group_format_drift?(helm_secret, kustomize_secret)
+  module_function def netsim_group_format_drift?(helm_secret, kustomize_secret)
     helm_value = helm_secret['netsim_redis_groups']
     kustomize_value = kustomize_secret['netsim_redis_groups']
     return false if helm_value.nil? || kustomize_value.nil?
