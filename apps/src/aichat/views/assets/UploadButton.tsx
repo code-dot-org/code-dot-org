@@ -1,10 +1,7 @@
-import {ButtonProps as DSCO_ButtonProps} from '@code-dot-org/component-library/button';
+import {ComponentLibraryButtonProps} from '@code-dot-org/component-library/button';
 import {ActionDropdown} from '@code-dot-org/component-library/dropdown';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
-import {
-  Button as MuiButton,
-  ButtonProps as MuiButtonProps,
-} from '@mui/material';
+import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import React, {ChangeEvent, useState} from 'react';
 
 import StarterAssetsDialog from '@cdo/apps/lab2/views/components/starterAssetsDialog';
@@ -91,56 +88,33 @@ const UploadButton: React.FC<UploadButtonProps> = ({
     );
   };
 
-  // TODO: Set of legacy DSCO props, remove once Dropdowns are moved to MUI.
-  const DSCO_buttonPropsCommon: DSCO_ButtonProps = {
-    type: 'secondary',
-    color: 'gray',
+  const buttonPropsCommon = {
+    variant: 'outlined' as const,
+    color: 'tertiary' as const,
   };
 
-  const DSCO_buttonPropsWithLabel: DSCO_ButtonProps = {
-    ...DSCO_buttonPropsCommon,
-    text: aichatI18n.aichatAddFile(),
-    iconLeft: {iconName: 'plus'},
-  };
-
-  const DSCO_buttonPropsIconOnly: DSCO_ButtonProps = {
-    ...DSCO_buttonPropsCommon,
-    icon: {iconName: 'plus', iconStyle: 'solid'},
-  };
-
-  const DSCO_commonProps = {
-    size: 'xs',
-    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
-  } as const;
-
-  const buttonPropsCommon: MuiButtonProps = {
-    variant: 'outlined',
-    color: 'secondary',
-  };
-
-  const buttonPropsWithLabel: MuiButtonProps = {
+  const buttonPropsWithLabel: ComponentLibraryButtonProps = {
     ...buttonPropsCommon,
     children: aichatI18n.aichatAddFile(),
     startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
-  const buttonPropsIconOnly: MuiButtonProps = {
+  const buttonPropsIconOnly: ComponentLibraryButtonProps = {
     ...buttonPropsCommon,
-    startIcon: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
+    children: <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />,
   };
 
-  const commonProps = {
-    size: 'extraSmall',
-    disabled: numStagedFiles >= MAX_NUM_FILES || isDisabled,
-  } as const;
+  const isButtonDisabled = numStagedFiles >= MAX_NUM_FILES || isDisabled;
 
   const uploadButton = hasStarterAssets ? (
     <ActionDropdown
-      {...DSCO_commonProps}
+      size="xs"
+      disabled={isButtonDisabled}
       name="uploadDropdown"
       labelText={aichatI18n.upload()}
+      useIconButton={!showLabel}
       triggerButtonProps={
-        showLabel ? DSCO_buttonPropsWithLabel : DSCO_buttonPropsIconOnly
+        showLabel ? buttonPropsWithLabel : buttonPropsIconOnly
       }
       menuVerticalPlacement="top"
       options={[
@@ -165,13 +139,27 @@ const UploadButton: React.FC<UploadButtonProps> = ({
         },
       ]}
     />
-  ) : (
+  ) : showLabel ? (
     <MuiButton
-      type="button"
-      {...(showLabel ? buttonPropsWithLabel : buttonPropsIconOnly)}
-      {...commonProps}
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
       onClick={onDeviceUploadClick}
-    />
+      startIcon={<FontAwesomeV6Icon iconName="plus" iconStyle="solid" />}
+    >
+      {aichatI18n.aichatAddFile()}
+    </MuiButton>
+  ) : (
+    <MuiIconButton
+      variant={buttonPropsCommon.variant}
+      color={buttonPropsCommon.color}
+      size="extraSmall"
+      disabled={isButtonDisabled}
+      onClick={onDeviceUploadClick}
+    >
+      <FontAwesomeV6Icon iconName="plus" iconStyle="solid" />
+    </MuiIconButton>
   );
 
   return (
