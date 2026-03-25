@@ -47,7 +47,8 @@ mysql_defaults: &mysql_defaults
   # such as queries executing in an ActiveJob worker, a cron job, or irb (dashboard-console). This is particularly
   # important for database migrations (DDL) or database seeding SQL statements that can take longer than 30 seconds
   # to complete and are executed by the aws/ci_build cron job.
-  read_timeout: <%= CDO.running_web_application? ? 30 : 120 %>
+  read_timeout: 180
+  #<%= CDO.running_web_application? ? 30 : 120 %>
 
   # `MYSQL_OPT_WRITE_TIMEOUT`: The timeout in seconds for each attempt to write to the server.
   # There is a retry if necessary, so the total effective timeout value is two times the option value.

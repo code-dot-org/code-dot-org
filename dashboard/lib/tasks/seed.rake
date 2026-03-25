@@ -201,6 +201,12 @@ namespace :seed do
     csa8-2024
     csa9-2024
     csa-postap-se-and-computer-vision-2024
+    aif1-2025
+    aif2-2025
+    aif3-2025
+    aif4-2025
+    aif5-2025
+    aif6-2025
   ).map {|script| "#{CURRICULUM_CONTENT_DIR}/config/scripts_json/#{script}.script_json"}.freeze
   ADHOC_SCRIPTS = MOST_RECENT_ADHOC_SCRIPTS + %w(
     algebra
@@ -390,6 +396,7 @@ namespace :seed do
       csp-2024
       csd-2024
       csa-2024
+      artificial-intelligence-foundations-2025
       original-allthethings-course
     ).each do |course_name|
       UnitGroup.load_from_path("#{CURRICULUM_CONTENT_DIR}/config/courses/#{course_name}.course")
@@ -656,9 +663,7 @@ namespace :seed do
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 
-  # DO NOT MERGE THIS CHANGE
-  # DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
-  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS else FULL_SEED_TASKS end
+  DEFAULT_SEED_TASKS = if rack_env == :test then UI_TEST_SEED_TASKS elsif rack_env == :adhoc then ADHOC_SEED_TASKS else FULL_SEED_TASKS end
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
