@@ -1,5 +1,4 @@
 import Alert from '@code-dot-org/component-library/alert';
-import {buttonColors} from '@code-dot-org/component-library/button';
 import Checkbox from '@code-dot-org/component-library/checkbox';
 import Dialog from '@code-dot-org/component-library/dialog';
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
@@ -442,13 +441,13 @@ export const WorkshopEnrollments: FC = () => {
             text: `Remove enrollment${s}`,
             size: 's',
             onClick: handleRemoveEnrollments,
-            color: buttonColors.destructive,
+            color: 'destructive',
           }}
           secondaryButtonProps={{
             size: 's',
             text: 'Cancel',
             type: 'secondary',
-            color: buttonColors.gray,
+            color: 'gray',
             onClick: () => {
               setActiveDialog(null);
               setRemoveEnrollmentError('');
@@ -511,7 +510,7 @@ export const WorkshopEnrollments: FC = () => {
             size: 's',
             text: 'Cancel',
             type: 'secondary',
-            color: buttonColors.gray,
+            color: 'gray',
             onClick: () => {
               setActiveDialog(null);
               setMoveToWorkshopId('');
