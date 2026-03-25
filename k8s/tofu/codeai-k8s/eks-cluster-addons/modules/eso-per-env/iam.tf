@@ -31,19 +31,26 @@ data "aws_iam_policy_document" "eso_trust" {
 
 data "aws_iam_policy_document" "eso_secrets" {
   statement {
-    # Secrets Manager does not support resource-level permissions for ListSecrets.
+    # AWS's documented BatchGetSecretValue policy shape keeps both
+    # BatchGetSecretValue and ListSecrets on Resource "*", while
+    # GetSecretValue stays scoped to the actual secret ARNs:
+    # https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_iam-policies.html
+    #
+    # The API docs also say filtered BatchGetSecretValue calls require
+    # BatchGetSecretValue, ListSecrets, and GetSecretValue for each secret:
+    # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_BatchGetSecretValue.html
     effect = "Allow"
-    actions = ["secretsmanager:ListSecrets"]
+    actions = [
+      "secretsmanager:BatchGetSecretValue",
+      "secretsmanager:ListSecrets",
+    ]
 
     resources = ["*"]
   }
 
   statement {
     effect  = "Allow"
-    actions = [
-      "secretsmanager:BatchGetSecretValue",
-      "secretsmanager:GetSecretValue",
-    ]
+    actions = ["secretsmanager:GetSecretValue"]
 
     resources = concat(
       [
