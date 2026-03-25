@@ -49,14 +49,14 @@ class Lesson < ApplicationRecord
   has_many :lessons_programming_expressions
 
   has_one :plc_learning_module, class_name: 'Plc::LearningModule', inverse_of: :lesson, foreign_key: 'stage_id', dependent: :destroy
-  has_and_belongs_to_many :standards, foreign_key: 'stage_id'
+  has_and_belongs_to_many :standards, -> {order('standards.shortcode ASC')}, foreign_key: 'stage_id'
   has_many :lessons_standards, foreign_key: 'stage_id' # join table. we need this association for seeding logic
 
   # the dependent: :destroy clause is needed to ensure that the associated join
   # models are deleted when this lesson is deleted. in order for this to work,
   # the join model must have an :id column.
   has_many :lessons_opportunity_standards,  dependent: :destroy
-  has_many :opportunity_standards, through: :lessons_opportunity_standards, source: :standard
+  has_many :opportunity_standards, -> {order('standards.shortcode ASC')}, through: :lessons_opportunity_standards, source: :standard
 
   has_one :rubric, dependent: :destroy
 

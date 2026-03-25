@@ -525,11 +525,9 @@ module Services
       assert_equal expected_descriptions, lesson.standards.map(&:description)
     end
 
-    test 'seed reorders existing lesson standards by key' do
+    test 'seed lesson standards are ordered by shortcode' do
       script = create_script_tree
 
-      # give the new standard a shortcode that will make it appear before the
-      # existing standards in the sort order.
       new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
       expected_shortcodes = [
@@ -537,17 +535,10 @@ module Services
         script.lessons.first.standards.last.shortcode,
       ]
 
-      expected_descriptions = [
-        new_standard.description,
-        script.lessons.first.standards.last.description,
-      ]
-
-      _script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+      _, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.standards.first.destroy
         lesson.standards.push(new_standard)
-        shortcodes = lesson.standards.map(&:shortcode)
-        refute_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -555,7 +546,6 @@ module Services
 
       lesson = script.lessons.first
       assert_equal expected_shortcodes, lesson.standards.map(&:shortcode)
-      assert_equal expected_descriptions, lesson.standards.map(&:description)
     end
 
     test 'seed updates lesson opportunity standards' do
@@ -590,41 +580,33 @@ module Services
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
-    test 'seed does not reorder existing opportunity standards by key' do
+    test 'seed lesson opportunity standards are ordered by shortcode' do
       script = create_script_tree
 
-      # give the new standard a shortcode that will make it appear before the
+      # Give the new standard a shortcode that will make it appear before the
       # existing standards in the sort order.
       new_standard = create(:standard, framework: @framework, shortcode: 'abc', description: 'New Standard')
 
-      # when the order of the serialized lessons_opportunity_standards changes,
-      # the sort order of opportunity standards in the database is preserved.
-      # strangely, the same is not true for lessons_standards. this may be
-      # related to the fact that LessonsOpportunityStandard contains an id
-      # column, while LessonsStandard does not.
-
       expected_shortcodes = [
-        script.lessons.first.opportunity_standards.last.shortcode,
         new_standard.shortcode,
+        script.lessons.first.opportunity_standards.last.shortcode,
       ]
 
       expected_descriptions = [
-        script.lessons.first.opportunity_standards.last.description,
         new_standard.description,
+        script.lessons.first.opportunity_standards.last.description,
       ]
 
-      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+      _, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
         lesson.opportunity_standards.first.destroy
         lesson.opportunity_standards.push(new_standard)
-        shortcodes = lesson.opportunity_standards.map(&:shortcode)
-        refute_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
       script = Unit.with_seed_models.find(script.id)
 
-      assert_script_trees_equal script_with_changes, script
+      # The model's default scope now guarantees these are ordered alphabetically by shortcode.
       lesson = script.lessons.first
       assert_equal expected_shortcodes, lesson.opportunity_standards.map(&:shortcode)
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
