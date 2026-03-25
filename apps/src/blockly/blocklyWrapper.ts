@@ -249,24 +249,31 @@ function initializeBlocklyWrapper(blocklyInstance: BlocklyCoreInstance) {
   // @blockly/plugin-scroll-options, which reads svgBlockCanvas_.getAttribute('transform').
   // Fix: mirror the full (x,y) translation to the SVG attribute and clear the CSS style
   // to avoid double-counting in getRelativeXY(), which reads both.
-  const originalTranslate = blocklyWrapper.WorkspaceSvg.prototype.translate;
-  blocklyWrapper.WorkspaceSvg.prototype.translate = function (
-    x: number,
-    y: number
-  ) {
-    originalTranslate.call(this, x, y);
-    if (this.svgBlockCanvas_) {
-      // Set the SVG attribute with the full translation (x, y already include
-      // absoluteLeft/absoluteTop) so getInjectionDivXY reads the correct origin offset.
-      this.svgBlockCanvas_.setAttribute(
-        'transform',
-        `translate(${x},${y}) scale(${this.scale})`
-      );
-      // Remove the CSS style.transform so getRelativeXY() doesn't double-count:
-      // it reads both the SVG attribute and the CSS style, so we must clear one.
-      this.svgBlockCanvas_.style.transform = '';
-    }
-  };
+  // Guard against re-wrapping when initializeBlocklyWrapper() is called multiple times.
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  if (!(blocklyWrapper.WorkspaceSvg.prototype.translate as any).__cdoPatched) {
+    const originalTranslate = blocklyWrapper.WorkspaceSvg.prototype.translate;
+    blocklyWrapper.WorkspaceSvg.prototype.translate = function (
+      x: number,
+      y: number
+    ) {
+      originalTranslate.call(this, x, y);
+      if (this.svgBlockCanvas_) {
+        // Set the SVG attribute with the full translation (x, y already include
+        // absoluteLeft/absoluteTop) so getInjectionDivXY reads the correct origin offset.
+        this.svgBlockCanvas_.setAttribute(
+          'transform',
+          `translate(${x},${y}) scale(${this.scale})`
+        );
+        // Remove the CSS style.transform so getRelativeXY() doesn't double-count:
+        // it reads both the SVG attribute and the CSS style, so we must clear one.
+        this.svgBlockCanvas_.style.transform = '';
+      }
+    };
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (blocklyWrapper.WorkspaceSvg.prototype.translate as any).__cdoPatched =
+      true;
+  }
 
   // TODO: Can/should we make CdoTrashcan have the same type as Trashcan?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
