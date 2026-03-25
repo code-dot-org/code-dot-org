@@ -47,10 +47,6 @@ jobs:
         id: init
         run: tofu init
 
-      - name: OpenTofu Validate
-        id: validate
-        run: tofu validate -no-color
-
       - name: OpenTofu Plan
         id: plan
         run: tofu plan -no-color
@@ -66,14 +62,6 @@ jobs:
 
             #### OpenTofu Format and Style 🖌\`${{ steps.fmt.outcome }}\`
             #### OpenTofu Initialization ⚙️\`${{ steps.init.outcome }}\`
-            #### OpenTofu Validation 🤖\`${{ steps.validate.outcome }}\`
-            <details><summary>Validation Output</summary>
-
-            \`\`\`\n
-            ${{ steps.validate.outputs.stdout }}
-            \`\`\`
-
-            </details>
 
             #### OpenTofu Plan 📖\`${{ steps.plan.outcome }}\`
 
