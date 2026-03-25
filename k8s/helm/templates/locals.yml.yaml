@@ -38,3 +38,9 @@ data:
   aws_s3_endpoint: {{ printf "http://%s:9000" (include "cdo.minioServiceName" .) | quote }}
   aws_s3_emulated: "true"
   {{- end }}
+
+  # Now insert `locals.yml:` values defined in *.values.yaml files
+  {{- $locals := index .Values "locals.yml" | default (dict) }}
+  {{- range $key, $value := $locals }}
+  {{ $key }}: {{ printf "%v" $value | quote }}
+  {{- end }}
