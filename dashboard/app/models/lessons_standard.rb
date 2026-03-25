@@ -2,8 +2,8 @@
 #
 # Table name: stages_standards
 #
-#  stage_id    :integer          not null
-#  standard_id :integer          not null
+#  stage_id    :integer          not null, primary key
+#  standard_id :integer          not null, primary key
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #

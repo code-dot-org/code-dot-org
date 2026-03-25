@@ -2,8 +2,8 @@
 #
 # Table name: levels_skills
 #
-#  level_id :bigint           not null
-#  skill_id :bigint           not null
+#  level_id :bigint           not null, primary key
+#  skill_id :bigint           not null, primary key
 #
 # Indexes
 #

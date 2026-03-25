@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_25_183412) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -356,7 +356,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["school_year", "id"], name: "index_census_submissions_on_school_year_and_id"
   end
 
-  create_table "census_submissions_school_infos", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "census_submissions_school_infos", primary_key: ["census_submission_id", "school_info_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "census_submission_id", null: false
     t.integer "school_info_id", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -399,7 +399,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["code_review_id"], name: "index_code_review_comments_on_code_review_id"
   end
 
-  create_table "code_review_group_members", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "code_review_group_members", primary_key: ["code_review_group_id", "follower_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "code_review_group_id", null: false
     t.bigint "follower_id", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -552,7 +552,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", primary_key: ["course_offering_id", "pd_workshop_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", null: false
@@ -1011,21 +1011,21 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["standard_id", "lesson_id"], name: "index_lessons_opportunity_standards_on_standard_id_and_lesson_id"
   end
 
-  create_table "lessons_programming_expressions", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "lessons_programming_expressions", primary_key: ["lesson_id", "programming_expression_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "lesson_id", null: false
     t.bigint "programming_expression_id", null: false
     t.index ["lesson_id", "programming_expression_id"], name: "lesson_programming_expression", unique: true
     t.index ["programming_expression_id", "lesson_id"], name: "programming_expression_lesson"
   end
 
-  create_table "lessons_resources", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "lessons_resources", primary_key: ["lesson_id", "resource_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "lesson_id", null: false
     t.integer "resource_id", null: false
     t.index ["lesson_id", "resource_id"], name: "index_lessons_resources_on_lesson_id_and_resource_id", unique: true
     t.index ["resource_id", "lesson_id"], name: "index_lessons_resources_on_resource_id_and_lesson_id"
   end
 
-  create_table "lessons_vocabularies", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "lessons_vocabularies", primary_key: ["lesson_id", "vocabulary_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "lesson_id", null: false
     t.bigint "vocabulary_id", null: false
     t.index ["lesson_id", "vocabulary_id"], name: "index_lessons_vocabularies_on_lesson_id_and_vocabulary_id", unique: true
@@ -1097,7 +1097,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["type"], name: "index_levels_on_type"
   end
 
-  create_table "levels_script_levels", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "levels_script_levels", primary_key: ["level_id", "script_level_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "level_id", null: false
     t.integer "script_level_id", null: false
     t.index ["level_id"], name: "index_levels_script_levels_on_level_id"
@@ -1105,7 +1105,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["script_level_id"], name: "index_levels_script_levels_on_script_level_id"
   end
 
-  create_table "levels_skills", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "levels_skills", primary_key: ["level_id", "skill_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "level_id", null: false
     t.bigint "skill_id", null: false
     t.index ["level_id", "skill_id"], name: "index_levels_skills_on_level_id_and_skill_id"
@@ -1146,7 +1146,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["lti_integration_id"], name: "index_lti_deployments_on_lti_integration_id"
   end
 
-  create_table "lti_deployments_user_identities", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "lti_deployments_user_identities", primary_key: ["lti_deployment_id", "lti_user_identity_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "lti_deployment_id", null: false
     t.bigint "lti_user_identity_id", null: false
     t.index ["lti_deployment_id"], name: "index_lti_deployments_user_identities_on_lti_deployment_id"
@@ -1285,7 +1285,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["name"], name: "index_pd_application_tags_on_name", unique: true
   end
 
-  create_table "pd_application_tags_applications", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "pd_application_tags_applications", primary_key: ["pd_application_id", "pd_application_tag_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "pd_application_id", null: false
     t.integer "pd_application_tag_id", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -1496,7 +1496,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["summer_workshop_id"], name: "index_pd_regional_partner_cohorts_on_summer_workshop_id"
   end
 
-  create_table "pd_regional_partner_cohorts_users", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "pd_regional_partner_cohorts_users", primary_key: ["pd_regional_partner_cohort_id", "user_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "pd_regional_partner_cohort_id", null: false
     t.integer "user_id", null: false
     t.index ["pd_regional_partner_cohort_id"], name: "index_pd_regional_partner_cohorts_users_on_cohort_id"
@@ -1703,7 +1703,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["regional_partner_id"], name: "index_pd_workshops_on_regional_partner_id"
   end
 
-  create_table "pd_workshops_facilitators", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "pd_workshops_facilitators", primary_key: ["pd_workshop_id", "user_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "pd_workshop_id", null: false
     t.integer "user_id", null: false
     t.index ["pd_workshop_id"], name: "index_pd_workshops_facilitators_on_pd_workshop_id"
@@ -1973,7 +1973,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.boolean "is_active", null: false
   end
 
-  create_table "regional_partners_school_districts", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "regional_partners_school_districts", primary_key: ["regional_partner_id", "school_district_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "regional_partner_id", null: false
     t.integer "school_district_id", null: false
     t.string "course", comment: "Course for a given workshop"
@@ -2088,8 +2088,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["school_id"], name: "index_school_stats_by_years_on_school_id"
   end
 
-  create_table "schools", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.string "id", limit: 12, null: false, comment: "NCES public school ID"
+  create_table "schools", id: { type: :string, limit: 12, comment: "NCES public school ID" }, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "school_district_id"
     t.string "name", null: false
     t.string "city", null: false
@@ -2162,9 +2161,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["wrapup_video_id"], name: "index_scripts_on_wrapup_video_id"
   end
 
-  create_table "scripts_resources", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "script_id"
-    t.integer "resource_id"
+  create_table "scripts_resources", primary_key: ["script_id", "resource_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "script_id", null: false
+    t.integer "resource_id", null: false
     t.index ["resource_id", "script_id"], name: "index_scripts_resources_on_resource_id_and_script_id"
     t.index ["script_id", "resource_id"], name: "index_scripts_resources_on_script_id_and_resource_id", unique: true
   end
@@ -2313,7 +2312,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["script_id", "key"], name: "index_stages_on_script_id_and_key", unique: true
   end
 
-  create_table "stages_standards", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+  create_table "stages_standards", primary_key: ["stage_id", "standard_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "stage_id", null: false
     t.integer "standard_id", null: false
     t.datetime "created_at", precision: nil, null: false
@@ -2477,9 +2476,9 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.index ["published_state"], name: "index_unit_groups_on_published_state"
   end
 
-  create_table "unit_groups_resources", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "unit_group_id"
-    t.integer "resource_id"
+  create_table "unit_groups_resources", primary_key: ["unit_group_id", "resource_id"], charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.integer "unit_group_id", null: false
+    t.integer "resource_id", null: false
     t.index ["resource_id", "unit_group_id"], name: "index_unit_groups_resources_on_resource_id_and_unit_group_id"
     t.index ["unit_group_id", "resource_id"], name: "index_unit_groups_resources_on_unit_group_id_and_resource_id", unique: true
   end

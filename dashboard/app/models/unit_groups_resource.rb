@@ -2,8 +2,8 @@
 #
 # Table name: unit_groups_resources
 #
-#  unit_group_id :integer
-#  resource_id   :integer
+#  unit_group_id :integer          not null, primary key
+#  resource_id   :integer          not null, primary key
 #
 # Indexes
 #

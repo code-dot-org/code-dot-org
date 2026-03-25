@@ -2,8 +2,8 @@
 #
 # Table name: lessons_vocabularies
 #
-#  lesson_id     :bigint           not null
-#  vocabulary_id :bigint           not null
+#  lesson_id     :bigint           not null, primary key
+#  vocabulary_id :bigint           not null, primary key
 #
 # Indexes
 #
