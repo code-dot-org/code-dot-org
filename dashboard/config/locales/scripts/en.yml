@@ -26092,6 +26092,8 @@ en:
               name: AI Prompt Modes
             lesson-8:
               name: Panel Levels - Semester 2
+            lesson-9:
+              name: 'Sem 2 Level Progression '
           lesson_groups: {}
           name: aif-all-the-things
           title: All the AIF Things!
@@ -27170,7 +27172,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pl-facilitators-aif2-intro-2026
-          title: 'Teaching AI Foundations S2: An Overview'
+          title: 'Unit 0 - Teaching AI Foundations S2: An Overview'
           description_audience: ''
           description_short: ''
           description: ''
@@ -27179,7 +27181,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pl-facilitators-aif2-ai-generated-design-2026
-          title: Teaching AI-Generated Design
+          title: Unit 1 - Teaching AI-Generated Design
           description_audience: ''
           description_short: ''
           description: |+
@@ -27204,7 +27206,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pl-facilitators-aif2-ai-algorithmic-decisions-2026
-          title: Teaching AI and Algorithmic Decisions
+          title: Unit 2 - Teaching AI and Algorithmic Decisions
           description_audience: ''
           description_short: ''
           description: |-
@@ -27225,7 +27227,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: pl-facilitators-aif2-data-driven-systems-2026
-          title: Teaching Data-Driven Systems
+          title: Unit 3 - Teaching Data-Driven Systems
           description_audience: ''
           description_short: ''
           description: |
