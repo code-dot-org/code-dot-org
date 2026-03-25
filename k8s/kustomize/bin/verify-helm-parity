@@ -368,7 +368,6 @@ module DashboardKustomize
     copy = deep_copy(doc)
     strip_ignored_labels!(copy)
     normalize_secret!(copy)
-    normalize_locals_configmap!(copy)
     copy['metadata']&.delete('labels') if copy['kind'] == 'HorizontalPodAutoscaler'
     normalize_statefulset_volume_claim_templates!(copy)
     normalize_order_insensitive_lists!(copy)
@@ -537,13 +536,6 @@ module DashboardKustomize
     doc['stringData'] = values
   end
 
-  module_function def normalize_locals_configmap!(doc)
-    return unless doc['kind'] == 'ConfigMap'
-    return unless doc.dig('metadata', 'labels', 'app.kubernetes.io/component') == 'locals.yml'
-
-    doc['data'] = canonicalize_locals_data(doc['data'] || {})
-  end
-
   module_function def normalize_skaffold_root_user_drift!(overlay, doc)
     return unless %w(setup-db setup-s3 setup-db-setup-s3).include?(overlay)
 
@@ -576,20 +568,6 @@ module DashboardKustomize
       entry.merge('master' => canonicalize_url_secret_value(entry['master']))
     end
     JSON.generate(canonical)
-  rescue Psych::SyntaxError
-    value
-  end
-
-  module_function def canonicalize_locals_data(values)
-    values.each_with_object({}) do |(key, value), result|
-      result[key.to_s] = canonicalize_locals_value(value)
-    end
-  end
-
-  module_function def canonicalize_locals_value(value)
-    return YAML.safe_load(value) if value.is_a?(String)
-
-    value
   rescue Psych::SyntaxError
     value
   end
