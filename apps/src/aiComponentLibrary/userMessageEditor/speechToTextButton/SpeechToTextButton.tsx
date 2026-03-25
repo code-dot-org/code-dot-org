@@ -12,7 +12,7 @@ import {AudioRecorder} from '@cdo/apps/util/AudioRecorder';
 import styles from './styles.module.scss';
 
 const unknownErrorMessage = 'An unknown error occurred.';
-const timeoutMs = 60000;
+const recordingTimeoutMs = 60000;
 
 interface SpeechToTextButtonProps {
   onTranscribed: (text: string) => void;
@@ -41,7 +41,7 @@ const SpeechToTextButton: React.FC<SpeechToTextButtonProps> = ({
       if (startState === 'Started') {
         setIsRecording(true);
         onRecordStart?.();
-        timeoutRef.current = setTimeout(onEndRecording, timeoutMs);
+        timeoutRef.current = setTimeout(onEndRecording, recordingTimeoutMs);
       } else {
         setErrorMessage(
           startState === 'PermissionDenied'
