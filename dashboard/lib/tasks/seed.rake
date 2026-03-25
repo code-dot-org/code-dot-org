@@ -72,6 +72,7 @@ namespace :seed do
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-artist
+    ui-test-csf
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
     ui-test-script-2-in-course-2017
@@ -103,12 +104,9 @@ namespace :seed do
     coursed-2017
     coursee-2017
     coursef-2017
-    pre-express-2017
-    express-2017
     coursea-2019
     coursec-2019
     coursee-2019
-    coursea-2020
     csd3-2023
     interactive-games-animations-2023
     focus-on-creativity3-2023
@@ -332,12 +330,9 @@ namespace :seed do
        coursed-2017
        coursee-2017
        coursef-2017
-       pre-express-2017
-       express-2017
        coursea-2019
        coursec-2019
        coursee-2019
-       coursea-2020
        csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
@@ -365,6 +360,7 @@ namespace :seed do
     end
     %w(
       ui-test-artist
+      ui-test-csf
       ui-test-course-2017
       ui-test-course-2019
       ui-test-original-course-2017

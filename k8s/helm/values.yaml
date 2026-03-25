@@ -9,6 +9,7 @@ args:
 
 # Override to set RAILS_ENV
 RAILS_ENV:
+dnsName: studio-development
 dashboard_workers: 0
 
 locals.yml:
@@ -41,10 +42,17 @@ dashboardJob:
 services:
   redis:
     enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
   mysql:
     enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
   minio:
     enabled: false
+    user: minioadmin
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
     runSetupS3Job: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args
