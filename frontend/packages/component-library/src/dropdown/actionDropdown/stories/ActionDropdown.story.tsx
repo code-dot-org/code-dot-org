@@ -1,5 +1,7 @@
 import {Meta, StoryFn} from '@storybook/react-vite';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 import ActionDropdown, {ActionDropdownProps} from '../index';
 
 export default {
@@ -39,10 +41,9 @@ export const DefaultActionDropdown = SingleTemplate.bind({});
 DefaultActionDropdown.args = {
   name: 'default-dropdown',
   triggerButtonProps: {
-    color: 'purple',
-    type: 'primary',
-    isIconOnly: true,
-    icon: {iconName: 'smile', iconStyle: 'solid'},
+    color: 'primary',
+    variant: 'contained',
+    children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   },
   options: [
     {
@@ -67,10 +68,9 @@ export const DisabledActionDropdown = SingleTemplate.bind({});
 DisabledActionDropdown.args = {
   name: 'disabled-dropdown',
   triggerButtonProps: {
-    color: 'purple',
-    type: 'primary',
-    isIconOnly: true,
-    icon: {iconName: 'smile', iconStyle: 'solid'},
+    color: 'primary',
+    variant: 'contained',
+    children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   },
   options: [
     {
@@ -95,10 +95,9 @@ export const WithDisabledOptionActionDropdown = SingleTemplate.bind({});
 WithDisabledOptionActionDropdown.args = {
   name: 'withDisabledOption-dropdown',
   triggerButtonProps: {
-    color: 'purple',
-    type: 'primary',
-    isIconOnly: true,
-    icon: {iconName: 'smile', iconStyle: 'solid'},
+    color: 'primary',
+    variant: 'contained',
+    children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   },
   options: [
     {
@@ -130,10 +129,9 @@ export const WithDestructiveOptionActionDropdown = SingleTemplate.bind({});
 WithDestructiveOptionActionDropdown.args = {
   name: 'withDisabledOption-dropdown',
   triggerButtonProps: {
-    color: 'purple',
-    type: 'primary',
-    isIconOnly: true,
-    icon: {iconName: 'smile', iconStyle: 'solid'},
+    color: 'primary',
+    variant: 'contained',
+    children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
   },
   options: [
     {
@@ -167,10 +165,9 @@ GroupOfActionDropdownColors.args = {
     {
       name: 'default-dropdown-light',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -194,9 +191,8 @@ GroupOfActionDropdownColors.args = {
       name: 'default-dropdown-dark',
       triggerButtonProps: {
         color: 'white',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -225,10 +221,9 @@ GroupOfActionDropdownMenuPlacements.args = {
     {
       name: 'default-dropdown-left',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -251,10 +246,9 @@ GroupOfActionDropdownMenuPlacements.args = {
     {
       name: 'default-dropdown-right',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -283,10 +277,9 @@ GroupOfSizesOfActionDropdown.args = {
     {
       name: 'default-dropdown-xs',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -309,10 +302,9 @@ GroupOfSizesOfActionDropdown.args = {
     {
       name: 'default-dropdown-s',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -335,10 +327,9 @@ GroupOfSizesOfActionDropdown.args = {
     {
       name: 'default-dropdown-m',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -361,10 +352,9 @@ GroupOfSizesOfActionDropdown.args = {
     {
       name: 'default-dropdown-l',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -394,10 +384,9 @@ GroupOfMenuPlacementOptions.args = {
     {
       name: 'menu-placement-left',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -420,10 +409,9 @@ GroupOfMenuPlacementOptions.args = {
     {
       name: 'menu-placement-right',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -452,10 +440,9 @@ GroupOfMenuVerticalPlacementOptions.args = {
     {
       name: 'menu-vertical-top',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -478,10 +465,9 @@ GroupOfMenuVerticalPlacementOptions.args = {
     {
       name: 'menu-vertical-bottom',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -510,10 +496,9 @@ GroupOfAllPlacements.args = {
     {
       name: 'placement-left-bottom',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -537,10 +522,9 @@ GroupOfAllPlacements.args = {
     {
       name: 'placement-right-bottom',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -564,10 +548,9 @@ GroupOfAllPlacements.args = {
     {
       name: 'placement-left-top',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {
@@ -591,10 +574,9 @@ GroupOfAllPlacements.args = {
     {
       name: 'placement-right-top',
       triggerButtonProps: {
-        color: 'purple',
-        type: 'primary',
-        isIconOnly: true,
-        icon: {iconName: 'smile', iconStyle: 'solid'},
+        color: 'primary',
+        variant: 'contained',
+        children: <FontAwesomeV6Icon iconName="smile" iconStyle="solid" />,
       },
       options: [
         {

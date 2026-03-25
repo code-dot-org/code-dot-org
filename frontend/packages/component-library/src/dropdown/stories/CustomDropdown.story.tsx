@@ -105,15 +105,15 @@ WithErrorMessageCustomDropdown.args = {
   size: 'm',
 };
 
-export const WithDSCOButtonTriggerCustomDropdown = SingleTemplate.bind({});
-WithDSCOButtonTriggerCustomDropdown.args = {
-  name: 'with-dsco-button-dropdown',
-  labelText: 'Dropdown with DSCO Button',
-  useDSCOButtonAsTrigger: true,
+export const WithMuiButtonTriggerCustomDropdown = SingleTemplate.bind({});
+WithMuiButtonTriggerCustomDropdown.args = {
+  name: 'with-mui-button-dropdown',
+  labelText: 'Dropdown with MUI Button',
+  useMuiButtonAsTrigger: true,
   triggerButtonProps: {
-    text: 'Open Dropdown',
-    color: 'purple',
-    type: 'primary',
+    children: 'Open Dropdown',
+    color: 'primary',
+    variant: 'contained',
   },
   size: 'm',
 };

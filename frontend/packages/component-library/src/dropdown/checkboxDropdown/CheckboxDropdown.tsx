@@ -1,6 +1,7 @@
+import {Button as MuiButton} from '@mui/material';
 import {AriaAttributes} from 'react';
 
-import Button, {buttonColors} from '@/button';
+import {sizeMap as buttonSizeToMuiSizeMap} from '@/button/buttonPropsToMuiCore';
 import Checkbox from '@/checkbox';
 import {dropdownColors} from '@/common/constants';
 import {
@@ -149,20 +150,22 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       </ul>
       {!rest.hideControls && (
         <div className={moduleStyles.bottomButtonsContainer}>
-          <Button
-            type="tertiary"
-            color={buttonColors.black}
-            text={rest.selectAllText}
+          <MuiButton
+            variant="text"
+            color="secondary"
             onClick={rest.onSelectAll}
-            size={size}
-          />
-          <Button
-            type="tertiary"
-            color={buttonColors.black}
-            text={rest.clearAllText}
+            size={buttonSizeToMuiSizeMap[size] || 'medium'}
+          >
+            {rest.selectAllText}
+          </MuiButton>
+          <MuiButton
+            variant="text"
+            color="secondary"
             onClick={rest.onClearAll}
-            size={size}
-          />
+            size={buttonSizeToMuiSizeMap[size] || 'medium'}
+          >
+            {rest.clearAllText}
+          </MuiButton>
         </div>
       )}
     </CustomDropdown>
