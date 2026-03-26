@@ -9,8 +9,8 @@
   %button.btn{type: 'submit'}
     %i.fa.fa-search
 
-- if params[:email].present?
-  - if @users.present?
+-if params[:email].present?
+  -if @users.present?
     %p
       Found
       = @users.length
@@ -36,7 +36,7 @@
             %td= user.current_sign_in_at.try(:strftime, '%F')
             %td= user.sign_in_count
             %td= user.created_at.strftime('%F')
-  - else
+  -else
     %p No user accounts found with that email.
 
 = render partial: 'home/admin'
