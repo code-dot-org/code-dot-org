@@ -1,0 +1,70 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-25T03:47:27.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Jordan's Garden Webpage\r\n\r\nJordan wants to make a webpage about a local community garden but doesn't know how to write HTML or CSS. Instead, they've provided you with a description and a potential screenshot:\r\n\r\n> \"I want to make a webpage about the community garden because it's one of my favorite places in the neighborhood and I want more people to know about it. I want a photo of the garden and some writing about it on the page. The writing should be easy to read — not too small. And the photo should look like it has a frame around it.\"\r\n\r\n<img src=\"https://images.code.org/744e0df14ca6ade62a64e99905783d6b-image-1774411192443.png\" style=\"width: 40%\" />\r\n\r\n&nbsp;\r\n\r\n**Do This:**\r\n1) Use AI tutor to help build this page. Ask it to make changes to this page step-by-step.\r\n    - Be specific about the elements, sizes, borders, and which elements they apply to\r\n2) Keep prompting until the webpage it's \"close enough\" to their vision!\r\n    - It doesn't have to perfectly match the image, but try to get it close to the style and layout!\r\n\r\nOnce you've compared your result to Jordan's vision: press the Continue button!\r\n\r\n**Hint:** This puzzle involves `<p>` and `<img>` tags in HTML, and the `font-size` and `border` properties in CSS.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do not use relative units for typography and spacing. Use `px` instead.",
+        "buildHTML": "- Do not link to a style.css page. Put all styles within a `<style>` tag in the head"
+      }
+    },
+    "display_name": "Jordan's Garden Page",
+    "bubble_choice_description": "Help Jordan make a webpage about a community garden: \"I want to make a webpage about the community garden because it's one of my favorite places in the neighborhood and I want more people to know about it.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "Riverside Community Garden\n\nThe Riverside Community Garden has been a gathering place for our neighborhood since 2008. Volunteers of all ages come together to grow vegetables, flowers, and herbs. The garden is open to everyone and offers free plots to local families who want to grow their own food.\n\nThe garden hosts events every Saturday morning, including workshops on composting, seed saving, and seasonal planting. It's one of the most vibrant spots in the neighborhood.",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "community-garden.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-11b/uuid/f0655dbd-da0e-455a-828c-41bd0d1acf1e.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMosu34yEhKqJBIHmQ8A\n1vkZrxnu2tDvYcaWzLHkJpa3n/+QKwP/nGDJiUEh3xrKg3UsnGUvjbav23cM\nImm0ix5NOtyykkkPQrdolWvcphqVpkhMG4hECxGS+anasJujcRXJYhaUKPz9\n1NALDtq6+0tSQiKvYxyB+7zNGQhskwJItIU17SHavVx33AXxT3zpWVCCQmOP\nq3RFOmtDr/txMRvwjLS5Nvmqn/iT5VVTlp597tYd0wysbM2ZSzFshJck20J/\nGxOuGxl+iKJP1GgDN1IGfUKslJFxMWJk9rS2JxvDvebIHyy3PlpJdnFdoDzv\nIbhX63XuLo03/4+DmPk0WtrRLHAIzrBvLbJv1QDkeycRcvLxfRtBRJtZU7Xx\nf0kTjaLusDqaep5AeIfsNgTBXj6K6SxDCAGtIgyMQt+s5O8rTa6fBX7RZTbu\nEzrunGvif0BLHyeMrUyWl0ECJ1FT/ADpRIgVUYoNxAXCJa3eDaP35RnsesDa\n88XlwCw/2trlVAZsP9bxo8B3c8LZ4cSVgtRzXlG2rQGsObFlstolEZS+kQMI\ngH65ZPSC/Se/WcF0mf2QGfiUDJSW0nc6eJOi19horZ84Oz9BAysd0c2LnRjT\no9YBI6htkaan5qnLJ84azXcDNat4TH5NCrfCXihSkXZFQ4a/puagyjiz/ZcH\nbDH7aI8kaiRmY7gbhd6t+/c5W+v5ccxQGqYRWozUS9e+DNLzAeGFCYHQjNq6\nvizkswFQksmfYSWN7fopttjWm4h4euTIfl1j3FM7BCxenMGyezpogvGXwbye\nVRsoKGywmpARMawjksbC6WR39c/abYhcEXTiaO8kYJMfFeLKBegwtom1mkdb\n7ejtcaDEhVn5Zj4u5CZxXhHkp8XXvFKd1lMq/hSeNUo47leSXYs58FyF7sUz\n2VEdgpxt9Lm6SToO3Vm4zIifcWd+9eJkrsUO3mdVYxiW7wg0fxbEpvRu50mt\nzVb1fkLyNHBobVLLPbQxxI64dwQVll+aYLQHvB/pFCEMFjlkIVsI3eESSePm\n1EhwQY9hTKeLLYyFruUGpcq3i3v+h+z0C2yBRpnT3WVbuJG22b5mdVUVSpzo\nFLLJH3lNmt1yKaX9ZTLLf4dvZHFHreCIkNKCgsN3lj5HOZSFhFl8vJqVvlNt\nnJ4CwtPbm6HvZGA8XAks3xoJAbsGNX+/JbS0i8qBQxM9Vo8W0Jf05ZI544iX\nzXp11SCa+pRcl5Fv8m0/w1gVTIwUYQaA305Z9wWsniOd89Va1kz2Sw94vEFJ\nG7zalHQSryUJ+c0k1di/n2460dR8QHovkJ6GjMHlqeIsEMaXpH3b7Ped6LQP\nFQsGj1OZuh4F++dJg8qG9YhzbReGPFgfzH3tiQ64B7LLnve2900Xaf/Wvfdy\nNCE/43B89+CarGdXz0IIq3+AZ40snV05qkcgZVsGPueYMBzYGEKOsLtFP4N/\nUh5N/fkoeQrkhi8u7/D60pZ8pyJuaUhPT5j37YFu9kiiajEhl+94KKND6V5X\n7M616Ga8lVpz2On/lxIq8SYFbK6nzCMQtVsWfKPblvdw1S3jS93hH6JIBJWC\n+nTaqZyYGPhnvrdVsdoeQVX7P4Jp1CKOgNu6vFxTDmqyZvvS4bm5n4IQhbXW\n8/xQTwgbY9PCI7GSOpzyvs8uqGrCCNhceMuID9euFKd0VdO9CO6MgHQgqrBh\nHqFspsNjwQ==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-25T03:47:27.944+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11a\"},{\"changed_at\":\"2026-03-25 03:49:17 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:50:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:51:43 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:51:55 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:52:54 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:53:14 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 04:05:08 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

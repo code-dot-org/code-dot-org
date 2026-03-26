@@ -85,10 +85,9 @@ resource "helm_release" "argocd" {
 
     server = {
       ingress = {
-        enabled          = true
-        controller       = "generic"
-        ingressClassName = "alb"
-        hostname         = local.argocd_hostname
+        enabled    = true
+        controller = "generic"
+        hostname   = local.argocd_hostname
         annotations = {
           "alb.ingress.kubernetes.io/scheme"           = "internet-facing"
           "alb.ingress.kubernetes.io/target-type"      = "ip"

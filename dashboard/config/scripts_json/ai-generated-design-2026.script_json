@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-24 08:53:41 UTC",
+    "serialized_at": "2026-03-25 03:23:58 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -655,7 +655,7 @@
       "key": "89de04c3-40b2-4849-aaca-cba88f886774",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -669,7 +669,7 @@
       "key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -3490,7 +3490,7 @@
       "key": "14a19331-34a1-430f-a2ad-5105f30b50ea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Students practice decomposition by organizing messy information into a clear, logical structure before learning the term site map.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two or three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of the Website cards."
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** For each scenario, have students write the pages the user would click in order. Start at Home and follow the connected pages until the user reaches their goal.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What do these paths tell us about how this website is organized?*\n - *What do you notice about the order of pages from general to specific?*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain what the paths show about how the website is organized. Students should notice that users start on broad pages and move to more specific pages to reach their goal.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "14a19331-34a1-430f-a2ad-5105f30b50ea",
@@ -3498,64 +3498,8 @@
       }
     },
     {
-      "key": "5d5d9851-f319-4d14-abd2-8606cab00e50",
-      "position": 2,
-      "properties": {
-        "description": "Your client's website is confusing! Users can't find what they need. How might you reorganize the pages so that navigation feels clear and logical?",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5d5d9851-f319-4d14-abd2-8606cab00e50",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "aa4036e8-dd93-4b29-ba6d-5dbb33e06c05",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards into a logical structure, using arrows to show how users would move through the site.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move between groups and ask why they grouped pages a certain way. Encourage reasoning such as \"We put Contact under About because users usually look for it with company info.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Let students know that the example on the slide is not the \"correct answer.\" There's no single right way to organize a site — what matters is whether the structure makes sense for the user. Encourage groups to explain their reasoning and compare different logical choices."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "aa4036e8-dd93-4b29-ba6d-5dbb33e06c05",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "bea6ba45-6a29-4696-8935-03eedd4e5bd0",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bea6ba45-6a29-4696-8935-03eedd4e5bd0",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "bfae031d-7b78-451d-9eef-8ffdf64b001b",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define site map. Explain that site maps help us see the overall structure and logic of a site — not just the pages themselves but how they relate. Tell students that now that they have explored what makes navigation clear, they will create their own structured site map later in today's activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns do we notice across site maps?*\n  - *Where did most groups put Home?*\n  - *Where did most groups put Contact?*\n  - *How did groups handle sections or sub-pages?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students mention unusual or creative structures, validate them — use these examples to discuss when breaking convention can help or hurt usability."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bfae031d-7b78-451d-9eef-8ffdf64b001b",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
       "key": "a210c99d-e6d0-4d6b-a31f-4b5941d1cd25",
-      "position": 6,
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -3565,7 +3509,7 @@
     },
     {
       "key": "37c4d390-898b-4bac-b076-fc4db9d0dc11",
-      "position": 7,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -3580,7 +3524,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Connect site mapping to real-world roles in tech and show how UX Designers plan user experiences before coding begins.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly spotlight careers such as UX Designer or Information Architect. Explain that these roles are responsible for structuring site navigation and ensuring users can find what they need. Emphasize that today's activity mirrors that real-world process — planning first, building later.",
         "duration": "15",
-        "name": "User Experience Design",
+        "name": "Intro to Site Maps and User Flow",
         "tips": [
           {
             "type": "teachingTip",
@@ -3604,23 +3548,165 @@
       }
     },
     {
-      "key": "529108a6-9383-492b-bd11-1c60e48bafd6",
+      "key": "d168159e-8164-4cbe-824e-bd321d9c051e",
       "position": 3,
       "properties": {
-        "description": "As UX Designers, part of your job is planning how users move through a site to complete a goal — that's called a user flow. For example, if you're designing a food delivery app, the user flow might be: Home → Menu → Add to Cart → Checkout. Today, you'll create your own user flow for your app idea to make sure navigation makes sense before anything is built.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define site map. Direct students to record the definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge. Direct students to record the definition in their Unit Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "d168159e-8164-4cbe-824e-bd321d9c051e",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "f05e8818-4d82-4152-90de-87846e2bdc80",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f05e8818-4d82-4152-90de-87846e2bdc80",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "9ebb2312-ce41-4a79-b4d1-5a4af6c02128",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two or three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of the Website cards."
+      },
+      "seeding_key": {
+        "activity_section.key": "9ebb2312-ce41-4a79-b4d1-5a4af6c02128",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "13d02fff-6a0b-4bea-a62e-cb64f0d5cc2e",
+      "position": 6,
+      "properties": {
+        "description": "Now you're stepping into the role of a UX Designer. Your job is to organize these pages in a way that makes sense for the user and plan how they would move through the website.\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "529108a6-9383-492b-bd11-1c60e48bafd6",
+        "activity_section.key": "13d02fff-6a0b-4bea-a62e-cb64f0d5cc2e",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "180b8e5b-782d-45cd-bbfe-71c791da143b",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "180b8e5b-782d-45cd-bbfe-71c791da143b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "8e902b9e-5fa8-4006-87ac-c9a0f3284f47",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards where they think users would expect to find each page, then draw arrows to show how a user could move from page to page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask groups why they placed pages where they did and how their layout supports user navigation. Encourage user-centered reasoning by asking questions such as, \"Why would a user expect to find Contact there?\" or \"What page would they likely click next?\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that the example on the slide is only one possible arrangement. There is no single correct answer. What matters is whether the organization and navigation make sense for the user."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e902b9e-5fa8-4006-87ac-c9a0f3284f47",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "58d65c74-3e19-4898-889e-76a17d779752",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58d65c74-3e19-4898-889e-76a17d779752",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "cec33bc7-31ed-485e-b86e-26749f9fe24d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Where did most groups put Home?*\n- *Where did most groups put Contact?*\n- *How did groups handle sections or sub-pages?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students mention unusual or creative structures, validate them — use these examples to discuss when breaking convention can help or hurt usability."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cec33bc7-31ed-485e-b86e-26749f9fe24d",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "3387f508-4c45-4172-9213-5b8f3a3a87b0",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3387f508-4c45-4172-9213-5b8f3a3a87b0",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "def1db0d-d49d-4b53-973b-fb5dd8da404b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that a site map helps AI understand what pages to create, how pages connect, and how the website is organized."
+      },
+      "seeding_key": {
+        "activity_section.key": "def1db0d-d49d-4b53-973b-fb5dd8da404b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "46d40806-7c97-402c-b717-d8b97a504cae",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "46d40806-7c97-402c-b717-d8b97a504cae",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "d07c751c-17a2-4f2b-b57d-69268a11c70b",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Students will apply site map and user flow concepts to plan a simple web app, explain how its structure supports users, and use that plan to guide AI in generating a connected multi-page website.\n",
+        "duration": "20",
+        "name": "UX Designer Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "d07c751c-17a2-4f2b-b57d-69268a11c70b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "1d9eb6a8-ddf6-4b91-bffb-b6e56ecfd20c",
+      "position": 15,
+      "properties": {
+        "description": "Now you are going to apply what you learned by acting like a UX Designer. Your job is to plan how a website is organized, trace how a user would move through it, explain your design choices, and then hand that plan off to AI to build. Before AI generates anything, you need a clear structure.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d9eb6a8-ddf6-4b91-bffb-b6e56ecfd20c",
         "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
       }
     },
     {
       "key": "d8668fbf-ca41-418e-829b-46532091d801",
-      "position": 4,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Levels 1 and 2: Students create a site map and trace a user flow for a chosen persona.\n- Levels 3 through 6: Students read and explain the key terms site map and user flow.\n- Level 7: Students respond to a final reflection or Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\"",
-        "progression_name": "Create a Site Map and User Flow"
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Level 1 to complete Levels 1 through 4.\n- Level 1: Create a site map for one app scenario.\n- Level 2: Trace a user flow through that site map.\n- Level 3: Explain how your design supports navigation and user needs.\n- Level 4: Upload your site map and use AI to generate the website.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Levels 1 and 2, check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\" For Level 4, prompt students with questions that build reflection and clarity: \"Does your website structure match your site map?\", \"What might you reword in your prompt to make the AI's output clearer?\", or \"If a link doesn't work, what does that tell you about how the AI interpreted your instructions?\"",
+        "progression_name": "Create a Site Map"
       },
       "seeding_key": {
         "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801",
@@ -3628,20 +3714,21 @@
       }
     },
     {
-      "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
-      "position": 5,
+      "key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5",
+      "position": 17,
       "properties": {
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "- Remind students to consider their persona's goals and challenges as they trace the flow. Does the flow make sense for that user?\n- Remind students that there isn't one \"right\" site structure — what matters is how well it serves their persona's needs. Encourage them to explain why their flow makes sense for that user."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use levels 1 and 2 to formatively assess student progress on lesson objectives. Check whether students can:\n- Creating a site map showing page hierarchy and navigation\n- Tracing a possible user flow across a web app."
-          }
-        ]
+        "progression_name": "Trace the User Flow"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
+      "position": 18,
+      "properties": {
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
@@ -3649,8 +3736,29 @@
       }
     },
     {
+      "key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
+      "position": 19,
+      "properties": {
+        "progression_name": "Build Your Web App with AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Show students how to click through the linked html pages in the navigation bar and see the URL change from index.html to challenges.html, for example. Make sure students evaluate AI’s output by testing out all of the hyperlinks in the navigation bar."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Levels 1, 2, and 4 to formatively assess student progress on lesson objectives. Check whether students can:\n- Create a site map showing page hierarchy and navigation.\n- Trace a possible user flow across a web app.\n- Articulate a site map as a clear prompt to AI.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
       "key": "217cba01-e4f7-4c26-b6f9-e3bd98d6948f",
-      "position": 6,
+      "position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -3659,28 +3767,10 @@
       }
     },
     {
-      "key": "147aa371-ffc6-406f-962a-974b01ce8856",
-      "position": 7,
-      "properties": {
-        "description": "Before we hand our site maps to the AI, let's think like designers and engineers. When we give instructions to an AI, it only knows what we tell it — it doesn't automatically understand our intent. Let's talk about how that affects the way we explain our designs.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "147aa371-ffc6-406f-962a-974b01ce8856",
-        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
-      }
-    },
-    {
       "key": "d44ff256-5f54-4b13-aadb-018a830b22a0",
-      "position": 8,
+      "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *How do we explain our site's logic to AI so it builds what we intend?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should recognize that:\n- A clear site map helps users navigate and achieve goals easily.\n- Communicating that structure clearly helps the AI generate more accurate, user-friendly designs.\n\nEncourage students to explain their reasoning using examples: \"We put Help under Contact because that's where users expect it.\" and \"If we don't tell the AI why a section is important, it might skip it or place it wrong.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, ask one more additional question: What do you need to make sure the AI understands before it starts building? This primes students for precision and transparency — a great segue into the next task."
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *Why might we want to check AI's work after we prompt it to create our site using a sitemap?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should recognize that:\n- Students should identify how site maps improve navigation by organizing pages clearly, showing hierarchy, and helping users complete tasks without confusion.\n- Students should share that AI-generated websites still need human review because AI can misinterpret the sitemap, leave out pages, or create broken or unclear navigation.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d44ff256-5f54-4b13-aadb-018a830b22a0",
@@ -3689,35 +3779,11 @@
     },
     {
       "key": "2cb6ca96-21e8-4eb2-82a4-69e1ed9a3b91",
-      "position": 9,
+      "position": 22,
       "properties": {
       },
       "seeding_key": {
         "activity_section.key": "2cb6ca96-21e8-4eb2-82a4-69e1ed9a3b91",
-        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
-      }
-    },
-    {
-      "key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Students apply their site map and user flow to generate a working, multi-page website using AI. They practice writing clear, structured prompts that communicate their logic and verify whether the AI builds what they intended.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete Level 8. Explain that this is their AI hand-off phase—they'll take their plan and test whether the AI can interpret it accurately just like a UX Designer communicating with a development team. Remind them that AI doesn't \"see\" their reasoning—it can only follow what they describe clearly in the prompt. Encourage students to revise their prompt if something doesn't look right — this models iteration and precision in AI collaboration.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt students with questions that build reflection and clarity: \"Does your website structure match your site map?\", \"What might you reword in your prompt to make the AI's output clearer?\", or \"If a link doesn't work, what does that tell you about how the AI interpreted your instructions?\"",
-        "duration": "15",
-        "name": "Articulate for AI",
-        "progression_name": "Build Your Web App with AI",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Show or read aloud the optional sample prompt to model precision. Emphasize that this isn't a script — students can adapt the wording as long as they're describing structure, navigation, and clarity."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use this level to formatively assess student progress on lesson objectives. Check whether students can:\n- Translate design logic into precise, testable AI prompts (clarity and structure in communication).\n- Evaluate AI output for accuracy and alignment with their original site map and user flow.\n- Iterate thoughtfully — making targeted prompt revisions based on observed gaps or misinterpretations."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
         "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
       }
     },
@@ -5169,6 +5235,28 @@
     },
     {
       "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Web Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level2-challenges_2026"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5193,7 +5281,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5218,7 +5306,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5243,7 +5331,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5268,7 +5356,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5293,7 +5381,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5318,7 +5406,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5343,7 +5431,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5368,7 +5456,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5393,7 +5481,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5418,7 +5506,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 4,
       "activity_section_position": 2,
       "assessment": true,
@@ -5443,7 +5531,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5468,7 +5556,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5476,7 +5564,7 @@
         "level_keys": [
           "ai-generated-design-lesson8-level1_2026"
         ],
-        "progression": "Create a Site Map and User Flow"
+        "progression": "Create a Site Map"
       },
       "bonus": false,
       "seeding_key": {
@@ -5493,15 +5581,12 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson8-level2_2026"
-        ],
-        "progression": "Create a Site Map and User Flow"
+        "progression": "Trace the User Flow"
       },
       "bonus": false,
       "seeding_key": {
@@ -5511,14 +5596,14 @@
         "lesson.key": "Lesson 8: Site Maps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801"
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5"
       },
       "level_keys": [
         "ai-generated-design-lesson8-level2_2026"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5543,7 +5628,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5568,7 +5653,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5593,7 +5678,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5703,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5643,7 +5728,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5668,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5693,7 +5778,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5718,7 +5803,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5740,7 +5825,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5765,7 +5850,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5790,7 +5875,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5815,7 +5900,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5840,7 +5925,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5865,7 +5950,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5890,7 +5975,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5981,6 +6066,18 @@
         "level.key": "ai-generated-design-lesson3-level1-explore_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson3-level1-explore_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level2-challenges_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_2026"
         ],
         "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
@@ -6153,7 +6250,7 @@
         "lesson.key": "Lesson 8: Site Maps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801"
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5"
       }
     },
     {

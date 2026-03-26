@@ -6790,6 +6790,18 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: Pilot 2026
+        just-in-time-pl:
+          title: just-in-time-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-csf:
+          title: ui-test-csf
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
         teaching-aif-design-build-ai-facilitators-2026:
           title: 'Teaching AIF: Designing & Building with AI'
           description_short: ''

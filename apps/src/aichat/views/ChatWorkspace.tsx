@@ -99,15 +99,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const scriptId = useAppSelector(state => state.progress.scriptId);
-  const visibleItems = useAppSelector(state => {
+  const unfilteredVisibleItems = useAppSelector(selectAllVisibleMessages);
+  const visibleItems = useMemo(() => {
     if (hideModelChangeMessage) {
-      return selectAllVisibleMessages(state).filter(
-        message => !isModelUpdate(message)
-      );
-    } else {
-      return selectAllVisibleMessages(state);
+      return unfilteredVisibleItems.filter(message => !isModelUpdate(message));
     }
-  });
+    return unfilteredVisibleItems;
+  }, [hideModelChangeMessage, unfilteredVisibleItems]);
   const currentUserId = useAppSelector(state => state.currentUser.userId);
 
   const isAiTutorVersion = useAppSelector(
