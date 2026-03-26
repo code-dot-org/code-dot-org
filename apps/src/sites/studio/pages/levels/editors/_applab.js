@@ -28,9 +28,13 @@ $(document).ready(function () {
       block => (circuitBlocks[block.func] = null)
     );
 
-    const editor = $('#level_code_functions')
-      .siblings()
-      .filter('.CodeMirror')[0].CodeMirror;
+    const codeFunctionsTextarea = document.getElementById(
+      'level_code_functions'
+    );
+    const editor = codeFunctionsTextarea?.codeMirror;
+    if (!editor) {
+      return;
+    }
     const currentFunctions = JSON.parse(editor.getValue());
     let functionsWithMaker;
     if ($(this).val() === 'circuitPlayground') {
@@ -50,7 +54,7 @@ $(document).ready(function () {
         microbitBlocks
       );
     }
-    editor.getDoc().setValue(JSON.stringify(functionsWithMaker, null, ' '));
+    editor.setValue(JSON.stringify(functionsWithMaker, null, ' '));
   });
 
   const styles = {
