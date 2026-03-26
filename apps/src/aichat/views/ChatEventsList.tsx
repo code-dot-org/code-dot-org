@@ -1,7 +1,7 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
-import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
+import React, {useEffect, useRef, useState, useCallback} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
@@ -92,9 +92,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
     }
   };
 
-  const isTeacherViewEmptyStudentChatHistory = useMemo(() => {
-    return isTeacherView && events.length === 0;
-  }, [isTeacherView, events]);
+  const hasChatHistory = events.length > 0;
 
   useEffect(() => {
     const container = conversationContainerRef.current;
@@ -192,16 +190,14 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       )}
     >
       <div className={moduleStyles.messageArea} ref={conversationContainerRef}>
-        {chatDisabled ? (
+        {chatDisabled && !(isTeacherView && hasChatHistory) ? (
           <ChatDisabled message={chatDisabledMessage} />
         ) : (
           <>
             {hasInstructionsDrawer && (
               <div className={moduleStyles.instructionsDrawerInset} />
             )}
-            {isTeacherViewEmptyStudentChatHistory && (
-              <EmptyStudentChatHistory />
-            )}
+            {isTeacherView && !hasChatHistory && <EmptyStudentChatHistory />}
             {events.map((event, index) => {
               const isLastMessage = index === events.length - 1;
               return (

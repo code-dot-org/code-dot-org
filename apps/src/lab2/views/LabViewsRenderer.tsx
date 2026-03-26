@@ -5,18 +5,12 @@
  */
 import React, {createContext, Suspense, useEffect, useState} from 'react';
 
-import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
-import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {PERMISSIONS} from '@cdo/apps/lab2/constants';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import {useInitialLabTheme} from '@cdo/apps/lab2/hooks/useInitialLabTheme';
-import lab2I18n from '@cdo/apps/lab2/locale';
 import ProgressContainer from '@cdo/apps/lab2/progress/ProgressContainer';
-import {
-  getAppOptionsViewingExemplar,
-  getIsStartMode,
-} from '@cdo/apps/lab2/projects/utils';
+import {getAppOptionsViewingExemplar} from '@cdo/apps/lab2/projects/utils';
 import {getLabViewPageAction, getIsLabViewBlocked} from '@cdo/apps/lab2/utils';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import useRequiredContext from '@cdo/apps/util/hooks/useRequiredContext';
@@ -83,38 +77,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     state => state.predictLevel.hasSubmittedResponse
   );
 
-  const aiChatAccessLevel = useAppSelector(
-    state => state.currentUser.aiChatAccessLevel
-  );
-  const {setChatDisabledState} = useAiChatDisabled();
-  useEffect(() => {
-    if (
-      currentAppName &&
-      !areAiChatToolsEnabled({appName: currentAppName, aiChatAccessLevel})
-    ) {
-      setChatDisabledState({
-        chatDisabled: true,
-        chatDisabledMessage: TEACHER_DISABLED_AI_CHAT_MESSAGE,
-      });
-    } else if (
-      isPredictLevel &&
-      !hasSubmittedPredictResponse &&
-      !getIsStartMode()
-    ) {
-      setChatDisabledState({
-        chatDisabled: true,
-        chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
-      });
-    } else {
-      setChatDisabledState({chatDisabled: false});
-    }
-  }, [
-    currentAppName,
-    aiChatAccessLevel,
+  useAiChatDisabledState({
+    appName: currentAppName,
     isPredictLevel,
     hasSubmittedPredictResponse,
-    setChatDisabledState,
-  ]);
+  });
 
   const blockLabView = getIsLabViewBlocked(
     pageAction,

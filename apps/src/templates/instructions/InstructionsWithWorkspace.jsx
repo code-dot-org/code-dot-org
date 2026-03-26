@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {TEACHER_DISABLED_AI_CHAT_MESSAGE} from '@cdo/apps/aichat/constants';
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
-import {
-  areAiChatToolsEnabled,
-  shouldShowAiTutor,
-} from '@cdo/apps/aichat/helpers/aiChatAccess';
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
@@ -35,12 +31,13 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
-    aiChatAccessLevel: PropTypes.string,
+    sectionAiChatAccessLevel: PropTypes.string,
+    currentUserAiChatAccessLevel: PropTypes.string,
     isShareView: PropTypes.bool,
   };
 
   state = {
-    aiChatOpen: false,
+    tutorLayout: {isVisible: false, isOpen: false},
     // only used so that we can rerender when resized
     windowWidth: undefined,
     windowHeight: undefined,
@@ -100,8 +97,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     setInstructionsMaxHeightAvailable(maxInstructionsHeight);
   };
 
-  toggleAiChat = () => {
-    this.setState(prevState => ({aiChatOpen: !prevState.aiChatOpen}));
+  handleLayoutChange = tutorLayout => {
+    this.setState({tutorLayout});
   };
 
   componentDidMount() {
@@ -118,7 +115,8 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       workspaceStyle,
       instructionsHeight,
       labType,
-      aiChatAccessLevel,
+      sectionAiChatAccessLevel,
+      currentUserAiChatAccessLevel,
       isShareView,
       children,
     } = this.props;
@@ -126,27 +124,39 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     const aiTutorAvailableForLevel =
       window?.appOptions?.level?.aiTutorAvailable ?? false;
 
-    const aiChatAccessDisabled = !areAiChatToolsEnabled({
-      appName: labType,
-      aiChatAccessLevel,
-    });
-
-    const showAiTutor =
+    const shouldMountAiTutorContainer =
       !isShareView &&
       AI_TUTOR_LEGACY_LABS.includes(labType) &&
       shouldShowAiTutor({
         appName: labType,
         tutorLevel: aiTutorAvailableForLevel,
-        aiChatAccessLevel,
+        aiChatAccessLevel: currentUserAiChatAccessLevel,
       });
+
+    // dilemma: This should really be owned by the AiTutorContainer but if I move it there we'll always start with
+    // isVisible false which will cause the layout to start without the tutor and then jump when the tutor renders.
+    const shouldShowTutor =
+      shouldMountAiTutorContainer &&
+      (sectionAiChatAccessLevel
+        ? shouldShowAiTutor({
+            appName: labType,
+            tutorLevel: aiTutorAvailableForLevel,
+            aiChatAccessLevel: sectionAiChatAccessLevel,
+          })
+        : true);
+
+    // Use shouldShowTutor as the initial layout value so there's no flash on
+    // first render. tutorLayout.isVisible overrides once AiTutorContainer
+    // reports back (e.g. when chat is disabled but history exists).
+    const isTutorVisible = shouldShowTutor || this.state.tutorLayout.isVisible;
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
-    const tutorSpace = this.state.aiChatOpen
+    const tutorSpace = this.state.tutorLayout.isOpen
       ? chatContainerSpace
       : sidebarSpace;
 
-    if (showAiTutor) {
+    if (isTutorVisible) {
       instructionsStyle = {...instructionsStyle, right: tutorSpace};
       workspaceStyle = {...workspaceStyle, right: tutorSpace};
     }
@@ -163,18 +173,11 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         >
           {children}
         </CodeWorkspaceContainer>
-        {showAiTutor && (
-          <AiChatDisabledProvider
-            chatDisabled={aiChatAccessDisabled}
-            chatDisabledMessage={
-              aiChatAccessDisabled
-                ? TEACHER_DISABLED_AI_CHAT_MESSAGE
-                : undefined
-            }
-          >
+        {shouldMountAiTutorContainer && (
+          <AiChatDisabledProvider>
             <AiTutorContainer
-              toggleAiChat={this.toggleAiChat}
-              aiChatOpen={this.state.aiChatOpen}
+              shouldShowTutor={shouldShowTutor}
+              onLayoutChange={this.handleLayoutChange}
             />
           </AiChatDisabledProvider>
         )}
@@ -188,10 +191,10 @@ export default connect(
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
     isShareView: state.pageConstants.isShareView,
-    aiChatAccessLevel:
-      (state.teacherSections
-        ? selectedSectionSelector(state)?.aiChatAccessLevel
-        : undefined) ?? state.currentUser.aiChatAccessLevel,
+    sectionAiChatAccessLevel: state.teacherSections
+      ? selectedSectionSelector(state)?.aiChatAccessLevel
+      : undefined,
+    currentUserAiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {

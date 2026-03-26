@@ -4,6 +4,7 @@ import React, {
   PropsWithChildren,
   useContext,
   useCallback,
+  useEffect,
   useMemo,
   useState,
 } from 'react';
@@ -85,6 +86,10 @@ export const AiChatDisabledProvider: FC<AiChatDisabledProviderProps> = ({
     },
     []
   );
+
+  useEffect(() => {
+    setChatDisabledState({chatDisabled, chatDisabledMessage});
+  }, [chatDisabled, chatDisabledMessage, setChatDisabledState]);
 
   const value = useMemo<AiChatDisabledContextValue>(
     () => ({
