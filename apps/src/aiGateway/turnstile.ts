@@ -32,9 +32,7 @@ export class TurnstileDevToolsError extends Error {
   constructor() {
     super(
       'Turnstile challenge blocked by active DevTools breakpoints. ' +
-        'To fix: press Ctrl+F8 / Cmd+F8 to deactivate breakpoints, or in ' +
-        'DevTools Settings → Ignore List enable ' +
-        '"Anonymous scripts from eval or console".'
+        'To fix: close DevTools, or press Ctrl+F8 / Cmd+F8 to deactivate breakpoints.'
     );
     this.name = 'TurnstileDevToolsError';
   }
@@ -55,7 +53,6 @@ export class TurnstileDevToolsError extends Error {
  * Returns false (safe to proceed) when:
  *   - DevTools is closed
  *   - Breakpoints are deactivated (Ctrl+F8)
- *   - "Anonymous scripts from eval or console" is enabled in DevTools Ignore List
  *   - Worker / Blob URL creation is blocked by CSP (can't detect → assume safe)
  */
 function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
@@ -147,21 +144,12 @@ export async function getTurnstileToken(): Promise<string> {
     );
     console.group('How to fix the Turnstile / DevTools conflict');
     console.log('Option 1: Close DevTools entirely and reload the page.');
-    console.groupCollapsed(
-      'Option 2: Keep DevTools open — ignore anonymous scripts (recommended for developers)'
-    );
-    console.log('Step 1: Open DevTools Settings — press F1 while DevTools is focused.');
-    console.log('        IMPORTANT: There are TWO gear icons in DevTools. Do NOT click the Console settings gear');
-    console.log('        (the smaller one inside the Console panel). Use F1 to open the correct main Settings panel.');
-    console.log('Step 2: In the Settings panel, look at the LEFT sidebar and scroll down until you see "Ignore List".');
-    console.log('        (In older Chrome versions this was called "Blackboxing" — same setting, different name.)');
-    console.log('Step 3: Make sure "Enable Ignore Listing" is checked (this is the master switch).');
-    console.log('Step 4: Check "Anonymous scripts from eval or console".');
-    console.log('Step 5: Close Settings (Escape or click ✕) and retry sending your message.');
-    console.groupEnd();
-    console.log(
-      'Option 3: Deactivate breakpoints temporarily — press Ctrl+F8 (Windows/Linux) or Cmd+F8 (Mac).'
-    );
+    console.log('Option 2: Keep DevTools open — deactivate breakpoints by pressing Ctrl+F8 (Windows/Linux) or Cmd+F8 (Mac).');
+    console.log('          This disables all breakpoints including debugger statements. Toggle it back on when done.');
+    console.log('');
+    console.log('NOTE: The DevTools Ignore List → "Anonymous scripts from eval or console" setting does NOT help here.');
+    console.log('      That setting only covers eval() and console-typed scripts, not Blob Worker scripts.');
+    console.log('      Cloudflare Turnstile (and our probe) run inside Blob Workers, which are a separate category.');
     console.groupEnd();
     throw new TurnstileDevToolsError();
   }
