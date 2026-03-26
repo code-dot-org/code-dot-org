@@ -160,8 +160,8 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
       it_behaves_like 'ignores account'
     end
 
-    context 'when deletion warning email was sent earlier than grace period threshold' do
-      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago}
+    context 'when deletion warning email was sent but we are still within the grace period' do
+      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago + 1.minute}
 
       it_behaves_like 'ignores account'
     end
