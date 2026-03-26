@@ -1,32 +1,61 @@
 import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import {UnconnectedResourcesEditor} from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
-import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 
-const misconceptionShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string,
-  text_content: PropTypes.string,
-  resources: PropTypes.arrayOf(resourceShape),
-});
+import moduleStyles from './misconceptionsEditor.module.scss';
 
-const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
-  const [name, setName] = useState(initial?.name || '');
-  const [textContent, setTextContent] = useState(initial?.text_content || '');
-  const [resources, setResources] = useState(initial?.resources || []);
+interface Resource {
+  id: number;
+  key: string;
+  name: string;
+  url: string;
+  type?: string;
+  audience?: string;
+  embeddabilityType?: string;
+  curriculumCategory?: string;
+  assessment?: boolean;
+  includeInPdf?: boolean;
+  downloadUrl?: string;
+  isRollup?: boolean;
+}
+
+interface Misconception {
+  id: number;
+  name?: string;
+  text_content?: string;
+  resources?: Resource[];
+}
+
+interface MisconceptionFormProps {
+  conceptId: number;
+  initial: Misconception | null;
+  onSave: (misconception: Misconception) => void;
+  onCancel: () => void;
+}
+
+const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
+  conceptId,
+  initial,
+  onSave,
+  onCancel,
+}) => {
+  const [name, setName] = useState(initial?.name ?? '');
+  const [textContent, setTextContent] = useState(initial?.text_content ?? '');
+  const [resources, setResources] = useState<Resource[]>(
+    initial?.resources ?? []
+  );
   const [isSaving, setIsSaving] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
-  const addResource = (_context, resource) =>
+  const addResource = (_context: string, resource: Resource) =>
     setResources(prev => [...prev, resource]);
-  const editResource = (_context, resource) =>
+  const editResource = (_context: string, resource: Resource) =>
     setResources(prev =>
       prev.map(r => (r.key === resource.key ? resource : r))
     );
-  const removeResource = (_context, key) =>
+  const removeResource = (_context: string, key: string) =>
     setResources(prev => prev.filter(r => r.key !== key));
 
   const save = () => {
@@ -35,7 +64,7 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
     $.ajax({
       url: isNew
         ? `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions`
-        : `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${initial.id}`,
+        : `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${initial!.id}`,
       method: isNew ? 'POST' : 'PUT',
       data: {
         name,
@@ -43,20 +72,20 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
         resource_ids: resources.map(r => r.id),
       },
     })
-      .done(data => onSave(data))
-      .fail(err => {
+      .done((data: Misconception) => onSave(data))
+      .fail((err: {responseText: string}) => {
         setIsSaving(false);
         setError(err.responseText);
       });
   };
 
   return (
-    <div style={styles.form}>
-      {error && <p style={styles.error}>{error}</p>}
-      <label style={styles.label}>
+    <div className={moduleStyles.form}>
+      {error && <p className={moduleStyles.error}>{error}</p>}
+      <label className={moduleStyles.label}>
         Name
         <input
-          style={styles.input}
+          className={moduleStyles.input}
           value={name}
           onChange={e => setName(e.target.value)}
         />
@@ -64,10 +93,12 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
       <TextareaWithMarkdownPreview
         name="text_content"
         label="Text Content"
-        handleMarkdownChange={e => setTextContent(e.target.value)}
+        handleMarkdownChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
+          setTextContent(e.target.value)
+        }
         markdown={textContent}
       />
-      <h4 style={styles.resourcesHeading}>Resources</h4>
+      <h4 className={moduleStyles.resourcesHeading}>Resources</h4>
       <UnconnectedResourcesEditor
         forJitPl
         resourceContext="jitPlMisconceptionResource"
@@ -76,11 +107,15 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
         editResource={editResource}
         removeResource={removeResource}
       />
-      <div style={styles.formButtons}>
+      <div className={moduleStyles.formButtons}>
         <button onClick={save} disabled={isSaving} type="button">
           {isSaving ? 'Saving...' : 'Save'}
         </button>
-        <button onClick={onCancel} type="button" style={styles.cancelButton}>
+        <button
+          onClick={onCancel}
+          type="button"
+          className={moduleStyles.cancelButton}
+        >
           Cancel
         </button>
       </div>
@@ -88,17 +123,22 @@ const MisconceptionForm = ({conceptId, initial, onSave, onCancel}) => {
   );
 };
 
-MisconceptionForm.propTypes = {
-  conceptId: PropTypes.number.isRequired,
-  initial: misconceptionShape,
-  onSave: PropTypes.func.isRequired,
-  onCancel: PropTypes.func.isRequired,
-};
+interface MisconceptionItemProps {
+  misconception: Misconception;
+  conceptId: number;
+  onUpdate: (misconception: Misconception) => void;
+  onDelete: (id: number) => void;
+}
 
-const MisconceptionItem = ({misconception, conceptId, onUpdate, onDelete}) => {
+const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
+  misconception,
+  conceptId,
+  onUpdate,
+  onDelete,
+}) => {
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleSave = updated => {
+  const handleSave = (updated: Misconception) => {
     setIsEditing(false);
     onUpdate(updated);
   };
@@ -125,20 +165,20 @@ const MisconceptionItem = ({misconception, conceptId, onUpdate, onDelete}) => {
   }
 
   return (
-    <div style={styles.card}>
+    <div className={moduleStyles.card}>
       <strong>{misconception.name}</strong>
-      <div style={styles.cardActions}>
+      <div className={moduleStyles.cardActions}>
         <button
           onClick={() => setIsEditing(true)}
           type="button"
-          style={styles.editButton}
+          className={moduleStyles.editButton}
         >
           <i className="fa fa-edit" /> Edit
         </button>
         <button
           onClick={handleDelete}
           type="button"
-          style={styles.deleteButton}
+          className={moduleStyles.deleteButton}
         >
           <i className="fa fa-trash" /> Delete
         </button>
@@ -147,31 +187,32 @@ const MisconceptionItem = ({misconception, conceptId, onUpdate, onDelete}) => {
   );
 };
 
-MisconceptionItem.propTypes = {
-  misconception: misconceptionShape.isRequired,
-  conceptId: PropTypes.number.isRequired,
-  onUpdate: PropTypes.func.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
+interface MisconceptionsEditorProps {
+  conceptId: number;
+  initialMisconceptions?: Misconception[];
+}
 
-const MisconceptionsEditor = ({conceptId, initialMisconceptions}) => {
-  const [misconceptions, setMisconceptions] = useState(
-    initialMisconceptions || []
+const MisconceptionsEditor: React.FC<MisconceptionsEditorProps> = ({
+  conceptId,
+  initialMisconceptions,
+}) => {
+  const [misconceptions, setMisconceptions] = useState<Misconception[]>(
+    initialMisconceptions ?? []
   );
   const [isAdding, setIsAdding] = useState(false);
 
-  const handleAdd = created => {
+  const handleAdd = (created: Misconception) => {
     setMisconceptions(prev => [...prev, created]);
     setIsAdding(false);
   };
 
-  const handleUpdate = updated => {
+  const handleUpdate = (updated: Misconception) => {
     setMisconceptions(prev =>
       prev.map(m => (m.id === updated.id ? updated : m))
     );
   };
 
-  const handleDelete = id => {
+  const handleDelete = (id: number) => {
     setMisconceptions(prev => prev.filter(m => m.id !== id));
   };
 
@@ -197,88 +238,13 @@ const MisconceptionsEditor = ({conceptId, initialMisconceptions}) => {
         <button
           onClick={() => setIsAdding(true)}
           type="button"
-          style={styles.addButton}
+          className={moduleStyles.addButton}
         >
           + Add Misconception
         </button>
       )}
     </div>
   );
-};
-
-MisconceptionsEditor.propTypes = {
-  conceptId: PropTypes.number.isRequired,
-  initialMisconceptions: PropTypes.arrayOf(misconceptionShape),
-};
-
-const styles = {
-  form: {
-    border: '1px solid #ddd',
-    borderRadius: 4,
-    padding: 16,
-    marginBottom: 12,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 10,
-  },
-  input: {
-    marginTop: 4,
-  },
-  resourcesHeading: {
-    marginTop: 12,
-    marginBottom: 6,
-  },
-  formButtons: {
-    marginTop: 12,
-    display: 'flex',
-    gap: 8,
-  },
-  cancelButton: {
-    marginLeft: 8,
-  },
-  error: {
-    color: 'red',
-  },
-  card: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    border: '1px solid #ddd',
-    borderRadius: 4,
-    padding: '8px 12px',
-    marginBottom: 8,
-    background: '#fafafa',
-  },
-  cardActions: {
-    display: 'flex',
-    gap: 8,
-  },
-  editButton: {
-    background: '#337ab7',
-    color: 'white',
-    border: 'none',
-    borderRadius: 3,
-    padding: '4px 10px',
-    cursor: 'pointer',
-  },
-  deleteButton: {
-    background: '#d9534f',
-    color: 'white',
-    border: 'none',
-    borderRadius: 3,
-    padding: '4px 10px',
-    cursor: 'pointer',
-  },
-  addButton: {
-    background: '#eee',
-    border: '1px solid #ddd',
-    borderRadius: 3,
-    padding: 7,
-    marginTop: 8,
-    cursor: 'pointer',
-  },
 };
 
 export default MisconceptionsEditor;
