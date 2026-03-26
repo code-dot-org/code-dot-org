@@ -98,11 +98,17 @@ const UserMessageEditor = React.forwardRef<
 
     const [speechToTextCount, setSpeechToTextCount] = useState(0);
     const [clearedMessageCount, setClearedMessageCount] = useState(0);
+    /** True after the field becomes empty following STT use, until the next successful transcription. */
+    const [
+      dictationClearedSinceLastTranscription,
+      setDictationClearedSinceLastTranscription,
+    ] = useState(false);
 
     useEffect(() => {
       // Track how many times the message was cleared after using speech to text.
       if (speechToTextCount > 0 && !userMessage) {
         setClearedMessageCount(c => c + 1);
+        setDictationClearedSinceLastTranscription(true);
       }
     }, [speechToTextCount, userMessage]);
 
@@ -112,11 +118,19 @@ const UserMessageEditor = React.forwardRef<
           dictationEnabled: speechToTextEnabled,
           dictationUsageCount: speechToTextCount,
           dictationMessageClearedCount: clearedMessageCount,
+          dictationClearedSinceLastTranscription,
         });
         setSpeechToTextCount(0);
         setClearedMessageCount(0);
+        setDictationClearedSinceLastTranscription(false);
       },
-      [speechToTextCount, speechToTextEnabled, clearedMessageCount, onSubmit]
+      [
+        speechToTextCount,
+        speechToTextEnabled,
+        clearedMessageCount,
+        dictationClearedSinceLastTranscription,
+        onSubmit,
+      ]
     );
 
     return (
@@ -164,6 +178,7 @@ const UserMessageEditor = React.forwardRef<
                   onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
                   setIsRecording(false);
                   setSpeechToTextCount(c => c + 1);
+                  setDictationClearedSinceLastTranscription(false);
                 }}
                 onRecordStart={() => setIsRecording(true)}
               />
