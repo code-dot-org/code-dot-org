@@ -224,10 +224,11 @@ class StudentSnapshotsController < ApplicationController
     student_id = params[:student_id]
     section_id = params[:section_id]
     teacher_id = current_user.id
+    refresh = params[:refresh] == 'true'
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
-    existing = LessonInsight.find_by(unit_id: unit_id, lesson_id: lesson_id, student_id: student_id, section_id: section_id)
+    existing = LessonInsight.find_by(unit_id: unit_id, lesson_id: lesson_id, student_id: student_id, section_id: section_id) unless refresh
 
     if existing
       stale = AiStudentSnapshotHelper.lesson_insight_stale?(
