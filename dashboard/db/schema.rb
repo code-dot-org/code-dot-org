@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_26_185815) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -1002,6 +1002,17 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_18_191529) do
     t.integer "position"
     t.text "properties"
     t.index ["script_id", "key"], name: "index_lesson_groups_on_script_id_and_key", unique: true
+  end
+
+  create_table "lesson_insights", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id"
+    t.integer "student_id"
+    t.integer "section_id"
+    t.integer "unit_id"
+    t.integer "teacher_id"
+    t.text "insight_json"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "lessons_opportunity_standards", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
