@@ -48,8 +48,8 @@ Feature: Curriculum Catalog Filters
     Given I am on "http://studio.code.org/catalog"
     Then I wait until element "#grade-dropdown-button" is visible
     Then I click selector "#grade-dropdown-button"
-    And I wait until element "span:contains(Select all)" is visible within element "#grade-dropdown"
-    Then I click selector "span:contains(Select all)"
+    And I wait until element "button:contains(Select all)" is visible within element "#grade-dropdown"
+    Then I click selector "button:contains(Select all)"
     And the "Kindergarten" checkbox is selected
     And the "Grade 1" checkbox is selected
     And the "Grade 2" checkbox is selected
@@ -63,8 +63,8 @@ Feature: Curriculum Catalog Filters
     And the "Grade 10" checkbox is selected
     And the "Grade 11" checkbox is selected
     And the "Grade 12" checkbox is selected
-    And I wait until element "span:contains(Clear all)" is visible within element "#grade-dropdown"
-    Then I click selector "span:contains(Clear all)"
+    And I wait until element "button:contains(Clear all)" is visible within element "#grade-dropdown"
+    Then I click selector "button:contains(Clear all)"
     And the "Kindergarten" checkbox is not selected
     And the "Grade 1" checkbox is not selected
     And the "Grade 2" checkbox is not selected
