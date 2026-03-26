@@ -327,6 +327,31 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
+  def test_codeprojects_html_get_sets_restrictive_csp_and_server_rendered_footer
+    post_file_data(@api, 'index.html', '<div><button onclick="alert(1)">math homework</button></div>', 'text/html')
+
+    @api.get_codeproject_object('index.html', '', {'HTTP_HOST' => CDO.canonical_hostname('codeprojects.org')})
+    assert successful?
+
+    csp = last_response['Content-Security-Policy']
+    refute_nil csp
+    assert_includes csp, "script-src 'none'"
+    assert_includes csp, "connect-src 'none'"
+    assert_includes csp, "frame-src 'none'"
+    assert_includes csp, "base-uri 'none'"
+
+    assert_includes last_response.body, 'id="codeprojects_pagefooter"'
+    assert_includes last_response.body, "/projects/weblab/#{@channel_id}/view"
+    assert_includes last_response.body, "report_abuse?channelId=#{@channel_id}"
+    assert_includes last_response.body, '/weblab/footer.css'
+    refute_includes last_response.body, '/weblab/footer.js'
+
+    @api.delete_object('index.html')
+    assert successful?
+
+    delete_all_manifest_versions
+  end
+
   def test_allow_mismatched_mime_type
     mismatched_filename = @api.randomize_filename('mismatchedmimetype.png')
     delete_all_file_versions(mismatched_filename)

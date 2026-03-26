@@ -11,6 +11,22 @@ require 'nokogiri'
 class FilesApi < Sinatra::Base
   set :mustermann_opts, check_anchors: false
 
+  CODEPROJECTS_WEBLAB_CSP = [
+    "default-src 'self' data: blob:",
+    "script-src 'none'",
+    "connect-src 'none'",
+    "object-src 'none'",
+    "base-uri 'none'",
+    "form-action 'none'",
+    "frame-src 'none'",
+    "child-src 'none'",
+    "worker-src 'none'",
+    "style-src 'self' 'unsafe-inline' https:",
+    "img-src 'self' data: blob: https:",
+    "font-src 'self' data: https:",
+    "media-src 'self' data: blob: https:",
+  ].freeze
+
   def max_file_size
     5_000_000 # 5 MB
   end
@@ -61,6 +77,52 @@ class FilesApi < Sinatra::Base
   # Default to cannot view if there is an error
   rescue Projects::NotFound, ArgumentError, OpenSSL::Cipher::CipherError
     false
+  end
+
+  def codeprojects_footer_html(encrypted_channel_id)
+    report_abuse_url = "#{CDO.studio_url('report_abuse')}?channelId=#{encrypted_channel_id}"
+    view_code_url = CDO.studio_url("projects/weblab/#{encrypted_channel_id}/view")
+
+    <<~HTML.chomp
+      <footer id="codeprojects_pagefooter">
+        <div class="codeprojects_pagefooter_content">
+          <a class="codeprojects_pagefooter_link" href="#{CDO.studio_url}">#{I18n.t('footer.built_on_code_studio')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link" href="#{report_abuse_url}" id="pagefooter_report_abuse" target="blank">#{I18n.t('footer.report_abuse')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link" href="#{view_code_url}" id="pagefooter_view_code">#{I18n.t('footer.view_code')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('tos')}">#{I18n.t('footer.tos')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('privacy')}">#{I18n.t('footer.privacy')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('cookies')}">#{I18n.t('footer.cookie_notice')}</a>
+          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
+          <a class="codeprojects_pagefooter_link">&copy; Code.org, #{Time.now.year}.</a>
+        </div>
+      </footer>
+    HTML
+  end
+
+  def inject_before_closing_tag(html, tag_name, insertion)
+    closing_tag = %r{</#{tag_name}>}i
+    if html.match?(closing_tag)
+      html.sub(closing_tag, "#{insertion}\\0")
+    else
+      "#{insertion}#{html}"
+    end
+  end
+
+  def decorate_codeprojects_html(html, encrypted_channel_id)
+    footer_stylesheet = %(<link rel="stylesheet" href="/weblab/footer.css">)
+    html_with_styles = inject_before_closing_tag(html, 'head', footer_stylesheet)
+    footer_html = codeprojects_footer_html(encrypted_channel_id)
+
+    if html_with_styles.match?(%r{</body>}i)
+      html_with_styles.sub(%r{</body>}i, "#{footer_html}\\0")
+    else
+      "#{html_with_styles}#{footer_html}"
+    end
   end
 
   def file_too_large(quota_type)
@@ -272,7 +334,8 @@ class FilesApi < Sinatra::Base
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
 
     if code_projects_domain_root_route && html?(response.headers)
-      return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
+      response.headers['Content-Security-Policy'] = CODEPROJECTS_WEBLAB_CSP.join('; ')
+      return decorate_codeprojects_html(result[:body].string, encrypted_channel_id)
     end
 
     response.headers['S3-Version-Id'] = result[:version_id]
