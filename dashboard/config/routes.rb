@@ -1067,7 +1067,7 @@ Dashboard::Application.routes.draw do
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
     end
-    if rack_env?(:development, :staging)
+    if rack_env?(:staging, :test)
       post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 

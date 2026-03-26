@@ -3,13 +3,6 @@ require 'cdo/github'
 require 'cdo/test_server_status'
 
 BUILD_STARTED_PATH = deploy_dir('build-started').freeze
-CHECK_DTS_ACTIONS = [
-  'opened',
-  'reopened',
-  'edited',
-  'synchronize',
-].freeze
-
 # Used to restart builds on staging/test via Slack slash commands.
 post '/api/dev/start-build' do
   # Forbidden in production because it's a dev route

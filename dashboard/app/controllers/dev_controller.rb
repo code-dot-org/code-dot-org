@@ -1,3 +1,13 @@
+require 'cdo/github'
+require 'cdo/developers_topic'
+
+CHECK_DTS_ACTIONS = [
+  'opened',
+  'reopened',
+  'edited',
+  'synchronize',
+].freeze
+
 # Controller actions used for internal developer tools
 class DevController < ApplicationController
   # Disable Rails' layout and CSRF verification for these API routes
@@ -5,6 +15,7 @@ class DevController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def check_dts
+    return head :forbidden unless rack_env?(:staging)
     return head :service_unavailable unless CDO.github_webhook_secret
 
     # verify signature
@@ -21,10 +32,14 @@ class DevController < ApplicationController
 
     # verify PR data
     data = JSON.parse(params[:payload])
-    unless CHECK_DTS_ACTIONS.include?(data['action']) &&
-        request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
-        data['pull_request']['base']['ref'] == 'staging'
-      return render status: :accepted, plain: 'I only check the DTS status for PRs against staging'
+    data_valid = CHECK_DTS_ACTIONS.include?(data['action']) &&
+      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+      data['pull_request']['base']['ref'] == 'staging'
+    unless data_valid
+      return render(
+        status: :accepted,
+        plain: 'I only check the DTS status for PRs against staging'
+      )
     end
 
     # set initial DTS for specified PR
