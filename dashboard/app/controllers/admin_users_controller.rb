@@ -367,13 +367,16 @@ class AdminUsersController < ApplicationController
 
   # GET /admin/lookup_by_email
   def lookup_by_email_form
-    email = params[:email]
+    email = params[:email].to_s.strip.downcase
     if email.present?
       hashed_email = AuthenticationOption.hash_email(email)
-      auth_options = AuthenticationOption.where(hashed_email: hashed_email)
-      user_ids = auth_options.pluck(:user_id).uniq
+      matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
+      user_ids = matched_auth_options.distinct.pluck(:user_id)
+      all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)
       @users = restricted_users.where(id: user_ids)
-      @credential_types_by_user = auth_options.group_by(&:user_id).transform_values {|opts| opts.map(&:credential_type)}
+      @credential_types_by_user = all_auth_options_for_users.group_by(&:user_id).transform_values do |opts|
+        opts.map(&:credential_type)
+      end
     end
   end
 
