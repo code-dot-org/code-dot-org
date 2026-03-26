@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import * as BlocklyCore from 'blockly/core';
 import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
@@ -7,7 +8,6 @@ import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {useInterval} from '@cdo/apps/util/useInterval';
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
@@ -25,11 +25,6 @@ import {closeAiModal, DanceState} from '../danceRedux';
 // Disabling import order in order to add require statements first
 // Require statements can change behavior based on the order they are called.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
-/* eslint-disable import/order */
-const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
-
-const i18n = require('../locale');
-/* eslint-enable import/order */
 
 import AiVisualizationPreview from './AiVisualizationPreview';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
@@ -65,6 +60,8 @@ import {
 } from './utils';
 
 import moduleStyles from './dance-ai-modal.module.scss';
+
+const i18n = require('../locale');
 
 // Progress in the generating mode has a step and a substep.
 // Each step is a now effect, while each substep shows progress for
@@ -646,29 +643,24 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
             className={moduleStyles.toggleArea}
             style={{zIndex: mode === DanceAiModalMode.RESULTS ? 1 : 0}}
           >
-            <ToggleGroup
-              selected={currentToggle}
-              activeColor={color['light_primary_500']}
-              onChange={(value: DanceAiPreviewButtonToggleState) => {
-                setCurrentToggle(value);
+            <SegmentedButtons
+              selectedButtonValue={currentToggle}
+              onChange={(value: string) => {
+                setCurrentToggle(value as DanceAiPreviewButtonToggleState);
               }}
-              useRebrandedLikeStyles
-            >
-              <button
-                id="toggle-effect-button"
-                type="button"
-                value={DanceAiPreviewButtonToggleState.EFFECT}
-              >
-                {i18n.danceAiModalEffectButton()}
-              </button>
-              <button
-                id="toggle-code-button"
-                type="button"
-                value={DanceAiPreviewButtonToggleState.CODE}
-              >
-                {i18n.danceAiModalCodeButton()}
-              </button>
-            </ToggleGroup>
+              buttons={[
+                {
+                  value: DanceAiPreviewButtonToggleState.EFFECT,
+                  label: i18n.danceAiModalEffectButton(),
+                  id: 'toggle-effect-button',
+                },
+                {
+                  value: DanceAiPreviewButtonToggleState.CODE,
+                  label: i18n.danceAiModalCodeButton(),
+                  id: 'toggle-code-button',
+                },
+              ]}
+            />
           </div>
         )}
 

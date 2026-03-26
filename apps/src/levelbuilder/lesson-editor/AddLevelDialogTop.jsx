@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
@@ -9,7 +10,8 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import AddLevelFilters from '@cdo/apps/levelbuilder/lesson-editor/AddLevelFilters';
 import AddLevelTable from '@cdo/apps/levelbuilder/lesson-editor/AddLevelTable';
 import CreateNewLevelInputs from '@cdo/apps/levelbuilder/lesson-editor/CreateNewLevelInputs';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+
+import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
@@ -69,17 +71,15 @@ function AddLevelDialogTop(props) {
     <div>
       {!loadingLevels && (
         <div style={styles.topArea}>
-          <ToggleGroup
-            selected={methodOfAddingLevel}
+          <SegmentedButtons
+            selectedButtonValue={methodOfAddingLevel}
             onChange={value => setMethodOfAddingLevel(value)}
-          >
-            <button type="button" value={'Find Level'}>
-              Find Level
-            </button>
-            <button type="button" value={'Create New Level'}>
-              Create New Level
-            </button>
-          </ToggleGroup>
+            className={legacyStyles.legacyToggle}
+            buttons={[
+              {value: 'Find Level', label: 'Find Level'},
+              {value: 'Create New Level', label: 'Create New Level'},
+            ]}
+          />
           {methodOfAddingLevel === 'Find Level' && (
             <div style={styles.filtersAndLevels}>
               <AddLevelFilters

@@ -1,15 +1,10 @@
 /** @file Root component for Public Key Cryptography widget */
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
 
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 
-import FontAwesome from '../legacySharedComponents/FontAwesome';
-import ToggleGroup from '../templates/ToggleGroup';
 import WidgetContinueButton from '../templates/WidgetContinueButton';
 import color from '../util/color';
 
@@ -23,6 +18,8 @@ import Eve from './Eve';
 import EveInstructions from './EveInstructions';
 import ModuloClock from './ModuloClock';
 import StartOverButton from './StartOverButton';
+
+import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 // Magic strings for view modes
 const ALICE_VIEW = 'alice';
@@ -192,20 +189,12 @@ export default class PublicKeyCryptographyWidget extends React.Component {
 
   render() {
     const {selectedCharacter} = this.state;
-    const store = createStore(
-      combineReducers({
-        isRtl,
-        responsive,
-      })
-    );
     return (
       <div style={style.root}>
-        <Provider store={store}>
-          <CharacterSelect
-            selectedCharacter={selectedCharacter}
-            onChange={this.setSelectedCharacter}
-          />
-        </Provider>
+        <CharacterSelect
+          selectedCharacter={selectedCharacter}
+          onChange={this.setSelectedCharacter}
+        />
         {selectedCharacter && <WidgetContinueButton />}
         {selectedCharacter && (
           <StartOverButton onClick={this.onStartOverClick} />
@@ -222,30 +211,46 @@ export default class PublicKeyCryptographyWidget extends React.Component {
  * Toggle group of character view options: Alice|Eve|Bob|All
  */
 const CharacterSelect = props => (
-  <span>
+  <div style={characterSelectWrapperStyle}>
     <strong style={characterSelectTextStyle}>Pick a character:</strong>
-    <ToggleGroup selected={props.selectedCharacter} onChange={props.onChange}>
-      <button type="button" value={ALICE_VIEW}>
-        <FontAwesome icon="user" /> Alice
-      </button>
-      <button type="button" value={EVE_VIEW}>
-        <FontAwesome icon="user-secret" /> Eve
-      </button>
-      <button type="button" value={BOB_VIEW}>
-        <FontAwesome icon="user" /> Bob
-      </button>
-      <button type="button" value={ALL_VIEW}>
-        <FontAwesome icon="users" /> All
-      </button>
-    </ToggleGroup>
-  </span>
+    <SegmentedButtons
+      selectedButtonValue={props.selectedCharacter}
+      onChange={props.onChange}
+      className={legacyStyles.legacyToggle}
+      buttons={[
+        {
+          value: ALICE_VIEW,
+          label: 'Alice',
+          iconLeft: {iconName: 'user', iconStyle: 'solid'},
+        },
+        {
+          value: EVE_VIEW,
+          label: 'Eve',
+          iconLeft: {iconName: 'user-secret', iconStyle: 'solid'},
+        },
+        {
+          value: BOB_VIEW,
+          label: 'Bob',
+          iconLeft: {iconName: 'user', iconStyle: 'solid'},
+        },
+        {
+          value: ALL_VIEW,
+          label: 'All',
+          iconLeft: {iconName: 'users', iconStyle: 'solid'},
+        },
+      ]}
+    />
+  </div>
 );
 CharacterSelect.propTypes = {
   selectedCharacter: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
+const characterSelectWrapperStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: 8,
+};
 const characterSelectTextStyle = {
   lineHeight: '26px',
-  verticalAlign: 'baseline',
-  marginRight: 8,
 };

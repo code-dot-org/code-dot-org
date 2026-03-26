@@ -1,11 +1,10 @@
 /** @file Row of controls above the visualization. */
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
 import styleConstants from '@cdo/apps/styleConstants';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 
 import * as utils from '../utils';
@@ -14,6 +13,8 @@ import {changeInterfaceMode} from './actions';
 import {P5LabInterfaceMode, P5LabType} from './constants';
 import PoemSelector from './poetry/PoemSelector';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
+
+import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -73,48 +74,38 @@ class P5LabVisualizationHeader extends React.Component {
         {this.shouldShowPoemSelector() && <PoemSelector />}
         {this.props.numAllowedModes > 1 && (
           <div style={styles.main} id="playSpaceHeader">
-            <ToggleGroup
-              selected={interfaceMode}
+            <SegmentedButtons
+              selectedButtonValue={interfaceMode}
               onChange={this.changeInterfaceMode}
-              flex={true}
-            >
-              <button
-                style={styles.buttonFocus}
-                type="button"
-                value={P5LabInterfaceMode.CODE}
-                id="codeMode"
-              >
-                {msg.codeMode()}
-              </button>
-              {allowAnimationMode && (
-                <button
-                  style={styles.buttonFocus}
-                  type="button"
-                  value={P5LabInterfaceMode.ANIMATION}
-                  id="animationMode"
-                >
-                  {this.props.isBlockly
-                    ? msg.costumeMode()
-                    : msg.animationMode()}
-                </button>
-              )}
-              {allowAnimationMode && this.props.isBlockly && (
-                <button
-                  style={{
-                    ...styles.buttonFocus,
-                    // If the button text is wider than the available space, truncate it.
-                    overflow: 'hidden',
-                    textOverflow: 'ellipsis',
-                    whiteSpace: 'nowrap',
-                  }}
-                  type="button"
-                  value={P5LabInterfaceMode.BACKGROUND}
-                  id="backgroundMode"
-                >
-                  {msg.backgroundMode()}
-                </button>
-              )}
-            </ToggleGroup>
+              className={legacyStyles.legacyToggle}
+              buttons={[
+                {
+                  value: P5LabInterfaceMode.CODE,
+                  label: msg.codeMode(),
+                  id: 'codeMode',
+                },
+                ...(allowAnimationMode
+                  ? [
+                      {
+                        value: P5LabInterfaceMode.ANIMATION,
+                        label: this.props.isBlockly
+                          ? msg.costumeMode()
+                          : msg.animationMode(),
+                        id: 'animationMode',
+                      },
+                    ]
+                  : []),
+                ...(allowAnimationMode && this.props.isBlockly
+                  ? [
+                      {
+                        value: P5LabInterfaceMode.BACKGROUND,
+                        label: msg.backgroundMode(),
+                        id: 'backgroundMode',
+                      },
+                    ]
+                  : []),
+              ]}
+            />
           </div>
         )}
       </div>
@@ -125,12 +116,6 @@ class P5LabVisualizationHeader extends React.Component {
 const styles = {
   main: {
     height: styleConstants['workspace-headers-height'],
-  },
-  buttonFocus: {
-    ':focus': {
-      outlineWidth: 1,
-      outlineColor: color.black,
-    },
   },
 };
 export default connect(

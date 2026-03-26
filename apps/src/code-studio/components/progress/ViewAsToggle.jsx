@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -6,8 +7,9 @@ import {connect} from 'react-redux';
 import {setViewAsUserId} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import commonMsg from '@cdo/locale';
+
+import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
@@ -57,22 +59,23 @@ class ViewAsToggle extends React.Component {
       <div className="non-scrollable-wrapper" style={styles.main}>
         <div style={styles.viewAs}>{commonMsg.viewPageAs()}</div>
         <div style={styles.toggleGroup}>
-          <ToggleGroup selected={viewAs} onChange={this.onChange}>
-            <button
-              type="button"
-              className="uitest-viewAsStudent"
-              value={ViewType.Participant}
-            >
-              {commonMsg.student()}
-            </button>
-            <button
-              type="button"
-              className="uitest-viewAsTeacher"
-              value={ViewType.Instructor}
-            >
-              {commonMsg.teacher()}
-            </button>
-          </ToggleGroup>
+          <SegmentedButtons
+            selectedButtonValue={viewAs}
+            onChange={this.onChange}
+            className={legacyStyles.legacyToggle}
+            buttons={[
+              {
+                value: ViewType.Participant,
+                label: commonMsg.student(),
+                id: 'uitest-viewAsStudent',
+              },
+              {
+                value: ViewType.Instructor,
+                label: commonMsg.teacher(),
+                id: 'uitest-viewAsTeacher',
+              },
+            ]}
+          />
         </div>
       </div>
     );

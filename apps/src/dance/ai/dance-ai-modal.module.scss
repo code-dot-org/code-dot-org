@@ -151,15 +151,21 @@ $ai-modal-border-width: 8px;
       animation: appear 0.3s;
       margin-top: 3px;
 
-      span {
-        button {
-          &:focus-visible {
-            // Used !important since ToggleGroup uses inline styles and there's no other way to overwrite them.
-            // Didn't want to change ToggleGroup component since that might cause unexpected regressions.
-            // We agreed that once DSCO SegmentedButton will be implemented and we'll have the time/ability -
-            // we'll simply use SegmentedButton here.
-            outline: 2px solid $light_primary_500 !important;
-          }
+      // Match legacy rebrandedLikeStyle: orange active, no shadows, semi-bold
+      --brand-teal-65: #{$light_primary_500};
+      --borders-brand-teal-primary: #949ca2;
+      --background-brand-teal-strong: #cc8300;
+      --background-brand-teal-light: #fff2d9;
+      --background-neutral-primary: #fff;
+      --borders-neutral-primary: #949ca2;
+      --text-neutral-primary: #292f36;
+      --text-neutral-white-fixed: #fff;
+
+      button {
+        font-weight: 600;
+
+        &:focus-visible {
+          outline: 2px solid $light_primary_500;
         }
       }
     }

@@ -59,6 +59,7 @@ const SegmentedButton: React.FunctionComponent<SegmentedButtonProps> = ({
     <button
       id={id}
       aria-label={ariaLabel}
+      aria-pressed={selected}
       type="button"
       disabled={disabled}
       onClick={handleClick}

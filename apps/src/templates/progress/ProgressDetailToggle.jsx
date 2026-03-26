@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -7,31 +8,7 @@ import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import ToggleGroup from '../ToggleGroup';
-
-import groupDetailActive from './images/groupToggleDetailActive.png';
-import groupDetailInactive from './images/groupToggleDetailInactive.png';
-import groupSummaryActive from './images/groupToggleSummaryActive.png';
-import groupSummaryInactive from './images/groupToggleSummaryInactive.png';
-import detailActive from './images/toggleDetailActive.png';
-import detailInactive from './images/toggleDetailInactive.png';
-import summaryActive from './images/toggleSummaryActive.png';
-import summaryInactive from './images/toggleSummaryInactive.png';
-
-const imageSets = {
-  teal: {
-    summaryActive,
-    summaryInactive,
-    detailActive,
-    detailInactive,
-  },
-  purple: {
-    summaryActive: groupSummaryActive,
-    summaryInactive: groupSummaryInactive,
-    detailActive: groupDetailActive,
-    detailInactive: groupDetailInactive,
-  },
-};
+import legacyStyles from '../legacy-toggle-styles.module.scss';
 
 /**
  * A toggle that provides a way to switch between detail and summary views of
@@ -40,7 +17,6 @@ const imageSets = {
 class ProgressDetailToggle extends React.Component {
   static propTypes = {
     activeColor: PropTypes.string,
-    whiteBorder: PropTypes.bool,
     toggleStudyGroup: PropTypes.string,
 
     // redux backed
@@ -50,82 +26,35 @@ class ProgressDetailToggle extends React.Component {
     setIsSummaryView: PropTypes.func.isRequired,
   };
 
-  onChange = () => {
-    const isSummaryView = !this.props.isSummaryView;
-    this.props.setIsSummaryView(isSummaryView);
+  onChange = value => {
+    this.props.setIsSummaryView(value === 'summary');
   };
 
   render() {
-    const {whiteBorder, isSummaryView, hasGroups, isPlc} = this.props;
+    const {isSummaryView, isPlc, hasGroups} = this.props;
 
-    let activeColor = this.props.activeColor;
-    if (!activeColor) {
-      activeColor = !isPlc && hasGroups ? color.purple : color.cyan;
-    }
+    const activeColor =
+      this.props.activeColor ||
+      (!isPlc && hasGroups ? color.purple : color.cyan);
 
-    const images =
-      activeColor === color.purple ? imageSets.purple : imageSets.teal;
     return (
-      <ToggleGroup
-        selected={isSummaryView ? 'summary' : 'detail'}
-        activeColor={activeColor}
+      <SegmentedButtons
+        selectedButtonValue={isSummaryView ? 'summary' : 'detail'}
         onChange={this.onChange}
-      >
-        <button
-          type="button"
-          value="summary"
-          style={
-            whiteBorder
-              ? {...styles.whiteBorder, ...styles.buttonStyles}
-              : styles.buttonStyles
-          }
-        >
-          <img
-            src={isSummaryView ? images.summaryActive : images.summaryInactive}
-            style={styles.icon}
-            alt={i18n.summaryView()}
-          />
-        </button>
-        <button
-          type="button"
-          value="detail"
-          style={
-            whiteBorder
-              ? {...styles.whiteBorder, ...styles.buttonStyles}
-              : styles.buttonStyles
-          }
-          className="uitest-toggle-detail"
-        >
-          <img
-            src={isSummaryView ? images.detailInactive : images.detailActive}
-            style={styles.icon}
-            alt={i18n.detailView()}
-          />
-        </button>
-      </ToggleGroup>
+        className={legacyStyles.legacyToggle}
+        style={{'--brand-teal-65': activeColor}}
+        buttons={[
+          {value: 'summary', label: i18n.summaryView()},
+          {
+            value: 'detail',
+            label: i18n.detailView(),
+            id: 'uitest-toggle-detail',
+          },
+        ]}
+      />
     );
   }
 }
-
-const styles = {
-  whiteBorder: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.white,
-  },
-  buttonStyles: {
-    marginBottom: 5,
-  },
-  icon: {
-    fontSize: 20,
-    paddingLeft: 3,
-    paddingRight: 3,
-    paddingTop: 6,
-    paddingBottom: 3,
-    // If not set explicitly, css sets "button > img" to 0.6
-    opacity: 1,
-  },
-};
 
 export const UnconnectedProgressDetailToggle = ProgressDetailToggle;
 
