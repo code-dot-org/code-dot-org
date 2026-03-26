@@ -470,19 +470,8 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
-    %w(
-      ui-test-artist
-      ui-test-course
-      ui-test-csa-family-script
-      ui-test-original-course
-      ui-test-teacher-pl-course
-      ui-test-self-paced-pl
-      ui-test-facilitator-pl-course
-      ui-test-single-unit-course
-      ui-test-versioned-course
-      ui-test-unnumbered-lessons
-    ).each do |course_offering_name|
-      CourseOffering.seed_record("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/#{course_offering_name}.json")
+    Dir.glob("#{CURRICULUM_CONTENT_DIR}/test/ui/config/course_offerings/*.json").each do |path|
+      CourseOffering.seed_record(path)
     end
   end
 
