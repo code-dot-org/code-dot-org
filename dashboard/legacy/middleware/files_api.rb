@@ -445,6 +445,16 @@ class FilesApi < Sinatra::Base
         # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
         text_to_check = begin
           parsed = JSON.parse(body)
+          # Some requests send the library JSON double-encoded: the body is a JSON string
+          # whose value is another JSON document (Ruby's first JSON.parse returns String).
+          if parsed.is_a?(String)
+            begin
+              inner = JSON.parse(parsed)
+              parsed = inner if inner.is_a?(Hash)
+            rescue JSON::ParserError
+              # Leave parsed as String; fall through to raw body below.
+            end
+          end
           if parsed.is_a?(Hash) && parsed.key?('source')
             [ShareFiltering.extract_text_from_js(parsed['source']), parsed['name'], parsed['description']].reject(&:empty?).join(' ')
           else
