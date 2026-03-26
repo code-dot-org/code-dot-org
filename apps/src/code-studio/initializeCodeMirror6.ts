@@ -242,7 +242,9 @@ function initializeCodeMirror6(
     lintExtensions.push(lintExtension);
   }
   if (additionalAnnotations) {
-    lintExtensions.push(linter(view => additionalAnnotations(view.state.doc.toString())));
+    lintExtensions.push(
+      linter(view => additionalAnnotations(view.state.doc.toString()))
+    );
   }
   const errorLineHighlightField = lineHighlightClassName
     ? createErrorLineHighlightField(lineHighlightClassName)
