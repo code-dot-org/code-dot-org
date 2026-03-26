@@ -91,6 +91,25 @@ class AiRubricConfig
     rubric_rows.map {|row| row['Key Concept']}
   end
 
+  def self.validate_learning_goals_for_rubric(rubric)
+    lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
+    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
+    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
+    missing_learning_goals = db_learning_goals - s3_learning_goals
+    if missing_learning_goals.any?
+      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
+    end
+  end
+
+  # Validate all ai-enabled learning goals for a single unit against S3.
+  # Raises if any ai-enabled learning goal is missing from the S3 rubric config.
+  # Skips validation when S3 is emulated (local dev) or the unit has no AI config.
+  def self.validate_learning_goals_for_unit!(unit)
+    return if CDO.aws_s3_emulated
+    return if unit.ai_rubric_s3_config.blank?
+    validate_learning_goals([unit])
+  end
+
   private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
     # this step should raise an error if any essential config files are missing
     # from the S3 release directory
@@ -113,16 +132,6 @@ class AiRubricConfig
       rescue StandardError => exception
         raise "Error validating learning goals for unit #{unit.name} level #{level_name.inspect}: #{exception.message}"
       end
-    end
-  end
-
-  private_class_method def self.validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = get_lesson_s3_name(rubric.get_script_level)
-    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
-    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
-    missing_learning_goals = db_learning_goals - s3_learning_goals
-    if missing_learning_goals.any?
-      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
     end
   end
 end

@@ -1085,6 +1085,7 @@ class Unit < ApplicationRecord
         },
         unit_data[:lesson_groups]
       )
+      AiRubricConfig.validate_learning_goals_for_unit!(Unit.find_by_name(unit_name))
       if Rails.application.config.levelbuilder_mode
         Unit.merge_and_write_i18n(i18n, unit_name, metadata_i18n, log_event_type: 'write_script')
       end

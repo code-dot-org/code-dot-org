@@ -22,13 +22,18 @@ class RubricsController < ApplicationController
   def create
     @rubric = Rubric.new(rubric_params)
     @lesson = @rubric.lesson
-    if @rubric.save
-      update_ai_rubric_s3_config(@lesson.script)
-      @rubric.lesson.script.write_script_json
-      render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
-    else
-      render json: @rubric.errors, status: :bad_request
+    Rubric.transaction do
+      if @rubric.save
+        update_ai_rubric_s3_config(@lesson.script)
+        AiRubricConfig.validate_learning_goals_for_unit!(@lesson.script)
+        @rubric.lesson.script.write_script_json
+        render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
+      else
+        render json: @rubric.errors, status: :bad_request
+      end
     end
+  rescue RuntimeError => exception
+    render json: {base: [exception.message]}, status: :bad_request
   end
 
   # TODO(KT) [AITT-163]: add notice that rubric was successfully updated
@@ -36,13 +41,18 @@ class RubricsController < ApplicationController
   def update
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
-    if @rubric.update(rubric_params)
-      update_ai_rubric_s3_config(@lesson.script)
-      @rubric.lesson.script.write_script_json
-      render json: @rubric.summarize_for_rubric_edit
-    else
-      render json: @rubric.errors, status: :bad_request
+    Rubric.transaction do
+      if @rubric.update(rubric_params)
+        update_ai_rubric_s3_config(@lesson.script)
+        AiRubricConfig.validate_learning_goals_for_unit!(@lesson.script)
+        @rubric.lesson.script.write_script_json
+        render json: @rubric.summarize_for_rubric_edit
+      else
+        render json: @rubric.errors, status: :bad_request
+      end
     end
+  rescue RuntimeError => exception
+    render json: {base: [exception.message]}, status: :bad_request
   end
 
   # GET /rubrics/:id
