@@ -143,7 +143,7 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
     end
 
     context 'when teacher has been signed in longer than allowed period' do
-      let!(:account) {create(:teacher, current_sign_in_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago)}
+      let!(:account) {create(:teacher, current_sign_in_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago - 1.minute)}
 
       it_behaves_like 'deletes account'
     end
@@ -161,7 +161,7 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
     end
 
     context 'when deletion warning email was sent earlier than grace period threshold' do
-      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago}
+      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago + 1.minute}
 
       it_behaves_like 'ignores account'
     end
@@ -245,7 +245,7 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
     context 'when provided :limit is less than inactive account total' do
       let(:described_instance_args) {{limit: 1}}
 
-      let!(:account2) {create(:teacher, created_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago)}
+      let!(:account2) {create(:teacher, created_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago - 1.minute)}
       let!(:user_data_retention_status2) {create(:user_data_retention_status, user: account2, deletion_warning_email_sent_at:)}
 
       it_behaves_like 'deletes account'
@@ -256,18 +256,6 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
         _(described_instance.num_errors).must_equal 0
         _(described_instance.processed_user_ids).wont_include account2.id
       end
-    end
-
-    context 'when deletion warning email was not sent' do
-      let(:deletion_warning_email_sent_at) {nil}
-
-      it_behaves_like 'ignores account'
-    end
-
-    context 'when deletion warning email was sent earlier than grace period threshold' do
-      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago}
-
-      it_behaves_like 'ignores account'
     end
   end
 end
