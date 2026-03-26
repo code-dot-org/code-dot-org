@@ -793,4 +793,76 @@ class AdminUsersControllerTest < ActionController::TestCase
   end
 
   generate_admin_only_tests_for :studio_person_form
+
+  generate_admin_only_tests_for :lookup_by_email_form
+
+  test 'lookup_by_email_form renders without results when no email param given' do
+    sign_in @admin
+    get :lookup_by_email_form
+    assert_response :success
+    assert_select 'table', 0
+  end
+
+  test 'lookup_by_email_form shows no results message for unknown email' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: 'nobody@example.com'}
+    assert_response :success
+    assert_select 'table', 0
+    assert_select 'p', text: /No user accounts found/
+  end
+
+  test 'lookup_by_email_form finds user by email' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: @not_admin.email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: @not_admin.id.to_s
+  end
+
+  test 'lookup_by_email_form shows credential_type for found user' do
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: @not_admin.email}
+    assert_response :success
+    assert_select 'td', text: AuthenticationOption::EMAIL
+  end
+
+  test 'lookup_by_email_form finds multiple users sharing the same hashed email' do
+    email = 'shared@example.com'
+    user1 = create(:teacher, email: email)
+    # Create a second user with a Clever auth option for the same email.
+    # Clever is an UNTRUSTED_EMAIL_CREDENTIAL_TYPE so uniqueness validation is skipped,
+    # allowing two users to share the same hashed_email in authentication_options.
+    user2 = create(:teacher)
+    create(:authentication_option,
+      user: user2,
+      email: email,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: "clever_#{user2.id}"
+    )
+
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: email}
+    assert_response :success
+    assert_select 'tbody tr', 2
+    assert_select 'td', text: user1.id.to_s
+    assert_select 'td', text: user2.id.to_s
+  end
+
+  test 'lookup_by_email_form shows all credential_types for a user with multiple auth options' do
+    email = 'multi_auth@example.com'
+    user = create(:teacher, email: email)
+    create(:authentication_option,
+      user: user,
+      email: email,
+      credential_type: AuthenticationOption::CLEVER,
+      authentication_id: "clever_#{user.id}"
+    )
+
+    sign_in @admin
+    get :lookup_by_email_form, params: {email: email}
+    assert_response :success
+    assert_select 'tbody tr', 1
+    assert_select 'td', text: /email/
+    assert_select 'td', text: /clever/
+  end
 end

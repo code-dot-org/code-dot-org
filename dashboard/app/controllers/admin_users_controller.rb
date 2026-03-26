@@ -365,6 +365,18 @@ class AdminUsersController < ApplicationController
     redirect_to studio_person_form_path
   end
 
+  # GET /admin/lookup_by_email
+  def lookup_by_email_form
+    email = params[:email]
+    if email.present?
+      hashed_email = AuthenticationOption.hash_email(email)
+      auth_options = AuthenticationOption.where(hashed_email: hashed_email)
+      user_ids = auth_options.pluck(:user_id).uniq
+      @users = restricted_users.where(id: user_ids)
+      @credential_types_by_user = auth_options.group_by(&:user_id).transform_values {|opts| opts.map(&:credential_type)}
+    end
+  end
+
   # GET /admin/mass_delete_student_progress
   def mass_delete_student_progress
   end
