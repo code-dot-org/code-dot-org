@@ -5,44 +5,42 @@ metadata:
   labels:
     {{ include "cdo.labels" (merge (dict "component" "locals.yml") .) | nindent 4 }}
 data:
-  locals.yml: |
-    build_apps: true
-    use_my_apps: true
+  # Local service non-secret configuration shared as a base by all instances:
+  dashboard_workers: {{ .Values.dashboard_workers | quote }}
 
-    # FIXME: once mountDotAWS is reliable, we should uncomment this conditional
-    # {{- if not .Values.localDev.mounts.mountDotAWS }}
+  build_apps: "true"
+  use_my_apps: "true"
 
-    # These are secrets that cause exceptions booting our dashbaord app in development
-    # We hope to get rid of needing these overrides soon, see:
-    # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
-    cloudfront_key_pair_id:
-    cloudfront_private_key:
-    slack_bot_token:
-    properties_encryption_key:
-    openai_lesson_summaries_api_key:
-    elevenlabs_api_key:
-    openai_student_learning_api_key:
-    langfuse_secret_key:
-    langfuse_public_key:
-    openai_measures_of_learning_api_key:
+  # These are secrets that cause exceptions booting our dashbaord app in development
+  # We hope to get rid of needing these overrides soon, see:
+  # - https://codedotorg.slack.com/archives/C03CK49G9/p1773224406769729
+  cloudfront_key_pair_id: ""
+  cloudfront_private_key: ""
+  slack_bot_token: ""
+  properties_encryption_key: ""
+  openai_lesson_summaries_api_key: ""
+  elevenlabs_api_key: ""
 
-    # {{- end }}
+  # Configuration for cluster local services in "development mode":
+  {{- if .Values.services.mysql.enabled }}
+  db_cluster_id: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_writer: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_writer_port: "3306"
+  db_endpoint_proxy_writer: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_writer_port: "3306"
+  db_endpoint_proxy_reader: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_reader_port: "3306"
+  db_endpoint_proxy_reporting: {{ include "cdo.mysqlServiceName" . | quote }}
+  db_endpoint_proxy_reporting_port: "3306"
+  {{- end }}
 
-    # Local service non-secret configuration. Append-only so we do not mix these
-    # values into the legacy locals.yml sections above.
-    {{- if .Values.services.mysql.enabled }}
-    db_cluster_id: {{ include "cdo.mysqlServiceName" . }}
-    db_endpoint_writer: {{ include "cdo.mysqlServiceName" . }}
-    db_endpoint_writer_port: 3306
-    db_endpoint_proxy_writer: {{ include "cdo.mysqlServiceName" . }}
-    db_endpoint_proxy_writer_port: 3306
-    db_endpoint_proxy_reader: {{ include "cdo.mysqlServiceName" . }}
-    db_endpoint_proxy_reader_port: 3306
-    db_endpoint_proxy_reporting: {{ include "cdo.mysqlServiceName" . }}
-    db_endpoint_proxy_reporting_port: 3306
-    {{- end }}
+  {{- if .Values.services.minio.enabled }}
+  aws_s3_endpoint: {{ printf "http://%s:9000" (include "cdo.minioServiceName" .) | quote }}
+  aws_s3_emulated: "true"
+  {{- end }}
 
-    {{- if .Values.services.minio.enabled }}
-    aws_s3_endpoint: http://{{ include "cdo.minioServiceName" . }}:9000
-    aws_s3_emulated: true
-    {{- end }}
+  # Now insert `locals.yml:` values defined in *.values.yaml files
+  {{- $locals := index .Values "locals.yml" | default (dict) }}
+  {{- range $key, $value := $locals }}
+  {{ $key }}: {{ printf "%v" $value | quote }}
+  {{- end }}

@@ -1,11 +1,19 @@
+import {extension as mimeToExtension} from 'mime-types';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import UserMessageEditor from '@cdo/apps/aiComponentLibrary/userMessageEditor/UserMessageEditor';
 import AiTutorEnglishOnlyWarning from '@cdo/apps/aiTutor/views/AiTutorEnglishOnlyWarning';
+import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {selectIsWaitingForChatResponse, submitChatContents} from '../redux';
+import supportsClientApi from '../api/supportsClientApi';
+import {ACCEPTED_FILE_TYPES} from '../constants';
+import {
+  selectIsWaitingForChatResponse,
+  submitChatContents,
+  uploadFiles,
+} from '../redux';
 import {
   AiChatClientType,
   ChatButtonAndKey,
@@ -136,6 +144,28 @@ const UserChatMessageEditor: React.FunctionComponent<
     }
   }, [disabled]);
 
+  // Speech to text is only enabled if the client API is supported for the current model
+  // since it makes use of the AI Gateway.
+  const speechToTextEnabled =
+    supportsClientApi(modelParameters.selectedModelId) ||
+    experiments.isEnabledAllowingQueryString('enable-speech-to-text');
+
+  const onPaste = useCallback(
+    (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
+      if (!multimodalAvailable || !buildAssetUrl) {
+        return;
+      }
+      const files = Array.from(e.clipboardData.items)
+        .filter(({type}) =>
+          ACCEPTED_FILE_TYPES.includes(`.${mimeToExtension(type) || ''}`)
+        )
+        .map(item => item.getAsFile())
+        .filter(item => item !== null);
+      dispatch(uploadFiles({files, buildAssetUrl}));
+    },
+    [multimodalAvailable, buildAssetUrl, dispatch]
+  );
+
   return (
     <>
       {chatButtons && chatButtons.length > 0 && !chatDisabled && (
@@ -151,6 +181,8 @@ const UserChatMessageEditor: React.FunctionComponent<
         onSubmit={handleSubmit}
         disabled={disabled}
         editorContainerClassName={editorContainerClassName}
+        speechToTextEnabled={speechToTextEnabled}
+        onPaste={onPaste}
         ref={inputRef}
       >
         {multimodalAvailable && buildAssetUrl && levelName && (

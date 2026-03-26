@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-02-13 22:00:48 UTC",
+    "serialized_at": "2026-03-17 14:07:24 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6752,9 +6752,10 @@
     },
     {
       "name": "All Resources",
-      "url": "/courses/artificial-intelligence-foundations-v2-2025/units/5/resources",
+      "url": "/courses/artificial-intelligence-foundations-2026/units/5/resources",
       "key": "all_resources_6",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
@@ -6763,9 +6764,10 @@
     },
     {
       "name": "All Standards",
-      "url": "/courses/artificial-intelligence-foundations-v2-2025/units/5/standards",
+      "url": "/courses/artificial-intelligence-foundations-2026/units/5/standards",
       "key": "all_standards_6",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {
@@ -6774,9 +6776,10 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/courses/artificial-intelligence-foundations-v2-2025/units/5/vocab",
+      "url": "/courses/artificial-intelligence-foundations-2026/units/5/vocab",
       "key": "all_vocabulary_6",
       "properties": {
+        "embeddability_type": "embed_and_resource_dropdown",
         "is_rollup": true
       },
       "seeding_key": {

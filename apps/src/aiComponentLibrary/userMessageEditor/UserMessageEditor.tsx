@@ -5,6 +5,8 @@ import React, {useState, useMemo, useEffect, useRef} from 'react';
 
 import {commonI18n} from '@cdo/apps/types/locale';
 
+import SpeechToTextButton from './speechToTextButton/SpeechToTextButton';
+
 import moduleStyles from './user-message-editor.module.scss';
 
 const MAX_MESSAGE_LENGTH = 10000;
@@ -22,6 +24,8 @@ export interface UserMessageEditorProps {
   /** Custom className for editor container */
   editorContainerClassName?: string;
   customPlaceholder?: string;
+  speechToTextEnabled?: boolean;
+  onPaste?: (event: React.ClipboardEvent<HTMLTextAreaElement>) => void;
   children?: React.ReactNode;
 }
 
@@ -40,6 +44,8 @@ const UserMessageEditor = React.forwardRef<
       editorContainerClassName,
       customPlaceholder,
       showSubmitLabel = false,
+      speechToTextEnabled = false,
+      onPaste,
       children,
     },
     externalInputRef
@@ -48,6 +54,7 @@ const UserMessageEditor = React.forwardRef<
     // Track focus state on textarea to apply focus styles to container since
     // :focus-visible doesn't work on divs and :has() is not supported in Firefox.
     const [focused, setFocused] = useState(false);
+    const [isRecording, setIsRecording] = useState(false);
 
     const userMessageIsEmpty = useMemo(() => {
       return userMessage.trim() === '';
@@ -74,7 +81,7 @@ const UserMessageEditor = React.forwardRef<
       variant: 'contained' as const,
       color: 'primary' as const,
       size: 'extraSmall' as const,
-      disabled: disabled || !userMessage || userMessageIsEmpty,
+      disabled: disabled || !userMessage || userMessageIsEmpty || isRecording,
       id: 'uitest-chat-submit',
       onClick: (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -112,28 +119,40 @@ const UserMessageEditor = React.forwardRef<
           }
           onChange={e => onChange(e.target.value)}
           value={userMessage}
-          disabled={disabled}
+          disabled={disabled || isRecording}
           onKeyDown={e => handleKeyPress(e, userMessage)}
           maxLength={MAX_MESSAGE_LENGTH}
           rows={1}
           aria-label={commonI18n.aiUserMessagePlaceholder()}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
+          onPaste={onPaste}
         />
         <div className={moduleStyles.chatActionsContainer}>
           {children}
-          {showSubmitLabel ? (
-            <MuiButton
-              {...editorButtonCommonProps}
-              startIcon={<EditorButtonIcon />}
-            >
-              {commonI18n.submit()}
-            </MuiButton>
-          ) : (
-            <MuiIconButton {...editorButtonCommonProps}>
-              <EditorButtonIcon />
-            </MuiIconButton>
-          )}
+          <div className={moduleStyles.actionButtons}>
+            {speechToTextEnabled && (
+              <SpeechToTextButton
+                onTranscribed={text => {
+                  onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
+                  setIsRecording(false);
+                }}
+                onRecordStart={() => setIsRecording(true)}
+              />
+            )}
+            {showSubmitLabel ? (
+              <MuiButton
+                {...editorButtonCommonProps}
+                startIcon={<EditorButtonIcon />}
+              >
+                {commonI18n.submit()}
+              </MuiButton>
+            ) : (
+              <MuiIconButton {...editorButtonCommonProps}>
+                <EditorButtonIcon />
+              </MuiIconButton>
+            )}
+          </div>
         </div>
       </div>
     );

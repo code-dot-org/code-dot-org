@@ -1,0 +1,29 @@
+<Music>
+  <config><![CDATA[{
+  "game_id": 70,
+  "created_at": "2026-03-24T13:06:58.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "offer_browser_tts": "false",
+    "use_secondary_finish_button": "false",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "launch2024"
+    },
+    "exemplar_settings": {
+      "playerEnabled": false,
+      "validationEnabled": false
+    },
+    "long_instructions": "# THIS IS A TEMPLATE LEVEL FOR SKILL DEVELOPMENT IN THE \"LOOPS: SYNTHESIZE\" LESSON",
+    "name_suffix": "_2025-v2",
+    "ai_tutor_available": "true",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-24T13:06:58.538+00:00\",\"changed\":[\"cloned from \\\"test-music-lab-loops-sythesize-skill-template_v2\\\"\"],\"cloned_from\":\"test-music-lab-loops-sythesize-skill-template_v2\"}]"
+}]]></config>
+  <blocks/>
+</Music>
