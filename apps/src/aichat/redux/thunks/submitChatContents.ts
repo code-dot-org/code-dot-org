@@ -272,6 +272,10 @@ async function handleChatCompletionError(
   viewAsUserId: number | null
 ) {
   // Skip log report for expected client-side conditions (403, DevTools block).
+  // Note: we check error.name rather than instanceof TurnstileDevToolsError because
+  // getClientApi() uses a dynamic import (separate webpack chunk), which gets its own
+  // copy of turnstile.ts. The two class objects differ across chunk boundaries, so
+  // instanceof always returns false for errors thrown inside that chunk.
   if (
     !(error instanceof NetworkError && error.response.status === 403) &&
     !(error.name === 'TurnstileDevToolsError')
@@ -305,6 +309,7 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  // See comment above for why error.name is checked instead of instanceof.
   } else if (error.name === 'TurnstileDevToolsError') {
     dispatch(
       addChatEvent({
