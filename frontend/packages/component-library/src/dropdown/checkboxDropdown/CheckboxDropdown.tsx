@@ -156,7 +156,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             onClick={rest.onSelectAll}
             size={buttonSizeToMuiSizeMap[size] || 'medium'}
           >
-            {rest.selectAllText}
+            <span>{rest.selectAllText}</span>
           </MuiButton>
           <MuiButton
             variant="text"
@@ -164,7 +164,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             onClick={rest.onClearAll}
             size={buttonSizeToMuiSizeMap[size] || 'medium'}
           >
-            {rest.clearAllText}
+            <span>{rest.clearAllText}</span>
           </MuiButton>
         </div>
       )}
