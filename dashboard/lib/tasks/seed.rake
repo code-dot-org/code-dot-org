@@ -101,12 +101,8 @@ namespace :seed do
     coursea-2017
     courseb-2017
     coursec-2017
-    coursed-2017
-    coursee-2017
-    coursef-2017
     coursea-2019
     coursec-2019
-    coursee-2019
     csd3-2023
     interactive-games-animations-2023
     focus-on-creativity3-2023
@@ -327,12 +323,8 @@ namespace :seed do
        coursea-2017
        courseb-2017
        coursec-2017
-       coursed-2017
-       coursee-2017
-       coursef-2017
        coursea-2019
        coursec-2019
-       coursee-2019
        csp-ap
        interactive-games-animations-2023
        interactive-games-animations-2024
@@ -505,6 +497,7 @@ namespace :seed do
   timed_task_with_logging course_offerings_ui_tests: :environment do
     %w(
       ui-test-artist
+      ui-test-csf
       ui-test-course
       ui-test-csa-family-script
       ui-test-original-course
@@ -544,6 +537,14 @@ namespace :seed do
 
   timed_task_with_logging data_docs: :environment do
     DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
+  end
+
+  # Courses must be seeded before JIT PL content because the resources refer
+  # to a pre-defined JIT PL course.
+  JIT_PL_DEPENDENCIES = [:environment, :courses]
+
+  timed_task_with_logging jit_pl_concepts: JIT_PL_DEPENDENCIES do
+    JitPlConcept.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
   # Seeds the data in school_districts
@@ -648,7 +649,7 @@ namespace :seed do
     end
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :jit_pl_concepts, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :foorms, :datablock_storage].freeze
   UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts_ui_tests, :courses_ui_tests, :reseed_scripts_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
   ADHOC_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_adhoc, :scripts_adhoc, :courses_adhoc, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :datablock_storage].freeze
 

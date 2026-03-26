@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: dot-aws
+  name: cdo-dot-aws
   labels:
     app.kubernetes.io/component: dot-aws
 spec:
@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteMany
   storageClassName: hostpath
-  volumeName: dot-aws
+  volumeName: cdo-dot-aws

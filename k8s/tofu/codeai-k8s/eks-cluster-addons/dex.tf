@@ -127,8 +127,7 @@ resource "helm_release" "dex" {
     ]
 
     ingress = {
-      enabled   = true
-      className = "alb"
+      enabled = true
       annotations = {
         "alb.ingress.kubernetes.io/scheme"           = "internet-facing"
         "alb.ingress.kubernetes.io/target-type"      = "ip"

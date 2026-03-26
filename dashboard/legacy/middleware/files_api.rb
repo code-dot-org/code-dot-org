@@ -363,7 +363,13 @@ class FilesApi < Sinatra::Base
       '//' + tag_dup
     end
 
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
+    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+
+    Nokogiri::HTML(body).xpath(
+      *disallowed_tag_selectors,
+      disallow_on_attrs_selector,
+    ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
