@@ -99,16 +99,13 @@ const UserMessageEditor = React.forwardRef<
     const [speechToTextCount, setSpeechToTextCount] = useState(0);
     const [clearedMessageCount, setClearedMessageCount] = useState(0);
     /** True after the field becomes empty following STT use, until the next successful transcription. */
-    const [
-      dictationClearedSinceLastTranscription,
-      setDictationClearedSinceLastTranscription,
-    ] = useState(false);
+    const [lastDictationCleared, setLastDictationCleared] = useState(false);
 
     useEffect(() => {
       // Track how many times the message was cleared after using speech to text.
       if (speechToTextCount > 0 && !userMessage) {
         setClearedMessageCount(c => c + 1);
-        setDictationClearedSinceLastTranscription(true);
+        setLastDictationCleared(true);
       }
     }, [speechToTextCount, userMessage]);
 
@@ -118,17 +115,17 @@ const UserMessageEditor = React.forwardRef<
           dictationEnabled: speechToTextEnabled,
           dictationUsageCount: speechToTextCount,
           dictationMessageClearedCount: clearedMessageCount,
-          dictationClearedSinceLastTranscription,
+          dictationClearedSinceLastTranscription: lastDictationCleared,
         });
         setSpeechToTextCount(0);
         setClearedMessageCount(0);
-        setDictationClearedSinceLastTranscription(false);
+        setLastDictationCleared(false);
       },
       [
         speechToTextCount,
         speechToTextEnabled,
         clearedMessageCount,
-        dictationClearedSinceLastTranscription,
+        lastDictationCleared,
         onSubmit,
       ]
     );
@@ -178,7 +175,7 @@ const UserMessageEditor = React.forwardRef<
                   onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
                   setIsRecording(false);
                   setSpeechToTextCount(c => c + 1);
-                  setDictationClearedSinceLastTranscription(false);
+                  setLastDictationCleared(false);
                 }}
                 onRecordStart={() => setIsRecording(true)}
               />
