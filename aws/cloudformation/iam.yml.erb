@@ -1022,8 +1022,10 @@ roles.each do |name, config| %>
             Condition:
               StringEquals:
                 token.actions.githubusercontent.com:aud: sts.amazonaws.com
-              StringLike:
-                token.actions.githubusercontent.com:sub: "repo:code-dot-org/code-dot-org:*"
+              StringEquals:
+                token.actions.githubusercontent.com:sub:
+                  - "repo:code-dot-org/code-dot-org:environment:staging"
+                  - "repo:code-dot-org/code-dot-org:environment:staging-next"
       Policies:
         - PolicyName: OpenTofuStateAccess
           PolicyDocument:
