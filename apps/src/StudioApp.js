@@ -2485,6 +2485,15 @@ StudioApp.prototype.handleEditCode_ = function (config) {
     config.dropletConfig
   );
 
+  // Localize the droplet palette categories
+  fullDropletPalette.forEach(
+    info =>
+      (info.name = localization.translate(info.name, [
+        'droplet',
+        'droplet-palette',
+      ]))
+  );
+
   // Create a child element of codeTextbox to instantiate droplet on, because
   // droplet sets css properties on its wrapper that would interfere with our
   // layout otherwise.
@@ -2492,6 +2501,8 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   const codeTextbox = document.getElementById('codeTextbox');
   const dropletCodeTextbox = document.createElement('div');
   dropletCodeTextbox.setAttribute('id', 'dropletCodeTextbox');
+  // Do not translate the contents. We will do that manually.
+  dropletCodeTextbox.setAttribute('data-notranslate', '');
   codeTextbox.appendChild(dropletCodeTextbox);
 
   this.editor = new droplet.Editor(dropletCodeTextbox, {
@@ -2595,6 +2606,7 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   if (config.level.dropletTooltipsDisabled) {
     this.dropletTooltipManager.setTooltipsEnabled(false);
   }
+
   this.dropletTooltipManager.registerBlocks();
 
   // Bind listener to palette/toolbox 'Hide' and 'Show' links
@@ -2626,8 +2638,20 @@ StudioApp.prototype.handleEditCode_ = function (config) {
   var startBlocks = config.level.lastAttempt || config.level.startBlocks;
   if (startBlocks) {
     try {
-      // Don't pass CRLF pairs to droplet until they fix CR handling:
-      this.editor.setValue(startBlocks.replace(/\r\n/g, '\n'));
+      // Try to localize the comments in start droplet code
+      // Also, ensures we don't pass CRLF pairs to droplet until they fix CR handling:
+      const localizedStartCode = startBlocks
+        .split(/\r\n|\n/)
+        .map(line =>
+          line.startsWith('//')
+            ? `//${localization.translate(line.substring(2), [
+                'comment',
+                'droplet',
+              ])}`
+            : line
+        )
+        .join('\n');
+      this.editor.setValue(localizedStartCode);
       // When adding content via setValue, the aceEditor cursor gets set to be
       // at the end of the file. For mysterious reasons we've been unable to
       // understand, we end up with some pretty funky render issues if the first
