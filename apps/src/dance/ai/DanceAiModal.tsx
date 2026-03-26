@@ -22,10 +22,6 @@ import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
 import danceMetricsReporter from '../danceMetricsReporter';
 import {closeAiModal, DanceState} from '../danceRedux';
 
-// Disabling import order in order to add require statements first
-// Require statements can change behavior based on the order they are called.
-// This might be safe to remove but needs investigation whether any behavior is changed by order.
-
 import AiVisualizationPreview from './AiVisualizationPreview';
 import CdoFieldDanceAi from './cdoFieldDanceAi';
 import {DANCE_AI_FIELD_NAME} from './constants';
@@ -645,6 +641,7 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
           >
             <SegmentedButtons
               selectedButtonValue={currentToggle}
+              size="xs"
               onChange={(value: string) => {
                 setCurrentToggle(value as DanceAiPreviewButtonToggleState);
               }}
