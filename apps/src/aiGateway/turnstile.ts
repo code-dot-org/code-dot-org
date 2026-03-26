@@ -4,6 +4,8 @@ const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
 const CHALLENGE_TIMEOUT_MS = 30_000;
+// Any elapsed time above this means a human had to click "Resume" in DevTools.
+const DEBUGGER_PAUSE_THRESHOLD_MS = 100;
 
 declare global {
   interface Window {
@@ -15,6 +17,55 @@ declare global {
       reset: (widgetId: string) => void;
       remove: (widgetId: string) => void;
     };
+  }
+}
+
+/**
+ * Thrown when DevTools is open with breakpoints active in anonymous scripts.
+ * Callers can instanceof-check this to show a targeted help message rather
+ * than a generic error.
+ */
+export class TurnstileDevToolsError extends Error {
+  constructor() {
+    super(
+      'Turnstile challenge blocked by active DevTools breakpoints. ' +
+        'To fix: press Ctrl+F8 / Cmd+F8 to deactivate breakpoints, or in ' +
+        'DevTools Settings → Ignore List enable ' +
+        '"Anonymous scripts from eval or console".'
+    );
+    this.name = 'TurnstileDevToolsError';
+  }
+}
+
+/**
+ * Detects whether a `debugger` statement inside an anonymous (eval'd) script
+ * would pause execution — the same context Turnstile uses for its own
+ * anti-bot debugger call. If this returns true, Turnstile's challenge will
+ * also be paused and the request will hang or time out.
+ *
+ * Returns false when:
+ *   - DevTools is closed
+ *   - Breakpoints are deactivated (Ctrl+F8)
+ *   - "Anonymous scripts from eval or console" is enabled in DevTools Ignore List
+ *   - new Function() is blocked by CSP (can't detect → assume safe)
+ */
+function debuggerWillPauseInAnonymousScope(): boolean {
+  try {
+    // new Function() produces a sourceless anonymous script, matching
+    // the Web Worker context Turnstile uses. The Ignore List setting only
+    // suppresses debugger pauses in scripts with no source URL, so running
+    // the probe here gives us an accurate signal for Turnstile specifically.
+    const elapsedMs = (
+      new Function(`
+        var t = performance.now();
+        debugger;
+        return performance.now() - t;
+      `) as () => number
+    )();
+    return elapsedMs > DEBUGGER_PAUSE_THRESHOLD_MS;
+  } catch {
+    // new Function() blocked by CSP — cannot probe, assume Turnstile is safe.
+    return false;
   }
 }
 
@@ -77,6 +128,13 @@ class TurnstileManager {
   }
 
   private runChallenge(): Promise<string> {
+    // Probe before touching the Turnstile widget. If DevTools would pause
+    // Turnstile's own debugger call, fail fast with an actionable error
+    // instead of hanging for 30 s.
+    if (debuggerWillPauseInAnonymousScope()) {
+      throw new TurnstileDevToolsError();
+    }
+
     return new Promise((resolve, reject) => {
       let settled = false;
 
