@@ -9,7 +9,7 @@ class JitPlMisconceptionsController < ApplicationController
     @misconception = @concept.jit_pl_misconceptions.new(misconception_params)
     if @misconception.save
       @misconception.resources = Resource.where(id: params[:resource_ids] || [])
-      @concept.write_serialization
+      @concept.reload.write_serialization
       render json: @misconception.serialize
     else
       render status: :bad_request, json: @misconception.errors
@@ -20,14 +20,14 @@ class JitPlMisconceptionsController < ApplicationController
   def update
     @misconception.update!(misconception_params)
     @misconception.resources = Resource.where(id: params[:resource_ids] || [])
-    @concept.write_serialization
+    @concept.reload.write_serialization
     render json: @misconception.serialize
   end
 
   # DELETE /jit_pl_concepts/:jit_pl_concept_id/jit_pl_misconceptions/:id
   def destroy
     @misconception.destroy!
-    @concept.write_serialization
+    @concept.reload.write_serialization
     render status: :ok, plain: "Destroyed JitPlMisconception #{@misconception.id}"
   end
 
