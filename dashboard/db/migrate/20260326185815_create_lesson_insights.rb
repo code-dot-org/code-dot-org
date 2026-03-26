@@ -10,5 +10,7 @@ class CreateLessonInsights < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+
+    add_index :lesson_insights, [:section_id, :lesson_id, :student_id], unique: true
   end
 end

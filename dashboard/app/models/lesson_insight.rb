@@ -12,5 +12,9 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
+# Indexes
+#
+#  index_lesson_insights_on_section_id_and_lesson_id_and_student_id  (section_id,lesson_id,student_id) UNIQUE
+#
 class LessonInsight < ApplicationRecord
 end
