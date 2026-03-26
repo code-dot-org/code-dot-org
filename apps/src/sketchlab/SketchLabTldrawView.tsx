@@ -68,7 +68,6 @@ const INITIAL_WORKSPACE_WIDTH = 800;
 // 1. I've occasionally seen issues where switching levels overwrites the new level with the
 //    previous level's snapshot.
 //    Could this be due to the debounce when listening for snapshot saves?
-// 2. The tldraw UI sticks around when switching levels (zoom options, dropdown menu, etc.) We should hide/unmount this.
 // Features to be implemented:
 // 1. Start over/version history
 // 2. Start mode, including checking if starter asset code in createTldrawAssetStore is working as expected.
@@ -105,8 +104,20 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
     isExcalidrawSource(currentSources?.source) ? currentSources.source : null
   );
 
+  const tldrawEditorRef = useRef<Editor | null>(null);
   const initializeEditor = useCallback((editor: Editor) => {
     setTldrawEditor(editor);
+    tldrawEditorRef.current = editor;
+  }, []);
+
+  // Dispose the editor on unmount so tldraw cleans up open menus, FocusManager
+  // event listeners on document.body, and other internal state. Without this,
+  // the tldraw UI (zoom widget, dropdown menus) can visually persist across
+  // level switches due to position:fixed portal elements and GPU compositing.
+  useEffect(() => {
+    return () => {
+      tldrawEditorRef.current?.dispose();
+    };
   }, []);
 
   useEffect(() => {
@@ -193,7 +204,9 @@ const SketchLabTldrawView: React.FC<LabProps<LevelProperties>> = ({
           className={panelClassName}
           headerContent={<WorkspaceHeader />}
         >
-          <div style={{height: '100%', position: 'relative'}}>
+          <div
+            style={{height: '100%', position: 'relative', overflow: 'hidden'}}
+          >
             <Tldraw
               assetUrls={assetUrls}
               assets={assetStore}
