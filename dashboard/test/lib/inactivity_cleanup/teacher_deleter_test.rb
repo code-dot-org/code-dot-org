@@ -195,7 +195,7 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
       end
     end
 
-    context 'when provided :inactive_since is before then last account activity' do
+    context 'when provided :inactive_since is before the last account activity' do
       let(:described_instance_args) {{inactive_since: (account.current_sign_in_at || account.created_at) - 1.minute}}
 
       it_behaves_like 'ignores account'
