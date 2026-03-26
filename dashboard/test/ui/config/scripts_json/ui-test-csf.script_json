@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSF",
-      "is_migrated": true
+      "is_migrated": true,
+      "lesson_extras_available": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-25 02:51:33 UTC",
+    "serialized_at": "2026-03-25 22:44:56 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -117,6 +118,27 @@
       "level_keys": [
         "contained_single_multi"
       ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Standalone_Artist_9"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csf",
+        "activity_section.key": "2dda9127-3cc5-4874-b697-59af6f22da1e"
+      },
+      "level_keys": [
+        "Standalone_Artist_9"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -137,6 +159,18 @@
         "level.key": "contained_single_multi",
         "script_level.level_keys": [
           "contained_single_multi"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ui-test-csf",
+        "activity_section.key": "2dda9127-3cc5-4874-b697-59af6f22da1e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Standalone_Artist_9",
+        "script_level.level_keys": [
+          "Standalone_Artist_9"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
