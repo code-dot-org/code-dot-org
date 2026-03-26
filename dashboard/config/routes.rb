@@ -1056,6 +1056,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Utility routes not intended for use in production
     if rack_env?(:development, :test)
       scope '/api' do
         namespace :test, defaults: {format: 'json'} do
@@ -1066,6 +1067,9 @@ Dashboard::Application.routes.draw do
         end
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
+    end
+    if rack_env?(:staging, :test)
+      post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 
     namespace :api do
