@@ -5,6 +5,7 @@ import React, {useEffect, useRef, useState, useCallback, useMemo} from 'react';
 
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {ProjectFile} from '@cdo/apps/lab2/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {selectIsWaitingForChatResponse} from '../redux';
@@ -24,6 +25,7 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
+  aiTutorVersionFiles?: ProjectFile[];
   hasInstructionsDrawer?: boolean;
 }
 
@@ -37,6 +39,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   isAiTutorVersion,
+  aiTutorVersionFiles,
   hasInstructionsDrawer,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
@@ -211,6 +214,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   isTeacherView={isTeacherView}
                   buildAssetUrl={buildAssetUrl}
                   isAiTutorVersion={isAiTutorVersion}
+                  aiTutorVersionFiles={aiTutorVersionFiles}
                   clientType={clientType}
                   modelParameters={modelParameters}
                   isLastMessage={isLastMessage}

@@ -20,7 +20,9 @@ import {
   getMergedAiTutorCodeWithSource,
   isAcceptRejectCodeFileTypes,
 } from '../helpers/aiTutorStructuredResponseHelper';
-import {setAiFilePathToPreview, setAiTutorVersionFiles} from '../weblab2Redux';
+import {setAiTutorVersionFiles} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+
+import {setAiFilePathToPreview} from '../weblab2Redux';
 
 /**
  * Custom hook that provides AI tutor response schema settings based on the current

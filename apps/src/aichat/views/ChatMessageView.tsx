@@ -13,6 +13,8 @@ import {
   AiInteractionStatus as Status,
 } from '@cdo/generated-scripts/sharedConstants';
 
+import {ProjectFile} from '@cdo/apps/lab2/types';
+
 import {
   ChatAsset,
   type ChatMessage as ChatMessageType,
@@ -33,6 +35,7 @@ interface ChatMessageViewProps {
   buildAssetUrl?: (asset: ChatAsset) => string;
   isAiTutorVersion?: boolean;
   isLastMessage?: boolean;
+  aiTutorVersionFiles?: ProjectFile[];
   clientType?: string;
   modelParameters?: ModelParameters;
 }
@@ -43,6 +46,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   buildAssetUrl,
   isAiTutorVersion,
   isLastMessage,
+  aiTutorVersionFiles,
   clientType,
   modelParameters,
 }) => {
@@ -188,6 +192,7 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
     <ChatMessage
       isAiTutorVersion={isAiTutorVersion}
       isLastMessage={isLastMessage}
+      versionFiles={aiTutorVersionFiles}
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}

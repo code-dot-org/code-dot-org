@@ -111,6 +111,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const isAiTutorVersion = useAppSelector(
     state => state.lab2Project.viewingAiTutorVersion
   );
+  const aiTutorVersionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
 
   const selectedStudent = useAppSelector(({teacherSections, progress}) => {
     const students = teacherSections.selectedStudents;
@@ -267,6 +270,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           isTeacherView={true}
           buildAssetUrl={buildAssetUrlValue}
           isAiTutorVersion={isAiTutorVersion}
+          aiTutorVersionFiles={aiTutorVersionFiles}
         />
       ),
       iconLeft: iconValue,
@@ -279,6 +283,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           events={visibleItems}
           buildAssetUrl={buildAssetUrlValue}
           isAiTutorVersion={isAiTutorVersion}
+          aiTutorVersionFiles={aiTutorVersionFiles}
         />
       ),
     },
@@ -323,6 +328,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           isTeacherView={isTeacherView}
           buildAssetUrl={buildAssetUrlValue}
           isAiTutorVersion={isAiTutorVersion}
+          aiTutorVersionFiles={aiTutorVersionFiles}
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}

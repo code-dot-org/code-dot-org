@@ -6,6 +6,7 @@ import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {
   LabConfig,
   MultiFileSource,
+  ProjectFile,
   ProjectSources,
   ProjectFileType,
   ProjectVersion,
@@ -22,6 +23,7 @@ import {
 export interface Lab2ProjectState {
   projectSources: ProjectSources | undefined;
   projectSourceBeforeAiTutorVersion?: MultiFileSource;
+  aiTutorVersionFiles?: ProjectFile[];
   versionDetails: ProjectVersion | undefined;
   viewingOldVersion: boolean;
   viewingAiTutorVersion?: boolean;
@@ -35,6 +37,7 @@ export interface Lab2ProjectState {
 const initialState: Lab2ProjectState = {
   projectSources: undefined,
   projectSourceBeforeAiTutorVersion: undefined,
+  aiTutorVersionFiles: undefined,
   versionDetails: undefined,
   viewingOldVersion: false,
   viewingAiTutorVersion: false,
@@ -88,6 +91,12 @@ const projectSlice = createSlice({
     },
     setViewingAiTutorVersion(state, action: PayloadAction<boolean>) {
       state.viewingAiTutorVersion = action.payload;
+    },
+    setAiTutorVersionFiles(
+      state,
+      action: PayloadAction<ProjectFile[] | undefined>
+    ) {
+      state.aiTutorVersionFiles = action.payload;
     },
     setRestoredOldVersion(state, action: PayloadAction<boolean>) {
       state.restoredOldVersion = action.payload;
@@ -456,6 +465,7 @@ const projectSlice = createSlice({
       state.viewingOldVersion = false;
       state.restoredOldVersion = false;
       state.viewingAiTutorVersion = false;
+      state.aiTutorVersionFiles = undefined;
     },
     setLastSavedLabConfig(state, action: PayloadAction<LabConfig | undefined>) {
       state.lastSavedLabConfig = action.payload;
@@ -466,6 +476,7 @@ const projectSlice = createSlice({
 export const {
   setProjectSource,
   setProjectSourceBeforeAiTutorVersion,
+  setAiTutorVersionFiles,
   setProjectSourceLevelId,
   setPreviousVersionSource,
   setViewingOldVersion,
