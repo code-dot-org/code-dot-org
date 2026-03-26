@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status, :submission_status, :submit]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :get_or_create_for_level, :can_publish_age_status, :submission_status, :submit]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -400,10 +400,6 @@ class ProjectsController < ApplicationController
                               false
 
     render(status: :ok, json: {channel: channel_token.channel, reduceChannelUpdates: reduce_channel_updates})
-  end
-
-  def weblab_footer
-    render partial: 'projects/weblab_footer'
   end
 
   def show

@@ -26,11 +26,6 @@ Dashboard::Application.routes.draw do
   get "/users/new_sign_up/finish_student_account", to: redirect("/users/sign_up/finish_student_account")
   get "/users/new_sign_up/finish_teacher_account", to: redirect("/users/sign_up/finish_teacher_account")
 
-  constraints host: CDO.codeprojects_hostname do
-    # Routes needed for the footer on weblab share links on codeprojects
-    get '/weblab/footer', to: 'projects#weblab_footer'
-  end
-
   constraints host: /^[^.]+\.#{Regexp.escape(CDO.preview_codeprojects_hostname)}$/ do
     get '/', to: 'codeprojects_preview#show'
     # Must be served from / on preview.codeprojects.org to control the root scope:

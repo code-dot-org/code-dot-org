@@ -80,28 +80,13 @@ class FilesApi < Sinatra::Base
   end
 
   def codeprojects_footer_html(encrypted_channel_id)
-    report_abuse_url = "#{CDO.studio_url('report_abuse')}?channelId=#{encrypted_channel_id}"
-    view_code_url = CDO.studio_url("projects/weblab/#{encrypted_channel_id}/view")
-
-    <<~HTML.chomp
-      <footer id="codeprojects_pagefooter">
-        <div class="codeprojects_pagefooter_content">
-          <a class="codeprojects_pagefooter_link" href="#{CDO.studio_url}">#{I18n.t('footer.built_on_code_studio')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link" href="#{report_abuse_url}" id="pagefooter_report_abuse" target="blank">#{I18n.t('footer.report_abuse')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link" href="#{view_code_url}" id="pagefooter_view_code">#{I18n.t('footer.view_code')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('tos')}">#{I18n.t('footer.tos')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('privacy')}">#{I18n.t('footer.privacy')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link" href="#{CDO.code_org_url('cookies')}">#{I18n.t('footer.cookie_notice')}</a>
-          <div class="codeprojects_pagefooter_dim">&nbsp; | &nbsp;</div>
-          <a class="codeprojects_pagefooter_link">&copy; Code.org, #{Time.now.year}.</a>
-        </div>
-      </footer>
-    HTML
+    ApplicationController.render(
+      partial: 'projects/weblab_footer',
+      locals: {
+        report_abuse_url: "#{CDO.studio_url('report_abuse')}?channelId=#{encrypted_channel_id}",
+        view_code_url: CDO.studio_url("projects/weblab/#{encrypted_channel_id}/view")
+      }
+    )
   end
 
   def inject_before_closing_tag(html, tag_name, insertion)
