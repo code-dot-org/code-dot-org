@@ -350,4 +350,69 @@ class ShareFilteringTest < Minitest::Test
     result = ShareFiltering.extract_text_from_js('for (var i = 0; i < 10; i++) {}')
     refute_includes result.split, 'i'
   end
+
+  # ShareFiltering.share_filter_text_from_library_request_body — used by files_api libraries PUT.
+  def sample_app_lab_library_hash_for_share_filter
+    {
+      'name' => 'Remix',
+      'description' => 'demo',
+      'functions' => ['battingAverage'],
+      'dropletConfig' => [
+        {
+          'func' => 'battingAverage',
+          'category' => 'Functions',
+          'comment' => 'Returns batting average',
+          'type' => 'either',
+          'params' => ['hits', 'atBats'],
+          'paletteParams' => ['hits', 'atBats'],
+        },
+      ],
+      'source' => 'function battingAverage(hits, atBats) { return hits / atBats; }',
+    }
+  end
+
+  def test_share_filter_text_from_library_request_body_app_lab_json_skips_droplet_config
+    library_hash = sample_app_lab_library_hash_for_share_filter
+    body = JSON.generate(library_hash)
+    text = ShareFiltering.share_filter_text_from_library_request_body(body)
+
+    refute_includes text, 'dropletConfig'
+    refute_includes text, 'paletteParams'
+    refute_includes text, 'paramshitsatBats'
+    assert_includes text, 'battingAverage'
+    assert_includes text, 'Remix'
+    assert_includes text, 'demo'
+  end
+
+  def test_share_filter_text_from_library_request_body_double_encoded_json
+    library_hash = sample_app_lab_library_hash_for_share_filter
+    inner = JSON.generate(library_hash)
+    body = JSON.generate(inner)
+    text = ShareFiltering.share_filter_text_from_library_request_body(body)
+
+    refute_includes text, 'dropletConfig'
+    assert_includes text, 'battingAverage'
+  end
+
+  def test_share_filter_text_from_library_request_body_nil_optional_fields
+    library_hash = {
+      'name' => 'N',
+      'source' => 'function f() {}',
+    }
+    body = JSON.generate(library_hash)
+    text = ShareFiltering.share_filter_text_from_library_request_body(body)
+
+    assert_includes text, 'N'
+    assert_includes text, 'function'
+  end
+
+  def test_share_filter_text_from_library_request_body_invalid_json_returns_raw
+    body = 'not json {{{'
+    assert_equal body, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
+
+  def test_share_filter_text_from_library_request_body_non_library_json_returns_raw
+    body = JSON.generate('library' => 'x')
+    assert_equal body, ShareFiltering.share_filter_text_from_library_request_body(body)
+  end
 end

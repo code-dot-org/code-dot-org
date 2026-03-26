@@ -269,6 +269,42 @@ module ShareFiltering
     text_parts.join(' ').strip
   end
 
+  # Builds the string passed to find_failure for App Lab library.json PUT bodies.
+  # Parses JSON (including double-encoded bodies), then uses only source/name/description
+  # so raw dropletConfig metadata cannot cause profanity false positives. Non-JSON or
+  # non-library bodies are returned unchanged for filtering as opaque text.
+  #
+  # @param [String] body Raw HTTP body
+  # @return [String] Text to scan for PII/profanity
+  def self.share_filter_text_from_library_request_body(body)
+    return body unless body.is_a?(String) && !body.empty?
+
+    begin
+      parsed = JSON.parse(body)
+      # Some requests send the library JSON double-encoded: the body is a JSON string
+      # whose value is another JSON document (first JSON.parse returns String).
+      if parsed.is_a?(String)
+        begin
+          inner = JSON.parse(parsed)
+          parsed = inner if inner.is_a?(Hash)
+        rescue JSON::ParserError
+          # Leave parsed as String; fall through to return raw body below.
+        end
+      end
+      if parsed.is_a?(Hash) && parsed.key?('source')
+        [
+          extract_text_from_js(parsed['source']),
+          parsed['name'],
+          parsed['description'],
+        ].compact.map(&:to_s).reject(&:empty?).join(' ')
+      else
+        body
+      end
+    rescue JSON::ParserError
+      body
+    end
+  end
+
   # Searches for all sources of offenses in text that might be worth flagging.
   # Returns both the error type and the offending text snippet.
   #

@@ -443,30 +443,7 @@ class FilesApi < Sinatra::Base
         # For App Lab libraries (JSON format), extract only name, description and source (user-created text)
         # instead of the raw JSON body. Scanning the raw JSON can produce false positives.
         # Non-JSON library files (e.g. .js, .py) fall back to the raw body.
-        text_to_check = begin
-          parsed = JSON.parse(body)
-          # Some requests send the library JSON double-encoded: the body is a JSON string
-          # whose value is another JSON document (Ruby's first JSON.parse returns String).
-          if parsed.is_a?(String)
-            begin
-              inner = JSON.parse(parsed)
-              parsed = inner if inner.is_a?(Hash)
-            rescue JSON::ParserError
-              # Leave parsed as String; fall through to raw body below.
-            end
-          end
-          if parsed.is_a?(Hash) && parsed.key?('source')
-            [
-              ShareFiltering.extract_text_from_js(parsed['source']),
-              parsed['name'],
-              parsed['description'],
-            ].compact.map(&:to_s).reject(&:empty?).join(' ')
-          else
-            body
-          end
-        rescue JSON::ParserError
-          body
-        end
+        text_to_check = ShareFiltering.share_filter_text_from_library_request_body(body)
         share_failure = ShareFiltering.find_failure(text_to_check, request.locale)
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
