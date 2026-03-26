@@ -7,7 +7,7 @@
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Template for Web Lab 2",
+    "long_instructions": "## Alex's Skateboarding Webpage\r\n\r\nAlex wants to make a webpage about skateboarding but doesn't know how to write HTML or CSS. Instead, they've provided you with a description and a potential screenshot:\r\n\r\n> \"I want to make a webpage about skateboarding because it's my favorite hobby. I want it to feel like two separate parts — history and styles. Both parts should have a color so they look different from the rest of the page.\"\r\n\r\n<img src=\"https://images.code.org/b7ea579e9e1119e7e9b886c247c9d891-image-1774410124636.png\" style=\"width: 40%\" />\r\n\r\n&nbsp;\r\n\r\n**Do This:**\r\n1) Use AI tutor to help build this page. Ask it to make changes to this page step-by-step.\r\n    - Be specific about the elements, sizes, borders, and which elements they apply to\r\n2) Keep prompting until the webpage it's \"close enough\" to their vision!\r\n    - It doesn't have to perfectly match the image, but try to get it close to the style and layout!\r\n\r\nOnce you've compared your result to Alex's vision: press the Continue button!\r\n\r\n**Hint:** This puzzle involves `<section>` and `<h2>` tags in HTML, and the `background-color` and `color` properties in CSS.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -27,12 +27,35 @@
     "ai_tutor_prompt_settings": {
       "answerTypes": [
         "hint",
-        "explainCode"
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
       ],
       "answerTypeCustomizations": {
+        "buildCSS": "- Do not use relative units for typography and spacing. Use `px` instead.",
+        "buildHTML": "- Do not link to a style.css page. Put all styles within a `<style>` tag in the head"
       }
-    }
+    },
+    "display_name": "Alex's Skateboarding Page",
+    "bubble_choice_description": "Help Alex make a webpage about skateboarding: \"I want to make a webpage about skateboarding because it's my favorite hobby.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "Skateboarding\n\nHistory\nSkateboarding started in the 1950s when surfers in California wanted something to do when the waves were flat. It grew from a backyard hobby into a global sport, officially becoming an Olympic event in 2021.\n\nStyles\nThere are many ways to skate. Street skating uses urban environments like stairs and rails. Park skating takes place in bowls and ramps. Freestyle skating focuses on flat-ground tricks and creativity.",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqwElaoRX309s+kb2KI\nu5Zkxr2RaxqUcfpzOz5ACyIE61GLyPdCjO5mnuyobYBWz6xCheH9zLCKIfij\nyZXnSw7OpsGAvY44JsY9H95KtypND5XWTJyiBhZAKEPLyD832Q92Hn5QYgrE\nvkzpw5btuN0VJ9JIjTdJ7Jis0sX7OhiKQxaMBrLIU73XMsZpe7H0B9TNEhv7\nqhCxm6AbN89wsHqXnpq8Kh3LXHji3KQUOPTfbC/baa+HJYGj1B6iAwK6FYrO\nvpKriniEvK9LUuyFF40k+1G481YA9B4aVIeNBaYQEMmY/opsEYbrfH8UOGt2\nD2HLLu6rVdCyvuUDMfkMf7OUUAZPlx6qQgixJyjJeGe94SugD5HXXnxjUAQo\ntZpFk/L2xBsCKsr36fZk2tpS+KlunTFh/0nGXIvMS9Cjv1RUaDa/ldxNfFYw\nWcWBhbxTgtVHXFkQmw0TD5LwguyGGFi/CrZura5jXetFiniDDjkT2lbAjpm4\nUYicTV99tJ5DxUnmeIRsMrBdLORIMi+1ccSMLdmzLgROqy5T/aTGnsw60ja/\njVuFNLwL681W8dHFefSISzquxqnR4YxU9k3xOigKSAidW8jtRiqP8vOqEOMo\nXV2c9ynD6d6v86gZbnEXAROR7yDGuroASTRwYkicrOT5Ok3UQPGp3XCJ+T+v\n0zUBSlC9N7DLmJCDl0MsHxYxMkprlAZLtDYNx10CLVNzqRsnqrflTCIKpepS\nygPRudJ6nLM+Qkw6gTABzHxVDIgWAX7kiEhS2bzourkJjG3xnVEM3F8EOuyE\nRbCUROSlfE1JvFPuXIqNtCJZDhwtzNpy0tW6PDxN4KPx6XpFeddCbs32WGSb\nT/kI0VGFebHkLACQfrl/3mS/x5iLnd3Vlsp7U/F4Ey/Bx181w0IrDTp7QV2l\nu6g/QE9p2gDzsnJW8GzbWwIxOJLymqjKIklN9+ng2Mw71lc1fGKGMRRtHYh7\njzp0Zf1zutJLmES3mVzl2AO8eP/po3owawJX30pAFHiYmJy231ytrtDjaATN\nTL48xRHoF7izDyuW2UFJV8NeXM0sgYLSfOKQVRYERUXpbHxoP39bp+oKfXPT\nLQdhr0ZMx+DmJ7sim77MOVuTu5nTcPbL3T52c6H2mN0stQKP1aj2x6QHvojA\nDQ3D0gJQTecTU5WKKoJX/j2Q4lEktwwx4y/7SraZdyrmvoJ7o3pjremx1Pbp\nvNUTlOzpfg4BQK9zxuFed/jTJA5cnshvjKQ+ANr41dey7V8wkbPJvjv3eqbG\nMwzjEO/4pmvMzXsm8M5AFs5r1tCV2+ed5BonwAiW28bgIwzOfm1R+5Dm5RVr\nS9ryohdy2l2ViOXUqZeWljD0019Lsbcokiq97Cc76/X8bOEU02/JhwBMhu+/\nSq0fOHxyswNcSUDPBar28TjcIX9WRgka0p0jGIw3kjUPd2udT8HLAJcV5cEZ\nq+uyc7sBGqcKhCz3OYS0o9EDjOEEcSdNMUj1WDaiYeN3p+1fn+15OvtVw5tg\nVX/LB0tP5pufjT4AA0RUQPn+F1CYaaNr8ma2PGVA\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:34:50.488+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-03-18 21:34:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:34:50.488+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-10a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-10a\"},{\"changed_at\":\"2026-03-18 21:34:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:28:16 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:29:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:29:53 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:43:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:45:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 03:47:06 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 04:07:03 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 04:10:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

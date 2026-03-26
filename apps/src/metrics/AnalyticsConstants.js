@@ -180,8 +180,7 @@ const EVENTS = {
     'Section students table save all clicked',
 
   // Section progress v2
-  PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
-  PROGRESS_V2_VIEW_OLD_PROGRESS: 'Old Progress Link Clicked',
+  PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_CHANGE_UNIT: 'Section New Progress Unit Changed',
   PROGRESS_V2_LESSON_EXPAND: 'Section New Progress Lesson Expand',
   PROGRESS_V2_LESSON_COLLAPSE: 'Section New Progress Lesson Collapse',

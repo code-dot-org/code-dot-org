@@ -2,13 +2,13 @@ Feature: Continue button on levels
 
 Scenario: External Video Level
   Given I am a teacher
-  Given I am on "http://studio.code.org/courses/coursec-2019/units/1/lessons/14/levels/1"
+  Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/55/levels/1"
   And I wait until element "#teacher-panel-container" is visible
   And I dismiss the teacher panel
   And I wait to see ".video-download"
   And I wait to see ".submitButton"
   Then I click ".submitButton" to load a new page
-  Then I wait until I am on "http://studio.code.org/courses/coursec-2019/units/1/lessons/15/levels/1"
+  Then I wait until I am on "http://studio.code.org/courses/allthethingscourse/units/1"
 
 Scenario: External Markdown Level
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/21/levels/1"
