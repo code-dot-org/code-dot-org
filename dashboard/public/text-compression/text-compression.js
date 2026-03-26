@@ -174,14 +174,18 @@
       minHeight: '200px',
     },
     '.cm-gutters': {
-      backgroundColor: '#ff9'
+      backgroundColor: '#ff9',
     },
     '.cm-lineNumbers .cm-gutterElement': {
       color: '#000',
-      textAlign: 'center'
+      textAlign: 'center',
+      boxSizing: 'content-box',
     },
     '.cm-scroller': {
       overflow: 'auto'
+    },
+    '.cm-line.dict-error': {
+      backgroundColor: '#f99'
     }
   };
 
