@@ -88,7 +88,9 @@ describe('Design System - Action Dropdown Component', () => {
   });
 
   it("doesn't call onClick when dropdown is disabled", async () => {
-    const user = userEvent.setup();
+    // MUI disabled IconButton sets pointer-events: none, so we need to
+    // bypass the pointer-events check to test click behavior.
+    const user = userEvent.setup({pointerEventsCheck: 0});
     render(
       <ActionDropdown
         name="test2-dropdown"
