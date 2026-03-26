@@ -138,6 +138,7 @@ const UserMessageEditor = React.forwardRef<
                   setIsRecording(false);
                 }}
                 onRecordStart={() => setIsRecording(true)}
+                disabled={disabled}
               />
             )}
             {showSubmitLabel ? (

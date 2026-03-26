@@ -921,3 +921,14 @@ class FilesTest < FilesApiTestBase
     delete_all_file_versions 'manifest.json'
   end
 end
+
+class FilesApiHtmlValidationTest < Minitest::Test
+  def test_valid_html_content_disallows_on_attrs
+    DCDO.stubs(:get).with('disallowed_html_tags', []).returns(['script', 'meta[http-equiv]'])
+
+    api = FilesApi.allocate
+
+    assert api.valid_html_content?('<div></div>')
+    refute api.valid_html_content?('<button onclick="alert(1)">Click me</button>')
+  end
+end
