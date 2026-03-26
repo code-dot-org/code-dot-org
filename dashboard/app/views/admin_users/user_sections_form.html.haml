@@ -1,0 +1,51 @@
+%h1 User Sections
+
+%p This page allows an admin to view non-hidden sections where a user is enrolled as a student. The sections are sorted by created_at in ascending order. All times in UTC.
+
+:ruby
+  def format_time(datetime)
+    datetime.try(:strftime, '%F %T')
+  end
+
+= form_tag url_for(action: 'user_sections_form'), method: 'get', class: 'form-inline', enforce_utf8: false do
+  = text_field_tag :user_identifier, params[:user_identifier], class: 'form-control', placeholder: 'user id, email, or username', size: 80
+  %button.btn{type: 'submit'}
+    %i.fa.fa-search
+
+-if @target_user
+  %h2 User information
+  %table.table.table-hover.table-condensed
+    %thead
+      %th Id
+      %th Email
+      %th Name
+      %th User type
+      %th Current sign in at
+      %th Created at
+    %tbody
+      %tr
+        %td= @target_user.id
+        %td= @target_user.email
+        %td= @target_user.name
+        %td= @target_user.user_type
+        %td= format_time(@target_user.current_sign_in_at)
+        %td= format_time(@target_user.created_at)
+
+  %h2 Sections
+  %table.table.table-hover.table-condensed
+    %thead
+      %th Created At
+      %th Updated At
+      %th Section Name
+      %th Login Type
+      %th Teacher Email
+    %tbody
+      - @sections_list.each do |section|
+        %tr
+          %td= format_time(section.created_at)
+          %td= format_time(section.updated_at)
+          %td= section.name
+          %td= section.login_type
+          %td= section.user&.email
+
+= render partial: 'home/admin'
