@@ -167,6 +167,23 @@ class AdminUsersController < ApplicationController
     end
   end
 
+  # GET /admin/user_sections
+  # This page takes an optional user_identifier param and renders a page with
+  # the non-hidden sections where the user is a student.
+  def user_sections_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @sections_list = Section.
+        joins(:followers).
+        includes(:user).
+        where(followers: {student_user_id: @target_user.id}).
+        visible.
+        distinct.
+        order('sections.created_at ASC')
+    end
+  end
+
   # PUT /admin/user_project
   # This page takes a user_id and channel param and un-deletes the project and then refreshes the user_projects_form
   def user_project_restore_form

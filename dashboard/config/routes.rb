@@ -739,6 +739,7 @@ Dashboard::Application.routes.draw do
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
