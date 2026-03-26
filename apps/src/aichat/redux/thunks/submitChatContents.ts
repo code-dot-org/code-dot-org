@@ -310,11 +310,11 @@ async function handleChatCompletionError(
   } else if (error instanceof TurnstileDevToolsError) {
     dispatch(
       addChatEvent({
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText:
+        removeId: getNewRemoveId(),
+        text:
           "Tutor chat messages cannot be sent due to your browser's dev tools being open. " +
           'Please close dev tools and try again or see message in dev tools for other options.',
+        notificationType: 'error',
         timestamp: Date.now(),
       })
     );
@@ -326,7 +326,7 @@ async function handleChatCompletionError(
       addChatEvent({
         role: Role.ASSISTANT,
         status: Status.ERROR,
-        chatMessageText: commonI18n.aiChatResponseError(),
+        chatMessageText: 'error',
         timestamp: Date.now(),
       })
     );

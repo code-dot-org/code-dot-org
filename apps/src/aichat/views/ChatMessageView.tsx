@@ -228,7 +228,7 @@ export function getChatMessageDisplayText(
     case Status.MODEL_RATE_LIMITED:
       return commonI18n.aiChatModelRateLimited();
     case Status.ERROR:
-      return chatMessageDisplayText;
+      return commonI18n.aiChatResponseError();
     default:
       return chatMessageDisplayText;
   }
