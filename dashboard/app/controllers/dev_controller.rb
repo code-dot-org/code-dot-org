@@ -1,6 +1,7 @@
 require 'cdo/github'
 require 'cdo/developers_topic'
 
+BUILD_STARTED_PATH = deploy_dir('build-started').freeze
 CHECK_DTS_ACTIONS = [
   'opened',
   'reopened',
@@ -13,6 +14,29 @@ class DevController < ApplicationController
   # Disable Rails' layout and CSRF verification for these API routes
   layout false
   skip_before_action :verify_authenticity_token
+
+  def start_build
+    # Forbidden in production because it's a dev route
+    # Forbidden in development because it won't work anyway
+    return head :forbidden if rack_env?(:development, :production)
+    return head :forbidden unless ActiveSupport::SecurityUtils.secure_compare(
+      params[:token], CDO.slack_start_build_token
+    )
+
+    # Don't create build-started if it already exists; let the requester know.
+    if File.file?(BUILD_STARTED_PATH)
+      return render plain: "I can't do that #{params[:user_name]} - a build is already queued"
+    end
+
+    # Create the build-started file so a new build will start within one minute
+    system "touch #{BUILD_STARTED_PATH}"
+
+    # Notify the room
+    return render json: {
+      text: "#{rack_env.to_s.capitalize} build restarted by #{params[:user_name]}",
+      response_type: 'in_channel'
+    }
+  end
 
   def check_dts
     return head :forbidden unless rack_env?(:staging)
