@@ -29,7 +29,11 @@ const allOptions: ActionDropdownOption[] = [
 
 const triggerButtonProps = {
   children: (
-    <FontAwesomeV6Icon iconName="check" iconStyle="solid" title="Trigger Icon" />
+    <FontAwesomeV6Icon
+      iconName="check"
+      iconStyle="solid"
+      title="Trigger Icon"
+    />
   ),
 };
 
