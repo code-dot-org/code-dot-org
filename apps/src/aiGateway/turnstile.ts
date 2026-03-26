@@ -150,11 +150,13 @@ export async function getTurnstileToken(): Promise<string> {
     console.groupCollapsed(
       'Option 2: Keep DevTools open — ignore anonymous scripts (recommended for developers)'
     );
-    console.log('Step 1: Open DevTools Settings — press F1 or click the ⚙ gear icon in the top-right of DevTools.');
-    console.log('Step 2: Select "Ignore List" in the left sidebar.');
+    console.log('Step 1: Open DevTools Settings — the most reliable way is to press F1 while DevTools is focused.');
+    console.log('        (Alternatively: click the three-dot ⋮ menu at the top-right of DevTools, then "Settings".)');
+    console.log('Step 2: In the Settings panel, look at the LEFT sidebar and scroll down until you see "Ignore List".');
+    console.log('        (In older Chrome versions this was called "Blackboxing" — same setting, different name.)');
     console.log('Step 3: Make sure "Enable Ignore Listing" is checked (this is the master switch).');
     console.log('Step 4: Check "Anonymous scripts from eval or console".');
-    console.log('Step 5: Close Settings and retry sending your message.');
+    console.log('Step 5: Close Settings (Escape or click ✕) and retry sending your message.');
     console.groupEnd();
     console.log(
       'Option 3: Deactivate breakpoints temporarily — press Ctrl+F8 (Windows/Linux) or Cmd+F8 (Mac).'
