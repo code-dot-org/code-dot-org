@@ -637,6 +637,75 @@ class AdminUsersControllerTest < ActionController::TestCase
     assert_select "table:nth-of-type(3) tbody tr", 1
   end
 
+  generate_admin_only_tests_for :user_sections_form
+
+  test 'user_sections finds user by id' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.id.to_s}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections finds user by username' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.username}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections finds user by email' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: @not_admin.email}
+    assert_select 'h2', 'User information'
+  end
+
+  test 'user_sections shows error for non-existent user' do
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: "bogus_name"}
+    assert_select '.alert-danger', 'User not found'
+  end
+
+  test 'user_sections returns visible sections sorted by created_at with owner email' do
+    student = create(:student)
+    owner_one = create(:teacher, email: 'owner_one@example.com')
+    owner_two = create(:teacher, email: 'owner_two@example.com')
+    co_teacher = create(:teacher, email: 'co_teacher@example.com')
+
+    older_section = create(
+      :section,
+      user: owner_one,
+      name: 'Older Section',
+      login_type: Section::LOGIN_TYPE_WORD,
+      created_at: 3.days.ago,
+      updated_at: 2.days.ago
+    )
+    newer_section = create(
+      :section,
+      user: owner_two,
+      name: 'Newer Section',
+      login_type: Section::LOGIN_TYPE_EMAIL,
+      created_at: 1.day.ago,
+      updated_at: 12.hours.ago
+    )
+    hidden_section = create(:section, user: owner_one, hidden: true, name: 'Hidden Section')
+
+    create(:section_instructor, section: older_section, instructor: co_teacher)
+    create(:follower, section: newer_section, student_user: student)
+    create(:follower, section: older_section, student_user: student)
+    create(:follower, section: hidden_section, student_user: student)
+
+    sign_in @admin
+    get :user_sections_form, params: {user_identifier: student.id.to_s}
+
+    assert_equal [older_section.id, newer_section.id], assigns(:sections_list).map(&:id)
+    assert_select "table", 2
+    assert_select "table:nth-of-type(2) tbody tr", 2
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Older Section'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Newer Section'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'owner_one@example.com'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'owner_two@example.com'
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'co_teacher@example.com', count: 0
+    assert_select "table:nth-of-type(2) tbody tr td", text: 'Hidden Section', count: 0
+  end
+
   generate_admin_only_tests_for :permissions_form
 
   test 'find user for non-existent email displays no user error' do
