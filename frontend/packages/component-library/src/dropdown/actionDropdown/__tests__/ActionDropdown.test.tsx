@@ -2,6 +2,8 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
 
+import FontAwesomeV6Icon from '@/fontAwesomeV6Icon';
+
 import ActionDropdown, {ActionDropdownOption} from './../index';
 
 const allOptions: ActionDropdownOption[] = [
@@ -26,7 +28,9 @@ const allOptions: ActionDropdownOption[] = [
 ];
 
 const triggerButtonProps = {
-  children: 'trigger-icon',
+  children: (
+    <FontAwesomeV6Icon iconName="check" iconStyle="solid" title="Trigger Icon" />
+  ),
 };
 
 describe('Design System - Action Dropdown Component', () => {

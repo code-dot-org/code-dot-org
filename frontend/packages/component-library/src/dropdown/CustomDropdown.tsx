@@ -255,6 +255,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
             'data-force-hover': isOpen || undefined,
             'aria-label':
               triggerButtonProps?.['aria-label'] ||
+              (useMuiIconButtonAsTrigger ? labelText : undefined) ||
               triggerComponentProps['aria-label'],
           };
 

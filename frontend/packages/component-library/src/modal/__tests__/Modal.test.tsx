@@ -27,7 +27,10 @@ describe('Modal Component', () => {
     render(
       <Modal
         {...defaultProps}
-        secondaryButtonProps={{children: 'Secondary Action', onClick: jest.fn()}}
+        secondaryButtonProps={{
+          children: 'Secondary Action',
+          onClick: jest.fn(),
+        }}
       />,
     );
     expect(
