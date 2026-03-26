@@ -44,8 +44,6 @@ import {
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
-import {TurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
-
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
@@ -276,7 +274,7 @@ async function handleChatCompletionError(
   // Skip log report for expected client-side conditions (403, DevTools block).
   if (
     !(error instanceof NetworkError && error.response.status === 403) &&
-    !(error instanceof TurnstileDevToolsError)
+    !(error.name === 'TurnstileDevToolsError')
   ) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -307,7 +305,7 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
-  } else if (error instanceof TurnstileDevToolsError) {
+  } else if (error.name === 'TurnstileDevToolsError') {
     dispatch(
       addChatEvent({
         removeId: getNewRemoveId(),
