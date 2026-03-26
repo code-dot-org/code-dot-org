@@ -256,9 +256,9 @@ locally as described above, here are the additional steps:
 
 3. Restart `./bin/dashboard-server` from the root folder of the repository.
 
-If you make any changes to the javascript files, you only need to repeat step 2
-from the previous section and restart `./bin/dashboard-server` if needed. You
-only need to rerun `assets:precompile` when you change Rails-managed assets.
+If you modify any Rails-managed assets, rerun step 2.
 
-To get back into a normal state, you must run `cd dashboard ; rake assets:clobber`, 
-or simply `rm -rf dashboard/public/assets`.
+To stop using locally precompiled Rails-managed assets and return to the
+default development asset pipeline, run `cd dashboard ; rake assets:clobber`,
+or simply remove `dashboard/public/assets`. This does not affect webpack
+assets, which continue to be served from `dashboard/public/blockly/js`.
