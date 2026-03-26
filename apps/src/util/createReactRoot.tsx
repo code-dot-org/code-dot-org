@@ -33,15 +33,6 @@ export function createReactRoot(
   }
 
   const brand = getCurrentBrand();
-
-  // Expose the brand on <html> so CSS variable overrides in colors.css can
-  // target [data-brand='codeai'] and swap the brand colour ramp.
-  if (brand === 'codeai') {
-    document.documentElement.dataset.brand = brand;
-  } else {
-    delete document.documentElement.dataset.brand;
-  }
-
   const theme = getMuiThemeForBrand(brand);
 
   ReactDOM.render(
