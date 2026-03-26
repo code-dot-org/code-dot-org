@@ -1509,6 +1509,14 @@ FactoryBot.define do
     resources {nil}
   end
 
+  factory :lesson_insight do
+    association(:student, factory: :student)
+    lesson
+    section_id {create(:section).id}
+    unit_id {lesson.script_id}
+    insight_json {'{}'}
+  end
+
   factory :activity_section do
     sequence(:key) {|n| "activity-section-#{n}"}
     sequence(:position)
