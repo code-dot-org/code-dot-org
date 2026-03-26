@@ -44,22 +44,3 @@ post '/api/dev/set-last-dtt-green' do
   forbidden! unless params[:token] == CDO.slack_set_last_dtt_green_token
   TestServerStatus.mark_green GitHub.sha('test')
 end
-
-post '/api/dev/check-dts' do
-  forbidden! unless rack_env == :staging || rack_env == :development
-  forbidden! unless verify_signature(CDO.github_webhook_secret)
-  data = JSON.parse(params[:payload])
-  unless CHECK_DTS_ACTIONS.include?(data['action']) &&
-      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
-      data['pull_request']['base']['ref'] == 'staging'
-    status 202
-    next 'I only check the DTS status for PRs against staging'
-  end
-  GitHub.configure_octokit
-  if DevelopersTopic.dts?
-    GitHub.set_dts_check_pass(data['pull_request'])
-  else
-    GitHub.set_dts_check_fail(data['pull_request'])
-  end
-  'success'
-end
