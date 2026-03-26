@@ -4,8 +4,11 @@ const TURNSTILE_SCRIPT_URL =
   'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
 const CONTAINER_ID = 'turnstile-container';
 const CHALLENGE_TIMEOUT_MS = 30_000;
-// Any elapsed time above this means a human had to click "Resume" in DevTools.
-const DEBUGGER_PAUSE_THRESHOLD_MS = 100;
+// How long to wait for the probe Worker to respond before concluding it was
+// paused by the DevTools debugger. The Worker posts a message in microseconds
+// when not paused, so 100 ms is an unambiguous signal — and short enough
+// that the user never perceives it on the happy path.
+const DEBUGGER_PROBE_TIMEOUT_MS = 100;
 
 declare global {
   interface Window {
@@ -38,35 +41,59 @@ export class TurnstileDevToolsError extends Error {
 }
 
 /**
- * Detects whether a `debugger` statement inside an anonymous (eval'd) script
- * would pause execution — the same context Turnstile uses for its own
- * anti-bot debugger call. If this returns true, Turnstile's challenge will
- * also be paused and the request will hang or time out.
+ * Detects whether a `debugger` statement inside an anonymous Web Worker script
+ * would be paused by DevTools — the same context Turnstile uses for its own
+ * anti-bot debugger call.
  *
- * Returns false when:
+ * The probe Worker fires `debugger` then immediately posts a message. If
+ * DevTools is pausing on anonymous scripts the Worker will be suspended and
+ * the message will never arrive within the timeout. When the timeout fires we
+ * terminate the Worker (which clears the DevTools pause automatically) and
+ * resolve true. The main thread is never blocked — the user never has to click
+ * Resume for our probe.
+ *
+ * Returns false (safe to proceed) when:
  *   - DevTools is closed
  *   - Breakpoints are deactivated (Ctrl+F8)
  *   - "Anonymous scripts from eval or console" is enabled in DevTools Ignore List
- *   - new Function() is blocked by CSP (can't detect → assume safe)
+ *   - Worker / Blob URL creation is blocked by CSP (can't detect → assume safe)
  */
-function debuggerWillPauseInAnonymousScope(): boolean {
-  try {
-    // new Function() produces a sourceless anonymous script, matching
-    // the Web Worker context Turnstile uses. The Ignore List setting only
-    // suppresses debugger pauses in scripts with no source URL, so running
-    // the probe here gives us an accurate signal for Turnstile specifically.
-    const elapsedMs = (
-      new Function(`
-        var t = performance.now();
-        debugger;
-        return performance.now() - t;
-      `) as () => number
-    )();
-    return elapsedMs > DEBUGGER_PAUSE_THRESHOLD_MS;
-  } catch {
-    // new Function() blocked by CSP — cannot probe, assume Turnstile is safe.
-    return false;
-  }
+function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
+  return new Promise(resolve => {
+    let worker: Worker | null = null;
+    let blobUrl: string | null = null;
+    let settled = false;
+
+    const settle = (willPause: boolean) => {
+      if (settled) return;
+      settled = true;
+      clearTimeout(timer);
+      worker?.terminate();
+      if (blobUrl) URL.revokeObjectURL(blobUrl);
+      resolve(willPause);
+    };
+
+    // If the Worker doesn't respond within the timeout, it was paused.
+    const timer = setTimeout(() => settle(true), DEBUGGER_PROBE_TIMEOUT_MS);
+
+    try {
+      // Blob Workers have no source URL, so they match the anonymous-script
+      // context that the "Ignore List → Anonymous scripts" setting targets —
+      // giving us an accurate signal for whether Turnstile's Worker will also
+      // be paused.
+      blobUrl = URL.createObjectURL(
+        new Blob(['debugger; postMessage("ok");'], {
+          type: 'application/javascript',
+        })
+      );
+      worker = new Worker(blobUrl);
+      worker.onmessage = () => settle(false); // responded before timeout → no pause
+      worker.onerror = () => settle(false); // Worker error → assume safe
+    } catch {
+      // Worker or Blob URL creation blocked (CSP or unsupported) → assume safe.
+      settle(false);
+    }
+  });
 }
 
 let scriptLoadPromise: Promise<void> | null = null;
@@ -127,11 +154,11 @@ class TurnstileManager {
     return result;
   }
 
-  private runChallenge(): Promise<string> {
+  private async runChallenge(): Promise<string> {
     // Probe before touching the Turnstile widget. If DevTools would pause
     // Turnstile's own debugger call, fail fast with an actionable error
     // instead of hanging for 30 s.
-    if (debuggerWillPauseInAnonymousScope()) {
+    if (await debuggerWillPauseInAnonymousScope()) {
       console.error(
         '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
           'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
