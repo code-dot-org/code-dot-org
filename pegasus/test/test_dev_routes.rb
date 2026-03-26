@@ -5,6 +5,8 @@ require_relative '../../lib/cdo/github'
 require_relative '../../lib/cdo/infra_test_topic'
 require_relative 'fixtures/mock_pegasus'
 
+FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'.freeze
+
 class DevRoutesTest < Minitest::Test
   describe '/api/dev/ routes' do
     DEFAULT_PARAMS = {
