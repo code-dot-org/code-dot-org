@@ -7,7 +7,6 @@ require_relative 'fixtures/mock_pegasus'
 
 BUILD_STARTED_PATH = deploy_dir('build-started').freeze
 FAKE_SLACK_SLASH_TOKEN = 'fake-start-build-token'.freeze
-FAKE_GITHUB_WEBHOOK_SECRET = 'fake-github-secret'.freeze
 
 class DevRoutesTest < Minitest::Test
   describe '/api/dev/ routes' do
