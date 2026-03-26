@@ -132,6 +132,29 @@ class TurnstileManager {
     // Turnstile's own debugger call, fail fast with an actionable error
     // instead of hanging for 30 s.
     if (debuggerWillPauseInAnonymousScope()) {
+      console.error(
+        '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
+          'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
+          'scripts that trigger a debugger statement — if breakpoints are ' +
+          'active for these, the challenge cannot complete.'
+      );
+      console.group('How to fix the Turnstile / DevTools conflict');
+      console.log(
+        'Option 1: Close DevTools entirely and reload the page.'
+      );
+      console.groupCollapsed(
+        'Option 2: Keep DevTools open — ignore anonymous scripts (recommended for developers)'
+      );
+      console.log('Step 1: Open DevTools Settings — press F1 or click the ⚙ gear icon in the top-right of DevTools.');
+      console.log('Step 2: Select "Ignore List" in the left sidebar.');
+      console.log('Step 3: Make sure "Enable Ignore Listing" is checked (this is the master switch).');
+      console.log('Step 4: Check "Anonymous scripts from eval or console".');
+      console.log('Step 5: Close Settings and retry sending your message.');
+      console.groupEnd();
+      console.log(
+        'Option 3: Deactivate breakpoints temporarily — press Ctrl+F8 (Windows/Linux) or Cmd+F8 (Mac).'
+      );
+      console.groupEnd();
       throw new TurnstileDevToolsError();
     }
 

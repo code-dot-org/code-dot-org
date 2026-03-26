@@ -44,6 +44,8 @@ import {
 } from '../../types';
 import {getNewRemoveId} from '../utils';
 
+import {TurnstileDevToolsError} from '@cdo/apps/aiGateway/turnstile';
+
 import {addChatEvent} from './addChatEvent';
 import {notifyErrorUnauthorized} from './helpers/notifyErrorUnauthorized';
 import {sendAnalytics} from './sendAnalytics';
@@ -271,8 +273,11 @@ async function handleChatCompletionError(
   dispatch: AppDispatch,
   viewAsUserId: number | null
 ) {
-  // Only send log report if not a 403 error.
-  if (!(error instanceof NetworkError && error.response.status === 403)) {
+  // Skip log report for expected client-side conditions (403, DevTools block).
+  if (
+    !(error instanceof NetworkError && error.response.status === 403) &&
+    !(error instanceof TurnstileDevToolsError)
+  ) {
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .logError('Error in aichat completion request', error as Error);
@@ -302,6 +307,17 @@ async function handleChatCompletionError(
     );
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
+  } else if (error instanceof TurnstileDevToolsError) {
+    dispatch(
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText:
+          "Tutor chat messages cannot be sent due to your browser's dev tools being open. " +
+          'Please close dev tools and try again or see message in dev tools for other options.',
+        timestamp: Date.now(),
+      })
+    );
   } else {
     Lab2Registry.getInstance()
       .getMetricsReporter()
@@ -310,7 +326,7 @@ async function handleChatCompletionError(
       addChatEvent({
         role: Role.ASSISTANT,
         status: Status.ERROR,
-        chatMessageText: 'error',
+        chatMessageText: commonI18n.aiChatResponseError(),
         timestamp: Date.now(),
       })
     );
