@@ -133,7 +133,7 @@ function getLanguageExtension(mode: EditorMode): Extension | null {
   return languageExtensionMap[mode] || null;
 }
 
-const getLintExtension = (
+const getLanguageLintExtension = (
   mode: EditorMode,
   lintConfig?: Options['lintConfig']
 ): Extension | null => {
@@ -236,8 +236,9 @@ function initializeCodeMirror6(
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
   const languageExtension = getLanguageExtension(mode);
+
   const lintExtensions: Extension[] = [];
-  const lintExtension = getLintExtension(mode, options.lintConfig);
+  const lintExtension = getLanguageLintExtension(mode, options.lintConfig);
   if (lintExtension) {
     lintExtensions.push(lintExtension);
   }
@@ -246,6 +247,7 @@ function initializeCodeMirror6(
       linter(view => additionalAnnotations(view.state.doc.toString()))
     );
   }
+
   const errorLineHighlightField = lineHighlightClassName
     ? createErrorLineHighlightField(lineHighlightClassName)
     : null;
