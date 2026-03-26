@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-20 23:50:12 UTC",
+    "serialized_at": "2026-03-25 22:39:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -368,8 +368,21 @@
       }
     },
     {
-      "key": "5294e91d-611c-4042-a8e7-7ad8d2fab596",
+      "key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
       "position": 1,
+      "properties": {
+        "name": "Updated Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b",
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "5294e91d-611c-4042-a8e7-7ad8d2fab596",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -383,7 +396,7 @@
     },
     {
       "key": "37fdd496-e8b5-446a-8490-b4418695bab9",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -397,7 +410,7 @@
     },
     {
       "key": "e717c33a-741f-4880-b54c-8c83c651f2e6",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -920,7 +933,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 and 2. Explain that they will be exploring two versions of a web app. On Level 1, they will note any features or functionality that are unclear, inconsistent, or frustrating. On Level 2, they will note how those features were improved.\n",
-        "progression_name": "Explore a Web App"
+        "progression_name": "Static vs Interactive Web App"
       },
       "seeding_key": {
         "activity_section.key": "99a96a18-a656-46b2-90fd-855b11b59392",
@@ -928,8 +941,19 @@
       }
     },
     {
-      "key": "df7a5650-e6e6-430c-92e0-2badaae9de20",
+      "key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47",
       "position": 4,
+      "properties": {
+        "progression_name": "Web App Comparison"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47",
+        "lesson_activity.key": "6c4121fd-6236-4719-b54b-f4f986f1d4f5"
+      }
+    },
+    {
+      "key": "df7a5650-e6e6-430c-92e0-2badaae9de20",
+      "position": 5,
       "properties": {
         "progression_name": "Vocab: Interactivity",
         "tips": [
@@ -946,7 +970,7 @@
     },
     {
       "key": "bcda0b35-4d0a-4d76-b5ed-e09e491e0156",
-      "position": 5,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -956,7 +980,7 @@
     },
     {
       "key": "b5eceb46-f101-4125-9d2e-a356e61f23a8",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did you feel using the first version of the web app? Why? What design choices made the second version better?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect their feelings of frustration or ease to specific design elements like button placement, clarity of icons, navigation flow, and responsiveness. Guide them to use specific examples from their experience. Listen for students identifying issues like 'the button kept moving' or 'I didn't know where to go next' for the bad design, and 'it was obvious what to do' or 'each button did what I expected it to' for the improved design.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define interactivity.\n"
       },
@@ -967,7 +991,7 @@
     },
     {
       "key": "b6d2c8ce-32ea-4909-af4b-ba538a9d4e2a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "UX designers think about how buttons, menus, and animations can guide users smoothly, make actions feel clear and responsive, and create an experience that’s enjoyable and easy for everyone to use.\n",
         "remarks": true
@@ -979,7 +1003,7 @@
     },
     {
       "key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students will consider features that benefit one group of users but may frustrate others, for example, autoplay vs. manual start.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 3 and choose one panel level to look at. Encourage them to think like UX designers making a decision about whether or not to incorporate a new feature. What tradeoffs will they have to make?\n",
         "duration": "15",
@@ -993,7 +1017,7 @@
     },
     {
       "key": "fc2c4e1d-94c5-4ca2-924b-320b5b072511",
-      "position": 9,
+      "position": 10,
       "properties": {
         "progression_name": "Hear From Different Users"
       },
@@ -1004,7 +1028,7 @@
     },
     {
       "key": "b6656009-56c7-4cd1-9fc2-0423d82a89c0",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define trade-offs.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *If you designed a new website with the feature you explored, what trade offs would you have to make?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should be able to identify specific design features and articulate the conflicting needs they serve. Guide the discussion towards understanding that there is rarely a single 'perfect' design, and that design decisions often involve balancing competing priorities. Listen for students identifying trade-offs like 'Autoplay is good for users who want to consume content quickly without thinking, but it's bad for users who have limited data or prefer to choose what they watch.'\n",
         "tips": [
@@ -1031,15 +1055,47 @@
       }
     },
     {
-      "key": "25b85963-d964-445a-acad-a5be25b9ad2c",
-      "position": 2,
+      "key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
+      "position": 1,
       "properties": {
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
+        "progression_name": "Predict & Trace: What Happens When You Click?"
       },
       "seeding_key": {
-        "activity_section.key": "25b85963-d964-445a-acad-a5be25b9ad2c",
-        "lesson_activity.key": "1006605d-ea06-4cbf-a929-dc19cedd3edd"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "139be038-6a88-4f45-98a8-95893208d904",
+      "position": 2,
+      "properties": {
+        "progression_name": "Generate with AI: Make a Button Respond"
+      },
+      "seeding_key": {
+        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "e385eb45-a718-408d-8d54-65c5433e5809",
+      "position": 3,
+      "properties": {
+        "progression_name": "Write It Yourself: Make a Button Respond"
+      },
+      "seeding_key": {
+        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
+      }
+    },
+    {
+      "key": "7089ddf9-bfda-4af2-8a66-09324fa4934e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Build, Test, and Fix Button Logic"
+      },
+      "seeding_key": {
+        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e",
+        "lesson_activity.key": "001a5923-8547-4c73-b24d-7a0de6f7263b"
       }
     },
     {
@@ -1060,7 +1116,7 @@
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Students should each have a copy of the Making a Button Respond activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define DOM. Explain that the DOM turns static elements on a page into objects that users can interact with.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Levels 1 where students will explore an interactive page with buttons. They will describe how they interact with the page and attempt to document the corresponding code in script.js. Students should use AI to help understand the code by asking questions like, 'What does [this line of code] mean?' They can attach specific lines of code as context within the AI chat interface.\n",
         "duration": "15",
         "name": "Making a Button Respond",
-        "progression_name": "Button Response",
+        "progression_name": "Predict & Trace: What Happens When You Click?",
         "tips": [
           {
             "type": "teachingTip",
@@ -1088,7 +1144,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define event handler. Explain that an event handler defines the reaction that a program takes based on a specific action, like a button click.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What event handlers did you trigger in Level 1?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to understand that clicking a button requires an event handler to trigger a reaction. Students should note where in their code they see document.querySelector and addEventListener which indicate onscreen content manipulation.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2, where they will act as QA Engineers, debugging broken code both by following a prescribed checklist, and then with AI assistance. Remind them to first try their own strategies and to ask AI specific questions like 'Why isn't this button working?' rather than asking for the full solution.\n",
-        "progression_name": "Fixing Broken Features",
+        "progression_name": "Generate with AI: Make a Button Respond",
         "tips": [
           {
             "type": "teachingTip",
@@ -1164,36 +1220,8 @@
       }
     },
     {
-      "key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5",
-      "position": 9,
-      "properties": {
-        "progression_name": "Vocab: Document Object Model (DOM)"
-      },
-      "seeding_key": {
-        "activity_section.key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
-      "key": "82a2759e-919a-4f94-b64f-e1c374de98e5",
-      "position": 10,
-      "properties": {
-        "progression_name": "Vocab: Event Handler",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that AI is a tool to assist, not to do the work for them. They should try to solve problems independently first before consulting AI. Emphasize asking specific questions to get the most helpful AI responses.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "82a2759e-919a-4f94-b64f-e1c374de98e5",
-        "lesson_activity.key": "37fdd496-e8b5-446a-8490-b4418695bab9"
-      }
-    },
-    {
       "key": "edb33008-a758-4c7b-a576-037d4ef4d00a",
-      "position": 11,
+      "position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -1203,7 +1231,7 @@
     },
     {
       "key": "f31f966e-80b8-453c-9e94-666c235560d6",
-      "position": 12,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Remind students of the three-step process that they followed in order to update the DOM when a user clicks a a button in a web application: Select an element, add an event listener, and update specific content (text, image, color, etc.)\n"
       },
@@ -1216,22 +1244,10 @@
       "key": "ff662afa-887f-4a26-a1e4-9ad3fdee4654",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 9 to complete the End of Lesson Survey.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review Key Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "ff662afa-887f-4a26-a1e4-9ad3fdee4654",
-        "lesson_activity.key": "e717c33a-741f-4880-b54c-8c83c651f2e6"
-      }
-    },
-    {
-      "key": "8e38f71a-369b-4ab9-9eea-ed2664b4073b",
-      "position": 2,
-      "properties": {
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "8e38f71a-369b-4ab9-9eea-ed2664b4073b",
         "lesson_activity.key": "e717c33a-741f-4880-b54c-8c83c651f2e6"
       }
     },
@@ -3447,12 +3463,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore a Web App"
+        "progression": "Static vs Interactive Web App"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level1_2026"
+          "ai-and-algorithmic-decisions-lesson1-level1_v2_2026"
         ],
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
@@ -3460,16 +3476,16 @@
         "activity_section.key": "99a96a18-a656-46b2-90fd-855b11b59392"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level1_2026"
+        "ai-and-algorithmic-decisions-lesson1-level1_v2_2026"
       ]
     },
     {
       "chapter": 3,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore a Web App"
+        "progression": "Web App Comparison"
       },
       "bonus": false,
       "seeding_key": {
@@ -3479,7 +3495,7 @@
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "99a96a18-a656-46b2-90fd-855b11b59392"
+        "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47"
       },
       "level_keys": [
         "ai-and-algorithmic-decisions-lesson1-level2_2026"
@@ -3488,94 +3504,28 @@
     {
       "chapter": 4,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Vocab: Interactivity"
+        "progression": "Web App Comparison"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level3_2026"
+          "ai-and-algorithmic-decisions-lesson1-level1_2026"
         ],
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "df7a5650-e6e6-430c-92e0-2badaae9de20"
+        "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level3_2026"
+        "ai-and-algorithmic-decisions-lesson1-level1_2026"
       ]
     },
     {
       "chapter": 5,
       "position": 4,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Interactivity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level4_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "df7a5650-e6e6-430c-92e0-2badaae9de20"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level4_2026"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Trade-Off"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level5_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level5_2026"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Trade-Off"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level6_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level6_2026"
-      ]
-    },
-    {
-      "chapter": 8,
-      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3596,56 +3546,100 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level8_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "25b85963-d964-445a-acad-a5be25b9ad2c"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level8_2026"
-      ]
-    },
-    {
-      "chapter": 10,
+      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Button Response"
+        "progression": "Predict & Trace: What Happens When You Click?"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level1_2026"
+          "ai-and-algorithmic-decisions-lesson2-level1-revised_2026"
         ],
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "bc8f7b11-6e86-478e-a2dc-332604240a0b"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
       },
       "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level1_2026"
+        "ai-and-algorithmic-decisions-lesson2-level1-revised_2026"
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 7,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Fixing Broken Features"
+        "progression": "Generate with AI: Make a Button Respond"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level2-revised_2026"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Write It Yourself: Make a Button Respond"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level3-revised_2026"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build, Test, and Fix Button Logic"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson2-level4-revised_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generate with AI: Make a Button Respond"
       },
       "bonus": false,
       "seeding_key": {
@@ -3662,8 +3656,8 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 3,
+      "chapter": 11,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3684,8 +3678,8 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 4,
+      "chapter": 12,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3706,117 +3700,7 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 5,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Document Object Model (DOM)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level5_2026"
-      ]
-    },
-    {
-      "chapter": 15,
-      "position": 6,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Document Object Model (DOM)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level6_2026"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Event Handler"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82a2759e-919a-4f94-b64f-e1c374de98e5"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level7_2026"
-      ]
-    },
-    {
-      "chapter": 17,
-      "position": 8,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Vocab: Event Handler"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82a2759e-919a-4f94-b64f-e1c374de98e5"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level8_2026"
-      ]
-    },
-    {
-      "chapter": 18,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level9_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8e38f71a-369b-4ab9-9eea-ed2664b4073b"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson2-level9_2026"
-      ]
-    },
-    {
-      "chapter": 19,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3838,7 +3722,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3860,7 +3744,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3882,7 +3766,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -3904,7 +3788,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3926,7 +3810,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -3948,7 +3832,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3970,7 +3854,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 20,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3992,7 +3876,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 21,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4014,7 +3898,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 22,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4036,7 +3920,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 23,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4058,7 +3942,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4080,7 +3964,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4102,7 +3986,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4124,7 +4008,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4146,7 +4030,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4168,7 +4052,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4190,7 +4074,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4212,7 +4096,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4234,7 +4118,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 32,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4256,7 +4140,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4278,7 +4162,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4300,7 +4184,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4322,7 +4206,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4344,7 +4228,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4366,7 +4250,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4388,7 +4272,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -4410,7 +4294,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -4432,7 +4316,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4454,7 +4338,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4476,7 +4360,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4498,7 +4382,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4520,7 +4404,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4542,7 +4426,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -4564,7 +4448,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 47,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4586,7 +4470,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 48,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4608,7 +4492,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 49,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4630,7 +4514,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4652,7 +4536,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4674,7 +4558,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4696,7 +4580,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4718,7 +4602,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4740,7 +4624,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4762,7 +4646,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4784,7 +4668,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4806,7 +4690,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4828,7 +4712,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4850,7 +4734,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4872,7 +4756,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4894,7 +4778,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4916,7 +4800,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -4938,7 +4822,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4960,7 +4844,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4982,7 +4866,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 66,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5004,7 +4888,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 67,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5026,7 +4910,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 68,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5048,7 +4932,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 69,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5070,7 +4954,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 70,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5092,7 +4976,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5114,7 +4998,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5136,7 +5020,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5158,7 +5042,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5180,7 +5064,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5086,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 76,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -5224,7 +5108,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 77,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5246,7 +5130,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5268,7 +5152,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5290,7 +5174,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5312,7 +5196,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5334,7 +5218,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5356,7 +5240,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5393,9 +5277,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level1_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson1-level1_v2_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level1_2026"
+          "ai-and-algorithmic-decisions-lesson1-level1_v2_2026"
         ],
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
@@ -5412,55 +5296,19 @@
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "99a96a18-a656-46b2-90fd-855b11b59392"
+        "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47"
       }
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level3_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson1-level1_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level3_2026"
+          "ai-and-algorithmic-decisions-lesson1-level1_2026"
         ],
         "lesson.key": "Lesson 1: Interactivity in Web Apps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "df7a5650-e6e6-430c-92e0-2badaae9de20"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level4_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level4_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "df7a5650-e6e6-430c-92e0-2badaae9de20"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level5_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level5_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level6_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level6_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "6d7a302d-57d4-4ecc-9ded-b3aecc0b0643"
+        "activity_section.key": "b1bee3a0-a8e2-41ad-8ce6-853801f34e47"
       }
     },
     {
@@ -5477,26 +5325,50 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level8_2026",
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level1-revised_2026",
         "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level8_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "25b85963-d964-445a-acad-a5be25b9ad2c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level1_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level1_2026"
+          "ai-and-algorithmic-decisions-lesson2-level1-revised_2026"
         ],
         "lesson.key": "Lesson 2: Making a Button Respond",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "bc8f7b11-6e86-478e-a2dc-332604240a0b"
+        "activity_section.key": "af985f57-83f1-4ff8-9750-1313b58d1e40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level2-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level2-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "139be038-6a88-4f45-98a8-95893208d904"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level3-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level3-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "e385eb45-a718-408d-8d54-65c5433e5809"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson2-level4-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson2-level4-revised_2026"
+        ],
+        "lesson.key": "Lesson 2: Making a Button Respond",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e"
       }
     },
     {
@@ -5533,66 +5405,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "882efeb6-f673-4f1f-a80d-1b435992d9d1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level5_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level5_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level6_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level6_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "d5fbee05-8435-41c1-9faf-e4244b4ee5c5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level7_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level7_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82a2759e-919a-4f94-b64f-e1c374de98e5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level8_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level8_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "82a2759e-919a-4f94-b64f-e1c374de98e5"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson2-level9_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson2-level9_2026"
-        ],
-        "lesson.key": "Lesson 2: Making a Button Respond",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "8e38f71a-369b-4ab9-9eea-ed2664b4073b"
       }
     },
     {

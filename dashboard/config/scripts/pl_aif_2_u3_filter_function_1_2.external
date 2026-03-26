@@ -28,6 +28,21 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/56fe0b2f27b93e2c89457ffa809bcb3a-image-1767640225831.png" alt="JavaScript code sample with a filtering function for a top ten playlist" width="650px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px; ">
 
+<br>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">💡 Check your answers </summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
+    <p style ="font-size: 14pt;">
+- The rule is song.rank <= 10 <br>
+- The new list is created by .filter() <br>
+- Change 10 to 5 to make it Top 5
+
+</p>
+</div>
+</details>
+
+
 ---
 
 ## Breaking it down
