@@ -1,3 +1,4 @@
+import SegmentedButtons from '@code-dot-org/component-library/segmentedButtons';
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -51,7 +52,7 @@ describe('AddLevelDialogTop', () => {
     const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
     server.respond();
 
-    expect(wrapper.findOne('Connect(ToggleGroup)'));
+    expect(wrapper.findOne(SegmentedButtons));
     expect(wrapper.findOne('Connect(AddLevelFilters)'));
     expect(wrapper.findOne('AddLevelTable'));
     expect(!wrapper.exists('FontAwesome')); // no spinner
@@ -64,7 +65,7 @@ describe('AddLevelDialogTop', () => {
 
     // Without using setLevels this test has no level data
 
-    expect(!wrapper.exists('ToggleGroup'));
+    expect(!wrapper.exists(SegmentedButtons));
     expect(!wrapper.exists('Connect(AddLevelFilters)'));
     expect(!wrapper.exists('AddLevelTable'));
     expect(wrapper.exists('FontAwesome'));
