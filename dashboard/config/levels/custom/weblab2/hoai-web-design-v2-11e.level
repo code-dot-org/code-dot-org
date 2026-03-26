@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-25T21:27:45.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Sofia's Photography Webpage\r\n\r\nSofia wants to make a webpage about her photography hobby but doesn't know how to write HTML or CSS. Instead, they've provided you with a description and a potential screenshot:\r\n\r\n> \"I want to make a webpage about my photography because I want to share my work and tell people a little about how I got into it. I want the title to be big and bold with a line under it. And I want the photos to look like they're in a frame - like something you'd hang on a wall.\"\r\n\r\n<img src=\"https://images.code.org/2a914c0a73a73a185f4d548bb8523cf0-image-1774476705361.png\" style=\"width: 40%\" />\r\n\r\n&nbsp;\r\n\r\n**Do This:**\r\n1) Use AI tutor to help build this page. Ask it to make changes to this page step-by-step.\r\n    - Be specific about the elements, sizes, borders, and which elements they apply to\r\n2) Keep prompting until the webpage it's \"close enough\" to their vision!\r\n    - It doesn't have to perfectly match the image, but try to get it close to the style and layout!\r\n\r\nOnce you've compared your result to Sofia's vision: press the Continue button!\r\n\r\n**Hint:** This puzzle involves `<img>` and `<h1>` tags in HTML, and the `border` and `text-decoration` properties in CSS.\r\n\r\n![]()",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do not use relative units for typography and spacing. Use `px` instead.",
+        "buildHTML": "- Do not link to a style.css page. Put all styles within a `<style>` tag in the head"
+      }
+    },
+    "display_name": "Sofia's Photography Page",
+    "bubble_choice_description": "Help Sofia make a webpage about her photography hobby: \"I want to make a webpage about my photography because I want to share my work and tell people a little about how I got into it.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "Through My Lens\n\n[title-image]\n\nPhotography started as a way for me to slow down and notice things I'd usually walk past. A crack in a wall. The way light hits a puddle. A stranger's expression on the bus.\n\nI shoot mostly on my phone, but I've been saving up for a film camera. There's something about the limitation of 24 exposures that makes you think harder before you press the button.\n\nThese are some of my favorite shots from the past year.\n\n[image-1]\n\n[image-2]\n\n[image-3]",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "image-2.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-11e/uuid/5247a8c0-2117-4dd1-bf9e-4f4fb9f88ea0.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "image-1.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-11e/uuid/145ad8c0-fd6d-47c4-93a1-8f12b184f4e3.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "image-3.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-11e/uuid/ca10ef89-e716-4d13-b735-89f7f5f0d7ca.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "title-image.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-11e/uuid/e815bcc2-953f-419b-b3b1-230697453788.jpg",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "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\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-25T21:27:45.325+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11d\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11d\"},{\"changed_at\":\"2026-03-25 21:28:35 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:29:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:29:54 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:01:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:02:14 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:08:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:10:20 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:10:36 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:11:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:12:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:13:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>
