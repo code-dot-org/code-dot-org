@@ -30,7 +30,10 @@ export class SentryAdapter implements RumClient {
         ...opts,
       });
     } catch (err) {
-      console.warn('[observability] Sentry init failed, falling back to no-op.', err);
+      console.warn(
+        '[observability] Sentry init failed, falling back to no-op.',
+        err,
+      );
       this.state.degraded = true;
     }
   }
@@ -38,11 +41,12 @@ export class SentryAdapter implements RumClient {
   recordLog(
     level: 'info' | 'warn' | 'error',
     message: string,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown>,
   ): void {
     if (this.state.degraded || !this.state.initialized) return;
     try {
-      Sentry.addBreadcrumb({level, message, data: context});
+      const sentryLevel = level === 'warn' ? 'warning' : level;
+      Sentry.addBreadcrumb({level: sentryLevel, message, data: context});
     } catch (err) {
       console.warn('[observability] Sentry recordLog failed.', err);
     }
@@ -51,13 +55,13 @@ export class SentryAdapter implements RumClient {
   recordMetric(
     name: string,
     value: number,
-    options?: {unit?: string; dimensions?: Record<string, string>}
+    options?: {unit?: string; dimensions?: Record<string, string>},
   ): void {
     if (this.state.degraded || !this.state.initialized) return;
     try {
       Sentry.metrics.distribution(name, value, {
-        unit: options?.unit as Sentry.MeasurementUnit | undefined,
-        tags: options?.dimensions,
+        unit: options?.unit,
+        attributes: options?.dimensions,
       });
     } catch (err) {
       console.warn('[observability] Sentry recordMetric failed.', err);
@@ -67,7 +71,7 @@ export class SentryAdapter implements RumClient {
   incrementCounter(name: string, dimensions?: Record<string, string>): void {
     if (this.state.degraded || !this.state.initialized) return;
     try {
-      Sentry.metrics.increment(name, 1, {tags: dimensions});
+      Sentry.metrics.count(name, 1, {attributes: dimensions});
     } catch (err) {
       console.warn('[observability] Sentry incrementCounter failed.', err);
     }

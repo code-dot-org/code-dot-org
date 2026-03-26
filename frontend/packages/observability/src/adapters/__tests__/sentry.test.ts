@@ -6,13 +6,13 @@ const {
   mockSentryInit,
   mockAddBreadcrumb,
   mockMetricsDistribution,
-  mockMetricsIncrement,
+  mockMetricsCount,
   mockClose,
 } = vi.hoisted(() => ({
   mockSentryInit: vi.fn(),
   mockAddBreadcrumb: vi.fn(),
   mockMetricsDistribution: vi.fn(),
-  mockMetricsIncrement: vi.fn(),
+  mockMetricsCount: vi.fn(),
   mockClose: vi.fn().mockResolvedValue(undefined),
 }));
 
@@ -21,7 +21,7 @@ vi.mock('@sentry/browser', () => ({
   addBreadcrumb: mockAddBreadcrumb,
   metrics: {
     distribution: mockMetricsDistribution,
-    increment: mockMetricsIncrement,
+    count: mockMetricsCount,
   },
   close: mockClose,
 }));
@@ -30,10 +30,14 @@ vi.mock('../../internal/ssrGuard', () => ({
   isBrowser: vi.fn(() => true),
 }));
 
-import {SentryAdapter} from '../sentry';
 import {isBrowser} from '../../internal/ssrGuard';
+import {SentryAdapter} from '../sentry';
 
-const baseConfig = {applicationName: 'test-app', environment: 'test', version: '1.0.0'};
+const baseConfig = {
+  applicationName: 'test-app',
+  environment: 'test',
+  version: '1.0.0',
+};
 
 describe('SentryAdapter', () => {
   beforeEach(() => {
@@ -90,7 +94,7 @@ describe('SentryAdapter', () => {
           sendDefaultPii: false,
           environment: 'test',
           release: '1.0.0',
-        })
+        }),
       );
     });
 
@@ -107,7 +111,7 @@ describe('SentryAdapter', () => {
       adapter.init(baseConfig);
       adapter.recordLog('warn', 'warning', {key: 'val'});
       expect(mockAddBreadcrumb).toHaveBeenCalledWith({
-        level: 'warn',
+        level: 'warning',
         message: 'warning',
         data: {key: 'val'},
       });
@@ -116,20 +120,23 @@ describe('SentryAdapter', () => {
     it('recordMetric delegates to Sentry.metrics.distribution', () => {
       const adapter = new SentryAdapter();
       adapter.init(baseConfig);
-      adapter.recordMetric('my.metric', 42, {unit: 'ms', dimensions: {env: 'prod'}});
+      adapter.recordMetric('my.metric', 42, {
+        unit: 'ms',
+        dimensions: {env: 'prod'},
+      });
       expect(mockMetricsDistribution).toHaveBeenCalledWith(
         'my.metric',
         42,
-        expect.objectContaining({tags: {env: 'prod'}})
+        expect.objectContaining({attributes: {env: 'prod'}}),
       );
     });
 
-    it('incrementCounter delegates to Sentry.metrics.increment', () => {
+    it('incrementCounter delegates to Sentry.metrics.count', () => {
       const adapter = new SentryAdapter();
       adapter.init(baseConfig);
       adapter.incrementCounter('my.counter', {region: 'us'});
-      expect(mockMetricsIncrement).toHaveBeenCalledWith('my.counter', 1, {
-        tags: {region: 'us'},
+      expect(mockMetricsCount).toHaveBeenCalledWith('my.counter', 1, {
+        attributes: {region: 'us'},
       });
     });
 
@@ -155,7 +162,11 @@ describe('SentryAdapter', () => {
       /**
        * Validates: Requirements 3.1
        */
-      const levelArb = fc.constantFrom('info' as const, 'warn' as const, 'error' as const);
+      const levelArb = fc.constantFrom(
+        'info' as const,
+        'warn' as const,
+        'error' as const,
+      );
       fc.assert(
         fc.property(levelArb, fc.string(), (level, message) => {
           vi.clearAllMocks();
@@ -163,11 +174,12 @@ describe('SentryAdapter', () => {
           const adapter = new SentryAdapter();
           adapter.init(baseConfig);
           adapter.recordLog(level, message);
+          const sentryLevel = level === 'warn' ? 'warning' : level;
           expect(mockAddBreadcrumb).toHaveBeenCalledWith(
-            expect.objectContaining({level, message})
+            expect.objectContaining({level: sentryLevel, message}),
           );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -179,22 +191,30 @@ describe('SentryAdapter', () => {
        * Validates: Requirements 3.2
        */
       fc.assert(
-        fc.property(fc.string({minLength: 1}), fc.float({min: -1e6, max: 1e6}), (name, value) => {
-          vi.clearAllMocks();
-          (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
-          const adapter = new SentryAdapter();
-          adapter.init(baseConfig);
-          adapter.recordMetric(name, value);
-          expect(mockMetricsDistribution).toHaveBeenCalledWith(name, value, expect.anything());
-        }),
-        {numRuns: 100}
+        fc.property(
+          fc.string({minLength: 1}),
+          fc.float({min: -1e6, max: 1e6}),
+          (name, value) => {
+            vi.clearAllMocks();
+            (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
+            const adapter = new SentryAdapter();
+            adapter.init(baseConfig);
+            adapter.recordMetric(name, value);
+            expect(mockMetricsDistribution).toHaveBeenCalledWith(
+              name,
+              value,
+              expect.anything(),
+            );
+          },
+        ),
+        {numRuns: 100},
       );
     });
   });
 
-  // Feature: observability, Property 5: incrementCounter === Sentry.metrics.increment(name, 1)
-  describe('Property 5: incrementCounter calls Sentry.metrics.increment with value 1', () => {
-    it('calls Sentry.metrics.increment with value 1 for any counter name', () => {
+  // Feature: observability, Property 5: incrementCounter === Sentry.metrics.count(name, 1)
+  describe('Property 5: incrementCounter calls Sentry.metrics.count with value 1', () => {
+    it('calls Sentry.metrics.count with value 1 for any counter name', () => {
       /**
        * Validates: Requirements 3.3
        */
@@ -205,9 +225,13 @@ describe('SentryAdapter', () => {
           const adapter = new SentryAdapter();
           adapter.init(baseConfig);
           adapter.incrementCounter(name);
-          expect(mockMetricsIncrement).toHaveBeenCalledWith(name, 1, expect.anything());
+          expect(mockMetricsCount).toHaveBeenCalledWith(
+            name,
+            1,
+            expect.anything(),
+          );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -228,7 +252,7 @@ describe('SentryAdapter', () => {
           expect(sentryCall).not.toHaveProperty('user');
           expect(sentryCall.sendDefaultPii).toBe(false);
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -252,9 +276,9 @@ describe('SentryAdapter', () => {
             const adapter = new SentryAdapter();
             adapter.init(baseConfig);
             expect(() => adapter.recordLog(level, message)).not.toThrow();
-          }
+          },
         ),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
 
@@ -273,7 +297,7 @@ describe('SentryAdapter', () => {
           adapter.init(baseConfig);
           expect(() => adapter.recordMetric(name, value)).not.toThrow();
         }),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
 
@@ -285,14 +309,14 @@ describe('SentryAdapter', () => {
         fc.property(fc.string({minLength: 1}), name => {
           vi.clearAllMocks();
           (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
-          mockMetricsIncrement.mockImplementation(() => {
+          mockMetricsCount.mockImplementation(() => {
             throw new Error('Sentry SDK error');
           });
           const adapter = new SentryAdapter();
           adapter.init(baseConfig);
           expect(() => adapter.incrementCounter(name)).not.toThrow();
         }),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
   });

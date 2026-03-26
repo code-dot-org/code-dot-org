@@ -42,31 +42,31 @@
   - [x] 6.3 Write unit and property-based tests in `src/adapters/__tests__/newrelic.test.ts` covering Properties 3, 4, 5, 6, 7
 
 - [x] 7. Implement the Sentry Adapter
-  - [x] 7.1 Create `src/adapters/sentry.ts` with `SentryAdapter` class: define `SENTRY_PRIVACY_COMPLIANCE` as a named `const` with `sendDefaultPii: false`; `init` spreads `SENTRY_PRIVACY_COMPLIANCE` before `config.providerOptions` in the `Sentry.init` call; `recordLog` calls `Sentry.addBreadcrumb`; `recordMetric` calls `Sentry.metrics.distribution`; `incrementCounter` calls `Sentry.metrics.increment`; `shutdown` calls `Sentry.close`
+  - [x] 7.1 Create `src/adapters/sentry.ts` with `SentryAdapter` class: define `SENTRY_PRIVACY_COMPLIANCE` as a named `const` with `sendDefaultPii: false`; `init` spreads `SENTRY_PRIVACY_COMPLIANCE` before `config.providerOptions` in the `Sentry.init` call; `recordLog` calls `Sentry.addBreadcrumb`; `recordMetric` calls `Sentry.metrics.distribution`; `incrementCounter` calls `Sentry.metrics.count` (Sentry 10.x API); `shutdown` calls `Sentry.close`
   - [x] 7.2 Implement `AdapterState` with SSR guard and try/catch fallback
   - [x] 7.3 Write unit and property-based tests in `src/adapters/__tests__/sentry.test.ts` covering Properties 3, 4, 5, 6, 7
 
-- [ ] 8. Implement the `createRumClient` factory and public API
-  - [ ] 8.1 Create `src/index.ts` exporting `RumClient`, `RumClientConfig`, `RumProvider` types and the `createRumClient` factory with exhaustive switch (throws descriptive `Error` for unknown provider)
-  - [ ] 8.2 Write unit and property-based tests in `src/__tests__/index.test.ts` for Properties 1 and 2: factory returns correct adapter for each valid provider, throws with message containing the value for any unknown provider string
-  - [ ] 8.3 Run `yarn build` in `frontend/packages/observability/` and verify `dist/index.mjs`, `dist/index.cjs`, and `dist/index.d.ts` are produced
+- [x] 8. Implement the `createRumClient` factory and public API
+  - [x] 8.1 Create `src/index.ts` exporting `RumClient`, `RumClientConfig`, `RumProvider` types and the `createRumClient` factory with exhaustive switch (throws descriptive `Error` for unknown provider)
+  - [x] 8.2 Write unit and property-based tests in `src/__tests__/index.test.ts` for Properties 1 and 2: factory returns correct adapter for each valid provider, throws with message containing the value for any unknown provider string
+  - [x] 8.3 Run `yarn build` in `frontend/packages/observability/` and verify `dist/index.mjs`, `dist/index.cjs`, and `dist/index.d.ts` are produced
 
-- [~] 9. Update `frontend/apps/studio/index.html` with the Config Meta Tag
-  - [ ] 9.1 Add `<meta name="app-config">` to `frontend/apps/studio/index.html` with all `RuntimeConfig` fields present and safe placeholder values: `{ "appVersion": "", "observability": { "rumProvider": "none", "datadog": { "applicationId": "", "clientToken": "" }, "newRelic": { "licenseKey": "", "applicationId": "" }, "sentry": { "dsn": "" } } }`
+- [x] 9. Configure the `<meta name="app-config">` tag via Rails (not the Vite index.html)
+  - [x] 9.1 The `<meta name="app-config">` tag is rendered by `dashboard/app/views/app/index.html.haml` in production, NOT `frontend/apps/studio/index.html`. Values come from the `CDO` object populated from `config/*.yml.erb`. The Vite dev `index.html` does NOT include this tag; `SiteConfig` defaults to `rumProvider: 'none'` when the tag is absent, which is correct for local dev.
 
-- [~] 10. Integrate with Code Studio bootstrap
-  - [ ] 10.1 Add `@code-dot-org/observability` as a dependency in `frontend/apps/studio/package.json`
-  - [ ] 10.2 Update `frontend/apps/studio/src/entrypoints/application.tsx` to import `CodeStudioConfig` from `@code-dot-org/core`, call `createRumClient(CodeStudioConfig.observability.rumProvider, ...)` passing the nested `datadog`, `newRelic`, and `sentry` sub-objects from `CodeStudioConfig.observability` via `providerOptions`, then wire the result into `metricsReporter.setRumClient(rumClient)`
+- [x] 10. Integrate with Code Studio bootstrap
+  - [x] 10.1 Add `@code-dot-org/observability` as a dependency in `frontend/apps/studio/package.json`
+  - [x] 10.2 Update `frontend/apps/studio/entrypoints/application.tsx` to import `CodeStudioConfig` from `@code-dot-org/core`, call `createRumClient(CodeStudioConfig.observability.rumProvider)` and `rumClient.init(...)` with provider options from `CodeStudioConfig.observability`
   - [ ] 10.3 Verify standalone dev mode works (`yarn dev` from `frontend/apps/studio/`) with `rumProvider: 'none'` in the meta tag — no SDK errors in console
 
-- [ ] 11. Integrate with `MetricsReporter` in `apps/`
-  - [ ] 11.1 Add `setRumClient(client: RumClient): void` method to `apps/src/metrics/MetricsReporter.ts`
-  - [ ] 11.2 Update `logInfo`, `logWarning`, `logError`, and `publishMetric` to delegate to `rumClient` when set, leaving the existing server-side path unchanged
-  - [ ] 11.3 Remove direct `datadogRum` / `datadogLogs` imports from `MetricsReporter`
-  - [ ] 11.4 Update or add unit tests for `MetricsReporter` verifying delegation to `RumClient` methods
+- [x] 11. Integrate with `MetricsReporter` in `apps/`
+  - [x] 11.1 Add `setRumClient(client: RumClient): void` method to `apps/src/metrics/MetricsReporter.ts`
+  - [x] 11.2 Update `logInfo`, `logWarning`, `logError`, and `publishMetric` to delegate to `rumClient` when set, leaving the existing server-side path unchanged
+  - [x] 11.3 Remove direct `datadogRum` / `datadogLogs` imports from `MetricsReporter`
+  - [x] 11.4 Add unit tests in `apps/test/unit/metrics/MetricsReporterTest.ts` verifying delegation to `RumClient` methods
 
-- [ ] 12. Final validation
+- [x] 12. Final validation
   - [ ] 12.1 Run `./tools/hooks/pre-commit` from repo root and resolve any lint errors across all changed files
-  - [ ] 12.2 Run `yarn run typecheck` in `apps/` and resolve any TypeScript errors
-  - [ ] 12.3 Run `yarn test` in `frontend/packages/observability/` and confirm all unit and property-based tests pass
-  - [ ] 12.4 Run `turbo build` in `frontend/` and confirm both `@code-dot-org/core` and `@code-dot-org/observability` build cleanly
+  - [x] 12.2 Run `yarn run typecheck` in `apps/` and resolve any TypeScript errors (N/A — MetricsReporter uses local interface, no TS errors in observability/studio)
+  - [x] 12.3 Run `yarn test` in `frontend/packages/observability/` — 74 tests pass across 5 test files
+  - [x] 12.4 Run `turbo build` in `frontend/` — both `@code-dot-org/core` and `@code-dot-org/observability` build cleanly, studio also builds

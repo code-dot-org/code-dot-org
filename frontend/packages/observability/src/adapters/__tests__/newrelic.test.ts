@@ -6,8 +6,8 @@ vi.mock('../../internal/ssrGuard', () => ({
   isBrowser: vi.fn(() => true),
 }));
 
-import {NewRelicAdapter} from '../newrelic';
 import {isBrowser} from '../../internal/ssrGuard';
+import {NewRelicAdapter} from '../newrelic';
 
 // Helper to set up a mock newrelic global
 function setupNewRelicGlobal() {
@@ -33,7 +33,11 @@ function removeNewRelicGlobal() {
   });
 }
 
-const baseConfig = {applicationName: 'test-app', environment: 'test', version: '1.0.0'};
+const baseConfig = {
+  applicationName: 'test-app',
+  environment: 'test',
+  version: '1.0.0',
+};
 
 describe('NewRelicAdapter', () => {
   beforeEach(() => {
@@ -95,7 +99,10 @@ describe('NewRelicAdapter', () => {
       const adapter = new NewRelicAdapter();
       adapter.init(baseConfig);
       expect(mockNr.setApplicationVersion).toHaveBeenCalledWith('1.0.0');
-      expect(mockNr.setCustomAttribute).toHaveBeenCalledWith('environment', 'test');
+      expect(mockNr.setCustomAttribute).toHaveBeenCalledWith(
+        'environment',
+        'test',
+      );
     });
 
     it('init skips setApplicationVersion when version is undefined', () => {
@@ -103,7 +110,10 @@ describe('NewRelicAdapter', () => {
       const adapter = new NewRelicAdapter();
       adapter.init({applicationName: 'app', environment: 'test'});
       expect(mockNr.setApplicationVersion).not.toHaveBeenCalled();
-      expect(mockNr.setCustomAttribute).toHaveBeenCalledWith('environment', 'test');
+      expect(mockNr.setCustomAttribute).toHaveBeenCalledWith(
+        'environment',
+        'test',
+      );
     });
 
     it('recordLog delegates to newrelic.log', () => {
@@ -121,10 +131,13 @@ describe('NewRelicAdapter', () => {
       const mockNr = setupNewRelicGlobal();
       const adapter = new NewRelicAdapter();
       adapter.init(baseConfig);
-      adapter.recordMetric('my.metric', 42, {unit: 'ms', dimensions: {env: 'prod'}});
+      adapter.recordMetric('my.metric', 42, {
+        unit: 'ms',
+        dimensions: {env: 'prod'},
+      });
       expect(mockNr.recordCustomEvent).toHaveBeenCalledWith(
         'my.metric',
-        expect.objectContaining({value: 42, unit: 'ms', env: 'prod'})
+        expect.objectContaining({value: 42, unit: 'ms', env: 'prod'}),
       );
     });
 
@@ -135,12 +148,12 @@ describe('NewRelicAdapter', () => {
       adapter.incrementCounter('my.counter', {region: 'us'});
       expect(mockNr.recordCustomEvent).toHaveBeenCalledWith(
         'my.counter',
-        expect.objectContaining({value: 1, unit: 'count', region: 'us'})
+        expect.objectContaining({value: 1, unit: 'count', region: 'us'}),
       );
     });
 
     it('shutdown is a no-op', () => {
-      const mockNr = setupNewRelicGlobal();
+      setupNewRelicGlobal();
       const adapter = new NewRelicAdapter();
       adapter.init(baseConfig);
       expect(() => adapter.shutdown()).not.toThrow();
@@ -156,7 +169,9 @@ describe('NewRelicAdapter', () => {
     });
 
     it('never calls setUserId (privacy compliance)', () => {
-      const mockNr = setupNewRelicGlobal() as ReturnType<typeof setupNewRelicGlobal> & {setUserId?: ReturnType<typeof vi.fn>};
+      const mockNr = setupNewRelicGlobal() as ReturnType<
+        typeof setupNewRelicGlobal
+      > & {setUserId?: ReturnType<typeof vi.fn>};
       mockNr.setUserId = vi.fn();
       const adapter = new NewRelicAdapter();
       adapter.init(baseConfig);
@@ -172,7 +187,11 @@ describe('NewRelicAdapter', () => {
   // Feature: observability, Property 3: recordLog is forwarded to the provider
   describe('Property 3: recordLog is forwarded to the provider', () => {
     it('forwards any log level/message to newrelic.log', () => {
-      const levelArb = fc.constantFrom('info' as const, 'warn' as const, 'error' as const);
+      const levelArb = fc.constantFrom(
+        'info' as const,
+        'warn' as const,
+        'error' as const,
+      );
       fc.assert(
         fc.property(levelArb, fc.string(), (level, message) => {
           vi.clearAllMocks();
@@ -181,9 +200,12 @@ describe('NewRelicAdapter', () => {
           const adapter = new NewRelicAdapter();
           adapter.init(baseConfig);
           adapter.recordLog(level, message);
-          expect(mockNr.log).toHaveBeenCalledWith(message, expect.objectContaining({level}));
+          expect(mockNr.log).toHaveBeenCalledWith(
+            message,
+            expect.objectContaining({level}),
+          );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -192,19 +214,23 @@ describe('NewRelicAdapter', () => {
   describe('Property 4: recordMetric is forwarded to the provider', () => {
     it('forwards any metric name/value to newrelic.recordCustomEvent', () => {
       fc.assert(
-        fc.property(fc.string({minLength: 1}), fc.float({min: -1e6, max: 1e6}), (name, value) => {
-          vi.clearAllMocks();
-          (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
-          const mockNr = setupNewRelicGlobal();
-          const adapter = new NewRelicAdapter();
-          adapter.init(baseConfig);
-          adapter.recordMetric(name, value);
-          expect(mockNr.recordCustomEvent).toHaveBeenCalledWith(
-            name,
-            expect.objectContaining({value})
-          );
-        }),
-        {numRuns: 100}
+        fc.property(
+          fc.string({minLength: 1}),
+          fc.float({min: -1e6, max: 1e6}),
+          (name, value) => {
+            vi.clearAllMocks();
+            (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
+            const mockNr = setupNewRelicGlobal();
+            const adapter = new NewRelicAdapter();
+            adapter.init(baseConfig);
+            adapter.recordMetric(name, value);
+            expect(mockNr.recordCustomEvent).toHaveBeenCalledWith(
+              name,
+              expect.objectContaining({value}),
+            );
+          },
+        ),
+        {numRuns: 100},
       );
     });
   });
@@ -222,10 +248,10 @@ describe('NewRelicAdapter', () => {
           adapter.incrementCounter(name);
           expect(mockNr.recordCustomEvent).toHaveBeenCalledWith(
             name,
-            expect.objectContaining({value: 1, unit: 'count'})
+            expect.objectContaining({value: 1, unit: 'count'}),
           );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -237,7 +263,9 @@ describe('NewRelicAdapter', () => {
         fc.property(fc.string(), fc.string(), (appName, env) => {
           vi.clearAllMocks();
           (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
-          const mockNr = setupNewRelicGlobal() as ReturnType<typeof setupNewRelicGlobal> & {setUserId?: ReturnType<typeof vi.fn>};
+          const mockNr = setupNewRelicGlobal() as ReturnType<
+            typeof setupNewRelicGlobal
+          > & {setUserId?: ReturnType<typeof vi.fn>};
           mockNr.setUserId = vi.fn();
           const adapter = new NewRelicAdapter();
           adapter.init({applicationName: appName, environment: env});
@@ -248,7 +276,7 @@ describe('NewRelicAdapter', () => {
             expect(key).not.toMatch(/user|userId|email|name/i);
           }
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -270,9 +298,9 @@ describe('NewRelicAdapter', () => {
             const adapter = new NewRelicAdapter();
             adapter.init(baseConfig);
             expect(() => adapter.recordLog(level, message)).not.toThrow();
-          }
+          },
         ),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
 
@@ -289,7 +317,7 @@ describe('NewRelicAdapter', () => {
           adapter.init(baseConfig);
           expect(() => adapter.recordMetric(name, value)).not.toThrow();
         }),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
   });

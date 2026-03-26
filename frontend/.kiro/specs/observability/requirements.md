@@ -92,7 +92,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 
 1. Code Studio SHALL import the observability package as a standard ES module dependency and call `createRumClient` during application bootstrap.
 2. Where Code Studio enables SSR in the future, the `RumClient.init` call SHALL be guarded to execute only in browser environments (i.e., where `typeof window !== 'undefined'`).
-3. The Code Studio integration SHALL configure the RUM provider using environment variables available at Vite build time or runtime, consistent with Code Studio's existing configuration patterns.
+3. The Code Studio integration SHALL configure the RUM provider using runtime values injected by Rails into the `<meta name="app-config">` tag. In production, this tag is rendered by `dashboard/app/views/app/index.html.haml` (not `frontend/apps/studio/index.html`) using values from the `CDO` object, which is populated from `config/*.yml.erb`. The Vite development `index.html` SHALL NOT include a hardcoded `<meta name="app-config">` tag; the no-op provider is the correct default when no tag is present.
 4. If the RUM provider SDK is not available at runtime (e.g., blocked by an ad blocker), the `RumClient` SHALL catch the initialization failure, log a warning, and fall back to no-op adapter behavior.
 5. The Code Studio integration SHALL NOT increase the initial JavaScript bundle size beyond the size of the selected RUM provider SDK plus the observability package itself (i.e., no unintended transitive dependencies shall be bundled).
 

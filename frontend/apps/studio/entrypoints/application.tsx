@@ -2,7 +2,8 @@ import {RouterProvider} from '@tanstack/react-router';
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
 
-import {initializeCodeStudioConfig} from '@code-dot-org/core';
+import {CodeStudioConfig, initializeCodeStudioConfig} from '@code-dot-org/core';
+import {createRumClient} from '@code-dot-org/observability';
 
 import router from '@/modules/router';
 
@@ -10,7 +11,22 @@ import router from '@/modules/router';
 const mount = document.getElementById('vite-root');
 
 initializeCodeStudioConfig();
-console.log(window.__CODE_STUDIO__);
+
+const {rumProvider, datadog, newRelic, sentry} = CodeStudioConfig.observability;
+const rumClient = createRumClient(rumProvider);
+rumClient.init({
+  applicationName: 'studio',
+  environment: CodeStudioConfig.environment,
+  version: CodeStudioConfig.appVersion,
+  providerOptions: {
+    applicationId: datadog?.applicationId,
+    clientToken: datadog?.clientToken,
+    site: 'datadoghq.com',
+    licenseKey: newRelic?.licenseKey,
+    applicationID: newRelic?.applicationId,
+    dsn: sentry?.dsn,
+  },
+});
 
 if (mount) {
   const root = createRoot(mount);

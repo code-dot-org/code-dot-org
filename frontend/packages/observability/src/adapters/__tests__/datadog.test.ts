@@ -43,8 +43,8 @@ vi.mock('../../internal/ssrGuard', () => ({
   isBrowser: vi.fn(() => true),
 }));
 
-import {DatadogAdapter} from '../datadog';
 import {isBrowser} from '../../internal/ssrGuard';
+import {DatadogAdapter} from '../datadog';
 
 const baseConfig = {applicationName: 'test-app', environment: 'test'};
 
@@ -108,7 +108,7 @@ describe('DatadogAdapter', () => {
           defaultPrivacyLevel: 'mask-user-input',
           service: 'test-app',
           env: 'test',
-        })
+        }),
       );
     });
 
@@ -142,10 +142,13 @@ describe('DatadogAdapter', () => {
     it('recordMetric delegates to datadogRum.addAction', () => {
       const adapter = new DatadogAdapter();
       adapter.init(baseConfig);
-      adapter.recordMetric('my.metric', 42, {unit: 'ms', dimensions: {env: 'prod'}});
+      adapter.recordMetric('my.metric', 42, {
+        unit: 'ms',
+        dimensions: {env: 'prod'},
+      });
       expect(mockRumAddAction).toHaveBeenCalledWith(
         'my.metric',
-        expect.objectContaining({value: 42, unit: 'ms', env: 'prod'})
+        expect.objectContaining({value: 42, unit: 'ms', env: 'prod'}),
       );
     });
 
@@ -155,7 +158,7 @@ describe('DatadogAdapter', () => {
       adapter.incrementCounter('my.counter', {region: 'us'});
       expect(mockRumAddAction).toHaveBeenCalledWith(
         'my.counter',
-        expect.objectContaining({value: 1, unit: 'count', region: 'us'})
+        expect.objectContaining({value: 1, unit: 'count', region: 'us'}),
       );
     });
 
@@ -178,7 +181,11 @@ describe('DatadogAdapter', () => {
   // Feature: observability, Property 3: recordLog is forwarded to the provider
   describe('Property 3: recordLog is forwarded to the provider', () => {
     it('forwards any log level/message/context to datadogLogs.logger', () => {
-      const levelArb = fc.constantFrom('info' as const, 'warn' as const, 'error' as const);
+      const levelArb = fc.constantFrom(
+        'info' as const,
+        'warn' as const,
+        'error' as const,
+      );
       fc.assert(
         fc.property(levelArb, fc.string(), (level, message) => {
           vi.clearAllMocks();
@@ -194,7 +201,7 @@ describe('DatadogAdapter', () => {
                 : mockLogsLoggerError;
           expect(mockFn).toHaveBeenCalledWith(message, undefined);
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -203,18 +210,22 @@ describe('DatadogAdapter', () => {
   describe('Property 4: recordMetric is forwarded to the provider', () => {
     it('forwards any metric name/value to datadogRum.addAction', () => {
       fc.assert(
-        fc.property(fc.string({minLength: 1}), fc.float({min: -1e6, max: 1e6}), (name, value) => {
-          vi.clearAllMocks();
-          (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
-          const adapter = new DatadogAdapter();
-          adapter.init(baseConfig);
-          adapter.recordMetric(name, value);
-          expect(mockRumAddAction).toHaveBeenCalledWith(
-            name,
-            expect.objectContaining({value})
-          );
-        }),
-        {numRuns: 100}
+        fc.property(
+          fc.string({minLength: 1}),
+          fc.float({min: -1e6, max: 1e6}),
+          (name, value) => {
+            vi.clearAllMocks();
+            (isBrowser as ReturnType<typeof vi.fn>).mockReturnValue(true);
+            const adapter = new DatadogAdapter();
+            adapter.init(baseConfig);
+            adapter.recordMetric(name, value);
+            expect(mockRumAddAction).toHaveBeenCalledWith(
+              name,
+              expect.objectContaining({value}),
+            );
+          },
+        ),
+        {numRuns: 100},
       );
     });
   });
@@ -231,10 +242,10 @@ describe('DatadogAdapter', () => {
           adapter.incrementCounter(name);
           expect(mockRumAddAction).toHaveBeenCalledWith(
             name,
-            expect.objectContaining({value: 1, unit: 'count'})
+            expect.objectContaining({value: 1, unit: 'count'}),
           );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -253,7 +264,7 @@ describe('DatadogAdapter', () => {
           expect(rumCall).not.toHaveProperty('user');
           expect(rumCall.trackUserInteractions).toBe(false);
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -280,9 +291,9 @@ describe('DatadogAdapter', () => {
             const adapter = new DatadogAdapter();
             adapter.init(baseConfig);
             expect(() => adapter.recordLog(level, message)).not.toThrow();
-          }
+          },
         ),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
 
@@ -298,7 +309,7 @@ describe('DatadogAdapter', () => {
           adapter.init(baseConfig);
           expect(() => adapter.recordMetric(name, value)).not.toThrow();
         }),
-        {numRuns: 50}
+        {numRuns: 50},
       );
     });
   });

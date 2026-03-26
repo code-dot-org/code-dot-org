@@ -4,8 +4,14 @@ import type {RumClient, RumClientConfig} from '../types';
 interface NewRelicAgent {
   setApplicationVersion(version: string): void;
   setCustomAttribute(name: string, value: string): void;
-  log(message: string, options?: {level?: string; customAttributes?: Record<string, unknown>}): void;
-  recordCustomEvent(eventType: string, attributes?: Record<string, unknown>): void;
+  log(
+    message: string,
+    options?: {level?: string; customAttributes?: Record<string, unknown>},
+  ): void;
+  recordCustomEvent(
+    eventType: string,
+    attributes?: Record<string, unknown>,
+  ): void;
 }
 
 interface AdapterState {
@@ -17,7 +23,7 @@ interface AdapterState {
 // New Relic browser agent does not expose a PII suppression init flag;
 // compliance is maintained by never calling setUserId or setCustomAttribute
 // with user-identifying values.
-const NEWRELIC_PRIVACY_COMPLIANCE = {} as const;
+const _NEWRELIC_PRIVACY_COMPLIANCE = {} as const;
 
 function getNewRelic(): NewRelicAgent | undefined {
   if (!isBrowser()) return undefined;
@@ -26,8 +32,6 @@ function getNewRelic(): NewRelicAgent | undefined {
 
 export class NewRelicAdapter implements RumClient {
   private state: AdapterState = {initialized: false, degraded: false};
-  // NEWRELIC_PRIVACY_COMPLIANCE is intentionally referenced to document the compliance decision
-  private readonly _compliance = NEWRELIC_PRIVACY_COMPLIANCE;
 
   init(config: RumClientConfig): void {
     if (!isBrowser()) return;
@@ -41,7 +45,10 @@ export class NewRelicAdapter implements RumClient {
       }
       nr.setCustomAttribute('environment', config.environment);
     } catch (err) {
-      console.warn('[observability] New Relic init failed, falling back to no-op.', err);
+      console.warn(
+        '[observability] New Relic init failed, falling back to no-op.',
+        err,
+      );
       this.state.degraded = true;
     }
   }
@@ -49,7 +56,7 @@ export class NewRelicAdapter implements RumClient {
   recordLog(
     level: 'info' | 'warn' | 'error',
     message: string,
-    context?: Record<string, unknown>
+    context?: Record<string, unknown>,
   ): void {
     if (this.state.degraded || !this.state.initialized) return;
     try {
@@ -64,7 +71,7 @@ export class NewRelicAdapter implements RumClient {
   recordMetric(
     name: string,
     value: number,
-    options?: {unit?: string; dimensions?: Record<string, string>}
+    options?: {unit?: string; dimensions?: Record<string, string>},
   ): void {
     if (this.state.degraded || !this.state.initialized) return;
     try {

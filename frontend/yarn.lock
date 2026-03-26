@@ -1500,7 +1500,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@code-dot-org/observability@workspace:packages/observability":
+"@code-dot-org/observability@workspace:*, @code-dot-org/observability@workspace:packages/observability":
   version: 0.0.0-use.local
   resolution: "@code-dot-org/observability@workspace:packages/observability"
   dependencies:
@@ -1536,6 +1536,7 @@ __metadata:
     "@code-dot-org/fonts": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@code-dot-org/music-lab": "workspace:*"
+    "@code-dot-org/observability": "workspace:*"
     "@emotion/react": "npm:^11.14.0"
     "@emotion/styled": "npm:^11.14.1"
     "@mui/material": "npm:^7.3.4"

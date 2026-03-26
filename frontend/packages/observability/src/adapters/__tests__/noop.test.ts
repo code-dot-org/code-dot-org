@@ -1,6 +1,7 @@
 import * as fc from 'fast-check';
-import {NoOpAdapter} from '../noop';
+
 import type {RumClient} from '../../types';
+import {NoOpAdapter} from '../noop';
 
 describe('NoOpAdapter', () => {
   let adapter: NoOpAdapter;
@@ -22,27 +23,32 @@ describe('NoOpAdapter', () => {
 
     it('init does not throw', () => {
       expect(() =>
-        adapter.init({applicationName: 'test', environment: 'test'})
+        adapter.init({applicationName: 'test', environment: 'test'}),
       ).not.toThrow();
     });
 
     it('recordLog does not throw', () => {
       expect(() => adapter.recordLog('info', 'hello')).not.toThrow();
-      expect(() => adapter.recordLog('warn', 'hello', {key: 'val'})).not.toThrow();
+      expect(() =>
+        adapter.recordLog('warn', 'hello', {key: 'val'}),
+      ).not.toThrow();
       expect(() => adapter.recordLog('error', 'hello')).not.toThrow();
     });
 
     it('recordMetric does not throw', () => {
       expect(() => adapter.recordMetric('my.metric', 42)).not.toThrow();
       expect(() =>
-        adapter.recordMetric('my.metric', 42, {unit: 'ms', dimensions: {env: 'prod'}})
+        adapter.recordMetric('my.metric', 42, {
+          unit: 'ms',
+          dimensions: {env: 'prod'},
+        }),
       ).not.toThrow();
     });
 
     it('incrementCounter does not throw', () => {
       expect(() => adapter.incrementCounter('my.counter')).not.toThrow();
       expect(() =>
-        adapter.incrementCounter('my.counter', {env: 'prod'})
+        adapter.incrementCounter('my.counter', {env: 'prod'}),
       ).not.toThrow();
     });
 
@@ -51,7 +57,9 @@ describe('NoOpAdapter', () => {
     });
 
     it('makes no external calls', () => {
-      const fetchSpy = vi.spyOn(globalThis, 'fetch').mockResolvedValue(new Response());
+      const fetchSpy = vi
+        .spyOn(globalThis, 'fetch')
+        .mockResolvedValue(new Response());
       adapter.init({applicationName: 'test', environment: 'test'});
       adapter.recordLog('info', 'msg');
       adapter.recordMetric('m', 1);
@@ -66,7 +74,11 @@ describe('NoOpAdapter', () => {
   // Feature: observability, Property 8: No-Op Adapter is always safe
   describe('Property 8: no-op adapter is always safe for any method call sequence', () => {
     it('never throws for any sequence of calls', () => {
-      const levelArb = fc.constantFrom('info' as const, 'warn' as const, 'error' as const);
+      const levelArb = fc.constantFrom(
+        'info' as const,
+        'warn' as const,
+        'error' as const,
+      );
       const configArb = fc.record({
         applicationName: fc.string(),
         environment: fc.string(),
@@ -77,15 +89,15 @@ describe('NoOpAdapter', () => {
         fc.tuple(levelArb, fc.string()).map(
           ([lvl, msg]) =>
             (a: NoOpAdapter) =>
-              a.recordLog(lvl, msg)
+              a.recordLog(lvl, msg),
         ),
         fc.tuple(fc.string(), fc.float({min: -1e6, max: 1e6})).map(
           ([name, val]) =>
             (a: NoOpAdapter) =>
-              a.recordMetric(name, val)
+              a.recordMetric(name, val),
         ),
         fc.string().map(name => (a: NoOpAdapter) => a.incrementCounter(name)),
-        fc.constant((a: NoOpAdapter) => a.shutdown())
+        fc.constant((a: NoOpAdapter) => a.shutdown()),
       );
 
       fc.assert(
@@ -95,7 +107,7 @@ describe('NoOpAdapter', () => {
             for (const call of calls) call(a);
           }).not.toThrow();
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -112,7 +124,7 @@ describe('NoOpAdapter', () => {
           expect(typeof client.incrementCounter).toBe('function');
           expect(typeof client.shutdown).toBe('function');
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });

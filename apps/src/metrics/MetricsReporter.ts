@@ -1,13 +1,23 @@
-import {datadogLogs} from '@datadog/browser-logs';
-import {datadogRum} from '@datadog/browser-rum';
-
-import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 
 import DashboardMetricsApi from './DashboardMetricsApi';
 import {MetricsApi} from './MetricsApi';
 import {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
+
+/** Subset of @code-dot-org/observability RumClient used by MetricsReporter */
+interface RumClient {
+  recordLog(
+    level: 'info' | 'warn' | 'error',
+    message: string,
+    context?: Record<string, unknown>
+  ): void;
+  recordMetric(
+    name: string,
+    value: number,
+    options?: {unit?: string; dimensions?: Record<string, string>}
+  ): void;
+}
 
 /**
  * If we receive an unauthorized response from the server, this may
@@ -32,8 +42,9 @@ const ALWAYS_SEND = false;
  * For legacy client-side reporting see {@link firehose} for AWS
  * Firehose reporting and {@link logToCloud} for New Relic reporting.
  */
-class MetricsReporter {
+export class MetricsReporter {
   private lastCheckCanReportTime: number;
+  private rumClient: RumClient | null = null;
 
   constructor(private readonly metricsApi: MetricsApi) {
     this.metricsApi = metricsApi;
@@ -41,10 +52,16 @@ class MetricsReporter {
       parseInt(localStorage.getItem(LOCAL_STORAGE_KEY_NAME) || '0') || 0;
   }
 
+  setRumClient(client: RumClient): void {
+    this.rumClient = client;
+  }
+
   /**
    * Publish an information log message. Can be a string or a structured object
    */
   logInfo(message: string | object) {
+    const msg = typeof message === 'string' ? message : JSON.stringify(message);
+    this.rumClient?.recordLog('info', msg);
     if (!this.shouldReport()) {
       console.log(message);
       return;
@@ -56,6 +73,8 @@ class MetricsReporter {
    * Publish a warning log message. Can be a string or a structured object
    */
   logWarning(message: string | object) {
+    const msg = typeof message === 'string' ? message : JSON.stringify(message);
+    this.rumClient?.recordLog('warn', msg);
     if (!this.shouldReport()) {
       console.warn(message);
       return;
@@ -67,6 +86,8 @@ class MetricsReporter {
    * Publish an error log message. Can be a string or a structured object
    */
   logError(message: string | object) {
+    const msg = typeof message === 'string' ? message : JSON.stringify(message);
+    this.rumClient?.recordLog('error', msg);
     if (!this.shouldReport()) {
       console.error(message);
       return;
@@ -100,17 +121,17 @@ class MetricsReporter {
       unit,
       dimensions: dimensions.concat(this.getDeviceDimensions()),
     };
+
+    this.rumClient?.recordMetric(name, value, {
+      unit,
+      dimensions: Object.fromEntries(
+        metric.dimensions.map(d => [d.name, d.value])
+      ),
+    });
+
     if (!this.shouldReport()) {
       console.info('[MetricsReporter] ' + JSON.stringify(metric));
       return;
-    }
-
-    // Send to Datadog RUM as a custom action
-    if (DCDO.get('datadog-enabled', false)) {
-      datadogRum.addAction(name, {
-        value,
-        unit,
-      });
     }
 
     // Send a version of the metric with and without the browser version dimension
@@ -130,11 +151,6 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
-    // Send to Datadog Logs in parallel, independently of isReportingEnabled
-    if (DCDO.get('datadog-enabled', false)) {
-      this.sendToDatadogLogs(level, message);
-    }
-
     if (!this.isReportingEnabled()) {
       this.fallbackLog(payload);
       return;
@@ -145,19 +161,6 @@ class MetricsReporter {
     } catch (error) {
       this.fallbackLog(payload);
       this.handleError(error as Error);
-    }
-  }
-
-  private sendToDatadogLogs(level: LogLevel, message: string | object) {
-    const msgStr =
-      typeof message === 'string' ? message : JSON.stringify(message);
-    const context = this.getDeviceInfo();
-    if (level === 'INFO') {
-      datadogLogs.logger.info(msgStr, context);
-    } else if (level === 'WARNING') {
-      datadogLogs.logger.warn(msgStr, context);
-    } else {
-      datadogLogs.logger.error(msgStr, context);
     }
   }
 

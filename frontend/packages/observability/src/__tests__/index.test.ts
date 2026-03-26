@@ -47,14 +47,19 @@ vi.mock('../adapters/sentry', () => {
   return {SentryAdapter};
 });
 
-import {createRumClient} from '../index';
-import {NoOpAdapter} from '../adapters/noop';
 import {DatadogAdapter} from '../adapters/datadog';
 import {NewRelicAdapter} from '../adapters/newrelic';
+import {NoOpAdapter} from '../adapters/noop';
 import {SentryAdapter} from '../adapters/sentry';
+import {createRumClient} from '../index';
 import type {RumClient, RumProvider} from '../types';
 
-const VALID_PROVIDERS: RumProvider[] = ['none', 'datadog', 'newrelic', 'sentry'];
+const VALID_PROVIDERS: RumProvider[] = [
+  'none',
+  'datadog',
+  'newrelic',
+  'sentry',
+];
 
 describe('createRumClient', () => {
   // Unit tests — 8.2
@@ -85,13 +90,15 @@ describe('createRumClient', () => {
 
     it('throws for unknown provider', () => {
       expect(() => createRumClient('unknown' as RumProvider)).toThrow(
-        /Unsupported RUM provider: "unknown"/
+        /Unsupported RUM provider: "unknown"/,
       );
     });
 
     it('thrown error message contains the unsupported value', () => {
       const badProvider = 'amplitude';
-      expect(() => createRumClient(badProvider as RumProvider)).toThrow(badProvider);
+      expect(() => createRumClient(badProvider as RumProvider)).toThrow(
+        badProvider,
+      );
     });
 
     it('returned client implements all RumClient methods', () => {
@@ -121,7 +128,7 @@ describe('createRumClient', () => {
           expect(typeof client.incrementCounter).toBe('function');
           expect(typeof client.shutdown).toBe('function');
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });
@@ -138,10 +145,10 @@ describe('createRumClient', () => {
       fc.assert(
         fc.property(invalidProviderArb, badProvider => {
           expect(() => createRumClient(badProvider as RumProvider)).toThrow(
-            new RegExp(badProvider.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'))
+            new RegExp(badProvider.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')),
           );
         }),
-        {numRuns: 100}
+        {numRuns: 100},
       );
     });
   });

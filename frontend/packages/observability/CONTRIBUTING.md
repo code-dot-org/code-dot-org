@@ -1,5 +1,17 @@
 # Contributing to @code-dot-org/observability
 
+## Development Workflow
+
+Always use `yarn` (not `npx`) to run scripts in this repo.
+
+When you encounter lint errors, run `yarn lint:fix` via Turborepo first to auto-fix before investigating remaining issues:
+
+```bash
+# From frontend/
+yarn turbo lint:fix --filter=@code-dot-org/observability
+yarn turbo lint --filter=@code-dot-org/observability
+```
+
 ## Adding a New Provider Adapter
 
 1. Create `src/adapters/<provider>.ts` implementing the `RumClient` interface from `src/types.ts`
