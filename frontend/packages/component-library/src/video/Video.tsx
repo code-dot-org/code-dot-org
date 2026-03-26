@@ -151,6 +151,7 @@ const Video: React.FC<VideoProps> = ({
                 'Please enable "Functional Cookies" and refresh the page to play this video.'}
             </BodyThreeText>
             <MuiButton
+              variant="contained"
               className={moduleStyles.cookieConsentButton}
               onClick={() => {
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any

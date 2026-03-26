@@ -10,8 +10,8 @@ describe('Dialog Component', () => {
     description: 'This is a test description.',
     onClose: jest.fn(),
     closeLabel: 'Close the dialog',
-    primaryButtonProps: {text: 'Primary Button', onClick: jest.fn()},
-    secondaryButtonProps: {text: 'Secondary Button', onClick: jest.fn()},
+    primaryButtonProps: {children: 'Primary Button', onClick: jest.fn()},
+    secondaryButtonProps: {children: 'Secondary Button', onClick: jest.fn()},
     mode: 'light',
   };
 

@@ -26,12 +26,7 @@ const allOptions: ActionDropdownOption[] = [
 ];
 
 const triggerButtonProps = {
-  isIconOnly: true,
-  icon: {
-    iconName: 'check',
-    iconStyle: 'solid' as const,
-    title: 'Trigger Icon',
-  },
+  children: 'trigger-icon',
 };
 
 describe('Design System - Action Dropdown Component', () => {
