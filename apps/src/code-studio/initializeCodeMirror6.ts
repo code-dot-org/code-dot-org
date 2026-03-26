@@ -239,7 +239,7 @@ function initializeCodeMirror6(
 
   const lintExtensions: Extension[] = [];
   const lintExtension = getLanguageLintExtension(mode, options.lintConfig);
-  if (lintExtension) {
+  if (lintExtension && onUpdateLinting) {
     lintExtensions.push(lintExtension);
   }
   if (additionalAnnotations) {
