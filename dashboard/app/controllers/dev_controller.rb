@@ -1,26 +1,26 @@
 require 'cdo/github'
 require 'cdo/developers_topic'
 
-BUILD_STARTED_PATH = deploy_dir('build-started').freeze
-CHECK_DTS_ACTIONS = [
-  'opened',
-  'reopened',
-  'edited',
-  'synchronize',
-].freeze
-
 # Controller actions used for internal developer tools
 class DevController < ApplicationController
   # Disable Rails' layout and CSRF verification for these API routes
   layout false
   skip_before_action :verify_authenticity_token
 
+  BUILD_STARTED_PATH = deploy_dir('build-started').freeze
+  CHECK_DTS_ACTIONS = [
+    'opened',
+    'reopened',
+    'edited',
+    'synchronize',
+  ].freeze
+
   def start_build
     # Forbidden in production because it's a dev route
     # Forbidden in development because it won't work anyway
     return head :forbidden if rack_env?(:development, :production)
     return head :forbidden unless ActiveSupport::SecurityUtils.secure_compare(
-      params[:token], CDO.slack_start_build_token
+      params[:token] || '', CDO.slack_start_build_token
     )
 
     # Don't create build-started if it already exists; let the requester know.
@@ -29,7 +29,7 @@ class DevController < ApplicationController
     end
 
     # Create the build-started file so a new build will start within one minute
-    system "touch #{BUILD_STARTED_PATH}"
+    FileUtils.touch(BUILD_STARTED_PATH)
 
     # Notify the room
     return render json: {
