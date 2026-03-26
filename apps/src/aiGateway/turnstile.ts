@@ -144,12 +144,18 @@ export async function getTurnstileToken(): Promise<string> {
     );
     console.group('How to fix the Turnstile / DevTools conflict');
     console.log('Option 1: Close DevTools entirely and reload the page.');
-    console.log('Option 2: Keep DevTools open — deactivate breakpoints by pressing Ctrl+F8 (Windows/Linux) or Cmd+F8 (Mac).');
-    console.log('          This disables all breakpoints including debugger statements. Toggle it back on when done.');
+    console.log('Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.');
+    console.log('          Click the "Deactivate breakpoints" button in the Sources panel toolbar');
+    console.log('          (it looks like a breakpoint circle with a slash through it).');
+    console.log('          This disables all breakpoints including debugger statements. Click again to re-enable.');
+    console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
+    console.log('          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as');
+    console.log('          standard function keys" enabled — clicking the button directly is more reliable.');
     console.log('');
-    console.log('NOTE: The DevTools Ignore List → "Anonymous scripts from eval or console" setting does NOT help here.');
-    console.log('      That setting only covers eval() and console-typed scripts, not Blob Worker scripts.');
-    console.log('      Cloudflare Turnstile (and our probe) run inside Blob Workers, which are a separate category.');
+    console.log('NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,');
+    console.log('      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob');
+    console.log('      Workers which are isolated contexts — no Ignore List pattern can suppress their');
+    console.log('      debugger statements.');
     console.groupEnd();
     throw new TurnstileDevToolsError();
   }
