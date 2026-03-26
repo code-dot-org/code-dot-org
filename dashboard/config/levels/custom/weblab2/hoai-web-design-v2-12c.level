@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-25T23:29:30.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Destiny's Sports Page\r\n\r\nIn this level, we're going to help Destiny, who is struggling with her use of AI. Here is what she says:\r\n\r\n*\"I can barely read anything on my page. I wanted it to look bold and dramatic with the team colors, but now the text and the background are basically the same color. I don't understand what went wrong.\"*\r\n\r\n**Do This:**\r\n1) Read Destiny's `vision.md` file in the file explorer to understand what she asked for\r\n2) Decide how you want to fix it. You can update the `vision.md` file to be more specific and have AI Tutor regenerate the page, or go step-by-step with AI Tutor to fix the issues.\r\n\r\nKeep working with AI Tutor until you think the webpage addresses Destiny's feedback. Once it does: press the Continue button!\r\n\r\n**Hint:** Look at how Destiny described the colors in her vision. Think about how you can separate the background color from the text color so they don't conflict - being specific about which element gets which color will help.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Always add new CSS to a `<style>` tag in the head of the document. Do not use a separate file.",
+        "buildHTML": "- Do not link a `style.css` file. Put all CSS updates in the head of the document\n- Do not use IDs or classes\n- Do not generate any links"
+      }
+    },
+    "display_name": "Destiny's Sports Page",
+    "bubble_choice_description": "Help Destiny wrangle AI tools to help them with their webpage: \"I can barely read anything on my page. I don't understand what went wrong.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        background-color: #003366;\n        color: #003366;\n        font-family: sans-serif;\n        padding: 1rem;\n      }\n      h1 {\n        color: #ffd700;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Westview Wolves</h1>\n\n    <section>\n      <h2>Team History</h2>\n      <p>The Westview Wolves have been a staple of local basketball since 1987. Known for their fast-paced play and strong defense, the Wolves have won three regional championships in the last decade.</p>\n    </section>\n\n    <section>\n      <h2>Starting Players</h2>\n      <ul>\n        <li>Marcus T. — Point Guard</li>\n        <li>Jordan S. — Shooting Guard</li>\n        <li>Priya N. — Small Forward</li>\n        <li>DeShawn W. — Power Forward</li>\n        <li>Aaliyah R. — Center</li>\n      </ul>\n    </section>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page about the Westview Wolves, my favorite local basketball team. Make it dark and bold using the team colors: navy blue and gold.\n\nThe page should have the team name at the top, a section about the team's history, and a list of the starting players.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-25T23:29:30.027+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12b\"},{\"changed_at\":\"2026-03-26 00:22:19 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:23:25 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>
