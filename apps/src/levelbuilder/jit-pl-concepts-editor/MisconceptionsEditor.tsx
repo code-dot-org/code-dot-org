@@ -1,8 +1,13 @@
 import $ from 'jquery';
-import React, {useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
+import {useSelector} from 'react-redux';
 
-import {UnconnectedResourcesEditor} from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
+import ResourcesEditor from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 
 import moduleStyles from './misconceptionsEditor.module.scss';
 
@@ -41,22 +46,22 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   onSave,
   onCancel,
 }) => {
+  const contextKey = `jitPlMisconceptionResource_${initial?.id ?? 'new'}`;
+  const initialResourcesRef = useRef(initial?.resources ?? []);
+
+  useEffect(() => {
+    registerReducers({[contextKey]: createResourcesReducer(contextKey)});
+    getStore().dispatch(initResources(contextKey, initialResourcesRef.current));
+  }, [contextKey]);
+
+  const resources = useSelector(
+    (state: Record<string, Resource[]>) => state[contextKey] ?? []
+  );
+
   const [name, setName] = useState(initial?.name ?? '');
   const [textContent, setTextContent] = useState(initial?.text_content ?? '');
-  const [resources, setResources] = useState<Resource[]>(
-    initial?.resources ?? []
-  );
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
-  const addResource = (_context: string, resource: Resource) =>
-    setResources(prev => [...prev, resource]);
-  const editResource = (_context: string, resource: Resource) =>
-    setResources(prev =>
-      prev.map(r => (r.key === resource.key ? resource : r))
-    );
-  const removeResource = (_context: string, key: string) =>
-    setResources(prev => prev.filter(r => r.key !== key));
 
   const save = () => {
     setIsSaving(true);
@@ -99,13 +104,10 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         markdown={textContent}
       />
       <h4 className={moduleStyles.resourcesHeading}>Resources</h4>
-      <UnconnectedResourcesEditor
+      <ResourcesEditor
         forJitPl
-        resourceContext="jitPlMisconceptionResource"
+        resourceContext={contextKey}
         resources={resources}
-        addResource={addResource}
-        editResource={editResource}
-        removeResource={removeResource}
       />
       <div className={moduleStyles.formButtons}>
         <button onClick={save} disabled={isSaving} type="button">
