@@ -14,6 +14,7 @@ class AdminUsersController < ApplicationController
     email
     primary_contact_info_id
     name
+    username
     user_type
     current_sign_in_at
     sign_in_count

@@ -20,6 +20,7 @@
         %th ID
         %th Email
         %th Name
+        %th Username
         %th User Type
         %th Credential Types
         %th Recent Sign In
@@ -31,6 +32,7 @@
             %td= link_to user.id, permissions_form_path(search_term: user.id)
             %td= user.email
             %td= user.name
+            %td= user.username
             %td= user.user_type
             %td= @credential_types_by_user[user.id]&.join(', ')
             %td= user.current_sign_in_at.try(:strftime, '%F')
