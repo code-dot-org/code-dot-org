@@ -96,6 +96,15 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
 let scriptLoadPromise: Promise<void> | null = null;
 let activeWidgetId: string | null = null;
 
+// Pre-fetched token promise. After each token is consumed we immediately kick
+// off a new challenge in the background, so the next request (e.g. the main
+// generation call that follows a safety-check call) finds a token already
+// waiting rather than having to wait for a fresh challenge to complete.
+//
+// Cleared to null before awaiting so a concurrent caller does not accidentally
+// pick up the same one-time-use token.
+let prefetchedTokenPromise: Promise<string> | null = null;
+
 function loadTurnstileScript(): Promise<void> {
   if (scriptLoadPromise) return scriptLoadPromise;
 
@@ -134,34 +143,11 @@ function getSiteKey(): string {
   );
 }
 
-export async function getTurnstileToken(): Promise<string> {
-  if (await debuggerWillPauseInAnonymousScope()) {
-    console.error(
-      '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
-        'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
-        'scripts that trigger a debugger statement — if breakpoints are ' +
-        'active for these, the challenge cannot complete.'
-    );
-    console.group('How to fix the Turnstile / DevTools conflict');
-    console.log('Option 1: Close DevTools entirely and reload the page.');
-    console.log('Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.');
-    console.log('          Click the "Deactivate breakpoints" button in the Sources panel toolbar');
-    console.log('          (it looks like a breakpoint circle with a slash through it).');
-    console.log('          This disables all breakpoints including debugger statements. Click again to re-enable.');
-    console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
-    console.log('          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as');
-    console.log('          standard function keys" enabled — clicking the button directly is more reliable.');
-    console.log('');
-    console.log('NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,');
-    console.log('      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob');
-    console.log('      Workers which are isolated contexts — no Ignore List pattern can suppress their');
-    console.log('      debugger statements.');
-    console.groupEnd();
-    throw new TurnstileDevToolsError();
-  }
-
-  await loadTurnstileScript();
-
+/**
+ * Renders a fresh Turnstile widget and waits for the challenge token.
+ * Removes any existing widget first so only one widget exists at a time.
+ */
+function renderFreshToken(): Promise<string> {
   return new Promise((resolve, reject) => {
     const container = getOrCreateContainer();
 
@@ -190,4 +176,47 @@ export async function getTurnstileToken(): Promise<string> {
       activeWidgetId = widgetId;
     }
   });
+}
+
+export async function getTurnstileToken(): Promise<string> {
+  if (await debuggerWillPauseInAnonymousScope()) {
+    console.error(
+      '[Turnstile] Challenge blocked: DevTools breakpoints are active on ' +
+        'anonymous scripts. Cloudflare Turnstile uses anonymous Web Worker ' +
+        'scripts that trigger a debugger statement — if breakpoints are ' +
+        'active for these, the challenge cannot complete.'
+    );
+    console.group('How to fix the Turnstile / DevTools conflict');
+    console.log('Option 1: Close DevTools entirely and reload the page.');
+    console.log('Option 2: Keep DevTools open — deactivate breakpoints in the Sources panel.');
+    console.log('          Click the "Deactivate breakpoints" button in the Sources panel toolbar');
+    console.log('          (it looks like a breakpoint circle with a slash through it).');
+    console.log('          This disables all breakpoints including debugger statements. Click again to re-enable.');
+    console.log('          Keyboard shortcut: Ctrl+F8 on Windows/Linux.');
+    console.log('          On Mac: Cmd+F8 requires Fn key (Fn+Cmd+F8) unless you have "Use F1, F2 etc. as');
+    console.log('          standard function keys" enabled — clicking the button directly is more reliable.');
+    console.log('');
+    console.log('NOTE: The DevTools Ignore List does NOT help here. It only applies to the main thread,');
+    console.log('      not to Web Worker contexts. Cloudflare Turnstile (and our probe) run inside Blob');
+    console.log('      Workers which are isolated contexts — no Ignore List pattern can suppress their');
+    console.log('      debugger statements.');
+    console.groupEnd();
+    throw new TurnstileDevToolsError();
+  }
+
+  await loadTurnstileScript();
+
+  // Grab the pre-fetched promise and clear it immediately so a concurrent
+  // caller doesn't end up awaiting the same one-time-use token.
+  const p = prefetchedTokenPromise ?? renderFreshToken();
+  prefetchedTokenPromise = null;
+
+  const token = await p;
+
+  // Start the next challenge in the background so subsequent calls within the
+  // same chat message (safety check → main generation → output safety check)
+  // find a token already waiting rather than stalling on a fresh challenge.
+  prefetchedTokenPromise = renderFreshToken();
+
+  return token;
 }
