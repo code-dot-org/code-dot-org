@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import {AiChatDisabledProvider} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {AI_TUTOR_LEGACY_LABS} from '@cdo/apps/aiTutor/views/legacyLabs/constants';
-import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 
 import {AiTutorContainer} from '../../aiTutor/views/legacyLabs/AiTutorContainer';
 import {setInstructionsMaxHeightAvailable} from '../../redux/instructions';
@@ -31,7 +30,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
-    sectionAiChatAccessLevel: PropTypes.string,
     currentUserAiChatAccessLevel: PropTypes.string,
     isShareView: PropTypes.bool,
   };
@@ -115,7 +113,6 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       workspaceStyle,
       instructionsHeight,
       labType,
-      sectionAiChatAccessLevel,
       currentUserAiChatAccessLevel,
       isShareView,
       children,
@@ -133,30 +130,13 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         aiChatAccessLevel: currentUserAiChatAccessLevel,
       });
 
-    // dilemma: This should really be owned by the AiTutorContainer but if I move it there we'll always start with
-    // isVisible false which will cause the layout to start without the tutor and then jump when the tutor renders.
-    const shouldShowTutor =
-      shouldMountAiTutorContainer &&
-      (sectionAiChatAccessLevel
-        ? shouldShowAiTutor({
-            appName: labType,
-            tutorLevel: aiTutorAvailableForLevel,
-            aiChatAccessLevel: sectionAiChatAccessLevel,
-          })
-        : true);
-
-    // Use shouldShowTutor as the initial layout value so there's no flash on
-    // first render. tutorLayout.isVisible overrides once AiTutorContainer
-    // reports back (e.g. when chat is disabled but history exists).
-    const isTutorVisible = shouldShowTutor || this.state.tutorLayout.isVisible;
-
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
     const sidebarSpace = 55; // 45px sidebar + 10px margin = 55px
     const tutorSpace = this.state.tutorLayout.isOpen
       ? chatContainerSpace
       : sidebarSpace;
 
-    if (isTutorVisible) {
+    if (this.state.tutorLayout.isVisible) {
       instructionsStyle = {...instructionsStyle, right: tutorSpace};
       workspaceStyle = {...workspaceStyle, right: tutorSpace};
     }
@@ -175,10 +155,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
         </CodeWorkspaceContainer>
         {shouldMountAiTutorContainer && (
           <AiChatDisabledProvider>
-            <AiTutorContainer
-              shouldShowTutor={shouldShowTutor}
-              onLayoutChange={this.handleLayoutChange}
-            />
+            <AiTutorContainer onLayoutChange={this.handleLayoutChange} />
           </AiChatDisabledProvider>
         )}
       </span>
@@ -191,9 +168,6 @@ export default connect(
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
     isShareView: state.pageConstants.isShareView,
-    sectionAiChatAccessLevel: state.teacherSections
-      ? selectedSectionSelector(state)?.aiChatAccessLevel
-      : undefined,
     currentUserAiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({

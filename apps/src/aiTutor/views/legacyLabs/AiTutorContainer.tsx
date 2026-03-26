@@ -3,10 +3,12 @@ import {Typography, IconButton as MuiIconButton} from '@mui/material';
 import classNames from 'classnames';
 import React, {FC, useEffect, useRef, useState} from 'react';
 
+import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -39,9 +41,8 @@ interface CommonLab {
 }
 
 export const AiTutorContainer: FC<{
-  shouldShowTutor: boolean;
   onLayoutChange: (state: {isVisible: boolean; isOpen: boolean}) => void;
-}> = ({shouldShowTutor, onLayoutChange}) => {
+}> = ({onLayoutChange}) => {
   const [aiChatOpen, setAiChatOpen] = useState(false);
   const dispatch = useAppDispatch();
 
@@ -51,6 +52,22 @@ export const AiTutorContainer: FC<{
 
   // When a teacher is viewing a student, viewAsUserId is set.
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+
+  const sectionAiChatAccessLevel = useAppSelector(
+    state => selectedSectionSelector(state)?.aiChatAccessLevel
+  );
+
+  const aiTutorAvailableForLevel =
+    window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+  const shouldShowTutor =
+    sectionAiChatAccessLevel && labState.appType
+      ? shouldShowAiTutor({
+          appName: labState.appType,
+          tutorLevel: aiTutorAvailableForLevel,
+          aiChatAccessLevel: sectionAiChatAccessLevel,
+        })
+      : false;
 
   const lab: CommonLab | undefined =
     labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
