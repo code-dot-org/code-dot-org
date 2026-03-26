@@ -754,6 +754,7 @@ module SharedConstants
     PROFANITY_VIOLATION: 'profanity_violation',
     USER_INPUT_TOO_LARGE: 'user_input_too_large',
     MODEL_TIMEOUT: 'model_timeout',
+    MODEL_RATE_LIMITED: 'model_rate_limited',
     OK: 'ok',
     UNKNOWN: 'unknown',
   }.freeze
@@ -805,6 +806,8 @@ module SharedConstants
     MODEL_TIMEOUT: 1006,
     # Model output image flagged.
     MODEL_IMAGE_FLAGGED: 1007,
+    # The model is currently rate-limited (HTTP 429).
+    MODEL_RATE_LIMITED: 1008,
   }
 
   STUDENT_WORK_EVALUATION_STATUS = {

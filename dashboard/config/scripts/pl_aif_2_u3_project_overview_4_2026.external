@@ -1,0 +1,104 @@
+name 'pl-aif-2-U3-project-overview-4_2026'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Begin with the End in Mind: Final Project Overview
+
+#### Let's take a moment to begin with the end in mind by taking a look at the Final Project for this Unit.
+
+<div style="display:flex; gap:30px; align-items:flex-start; max-width:1000px; margin:20px auto;">
+
+<div style="flex:2;">
+
+## Value Explorer
+
+#### In the **Value Explorer** project, students take on the role of **product designers and data stewards**, building a web app that helps users explore a curated set of items or opportunities such as side hustles, volunteer roles, or clubs.
+
+<div style="background:#f7f8fa; padding:20px; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); font-size:14pt; line-height:1.6; margin-top:15px;">
+
+<h4 style="margin-top:0; font-weight:bold;">Students will:</h4>
+
+<ul style="padding-left:20px; font-size:14pt;">
+
+<li>Define their own dataset and design a simple schema for organizing the information.</li>
+<br>
+
+<li>Create features that allow users to sort and filter items using different “value lenses.”</li>
+<br>
+
+<li>Implement ranking systems that prioritize values such as profit, time commitment, or social impact.</li>
+<br>
+
+<li>Make their sorting logic transparent by explaining how the ranking rules work.</li>
+<br>
+
+<li>Reflect on how data choices and algorithm design influence outcomes.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div style="flex:1;">
+
+<img src="https://images.code.org/ae1f7db6b63189e93e183a912e8456b3-image-1767975441911.png" 
+alt="prototype of volunteer app that has input for interests and time and suggests a volunteer opportunity"
+style="width:100%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.2);">
+
+</div>
+
+</div>
+
+#### The result is a web app that helps users explore opportunities through different perspectives, while demonstrating that **data design and algorithms always involve choices.**
+
+---
+
+### **When Project Begins:** Final lesson of the unit
+
+### The project extends over five class periods beginning in Lesson 11.
+
+---
+
+## What Success Looks Like
+
+#### This project lets students apply their design and coding skills in a creative, authentic way while learning how data structures, algorithms, and values shape digital systems.
+
+<div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">📊</span>
+Loads a curated dataset that follows a student-designed schema
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">🔎</span>
+Allows users to apply multiple “value lenses” to explore the data
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">📈</span>
+Displays transparent rankings and explains the sorting rule being used
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">🧭</span>
+Includes a Project Charter outlining the app’s mission and ethical principles
+</div>
+
+<div style="background:#f2f2f2; box-shadow:0 2px 6px rgba(0,0,0,0.15); border-radius:8px; padding:16px 20px; text-align:center; width:170px; font-size:14pt;">
+<span style="display:block; font-size:28pt; margin-bottom:8px;">💡</span>
+Reflects on data design decisions and trade-offs made during development
+</div>
+
+</div>
+
+---
+
+## Now, let’s see how we get here!
+
+#### Arrays are up next!
+
+
+MARKDOWN

@@ -1,8 +1,12 @@
 name 'hoai-web-design-v2-10'
-display_name 'Learn an HTML Feature'
-description 'Learn an HTML Feature'
+display_name 'Learn about a CSS Rule'
+description 'Choose at least one CSS rule to learn more about with AI Tutor. Once you\'ve explored one: you can either choose more rules to explore, or continue to the next level.'
 
 sublevels
 level 'hoai-web-design-v2-10a'
+level 'hoai-web-design-v2-10b'
+level 'hoai-web-design-v2-10c'
+level 'hoai-web-design-v2-10d'
+level 'hoai-web-design-v2-10e'
 
 uses_lab2

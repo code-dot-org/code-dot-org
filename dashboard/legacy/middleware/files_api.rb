@@ -363,7 +363,13 @@ class FilesApi < Sinatra::Base
       '//' + tag_dup
     end
 
-    Nokogiri::HTML(body).xpath(*disallowed_tag_selectors).empty?
+    # no HTML event handler attributes (on*), e.g. onclick, onsubmit, etc
+    disallow_on_attrs_selector = '//*[@*[starts-with(name(), "on")]]'
+
+    Nokogiri::HTML(body).xpath(
+      *disallowed_tag_selectors,
+      disallow_on_attrs_selector,
+    ).empty?
   end
 
   # Determine whether or not a file is a valid HTML file.
@@ -1076,12 +1082,36 @@ class FilesApi < Sinatra::Base
       return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
     end
 
-    # Optionally record the URL for metrics, if passed as a query param.
-    image_url = params['image_url']
-
-    rating = ImageModeration.rate_image(image_stream, content_type_header, image_url)
+    rating = ImageModeration.rate_image(image_stream, content_type_header)
 
     {rating: rating.to_s}.to_json
+  end
+
+  #
+  # POST /v3/images/moderate-ai-content-safety
+  #
+  # Moderate an image upload via ImageModeration using Azure AI Content Safety and return the
+  # moderation result as JSON. Returns null if the moderation service is unavailable.
+  #
+  post %r{/v3/images/moderate-ai-content-safety$} do
+    content_type :json
+    dont_cache
+
+    # Read the raw bytes and wrap in an IO.
+    raw = request.body.read
+    image_stream = StringIO.new(raw)
+
+    # Determine MIME type (e.g. "image/png", "image/jpeg").
+    content_type_header = request.content_type
+
+    # Validate allowed content types
+    unless ['image/png', 'image/jpeg', 'image/gif'].include?(content_type_header)
+      status 400
+      return {error: 'Unsupported image type. Only PNG, JPEG, and GIF files are allowed.'}.to_json
+    end
+
+    result = ImageModeration.moderate_image(image_stream, content_type_header)
+    result.to_json
   end
 
   #

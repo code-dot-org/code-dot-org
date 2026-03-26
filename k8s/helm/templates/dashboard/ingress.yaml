@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
+  labels:
+    {{ include "cdo.labels" (merge (dict "component" "dashboard") .) | nindent 4 }}
+    code.ai/dns-name: {{ .Values.dnsName }}
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: {{ include "cdo.fullname" (merge (dict "component" "dashboard") .) }}
+                port:
+                  name: http

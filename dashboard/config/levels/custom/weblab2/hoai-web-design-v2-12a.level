@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-18T21:35:00.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Template for Web Lab 2",
+    "long_instructions": "## Maya's School Club Page\r\n\r\nIn this level, we're going to help Maya, who is struggling with her use of AI. Here is what she says:\r\n\r\n*\"I asked for a colorful page but it looks like a rainbow exploded on it. Every single thing is a different color - the heading, the paragraphs, the list items. That's not what I meant at all. I just wanted it to feel fun and bright, not chaotic.\"*\r\n\r\n**Do This:**\r\n1) Read Maya's `vision.md` file to understand what she asked for\r\n2) Decide how you want to fix it. You can update the `vision.md` file to be more specific and have AI Tutor regenerate the page, or go step-by-step with AI Tutor to fix the issues.\r\n\r\nKeep working with AI Tutor until you think the webpage addresses Maya's feedback. Once it does: press the Continue button!\r\n\r\n**Hint:** Think about how you can clarify what \"colorful\" means using specific color terms you've learned - like color names for specific elements.",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -27,12 +26,43 @@
     "ai_tutor_prompt_settings": {
       "answerTypes": [
         "hint",
-        "explainCode"
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
       ],
       "answerTypeCustomizations": {
+        "buildCSS": "- Always add new CSS to a `<style>` tag in the head of the document. Do not use a separate file.",
+        "buildHTML": "- Do not link a `style.css` file. Put all CSS updates in the head of the document\n- Do not use IDs or classes\n- Do not generate any links"
       }
+    },
+    "display_name": "Maya's School Club Page",
+    "bubble_choice_description": "Help Maya wrangle AI tools to help her with her webpage: \"I asked for a colorful page but it looks like a rainbow exploded on it.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      h1 { \n        color: #ff0000;\n        background-color: #0000ff;\n      }\n      h2 { \n        color: #ff6600;\n        background-color: #ab11ab;\n      }\n      p { \n        color: #9900cc; \n        background-color: #00ffff;\n      }\n      li { \n        color: #0000ff; \n        background-color: #000000;\n      }\n      body { \n        background-color: #ffff00; \n      }\n    </style>\n  </head>\n  <body>\n    <h1>Photography Club</h1>\n    <p>We are a group of students who love taking photos. We explore different styles of photography, edit our work, and share it with the school community. Everyone is welcome — no experience needed!</p>\n\n    <h2>Upcoming Meetings</h2>\n    <ul>\n      <li>Monday, March 10 — Room 204, 3:30pm</li>\n      <li>Monday, March 17 — Room 204, 3:30pm</li>\n      <li>Monday, March 24 — Room 204, 3:30pm</li>\n    </ul>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page for my school's photography club. Make it colorful so it stands out and gets people excited to join.\n\nThe page should have the club name at the top, a short description of what the club does, and a list of upcoming meeting times.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:35:00.428+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11a\"},{\"changed_at\":\"2026-03-18 21:35:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:35:00.428+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11a\"},{\"changed_at\":\"2026-03-18 21:35:03 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:38:44 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:43:38 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:30 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:45:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:02 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:46:21 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:11:37 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

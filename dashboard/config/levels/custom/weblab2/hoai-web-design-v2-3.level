@@ -1,13 +1,12 @@
 <Weblab2>
   <config><![CDATA[{
-  "published": true,
   "game_id": 74,
   "created_at": "2026-03-18T19:52:55.000Z",
   "level_num": "custom",
   "user_id": 14639,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "Template for Web Lab 2",
+    "long_instructions": "## Create Your Own Vision\r\n\r\nNow it's your turn to write your own vision and have your AI assistant create a website for you.\r\n\r\n**Do This:**\r\n- Click the `vision.txt` file. Replace the [FILL IN HERE] with your own ideas\r\n- Hover over `vision.txt` in the Files sidebar and click the &nbsp; <i class=\"fa-solid fa-ellipsis-v\"></i> &nbsp; icon, then select \"Add to AI Tutor Chat\"\r\n- Tell AI Tutor to make you a website based on your vision\r\n\r\n![](https://images.code.org/4fcad145d34ff5e0a6395c7344d27c01-image-1773946379472.png)",
     "submittable": "false",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "true",
@@ -26,13 +25,89 @@
     },
     "ai_tutor_prompt_settings": {
       "answerTypes": [
-        "hint",
-        "explainCode"
+        "explainCode",
+        "buildHTML"
       ],
       "answerTypeCustomizations": {
+        "buildHTML": "Additionally, follow these instructions even if they contradict the above ones:\n- Do not link style.css\n- Do not include any image or video files\n- Do not include IDs"
       }
-    }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "wireframes",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.txt",
+          "contents": "Make me a website with the following details:\n\nI want a website about: [FILL IN HERE]\nMake sure to include:\n- [FILL IN HERE]\n- [FILL IN HERE]\n- [FILL IN HERE - YOU CAN ADD MORE BULLETS]\n\nI want the tone of my website to be: [FILL IN HERE]\n\nI'm making this website because: [FILL IN HERE]",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "example-vision.txt",
+          "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI'm making this website because: I love otters and I want everyone to know",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "wireframe-sidebar-rows.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/e74cd189-66e2-44c2-867d-56aca64d56e9.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "wireframe-offset-rows.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/c5471066-9e27-4a46-add5-11a78f05dd89.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "wireframe-three-columns.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/139ca790-172f-40ca-963d-9abab904a81c.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "wireframe-two-columns.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/hoai-web-design-v2-3/uuid/90b64f4c-c4d0-4fdc-8e62-2c2e08ca45eb.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2"
+      ]
+    },
+    "project_template_level_name": "hoai-web-design-v2-template1",
+    "encrypted_exemplar_sources": "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\n"
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:55.339+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:53:06 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:55.339+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:53:06 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:46:10 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:53:53 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 19:47:34 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 19:47:37 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 19:52:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 19:58:00 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 20:00:06 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 20:00:24 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 20:14:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 00:35:04 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Weblab2>

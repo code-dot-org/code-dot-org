@@ -14,8 +14,19 @@ answer '**shift()**'
 
 
 markdown <<MARKDOWN
+ #### Match the correct definition to the term. 
+<br>
 
+::: details [**🔎 Check your Answers**]
+- #### Adds an item to the end of the array. - **push()**
+- ####  Adds an item to the front of an array. - **unshift()**
+- #### Removes the last item from the array. - **pop()**
+- #### Removes the first item from an array. - **shift()**
+:::
+
+<br>
 MARKDOWN
+
 teacher_markdown <<MARKDOWN
 
 

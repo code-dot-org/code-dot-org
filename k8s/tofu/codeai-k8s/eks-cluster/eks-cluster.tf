@@ -2,6 +2,20 @@
 # EKS Kubernetes Cluster: codeai-k8s
 #============================================================
 
+locals {
+  production_namespace = "production"
+
+  non_prod_single_namespace_environment_types = [
+    for namespace in sort(tolist(var.single_namespace_environment_types)) : namespace
+    if namespace != local.production_namespace
+  ]
+
+  non_prod_fargate_namespaces = concat(
+    local.non_prod_single_namespace_environment_types,
+    ["adhoc-*"]
+  )
+}
+
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "~> 21.0"
@@ -12,7 +26,7 @@ module "eks" {
   kms_key_administrators = var.cluster_admin_role_arns
 
   # See: ./eks-cluster-networking.tf
-  vpc_id = var.vpc_id
+  vpc_id = local.vpc_id
   subnet_ids = [
     aws_subnet.public_1.id,
     aws_subnet.public_2.id,
@@ -76,7 +90,7 @@ module "eks" {
     production = {
       name       = "production"
       subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
-      selectors  = [{ namespace = "production" }]
+      selectors  = [{ namespace = local.production_namespace }]
     }
 
     # Staging, test, levelbuilder, and adhoc-* deployments share a profile.
@@ -84,10 +98,7 @@ module "eks" {
       name       = "non-prod"
       subnet_ids = [aws_subnet.private_1.id, aws_subnet.private_2.id]
       selectors = [
-        { namespace = "staging" },
-        { namespace = "test" },
-        { namespace = "levelbuilder" },
-        { namespace = "adhoc-*" },
+        for namespace in local.non_prod_fargate_namespaces : { namespace = namespace }
       ]
     }
 

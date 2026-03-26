@@ -555,6 +555,12 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
+      collection do
+        get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
+      end
+    end
+
     resources :lessons, only: [:edit, :update] do
       member do
         get :show, to: 'lessons#show_by_id'
@@ -733,9 +739,11 @@ Dashboard::Application.routes.draw do
         post :studio_person_add_email_to_emails
         get :user_progress, action: 'user_progress_form', as: 'user_progress_form'
         get :user_projects, action: 'user_projects_form', as: 'user_projects_form'
+        get :user_sections, action: 'user_sections_form', as: 'user_sections_form'
         put :user_project, action: 'user_project_restore_form', as: 'user_project_restore_form'
         get :delete_progress, action: 'delete_progress_form', as: 'delete_progress_form'
         post :delete_progress
+        get :lookup_by_email, action: 'lookup_by_email_form', as: 'lookup_by_email_form'
         get 'mass-delete-student-progress', action: 'mass_delete_student_progress'
         post :convert_usernames_to_ids
         post :delete_user_progress
@@ -1049,6 +1057,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    # Utility routes not intended for use in production
     if rack_env?(:development, :test)
       scope '/api' do
         namespace :test, defaults: {format: 'json'} do
@@ -1059,6 +1068,9 @@ Dashboard::Application.routes.draw do
         end
         post 'test/ai_proxy/assessment', to: 'test_ai_proxy#assessment'
       end
+    end
+    if rack_env?(:staging, :test)
+      post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 
     namespace :api do

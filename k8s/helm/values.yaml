@@ -1,6 +1,7 @@
 # Default configuration, overridden by:
 # - development.values.yml
 # - production.values.yml
+# argocd-detect-probe: code-dot-org run 10 at 2026-03-22T10:32:51Z
 
 image: code-dot-org:latest
 command: ["bin/dashboard-server"]
@@ -8,9 +9,14 @@ args:
 
 # Override to set RAILS_ENV
 RAILS_ENV:
+dnsName: studio-development
 dashboard_workers: 0
 
 locals.yml:
+  # For example:
+  # levelbuilder_mode: true
+  # build_apps: false
+  # ...etc...
 
 # Require the k8s secret `cdo-external-secrets` to exist before bootup
 # Aka: "Require AWS Secrets Manager access to boot" mode
@@ -18,6 +24,9 @@ require_external_secrets: false
 
 healthChecks:
   enabled: false
+
+resources:
+  ephemeralStorage: 30Gi
 
 autoscaling:
   enabled: false
@@ -37,10 +46,17 @@ dashboardJob:
 services:
   redis:
     enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
   mysql:
     enabled: false
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
   minio:
     enabled: false
+    user: minioadmin
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    password:
     runSetupS3Job: false # seed the minio buckets, runs a one-time job
 
 # These should match the docker image's USERNAME, UID and GID args

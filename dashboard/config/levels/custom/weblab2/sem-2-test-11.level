@@ -1,0 +1,122 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-24T18:44:30.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Vibe Dashboard</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n  </head>\n  <body>\n    <div class=\"page-shell\">\n      <header class=\"top-bar\">\n        <div class=\"brand\">\n          <div class=\"brand-icon\">✦</div>\n          <div>\n            <h1>Vibe Dashboard</h1>\n            <p class=\"tagline\">Set the mood. Change the energy.</p>\n          </div>\n        </div>\n\n        <button id=\"themeBtn\" class=\"action-btn\">Change Vibe</button>\n      </header>\n\n      <main class=\"dashboard-grid\">\n        <section class=\"card hero-card\">\n          <div class=\"hero-text\">\n            <p class=\"eyebrow\">TODAY'S MOOD</p>\n            <h2 id=\"moodTitle\">Chill and Focused</h2>\n            <p id=\"moodDescription\">\n              Your dashboard is ready. Try customizing the vibe, updating the\n              message, or making one of the buttons actually do something.\n            </p>\n\n            <div class=\"hero-actions\">\n              <button id=\"messageBtn\" class=\"action-btn\">Show Message</button>\n              <button id=\"nextImageBtn\" class=\"secondary-btn\">Next Image</button>\n            </div>\n          </div>\n\n          <div class=\"hero-image-wrap\">\n            <img\n              id=\"vibeImage\"\n              src=\"https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80\"\n              alt=\"Friends smiling together outdoors\"\n            />\n          </div>\n        </section>\n\n        <section class=\"card panel-card\">\n          <p class=\"panel-label\">GREETING BOX</p>\n          <h3>Personalize the page</h3>\n          <label for=\"nameInput\">Enter your name</label>\n          <input\n            id=\"nameInput\"\n            type=\"text\"\n            placeholder=\"Type your name here\"\n          />\n          <button id=\"submitNameBtn\" class=\"action-btn\">Submit</button>\n\n          <div class=\"output-box\">\n            <p class=\"output-label\">Greeting</p>\n            <p id=\"greetingOutput\">Hello, friend!</p>\n          </div>\n        </section>\n\n        <section class=\"card panel-card\">\n          <p class=\"panel-label\">ENERGY COUNTER</p>\n          <h3>Track your energy</h3>\n\n          <div class=\"counter-row\">\n            <button id=\"minusBtn\" class=\"secondary-btn\">−</button>\n            <div class=\"counter-display\">\n              <p class=\"output-label\">Energy Level</p>\n              <p id=\"energyValue\">5</p>\n            </div>\n            <button id=\"plusBtn\" class=\"secondary-btn\">+</button>\n          </div>\n\n          <p class=\"helper-text\">\n            This looks interactive already... but does it actually work yet?\n          </p>\n        </section>\n\n        <section class=\"card panel-card\">\n          <p class=\"panel-label\">NOW PLAYING</p>\n          <h3>Current vibe soundtrack</h3>\n          <div class=\"music-box\">\n            <p class=\"song-label\">Now Playing</p>\n            <p id=\"songTitle\">Late Night Drive</p>\n            <p id=\"songArtist\">by Nova Sky</p>\n          </div>\n          <button id=\"songBtn\" class=\"action-btn\">Change Song</button>\n        </section>\n\n        <section class=\"card panel-card\">\n          <p class=\"panel-label\">QUICK STATUS</p>\n          <h3>Dashboard message</h3>\n          <div class=\"output-box\">\n            <p class=\"output-label\">Status</p>\n            <p id=\"statusOutput\">Everything is calm right now.</p>\n          </div>\n          <button id=\"statusBtn\" class=\"secondary-btn\">Update Status</button>\n        </section>\n\n        <section class=\"card panel-card tips-card\">\n          <p class=\"panel-label\">TRY THIS</p>\n          <h3>Ideas to make interactive later</h3>\n          <ul>\n            <li>Make the page background change color</li>\n            <li>Show a personalized greeting</li>\n            <li>Swap the main image</li>\n            <li>Change the song title</li>\n            <li>Increase or decrease the energy level</li>\n          </ul>\n        </section>\n      </main>\n    </div>\n      <script src=\"script.js\"></script>\n\n  </body>\n</html>",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nbody {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif;\n  background: linear-gradient(135deg, #f4f1ff, #e9f7ff);\n  color: #1f2430;\n}\n\n.page-shell {\n  max-width: 1100px;\n  margin: 0 auto;\n  padding: 24px;\n}\n\n.top-bar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  gap: 16px;\n  margin-bottom: 24px;\n}\n\n.brand {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n}\n\n.brand-icon {\n  width: 52px;\n  height: 52px;\n  border-radius: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: #1f2430;\n  color: white;\n  font-size: 24px;\n}\n\n.brand h1 {\n  margin: 0;\n  font-size: 2rem;\n}\n\n.tagline {\n  margin: 4px 0 0;\n  color: #5c667a;\n}\n\n.dashboard-grid {\n  display: grid;\n  grid-template-columns: 2fr 1fr;\n  gap: 18px;\n}\n\n.card {\n  background: rgba(255, 255, 255, 0.92);\n  border: 1px solid #d9e1f2;\n  border-radius: 20px;\n  padding: 20px;\n  box-shadow: 0 10px 24px rgba(31, 36, 48, 0.08);\n}\n\n.hero-card {\n  display: grid;\n  grid-template-columns: 1.1fr 1fr;\n  gap: 20px;\n  align-items: center;\n  grid-column: 1 / -1;\n}\n\n.eyebrow,\n.panel-label,\n.output-label,\n.song-label {\n  margin: 0 0 8px;\n  font-size: 0.78rem;\n  font-weight: bold;\n  letter-spacing: 0.08em;\n  color: #6b7280;\n}\n\n.hero-card h2,\n.panel-card h3 {\n  margin-top: 0;\n  margin-bottom: 10px;\n}\n\n.hero-card h2 {\n  font-size: 2rem;\n}\n\n.hero-card p {\n  line-height: 1.5;\n}\n\n.hero-actions {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 10px;\n  margin-top: 18px;\n}\n\n.hero-image-wrap img {\n  width: 100%;\n  height: 260px;\n  object-fit: cover;\n  border-radius: 18px;\n  display: block;\n}\n\n.panel-card label {\n  display: block;\n  margin-bottom: 8px;\n  font-weight: bold;\n}\n\ninput[type=\"text\"] {\n  width: 100%;\n  padding: 12px 14px;\n  border: 1px solid #c7d2e5;\n  border-radius: 12px;\n  font-size: 1rem;\n  margin-bottom: 12px;\n}\n\n.action-btn,\n.secondary-btn {\n  border: none;\n  border-radius: 12px;\n  padding: 12px 16px;\n  font-size: 0.98rem;\n  font-weight: bold;\n  cursor: pointer;\n}\n\n.action-btn {\n  background: #4f46e5;\n  color: white;\n}\n\n.secondary-btn {\n  background: #e6ecff;\n  color: #24324a;\n}\n\n.output-box,\n.music-box,\n.counter-display {\n  margin-top: 16px;\n  padding: 14px 16px;\n  background: #f7f9ff;\n  border: 1px solid #dbe4ff;\n  border-radius: 14px;\n}\n\n.output-box p,\n.music-box p,\n.counter-display p {\n  margin: 0;\n}\n\n#greetingOutput,\n#statusOutput,\n#songTitle,\n#songArtist,\n#energyValue {\n  margin-top: 6px;\n}\n\n#songTitle {\n  font-size: 1.2rem;\n  font-weight: bold;\n}\n\n#songArtist {\n  color: #5c667a;\n}\n\n.counter-row {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  gap: 12px;\n}\n\n.counter-row .secondary-btn {\n  width: 56px;\n  height: 56px;\n  font-size: 1.5rem;\n}\n\n.counter-display {\n  flex: 1;\n  text-align: center;\n}\n\n#energyValue {\n  font-size: 2rem;\n  font-weight: bold;\n}\n\n.helper-text {\n  margin-top: 14px;\n  color: #5c667a;\n  line-height: 1.4;\n}\n\n.tips-card ul {\n  margin: 10px 0 0;\n  padding-left: 20px;\n  line-height: 1.7;\n}\n\n@media (max-width: 850px) {\n  .dashboard-grid {\n    grid-template-columns: 1fr;\n  }\n\n  .hero-card {\n    grid-template-columns: 1fr;\n  }\n\n  .top-bar {\n    flex-direction: column;\n    align-items: flex-start;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "script.js",
+          "contents": "// -----------------------------\n// DOM ELEMENT HOOKS\n// -----------------------------\nconst themeBtn = document.getElementById(\"themeBtn\");\nconst messageBtn = document.getElementById(\"messageBtn\");\nconst nextImageBtn = document.getElementById(\"nextImageBtn\");\nconst submitNameBtn = document.getElementById(\"submitNameBtn\");\nconst minusBtn = document.getElementById(\"minusBtn\");\nconst plusBtn = document.getElementById(\"plusBtn\");\nconst songBtn = document.getElementById(\"songBtn\");\nconst statusBtn = document.getElementById(\"statusBtn\");\n\nconst nameInput = document.getElementById(\"nameInput\");\n\nconst moodTitle = document.getElementById(\"moodTitle\");\nconst moodDescription = document.getElementById(\"moodDescription\");\nconst vibeImage = document.getElementById(\"vibeImage\");\nconst greetingOutput = document.getElementById(\"greetingOutput\");\nconst energyValue = document.getElementById(\"energyValue\");\nconst songTitle = document.getElementById(\"songTitle\");\nconst songArtist = document.getElementById(\"songArtist\");\nconst statusOutput = document.getElementById(\"statusOutput\");\nconst pageHeading = document.querySelector(\".brand h1\");\nconst pageTagline = document.querySelector(\".tagline\");\n\n// -----------------------------\n// STATE VARIABLES\n// -----------------------------\nlet energy = 5;\nlet currentImageIndex = 0;\nlet currentSongIndex = 0;\nlet currentStatusIndex = 0;\nlet currentThemeIndex = 0;\nlet currentMessageIndex = 0;\n\n// -----------------------------\n// DATA ARRAYS\n// -----------------------------\nconst vibeImages = [\n  {\n    src: \"melancholic_night.png\",\n    alt: \"A rainy neon-lit city street at night with reflections in puddles\"\n  },\n  {\n    src: \"minimalist.png\",\n    alt: \"A bright minimalist workspace with a laptop, headphones, and clean modern architecture\"\n  },\n  {\n    src: \"vibrant.png\",\n    alt: \"A colorful party scene with laser lights and confetti\"\n  },\n  {\n    src: \"cozy.png\",\n    alt: \"A cozy desk by a rainy window with warm lighting, books, and a laptop\"\n  },\n  {\n    src: \"dreamy.png\",\n    alt: \"A soft pastel lake scene with floating candles and flowers\"\n  }\n];\n\nconst songs = [\n  {\n    title: \"Late Night Drive\",\n    artist: \"Nova Sky\",\n  },\n  {\n    title: \"Glow Up\",\n    artist: \"Pixel Hearts\",\n  },\n  {\n    title: \"Cloud Room\",\n    artist: \"Mira Moon\",\n  },\n  {\n    title: \"Weekend Replay\",\n    artist: \"The Echo Set\",\n  },\n];\n\nconst quickStatuses = [\n  \"Everything is calm right now.\",\n  \"Your focus level is rising.\",\n  \"Main character energy activated.\",\n  \"You are officially in your productive era.\",\n  \"The vibe just got brighter.\",\n  \"A small change can shift the whole page.\",\n];\n\nconst vibeMessages = [\n  \"Late night thoughts. City lights. Quiet energy.\",\n  \"Clear mind. Clean space. Focus mode activated.\",\n  \"High energy. Bright lights. Let’s go!\",\n  \"Warm lights, soft music, and a calm mind.\",\n  \"Slow moments. Soft light. Just breathe.\"\n];\n\nconst themes = [\n  {\n    background: \"linear-gradient(135deg, #f4f1ff, #e9f7ff)\",\n    title: \"Chill and Focused\",\n    headingColor: \"#1f2430\",\n    taglineColor: \"#5c667a\"\n  },\n  {\n    background: \"linear-gradient(135deg, #ffe5ec, #fff1c1)\",\n    title: \"Bright and Playful\",\n    headingColor: \"#1f2430\",\n    taglineColor: \"#5c667a\"\n  },\n  {\n    background: \"linear-gradient(135deg, #dff7e3, #dff4ff)\",\n    title: \"Fresh and Calm\",\n    headingColor: \"#1f2430\",\n    taglineColor: \"#5c667a\"\n  },\n  {\n    background: \"linear-gradient(135deg, #1f2430, #3a4052)\",\n    title: \"Late Night Mode\",\n    headingColor: \"#d1d5db\",\n    taglineColor: \"#cbd5e1\"\n  }\n];\n\n// -----------------------------\n// HELPER FUNCTIONS\n// -----------------------------\nfunction updateGreeting() {\n  const name = nameInput.value.trim();\n\n  if (name === \"\") {\n    greetingOutput.textContent = \"Hello, friend!\";\n  } else {\n    greetingOutput.textContent = \"Hello, \" + name + \"!\";\n  }\n}\n\nfunction updateEnergyDisplay() {\n  energyValue.textContent = energy;\n}\n\nfunction increaseEnergy() {\n  energy = energy + 1;\n  updateEnergyDisplay();\n}\n\nfunction decreaseEnergy() {\n  energy = energy - 1;\n\n  if (energy < 0) {\n    energy = 0;\n  }\n\n  updateEnergyDisplay();\n}\n\nfunction showNextImage() {\n  currentImageIndex = currentImageIndex + 1;\n\n  if (currentImageIndex >= vibeImages.length) {\n    currentImageIndex = 0;\n  }\n\n  vibeImage.src = vibeImages[currentImageIndex].src;\n  vibeImage.alt = vibeImages[currentImageIndex].alt;\n}\n\nfunction showNextSong() {\n  currentSongIndex = currentSongIndex + 1;\n\n  if (currentSongIndex >= songs.length) {\n    currentSongIndex = 0;\n  }\n\n  songTitle.textContent = songs[currentSongIndex].title;\n  songArtist.textContent = \"by \" + songs[currentSongIndex].artist;\n}\n\nfunction showNextStatus() {\n  currentStatusIndex = currentStatusIndex + 1;\n\n  if (currentStatusIndex >= quickStatuses.length) {\n    currentStatusIndex = 0;\n  }\n\n  statusOutput.textContent = quickStatuses[currentStatusIndex];\n}\n\nfunction showNextMessage() {\n  currentMessageIndex = currentMessageIndex + 1;\n\n  if (currentMessageIndex >= vibeMessages.length) {\n    currentMessageIndex = 0;\n  }\n\n  moodDescription.textContent = vibeMessages[currentMessageIndex];\n}\n\nfunction changeTheme() {\n  currentThemeIndex = currentThemeIndex + 1;\n\n  if (currentThemeIndex >= themes.length) {\n    currentThemeIndex = 0;\n  }\n\n  document.body.style.background = themes[currentThemeIndex].background;\n  moodTitle.textContent = themes[currentThemeIndex].title;\n  pageHeading.style.color = themes[currentThemeIndex].headingColor;\n  pageTagline.style.color = themes[currentThemeIndex].taglineColor;\n}\n\nfunction submitGreeting() {\n  updateGreeting();\n}\n\n// -----------------------------\n// EVENT LISTENERS\n// -----------------------------\nthemeBtn.addEventListener(\"click\", changeTheme);\nmessageBtn.addEventListener(\"click\", showNextMessage);\nnextImageBtn.addEventListener(\"click\", showNextImage);\nsubmitNameBtn.addEventListener(\"click\", submitGreeting);\nplusBtn.addEventListener(\"click\", increaseEnergy);\nminusBtn.addEventListener(\"click\", decreaseEnergy);\nsongBtn.addEventListener(\"click\", showNextSong);\nstatusBtn.addEventListener(\"click\", showNextStatus);\n\n// Optional: allow Enter key to submit greeting\nnameInput.addEventListener(\"keydown\", function (event) {\n  if (event.key === \"Enter\") {\n    submitGreeting();\n  }\n});\n\n// -----------------------------\n// STARTUP\n// -----------------------------\nfunction startPage() {\n  updateEnergyDisplay();\n  greetingOutput.textContent = \"Hello, friend!\";\n  statusOutput.textContent = quickStatuses[currentStatusIndex];\n  songTitle.textContent = songs[currentSongIndex].title;\n  songArtist.textContent = \"by \" + songs[currentSongIndex].artist;\n  vibeImage.src = vibeImages[currentImageIndex].src;\n  vibeImage.alt = vibeImages[currentImageIndex].alt;\n  moodDescription.textContent = vibeMessages[currentMessageIndex];\n  moodTitle.textContent = themes[currentThemeIndex].title;\n  document.body.style.background = themes[currentThemeIndex].background;\n  pageHeading.style.color = themes[currentThemeIndex].headingColor;\n  pageTagline.style.color = themes[currentThemeIndex].taglineColor;\n}\n\nstartPage();",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "dreamy.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/sem-2-test-11/uuid/4057f695-39c1-4fce-958d-79a0a94a7971.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "minimalist.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/sem-2-test-11/uuid/527c288a-e3ab-4264-ae46-d0e057f0023d.png",
+          "type": "starter",
+          "active": false
+        },
+        "6": {
+          "id": "6",
+          "name": "vibrant.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/sem-2-test-11/uuid/1da98961-27f5-498d-8362-1a8d44af40a6.png",
+          "type": "starter",
+          "active": false
+        },
+        "7": {
+          "id": "7",
+          "name": "cozy.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/sem-2-test-11/uuid/7b16f71a-819d-4370-8cd0-b30b96364b06.png",
+          "type": "starter",
+          "active": false
+        },
+        "8": {
+          "id": "8",
+          "name": "melancholic_night.png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/sem-2-test-11/uuid/f60e5537-f379-4333-851d-d6af10d845ec.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "encrypted": "false",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode",
+        "testCase"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-25 18:58:19 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-25 22:21:24 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-25 22:21:46 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Weblab2>
