@@ -169,8 +169,8 @@ module Dashboard
     # Generate digests for assets URLs which do not contain webpack hashes.
     config.assets.digest = CDO.optimize_rails_assets
 
+    # Webpack bundles are served directly from public/blockly/js.
     config.assets.precompile += %w(
-      js/*
       css/*.css
       levels/*.css
       jquery.handsontable.full.css

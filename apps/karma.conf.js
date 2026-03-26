@@ -73,7 +73,8 @@ module.exports = function (config) {
 
       // Serve ./build/karma/, our webpack bundle, as /webpack_output/
       '/webpack_output/': '/base/build/karma/',
-      '/assets/js/images/': '/base/build/karma/images/',
+      '/assets/js/': '/base/build/karma/',
+      '/blockly/js/': '/base/build/karma/',
     },
 
     preprocessors: {

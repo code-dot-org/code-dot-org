@@ -7,8 +7,16 @@ class AssetHelper
     "#{CDO.root_dir}/dashboard/public/blockly/js/manifest.json"
   end
 
+  def webpack_asset_url_prefix
+    '/blockly'
+  end
+
   def webpack_manifest
     @webpack_manifest ||= JSON.parse(File.read(webpack_manifest_path))
+  end
+
+  def normalize_webpack_asset_path(path)
+    path.sub(%r{\A/assets/js/}, '/blockly/js/')
   end
 
   #
@@ -17,7 +25,7 @@ class AssetHelper
   # When using an apps package containing optimized webpack assets, the manifest
   # must be used to locate the asset. The result may look like this:
   #
-  #   '/assets/js/cookieBannerwp0123456789aabbccddee.min.js'
+  #   '/blockly/js/cookieBannerwp0123456789aabbccddee.min.js'
   #
   # Prebuilt apps packages only contain optimized webpack assets, so if we are
   # using a prebuilt apps package then we must use the manifest.
@@ -26,7 +34,7 @@ class AssetHelper
   # lookup is skipped and the result is a valid url to an unminified, unhashed
   # asset like this:
   #
-  #   '/assets/js/cookieBanner.js'
+  #   '/blockly/js/cookieBanner.js'
   #
   # Unit tests must not assume the presence of a webpack manifest. Therefore,
   # unit tests which need this method to return a value without raising must
@@ -35,10 +43,10 @@ class AssetHelper
   def webpack_asset_path(asset)
     using_prebuilt_apps = !CDO.use_my_apps
     use_manifest = CDO.optimize_webpack_assets || using_prebuilt_apps
-    return "/assets/#{asset}" unless use_manifest
+    return "#{webpack_asset_url_prefix}/#{asset}" unless use_manifest
     path = webpack_manifest[asset]
     raise "Invalid webpack asset name: '#{asset}'" unless path
-    path
+    normalize_webpack_asset_path(path)
   end
 end
 

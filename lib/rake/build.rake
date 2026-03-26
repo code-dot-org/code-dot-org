@@ -159,23 +159,23 @@ namespace :build do
         # Quick check to see if there are old assets to clean.
         # This saves about 60 seconds during UI test setup in CI.
         #
-        # We use webpack manifest files as a proxy because a new one is added
-        # any time any js file changes, thus it is very likely to change on
-        # every build. If there are fewer than 2 manifest files, we can safely
+        # We use sprockets manifest files as a proxy because a new one is added
+        # on every successful precompile. If there are fewer than 2 manifest
+        # files, we can safely
         # guess that there are no old asset versions to clean, so we can skip
         # the expensive assets:clean task.
         #
         # This assumption is "safe" because if we are wrong and there are old
         # assets to clean, the problem will be corrected by the next run of
-        # assets:clean after the next js file is modified.
-        manifest_count = Dir.glob(dashboard_dir('public/assets/js/manifest-*.json')).size
+        # assets:clean after the next successful precompile.
+        manifest_count = Dir.glob(dashboard_dir('public/assets/.sprockets-manifest-*.json')).size
 
         # rake assets:clean keeps 2 copies of rails assets by default. To future
         # proof against this default changing, set the number explicitly here.
         ASSETS_TO_KEEP = 2
 
         if manifest_count < ASSETS_TO_KEEP
-          ChatClient.log "Skipping assets:clean - only #{manifest_count} webpack manifest(s) found"
+          ChatClient.log "Skipping assets:clean - only #{manifest_count} sprockets manifest(s) found"
         else
           ChatClient.log 'Cleaning <b>dashboard</b> assets...'
           RakeUtils.rake "assets:clean[#{ASSETS_TO_KEEP}]"

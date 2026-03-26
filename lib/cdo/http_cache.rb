@@ -166,6 +166,14 @@ class HttpCache
             cookies: 'none',
             include_marketing_router_lambda: true,
           },
+          {
+            # Webpack assets are served directly from Dashboard's apps package.
+            path: '/blockly/js/*',
+            proxy: 'dashboard',
+            headers: [],
+            cookies: 'none',
+            include_marketing_router_lambda: true,
+          },
           # For .png images, don't forward any cookies or additional headers.
           {
             path: '/*.png',
@@ -308,7 +316,7 @@ class HttpCache
           },
           {
             # For static-asset paths, don't forward any cookies or additional headers.
-            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/media/* /media),
+            path: STATIC_ASSET_EXTENSION_PATHS + %w(/blockly/js/* /blockly/media/* /media),
             headers: [],
             cookies: 'none'
           },

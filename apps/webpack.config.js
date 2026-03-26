@@ -20,6 +20,8 @@ const {StatsWriterPlugin} = require('webpack-stats-plugin');
 const circularDependencies = require('./circular_dependencies.json');
 const envConstants = require('./envConstants');
 
+const WEBPACK_ASSET_BASE_PATH = '/blockly/js/';
+
 if (envConstants.PROFILE_APPS_BUILD) {
   console.log(
     'Webpack configured with NODE_OPTIONS:',
@@ -313,7 +315,7 @@ const WEBPACK_BASE_CONFIG = {
         generator: {
           filename: '[name]wp[contenthash:20][ext]',
           outputPath: 'images/', // build/package/js/images/
-          publicPath: '/assets/js/images/', // Dashboard assets path
+          publicPath: `${WEBPACK_ASSET_BASE_PATH}images/`, // Dashboard assets path
         },
       },
       {
@@ -323,7 +325,7 @@ const WEBPACK_BASE_CONFIG = {
         generator: {
           filename: '[name]wp[contenthash:20][ext]',
           outputPath: 'json/', // build/package/js/json/
-          publicPath: '/assets/js/json/', // Dashboard assets path
+          publicPath: `${WEBPACK_ASSET_BASE_PATH}json/`, // Dashboard assets path
         },
       },
 
@@ -455,7 +457,7 @@ function createWebpackConfig({
   const WEBPACK_CONFIG = {
     output: {
       path: path.resolve(__dirname, 'build/package/js/'),
-      publicPath: '/assets/js/',
+      publicPath: WEBPACK_ASSET_BASE_PATH,
       // When minifying, this generates a 20-hex-character hash.
       filename: `[name]${minify ? 'wp[contenthash].min.js' : '.js'}`,
     },
