@@ -56,6 +56,7 @@ export default class AddResourceDialog extends Component {
     handleClose: PropTypes.func.isRequired,
     existingResource: resourceShape,
     courseVersionId: PropTypes.number,
+    forJitPl: PropTypes.bool,
   };
 
   constructor(props) {
@@ -153,7 +154,10 @@ export default class AddResourceDialog extends Component {
         )}
         <form id="create-resource-form" onSubmit={this.saveResource}>
           <RailsAuthenticityToken />
-          {this.props.courseVersionId && (
+          {this.props.forJitPl && (
+            <input type="hidden" name="forJitPl" value="true" />
+          )}
+          {!this.props.forJitPl && this.props.courseVersionId && (
             <input
               type="hidden"
               name="courseVersionId"

@@ -1,0 +1,61 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-25T21:14:38.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Priya's Music Webpage\r\n\r\nPriya wants to make a webpage about her favorite music but doesn't know how to write HTML or CSS. Instead, they've provided you with a description and a potential screenshot:\r\n\r\n> \"I want to make a webpage about my favorite music because I love sharing what I'm listening to with other people. I want each genre to have its own title with the artists listed underneath. The titles should look different from the artist names — maybe a fancier font. And the artist names should be a warm color, like gold or orange.\"\r\n\r\n<img src=\"https://images.code.org/85d3712fe1f9011a73ed96f020d83db6-image-1774473713632.png\" style=\"width: 30%\" />\r\n\r\n&nbsp;\r\n\r\n**Do This:**\r\n1) Use AI tutor to help build this page. Ask it to make changes to this page step-by-step.\r\n    - Be specific about the elements, sizes, borders, and which elements they apply to\r\n2) Keep prompting until the webpage it's \"close enough\" to their vision!\r\n    - It doesn't have to perfectly match the image, but try to get it close to the style and layout!\r\n\r\nOnce you've compared your result to Priya's vision: press the Continue button!\r\n\r\n**Hint:** This puzzle involves `<ul>` and `<h2>` tags in HTML, and the `font-family` and `color` properties in CSS.\r\n",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Do not use relative units for typography and spacing. Use `px` instead.",
+        "buildHTML": "- Do not link to a style.css page. Put all styles within a `<style>` tag in the head"
+      }
+    },
+    "display_name": "Priya's Garden Page",
+    "bubble_choice_description": "Help Priya make a webpage about her favorite music: \"I want to make a webpage about my favorite music because I love sharing what I'm listening to with other people.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "My Favorite Genres\n\nR&B\nBeyoncé\nSZA\nFrank Ocean\nDaniel Caesar\n\nHip-Hop\nKendrick Lamar\nTyler, the Creator\nNoname\nLittle Simz\n\nLatin\nBad Bunny\nRosalía\nKali Uchis\nJ Balvin",
+          "active": true,
+          "folderId": "0"
+        }
+      },
+      "openFiles": [
+        "1"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMosu34yEhKqJBIHmQ8A\n1vkZrxnu2tDvYcaWzLHkJpa3n/+QKwP/nGDJiUEh3xrKg3UsnGUvjbav23cM\nImm0ix5NnEmRF40xel3ciNk64Y9wsHxKZhDnoRpLAy31S1d3yXetTX4ueq56\njefI1zhr234wTOuFU+1I8vvdfeoEEU7edcX2WaOFaaIH/Y0mhuuwu8aXLJZd\nwD810938kxy/8PVmtB27UKRsNXBVd6Ol/2IXUza3ZZd10lVFY8GD5iebGyUz\n2NSrRnPNANhAMzwitXcoKtVUqh4odEHTdn1ZjTLV/yVRvHTVS4ozXoeVaMor\nHmedfwVAWWDT+Kat9KGGkx4GdrKfjD629SZM8yXEoRkiziXZx8wvzowD5kTU\nRWacZQtczW2HPcixcn3EM+ec6qo+ipkxgAH86sT01h0F8zFpu0xEEmMbk0w6\nZQBHwxDxf32coIgVMLbVpxKwSIxpXm0FCcqcZ2YTpcpIaDyYvYki86M6gJhx\nYoyj+yLUCZqhRgopB3NCJkujoHIpy3qgwvxCooAlkEu+pusGXawmd7QlHwUC\nNciIBtX/vYQXcRwknS+0a12hfvMVDSDy6AoWk50xpJKxlak1Xazz4z3XM4Bu\nAX8HjNVn274fswfguO98Aw2p4hoD4tOivQvAIFF178M2m81bxEdceubn4UmL\nkVYOAkCX4ALsmXTp1KUgDiVtYI4/TQsA1FbY3QTrtO1momvcN2f2d1h1e1+N\nyFHEg3gQvdzczEK7r47Wu5OpowJjmq5WKYtf4g8GEoeBgnniofTRayqR3lIw\n1uywT5S22SIsua9o0B9mYTb/YhvF9EWKezCpXCMhF9Ud3MLz8OeU1vKRjuRp\nexpG7732TyOtT2KXRcXV5JjoYUqNqDu/2pn+ODHRHKGLmndQiztHPrJp9MX7\nDUBZqOUXOUwcsyFioZ4tTHtj/VP9UNea6MzPV2Z5cNmnBaEHcSFWsHsCL4yK\na2DVCgTQuzqgIySxfhBZPG98NNT8uXqakEWx3lbENt0469jKcbJ0IAb8SZ5A\ndBuRf4F6Rg6uCpPy6q1/qgKaBNoWHA3VsL9ghiFa2s+Yn21DdGNFQJ/7A2AB\nItbcm+Ed6MhVj8BVxAcEhA6axyww6OYNkYG0P+ZOVNBQKDMOcICjrCTSDg0s\ntf5ollrv2+eI1nC0g2AQBTkN3a1C00p9cRGEbR7IQuQIunDW1dUqYrfjf6Yx\nWPnEoOlNnUHFXOUZDUuA4cnRS4np8mCoH+7Dd/Rm08til/lKkoG/MNPPqRt1\n3iIib09ISl255IDSTbAL70mAVWG9Bi9g0UgGLtV0ChiCqXAjJnmmYHkpaPq3\nJ9669CJkWg6+vrsaTHliIUnDS6QeDe+AOxkrfznIYAQfJU27W5QKF7dxf+Fu\np2d03DUroN+l9mdkX/NM/GdEdYEUhVk00TB343ibgmH2NehMqtm75iWeDdz1\nFQrub4JYz5mhmrcIIqWmOYTqlWHIzxCJKWQxomBYVIO05z61JosmpgCzYQ42\nW3cPX+I9RHy+dKrcKfBuuKug7XrOHqQyoQideH+GDH56fyIJbzrrpETJ+7kw\n06bFo9eQ/8/RPwAv0285PyuH2TJQjm15xJeFNkCAqiycwozMyfvFebcwHqls\n+98ajN7PQLHjc8TdcKihj5SDHkazaGsrzK6PETvNXHebf5o+lLncO8SuClAz\npOqsNGJ67SfJo17Hb7UsXLXKgcFOmOnZpVUSNy4lNPuDis9S4whsVRq1H9oH\nf/yHbFoKawI1Jmc6ewSBXNC68EK9/QQ2URKxxFOJXlVtWxu1Cs4azEju\n"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-25T21:14:38.710+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-11b\\\"\"],\"cloned_from\":\"hoai-web-design-v2-11b\"},{\"changed_at\":\"2026-03-25 21:17:13 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:19:17 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:20:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:20:19 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 21:22:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 22:14:42 +0000\",\"changed\":[\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

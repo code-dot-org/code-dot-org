@@ -1,0 +1,68 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-25T23:17:47.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Eli's Favorite Book Page\r\n\r\nIn this level, we're going to help Eli, who is struggling with his use of AI. Here is what he says:\r\n\r\n*\"The content is all there but the page looks so boring and plain. I wanted it to feel like the book - dark and mysterious with a bit of magic to it. It just looks like a default webpage right now.\"*\r\n\r\n**Do This:**\r\n1) Read Eli's `vision.md` file in the file explorer to understand what he asked for\r\n2) Decide how you want to fix it. You can update the `vision.md` file to be more specific and have AI Tutor regenerate the page, or go step-by-step with AI Tutor to fix the issues.\r\n\r\nKeep working with AI Tutor until you think the webpage addresses Eli's feedback. Once it does: press the Continue button!\r\n\r\n**Hint:** Think about what's missing from Eli's vision - he described the content well but left out details about how the page should look. What specific style properties could you add to capture \"dark and mysterious\"?",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "hint",
+        "explainCode",
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "buildCSS": "- Always add new CSS to a `<style>` tag in the head of the document. Do not use a separate file.",
+        "buildHTML": "- Do not link a `style.css` file. Put all CSS updates in the head of the document\n- Do not use IDs or classes\n- Do not generate any links"
+      }
+    },
+    "display_name": "Eli's Favorite Book Page",
+    "bubble_choice_description": "Help Eli wrangle AI tools to help him with his webpage: \"The content is all there but the page looks so boring and plain.\"",
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <style>\n      body {\n        font-family: sans-serif;\n        padding: 10px;\n        background-color: #ffffff;\n        color: #000000;\n      }\n      h1 {\n        font-size: 20px;\n      }\n      h2 {\n        font-size: 15px;\n      }\n      p {\n        font-size: 12px;\n      }\n      ol {\n        padding: 10px;\n      }\n      li {\n        margin: 5px;\n      }\n    </style>\n  </head>\n  <body>\n    <h1>Percy Jackson and the Olympians</h1>\n    <p>Percy Jackson and the Olympians is a fantasy series by Rick Riordan. It follows Percy Jackson, a twelve-year-old who discovers he is the son of a Greek god. I like it because I get to learn about Greek mythology but it's still funny and I like the characters.</p>\n    <h2>Books in the Series</h2>\n    <ol>\n      <li>The Lightning Thief</li>\n      <li>The Sea of Monsters</li>\n      <li>The Titan's Curse</li>\n      <li>The Battle of the Labyrinth</li>\n      <li>The Last Olympian</li>\n    </ol>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "vision.md",
+          "contents": "I want a page about my favorite book series, Percy Jackson and the Olympians by Rick Riordan.\n\nThe page should have a title at the top, a paragraph describing the series, and a list of the five books in order.",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2"
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-25T23:17:47.377+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-12a\\\"\"],\"cloned_from\":\"hoai-web-design-v2-12a\"},{\"changed_at\":\"2026-03-25 23:19:46 +0000\",\"changed\":[\"long_instructions\",\"display_name\",\"bubble_choice_description\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-25 23:29:22 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>
