@@ -150,8 +150,9 @@ export async function getTurnstileToken(): Promise<string> {
     console.groupCollapsed(
       'Option 2: Keep DevTools open — ignore anonymous scripts (recommended for developers)'
     );
-    console.log('Step 1: Open DevTools Settings — the most reliable way is to press F1 while DevTools is focused.');
-    console.log('        (Alternatively: click the three-dot ⋮ menu at the top-right of DevTools, then "Settings".)');
+    console.log('Step 1: Open DevTools Settings — press F1 while DevTools is focused.');
+    console.log('        IMPORTANT: There are TWO gear icons in DevTools. Do NOT click the Console settings gear');
+    console.log('        (the smaller one inside the Console panel). Use F1 to open the correct main Settings panel.');
     console.log('Step 2: In the Settings panel, look at the LEFT sidebar and scroll down until you see "Ignore List".');
     console.log('        (In older Chrome versions this was called "Blackboxing" — same setting, different name.)');
     console.log('Step 3: Make sure "Enable Ignore Listing" is checked (this is the master switch).');
