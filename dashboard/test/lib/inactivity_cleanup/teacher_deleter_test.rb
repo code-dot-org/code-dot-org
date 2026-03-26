@@ -142,8 +142,8 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
       it_behaves_like 'deletes account'
     end
 
-    context 'when teacher has been signed in longer than allowed period' do
-      let!(:account) {create(:teacher, current_sign_in_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago)}
+    context 'when teacher has not signed in since the inactivity threshold' do
+      let!(:account) {create(:teacher, current_sign_in_at: InactivityCleanup::INACTIVITY_THRESHOLD.ago - 1.minute)}
 
       it_behaves_like 'deletes account'
     end
@@ -264,8 +264,8 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
       it_behaves_like 'ignores account'
     end
 
-    context 'when deletion warning email was sent earlier than grace period threshold' do
-      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago}
+    context 'when deletion warning email was sent but we are still within the grace period' do
+      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago + 1.minute}
 
       it_behaves_like 'ignores account'
     end
