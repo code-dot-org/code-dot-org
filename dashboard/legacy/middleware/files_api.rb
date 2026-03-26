@@ -456,7 +456,11 @@ class FilesApi < Sinatra::Base
             end
           end
           if parsed.is_a?(Hash) && parsed.key?('source')
-            [ShareFiltering.extract_text_from_js(parsed['source']), parsed['name'], parsed['description']].reject(&:empty?).join(' ')
+            [
+              ShareFiltering.extract_text_from_js(parsed['source']),
+              parsed['name'],
+              parsed['description'],
+            ].compact.map(&:to_s).reject(&:empty?).join(' ')
           else
             body
           end
