@@ -182,7 +182,6 @@ export async function getTurnstileToken(): Promise<string> {
       sitekey: getSiteKey(),
       callback: (token: string) => {
         clearTimeout(timeout);
-        activeWidgetId = null;
         resolve(token);
       },
     });
