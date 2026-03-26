@@ -33,6 +33,7 @@ export const lintFoormKeys = text => {
         message: 'Question names should only contain letters and underscores.',
         from: match.index,
         to: match.index + match[0].length,
+        severity: 'error',
       });
     }
   }
