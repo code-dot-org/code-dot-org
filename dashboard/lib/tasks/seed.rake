@@ -497,6 +497,7 @@ namespace :seed do
   timed_task_with_logging course_offerings_ui_tests: :environment do
     %w(
       ui-test-artist
+      ui-test-csf
       ui-test-course
       ui-test-csa-family-script
       ui-test-original-course

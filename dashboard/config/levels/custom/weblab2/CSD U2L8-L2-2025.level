@@ -75,8 +75,21 @@
       ]
     },
     "encrypted_exemplar_sources": "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\ngvdE\n",
-    "project_template_level_name": "CSD U2L8-L2-template-2025"
+    "project_template_level_name": "CSD U2L8-L2-template-2025",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "ask",
+        "hint",
+        "debug",
+        "example",
+        "explainCode",
+        "documentation",
+        "pseudocode"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
   },
-  "audit_log": "[{\"changed_at\":\"2026-01-26 01:25:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:26:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:29:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:40:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-01-26 01:25:28 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:26:05 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:29:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-01-26 01:40:56 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2026-03-25 15:46:59 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Weblab2>
