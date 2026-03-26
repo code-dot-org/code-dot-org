@@ -431,8 +431,6 @@ class StudentSnapshotsControllerTest < ActionController::TestCase
   end
 
   # Baseline query count without lesson insight caching.
-  # This number should decrease once caching is implemented (Stage 2).
-  # Run with: bundle exec spring testunit ./test/controllers/student_snapshots_controller_test.rb
   test "lesson_insight baseline query count" do
     teacher = create(:authorized_teacher)
     student = create(:student)
