@@ -60,6 +60,11 @@ interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
   attachments?: boolean;
   onUpdateLinting?: (errors: Array<{message: string}>) => void;
+  additionalAnnotations?: (text: string) => Array<{
+    message?: string;
+    from?: number;
+    to?: number;
+  }>;
   lintConfig?: {
     es5?: boolean;
     disableRecommendedJsConfig?: boolean;
@@ -185,6 +190,34 @@ function getErrorMessages(diagnostics: Diagnostic[]): Array<{message: string}> {
     .map(diagnostic => ({message: diagnostic.message}));
 }
 
+function getAdditionalDiagnostics(
+  state: EditorState,
+  additionalAnnotations: NonNullable<Options['additionalAnnotations']>
+): Diagnostic[] {
+  const annotations = additionalAnnotations(state.doc.toString()) || [];
+
+  return annotations
+    .map(annotation => {
+      const from =
+        annotation.from === undefined
+          ? 0
+          : Math.max(0, Math.min(annotation.from, state.doc.length));
+      const to =
+        annotation.to === undefined
+          ? from
+          : Math.max(0, Math.min(annotation.to, state.doc.length));
+      const message = annotation.message || 'Lint error';
+
+      return {
+        from,
+        to: Math.max(from, to),
+        message,
+        severity: 'error' as const,
+      };
+    })
+    .filter(diagnostic => diagnostic.from <= diagnostic.to);
+}
+
 function resolvePreviewElement(
   preview: string | Element | undefined,
   node: HTMLTextAreaElement
@@ -205,6 +238,7 @@ function resolvePreviewElement(
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
  * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
+ * @param {function} [options.additionalAnnotations] - optional lint annotation callback; receives editor text and returns additional diagnostics to display.
  * @param {Object} [options.lintConfig] - configuration options for linting (only applicable for javascript mode).
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
@@ -224,6 +258,7 @@ function initializeCodeMirror6(
     callback,
     attachments,
     onUpdateLinting,
+    additionalAnnotations,
     lineNumberFormatter,
     lineHighlightClassName,
     themeStyles,
@@ -233,7 +268,18 @@ function initializeCodeMirror6(
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
   const languageExtension = getLanguageExtension(mode);
+  const lintExtensions: Extension[] = [];
   const lintExtension = getLintExtension(mode, options.lintConfig);
+  if (lintExtension) {
+    lintExtensions.push(lintExtension);
+  }
+  if (additionalAnnotations) {
+    lintExtensions.push(
+      linter(view =>
+        getAdditionalDiagnostics(view.state, additionalAnnotations)
+      )
+    );
+  }
   const errorLineHighlightField = lineHighlightClassName
     ? createErrorLineHighlightField(lineHighlightClassName)
     : null;
@@ -330,7 +376,7 @@ function initializeCodeMirror6(
     ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
     ...(errorLineHighlightField ? [errorLineHighlightField] : []),
-    ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
+    ...(lintExtensions.length ? [...lintExtensions, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {
         dropListeners.forEach(listener => listener(event));
