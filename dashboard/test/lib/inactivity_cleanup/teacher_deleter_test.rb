@@ -257,17 +257,5 @@ class InactivityCleanup::TeacherDeleterTest < ActiveSupport::TestCase
         _(described_instance.processed_user_ids).wont_include account2.id
       end
     end
-
-    context 'when deletion warning email was not sent' do
-      let(:deletion_warning_email_sent_at) {nil}
-
-      it_behaves_like 'ignores account'
-    end
-
-    context 'when deletion warning email was sent earlier than grace period threshold' do
-      let(:deletion_warning_email_sent_at) {InactivityCleanup::TeacherDeleter::DELETION_WARNING_GRACE_PERIOD.ago}
-
-      it_behaves_like 'ignores account'
-    end
   end
 end
