@@ -97,15 +97,4 @@ def curriculum_url(resource)
   CDO.curriculum_url(request.locale, resource)
 end
 
-def verify_signature(token)
-  request.body.rewind
-  payload_body = request.body.read
-  signature = 'sha1=' + OpenSSL::HMAC.hexdigest(
-    OpenSSL::Digest.new('sha1'),
-    token,
-    payload_body
-  )
-  Rack::Utils.secure_compare(signature, request.env['HTTP_X_HUB_SIGNATURE'])
-end
-
 Dir.glob(pegasus_dir('helpers/*.rb')).sort.each {|path| require path}
