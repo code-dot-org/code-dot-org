@@ -22,4 +22,10 @@ FactoryBot.define do
     sequence(:display_name) {|n| "JIT PL Concept #{n}"}
     text_content {"Some concept text content"}
   end
+
+  factory :jit_pl_misconception do
+    association :jit_pl_concept
+    sequence(:name) {|n| "jit-pl-misconception-#{n}"}
+    text_content {"Some misconception text content"}
+  end
 end
