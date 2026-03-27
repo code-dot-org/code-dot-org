@@ -1,13 +1,14 @@
 <Weblab2>
   <config><![CDATA[{
+  "published": true,
   "game_id": 74,
   "created_at": "2026-02-24T18:12:24.000Z",
   "level_num": "custom",
   "user_id": 18603,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "##Designer Mindset\r\n###Step 1: Generate\r\n- Upload your wireframe from Lesson 10. Prompt AI with structured recipe:\r\n\t- “_Generate HTML for a page with [header], [nav bar items], [main content area], [footer]._”\r\n- Compare AI output to wireframe.\r\n- Use Revision Checklist to record matches/mismatches (_in Activity Guide_).\r\n- Save as **Version 1**\r\n",
-    "submittable": "false",
+    "long_instructions": "# Wireframes → Webpages\r\n\r\n**Your Goal:** Use your wireframe and a planned prompt to generate the webpages with AI, then refine it to better match your design.\r\n\r\n:::details [**Step 1: Plan Your Prompt**]\r\n\r\n- Open `prompt.md` and using your wireframe from last class to help you complete the ROPE sections to plan your prompt.\r\n- If you don’t have a wireframe, use the Sample Wireframe provided in the file panel.\r\n:::\r\n\r\n:::details [**Step 2: Generate with AI**]\r\n\r\n- Add your wireframe from your Backpack\r\n  - Add the Sample Wireframe if you don't have a wireframe from last class\r\n- Use your `prompt.md` to write your prompt\r\n- Run your prompt and review the result.\r\n- Accept the output when you're ready to move forward. \r\n\r\n**Make sure your prompt:**\r\n- Clearly describes the layout and structure  \r\n- Includes key constraints from your wireframe  \r\n- Considers at least one accessibility need (POUR)\r\n\r\n:::\r\n\r\n:::details [**Step 3: Compare Your Design to the Output**]\r\n\r\n- Record in your Activity Guide:\r\n  - Where the AI output **matches** your wireframe\r\n  - Where the AI output **does not match** your wireframe  \r\n- Focus on layout and structure.\r\n\r\n:::\r\n\r\n:::details [**Step 4: Focus Your Revision**]\r\n\r\n- Choose **ONE mismatch** to improve.\r\n  - Describe what should be different in your webpage (update this in `prompt.md`).\r\n  - Plan how you will update your prompt  \r\n\r\n- Then:\r\n  - Prompt AI to revise your layout  \r\n  - Refine until your layout better aligns with your wireframe\r\n  - Revert to a previous version if a revision moves your layout further from your wireframe\r\n  - Answer the reflection questions in your Activity Guide \r\n\r\n:::\r\n\r\n\r\n:::details [**If Time Allows**]\r\n\r\n- Choose a second mismatch and refine it  \r\n- Improve one accessibility issue using POUR  \r\n- Try a different prompt (more detail, clearer structure, or added context)  \r\n\r\n:::",
+    "submittable": "true",
     "disable_edit_run_for_submission": "false",
     "hide_share_and_remix": "false",
     "widget_view": "false",
@@ -25,10 +26,64 @@
       "codeEditableAfterSubmit": false,
       "allowMultipleAttempts": false
     },
-    "project_template_level_name": "ai-generated-design-lesson11-template-test_2026",
-    "name_suffix": "_2026"
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildHTML",
+        "buildCSS",
+        "ask",
+        "debug"
+      ],
+      "answerTypeCustomizations": {
+      }
+    },
+    "start_sources": {
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "Sample_Wireframe",
+          "parentId": "0",
+          "open": false
+        }
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <body>\n    Content goes here!\n  </body>\n</html>\n  ",
+          "active": false,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "style.css",
+          "contents": "Add your changes to style.css",
+          "folderId": "0",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "prompt.md",
+          "contents": "**1. What is the goal?**\n\n\n**2. What are the constraints?**\n\n\n**3. What are the edge cases?**",
+          "folderId": "0",
+          "active": true
+        },
+        "4": {
+          "id": "4",
+          "name": "Petes_Pizza.png",
+          "contents": "",
+          "folderId": "1",
+          "url": "/level_starter_assets/ai-generated-design-lesson11-level1_2026/uuid/9a2aed95-57ea-4976-b29e-552793457fae.png",
+          "type": "starter",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "3"
+      ]
+    },
+    "teacher_markdown": "### Teacher Tips\r\n\r\n- **Watch for vague prompts**\r\n  Students may write very general prompts (e.g., “create my webpage”).  \r\n  Encourage them to use their ROPE plan to add **specific layout details and constraints**.  \r\n  If outputs are off, prompt them with: *“What part of your wireframe did the AI not understand?”*\r\n\r\n- **Keep debugging focused**\r\n  Students may try to fix everything at once or repeatedly regenerate full pages.  \r\n  Redirect them to focus on **one mismatch at a time** and make a targeted prompt revision.  \r\n  Ask: *“What is the one change you’re trying to make in this version?”*\r\n\r\n- **Support interpretation of AI output**\r\n  Some students may accept outputs without evaluating them.  \r\n  Push them to compare carefully: *“Where does this match your wireframe? Where does it not?”*  \r\n  If stuck, have them describe their wireframe out loud or ask AI to describe it, then refine from there.\r\n\r\n\r\n- **Support students when AI misinterprets the wireframe**\r\n  If AI isn’t generating what students expect, have them upload their wireframe and prompt AI to describe the layout. Then, have students edit that description and use it to build a clearer prompt. This helps students make their prompts more specific and aligned to their design."
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:24.669+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson11-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson11-level1_2025\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-02-24T18:12:24.669+00:00\",\"changed\":[\"cloned from \\\"ai-generated-design-lesson11-level1_2025\\\"\"],\"cloned_from\":\"ai-generated-design-lesson11-level1_2025\"},{\"changed_at\":\"2026-03-19 16:21:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 16:35:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 17:56:15 +0000\",\"changed\":[\"long_instructions\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 17:59:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:03:06 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:03:40 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:04:10 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:10:49 +0000\",\"changed\":[\"long_instructions\",\"submittable\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 18:18:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 21:00:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 21:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 21:16:02 +0000\",\"changed\":[\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-19 21:27:58 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2026-03-20 03:10:30 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab2>

@@ -1,4 +1,5 @@
 RAILS_ENV: development
+dashboard_workers: 0
 healthChecks:
   # Disable this if you want pods to start even if they fail an HTTP health check
   # can be useful for inspecting what's going wrong.
@@ -6,9 +7,16 @@ healthChecks:
 services:
   redis:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password:
   mysql:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password:
   minio:
     enabled: true
+    # skaffold development profile will auto-generate, see cdo-local-secrets:
+    # password: 
+
 user:
   allowSudo: true

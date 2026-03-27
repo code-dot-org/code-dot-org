@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "29ddda12-cb2b-4361-8b6a-ae84fc3f6132",
+          "notice": "Professional Learning for Thinking Critically About AI",
+          "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+          "link": "https://studio.code.org/courses/self-paced-pl-thinkingcriticallywithai-2026/units/1",
+          "type": "collaborate",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Let's Go!"
+        }
+      ],
       "content_area": "curriculum_6_8",
       "curriculum_umbrella": "CSD",
       "has_unnumbered_lessons": true,
@@ -21,7 +33,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-10 18:49:34 UTC",
+    "serialized_at": "2026-03-24 23:38:53 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1015,7 +1027,7 @@
       "key": "fc7375c9-7233-4a05-8180-a500df222549",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recap Lesson 1 and hypothesize how AI learns from human input.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did the AI dancer learn what a 'preppy' or 'fire' dance move looked like?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that AI doesn't learn like humans; it processes patterns from data provided by people. If students struggle, prompt them to think about the \"preppy\" or \"fire\" styles they saw in the previous lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recap Lesson 1 and hypothesize how AI learns from human input.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How did the AI dancer learn what a 'preppy' or 'fire' dancer looked like?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students realize that AI doesn't learn like humans; it processes patterns from data provided by people. If students struggle, prompt them to think about the \"preppy\" or \"fire\" styles they saw in the previous lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "fc7375c9-7233-4a05-8180-a500df222549",

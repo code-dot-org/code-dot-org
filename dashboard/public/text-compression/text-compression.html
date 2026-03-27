@@ -88,20 +88,8 @@
     #data .error {
       color: #c00;
     }
-    mark, .CodeMirror-gutters {
+    mark {
       background-color: #ff9;
-    }
-    .CodeMirror-linenumber {
-      color: #000;
-      text-align: center;
-    }
-    .CodeMirror {
-      font-size: 14pt;
-      line-height: 1.4em;
-      min-height: 200px;
-    }
-    .dict-error {
-      background-color: #f99;
     }
     #selfEnteredPoem {
       box-sizing: border-box;
@@ -159,21 +147,5 @@
     </table>
   </div>
   <script type="text/javascript" src="/text-compression/text-compression.js"></script>
-  <!--[if IE 9]>
-  <script>
-    function fixIE9 () {
-      var $widgetMain = $('#widgetMain');
-      $('#widgetMainWrapper')
-          .css('position', 'absolute')
-          .css('top', $widgetMain.position().top)
-          .css('width', $widgetMain.width())
-          .css('height', $widgetMain.height());
-      $('.CodeMirror').height($('#symbolEditorWrapper').height());
-      editor.refresh();
-    }
-    $(document).ready(fixIE9);
-    $(window).resize(fixIE9);
-  </script>
-  <![endif]-->
 </body>
 </html>

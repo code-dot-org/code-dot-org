@@ -11,8 +11,8 @@ module LangfuseHelper
     end
   end
 
-  def self.add_dataset_item(dataset_item)
-    response = client.add_dataset_item(dataset_item)
+  def self.tutor_add_dataset_item(dataset_item)
+    response = tutor_client.add_dataset_item(dataset_item)
 
     if response.code == 200
       {status: :ok, json: JSON.parse(response.body)}
@@ -21,12 +21,46 @@ module LangfuseHelper
     end
   end
 
-  def self.client
-    LangfuseClientHelper::Client.new(
-      CDO.langfuse_secret_key,
-      CDO.langfuse_public_key
+  # Sends a trace + generation to the TA Langfuse project for a lesson insight call.
+  # Input is keyed identifiers only (not the system prompt) to avoid logging student data.
+  def self.trace_lesson_insight(model:, teacher_id:, lesson_id:, lesson_name:, unit_id:, unit_name:, section_id:, student_id:, system_prompt:, output:, usage:, start_time:, end_time:)
+    ta_client.create_trace_and_generation(
+      trace_name: "lesson-insight",
+      generation_name: "llm-call",
+      model: model,
+      user_id: teacher_id&.to_s,
+      input: {lesson_id: lesson_id, unit_id: unit_id, section_id: section_id},
+      output: output,
+      usage: {
+        input: usage&.dig('prompt_tokens'),
+        output: usage&.dig('completion_tokens'),
+        unit: "TOKENS",
+      },
+      metadata: {
+        lesson_id: lesson_id,
+        lesson_name: lesson_name,
+        unit_id: unit_id,
+        unit_name: unit_name,
+        section_id: section_id,
+        student_id: student_id,
+        teacher_id: teacher_id,
+        system_prompt: system_prompt,
+      },
+      tags: ["lesson-insight"],
+      start_time: start_time,
+      end_time: end_time,
     )
+  rescue => exception
+    Rails.logger.warn("LangfuseHelper.trace_lesson_insight failed: #{exception.message}")
   end
 
-  private_class_method :client
+  def self.tutor_client
+    LangfuseClientHelper::Client.new(CDO.tutor_langfuse_secret_key, CDO.tutor_langfuse_public_key)
+  end
+
+  def self.ta_client
+    LangfuseClientHelper::Client.new(CDO.ta_langfuse_secret_key, CDO.ta_langfuse_public_key)
+  end
+
+  private_class_method :tutor_client, :ta_client
 end

@@ -1,0 +1,14 @@
+name 'designing-reliable-apps-postassessment-q9_2025'
+
+question 'A developer fetches an array of 8 book objects and writes JavaScript that loops through the array and creates a <div> for each book. Before the fetch runs, how many book <div> elements exist in the HTML file?'
+
+right 'Zero — the book divs are generated dynamically by JavaScript, not written in the HTML file'
+wrong 'Eight — the HTML file must contain placeholder divs that JavaScript fills with content'
+wrong 'One — the HTML file contains a single template div that JavaScript copies for each book'
+wrong 'It depends on how many books were returned by the API on the previous page load'
+
+allow_multiple_attempts true
+
+teacher_markdown <<MARKDOWN
+Lesson 6
+MARKDOWN

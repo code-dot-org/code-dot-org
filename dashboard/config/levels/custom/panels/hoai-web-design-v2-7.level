@@ -1,0 +1,48 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2026-03-18T21:33:24.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "offer_browser_tts": "true",
+    "panels": [
+      {
+        "text": "You might have noticed something when you saw your page for the first time. You described what you wanted. The AI built something. And it wasn't quite what you had in your head.",
+        "imageUrl": "https://images.code.org/f033f3bd35a5e945ed854e2053007304-eq-panel-1.png ",
+        "key": "undefined-904541ec-483c-456e-aadb-a278e20e7bfe",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "That gap isn't a bug. It's just how working with AI goes. AI does what it thinks you mean - not always what you actually mean. The more specific and clear you are, the closer the result will be to your vision.",
+        "imageUrl": "https://images.code.org/6423f90e2bf65060d65bb647d48c09ca-eq-panel-2.png",
+        "key": "hoai-web-design-v2-7-21711e4a-5f11-4b7d-a483-4fe43fc6f273",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-top-left"
+      },
+      {
+        "text": "Web designers deal with this all the time. They have a vibe in mind, but are missing the words that make it tangible. That's why learning the language of the web matters. It gives you the words to say exactly what you mean.",
+        "imageUrl": "https://images.code.org/3e0bb4465a29db9844a950fc58d305e3-eq-panel-3.png",
+        "key": "hoai-web-design-v2-7-22857ce6-e411-4c27-a25b-ef145dd2992b",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-left"
+      },
+      {
+        "text": "So here's the question we're going to explore next: How do designers close the gap between vision and reality? You've already felt that gap. Now let's figure out how to close it.",
+        "imageUrl": "https://images.code.org/3c56c3380b4a3cb879833b4f7eba40a6-eq-panel-4.png",
+        "key": "hoai-web-design-v2-7-a237fd9d-7820-4582-841b-72b78332e25e",
+        "typing": true,
+        "fadeInOverPrevious": true,
+        "layout": "text-bottom-right"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:33:24.706+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-panel-template\\\"\"],\"cloned_from\":\"hoai-web-design-panel-template\"},{\"changed_at\":\"2026-03-18 21:33:27 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 22:50:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>

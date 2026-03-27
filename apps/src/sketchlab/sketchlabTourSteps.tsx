@@ -1,99 +1,120 @@
-import {Steps} from 'intro.js-react';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import {type StepOptions, type Tour} from 'shepherd.js';
 
-import {sendLab2AnalyticsEvent} from '@cdo/apps/lab2/utils';
-import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
-import {commonI18n} from '@cdo/apps/types/locale';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
+import {resourcePanelNavigationButtonElementId} from '@cdo/apps/lab2/views/components/Instructions/ResourcePanel/constants';
+import {
+  backButton,
+  doneButton,
+  nextButton,
+} from '@cdo/apps/sharedComponents/productTour/productTourHelpers';
 
-import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
-import {STEPS, INITIAL_STEP} from './sketchlabTourHelpers';
-
-// Check if tour should be disabled (e.g., during UI tests) before any rendering.
-// This runs when the module is first imported so localStorage is set early.
-const urlParams = new URLSearchParams(window.location.search);
-if (urlParams.get('noIntrojs') === 'true') {
-  trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
-}
-const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding';
-
-const OnboardingTourSteps: React.FC = () => {
-  const sketchlabOnboardingTourSeen = tryGetLocalStorage(
-    SKETCHLAB_ONBOARDING_TOUR_SEEN,
-    'no'
-  );
-  const [isToolbarReady, setIsToolbarReady] = useState(false);
-
-  const [tourStep, setTourStep] = useState(0);
-
-  useEffect(() => {
-    // Wait for Excalidraw toolbar to be fully rendered.
-    const checkToolbarReady = () => {
-      // Check if required elements for the tour's initial step exists.
-      const toolbarElements = document.querySelectorAll('label.ToolIcon');
-      if (toolbarElements.length > 0) {
-        setIsToolbarReady(true);
-        return true;
-      }
-      return false;
-    };
-
-    // Try immediately first.
-    if (checkToolbarReady()) {
-      return;
-    }
-
-    // If not ready, poll every 100ms for up to 5 seconds
-    const maxAttempts = 50;
-    let attempts = 0;
-    const interval = setInterval(() => {
-      attempts++;
-      if (checkToolbarReady() || attempts >= maxAttempts) {
-        clearInterval(interval);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return (
-    <Steps
-      enabled={isToolbarReady && sketchlabOnboardingTourSeen !== 'yes'}
-      initialStep={INITIAL_STEP}
-      steps={STEPS}
-      onExit={() => {
-        trySetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'yes');
-        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_EXIT, {
-          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
-          step: tourStep.toString(),
-        });
-      }}
-      onStart={() => {
-        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_STARTED, {
-          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
-        });
-      }}
-      onChange={nextStepIndex => {
-        setTourStep(nextStepIndex);
-      }}
-      onComplete={() => {
-        sendLab2AnalyticsEvent(EVENTS.INTROJS_FLOW_COMPLETED, {
-          flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
-        });
-      }}
-      options={{
-        scrollToElement: false,
-        exitOnOverlayClick: false,
-        hidePrev: true,
-        nextLabel: commonI18n.next(),
-        prevLabel: commonI18n.back(),
-        doneLabel: commonI18n.done(),
-        showBullets: false,
-        showStepNumbers: true,
-        disableInteraction: false, // Allow interaction with page elements.
-      }}
-    />
-  );
+const toElement = (jsx: React.ReactElement): HTMLElement => {
+  const div = document.createElement('div');
+  div.innerHTML = renderToStaticMarkup(jsx);
+  return div;
 };
 
-export default OnboardingTourSteps;
+export const createSketchlabTourSteps = (tour: Tour): StepOptions[] => [
+  {
+    id: 'hand-tool',
+    attachTo: {element: 'label.ToolIcon[title^="Hand"]', on: 'bottom'},
+    title: 'Grab and Select Tools',
+    text: 'Use the hand tool to move around the canvas. Switch to the pointer (1) tool to select elements or drag to select multiple.',
+    buttons: [nextButton(tour)],
+  },
+  {
+    id: 'shape-tools',
+    attachTo: {element: 'label.ToolIcon[title^="Rectangle"]', on: 'bottom'},
+    title: 'Shape Tools',
+    text: 'This square (2) tool and the icons next to it - diamond (3) and circle (4) - let you draw basic shapes for diagrams and layouts.',
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'line-pen-tools',
+    attachTo: {element: 'label.ToolIcon[title^="Arrow"]', on: 'bottom'},
+    title: 'Line and Pen Tools',
+    text: 'The arrow (5) tool connects ideas, the line (6) adds straight connectors, and the pen (7) lets you sketch freeform lines or notes.',
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'content-tools',
+    attachTo: {element: 'label.ToolIcon[title^="Text"]', on: 'bottom'},
+    title: 'Content Tools',
+    text: 'The text (8) tool lets you label your sketch, and the image (9) tool next to it lets you insert pictures or references onto the canvas.',
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'eraser-tool',
+    attachTo: {element: 'label.ToolIcon[title^="Eraser"]', on: 'bottom'},
+    title: 'Eraser Tool',
+    text: "Click the eraser (0) once on any element to remove it. You can't drag to erase — one click per item.",
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'open-menu',
+    attachTo: {
+      element: '.dropdown-menu-button.main-menu-trigger',
+      on: 'bottom',
+    },
+    title: 'Open the menu',
+    text: 'Click the hamburger menu icon to access extra options like exporting your work.',
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'exporting',
+    title: 'Exporting your sketches',
+    text: toElement(
+      <>
+        <p>
+          From the menu, select Export image (or press Cmd + Shift + E) to open
+          export options. Click Next to continue.
+        </p>
+        <img
+          src="/blockly/media/sketchlab/export-image-button.png"
+          alt="Export PNG button"
+          style={{
+            width: '100%',
+            maxWidth: '500px',
+            borderRadius: '8px',
+            margin: '10px 0',
+          }}
+        />
+      </>
+    ),
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'save-as-image',
+    title: 'Save as an image',
+    text: toElement(
+      <>
+        <p>
+          Choose the PNG option to save your canvas as an image. You'll use this
+          later to share with the AI Tutor.
+        </p>
+        <img
+          src="/blockly/media/sketchlab/export-image-dialog.png"
+          alt="Export PNG dialog"
+          style={{
+            width: '100%',
+            maxWidth: '700px',
+            borderRadius: '8px',
+            margin: '10px 0',
+          }}
+        />
+      </>
+    ),
+    buttons: [backButton(tour), nextButton(tour)],
+  },
+  {
+    id: 'navigation',
+    attachTo: {
+      element: `#${resourcePanelNavigationButtonElementId}`,
+      on: 'top',
+    },
+    title: 'Move on to the next level',
+    text: "When you're done with your Sketch Lab creation, click Continue to move on to the next level.",
+    buttons: [backButton(tour), doneButton(tour)],
+  },
+];

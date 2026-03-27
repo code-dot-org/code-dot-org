@@ -1,0 +1,12 @@
+name 'music-lab-genre-examples-choice_2025-v2'
+display_name 'Genre Remix Examples'
+description 'Genre Remix Examples'
+
+sublevels
+level 'music-lab-genre-example-1_2025-v2'
+level 'music-lab-genre-example-2_2025-v2'
+level 'music-lab-genre-example-3_2025-v2'
+level 'music-lab-genre-example-4_2025-v2'
+level 'music-lab-genre-example-5_2025-v2'
+level 'music-lab-genre-example-6_2025-v2'
+level 'music-lab-genre-example-7_2025-v2'

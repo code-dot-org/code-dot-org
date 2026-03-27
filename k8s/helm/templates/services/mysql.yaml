@@ -37,8 +37,11 @@ spec:
         ports:
         - containerPort: 3306
         env:
-        - name: MYSQL_ALLOW_EMPTY_PASSWORD
-          value: "yes"
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: {{ include "cdo.localSecretsName" . }}
+              key: _mysql_root_password
         volumeMounts:
         - name: mysql-data
           mountPath: /var/lib/mysql/
