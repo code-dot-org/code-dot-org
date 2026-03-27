@@ -15,6 +15,17 @@ class AssetHelper
     @webpack_manifest ||= JSON.parse(File.read(webpack_manifest_path))
   end
 
+  # Compatibility shim for manifests generated before webpack assets moved from
+  # `/assets/js` to `/blockly/js`.
+  #
+  # Fresh `yarn build:dist` output already writes `/blockly/js/...` entries to
+  # `manifest.json`, but older local builds and prebuilt apps packages may
+  # still point at `/assets/js/...`. Normalize those legacy entries here so
+  # they continue to work during the transition away from the Rails asset
+  # pipeline for webpack assets.
+  #
+  # Remove this once we no longer need to support manifests produced before the
+  # `/blockly/js` publicPath change.
   def normalize_webpack_asset_path(path)
     path.sub(%r{\A/assets/js/}, '/blockly/js/')
   end
