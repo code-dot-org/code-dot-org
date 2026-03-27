@@ -147,12 +147,12 @@ Apps that don't depend on `@code-dot-org/observability` simply call `initializeC
 
 `@code-dot-org/observability` exposes four entry points:
 
-| Export path | Contents |
-|---|---|
-| `@code-dot-org/observability` | `ObservabilityClient` singleton (default export), `ObservabilityClient` type, `ObservabilityConfig` type, `createObservabilityClient` factory |
-| `@code-dot-org/observability/plugin` | `observabilityPlugin` — the `CorePlugin` implementation for use with `initializeCore` |
-| `@code-dot-org/observability/sentry` | `SentryAdapter` (imports `@sentry/browser`) |
-| `@code-dot-org/observability/noop` | `NoopAdapter` |
+| Export path                          | Contents                                                                                                                                      |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `@code-dot-org/observability`        | `ObservabilityClient` singleton (default export), `ObservabilityClient` type, `ObservabilityConfig` type, `createObservabilityClient` factory |
+| `@code-dot-org/observability/plugin` | `observabilityPlugin` — the `CorePlugin` implementation for use with `initializeCore`                                                         |
+| `@code-dot-org/observability/sentry` | `SentryAdapter` (imports `@sentry/browser`)                                                                                                   |
+| `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                 |
 
 The factory dynamically imports the adapter module at runtime so the provider SDK is only loaded when actually selected.
 
@@ -227,8 +227,8 @@ export interface ObservabilityConfig {
 ```typescript
 export function createObservabilityClient(
   provider?: 'sentry' | 'none',
-  config?: Omit<ObservabilityConfig, 'provider'>
-): ObservabilityClient
+  config?: Omit<ObservabilityConfig, 'provider'>,
+): ObservabilityClient;
 ```
 
 - When `provider` is `undefined` or `'none'`, returns a `NoopAdapter` synchronously (no dynamic import needed).
@@ -306,6 +306,7 @@ export default new SiteConfig() as SiteConfig & SiteConfigExtensions;
 ```
 
 This means:
+
 - Without importing `@code-dot-org/observability`, `CodeStudioConfig.observability` is a **type error** — the field doesn't exist in TypeScript.
 - After importing `@code-dot-org/observability/plugin`, `CodeStudioConfig.observability` is fully typed as `ObservabilityConfig`.
 - At runtime, `SiteConfig` always parses the `observability` slice from the meta tag (it's just data, no SDK loaded), so the field is always present on the object — the augmentation is purely a type-level gate.
@@ -332,7 +333,7 @@ Rails renders the `<meta name="app-config">` tag in `dashboard/app/views/app/ind
   "appVersion": "abc123",
   "observability": {
     "provider": "sentry",
-    "sentry": { "dsn": "https://..." },
+    "sentry": {"dsn": "https://..."},
     "sampling": {
       "errorSampleRate": 1.0,
       "tracesSampleRate": 0.1
@@ -352,7 +353,7 @@ The `SentryAdapter` maintains internal state:
 interface AdapterState {
   initialized: boolean;
   consentedUserId: string | null | undefined; // undefined = not yet called
-  pendingConsent: string | null | undefined;  // queued before init
+  pendingConsent: string | null | undefined; // queued before init
 }
 ```
 
@@ -408,53 +409,53 @@ New entry points added to `@code-dot-org/observability`'s `package.json` exports
 
 ## Correctness Properties
 
-*A property is a characteristic or behavior that should hold true across all valid executions of a system — essentially, a formal statement about what the system should do. Properties serve as the bridge between human-readable specifications and machine-verifiable correctness guarantees.*
+_A property is a characteristic or behavior that should hold true across all valid executions of a system — essentially, a formal statement about what the system should do. Properties serve as the bridge between human-readable specifications and machine-verifiable correctness guarantees._
 
 ### Property 1: Factory returns a valid client for all valid providers and configs
 
-*For any* valid provider identifier (`'sentry'` or `'none'`) and any valid `ObservabilityConfig` (including configs with arbitrary `sampling` and `tracePropagationTargets` values), `createObservabilityClient` SHALL return an object that implements the `ObservabilityClient` interface — i.e., has callable `init`, `recordError`, `setConsented`, `isConsented`, and `shutdown` methods.
+_For any_ valid provider identifier (`'sentry'` or `'none'`) and any valid `ObservabilityConfig` (including configs with arbitrary `sampling` and `tracePropagationTargets` values), `createObservabilityClient` SHALL return an object that implements the `ObservabilityClient` interface — i.e., has callable `init`, `recordError`, `setConsented`, `isConsented`, and `shutdown` methods.
 
 **Validates: Requirements 2.1, 8.1, 9.1**
 
 ### Property 2: Unrecognized provider throws a descriptive error
 
-*For any* string value that is not `'sentry'` or `'none'`, calling `createObservabilityClient` with that value SHALL throw an `Error` whose message contains the unrecognized value.
+_For any_ string value that is not `'sentry'` or `'none'`, calling `createObservabilityClient` with that value SHALL throw an `Error` whose message contains the unrecognized value.
 
 **Validates: Requirements 2.3**
 
 ### Property 3: recordError forwards errors to the provider
 
-*For any* error value and optional context object, calling `recordError(error, context)` on an initialized `SentryAdapter` SHALL result in the underlying Sentry SDK receiving that error and context. The method SHALL NOT throw regardless of the error value passed.
+_For any_ error value and optional context object, calling `recordError(error, context)` on an initialized `SentryAdapter` SHALL result in the underlying Sentry SDK receiving that error and context. The method SHALL NOT throw regardless of the error value passed.
 
 **Validates: Requirements 3.1**
 
 ### Property 4: Provider SDK errors during recordError are swallowed
 
-*For any* error thrown by the provider SDK during `captureException`, calling `recordError` on the adapter SHALL NOT propagate the exception to the caller. The adapter SHALL log a console warning and continue operating normally.
+_For any_ error thrown by the provider SDK during `captureException`, calling `recordError` on the adapter SHALL NOT propagate the exception to the caller. The adapter SHALL log a console warning and continue operating normally.
 
 **Validates: Requirements 3.4**
 
 ### Property 5: Consent round-trip — setConsented/isConsented accurately reflect state
 
-*For any* sequence of `setConsented` and `init` calls: (a) `isConsented()` returns `true` if and only if `setConsented` was called with a non-null, non-empty string; (b) calling `setConsented(null)` or `setConsented('')` after a prior consent call causes `isConsented()` to return `false`; (c) calling `setConsented` before `init` queues the association and `isConsented()` reflects the queued value correctly after `init` completes.
+_For any_ sequence of `setConsented` and `init` calls: (a) `isConsented()` returns `true` if and only if `setConsented` was called with a non-null, non-empty string; (b) calling `setConsented(null)` or `setConsented('')` after a prior consent call causes `isConsented()` to return `false`; (c) calling `setConsented` before `init` queues the association and `isConsented()` reflects the queued value correctly after `init` completes.
 
 **Validates: Requirements 4.3, 5.1, 5.2 (edge-case), 5.4, 5.5**
 
 ### Property 6: Config values are passed through to the provider SDK unchanged
 
-*For any* valid `sampling.errorSampleRate`, `sampling.tracesSampleRate`, and `tracePropagationTargets` values supplied to `init`, the `SentryAdapter` SHALL pass those exact values to `Sentry.init` without modification. The adapter SHALL NOT apply its own sampling logic on top of the SDK's.
+_For any_ valid `sampling.errorSampleRate`, `sampling.tracesSampleRate`, and `tracePropagationTargets` values supplied to `init`, the `SentryAdapter` SHALL pass those exact values to `Sentry.init` without modification. The adapter SHALL NOT apply its own sampling logic on top of the SDK's.
 
 **Validates: Requirements 8.4, 9.2**
 
 ### Property 7: No-op adapter accepts any config and performs no external calls
 
-*For any* `ObservabilityConfig` (including arbitrary `sampling` and `tracePropagationTargets` values), the `NoopAdapter` SHALL accept the config without throwing, and calling any method on it SHALL produce no observable side effects (no network calls, no console output, no global state mutations).
+_For any_ `ObservabilityConfig` (including arbitrary `sampling` and `tracePropagationTargets` values), the `NoopAdapter` SHALL accept the config without throwing, and calling any method on it SHALL produce no observable side effects (no network calls, no console output, no global state mutations).
 
 **Validates: Requirements 2.2, 8.6, 9.6**
 
 ### Property 8: Init failure falls back gracefully without propagating
 
-*For any* `SentryAdapter` where `Sentry.init` throws (e.g., SDK blocked by ad blocker), calling `init(config)` SHALL NOT propagate the exception to the caller. After the failure, all subsequent `recordError` calls SHALL also be no-ops (the adapter degrades to no-op behavior), and `isConsented()` SHALL return `false`.
+_For any_ `SentryAdapter` where `Sentry.init` throws (e.g., SDK blocked by ad blocker), calling `init(config)` SHALL NOT propagate the exception to the caller. After the failure, all subsequent `recordError` calls SHALL also be no-ops (the adapter degrades to no-op behavior), and `isConsented()` SHALL return `false`.
 
 **Validates: Requirements 6.4**
 
@@ -462,17 +463,17 @@ New entry points added to `@code-dot-org/observability`'s `package.json` exports
 
 ## Error Handling
 
-| Scenario | Behavior |
-|---|---|
-| `createObservabilityClient` called with unknown provider | Throws `Error` with descriptive message including the bad value |
-| `Sentry.init` throws (e.g., ad blocker, bad DSN) | Caught; console warning logged; adapter degrades to no-op |
-| `Sentry.captureException` throws | Caught; console warning logged; `recordError` returns normally |
-| `setConsented` called before `init` | Association queued; applied on `init` |
-| `setConsented(null)` or `setConsented('')` | Clears user association; `isConsented()` returns `false` |
-| Meta tag absent or malformed JSON | `SiteConfig` returns `{}` for runtime config; `provider` defaults to `'none'`; singleton stays as no-op |
-| `typeof window === 'undefined'` (SSR) | `init` is a no-op; no SDK initialization attempted |
-| Package/lab calls singleton before `initializeCore` | Singleton is no-op; calls are silently dropped — safe by design |
-| `initializeCore` called without `observabilityPlugin` | Observability package never bundled; singleton never swapped from no-op |
+| Scenario                                                 | Behavior                                                                                                |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `createObservabilityClient` called with unknown provider | Throws `Error` with descriptive message including the bad value                                         |
+| `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op                                               |
+| `Sentry.captureException` throws                         | Caught; console warning logged; `recordError` returns normally                                          |
+| `setConsented` called before `init`                      | Association queued; applied on `init`                                                                   |
+| `setConsented(null)` or `setConsented('')`               | Clears user association; `isConsented()` returns `false`                                                |
+| Meta tag absent or malformed JSON                        | `SiteConfig` returns `{}` for runtime config; `provider` defaults to `'none'`; singleton stays as no-op |
+| `typeof window === 'undefined'` (SSR)                    | `init` is a no-op; no SDK initialization attempted                                                      |
+| Package/lab calls singleton before `initializeCore`      | Singleton is no-op; calls are silently dropped — safe by design                                         |
+| `initializeCore` called without `observabilityPlugin`    | Observability package never bundled; singleton never swapped from no-op                                 |
 
 ---
 
@@ -489,22 +490,23 @@ The property-based testing library for this package is **[fast-check](https://fa
 Each property test MUST run a minimum of **100 iterations** (fast-check default is 100; do not lower it).
 
 Each property test MUST include a comment referencing the design property it validates:
+
 ```
 // Feature: observability, Property N: <property text>
 ```
 
 **Property test mapping:**
 
-| Design Property | Test file | fast-check arbitraries |
-|---|---|---|
-| P1: Factory returns valid client | `factory.test.ts` | `fc.constantFrom('sentry', 'none')`, `fc.record({sampling: ..., tracePropagationTargets: ...})` |
-| P2: Unknown provider throws | `factory.test.ts` | `fc.string()` filtered to exclude valid values |
-| P3: recordError forwards errors | `sentry.test.ts` | `fc.anything()` for error, `fc.record(...)` for context |
-| P4: SDK errors swallowed | `sentry.test.ts` | `fc.anything()` for thrown value |
-| P5: Consent round-trip | `sentry.test.ts` | `fc.string()` for userId, `fc.boolean()` for call ordering |
-| P6: Config pass-through | `sentry.test.ts` | `fc.float({min:0,max:1})` for rates, `fc.array(fc.string())` for targets |
-| P7: No-op accepts any config | `noop.test.ts` | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})` |
-| P8: Init failure degrades gracefully | `sentry.test.ts` | `fc.anything()` for thrown error |
+| Design Property                      | Test file         | fast-check arbitraries                                                                          |
+| ------------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------- |
+| P1: Factory returns valid client     | `factory.test.ts` | `fc.constantFrom('sentry', 'none')`, `fc.record({sampling: ..., tracePropagationTargets: ...})` |
+| P2: Unknown provider throws          | `factory.test.ts` | `fc.string()` filtered to exclude valid values                                                  |
+| P3: recordError forwards errors      | `sentry.test.ts`  | `fc.anything()` for error, `fc.record(...)` for context                                         |
+| P4: SDK errors swallowed             | `sentry.test.ts`  | `fc.anything()` for thrown value                                                                |
+| P5: Consent round-trip               | `sentry.test.ts`  | `fc.string()` for userId, `fc.boolean()` for call ordering                                      |
+| P6: Config pass-through              | `sentry.test.ts`  | `fc.float({min:0,max:1})` for rates, `fc.array(fc.string())` for targets                        |
+| P7: No-op accepts any config         | `noop.test.ts`    | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
+| P8: Init failure degrades gracefully | `sentry.test.ts`  | `fc.anything()` for thrown error                                                                |
 
 ### Unit Tests
 

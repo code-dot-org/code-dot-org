@@ -2,7 +2,7 @@
 inclusion: auto
 name: package-conventions
 description: Frontend package conventions for frontend/packages. Use when creating or modifying any file at the root of a package under frontend/packages/ or frontend/packages/labs/, including package.json, tsconfig, vite.config.ts, eslint.config.mjs, README.md, and similar scaffold files.
-fileMatchPattern: ["packages/*/*", "packages/labs/*/*"]
+fileMatchPattern: ['packages/*/*', 'packages/labs/*/*']
 ---
 
 # Frontend Package Conventions
@@ -21,6 +21,7 @@ Labs (`packages/labs/*`) are standalone React apps — curriculum "game engines"
 - Use `workspace:*` for internal packages; always declare `@code-dot-org/lint-config` as a `devDependency`
 
 **Required scripts** (all packages):
+
 - `"build"`: `"vite build && tsc --noEmit"`
 - `"typecheck"`: `"tsc --noEmit"`
 - `"lint"` / `"lint:fix"`: `"eslint ."` / `"eslint --fix ."`
@@ -29,6 +30,7 @@ Labs (`packages/labs/*`) are standalone React apps — curriculum "game engines"
 - `"clean"`: `"rimraf dist .turbo"`
 
 **Exports**: always declare explicit `"exports"` with `types` / `import` (`.mjs`) / `require` (`.cjs`) per entry point:
+
 ```json
 ".": { "types": "./dist/index.d.ts", "import": "./dist/index.mjs", "require": "./dist/index.cjs" }
 ```
@@ -36,6 +38,7 @@ Labs (`packages/labs/*`) are standalone React apps — curriculum "game engines"
 ## Vite (`vite.config.ts`) — all packages
 
 All packages use the same `vite-plugin-dts` options:
+
 ```ts
 dts({
   tsconfigPath: './tsconfig.app.json', // or './tsconfig.json' for single-tsconfig packages
@@ -43,13 +46,15 @@ dts({
   entryRoot: 'src',
   insertTypesEntry: false,
   exclude: ['**/__tests__/**', '**/*.test.ts', '**/*.test.tsx'],
-})
+});
 ```
+
 - `rollupTypes: false` keeps per-module `.d.ts` files, matching `preserveModules` and enabling tree-shaking
 - `entryRoot: 'src'` mirrors `dist/` paths to `src/` paths
 - `insertTypesEntry: false` prevents dts from injecting a redundant `types` field (declared explicitly in `exports`)
 
 All packages use `vite-plugin-externalize-deps` and dual ESM+CJS output via `getRollupOutputConfig`:
+
 ```ts
 function getRollupOutputConfig(format: 'es' | 'cjs'): OutputOptions {
   return {
@@ -70,16 +75,27 @@ Also set: `build.sourcemap: true`, `build.cssCodeSplit: true`, `resolve.alias: {
 Library packages (`packages/*`) may use a single `tsconfig.json` extending `@code-dot-org/lint-config/typescript/tsconfig.vite.app.json` when no React/Vite split is needed (see `@code-dot-org/core`).
 
 Split tsconfig is preferred for React packages and required for labs:
+
 - `tsconfig.json` — `"files": []` + `"references"` to `tsconfig.app.json` and `tsconfig.node.json`
 - `tsconfig.app.json` — extends `tsconfig.vite.app.json`, `"include": ["src"]`
 - `tsconfig.node.json` — extends `tsconfig.vite.node.json`, `"include": ["vite.config.ts"]`
 
 ## ESLint (`eslint.config.mjs`) — all packages
 
-Always extend from `@code-dot-org/lint-config`; always ignore `dist/*`:
+Always extend from `@code-dot-org/lint-config`; always ignore `dist/*`. The shared base configs (`base.mjs`, `react.mjs`, `node.mjs`) include `globalIgnores(['dist'])` automatically — do not remove it or override it in package-level configs:
+
 - React packages: `@code-dot-org/lint-config/eslint/react.mjs`
 - Non-React browser: `@code-dot-org/lint-config/eslint/base.mjs`
 - Node/build tooling: `@code-dot-org/lint-config/eslint/node.mjs`
+
+Minimal package-level config (non-React):
+
+```js
+import baseConfig from '@code-dot-org/lint-config/eslint/base.mjs';
+
+// dist/ is ignored via globalIgnores in the base config
+export default baseConfig;
+```
 
 ## Testing (`vitest.config.ts`) — all packages
 

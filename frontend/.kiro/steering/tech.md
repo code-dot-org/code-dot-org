@@ -11,6 +11,7 @@
 Runtime configuration (API keys, feature flags, RUM provider settings) is injected by Rails into HTML meta tags, **not** hardcoded in Vite's `index.html`.
 
 ### Pattern
+
 - Rails renders `<meta name="app-config">` in `dashboard/app/views/app/index.html.haml`
 - Values come from the `CDO` object, populated from `config/*.yml.erb`
 - The Vite dev `frontend/apps/studio/index.html` does NOT include config meta tags
@@ -18,6 +19,7 @@ Runtime configuration (API keys, feature flags, RUM provider settings) is inject
 - When the meta tag is absent (local dev), `SiteConfig` uses safe defaults (e.g., `rumProvider: 'none'`)
 
 ### Do NOT
+
 - Add hardcoded secret values or provider credentials to `frontend/apps/studio/index.html`
 - Use `import.meta.env` for runtime secrets (those belong in Rails config, not Vite build-time env)
 
