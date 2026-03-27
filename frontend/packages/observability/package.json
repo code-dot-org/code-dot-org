@@ -1,0 +1,56 @@
+{
+  "name": "@code-dot-org/observability",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./plugin": {
+      "types": "./dist/plugin.d.ts",
+      "import": "./dist/plugin.mjs",
+      "require": "./dist/plugin.cjs"
+    },
+    "./sentry": {
+      "types": "./dist/adapters/sentry.d.ts",
+      "import": "./dist/adapters/sentry.mjs",
+      "require": "./dist/adapters/sentry.cjs"
+    },
+    "./noop": {
+      "types": "./dist/adapters/noop.d.ts",
+      "import": "./dist/adapters/noop.mjs",
+      "require": "./dist/adapters/noop.cjs"
+    }
+  },
+  "scripts": {
+    "build": "vite build && tsc --noEmit",
+    "dev": "vite",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "test": "vitest --run",
+    "typecheck": "tsc --noEmit"
+  },
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+  "devDependencies": {
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/lint-config": "workspace:*",
+    "@sentry/browser": "^10.46.0",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "fast-check": "^3.0.0",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vite-plugin-externalize-deps": "catalog:",
+    "vitest": "^4.0.17"
+  },
+  "peerDependencies": {
+    "@sentry/browser": "^8.0.0"
+  }
+}

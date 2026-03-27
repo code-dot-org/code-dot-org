@@ -2,7 +2,7 @@
 inclusion: auto
 name: singleton-services
 description: Convention for shared singleton services in the frontend monorepo. Use when creating or consuming shared stateful services (observability, analytics, feature flags, etc.) across packages and labs.
-fileMatchPattern: ["packages/*/*", "packages/labs/*/*", "apps/*/*"]
+fileMatchPattern: ['packages/*/*', 'packages/labs/*/*', 'apps/*/*']
 ---
 
 # Singleton Services Convention
@@ -54,7 +54,9 @@ export default {
   isConsented: () => _client.isConsented(),
   init: (...args) => _client.init(...args),
   shutdown: () => _client.shutdown(),
-  /** @internal */ _set(c: ObservabilityClient) { _client = c; },
+  /** @internal */ _set(c: ObservabilityClient) {
+    _client = c;
+  },
 } satisfies ObservabilityClient & {_set(c: ObservabilityClient): void};
 ```
 

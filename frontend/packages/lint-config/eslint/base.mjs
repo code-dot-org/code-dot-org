@@ -1,8 +1,10 @@
 import js from '@eslint/js';
+import {globalIgnores} from 'eslint/config';
 import importPlugin from 'eslint-plugin-import-x';
 import {configs as tseslintConfig} from 'typescript-eslint';
 
 export default [
+  globalIgnores(['dist']),
   js.configs.recommended,
   ...tseslintConfig.recommended,
   importPlugin.flatConfigs.recommended,
