@@ -1,4 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
+import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {
   MultiFileSource,
   ProjectFile,
@@ -6,6 +7,9 @@ import {
   ProjectSources,
 } from '@cdo/apps/lab2/types';
 import HttpClient, {GetResponse, NetworkError} from '@cdo/apps/util/HttpClient';
+
+/** Matches {@link responseValidators} when `/v3/sources/.../main.json` returns JSON without `source` (typical for WebLab1-only projects). */
+const MISSING_LAB2_SOURCE_FIELD_MESSAGE = 'Missing required field: source';
 
 type Weblab1ManifestEntry = {
   filename: string;
@@ -113,7 +117,17 @@ export function isWeblab1CompatibilityModeEnabled(): boolean {
 }
 
 export function shouldFallbackToWeblab1Files(error: unknown): boolean {
-  return error instanceof NetworkError && error.response.status === 404;
+  if (error instanceof NetworkError && error.response.status === 404) {
+    return true;
+  }
+  // Lab2 fetch can succeed (200) with JSON that has no `source` — WebLab1 projects do not use main.json.
+  if (
+    error instanceof ValidationError &&
+    error.message === MISSING_LAB2_SOURCE_FIELD_MESSAGE
+  ) {
+    return true;
+  }
+  return false;
 }
 
 export function buildMultiFileSourceFromWeblab1Files(

@@ -1,4 +1,5 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
+import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   buildMultiFileSourceFromWeblab1Files,
@@ -48,6 +49,20 @@ describe('weblab1Compatibility', () => {
       expect(shouldFallbackToWeblab1Files(new Error('other error'))).toBe(
         false
       );
+    });
+
+    it('returns true when main.json response omits source (ValidationError)', () => {
+      expect(
+        shouldFallbackToWeblab1Files(
+          new ValidationError('Missing required field: source')
+        )
+      ).toBe(true);
+    });
+
+    it('returns false for other ValidationErrors', () => {
+      expect(
+        shouldFallbackToWeblab1Files(new ValidationError('Invalid source code'))
+      ).toBe(false);
     });
   });
 
