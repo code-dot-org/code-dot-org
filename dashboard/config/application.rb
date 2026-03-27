@@ -184,6 +184,7 @@ module Dashboard
 
     runtime_load_paths = [
       Rails.root.join('lib'),
+      Rails.root.join('app', 'agents'),
       Rails.root.join('app', 'models', 'experiments'),
       Rails.root.join('app', 'models', 'levels'),
       Rails.root.join('app', 'models', 'sections'),

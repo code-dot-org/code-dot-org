@@ -10,6 +10,7 @@ class AichatEventsController < ApplicationController
   #     currentLevelId: number | null;
   #     scriptId: number | null;
   #     channelId: string | undefined;
+  #     lessonId: number | undefined;
   #  }
 
   def log_chat_event
@@ -37,6 +38,7 @@ class AichatEventsController < ApplicationController
         level_id: context[:currentLevelId],
         script_id: context[:scriptId],
         project_id: project_id,
+        lesson_id: context[:lessonId],
         request_id: event[:requestId], # Only present if ChatEvent is a ChatMessage, otherwise nil
         aichat_event: event
       )
@@ -58,8 +60,8 @@ class AichatEventsController < ApplicationController
     # Request all chat events for a user at a given level/script.
     begin
       params.require([:userId])
-      unless (params[:scriptId].present? && params[:levelId].present?) || params[:channelId].present?
-        raise ActionController::ParameterMissing, 'Either both scriptId and levelId, or channelId must be provided'
+      unless (params[:scriptId].present? && params[:levelId].present?) || params[:channelId].present? || params[:lessonId].present?
+        raise ActionController::ParameterMissing, 'Either both scriptId and levelId, channelId, or lessonId must be provided'
       end
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
@@ -68,6 +70,7 @@ class AichatEventsController < ApplicationController
     script_id = params[:scriptId]
     channel_id = params[:channelId]
     level_id = params[:levelId]
+    lesson_id = params[:lessonId]
     user_id = params[:userId].to_i
     unless can_view_chat_history?(user_id)
       return render(status: :forbidden, json: {error: "Access denied for chat history."})
@@ -79,6 +82,8 @@ class AichatEventsController < ApplicationController
     elsif channel_id.present?
       _, project_id = get_storage_id_and_project_id(channel_id)
       aichat_events = AichatEvent.where(user_id: user_id, project_id: project_id)
+    elsif lesson_id.present?
+      aichat_events = AichatEvent.where(user_id: user_id, lesson_id: lesson_id)
     end
     aichat_events = aichat_events.order(:id).map do |event|
       chat_event = event[:aichat_event].is_a?(String) ? JSON.parse(event[:aichat_event]) : event[:aichat_event]

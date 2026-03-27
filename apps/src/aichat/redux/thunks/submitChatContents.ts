@@ -241,6 +241,16 @@ export const submitChatContents = createAsyncThunk(
     dispatch(sendProgressReport('aichat', TestResults.LEVEL_STARTED));
     messages.forEach(message => {
       if (message.role === Role.ASSISTANT) {
+        // Extract tool call metadata from structured responses before the
+        // responseCallback transforms the text into a display-only string.
+        try {
+          const parsed = JSON.parse(message.chatMessageText);
+          if (Array.isArray(parsed.tool_calls) && parsed.tool_calls.length > 0) {
+            message.toolCalls = parsed.tool_calls;
+          }
+        } catch {
+          // Not a structured response — no tool calls to extract.
+        }
         message.chatMessageText =
           responseCallback?.(message.chatMessageText) ??
           message.chatMessageText;

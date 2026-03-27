@@ -14,7 +14,6 @@ import {
   modelDescriptions,
   RESET_CONVERSATION_CUSTOMIZATION_UPDATES,
 } from '../constants';
-import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
@@ -63,6 +62,7 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+  lessonId?: number;
 }
 
 /**
@@ -81,6 +81,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
+  lessonId,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -146,8 +147,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       currentLevelId: parseInt(currentLevelId || ''),
       scriptId,
       channelId,
+      lessonId,
     });
-  }, [clientType, currentLevelId, scriptId, channelId]);
+  }, [clientType, currentLevelId, scriptId, channelId, lessonId]);
 
   // This effect resets chat history and any staged uploads or user selections when:
   // a) a user switches levels, or
@@ -163,6 +165,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           userId: selectedStudent.id,
           isOwnHistory: false,
           channelId,
+          lessonId,
         })
       );
     } else {
@@ -171,10 +174,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           userId: currentUserId,
           isOwnHistory: true,
           channelId,
+          lessonId,
         })
       );
     }
-  }, [dispatch, currentUserId, currentLevelId, selectedStudent, channelId]);
+  }, [
+    dispatch,
+    currentUserId,
+    currentLevelId,
+    selectedStudent,
+    channelId,
+    lessonId,
+  ]);
 
   useEffect(() => {
     dispatch(setClientType(clientType));
@@ -253,14 +264,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'viewStudentChatHistory',
       text:
         selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? aichatI18n.viewOnlyTabLabel({
-              fieldLabel: aichatI18n.viewStudentChatHistory({
-                selectedStudentName: selectedStudentName ?? '',
-              }),
-            })
-          : aichatI18n.viewStudentChatHistory({
-              selectedStudentName: selectedStudentName ?? '',
-            }),
+          ? `Viewing ${selectedStudentName ?? 'Student'} Chat History`
+          : `View ${selectedStudentName ?? 'Student'} Chat History`,
       tabContent: (
         <ChatEventsList
           events={studentChatHistory}
@@ -273,7 +278,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     },
     {
       value: 'testStudentModel',
-      text: aichatI18n.testStudentModel(),
+      text: 'Test Student Model',
       tabContent: (
         <ChatEventsList
           events={visibleItems}

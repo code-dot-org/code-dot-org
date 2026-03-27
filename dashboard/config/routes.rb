@@ -473,6 +473,7 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
+        get 'practice', to: 'lessons#practice', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -1367,6 +1368,8 @@ Dashboard::Application.routes.draw do
 
     get '/ai_prompt_management/get_prompt', to: 'ai_prompt_management#get_prompt'
     post '/ai_observability/add_internal_ai_tutor_dataset_item', to: 'ai_observability#add_internal_ai_tutor_dataset_item'
+
+    post '/lesson_practice_ai_tutor/chat', to: 'lesson_practice_ai_tutor#chat'
 
     resources :aichat_requests, only: [:create, :update]
     post '/aichat_request/start_chat_completion', to: 'aichat_requests#start_chat_completion'

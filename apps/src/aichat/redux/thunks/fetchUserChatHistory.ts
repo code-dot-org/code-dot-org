@@ -10,6 +10,7 @@ interface FetchUserChatHistoryParams {
   userId: number;
   isOwnHistory: boolean;
   channelId?: string;
+  lessonId?: number;
 }
 
 // This thunk's callback function submits a user id (either a teacher or student)
@@ -18,7 +19,7 @@ interface FetchUserChatHistoryParams {
 export const fetchUserChatHistory = createAsyncThunk(
   'aichat/fetchUserChatHistory',
   async (
-    {userId, isOwnHistory, channelId}: FetchUserChatHistoryParams,
+    {userId, isOwnHistory, channelId, lessonId}: FetchUserChatHistoryParams,
     thunkAPI
   ) => {
     const state = thunkAPI.getState() as RootState;
@@ -28,7 +29,8 @@ export const fetchUserChatHistory = createAsyncThunk(
         userId,
         parseInt(state.progress.currentLevelId || ''),
         state.progress.scriptId,
-        channelId
+        channelId,
+        lessonId
       );
 
       if (isOwnHistory) {

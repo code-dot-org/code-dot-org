@@ -11,14 +11,16 @@
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #  request_id   :bigint
+#  lesson_id    :integer
 #
 # Indexes
 #
-#  index_ace_user_level_script        (user_id,level_id,script_id)
-#  index_ace_user_level_script_id     (user_id,level_id,script_id,id)
-#  index_ace_user_project             (user_id,project_id)
-#  index_ace_user_project_id          (user_id,project_id,id)
-#  index_aichat_events_on_request_id  (request_id)
+#  index_ace_user_level_script                   (user_id,level_id,script_id)
+#  index_ace_user_level_script_id                (user_id,level_id,script_id,id)
+#  index_ace_user_project                        (user_id,project_id)
+#  index_ace_user_project_id                     (user_id,project_id,id)
+#  index_aichat_events_on_request_id             (request_id)
+#  index_aichat_events_on_user_id_and_lesson_id  (user_id,lesson_id)
 #
 class AichatEvent < ApplicationRecord
   belongs_to :user

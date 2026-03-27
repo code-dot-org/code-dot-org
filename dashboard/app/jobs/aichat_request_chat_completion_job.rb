@@ -62,6 +62,11 @@ class AichatRequestChatCompletionJob < ApplicationJob
     user_pii = find_pii(request.new_message['chatMessageText'], locale)
     return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:USER_PII], "PII detected in user input: #{user_pii}"] if user_pii
 
+    # Route lesson practice requests to the RubyLLM agent.
+    if request.model_customizations['clientType'] == SharedConstants::AI_CHAT_CLIENT_TYPES[:LESSON_PRACTICE_AI_TUTOR]
+      return run_lesson_practice_agent(request, locale)
+    end
+
     # Make the request.
     if openai_or_gemini?(request.model_customizations['selectedModelId'])
       begin
@@ -113,6 +118,49 @@ class AichatRequestChatCompletionJob < ApplicationJob
       request.new_message,
       request.level_id
     )
+  end
+
+  private def run_lesson_practice_agent(request, locale)
+    lesson_id = request.model_customizations['lessonId']
+    lesson = Lesson.find_by(id: lesson_id)
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE], "Lesson not found"] unless lesson
+
+    vocabulary_tool = SuggestFlashcards.new(lesson.vocabularies)
+    agent = LessonPracticeAITutor.for_lesson(lesson, vocabulary_tool)
+
+    # Replay stored conversation history so the agent has context.
+    Array(request.stored_messages).each do |msg|
+      role = msg['role']&.to_sym
+      next unless [:user, :assistant].include?(role)
+      # Unwrap JSON-encoded assistant messages to extract plain text.
+      content = if role == :assistant
+        begin
+          JSON.parse(msg['chatMessageText'])['message']
+        rescue
+          msg['chatMessageText']
+        end
+      else
+        msg['chatMessageText']
+      end
+      agent.add_message(role: role, content: content.to_s)
+    end
+
+    ai_response = agent.ask(request.new_message['chatMessageText'].to_s)
+    message_text = ai_response.content.to_s
+
+    model_toxicity = AichatSafetyHelper.find_toxicity(message_text, request.level_id, 'Assistant')
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PROFANITY], model_toxicity.to_json] if model_toxicity
+
+    model_pii = find_pii(message_text, locale)
+    return [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:MODEL_PII], "PII detected in model output: #{model_pii}"] if model_pii
+
+    tool_calls = if vocabulary_tool.called?
+      [{name: 'suggest_flashcards', input: {vocabulary_ids: vocabulary_tool.suggested_ids}}]
+    else
+      []
+    end
+    response = {message: message_text, vocabulary_ids: vocabulary_tool.suggested_ids, tool_calls: tool_calls}.to_json
+    [SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS], response]
   end
 
   # Check the given text for PII.

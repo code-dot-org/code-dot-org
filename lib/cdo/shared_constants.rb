@@ -840,12 +840,14 @@ module SharedConstants
     AI_CHAT_LAB: "ai-chat-lab",
     AI_TUTOR: "ai-tutor",
     FLOW_LAB: "flow-lab",
+    LESSON_PRACTICE_AI_TUTOR: "lesson-practice-ai-tutor",
   }
 
   AI_CHAT_READ_TIMEOUTS = {
     AI_CHAT_CLIENT_TYPES[:AI_CHAT_LAB] => 30,
     AI_CHAT_CLIENT_TYPES[:AI_TUTOR] => 30,
     AI_CHAT_CLIENT_TYPES[:FLOW_LAB] => 60,
+    AI_CHAT_CLIENT_TYPES[:LESSON_PRACTICE_AI_TUTOR] => 30,
   }
 
   AICHAT_METRICS_NAMESPACE = 'GenAICurriculum'.freeze
