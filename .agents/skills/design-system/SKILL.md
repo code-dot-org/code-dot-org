@@ -27,7 +27,7 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 
 ## Styling
 - Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
-- **Color priority**: always use semantic colors (`@code-dot-org/component-library-styles/colors.scss`) first, then primitive colors (`primitiveColors.scss`) second, then other colors only as last resort.
+- **Color priority**: always use semantic colors (`@code-dot-org/component-library-styles/colors.css`) first, then primitive colors (`primitiveColors.css`) second, then other colors only as last resort.
 - Semantic colors are CSS variables (e.g., `var(--text-neutral-primary)`) that support light/dark theming via the `data-theme` attribute.
 - **Never rely on stylesheet load order** for specificity. Always use CSS selector specificity rules.
 - Override component styles via parent element selectors or component-specific class selectors in SCSS modules.
