@@ -1,9 +1,9 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {
   buildMultiFileSourceFromWeblab1Files,
   isWeblab1CompatibilityModeEnabled,
+  mainJsonIsLab2CodebridgeShape,
   shouldFallbackToWeblab1Files,
 } from '@cdo/apps/weblab2/weblab1Compatibility';
 
@@ -50,19 +50,32 @@ describe('weblab1Compatibility', () => {
         false
       );
     });
+  });
 
-    it('returns true when main.json response omits source (ValidationError)', () => {
+  describe('mainJsonIsLab2CodebridgeShape', () => {
+    it('returns false for App Lab-shaped main.json (source is JS string)', () => {
       expect(
-        shouldFallbackToWeblab1Files(
-          new ValidationError('Missing required field: source')
-        )
+        mainJsonIsLab2CodebridgeShape({
+          source: 'var x = 1;',
+          html: '<div></div>',
+        })
+      ).toBe(false);
+    });
+
+    it('returns true when source is a MultiFileSource-shaped object', () => {
+      expect(
+        mainJsonIsLab2CodebridgeShape({
+          source: {files: {}, folders: {}},
+        })
       ).toBe(true);
     });
 
-    it('returns false for other ValidationErrors', () => {
-      expect(
-        shouldFallbackToWeblab1Files(new ValidationError('Invalid source code'))
-      ).toBe(false);
+    it('returns false when source is missing', () => {
+      expect(mainJsonIsLab2CodebridgeShape({})).toBe(false);
+    });
+
+    it('returns false when source object lacks files or folders', () => {
+      expect(mainJsonIsLab2CodebridgeShape({source: {files: {}}})).toBe(false);
     });
   });
 

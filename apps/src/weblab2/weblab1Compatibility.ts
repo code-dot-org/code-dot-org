@@ -1,5 +1,4 @@
 import {DEFAULT_FOLDER_ID} from '@cdo/apps/codebridge/constants';
-import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {
   MultiFileSource,
   ProjectFile,
@@ -8,8 +7,29 @@ import {
 } from '@cdo/apps/lab2/types';
 import HttpClient, {GetResponse, NetworkError} from '@cdo/apps/util/HttpClient';
 
-/** Matches {@link responseValidators} when `/v3/sources/.../main.json` returns JSON without `source` (typical for WebLab1-only projects). */
-const MISSING_LAB2_SOURCE_FIELD_MESSAGE = 'Missing required field: source';
+/**
+ * True when `main.json` already matches Lab2 Codebridge storage: `source` is an
+ * object with `files` and `folders` (not an App Lab JS string, Blockly blob, etc.).
+ * Used in weblab1 compat mode to decide between normal Lab2 validation vs `/v3/files` fallback.
+ */
+export function mainJsonIsLab2CodebridgeShape(body: unknown): boolean {
+  if (body === null || typeof body !== 'object' || Array.isArray(body)) {
+    return false;
+  }
+  const record = body as Record<string, unknown>;
+  const source = record.source;
+  if (source === undefined || source === null) {
+    return false;
+  }
+  if (typeof source === 'string') {
+    return false;
+  }
+  if (typeof source !== 'object' || Array.isArray(source)) {
+    return false;
+  }
+  const multi = source as Record<string, unknown>;
+  return Boolean(multi.files && multi.folders);
+}
 
 type Weblab1ManifestEntry = {
   filename: string;
@@ -116,18 +136,9 @@ export function isWeblab1CompatibilityModeEnabled(): boolean {
   return parseCompatibilityQueryParam(params.get(WEBLAB1_COMPAT_QUERY_PARAM));
 }
 
+/** Used when compat mode fetch throws (e.g. main.json missing). Success-path shape checks use {@link mainJsonIsLab2CodebridgeShape}. */
 export function shouldFallbackToWeblab1Files(error: unknown): boolean {
-  if (error instanceof NetworkError && error.response.status === 404) {
-    return true;
-  }
-  // Lab2 fetch can succeed (200) with JSON that has no `source` — WebLab1 projects do not use main.json.
-  if (
-    error instanceof ValidationError &&
-    error.message === MISSING_LAB2_SOURCE_FIELD_MESSAGE
-  ) {
-    return true;
-  }
-  return false;
+  return error instanceof NetworkError && error.response.status === 404;
 }
 
 export function buildMultiFileSourceFromWeblab1Files(
