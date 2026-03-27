@@ -189,7 +189,7 @@
     }
   };
 
-  window.editor = window.initializeCodeMirror6($dictionary[0], 'markdown', {
+  window.editor = window.initializeCodeMirror6($dictionary[0], 'text', {
     lineNumberFormatter: function (lineNumber) {
       return dictEntries[lineNumber - 1] || '';
     },

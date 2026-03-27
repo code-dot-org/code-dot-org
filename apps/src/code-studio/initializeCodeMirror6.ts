@@ -71,7 +71,7 @@ interface Options {
   game?: string;
 }
 
-type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
+type EditorMode = 'text' | 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -120,7 +120,7 @@ const createErrorLineHighlightField = (className: string) =>
     provide: field => EditorView.decorations.from(field),
   });
 
-const languageExtensionMap: Record<EditorMode, Extension> = {
+const languageExtensionMap: Partial<Record<EditorMode, Extension>> = {
   javascript: javascript(),
   json: json(),
   markdown: markdown(),
@@ -128,8 +128,8 @@ const languageExtensionMap: Record<EditorMode, Extension> = {
   html: html(),
 };
 
-function getLanguageExtension(mode: EditorMode): Extension {
-  return languageExtensionMap[mode];
+function getLanguageExtension(mode: EditorMode): Extension | null {
+  return languageExtensionMap[mode] || null;
 }
 
 const getLintExtension = (
@@ -201,7 +201,7 @@ function resolvePreviewElement(
  * initializeCodeMirror6 syncs a textarea on the page with a full-featured
  * CodeMirror6 editor.
  * @param {!string|!Element} target - element or id of element to replace.
- * @param {!string} mode - editor syntax mode
+ * @param {!string} mode - editor syntax mode (`text` disables language/lint extensions)
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
  * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
@@ -232,6 +232,7 @@ function initializeCodeMirror6(
   } = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
+  const languageExtension = getLanguageExtension(mode);
   const lintExtension = getLintExtension(mode, options.lintConfig);
   const errorLineHighlightField = lineHighlightClassName
     ? createErrorLineHighlightField(lineHighlightClassName)
@@ -324,7 +325,7 @@ function initializeCodeMirror6(
     lineNumbers(
       lineNumberFormatter ? {formatNumber: lineNumberFormatter} : undefined
     ),
-    getLanguageExtension(mode),
+    ...(languageExtension ? [languageExtension] : []),
     levelbuilderEditorTheme,
     ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
