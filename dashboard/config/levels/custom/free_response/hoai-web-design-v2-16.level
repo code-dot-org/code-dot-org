@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Reflection: Vision & Reality",
-    "long_instructions": "Look at your first version and your final version side by side. How did you close the gap? What did you have to learn - or say differently - to get there?",
+    "long_instructions": "Think about your first version and your final version side by side and notice what's different and what improved. What did you have to learn - or say differently - to get there?",
     "stay_on_level_after_submit": "false",
     "submittable": "false",
     "allow_multiple_attempts": "false",
@@ -18,7 +18,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2026-03-18T21:40:06.718+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-13\\\"\"],\"cloned_from\":\"hoai-web-design-v2-13\"},{\"changed_at\":\"2026-03-18 21:40:30 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2026-03-18T21:40:06.718+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-v2-13\\\"\"],\"cloned_from\":\"hoai-web-design-v2-13\"},{\"changed_at\":\"2026-03-18 21:40:30 +0000\",\"changed\":[\"title\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 18:20:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
