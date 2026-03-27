@@ -1,11 +1,11 @@
-name: OpenTofu Apply
+name: OpenTofu-Apply
 
 on:
   push:
     branches: [staging]
     paths:
-      - "**.tf"
-      - "**.tfvars"
+      - "**/*.tf"
+      - "**/*.tfvars"
 
 permissions:
   id-token: write # Required for OIDC
@@ -17,6 +17,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Make sure to keep these in sync with the plan job workspaces matrix
         workspace:
           - k8s/tofu/codeai-k8s/eks-cluster
           - k8s/tofu/codeai-k8s/eks-cluster-addons
@@ -24,6 +25,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.workspace }}
+    environment: open-tofu-plan
     steps:
       - uses: actions/checkout@v4
 
@@ -75,7 +77,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.workspace }}
-    environment: production # Pauses here for manual approval — reviewer sees plan summary before approving
+    environment: open-tofu-apply
     steps:
       - uses: actions/checkout@v4
 
@@ -103,4 +105,4 @@ jobs:
         run: tofu init
 
       - name: OpenTofu Apply
-        run: tofu apply -no-color tfplan
+        run: tofu apply -no-color -input=false -auto-approve tfplan

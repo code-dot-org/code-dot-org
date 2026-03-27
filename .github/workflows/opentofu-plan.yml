@@ -1,11 +1,11 @@
-name: OpenTofu Plan
+name: OpenTofu-Plan
 
 on:
   pull_request:
     branches: [staging]
     paths:
-      - "**.tf"
-      - "**.tfvars"
+      - "**/*.tf"
+      - "**/*.tfvars"
 
 permissions:
   id-token: write # Required for OIDC
@@ -18,6 +18,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Make sure to keep these in sync with the apply job workspaces matrix
         workspace:
           - k8s/tofu/codeai-k8s/eks-cluster
           - k8s/tofu/codeai-k8s/eks-cluster-addons
@@ -25,6 +26,7 @@ jobs:
     defaults:
       run:
         working-directory: ${{ matrix.workspace }}
+    environment: open-tofu-plan
     steps:
       - uses: actions/checkout@v4
 
