@@ -61,7 +61,6 @@ const SILENCED = [
   'standaloneVideo',
   'studio',
   'turtle',
-  'weblab',
 
   // referenced from exported projects
   'applab-api',

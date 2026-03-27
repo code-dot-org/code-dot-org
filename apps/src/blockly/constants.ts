@@ -241,7 +241,6 @@ export const READ_ONLY_PROPERTIES = [
   'VariableMap',
   'VariableModel',
   'Variables',
-  'weblab_locale',
   'WidgetDiv',
   'Workspace',
   'WorkspaceSvg',

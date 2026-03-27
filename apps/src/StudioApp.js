@@ -3365,7 +3365,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
-      isBramble: config.app && config.app === 'weblab',
       hideSource: !!config.hideSource,
       isChallengeLevel: !!config.isChallengeLevel,
       isEmbedView: !!config.embed,

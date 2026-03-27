@@ -287,17 +287,7 @@ var projects = (module.exports = {
    */
   getShareUrl() {
     const location = this.getLocation();
-    if (this.isWebLab()) {
-      const re = /([-.]?studio)?\.?code.org/i;
-      const environmentKey = location.hostname.replace(re, '');
-      const subdomain = environmentKey.length > 0 ? `${environmentKey}.` : '';
-      const port = 'localhost' === environmentKey ? `:${location.port}` : '';
-      return `${
-        location.protocol
-      }//${subdomain}codeprojects.org${port}/projects/weblab/${this.getCurrentId()}`;
-    } else {
-      return location.origin + this.getPathName();
-    }
+    return location.origin + this.getPathName();
   },
 
   /**
@@ -791,8 +781,6 @@ var projects = (module.exports = {
       case 'spritelab':
       case 'thebadguys':
         return msg.defaultProjectNameSpriteLab();
-      case 'weblab':
-        return msg.defaultProjectNameWebLab();
       case 'turtle':
         switch (appOptions.skinId) {
           case 'artist':
@@ -848,7 +836,6 @@ var projects = (module.exports = {
       case 'applab':
       case 'dance':
       case 'flappy':
-      case 'weblab':
       case 'gamelab':
       case 'thebadguys':
       case 'javalab':
@@ -912,10 +899,6 @@ var projects = (module.exports = {
     return this.getStandaloneApp() || 'unknown';
   },
 
-  isWebLab() {
-    return this.getStandaloneApp() === 'weblab';
-  },
-
   canServerSideRemix() {
     // The excluded app types need to make modifications to the project that
     // apply to the remixed project, but should not be saved on the original
@@ -938,7 +921,7 @@ var projects = (module.exports = {
    * @returns {boolean} Whether a project should use the sources api.
    */
   useSourcesApi() {
-    return this.getStandaloneApp() !== 'weblab';
+    return false;
   },
   /**
    * @returns {string} The path to the app capable of running

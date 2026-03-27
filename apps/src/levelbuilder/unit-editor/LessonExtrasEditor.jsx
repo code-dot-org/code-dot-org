@@ -85,7 +85,6 @@ export default class LessonExtrasEditor extends React.Component {
                 <option value="artist_k1">Artist K1</option>
                 <option value="applab">App Lab</option>
                 <option value="gamelab">Game Lab</option>
-                <option value="weblab">Web Lab</option>
                 <option value="frozen">Frozen</option>
                 <option value="minecraft_adventurer">
                   Minecraft Adventurer

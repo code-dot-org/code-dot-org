@@ -194,14 +194,13 @@ export const DEPRECATED_PROJECT_TYPES = ['algebra_game', 'calc', 'eval'];
 export const OPEN_ENDED_LEGACY_PROJECT_TYPES = [
   'applab',
   'gamelab',
-  'weblab',
   'javalab',
   'spritelab',
   'poetry',
   'playlab',
 ];
 
-export const OPEN_ENDED_LAB2_PROJECT_TYPES = ['pythonlab', 'weblab2'];
+export const OPEN_ENDED_LAB2_PROJECT_TYPES = ['pythonlab', 'weblab', 'weblab2'];
 
 export const OPEN_ENDED_PROJECTS_YOUNG_AGE = [
   'spritelab',
