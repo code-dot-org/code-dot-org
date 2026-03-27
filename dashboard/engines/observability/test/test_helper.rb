@@ -21,7 +21,7 @@ require 'sentry-ruby'
 # Individual tests set the values they need in before blocks.
 module CDO
   class << self
-    attr_accessor :enable_opentelemetry, :enable_sentry, :sentry_dsn
+    attr_accessor :enable_opentelemetry, :enable_sentry, :dashboard_sentry_dsn, :frontend_apps_sentry_dsn, :frontend_studio_sentry_dsn
 
     def running_web_application?
       @running_web_application
@@ -36,7 +36,9 @@ module CDO
 
   self.enable_opentelemetry = false
   self.enable_sentry = false
-  self.sentry_dsn = nil
+  self.dashboard_sentry_dsn = nil
+  self.frontend_apps_sentry_dsn = nil
+  self.frontend_studio_sentry_dsn = nil
   self.running_web_application = false
 end
 

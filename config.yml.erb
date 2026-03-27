@@ -262,7 +262,12 @@ enable_opentelemetry: false
 
 # Sentry trace and error reporting.
 enable_sentry: false
-sentry_dsn: !Secret
+# DSN for the Dashboard Rails backend Sentry project.
+dashboard_sentry_dsn: !Secret
+# DSN for the apps/ webpack bundle Sentry project.
+frontend_apps_sentry_dsn: !Secret
+# DSN for the frontend/apps/studio Vite app Sentry project.
+frontend_studio_sentry_dsn: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)

@@ -1,5 +1,7 @@
 import * as Sentry from '@sentry/browser';
 
+import {CodeStudioConfig, getDashboardApiUrl} from '@code-dot-org/core';
+
 import type {ObservabilityClient, ObservabilityConfig} from '../types';
 
 /**
@@ -37,11 +39,10 @@ export class SentryAdapter implements ObservabilityClient {
       Sentry.init({
         dsn: config.sentry?.dsn,
         sendDefaultPii: false,
+        integrations: [Sentry.browserTracingIntegration()],
+        tracePropagationTargets: [this.getAllowedTracingUrls()],
         sampleRate: config.sampling?.errorSampleRate ?? 1.0,
         tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
-        tracePropagationTargets: config.tracePropagationTargets ?? [
-          /^\/(?!\/)/,
-        ],
       });
 
       this.state.initialized = true;
@@ -58,6 +59,17 @@ export class SentryAdapter implements ObservabilityClient {
       );
       // Mark as initialized so subsequent calls don't queue, but SDK is broken.
       // We leave initialized=false so recordError becomes a no-op too.
+    }
+  }
+
+  getAllowedTracingUrls() {
+    const environment = CodeStudioConfig.environment;
+
+    switch (environment) {
+      case 'adhoc':
+        return /^https:\/\/.*\.cdn-code\.org/;
+      default:
+        return getDashboardApiUrl(environment);
     }
   }
 

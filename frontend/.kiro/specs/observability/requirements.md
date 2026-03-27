@@ -89,7 +89,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 
 1. Code Studio SHALL import the observability package as a standard ES module dependency and call `createObservabilityClient` during application bootstrap.
 2. Where Code Studio enables SSR in the future, the `ObservabilityClient.init` call SHALL be guarded to execute only in browser environments (i.e., where `typeof window !== 'undefined'`).
-3. The Code Studio integration SHALL configure the observability provider using runtime values injected by Rails into the `<meta name="app-config">` tag. In production, this tag is rendered by `dashboard/app/views/app/index.html.haml` using values from the `CDO` object, which is populated from `config/*.yml.erb`. The Vite development `frontend/apps/studio/index.html` SHALL NOT be modified; when the meta tag is absent, `createObservabilityClient` SHALL default to the no-op adapter.
+3. The Code Studio integration SHALL configure the observability provider using runtime values injected by Rails into the `<meta name="app-config">` tag. In production, this tag is rendered by `dashboard/app/views/app/index.html.haml` using values from the `CDO` object, which is populated from `config/*.yml.erb`; the Sentry DSN for the Studio app is sourced from `CDO.frontend_studio_sentry_dsn`. The Vite development `frontend/apps/studio/index.html` SHALL include a stub `<meta name="app-config">` tag with `{"observability":{"provider":"none"}}` so the app degrades gracefully in local dev without Rails. When the meta tag is absent or `provider` is `'none'`, `createObservabilityClient` SHALL default to the no-op adapter.
 4. If the provider SDK is not available at runtime (e.g., blocked by an ad blocker), the `ObservabilityClient` SHALL catch the initialization failure, log a warning, and fall back to no-op adapter behavior.
 5. The Code Studio integration SHALL NOT increase the initial JavaScript bundle size beyond the size of the selected provider SDK plus the observability package itself (i.e., no unintended transitive dependencies shall be bundled).
 
@@ -117,7 +117,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 2. When `tracesSampleRate` is `0` or not set, the `ObservabilityClient` SHALL NOT emit any trace or span data to the provider.
 3. When `errorSampleRate` is `0`, the `ObservabilityClient` SHALL NOT emit any error data to the provider, but SHALL continue to operate normally (no exception thrown).
 4. The `ObservabilityClient` SHALL pass `errorSampleRate` and `tracesSampleRate` directly to the active provider SDK's native sampling configuration; it SHALL NOT implement its own sampling logic on top of the provider's.
-5. The host application SHALL supply sampling rates via the Rails-injected `<meta name="app-config">` runtime config, allowing rates to differ per environment (e.g., lower trace rates in production, higher in staging) without a code deploy.
+5. The host application SHALL supply sampling rates via the Rails-injected `<meta name="app-config">` runtime config or via DCDO (`frontend-observability-sampling-config`), allowing rates to differ per environment (e.g., lower trace rates in production, higher in staging) without a code deploy.
 6. The no-op adapter SHALL accept and silently ignore all sampling configuration.
 
 ### Requirement 9: Distributed Tracing — Frontend/Backend Trace Context Propagation
@@ -129,6 +129,8 @@ All instrumentation must comply with the platform's privacy policy: session data
 1. The `ObservabilityClient` configuration SHALL accept a `tracePropagationTargets` option — an array of strings and/or regular expressions — that controls which outgoing HTTP request URLs receive W3C `traceparent` headers.
 2. When `tracePropagationTargets` is provided, the `ObservabilityClient` SHALL configure the active provider to emit the W3C `traceparent` header on matching outgoing requests, enabling the OTel-instrumented Rails backend to continue the trace.
 3. Trace context propagation SHALL operate independently of span collection — the `ObservabilityClient` SHALL propagate trace headers on matching outgoing requests even when `tracesSampleRate` is `0` or not set.
-4. The host application is responsible for supplying environment-appropriate tracing targets (e.g. the dashboard API URL for standard environments, or a CDN-scoped pattern for adhoc environments); the `ObservabilityClient` SHALL NOT hardcode any target URLs.
-5. When `tracePropagationTargets` is not set, the `ObservabilityClient` SHALL default to same-origin requests only, preventing accidental trace header leakage to third-party services.
+4. When `tracePropagationTargets` is not supplied in the config, the `SentryAdapter` SHALL derive a default target by reading `CodeStudioConfig` from `@code-dot-org/core`. This makes `@code-dot-org/observability` an explicit runtime peer of `@code-dot-org/core`. The derived default SHALL be:
+   - For adhoc environments: a regex matching the CDN domain (`/^https:\/\/.*\.cdn-code\.org/`)
+   - For all other environments (production, staging, development, test, levelbuilder): the dashboard API URL returned by `getDashboardApiUrl(environment)`
+5. When `tracePropagationTargets` is not set, the `ObservabilityClient` SHALL use the environment-derived default described in 9.4, preventing accidental trace header leakage to third-party services.
 6. The no-op adapter SHALL accept and silently ignore all trace propagation configuration.

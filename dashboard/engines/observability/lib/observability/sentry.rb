@@ -9,13 +9,13 @@ module Observability
     def self.setup
       return unless CDO.enable_sentry && CDO.running_web_application?
 
-      if CDO.sentry_dsn.blank?
-        CDO.log.warn '[observability] enable_sentry is true but sentry_dsn is not configured; skipping Sentry setup'
+      if CDO.dashboard_sentry_dsn.blank?
+        CDO.log.warn '[observability] enable_sentry is true but dashboard_sentry_dsn is not configured; skipping Sentry setup'
         return
       end
 
       ::Sentry.init do |config|
-        config.dsn = CDO.sentry_dsn
+        config.dsn = CDO.dashboard_sentry_dsn
         # Explicitly disable PII collection per privacy policy.
         # Sentry defaults this to false, but we set it explicitly to make the
         # intent clear.
