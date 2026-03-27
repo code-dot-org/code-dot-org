@@ -439,6 +439,7 @@ class Ability
         Rubric,
         DataDoc,
         JitPlConcept,
+        JitPlMisconception,
         CourseOffering,
         UnitGroup,
         Resource,

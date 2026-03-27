@@ -115,6 +115,59 @@ class JitPlConceptTest < ActiveSupport::TestCase
     assert_equal 'my-resource', properties[:jit_pl_concepts_resources].first['seeding_key']['resource.key']
   end
 
+  test "serialize includes misconceptions" do
+    concept = create(:jit_pl_concept)
+    misconception = create(:jit_pl_misconception, jit_pl_concept: concept, name: 'bad-idea', text_content: 'Wrong.')
+
+    serialized = concept.serialize
+    assert_equal 1, serialized[:misconceptions].length
+    assert_equal misconception.id, serialized[:misconceptions].first[:id]
+    assert_equal 'bad-idea', serialized[:misconceptions].first[:name]
+    assert_equal 'Wrong.', serialized[:misconceptions].first[:text_content]
+  end
+
+  test "seed_record creates misconceptions from file" do
+    concept = create(:jit_pl_concept, name: 'functions')
+    data = {
+      name: 'functions',
+      display_name: 'Functions',
+      text_content: 'Reusable code.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      misconceptions: [
+        {name: 'bad-idea', text_content: 'Wrong.', resources: [], jit_pl_misconceptions_resources: []}
+      ]
+    }
+
+    File.stubs(:read).returns(data.to_json)
+
+    JitPlConcept.seed_record('config/jit_pl_concepts/functions.json')
+
+    concept.reload
+    assert_equal 1, concept.jit_pl_misconceptions.count
+    assert_equal 'bad-idea', concept.jit_pl_misconceptions.first.name
+  end
+
+  test "seed_record removes misconceptions absent from file" do
+    concept = create(:jit_pl_concept, name: 'loops')
+    _to_remove = create(:jit_pl_misconception, jit_pl_concept: concept, name: 'old-idea')
+    data = {
+      name: 'loops',
+      display_name: 'Loops',
+      text_content: 'Repeating.',
+      resources: [],
+      jit_pl_concepts_resources: [],
+      misconceptions: []
+    }
+
+    File.stubs(:read).returns(data.to_json)
+
+    JitPlConcept.seed_record('config/jit_pl_concepts/loops.json')
+
+    concept.reload
+    assert_empty concept.jit_pl_misconceptions
+  end
+
   test "seed_all removes concepts with no corresponding file" do
     concept_to_keep = create(:jit_pl_concept)
     concept_to_remove = create(:jit_pl_concept)

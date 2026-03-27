@@ -1,8 +1,9 @@
 import FontAwesomeV6Icon from '@code-dot-org/component-library/fontAwesomeV6Icon';
 import {Button as MuiButton, IconButton as MuiIconButton} from '@mui/material';
 import classnames from 'classnames';
-import React, {useState, useMemo, useEffect, useRef} from 'react';
+import React, {useState, useMemo, useEffect, useRef, useCallback} from 'react';
 
+import {AnalyticsProperties} from '@cdo/apps/aichat/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import SpeechToTextButton from './speechToTextButton/SpeechToTextButton';
@@ -18,7 +19,10 @@ const MAX_MESSAGE_LENGTH = 10000;
 export interface UserMessageEditorProps {
   userMessage: string;
   onChange: (userMessage: string) => void;
-  onSubmit: (userMessage: string) => void;
+  onSubmit: (
+    userMessage: string,
+    analyticsProperties?: AnalyticsProperties
+  ) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
   /** Custom className for editor container */
@@ -63,7 +67,7 @@ const UserMessageEditor = React.forwardRef<
     const handleKeyPress = (e: React.KeyboardEvent, userMessage: string) => {
       if (e.key === 'Enter' && !e.shiftKey && userMessage.trim() !== '') {
         e.preventDefault(); // Prevent the text box from having just a blank line.
-        onSubmit(userMessage);
+        submitMessage(userMessage);
       }
     };
 
@@ -85,12 +89,46 @@ const UserMessageEditor = React.forwardRef<
       id: 'uitest-chat-submit',
       onClick: (e: React.MouseEvent) => {
         e.stopPropagation();
-        onSubmit(userMessage);
+        submitMessage(userMessage);
       },
       'aria-label': commonI18n.submit(),
       type: 'button' as const,
       component: 'button' as const,
     };
+
+    const [speechToTextCount, setSpeechToTextCount] = useState(0);
+    const [clearedMessageCount, setClearedMessageCount] = useState(0);
+    /** True after the field becomes empty following STT use, until the next successful transcription. */
+    const [lastDictationCleared, setLastDictationCleared] = useState(false);
+
+    useEffect(() => {
+      // Track how many times the message was cleared after using speech to text.
+      if (speechToTextCount > 0 && !userMessage) {
+        setClearedMessageCount(c => c + 1);
+        setLastDictationCleared(true);
+      }
+    }, [speechToTextCount, userMessage]);
+
+    const submitMessage = useCallback(
+      (userMessage: string) => {
+        onSubmit(userMessage, {
+          dictationEnabled: speechToTextEnabled,
+          dictationUsageCount: speechToTextCount,
+          dictationMessageClearedCount: clearedMessageCount,
+          dictationClearedSinceLastTranscription: lastDictationCleared,
+        });
+        setSpeechToTextCount(0);
+        setClearedMessageCount(0);
+        setLastDictationCleared(false);
+      },
+      [
+        speechToTextCount,
+        speechToTextEnabled,
+        clearedMessageCount,
+        lastDictationCleared,
+        onSubmit,
+      ]
+    );
 
     return (
       <div
@@ -136,8 +174,11 @@ const UserMessageEditor = React.forwardRef<
                 onTranscribed={text => {
                   onChange(`${userMessage ? userMessage + ' ' : ''}${text}`);
                   setIsRecording(false);
+                  setSpeechToTextCount(c => c + 1);
+                  setLastDictationCleared(false);
                 }}
                 onRecordStart={() => setIsRecording(true)}
+                disabled={disabled}
               />
             )}
             {showSubmitLabel ? (
