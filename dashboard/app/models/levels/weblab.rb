@@ -25,9 +25,7 @@
 #  index_levels_on_type       (type)
 #
 
-class Weblab < Level
-  before_save :fix_examples
-
+class Weblab < Weblab2
   serialized_attrs %w(
     project_template_level_name
     start_sources
@@ -39,55 +37,6 @@ class Weblab < Level
   )
 
   def self.create_from_level_builder(params, level_params)
-    create!(
-      level_params.merge(
-        user: params[:user],
-        game: Game.weblab,
-        level_num: 'custom',
-        properties: {},
-        validation_enabled: true
-      )
-    )
-  end
-
-  # Return an 'appOptions' hash derived from the level contents
-  def non_blockly_puzzle_level_options
-    options = Rails.cache.fetch("#{cache_key}/#{I18n.locale}/non_blockly_puzzle_level_options/v2") do
-      level_prop = {}
-
-      properties.each_key do |dashboard|
-        # Select value from properties json
-        value = JSONValue.value(properties[dashboard].presence)
-        apps_prop_name = dashboard.camelize(:lower)
-        # Don't override existing valid (non-nil/empty) values
-        level_prop[apps_prop_name] = value unless value.nil? # make sure we convert false
-      end
-
-      # FND-985 Create shared API to get localized level properties.
-      if should_localize?
-        localized_long_instructions = I18n.t(name, scope: [:data, 'long_instructions'], default: level_prop['longInstructions'])
-        level_prop['longInstructions'] = localized_long_instructions
-      end
-
-      level_prop['levelId'] = level_num
-
-      # We don't want this to be cached (as we only want it to be seen by authorized teachers), so
-      # set it to nil here and let other code put it in app_options
-      level_prop['teacherMarkdown'] = nil
-
-      # Don't set nil values
-      level_prop.compact!
-    end
-    options.freeze
-  end
-
-  def fix_examples
-    # remove nil and empty strings from examples
-    return if examples.nil?
-    self.examples = examples.select(&:present?)
-  end
-
-  def age_13_required?
-    true
+    raise "Do not create Weblab levels"
   end
 end

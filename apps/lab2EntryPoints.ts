@@ -26,6 +26,7 @@ export const lab2EntryPoints = {
   panels: PanelsEntryPoint,
   pythonlab: PythonlabEntryPoint,
   standalone_video: StandaloneVideoEntryPoint,
+  weblab: Weblab2EntryPoint,
   weblab2: Weblab2EntryPoint,
   sketchlab: SketchlabEntryPoint,
 } as const satisfies Record<string, Lab2EntryPoint>;

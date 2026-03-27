@@ -92,6 +92,42 @@ class Weblab2 < Level
       properties_camelized[:widgetView] = true
     end
 
+    # Reform any legacy string startSources
+    if properties_camelized["startSources"].is_a?(String)
+      begin
+        properties_camelized["startSources"] = JSON.parse(properties_camelized["startSources"])
+
+        # Ensure startSources has folders
+        properties_camelized["startSources"]["folders"] ||= {}
+
+        # Ensure file data is correct
+        properties_camelized["startSources"]["files"] ||= {}
+
+        if properties_camelized["startSources"]["files"].is_a?(Array)
+          files = properties_camelized["startSources"]["files"]
+          properties_camelized["startSources"]["files"] = {}
+
+          id = 0
+          files.each do |file|
+            # Ensurre the file has an id
+            id += 1
+
+            properties_camelized["startSources"]["files"][id] = {
+              # Ensure 'data' becomes 'contents'
+              id: id.to_s,
+              active: id == 1,
+              folderId: "0",
+              name:  file["name"] || "index.html",
+              contents: file["data"] || "",
+            }
+          end
+        end
+      rescue
+        # We don't understand the startSources... let's ensure they are nulled out
+        properties_camelized.delete("startSources")
+      end
+    end
+
     properties_camelized
   end
 
