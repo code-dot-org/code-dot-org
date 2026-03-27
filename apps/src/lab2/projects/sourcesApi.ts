@@ -4,6 +4,11 @@
  */
 
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+import {
+  isWeblab1CompatibilityModeEnabled,
+  loadWeblab1ProjectAsLab2Sources,
+  shouldFallbackToWeblab1Files,
+} from '@cdo/apps/weblab2/weblab1Compatibility';
 
 import {SOURCE_FILE} from '../constants';
 import {SourceResponseValidator} from '../responseValidators';
@@ -22,7 +27,21 @@ export async function get(
   if (versionId) {
     url += `?version=${versionId}`;
   }
-  return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator);
+  try {
+    return await HttpClient.fetchJson<ProjectSources>(
+      url,
+      {},
+      SourceResponseValidator
+    );
+  } catch (error) {
+    if (
+      isWeblab1CompatibilityModeEnabled() &&
+      shouldFallbackToWeblab1Files(error)
+    ) {
+      return loadWeblab1ProjectAsLab2Sources(channelId, versionId);
+    }
+    throw error;
+  }
 }
 
 export async function update(
