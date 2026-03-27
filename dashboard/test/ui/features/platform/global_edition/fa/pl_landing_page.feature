@@ -69,7 +69,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I start a self-paced PL course
 
     When I am on "http://studio.code.org/my-professional-learning"
-    And I wait until element "a[href*='/courses/alltheselfpacedplthings/units/1']" is visible
+    And I wait until element "a:contains(Continue course)" is visible
 
     When I visit Farsi version of Professional Learning Lending page
-    Then element "a[href*='/courses/alltheselfpacedplthings/units/1']" is visible
+    Then element "a:contains(ادامه دوره)" is visible
