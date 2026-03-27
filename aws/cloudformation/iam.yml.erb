@@ -1041,13 +1041,6 @@ roles.each do |name, config| %>
                 Resource:
                   - arn:aws:s3:::codeai-tofu-state
                   - arn:aws:s3:::codeai-tofu-state/*
-              - Sid: DynamoDBStateLocking
-                Effect: Allow
-                Action:
-                  - dynamodb:GetItem
-                  - dynamodb:PutItem
-                  - dynamodb:DeleteItem
-                Resource: !Sub "arn:aws:dynamodb:*:${AWS::AccountId}:table/codeai-tofu-state-lock"
         - PolicyName: EKSManagement
           PolicyDocument:
             Version: 2012-10-17
@@ -1055,43 +1048,43 @@ roles.each do |name, config| %>
               - Sid: EKSClusterManagement
                 Effect: Allow
                 Action:
-                  - eks:CreateCluster
-                  - eks:DeleteCluster
+                  # - eks:CreateCluster
+                  # - eks:DeleteCluster
                   - eks:DescribeCluster
-                  - eks:UpdateClusterConfig
-                  - eks:UpdateClusterVersion
-                  - eks:TagResource
-                  - eks:UntagResource
-                  - eks:ListTagsForResource
-                  - eks:CreateFargateProfile
-                  - eks:DeleteFargateProfile
-                  - eks:DescribeFargateProfile
-                  - eks:ListFargateProfiles
-                  - eks:CreateAddon
-                  - eks:DeleteAddon
-                  - eks:DescribeAddon
-                  - eks:DescribeAddonVersions
-                  - eks:UpdateAddon
-                  - eks:ListAddons
-                  - eks:CreateAccessEntry
-                  - eks:DeleteAccessEntry
-                  - eks:DescribeAccessEntry
-                  - eks:ListAccessEntries
-                  - eks:AssociateAccessPolicy
-                  - eks:DisassociateAccessPolicy
-                  - eks:ListAssociatedAccessPolicies
-                  - eks:CreateNodegroup
-                  - eks:DeleteNodegroup
-                  - eks:DescribeNodegroup
-                  - eks:UpdateNodegroupConfig
-                  - eks:UpdateNodegroupVersion
-                  - eks:ListNodegroups
-                  - eks:DescribeUpdate
-                  - eks:ListUpdates
-                  - eks:AssociateIdentityProviderConfig
-                  - eks:DescribeIdentityProviderConfig
-                  - eks:DisassociateIdentityProviderConfig
-                  - eks:ListIdentityProviderConfigs
+                  # - eks:UpdateClusterConfig
+                  # - eks:UpdateClusterVersion
+                  # - eks:TagResource
+                  # - eks:UntagResource
+                  # - eks:ListTagsForResource
+                  # - eks:CreateFargateProfile
+                  # - eks:DeleteFargateProfile
+                  # - eks:DescribeFargateProfile
+                  # - eks:ListFargateProfiles
+                  # - eks:CreateAddon
+                  # - eks:DeleteAddon
+                  # - eks:DescribeAddon
+                  # - eks:DescribeAddonVersions
+                  # - eks:UpdateAddon
+                  # - eks:ListAddons
+                  # - eks:CreateAccessEntry
+                  # - eks:DeleteAccessEntry
+                  # - eks:DescribeAccessEntry
+                  # - eks:ListAccessEntries
+                  # - eks:AssociateAccessPolicy
+                  # - eks:DisassociateAccessPolicy
+                  # - eks:ListAssociatedAccessPolicies
+                  # - eks:CreateNodegroup
+                  # - eks:DeleteNodegroup
+                  # - eks:DescribeNodegroup
+                  # - eks:UpdateNodegroupConfig
+                  # - eks:UpdateNodegroupVersion
+                  # - eks:ListNodegroups
+                  # - eks:DescribeUpdate
+                  # - eks:ListUpdates
+                  # - eks:AssociateIdentityProviderConfig
+                  # - eks:DescribeIdentityProviderConfig
+                  # - eks:DisassociateIdentityProviderConfig
+                  # - eks:ListIdentityProviderConfigs
                 Resource: "*"
         - PolicyName: VPCNetworking
           PolicyDocument:
@@ -1100,39 +1093,39 @@ roles.each do |name, config| %>
               - Sid: VPCNetworkManagement
                 Effect: Allow
                 Action:
-                  - ec2:CreateSubnet
-                  - ec2:DeleteSubnet
-                  - ec2:ModifySubnetAttribute
+                  # - ec2:CreateSubnet
+                  # - ec2:DeleteSubnet
+                  # - ec2:ModifySubnetAttribute
                   - ec2:DescribeSubnets
-                  - ec2:CreateRouteTable
-                  - ec2:DeleteRouteTable
-                  - ec2:AssociateRouteTable
-                  - ec2:DisassociateRouteTable
-                  - ec2:CreateRoute
-                  - ec2:DeleteRoute
-                  - ec2:ReplaceRoute
-                  - ec2:DescribeRouteTables
-                  - ec2:CreateNatGateway
-                  - ec2:DeleteNatGateway
-                  - ec2:DescribeNatGateways
-                  - ec2:AllocateAddress
-                  - ec2:ReleaseAddress
-                  - ec2:DescribeAddresses
-                  - ec2:CreateTags
-                  - ec2:DeleteTags
-                  - ec2:DescribeTags
-                  - ec2:DescribeVpcs
-                  - ec2:DescribeInternetGateways
-                  - ec2:DescribeAvailabilityZones
-                  - ec2:DescribeSecurityGroups
-                  - ec2:DescribeSecurityGroupRules
-                  - ec2:CreateSecurityGroup
-                  - ec2:DeleteSecurityGroup
-                  - ec2:AuthorizeSecurityGroupIngress
-                  - ec2:AuthorizeSecurityGroupEgress
-                  - ec2:RevokeSecurityGroupIngress
-                  - ec2:RevokeSecurityGroupEgress
-                  - ec2:DescribeNetworkInterfaces
+                  # - ec2:CreateRouteTable
+                  # - ec2:DeleteRouteTable
+                  # - ec2:AssociateRouteTable
+                  # - ec2:DisassociateRouteTable
+                  # - ec2:CreateRoute
+                  # - ec2:DeleteRoute
+                  # - ec2:ReplaceRoute
+                  # - ec2:DescribeRouteTables
+                  # - ec2:CreateNatGateway
+                  # - ec2:DeleteNatGateway
+                  # - ec2:DescribeNatGateways
+                  # - ec2:AllocateAddress
+                  # - ec2:ReleaseAddress
+                  # - ec2:DescribeAddresses
+                  # - ec2:CreateTags
+                  # - ec2:DeleteTags
+                  # - ec2:DescribeTags
+                  # - ec2:DescribeVpcs
+                  # - ec2:DescribeInternetGateways
+                  # - ec2:DescribeAvailabilityZones
+                  # - ec2:DescribeSecurityGroups
+                  # - ec2:DescribeSecurityGroupRules
+                  # - ec2:CreateSecurityGroup
+                  # - ec2:DeleteSecurityGroup
+                  # - ec2:AuthorizeSecurityGroupIngress
+                  # - ec2:AuthorizeSecurityGroupEgress
+                  # - ec2:RevokeSecurityGroupIngress
+                  # - ec2:RevokeSecurityGroupEgress
+                  # - ec2:DescribeNetworkInterfaces
                 Resource: "*"
         - PolicyName: IAMForEKS
           PolicyDocument:
@@ -1141,36 +1134,36 @@ roles.each do |name, config| %>
               - Sid: IAMRoleManagement
                 Effect: Allow
                 Action:
-                  - iam:CreateRole
-                  - iam:DeleteRole
-                  - iam:GetRole
-                  - iam:UpdateRole
-                  - iam:TagRole
-                  - iam:UntagRole
-                  - iam:UpdateAssumeRolePolicy
-                  - iam:PutRolePolicy
-                  - iam:GetRolePolicy
-                  - iam:DeleteRolePolicy
-                  - iam:AttachRolePolicy
-                  - iam:DetachRolePolicy
-                  - iam:ListAttachedRolePolicies
-                  - iam:ListRolePolicies
-                  - iam:ListInstanceProfilesForRole
-                  - iam:PassRole
-                  - iam:CreatePolicy
-                  - iam:DeletePolicy
+                  # - iam:CreateRole
+                  # - iam:DeleteRole
+                  # - iam:GetRole
+                  # - iam:UpdateRole
+                  # - iam:TagRole
+                  # - iam:UntagRole
+                  # - iam:UpdateAssumeRolePolicy
+                  # - iam:PutRolePolicy
+                  # - iam:GetRolePolicy
+                  # - iam:DeleteRolePolicy
+                  # - iam:AttachRolePolicy
+                  # - iam:DetachRolePolicy
+                  # - iam:ListAttachedRolePolicies
+                  # - iam:ListRolePolicies
+                  # - iam:ListInstanceProfilesForRole
+                  # - iam:PassRole
+                  # - iam:CreatePolicy
+                  # - iam:DeletePolicy
                   - iam:GetPolicy
-                  - iam:GetPolicyVersion
-                  - iam:CreatePolicyVersion
-                  - iam:DeletePolicyVersion
-                  - iam:ListPolicyVersions
-                  - iam:CreateOpenIDConnectProvider
-                  - iam:DeleteOpenIDConnectProvider
-                  - iam:GetOpenIDConnectProvider
-                  - iam:TagOpenIDConnectProvider
-                  - iam:UpdateOpenIDConnectProviderThumbprint
-                  - iam:AddClientIDToOpenIDConnectProvider
-                  - iam:CreateServiceLinkedRole
+                  # - iam:GetPolicyVersion
+                  # - iam:CreatePolicyVersion
+                  # - iam:DeletePolicyVersion
+                  # - iam:ListPolicyVersions
+                  # - iam:CreateOpenIDConnectProvider
+                  # - iam:DeleteOpenIDConnectProvider
+                  # - iam:GetOpenIDConnectProvider
+                  # - iam:TagOpenIDConnectProvider
+                  # - iam:UpdateOpenIDConnectProviderThumbprint
+                  # - iam:AddClientIDToOpenIDConnectProvider
+                  # - iam:CreateServiceLinkedRole
                 Resource: "*"
         - PolicyName: KMSForEKS
           PolicyDocument:
@@ -1179,19 +1172,19 @@ roles.each do |name, config| %>
               - Sid: KMSKeyManagement
                 Effect: Allow
                 Action:
-                  - kms:CreateKey
-                  - kms:CreateAlias
-                  - kms:DeleteAlias
+                  # - kms:CreateKey
+                  # - kms:CreateAlias
+                  # - kms:DeleteAlias
                   - kms:DescribeKey
-                  - kms:GetKeyPolicy
-                  - kms:GetKeyRotationStatus
-                  - kms:ListAliases
-                  - kms:ListResourceTags
-                  - kms:PutKeyPolicy
-                  - kms:TagResource
-                  - kms:UntagResource
-                  - kms:EnableKeyRotation
-                  - kms:ScheduleKeyDeletion
+                  # - kms:GetKeyPolicy
+                  # - kms:GetKeyRotationStatus
+                  # - kms:ListAliases
+                  # - kms:ListResourceTags
+                  # - kms:PutKeyPolicy
+                  # - kms:TagResource
+                  # - kms:UntagResource
+                  # - kms:EnableKeyRotation
+                  # - kms:ScheduleKeyDeletion
                 Resource: "*"
         - PolicyName: SecretsManagerReadOnly
           PolicyDocument:
@@ -1200,7 +1193,7 @@ roles.each do |name, config| %>
               - Sid: SecretsManagerRead
                 Effect: Allow
                 Action:
-                  - secretsmanager:GetSecretValue
+                  # - secretsmanager:GetSecretValue
                   - secretsmanager:DescribeSecret
                 Resource: !Sub "arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:*/cdo/*"
 
