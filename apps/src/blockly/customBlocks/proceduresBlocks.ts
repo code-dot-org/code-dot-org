@@ -317,31 +317,25 @@ BlocklyCore.Extensions.register(
   }
 );
 
-// Override procedure_def_mutator because the plugin doesn't export it and
-// our copy has CDO-specific customizations (no gear icon, extra state for
-// description/visibility/modal function editor).
-if (BlocklyCore.Extensions.isRegistered('procedure_def_mutator')) {
-  BlocklyCore.Extensions.unregister('procedure_def_mutator');
-}
+// TODO: After updating to Blockly v10, remove this local copy of
+// procedureDefMutator and instead modify the imported mutator directly.
+// Our local copy has the compose() and decompose() methods removed.
+BlocklyCore.Extensions.unregister('procedure_def_mutator');
 BlocklyCore.Extensions.registerMutator(
   'procedure_def_mutator',
   procedureDefMutator
 );
 
-// Override here to add CDO-specific state: behaviorId and
-// disableNextConnection.
-if (BlocklyCore.Extensions.isRegistered('procedure_caller_mutator')) {
-  BlocklyCore.Extensions.unregister('procedure_caller_mutator');
-}
+// TODO: After updating to Blockly v10, use the original
+// procedure_caller_mutator and procedure_caller_on_change_mixin.
+// https://codedotorg.atlassian.net/browse/CT-148
+BlocklyCore.Extensions.unregister('procedure_caller_mutator');
 BlocklyCore.Extensions.registerMutator(
   'procedure_caller_mutator',
   procedureCallerMutator
 );
 
-// Override here to add an early-return guard for embedded workspaces.
-if (BlocklyCore.Extensions.isRegistered('procedure_caller_onchange_mixin')) {
-  BlocklyCore.Extensions.unregister('procedure_caller_onchange_mixin');
-}
+BlocklyCore.Extensions.unregister('procedure_caller_onchange_mixin');
 BlocklyCore.Extensions.registerMixin(
   'procedure_caller_onchange_mixin',
   procedureCallerOnChangeMixin

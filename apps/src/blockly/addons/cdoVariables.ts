@@ -49,7 +49,7 @@ export default function initializeVariables(
 // Delete all variables except those that are in use in the workspace.
 export function deleteUnusedVariables(workspace: BlocklyCore.Workspace) {
   // Get all declared variables
-  const allVariables = workspace.getVariableMap().getAllVariables();
+  const allVariables = workspace.getAllVariables();
 
   // Get all used variables
   const usedVariables = Blockly.Variables.allUsedVarModels(workspace);

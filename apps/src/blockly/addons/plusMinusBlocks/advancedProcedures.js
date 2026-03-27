@@ -552,9 +552,7 @@ const procedureDefHelper = function () {
 
   this.getInput('TOP').insertFieldAt(0, createPlusField(), 'PLUS');
 };
-if (BlocklyCore.Extensions.isRegistered('advanced_procedure_def_mutator')) {
-  BlocklyCore.Extensions.unregister('advanced_procedure_def_mutator');
-}
+BlocklyCore.Extensions.unregister('advanced_procedure_def_mutator');
 BlocklyCore.Extensions.registerMutator(
   'advanced_procedure_def_mutator',
   procedureDefMutator,

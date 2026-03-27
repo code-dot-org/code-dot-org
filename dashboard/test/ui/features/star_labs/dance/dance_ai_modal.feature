@@ -4,8 +4,7 @@ Feature: Dance Party
     Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/37/levels/3"
     And I wait for the lab page to fully load
     And I select age 10 in the age dialog
-    And I add a "Dancelab_ai" block with id "dance_ai" to workspace
-    And I connect block "dance_ai" inside block "setup"
+    And I drag block "dance_ai" to block "setup"
     And I click block field "[data-id='setup'] > [data-id='dance_ai'] > .blocklyEditableField"
 
     # First time choosing emojis.
