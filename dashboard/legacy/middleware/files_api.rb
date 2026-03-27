@@ -258,7 +258,7 @@ class FilesApi < Sinatra::Base
       attachment(filename)
     end
 
-    project = Projects.new(get_storage_id).get(encrypted_channel_id)
+    project = Projects.new(get_storage_id).get(encrypted_channel_id) if valid_encrypted_channel_id(encrypted_channel_id)
     project_type = project[:projectType]&.downcase if project
 
     # we always fetch weblab1 html files to ensure they still pass our latest no-js validations
