@@ -308,47 +308,75 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_extract_text_from_js_extracts_identifiers
-    result = ShareFiltering.extract_text_from_js('var myVar = 1;')
-    assert_includes result, 'var'
-    assert_includes result, 'myVar'
+    assert_equal 'var myVar', ShareFiltering.extract_text_from_js('var myVar = 1;')
   end
 
   def test_extract_text_from_js_extracts_single_line_comment_text
-    result = ShareFiltering.extract_text_from_js('// this is a comment')
-    assert_includes result, 'this is a comment'
+    assert_equal(
+      'this is a comment',
+      ShareFiltering.extract_text_from_js('// this is a comment')
+    )
+  end
+
+  def test_extract_text_from_js_single_line_comment_strips_leading_slashes
+    assert_equal(
+      'note about code',
+      ShareFiltering.extract_text_from_js('//   note about code')
+    )
+  end
+
+  def test_extract_text_from_js_single_line_comment_replaces_syntax_chars_for_tokenization
+    # Same intent as extractTextFromCode.ts: punctuation in comments is turned into spaces
+    # so downstream profanity filters do not glue words across (), [], ;, etc.
+    assert_equal(
+      'foo a b   arr 0    x   y',
+      ShareFiltering.extract_text_from_js('// foo(a,b); arr[0] < x > y')
+    )
   end
 
   def test_extract_text_from_js_extracts_multi_line_comment_text
-    result = ShareFiltering.extract_text_from_js("/* hello\nworld */")
-    assert_includes result, 'hello'
-    assert_includes result, 'world'
+    assert_equal(
+      "hello\nworld",
+      ShareFiltering.extract_text_from_js("/* hello\nworld */")
+    )
+  end
+
+  def test_extract_text_from_js_multi_line_comment_strips_delimiters_and_syntax_chars
+    assert_equal(
+      'see  foo bar',
+      ShareFiltering.extract_text_from_js('/* see: foo(bar); */')
+    )
   end
 
   def test_extract_text_from_js_extracts_string_literal_content
-    result = ShareFiltering.extract_text_from_js('var x = "hello world";')
-    assert_includes result, 'hello world'
+    assert_equal(
+      'hello world var',
+      ShareFiltering.extract_text_from_js('var x = "hello world";')
+    )
   end
 
   def test_extract_text_from_js_separates_function_name_and_param
     # Key regression: `totals(hit)` must NOT become "totalshit" after syntax stripping.
-    result = ShareFiltering.extract_text_from_js('function totals(hits) { return hit; }')
-    refute_includes result, 'totalshits'
-    assert_includes result, 'totals'
-    assert_includes result, 'hits'
+    assert_equal(
+      'function totals hits return hit',
+      ShareFiltering.extract_text_from_js('function totals(hits) { return hit; }')
+    )
   end
 
   def test_extract_text_from_js_no_false_positive_from_adjacent_string_literals
     # `"shi"+"ts"` must not become "shits" after syntax stripping.
-    result = ShareFiltering.extract_text_from_js('var x = "shi"+"ts";')
-    refute_includes result, 'shits'
-    assert_includes result, 'shi'
-    assert_includes result, 'ts'
+    assert_equal(
+      'shi ts var',
+      ShareFiltering.extract_text_from_js('var x = "shi"+"ts";')
+    )
   end
 
   def test_extract_text_from_js_excludes_single_char_identifiers
     # Single-character identifiers are too noisy to be useful.
-    result = ShareFiltering.extract_text_from_js('for (var i = 0; i < 10; i++) {}')
-    refute_includes result.split, 'i'
+    assert_equal(
+      'for var',
+      ShareFiltering.extract_text_from_js('for (var i = 0; i < 10; i++) {}')
+    )
   end
 
   # ShareFiltering.share_filter_text_from_library_request_body — used by files_api libraries PUT.
@@ -374,24 +402,18 @@ class ShareFilteringTest < Minitest::Test
   def test_share_filter_text_from_library_request_body_app_lab_json_skips_droplet_config
     library_hash = sample_app_lab_library_hash_for_share_filter
     body = JSON.generate(library_hash)
-    text = ShareFiltering.share_filter_text_from_library_request_body(body)
-
-    refute_includes text, 'dropletConfig'
-    refute_includes text, 'paletteParams'
-    refute_includes text, 'paramshitsatBats'
-    assert_includes text, 'battingAverage'
-    assert_includes text, 'Remix'
-    assert_includes text, 'demo'
+    expected =
+      'function battingAverage hits atBats return hits atBats Remix demo'
+    assert_equal expected, ShareFiltering.share_filter_text_from_library_request_body(body)
   end
 
   def test_share_filter_text_from_library_request_body_double_encoded_json
     library_hash = sample_app_lab_library_hash_for_share_filter
     inner = JSON.generate(library_hash)
     body = JSON.generate(inner)
-    text = ShareFiltering.share_filter_text_from_library_request_body(body)
-
-    refute_includes text, 'dropletConfig'
-    assert_includes text, 'battingAverage'
+    expected =
+      'function battingAverage hits atBats return hits atBats Remix demo'
+    assert_equal expected, ShareFiltering.share_filter_text_from_library_request_body(body)
   end
 
   def test_share_filter_text_from_library_request_body_nil_optional_fields
@@ -400,10 +422,7 @@ class ShareFilteringTest < Minitest::Test
       'source' => 'function f() {}',
     }
     body = JSON.generate(library_hash)
-    text = ShareFiltering.share_filter_text_from_library_request_body(body)
-
-    assert_includes text, 'N'
-    assert_includes text, 'function'
+    assert_equal 'function N', ShareFiltering.share_filter_text_from_library_request_body(body)
   end
 
   def test_share_filter_text_from_library_request_body_invalid_json_returns_raw
