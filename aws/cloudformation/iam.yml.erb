@@ -1229,8 +1229,3 @@ Outputs:
     Description: Execution Role for GenAI Sagemaker Models
     Value: !GetAtt SagemakerModelExecutionRole.Arn
     Export: {Name: !Sub "${AWS::StackName}-SagemakerExecutionRoleARN"}
-  GitHubActionsCodeDotOrgRoleARN:
-    Description: GitHub Actions OIDC Role ARN for code-dot-org/code-dot-org
-    Value: !GetAtt GitHubActionsCodeDotOrgRole.Arn
-    Export: {Name: !Sub "${AWS::StackName}-GitHubActionsCodeDotOrgRoleARN"}
-
