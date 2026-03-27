@@ -212,7 +212,6 @@ module ShareFiltering
   end
 
   # Extracts user-written text from JavaScript source code for profanity/PII filtering.
-  # Contains the same logic as the TypeScript function in apps/src/code-studio/components/libraries/extractTextFromCode.ts.
   #
   # Each token is space-separated in the output so that profanity filters which strip
   # syntax characters cannot concatenate adjacent identifiers into a false positive

@@ -297,7 +297,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   # Tests for ShareFiltering.extract_text_from_js
-  # These are the same as the behavior of the TypeScript extractTextFromCode function.
+  # These tests cover expected extraction behavior.
 
   def test_extract_text_from_js_returns_empty_for_nil
     assert_equal '', ShareFiltering.extract_text_from_js(nil)
@@ -326,7 +326,7 @@ class ShareFilteringTest < Minitest::Test
   end
 
   def test_extract_text_from_js_single_line_comment_replaces_syntax_chars_for_tokenization
-    # Same intent as extractTextFromCode.ts: punctuation in comments is turned into spaces
+    # Punctuation in comments is turned into spaces
     # so downstream profanity filters do not glue words across (), [], ;, etc.
     assert_equal(
       'foo a b   arr 0    x   y',
