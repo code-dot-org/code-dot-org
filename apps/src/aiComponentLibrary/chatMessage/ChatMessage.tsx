@@ -96,7 +96,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
     >
       <div className={moduleStyles.grid}>
         {isAssistant && isTA && (
-          <div className={moduleStyles.botIconWrapper}>
+          <div className={moduleStyles.botIconTAOverlayContainer}>
             <div className={classNames(moduleStyles.botIconContainer)}>
               <img
                 src={aiBotOutlineIcon}
