@@ -247,6 +247,7 @@ Wraps `@sentry/browser`. Key behaviors:
 
 - **`init(config)`**: Calls `Sentry.init()` with:
   - `dsn` from `config.sentry.dsn`
+  - `environment: CodeStudioConfig.environment` (so events are bucketed correctly in the Sentry dashboard rather than defaulting to `"production"`)
   - `sendDefaultPii: false` (anonymous mode)
   - `sampleRate: config.sampling?.errorSampleRate ?? 1.0`
   - `tracesSampleRate: config.sampling?.tracesSampleRate ?? 0`

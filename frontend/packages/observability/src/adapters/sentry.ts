@@ -38,6 +38,7 @@ export class SentryAdapter implements ObservabilityClient {
     try {
       Sentry.init({
         dsn: config.sentry?.dsn,
+        environment: CodeStudioConfig.environment,
         sendDefaultPii: false,
         integrations: [Sentry.browserTracingIntegration()],
         tracePropagationTargets: [this.getAllowedTracingUrls()],
