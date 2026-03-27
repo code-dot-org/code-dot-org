@@ -58,7 +58,7 @@ The goal is a clean separation between the Vite frontend and the Rails backend, 
    }
    ```
    - `provider` SHALL default to `'none'` when the meta tag is absent or the field is missing.
-   - `sentry.dsn` is sourced from `CDO.sentry_dsn`.
+   - `sentry.dsn` is sourced from `CDO.frontend_studio_sentry_dsn` for the Studio app and `CDO.frontend_apps_sentry_dsn` for the apps/ bundle.
 3. `SiteConfig` SHALL also expose `appVersion?: string` sourced from the meta tag.
 4. If the `<meta name="app-config">` tag is absent or its content is not valid JSON, `SiteConfig` SHALL use safe defaults (e.g. `provider: 'none'`) rather than throwing.
 5. All modules in the app SHALL access config via the existing `CodeStudioConfig` singleton from `@code-dot-org/core` — never directly from `document.querySelector`, `window` globals, or `import.meta.env`.

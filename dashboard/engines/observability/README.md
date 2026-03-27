@@ -9,7 +9,7 @@ Observability instrumentations are disabled by default. Enable them in your `loc
 ```yaml
 enable_opentelemetry: true
 enable_sentry: true
-sentry_dsn: "https://..."   # required for Sentry to send events
+dashboard_sentry_dsn: "https://..."   # required for Sentry to send events to the Dashboard backend project
 ```
 
 ## OpenTelemetry

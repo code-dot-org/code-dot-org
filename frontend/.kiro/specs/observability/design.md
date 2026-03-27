@@ -343,6 +343,13 @@ Rails renders the `<meta name="app-config">` tag in `dashboard/app/views/app/ind
 }
 ```
 
+The DSN values are sourced from separate CDO config keys per frontend target:
+- `CDO.dashboard_sentry_dsn` — Rails backend Sentry project
+- `CDO.frontend_studio_sentry_dsn` — Code Studio (Vite) Sentry project
+- `CDO.frontend_apps_sentry_dsn` — apps/ webpack bundle Sentry project
+
+The Vite development `frontend/apps/studio/index.html` includes a stub meta tag with `{"observability":{"provider":"none"}}` so the app degrades gracefully without Rails.
+
 When the tag is absent or `observability` is omitted, `SiteConfig` defaults `provider` to `'none'` and `createObservabilityClient` returns the no-op adapter.
 
 ### Consent Queue
@@ -443,7 +450,7 @@ _For any_ sequence of `setConsented` and `init` calls: (a) `isConsented()` retur
 
 ### Property 6: Config values are passed through to the provider SDK unchanged
 
-_For any_ valid `sampling.errorSampleRate`, `sampling.tracesSampleRate`, and `tracePropagationTargets` values supplied to `init`, the `SentryAdapter` SHALL pass those exact values to `Sentry.init` without modification. The adapter SHALL NOT apply its own sampling logic on top of the SDK's.
+_When_ `tracePropagationTargets` is explicitly provided in the config, along with any valid `sampling.errorSampleRate` and `sampling.tracesSampleRate` values, the `SentryAdapter` SHALL pass those exact values to `Sentry.init` without modification. The adapter SHALL NOT apply its own sampling logic on top of the SDK's. When `tracePropagationTargets` is not provided, the adapter uses the environment-derived default from `getAllowedTracingUrls()` rather than passing through the config value.
 
 **Validates: Requirements 8.4, 9.2**
 
@@ -513,7 +520,7 @@ Each property test MUST include a comment referencing the design property it val
 Unit tests (in the same `__tests__/` files) cover:
 
 - `factory.test.ts`: `createObservabilityClient()` with no args returns no-op; `createObservabilityClient('none')` returns no-op; returned object has all required methods.
-- `sentry.test.ts`: `init` configures Sentry with `sendDefaultPii: false` (Req 4.2, 4.4); `init` registers global error/rejection handlers (Req 3.2, 3.3); `setConsented` before `init` is applied after `init` (Req 5.4); `init` is a no-op when `typeof window === 'undefined'` (Req 6.2); `tracesSampleRate` defaults to `0` when not set (Req 8.2); `tracePropagationTargets` defaults to same-origin pattern when not set (Req 9.5); `tracePropagationTargets` is passed through even when `tracesSampleRate` is `0` (Req 9.3).
+- `sentry.test.ts`: `init` configures Sentry with `sendDefaultPii: false` (Req 4.2, 4.4); `init` registers global error/rejection handlers (Req 3.2, 3.3); `setConsented` before `init` is applied after `init` (Req 5.4); `init` is a no-op when `typeof window === 'undefined'` (Req 6.2); `tracesSampleRate` defaults to `0` when not set (Req 8.2); `tracePropagationTargets` defaults to dashboard API URL for standard environments and CDN pattern for adhoc when not set (Req 9.4, 9.5); `tracePropagationTargets` is passed through unchanged when explicitly provided even when `tracesSampleRate` is `0` (Req 9.3).
 - `noop.test.ts`: all methods callable without error; `isConsented()` returns `false`; `shutdown()` resolves.
 
 ### Vitest Configuration
