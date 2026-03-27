@@ -26,15 +26,16 @@ module Middleware
         *(defined?(HocLegacy::Engine) ? [HocLegacy::API_ROOT_PATH] : []),
       ].compact.freeze
 
-      attr_reader :app, :env, :request, :current_region, :current_locale
+      attr_reader :app, :env, :request, :original_path, :original_region, :original_locale
 
       def initialize(app, env)
         @app = app
         @env = env
 
         @request = Rack::Request.new(env)
-        @current_region = @request.cookies[REGION_KEY].presence
-        @current_locale = @request.cookies[LOCALE_KEY].presence
+        @original_path   = @request.path
+        @original_region = @request.cookies[REGION_KEY].presence
+        @original_locale = @request.cookies[LOCALE_KEY].presence
       end
 
       # @note Changes to the `request` should be made before the `response` is initialized to apply the changes.
@@ -46,7 +47,7 @@ module Middleware
         if request.params.key?(REGION_KEY)
           new_region = request.params[REGION_KEY].presence
 
-          redirect_path = ::File.join('/', request_path_vars(:main_path).first || request.path)
+          redirect_path = ::File.join('/', main_path || request.path)
           redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
           redirect_uri = URI(redirect_path)
@@ -56,27 +57,24 @@ module Middleware
           setup_region(new_region)
           setup_redirect_to(redirect_path)
         elsif resolved_region
-          url_region, url_prefix, main_path = request_path_vars(:ge_region, :ge_prefix, :main_path)
-
           if url_region == resolved_region
-            unless existing_route?(original_path_info)
+            unless existing_route?(original_path_info) || excluded_path?(main_path)
               # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
               # request.path == request.script_name + request.path_info
               # - `request.script_name` strips the prefix from the request path
               #   so the application processes requests as if it were running at the root level.
               # - `request.path_info` provides the specific path that should be handled by the application.
-              request.script_name = ::File.join(url_prefix, original_script_name).chomp('/') unless excluded_path?(main_path)
-              request.path_info   = main_path
+              request.script_name = regional_path_for(url_region, original_script_name).chomp('/')
             end
           elsif redirectable?
-            redirect_path = url_prefix ? main_path : request.path
+            redirect_path = url_region ? main_path : original_path
             redirect_path = "#{redirect_path}?#{request.query_string}" unless request.query_string.empty?
             setup_redirect_to regional_path_for(resolved_region, redirect_path)
           end
 
+          request.path_info = main_path if url_region && !existing_route?(original_path_info)
           setup_region(resolved_region)
-        elsif Cdo::GlobalEdition::PATH_PATTERN.match?(request.path)
-          main_path = request_path_vars(:main_path).first
+        elsif url_region
           request.path_info = main_path unless existing_route?
           setup_redirect_to(request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}") if redirectable?
           setup_region(nil)
@@ -99,51 +97,37 @@ module Middleware
         @response ||= Rack::Response[*app.call(env)]
       end
 
-      # Extracts named components from the request path using the Global Edition path pattern.
-      #
-      # Matches the current request path against `Cdo::GlobalEdition::PATH_PATTERN`
-      # and returns the values of the requested named capture groups.
-      #
-      # @param keys [Array<Symbol>] names of capture groups to extract
-      #   Available options:
-      #   - :ge_region  region code extracted from the path (e.g., "fa")
-      #   - :ge_prefix  full Global Edition prefix (e.g., "/global/fa")
-      #   - :main_path  remaining path after the prefix (e.g., "/home")
-      # @return [Array<String, nil>] values corresponding to the requested keys in order,
-      #   or an empty array if the path does not match
-      #
-      # @example For path "/global/fa/home"
-      #   request_path_vars(:ge_region, :ge_prefix, :main_path) => ["fa", "/global/fa", "/home"]
-      private def request_path_vars(*keys)
-        Cdo::GlobalEdition::PATH_PATTERN.match(request.path)&.values_at(*keys) || []
+      private def url_region
+        return @url_region if defined?(@url_region)
+        @url_region = Cdo::GlobalEdition::PATH_PATTERN.match(original_path).try(:[], :ge_region).presence
+      end
+
+      private def main_path
+        return @main_path if defined?(@main_path)
+        @main_path = Cdo::GlobalEdition::PATH_PATTERN.match(original_path).try(:[], :main_path).presence
       end
 
       # Resolves and memoizes the effective Global Edition region for the request.
       #
       # @return [String, nil] resolved region code (e.g., "fa"), or nil if none is valid
       private def resolved_region
-        return @resolved_region if defined? @resolved_region
+        return @resolved_region if defined?(@resolved_region)
 
-        @resolved_region = begin
-          # Extract region from URL (e.g., "/global/fa" => "fa")
-          url_region = request_path_vars(:ge_region).first
-
-          # Initial candidate regions in priority order
-          regions = [current_region, url_region]
-
-          if current_locale
-            locale_regions = Cdo::GlobalEdition.locales_regions[current_locale]
-            # If locale has no associated regions, no valid region can be resolved
+        @resolved_region =
+          if original_locale
+            locale_regions = Cdo::GlobalEdition.locales_regions[original_locale]
             return if locale_regions.blank?
 
-            # Keep only regions compatible with the locale
-            regions &= locale_regions
-            # Add all locale regions as fallback options
-            regions += locale_regions
-          end
+            return original_region if locale_regions.include?(original_region)
+            return url_region      if locale_regions.include?(url_region)
 
-          regions.find {|region| Cdo::GlobalEdition.region_available?(region)}
-        end
+            locale_regions.first
+          else
+            return original_region if Cdo::GlobalEdition.region_available?(original_region)
+            return url_region      if Cdo::GlobalEdition.region_available?(url_region)
+
+            nil
+          end
       end
 
       private def setup_region(new_region)
@@ -159,14 +143,14 @@ module Middleware
         # Updates the global `language` cookie to enforce the switch to the regional language.
         set_locale_cookie(new_locale)
 
-        unless new_region == current_region
+        unless new_region == original_region
           Metrics::Events.log_event(
             event_name: 'Global Edition Region Changed',
             user: request.user,
             session: request.session,
             metadata: {
-              old_region: current_region,
-              old_locale: current_locale,
+              old_region: original_region,
+              old_locale: original_locale,
               new_region:,
               new_locale:,
             },
@@ -174,7 +158,7 @@ module Middleware
         end
       end
 
-      private def existing_route?(path = request.path_info)
+      private def existing_route?(path = original_path)
         return false unless request.hostname == CDO.dashboard_hostname
         request_method = request.params['_method'].presence || request.request_method
         Dashboard::Application.routes.recognize_path(path, method: request_method).present?
@@ -183,7 +167,7 @@ module Middleware
       end
 
       private def site_locale(region)
-        site_locale = current_locale
+        site_locale = original_locale
 
         if Cdo::GlobalEdition.region_available?(region)
           unless Cdo::GlobalEdition.locale_available?(region, site_locale)
@@ -208,7 +192,7 @@ module Middleware
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
-        !excluded_path?(request.path)
+        !excluded_path?(original_path)
       end
 
       private def regional_path_for(region, main_path)
