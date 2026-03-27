@@ -31,7 +31,6 @@ import {getUserHasAichatLabAccess} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {ModalTypes} from '../constants';
 import {LevelPropertiesContext} from '../levelPropertiesContext';
-import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
@@ -233,21 +232,21 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
   const viewModeButtonsProps: SegmentedButtonsProps = {
     buttons: [
       {
-        label: aichatI18n.editModeButtonText(),
+        label: 'Edit',
         value: ViewMode.EDIT,
         iconLeft: {
           iconName: 'wrench',
           iconStyle: 'solid',
-          title: aichatI18n.aichatView_screenReader_EditModeButton(),
+          title: 'Edit Mode',
         },
       },
       {
-        label: aichatI18n.userViewButtonText(),
+        label: 'User View',
         value: ViewMode.PRESENTATION,
         iconLeft: {
           iconName: 'user-group',
           iconStyle: 'solid',
-          title: aichatI18n.aichatView_screenReader_UserViewModeButton(),
+          title: 'User View Mode',
         },
         id: 'uitest-user-view-button',
       },
@@ -259,9 +258,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
 
   const chatWorkspaceHeader = (
     <div className={moduleStyles.workspaceHeaderContent}>
-      {viewMode === ViewMode.EDIT
-        ? aichatI18n.aichatWorkspaceHeader()
-        : botName}
+      {viewMode === ViewMode.EDIT ? 'AI Chat' : botName}
       {projectTemplateLevel && (
         <ProjectTemplateWorkspaceIconV2 tooltipPlace="onBottom" />
       )}
@@ -342,7 +339,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
                 <div className={moduleStyles.customizationArea}>
                   <PanelContainer
                     id="aichat-model-customization-panel"
-                    headerContent={aichatI18n.modelCustomizationHeader()}
+                    headerContent={'Model Customization'}
                     className={moduleStyles.panelContainer}
                     headerClassName={moduleStyles.panelHeader}
                     rightHeaderContent={
@@ -366,7 +363,7 @@ const AichatView: React.FunctionComponent<LabProps<AichatLevelProperties>> = ({
             >
               <PanelContainer
                 id="aichat-presentation-panel"
-                headerContent={aichatI18n.modelCardPanelHeader()}
+                headerContent={'Model Card'}
                 className={moduleStyles.panelContainer}
                 headerClassName={moduleStyles.panelHeader}
               >
@@ -407,7 +404,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
   return (
     <IconButtonWithTooltip
       id="start-over"
-      label={aichatI18n.aria_startOver()}
+      label={'Start over'}
       icon={{iconName: 'refresh', iconStyle: 'solid'}}
       type="tertiary"
       color="gray"
@@ -427,7 +424,7 @@ const renderInstructionsHeaderRight = (
   return isUserTeacher ? (
     <IconButtonWithTooltip
       id="about-aichat-lab"
-      label={aichatI18n.aboutAichatLab()}
+      label={'About AI Chat Lab'}
       icon={{iconName: 'message-question', iconStyle: 'solid'}}
       type="tertiary"
       color="black"
