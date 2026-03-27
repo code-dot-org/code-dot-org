@@ -11,26 +11,19 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     Given I create a teacher named "New Teacher"
     And I sign in as "New Teacher" and go home
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-
-    When I open my eyes to test "[Farsi MVP] New teacher Professional Learning page"
+    When I visit Farsi version of Professional Learning Lending page
+    Then I open my eyes to test "[Farsi MVP] New teacher Professional Learning page"
     And I see no difference for "Full page"
-    Then I close my eyes
+    And I close my eyes
 
   Scenario: Facilitator does not see Facilitator Center in Farsi MVP
     Given I am a facilitator with started and completed courses
 
     When I am on "http://studio.code.org/my-professional-learning"
-    Then I wait until element "button:contains(Facilitator Center)" is visible
+    Then I wait until element "button#myPLTabs-tab-myFacilitatorCenter" is visible
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-    And element "button:contains(Facilitator Center)" is not visible
+    When I visit Farsi version of Professional Learning Lending page
+    Then element "button#myPLTabs-tab-myFacilitatorCenter" is not visible
 
     And I delete the workshop
 
@@ -41,26 +34,20 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I reload the page
 
     When I am on "http://studio.code.org/my-professional-learning"
-    Then I wait until element "button:contains(Instructor Center)" is visible
+    Then I wait until element "button#myPLTabs-tab-instructorCenter" is visible
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-    And element "button:contains(Instructor Center)" is visible
+    When I visit Farsi version of Professional Learning Lending page
+    Then element "button#myPLTabs-tab-instructorCenter" is visible
 
   Scenario: Regional Partner does not see Regional Partner Center in Farsi MVP
     Given I am a program manager with a started course
     And I wait for 2 seconds
 
     When I am on "http://studio.code.org/my-professional-learning"
-    Then I wait until element "button:contains(Regional Partner Center)" is visible
+    Then I wait until element "button#myPLTabs-tab-RPCenter" is visible
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-    And element "button:contains(Regional Partner Center)" is not visible
+    When I visit Farsi version of Professional Learning Lending page
+    Then element "button#myPLTabs-tab-RPCenter" is not visible
 
     And I delete the workshop
 
@@ -69,13 +56,10 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I wait for 2 seconds
 
     When I am on "http://studio.code.org/my-professional-learning"
-    And I wait until element "button:contains(Workshop Organizer)" is visible
+    And I wait until element "button#myPLTabs-tab-workshopOrganizerCenter" is visible
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-    And element "button:contains(Workshop Organizer)" is not visible
+    When I visit Farsi version of Professional Learning Lending page
+    Then element "button#myPLTabs-tab-workshopOrganizerCenter" is not visible
 
     And I delete the workshop
 
@@ -85,10 +69,7 @@ Feature: Global Edition - Farsi MVP - Professional Learning landing page
     And I start a self-paced PL course
 
     When I am on "http://studio.code.org/my-professional-learning"
-    And I wait until element "a:contains(Continue course)" is visible
+    And I wait until element "a[href*='/courses/alltheselfpacedplthings/units/1']" is visible
 
-    When I am on "http://studio.code.org/global/fa/my-professional-learning"
-    And I select the "English" option in dropdown "locale" to load a new page
-    And I wait until element "h1:contains(Professional Learning)" is visible
-    Then I see Farsi version of Professional Learning Lending page
-    And element "a:contains(Continue course)" is visible
+    When I visit Farsi version of Professional Learning Lending page
+    Then element "a[href*='/courses/alltheselfpacedplthings/units/1']" is visible
