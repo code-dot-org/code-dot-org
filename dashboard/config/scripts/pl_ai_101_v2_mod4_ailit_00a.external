@@ -1,0 +1,31 @@
+name 'pl-ai-101-V2-mod4-AILit-00a'
+title 'title'
+description 'description here'
+display_name 'Knowledge'
+bubble_choice_description ''
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
+
+markdown <<MARKDOWN
+# Knowledge: Helping Students Understand AI
+
+#### Knowledge in the framework refers to the key concepts and understandings students need in order to make sense of AI systems. These include both technical ideas and broader societal considerations.
+
+#### The framework groups knowledge into five areas:
+* #### **The Nature of AI**: AI systems use data, algorithms, and patterns to generate outputs, but they do not think or understand like humans.
+* #### **AI Reflects Human Choices and Perspectives**: AI is shaped by the data and decisions humans make, which can introduce bias and influence outcomes.
+* #### **AI Reshapes Work and Human Roles**: AI changes how work is done by automating some tasks and requiring humans to adapt, make decisions, and apply judgment.
+* #### **AI’s Capabilities and Limitations**: AI is strong at tasks like pattern recognition but lacks context, reasoning, and true understanding, and can produce incorrect or misleading results.
+* #### **AI’s Role in Society**: AI influences decisions in areas like media, education, and employment, raising questions about fairness, privacy, and responsibility.
+
+#### These categories help students understand how AI systems work, how they are shaped by human decisions and data, and how they influence individuals, communities, and institutions.
+
+#### You can preview the Nature of AI knowledge category below.
+
+<div style="border:1px solid #000; border-radius:10px; overflow:hidden; max-width:100%;">
+  <img src="https://images.code.org/9ac97fb5de1b69bb300c128a31a9aa3c-Screenshot 2026-03-26 at 4.15.23 PM.png" alt="Full width image" style="width:100%; height:auto; display:block;">
+</div>
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ If you'd like, you can check out the full <a href="https://ailiteracyframework.org/" target="blank" rel="noopener noreferrer"> AILit Framework</a>.
+</p>
+MARKDOWN

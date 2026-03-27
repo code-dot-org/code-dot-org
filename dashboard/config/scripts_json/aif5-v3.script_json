@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-17 14:07:24 UTC",
+    "serialized_at": "2026-03-26 20:59:50 UTC",
     "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
@@ -6686,27 +6686,27 @@
     {
       "name": "[KEY] User Profiles' Audit Log Suspicious Activity",
       "url": "https://docs.google.com/document/d/1UjbILX-9ROJQTIQZ6nUjaE7qVxCYGkGR1CVXdiIuvIw/edit?usp=sharing",
-      "key": "_key_user_profiles_audit_log_suspicious_activity",
+      "key": "_key_user_profiles_audit_log_suspicious_activity_1",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Teacher",
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Answer Key"
       },
       "seeding_key": {
-        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity_1"
       }
     },
     {
       "name": "AAA and AI",
       "url": "https://docs.google.com/presentation/d/1gtjg3TyBdRwjwA4NOLQEjwtG1WNlx505HicRtzkQTYk/edit?usp=sharing",
-      "key": "aaa_and_ai_1",
+      "key": "aaa_and_ai",
       "properties": {
-        "audience": "Verified Teacher",
-        "curriculum_category": "curriculum",
+        "audience": "Teacher",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "aaa_and_ai_1"
+        "resource.key": "aaa_and_ai"
       }
     },
     {
@@ -6792,7 +6792,7 @@
       "key": "audit_logs_profile_1_jordan_p_",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
@@ -6805,7 +6805,7 @@
       "key": "audit_logs_profile_2_sana_r_",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
@@ -6813,16 +6813,16 @@
       }
     },
     {
-      "name": "Audit Logs Profile 3: Amara T.",
+      "name": "Audit Logs Profile 3: Amara T",
       "url": "https://docs.google.com/document/d/1Wsw61alnuJW1EPdb93Z1s5qo5wNE4xWS-A6mqi4m2fU/edit?usp=sharing",
-      "key": "audit_logs_profile_3_amara_t_",
+      "key": "audit_logs_profile_3_amara_t",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "audit_logs_profile_3_amara_t_"
+        "resource.key": "audit_logs_profile_3_amara_t"
       }
     },
     {
@@ -6831,7 +6831,7 @@
       "key": "audit_logs_profile_4_omar_m_",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
+        "embeddability_type": "embed_and_resource_dropdown",
         "type": "Handout"
       },
       "seeding_key": {
@@ -7024,29 +7024,15 @@
     },
     {
       "name": "Fraud Detection Investigation",
-      "url": "https://docs.google.com/document/d/1idByIUpqHOTgApWUPuuS4z4w3LHHP9zGh-Uo_VXbKGM/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Qvbw8JRyfFlhEYVjhy-IF58Cjk1rqZfB-WlXOORNQs4/edit?tab=t.0#heading=h.nt5j74w7fpmt",
       "key": "fraud_detection_investigation",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "fraud_detection_investigation"
-      }
-    },
-    {
-      "name": "Fraud Detection Investigation",
-      "url": "https://docs.google.com/document/d/1Qvbw8JRyfFlhEYVjhy-IF58Cjk1rqZfB-WlXOORNQs4/edit?usp=sharing",
-      "key": "fraud_detection_investigation_1",
-      "properties": {
-        "audience": "Student",
-        "curriculum_category": "curriculum",
         "embeddability_type": "embed_and_resource_dropdown",
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "fraud_detection_investigation_1"
+        "resource.key": "fraud_detection_investigation"
       }
     },
     {
@@ -7532,13 +7518,13 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
-        "resource.key": "_key_user_profiles_audit_log_suspicious_activity"
+        "resource.key": "_key_user_profiles_audit_log_suspicious_activity_1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
-        "resource.key": "aaa_and_ai_1"
+        "resource.key": "aaa_and_ai"
       }
     },
     {
@@ -7556,7 +7542,7 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
-        "resource.key": "audit_logs_profile_3_amara_t_"
+        "resource.key": "audit_logs_profile_3_amara_t"
       }
     },
     {
@@ -7569,12 +7555,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 8: AAA and AI",
         "resource.key": "fraud_detection_investigation"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: AAA and AI",
-        "resource.key": "fraud_detection_investigation_1"
       }
     },
     {
@@ -7970,12 +7950,6 @@
       "seeding_key": {
         "lesson.key": "Lesson 7: Authentication, Authorization, and Accounting",
         "vocabulary.key": "authorization"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Lesson 8: AAA and AI",
-        "vocabulary.key": "accounting"
       }
     },
     {
