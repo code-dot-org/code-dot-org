@@ -1,0 +1,76 @@
+name 'pl-ai-101-V2-mod4-AILit-02'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# The Four Domains of AI Literacy
+
+#### The AI Literacy Framework organizes learning into four domains that describe how students interact with AI. These domains provide practical entry points for integrating AI into classroom activities across subjects and grade levels.
+
+<div style="column-count:2; column-gap:12px; margin-top:10px;">
+
+  <!-- Engaging with AI -->
+  <div style="display:inline-block; width:100%; margin:0 0 12px 0; break-inside:avoid;">
+    <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+      <img src="https://images.code.org/730d23bfec5ff9ff78f416f1651cd60c-Screenshot 2026-03-26 at 3.54.33 PM.png" alt="Engaging with AI" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+      <strong>Engaging with AI</strong>
+      <p style="font-size:14px;">Focuses on recognizing and evaluating AI in everyday contexts. Students learn to identify when AI is being used and to question the accuracy, relevance, and fairness of its outputs.</p>
+      <p style="font-size:14px; margin:8px 0 0 0;"><strong>Examples:</strong></p>
+      <ul style="font-size:14px; padding-left:18px; margin:6px 0 0 0;">
+        <li><strong>Primary:</strong> List familiar digital interactions (e.g., video recommendations) and discuss if and how each uses AI</li>
+        <li><strong>Secondary:</strong> Ask an AI system about a historical event and evaluate its accuracy and bias using other sources</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Creating with AI -->
+  <div style="display:inline-block; width:100%; margin:0 0 12px 0; break-inside:avoid;">
+    <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+      <img src="https://images.code.org/31f70983e63a1357ddcb24b38ac266d5-Screenshot 2026-03-26 at 3.54.39 PM.png" alt="Creating with AI" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+      <strong>Creating with AI</strong>
+      <p style="font-size:14px;">Involves using AI as a partner in creative and problem-solving tasks. Students generate ideas, refine outputs, and reflect on how AI contributes to their work.</p>
+      <p style="font-size:14px; margin:8px 0 0 0;"><strong>Examples:</strong></p>
+      <ul style="font-size:14px; padding-left:18px; margin:6px 0 0 0;">
+        <li><strong>Primary:</strong> Generate images for a story setting and write a story based on the results</li>
+        <li><strong>Secondary:</strong> Use AI tools (text, images, music) to create a final product for a project</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Managing AI -->
+  <div style="display:inline-block; width:100%; margin:0 0 12px 0; break-inside:avoid;">
+    <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+      <img src="https://images.code.org/4e68e03b97e3b739323240244df2e8ff-Screenshot 2026-03-26 at 3.54.46 PM.png" alt="Managing AI" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+      <strong>Managing AI</strong>
+      <p style="font-size:14px;">Emphasizes decision-making and agency. Students learn to decide when and how to use AI, break down tasks between human and AI contributions, and guide AI systems with clear instructions.</p>
+      <p style="font-size:14px; margin:8px 0 0 0;"><strong>Examples:</strong></p>
+      <ul style="font-size:14px; padding-left:18px; margin:6px 0 0 0;">
+        <li><strong>Primary:</strong> Decide if AI should be used for a task like writing a birthday card</li>
+        <li><strong>Secondary:</strong> Use AI to summarize sources while students analyze context and form conclusions</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Designing AI -->
+  <div style="display:inline-block; width:100%; margin:0 0 12px 0; break-inside:avoid;">
+    <div style="background:#fff; padding:15px; text-align:left; border-radius:8px; box-shadow:0 3px 6px rgba(0,0,0,0.1); border:2px solid #5a2ca0; font-size:16px;">
+      <img src="https://images.code.org/c6122d38a3a6f4c657a0831ac86d9557-Screenshot 2026-03-26 at 3.54.51 PM.png" alt="Designing AI" style="width:100%; height:140px; object-fit:cover; border-radius:6px; margin-bottom:10px; background:#ececec;">
+      <strong>Designing AI</strong>
+      <p style="font-size:14px;">Introduces students to how AI systems are built and how design choices impact outcomes. Students explore how data is collected and used, how models make predictions, and how bias and fairness can be addressed.</p>
+      <p style="font-size:14px; margin:8px 0 0 0;"><strong>Examples:</strong></p>
+      <ul style="font-size:14px; padding-left:18px; margin:6px 0 0 0;">
+        <li><strong>Primary:</strong> Develop a simple system to classify items (e.g., healthy vs. unhealthy snacks)</li>
+        <li><strong>Secondary:</strong> Create a “model card” describing an AI system's purpose, data, and limitations</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+#### Together, these four domains help students move from simply using AI to understanding, directing, and ultimately shaping how it works in the world.
+
+MARKDOWN

@@ -1,0 +1,33 @@
+name 'pl-ai-101-V2-mod4-AILit-00b'
+title 'title'
+description 'description here'
+display_name 'Skills'
+bubble_choice_description ''
+thumbnail_url 'https://images.code.org/5394516c25f360d45e47665aa5eecd86-Screenshot 2026-02-13 at 1.22.31 PM.png'
+
+markdown <<MARKDOWN
+# Skills: What Students Can Do with AI
+
+#### Skills in the framework describe how students apply their understanding of AI in practice. These are familiar competencies applied in an AI context and are essential for interacting with AI systems effectively and responsibly.
+
+#### The framework identifies seven skill areas:
+* #### **Critical Thinking**: Evaluate AI-generated content for accuracy, bias, and reliability.
+* #### **Creativity**: Use AI to generate and refine ideas while maintaining ownership of the final work.
+* #### **Computational Thinking**: Break down problems and communicate clearly so AI systems can assist effectively.
+* #### **Collaboration**: Work productively with AI tools and with others to complete tasks.
+* #### **Communication**: Clearly explain how AI is used and describe its role in producing results.
+* #### **Problem Solving**: Decide when and how AI should be used based on the task and its goals.
+* #### **Self and Social Awareness**: Recognize how AI influences personal choices, behavior, and broader society.
+
+#### These skills enable students to evaluate AI-generated content, collaborate with AI tools, communicate transparently about AI use, and make informed decisions about when and how to use AI.
+
+#### You can preview the Critical Thinking category below.
+
+<div style="border:1px solid #000; border-radius:10px; overflow:hidden; max-width:100%;">
+  <img src="https://images.code.org/4c403344e5a9047e9dc77b0ac9255ea3-Screenshot 2026-03-26 at 4.25.42 PM.png" alt="Full width image" style="width:100%; height:auto; display:block;">
+</div>
+
+<br>
+<p style="font-size: 18px; font-weight: bold; background-color: #F5F7F8; padding: 10px; border-left: 5px solid #8148B2; display: inline-block;"> ➡️ If you'd like, you can check out the full <a href="https://ailiteracyframework.org/" target="blank" rel="noopener noreferrer"> AILit Framework</a>.
+</p>
+MARKDOWN

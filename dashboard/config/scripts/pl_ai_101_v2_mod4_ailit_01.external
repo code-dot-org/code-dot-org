@@ -1,0 +1,30 @@
+name 'pl-ai-101-V2-mod4-AILit-01'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# AI Literacy Framework
+
+#### The AILit Framework provides a starting point for helping students understand and use AI in thoughtful, responsible ways. It is designed for all educators and can be integrated into existing subjects and lessons.
+
+#### The framework is organized around three key elements that work together:
+#### Knowledge focuses on what students understand about AI. For example:
+* #### AI systems use data and patterns to generate outputs, but they do not truly understand or think like humans
+* #### AI reflects human choices and can include bias from the data it is trained on
+* #### AI has strengths (like pattern recognition) but also important limitations, such as lack of context or judgment
+
+#### Skills focus on what students can do when working with AI. For example:
+* #### Critical thinking: evaluating whether AI-generated content is accurate, fair, or biased
+* #### Creativity: using AI to generate and refine ideas while staying responsible for the final product
+* #### Problem solving: deciding when AI is useful and when human judgment is needed
+
+#### Attitudes focus on how students approach AI. For example:
+* #### Responsible: thinking carefully about how AI is used and its potential impact
+* #### Curious: exploring what AI can do and asking questions about how it works
+* #### Empathetic: considering how AI affects different people and communities 
+
+#### Rather than focusing only on technical concepts, the framework emphasizes helping students think critically, make informed decisions, and use AI in ways that support learning and human judgment.
+
+#### The framework is flexible and meant to be applied across grade levels and subjects. Teachers can use it to identify small, meaningful ways to incorporate AI-related thinking into the lessons they already teach.
+
+MARKDOWN

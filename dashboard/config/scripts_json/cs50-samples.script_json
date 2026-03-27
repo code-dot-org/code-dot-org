@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-06 19:17:29 UTC",
+    "serialized_at": "2026-03-26 19:26:05 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -316,6 +316,25 @@
         "lesson_group.key": "",
         "script.name": "cs50-samples"
       }
+    },
+    {
+      "key": "lesson-20",
+      "name": "Test Lesson 1",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 20,
+      "properties": {
+        "overview": "This is an example lesson overview. Example sentence with **formatting**.",
+        "preparation": "Preparation section.",
+        "purpose": "Purpose section.",
+        "student_overview": "Students will see this section."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "cs50-samples"
+      }
     }
   ],
   "lesson_activities": [
@@ -559,6 +578,20 @@
         "lesson_group.key": "",
         "script.name": "cs50-samples"
       }
+    },
+    {
+      "key": "0286b7fd-fbe6-4cbf-a54c-b6bcb541ee4b",
+      "position": 1,
+      "properties": {
+        "duration": 30,
+        "name": "Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0286b7fd-fbe6-4cbf-a54c-b6bcb541ee4b",
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "cs50-samples"
+      }
     }
   ],
   "activity_sections": [
@@ -750,6 +783,19 @@
       "seeding_key": {
         "activity_section.key": "8d47eeb8-6517-4889-89e5-1d324e58fe0e",
         "lesson_activity.key": "e3f5e691-8862-4ea1-9e70-37990b048a3e"
+      }
+    },
+    {
+      "key": "1fc39d26-3eb7-4ff0-a964-e4c467643780",
+      "position": 1,
+      "properties": {
+        "description": "Experiment with writing Python code to visualize data.",
+        "name": "Visualizing Data",
+        "progression_name": "Build a Weather Visualization"
+      },
+      "seeding_key": {
+        "activity_section.key": "1fc39d26-3eb7-4ff0-a964-e4c467643780",
+        "lesson_activity.key": "0286b7fd-fbe6-4cbf-a54c-b6bcb541ee4b"
       }
     }
   ],
@@ -2721,6 +2767,28 @@
       "level_keys": [
         "allthethings sketchlab 4_cs50"
       ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Build a Weather Visualization"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cs50_testing_python_weather"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "cs50-samples",
+        "activity_section.key": "1fc39d26-3eb7-4ff0-a964-e4c467643780"
+      },
+      "level_keys": [
+        "cs50_testing_python_weather"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -3706,6 +3774,18 @@
         "lesson_group.key": "",
         "script.name": "cs50-samples",
         "activity_section.key": "8d47eeb8-6517-4889-89e5-1d324e58fe0e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cs50_testing_python_weather",
+        "script_level.level_keys": [
+          "cs50_testing_python_weather"
+        ],
+        "lesson.key": "lesson-20",
+        "lesson_group.key": "",
+        "script.name": "cs50-samples",
+        "activity_section.key": "1fc39d26-3eb7-4ff0-a964-e4c467643780"
       }
     }
   ],
