@@ -17,4 +17,7 @@
 #  index_lesson_insights_on_section_id_and_lesson_id_and_student_id  (section_id,lesson_id,student_id) UNIQUE
 #
 class LessonInsight < ApplicationRecord
+  belongs_to :lesson
+  belongs_to :student, class_name: 'User'
+  belongs_to :section
 end
