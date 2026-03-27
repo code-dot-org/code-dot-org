@@ -149,6 +149,9 @@ function main() {
       }
       if (url) {
         let fetchUrl = url;
+        if (isStudioRelativeFileUrl(url)) {
+          fetchUrl = codeDotOrgOrigin + url;
+        }
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
           // We use a cache-busting query parameter to ensure that we get the correct response headers,
@@ -178,6 +181,12 @@ function main() {
         },
       });
     }
+  }
+
+  function isStudioRelativeFileUrl(url) {
+    // Compatibility mode uses /v3/files/<channel>/<filename> urls from studio.
+    // Route these through the matching studio origin so fetch happens on the correct host.
+    return /^\/v3\/files\/[^/]+\/.+/.test(url);
   }
 }
 
