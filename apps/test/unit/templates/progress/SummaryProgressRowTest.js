@@ -102,6 +102,20 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.find('Button')).toHaveLength(0);
     });
 
+    it('does not show lesson resources button when lesson has student_lesson_plan_html_url and isOnLevelView is true', () => {
+      const lessonWithUrl = {
+        ...fakeLesson('Maze', 1, false, 3),
+        student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+      };
+      const wrapper = setUp({
+        lesson: lessonWithUrl,
+        isOnLevelView: true,
+      });
+
+      const button = wrapper.find('Button');
+      expect(button).toHaveLength(0);
+    });
+
     it('has a lock icon when lockable and locked for user', () => {
       const wrapper = setUp({
         lesson: fakeLesson('Maze', 1, true),

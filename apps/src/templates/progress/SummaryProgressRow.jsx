@@ -29,6 +29,7 @@ function SummaryProgressRow({
   lessonIsLockedForAllStudents,
   unitHasUnnumberedLessons,
   viewAs,
+  isOnLevelView,
 }) {
   // The parent component filters out hidden SummaryProgressRows from the student view,
   // this check is just to ensure it won't be rendered if it should be hidden for students
@@ -127,7 +128,7 @@ function SummaryProgressRow({
             )}
             {lesson.isFocusArea && <FocusAreaIndicator />}
           </div>
-          {lesson.student_lesson_plan_html_url && (
+          {lesson.student_lesson_plan_html_url && !isOnLevelView && (
             <Button
               __useDeprecatedTag
               className="ui-test-lesson-resources"
@@ -149,6 +150,7 @@ SummaryProgressRow.propTypes = {
   dark: PropTypes.bool.isRequired,
   lesson: lessonType.isRequired,
   levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
+  isOnLevelView: PropTypes.bool,
 
   // from redux
   viewAs: PropTypes.oneOf(Object.keys(ViewType)),
