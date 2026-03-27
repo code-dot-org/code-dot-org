@@ -129,6 +129,5 @@ Scenario: Teacher can delete a section from the section options dropdown
     Then I sign out and sign in as "Teacher Hank"
     Given I am on "http://studio.code.org/teacher_dashboard/home"
     And I wait to see "#ui-test-section-list"
-    And The header is finished animating
     And I see no difference for "teacher homepage"
     And I close my eyes

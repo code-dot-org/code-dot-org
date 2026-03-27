@@ -204,17 +204,13 @@ When /^I switch to the default content$/ do
 end
 
 When /^I close the instructions overlay if it exists$/ do
-  steps <<-GHERKIN
-    When I click selector "#overlay" if it exists
-    And I wait for 0.5 seconds
-  GHERKIN
+  steps 'When I click selector "#overlay" if it exists'
 end
 
 When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
-    And The header is finished animating
     And I close the instructions overlay if it exists
   GHERKIN
 end

@@ -31,7 +31,6 @@ Scenario: Applab with free response contained level
 Scenario: Javalab with free response contained level
   When I open my eyes to test "javalab contained level"
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/6"
-  And The header is finished animating
   And I wait to see ".response"
   And I scroll the ".response" element into view
   Then I see no difference for "initial load" using stitch mode "none"
@@ -45,7 +44,6 @@ Scenario: Javalab with free response contained level
   # At this point, we should have submitted our result to the server, do
   # a reload and make sure we have the submission
   Then I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/44/levels/6"
-  And The header is finished animating
   And I wait to see ".response"
   And I see no difference for "reloaded with contained level answered" using stitch mode "none"
   Then I press "runButton"

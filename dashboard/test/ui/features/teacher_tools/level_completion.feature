@@ -35,7 +35,6 @@ Scenario:
 Scenario:
   When I open my eyes to test "freeplay playlab sharing"
   And I am on "http://studio.code.org/courses/playlab/units/1/lessons/1/levels/10?noautoplay=true"
-  And The header is finished animating
   And I wait for the lab page to fully load
   And I see no difference for "initial load"
   And I press "runButton"

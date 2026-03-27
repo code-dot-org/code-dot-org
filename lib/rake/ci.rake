@@ -132,18 +132,18 @@ namespace :ci do
       # Use --local to configure the UI tests to run against localhost and
       # use --config to override the local webdriver so SauceLabs is used
       # instead.
-      # RakeUtils.system_stream_output "bundle exec ./runner.rb " \
-      #     "--feature #{container_features.join(',')} " \
-      #     "--local " \
-      #     "--ci " \
-      #     "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
-      #     "--parallel #{PARALLEL_COUNT} " \
-      #     "--abort_when_failures_exceed 10 " \
-      #     "--retry_count 2 " \
-      #     "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
-      #     "--output-synopsis " \
-      #     "--with-status-page " \
-      #     "--html"
+      RakeUtils.system_stream_output "bundle exec ./runner.rb " \
+          "--feature #{container_features.join(',')} " \
+          "--local " \
+          "--ci " \
+          "#{use_saucelabs ? "--config #{ui_test_browsers.join(',')} " : ''}" \
+          "--parallel #{PARALLEL_COUNT} " \
+          "--abort_when_failures_exceed 10 " \
+          "--retry_count 2 " \
+          "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
+          "--output-synopsis " \
+          "--with-status-page " \
+          "--html"
       if test_eyes?
         RakeUtils.system_stream_output "bundle exec ./runner.rb " \
             "--eyes " \
@@ -153,6 +153,7 @@ namespace :ci do
             "--ci " \
             "--parallel #{PARALLEL_COUNT} " \
             "--retry_count 1 " \
+            "#{CI::Utils.tagged?(SKIP_LOCAL_WEBDRIVER) ? '' : '--first_run_local '}" \
             "--with-status-page " \
             "--html"
       end

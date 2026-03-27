@@ -31,7 +31,6 @@ Scenario: Applab visualization scaling
 Scenario: Applab embedded level
   When I open my eyes to test "Applab embedded level"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/12"
-  And The header is finished animating
   And I see no difference for "embedded level"
   Then I close my eyes
 
@@ -39,7 +38,6 @@ Scenario: Applab widget mode
   When I open my eyes to test "Applab widget mode"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/22"
   And I wait until element "#start_over_button" is visible
-  And The header is finished animating
   And I see no difference for "widget mode level"
   Then I close my eyes
 
@@ -47,7 +45,6 @@ Scenario: Applab Instructions in Top Pane
   When I open my eyes to test "Applab Instructions in top pane"
   And I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/18/levels/9"
   And I wait for the lab page to fully load
-  And The header is finished animating
   And I see no difference for "top instructions enabled on standard level"
   Then I click selector ".fa-chevron-circle-up"
   And I see no difference for "top instructions collapsed"
