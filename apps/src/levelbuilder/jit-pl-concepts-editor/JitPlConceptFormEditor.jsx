@@ -10,11 +10,14 @@ import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMark
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 
+import MisconceptionsEditor from './MisconceptionsEditor';
+
 const JitPlConceptFormEditor = ({
   conceptId,
   originalName,
   originalDisplayName,
   originalTextContent,
+  originalMisconceptions,
   resources,
 }) => {
   const [name, setName] = useState(originalName);
@@ -88,6 +91,11 @@ const JitPlConceptFormEditor = ({
         resourceContext="jitPlConceptResource"
         resources={resources}
       />
+      <h2>Misconceptions</h2>
+      <MisconceptionsEditor
+        conceptId={conceptId}
+        initialMisconceptions={originalMisconceptions}
+      />
       <br />
       <SaveBar
         handleSave={save}
@@ -114,6 +122,7 @@ JitPlConceptFormEditor.propTypes = {
   originalName: PropTypes.string,
   originalDisplayName: PropTypes.string,
   originalTextContent: PropTypes.string,
+  originalMisconceptions: PropTypes.array,
   resources: PropTypes.arrayOf(resourceShape).isRequired,
 };
 
