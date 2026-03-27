@@ -424,13 +424,6 @@ Style/RescueStandardError:
 Style/StringConcatenation:
   Enabled: false
 
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiteralsInInterpolation:
-  Enabled: false
-
 # Offense count: 30
 # This cop supports safe autocorrection (--autocorrect).
 Style/SuperArguments:

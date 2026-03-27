@@ -443,7 +443,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
 
   ChatClient.log "Skipped tests tagged with: #{skipped_tags.to_a.join(', ')}"
 
-  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? "*❌ FAILED*" : "*✅ PASSED*"}\n"
+  test_report =  "\n#{test_type.upcase} TEST REPORT: #{failures.any? ? '*❌ FAILED*' : '*✅ PASSED*'}\n"
   test_report += "\n#{failures.count}x failed features:\n" + failures.map {|failure| "• #{failure}\n"}.join if failures.any?
   test_report += "\n"
   test_report += "Applitools Eyes Results:\n#{applitools_batch_url}\n\n" if applitools_batch_url
@@ -452,7 +452,7 @@ def report_tests_finished(start_time, run_results, run_status_page_url = nil)
   test_report += "\n"
   test_report += "#{suite_success_count} passed. #{failures.count} failed. Test count: #{run_results.count}. Duration: #{RakeUtils.format_duration(suite_duration)}. Total successful reruns of flaky tests: #{total_flaky_successful_reruns}.\n"
   test_report += "\n"
-  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? "FAILED" : "PASSED"}\n\n"
+  test_report += "\n*#{test_type.upcase}* TESTS #{failures.any? ? 'FAILED' : 'PASSED'}\n\n"
 
   ChatClient.log test_report, color: 'purple'
 end

@@ -125,22 +125,22 @@ Unit overview: #{lesson_plan[:unit_overview].to_json}
     end
     personalization_string = ""
     if profile.individual_data["yearsTeaching"]
-      personalization_string << "\nThe teacher has #{profile.individual_data["yearsTeaching"]} years of experience in the classroom."
+      personalization_string << "\nThe teacher has #{profile.individual_data['yearsTeaching']} years of experience in the classroom."
     end
     if profile.individual_data["selectedConfidence"]
-      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data["selectedConfidence"]} out of 10, with 10 being extremely confident and 0 being not confident at all."
+      personalization_string << "\nThey rate their confidence with computer science concepts at #{profile.individual_data['selectedConfidence']} out of 10, with 10 being extremely confident and 0 being not confident at all."
     end
     if profile.individual_data["selectedGoals"]
-      personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data["selectedGoals"].join("\n  -")}"
+      personalization_string << "\nThey listed the following as their primary teaching goals:\n  -#{profile.individual_data['selectedGoals'].join("\n  -")}"
     end
     if profile.individual_data["selectedSupports"]
-      personalization_string << "\nThey requested the following types of support from the assistant:\n  -#{profile.individual_data["selectedSupports"].join("\n  -")}"
+      personalization_string << "\nThey requested the following types of support from the assistant:\n  -#{profile.individual_data['selectedSupports'].join("\n  -")}"
     end
     if profile.individual_data["challenge"]
-      personalization_string << "\nThey stated that their biggest challenge is: #{profile.individual_data["challenge"]}"
+      personalization_string << "\nThey stated that their biggest challenge is: #{profile.individual_data['challenge']}"
     end
     if profile.individual_data["classroomVision"]
-      personalization_string << "\nTheir vision for their classroom is: #{profile.individual_data["classroomVision"]}"
+      personalization_string << "\nTheir vision for their classroom is: #{profile.individual_data['classroomVision']}"
     end
     if profile.individual_data["matchedPersona"]
       persona = case profile.individual_data["matchedPersona"]

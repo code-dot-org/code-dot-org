@@ -59,7 +59,7 @@ module AichatRubyTypes
 
     # Assert whether a value is this type.  Relies on `value_is_type?` helper.
     def assert_value_is_type(value, key = nil)
-      AichatRubyTypes.raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? "" : " for key=#{key}"}") unless value_is_type?(value)
+      AichatRubyTypes.raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type_string}#{key.nil? ? '' : " for key=#{key}"}") unless value_is_type?(value)
     end
   end
 
@@ -69,7 +69,7 @@ module AichatRubyTypes
     # so we use is_a?(Class to catch this case.
     if type.is_a?(Class)
       # If an interface, we check that the value is an instance of that stuct.
-      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? "" : " for key=#{key}"}") unless value.is_a?(type)
+      raise_or_notify_type_error("#{AichatRubyTypes.stringify_type(value)} does not match type: #{type}#{key.nil? ? '' : " for key=#{key}"}") unless value.is_a?(type)
 
     # For all instances of Type-derived classes, we call its assert_value_is_type
     # to do the assertion.
