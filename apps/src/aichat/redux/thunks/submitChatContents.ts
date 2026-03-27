@@ -169,12 +169,10 @@ export const submitChatContents = createAsyncThunk(
     ];
 
     try {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .incrementCounter(
-          'Aichat.ChatCompletionRequestInitiated',
-          metricDimensions
-        );
+      incrementCounter(
+        'Aichat.ChatCompletionRequestInitiated',
+        metricDimensions
+      );
 
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
@@ -298,9 +296,7 @@ async function handleChatCompletionError(
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorRateLimited', dimensions);
+    incrementCounter('Aichat.ChatCompletionErrorRateLimited', dimensions);
     dispatch(
       addChatEvent({
         removeId: getNewRemoveId(),
@@ -312,9 +308,7 @@ async function handleChatCompletionError(
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
   } else {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
+    incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
     dispatch(
       addChatEvent({
         role: Role.ASSISTANT,
@@ -324,4 +318,11 @@ async function handleChatCompletionError(
       })
     );
   }
+}
+
+function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
+  const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  reporter.incrementCounter(metricName, dimensions);
+  // Report without dimensions for an aggregate count.
+  reporter.incrementCounter(metricName);
 }
