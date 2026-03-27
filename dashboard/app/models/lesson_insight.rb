@@ -6,7 +6,6 @@
 #  lesson_id    :integer
 #  student_id   :integer
 #  section_id   :integer
-#  unit_id      :integer
 #  teacher_id   :integer
 #  insight_json :text(65535)
 #  created_at   :datetime         not null

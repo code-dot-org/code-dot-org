@@ -1008,7 +1008,6 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_26_185815) do
     t.integer "lesson_id"
     t.integer "student_id"
     t.integer "section_id"
-    t.integer "unit_id"
     t.integer "teacher_id"
     t.text "insight_json"
     t.datetime "created_at", null: false
