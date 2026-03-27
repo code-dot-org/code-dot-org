@@ -49,7 +49,7 @@
 ## Design System
 - When working on React UI in `apps/` or `frontend/`, refer to the `design-system` agent skill for component library guidelines, styling rules, and DSCO-to-MUI migration guidance.
 - Our design system lives in `frontend/packages/component-library/` with shared styles in `frontend/packages/component-library-styles/`.
-- **Always prefer design system components** over legacy ones in `apps/src/sharedComponents/` or `apps/src/legacySharedComponents/`.
+- **Always prefer design system components** over custom or legacy alternatives. Only create custom UI components when no design system equivalent exists.
 
 ## Levelbuilder
 - An important part of dashboard conceptually is "levelbuilder", which is used by curriculum authors to, well, write curriculum also called "levels".

@@ -6,16 +6,20 @@ description: Guidelines for using and contributing to the @code-dot-org/componen
 # Design System (`@code-dot-org/component-library`)
 
 ## Overview
-- Our design system lives in `frontend/packages/component-library/` (React components, TypeScript) with shared styles in `frontend/packages/component-library-styles/` (colors, typography, mixins).
-- **Always prefer design system components** over legacy ones in `apps/src/sharedComponents/` or `apps/src/legacySharedComponents/`. Only use legacy components when no design system equivalent exists. Never create custom UI primitives (buttons, modals, alerts, etc.) when a design system component is available.
+- Our design system has two types of components:
+  - **DSCO components**: our custom React components in `frontend/packages/component-library/` (TypeScript).
+  - **MUI components**: from `@mui/material`, with custom style overrides in `frontend/packages/component-library/src/themes/.../styleOverrides/` to match our design system look and feel.
+- Shared styles (colors, typography, mixins) live in `frontend/packages/component-library-styles/`.
+- **Always prefer design system components** over custom or legacy alternatives (e.g. `apps/src/sharedComponents/`, `apps/src/legacySharedComponents/`). Only create custom UI components when no design system equivalent exists.
 
 ## Available Components
 Accordion, ActionBlock, Alert, Breadcrumbs, Button/LinkButton, Carousel, Checkbox, Chips, Dialog, Divider, Dropdown (action, checkbox, icon, simple), FontAwesomeV6Icon, Header, HeroBanner, Image, Link, List, Modal, NotificationBanner, Popover, RadioButton, SegmentedButtons, Slider, Snackbar, Tabs, Tags, TextField, Toggle, Tooltip, Typography, Video, and more.
 
 ## Import Pattern & Component Status
-- Import pattern: `import Checkbox from '@code-dot-org/component-library/checkbox';`
-- Each component has a JSDoc status header (`Stable`, `Ready for dev`, `WIP`, `DEPRECATED`) -- check it before using.
-- For full API reference, check the component source or Storybook at https://code-dot-org.github.io/code-dot-org/component-library-storybook
+- Import pattern: `import Checkbox from '@code-dot-org/component-library/checkbox';` for DSCO Components
+- MUI components (e.g. Typography, Button) are imported directly from `@mui/material` (e.g. `import { Typography as MuiTypography } from '@mui/material';`) and customized via style overrides in the theme.
+- Each DSCO component has a JSDoc status header (`Stable`, `Ready for dev`, `WIP`, `DEPRECATED`) -- check it before using.
+- For full API reference, check the component source or Storybook at https://code-dot-org.github.io/code-dot-org/component-library-storybook and official MUI docs at https://mui.com/material-ui/all-components/.
 
 ## Styling
 - Use **SCSS modules** (`.module.scss`) for all component styling. Never use inline styles or global styles.
@@ -36,5 +40,6 @@ Accordion, ActionBlock, Alert, Breadcrumbs, Button/LinkButton, Carousel, Checkbo
 - **Migration status doc**: see `frontend/packages/component-library/MIGRATION_STATUS.md` for the full per-component migration status table.
 - **Decision guide for which component to use**: if a DSCO component is deprecated or has MUI style overrides in the theme, use the MUI equivalent. Otherwise, continue using the DSCO component until its MUI migration is ready.
 - **Already migrated (deprecated)**: Typography, Button/LinkButton/GenericButton, Breadcrumbs. Use MUI equivalents directly.
+- **MUI style overrides**: located in `frontend/packages/component-library/src/themes/.../styleOverrides/`. These customize MUI components (Typography, Button, IconButton, Link, Breadcrumbs) to match our design system. When migrating a DSCO component to MUI, add or update the corresponding style override file here.
 - **MUI theme**: our custom MUI theme (`CdoTheme`) lives in `frontend/packages/component-library/src/themes/code.org/` and is applied via `<ThemeProvider theme={CdoTheme}>`. It defines custom typography variants, button sizes/colors, and uses CSS variables for light/dark theme support.
 - **MUI type augmentation**: custom MUI types (extra button sizes, colors, typography variants, etc.) are declared in `frontend/packages/component-library/types/mui.d.ts` and must be manually synced to `apps/src/types/mui.d.ts`.
