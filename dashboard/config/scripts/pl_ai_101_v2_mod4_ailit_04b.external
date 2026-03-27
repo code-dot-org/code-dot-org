@@ -1,0 +1,70 @@
+name 'pl-ai-101-V2-mod4-AILit-04b'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Secondary Examples
+
+
+<!-- Engaging with AI - Secondary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Engaging with AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students research the causes of the American Revolution using a textbook and curated primary and secondary sources. They take notes, identify key events and perspectives, and write a short paragraph explaining the main causes using evidence from their sources.</p>
+
+    <p><strong>Small AI shift:</strong> After completing their initial research, students ask an AI tool the same question. They compare the AI response to their notes and sources, identifying what the AI included, what it left out, and whether any bias, vagueness, or oversimplification is present. Students then revise their paragraph or add a short reflection about whether the AI response should be trusted on its own.</p>
+
+    <p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives; AI’s Role in Society<br>
+    <strong>Skills:</strong> Critical Thinking; Self and Social Awareness<br>
+    <strong>Attitudes:</strong> Curious; Empathetic</p>
+  </div>
+</details>
+
+
+<!-- Creating with AI - Secondary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Creating with AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students create a visual artwork based on a theme such as identity, community, or change. They sketch several ideas, choose one concept to develop, and produce a final piece using a medium of their choice. They also write a short artist statement describing their intentions and design choices.</p>
+
+    <p><strong>Small AI shift:</strong> At the idea development stage, students generate an AI image based on the same theme and analyze it for symbolism, mood, composition, and originality. They discuss what feels effective, generic, or incomplete, and then create their own piece that either improves on or intentionally departs from the AI-generated version. In their artist statement, they explain how the AI image influenced their thinking and where their own creative decisions shaped the final work.</p>
+
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations; AI Reflects Human Choices and Perspectives<br>
+    <strong>Skills:</strong> Creativity; Critical Thinking<br>
+    <strong>Attitudes:</strong> Innovative; Adaptable</p>
+  </div>
+</details>
+
+<!-- Managing AI - Secondary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Managing AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students write an argumentative essay on a course-related topic. They develop a claim, gather supporting evidence, organize their reasoning, draft the essay, and revise for clarity, evidence, and style. The lesson emphasizes strong argumentation and original thinking.</p>
+
+    <p><strong>Small AI shift:</strong> The teacher asks students to make a deliberate decision about whether AI should be used for one part of the process, such as brainstorming, outlining, or revising. Students briefly explain why they chose to use or avoid AI for that stage and reflect on whether it improved the quality of their thinking or writing. This keeps the focus on student agency and helps them consider where AI supports learning and where human judgment should remain central.</p>
+
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations; AI’s Role in Society<br>
+    <strong>Skills:</strong> Problem Solving; Communication<br>
+    <strong>Attitudes:</strong> Responsible; Adaptable</p>
+  </div>
+</details>
+
+
+<!-- Designing AI - Secondary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Designing AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students analyze a dataset, such as survey responses, school climate data, or environmental measurements, to identify patterns and draw conclusions. They create charts or visualizations and explain what the data suggests, including any limitations in the evidence.</p>
+
+<p><strong>Small AI shift:</strong> The teacher extends the lesson by asking students to imagine how the same dataset might be used to train an AI model. Students examine what data is included, what might be missing, and how those gaps could affect predictions or recommendations. They then discuss how biased or incomplete data could produce unfair outcomes and propose ways the dataset or system design could be improved before being used in an AI system.</p>
+
+<p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives; AI’s Role in Society<br>
+    <strong>Skills:</strong> Computational Thinking; Self and Social Awareness<br>
+    <strong>Attitudes:</strong> Empathetic; Responsible</p>
+  </div>
+</details>
+MARKDOWN

@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cdo-dashboard
+spec:
+  template:
+    spec:
+      containers:
+        - name: dashboard
+          volumeMounts:
+            - mountPath: /home/code-dot-org/.config/gcloud
+              name: dot-config-gcloud
+      volumes:
+        - name: dot-config-gcloud
+          persistentVolumeClaim:
+            claimName: cdo-dot-config-gcloud

@@ -6790,3 +6790,39 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: Pilot 2026
+        just-in-time-pl:
+          title: just-in-time-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        ui-test-csf:
+          title: ui-test-csf
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        teaching-aif-design-build-ai-facilitators-2026:
+          title: 'Teaching AIF: Designing & Building with AI'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'26-'27"
+        ai-foundations-exploring-ai-and-cs-2026:
+          title: 'AI Foundations: Exploring AI and CS'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: Fall 2026
+        aif-designing-and-building-with-ai-2026:
+          title: 'AI Foundations: Designing and Building with AI'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: Fall 2026
+        ai-foundations-year1-2026:
+          title: AI Foundations Year 1
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'26-'27"

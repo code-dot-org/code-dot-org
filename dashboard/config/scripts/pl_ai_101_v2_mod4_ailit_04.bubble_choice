@@ -1,0 +1,12 @@
+name 'pl-ai-101-V2-mod4-AILit-04'
+display_name 'Examples from the Classroom'
+description '####Check out some examples of how to make small changes to lesson plans in order to integrate AI.'
+
+sublevels
+level 'pl-ai-101-V2-mod4-AILit-04a'
+level 'pl-ai-101-V2-mod4-AILit-04b'
+
+uses_lab2
+markdown <<MARKDOWN
+
+MARKDOWN

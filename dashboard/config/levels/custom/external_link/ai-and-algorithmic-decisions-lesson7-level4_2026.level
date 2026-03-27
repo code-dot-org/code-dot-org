@@ -1,0 +1,18 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "game_id": 55,
+  "created_at": "2026-03-20T23:44:29.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "link_title": "End-of-Lesson Survey ",
+    "url": "https://form.jotform.com/260115475593156",
+    "teacher_markdown": "We appreciate your time letting us know how this lesson went for you and your students. While your students complete the End of Lesson Survey, please complete the [Teacher End-of-Lesson Survey](https://form.jotform.com/260115638014145).",
+    "long_instructions": "#### Please take a moment to respond to this short survey. \r\n\r\nCode.org takes your privacy seriously. Your responses will be kept **anonymous**.",
+    "name_suffix": "_2026"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:44:29.237+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson7-level4_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson7-level4_2025\"}]"
+}]]></config>
+</ExternalLink>

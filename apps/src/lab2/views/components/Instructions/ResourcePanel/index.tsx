@@ -11,7 +11,7 @@ import AiChatHeaderButtons from '@cdo/apps/aichat/views/aiChatHeaderButtons/AiCh
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import usePanelPosition from '@cdo/apps/lab2/hooks/usePanelPosition';
 import lab2I18n from '@cdo/apps/lab2/locale';
-import useResourcePanelShepherdTours from '@cdo/apps/lab2/productTours/useResourcePanelShepherdTours';
+import useResourcePanelTours from '@cdo/apps/lab2/productTours/useResourcePanelTours';
 import {
   isReadOnlyWorkspace,
   isPermanentlyReadOnlyWorkspace,
@@ -229,7 +229,7 @@ const ResourcePanel: React.FC<ResourcePanelProps> = ({
     queryParams('show-ai-tutor') === 'true';
 
   const showBackpack = backpackProps && !isPermanentlyReadOnly;
-  useResourcePanelShepherdTours({
+  useResourcePanelTours({
     appName,
     productToursForLevel: instructionsProps.levelProperties.productTours,
     isStandaloneCollapsed,

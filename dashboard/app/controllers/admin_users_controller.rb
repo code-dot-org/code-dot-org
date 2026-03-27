@@ -14,6 +14,7 @@ class AdminUsersController < ApplicationController
     email
     primary_contact_info_id
     name
+    username
     user_type
     current_sign_in_at
     sign_in_count
@@ -164,6 +165,23 @@ class AdminUsersController < ApplicationController
     if @target_user
       @projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'active')
       @deleted_projects_list = ProjectsList.fetch_personal_projects_for_admin(@target_user.id, 'deleted')
+    end
+  end
+
+  # GET /admin/user_sections
+  # This page takes an optional user_identifier param and renders a page with
+  # the non-hidden sections where the user is a student.
+  def user_sections_form
+    set_target_user_from_identifier(params[:user_identifier])
+
+    if @target_user
+      @sections_list = Section.
+        joins(:followers).
+        includes(:user).
+        where(followers: {student_user_id: @target_user.id}).
+        visible.
+        distinct.
+        order('sections.created_at ASC')
     end
   end
 
@@ -363,6 +381,21 @@ class AdminUsersController < ApplicationController
   rescue ArgumentError => exception
     flash[:alert] = "ADD EMAIL FAILED: #{exception.message}"
     redirect_to studio_person_form_path
+  end
+
+  # GET /admin/lookup_by_email
+  def lookup_by_email_form
+    email = params[:email].to_s.strip.downcase
+    if email.present?
+      hashed_email = AuthenticationOption.hash_email(email)
+      matched_auth_options = AuthenticationOption.where(hashed_email: hashed_email)
+      user_ids = matched_auth_options.distinct.pluck(:user_id)
+      all_auth_options_for_users = AuthenticationOption.where(user_id: user_ids)
+      @users = restricted_users.where(id: user_ids)
+      @credential_types_by_user = all_auth_options_for_users.group_by(&:user_id).transform_values do |opts|
+        opts.map(&:credential_type)
+      end
+    end
   end
 
   # GET /admin/mass_delete_student_progress

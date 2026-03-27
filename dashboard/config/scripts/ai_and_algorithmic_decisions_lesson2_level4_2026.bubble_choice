@@ -1,0 +1,11 @@
+name 'ai-and-algorithmic-decisions-lesson2-level4_2026'
+display_name 'Front-End Developer Challenge'
+description 'You are a front-end developer. Plan and build a small app that responds to user clicks and updates the interface.'
+
+sublevels
+level 'ai-and-algorithmic-decisions-lesson2-level4a_2026'
+level 'ai-and-algorithmic-decisions-lesson2-level4b_2026'
+level 'ai-and-algorithmic-decisions-lesson2-level4c_2026'
+level 'ai-and-algorithmic-decisions-lesson2-level4d_2026'
+
+uses_lab2

@@ -187,10 +187,20 @@ json-video {
   margin: 15px 0;
 }
 
-.messageAndHeader {
+%message-and-header {
   display: flex;
   flex-direction: column;
   gap: $vertical-gap;
+}
+
+.message-and-header-assistant {
+  @extend %message-and-header;
+  align-items: flex-start;
+}
+
+.message-and-header-user {
+  @extend %message-and-header;
+  align-items: flex-end;
 }
 
 .grid {

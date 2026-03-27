@@ -55,15 +55,19 @@ export async function isTextSafe(
   return classification === 'OK';
 }
 
-export async function isImageSafe(file: GeneratedFile): Promise<boolean> {
-  const {filename, fileBuffer, mediaType, extension} = prepareGeneratedFile(
+export async function isImageSafe(
+  file: GeneratedFile,
+  assetUrl: string
+): Promise<boolean> {
+  const {filename, fileBuffer, mediaType} = prepareGeneratedFile(
     file,
     ACCEPTED_IMAGE_MEDIA_TYPES
   );
   const image = new File([fileBuffer], filename, {type: mediaType});
-  const moderationStatus = await moderateImage(image, extension, 'aichat', {
+  const moderationStatus = await moderateImage(image, 'aichat', {
     moderateEvent: EVENTS.MODERATE_MODEL_OUTPUT_IMAGE_AZURE,
     flaggedEvent: EVENTS.FLAGGED_MODEL_OUTPUT_IMAGE_AZURE,
+    assetUrl,
   });
   return moderationStatus === 'ok' || moderationStatus === 'skipped';
 }
