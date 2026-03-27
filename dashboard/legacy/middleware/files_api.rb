@@ -258,18 +258,26 @@ class FilesApi < Sinatra::Base
       attachment(filename)
     end
 
-    result = buckets.get(encrypted_channel_id, filename, env['HTTP_IF_MODIFIED_SINCE'], request.GET['version'])
+    project = Projects.new(get_storage_id).get(encrypted_channel_id)
+    project_type = project[:projectType]&.downcase if project
+
+    # we always fetch weblab1 html files to ensure they still pass our latest no-js validations
+    if_modified_since = html_file?(filename) && project_type == 'weblab' ? nil : env['HTTP_IF_MODIFIED_SINCE']
+
+    result = buckets.get(encrypted_channel_id, filename, if_modified_since, request.GET['version'])
     not_found if result[:status] == 'NOT_FOUND'
     not_modified if result[:status] == 'NOT_MODIFIED'
-    last_modified result[:last_modified]
 
     metadata = result[:metadata]
     abuse_score = [metadata['abuse_score'].to_i, metadata['abuse-score'].to_i].max
-    project = Projects.new(get_storage_id).get(encrypted_channel_id)
-    project_type = project[:projectType]&.downcase if project
     not_found if abuse_score >= SharedConstants::ABUSE_CONSTANTS.ABUSE_THRESHOLD && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if profanity_privacy_violation?(filename, result[:body], project_type) && !can_view_flagged_assets?(encrypted_channel_id)
     not_found if code_projects_domain_root_route && !codeprojects_can_view?(encrypted_channel_id)
+    not_found if html_file?(filename) && !valid_html_file?(encrypted_channel_id, filename, result[:body].string)
+
+    # clients still get a 304 Not Modified from us if their cache is fresh,
+    # even if we had to fetch html from s3 to validate it
+    last_modified result[:last_modified]
 
     if code_projects_domain_root_route && html?(response.headers)
       return "<head>\n<script>\nvar encrypted_channel_id='#{encrypted_channel_id}';\n</script>\n<script async src='/weblab/footer.js'></script>\n<link rel='stylesheet' href='/weblab/footer.css'></head>\n" << result[:body].string
