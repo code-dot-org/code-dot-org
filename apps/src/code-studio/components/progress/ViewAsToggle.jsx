@@ -9,7 +9,6 @@ import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import commonMsg from '@cdo/locale';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
@@ -62,17 +61,17 @@ class ViewAsToggle extends React.Component {
           <SegmentedButtons
             selectedButtonValue={viewAs}
             onChange={this.onChange}
-            className={legacyStyles.legacyToggle}
+            size="xs"
             buttons={[
               {
                 value: ViewType.Participant,
                 label: commonMsg.student(),
-                id: 'uitest-viewAsStudent',
+                className: 'uitest-viewAsStudent',
               },
               {
                 value: ViewType.Instructor,
                 label: commonMsg.teacher(),
-                id: 'uitest-viewAsTeacher',
+                className: 'uitest-viewAsTeacher',
               },
             ]}
           />

@@ -9,7 +9,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import Spinner from '../../../../../sharedComponents/Spinner';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 const PREVIEW_ON = 'preview-on';
 const PREVIEW_OFF = 'preview-off';
@@ -90,7 +89,7 @@ class FoormEntityEditorHeader extends Component {
             <SegmentedButtons
               onChange={this.props.livePreviewToggled}
               selectedButtonValue={this.props.livePreviewStatus}
-              className={legacyStyles.legacyToggle}
+              size="xs"
               buttons={[
                 {value: PREVIEW_ON, label: 'Live Preview On'},
                 {value: PREVIEW_OFF, label: 'Live Preview Off'},

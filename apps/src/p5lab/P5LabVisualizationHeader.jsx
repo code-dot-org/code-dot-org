@@ -14,7 +14,6 @@ import {P5LabInterfaceMode, P5LabType} from './constants';
 import PoemSelector from './poetry/PoemSelector';
 import {allowAnimationMode, countAllowedModes} from './stateQueries';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 /**
  * Controls above the visualization header, including the code/animation toggle.
@@ -77,7 +76,7 @@ class P5LabVisualizationHeader extends React.Component {
             <SegmentedButtons
               selectedButtonValue={interfaceMode}
               onChange={this.changeInterfaceMode}
-              className={legacyStyles.legacyToggle}
+              size="xs"
               buttons={[
                 {
                   value: P5LabInterfaceMode.CODE,

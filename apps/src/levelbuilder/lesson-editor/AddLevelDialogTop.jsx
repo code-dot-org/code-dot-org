@@ -11,7 +11,6 @@ import AddLevelFilters from '@cdo/apps/levelbuilder/lesson-editor/AddLevelFilter
 import AddLevelTable from '@cdo/apps/levelbuilder/lesson-editor/AddLevelTable';
 import CreateNewLevelInputs from '@cdo/apps/levelbuilder/lesson-editor/CreateNewLevelInputs';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
@@ -74,7 +73,7 @@ function AddLevelDialogTop(props) {
           <SegmentedButtons
             selectedButtonValue={methodOfAddingLevel}
             onChange={value => setMethodOfAddingLevel(value)}
-            className={legacyStyles.legacyToggle}
+            size="xs"
             buttons={[
               {value: 'Find Level', label: 'Find Level'},
               {value: 'Create New Level', label: 'Create New Level'},

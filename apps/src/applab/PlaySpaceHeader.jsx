@@ -11,7 +11,6 @@ import {ApplabInterfaceMode} from './constants';
 import {actions} from './redux/applab';
 import ScreenSelector from './ScreenSelector';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 class PlaySpaceHeader extends React.Component {
   static propTypes = {
@@ -40,7 +39,7 @@ class PlaySpaceHeader extends React.Component {
         <SegmentedButtons
           selectedButtonValue={this.props.interfaceMode}
           onChange={this.props.onInterfaceModeChange}
-          className={legacyStyles.legacyToggle}
+          size="xs"
           buttons={[
             {
               value: ApplabInterfaceMode.CODE,

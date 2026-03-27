@@ -5,10 +5,7 @@ import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import legacyStyles from '../legacy-toggle-styles.module.scss';
 
 /**
  * A toggle that provides a way to switch between detail and summary views of
@@ -16,7 +13,6 @@ import legacyStyles from '../legacy-toggle-styles.module.scss';
  */
 class ProgressDetailToggle extends React.Component {
   static propTypes = {
-    activeColor: PropTypes.string,
     toggleStudyGroup: PropTypes.string,
 
     // redux backed
@@ -31,24 +27,19 @@ class ProgressDetailToggle extends React.Component {
   };
 
   render() {
-    const {isSummaryView, isPlc, hasGroups} = this.props;
-
-    const activeColor =
-      this.props.activeColor ||
-      (!isPlc && hasGroups ? color.purple : color.cyan);
+    const {isSummaryView} = this.props;
 
     return (
       <SegmentedButtons
         selectedButtonValue={isSummaryView ? 'summary' : 'detail'}
         onChange={this.onChange}
-        className={legacyStyles.legacyToggle}
-        style={{'--brand-teal-65': activeColor}}
+        size="xs"
         buttons={[
           {value: 'summary', label: i18n.summaryView()},
           {
             value: 'detail',
             label: i18n.detailView(),
-            id: 'uitest-toggle-detail',
+            className: 'uitest-toggle-detail',
           },
         ]}
       />

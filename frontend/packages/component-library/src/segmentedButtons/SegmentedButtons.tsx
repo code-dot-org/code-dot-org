@@ -29,8 +29,6 @@ export interface SegmentedButtonsProps {
   onChange: (value: string) => void;
   /** Custom className (for example if you want to set max width of the button and/or truncate overflowed text)*/
   className?: string;
-  /** Inline styles applied to the container (useful for CSS custom property overrides) */
-  legacyStyles?: React.CSSProperties;
 }
 
 /**
@@ -50,7 +48,6 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
   selectedButtonValue,
   onChange,
   className,
-  legacyStyles,
   color = 'primary',
   size = 'm',
   type = 'withLabel',
@@ -63,7 +60,6 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
         moduleStyles[`segmentedButtons-${size}`],
         className,
       )}
-      style={legacyStyles}
     >
       {buttons.map(
         ({
@@ -75,6 +71,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
           icon,
           value,
           id,
+          className: buttonClassName,
         }) => (
           <SegmentedButton
             key={value}
@@ -89,6 +86,7 @@ const SegmentedButtons: React.FunctionComponent<SegmentedButtonsProps> = ({
             buttonType={type}
             value={value}
             id={id}
+            className={buttonClassName}
           />
         ),
       )}

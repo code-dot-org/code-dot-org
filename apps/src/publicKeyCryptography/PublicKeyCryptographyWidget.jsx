@@ -19,7 +19,6 @@ import EveInstructions from './EveInstructions';
 import ModuloClock from './ModuloClock';
 import StartOverButton from './StartOverButton';
 
-import legacyStyles from '@cdo/apps/templates/legacy-toggle-styles.module.scss';
 
 // Magic strings for view modes
 const ALICE_VIEW = 'alice';
@@ -216,7 +215,7 @@ const CharacterSelect = props => (
     <SegmentedButtons
       selectedButtonValue={props.selectedCharacter}
       onChange={props.onChange}
-      className={legacyStyles.legacyToggle}
+      size="xs"
       buttons={[
         {
           value: ALICE_VIEW,
