@@ -37,23 +37,23 @@ interface UseSketchlabTourParams {
 }
 
 const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
-  // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
-  const [isToolbarReady, setIsToolbarReady] = useState(false);
+  // Wait for the ReactFlow canvas to be fully rendered before starting the tour.
+  const [isCanvasReady, setIsCanvasReady] = useState(false);
   useEffect(() => {
     const tourSeen = tryGetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'no');
     if (tourSeen === 'yes') {
       return;
     }
-    const checkToolbarReady = () => {
-      const toolbarElements = document.querySelectorAll('label.ToolIcon');
-      if (toolbarElements.length > 0) {
-        setIsToolbarReady(true);
+    const checkCanvasReady = () => {
+      const reactFlowElement = document.querySelector('.react-flow__viewport');
+      if (reactFlowElement) {
+        setIsCanvasReady(true);
         return true;
       }
       return false;
     };
 
-    if (checkToolbarReady()) {
+    if (checkCanvasReady()) {
       return;
     }
 
@@ -61,7 +61,7 @@ const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
     let attempts = 0;
     const interval = setInterval(() => {
       attempts++;
-      if (checkToolbarReady() || attempts >= maxAttempts) {
+      if (checkCanvasReady() || attempts >= maxAttempts) {
         clearInterval(interval);
       }
     }, 100);
@@ -82,7 +82,7 @@ const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
     getSteps: createSketchlabTourSteps,
     localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
     tourAvailable:
-      isToolbarReady &&
+      isCanvasReady &&
       isTourEnabledOnLevel(
         ProductTour.SketchlabIntro,
         'sketchlab',

@@ -8,12 +8,6 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
-import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
-import {
-  ExcalidrawInitialDataState,
-  BinaryFileData,
-  DataURL,
-} from '@excalidraw/excalidraw/types/types';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -79,10 +73,7 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source =
-  | BlocklySource
-  | MultiFileSource
-  | ExcalidrawSourceWithExternalFiles;
+export type Source = BlocklySource | MultiFileSource | SketchlabSource;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -102,37 +93,32 @@ export type BlocklySource = {[key: string]: unknown};
 
 // -- SKETCH LAB -- //
 
-export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
+// Plain serializable types for project storage. We avoid using ReactFlow's
+// Node/Edge types directly here because their complex DOM attribute types
+// (with readonly arrays) are incompatible with Immer's WritableDraft used
+// in Redux Toolkit reducers.
+export interface SketchlabNode {
+  id: string;
+  type?: string;
+  position: {x: number; y: number};
+  data: Record<string, unknown>;
+  [key: string]: unknown;
+}
 
-// By default, Excalidraw file entries require a dataURL field that has a
-// base64 encoding of the file. As we move to store images in S3, this field
-// is now optional.
-type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
-  dataURL?: DataURL;
-};
+export interface SketchlabEdge {
+  id: string;
+  source: string;
+  target: string;
+  type?: string;
+  data?: Record<string, unknown>;
+  [key: string]: unknown;
+}
 
-export type ExcalidrawFilesWithOptionalData = Record<
-  ExcalidrawElement['id'],
-  ExcalidrawFileWithOptionalData
->;
-
-// We add the externalFiles property to Excalidraw's default state
-// to map each file to an external URL (a location in S3) where we store the image.
-// We override the files property with a version of their file type where the dataURL
-// is not required (ie, since we're storing the image in S3 instead of as a base64 encoded string).
-export type ExcalidrawSourceWithExternalFiles = Omit<
-  ExcalidrawInitialDataState,
-  'files'
-> & {
-  files?: ExcalidrawFilesWithOptionalData;
-  externalFiles?: SketchlabExternalFiles;
-};
-
-export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
-  uploaded?: boolean;
-  starterAsset?: boolean;
-  filenameWithExtension?: string;
-};
+export interface SketchlabSource {
+  nodes: SketchlabNode[];
+  edges: SketchlabEdge[];
+  viewport?: {x: number; y: number; zoom: number};
+}
 
 // -- MULTI-FILE -- //
 
