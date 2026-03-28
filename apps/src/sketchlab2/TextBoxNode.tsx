@@ -1,7 +1,7 @@
 import {Handle, Position, useReactFlow, type NodeProps} from '@xyflow/react';
 import React, {useCallback, useState, useRef, useEffect, memo} from 'react';
 
-import moduleStyles from './styles/sketchlab-view.module.scss';
+import moduleStyles from './styles/sketchlab2-view.module.scss';
 
 const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
   const {updateNodeData} = useReactFlow();

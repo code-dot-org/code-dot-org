@@ -11,49 +11,49 @@ import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import useStartTourWhenAvailable from '@cdo/apps/sharedComponents/productTour/useStartTourWhenAvailable';
 import {tryGetLocalStorage} from '@cdo/apps/utils';
 
-import {SKETCHLAB_ONBOARDING_TOUR_SEEN} from './constants';
-import {createSketchlabTourSteps} from './sketchlabTourSteps';
+import {SKETCHLAB2_ONBOARDING_TOUR_SEEN} from './constants';
+import {createSketchlab2TourSteps} from './sketchlab2TourSteps';
 
-const SKETCHLAB_ONBOARDING_FLOW_NAME = 'Sketch Lab Onboarding V2';
+const SKETCHLAB2_ONBOARDING_FLOW_NAME = 'Sketch Lab 2 Onboarding';
 
 const onTourStart = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_STARTED, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
   });
 
 const onTourComplete = () =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_COMPLETED, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
   });
 
 const onTourCancel = (stepIndex: number) =>
   sendLab2AnalyticsEvent(EVENTS.INTRO_FLOW_EXIT, {
-    flowName: SKETCHLAB_ONBOARDING_FLOW_NAME,
+    flowName: SKETCHLAB2_ONBOARDING_FLOW_NAME,
     step: stepIndex.toString(),
   });
 
-interface UseSketchlabTourParams {
+interface UseSketchlab2TourParams {
   productTours: string[] | undefined;
 }
 
-const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
-  // Wait for the Excalidraw toolbar to be fully rendered before starting the tour.
-  const [isToolbarReady, setIsToolbarReady] = useState(false);
+const useSketchlab2Tour = ({productTours}: UseSketchlab2TourParams) => {
+  // Wait for the ReactFlow canvas to be fully rendered before starting the tour.
+  const [isCanvasReady, setIsCanvasReady] = useState(false);
   useEffect(() => {
-    const tourSeen = tryGetLocalStorage(SKETCHLAB_ONBOARDING_TOUR_SEEN, 'no');
+    const tourSeen = tryGetLocalStorage(SKETCHLAB2_ONBOARDING_TOUR_SEEN, 'no');
     if (tourSeen === 'yes') {
       return;
     }
-    const checkToolbarReady = () => {
-      const toolbarElements = document.querySelectorAll('label.ToolIcon');
-      if (toolbarElements.length > 0) {
-        setIsToolbarReady(true);
+    const checkCanvasReady = () => {
+      const reactFlowElement = document.querySelector('.react-flow__viewport');
+      if (reactFlowElement) {
+        setIsCanvasReady(true);
         return true;
       }
       return false;
     };
 
-    if (checkToolbarReady()) {
+    if (checkCanvasReady()) {
       return;
     }
 
@@ -61,7 +61,7 @@ const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
     let attempts = 0;
     const interval = setInterval(() => {
       attempts++;
-      if (checkToolbarReady() || attempts >= maxAttempts) {
+      if (checkCanvasReady() || attempts >= maxAttempts) {
         clearInterval(interval);
       }
     }, 100);
@@ -79,13 +79,13 @@ const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
   );
 
   const {tour} = useLab2ProductTour({
-    getSteps: createSketchlabTourSteps,
-    localStorageKey: SKETCHLAB_ONBOARDING_TOUR_SEEN,
+    getSteps: createSketchlab2TourSteps,
+    localStorageKey: SKETCHLAB2_ONBOARDING_TOUR_SEEN,
     tourAvailable:
-      isToolbarReady &&
+      isCanvasReady &&
       isTourEnabledOnLevel(
         ProductTour.SketchlabIntro,
-        'sketchlab',
+        'sketchlab2',
         productTours
       ),
     onStart: onTourStart,
@@ -97,4 +97,4 @@ const useSketchlabTour = ({productTours}: UseSketchlabTourParams) => {
   useStartTourWhenAvailable(tour);
 };
 
-export default useSketchlabTour;
+export default useSketchlab2Tour;

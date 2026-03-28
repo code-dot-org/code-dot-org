@@ -1,0 +1,14 @@
+<Sketchlab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 76,
+  "created_at": "2026-03-28T00:00:00.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "This is the first allthethings level for Sketch Lab 2! Use the toolbar to add text box nodes and connect them with arrows."
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-28 00:00:00 +0000\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"levelbuilder@code.org\"}]"
+}]]></config>
+</Sketchlab2>

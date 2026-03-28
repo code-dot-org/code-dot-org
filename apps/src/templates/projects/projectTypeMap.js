@@ -42,6 +42,7 @@ export const PROJECT_TYPE_MAP = {
   thebadguys: i18n.projectTypeThebadguys(),
   science: i18n.projectTypeScience(),
   sketchlab: 'Sketch Lab',
+  sketchlab2: 'Sketch Lab 2',
   story: i18n.projectTypeStory(),
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),

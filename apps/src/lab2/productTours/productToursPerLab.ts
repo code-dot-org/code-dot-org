@@ -68,5 +68,6 @@ export const ToursPerLab: Partial<Record<AppName, ProductTourConfig[]>> = {
     ProductTourConfigurations[ProductTour.ResourcePanelValidation],
   ],
   sketchlab: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
+  sketchlab2: [ProductTourConfigurations[ProductTour.SketchlabIntro]],
   weblab2: [ProductTourConfigurations[ProductTour.ResourcePanelOnboarding]],
 };

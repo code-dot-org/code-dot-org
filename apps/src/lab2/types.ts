@@ -8,6 +8,12 @@
 // The library data should definitely live elsewhere.
 
 import {Theme} from '@code-dot-org/component-library/common/contexts';
+import {ExcalidrawElement} from '@excalidraw/excalidraw/types/element/types';
+import {
+  ExcalidrawInitialDataState,
+  BinaryFileData,
+  DataURL,
+} from '@excalidraw/excalidraw/types/types';
 import type * as BlocklyCore from 'blockly/core';
 import {ComponentType, LazyExoticComponent} from 'react';
 
@@ -73,7 +79,11 @@ export interface ProjectSources {
 
 export type LabConfig = {[key: string]: {[key: string]: string}};
 
-export type Source = BlocklySource | MultiFileSource | SketchlabSource;
+export type Source =
+  | BlocklySource
+  | MultiFileSource
+  | ExcalidrawSourceWithExternalFiles
+  | Sketchlab2Source;
 
 export interface SaveSourceOptions {
   projectType?: string;
@@ -93,11 +103,44 @@ export type BlocklySource = {[key: string]: unknown};
 
 // -- SKETCH LAB -- //
 
-// Plain serializable types for project storage. We avoid using ReactFlow's
-// Node/Edge types directly here because their complex DOM attribute types
-// (with readonly arrays) are incompatible with Immer's WritableDraft used
-// in Redux Toolkit reducers.
-export interface SketchlabNode {
+export type SketchlabExternalFiles = Record<FileId, SketchlabProjectFile>;
+
+// By default, Excalidraw file entries require a dataURL field that has a
+// base64 encoding of the file. As we move to store images in S3, this field
+// is now optional.
+type ExcalidrawFileWithOptionalData = Omit<BinaryFileData, 'dataURL'> & {
+  dataURL?: DataURL;
+};
+
+export type ExcalidrawFilesWithOptionalData = Record<
+  ExcalidrawElement['id'],
+  ExcalidrawFileWithOptionalData
+>;
+
+// We add the externalFiles property to Excalidraw's default state
+// to map each file to an external URL (a location in S3) where we store the image.
+// We override the files property with a version of their file type where the dataURL
+// is not required (ie, since we're storing the image in S3 instead of as a base64 encoded string).
+export type ExcalidrawSourceWithExternalFiles = Omit<
+  ExcalidrawInitialDataState,
+  'files'
+> & {
+  files?: ExcalidrawFilesWithOptionalData;
+  externalFiles?: SketchlabExternalFiles;
+};
+
+export type SketchlabProjectFile = Pick<ProjectFile, 'id' | 'url'> & {
+  uploaded?: boolean;
+  starterAsset?: boolean;
+  filenameWithExtension?: string;
+};
+
+// -- SKETCH LAB 2 -- //
+
+// Plain serializable types for Sketchlab2's ReactFlow-based source storage.
+// Avoids using ReactFlow's Node/Edge types directly to prevent Immer
+// WritableDraft incompatibilities in Redux Toolkit reducers.
+export interface Sketchlab2Node {
   id: string;
   type?: string;
   position: {x: number; y: number};
@@ -105,7 +148,7 @@ export interface SketchlabNode {
   [key: string]: unknown;
 }
 
-export interface SketchlabEdge {
+export interface Sketchlab2Edge {
   id: string;
   source: string;
   target: string;
@@ -114,9 +157,9 @@ export interface SketchlabEdge {
   [key: string]: unknown;
 }
 
-export interface SketchlabSource {
-  nodes: SketchlabNode[];
-  edges: SketchlabEdge[];
+export interface Sketchlab2Source {
+  nodes: Sketchlab2Node[];
+  edges: Sketchlab2Edge[];
   viewport?: {x: number; y: number; zoom: number};
 }
 
