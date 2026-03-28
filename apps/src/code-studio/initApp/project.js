@@ -921,7 +921,7 @@ var projects = (module.exports = {
    * @returns {boolean} Whether a project should use the sources api.
    */
   useSourcesApi() {
-    return false;
+    return true;
   },
   /**
    * @returns {string} The path to the app capable of running
