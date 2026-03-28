@@ -1,6 +1,6 @@
 import React from 'react';
 
-import moduleStyles from './styles/color-palette.module.scss';
+import moduleStyles from './styles/node-palette.module.scss';
 
 export interface PaletteColor {
   label: string;
@@ -79,14 +79,14 @@ export const PALETTE_SHAPES: {
   },
 ];
 
-interface ColorPaletteProps {
+interface NodePaletteProps {
   selectedColor?: string | null;
   onColorSelect: (color: string | null) => void;
   selectedShape?: NodeShape;
   onShapeSelect?: (shape: NodeShape) => void;
 }
 
-const ColorPalette: React.FC<ColorPaletteProps> = ({
+const NodePalette: React.FC<NodePaletteProps> = ({
   selectedColor,
   onColorSelect,
   selectedShape,
@@ -148,4 +148,4 @@ const ColorPalette: React.FC<ColorPaletteProps> = ({
   </div>
 );
 
-export default ColorPalette;
+export default NodePalette;

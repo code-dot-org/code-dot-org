@@ -171,15 +171,18 @@ const Sketchlab2Canvas: React.FC<{
 
       saveSourcesTimeoutRef.current = setTimeout(() => {
         const viewport = reactFlowInstanceRef.current?.getViewport();
-        updateSources(() => ({
-          source: {
-            nodes: currentNodes as unknown as Sketchlab2Node[],
-            edges: currentEdges as unknown as Sketchlab2Edge[],
-            viewport: viewport
-              ? {x: viewport.x, y: viewport.y, zoom: viewport.zoom}
-              : undefined,
-          },
-        }));
+        const cleanNodes = currentNodes.map(
+          ({dragging, selected, measured, resizing, ...rest}) => rest
+        );
+        const source = {
+          nodes: cleanNodes as unknown as Sketchlab2Node[],
+          edges: currentEdges as unknown as Sketchlab2Edge[],
+          viewport: viewport
+            ? {x: viewport.x, y: viewport.y, zoom: viewport.zoom}
+            : undefined,
+        };
+        console.log('sketchlab2 sources:', source);
+        updateSources(() => ({source}));
       }, DEBOUNCED_WORKSPACE_SERIALIZATION_MS);
     },
     [updateSources]

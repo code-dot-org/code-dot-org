@@ -7,7 +7,7 @@ import {
 } from '@xyflow/react';
 import React, {useCallback, useState, useRef, useEffect, memo} from 'react';
 
-import ColorPalette, {type NodeShape} from './ColorPalette';
+import NodePalette, {type NodeShape} from './NodePalette';
 
 import moduleStyles from './styles/sketchlab2-view.module.scss';
 
@@ -184,7 +184,12 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
 
   const isTransparent = color === 'transparent';
   const fillColor = isTransparent ? 'transparent' : color ?? DEFAULT_FILL;
-  const strokeColor = selected ? SELECTED_BORDER_COLOR : BORDER_COLOR;
+  const strokeColor =
+    isTransparent && !selected
+      ? 'transparent'
+      : selected
+      ? SELECTED_BORDER_COLOR
+      : BORDER_COLOR;
 
   return (
     <>
@@ -192,9 +197,9 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
         isVisible={selected && !editing}
         position={Position.Bottom}
         align="center"
-        offset={8}
+        offset={23}
       >
-        <ColorPalette
+        <NodePalette
           selectedColor={color}
           onColorSelect={onColorSelect}
           selectedShape={shape}
