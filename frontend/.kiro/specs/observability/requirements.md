@@ -16,7 +16,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 - `session ID`: The opaque session identifier assigned by the active provider for the current browser session.
 - `user ID`: The application-level identifier for an authenticated user.
 - `consent`: Explicit, affirmative user action granting permission to link a session ID to a user ID for troubleshooting purposes.
-- `no-op adapter`: A provider adapter that performs no instrumentation and makes no external calls. This is the default when no provider is configured.
+- `no-op adapter`: A provider adapter that performs no external instrumentation calls and makes no network requests. Consent state and session-based sampling state are still tracked internally (via `BaseAdapter`) so that `isConsented()` and `isLogSampled()`/`isMetricsSampled()` behave correctly even before a real provider is selected. This is the default when no provider is configured.
 
 ---
 

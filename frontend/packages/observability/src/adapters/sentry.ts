@@ -2,76 +2,39 @@ import * as Sentry from '@sentry/browser';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '@code-dot-org/core';
 
-import type {ObservabilityClient, ObservabilityConfig} from '../types';
+import type {ObservabilityConfig} from '../types';
+import {BaseAdapter} from './base';
 
 /**
- * Internal state for the SentryAdapter.
+ * SentryAdapter wraps @sentry/browser and implements ObservabilityClient
+ * via BaseAdapter (which owns session ID state, consent queue, and sampling).
+ *
+ * Requirements: 3.1, 3.2, 3.3, 3.4, 4.2, 4.4, 5.1, 5.2, 5.4, 5.5,
+ *               6.2, 6.4, 8.2, 8.4, 9.2, 9.3, 9.5
  */
-interface AdapterState {
-  initialized: boolean;
-  consentedUserId: string | null | undefined; // undefined = setConsented never called
-  pendingConsent: string | null | undefined; // queued before init
-}
+export class SentryAdapter extends BaseAdapter {
+  protected initProvider(config: ObservabilityConfig): void {
+    const logSampleRate = config.sampling?.logSampleRate ?? 0;
+    const metricsSampleRate = config.sampling?.metricsSampleRate ?? 0;
 
-/**
- * SentryAdapter wraps @sentry/browser and implements ObservabilityClient.
- * All sessions are anonymous by default; user linkage requires setConsented().
- * Requirements: 3.1, 3.2, 3.3, 3.4, 4.2, 4.4, 5.1, 5.2, 5.4, 5.5, 6.2, 6.4, 8.2, 8.4, 9.2, 9.3, 9.5
- */
-export class SentryAdapter implements ObservabilityClient {
-  private state: AdapterState = {
-    initialized: false,
-    consentedUserId: undefined,
-    pendingConsent: undefined,
-  };
-
-  /**
-   * Initialize the Sentry SDK.
-   * Guards on typeof window — safe in SSR environments.
-   * On failure, logs a warning and degrades to no-op behavior.
-   */
-  init(config: ObservabilityConfig): void {
-    if (typeof window === 'undefined') {
-      return;
-    }
-
-    try {
-      Sentry.init({
-        dsn: config.sentry?.dsn,
-        environment: CodeStudioConfig.environment,
-        sendDefaultPii: false,
-        integrations: [Sentry.browserTracingIntegration()],
-        tracePropagationTargets: [this.getAllowedTracingUrls()],
-        sampleRate: config.sampling?.errorSampleRate ?? 1.0,
-        tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
-      });
-
-      this.state.initialized = true;
-
-      // Apply any queued setConsented call
-      if (this.state.pendingConsent !== undefined) {
-        this._applyConsent(this.state.pendingConsent);
-        this.state.pendingConsent = undefined;
-      }
-    } catch (err) {
-      console.warn(
-        '[observability] SentryAdapter.init failed — degrading to no-op:',
-        err,
-      );
-      // Mark as initialized so subsequent calls don't queue, but SDK is broken.
-      // We leave initialized=false so recordError becomes a no-op too.
-    }
+    Sentry.init({
+      dsn: config.sentry?.dsn,
+      environment: CodeStudioConfig.environment,
+      sendDefaultPii: false,
+      integrations: [Sentry.browserTracingIntegration()],
+      tracePropagationTargets:
+        config.tracePropagationTargets ?? [this.getAllowedTracingUrls()],
+      sampleRate: config.sampling?.errorSampleRate ?? 1.0,
+      tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
+      // Enable log ingestion only when a non-zero rate is configured (Req 9.2)
+      enableLogs: logSampleRate > 0,
+      // Disable metrics collection entirely when rate is 0 (Req 10.2)
+      enableMetrics: metricsSampleRate > 0,
+    });
   }
 
-  getAllowedTracingUrls() {
-    const environment = CodeStudioConfig.environment;
-
-    switch (environment) {
-      case 'adhoc':
-        return /^https:\/\/.*\.cdn-code\.org/;
-      default:
-        return getDashboardApiUrl(environment);
-    }
+  protected applyConsentToProvider(userId: string | null): void {
+    Sentry.setUser(userId ? {id: userId} : null);
   }
 
   /**
@@ -79,7 +42,7 @@ export class SentryAdapter implements ObservabilityClient {
    * No-op if not initialized. Never throws.
    */
   recordError(error: unknown, context?: Record<string, unknown>): void {
-    if (!this.state.initialized) {
+    if (!this.initialized) {
       return;
     }
     try {
@@ -90,40 +53,22 @@ export class SentryAdapter implements ObservabilityClient {
   }
 
   /**
-   * Associate the current session with a user ID.
-   * If called before init(), queues the association.
-   * Passing null or empty string removes any existing user association.
-   */
-  setConsented(userId: string | null): void {
-    if (!this.state.initialized) {
-      this.state.pendingConsent = userId;
-      return;
-    }
-    this._applyConsent(userId);
-  }
-
-  /**
-   * Returns true if a non-empty user ID is currently associated with the session.
-   * Before init(), reflects the pending queued value.
-   */
-  isConsented(): boolean {
-    const userId = this.state.initialized
-      ? this.state.consentedUserId
-      : this.state.pendingConsent !== undefined
-        ? this.state.pendingConsent
-        : this.state.consentedUserId;
-    return userId !== null && userId !== undefined && userId !== '';
-  }
-
-  /**
    * Tear down the Sentry SDK and flush pending events.
    */
   shutdown(): Promise<void> {
     return Sentry.close().then(() => undefined);
   }
 
-  private _applyConsent(userId: string | null): void {
-    this.state.consentedUserId = userId;
-    Sentry.setUser(userId ? {id: userId} : null);
+  /**
+   * Returns the environment-appropriate tracing URL target.
+   * adhoc → CDN regex; all others → dashboard API URL.
+   * Requirements: 11.4
+   */
+  getAllowedTracingUrls(): string | RegExp {
+    const environment = CodeStudioConfig.environment;
+    if (environment === 'adhoc') {
+      return /^https:\/\/.*\.cdn-code\.org/;
+    }
+    return getDashboardApiUrl(environment);
   }
 }

@@ -45,12 +45,14 @@
     "fast-check": "^3.0.0",
     "prettier": "catalog:",
     "typescript": "catalog:",
+    "uuid": "catalog:",
     "vite": "catalog:",
     "vite-plugin-dts": "catalog:",
     "vite-plugin-externalize-deps": "catalog:",
     "vitest": "^4.0.17"
   },
   "peerDependencies": {
-    "@sentry/browser": "^8.0.0"
+    "@sentry/browser": "^8.0.0",
+    "uuid": "^11.0.0"
   }
 }

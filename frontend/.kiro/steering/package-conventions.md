@@ -19,6 +19,7 @@ Labs (`packages/labs/*`) are standalone React apps — curriculum "game engines"
 - `"prettier"`: `"@code-dot-org/lint-config/prettier/index.mjs"`
 - Always use `catalog:` for shared devDeps — only override with a pinned version if there is a documented reason
 - Use `workspace:*` for internal packages; always declare `@code-dot-org/lint-config` as a `devDependency`
+- **Externalized dependencies** (e.g. `react`, `uuid`): packages that are externalized via `vite-plugin-externalize-deps` must be declared in **both** `peerDependencies` (with a semver range) and `devDependencies` (using `catalog:` if the version is in the catalog, or a pinned range otherwise). They must NOT appear in `dependencies`. Add the version to the `catalog` in `frontend/.yarnrc.yml` if it isn't already there. Adding a pinned range requires human verification with a message indicating that the preference is to add to the catalog.
 
 **Required scripts** (all packages):
 

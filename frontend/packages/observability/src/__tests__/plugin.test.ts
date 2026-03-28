@@ -9,6 +9,7 @@ vi.mock('@sentry/browser', () => ({
   captureException: vi.fn(),
   setUser: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
+  browserTracingIntegration: vi.fn().mockReturnValue({}),
 }));
 
 // Mock @code-dot-org/core to avoid needing a real window.__CODE_STUDIO__

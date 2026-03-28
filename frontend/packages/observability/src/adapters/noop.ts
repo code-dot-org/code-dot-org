@@ -1,29 +1,21 @@
-import type {ObservabilityClient, ObservabilityConfig} from '../types';
+import type {ObservabilityConfig} from '../types';
+import {BaseAdapter} from './base';
 
 /**
- * No-op adapter that satisfies the ObservabilityClient interface
- * but performs no instrumentation and makes no external calls.
- * This is the default when no provider is configured.
+ * No-op adapter — performs no instrumentation and makes no external calls.
+ * Extends BaseAdapter so it inherits the correct isConsented/sampling/consent
+ * queue behaviour without duplicating any logic.
  * Requirements: 2.2, 8.6, 9.6
  */
-export class NoopAdapter implements ObservabilityClient {
+export class NoopAdapter extends BaseAdapter {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  init(_config: ObservabilityConfig): void {
-    // no-op
+  protected initProvider(_config: ObservabilityConfig): void {
+    // no-op — intentionally does nothing
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   recordError(_error: unknown, _context?: Record<string, unknown>): void {
     // no-op
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setConsented(_userId: string | null): void {
-    // no-op
-  }
-
-  isConsented(): boolean {
-    return false;
   }
 
   shutdown(): Promise<void> {

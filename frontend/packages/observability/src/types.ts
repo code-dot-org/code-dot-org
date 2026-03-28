@@ -6,6 +6,10 @@ export interface SamplingConfig {
   errorSampleRate?: number;
   /** Fraction of traces/spans sent to the provider. Range [0, 1]. Default: 0 (disabled) */
   tracesSampleRate?: number;
+  /** Fraction of log events sent to the provider. Range [0, 1]. Default: 0 (disabled) */
+  logSampleRate?: number;
+  /** Fraction of metric events sent to the provider. Range [0, 1]. Default: 0 (disabled) */
+  metricsSampleRate?: number;
 }
 
 /**

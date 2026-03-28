@@ -35,6 +35,7 @@ graph TD
         OBSPLUGIN["observabilityPlugin<br/>src/plugin.ts"]
         FACTORY["createObservabilityClient()<br/>src/factory.ts"]
         IFACE["ObservabilityClient interface<br/>src/types.ts"]
+        BASE["BaseAdapter (abstract)<br/>src/adapters/base.ts"]
         NOOP["NoopAdapter<br/>src/adapters/noop.ts"]
         SENTRY["SentryAdapter<br/>src/adapters/sentry.ts"]
     end
@@ -58,8 +59,9 @@ graph TD
     SENTRY -->|wraps| SENTRYSDK
     OBSPLUGIN -->|_initializeSingleton| OBSCLIENT
     LAB -->|imports singleton| OBSCLIENT
-    IFACE -.->|implemented by| NOOP
-    IFACE -.->|implemented by| SENTRY
+    IFACE -.->|implemented by| BASE
+    BASE -.->|extended by| NOOP
+    BASE -.->|extended by| SENTRY
 ```
 
 ### Singleton Pattern
@@ -216,7 +218,7 @@ export interface SamplingConfig {
 
 **Why consent is not required:** The session ID is used purely as a local sampling key — a deterministic input to a hash function that produces an include/exclude decision entirely within the client. The session ID is never transmitted to the provider. The log and metric events that are emitted as a result of this decision contain no personally identifiable information; they are anonymous telemetry data. Consent governs whether a user's identity is *linked* to a session in the provider (via `setConsented`), which is a separate concern from whether anonymous telemetry is collected at all.
 
-**Observability-owned session ID:** The sampling key is a UUID generated and owned by the observability package itself, stored in `sessionStorage` under the key `__cdo_observability_session_id__`. On `init`, the adapter attempts to read this value from `sessionStorage`. If absent, it generates a new `crypto.randomUUID()`, writes it to `sessionStorage`, then uses it. Using `sessionStorage` means the ID is scoped to the browser tab and survives page refreshes within the session, but is discarded when the tab is closed. This avoids any dependency on Rails session IDs (which would introduce a security risk by exposing server-side session identifiers to frontend code) or Sentry's internal session tracking.
+**Observability-owned session ID:** The sampling key is a UUID generated and owned by the observability package itself, stored in `sessionStorage` under the key `__cdo_observability_session_id__`. On `init`, the adapter attempts to read this value from `sessionStorage`. If absent, it generates a new UUID via the `uuid` npm package (`v4`), writes it to `sessionStorage`, then uses it. Using `sessionStorage` means the ID is scoped to the browser tab and survives page refreshes within the session, but is discarded when the tab is closed. This avoids any dependency on Rails session IDs (which would introduce a security risk by exposing server-side session identifiers to frontend code) or Sentry's internal session tracking.
 
 If `sessionStorage` throws at any point (e.g. private browsing restrictions, storage quota exceeded), the adapter logs a single `console.warn` and sets a `sessionStorageUnavailable` flag in `AdapterState`. All subsequent sampling decisions that require the session ID short-circuit immediately and return `false` (not sampled), without attempting `sessionStorage` again.
 
@@ -262,28 +264,45 @@ export function createObservabilityClient(
 
 Because the factory may need to return synchronously (before the dynamic import resolves), the adapter is constructed eagerly but `init()` defers the actual SDK initialization. The factory always returns a fully-constructed `ObservabilityClient` immediately.
 
+### `BaseAdapter` (abstract)
+
+All provider adapters extend `BaseAdapter`, which owns every concern that is provider-agnostic:
+
+- **Consent queue** — `setConsented` called before `init` is stored as `pendingConsent` and applied automatically once `initProvider` succeeds.
+- **`isConsented()`** — reflects the queued value before init and the applied value after.
+- **Session ID state** — on `init`, calls `getOrCreateObservabilitySessionId()` from `src/sampling.ts`; stores the result and a `sessionStorageUnavailable` flag.
+- **`isLogSampled(rate)` / `isMetricsSampled(rate)`** — delegate to `isSampled(sessionId, rate)`, short-circuiting to `false` when sessionStorage is unavailable.
+- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), calls abstract `initProvider(config)`, resolves session ID, applies queued consent. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation).
+
+Subclasses implement:
+- `initProvider(config)` — provider-specific SDK initialization; must throw on failure.
+- `applyConsentToProvider(userId)` — called when consent is applied; default is a no-op.
+- `recordError(error, context)` — provider-specific error capture.
+- `shutdown()` — provider-specific teardown.
+
 ### `NoopAdapter`
 
-Implements `ObservabilityClient` with empty method bodies. All methods are no-ops. `isConsented()` returns `false`. `shutdown()` returns `Promise.resolve()`. Accepts any config without error.
+Extends `BaseAdapter`. `initProvider` and `recordError` are empty. `shutdown()` returns `Promise.resolve()`. Because it inherits `BaseAdapter`, `isConsented()` correctly reflects any `setConsented` calls, and `isLogSampled()`/`isMetricsSampled()` work correctly (returning `false` at rate 0, `true` at rate 1.0 once initialized). No external calls are ever made.
 
 ### `SentryAdapter`
 
-Wraps `@sentry/browser`. Key behaviors:
+Extends `BaseAdapter`. Implements `initProvider`, `applyConsentToProvider`, `recordError`, and `shutdown`. Key behaviors:
 
-- **`init(config)`**: Calls `Sentry.init()` with:
+- **`initProvider(config)`**: Calls `Sentry.init()` with:
   - `dsn` from `config.sentry.dsn`
-  - `environment: CodeStudioConfig.environment` (so events are bucketed correctly in the Sentry dashboard rather than defaulting to `"production"`)
+  - `environment: CodeStudioConfig.environment`
   - `sendDefaultPii: false` (anonymous mode)
+  - `integrations: [Sentry.browserTracingIntegration()]`
   - `sampleRate: config.sampling?.errorSampleRate ?? 1.0`
   - `tracesSampleRate: config.sampling?.tracesSampleRate ?? 0`
-  - `tracePropagationTargets: config.tracePropagationTargets ?? [/^\/(?!\/)/]` (same-origin default: paths starting with `/` but not `//`)
-  - Registers `window.addEventListener('error', ...)` and `window.addEventListener('unhandledrejection', ...)` for automatic capture (Sentry does this internally via `integrations` — the adapter relies on Sentry's default `GlobalHandlers` integration).
-  - Applies any queued `setConsented` call.
-  - Wrapped in try/catch; on failure logs a console warning and transitions to no-op behavior.
+  - `enableLogs: (config.sampling?.logSampleRate ?? 0) > 0` — enables Sentry log ingestion only when a non-zero log rate is configured; the Sentry JS SDK requires this flag to accept `Sentry.logger.*` calls
+  - `enableMetrics: (config.sampling?.metricsSampleRate ?? 0) > 0` — disables Sentry metrics collection entirely when rate is 0, avoiding unnecessary buffering
+  - `tracePropagationTargets: config.tracePropagationTargets ?? [getAllowedTracingUrls()]` — passes explicit targets through unchanged; derives environment-aware default when not provided
+  - Must throw on failure (caught by `BaseAdapter.init`'s try/catch, which logs a warning and leaves the adapter in no-op state).
+- **`applyConsentToProvider(userId)`**: Calls `Sentry.setUser(userId ? { id: userId } : null)`.
 - **`recordError(error, context)`**: Calls `Sentry.captureException(error, { extra: context })`. Wrapped in try/catch; on failure logs a console warning.
-- **`setConsented(userId)`**: If `init` has not been called, queues the call. Otherwise calls `Sentry.setUser(userId ? { id: userId } : null)`.
-- **`isConsented()`**: Returns `true` if a non-null userId is currently set.
 - **`shutdown()`**: Calls `Sentry.close()`.
+- **`getAllowedTracingUrls()`**: Returns environment-aware default tracing target — CDN regex for adhoc, dashboard API URL for all other environments.
 
 ### `SiteConfig` Update (`@code-dot-org/core`)
 
@@ -378,19 +397,22 @@ The Vite development `frontend/apps/studio/index.html` includes a stub meta tag 
 
 When the tag is absent or `observability` is omitted, `SiteConfig` defaults `provider` to `'none'` and `createObservabilityClient` returns the no-op adapter.
 
-### Consent Queue
+### Shared Adapter State (`BaseAdapter`)
 
-The `SentryAdapter` maintains internal state:
+All provider adapters inherit state from `BaseAdapter`:
 
 ```typescript
-interface AdapterState {
+// private to BaseAdapter — accessed only via protected methods
+interface BaseAdapterState {
   initialized: boolean;
-  consentedUserId: string | null | undefined; // undefined = not yet called
-  pendingConsent: string | null | undefined; // queued before init
+  consentedUserId: string | null | undefined; // undefined = never called
+  pendingConsent: string | null | undefined;  // queued before init
+  sessionStorageUnavailable: boolean;
+  observabilitySessionId: string | undefined;
 }
 ```
 
-`isConsented()` returns `consentedUserId !== null && consentedUserId !== undefined && consentedUserId !== ''`.
+`isConsented()` returns `consentedUserId !== null && consentedUserId !== undefined && consentedUserId !== ''` (or the pending value before init).
 
 ### Package File Layout
 
@@ -399,14 +421,17 @@ frontend/packages/observability/
 ├── src/
 │   ├── index.ts              # main entry: singleton default export + factory + types
 │   ├── plugin.ts             # observabilityPlugin (CorePlugin implementation)
-│   ├── types.ts              # ObservabilityClient, ObservabilityConfig
+│   ├── types.ts              # ObservabilityClient, ObservabilityConfig, SamplingConfig
+│   ├── sampling.ts           # getOrCreateObservabilitySessionId, hashSessionId, isSampled
 │   ├── adapters/
-│   │   ├── noop.ts           # NoopAdapter
-│   │   └── sentry.ts         # SentryAdapter
+│   │   ├── base.ts           # BaseAdapter (abstract) — consent queue, session ID, sampling gates
+│   │   ├── noop.ts           # NoopAdapter extends BaseAdapter
+│   │   └── sentry.ts         # SentryAdapter extends BaseAdapter
 │   └── __tests__/
 │       ├── factory.test.ts
 │       ├── noop.test.ts
 │       ├── plugin.test.ts
+│       ├── sampling.test.ts
 │       └── sentry.test.ts
 ├── package.json
 ├── vite.config.ts
@@ -482,7 +507,7 @@ _When_ `tracePropagationTargets` is explicitly provided in the config, along wit
 
 ### Property 7: No-op adapter accepts any config and performs no external calls
 
-_For any_ `ObservabilityConfig` (including arbitrary `sampling` and `tracePropagationTargets` values), the `NoopAdapter` SHALL accept the config without throwing, and calling any method on it SHALL produce no observable side effects (no network calls, no console output, no global state mutations).
+_For any_ `ObservabilityConfig` (including arbitrary `sampling` and `tracePropagationTargets` values), the `NoopAdapter` SHALL accept the config without throwing, and calling any method on it SHALL produce no observable side effects (no network calls, no console output, no global state mutations). Note: `isConsented()` and `isLogSampled()`/`isMetricsSampled()` correctly reflect internal state inherited from `BaseAdapter` — this is intentional, not a side effect.
 
 **Validates: Requirements 2.2, 8.6, 9.6**
 
@@ -492,9 +517,13 @@ _For any_ `SentryAdapter` where `Sentry.init` throws (e.g., SDK blocked by ad bl
 
 **Validates: Requirements 6.4**
 
----
+### Property 9: Session ID sampling is deterministic and uniformly distributed
 
-## Error Handling
+_For any_ session ID string and sample rate in `[0, 1]`: (a) the same session ID and rate always produce the same `isSampled` result; (b) `isSampled(undefined, rate)` always returns `false`; (c) `isSampled(id, 0)` always returns `false`; (d) `isSampled(id, 1)` always returns `true`.
+
+**Validates: Requirements 11.2, 11.4**
+
+---
 
 | Scenario                                                 | Behavior                                                                                                |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -540,6 +569,7 @@ Each property test MUST include a comment referencing the design property it val
 | P6: Config pass-through              | `sentry.test.ts`  | `fc.float({min:0,max:1})` for rates, `fc.array(fc.string())` for targets                        |
 | P7: No-op accepts any config         | `noop.test.ts`    | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
 | P8: Init failure degrades gracefully | `sentry.test.ts`  | `fc.anything()` for thrown error                                                                |
+| P9: Session ID sampling is deterministic | `sampling.test.ts` | `fc.string({minLength:1})` for session ID, `fc.float({min:0,max:1})` for rate              |
 
 ### Unit Tests
 

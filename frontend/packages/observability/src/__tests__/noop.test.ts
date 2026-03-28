@@ -16,6 +16,8 @@ describe('NoopAdapter', () => {
           sampling: fc.record({
             errorSampleRate: fc.float({min: 0, max: 1}),
             tracesSampleRate: fc.float({min: 0, max: 1}),
+            logSampleRate: fc.float({min: 0, max: 1}),
+            metricsSampleRate: fc.float({min: 0, max: 1}),
           }),
           tracePropagationTargets: fc.array(fc.string()),
         }),
@@ -66,14 +68,30 @@ describe('NoopAdapter', () => {
       expect(() => adapter.setConsented(null)).not.toThrow();
     });
 
-    it('isConsented returns false', () => {
+    it('isConsented returns false when setConsented is never called', () => {
       expect(adapter.isConsented()).toBe(false);
+    });
+
+    it('isConsented reflects setConsented state (inherited from BaseAdapter)', () => {
       adapter.setConsented('user-123');
+      expect(adapter.isConsented()).toBe(true);
+      adapter.setConsented(null);
       expect(adapter.isConsented()).toBe(false);
     });
 
     it('shutdown resolves', async () => {
       await expect(adapter.shutdown()).resolves.toBeUndefined();
+    });
+
+    it('init does not call any provider SDK (sessionStorage is accessed by BaseAdapter for sampling)', () => {
+      // NoopAdapter inherits BaseAdapter.init() which reads sessionStorage for
+      // session-based sampling — this is expected and correct behaviour.
+      // What it must NOT do is call any external provider SDK.
+      const adapter = new NoopAdapter();
+      expect(() => adapter.init({provider: 'none'})).not.toThrow();
+      // isLogSampled / isMetricsSampled still work (return false at rate 0)
+      expect(adapter.isLogSampled(0)).toBe(false);
+      expect(adapter.isMetricsSampled(0)).toBe(false);
     });
   });
 });
