@@ -184,6 +184,72 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
   - Run `turbo build` in `frontend/` to verify the Turborepo pipeline produces compiled output for both packages
   - Ensure all tests pass, ask the user if questions arise.
 
+- [ ] 14. Extend `SamplingConfig` with log and metrics rate fields in `src/types.ts`
+  - Add `logSampleRate?: number` and `metricsSampleRate?: number` to `SamplingConfig`
+  - _Requirements: 8.1, 9.1, 10.1_
+
+- [ ] 15. Update `SentryAdapter` — environment, tracing integration, and environment-aware propagation targets
+  - Add `environment: CodeStudioConfig.environment` to `Sentry.init()` call so events are bucketed correctly in the Sentry dashboard (Req 6.6)
+  - Add `integrations: [Sentry.browserTracingIntegration()]` to `Sentry.init()` to enable distributed tracing
+  - Replace hardcoded same-origin default with `getAllowedTracingUrls()` method that reads `CodeStudioConfig.environment` from `@code-dot-org/core`:
+    - adhoc → `/^https:\/\/.*\.cdn-code\.org/`
+    - all other environments → `getDashboardApiUrl(environment)`
+  - _Requirements: 6.6, 11.4, 11.5_
+
+  - [ ] 15.1 Write unit tests for environment bucketing and `getAllowedTracingUrls()`
+    - `Sentry.init` receives `environment` matching `CodeStudioConfig.environment` (Req 6.6)
+    - `getAllowedTracingUrls()` returns CDN regex for adhoc environment (Req 11.4)
+    - `getAllowedTracingUrls()` returns dashboard API URL for standard environments (Req 11.4)
+    - `tracePropagationTargets` uses `getAllowedTracingUrls()` when not explicitly provided (Req 11.5)
+    - _File: `src/__tests__/sentry.test.ts`_
+
+- [ ] 16. Implement session ID-based sampling utility in `src/sampling.ts`
+  - Export `getOrCreateObservabilitySessionId(): string | undefined`:
+    - Attempt `sessionStorage.getItem('__cdo_observability_session_id__')`
+    - If absent, generate `crypto.randomUUID()`, write to `sessionStorage`, return it
+    - If `sessionStorage` throws: log `console.warn` once, return `undefined`
+  - Export `hashSessionId(sessionId: string): number` — deterministic FNV-1a hash returning a float in `[0, 1)`
+  - Export `isSampled(sessionId: string | undefined, sampleRate: number): boolean` — returns `false` immediately if `sessionId` is `undefined`; otherwise `hash(sessionId) < sampleRate`
+  - This module is provider-agnostic — any adapter can use it
+  - _Requirements: 9.3, 10.3_
+
+  - [ ] 16.1 Write property test for session ID sampling (Property 9)
+    - **Property 9: Session ID sampling is deterministic and uniformly distributed**
+    - Use `fc.string({minLength: 1})` for session IDs, `fc.float({min: 0, max: 1})` for rates
+    - Assert same session ID + rate always produces the same result (determinism)
+    - Assert `isSampled(undefined, rate)` always returns `false` regardless of rate
+    - Assert `isSampled(id, 0)` always returns `false`; `isSampled(id, 1)` always returns `true`
+    - **Validates: Requirements 9.3, 10.3**
+    - _File: `src/__tests__/sampling.test.ts`_
+
+- [ ] 17. Add session ID state and sampling gates to `ObservabilityClient` and `SentryAdapter`
+  - Add `sessionStorageUnavailable: boolean` and `observabilitySessionId: string | undefined` to `AdapterState` in `SentryAdapter`
+  - On `init`, call `getOrCreateObservabilitySessionId()` from `src/sampling.ts`; if it returns `undefined`, set `state.sessionStorageUnavailable = true`
+  - All sampling decisions check `state.sessionStorageUnavailable` first and short-circuit to `false` without retrying `sessionStorage`
+  - Add `isLogSampled(): boolean` and `isMetricsSampled(): boolean` to `SentryAdapter` using `isSampled(state.observabilitySessionId, rate)`
+  - Gate log and metric event emission on these methods; unsampled events are silently dropped
+  - `NoopAdapter` returns `false` for both without accessing `sessionStorage`
+  - _Requirements: 9.2, 9.3, 10.2, 10.3_
+
+  - [ ] 17.1 Write unit tests for session ID management and sampling gates
+    - Session ID is generated and persisted to `sessionStorage` on first call (Req 9.3, 10.3)
+    - Same session ID is returned on subsequent calls within the same session (Req 9.3, 10.3)
+    - `sessionStorageUnavailable` is set and `console.warn` is logged once when `sessionStorage` throws (Req 9.3, 10.3)
+    - Subsequent sampling decisions short-circuit to `false` when `sessionStorageUnavailable` is set (Req 9.3, 10.3)
+    - Log events are not emitted when `logSampleRate` is `0` or not set (Req 9.2)
+    - Metric events are not emitted when `metricsSampleRate` is `0` or not set (Req 10.2)
+    - `NoopAdapter` returns `false` for log and metrics sampling without touching `sessionStorage` (Req 9.5, 10.5)
+    - _File: `src/__tests__/sentry.test.ts`, `src/__tests__/noop.test.ts`_
+
+- [ ] 18. Update `NoopAdapter` to accept new `SamplingConfig` fields silently
+  - Verify `NoopAdapter` already ignores all sampling config (no code change expected, but confirm and update Property 7 test to include `logSampleRate` and `metricsSampleRate` in the arbitrary)
+  - _Requirements: 9.5, 10.5_
+
+- [ ] 19. Final checkpoint — ensure all tests pass after new tasks
+  - Run `yarn workspace @code-dot-org/observability test`
+  - Run `yarn lint:fix` and `yarn release:dryrun` from `frontend/`
+  - Ensure all tests pass, ask the user if questions arise.
+
 ## Notes
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP

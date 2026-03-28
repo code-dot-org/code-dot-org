@@ -203,7 +203,32 @@ export interface SamplingConfig {
   errorSampleRate?: number;
   /** Fraction of traces/spans sent to the provider. Range [0, 1]. Default: 0 (disabled) */
   tracesSampleRate?: number;
+  /** Fraction of log events sent to the provider. Range [0, 1]. Default: 0 (disabled) */
+  logSampleRate?: number;
+  /** Fraction of metric events sent to the provider. Range [0, 1]. Default: 0 (disabled) */
+  metricsSampleRate?: number;
 }
+```
+
+#### Session ID-Based Sampling for Logs and Metrics
+
+`logSampleRate` and `metricsSampleRate` use **session ID hashing** rather than per-event random sampling. This guarantees that all log and metric events within a session are either all included or all excluded — preventing partial session data that would be difficult to interpret. It also supports anonymous users since no user ID or consent is required.
+
+**Why consent is not required:** The session ID is used purely as a local sampling key — a deterministic input to a hash function that produces an include/exclude decision entirely within the client. The session ID is never transmitted to the provider. The log and metric events that are emitted as a result of this decision contain no personally identifiable information; they are anonymous telemetry data. Consent governs whether a user's identity is *linked* to a session in the provider (via `setConsented`), which is a separate concern from whether anonymous telemetry is collected at all.
+
+**Observability-owned session ID:** The sampling key is a UUID generated and owned by the observability package itself, stored in `sessionStorage` under the key `__cdo_observability_session_id__`. On `init`, the adapter attempts to read this value from `sessionStorage`. If absent, it generates a new `crypto.randomUUID()`, writes it to `sessionStorage`, then uses it. Using `sessionStorage` means the ID is scoped to the browser tab and survives page refreshes within the session, but is discarded when the tab is closed. This avoids any dependency on Rails session IDs (which would introduce a security risk by exposing server-side session identifiers to frontend code) or Sentry's internal session tracking.
+
+If `sessionStorage` throws at any point (e.g. private browsing restrictions, storage quota exceeded), the adapter logs a single `console.warn` and sets a `sessionStorageUnavailable` flag in `AdapterState`. All subsequent sampling decisions that require the session ID short-circuit immediately and return `false` (not sampled), without attempting `sessionStorage` again.
+
+The algorithm:
+
+1. On `init`, read or generate the observability session ID from `sessionStorage`.
+2. Hash the session ID to a float in `[0, 1)` using a deterministic, uniformly-distributed hash function (e.g. FNV-1a).
+3. Include the session if `hash(sessionId) < sampleRate`.
+
+Because the hash is deterministic, the same session always produces the same inclusion decision. Because it is uniformly distributed, the full `[0, 1]` float range is meaningful — a rate of `0.00001` (0.001%) will include approximately 1 in 100,000 sessions.
+
+If `sessionStorage` throws at any point, the adapter logs a single `console.warn` and sets a `sessionStorageUnavailable` flag — all subsequent sampling decisions short-circuit to `false` without retrying `sessionStorage`.
 
 export interface ObservabilityConfig {
   /** Provider identifier. Defaults to 'none'. */
