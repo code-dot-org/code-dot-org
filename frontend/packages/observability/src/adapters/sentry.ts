@@ -1,4 +1,5 @@
 import * as Sentry from '@sentry/browser';
+import type {Integration} from '@sentry/core';
 
 import {CodeStudioConfig, getDashboardApiUrl} from '@code-dot-org/core';
 
@@ -9,27 +10,41 @@ import {BaseAdapter} from './base';
  * SentryAdapter wraps @sentry/browser and implements ObservabilityClient
  * via BaseAdapter (which owns session ID state, consent queue, and sampling).
  *
+ * Sampling strategy: SDK-level feature flags (`enableLogs`, `enableMetrics`) are
+ * computed once at init time using the session ID resolved by BaseAdapter.init()
+ * before this method is called. No per-call sampling checks are needed in
+ * initLogger/initMetrics — the SDK handles ingestion gating.
+ *
  * Requirements: 3.1, 3.2, 3.3, 3.4, 4.2, 4.4, 5.1, 5.2, 5.4, 5.5,
- *               6.2, 6.4, 8.2, 8.4, 9.2, 9.3, 9.5, 13.1–13.3, 14.1–14.3
+ *               6.2, 6.4, 8.2, 8.4, 9.2, 9.3, 9.5, 13.1–13.3, 14.1–14.3,
+ *               15.1–15.4
  */
 export class SentryAdapter extends BaseAdapter {
   protected initProvider(config: ObservabilityConfig): void {
-    const logSampleRate = config.sampling?.logSampleRate ?? 0;
-    const metricsSampleRate = config.sampling?.metricsSampleRate ?? 0;
+    // Session ID is already resolved by BaseAdapter.init() before this call,
+    // so isLogSampled/isMetricsSampled return correct values here.
+    const enableLogs = this.isLogSampled(config.sampling?.logSampleRate);
+    const enableMetrics = this.isMetricsSampled(config.sampling?.metricsSampleRate);
+
+    const integrations: Integration[] = [Sentry.browserTracingIntegration()];
+    // Req 15.3, 15.4: capture console.error as a Sentry log only when logs are sampled
+    if (enableLogs) {
+      integrations.push(Sentry.consoleLoggingIntegration({levels: ['error']}));
+    }
 
     Sentry.init({
       dsn: config.sentry?.dsn,
       environment: CodeStudioConfig.environment,
       sendDefaultPii: false,
-      integrations: [Sentry.browserTracingIntegration()],
+      integrations,
       tracePropagationTargets:
         config.tracePropagationTargets ?? [this.getAllowedTracingUrls()],
       sampleRate: config.sampling?.errorSampleRate ?? 1.0,
       tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
-      // Req 9.2: enable Sentry log ingestion only when a non-zero rate is configured
-      enableLogs: logSampleRate > 0,
-      // Req 10.2: disable Sentry metrics buffering entirely when rate is 0
-      enableMetrics: metricsSampleRate > 0,
+      // Req 9.2: enable Sentry log ingestion only when session is sampled
+      enableLogs,
+      // Req 10.2: enable Sentry metrics buffering only when session is sampled
+      enableMetrics,
     });
   }
 
@@ -39,15 +54,13 @@ export class SentryAdapter extends BaseAdapter {
 
   /**
    * Wire up the live logger after SDK init.
-   * Each method gates on isLogSampled() before calling Sentry.logger.*.
+   * No per-call sampling check — SDK gates ingestion via enableLogs set at init.
    * Requirements: 13.1, 13.2, 13.3
    */
-  protected initLogger(config: ObservabilityConfig): void {
-    const rate = config.sampling?.logSampleRate;
+  protected initLogger(_config: ObservabilityConfig): void {
     const makeMethod =
       (level: keyof typeof Sentry.logger) =>
       (message: string, attributes?: Record<string, unknown>) => {
-        if (!this.isLogSampled(rate)) return;
         try {
           (Sentry.logger[level] as (m: string, a?: Record<string, unknown>) => void)(
             message,
@@ -70,33 +83,28 @@ export class SentryAdapter extends BaseAdapter {
 
   /**
    * Wire up the live metrics instruments after SDK init.
-   * Each method gates on isMetricsSampled() before calling Sentry.metrics.*.
+   * No per-call sampling check — SDK gates ingestion via enableMetrics set at init.
    * Requirements: 14.1, 14.2, 14.3
    */
-  protected initMetrics(config: ObservabilityConfig): void {
-    const rate = config.sampling?.metricsSampleRate;
-
+  protected initMetrics(_config: ObservabilityConfig): void {
     this.metrics = {
       count: (name, value = 1, attributes) => {
-        if (!this.isMetricsSampled(rate)) return;
         try {
-          Sentry.metrics.count(name, value, {tags: attributes});
+          Sentry.metrics.count(name, value, {attributes});
         } catch (err) {
           console.warn('[observability] SentryAdapter.metrics.count failed:', err);
         }
       },
       gauge: (name, value, attributes) => {
-        if (!this.isMetricsSampled(rate)) return;
         try {
-          Sentry.metrics.gauge(name, value, {tags: attributes});
+          Sentry.metrics.gauge(name, value, {attributes});
         } catch (err) {
           console.warn('[observability] SentryAdapter.metrics.gauge failed:', err);
         }
       },
       distribution: (name, value, attributes) => {
-        if (!this.isMetricsSampled(rate)) return;
         try {
-          Sentry.metrics.distribution(name, value, {tags: attributes});
+          Sentry.metrics.distribution(name, value, {attributes});
         } catch (err) {
           console.warn('[observability] SentryAdapter.metrics.distribution failed:', err);
         }
@@ -122,8 +130,8 @@ export class SentryAdapter extends BaseAdapter {
   /**
    * Tear down the Sentry SDK and flush pending events.
    */
-  shutdown(): Promise<void> {
-    return Sentry.close().then(() => undefined);
+  async shutdown(): Promise<void> {
+    await Sentry.close();
   }
 
   /**

@@ -2,6 +2,7 @@ import * as fc from 'fast-check';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
 
 import {SentryAdapter} from '../adapters/sentry';
+import {isSampled} from '../sampling';
 
 // Mock @sentry/browser so tests don't need a real DSN or network
 vi.mock('@sentry/browser', () => ({
@@ -9,7 +10,8 @@ vi.mock('@sentry/browser', () => ({
   captureException: vi.fn(),
   setUser: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
-  browserTracingIntegration: vi.fn().mockReturnValue({}),
+  browserTracingIntegration: vi.fn().mockReturnValue({name: 'BrowserTracing'}),
+  consoleLoggingIntegration: vi.fn().mockReturnValue({name: 'ConsoleLogging'}),
   logger: {
     trace: vi.fn(),
     debug: vi.fn(),
@@ -31,6 +33,7 @@ import * as Sentry from '@sentry/browser';
 describe('SentryAdapter', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    sessionStorage.clear();
   });
 
   // ─── Property 3: recordError forwards errors to the provider ───────────────
@@ -216,7 +219,6 @@ describe('SentryAdapter', () => {
     });
 
     it('init is a no-op when typeof window === undefined (Req 6.2)', () => {
-      // Temporarily remove window
       const originalWindow = global.window;
       // @ts-expect-error intentionally deleting window for test
       delete global.window;
@@ -251,9 +253,7 @@ describe('SentryAdapter', () => {
       const call = vi.mocked(Sentry.init).mock.calls[0][0] as {
         tracePropagationTargets: unknown[];
       };
-      // Should have exactly one default target derived from getAllowedTracingUrls()
       expect(call.tracePropagationTargets).toHaveLength(1);
-      // The target should be either a string URL or a RegExp
       expect(
         typeof call.tracePropagationTargets[0] === 'string' ||
           call.tracePropagationTargets[0] instanceof RegExp,
@@ -276,12 +276,14 @@ describe('SentryAdapter', () => {
         }),
       );
     });
-    it('enableLogs is true when logSampleRate > 0, false otherwise', () => {
+
+    it('enableLogs is true when logSampleRate > 0 and session is sampled, false otherwise', () => {
+      // With logSampleRate=1.0, isSampled always returns true
       const adapter = new SentryAdapter();
       adapter.init({
         provider: 'sentry',
         sentry: {dsn: 'https://test@sentry.io/1'},
-        sampling: {logSampleRate: 0.5},
+        sampling: {logSampleRate: 1.0},
       });
       expect(Sentry.init).toHaveBeenCalledWith(
         expect.objectContaining({enableLogs: true}),
@@ -298,12 +300,12 @@ describe('SentryAdapter', () => {
       );
     });
 
-    it('enableMetrics is true when metricsSampleRate > 0, false otherwise', () => {
+    it('enableMetrics is true when metricsSampleRate > 0 and session is sampled, false otherwise', () => {
       const adapter = new SentryAdapter();
       adapter.init({
         provider: 'sentry',
         sentry: {dsn: 'https://test@sentry.io/1'},
-        sampling: {metricsSampleRate: 0.1},
+        sampling: {metricsSampleRate: 1.0},
       });
       expect(Sentry.init).toHaveBeenCalledWith(
         expect.objectContaining({enableMetrics: true}),
@@ -325,6 +327,7 @@ describe('SentryAdapter', () => {
 describe('environment bucketing and getAllowedTracingUrls (Task 15.1)', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    sessionStorage.clear();
   });
 
   it('Sentry.init receives environment matching CodeStudioConfig.environment (Req 6.6)', () => {
@@ -334,9 +337,7 @@ describe('environment bucketing and getAllowedTracingUrls (Task 15.1)', () => {
       sentry: {dsn: 'https://test@sentry.io/1'},
     });
     expect(Sentry.init).toHaveBeenCalledWith(
-      expect.objectContaining({
-        environment: expect.any(String),
-      }),
+      expect.objectContaining({environment: expect.any(String)}),
     );
   });
 
@@ -345,12 +346,10 @@ describe('environment bucketing and getAllowedTracingUrls (Task 15.1)', () => {
     adapter.init({
       provider: 'sentry',
       sentry: {dsn: 'https://test@sentry.io/1'},
-      // No tracePropagationTargets provided
     });
     const call = vi.mocked(Sentry.init).mock.calls[0][0] as {
       tracePropagationTargets: unknown[];
     };
-    // Should have exactly one default target from getAllowedTracingUrls()
     expect(call.tracePropagationTargets).toHaveLength(1);
   });
 
@@ -363,13 +362,11 @@ describe('environment bucketing and getAllowedTracingUrls (Task 15.1)', () => {
       tracePropagationTargets: targets,
     });
     expect(Sentry.init).toHaveBeenCalledWith(
-      expect.objectContaining({
-        tracePropagationTargets: targets,
-      }),
+      expect.objectContaining({tracePropagationTargets: targets}),
     );
   });
 
-  it('getAllowedTracingUrls() returns a string URL for non-adhoc environments (Req 11.4)', () => {
+  it('getAllowedTracingUrls() returns a string URL or RegExp for any environment (Req 11.4)', () => {
     const adapter = new SentryAdapter();
     adapter.init({
       provider: 'sentry',
@@ -378,8 +375,6 @@ describe('environment bucketing and getAllowedTracingUrls (Task 15.1)', () => {
     const call = vi.mocked(Sentry.init).mock.calls[0][0] as {
       tracePropagationTargets: unknown[];
     };
-    // In jsdom test env, CodeStudioConfig.environment resolves to a non-adhoc environment
-    // so getAllowedTracingUrls() returns a string URL from getDashboardApiUrl()
     expect(call.tracePropagationTargets).toHaveLength(1);
     expect(
       typeof call.tracePropagationTargets[0] === 'string' ||
@@ -396,49 +391,34 @@ describe('session ID management and sampling gates (Task 17.1)', () => {
 
   it('session ID is generated and persisted to sessionStorage on init (Req 9.3, 10.3)', () => {
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     expect(sessionStorage.getItem('__cdo_observability_session_id__')).not.toBeNull();
   });
 
   it('same session ID is returned on subsequent calls within the same session (Req 9.3, 10.3)', () => {
     const adapter1 = new SentryAdapter();
-    adapter1.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter1.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     const id1 = sessionStorage.getItem('__cdo_observability_session_id__');
 
     const adapter2 = new SentryAdapter();
-    adapter2.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter2.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     const id2 = sessionStorage.getItem('__cdo_observability_session_id__');
 
     expect(id1).toBe(id2);
   });
 
-  it('sessionStorageUnavailable is set and console.warn logged once when sessionStorage throws (Req 9.3, 10.3)', () => {
+  it('sessionStorageUnavailable is set and console.warn logged when sessionStorage throws (Req 9.3, 10.3)', () => {
     const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     const getItemSpy = vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
       throw new Error('storage unavailable');
     });
 
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
 
-    // The warn from sessionStorage unavailability
     expect(warnSpy).toHaveBeenCalledWith(
       '[observability] sessionStorage unavailable — sampling disabled',
     );
-
-    // Sampling should short-circuit to false
     expect(adapter.isLogSampled(1.0)).toBe(false);
     expect(adapter.isMetricsSampled(1.0)).toBe(false);
 
@@ -448,111 +428,124 @@ describe('session ID management and sampling gates (Task 17.1)', () => {
 
   it('log events are not sampled when logSampleRate is 0 or not set (Req 9.2)', () => {
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     expect(adapter.isLogSampled(0)).toBe(false);
     expect(adapter.isLogSampled(undefined)).toBe(false);
   });
 
   it('metric events are not sampled when metricsSampleRate is 0 or not set (Req 10.2)', () => {
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     expect(adapter.isMetricsSampled(0)).toBe(false);
     expect(adapter.isMetricsSampled(undefined)).toBe(false);
   });
 
   it('isLogSampled returns true when logSampleRate is 1.0 and session ID exists', () => {
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     expect(adapter.isLogSampled(1.0)).toBe(true);
   });
 
   it('isMetricsSampled returns true when metricsSampleRate is 1.0 and session ID exists', () => {
     const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-    });
+    adapter.init({provider: 'sentry', sentry: {dsn: 'https://test@sentry.io/1'}});
     expect(adapter.isMetricsSampled(1.0)).toBe(true);
   });
 });
 
-// ─── Property 10: logger forwards when sampled ────────────────────────────────
-// Feature: observability, Property 10: logger methods forward to provider only when session is sampled
-describe('logger — sampling and forwarding (Req 13.1–13.3)', () => {
+// ─── Property 10: enableLogs/enableMetrics reflect session sampling at init ───
+// Feature: observability, Property 10: enableLogs/enableMetrics reflect the session sampling decision made at init
+describe('Property 10: SDK-level sampling flags at init (Task 22.1)', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     sessionStorage.clear();
   });
 
-  it('Property 10: logger.* calls Sentry.logger.* when session is sampled (logSampleRate=1)', () => {
+  it('Property 10: enableLogs matches isSampled(sessionId, logSampleRate) for any rate', () => {
     fc.assert(
       fc.property(
-        fc.constantFrom(
-          'trace' as const,
-          'debug' as const,
-          'info' as const,
-          'warn' as const,
-          'error' as const,
-          'fatal' as const,
-        ),
-        fc.string(),
-        fc.record({key: fc.string()}),
-        (level, message, attributes) => {
+        fc.float({min: 0, max: 1}),
+        fc.float({min: 0, max: 1}),
+        (logSampleRate, metricsSampleRate) => {
           vi.clearAllMocks();
+          sessionStorage.clear();
+
           const adapter = new SentryAdapter();
           adapter.init({
             provider: 'sentry',
             sentry: {dsn: 'https://test@sentry.io/1'},
-            sampling: {logSampleRate: 1.0},
+            sampling: {logSampleRate, metricsSampleRate},
           });
 
-          expect(() => adapter.logger[level](message, attributes)).not.toThrow();
-          expect(Sentry.logger[level]).toHaveBeenCalledWith(message, attributes);
+          const sessionId = sessionStorage.getItem('__cdo_observability_session_id__');
+          const expectedEnableLogs = sessionId !== null
+            ? isSampled(sessionId, logSampleRate)
+            : false;
+          const expectedEnableMetrics = sessionId !== null
+            ? isSampled(sessionId, metricsSampleRate)
+            : false;
+
+          expect(Sentry.init).toHaveBeenCalledWith(
+            expect.objectContaining({
+              enableLogs: expectedEnableLogs,
+              enableMetrics: expectedEnableMetrics,
+            }),
+          );
         },
       ),
       {numRuns: 100},
     );
   });
 
-  it('Property 10: logger.* is a no-op when logSampleRate is 0', () => {
-    fc.assert(
-      fc.property(
-        fc.constantFrom(
-          'trace' as const,
-          'debug' as const,
-          'info' as const,
-          'warn' as const,
-          'error' as const,
-          'fatal' as const,
-        ),
-        fc.string(),
-        (level, message) => {
-          vi.clearAllMocks();
-          const adapter = new SentryAdapter();
-          adapter.init({
-            provider: 'sentry',
-            sentry: {dsn: 'https://test@sentry.io/1'},
-            sampling: {logSampleRate: 0},
-          });
-
-          expect(() => adapter.logger[level](message)).not.toThrow();
-          expect(Sentry.logger[level]).not.toHaveBeenCalled();
-        },
-      ),
-      {numRuns: 100},
+  it('enableLogs is false when logSampleRate is 0', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {logSampleRate: 0},
+    });
+    expect(Sentry.init).toHaveBeenCalledWith(
+      expect.objectContaining({enableLogs: false}),
     );
   });
 
-  it('logger.* is a no-op before init (logger is NOOP_LOGGER)', () => {
+  it('enableMetrics is false when metricsSampleRate is 0', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {metricsSampleRate: 0},
+    });
+    expect(Sentry.init).toHaveBeenCalledWith(
+      expect.objectContaining({enableMetrics: false}),
+    );
+  });
+});
+
+// ─── Task 22.2: logger and metrics direct delegation ─────────────────────────
+describe('logger — direct delegation to Sentry.logger (Task 22.2)', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    sessionStorage.clear();
+  });
+
+  it('logger.* calls Sentry.logger.* directly when enableLogs is true (logSampleRate=1)', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {logSampleRate: 1.0},
+    });
+
+    const levels = ['trace', 'debug', 'info', 'warn', 'error', 'fatal'] as const;
+    for (const level of levels) {
+      vi.clearAllMocks();
+      adapter.logger[level]('test message', {key: 'val'});
+      expect(Sentry.logger[level]).toHaveBeenCalledWith('test message', {key: 'val'});
+    }
+  });
+
+  it('logger.* is a no-op before init (NOOP_LOGGER)', () => {
     const adapter = new SentryAdapter();
     expect(() => adapter.logger.info('before init')).not.toThrow();
     expect(Sentry.logger.info).not.toHaveBeenCalled();
@@ -577,15 +570,13 @@ describe('logger — sampling and forwarding (Req 13.1–13.3)', () => {
   });
 });
 
-// ─── Property 11: metrics forwards when sampled ───────────────────────────────
-// Feature: observability, Property 11: metrics methods forward to provider only when session is sampled
-describe('metrics — sampling and forwarding (Req 14.1–14.3)', () => {
+describe('metrics — direct delegation to Sentry.metrics (Task 22.2)', () => {
   beforeEach(() => {
     vi.clearAllMocks();
     sessionStorage.clear();
   });
 
-  it('Property 11: metrics.count/gauge/distribution call Sentry.metrics.* when sampled (rate=1)', () => {
+  it('metrics.count/gauge/distribution call Sentry.metrics.* directly when enableMetrics is true', () => {
     const adapter = new SentryAdapter();
     adapter.init({
       provider: 'sentry',
@@ -593,29 +584,14 @@ describe('metrics — sampling and forwarding (Req 14.1–14.3)', () => {
       sampling: {metricsSampleRate: 1.0},
     });
 
-    expect(() => adapter.metrics.count('lab.clicks', 1, {lab: 'music'})).not.toThrow();
-    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {tags: {lab: 'music'}});
+    adapter.metrics.count('lab.clicks', 1, {lab: 'music'});
+    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {attributes: {lab: 'music'}});
 
-    expect(() => adapter.metrics.gauge('lab.queue', 42)).not.toThrow();
-    expect(Sentry.metrics.gauge).toHaveBeenCalledWith('lab.queue', 42, {tags: undefined});
+    adapter.metrics.gauge('lab.queue', 42);
+    expect(Sentry.metrics.gauge).toHaveBeenCalledWith('lab.queue', 42, {attributes: undefined});
 
-    expect(() => adapter.metrics.distribution('lab.latency', 187)).not.toThrow();
-    expect(Sentry.metrics.distribution).toHaveBeenCalledWith('lab.latency', 187, {tags: undefined});
-  });
-
-  it('Property 11: metrics.* are no-ops when metricsSampleRate is 0', () => {
-    const adapter = new SentryAdapter();
-    adapter.init({
-      provider: 'sentry',
-      sentry: {dsn: 'https://test@sentry.io/1'},
-      sampling: {metricsSampleRate: 0},
-    });
-
-    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
-    expect(Sentry.metrics.count).not.toHaveBeenCalled();
-
-    expect(() => adapter.metrics.gauge('lab.queue', 1)).not.toThrow();
-    expect(Sentry.metrics.gauge).not.toHaveBeenCalled();
+    adapter.metrics.distribution('lab.latency', 187);
+    expect(Sentry.metrics.distribution).toHaveBeenCalledWith('lab.latency', 187, {attributes: undefined});
   });
 
   it('metrics.count defaults value to 1 (Req 14.1)', () => {
@@ -627,7 +603,13 @@ describe('metrics — sampling and forwarding (Req 14.1–14.3)', () => {
     });
 
     adapter.metrics.count('lab.clicks');
-    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {tags: undefined});
+    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {attributes: undefined});
+  });
+
+  it('metrics.* are no-ops before init (NOOP_METRICS)', () => {
+    const adapter = new SentryAdapter();
+    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
+    expect(Sentry.metrics.count).not.toHaveBeenCalled();
   });
 
   it('metrics.* swallows SDK errors and logs console.warn (Req 14.3)', () => {
@@ -647,10 +629,49 @@ describe('metrics — sampling and forwarding (Req 14.1–14.3)', () => {
     expect(warnSpy).toHaveBeenCalled();
     warnSpy.mockRestore();
   });
+});
 
-  it('metrics.* are no-ops before init (metrics is NOOP_METRICS)', () => {
+// ─── Task 22.3: consoleLoggingIntegration (Req 15) ───────────────────────────
+describe('consoleLoggingIntegration (Task 22.3, Req 15.1, 15.3, 15.4)', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    sessionStorage.clear();
+  });
+
+  it('consoleLoggingIntegration is included in integrations when enableLogs is true', () => {
     const adapter = new SentryAdapter();
-    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
-    expect(Sentry.metrics.count).not.toHaveBeenCalled();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {logSampleRate: 1.0},
+    });
+
+    expect(Sentry.consoleLoggingIntegration).toHaveBeenCalledWith({levels: ['error']});
+    const call = vi.mocked(Sentry.init).mock.calls[0][0] as {integrations: unknown[]};
+    // integrations array should contain the consoleLoggingIntegration result
+    expect(call.integrations).toContainEqual({name: 'ConsoleLogging'});
+  });
+
+  it('consoleLoggingIntegration is NOT included when enableLogs is false', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {logSampleRate: 0},
+    });
+
+    expect(Sentry.consoleLoggingIntegration).not.toHaveBeenCalled();
+    const call = vi.mocked(Sentry.init).mock.calls[0][0] as {integrations: unknown[]};
+    expect(call.integrations).not.toContainEqual({name: 'ConsoleLogging'});
+  });
+
+  it('consoleLoggingIntegration is NOT included when logSampleRate is not set', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+    });
+
+    expect(Sentry.consoleLoggingIntegration).not.toHaveBeenCalled();
   });
 });

@@ -203,14 +203,14 @@ export interface ObservabilityClient {
 
   /**
    * Structured, leveled logger aligned with OTel severity levels and Sentry's logger namespace.
-   * Each method checks the session-based log sampling gate before forwarding to the provider.
+   * Delegates directly to the provider SDK — sampling is resolved once at init time via enableLogs.
    * No-op when logSampleRate is 0 or the session is not sampled.
    */
   logger: ObservabilityLogger;
 
   /**
    * OTel-aligned metrics instruments (counter, gauge, distribution).
-   * Each method checks the session-based metrics sampling gate before forwarding to the provider.
+   * Delegates directly to the provider SDK — sampling is resolved once at init time via enableMetrics.
    * No-op when metricsSampleRate is 0 or the session is not sampled.
    */
   metrics: ObservabilityMetrics;
@@ -311,15 +311,13 @@ All provider adapters extend `BaseAdapter`, which owns every concern that is pro
 - **`isLogSampled(rate)` / `isMetricsSampled(rate)`** — delegate to `isSampled(sessionId, rate)`, short-circuiting to `false` when sessionStorage is unavailable.
 - **`logger` default** — a no-op `ObservabilityLogger` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isLogSampled(config.sampling?.logSampleRate)`.
 - **`metrics` default** — a no-op `ObservabilityMetrics` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isMetricsSampled(config.sampling?.metricsSampleRate)`.
-- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), calls abstract `initProvider(config)`, resolves session ID, applies queued consent, then calls `initLogger(config)` and `initMetrics(config)` hooks so subclasses can replace the no-op `logger`/`metrics` with live implementations. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation).
+- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), resolves session ID via `getOrCreateObservabilitySessionId()` *first* (so `isLogSampled`/`isMetricsSampled` are available to `initProvider`), then calls abstract `initProvider(config)`, applies queued consent. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation). The `logger` and `metrics` properties are set directly by `initProvider` — no separate `initLogger`/`initMetrics` hooks needed.
 
 Subclasses implement:
-- `initProvider(config)` — provider-specific SDK initialization; must throw on failure.
+- `initProvider(config)` — provider-specific SDK initialization; must throw on failure. May call `isLogSampled()`/`isMetricsSampled()` to make sampling decisions before calling the provider SDK. **Preferred pattern**: if the provider SDK supports disabling log/metrics ingestion at init time (e.g. Sentry's `enableLogs`/`enableMetrics`), use that — it is more efficient than per-call gating. **Fallback pattern**: if the provider does not support SDK-level feature flags, gate each `logger.*`/`metrics.*` call on `isLogSampled()`/`isMetricsSampled()` at call time.
 - `applyConsentToProvider(userId)` — called when consent is applied; default is a no-op.
 - `recordError(error, context)` — provider-specific error capture.
 - `shutdown()` — provider-specific teardown.
-- `initLogger(config)` _(optional override)_ — replace `this.logger` with a live implementation after SDK init.
-- `initMetrics(config)` _(optional override)_ — replace `this.metrics` with a live implementation after SDK init.
 
 ### `NoopAdapter`
 
@@ -329,23 +327,23 @@ Extends `BaseAdapter`. `initProvider` and `recordError` are empty. `shutdown()` 
 
 Extends `BaseAdapter`. Implements `initProvider`, `applyConsentToProvider`, `recordError`, and `shutdown`. Key behaviors:
 
-- **`initProvider(config)`**: Calls `Sentry.init()` with:
+- **`initProvider(config)`**: Called after the session ID is already resolved by `BaseAdapter.init`. Calls `Sentry.init()` with:
   - `dsn` from `config.sentry.dsn`
   - `environment: CodeStudioConfig.environment`
   - `sendDefaultPii: false` (anonymous mode)
-  - `integrations: [Sentry.browserTracingIntegration()]`
+  - `integrations: [Sentry.browserTracingIntegration(), ...consoleIntegration]` — `consoleLoggingIntegration({ levels: ['error'] })` is added only when log ingestion is enabled (Req 15.3, 15.4)
   - `sampleRate: config.sampling?.errorSampleRate ?? 1.0`
   - `tracesSampleRate: config.sampling?.tracesSampleRate ?? 0`
-  - `enableLogs: (config.sampling?.logSampleRate ?? 0) > 0` — enables Sentry log ingestion only when a non-zero log rate is configured; the Sentry JS SDK requires this flag to accept `Sentry.logger.*` calls
-  - `enableMetrics: (config.sampling?.metricsSampleRate ?? 0) > 0` — disables Sentry metrics collection entirely when rate is 0, avoiding unnecessary buffering
-  - `tracePropagationTargets: config.tracePropagationTargets ?? [getAllowedTracingUrls()]` — passes explicit targets through unchanged; derives environment-aware default when not provided
-  - Must throw on failure (caught by `BaseAdapter.init`'s try/catch, which logs a warning and leaves the adapter in no-op state).
+  - `enableLogs: this.isLogSampled(config.sampling?.logSampleRate)` — sampling decision made once at init using the already-resolved session ID; enables Sentry log ingestion for the entire session if sampled (Req 9.3)
+  - `enableMetrics: this.isMetricsSampled(config.sampling?.metricsSampleRate)` — sampling decision made once at init; enables Sentry metrics collection for the entire session if sampled (Req 10.3)
+  - `tracePropagationTargets: config.tracePropagationTargets ?? [getAllowedTracingUrls()]`
+  - After `Sentry.init`, sets `this.logger` to an object that delegates directly to `Sentry.logger.*` (no per-call sampling check needed — SDK handles it via `enableLogs`). Each method wraps in try/catch.
+  - After `Sentry.init`, sets `this.metrics` to an object that delegates directly to `Sentry.metrics.*` (no per-call sampling check needed — SDK handles it via `enableMetrics`). Each method wraps in try/catch.
+  - Must throw on failure (caught by `BaseAdapter.init`'s try/catch).
 - **`applyConsentToProvider(userId)`**: Calls `Sentry.setUser(userId ? { id: userId } : null)`.
 - **`recordError(error, context)`**: Calls `Sentry.captureException(error, { extra: context })`. Wrapped in try/catch; on failure logs a console warning.
 - **`shutdown()`**: Calls `Sentry.close()`.
 - **`getAllowedTracingUrls()`**: Returns environment-aware default tracing target — CDN regex for adhoc, dashboard API URL for all other environments.
-- **`initLogger(config)`**: After `initProvider` succeeds, replaces `this.logger` with an implementation that gates each method on `isLogSampled(config.sampling?.logSampleRate)` before calling the corresponding `Sentry.logger.*` method (`trace`, `debug`, `info`, `warn`, `error`, `fatal`). Each method wraps the SDK call in try/catch and logs a console warning on failure.
-- **`initMetrics(config)`**: After `initProvider` succeeds, replaces `this.metrics` with an implementation that gates each method on `isMetricsSampled(config.sampling?.metricsSampleRate)` before calling the corresponding `Sentry.metrics.*` method (`count` → `Sentry.metrics.count`, `gauge` → `Sentry.metrics.gauge`, `distribution` → `Sentry.metrics.distribution`). Each method wraps the SDK call in try/catch and logs a console warning on failure.
 
 ### `SiteConfig` Update (`@code-dot-org/core`)
 
@@ -566,29 +564,29 @@ _For any_ session ID string and sample rate in `[0, 1]`: (a) the same session ID
 
 **Validates: Requirements 11.2, 11.4**
 
-### Property 10: logger methods forward to provider only when session is sampled
+### Property 10: logger/metrics enabled iff session is sampled at init
 
-_For any_ initialized `SentryAdapter` where `logSampleRate > 0` and the session is sampled, calling any `logger.*` method SHALL result in the corresponding `Sentry.logger.*` call. When the session is not sampled (or `logSampleRate` is `0`), no `Sentry.logger.*` call SHALL be made. Neither case SHALL throw.
+_For any_ `SentryAdapter` initialized with `logSampleRate > 0`: `enableLogs` passed to `Sentry.init` SHALL be `true` if and only if `isLogSampled(logSampleRate)` returns `true` at init time. When `enableLogs` is `false`, `Sentry.logger.*` calls are silently dropped by the SDK. The same applies to `enableMetrics` and `isMetricsSampled(metricsSampleRate)`.
 
-**Validates: Requirements 9.2, 9.3, 13.2, 13.3**
+**Validates: Requirements 9.3, 10.3, 13.2, 14.2**
 
-### Property 11: metrics methods forward to provider only when session is sampled
+### Property 11: console.error is captured iff log ingestion is enabled
 
-_For any_ initialized `SentryAdapter` where `metricsSampleRate > 0` and the session is sampled, calling any `metrics.*` method SHALL result in the corresponding `Sentry.metrics.*` call. When the session is not sampled (or `metricsSampleRate` is `0`), no `Sentry.metrics.*` call SHALL be made. Neither case SHALL throw.
+_For any_ `SentryAdapter` where `enableLogs` is `true`, `consoleLoggingIntegration({ levels: ['error'] })` SHALL be included in the Sentry integrations. When `enableLogs` is `false`, no console integration SHALL be added.
 
-**Validates: Requirements 10.2, 10.3, 14.2, 14.3**
+**Validates: Requirements 15.1, 15.4**
 
 ---
 
 | Scenario                                                 | Behavior                                                                                                |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `createObservabilityClient` called with unknown provider | Throws `Error` with descriptive message including the bad value                                         |
-| `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op                                               |
+| `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op; `logger`/`metrics` remain no-ops            |
 | `Sentry.captureException` throws                         | Caught; console warning logged; `recordError` returns normally                                          |
 | `Sentry.logger.*` throws                                 | Caught; console warning logged; `logger.*` returns normally                                             |
 | `Sentry.metrics.*` throws                                | Caught; console warning logged; `metrics.*` returns normally                                            |
-| `logger.*` called when session not sampled               | Silently dropped before reaching SDK; no console output                                                 |
-| `metrics.*` called when session not sampled              | Silently dropped before reaching SDK; no console output                                                 |
+| Session not sampled for logs (`enableLogs: false`)       | SDK drops all `Sentry.logger.*` calls and console.error capture silently; no network traffic            |
+| Session not sampled for metrics (`enableMetrics: false`) | SDK drops all `Sentry.metrics.*` calls silently; no network traffic                                     |
 | `setConsented` called before `init`                      | Association queued; applied on `init`                                                                   |
 | `setConsented(null)` or `setConsented('')`               | Clears user association; `isConsented()` returns `false`                                                |
 | Meta tag absent or malformed JSON                        | `SiteConfig` returns `{}` for runtime config; `provider` defaults to `'none'`; singleton stays as no-op |
@@ -629,8 +627,8 @@ Each property test MUST include a comment referencing the design property it val
 | P7: No-op accepts any config         | `noop.test.ts`    | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
 | P8: Init failure degrades gracefully | `sentry.test.ts`  | `fc.anything()` for thrown error                                                                |
 | P9: Session ID sampling is deterministic | `sampling.test.ts` | `fc.string({minLength:1})` for session ID, `fc.float({min:0,max:1})` for rate              |
-| P10: logger forwards when sampled        | `sentry.test.ts`   | `fc.constantFrom('trace','debug','info','warn','error','fatal')`, `fc.string()`, `fc.record(...)` |
-| P11: metrics forwards when sampled       | `sentry.test.ts`   | `fc.constantFrom('count','gauge','distribution')`, `fc.string()`, `fc.float({min:0})`      |
+| P10: enableLogs/enableMetrics reflect sampling decision  | `sentry.test.ts`   | `fc.float({min:0,max:1})` for rates, session ID hash determines expected boolean              |
+| P11: console.error captured iff enableLogs is true       | `sentry.test.ts`   | unit test — check `consoleLoggingIntegration` presence in integrations                        |
 
 ### Unit Tests
 

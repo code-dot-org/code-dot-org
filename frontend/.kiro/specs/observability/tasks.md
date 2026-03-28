@@ -250,6 +250,75 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
   - Run `yarn lint:fix` and `yarn release:dryrun` from `frontend/`
   - Ensure all tests pass, ask the user if questions arise.
 
+- [x] 20. Extend `ObservabilityClient` interface and types with `logger` and `metrics`
+
+  - Add `ObservabilityLogger` interface to `src/types.ts`: methods `trace`, `debug`, `info`, `warn`, `error`, `fatal` — each accepts `(message: string, attributes?: Record<string, unknown>): void`
+  - Add `ObservabilityMetrics` interface to `src/types.ts`: methods `count(name, value?, attributes?)`, `gauge(name, value, attributes?)`, `distribution(name, value, attributes?)` — OTel instrument types
+  - Add `LogAttributes = Record<string, unknown>` type alias
+  - Add `NOOP_LOGGER` and `NOOP_METRICS` constant objects (all methods are empty arrow functions)
+  - Add `logger: ObservabilityLogger` and `metrics: ObservabilityMetrics` fields to `ObservabilityClient` interface
+  - Export all new types from `src/index.ts`
+  - _Requirements: 1.1, 13.1, 14.1_
+
+- [x] 21. Refactor `BaseAdapter` — resolve session ID before `initProvider`
+
+  - In `BaseAdapter.init()`, move `getOrCreateObservabilitySessionId()` call to run **before** `this.initProvider(config)` so that `isLogSampled()`/`isMetricsSampled()` return correct values when `initProvider` calls them
+  - New lifecycle order: SSR guard → resolve session ID → `initProvider(config)` → set `initialized = true` → apply queued consent → `initLogger(config)` → `initMetrics(config)`
+  - Add `logger: ObservabilityLogger = NOOP_LOGGER` and `metrics: ObservabilityMetrics = NOOP_METRICS` public fields to `BaseAdapter`
+  - Add protected `initLogger(config)` and `initMetrics(config)` no-op hooks (subclasses override to wire up live implementations)
+  - _Requirements: 9.3, 10.3, 13.2, 14.2_
+
+- [x] 22. Refactor `SentryAdapter` — SDK-level sampling, direct logger/metrics delegation, console integration
+
+  - In `initProvider(config)`:
+    - Compute `enableLogs = this.isLogSampled(config.sampling?.logSampleRate)` using the already-resolved session ID (Req 9.3)
+    - Compute `enableMetrics = this.isMetricsSampled(config.sampling?.metricsSampleRate)` (Req 10.3)
+    - Pass `enableLogs` and `enableMetrics` to `Sentry.init()`
+    - Add `Sentry.consoleLoggingIntegration({ levels: ['error'] })` to `integrations` only when `enableLogs` is `true` (Req 15.3, 15.4)
+  - Implement `initLogger(config)`: replace `this.logger` with an object that delegates directly to `Sentry.logger.*` with no per-call sampling check (SDK handles it via `enableLogs`); each method wraps in try/catch
+  - Implement `initMetrics(config)`: replace `this.metrics` with an object that delegates directly to `Sentry.metrics.*` with no per-call sampling check (SDK handles it via `enableMetrics`); each method wraps in try/catch
+  - _Requirements: 9.3, 10.3, 13.1–13.3, 14.1–14.3, 15.1–15.4_
+
+  - [x] 22.1 Write property test for sampling decision at init (Property 10)
+
+    - **Property 10: enableLogs/enableMetrics reflect the session sampling decision made at init**
+    - Use `fc.float({min: 0, max: 1})` for `logSampleRate` and `metricsSampleRate`
+    - For a known session ID, compute expected `isSampled` result; assert `Sentry.init` was called with matching `enableLogs`/`enableMetrics` booleans
+    - Assert `enableLogs: false` when `logSampleRate` is `0`; `enableMetrics: false` when `metricsSampleRate` is `0`
+    - **Validates: Requirements 9.3, 10.3**
+    - _File: `src/__tests__/sentry.test.ts`_
+
+  - [x] 22.2 Write unit tests for `logger` and `metrics` direct delegation
+
+    - `logger.*` calls `Sentry.logger.*` directly when `enableLogs` is `true` (no per-call sampling check)
+    - `logger.*` is a no-op before `init` (NOOP_LOGGER)
+    - `logger.*` swallows SDK errors and logs `console.warn` (Req 13.3)
+    - `metrics.count` defaults `value` to `1` (Req 14.1)
+    - `metrics.*` calls `Sentry.metrics.*` directly when `enableMetrics` is `true`
+    - `metrics.*` swallows SDK errors and logs `console.warn` (Req 14.3)
+    - _Requirements: 13.1–13.3, 14.1–14.3_
+    - _File: `src/__tests__/sentry.test.ts`_
+
+  - [x] 22.3 Write unit tests for console error capture (Req 15)
+
+    - `consoleLoggingIntegration({ levels: ['error'] })` is included in integrations when `enableLogs` is `true`
+    - `consoleLoggingIntegration` is NOT included when `enableLogs` is `false`
+    - **Validates: Requirements 15.1, 15.3, 15.4**
+    - _File: `src/__tests__/sentry.test.ts`_
+
+- [x] 23. Update `NoopAdapter` — add no-op `logger` and `metrics` (inherited from `BaseAdapter`)
+
+  - Confirm `NoopAdapter` inherits `logger = NOOP_LOGGER` and `metrics = NOOP_METRICS` from `BaseAdapter` — no code change expected
+  - Update Property 7 test to assert `logger.*` and `metrics.*` methods are callable without error and produce no console output or external calls
+  - _Requirements: 13.5, 14.5_
+  - _File: `src/__tests__/noop.test.ts`_
+
+- [x] 24. Final checkpoint — ensure all tests pass after logger/metrics/sampling refactor
+
+  - Run `yarn workspace @code-dot-org/observability test`
+  - Run `./tools/hooks/pre-commit` from repo root to lint changed files
+  - Ensure all 63+ tests pass; ask the user if questions arise
+
 ## Notes
 
 - Tasks marked with `*` are optional and can be skipped for faster MVP
@@ -257,3 +326,4 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
 - Property tests use fast-check with a minimum of 100 iterations; each test must include a comment `// Feature: observability, Property N: <property text>`
 - The singleton reassignment pattern (`export let singleton`) works for all ES module consumers including webpack 5 `import` statements; raw `require()` with a cached default reference is not a supported usage pattern
 - `SentryAdapter` is never imported by the main entry point — it is only reachable via the `./sentry` entry point or via the factory's dynamic import, keeping it tree-shakeable
+- **Sampling preference**: adapters SHOULD use SDK-level feature flags (`enableLogs`/`enableMetrics`) to disable ingestion at init time where the provider supports it. Adapters that don't support SDK-level flags MAY fall back to per-call gating using `isLogSampled()`/`isMetricsSampled()` from `BaseAdapter`.
