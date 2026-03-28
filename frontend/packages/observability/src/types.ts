@@ -31,9 +31,57 @@ export interface ObservabilityConfig {
   tracePropagationTargets?: Array<string | RegExp>;
 }
 
+/** Structured log attributes — searchable key-value pairs. */
+export type LogAttributes = Record<string, unknown>;
+
+/**
+ * OTel-aligned structured logger with six severity levels.
+ * Mirrors OpenTelemetry SeverityText and Sentry's logger namespace.
+ * Requirements: 13.1
+ */
+export interface ObservabilityLogger {
+  trace(message: string, attributes?: LogAttributes): void;
+  debug(message: string, attributes?: LogAttributes): void;
+  info(message: string, attributes?: LogAttributes): void;
+  warn(message: string, attributes?: LogAttributes): void;
+  error(message: string, attributes?: LogAttributes): void;
+  fatal(message: string, attributes?: LogAttributes): void;
+}
+
+/**
+ * OTel-aligned metrics instruments.
+ * Requirements: 14.1
+ */
+export interface ObservabilityMetrics {
+  /** Monotonic counter — events, clicks, API calls. value defaults to 1. */
+  count(name: string, value?: number, attributes?: LogAttributes): void;
+  /** Current-value gauge — queue depth, active connections. */
+  gauge(name: string, value: number, attributes?: LogAttributes): void;
+  /** Value distribution — response times, payload sizes. */
+  distribution(name: string, value: number, attributes?: LogAttributes): void;
+}
+
+/**
+ * No-op implementations used as defaults before init and in NoopAdapter.
+ */
+export const NOOP_LOGGER: ObservabilityLogger = {
+  trace: () => {},
+  debug: () => {},
+  info: () => {},
+  warn: () => {},
+  error: () => {},
+  fatal: () => {},
+};
+
+export const NOOP_METRICS: ObservabilityMetrics = {
+  count: () => {},
+  gauge: () => {},
+  distribution: () => {},
+};
+
 /**
  * Common interface that all provider adapters implement.
- * Requirements: 1.1, 2.1, 8.1, 9.1
+ * Requirements: 1.1, 2.1, 8.1, 9.1, 13.1, 14.1
  */
 export interface ObservabilityClient {
   /**
@@ -47,6 +95,22 @@ export interface ObservabilityClient {
    * Never throws — SDK errors are caught and logged as console warnings.
    */
   recordError(error: unknown, context?: Record<string, unknown>): void;
+
+  /**
+   * Structured, leveled logger aligned with OTel severity levels.
+   * Each method checks the session-based log sampling gate before forwarding.
+   * No-op when logSampleRate is 0 or the session is not sampled.
+   * Requirements: 13.1, 13.2
+   */
+  logger: ObservabilityLogger;
+
+  /**
+   * OTel-aligned metrics instruments (counter, gauge, distribution).
+   * Each method checks the session-based metrics sampling gate before forwarding.
+   * No-op when metricsSampleRate is 0 or the session is not sampled.
+   * Requirements: 14.1, 14.2
+   */
+  metrics: ObservabilityMetrics;
 
   /**
    * Associate the current session with a user ID (requires explicit consent).

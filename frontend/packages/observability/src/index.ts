@@ -2,10 +2,20 @@ import {NoopAdapter} from './adapters/noop';
 import type {
   ObservabilityClient,
   ObservabilityConfig,
+  ObservabilityLogger,
+  ObservabilityMetrics,
+  LogAttributes,
   SamplingConfig,
 } from './types';
 
-export type {ObservabilityClient, ObservabilityConfig, SamplingConfig};
+export type {
+  ObservabilityClient,
+  ObservabilityConfig,
+  ObservabilityLogger,
+  ObservabilityMetrics,
+  LogAttributes,
+  SamplingConfig,
+};
 export {createObservabilityClient} from './factory';
 
 /**

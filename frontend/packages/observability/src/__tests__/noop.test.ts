@@ -93,5 +93,30 @@ describe('NoopAdapter', () => {
       expect(adapter.isLogSampled(0)).toBe(false);
       expect(adapter.isMetricsSampled(0)).toBe(false);
     });
+
+    it('logger methods are all no-ops (Req 13.5)', () => {
+      const adapter = new NoopAdapter();
+      adapter.init({provider: 'none'});
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      expect(() => adapter.logger.trace('t')).not.toThrow();
+      expect(() => adapter.logger.debug('d')).not.toThrow();
+      expect(() => adapter.logger.info('i')).not.toThrow();
+      expect(() => adapter.logger.warn('w')).not.toThrow();
+      expect(() => adapter.logger.error('e')).not.toThrow();
+      expect(() => adapter.logger.fatal('f')).not.toThrow();
+      expect(warnSpy).not.toHaveBeenCalled();
+      warnSpy.mockRestore();
+    });
+
+    it('metrics methods are all no-ops (Req 14.5)', () => {
+      const adapter = new NoopAdapter();
+      adapter.init({provider: 'none'});
+      const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+      expect(() => adapter.metrics.count('x')).not.toThrow();
+      expect(() => adapter.metrics.gauge('x', 1)).not.toThrow();
+      expect(() => adapter.metrics.distribution('x', 1)).not.toThrow();
+      expect(warnSpy).not.toHaveBeenCalled();
+      warnSpy.mockRestore();
+    });
   });
 });

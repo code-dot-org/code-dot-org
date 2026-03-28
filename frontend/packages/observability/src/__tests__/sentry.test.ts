@@ -10,6 +10,19 @@ vi.mock('@sentry/browser', () => ({
   setUser: vi.fn(),
   close: vi.fn().mockResolvedValue(undefined),
   browserTracingIntegration: vi.fn().mockReturnValue({}),
+  logger: {
+    trace: vi.fn(),
+    debug: vi.fn(),
+    info: vi.fn(),
+    warn: vi.fn(),
+    error: vi.fn(),
+    fatal: vi.fn(),
+  },
+  metrics: {
+    count: vi.fn(),
+    gauge: vi.fn(),
+    distribution: vi.fn(),
+  },
 }));
 
 // eslint-disable-next-line import-x/order -- must come after vi.mock() for Vitest hoisting
@@ -469,5 +482,175 @@ describe('session ID management and sampling gates (Task 17.1)', () => {
       sentry: {dsn: 'https://test@sentry.io/1'},
     });
     expect(adapter.isMetricsSampled(1.0)).toBe(true);
+  });
+});
+
+// ─── Property 10: logger forwards when sampled ────────────────────────────────
+// Feature: observability, Property 10: logger methods forward to provider only when session is sampled
+describe('logger — sampling and forwarding (Req 13.1–13.3)', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    sessionStorage.clear();
+  });
+
+  it('Property 10: logger.* calls Sentry.logger.* when session is sampled (logSampleRate=1)', () => {
+    fc.assert(
+      fc.property(
+        fc.constantFrom(
+          'trace' as const,
+          'debug' as const,
+          'info' as const,
+          'warn' as const,
+          'error' as const,
+          'fatal' as const,
+        ),
+        fc.string(),
+        fc.record({key: fc.string()}),
+        (level, message, attributes) => {
+          vi.clearAllMocks();
+          const adapter = new SentryAdapter();
+          adapter.init({
+            provider: 'sentry',
+            sentry: {dsn: 'https://test@sentry.io/1'},
+            sampling: {logSampleRate: 1.0},
+          });
+
+          expect(() => adapter.logger[level](message, attributes)).not.toThrow();
+          expect(Sentry.logger[level]).toHaveBeenCalledWith(message, attributes);
+        },
+      ),
+      {numRuns: 100},
+    );
+  });
+
+  it('Property 10: logger.* is a no-op when logSampleRate is 0', () => {
+    fc.assert(
+      fc.property(
+        fc.constantFrom(
+          'trace' as const,
+          'debug' as const,
+          'info' as const,
+          'warn' as const,
+          'error' as const,
+          'fatal' as const,
+        ),
+        fc.string(),
+        (level, message) => {
+          vi.clearAllMocks();
+          const adapter = new SentryAdapter();
+          adapter.init({
+            provider: 'sentry',
+            sentry: {dsn: 'https://test@sentry.io/1'},
+            sampling: {logSampleRate: 0},
+          });
+
+          expect(() => adapter.logger[level](message)).not.toThrow();
+          expect(Sentry.logger[level]).not.toHaveBeenCalled();
+        },
+      ),
+      {numRuns: 100},
+    );
+  });
+
+  it('logger.* is a no-op before init (logger is NOOP_LOGGER)', () => {
+    const adapter = new SentryAdapter();
+    expect(() => adapter.logger.info('before init')).not.toThrow();
+    expect(Sentry.logger.info).not.toHaveBeenCalled();
+  });
+
+  it('logger.* swallows SDK errors and logs console.warn (Req 13.3)', () => {
+    vi.mocked(Sentry.logger.info).mockImplementationOnce(() => {
+      throw new Error('sdk error');
+    });
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {logSampleRate: 1.0},
+    });
+
+    expect(() => adapter.logger.info('test')).not.toThrow();
+    expect(warnSpy).toHaveBeenCalled();
+    warnSpy.mockRestore();
+  });
+});
+
+// ─── Property 11: metrics forwards when sampled ───────────────────────────────
+// Feature: observability, Property 11: metrics methods forward to provider only when session is sampled
+describe('metrics — sampling and forwarding (Req 14.1–14.3)', () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+    sessionStorage.clear();
+  });
+
+  it('Property 11: metrics.count/gauge/distribution call Sentry.metrics.* when sampled (rate=1)', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {metricsSampleRate: 1.0},
+    });
+
+    expect(() => adapter.metrics.count('lab.clicks', 1, {lab: 'music'})).not.toThrow();
+    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {tags: {lab: 'music'}});
+
+    expect(() => adapter.metrics.gauge('lab.queue', 42)).not.toThrow();
+    expect(Sentry.metrics.gauge).toHaveBeenCalledWith('lab.queue', 42, {tags: undefined});
+
+    expect(() => adapter.metrics.distribution('lab.latency', 187)).not.toThrow();
+    expect(Sentry.metrics.distribution).toHaveBeenCalledWith('lab.latency', 187, {tags: undefined});
+  });
+
+  it('Property 11: metrics.* are no-ops when metricsSampleRate is 0', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {metricsSampleRate: 0},
+    });
+
+    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
+    expect(Sentry.metrics.count).not.toHaveBeenCalled();
+
+    expect(() => adapter.metrics.gauge('lab.queue', 1)).not.toThrow();
+    expect(Sentry.metrics.gauge).not.toHaveBeenCalled();
+  });
+
+  it('metrics.count defaults value to 1 (Req 14.1)', () => {
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {metricsSampleRate: 1.0},
+    });
+
+    adapter.metrics.count('lab.clicks');
+    expect(Sentry.metrics.count).toHaveBeenCalledWith('lab.clicks', 1, {tags: undefined});
+  });
+
+  it('metrics.* swallows SDK errors and logs console.warn (Req 14.3)', () => {
+    vi.mocked(Sentry.metrics.count).mockImplementationOnce(() => {
+      throw new Error('sdk error');
+    });
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+
+    const adapter = new SentryAdapter();
+    adapter.init({
+      provider: 'sentry',
+      sentry: {dsn: 'https://test@sentry.io/1'},
+      sampling: {metricsSampleRate: 1.0},
+    });
+
+    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
+    expect(warnSpy).toHaveBeenCalled();
+    warnSpy.mockRestore();
+  });
+
+  it('metrics.* are no-ops before init (metrics is NOOP_METRICS)', () => {
+    const adapter = new SentryAdapter();
+    expect(() => adapter.metrics.count('lab.clicks')).not.toThrow();
+    expect(Sentry.metrics.count).not.toHaveBeenCalled();
   });
 });

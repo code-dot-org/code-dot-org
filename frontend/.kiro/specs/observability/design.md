@@ -165,6 +165,29 @@ The factory dynamically imports the adapter module at runtime so the provider SD
 ### `ObservabilityClient` Interface
 
 ```typescript
+/** Structured log attributes — searchable key-value pairs. */
+type LogAttributes = Record<string, unknown>;
+
+/** OTel-aligned logger with six severity levels. */
+interface ObservabilityLogger {
+  trace(message: string, attributes?: LogAttributes): void;
+  debug(message: string, attributes?: LogAttributes): void;
+  info(message: string, attributes?: LogAttributes): void;
+  warn(message: string, attributes?: LogAttributes): void;
+  error(message: string, attributes?: LogAttributes): void;
+  fatal(message: string, attributes?: LogAttributes): void;
+}
+
+/** OTel-aligned metric instrument types. */
+interface ObservabilityMetrics {
+  /** Monotonic counter — events, clicks, API calls. value defaults to 1. */
+  count(name: string, value?: number, attributes?: LogAttributes): void;
+  /** Current-value gauge — queue depth, active connections. */
+  gauge(name: string, value: number, attributes?: LogAttributes): void;
+  /** Value distribution — response times, payload sizes. */
+  distribution(name: string, value: number, attributes?: LogAttributes): void;
+}
+
 export interface ObservabilityClient {
   /**
    * Initialize the provider SDK. Must be called before any other method.
@@ -177,6 +200,20 @@ export interface ObservabilityClient {
    * Never throws — SDK errors are caught and logged as console warnings.
    */
   recordError(error: unknown, context?: Record<string, unknown>): void;
+
+  /**
+   * Structured, leveled logger aligned with OTel severity levels and Sentry's logger namespace.
+   * Each method checks the session-based log sampling gate before forwarding to the provider.
+   * No-op when logSampleRate is 0 or the session is not sampled.
+   */
+  logger: ObservabilityLogger;
+
+  /**
+   * OTel-aligned metrics instruments (counter, gauge, distribution).
+   * Each method checks the session-based metrics sampling gate before forwarding to the provider.
+   * No-op when metricsSampleRate is 0 or the session is not sampled.
+   */
+  metrics: ObservabilityMetrics;
 
   /**
    * Associate the current session with a user ID (requires explicit consent).
@@ -272,17 +309,21 @@ All provider adapters extend `BaseAdapter`, which owns every concern that is pro
 - **`isConsented()`** — reflects the queued value before init and the applied value after.
 - **Session ID state** — on `init`, calls `getOrCreateObservabilitySessionId()` from `src/sampling.ts`; stores the result and a `sessionStorageUnavailable` flag.
 - **`isLogSampled(rate)` / `isMetricsSampled(rate)`** — delegate to `isSampled(sessionId, rate)`, short-circuiting to `false` when sessionStorage is unavailable.
-- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), calls abstract `initProvider(config)`, resolves session ID, applies queued consent. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation).
+- **`logger` default** — a no-op `ObservabilityLogger` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isLogSampled(config.sampling?.logSampleRate)`.
+- **`metrics` default** — a no-op `ObservabilityMetrics` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isMetricsSampled(config.sampling?.metricsSampleRate)`.
+- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), calls abstract `initProvider(config)`, resolves session ID, applies queued consent, then calls `initLogger(config)` and `initMetrics(config)` hooks so subclasses can replace the no-op `logger`/`metrics` with live implementations. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation).
 
 Subclasses implement:
 - `initProvider(config)` — provider-specific SDK initialization; must throw on failure.
 - `applyConsentToProvider(userId)` — called when consent is applied; default is a no-op.
 - `recordError(error, context)` — provider-specific error capture.
 - `shutdown()` — provider-specific teardown.
+- `initLogger(config)` _(optional override)_ — replace `this.logger` with a live implementation after SDK init.
+- `initMetrics(config)` _(optional override)_ — replace `this.metrics` with a live implementation after SDK init.
 
 ### `NoopAdapter`
 
-Extends `BaseAdapter`. `initProvider` and `recordError` are empty. `shutdown()` returns `Promise.resolve()`. Because it inherits `BaseAdapter`, `isConsented()` correctly reflects any `setConsented` calls, and `isLogSampled()`/`isMetricsSampled()` work correctly (returning `false` at rate 0, `true` at rate 1.0 once initialized). No external calls are ever made.
+Extends `BaseAdapter`. `initProvider` and `recordError` are empty. `shutdown()` returns `Promise.resolve()`. Because it inherits `BaseAdapter`, `isConsented()` correctly reflects any `setConsented` calls, and `isLogSampled()`/`isMetricsSampled()` work correctly. The `logger` and `metrics` objects remain the `BaseAdapter` no-op defaults — all methods are silent no-ops with no console output and no external calls.
 
 ### `SentryAdapter`
 
@@ -303,6 +344,8 @@ Extends `BaseAdapter`. Implements `initProvider`, `applyConsentToProvider`, `rec
 - **`recordError(error, context)`**: Calls `Sentry.captureException(error, { extra: context })`. Wrapped in try/catch; on failure logs a console warning.
 - **`shutdown()`**: Calls `Sentry.close()`.
 - **`getAllowedTracingUrls()`**: Returns environment-aware default tracing target — CDN regex for adhoc, dashboard API URL for all other environments.
+- **`initLogger(config)`**: After `initProvider` succeeds, replaces `this.logger` with an implementation that gates each method on `isLogSampled(config.sampling?.logSampleRate)` before calling the corresponding `Sentry.logger.*` method (`trace`, `debug`, `info`, `warn`, `error`, `fatal`). Each method wraps the SDK call in try/catch and logs a console warning on failure.
+- **`initMetrics(config)`**: After `initProvider` succeeds, replaces `this.metrics` with an implementation that gates each method on `isMetricsSampled(config.sampling?.metricsSampleRate)` before calling the corresponding `Sentry.metrics.*` method (`count` → `Sentry.metrics.count`, `gauge` → `Sentry.metrics.gauge`, `distribution` → `Sentry.metrics.distribution`). Each method wraps the SDK call in try/catch and logs a console warning on failure.
 
 ### `SiteConfig` Update (`@code-dot-org/core`)
 
@@ -471,9 +514,9 @@ _A property is a characteristic or behavior that should hold true across all val
 
 ### Property 1: Factory returns a valid client for all valid providers and configs
 
-_For any_ valid provider identifier (`'sentry'` or `'none'`) and any valid `ObservabilityConfig` (including configs with arbitrary `sampling` and `tracePropagationTargets` values), `createObservabilityClient` SHALL return an object that implements the `ObservabilityClient` interface — i.e., has callable `init`, `recordError`, `setConsented`, `isConsented`, and `shutdown` methods.
+_For any_ valid provider identifier (`'sentry'` or `'none'`) and any valid `ObservabilityConfig` (including configs with arbitrary `sampling` and `tracePropagationTargets` values), `createObservabilityClient` SHALL return an object that implements the `ObservabilityClient` interface — i.e., has callable `init`, `recordError`, `logger` (with `trace`/`debug`/`info`/`warn`/`error`/`fatal`), `metrics` (with `count`/`gauge`/`distribution`), `setConsented`, `isConsented`, and `shutdown` methods.
 
-**Validates: Requirements 2.1, 8.1, 9.1**
+**Validates: Requirements 2.1, 8.1, 9.1, 13.1, 14.1**
 
 ### Property 2: Unrecognized provider throws a descriptive error
 
@@ -523,6 +566,18 @@ _For any_ session ID string and sample rate in `[0, 1]`: (a) the same session ID
 
 **Validates: Requirements 11.2, 11.4**
 
+### Property 10: logger methods forward to provider only when session is sampled
+
+_For any_ initialized `SentryAdapter` where `logSampleRate > 0` and the session is sampled, calling any `logger.*` method SHALL result in the corresponding `Sentry.logger.*` call. When the session is not sampled (or `logSampleRate` is `0`), no `Sentry.logger.*` call SHALL be made. Neither case SHALL throw.
+
+**Validates: Requirements 9.2, 9.3, 13.2, 13.3**
+
+### Property 11: metrics methods forward to provider only when session is sampled
+
+_For any_ initialized `SentryAdapter` where `metricsSampleRate > 0` and the session is sampled, calling any `metrics.*` method SHALL result in the corresponding `Sentry.metrics.*` call. When the session is not sampled (or `metricsSampleRate` is `0`), no `Sentry.metrics.*` call SHALL be made. Neither case SHALL throw.
+
+**Validates: Requirements 10.2, 10.3, 14.2, 14.3**
+
 ---
 
 | Scenario                                                 | Behavior                                                                                                |
@@ -530,6 +585,10 @@ _For any_ session ID string and sample rate in `[0, 1]`: (a) the same session ID
 | `createObservabilityClient` called with unknown provider | Throws `Error` with descriptive message including the bad value                                         |
 | `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op                                               |
 | `Sentry.captureException` throws                         | Caught; console warning logged; `recordError` returns normally                                          |
+| `Sentry.logger.*` throws                                 | Caught; console warning logged; `logger.*` returns normally                                             |
+| `Sentry.metrics.*` throws                                | Caught; console warning logged; `metrics.*` returns normally                                            |
+| `logger.*` called when session not sampled               | Silently dropped before reaching SDK; no console output                                                 |
+| `metrics.*` called when session not sampled              | Silently dropped before reaching SDK; no console output                                                 |
 | `setConsented` called before `init`                      | Association queued; applied on `init`                                                                   |
 | `setConsented(null)` or `setConsented('')`               | Clears user association; `isConsented()` returns `false`                                                |
 | Meta tag absent or malformed JSON                        | `SiteConfig` returns `{}` for runtime config; `provider` defaults to `'none'`; singleton stays as no-op |
@@ -570,6 +629,8 @@ Each property test MUST include a comment referencing the design property it val
 | P7: No-op accepts any config         | `noop.test.ts`    | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
 | P8: Init failure degrades gracefully | `sentry.test.ts`  | `fc.anything()` for thrown error                                                                |
 | P9: Session ID sampling is deterministic | `sampling.test.ts` | `fc.string({minLength:1})` for session ID, `fc.float({min:0,max:1})` for rate              |
+| P10: logger forwards when sampled        | `sentry.test.ts`   | `fc.constantFrom('trace','debug','info','warn','error','fatal')`, `fc.string()`, `fc.record(...)` |
+| P11: metrics forwards when sampled       | `sentry.test.ts`   | `fc.constantFrom('count','gauge','distribution')`, `fc.string()`, `fc.float({min:0})`      |
 
 ### Unit Tests
 

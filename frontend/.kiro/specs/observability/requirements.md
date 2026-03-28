@@ -28,7 +28,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 
 #### Acceptance Criteria
 
-1. The observability package SHALL export an `ObservabilityClient` interface with at minimum the following operations: `init`, `recordError`, `setConsented`, and `shutdown`.
+1. The observability package SHALL export an `ObservabilityClient` interface with at minimum the following operations: `init`, `recordError`, `logger`, `metrics`, `setConsented`, `isConsented`, and `shutdown`.
 2. The observability package SHALL be registered as a Turborepo workspace package under `frontend/packages/observability` and covered by the `"packages/*"` glob in `frontend/package.json`.
 3. The observability package SHALL export TypeScript type declarations alongside its compiled output.
 4. When the observability package is imported by a host application, it SHALL NOT bundle any provider SDK directly; each provider adapter SHALL be a separate entry point so that only the selected provider's code is included in the host bundle.
@@ -55,9 +55,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 2. When an unhandled JavaScript exception occurs in the browser, the `ObservabilityClient` SHALL automatically capture and forward the error to the active provider, provided `init` has been called.
 3. When an unhandled Promise rejection occurs in the browser, the `ObservabilityClient` SHALL automatically capture and forward the rejection reason to the active provider, provided `init` has been called.
 4. If the active provider SDK throws during error recording, the `ObservabilityClient` SHALL catch the exception, log a warning to the browser console, and continue normal operation without re-throwing.
-5. The `ObservabilityClient` SHALL record only error-level data and session metadata; it SHALL NOT record user interaction replays, DOM snapshots, or network request payloads unless explicitly enabled by a future requirement.
-
-### Requirement 4: Privacy — Default Anonymous Sessions
+5. The `ObservabilityClient` SHALL record only error-level data and session metadata; it SHALL NOT record user interaction replays, DOM snapshots, or network request payloads unless explicitly enabled by a future requirement. Privacy — Default Anonymous Sessions
 
 **User Story:** As a privacy-conscious product owner, I want observability sessions to be anonymous by default so that no recorded session can be tied back to a specific user without their consent.
 
@@ -130,7 +128,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 #### Acceptance Criteria
 
 1. The `ObservabilityClient` configuration SHALL accept a `logSampleRate` field (in `sampling`) as described in Requirement 8.1.
-2. When `logSampleRate` is `0` or not set, the `ObservabilityClient` SHALL NOT emit any log events to the provider.
+2. When `logSampleRate` is `0` or not set, the `ObservabilityClient` SHALL NOT emit any log events to the provider. The sampling decision is made at each `logger.*` call site using the session-based mechanism (Requirement 11) — if the session is not sampled, the call is silently dropped before reaching the provider SDK.
 3. Log sampling SHALL use the session-based sampling mechanism described in Requirement 11.
 4. The host application SHALL supply `logSampleRate` via the Rails-injected `<meta name="app-config">` runtime config or via DCDO, allowing the rate to be adjusted per environment without a code deploy.
 5. The no-op adapter SHALL accept and silently ignore all log sampling configuration.
@@ -142,7 +140,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 #### Acceptance Criteria
 
 1. The `ObservabilityClient` configuration SHALL accept a `metricsSampleRate` field (in `sampling`) as described in Requirement 8.1.
-2. When `metricsSampleRate` is `0` or not set, the `ObservabilityClient` SHALL NOT emit any metric events to the provider.
+2. When `metricsSampleRate` is `0` or not set, the `ObservabilityClient` SHALL NOT emit any metric events to the provider. The sampling decision is made at each `metrics.*` call site using the session-based mechanism (Requirement 11) — if the session is not sampled, the call is silently dropped before reaching the provider SDK.
 3. Metrics sampling SHALL use the session-based sampling mechanism described in Requirement 11.
 4. The host application SHALL supply `metricsSampleRate` via the Rails-injected `<meta name="app-config">` runtime config or via DCDO, allowing the rate to be adjusted per environment without a code deploy.
 5. The no-op adapter SHALL accept and silently ignore all metrics sampling configuration.
@@ -173,3 +171,32 @@ All instrumentation must comply with the platform's privacy policy: session data
    - For all other environments (production, staging, development, test, levelbuilder): the dashboard API URL returned by `getDashboardApiUrl(environment)`
 5. When `tracePropagationTargets` is not set, the `ObservabilityClient` SHALL use the environment-derived default described in 12.4, preventing accidental trace header leakage to third-party services.
 6. The no-op adapter SHALL accept and silently ignore all trace propagation configuration.
+
+### Requirement 13: Structured Logging API
+
+**User Story:** As a frontend engineer, I want a structured, leveled logging API aligned with OpenTelemetry and Sentry best practices so that I can emit searchable, trace-correlated log events without coupling to a specific provider.
+
+#### Acceptance Criteria
+
+1. The `ObservabilityClient` SHALL expose a `logger` object with the following methods, aligned with the OpenTelemetry severity model and Sentry's `logger` namespace: `trace`, `debug`, `info`, `warn`, `error`, `fatal`. Each method SHALL accept a `message: string` and an optional `attributes: Record<string, unknown>` for structured, searchable key-value context.
+2. Each `logger.*` method SHALL check the session-based sampling gate (`isLogSampled`) before forwarding to the provider. If the session is not sampled, the call SHALL be silently dropped with no console output and no external call.
+3. If the provider SDK throws during a `logger.*` call, the `ObservabilityClient` SHALL catch the exception, log a warning to the browser console, and continue normal operation without re-throwing.
+4. The `logger` object SHALL be available on the `ObservabilityClient` interface so that consumers do not need to import provider-specific modules.
+5. The no-op adapter SHALL expose a `logger` object whose methods are all no-ops — no console output, no external calls, no thrown exceptions.
+6. Log events SHALL NOT include personally identifiable information unless the host application explicitly passes it in `attributes` after obtaining user consent.
+
+### Requirement 14: Metrics API
+
+**User Story:** As a frontend engineer, I want a structured metrics API aligned with OpenTelemetry instrument types so that I can record counters, gauges, and distributions without coupling to a specific provider.
+
+#### Acceptance Criteria
+
+1. The `ObservabilityClient` SHALL expose a `metrics` object with the following methods, aligned with the OpenTelemetry metrics instrument model:
+   - `count(name: string, value?: number, attributes?: Record<string, unknown>)` — monotonic counter for events (orders, clicks, API calls). `value` defaults to `1`.
+   - `gauge(name: string, value: number, attributes?: Record<string, unknown>)` — current value instrument (queue depth, active connections).
+   - `distribution(name: string, value: number, attributes?: Record<string, unknown>)` — value distribution instrument (response times, payload sizes).
+2. Each `metrics.*` method SHALL check the session-based sampling gate (`isMetricsSampled`) before forwarding to the provider. If the session is not sampled, the call SHALL be silently dropped with no console output and no external call.
+3. If the provider SDK throws during a `metrics.*` call, the `ObservabilityClient` SHALL catch the exception, log a warning to the browser console, and continue normal operation without re-throwing.
+4. The `metrics` object SHALL be available on the `ObservabilityClient` interface so that consumers do not need to import provider-specific modules.
+5. The no-op adapter SHALL expose a `metrics` object whose methods are all no-ops — no console output, no external calls, no thrown exceptions.
+6. Metric names SHALL follow a dot-separated namespace convention (e.g. `lab.music.notes_played`) to enable grouping and filtering in the provider dashboard.
