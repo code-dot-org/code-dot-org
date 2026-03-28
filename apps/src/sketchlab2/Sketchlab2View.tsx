@@ -216,6 +216,9 @@ const Sketchlab2Canvas: React.FC<{
         type: 'image',
         position,
         data: {url, filename},
+        width: 120,
+        height: 90,
+        style: {width: 120, height: 90},
       };
       setNodes(nds => nds.concat(newNode));
     },

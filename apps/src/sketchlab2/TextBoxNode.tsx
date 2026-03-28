@@ -1,5 +1,13 @@
-import {Handle, Position, useReactFlow, type NodeProps} from '@xyflow/react';
+import {
+  Handle,
+  NodeToolbar,
+  Position,
+  useReactFlow,
+  type NodeProps,
+} from '@xyflow/react';
 import React, {useCallback, useState, useRef, useEffect, memo} from 'react';
+
+import ColorPalette from './ColorPalette';
 
 import moduleStyles from './styles/sketchlab2-view.module.scss';
 
@@ -9,6 +17,14 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const text = (data.text as string) || '';
+  const color = (data.color as string | null | undefined) ?? null;
+
+  const onColorSelect = useCallback(
+    (newColor: string | null) => {
+      updateNodeData(id, {color: newColor});
+    },
+    [id, updateNodeData]
+  );
 
   // Focus the textarea when entering edit mode
   useEffect(() => {
@@ -58,37 +74,48 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
   );
 
   return (
-    <div
-      className={`${moduleStyles.textBoxNode} ${
-        selected ? moduleStyles.textBoxNodeSelected : ''
-      }`}
-      onDoubleClick={enterEditMode}
-      onKeyDown={onKeyDown}
-      tabIndex={-1}
-      aria-label="Text box node, double-click or press Enter to edit"
-    >
-      <Handle type="target" position={Position.Top} />
-      {editing ? (
-        <textarea
-          ref={textareaRef}
-          value={text}
-          onChange={onChange}
-          onBlur={exitEditMode}
-          onKeyDown={onTextareaKeyDown}
-          placeholder="Type here..."
-          className={moduleStyles.textBoxNodeTextarea}
-        />
-      ) : (
-        <div className={moduleStyles.textBoxNodeDisplay}>
-          {text || (
-            <span className={moduleStyles.textBoxNodePlaceholder}>
-              Double-click to edit
-            </span>
-          )}
-        </div>
-      )}
-      <Handle type="source" position={Position.Bottom} />
-    </div>
+    <>
+      <NodeToolbar
+        isVisible={selected && !editing}
+        position={Position.Bottom}
+        align="end"
+        offset={8}
+      >
+        <ColorPalette selectedColor={color} onColorSelect={onColorSelect} />
+      </NodeToolbar>
+      <div
+        className={`${moduleStyles.textBoxNode} ${
+          selected ? moduleStyles.textBoxNodeSelected : ''
+        }`}
+        style={color ? {backgroundColor: color} : undefined}
+        onDoubleClick={enterEditMode}
+        onKeyDown={onKeyDown}
+        tabIndex={-1}
+        aria-label="Text box node, double-click or press Enter to edit"
+      >
+        <Handle type="target" position={Position.Top} />
+        {editing ? (
+          <textarea
+            ref={textareaRef}
+            value={text}
+            onChange={onChange}
+            onBlur={exitEditMode}
+            onKeyDown={onTextareaKeyDown}
+            placeholder="Type here..."
+            className={moduleStyles.textBoxNodeTextarea}
+          />
+        ) : (
+          <div className={moduleStyles.textBoxNodeDisplay}>
+            {text || (
+              <span className={moduleStyles.textBoxNodePlaceholder}>
+                Double-click to edit
+              </span>
+            )}
+          </div>
+        )}
+        <Handle type="source" position={Position.Bottom} />
+      </div>
+    </>
   );
 });
 

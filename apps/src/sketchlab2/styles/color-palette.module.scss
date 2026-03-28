@@ -1,0 +1,62 @@
+.colorPalette {
+  display: flex;
+  gap: 5px;
+  padding: 6px 8px;
+  background: var(--neutral-gray-90);
+  border: 1px solid var(--neutral-gray-70);
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
+}
+
+.colorSwatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--neutral-gray-60);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: transform 0.1s ease, border-color 0.1s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    border-color: var(--neutral-base-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: 2px;
+  }
+}
+
+.colorSwatchSelected {
+  border-color: var(--neutral-base-white);
+  transform: scale(1.15);
+}
+
+// The "Default" (null) swatch — shows the base dark color with an X
+.colorSwatchDefault {
+  background: var(--neutral-base-black);
+  position: relative;
+
+  // Draw an X using pseudo-elements
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    border-radius: 1px;
+    background: var(--neutral-gray-50);
+    width: 1.5px;
+    left: 50%;
+    transform-origin: center;
+  }
+
+  &::before {
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+}
