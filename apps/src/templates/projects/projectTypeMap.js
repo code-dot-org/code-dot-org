@@ -45,6 +45,7 @@ export const PROJECT_TYPE_MAP = {
   time_capsule: i18n.projectTypeTimeCapsule(),
   transformers: i18n.projectTypeTransformers(),
   music_dance_ai: 'Mix & Move with AI',
+  weblab: 'Web Lab',
   weblab2: 'Web Lab 2',
 };
 
