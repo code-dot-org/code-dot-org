@@ -1,4 +1,5 @@
 import type {ObservabilityConfig} from '../types';
+
 import {BaseAdapter} from './base';
 
 /**

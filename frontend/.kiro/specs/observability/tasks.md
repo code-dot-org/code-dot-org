@@ -181,15 +181,18 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
   - _Requirements: 4.5, 7.2_
 
 - [x] 13. Final checkpoint — ensure all tests pass
+
   - Run `yarn workspace @code-dot-org/observability test` and `yarn workspace @code-dot-org/core test`
   - Run `turbo build` in `frontend/` to verify the Turborepo pipeline produces compiled output for both packages
   - Ensure all tests pass, ask the user if questions arise.
 
 - [x] 14. Extend `SamplingConfig` with log and metrics rate fields in `src/types.ts`
+
   - Add `logSampleRate?: number` and `metricsSampleRate?: number` to `SamplingConfig`
   - _Requirements: 8.1, 9.1, 10.1_
 
 - [x] 15. Update `SentryAdapter` — environment, tracing integration, and environment-aware propagation targets
+
   - Add `environment: CodeStudioConfig.environment` to `Sentry.init()` call so events are bucketed correctly in the Sentry dashboard (Req 6.6)
   - Add `integrations: [Sentry.browserTracingIntegration()]` to `Sentry.init()` to enable distributed tracing
   - Replace hardcoded same-origin default with `getAllowedTracingUrls()` method that reads `CodeStudioConfig.environment` from `@code-dot-org/core`:
@@ -205,6 +208,7 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
     - _File: `src/__tests__/sentry.test.ts`_
 
 - [x] 16. Implement session ID-based sampling utility in `src/sampling.ts`
+
   - Export `getOrCreateObservabilitySessionId(): string | undefined`:
     - Attempt `sessionStorage.getItem('__cdo_observability_session_id__')`
     - If absent, generate `crypto.randomUUID()`, write to `sessionStorage`, return it
@@ -224,6 +228,7 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
     - _File: `src/__tests__/sampling.test.ts`_
 
 - [x] 17. Add session ID state and sampling gates to `ObservabilityClient` and `SentryAdapter`
+
   - Add `sessionStorageUnavailable: boolean` and `observabilitySessionId: string | undefined` to `AdapterState` in `SentryAdapter`
   - On `init`, call `getOrCreateObservabilitySessionId()` from `src/sampling.ts`; if it returns `undefined`, set `state.sessionStorageUnavailable = true`
   - All sampling decisions check `state.sessionStorageUnavailable` first and short-circuit to `false` without retrying `sessionStorage`
@@ -243,10 +248,12 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
     - _File: `src/__tests__/sentry.test.ts`, `src/__tests__/noop.test.ts`_
 
 - [x] 18. Update `NoopAdapter` to accept new `SamplingConfig` fields silently
+
   - Verify `NoopAdapter` already ignores all sampling config (no code change expected, but confirm and update Property 7 test to include `logSampleRate` and `metricsSampleRate` in the arbitrary)
   - _Requirements: 9.5, 10.5_
 
 - [x] 19. Final checkpoint — ensure all tests pass after new tasks
+
   - Run `yarn workspace @code-dot-org/observability test`
   - Run `yarn lint:fix` and `yarn release:dryrun` from `frontend/`
   - Ensure all tests pass, ask the user if questions arise.

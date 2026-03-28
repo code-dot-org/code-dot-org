@@ -78,12 +78,18 @@ export function shutdown(): Promise<void> {
  * @see ObservabilityClient.logger
  */
 export const logger: ObservabilityLogger = {
-  trace: (message, attributes) => observabilityClient.logger.trace(message, attributes),
-  debug: (message, attributes) => observabilityClient.logger.debug(message, attributes),
-  info: (message, attributes) => observabilityClient.logger.info(message, attributes),
-  warn: (message, attributes) => observabilityClient.logger.warn(message, attributes),
-  error: (message, attributes) => observabilityClient.logger.error(message, attributes),
-  fatal: (message, attributes) => observabilityClient.logger.fatal(message, attributes),
+  trace: (message, attributes) =>
+    observabilityClient.logger.trace(message, attributes),
+  debug: (message, attributes) =>
+    observabilityClient.logger.debug(message, attributes),
+  info: (message, attributes) =>
+    observabilityClient.logger.info(message, attributes),
+  warn: (message, attributes) =>
+    observabilityClient.logger.warn(message, attributes),
+  error: (message, attributes) =>
+    observabilityClient.logger.error(message, attributes),
+  fatal: (message, attributes) =>
+    observabilityClient.logger.fatal(message, attributes),
 };
 
 /**

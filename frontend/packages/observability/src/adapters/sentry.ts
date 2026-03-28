@@ -4,6 +4,7 @@ import type {Integration} from '@sentry/core';
 import {CodeStudioConfig, getDashboardApiUrl} from '@code-dot-org/core';
 
 import type {ObservabilityConfig} from '../types';
+
 import {BaseAdapter} from './base';
 
 /**
@@ -24,7 +25,9 @@ export class SentryAdapter extends BaseAdapter {
     // Session ID is already resolved by BaseAdapter.init() before this call,
     // so isLogSampled/isMetricsSampled return correct values here.
     const enableLogs = this.isLogSampled(config.sampling?.logSampleRate);
-    const enableMetrics = this.isMetricsSampled(config.sampling?.metricsSampleRate);
+    const enableMetrics = this.isMetricsSampled(
+      config.sampling?.metricsSampleRate,
+    );
 
     const integrations: Integration[] = [Sentry.browserTracingIntegration()];
     // Req 15.3, 15.4: capture console.error as a Sentry log only when logs are sampled
@@ -37,8 +40,9 @@ export class SentryAdapter extends BaseAdapter {
       environment: CodeStudioConfig.environment,
       sendDefaultPii: false,
       integrations,
-      tracePropagationTargets:
-        config.tracePropagationTargets ?? [this.getAllowedTracingUrls()],
+      tracePropagationTargets: config.tracePropagationTargets ?? [
+        this.getAllowedTracingUrls(),
+      ],
       sampleRate: config.sampling?.errorSampleRate ?? 1.0,
       tracesSampleRate: config.sampling?.tracesSampleRate ?? 0,
       // Req 9.2: enable Sentry log ingestion only when session is sampled
@@ -57,17 +61,26 @@ export class SentryAdapter extends BaseAdapter {
    * No per-call sampling check — SDK gates ingestion via enableLogs set at init.
    * Requirements: 13.1, 13.2, 13.3
    */
-  protected initLogger(_config: ObservabilityConfig): void {
+  protected initLogger(): void {
+    const sentryLoggerMethods = {
+      trace: Sentry.logger.trace,
+      debug: Sentry.logger.debug,
+      info: Sentry.logger.info,
+      warn: Sentry.logger.warn,
+      error: Sentry.logger.error,
+      fatal: Sentry.logger.fatal,
+    } as const;
+
     const makeMethod =
-      (level: keyof typeof Sentry.logger) =>
+      (level: keyof typeof sentryLoggerMethods) =>
       (message: string, attributes?: Record<string, unknown>) => {
         try {
-          (Sentry.logger[level] as (m: string, a?: Record<string, unknown>) => void)(
-            message,
-            attributes,
-          );
+          sentryLoggerMethods[level](message, attributes);
         } catch (err) {
-          console.warn(`[observability] SentryAdapter.logger.${level} failed:`, err);
+          console.warn(
+            `[observability] SentryAdapter.logger.${level} failed:`,
+            err,
+          );
         }
       };
 
@@ -86,27 +99,36 @@ export class SentryAdapter extends BaseAdapter {
    * No per-call sampling check — SDK gates ingestion via enableMetrics set at init.
    * Requirements: 14.1, 14.2, 14.3
    */
-  protected initMetrics(_config: ObservabilityConfig): void {
+  protected initMetrics(): void {
     this.metrics = {
       count: (name, value = 1, attributes) => {
         try {
           Sentry.metrics.count(name, value, {attributes});
         } catch (err) {
-          console.warn('[observability] SentryAdapter.metrics.count failed:', err);
+          console.warn(
+            '[observability] SentryAdapter.metrics.count failed:',
+            err,
+          );
         }
       },
       gauge: (name, value, attributes) => {
         try {
           Sentry.metrics.gauge(name, value, {attributes});
         } catch (err) {
-          console.warn('[observability] SentryAdapter.metrics.gauge failed:', err);
+          console.warn(
+            '[observability] SentryAdapter.metrics.gauge failed:',
+            err,
+          );
         }
       },
       distribution: (name, value, attributes) => {
         try {
           Sentry.metrics.distribution(name, value, {attributes});
         } catch (err) {
-          console.warn('[observability] SentryAdapter.metrics.distribution failed:', err);
+          console.warn(
+            '[observability] SentryAdapter.metrics.distribution failed:',
+            err,
+          );
         }
       },
     };

@@ -83,17 +83,22 @@ export function _initializeSingleton(client: ObservabilityClient): void {
 }
 
 // Module-level delegating API — always forwards to the live singleton
-export function recordError(error: unknown, context?: Record<string, unknown>): void {
+export function recordError(
+  error: unknown,
+  context?: Record<string, unknown>,
+): void {
   observabilityClient.recordError(error, context);
 }
 
 export const logger: ObservabilityLogger = {
-  info: (message, attributes) => observabilityClient.logger.info(message, attributes),
+  info: (message, attributes) =>
+    observabilityClient.logger.info(message, attributes),
   // ... other levels
 };
 
 export const metrics: ObservabilityMetrics = {
-  count: (name, value, attributes) => observabilityClient.metrics.count(name, value, attributes),
+  count: (name, value, attributes) =>
+    observabilityClient.metrics.count(name, value, attributes),
   // ... other instruments
 };
 // ... init, setConsented, isConsented, shutdown
@@ -171,12 +176,12 @@ Apps that don't depend on `@code-dot-org/observability` simply call `initializeC
 
 `@code-dot-org/observability` exposes four entry points:
 
-| Export path                          | Contents                                                                                                                                      |
-| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Export path                          | Contents                                                                                                                                                                                                                             |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `@code-dot-org/observability`        | `observabilityClient` singleton, module-level `logger`/`metrics`/`recordError`/`init`/`setConsented`/`isConsented`/`shutdown` functions, `ObservabilityClient` type, `ObservabilityConfig` type, `createObservabilityClient` factory |
-| `@code-dot-org/observability/plugin` | `observabilityPlugin` — the `CorePlugin` implementation for use with `initializeCore`                                                         |
-| `@code-dot-org/observability/sentry` | `SentryAdapter` (imports `@sentry/browser`)                                                                                                   |
-| `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                 |
+| `@code-dot-org/observability/plugin` | `observabilityPlugin` — the `CorePlugin` implementation for use with `initializeCore`                                                                                                                                                |
+| `@code-dot-org/observability/sentry` | `SentryAdapter` (imports `@sentry/browser`)                                                                                                                                                                                          |
+| `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                                                                                                        |
 
 The factory dynamically imports the adapter module at runtime so the provider SDK is only loaded when actually selected.
 
@@ -275,7 +280,7 @@ export interface SamplingConfig {
 
 `logSampleRate` and `metricsSampleRate` use **session ID hashing** rather than per-event random sampling. This guarantees that all log and metric events within a session are either all included or all excluded — preventing partial session data that would be difficult to interpret. It also supports anonymous users since no user ID or consent is required.
 
-**Why consent is not required:** The session ID is used purely as a local sampling key — a deterministic input to a hash function that produces an include/exclude decision entirely within the client. The session ID is never transmitted to the provider. The log and metric events that are emitted as a result of this decision contain no personally identifiable information; they are anonymous telemetry data. Consent governs whether a user's identity is *linked* to a session in the provider (via `setConsented`), which is a separate concern from whether anonymous telemetry is collected at all.
+**Why consent is not required:** The session ID is used purely as a local sampling key — a deterministic input to a hash function that produces an include/exclude decision entirely within the client. The session ID is never transmitted to the provider. The log and metric events that are emitted as a result of this decision contain no personally identifiable information; they are anonymous telemetry data. Consent governs whether a user's identity is _linked_ to a session in the provider (via `setConsented`), which is a separate concern from whether anonymous telemetry is collected at all.
 
 **Observability-owned session ID:** The sampling key is a UUID generated and owned by the observability package itself, stored in `sessionStorage` under the key `__cdo_observability_session_id__`. On `init`, the adapter attempts to read this value from `sessionStorage`. If absent, it generates a new UUID via the `uuid` npm package (`v4`), writes it to `sessionStorage`, then uses it. Using `sessionStorage` means the ID is scoped to the browser tab and survives page refreshes within the session, but is discarded when the tab is closed. This avoids any dependency on Rails session IDs (which would introduce a security risk by exposing server-side session identifiers to frontend code) or Sentry's internal session tracking.
 
@@ -292,21 +297,23 @@ Because the hash is deterministic, the same session always produces the same inc
 If `sessionStorage` throws at any point, the adapter logs a single `console.warn` and sets a `sessionStorageUnavailable` flag — all subsequent sampling decisions short-circuit to `false` without retrying `sessionStorage`.
 
 export interface ObservabilityConfig {
-  /** Provider identifier. Defaults to 'none'. */
-  provider: 'sentry' | 'none';
-  /** Sentry-specific configuration. Required when provider is 'sentry'. */
-  sentry?: {
-    dsn: string;
-  };
-  /** Sampling rates. Provider SDK defaults apply when not set. */
-  sampling?: SamplingConfig;
-  /**
-   * URLs/patterns that should receive W3C traceparent headers.
-   * Defaults to same-origin only when not set.
-   */
+/** Provider identifier. Defaults to 'none'. \*/
+provider: 'sentry' | 'none';
+/** Sentry-specific configuration. Required when provider is 'sentry'. _/
+sentry?: {
+dsn: string;
+};
+/\*\* Sampling rates. Provider SDK defaults apply when not set. _/
+sampling?: SamplingConfig;
+/\*\*
+
+- URLs/patterns that should receive W3C traceparent headers.
+- Defaults to same-origin only when not set.
+  \*/
   tracePropagationTargets?: Array<string | RegExp>;
-}
-```
+  }
+
+````
 
 ### `createObservabilityClient` Factory
 
@@ -315,7 +322,7 @@ export function createObservabilityClient(
   provider?: 'sentry' | 'none',
   config?: Omit<ObservabilityConfig, 'provider'>,
 ): ObservabilityClient;
-```
+````
 
 - When `provider` is `undefined` or `'none'`, returns a `NoopAdapter` synchronously (no dynamic import needed).
 - When `provider` is `'sentry'`, dynamically imports `@code-dot-org/observability/sentry` and returns a `SentryAdapter`.
@@ -333,9 +340,10 @@ All provider adapters extend `BaseAdapter`, which owns every concern that is pro
 - **`isLogSampled(rate)` / `isMetricsSampled(rate)`** — delegate to `isSampled(sessionId, rate)`, short-circuiting to `false` when sessionStorage is unavailable.
 - **`logger` default** — a no-op `ObservabilityLogger` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isLogSampled(config.sampling?.logSampleRate)`.
 - **`metrics` default** — a no-op `ObservabilityMetrics` object. Subclasses override this property after `initProvider` succeeds to provide a real implementation that gates each method on `isMetricsSampled(config.sampling?.metricsSampleRate)`.
-- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), resolves session ID via `getOrCreateObservabilitySessionId()` *first* (so `isLogSampled`/`isMetricsSampled` are available to `initProvider`), then calls abstract `initProvider(config)`, applies queued consent. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation). The `logger` and `metrics` properties are set directly by `initProvider` — no separate `initLogger`/`initMetrics` hooks needed.
+- **`init(config)` lifecycle** — SSR guard (`typeof window === 'undefined'`), resolves session ID via `getOrCreateObservabilitySessionId()` _first_ (so `isLogSampled`/`isMetricsSampled` are available to `initProvider`), then calls abstract `initProvider(config)`, applies queued consent. Wraps everything in try/catch; on failure logs a warning and leaves `initialized = false` (no-op degradation). The `logger` and `metrics` properties are set directly by `initProvider` — no separate `initLogger`/`initMetrics` hooks needed.
 
 Subclasses implement:
+
 - `initProvider(config)` — provider-specific SDK initialization; must throw on failure. May call `isLogSampled()`/`isMetricsSampled()` to make sampling decisions before calling the provider SDK. **Preferred pattern**: if the provider SDK supports disabling log/metrics ingestion at init time (e.g. Sentry's `enableLogs`/`enableMetrics`), use that — it is more efficient than per-call gating. **Fallback pattern**: if the provider does not support SDK-level feature flags, gate each `logger.*`/`metrics.*` call on `isLogSampled()`/`isMetricsSampled()` at call time.
 - `applyConsentToProvider(userId)` — called when consent is applied; default is a no-op.
 - `recordError(error, context)` — provider-specific error capture.
@@ -452,6 +460,7 @@ Rails renders the `<meta name="app-config">` tag in `dashboard/app/views/app/ind
 ```
 
 The DSN values are sourced from separate CDO config keys per frontend target:
+
 - `CDO.dashboard_sentry_dsn` — Rails backend Sentry project
 - `CDO.frontend_studio_sentry_dsn` — Code Studio (Vite) Sentry project
 - `CDO.frontend_apps_sentry_dsn` — apps/ webpack bundle Sentry project
@@ -469,7 +478,7 @@ All provider adapters inherit state from `BaseAdapter`:
 interface BaseAdapterState {
   initialized: boolean;
   consentedUserId: string | null | undefined; // undefined = never called
-  pendingConsent: string | null | undefined;  // queued before init
+  pendingConsent: string | null | undefined; // queued before init
   sessionStorageUnavailable: boolean;
   observabilitySessionId: string | undefined;
 }
@@ -603,7 +612,7 @@ _For any_ `SentryAdapter` where `enableLogs` is `true`, `consoleLoggingIntegrati
 | Scenario                                                 | Behavior                                                                                                |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `createObservabilityClient` called with unknown provider | Throws `Error` with descriptive message including the bad value                                         |
-| `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op; `logger`/`metrics` remain no-ops            |
+| `Sentry.init` throws (e.g., ad blocker, bad DSN)         | Caught; console warning logged; adapter degrades to no-op; `logger`/`metrics` remain no-ops             |
 | `Sentry.captureException` throws                         | Caught; console warning logged; `recordError` returns normally                                          |
 | `Sentry.logger.*` throws                                 | Caught; console warning logged; `logger.*` returns normally                                             |
 | `Sentry.metrics.*` throws                                | Caught; console warning logged; `metrics.*` returns normally                                            |
@@ -638,19 +647,19 @@ Each property test MUST include a comment referencing the design property it val
 
 **Property test mapping:**
 
-| Design Property                      | Test file         | fast-check arbitraries                                                                          |
-| ------------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------- |
-| P1: Factory returns valid client     | `factory.test.ts` | `fc.constantFrom('sentry', 'none')`, `fc.record({sampling: ..., tracePropagationTargets: ...})` |
-| P2: Unknown provider throws          | `factory.test.ts` | `fc.string()` filtered to exclude valid values                                                  |
-| P3: recordError forwards errors      | `sentry.test.ts`  | `fc.anything()` for error, `fc.record(...)` for context                                         |
-| P4: SDK errors swallowed             | `sentry.test.ts`  | `fc.anything()` for thrown value                                                                |
-| P5: Consent round-trip               | `sentry.test.ts`  | `fc.string()` for userId, `fc.boolean()` for call ordering                                      |
-| P6: Config pass-through              | `sentry.test.ts`  | `fc.float({min:0,max:1})` for rates, `fc.array(fc.string())` for targets                        |
-| P7: No-op accepts any config         | `noop.test.ts`    | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
-| P8: Init failure degrades gracefully | `sentry.test.ts`  | `fc.anything()` for thrown error                                                                |
-| P9: Session ID sampling is deterministic | `sampling.test.ts` | `fc.string({minLength:1})` for session ID, `fc.float({min:0,max:1})` for rate              |
-| P10: enableLogs/enableMetrics reflect sampling decision  | `sentry.test.ts`   | `fc.float({min:0,max:1})` for rates, session ID hash determines expected boolean              |
-| P11: console.error captured iff enableLogs is true       | `sentry.test.ts`   | unit test — check `consoleLoggingIntegration` presence in integrations                        |
+| Design Property                                         | Test file          | fast-check arbitraries                                                                          |
+| ------------------------------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------- |
+| P1: Factory returns valid client                        | `factory.test.ts`  | `fc.constantFrom('sentry', 'none')`, `fc.record({sampling: ..., tracePropagationTargets: ...})` |
+| P2: Unknown provider throws                             | `factory.test.ts`  | `fc.string()` filtered to exclude valid values                                                  |
+| P3: recordError forwards errors                         | `sentry.test.ts`   | `fc.anything()` for error, `fc.record(...)` for context                                         |
+| P4: SDK errors swallowed                                | `sentry.test.ts`   | `fc.anything()` for thrown value                                                                |
+| P5: Consent round-trip                                  | `sentry.test.ts`   | `fc.string()` for userId, `fc.boolean()` for call ordering                                      |
+| P6: Config pass-through                                 | `sentry.test.ts`   | `fc.float({min:0,max:1})` for rates, `fc.array(fc.string())` for targets                        |
+| P7: No-op accepts any config                            | `noop.test.ts`     | `fc.record({provider: ..., sampling: ..., tracePropagationTargets: ...})`                       |
+| P8: Init failure degrades gracefully                    | `sentry.test.ts`   | `fc.anything()` for thrown error                                                                |
+| P9: Session ID sampling is deterministic                | `sampling.test.ts` | `fc.string({minLength:1})` for session ID, `fc.float({min:0,max:1})` for rate                   |
+| P10: enableLogs/enableMetrics reflect sampling decision | `sentry.test.ts`   | `fc.float({min:0,max:1})` for rates, session ID hash determines expected boolean                |
+| P11: console.error captured iff enableLogs is true      | `sentry.test.ts`   | unit test — check `consoleLoggingIntegration` presence in integrations                          |
 
 ### Unit Tests
 
