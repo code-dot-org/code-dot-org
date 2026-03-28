@@ -1504,6 +1504,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@code-dot-org/observability@workspace:packages/observability"
   dependencies:
+    "@code-dot-org/core": "workspace:*"
     "@code-dot-org/lint-config": "workspace:*"
     "@sentry/browser": "npm:^10.46.0"
     "@types/node": "catalog:"
