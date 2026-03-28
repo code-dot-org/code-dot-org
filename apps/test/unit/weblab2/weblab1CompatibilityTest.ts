@@ -126,16 +126,16 @@ describe('weblab1Compatibility', () => {
       expect(source.openFiles).toEqual([activeFiles[0].id]);
     });
 
-    it('preserves data URL file contents for image assets', () => {
-      const dataUrl = 'data:image/png;base64,abc123';
+    it('preserves URL-backed image assets without inlining binary in contents', () => {
+      const fileUrl = '/v3/files/abc123/wrench.jpg';
       const source = buildMultiFileSourceFromWeblab1Files([
-        {filename: 'images/logo.png', contents: dataUrl},
+        {filename: 'images/logo.png', contents: '', url: fileUrl},
       ]);
 
       const onlyFile = Object.values(source.files)[0];
       expect(onlyFile.name).toBe('logo.png');
-      expect(onlyFile.contents).toBe(dataUrl);
-      expect(onlyFile.url).toBeUndefined();
+      expect(onlyFile.contents).toBe('');
+      expect(onlyFile.url).toBe(fileUrl);
     });
   });
 });

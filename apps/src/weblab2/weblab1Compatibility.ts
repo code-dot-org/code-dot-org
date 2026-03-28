@@ -92,23 +92,6 @@ function toCompatFileUrl(
   return `/v3/files/${channelId}/${encodedFileName}${versionSuffix}`;
 }
 
-async function toDataUrl(response: Response): Promise<string> {
-  const blob = await response.blob();
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      const result = reader.result;
-      if (typeof result === 'string') {
-        resolve(result);
-      } else {
-        reject(new Error('Unable to convert file to data URL'));
-      }
-    };
-    reader.onerror = () => reject(new Error('Unable to read file as data URL'));
-    reader.readAsDataURL(blob);
-  });
-}
-
 function shouldLoadFileContents(entry: Weblab1ManifestEntry): boolean {
   return TEXT_FILE_EXTENSIONS.has(getFileExtension(entry.filename));
 }
@@ -243,36 +226,19 @@ export async function loadWeblab1ProjectAsLab2Sources(
         versionId
       );
 
-      if (isImageFile(manifestEntry)) {
-        try {
-          const response = await HttpClient.get(fileUrl);
-          return {
-            filename: manifestEntry.filename,
-            contents: await toDataUrl(response),
-          };
-        } catch {
-          return {
-            filename: manifestEntry.filename,
-            contents: '',
-            url: fileUrl,
-          };
-        }
-      }
-
-      if (!shouldLoadFileContents(manifestEntry)) {
-        try {
-          const response = await HttpClient.get(fileUrl);
-          return {
-            filename: manifestEntry.filename,
-            contents: await toDataUrl(response),
-          };
-        } catch {
-          return {
-            filename: manifestEntry.filename,
-            contents: '',
-            url: fileUrl,
-          };
-        }
+      // Binary assets (images, etc.): do not inline as data URLs. ProjectFile.contents is typed
+      // as string across Lab2/Codebridge; raw bytes would not serialize to main.json anyway. Serve
+      // via `url` so the preview service worker fetches `/v3/files/...` from studio (see
+      // weblab2_project_service_worker.js).
+      if (
+        isImageFile(manifestEntry) ||
+        !shouldLoadFileContents(manifestEntry)
+      ) {
+        return {
+          filename: manifestEntry.filename,
+          contents: '',
+          url: fileUrl,
+        };
       }
 
       try {

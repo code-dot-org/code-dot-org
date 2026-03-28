@@ -162,6 +162,12 @@ function main() {
         }
         return await fetch(fetchUrl);
       }
+      // Inline data URLs (e.g. WebLab1 compat: images loaded via FileReader) must use fetch() so
+      // the response body is decoded bytes. new Response(dataUrlString) sends the literal ASCII
+      // string, which is not valid image/css binary → broken <img> in preview.
+      if (typeof content === 'string' && content.indexOf('data:') === 0) {
+        return await fetch(content);
+      }
       return new Response(content, {
         status: 200,
         headers: {
