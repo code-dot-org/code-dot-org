@@ -20,10 +20,9 @@ export {createObservabilityClient} from './factory';
 
 /**
  * Module-level singleton — starts as no-op, reassigned by _initializeSingleton.
- * ES module consumers hold a live binding so reassignment is visible to all importers.
  * Requirements: 1.1, 1.4, 2.5
  */
-export let observabilityClient: ObservabilityClient = new NoopAdapter();
+let observabilityClient: ObservabilityClient = new NoopAdapter();
 
 /**
  * Reassign the singleton to the provided client.
@@ -36,12 +35,9 @@ export function _initializeSingleton(client: ObservabilityClient): void {
 
 // ─── Module-level API — mirrors ObservabilityClient, delegates to live singleton ──
 //
-// Consumers can use either:
+// Consumers use:
 //   import * as observability from '@code-dot-org/observability'
 //   observability.logger.info('...')
-//
-// or the named export:
-//   import {observabilityClient} from '@code-dot-org/observability'
 
 /** @see ObservabilityClient.init */
 export function init(config: ObservabilityConfig): void {

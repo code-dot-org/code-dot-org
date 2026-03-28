@@ -1,5 +1,4 @@
-import {datadogLogs} from '@datadog/browser-logs';
-import {datadogRum} from '@datadog/browser-rum';
+import * as observability from '@code-dot-org/observability';
 
 import DCDO from '@cdo/apps/dcdo';
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
@@ -105,12 +104,8 @@ class MetricsReporter {
       return;
     }
 
-    // Send to Datadog RUM as a custom action
     if (DCDO.get('frontend-observability-enabled', false)) {
-      datadogRum.addAction(name, {
-        value,
-        unit,
-      });
+      observability.metrics.count(name, value, {unit});
     }
 
     // Send a version of the metric with and without the browser version dimension
@@ -130,9 +125,8 @@ class MetricsReporter {
       deviceInfo: this.getDeviceInfo(),
     };
 
-    // Send to Datadog Logs in parallel, independently of isReportingEnabled
     if (DCDO.get('frontend-observability-enabled', false)) {
-      this.sendToDatadogLogs(level, message);
+      this.sendToObservabilityLogger(level, message);
     }
 
     if (!this.isReportingEnabled()) {
@@ -148,16 +142,16 @@ class MetricsReporter {
     }
   }
 
-  private sendToDatadogLogs(level: LogLevel, message: string | object) {
+  private sendToObservabilityLogger(level: LogLevel, message: string | object) {
     const msgStr =
       typeof message === 'string' ? message : JSON.stringify(message);
-    const context = this.getDeviceInfo();
+    const context = this.getDeviceInfo() as Record<string, unknown>;
     if (level === 'INFO') {
-      datadogLogs.logger.info(msgStr, context);
+      observability.logger.info(msgStr, context);
     } else if (level === 'WARNING') {
-      datadogLogs.logger.warn(msgStr, context);
+      observability.logger.warn(msgStr, context);
     } else {
-      datadogLogs.logger.error(msgStr, context);
+      observability.logger.error(msgStr, context);
     }
   }
 

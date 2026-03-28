@@ -23,11 +23,11 @@ vi.mock('@code-dot-org/core', async () => {
   };
 });
 
+import * as Sentry from '@sentry/browser';
 import type {SiteConfig, SiteConfigExtensions} from '@code-dot-org/core';
 
 import {NoopAdapter} from '../adapters/noop';
-import {SentryAdapter} from '../adapters/sentry';
-import {observabilityClient, _initializeSingleton} from '../index';
+import {_initializeSingleton} from '../index';
 import {observabilityPlugin} from '../plugin';
 import type {ObservabilityConfig} from '../types';
 
@@ -41,22 +41,17 @@ describe('observabilityPlugin', () => {
     _initializeSingleton(new NoopAdapter());
   });
 
-  it('onCoreReady with provider "none" does not call factory or _initializeSingleton', () => {
+  it('onCoreReady with provider "none" does not initialize Sentry', () => {
     const config = {
       observability: {provider: 'none'},
     } as unknown as PluginConfig;
-    const initSpy = vi.spyOn(NoopAdapter.prototype, 'init');
 
     observabilityPlugin.onCoreReady(config);
 
-    // Singleton should still be a NoopAdapter (unchanged)
-    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
-    // init should not have been called on a new adapter
-    expect(initSpy).not.toHaveBeenCalled();
-    initSpy.mockRestore();
+    expect(Sentry.init).not.toHaveBeenCalled();
   });
 
-  it('onCoreReady with provider "sentry" calls factory and _initializeSingleton', () => {
+  it('onCoreReady with provider "sentry" initializes Sentry with the given DSN', () => {
     const config = {
       observability: {
         provider: 'sentry',
@@ -66,15 +61,16 @@ describe('observabilityPlugin', () => {
 
     observabilityPlugin.onCoreReady(config);
 
-    // Singleton should now be a SentryAdapter
-    expect(observabilityClient).toBeInstanceOf(SentryAdapter);
+    expect(Sentry.init).toHaveBeenCalledWith(
+      expect.objectContaining({dsn: 'https://test@sentry.io/1'}),
+    );
   });
 
-  it('singleton is NoopAdapter before onCoreReady', () => {
-    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
+  it('Sentry is not initialized before onCoreReady', () => {
+    expect(Sentry.init).not.toHaveBeenCalled();
   });
 
-  it('singleton is SentryAdapter after onCoreReady with sentry provider', () => {
+  it('Sentry is initialized after onCoreReady with sentry provider', () => {
     const config = {
       observability: {
         provider: 'sentry',
@@ -83,12 +79,12 @@ describe('observabilityPlugin', () => {
     } as unknown as PluginConfig;
 
     observabilityPlugin.onCoreReady(config);
-    expect(observabilityClient).toBeInstanceOf(SentryAdapter);
+    expect(Sentry.init).toHaveBeenCalledOnce();
   });
 
   it('onCoreReady with missing observability config is a no-op', () => {
     const config = {} as unknown as PluginConfig;
     expect(() => observabilityPlugin.onCoreReady(config)).not.toThrow();
-    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
+    expect(Sentry.init).not.toHaveBeenCalled();
   });
 });
