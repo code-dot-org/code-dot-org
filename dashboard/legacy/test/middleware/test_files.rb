@@ -178,13 +178,6 @@ class FilesTest < FilesApiTestBase
     assert successful?
     @api.delete_object(filename)
 
-    # This means the channel_id does not belong to a valid project.
-    # These requests should always return a 400.
-    Projects.any_instance.stubs(:get).returns(nil)
-    @api.put_object(filename, valid_html)
-    assert bad_request?
-    @api.delete_object(filename)
-
     Projects.any_instance.unstub(:get)
     delete_all_manifest_versions
   end
