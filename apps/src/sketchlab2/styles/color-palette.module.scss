@@ -1,6 +1,7 @@
 .colorPalette {
   display: flex;
-  gap: 5px;
+  flex-direction: column;
+  gap: 6px;
   padding: 6px 8px;
   background: var(--neutral-gray-90);
   border: 1px solid var(--neutral-gray-70);
@@ -8,6 +9,51 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
 }
 
+.paletteRow {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.paletteDivider {
+  height: 1px;
+  background: var(--neutral-gray-70);
+  margin: 0 -2px;
+}
+
+// Shape picker buttons
+.shapeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  border: 1px solid var(--neutral-gray-60);
+  border-radius: 5px;
+  background: transparent;
+  color: var(--neutral-gray-30);
+  cursor: pointer;
+  padding: 0;
+  transition: border-color 0.1s ease, color 0.1s ease, background 0.1s ease;
+
+  &:hover {
+    border-color: var(--neutral-base-white);
+    color: var(--neutral-base-white);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: 2px;
+  }
+}
+
+.shapeButtonSelected {
+  border-color: var(--neutral-base-white);
+  color: var(--neutral-base-white);
+  background: var(--neutral-gray-80);
+}
+
+// Color swatches
 .colorSwatch {
   width: 22px;
   height: 22px;
@@ -32,6 +78,13 @@
 .colorSwatchSelected {
   border-color: var(--neutral-base-white);
   transform: scale(1.15);
+}
+
+// The "Transparent" swatch — dashed outline, empty interior
+.colorSwatchTransparent {
+  background: transparent;
+  border-style: dashed;
+  border-color: var(--neutral-gray-50);
 }
 
 // The "Default" (null) swatch — shows the base dark color with an X

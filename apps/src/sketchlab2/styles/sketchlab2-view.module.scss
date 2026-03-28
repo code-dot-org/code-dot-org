@@ -61,6 +61,7 @@
   border-radius: 8px;
   padding: 8px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   cursor: grab;
@@ -75,34 +76,100 @@
   box-shadow: 0 0 0 2px var(--neutral-gray-60);
 }
 
+.textBoxNodeTransparent {
+  background: transparent;
+  border-color: transparent;
+}
+
+.textBoxNodeCircle {
+  border-radius: 50%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.textBoxNodeTriangle {
+  // No clip-path — the SVG handles fill + border
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent !important;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.triangleSvg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+// Shared content wrapper — sits above the triangle SVG for all shapes
+.textBoxNodeContent {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// For triangle: absolutely fill the node bounds, clip to the triangle,
+// and nudge content down toward the visual centroid (~67% from apex)
+.textBoxNodeContentTriangle {
+  position: absolute;
+  inset: 0;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  padding-top: 30%;
+  align-items: center;
+  justify-content: center;
+
+  // Override the full-width defaults so flex centering can take effect
+  .textBoxNodeDisplay,
+  .textBoxNodeTextarea {
+    width: auto;
+    max-width: 55%;
+    text-align: center;
+  }
+}
+
 .textBoxNodeDisplay {
   width: 100%;
-  min-height: 40px;
-  font-size: 14px;
+  font-size: 7px;
   line-height: 1.4;
   white-space: pre-wrap;
   word-break: break-word;
   user-select: none;
   color: var(--neutral-base-white);
+  text-align: center;
 }
 
 .textBoxNodePlaceholder {
   color: var(--neutral-gray-50);
   font-style: italic;
-  font-size: 13px;
+  font-size: 6.5px;
 }
 
 .textBoxNodeTextarea {
   width: 100%;
-  min-height: 40px;
   border: none;
   outline: none;
   resize: none;
-  font-size: 14px;
+  font-size: 7px;
   line-height: 1.4;
   background: transparent;
   font-family: inherit;
   color: var(--neutral-base-white);
+  text-align: center;
   cursor: text;
 }
 

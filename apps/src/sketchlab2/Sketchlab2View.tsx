@@ -70,8 +70,42 @@ const nodeTypes = {
   image: ImageNode,
 };
 
-let nodeId = 0;
-const getNodeId = () => `node_${nodeId++}`;
+const getNodeId = () => crypto.randomUUID();
+
+// Fixed shape height matching the rectangle's rendered size
+// (min-height 60 + padding 16 + border 4 = 80px in content-box).
+const SHAPE_HEIGHT = 80;
+
+// Ensure circle/triangle nodes use the standard SHAPE_HEIGHT.
+const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
+  nodes.map(n => {
+    const shape = n.data?.shape as string | undefined;
+    if (shape === 'triangle') {
+      const w = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
+      if (n.style?.width === w && n.style?.height === SHAPE_HEIGHT) return n;
+      return {
+        ...n,
+        width: w,
+        height: SHAPE_HEIGHT,
+        style: {...(n.style ?? {}), width: w, height: SHAPE_HEIGHT},
+      };
+    }
+    if (shape === 'circle') {
+      if (n.style?.width === SHAPE_HEIGHT && n.style?.height === SHAPE_HEIGHT)
+        return n;
+      return {
+        ...n,
+        width: SHAPE_HEIGHT,
+        height: SHAPE_HEIGHT,
+        style: {
+          ...(n.style ?? {}),
+          width: SHAPE_HEIGHT,
+          height: SHAPE_HEIGHT,
+        },
+      };
+    }
+    return n;
+  });
 
 const Sketchlab2Canvas: React.FC<{
   levelProperties: LevelProperties;
@@ -91,7 +125,10 @@ const Sketchlab2Canvas: React.FC<{
     useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const initialNodes = useMemo(
-    () => cloneDeep(currentSources.source.nodes || []) as Node[],
+    () =>
+      normalizeNodeDimensions(
+        cloneDeep(currentSources.source.nodes || []) as Node[]
+      ),
     [currentSources.source.nodes]
   );
   const initialEdges = useMemo(
@@ -267,7 +304,11 @@ const Sketchlab2Canvas: React.FC<{
   // Reinitialize nodes/edges when mount key changes (source reinitialized)
   useEffect(() => {
     if (mountKey > 0) {
-      setNodes(cloneDeep(currentSources.source.nodes || []) as Node[]);
+      setNodes(
+        normalizeNodeDimensions(
+          cloneDeep(currentSources.source.nodes || []) as Node[]
+        )
+      );
       setEdges(cloneDeep(currentSources.source.edges || []) as Edge[]);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -422,6 +463,7 @@ const Sketchlab2Canvas: React.FC<{
                 nodesFocusable={true}
                 edgesFocusable={true}
                 colorMode={colorMode}
+                proOptions={{hideAttribution: true}}
                 fitView
               >
                 <Controls />
