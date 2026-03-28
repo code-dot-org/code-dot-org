@@ -47,10 +47,12 @@ import {useDialogControl} from '../lab2/views/dialogs';
 import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContext';
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
+import ImageNode from './ImageNode';
 import TextBoxNode from './TextBoxNode';
 import {Sketchlab2Sources} from './types';
 import useSketchlab2Tour from './useSketchlab2Tour';
 import {handleSaveToBackpack} from './utils';
+import {uploadImageFile} from './utils/uploadImage';
 
 import moduleStyles from './styles/sketchlab2-view.module.scss';
 
@@ -65,6 +67,7 @@ const DEFAULT_SOURCES = {source: {nodes: [], edges: []}};
 
 const nodeTypes = {
   textBox: TextBoxNode,
+  image: ImageNode,
 };
 
 let nodeId = 0;
@@ -82,7 +85,10 @@ const Sketchlab2Canvas: React.FC<{
 
   const saveSourcesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const reactFlowInstanceRef = useRef<ReactFlowInstance | null>(null);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
   const readonlyWorkspace = useAppSelector(isReadOnlyWorkspace);
+  const channelId =
+    useAppSelector(state => state.lab.channel && state.lab.channel.id) || '';
 
   const initialNodes = useMemo(
     () => cloneDeep(currentSources.source.nodes || []) as Node[],
@@ -190,6 +196,47 @@ const Sketchlab2Canvas: React.FC<{
     };
     setNodes(nds => nds.concat(newNode));
   }, [setNodes]);
+
+  const addImageNode = useCallback(
+    (url: string, filename: string) => {
+      const instance = reactFlowInstanceRef.current;
+      const viewport = instance?.getViewport() ?? {x: 0, y: 0, zoom: 1};
+      const wrapper = document.querySelector(
+        `.${moduleStyles.reactFlowWrapper}`
+      );
+      const rect = wrapper?.getBoundingClientRect();
+      const centerX = (rect?.width ?? 800) / 2;
+      const centerY = (rect?.height ?? 600) / 2;
+      const position = {
+        x: (centerX - viewport.x) / viewport.zoom,
+        y: (centerY - viewport.y) / viewport.zoom,
+      };
+      const newNode: Node = {
+        id: getNodeId(),
+        type: 'image',
+        position,
+        data: {url, filename},
+      };
+      setNodes(nds => nds.concat(newNode));
+    },
+    [setNodes]
+  );
+
+  const onFileInputChange = useCallback(
+    async (event: React.ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      // Reset the input so the same file can be selected again later
+      event.target.value = '';
+      if (!file || !channelId) return;
+      try {
+        const url = await uploadImageFile(file, channelId);
+        addImageNode(url, file.name);
+      } catch {
+        console.error('Failed to upload image');
+      }
+    },
+    [channelId, addImageNode]
+  );
 
   const onInit = useCallback((instance: ReactFlowInstance) => {
     reactFlowInstanceRef.current = instance;
@@ -388,30 +435,25 @@ const Sketchlab2Canvas: React.FC<{
                     aria-label="Add text box"
                     type="button"
                   >
-                    <svg width="24" height="24" viewBox="0 0 24 24">
-                      <rect
-                        x="2"
-                        y="4"
-                        width="20"
-                        height="16"
-                        rx="4"
-                        ry="4"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                      />
-                      <text
-                        x="12"
-                        y="15"
-                        textAnchor="middle"
-                        fontSize="9"
-                        fill="currentColor"
-                        fontFamily="sans-serif"
-                      >
-                        T
-                      </text>
-                    </svg>
+                    <FontAwesomeV6Icon iconStyle="solid" iconName="font" />
                   </button>
+                  <button
+                    className={moduleStyles.toolbarButton}
+                    onClick={() => fileInputRef.current?.click()}
+                    title="Upload image"
+                    aria-label="Upload image"
+                    type="button"
+                    disabled={!channelId}
+                  >
+                    <FontAwesomeV6Icon iconStyle="solid" iconName="image" />
+                  </button>
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    style={{display: 'none'}}
+                    onChange={onFileInputChange}
+                  />
                 </div>
               )}
             </div>
