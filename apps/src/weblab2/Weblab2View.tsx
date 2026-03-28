@@ -199,8 +199,8 @@ const Weblab2View: React.FC<
   LabProps<Weblab2LevelProperties, ProjectSources>
 > = ({levelProperties, initialSources}) => {
   const [reformedSources, setReformedSources] = useState<
-    ProjectSources | undefined
-  >(undefined);
+    ProjectSources | undefined | null
+  >(null);
 
   // When we are in a legacy Weblab level and we didn't pull modern sources,
   // this might mean that we have legacy sources. We need to poll the old files
@@ -226,6 +226,16 @@ const Weblab2View: React.FC<
       (async () => {
         // Get the file list
         const response = await fetch(`/v3/files/${channelId}`);
+        if (!response.ok) {
+          // An error probably means there's no existing legacy project, so do
+          // nothing and the default project will get created from the startSources.
+          // And then set the current sources, which will finally allow the actual
+          // Weblab view to load.
+          setReformedSources(undefined);
+          return;
+        }
+
+        console.log('response', response);
         const filesList = await response.json();
 
         // Parse through and download all of the files referenced in the files list
@@ -286,7 +296,7 @@ const Weblab2View: React.FC<
 
   return fetchingLegacySources ? (
     // Weblab 1 Conversion
-    reformedSources ? (
+    reformedSources !== null ? (
       <Weblab2LoadedView
         levelProperties={levelProperties}
         initialSources={reformedSources}
