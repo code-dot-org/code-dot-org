@@ -27,7 +27,7 @@ import type {SiteConfig, SiteConfigExtensions} from '@code-dot-org/core';
 
 import {NoopAdapter} from '../adapters/noop';
 import {SentryAdapter} from '../adapters/sentry';
-import {singleton, _initializeSingleton} from '../index';
+import {observabilityClient, _initializeSingleton} from '../index';
 import {observabilityPlugin} from '../plugin';
 import type {ObservabilityConfig} from '../types';
 
@@ -50,7 +50,7 @@ describe('observabilityPlugin', () => {
     observabilityPlugin.onCoreReady(config);
 
     // Singleton should still be a NoopAdapter (unchanged)
-    expect(singleton).toBeInstanceOf(NoopAdapter);
+    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
     // init should not have been called on a new adapter
     expect(initSpy).not.toHaveBeenCalled();
     initSpy.mockRestore();
@@ -67,11 +67,11 @@ describe('observabilityPlugin', () => {
     observabilityPlugin.onCoreReady(config);
 
     // Singleton should now be a SentryAdapter
-    expect(singleton).toBeInstanceOf(SentryAdapter);
+    expect(observabilityClient).toBeInstanceOf(SentryAdapter);
   });
 
   it('singleton is NoopAdapter before onCoreReady', () => {
-    expect(singleton).toBeInstanceOf(NoopAdapter);
+    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
   });
 
   it('singleton is SentryAdapter after onCoreReady with sentry provider', () => {
@@ -83,12 +83,12 @@ describe('observabilityPlugin', () => {
     } as unknown as PluginConfig;
 
     observabilityPlugin.onCoreReady(config);
-    expect(singleton).toBeInstanceOf(SentryAdapter);
+    expect(observabilityClient).toBeInstanceOf(SentryAdapter);
   });
 
   it('onCoreReady with missing observability config is a no-op', () => {
     const config = {} as unknown as PluginConfig;
     expect(() => observabilityPlugin.onCoreReady(config)).not.toThrow();
-    expect(singleton).toBeInstanceOf(NoopAdapter);
+    expect(observabilityClient).toBeInstanceOf(NoopAdapter);
   });
 });

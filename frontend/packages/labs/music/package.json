@@ -16,7 +16,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/core": "workspace:*",
+    "@code-dot-org/observability": "workspace:*"
   },
   "devDependencies": {
     "@eslint/js": "catalog:",

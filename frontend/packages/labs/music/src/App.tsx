@@ -5,6 +5,7 @@ import type {
   LevelPropertiesResponse,
   UserPreferenceThemeResponse,
 } from '@code-dot-org/core/api';
+import * as observability from '@code-dot-org/observability';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,21 +15,48 @@ function App() {
   const [theme, setTheme] = useState<UserPreferenceThemeResponse | undefined>();
 
   useEffect(() => {
+    observability.logger.info('MusicLab mounted', {
+      environment: CodeStudioConfig.environment,
+    });
+    observability.metrics.count('music_lab.mount', 1, {
+      environment: CodeStudioConfig.environment,
+    });
+
     DashboardApiClient.labs.levels
       .getLevelProperties({levelId: '46446'})
-      .then(res => setLevelProperties(res));
+      .then(res => {
+        setLevelProperties(res);
+        observability.logger.debug('Level properties loaded', {levelId: '46446'});
+      })
+      .catch(err => {
+        observability.logger.error('Failed to load level properties', {error: String(err)});
+        observability.recordError(err, {levelId: '46446'});
+      });
+
     DashboardApiClient.users.userPreference
       .getTheme()
-      .then(res => setTheme(res));
+      .then(res => {
+        setTheme(res);
+        observability.logger.debug('Theme loaded', {theme: res});
+      })
+      .catch(err => {
+        observability.logger.error('Failed to load theme', {error: String(err)});
+        observability.recordError(err, {context: 'getTheme'});
+      });
   }, []);
+
+  function handleCountClick() {
+    const next = count + 1;
+    setCount(next);
+    observability.logger.info('Button clicked', {count: next});
+    observability.metrics.count('music_lab.button_click', 1, {count: String(next)});
+  }
 
   return (
     <>
       <h1>Music Lab</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
-          count is {count}
-        </button>
+        <button onClick={handleCountClick}>count is {count}</button>
       </div>
       <p>Dashboard: {CodeStudioConfig.dashboardApiUrl}</p>
       <p>
@@ -37,7 +65,6 @@ function App() {
       <pre style={{height: 400, overflow: 'auto'}}>
         {levelProperties && JSON.stringify(levelProperties, null, 2)}
       </pre>
-
       <p>
         <strong>Theme</strong>
       </p>

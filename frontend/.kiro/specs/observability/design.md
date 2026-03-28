@@ -31,7 +31,7 @@ graph TD
     end
 
     subgraph "frontend/packages/observability"
-        OBSCLIENT["ObservabilityClient singleton<br/>export default noopClient<br/>src/index.ts"]
+        OBSCLIENT["ObservabilityClient singleton<br/>export let observabilityClient<br/>src/index.ts"]
         OBSPLUGIN["observabilityPlugin<br/>src/plugin.ts"]
         FACTORY["createObservabilityClient()<br/>src/factory.ts"]
         IFACE["ObservabilityClient interface<br/>src/types.ts"]
@@ -41,7 +41,7 @@ graph TD
     end
 
     subgraph "frontend/packages/labs/*"
-        LAB["any lab or package<br/>import ObservabilityClient from '@code-dot-org/observability'"]
+        LAB["any lab or package<br/>import * as observability from '@code-dot-org/observability'"]
     end
 
     subgraph "External"
@@ -64,34 +64,56 @@ graph TD
     BASE -.->|extended by| SENTRY
 ```
 
-### Singleton Pattern
+### Module-Level API Pattern
 
-The observability client singleton lives entirely within `@code-dot-org/observability` — core has no knowledge of it. The package exports a module-level no-op singleton as its default export, following the same ES module caching pattern as `SiteConfig` in `@code-dot-org/core`.
+The observability client singleton lives entirely within `@code-dot-org/observability` — core has no knowledge of it. The package exposes a module-level API that mirrors the `ObservabilityClient` interface, following the same pattern as `import * as Sentry from '@sentry/browser'`.
 
-The singleton is a simple module-level variable. ES module consumers (including webpack-compiled `import` statements) hold a live binding to the exported namespace, so reassigning the variable after `_initializeSingleton` is called is visible to all consumers — no proxy or mutation needed:
+The singleton is a module-level variable (`observabilityClient`) that starts as a `NoopAdapter` and is reassigned by `_initializeSingleton` when the plugin initializes. Rather than exposing the singleton directly as a default export (which would be a stale snapshot), the package exports stable delegating functions and objects that always forward to the current singleton:
 
 ```ts
 // packages/observability/src/index.ts
 import {NoopAdapter} from './adapters/noop';
 
 // Module-level singleton — starts as no-op, reassigned by _initializeSingleton
-export let singleton: ObservabilityClient = new NoopAdapter();
+export let observabilityClient: ObservabilityClient = new NoopAdapter();
 
 /** @internal — called only by observabilityPlugin */
 export function _initializeSingleton(client: ObservabilityClient): void {
-  singleton = client;
+  observabilityClient = client;
 }
 
-export default singleton;
+// Module-level delegating API — always forwards to the live singleton
+export function recordError(error: unknown, context?: Record<string, unknown>): void {
+  observabilityClient.recordError(error, context);
+}
+
+export const logger: ObservabilityLogger = {
+  info: (message, attributes) => observabilityClient.logger.info(message, attributes),
+  // ... other levels
+};
+
+export const metrics: ObservabilityMetrics = {
+  count: (name, value, attributes) => observabilityClient.metrics.count(name, value, attributes),
+  // ... other instruments
+};
+// ... init, setConsented, isConsented, shutdown
 ```
 
-This works correctly for all ES module consumers. Raw `require()` with a cached default reference is not a supported usage pattern.
-
-Any lab or package consumes observability without knowing which provider is active:
+Consumers use the namespace import pattern — identical to how `@sentry/browser` is used:
 
 ```ts
-import ObservabilityClient from '@code-dot-org/observability';
-ObservabilityClient.captureException(err, {lab: 'music'});
+import * as observability from '@code-dot-org/observability';
+observability.logger.info('User loaded level', {lab: 'music'});
+observability.recordError(err, {lab: 'music'});
+observability.metrics.count('music_lab.notes_played');
+```
+
+The `logger` and `metrics` objects are stable references (created once at module load) whose methods close over `observabilityClient`. When `_initializeSingleton` replaces the singleton, all subsequent calls through `observability.logger.*` and `observability.metrics.*` automatically reach the new adapter — no proxy class, no stale snapshot.
+
+The named `observabilityClient` export is also available for consumers that need to pass the full client object:
+
+```ts
+import {observabilityClient} from '@code-dot-org/observability';
 ```
 
 ### Plugin Pattern
@@ -151,7 +173,7 @@ Apps that don't depend on `@code-dot-org/observability` simply call `initializeC
 
 | Export path                          | Contents                                                                                                                                      |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `@code-dot-org/observability`        | `ObservabilityClient` singleton (default export), `ObservabilityClient` type, `ObservabilityConfig` type, `createObservabilityClient` factory |
+| `@code-dot-org/observability`        | `observabilityClient` singleton, module-level `logger`/`metrics`/`recordError`/`init`/`setConsented`/`isConsented`/`shutdown` functions, `ObservabilityClient` type, `ObservabilityConfig` type, `createObservabilityClient` factory |
 | `@code-dot-org/observability/plugin` | `observabilityPlugin` — the `CorePlugin` implementation for use with `initializeCore`                                                         |
 | `@code-dot-org/observability/sentry` | `SentryAdapter` (imports `@sentry/browser`)                                                                                                   |
 | `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                 |

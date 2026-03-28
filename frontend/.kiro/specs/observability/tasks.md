@@ -130,13 +130,14 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
 
   - Ensure all tests pass, ask the user if questions arise.
 
-- [x] 7. Implement the singleton and `_initializeSingleton` in `src/index.ts`
+- [x] 7. Implement the module-level API and `_initializeSingleton` in `src/index.ts`
 
-  - Declare module-level `export let singleton: ObservabilityClient = new NoopAdapter()`
-  - Export `_initializeSingleton(client)` that reassigns `singleton`
+  - Declare module-level `export let observabilityClient: ObservabilityClient = new NoopAdapter()`
+  - Export `_initializeSingleton(client)` that reassigns `observabilityClient`
+  - Export module-level delegating functions `init`, `recordError`, `setConsented`, `isConsented`, `shutdown` that forward to the live `observabilityClient`
+  - Export stable `logger` and `metrics` objects whose methods close over `observabilityClient`, enabling `import * as observability from '@code-dot-org/observability'`
   - Re-export `ObservabilityClient`, `ObservabilityConfig`, `createObservabilityClient` from their respective modules
-  - Export `singleton` as the default export
-  - _Requirements: 1.1, 1.4, 2.5_
+  - _Requirements: 1.1, 1.4, 1.5, 2.5_
 
 - [x] 8. Implement `observabilityPlugin` in `src/plugin.ts`
 
@@ -145,7 +146,7 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
   - _Requirements: 2.4, 4.1, 6.1, 6.3_
 
   - [x] 8.1 Write unit tests for `observabilityPlugin`
-    - `onCoreReady` with `provider: 'none'` does not call factory; `onCoreReady` with `provider: 'sentry'` calls factory and `_initializeSingleton`; singleton is no-op before `onCoreReady` and the real adapter after
+    - `onCoreReady` with `provider: 'none'` does not call factory; `onCoreReady` with `provider: 'sentry'` calls factory and `_initializeSingleton`; `observabilityClient` is no-op before `onCoreReady` and the real adapter after
     - _Requirements: 2.4, 2.5_
     - _File: `src/__tests__/plugin.test.ts`_
 
@@ -324,6 +325,6 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
 - Tasks marked with `*` are optional and can be skipped for faster MVP
 - Each task references specific requirements for traceability
 - Property tests use fast-check with a minimum of 100 iterations; each test must include a comment `// Feature: observability, Property N: <property text>`
-- The singleton reassignment pattern (`export let singleton`) works for all ES module consumers including webpack 5 `import` statements; raw `require()` with a cached default reference is not a supported usage pattern
+- The module-level API pattern (`import * as observability from '@code-dot-org/observability'`) mirrors how `@sentry/browser` is consumed. The `logger` and `metrics` objects are stable references whose methods close over the live `observabilityClient` singleton — no proxy class needed. Raw `require()` with a cached default reference is not a supported usage pattern.
 - `SentryAdapter` is never imported by the main entry point — it is only reachable via the `./sentry` entry point or via the factory's dynamic import, keeping it tree-shakeable
 - **Sampling preference**: adapters SHOULD use SDK-level feature flags (`enableLogs`/`enableMetrics`) to disable ingestion at init time where the provider supports it. Adapters that don't support SDK-level flags MAY fall back to per-call gating using `isLogSampled()`/`isMetricsSampled()` from `BaseAdapter`.

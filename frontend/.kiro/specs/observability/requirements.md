@@ -32,6 +32,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 2. The observability package SHALL be registered as a Turborepo workspace package under `frontend/packages/observability` and covered by the `"packages/*"` glob in `frontend/package.json`.
 3. The observability package SHALL export TypeScript type declarations alongside its compiled output.
 4. When the observability package is imported by a host application, it SHALL NOT bundle any provider SDK directly; each provider adapter SHALL be a separate entry point so that only the selected provider's code is included in the host bundle.
+5. The observability package SHALL expose a module-level API — `init`, `recordError`, `logger`, `metrics`, `setConsented`, `isConsented`, `shutdown` — as named exports that delegate to the live singleton. Consumers SHALL be able to use `import * as observability from '@code-dot-org/observability'` and call `observability.logger.info(...)`, `observability.recordError(...)`, etc. without needing to import or reference the singleton object directly.
 
 ### Requirement 2: Provider Adapter Selection
 

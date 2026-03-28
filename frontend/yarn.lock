@@ -1478,6 +1478,7 @@ __metadata:
   resolution: "@code-dot-org/music-lab@workspace:packages/labs/music"
   dependencies:
     "@code-dot-org/core": "workspace:*"
+    "@code-dot-org/observability": "workspace:*"
     "@eslint/js": "catalog:"
     "@types/node": "catalog:"
     "@types/react": "npm:^19.2.5"
