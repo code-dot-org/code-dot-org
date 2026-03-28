@@ -5,6 +5,8 @@ import {
   addEdge,
   Background,
   Controls,
+  getNodesBounds,
+  getViewportForBounds,
   MarkerType,
   ReactFlow,
   ReactFlowProvider,
@@ -281,6 +283,93 @@ const Sketchlab2Canvas: React.FC<{
     [channelId, addImageNode]
   );
 
+  const downloadPng = useCallback(async () => {
+    if (nodes.length === 0) return;
+
+    const PADDING = 50;
+    const SCALE = 2;
+    const bounds = getNodesBounds(nodes);
+    const imageWidth = bounds.width + PADDING * 2;
+    const imageHeight = bounds.height + PADDING * 2;
+    const viewport = getViewportForBounds(
+      bounds,
+      imageWidth,
+      imageHeight,
+      0.5,
+      2,
+      PADDING
+    );
+
+    const viewportEl = document.querySelector(
+      '.react-flow__viewport'
+    ) as HTMLElement | null;
+    if (!viewportEl) return;
+
+    // Clone the viewport and prepare it for serialization
+    const clone = viewportEl.cloneNode(true) as HTMLElement;
+    clone.style.transform = `translate(${viewport.x}px, ${viewport.y}px) scale(${viewport.zoom})`;
+
+    // Convert all <img> elements to base64 data URLs so they render
+    // inside the foreignObject SVG (external URLs are blocked).
+    const imgs = clone.querySelectorAll('img');
+    await Promise.all(
+      Array.from(imgs).map(async imgEl => {
+        try {
+          const resp = await fetch(imgEl.src);
+          const blob = await resp.blob();
+          const dataUrl = await new Promise<string>(resolve => {
+            const reader = new FileReader();
+            reader.onloadend = () => resolve(reader.result as string);
+            reader.readAsDataURL(blob);
+          });
+          imgEl.src = dataUrl;
+        } catch {
+          // Leave the src as-is if fetching fails
+        }
+      })
+    );
+
+    // Inline all computed styles so they survive serialization
+    const originals = viewportEl.querySelectorAll('*');
+    const clones = clone.querySelectorAll('*');
+    for (let i = 0; i < clones.length; i++) {
+      const computed = window.getComputedStyle(originals[i]);
+      const inline = (clones[i] as HTMLElement).style;
+      if (!inline) continue;
+      for (let j = 0; j < computed.length; j++) {
+        const prop = computed[j];
+        inline.setProperty(prop, computed.getPropertyValue(prop));
+      }
+    }
+
+    const svgString = `
+      <svg xmlns="http://www.w3.org/2000/svg" width="${imageWidth}" height="${imageHeight}">
+        <foreignObject width="100%" height="100%">
+          ${new XMLSerializer().serializeToString(clone)}
+        </foreignObject>
+      </svg>`;
+
+    const canvas = document.createElement('canvas');
+    canvas.width = imageWidth * SCALE;
+    canvas.height = imageHeight * SCALE;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    ctx.fillStyle = '#292f36';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    const img = new Image();
+    img.onload = () => {
+      ctx.drawImage(img, 0, 0, imageWidth * SCALE, imageHeight * SCALE);
+      const link = document.createElement('a');
+      link.download = 'sketch.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    };
+    img.src =
+      'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+  }, [nodes]);
+
   const onInit = useCallback((instance: ReactFlowInstance) => {
     reactFlowInstanceRef.current = instance;
   }, []);
@@ -502,6 +591,17 @@ const Sketchlab2Canvas: React.FC<{
                     style={{display: 'none'}}
                     onChange={onFileInputChange}
                   />
+                  <div className={moduleStyles.toolbarSeparator} />
+                  <button
+                    className={moduleStyles.toolbarButton}
+                    onClick={downloadPng}
+                    title="Download as PNG"
+                    aria-label="Download as PNG"
+                    type="button"
+                    disabled={nodes.length === 0}
+                  >
+                    <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
+                  </button>
                 </div>
               )}
             </div>
