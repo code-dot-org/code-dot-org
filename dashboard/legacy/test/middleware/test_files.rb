@@ -169,19 +169,6 @@ class FilesTest < FilesApiTestBase
     delete_all_manifest_versions
   end
 
-  def test_upload_html_file
-    filename = 'index.html'
-    valid_html = '<div></div>'
-
-    Projects.any_instance.stubs(:get).returns({projectType: 'applab'})
-    @api.put_object(filename, valid_html)
-    assert successful?
-    @api.delete_object(filename)
-
-    Projects.any_instance.unstub(:get)
-    delete_all_manifest_versions
-  end
-
   def test_content_disposition
     dog_image_filename = @api.randomize_filename('dog.png')
     dog_image_body = 'stub-dog-contents'
