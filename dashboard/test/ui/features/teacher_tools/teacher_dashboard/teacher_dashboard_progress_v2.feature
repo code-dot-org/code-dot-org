@@ -223,12 +223,16 @@ Scenario: Teacher can view choice levels
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to course "allthethingscourse" with teacher "Teacher_Sally" in a section named "Test Section"
 
-  # Student submits choice level
+  # Student submits choice level (Web Lab 2)
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
   And I wait until I see selector "button:contains(Submit)"
+  # We must modify the HTML to enable the Submit button
+  And I wait until I see selector ".codemirror-container"
+  And I press keys ":enter" for element ".codemirror-container"
+  And I press keys "something" for element ".codemirror-container"
   And I click selector "button:contains(Submit)"
-  And I wait to see "#confirm-button"
-  And I press "confirm-button"
+  And I wait to see "button:contains(OK)"
+  And I click selector "button:contains(OK)"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
