@@ -92,6 +92,7 @@ All instrumentation must comply with the platform's privacy policy: session data
 4. If the provider SDK is not available at runtime (e.g., blocked by an ad blocker), the `ObservabilityClient` SHALL catch the initialization failure, log a warning, and fall back to no-op adapter behavior.
 5. The Code Studio integration SHALL NOT increase the initial JavaScript bundle size beyond the size of the selected provider SDK plus the observability package itself (i.e., no unintended transitive dependencies shall be bundled).
 6. When initializing the provider SDK, the `ObservabilityClient` SHALL pass the current runtime environment identifier (e.g. `'production'`, `'staging'`, `'adhoc'`) to the provider so that events are correctly bucketed by environment in the provider dashboard and do not default to `'production'`.
+7. The `observabilityPlugin`'s `onCoreReady` method SHALL be synchronous and SHALL fire-and-forget the `Promise` returned by `createObservabilityClient`. The `createObservabilityClient` factory SHALL dynamically import the provider adapter (and its SDK) only when `provider` is not `'none'`, ensuring the provider SDK is a separate bundle chunk not included in the initial JavaScript payload. `CorePlugin.onCoreReady` returns `void` — no async interface change is needed. The singleton starts as no-op and is replaced once the dynamic import resolves and `_initializeSingleton(client)` is called.
 
 ### Requirement 7: Portability and Extensibility
 

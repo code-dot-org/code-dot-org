@@ -1,4 +1,10 @@
 import {isUnsupportedBrowser} from '@cdo/apps/util/browser-detector';
+import {initializeCore} from '@code-dot-org/core';
+import {observabilityPlugin} from '@code-dot-org/observability/plugin';
+
+if (typeof window !== 'undefined') {
+  initializeCore([observabilityPlugin]);
+}
 
 // Prevent filtered errors from being passed to New Relic. Return true when New
 // Relic should ignore the error.

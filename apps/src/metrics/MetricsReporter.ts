@@ -19,7 +19,7 @@ const CHECK_CAN_REPORT_INTERVAL_MS =
   CHECK_CAN_REPORT_INTERVAL_MINUTES * 60 * 1000;
 const LOCAL_STORAGE_KEY_NAME = 'cdo-metrics-reporter-last-check-time';
 // A flag that can be toggled to send events regardless of environment
-const ALWAYS_SEND = false;
+const ALWAYS_SEND = true;
 
 /**
  * Reports logs and metrics, intended primarily for developer-facing

@@ -402,7 +402,7 @@ const WEBPACK_BASE_CONFIG = {
             },
             // Enable source maps for shared frontend packages
             {
-              test: /\.js$/,
+              test: /\.[cm]?js$/,
               enforce: 'pre',
               include: /frontend\/packages/,
               use: ['source-map-loader'],

@@ -335,3 +335,36 @@ Implement the `@code-dot-org/observability` package and integrate it into Code S
 - The module-level API pattern (`import * as observability from '@code-dot-org/observability'`) mirrors how `@sentry/browser` is consumed. The `logger` and `metrics` objects are stable references whose methods close over the live `observabilityClient` singleton — no proxy class needed. Raw `require()` with a cached default reference is not a supported usage pattern.
 - `SentryAdapter` is never imported by the main entry point — it is only reachable via the `./sentry` entry point or via the factory's dynamic import, keeping it tree-shakeable
 - **Sampling preference**: adapters SHOULD use SDK-level feature flags (`enableLogs`/`enableMetrics`) to disable ingestion at init time where the provider supports it. Adapters that don't support SDK-level flags MAY fall back to per-call gating using `isLogSampled()`/`isMetricsSampled()` from `BaseAdapter`.
+
+- [x] 25. ~~Widen `CorePlugin.onCoreReady` return type~~ — not needed
+
+  - `CorePlugin.onCoreReady` stays typed as `void`. `observabilityPlugin.onCoreReady` is synchronous and fires-and-forgets the factory promise, so no interface change is required in `@code-dot-org/core`.
+  - _Requirements: 6.5_
+
+- [x] 26. Make `createObservabilityClient` async with dynamic adapter import at the factory level
+
+  - In `frontend/packages/observability/src/factory.ts`:
+    - Change `createObservabilityClient` to `async`, return type `Promise<ObservabilityClient>`
+    - For `provider === 'none'` or `undefined`: return `new NoopAdapter()` immediately
+    - For `provider === 'sentry'`: `const {SentryAdapter} = await import('./adapters/sentry')` then return `new SentryAdapter()`
+    - For unknown providers: throw (the async wrapper rejects the promise)
+  - In `frontend/packages/observability/src/plugin.ts`:
+    - Keep the static `import {createObservabilityClient} from './factory'`
+    - Keep `onCoreReady` as `async` (it must `await createObservabilityClient(...)`)
+    - Change `const client = createObservabilityClient(...)` to `const client = await createObservabilityClient(...)`
+  - The bundle split now happens at the adapter level inside the factory
+  - _Requirements: 6.5, 6.7_
+
+  - [x] 26.1 Update `factory.test.ts` and `plugin.test.ts` for async factory
+
+    - In `factory.test.ts`: change `fc.property` to `fc.asyncProperty`, `await` all `createObservabilityClient` calls, use `rejects.toThrow` for the unknown-provider case
+    - In `plugin.test.ts`: factory mock uses `mockResolvedValue(mockClient)`; tests that assert post-factory behavior use `await Promise.resolve()` to flush the microtask queue; `onCoreReady` calls are synchronous (no `await`)
+    - _Requirements: 6.5_
+    - _File: `src/__tests__/factory.test.ts`, `src/__tests__/plugin.test.ts`_
+
+- [x] 27. Final checkpoint — ensure all tests pass after async plugin refactor
+
+  - Run `yarn workspace @code-dot-org/observability test`
+  - Run `yarn workspace @code-dot-org/core test`
+  - Run `./tools/hooks/pre-commit` from repo root
+  - Ensure all tests pass; ask the user if questions arise

@@ -16,12 +16,12 @@ If using the Sentry adapter, also add `@sentry/browser` as a peer dependency.
 
 ## Key Exports
 
-| Import path                          | Contents                                                                                                                                                          |
-| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Import path                          | Contents                                                                                                                                                                              |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `@code-dot-org/observability`        | Module-level API (`logger`, `metrics`, `recordError`, `init`, `setConsented`, `isConsented`, `shutdown`), `observabilityClient` singleton, `createObservabilityClient` factory, types |
-| `@code-dot-org/observability/plugin` | `observabilityPlugin` — pass to `initializeCore()`                                                                                                                |
-| `@code-dot-org/observability/sentry` | `SentryAdapter`                                                                                                                                                   |
-| `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                                     |
+| `@code-dot-org/observability/plugin` | `observabilityPlugin` — pass to `initializeCore()`                                                                                                                                    |
+| `@code-dot-org/observability/sentry` | `SentryAdapter`                                                                                                                                                                       |
+| `@code-dot-org/observability/noop`   | `NoopAdapter`                                                                                                                                                                         |
 
 ## Usage
 
@@ -58,7 +58,10 @@ import * as observability from '@code-dot-org/observability';
 
 observability.logger.info('User loaded level', {lab: 'music', levelId: 42});
 observability.logger.warn('Slow render detected', {durationMs: 850});
-observability.logger.error('API call failed', {endpoint: '/api/levels', status: 500});
+observability.logger.error('API call failed', {
+  endpoint: '/api/levels',
+  status: 500,
+});
 ```
 
 Log events are only forwarded to the provider when `logSampleRate > 0` and the session is sampled (decided once at init time).
@@ -75,7 +78,9 @@ observability.metrics.count('music_lab.notes_played', 1, {instrument: 'piano'});
 observability.metrics.gauge('lab.active_users', 42);
 
 // Distribution — value spread (response times, payload sizes)
-observability.metrics.distribution('api.response_time_ms', 187, {endpoint: '/levels'});
+observability.metrics.distribution('api.response_time_ms', 187, {
+  endpoint: '/levels',
+});
 ```
 
 Metric events are only forwarded when `metricsSampleRate > 0` and the session is sampled.

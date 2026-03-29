@@ -21,8 +21,12 @@ export class NewRelicAdapter extends BaseAdapter {
     // ... call SDK init with enableLogs, etc.
 
     // Wire up this.logger and this.metrics to the live SDK after init:
-    this.logger = { /* delegate to SDK logger */ };
-    this.metrics = { /* delegate to SDK metrics */ };
+    this.logger = {
+      /* delegate to SDK logger */
+    };
+    this.metrics = {
+      /* delegate to SDK metrics */
+    };
   }
 
   protected applyConsentToProvider(userId: string | null): void {
@@ -78,6 +82,7 @@ Add `src/__tests__/newrelic.test.ts` with unit tests and property-based tests fo
 ```
 
 Cover at minimum:
+
 - `recordError` forwards to the SDK (Property 3 equivalent)
 - SDK errors during `recordError` are swallowed (Property 4)
 - Consent round-trip (Property 5)

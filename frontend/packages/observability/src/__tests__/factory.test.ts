@@ -4,9 +4,9 @@ import {createObservabilityClient} from '../factory';
 
 describe('createObservabilityClient', () => {
   // Feature: observability, Property 1: Factory returns a valid client for all valid providers and configs
-  it('Property 1: returns a valid ObservabilityClient for all valid providers and configs', () => {
-    fc.assert(
-      fc.property(
+  it('Property 1: returns a valid ObservabilityClient for all valid providers and configs', async () => {
+    await fc.assert(
+      fc.asyncProperty(
         fc.constantFrom('sentry' as const, 'none' as const),
         fc.record({
           sampling: fc.record({
@@ -15,8 +15,8 @@ describe('createObservabilityClient', () => {
           }),
           tracePropagationTargets: fc.array(fc.string()),
         }),
-        (provider, config) => {
-          const client = createObservabilityClient(provider, config);
+        async (provider, config) => {
+          const client = await createObservabilityClient(provider, config);
           expect(typeof client.init).toBe('function');
           expect(typeof client.recordError).toBe('function');
           expect(typeof client.setConsented).toBe('function');
@@ -29,20 +29,15 @@ describe('createObservabilityClient', () => {
   });
 
   // Feature: observability, Property 2: Unrecognized provider throws a descriptive error
-  it('Property 2: throws a descriptive error for unrecognized providers', () => {
-    fc.assert(
-      fc.property(
+  it('Property 2: throws a descriptive error for unrecognized providers', async () => {
+    await fc.assert(
+      fc.asyncProperty(
         fc.string().filter(s => s !== 'sentry' && s !== 'none' && s.length > 0),
-        badProvider => {
-          let thrown: unknown;
-          try {
+        async badProvider => {
+          await expect(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            createObservabilityClient(badProvider as any);
-          } catch (e) {
-            thrown = e;
-          }
-          expect(thrown).toBeInstanceOf(Error);
-          expect((thrown as Error).message).toContain(badProvider);
+            createObservabilityClient(badProvider as any),
+          ).rejects.toThrow(badProvider);
         },
       ),
       {numRuns: 100},
@@ -51,8 +46,8 @@ describe('createObservabilityClient', () => {
 
   // Unit tests (Task 4.3)
   describe('unit tests', () => {
-    it('returns a no-op client when called with no arguments', () => {
-      const client = createObservabilityClient();
+    it('returns a no-op client when called with no arguments', async () => {
+      const client = await createObservabilityClient();
       expect(typeof client.init).toBe('function');
       expect(typeof client.recordError).toBe('function');
       expect(typeof client.setConsented).toBe('function');
@@ -61,13 +56,13 @@ describe('createObservabilityClient', () => {
       expect(client.isConsented()).toBe(false);
     });
 
-    it('returns a no-op client for provider "none"', () => {
-      const client = createObservabilityClient('none');
+    it('returns a no-op client for provider "none"', async () => {
+      const client = await createObservabilityClient('none');
       expect(client.isConsented()).toBe(false);
     });
 
-    it('returns a client with all required methods for provider "sentry"', () => {
-      const client = createObservabilityClient('sentry');
+    it('returns a client with all required methods for provider "sentry"', async () => {
+      const client = await createObservabilityClient('sentry');
       expect(typeof client.init).toBe('function');
       expect(typeof client.recordError).toBe('function');
       expect(typeof client.setConsented).toBe('function');
@@ -75,11 +70,11 @@ describe('createObservabilityClient', () => {
       expect(typeof client.shutdown).toBe('function');
     });
 
-    it('throws for an unknown provider', () => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      expect(() => createObservabilityClient('datadog' as any)).toThrow(
-        'Unsupported observability provider: "datadog"',
-      );
+    it('throws for an unknown provider', async () => {
+      await expect(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        createObservabilityClient('datadog' as any),
+      ).rejects.toThrow('Unsupported observability provider: "datadog"');
     });
   });
 });

@@ -128,7 +128,9 @@ import {observabilityClient} from '@code-dot-org/observability';
 ```ts
 // packages/core/src/config/initializeCore.ts
 export interface CorePlugin {
-  /** Called by initializeCore with the full SiteConfig after core is ready */
+  /**
+   * Called by initializeCore with the full SiteConfig after core is ready.
+   */
   onCoreReady(config: SiteConfig): void;
 }
 
@@ -146,16 +148,20 @@ export function initializeCore(plugins: CorePlugin[] = []): void {
 // packages/observability/src/plugin.ts
 export const observabilityPlugin: CorePlugin = {
   onCoreReady(config) {
-    const obs = config.observability;
-    if (obs.provider === 'none') return;
-    const client = createObservabilityClient(obs.provider, obs);
-    client.init(obs);
-    _initializeSingleton(client);
+    const obs = config.observability as ObservabilityConfig | undefined;
+    if (!obs || obs.provider === 'none') return;
+
+    // Fire-and-forget: createObservabilityClient dynamically imports SentryAdapter
+    // at the adapter level. onCoreReady stays synchronous — no async/await needed.
+    createObservabilityClient(obs.provider, obs).then(client => {
+      client.init(obs);
+      _initializeSingleton(client);
+    });
   },
 };
 ```
 
-Studio bootstrap:
+Studio bootstrap — unchanged from the host app's perspective:
 
 ```ts
 // apps/studio/entrypoints/application.tsx
@@ -165,6 +171,8 @@ import {observabilityPlugin} from '@code-dot-org/observability/plugin';
 initializeCore([observabilityPlugin]);
 // ... mount React app
 ```
+
+**Chunk boundary**: `plugin.ts` imports `factory.ts` statically, but `factory.ts` itself uses a dynamic `import('./adapters/sentry')` when `provider === 'sentry'`. This means the bundler (webpack 5 / Vite) splits `SentryAdapter` and `@sentry/browser` into a separate async chunk at the adapter level — the split happens inside the factory, not in the plugin. The chunk is only fetched at runtime when `provider !== 'none'`. The singleton starts as `NoopAdapter` and is replaced once the chunk loads and `_initializeSingleton` is called — the consent queue and no-op fallback ensure no events are lost during this window.
 
 Apps that don't depend on `@code-dot-org/observability` simply call `initializeCore()` with no plugins — the observability package is never bundled.
 
@@ -318,17 +326,17 @@ sampling?: SamplingConfig;
 ### `createObservabilityClient` Factory
 
 ```typescript
-export function createObservabilityClient(
+export async function createObservabilityClient(
   provider?: 'sentry' | 'none',
   config?: Omit<ObservabilityConfig, 'provider'>,
-): ObservabilityClient;
-````
+): Promise<ObservabilityClient>;
+```
 
-- When `provider` is `undefined` or `'none'`, returns a `NoopAdapter` synchronously (no dynamic import needed).
-- When `provider` is `'sentry'`, dynamically imports `@code-dot-org/observability/sentry` and returns a `SentryAdapter`.
-- When `provider` is any other string, throws `new Error(\`Unsupported observability provider: "${provider}"\`)`.
+- When `provider` is `undefined` or `'none'`, resolves immediately with a `NoopAdapter` (no dynamic import needed).
+- When `provider` is `'sentry'`, dynamically imports `./adapters/sentry` and resolves with a new `SentryAdapter`. The dynamic import is the bundle split point — `SentryAdapter` and `@sentry/browser` land in a separate async chunk that is only fetched when this branch is reached.
+- When `provider` is any other string, rejects with `new Error(\`Unsupported observability provider: "${provider}"\`)`.
 
-Because the factory may need to return synchronously (before the dynamic import resolves), the adapter is constructed eagerly but `init()` defers the actual SDK initialization. The factory always returns a fully-constructed `ObservabilityClient` immediately.
+The factory is async so that the Sentry adapter code-split happens at the adapter level, keeping the factory module itself lightweight. Callers `await` the factory and then call `client.init(config)` to initialize the provider SDK.
 
 ### `BaseAdapter` (abstract)
 
@@ -624,6 +632,7 @@ _For any_ `SentryAdapter` where `enableLogs` is `true`, `consoleLoggingIntegrati
 | `typeof window === 'undefined'` (SSR)                    | `init` is a no-op; no SDK initialization attempted                                                      |
 | Package/lab calls singleton before `initializeCore`      | Singleton is no-op; calls are silently dropped — safe by design                                         |
 | `initializeCore` called without `observabilityPlugin`    | Observability package never bundled; singleton never swapped from no-op                                 |
+| Provider adapter chunk fetch fails (network error)       | `onCoreReady` promise rejects silently; singleton remains no-op; no errors propagate to host app        |
 
 ---
 
@@ -691,3 +700,4 @@ yarn workspace @code-dot-org/observability test
 # or from frontend/packages/observability/
 yarn test
 ```
+````
