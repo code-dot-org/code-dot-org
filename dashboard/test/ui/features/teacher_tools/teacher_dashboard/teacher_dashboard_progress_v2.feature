@@ -227,9 +227,9 @@ Scenario: Teacher can view choice levels
   Given I am on "http://studio.code.org/courses/allthethingscourse/units/1/lessons/40/levels/1/sublevel/2?noautoplay=true"
   And I wait until I see selector "button:contains(Submit)"
   # We must modify the HTML to enable the Submit button
-  And I wait until I see selector ".codemirror-container"
-  And I press keys ":enter" for element ".codemirror-container"
-  And I press keys "something" for element ".codemirror-container"
+  And I wait until I see selector "#uitest-codebridge-editor"
+  And I press keys ":enter" for element "#uitest-codebridge-editor"
+  And I press keys "something" for element "#uitest-codebridge-editor"
   And I click selector "button:contains(Submit)"
   And I wait to see "button:contains(OK)"
   And I click selector "button:contains(OK)"
