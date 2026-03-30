@@ -81,7 +81,7 @@ class AiRubricConfig
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
-    validate_learning_goals(units_with_ai_config)
+    validate_learning_goals_for_units(units_with_ai_config)
     S3_AI_RELEASE_PATH
   end
 
@@ -96,7 +96,7 @@ class AiRubricConfig
   # Skips validation when S3 is emulated (local dev).
   def self.validate_learning_goals_for_unit!(unit)
     return if CDO.aws_s3_emulated
-    validate_learning_goals([unit])
+    validate_learning_goals_for_units([unit])
   end
 
   private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
@@ -110,7 +110,7 @@ class AiRubricConfig
   # For each unit with ai_rubric_s3_config, validate that every ai-enabled
   # learning goal in its rubric in the database has a corresponding learning
   # goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals(units)
+  private_class_method def self.validate_learning_goals_for_units(units)
     units.each do |unit|
       unit.ai_rubric_s3_config&.each_key do |level_name|
         level = Level.find_by_name!(level_name)
