@@ -59,6 +59,18 @@ export const AiTutorContainer: FC<{
     state => selectedSectionSelector(state)?.aiChatAccessLevel
   );
 
+  const aiTutorAvailableForLevel =
+    window?.appOptions?.level?.aiTutorAvailable ?? false;
+
+  const tutorDisabledForSelectedSection =
+    !!sectionAiChatAccessLevel &&
+    !!labState.appType &&
+    !shouldShowAiTutor({
+      appName: labState.appType,
+      tutorLevel: aiTutorAvailableForLevel,
+      aiChatAccessLevel: sectionAiChatAccessLevel,
+    });
+
   const isPredictLevel =
     window?.appOptions?.level?.predictSettings?.isPredictLevel ?? false;
   const awaitingContainedResponse = useAppSelector(
@@ -73,18 +85,6 @@ export const AiTutorContainer: FC<{
     hasSubmittedPredictResponse: !awaitingContainedResponse,
   });
 
-  const aiTutorAvailableForLevel =
-    window?.appOptions?.level?.aiTutorAvailable ?? false;
-
-  const shouldShowTutor =
-    sectionAiChatAccessLevel && labState.appType
-      ? shouldShowAiTutor({
-          appName: labState.appType,
-          tutorLevel: aiTutorAvailableForLevel,
-          aiChatAccessLevel: sectionAiChatAccessLevel,
-        })
-      : false;
-
   const lab: CommonLab | undefined =
     labState.appType === 'weblab' ? window.getWebLab?.() : studioApp()?.config;
 
@@ -92,7 +92,7 @@ export const AiTutorContainer: FC<{
   // student's history so we can decide whether to show the component before
   // ChatWorkspace mounts.
   useEffect(() => {
-    if (!shouldShowTutor && viewAsUserId) {
+    if (tutorDisabledForSelectedSection && viewAsUserId) {
       dispatch(
         fetchUserChatHistory({
           userId: viewAsUserId,
@@ -115,7 +115,8 @@ export const AiTutorContainer: FC<{
     hasEverHadHistory.current = true;
   }
 
-  const isVisible = shouldShowTutor || hasEverHadHistory.current;
+  const isVisible =
+    !tutorDisabledForSelectedSection || hasEverHadHistory.current;
 
   useEffect(() => {
     onLayoutChange({isVisible, isOpen: aiChatOpen});

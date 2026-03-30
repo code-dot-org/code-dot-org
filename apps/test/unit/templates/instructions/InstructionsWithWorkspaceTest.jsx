@@ -47,6 +47,7 @@ describe('InstructionsWithWorkspace', () => {
           setInstructionsMaxHeightAvailable={() => {}}
           labType="applab"
           isShareView={true}
+          aiChatAccessLevel="enabled"
         />
       );
       expect(wrapper.find('AiTutorContainer')).toHaveLength(0);
@@ -65,7 +66,7 @@ describe('InstructionsWithWorkspace', () => {
       expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
     });
 
-    it('renders AI tutor when selected section has AI enabled', () => {
+    it('renders AI tutor when AI enabled', () => {
       const wrapper = shallow(
         <InstructionsWithWorkspace
           instructionsHeight={400}
@@ -78,7 +79,7 @@ describe('InstructionsWithWorkspace', () => {
       expect(wrapper.find('AiTutorContainer')).toHaveLength(1);
     });
 
-    it('does not render AI tutor when selected section has AI disabled', () => {
+    it('does not render AI tutor when AI disabled', () => {
       const wrapper = shallow(
         <InstructionsWithWorkspace
           instructionsHeight={400}
