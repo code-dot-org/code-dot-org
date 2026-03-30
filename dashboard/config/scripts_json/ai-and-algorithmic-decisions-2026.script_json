@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-26 23:35:21 UTC",
+    "serialized_at": "2026-03-29 07:32:29 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -423,8 +423,21 @@
       }
     },
     {
-      "key": "b423cffb-c464-4638-bb45-dcda07ecf86e",
+      "key": "479c93c3-ccfe-42ea-b39f-f52418009b08",
       "position": 1,
+      "properties": {
+        "name": "New / Revised Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "479c93c3-ccfe-42ea-b39f-f52418009b08",
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026"
+      }
+    },
+    {
+      "key": "b423cffb-c464-4638-bb45-dcda07ecf86e",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -438,7 +451,7 @@
     },
     {
       "key": "042f6cf1-75ab-469f-9f6e-fcdeaeb5dd96",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -452,7 +465,7 @@
     },
     {
       "key": "d6140da2-7b34-4300-a4e1-edcbbfa1512a",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
@@ -1249,6 +1262,17 @@
       "seeding_key": {
         "activity_section.key": "ff662afa-887f-4a26-a1e4-9ad3fdee4654",
         "lesson_activity.key": "e717c33a-741f-4880-b54c-8c83c651f2e6"
+      }
+    },
+    {
+      "key": "7090a9f9-72ab-4957-8014-1ec90e025f74",
+      "position": 1,
+      "properties": {
+        "progression_name": "Level 1 Predict (format updated)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74",
+        "lesson_activity.key": "479c93c3-ccfe-42ea-b39f-f52418009b08"
       }
     },
     {
@@ -3251,28 +3275,6 @@
     },
     {
       "chapter": 5,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Hear From Different Users"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level7_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "fc2c4e1d-94c5-4ca2-924b-320b5b072511"
-      },
-      "level_keys": [
-        "ai-and-algorithmic-decisions-lesson1-level7_2026"
-      ]
-    },
-    {
-      "chapter": 6,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3294,7 +3296,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3316,7 +3318,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 7,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -3338,7 +3340,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 8,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -3360,8 +3362,30 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 9,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Level 1 Predict (format updated)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74"
+      },
+      "level_keys": [
+        "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3383,7 +3407,7 @@
     },
     {
       "chapter": 11,
-      "position": 2,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3405,7 +3429,7 @@
     },
     {
       "chapter": 12,
-      "position": 3,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -3427,7 +3451,7 @@
     },
     {
       "chapter": 13,
-      "position": 4,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4203,18 +4227,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-and-algorithmic-decisions-lesson1-level7_2026",
-        "script_level.level_keys": [
-          "ai-and-algorithmic-decisions-lesson1-level7_2026"
-        ],
-        "lesson.key": "Lesson 1: Interactivity in Web Apps",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-and-algorithmic-decisions-2026",
-        "activity_section.key": "fc2c4e1d-94c5-4ca2-924b-320b5b072511"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "ai-and-algorithmic-decisions-lesson2-level1-revised_2026",
         "script_level.level_keys": [
           "ai-and-algorithmic-decisions-lesson2-level1-revised_2026"
@@ -4259,6 +4271,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-and-algorithmic-decisions-2026",
         "activity_section.key": "7089ddf9-bfda-4af2-8a66-09324fa4934e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ai-and-algorithmic-decisions-lesson3-level1-revised_2026",
+        "script_level.level_keys": [
+          "ai-and-algorithmic-decisions-lesson3-level1-revised_2026"
+        ],
+        "lesson.key": "Lesson 3: Variables and Live Updates",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-and-algorithmic-decisions-2026",
+        "activity_section.key": "7090a9f9-72ab-4957-8014-1ec90e025f74"
       }
     },
     {
