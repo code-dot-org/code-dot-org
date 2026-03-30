@@ -78,6 +78,20 @@ modifying that area — not before every edit.
 | Rails config injection, `SiteConfig`, meta tag        | `docs/conventions/tech.md`           |
 | `packages/core` singletons, boot, or `./api` sub-path | `packages/core/docs/architecture.md` |
 
+## Generator ↔ conventions coupling
+
+`turbo/generators/config.ts` (and its `turbo/generators/templates/` directory)
+and `docs/conventions/packages.md` are **tightly coupled** — they must always
+describe the same scaffold structure.
+
+**Rule:** When you change either, you MUST update the other:
+
+- Changing a template (file content, deps, scripts, etc.) → update `docs/conventions/packages.md`
+- Changing the convention docs (scaffold structure, file list, naming) → update the relevant templates
+
+This coupling is intentional: the docs describe what the generator produces, and
+the generator enforces what the docs specify.
+
 Key rules that apply everywhere:
 
 - Always `yarn`, never `npx`. Turbo is invoked through workspace scripts.
