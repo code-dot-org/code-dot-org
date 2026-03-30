@@ -231,7 +231,7 @@ Scenario: Teacher can view choice levels
   And I press keys ":enter" for element "#uitest-codebridge-editor"
   And I press keys "something" for element "#uitest-codebridge-editor"
   And I click selector "button:contains(Submit)"
-  And I wait to see "button:contains(OK)"
+  And I wait until I see selector "button:contains(OK)"
   And I click selector "button:contains(OK)"
 
   When I sign in as "Teacher_Sally" and go home
