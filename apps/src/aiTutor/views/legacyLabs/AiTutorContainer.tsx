@@ -10,7 +10,6 @@ import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
-import {RootState} from '@cdo/apps/types/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -71,18 +70,10 @@ export const AiTutorContainer: FC<{
       aiChatAccessLevel: sectionAiChatAccessLevel,
     });
 
-  const isPredictLevel =
-    window?.appOptions?.level?.predictSettings?.isPredictLevel ?? false;
-  const awaitingContainedResponse = useAppSelector(
-    state =>
-      (state as RootState & {runState: {awaitingContainedResponse: boolean}})
-        .runState.awaitingContainedResponse
-  );
-
   useAiChatDisabledState({
     appName: labState.appType,
-    isPredictLevel,
-    hasSubmittedPredictResponse: !awaitingContainedResponse,
+    isPredictLevel: false,
+    hasSubmittedPredictResponse: false,
   });
 
   const lab: CommonLab | undefined =
