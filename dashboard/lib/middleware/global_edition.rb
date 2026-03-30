@@ -38,10 +38,38 @@ module Middleware
         @original_path_info   = @request.path_info
         @original_path        = @request.path
         @original_region      = @request.cookies[REGION_KEY].presence
-        @original_locale      = @request.cookies[LOCALE_KEY].presence
+        @original_locale      = @request.locale
       end
 
-      # @note Changes to the `request` should be made before the `response` is initialized to apply the changes.
+      # Processes the current request within the Global Edition routing context.
+      #
+      # Inspects the incoming request, determines whether the request should remain on the current URL,
+      # be internally rewritten, or be redirected to a different Global Edition or international URL,
+      # and applies the corresponding region and locale state before the downstream app is invoked.
+      #
+      # The resolution flow is:
+      # 1. If the request explicitly provides `?ge_region=<region_code>`, that value is
+      #    treated as an explicit region override. The region is updated, the locale is
+      #    recalculated for that region, and the request is redirected to the same path
+      #    without the `ge_region` query parameter.
+      # 2. Otherwise, if an `effective_region` can be resolved from the current locale,
+      #    stored region, and URL region, the request is resolved for that region:
+      #    - If the resolved region already matches the URL region, the original request
+      #      is handled in place.
+      #    - Otherwise, the request is redirected or rewritten to the resolved regional URL.
+      # 3. If the URL contains a region but no `effective_region` can be determined:
+      #    - If the URL region is valid and the user has not yet selected a preferred
+      #      language, the request adopts the URL region and resolves in place.
+      #    - Otherwise, the request falls back to the international version.
+      #
+      # During resolution, this method may:
+      # - rewrite `request.script_name` and `request.path_info` so the application can
+      #   process a regional URL as its underlying non-prefixed route
+      # - set or clear Global Edition region and locale cookies
+      # - update request scoped region state in `RequestStore`
+      # - emit a redirect response when the browser URL must change
+      #
+      # @return [Array(Integer, Hash, #each)] the Rack response returned by `response.finish`
       def call
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.params.key?(REGION_KEY)
@@ -56,26 +84,20 @@ module Middleware
 
           setup_region(new_region)
           setup_redirect_to(redirect_path)
-        elsif resolved_region
-          if url_region == resolved_region
-            unless existing_route? || excluded_path?(main_path)
-              # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
-              # request.path == request.script_name + request.path_info
-              # - `request.script_name` strips the prefix from the request path
-              #   so the application processes requests as if it were running at the root level.
-              # - `request.path_info` provides the specific path that should be handled by the application.
-              request.script_name = regional_path_for(url_region, original_script_name).chomp('/')
-            end
-          elsif redirectable?
-            setup_redirect_to regional_path_for(resolved_region, main_fullpath)
+        elsif effective_region
+          if effective_region == url_region
+            normalize_request_for_routing
+          else
+            redirect_request_to_region(effective_region)
           end
-
-          request.path_info = main_path unless existing_route?
-          setup_region(resolved_region)
         elsif url_region
-          request.path_info = main_path unless existing_route?
-          setup_redirect_to(main_fullpath) if redirectable?
-          setup_region(nil)
+          # If the user visits a regional URL and has not yet selected a preferred language,
+          # automatically set their preferred region and language based on the URL's region.
+          if Cdo::GlobalEdition.region_available?(url_region) && request.cookies[LOCALE_KEY].blank?
+            normalize_request_for_routing
+          else
+            redirect_request_to_region(nil)
+          end
         end
 
         response.finish
@@ -118,13 +140,13 @@ module Middleware
         @main_fullpath ||= request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}"
       end
 
-      # Resolves and memoizes the effective Global Edition region for the request.
+      # Determines and memoizes the effective Global Edition region for the request.
       #
       # @return [String, nil] resolved region code (e.g., "fa"), or nil if none is valid
-      private def resolved_region
-        return @resolved_region if defined?(@resolved_region)
+      private def effective_region
+        return @effective_region if defined?(@effective_region)
 
-        @resolved_region =
+        @effective_region =
           if original_locale
             locale_regions = Cdo::GlobalEdition.locales_regions[original_locale]
             return if locale_regions.blank?
@@ -214,6 +236,61 @@ module Middleware
         response.do_not_cache!
         response.redirect ::File.join('/', redirect_path.to_s)
       end
+
+      # Prepares the current request so it can be correctly routed by the application.
+      #
+      # This method adapts incoming Global Edition URLs (e.g., `/global/<ge-region>/...`)
+      # into a form that the application can process as standard root level routes.
+      # Without this normalization, such requests would not match any route and result in a 404.
+      #
+      # Behavior:
+      # - If the request does not match an existing route, adjusts Rack path components:
+      #   - Updates `request.script_name` to account for the regional prefix so the app
+      #     behaves as if mounted under that path.
+      #   - Replaces `request.path_info` with the main path (without the GE prefix),
+      #     allowing the router to resolve it correctly.
+      # - Skips rewriting for excluded paths.
+      # - Applies the resolved region context via `setup_region`.
+      #
+      # @note This method performs an internal request transformation only.
+      #   It does not trigger a redirect or modify the browser URL.
+      private def normalize_request_for_routing
+        unless existing_route?
+          # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
+          # request.path == request.script_name + request.path_info
+          # - `request.script_name` strips the prefix from the request path
+          #   so the application processes requests as if it were running at the root level.
+          # - `request.path_info` provides the specific path that should be handled by the application.
+          request.script_name = regional_path_for(url_region, original_script_name).chomp('/') unless excluded_path?(main_path)
+          request.path_info   = main_path
+        end
+
+        setup_region(url_region)
+      end
+
+      # Redirects the request to the appropriate regional or international URL.
+      #
+      # This method determines the correct destination URL based on the provided region
+      # and prepares a redirect response if necessary. It ensures that the browser URL
+      # reflects the resolved Global Edition state.
+      #
+      # Behavior:
+      # - If the request does not match an existing route, normalizes `request.path_info`
+      #   to the main path (without GE prefix) to ensure consistency.
+      # - If the request is eligible for redirect (`redirectable?`):
+      #   - Redirects to a region-specific URL when `region` is present.
+      #   - Redirects to the international (non-regional) URL when `region` is nil.
+      # - Applies the resolved region context via `setup_region`.
+      #
+      # @param region [String, nil] region code (e.g., "fa"), or nil to indicate fallback to the international version
+      #
+      # @note This method prepares a redirect response but does not immediately halt execution;
+      #       the response is finalized later in the middleware lifecycle.
+      private def redirect_request_to_region(region)
+        request.path_info = main_path unless existing_route?
+        setup_redirect_to(region ? regional_path_for(region, main_fullpath) : main_fullpath) if redirectable?
+        setup_region(region)
+      end
     end
 
     def initialize(app)
@@ -232,7 +309,7 @@ module Middleware
     private def process_request(env)
       RouteHandler.new(@app, env).call
     rescue StandardError => exception
-      raise exception if CDO.rack_env?(:development)
+      raise exception if CDO.rack_env?(:development) || CDO.rack_env?(:test)
 
       Honeybadger.notify(
         exception,

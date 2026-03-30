@@ -76,50 +76,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
       end
 
-      context 'when ge_region cookie is set' do
-        let(:params) {{foo: 'bar'}}
-
-        before do
-          cookies[:ge_region] = ge_region
-        end
-
-        it 'redirects to regional page with params' do
-          get_international_page
-
-          must_respond_with 302
-          must_redirect_to "#{regional_page_path}?#{params.to_query}"
-
-          follow_redirect!
-
-          must_respond_with 200
-          _(path).must_equal regional_page_path
-          _(request.params[:foo]).must_equal params[:foo]
-
-          expect(Metrics::Events).not_to have_received(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: nil,
-            session: anything,
-            metadata: anything,
-          )
-        end
-
-        it 'does not redirect from not application routes' do
-          get '/500.html'
-          must_respond_with :success
-        end
-
-        context 'if ge_region is invalid' do
-          let(:ge_region) {'_'}
-
-          it 'stays on international page' do
-            get international_page_path
-
-            must_respond_with 200
-            _(path).must_equal international_page_path
-          end
-        end
-      end
-
       context 'when :language_ cookie is set to locale supported by region' do
         let(:params) {{foo: 'bar'}}
 
@@ -166,7 +122,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
           session: anything,
           metadata: {
             old_region: nil,
-            old_locale: nil,
+            old_locale: 'en-US',
             new_region: ge_region,
             new_locale: ge_region_locale,
           }
@@ -214,7 +170,7 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
             session: anything,
             metadata: {
               old_region: nil,
-              old_locale: nil,
+              old_locale: 'en-US',
               new_region: ge_region,
               new_locale: ge_region_locale,
             }
@@ -291,25 +247,6 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         end
       end
 
-      context 'when another region is set' do
-        let(:init_ge_region) {'en'}
-
-        before do
-          cookies[:ge_region] = init_ge_region
-        end
-
-        it 'does not reset initial region' do
-          expect(Metrics::Events).not_to receive(:log_event).with(
-            event_name: 'Global Edition Region Changed',
-            user: anything,
-            session: anything,
-            metadata: anything,
-          )
-
-          _ {get_regional_page}.wont_change -> {cookies['ge_region']}
-        end
-      end
-
       context 'when :language_ cookie is set to locale not supported by region' do
         let(:new_locale) {'en-US'}
 
@@ -341,8 +278,8 @@ class GlobalEditionTest < ActionDispatch::IntegrationTest
         let(:ge_region) {'_'}
 
         it 'is not accessible' do
-          get_regional_page
-          must_respond_with 500
+          error = _ {get_regional_page}.must_raise ActionController::RoutingError
+          _(error.message).must_equal "No route matches [GET] #{regional_page_path.inspect}"
         end
       end
     end
