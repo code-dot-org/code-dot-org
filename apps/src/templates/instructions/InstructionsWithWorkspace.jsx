@@ -127,7 +127,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       shouldShowAiTutor({
         appName: labType,
         tutorLevel: aiTutorAvailableForLevel,
-        aiChatAccessLevel: aiChatAccessLevel,
+        aiChatAccessLevel,
       });
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
