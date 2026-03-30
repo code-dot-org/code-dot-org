@@ -31,6 +31,41 @@ describe('SummaryProgressRow', () => {
     expect(wrapper.props().id).toEqual('summary-progress-row-3');
   });
 
+  it('shows lesson resources button when lesson has student_lesson_plan_html_url', () => {
+    const lessonWithUrl = {
+      ...fakeLesson('Maze', 1, false, 3),
+      student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+    };
+    const wrapper = setUp({
+      lesson: lessonWithUrl,
+    });
+
+    const button = wrapper.find('Button');
+    expect(button).toHaveLength(1);
+    expect(button.props().href).toEqual('https://example.com/lesson-plan');
+    expect(button.props().className).toEqual('ui-test-lesson-resources');
+  });
+
+  it('does not show lesson resources button when lesson has no student_lesson_plan_html_url', () => {
+    const wrapper = setUp();
+
+    expect(wrapper.find('Button')).toHaveLength(0);
+  });
+
+  it('does not show lesson resources button when lesson has student_lesson_plan_html_url and isOnLevelView is true', () => {
+    const lessonWithUrl = {
+      ...fakeLesson('Maze', 1, false, 3),
+      student_lesson_plan_html_url: 'https://example.com/lesson-plan',
+    };
+    const wrapper = setUp({
+      lesson: lessonWithUrl,
+      isOnLevelView: true,
+    });
+
+    const button = wrapper.find('Button');
+    expect(button).toHaveLength(0);
+  });
+
   describe('when viewing as Participant', () => {
     it('will not render if the lesson is hidden for students', () => {
       const wrapper = setUp({
@@ -79,41 +114,6 @@ describe('SummaryProgressRow', () => {
       expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
         true
       );
-    });
-
-    it('shows lesson resources button when lesson has student_lesson_plan_html_url', () => {
-      const lessonWithUrl = {
-        ...fakeLesson('Maze', 1, false, 3),
-        student_lesson_plan_html_url: 'https://example.com/lesson-plan',
-      };
-      const wrapper = setUp({
-        lesson: lessonWithUrl,
-      });
-
-      const button = wrapper.find('Button');
-      expect(button).toHaveLength(1);
-      expect(button.props().href).toEqual('https://example.com/lesson-plan');
-      expect(button.props().className).toEqual('ui-test-lesson-resources');
-    });
-
-    it('does not show lesson resources button when lesson has no student_lesson_plan_html_url', () => {
-      const wrapper = setUp();
-
-      expect(wrapper.find('Button')).toHaveLength(0);
-    });
-
-    it('does not show lesson resources button when lesson has student_lesson_plan_html_url and isOnLevelView is true', () => {
-      const lessonWithUrl = {
-        ...fakeLesson('Maze', 1, false, 3),
-        student_lesson_plan_html_url: 'https://example.com/lesson-plan',
-      };
-      const wrapper = setUp({
-        lesson: lessonWithUrl,
-        isOnLevelView: true,
-      });
-
-      const button = wrapper.find('Button');
-      expect(button).toHaveLength(0);
     });
 
     it('has a lock icon when lockable and locked for user', () => {

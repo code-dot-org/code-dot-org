@@ -330,6 +330,7 @@ describe('ProgressLesson', () => {
       />
     );
     expect(wrapper.find('Button').length).toEqual(0);
+    delete myLesson.student_lesson_plan_html_url;
   });
 
   it('does not show Lesson Resources button when viewing as a instructor and student_lesson_plan_html_url is not null', () => {
