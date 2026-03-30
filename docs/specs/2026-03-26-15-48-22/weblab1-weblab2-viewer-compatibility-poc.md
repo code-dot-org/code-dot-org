@@ -65,12 +65,16 @@ This avoids accidental behavior changes and allows controlled experimentation.
 
 ## Data-loading shim
 
-- In Lab2 source loading (`apps/src/lab2/projects/sourcesApi.ts`):
-  1. Try normal Lab2 load from `/v3/sources/:channel/main.json`.
-  2. If request fails with **404** and compatibility mode is enabled:
-     - Load WebLab1 manifest from `/v3/files/:channel`.
-     - Fetch file contents for text-like files.
+- In Lab2 source loading (`apps/src/lab2/projects/sourcesApi.ts`), when compatibility mode is enabled:
+  1. **GET** `/v3/sources/:channel/main.json` as JSON **without** running `SourceResponseValidator` first.
+  2. If the body **already looks like Lab2 Codebridge** (`source` is an object with `files` and `folders`), run the normal validator and return it (same as native WebLab2).
+  3. Otherwise (missing `source`, App Lab–style string `source`, empty object, etc.) **or** if validation throws after a shape match, synthesize from WebLab1:
+     - Load manifest from `/v3/files/:channel`.
+     - Load **text-like** files into `contents`; **binary / images** use **`url: /v3/files/:channel/:filename`** and empty `contents` (same *pattern* as native WebLab2 uses **`/v3/assets/...`** for uploads—path string in `ProjectFile.url`, not inlined base64).
      - Build a synthetic `ProjectSources` with a generated `MultiFileSource`.
+  4. If the **GET** throws **404**, fall back to the same WebLab1 synthesis path.
+
+When compatibility mode is **off**, behavior is unchanged: single `fetchJson` + `SourceResponseValidator`.
 
 ## MultiFile synthesis strategy
 
@@ -84,12 +88,9 @@ This avoids accidental behavior changes and allows controlled experimentation.
 
 ## Preview compatibility
 
-- WebLab2 preview SW currently assumes same-origin project files or level starter assets.
-- Extend SW fetch logic so URL-backed files from compatibility mode that match:
-  - `/v3/files/:channel/:filename`
-  are fetched via environment-appropriate Studio origin (using existing `codeDotOrgOrigin` derivation).
-
-This is needed so URL-backed compatibility files can still resolve in preview context.
+- The project **service worker** (`weblab2_project_service_worker.js`) already serves virtual project files and, when `ProjectFile.url` is set, does **`fetch(url)`** with that path.
+- **Same-origin preview** routing: path-only URLs such as **`/v3/assets/...`** (native WebLab2 uploads) and **`/v3/files/...`** (WebLab1 file API) are intended to resolve on the **preview** origin the same way production WebLab2 already relies on for assets—**no POC-specific changes** to the service worker.
+- **Exception already in the worker:** paths starting with **`/level_starter_assets/`** are still rewritten to the Studio origin (with cache-bust) for CORS/header reasons; that predates this POC.
 
 ---
 
@@ -98,27 +99,21 @@ This is needed so URL-backed compatibility files can still resolve in preview co
 1. **New compatibility module**
    - `apps/src/weblab2/weblab1Compatibility.ts`
    - Adds:
-     - compatibility mode parser,
-     - fallback eligibility check (`404` only),
-     - WebLab1 manifest/file loading,
-     - conversion to synthetic `MultiFileSource`.
+     - compatibility query-param parsing,
+     - **`mainJsonIsLab2CodebridgeShape`** (structural check before validating as Codebridge),
+     - **`shouldFallbackToWeblab1Files`** (network **404** only, for failed `main.json` GET),
+     - WebLab1 manifest + file loading,
+     - conversion to synthetic `MultiFileSource` (text in `contents`, binaries via **`url`** to `/v3/files/...`).
 
-2. **Lab2 source loading fallback**
+2. **Lab2 source loading**
    - `apps/src/lab2/projects/sourcesApi.ts`
-   - Adds guarded fallback path:
-     - normal Lab2 load first,
-     - compatibility conversion on 404 + compat flag.
+   - When compat flag is on: raw `main.json` inspect → valid Codebridge shape uses normal validator; otherwise WebLab1 synthesis; **404** still triggers synthesis.
 
-3. **Preview SW bridge extension**
-   - `apps/src/weblab2/htmlPreview/weblab2_project_service_worker.js`
-   - Adds studio-relative file URL handling for `/v3/files/...` URLs used by compatibility mode.
-
-4. **Initial unit tests**
+3. **Initial unit tests**
    - `apps/test/unit/weblab2/weblab1CompatibilityTest.ts`
-   - Covers:
-     - compat mode query param parsing,
-     - fallback decision behavior,
-     - basic multi-file conversion expectations.
+   - Covers compat param, shape helper, 404 fallback, multi-file / URL-backed file expectations.
+
+**Not part of this POC:** edits to `weblab2_project_service_worker.js` (rely on existing `fetch(url)` behavior for `/v3/files/...` like `/v3/assets/...`).
 
 ---
 
@@ -150,8 +145,8 @@ This is needed so URL-backed compatibility files can still resolve in preview co
    - This is a critical area for deeper validation and likely hardening.
 
 2. **Non-text assets**
-   - Compatibility currently prioritizes text-file materialization.
-   - URL-backed assets and MIME handling may need additional normalization.
+   - Represented with **`url`** pointing at `/v3/files/...` (not inlined data URLs in `contents`).
+   - MIME/extension edge cases may still need validation in the field.
 
 3. **Viewer actions**
    - Share sidebar actions (`View code`, `Make my own`) remain existing behavior.
@@ -235,8 +230,9 @@ This is needed so URL-backed compatibility files can still resolve in preview co
 
 - `apps/src/weblab2/weblab1Compatibility.ts` (new)
 - `apps/src/lab2/projects/sourcesApi.ts`
-- `apps/src/weblab2/htmlPreview/weblab2_project_service_worker.js`
 - `apps/test/unit/weblab2/weblab1CompatibilityTest.ts` (new)
+
+This spec document under `docs/specs/2026-03-26-15-48-22/`.
 
 ---
 
@@ -261,7 +257,7 @@ This is needed so URL-backed compatibility files can still resolve in preview co
 
 ## Requested unknowns / decisions needed
 
-1. Should compatibility mode remain query-param based in near term, or should we auto-detect based on missing `main.json`?
+1. Should compatibility mode remain query-param based in near term, or auto-enable when `main.json` is missing / not Codebridge-shaped (today: explicit param + shape-based branch when param is on)?
 2. In compatibility mode, should "View code" open legacy WebLab1 editor view, WebLab2 read-only code view, or be hidden?
 3. Should "Make my own" point to legacy remix initially, or be disabled until compatibility editing/remix is defined?
 4. Do we require full parity for WebLab1 binary assets in POC, or text-first plus common image support is sufficient?
