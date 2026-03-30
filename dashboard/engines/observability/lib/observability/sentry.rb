@@ -7,14 +7,13 @@ module Observability
     # When OpenTelemetry is also enabled, the OTLP integration is activated so
     # errors are correlated with traces.
     def self.setup
-      puts "CDO.enable_sentry: #{CDO.enable_sentry}, CDO.running_web_application?: #{CDO.running_web_application?}"
       return unless CDO.enable_sentry && CDO.running_web_application?
 
       if CDO.sentry_dsn.blank?
         CDO.log.warn '[observability] enable_sentry is true but sentry_dsn is not configured; skipping Sentry setup'
         return
       end
-      puts 'BEFORE SENTRY INIT'
+
       ::Sentry.init do |config|
         config.dsn = CDO.sentry_dsn
         # Explicitly disable PII collection per privacy policy.
@@ -31,7 +30,6 @@ module Observability
           config.otlp.setup_propagator = false             # keep existing propagation
         end
       end
-      puts 'AFTER SENTRY INIT'
     end
   end
 end
