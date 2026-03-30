@@ -28,4 +28,10 @@ FactoryBot.define do
     sequence(:name) {|n| "jit-pl-misconception-#{n}"}
     text_content {"Some misconception text content"}
   end
+
+  factory :jit_pl_exemplar do
+    sequence(:name) {|n| "jit-pl-exemplar-#{n}"}
+    text_content {"Some exemplar text content"}
+    exemplar_type {"good"}
+  end
 end

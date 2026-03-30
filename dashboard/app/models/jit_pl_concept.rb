@@ -31,6 +31,7 @@ class JitPlConcept < ApplicationRecord
       display_name: display_name,
       text_content: text_content,
       resources: resources.map(&:summarize_for_lesson_edit),
+      exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map(&:serialize),
       misconceptions: jit_pl_misconceptions.map(&:serialize),
     }
   end
@@ -48,12 +49,32 @@ class JitPlConcept < ApplicationRecord
                                                  text_content: text_content,
                                                  resources: resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                  jit_pl_concepts_resources: resources.map {|r| {seeding_key: {'concept.name' => name, 'resource.key' => r.key}}},
+                                                 exemplars: jit_pl_exemplars.where(jit_pl_misconception: nil).map do |e|
+                                                   {
+                                                     name: e.name,
+                                                     text_content: e.text_content,
+                                                     code_content: e.code_content,
+                                                     exemplar_type: e.exemplar_type,
+                                                     resources: e.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
+                                                     jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'concept.name' => name, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
+                                                   }
+                                                 end,
                                                  misconceptions: jit_pl_misconceptions.map do |m|
                                                    {
                                                      name: m.name,
                                                      text_content: m.text_content,
                                                      resources: m.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
                                                      jit_pl_misconceptions_resources: m.resources.map {|r| {seeding_key: {'misconception.name' => m.name, 'resource.key' => r.key}}},
+                                                     exemplars: m.jit_pl_exemplars.map do |e|
+                                                       {
+                                                         name: e.name,
+                                                         text_content: e.text_content,
+                                                         code_content: e.code_content,
+                                                         exemplar_type: e.exemplar_type,
+                                                         resources: e.resources.map {|r| {key: r.key, name: r.name, url: r.url, properties: r.properties.sort.to_h}},
+                                                         jit_pl_exemplars_resources: e.resources.map {|r| {seeding_key: {'misconception.name' => m.name, 'exemplar.name' => e.name, 'resource.key' => r.key}}},
+                                                       }
+                                                     end,
                                                    }
                                                  end,
                                                }
@@ -82,6 +103,7 @@ class JitPlConcept < ApplicationRecord
       text_content: config['text_content'],
       resources: config['resources'] || [],
       jit_pl_concepts_resources: config['jit_pl_concepts_resources'] || [],
+      exemplars: config['exemplars'] || [],
       misconceptions: config['misconceptions'] || [],
     }
   end
@@ -104,6 +126,21 @@ class JitPlConcept < ApplicationRecord
     resource_keys = properties[:jit_pl_concepts_resources].map {|r| r['seeding_key']['resource.key']}
     concept.resources = Resource.where(key: resource_keys, course_version: jit_pl_course_version)
 
+    seeded_concept_exemplar_names = []
+    (properties[:exemplars] || []).each do |e_data|
+      exemplar = JitPlExemplar.find_or_initialize_by(name: e_data['name'], jit_pl_concept: concept, jit_pl_misconception_id: nil)
+      exemplar.update!(text_content: e_data['text_content'], code_content: e_data['code_content'], exemplar_type: e_data['exemplar_type'])
+      seeded_concept_exemplar_names << e_data['name']
+
+      (e_data['resources'] || []).each do |resource_data|
+        resource = Resource.find_or_initialize_by(key: resource_data['key'], course_version: jit_pl_course_version)
+        resource.update!(name: resource_data['name'], url: resource_data['url'], properties: resource_data['properties'])
+      end
+      e_resource_keys = (e_data['jit_pl_exemplars_resources'] || []).map {|r| r['seeding_key']['resource.key']}
+      exemplar.resources = Resource.where(key: e_resource_keys, course_version: jit_pl_course_version)
+    end
+    concept.jit_pl_exemplars.where(jit_pl_misconception_id: nil).where.not(name: seeded_concept_exemplar_names).destroy_all
+
     seeded_misconception_names = []
     properties[:misconceptions].each do |m_data|
       misconception = JitPlMisconception.find_or_initialize_by(name: m_data['name'], jit_pl_concept: concept)
@@ -114,9 +151,23 @@ class JitPlConcept < ApplicationRecord
         resource = Resource.find_or_initialize_by(key: resource_data['key'], course_version: jit_pl_course_version)
         resource.update!(name: resource_data['name'], url: resource_data['url'], properties: resource_data['properties'])
       end
-
       m_resource_keys = (m_data['jit_pl_misconceptions_resources'] || []).map {|r| r['seeding_key']['resource.key']}
       misconception.resources = Resource.where(key: m_resource_keys, course_version: jit_pl_course_version)
+
+      seeded_misconception_exemplar_names = []
+      (m_data['exemplars'] || []).each do |e_data|
+        exemplar = JitPlExemplar.find_or_initialize_by(name: e_data['name'], jit_pl_misconception: misconception)
+        exemplar.update!(text_content: e_data['text_content'], code_content: e_data['code_content'], exemplar_type: e_data['exemplar_type'])
+        seeded_misconception_exemplar_names << e_data['name']
+
+        (e_data['resources'] || []).each do |resource_data|
+          resource = Resource.find_or_initialize_by(key: resource_data['key'], course_version: jit_pl_course_version)
+          resource.update!(name: resource_data['name'], url: resource_data['url'], properties: resource_data['properties'])
+        end
+        e_resource_keys = (e_data['jit_pl_exemplars_resources'] || []).map {|r| r['seeding_key']['resource.key']}
+        exemplar.resources = Resource.where(key: e_resource_keys, course_version: jit_pl_course_version)
+      end
+      misconception.jit_pl_exemplars.where.not(name: seeded_misconception_exemplar_names).destroy_all
     end
 
     concept.jit_pl_misconceptions.where.not(name: seeded_misconception_names).destroy_all

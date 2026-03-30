@@ -556,7 +556,10 @@ Dashboard::Application.routes.draw do
     end
 
     resources :jit_pl_concepts, only: [:new, :create, :edit, :update, :destroy] do
-      resources :jit_pl_misconceptions, only: [:create, :update, :destroy]
+      resources :jit_pl_misconceptions, only: [:create, :update, :destroy] do
+        resources :jit_pl_exemplars, only: [:create, :update, :destroy]
+      end
+      resources :jit_pl_exemplars, only: [:create, :update, :destroy]
       collection do
         get '/edit', to: 'jit_pl_concepts#edit_all', as: :edit_all
       end

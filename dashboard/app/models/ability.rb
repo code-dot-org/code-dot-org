@@ -440,6 +440,7 @@ class Ability
         DataDoc,
         JitPlConcept,
         JitPlMisconception,
+        JitPlExemplar,
         CourseOffering,
         UnitGroup,
         Resource,
