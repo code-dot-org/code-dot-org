@@ -20,7 +20,7 @@
 $container-width: 512;
 $header-height: 40;
 $body-height: 612;
-$fab-left: 11;
+$fab-right: 11;
 $fab-bottom: 35;
 $fab-height: 48;
 $sidebar-tooltip-z-index: 2010;
@@ -28,7 +28,7 @@ $sidebar-tooltip-z-index: 2010;
 :export {
   containerHeight: $header-height + $body-height;
   containerWidth: $container-width;
-  fabOriginX: $fab-left;
+  fabOriginX: $fab-right + 48;
   // magic number 16 seems to correct for borders/margins/etc.
   fabOriginY: $fab-bottom + $fab-height + 16;
 }
@@ -290,7 +290,7 @@ $sidebar-tooltip-z-index: 2010;
 
 .floatingActionButton {
   position: fixed;
-  left: $fab-left * 1px;
+  right: $fab-right * 1px;
   bottom: $fab-bottom * 1px;
   height: $fab-height * 1px;
   width: 48px;
@@ -299,7 +299,7 @@ $sidebar-tooltip-z-index: 2010;
   background-color: transparent;
   border-width: 0;
   border-radius: 50%;
-  z-index: 1000;
+  // z-index: 1000;
 
   img {
     opacity: 1;

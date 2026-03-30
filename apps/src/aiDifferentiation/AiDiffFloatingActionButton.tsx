@@ -21,15 +21,16 @@ import analyticsReporter from '../metrics/AnalyticsReporter';
 import {createTeacherNotificationSubscription} from '../templates/teacherDashboardShared/WebSocketUtils';
 import HttpClient from '../util/HttpClient';
 
+// import AiDiffDrawer from './AiDiffDrawer';
 import {AiDiffNotification} from './notifications/types';
 import {Context} from './types';
 
 import style from './ai-differentiation.module.scss';
 
-const LazyAiDiffContainer = React.lazy(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  () => import('./AiDiffContainer' as any)
-);
+// const LazyAiDiffContainer = React.lazy(
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   () => import('./AiDiffContainer' as any)
+// );
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
@@ -60,7 +61,7 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
    * Whether the FAB can start open if a user has never interacted with it.
    * Does not prevent auto-opening if the user has interacted with the FAB before.
    */
-  canDefaultOpen = true,
+  canDefaultOpen = false,
 }) => {
   // Show the pulse until the user clicks the FAB to open the chat window
   const hasOpened =
@@ -256,17 +257,15 @@ const AiDiffFloatingActionButton: React.FC<AiDiffFloatingActionButtonProps> = ({
           />
         </Badge>
       </button>
-      <React.Suspense fallback={<div />}>
-        <LazyAiDiffContainer
-          context={context}
-          closeTutor={handleClick}
-          curriculumCourses={curriculumCourses || ([] as string[])}
-          scriptName={scriptName}
-          unreadNotificationCount={
-            unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
-          }
-        />
-      </React.Suspense>
+      {/* <AiDiffDrawer
+        context={context}
+        closeTutor={handleClick}
+        curriculumCourses={curriculumCourses || ([] as string[])}
+        scriptName={scriptName}
+        unreadNotificationCount={
+          unreadNotificationCount === 'loading' ? 0 : unreadNotificationCount
+        }
+      /> */}
     </div>
   );
 };
