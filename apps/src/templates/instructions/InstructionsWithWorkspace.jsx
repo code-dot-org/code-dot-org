@@ -30,7 +30,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
     instructionsHeight: PropTypes.number.isRequired,
     setInstructionsMaxHeightAvailable: PropTypes.func.isRequired,
     labType: PropTypes.string,
-    currentUserAiChatAccessLevel: PropTypes.string,
+    aiChatAccessLevel: PropTypes.string,
     isShareView: PropTypes.bool,
   };
 
@@ -113,7 +113,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       workspaceStyle,
       instructionsHeight,
       labType,
-      currentUserAiChatAccessLevel,
+      aiChatAccessLevel,
       isShareView,
       children,
     } = this.props;
@@ -127,7 +127,7 @@ export class UnwrappedInstructionsWithWorkspace extends React.Component {
       shouldShowAiTutor({
         appName: labType,
         tutorLevel: aiTutorAvailableForLevel,
-        aiChatAccessLevel: currentUserAiChatAccessLevel,
+        aiChatAccessLevel: aiChatAccessLevel,
       });
 
     const chatContainerSpace = 335; // 325px chat container + 10px margin = 335px
@@ -168,7 +168,7 @@ export default connect(
     instructionsHeight: state.instructions.renderedHeight,
     labType: state.pageConstants.appType,
     isShareView: state.pageConstants.isShareView,
-    currentUserAiChatAccessLevel: state.currentUser.aiChatAccessLevel,
+    aiChatAccessLevel: state.currentUser.aiChatAccessLevel,
   }),
   dispatch => ({
     setInstructionsMaxHeightAvailable(maxHeight) {
