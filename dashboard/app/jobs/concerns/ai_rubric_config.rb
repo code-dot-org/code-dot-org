@@ -81,7 +81,10 @@ class AiRubricConfig
     lesson_s3_names.each do |lesson_s3_name|
       validate_ai_config_for_lesson(lesson_s3_name, code)
     end
-    validate_learning_goals_for_units(units_with_ai_config)
+    units_with_ai_config.each do |unit|
+      validate_ai_config_for_unit(unit)
+    end
+
     S3_AI_RELEASE_PATH
   end
 
@@ -113,15 +116,6 @@ class AiRubricConfig
     get_openai_params(lesson_s3_name, code)
   rescue Aws::S3::Errors::NoSuchKey => exception
     raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
-
-  # For each unit with ai_rubric_s3_config, validate that every ai-enabled
-  # learning goal in its rubric in the database has a corresponding learning
-  # goal in the rubric in S3.
-  private_class_method def self.validate_learning_goals_for_units(units)
-    units.each do |unit|
-      validate_ai_config_for_unit(unit)
-    end
   end
 
   private_class_method def self.validate_learning_goals_for_rubric(rubric)
