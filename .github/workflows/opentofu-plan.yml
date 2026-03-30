@@ -1,6 +1,7 @@
 name: OpenTofu-Plan
 
 on:
+  workflow_dispatch:
   pull_request:
     branches: [staging]
     paths:
@@ -32,7 +33,7 @@ jobs:
 
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          role-to-assume: ${{ secrets.GITHUB_ACTIONS_CODE_DOT_ORG_ROLE_ARN }}
           aws-region: ${{ secrets.AWS_REGION }}
 
       - uses: opentofu/setup-opentofu@v2
