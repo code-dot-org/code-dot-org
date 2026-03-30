@@ -149,9 +149,6 @@ function main() {
       }
       if (url) {
         let fetchUrl = url;
-        if (isStudioRelativeFileUrl(url)) {
-          fetchUrl = codeDotOrgOrigin + url;
-        }
         if (url.startsWith('/level_starter_assets/')) {
           // We fetch level starter assets from the code.org origin for this environment.
           // We use a cache-busting query parameter to ensure that we get the correct response headers,
@@ -161,12 +158,6 @@ function main() {
           fetchUrl = codeDotOrgOrigin + url + cacheBust;
         }
         return await fetch(fetchUrl);
-      }
-      // Inline data URLs (e.g. WebLab1 compat: images loaded via FileReader) must use fetch() so
-      // the response body is decoded bytes. new Response(dataUrlString) sends the literal ASCII
-      // string, which is not valid image/css binary → broken <img> in preview.
-      if (typeof content === 'string' && content.indexOf('data:') === 0) {
-        return await fetch(content);
       }
       return new Response(content, {
         status: 200,
@@ -187,12 +178,6 @@ function main() {
         },
       });
     }
-  }
-
-  function isStudioRelativeFileUrl(url) {
-    // Compatibility mode uses /v3/files/<channel>/<filename> urls from studio.
-    // Route these through the matching studio origin so fetch happens on the correct host.
-    return /^\/v3\/files\/[^/]+\/.+/.test(url);
   }
 }
 
