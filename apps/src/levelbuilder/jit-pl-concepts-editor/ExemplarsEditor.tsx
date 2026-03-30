@@ -46,7 +46,9 @@ const ExemplarForm: React.FC<ExemplarFormProps> = ({
   onSave,
   onCancel,
 }) => {
-  const contextKey = `jitPlExemplarResource_${misconceptionId ?? 'concept'}_${initial?.id ?? 'new'}`;
+  const contextKey = `jitPlExemplarResource_${misconceptionId ?? 'concept'}_${
+    initial?.id ?? 'new'
+  }`;
   const initialResourcesRef = useRef(initial?.resources ?? []);
 
   useEffect(() => {
