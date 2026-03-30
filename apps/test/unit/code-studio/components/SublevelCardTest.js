@@ -1,7 +1,15 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {Provider} from 'react-redux';
 
 import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
@@ -23,10 +31,22 @@ const setUp = (isLessonExtra = false, overrideSublevel = {}) => {
     isLessonExtra: isLessonExtra,
     sublevel: {...DEFAULT_SUBLEVEL, ...overrideSublevel},
   };
-  return mount(<SublevelCard {...props} />);
+  return mount(
+    <Provider store={getStore()}>
+      <SublevelCard {...props} />
+    </Provider>
+  );
 };
 
 describe('SublevelCard', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({progress});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
   it('renders level information', () => {
     const wrapper = setUp();
     expect(DEFAULT_SUBLEVEL.display_name).toEqual(

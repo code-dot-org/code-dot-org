@@ -17,6 +17,7 @@ import {
 } from '@cdo/apps/lab2/types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import {LevelWithProgress} from '@cdo/apps/types/progressTypes';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {
   BubbleChoiceCustomModes,
@@ -122,14 +123,14 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
 
   const imageHeight = imageWidth / imageAspectRatio;
 
-  const sublevelToProgressBubbleLevel = (index: number) => {
+  const sublevelToProgressBubbleLevel = (index: number): LevelWithProgress => {
     const sublevel = levelBubbleChoice.sublevels[index];
     const status = sublevelsStatus[index];
     // ProgressBubble expects level keys to be camelCase instead of snake_case.
     const level = _.mapKeys(sublevel, (value, key) => _.camelCase(key));
     // Add status to the level object.
     level.status = status;
-    return level;
+    return level as unknown as LevelWithProgress;
   };
 
   const navigateToSublevel = (sublevel: BubbleChoiceSublevel) => {

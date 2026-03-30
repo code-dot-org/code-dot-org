@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
+
 import headerVignetteStyles from './HeaderVignette';
 import ProjectUpdatedAt from './ProjectUpdatedAt';
 
@@ -49,6 +52,12 @@ class ScriptName extends React.Component {
     this.setDesiredWidth();
   };
 
+  onLessonNameClick = () => {
+    analyticsReporter.sendEvent(EVENTS.HEADER_LESSON_NAME_CLICKED, {
+      lessonName: this.props.name,
+    });
+  };
+
   renderScriptLink() {
     let className = 'header_text';
     if (this.props.smallText) {
@@ -64,6 +73,7 @@ class ScriptName extends React.Component {
             : {}
         }
         title={this.props.name}
+        onClick={this.onLessonNameClick}
       >
         {this.props.name}
       </a>

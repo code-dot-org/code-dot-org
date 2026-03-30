@@ -5,6 +5,8 @@ import queryString from 'query-string';
 import React from 'react';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/AnalyticsReporter';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -94,9 +96,26 @@ const handleKeyDown = (event, clickEvent) => {
   }
 };
 
-export function BubbleLink({url, onClick, children, a11y_description}) {
+export function BubbleLink({
+  url,
+  onClick,
+  children,
+  a11y_description,
+  clickedLevelNumber,
+  lessonName,
+  currentLevelNumber,
+}) {
+  const handleClick = () => {
+    analyticsReporter.sendEvent(EVENTS.HEADER_PROGRESS_BUBBLE_LINK_CLICKED, {
+      previousLevelNumber: currentLevelNumber,
+      newLevelNumber: clickedLevelNumber,
+      lessonName: lessonName,
+    });
+    onClick?.();
+  };
+
   const commonProps = {
-    onClick,
+    onClick: handleClick,
     className: 'progress-bubble-link',
     title: a11y_description,
   };
@@ -124,6 +143,9 @@ BubbleLink.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.element.isRequired,
   a11y_description: PropTypes.string,
+  clickedLevelNumber: PropTypes.number,
+  lessonName: PropTypes.string,
+  currentLevelNumber: PropTypes.number,
 };
 
 function getTooltipTextForLevel(level) {
