@@ -25,7 +25,7 @@ class RubricsController < ApplicationController
     Rubric.transaction do
       if @rubric.save
         update_ai_rubric_s3_config(@lesson.script)
-        AiRubricConfig.validate_learning_goals_for_unit!(@lesson.script)
+        AiRubricConfig.validate_learning_goals_for_unit(@lesson.script)
         @rubric.lesson.script.write_script_json
         render json: {redirectUrl: edit_rubric_path(@rubric.id), rubricId: @rubric.id}
       else
@@ -44,7 +44,7 @@ class RubricsController < ApplicationController
     Rubric.transaction do
       if @rubric.update(rubric_params)
         update_ai_rubric_s3_config(@lesson.script)
-        AiRubricConfig.validate_learning_goals_for_unit!(@lesson.script)
+        AiRubricConfig.validate_learning_goals_for_unit(@lesson.script)
         @rubric.lesson.script.write_script_json
         render json: @rubric.summarize_for_rubric_edit
       else

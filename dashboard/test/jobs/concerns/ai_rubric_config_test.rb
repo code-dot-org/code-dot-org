@@ -41,25 +41,25 @@ class AiRubricConfigTest < ActiveSupport::TestCase
     refute AiRubricConfig.ai_enabled?(@script_level)
   end
 
-  test 'validate_learning_goals_for_unit! skips when aws_s3_emulated' do
+  test 'validate_learning_goals_for_unit skips when aws_s3_emulated' do
     CDO.stubs(:aws_s3_emulated).returns(true)
     @unit.update!(properties: @unit.properties.merge('ai_rubric_s3_config' => {@level.name => 'test-lesson-L1'}))
 
     # Should not raise even without S3 stubs
     assert_nothing_raised do
-      AiRubricConfig.validate_learning_goals_for_unit!(@unit)
+      AiRubricConfig.validate_learning_goals_for_unit(@unit)
     end
   end
 
-  test 'validate_learning_goals_for_unit! skips when unit has no ai_rubric_s3_config' do
+  test 'validate_learning_goals_for_unit skips when unit has no ai_rubric_s3_config' do
     CDO.stubs(:aws_s3_emulated).returns(false)
 
     assert_nothing_raised do
-      AiRubricConfig.validate_learning_goals_for_unit!(@unit)
+      AiRubricConfig.validate_learning_goals_for_unit(@unit)
     end
   end
 
-  test 'validate_learning_goals_for_unit! raises for invalid ai-enabled learning goal' do
+  test 'validate_learning_goals_for_unit raises for invalid ai-enabled learning goal' do
     CDO.stubs(:aws_s3_emulated).returns(false)
 
     lesson = @script_level.lesson
@@ -72,13 +72,13 @@ class AiRubricConfigTest < ActiveSupport::TestCase
     stub_s3_rubric_csv('test-lesson-L1')
 
     error = assert_raises(RuntimeError) do
-      AiRubricConfig.validate_learning_goals_for_unit!(@unit)
+      AiRubricConfig.validate_learning_goals_for_unit(@unit)
     end
     assert_includes error.message, 'Missing AI config in S3'
     assert_includes error.message, 'non-configured goal'
   end
 
-  test 'validate_learning_goals_for_unit! passes for valid ai-enabled learning goal' do
+  test 'validate_learning_goals_for_unit passes for valid ai-enabled learning goal' do
     CDO.stubs(:aws_s3_emulated).returns(false)
 
     lesson = @script_level.lesson
@@ -91,7 +91,7 @@ class AiRubricConfigTest < ActiveSupport::TestCase
     stub_s3_rubric_csv('test-lesson-L1')
 
     assert_nothing_raised do
-      AiRubricConfig.validate_learning_goals_for_unit!(@unit)
+      AiRubricConfig.validate_learning_goals_for_unit(@unit)
     end
   end
 

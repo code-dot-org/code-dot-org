@@ -94,9 +94,17 @@ class AiRubricConfig
   # Validate all ai-enabled learning goals for a single unit against S3.
   # Raises if any ai-enabled learning goal is missing from the S3 rubric config.
   # Skips validation when S3 is emulated (local dev).
-  def self.validate_learning_goals_for_unit!(unit)
+  def self.validate_learning_goals_for_unit(unit)
     return if CDO.aws_s3_emulated
-    validate_learning_goals_for_units([unit])
+    unit.ai_rubric_s3_config&.each_key do |level_name|
+      level = Level.find_by_name!(level_name)
+      script_level = level.script_levels.select {|sl| sl.script.name == unit.name}.first
+      lesson = script_level.lesson
+      rubric = Rubric.find_by!(lesson: lesson, level: level)
+      validate_learning_goals_for_rubric(rubric)
+    rescue StandardError => exception
+      raise "Error validating learning goals for unit #{unit.name} level #{level_name.inspect}: #{exception.message}"
+    end
   end
 
   private_class_method def self.validate_ai_config_for_lesson(lesson_s3_name, code)
@@ -112,15 +120,7 @@ class AiRubricConfig
   # goal in the rubric in S3.
   private_class_method def self.validate_learning_goals_for_units(units)
     units.each do |unit|
-      unit.ai_rubric_s3_config&.each_key do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit.name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit.name} level #{level_name.inspect}: #{exception.message}"
-      end
+      validate_ai_config_for_unit(unit)
     end
   end
 
