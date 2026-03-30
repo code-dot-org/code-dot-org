@@ -138,7 +138,6 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
   ) => {
     event.preventDefault(); // Prevent default link navigation
     if (currentLessonId) {
-      console.log('before dispatch');
       dispatch(navigateToLevelId(sublevel.level_id));
     } else {
       window.location.href = sublevel.url;
@@ -188,6 +187,7 @@ const BubbleChoice: React.FC<LabProps<BubbleChoiceLevelProperties>> = ({
                 height: imageWidth / aspectRatio,
                 textDecoration: 'none',
               }}
+              aria-label={sublevel.display_name}
               onClick={event => navigateToSublevel(event, sublevel)}
             >
               <div
