@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
+ActiveRecord::Schema[7.0].define(version: 2026_03_31_211410) do
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "level_id"
@@ -2013,6 +2013,7 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_175427) do
     t.integer "level_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "s3_config_dir"
     t.index ["lesson_id", "level_id"], name: "index_rubrics_on_lesson_id_and_level_id", unique: true
   end
 
