@@ -14,14 +14,11 @@ const BaseMuiDecorator = withThemeFromJSXProvider({
 });
 
 /**
- * Conditionally applies the MUI ThemeProvider decorator based on the
- * `useMui` parameter in the story's context. By default, MUI is not applied.
- *
- * As more components are migrated to MUI, we can flip the default to true and
- * only disable MUI for non-MUI stories.
+ * Applies the MUI ThemeProvider decorator for all stories by default.
+ * Stories can opt out by setting `parameters.useMui = false`.
  */
 const MuiDecorator: Decorator = (Story, context: StoryContext) => {
-  const enabled = context.parameters?.useMui ?? false;
+  const enabled = context.parameters?.useMui ?? true;
 
   if (!enabled) {
     // Just render the story without the theme wrapper
