@@ -26,28 +26,28 @@ module Middleware
         *(defined?(HocLegacy::Engine) ? [HocLegacy::API_ROOT_PATH] : []),
       ].compact.freeze
 
-      attr_reader :app, :env, :request, :original_path, :original_region, :original_locale
+      attr_reader :app, :env, :request, :original_script_name, :original_path_info, :original_path, :original_region,
+                  :original_locale
 
       def initialize(app, env)
         @app = app
         @env = env
 
-        @request = Rack::Request.new(env)
-        @original_path   = @request.path
-        @original_region = @request.cookies[REGION_KEY].presence
-        @original_locale = @request.cookies[LOCALE_KEY].presence
+        @request = Rack::Request.new(@env)
+        @original_script_name = @request.script_name
+        @original_path_info   = @request.path_info
+        @original_path        = @request.path
+        @original_region      = @request.cookies[REGION_KEY].presence
+        @original_locale      = @request.cookies[LOCALE_KEY].presence
       end
 
       # @note Changes to the `request` should be made before the `response` is initialized to apply the changes.
       def call
-        original_script_name = request.script_name
-        original_path_info   = request.path_info
-
         # Allows setting the GE region via the URL parameter `?ge_region=<region_code>`.
         if request.params.key?(REGION_KEY)
           new_region = request.params[REGION_KEY].presence
 
-          redirect_path = ::File.join('/', main_path || request.path)
+          redirect_path = ::File.join('/', main_path)
           redirect_path = regional_path_for(new_region, redirect_path) if Cdo::GlobalEdition.region_available?(new_region)
 
           redirect_uri = URI(redirect_path)
@@ -58,7 +58,7 @@ module Middleware
           setup_redirect_to(redirect_path)
         elsif resolved_region
           if url_region == resolved_region
-            unless existing_route?(original_path_info) || excluded_path?(main_path)
+            unless existing_route? || excluded_path?(main_path)
               # Strips the Global Edition path prefix (e.g., `/global/fa`) from the request path.
               # request.path == request.script_name + request.path_info
               # - `request.script_name` strips the prefix from the request path
@@ -67,16 +67,14 @@ module Middleware
               request.script_name = regional_path_for(url_region, original_script_name).chomp('/')
             end
           elsif redirectable?
-            redirect_path = url_region ? main_path : original_path
-            redirect_path = "#{redirect_path}?#{request.query_string}" unless request.query_string.empty?
-            setup_redirect_to regional_path_for(resolved_region, redirect_path)
+            setup_redirect_to regional_path_for(resolved_region, main_fullpath)
           end
 
-          request.path_info = main_path if url_region && !existing_route?(original_path_info)
+          request.path_info = main_path unless existing_route?
           setup_region(resolved_region)
         elsif url_region
           request.path_info = main_path unless existing_route?
-          setup_redirect_to(request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}") if redirectable?
+          setup_redirect_to(main_fullpath) if redirectable?
           setup_region(nil)
         end
 
@@ -97,14 +95,27 @@ module Middleware
         @response ||= Rack::Response[*app.call(env)]
       end
 
-      private def url_region
-        return @url_region if defined?(@url_region)
-        @url_region = Cdo::GlobalEdition::PATH_PATTERN.match(original_path).try(:[], :ge_region).presence
+      private def url_data
+        return @url_data if defined?(@url_data)
+        @url_data = Cdo::GlobalEdition::PATH_PATTERN.match(original_path)
       end
 
+      private def url_region
+        return @url_region if defined?(@url_region)
+        @url_region = url_data.try(:[], :ge_region).presence
+      end
+
+      # Returns the request path with the Global Edition (GE) prefix removed.
+      #
+      # @example `/global/fa/home` => `/home`
+      #
+      # @return [String] path without GE prefix, or the original path if no prefix is present
       private def main_path
-        return @main_path if defined?(@main_path)
-        @main_path = Cdo::GlobalEdition::PATH_PATTERN.match(original_path).try(:[], :main_path).presence
+        @main_path ||= url_data.try(:[], :main_path) || original_path
+      end
+
+      private def main_fullpath
+        @main_fullpath ||= request.query_string.empty? ? main_path : "#{main_path}?#{request.query_string}"
       end
 
       # Resolves and memoizes the effective Global Edition region for the request.
@@ -158,7 +169,7 @@ module Middleware
         end
       end
 
-      private def existing_route?(path = original_path)
+      private def existing_route?(path = original_path_info)
         return false unless request.hostname == CDO.dashboard_hostname
         request_method = request.params['_method'].presence || request.request_method
         Dashboard::Application.routes.recognize_path(path, method: request_method).present?
