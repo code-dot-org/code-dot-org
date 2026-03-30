@@ -94,16 +94,6 @@ function debuggerWillPauseInAnonymousScope(): Promise<boolean> {
 }
 
 let scriptLoadPromise: Promise<void> | null = null;
-let activeWidgetId: string | null = null;
-
-// Pre-fetched token promise. After each token is consumed we immediately kick
-// off a new challenge in the background, so the next request (e.g. the main
-// generation call that follows a safety-check call) finds a token already
-// waiting rather than having to wait for a fresh challenge to complete.
-//
-// Cleared to null before awaiting so a concurrent caller does not accidentally
-// pick up the same one-time-use token.
-let prefetchedTokenPromise: Promise<string> | null = null;
 
 function loadTurnstileScript(): Promise<void> {
   if (scriptLoadPromise) return scriptLoadPromise;
@@ -144,39 +134,121 @@ function getSiteKey(): string {
 }
 
 /**
- * Renders a fresh Turnstile widget and waits for the challenge token.
- * Removes any existing widget first so only one widget exists at a time.
+ * Manages Turnstile widget lifecycle with three goals:
+ *
+ * 1. Serialization — only one widget renders at a time (via promise chain),
+ *    so widgetId is always owned by exactly one execution context.
+ *
+ * 2. Pre-fetch — after each token is delivered, a new challenge starts
+ *    immediately in the background. The next call (e.g. main generation
+ *    after a safety-check call) receives an already-completing token rather
+ *    than waiting for a fresh challenge from scratch.
+ *
+ * 3. Double-settle prevention — a `settled` flag inside each runChallenge()
+ *    ensures the timeout and the token callback can never both fire.
  */
-function renderFreshToken(): Promise<string> {
-  return new Promise((resolve, reject) => {
-    const container = getOrCreateContainer();
+class TurnstileManager {
+  private widgetId: string | null = null;
 
-    if (activeWidgetId) {
-      window.turnstile.remove(activeWidgetId);
-      activeWidgetId = null;
+  // Serializes all widget renders — ensures only one challenge runs at a time.
+  // The chain always advances even on rejection so queued callers are never
+  // permanently blocked.
+  private chain: Promise<unknown> = Promise.resolve();
+
+  // Speculatively started challenge from the previous token delivery.
+  // Cleared to null immediately when taken so a concurrent synchronous caller
+  // cannot claim the same one-time-use token.
+  private nextToken: Promise<string> | null = null;
+
+  getToken(): Promise<string> {
+    if (this.nextToken) {
+      const p = this.nextToken;
+      this.nextToken = null;
+      // Start the next speculative challenge now that this one is consumed.
+      this.schedulePrefetch();
+      return p;
     }
 
-    const timeout = setTimeout(() => {
-      reject(new Error('Turnstile challenge timed out'));
-    }, CHALLENGE_TIMEOUT_MS);
+    // No pre-fetch ready — enqueue a challenge and pre-fetch once it delivers.
+    const result = this.runSerializedChallenge();
+    result.then(() => this.schedulePrefetch(), () => {});
+    return result;
+  }
 
-    // widgetId is assigned synchronously by render() before the async callback fires
-    const widgetId = window.turnstile.render(container, {
-      sitekey: getSiteKey(),
-      callback: (token: string) => {
-        clearTimeout(timeout);
-        resolve(token);
-      },
+  private schedulePrefetch(): void {
+    if (this.nextToken) return; // already one in flight
+    const p = this.runSerializedChallenge();
+    this.nextToken = p;
+    // Don't cache a rejected promise — clear so the next real call retries cleanly.
+    p.catch(() => {
+      if (this.nextToken === p) this.nextToken = null;
     });
+  }
 
-    if (!widgetId) {
-      clearTimeout(timeout);
-      reject(new Error('Turnstile failed to render widget'));
-    } else {
-      activeWidgetId = widgetId;
-    }
-  });
+  private runSerializedChallenge(): Promise<string> {
+    const result = this.chain.then(
+      () => loadTurnstileScript().then(() => this.runChallenge()),
+      () => loadTurnstileScript().then(() => this.runChallenge())
+    );
+    // Absorb so the chain always advances for subsequent callers.
+    this.chain = result.then(
+      () => {},
+      () => {}
+    );
+    return result;
+  }
+
+  private runChallenge(): Promise<string> {
+    return new Promise((resolve, reject) => {
+      // Prevents the timeout and the token callback from both firing if they
+      // race (e.g. token arrives at the exact moment the 30 s timer fires).
+      let settled = false;
+      const settle = (fn: () => void) => {
+        if (settled) return;
+        settled = true;
+        fn();
+      };
+
+      const timeout = setTimeout(() => {
+        settle(() => {
+          if (this.widgetId) {
+            window.turnstile.remove(this.widgetId);
+            this.widgetId = null;
+          }
+          reject(new Error('Turnstile challenge timed out'));
+        });
+      }, CHALLENGE_TIMEOUT_MS);
+
+      if (this.widgetId) {
+        window.turnstile.remove(this.widgetId);
+        this.widgetId = null;
+      }
+
+      const container = getOrCreateContainer();
+      // widgetId is assigned synchronously by render() before the async callback fires.
+      const widgetId = window.turnstile.render(container, {
+        sitekey: getSiteKey(),
+        callback: (token: string) => {
+          settle(() => {
+            clearTimeout(timeout);
+            resolve(token);
+          });
+        },
+      });
+
+      if (!widgetId) {
+        settle(() => {
+          clearTimeout(timeout);
+          reject(new Error('Turnstile failed to render widget'));
+        });
+      } else {
+        this.widgetId = widgetId;
+      }
+    });
+  }
 }
+
+const manager = new TurnstileManager();
 
 export async function getTurnstileToken(): Promise<string> {
   if (await debuggerWillPauseInAnonymousScope()) {
@@ -204,19 +276,5 @@ export async function getTurnstileToken(): Promise<string> {
     throw new TurnstileDevToolsError();
   }
 
-  await loadTurnstileScript();
-
-  // Grab the pre-fetched promise and clear it immediately so a concurrent
-  // caller doesn't end up awaiting the same one-time-use token.
-  const p = prefetchedTokenPromise ?? renderFreshToken();
-  prefetchedTokenPromise = null;
-
-  const token = await p;
-
-  // Start the next challenge in the background so subsequent calls within the
-  // same chat message (safety check → main generation → output safety check)
-  // find a token already waiting rather than stalling on a fresh challenge.
-  prefetchedTokenPromise = renderFreshToken();
-
-  return token;
+  return manager.getToken();
 }
