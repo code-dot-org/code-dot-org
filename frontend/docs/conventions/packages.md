@@ -5,7 +5,14 @@ Applies to all packages under `frontend/packages/` and `frontend/packages/labs/`
 Labs (`packages/labs/*`) are standalone React apps that render a curriculum experience.
 Libraries (`packages/*`) are shared utilities consumed by labs and Studio.
 
-**Scaffolded by:** `yarn turbo gen package` (library) or `yarn turbo gen lab` (lab — generator not yet implemented, see scaffolding steps below)
+**Scaffolded by:** `yarn turbo gen package` (library) or `yarn turbo gen lab` (lab)
+
+Run from `frontend/`. The generator creates all scaffold files and, for labs,
+also registers the lab in Studio.
+
+> **Convention coupling:** `turbo/generators/config.ts` and this file are tightly
+> coupled. When you update a generator template, update this file too, and vice
+> versa. See `AGENTS.md` at the `frontend/` root for the enforcement rule.
 
 ## Why
 
@@ -93,15 +100,14 @@ Labs (`packages/labs/*`) are standalone React apps that are also consumed as laz
 
 ### Scaffolding a new lab
 
-1. Create `frontend/packages/labs/<name>/` mirroring the music lab file structure
-2. In `package.json`: set `name` to `@code-dot-org/<name>-lab`; do not add `"type": "module"`
-3. In `vite.config.ts`: update the `name` field in `build.lib`
-4. Use `.mjs` for `eslint.config.mjs` (music lab has `.js`; `.mjs` is the convention)
-5. Register in Studio — three files:
-   - `apps/studio/src/modules/labs/config/labs.ts` — add `'<name>'` to `AVAILABLE_LABS`
-   - `apps/studio/src/modules/labs/router/getLabEntrypoint.ts` — add `['<name>']: lazy(() => import('@code-dot-org/<name>-lab'))`
-   - `apps/studio/package.json` — add `"@code-dot-org/<name>-lab": "workspace:*"` to `dependencies`
-6. Run `yarn install` then `yarn release:dryrun` from `frontend/`
+Run from `frontend/`:
+
+```bash
+yarn turbo gen lab
+```
+
+The generator creates all scaffold files and automatically registers the lab in
+Studio (updates `labs.ts`, `getLabEntrypoint.ts`, and `apps/studio/package.json`).
 
 The lab is then reachable at `/app/projects/<name>/:channelId/edit`.
 

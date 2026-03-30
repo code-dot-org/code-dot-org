@@ -16,10 +16,18 @@
       "dependsOn": ["build", "lint", "test"]
     },
     "lint": {
-      "dependsOn": ["^lint", "prettier", "stylelint", "typecheck", "//#format"]
+      "dependsOn": [
+        "build",
+        "^lint",
+        "prettier",
+        "stylelint",
+        "typecheck",
+        "//#format"
+      ]
     },
     "lint:fix": {
       "dependsOn": [
+        "build",
         "^lint:fix",
         "prettier:fix",
         "stylelint:fix",
