@@ -9,8 +9,6 @@ import createResourcesReducer, {
 import TextareaWithMarkdownPreview from '@cdo/apps/levelbuilder/TextareaWithMarkdownPreview';
 import {getStore, hasReducer, registerReducers} from '@cdo/apps/redux';
 
-import ExemplarsEditor, {Exemplar} from './ExemplarsEditor';
-
 import moduleStyles from './misconceptionsEditor.module.scss';
 
 interface Resource {
@@ -20,36 +18,35 @@ interface Resource {
   url: string;
   type?: string;
   audience?: string;
-  embeddabilityType?: string;
-  curriculumCategory?: string;
-  assessment?: boolean;
-  includeInPdf?: boolean;
-  downloadUrl?: string;
-  isRollup?: boolean;
 }
 
-interface Misconception {
+export interface Exemplar {
   id: number;
   name?: string;
   text_content?: string;
+  code_content?: string;
+  exemplar_type?: string;
   resources?: Resource[];
-  exemplars?: Exemplar[];
 }
 
-interface MisconceptionFormProps {
+const EXEMPLAR_TYPES = ['good', 'bad', 'neutral'];
+
+interface ExemplarFormProps {
   conceptId: number;
-  initial: Misconception | null;
-  onSave: (misconception: Misconception) => void;
+  misconceptionId?: number;
+  initial: Exemplar | null;
+  onSave: (exemplar: Exemplar) => void;
   onCancel: () => void;
 }
 
-const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
+const ExemplarForm: React.FC<ExemplarFormProps> = ({
   conceptId,
+  misconceptionId,
   initial,
   onSave,
   onCancel,
 }) => {
-  const contextKey = `jitPlMisconceptionResource_${initial?.id ?? 'new'}`;
+  const contextKey = `jitPlExemplarResource_${misconceptionId ?? 'concept'}_${initial?.id ?? 'new'}`;
   const initialResourcesRef = useRef(initial?.resources ?? []);
 
   useEffect(() => {
@@ -64,25 +61,33 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   );
 
   const [name, setName] = useState(initial?.name ?? '');
+  const [exemplarType, setExemplarType] = useState(
+    initial?.exemplar_type ?? 'good'
+  );
   const [textContent, setTextContent] = useState(initial?.text_content ?? '');
+  const [codeContent, setCodeContent] = useState(initial?.code_content ?? '');
   const [isSaving, setIsSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const baseUrl = misconceptionId
+    ? `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${misconceptionId}/jit_pl_exemplars`
+    : `/jit_pl_concepts/${conceptId}/jit_pl_exemplars`;
 
   const save = () => {
     setIsSaving(true);
     const isNew = !initial;
     $.ajax({
-      url: isNew
-        ? `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions`
-        : `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${initial!.id}`,
+      url: isNew ? baseUrl : `${baseUrl}/${initial!.id}`,
       method: isNew ? 'POST' : 'PUT',
       data: {
         name,
+        exemplar_type: exemplarType,
         text_content: textContent,
+        code_content: codeContent,
         resource_ids: resources.map(r => r.id),
       },
     })
-      .done((data: Misconception) => onSave(data))
+      .done((data: Exemplar) => onSave(data))
       .fail((err: {responseText: string}) => {
         setIsSaving(false);
         setError(err.responseText);
@@ -100,6 +105,19 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
           onChange={e => setName(e.target.value)}
         />
       </label>
+      <label className={moduleStyles.label}>
+        Type
+        <select
+          value={exemplarType}
+          onChange={e => setExemplarType(e.target.value)}
+        >
+          {EXEMPLAR_TYPES.map(t => (
+            <option key={t} value={t}>
+              {t}
+            </option>
+          ))}
+        </select>
+      </label>
       <TextareaWithMarkdownPreview
         name="text_content"
         label="Text Content"
@@ -108,6 +126,15 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
         }
         markdown={textContent}
       />
+      <label className={moduleStyles.label}>
+        Code Content
+        <textarea
+          value={codeContent}
+          onChange={e => setCodeContent(e.target.value)}
+          rows={6}
+          style={{fontFamily: 'monospace', width: '100%'}}
+        />
+      </label>
       <h4 className={moduleStyles.resourcesHeading}>Resources</h4>
       <ResourcesEditor
         forJitPl
@@ -130,41 +157,46 @@ const MisconceptionForm: React.FC<MisconceptionFormProps> = ({
   );
 };
 
-interface MisconceptionItemProps {
-  misconception: Misconception;
+interface ExemplarItemProps {
+  exemplar: Exemplar;
   conceptId: number;
-  onUpdate: (misconception: Misconception) => void;
+  misconceptionId?: number;
+  onUpdate: (exemplar: Exemplar) => void;
   onDelete: (id: number) => void;
 }
 
-const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
-  misconception,
+const ExemplarItem: React.FC<ExemplarItemProps> = ({
+  exemplar,
   conceptId,
+  misconceptionId,
   onUpdate,
   onDelete,
 }) => {
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleSave = (updated: Misconception) => {
+  const handleSave = (updated: Exemplar) => {
     setIsEditing(false);
     onUpdate(updated);
   };
 
   const handleDelete = () => {
-    if (!confirm(`Delete misconception "${misconception.name}"?`)) {
+    if (!confirm(`Delete exemplar "${exemplar.name}"?`)) {
       return;
     }
-    $.ajax({
-      url: `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${misconception.id}`,
-      method: 'DELETE',
-    }).done(() => onDelete(misconception.id));
+    const baseUrl = misconceptionId
+      ? `/jit_pl_concepts/${conceptId}/jit_pl_misconceptions/${misconceptionId}/jit_pl_exemplars`
+      : `/jit_pl_concepts/${conceptId}/jit_pl_exemplars`;
+    $.ajax({url: `${baseUrl}/${exemplar.id}`, method: 'DELETE'}).done(() =>
+      onDelete(exemplar.id)
+    );
   };
 
   if (isEditing) {
     return (
-      <MisconceptionForm
+      <ExemplarForm
         conceptId={conceptId}
-        initial={misconception}
+        misconceptionId={misconceptionId}
+        initial={exemplar}
         onSave={handleSave}
         onCancel={() => setIsEditing(false)}
       />
@@ -172,81 +204,80 @@ const MisconceptionItem: React.FC<MisconceptionItemProps> = ({
   }
 
   return (
-    <div className={moduleStyles.cardWithExemplars}>
-      <div className={moduleStyles.cardHeader}>
-        <strong>{misconception.name}</strong>
-        <div className={moduleStyles.cardActions}>
-          <button
-            onClick={() => setIsEditing(true)}
-            type="button"
-            className={moduleStyles.editButton}
-          >
-            <i className="fa fa-edit" /> Edit
-          </button>
-          <button
-            onClick={handleDelete}
-            type="button"
-            className={moduleStyles.deleteButton}
-          >
-            <i className="fa fa-trash" /> Delete
-          </button>
-        </div>
-      </div>
-      <div className={moduleStyles.exemplarsSection}>
-        <h5 className={moduleStyles.exemplarsSectionHeading}>Exemplars</h5>
-        <ExemplarsEditor
-          conceptId={conceptId}
-          misconceptionId={misconception.id}
-          initialExemplars={misconception.exemplars ?? []}
-        />
+    <div className={moduleStyles.card}>
+      <span>
+        <strong>{exemplar.name}</strong>
+        {exemplar.exemplar_type && (
+          <span style={{marginLeft: 8, color: '#666'}}>
+            [{exemplar.exemplar_type}]
+          </span>
+        )}
+      </span>
+      <div className={moduleStyles.cardActions}>
+        <button
+          onClick={() => setIsEditing(true)}
+          type="button"
+          className={moduleStyles.editButton}
+        >
+          <i className="fa fa-edit" /> Edit
+        </button>
+        <button
+          onClick={handleDelete}
+          type="button"
+          className={moduleStyles.deleteButton}
+        >
+          <i className="fa fa-trash" /> Delete
+        </button>
       </div>
     </div>
   );
 };
 
-interface MisconceptionsEditorProps {
+interface ExemplarsEditorProps {
   conceptId: number;
-  initialMisconceptions?: Misconception[];
+  misconceptionId?: number;
+  initialExemplars?: Exemplar[];
 }
 
-const MisconceptionsEditor: React.FC<MisconceptionsEditorProps> = ({
+const ExemplarsEditor: React.FC<ExemplarsEditorProps> = ({
   conceptId,
-  initialMisconceptions,
+  misconceptionId,
+  initialExemplars,
 }) => {
-  const [misconceptions, setMisconceptions] = useState<Misconception[]>(
-    initialMisconceptions ?? []
+  const [exemplars, setExemplars] = useState<Exemplar[]>(
+    initialExemplars ?? []
   );
   const [isAdding, setIsAdding] = useState(false);
 
-  const handleAdd = (created: Misconception) => {
-    setMisconceptions(prev => [...prev, created]);
+  const handleAdd = (created: Exemplar) => {
+    setExemplars(prev => [...prev, created]);
     setIsAdding(false);
   };
 
-  const handleUpdate = (updated: Misconception) => {
-    setMisconceptions(prev =>
-      prev.map(m => (m.id === updated.id ? updated : m))
-    );
+  const handleUpdate = (updated: Exemplar) => {
+    setExemplars(prev => prev.map(e => (e.id === updated.id ? updated : e)));
   };
 
   const handleDelete = (id: number) => {
-    setMisconceptions(prev => prev.filter(m => m.id !== id));
+    setExemplars(prev => prev.filter(e => e.id !== id));
   };
 
   return (
     <div>
-      {misconceptions.map(m => (
-        <MisconceptionItem
-          key={m.id}
-          misconception={m}
+      {exemplars.map(e => (
+        <ExemplarItem
+          key={e.id}
+          exemplar={e}
           conceptId={conceptId}
+          misconceptionId={misconceptionId}
           onUpdate={handleUpdate}
           onDelete={handleDelete}
         />
       ))}
       {isAdding ? (
-        <MisconceptionForm
+        <ExemplarForm
           conceptId={conceptId}
+          misconceptionId={misconceptionId}
           initial={null}
           onSave={handleAdd}
           onCancel={() => setIsAdding(false)}
@@ -257,11 +288,11 @@ const MisconceptionsEditor: React.FC<MisconceptionsEditorProps> = ({
           type="button"
           className={moduleStyles.addButton}
         >
-          + Add Misconception
+          + Add Exemplar
         </button>
       )}
     </div>
   );
 };
 
-export default MisconceptionsEditor;
+export default ExemplarsEditor;

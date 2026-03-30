@@ -14,8 +14,15 @@ $(document).ready(() => {
     resources: createResourcesReducer('jitPlConceptResource'),
   });
   const store = getStore();
-  const {id, name, display_name, text_content, resources, exemplars, misconceptions} =
-    getScriptData('jitPlConcept');
+  const {
+    id,
+    name,
+    display_name,
+    text_content,
+    resources,
+    exemplars,
+    misconceptions,
+  } = getScriptData('jitPlConcept');
 
   store.dispatch(initResources('jitPlConceptResource', resources || []));
 

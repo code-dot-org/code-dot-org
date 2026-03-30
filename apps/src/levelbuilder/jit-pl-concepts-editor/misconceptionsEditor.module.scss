@@ -45,6 +45,33 @@
   background: #fafafa;
 }
 
+.cardWithExemplars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.exemplarsSection {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.exemplarsSectionHeading {
+  margin: 4px 0;
+}
+
 .cardActions {
   display: flex;
   gap: 8px;
