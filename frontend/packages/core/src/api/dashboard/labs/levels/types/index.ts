@@ -1,3 +1,4 @@
+/*
 export interface LevelData {
   library: string;
   showSoundFilters: boolean;
@@ -23,7 +24,10 @@ export interface LevelProperties {
   usesProjects: string;
   baseAssetUrl: string;
 }
+export type LevelPropertiesResponse = Record<string, LevelProperties>;
+*/
 export interface LevelPropertiesRequest {
   levelId: string;
 }
-export type LevelPropertiesResponse = Record<string, LevelProperties>;
+export * from '../../../../domains/levels/levels.types';
+export type {LevelPropertiesMap as LevelPropertiesResponse} from '../../../../domains/levels/levels.types';

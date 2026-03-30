@@ -27,6 +27,15 @@ export default defineConfig(({mode}) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, './src'),
+        // Stub out react-dom/server to prevent Node-only imports (util, process)
+        // from crashing in the browser. intro.js-react imports renderToStaticMarkup
+        // at the top level which pulls in the full Node SSR bundle.
+        'react-dom/server': path.resolve(
+          __dirname,
+          './src/stubs/react-dom-server.ts',
+        ),
+        react: path.resolve(workspaceRoot, 'node_modules/react'),
+        'react-dom': path.resolve(workspaceRoot, 'node_modules/react-dom'),
       },
       // Dedupe blockly to ensure only one instance across all workspace packages.
       // Combined with optimizeDeps.include, this ensures proper deduplication.

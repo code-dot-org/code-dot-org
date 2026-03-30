@@ -22,9 +22,6 @@ export default defineConfig({
       useFile: path.resolve(__dirname, 'package.json'),
     }),
   ],
-  server: {
-    allowedHosts: ['localhost-studio.code.org'],
-  },
   resolve: {
     // Dedupe React and Redux packages to ensure only one instance is used across all packages.
     // This prevents "older version of React" errors when workspace packages
