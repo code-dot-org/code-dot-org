@@ -108,9 +108,13 @@ $vertical-gap: 0.375rem;
   justify-content: flex-end;
 }
 
-.botIconWrapper {
+.botIconTAOverlayContainer {
   grid-column: 1;
   align-self: end;
+  position: relative;
+  display: flex;
+  padding-right: $icon-overlay-padding-right;
+  padding-top: 3px;
 }
 
 .botIconContainer {
@@ -125,15 +129,13 @@ $vertical-gap: 0.375rem;
   margin-bottom: 0;
 }
 
-.botIconContainerWithOverlay {
-  position: relative;
-  display: flex;
-  padding-right: $icon-overlay-padding-right;
-  padding-top: 3px;
+.assistantFooterBotIcon {
+  grid-column: 2;
 }
 
-.assistantFooter {
-  grid-column: 2;
+// Without the bot column, align footer with the message (column 1), not column 2.
+.assistantFooterNoBotIcon {
+  grid-column: 1;
 }
 
 .botIcon {

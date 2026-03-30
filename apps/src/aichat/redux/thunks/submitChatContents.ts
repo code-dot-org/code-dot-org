@@ -14,6 +14,7 @@ import {sendProgressReport} from '@cdo/apps/code-studio/progressRedux';
 import {TestResults} from '@cdo/apps/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
+import {MetricDimension} from '@cdo/apps/metrics/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
@@ -163,10 +164,15 @@ export const submitChatContents = createAsyncThunk(
       ...analyticsProperties,
     };
 
+    const metricDimensions = [
+      {name: 'ModelId', value: modelParameters.selectedModelId},
+    ];
+
     try {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+      incrementCounter(
+        'Aichat.ChatCompletionRequestInitiated',
+        metricDimensions
+      );
 
       dispatch(
         sendAnalytics(EVENTS.SUBMIT_AICHAT_REQUEST_INITIATED, eventData)
@@ -219,18 +225,18 @@ export const submitChatContents = createAsyncThunk(
       );
       Lab2Registry.getInstance()
         .getMetricsReporter()
-        .reportLoadTime('AichatModelResponseTime', responseTime, [
-          {
-            name: 'ModelId',
-            value: modelParameters.selectedModelId,
-          },
-        ]);
+        .reportLoadTime(
+          'AichatModelResponseTime',
+          responseTime,
+          metricDimensions
+        );
     } catch (error) {
       await handleChatCompletionError(
         error as Error,
         newUserMessage,
         dispatch,
-        state.progress.viewAsUserId
+        state.progress.viewAsUserId,
+        metricDimensions
       );
       return;
     }
@@ -269,7 +275,8 @@ async function handleChatCompletionError(
   error: Error,
   newUserMessage: PendingChatMessage & {updateId: string},
   dispatch: AppDispatch,
-  viewAsUserId: number | null
+  viewAsUserId: number | null,
+  dimensions: MetricDimension[] = []
 ) {
   // Only send log report if not a 403 error.
   if (!(error instanceof NetworkError && error.response.status === 403)) {
@@ -289,9 +296,7 @@ async function handleChatCompletionError(
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorRateLimited');
+    incrementCounter('Aichat.ChatCompletionErrorRateLimited', dimensions);
     dispatch(
       addChatEvent({
         removeId: getNewRemoveId(),
@@ -303,9 +308,7 @@ async function handleChatCompletionError(
   } else if (error instanceof NetworkError && error.response.status === 403) {
     await notifyErrorUnauthorized(error, 'Chat Completion', dispatch);
   } else {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
+    incrementCounter('Aichat.ChatCompletionErrorUnhandled', dimensions);
     dispatch(
       addChatEvent({
         role: Role.ASSISTANT,
@@ -315,4 +318,11 @@ async function handleChatCompletionError(
       })
     );
   }
+}
+
+function incrementCounter(metricName: string, dimensions: MetricDimension[]) {
+  const reporter = Lab2Registry.getInstance().getMetricsReporter();
+  reporter.incrementCounter(metricName, dimensions);
+  // Report without dimensions for an aggregate count.
+  reporter.incrementCounter(metricName);
 }

@@ -8,7 +8,7 @@ import localization from '@cdo/apps/localization';
  */
 export function unlocalizeVariables(workspace: ExtendedWorkspaceSvg) {
   // Go through the original variables and return them to their source language.
-  for (const variable of workspace.getAllVariables()) {
+  for (const variable of workspace.getVariableMap().getAllVariables()) {
     if (Blockly.SourceVariables[variable.getId()]) {
       workspace.renameVariableById(
         variable.getId(),
@@ -57,7 +57,7 @@ export function initializeVariableLocalization(
   }
 
   // We keep track of all variables in the workspace
-  for (const variable of workspace.getAllVariables()) {
+  for (const variable of workspace.getVariableMap().getAllVariables()) {
     const id = variable.getId();
     const oldName = variable.getName();
     Blockly.SourceVariables[id] = oldName;
@@ -116,7 +116,7 @@ export function localizeVariables(workspace: ExtendedWorkspaceSvg) {
     }
   }
 
-  for (const variable of workspace.getAllVariables()) {
+  for (const variable of workspace.getVariableMap().getAllVariables()) {
     Blockly.SourceVariables[variable.getId()] ||= variable.getName();
     const oldName = Blockly.SourceVariables[variable.getId()];
 

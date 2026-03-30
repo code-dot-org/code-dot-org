@@ -16,7 +16,7 @@
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gemini-3-pro-preview",
+        "selectedModelId": "gemini-2.5-flash",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -44,7 +44,7 @@
       "levelSystemPrompt": "You are a helpful AI assistant planning events for middle school students.\n\nWhen given a request:\n\nProvide a complete and detailed plan immediately.\n\nDo not ask clarifying questions unless directly required.\n\nMake reasonable assumptions about location, budget, supervision, and resources.\n\nUse common, popular middle school interests as defaults.\n\nPresent the plan confidently and positively.\n\nAvoid highlighting uncertainty in your assumptions.\n\nIf more context is later provided, adjust the plan accordingly.\n\nYour goal is to quickly generate a polished plan that feels practical and well thought out.",
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gemini-3-pro-preview"
+        "gemini-2.5-flash"
       ],
       "multimodalEnabled": true
     },
