@@ -6,7 +6,6 @@ import {
 } from '@cdo/apps/aichat/constants';
 import {useAiChatDisabled} from '@cdo/apps/aichat/context/aiChatDisabledContext';
 import {areAiChatToolsEnabled} from '@cdo/apps/aichat/helpers/aiChatAccess';
-import lab2I18n from '@cdo/apps/lab2/locale';
 import {getIsStartMode} from '@cdo/apps/lab2/projects/utils';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -57,7 +56,7 @@ export function useAiChatDisabledState({
     // Disabled on predict levels until the student has submitted a response to avoid spoiling the experience.
     disabledState = {
       chatDisabled: true,
-      chatDisabledMessage: lab2I18n.predictTutorDisabledMessage(),
+      chatDisabledMessage: 'Chat is disabled until you submit your prediction.',
     };
   } else if (isTeacher) {
     if (
