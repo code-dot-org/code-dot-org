@@ -4,8 +4,8 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "browserName": "Safari",
-    "appium:platformVersion": "17.0",
+    "appium:platformVersion": "16.2",
+    "browserName": "safari",
     "appium:deviceName": "iPhone Simulator",
     "appium:automationName": "XCUITest",
     "appium:mobile": true,
@@ -16,8 +16,8 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "browserName": "Safari",
-    "appium:platformVersion": "17.0",
+    "appium:platformVersion": "14.5",
+    "browserName": "safari",
     "appium:deviceName": "iPad Simulator",
     "appium:mobile": true,
     "appium:automationName": "XCUITest",
