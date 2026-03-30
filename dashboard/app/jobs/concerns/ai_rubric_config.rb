@@ -93,10 +93,9 @@ class AiRubricConfig
 
   # Validate all ai-enabled learning goals for a single unit against S3.
   # Raises if any ai-enabled learning goal is missing from the S3 rubric config.
-  # Skips validation when S3 is emulated (local dev) or the unit has no AI config.
+  # Skips validation when S3 is emulated (local dev).
   def self.validate_learning_goals_for_unit!(unit)
     return if CDO.aws_s3_emulated
-    return if unit.ai_rubric_s3_config.blank?
     validate_learning_goals([unit])
   end
 
@@ -113,7 +112,7 @@ class AiRubricConfig
   # goal in the rubric in S3.
   private_class_method def self.validate_learning_goals(units)
     units.each do |unit|
-      unit.ai_rubric_s3_config.each_key do |level_name|
+      unit.ai_rubric_s3_config&.each_key do |level_name|
         level = Level.find_by_name!(level_name)
         script_level = level.script_levels.select {|sl| sl.script.name == unit.name}.first
         lesson = script_level.lesson
