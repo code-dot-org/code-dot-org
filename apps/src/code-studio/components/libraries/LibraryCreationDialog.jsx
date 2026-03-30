@@ -16,7 +16,6 @@ import i18n from '@cdo/locale';
 import Spinner from '../../../sharedComponents/Spinner';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 
-import {extractTextFromCode} from './extractTextFromCode';
 import LibraryClientApi from './LibraryClientApi';
 import loadLibrary from './libraryLoader';
 import LibraryPublisher from './LibraryPublisher';
@@ -91,10 +90,7 @@ class LibraryCreationDialog extends React.Component {
 
     try {
       const userCode = libraryDetails.librarySource;
-      // Extract only user-written text (strings, comments, identifiers) from the JavaScript code
-      // This avoids issues with syntax characters like parentheses interfering with profanity filtering
-      const textToTest = extractTextFromCode(userCode);
-      const profaneWords = await findProfanity(textToTest);
+      const profaneWords = await findProfanity(userCode, undefined, null, true);
       if (profaneWords && profaneWords.length > 0) {
         this.setState({
           dialogState: DialogState.CODE_PROFANITY,
