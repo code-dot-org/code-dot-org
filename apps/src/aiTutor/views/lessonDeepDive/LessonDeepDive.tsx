@@ -13,7 +13,7 @@ import GenericStudentLessonSummary from './GenericStudentLessonSummary';
 import PracticeOptions from './PracticeOptions';
 import VocabularyFlashcards from './VocabularyFlashcards';
 
-import styles from '@cdo/apps/aiTutor/views/lessonPractice/lesson-practice-ai-tutor.module.scss';
+import styles from '@cdo/apps/aiTutor/views/lessonDeepDive/lesson-deep-dive-ai-tutor.module.scss';
 
 type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
 
@@ -31,7 +31,7 @@ export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
   );
   const hasVocabulary = vocabulary && vocabulary.length > 0;
 
-  if (!experiments.isEnabled(experiments.AI_TUTOR_LESSON_PRACTICE)) {
+  if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
     return null;
   }
 
