@@ -1072,10 +1072,7 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
-      end
+      post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 
     namespace :api do
