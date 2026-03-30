@@ -1,5 +1,7 @@
 import React, {FC, useCallback, useState} from 'react';
 
+import experiments from '@cdo/apps/util/experiments';
+
 import InterventionBox from './InterventionBox';
 import LessonSummaryBox from './LessonSummaryBox';
 import ReflectionBox from './ReflectionBox';
@@ -24,6 +26,10 @@ const LessonDeepDiveContainer: FC = () => {
   const goToPrev = useCallback(() => {
     setCurrentIndex(i => Math.max(i - 1, 0));
   }, []);
+
+  if (!experiments.isEnabled(experiments.LESSON_TUTOR)) {
+    return null;
+  }
 
   const isFirst = currentIndex === 0;
   const isLast = currentIndex === BOXES.length - 1;
