@@ -9,6 +9,18 @@
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
 }
 
+.colorPaletteVertical {
+  .paletteRow {
+    flex-direction: column;
+  }
+
+  .paletteDivider {
+    width: 100%;
+    height: 1px;
+    margin: 0;
+  }
+}
+
 .paletteRow {
   display: flex;
   gap: 5px;

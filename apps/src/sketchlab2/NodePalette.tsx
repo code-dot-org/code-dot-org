@@ -84,6 +84,7 @@ interface NodePaletteProps {
   onColorSelect: (color: string | null) => void;
   selectedShape?: NodeShape;
   onShapeSelect?: (shape: NodeShape) => void;
+  vertical?: boolean;
 }
 
 const NodePalette: React.FC<NodePaletteProps> = ({
@@ -91,8 +92,13 @@ const NodePalette: React.FC<NodePaletteProps> = ({
   onColorSelect,
   selectedShape,
   onShapeSelect,
+  vertical,
 }) => (
-  <div className={moduleStyles.colorPalette}>
+  <div
+    className={`${moduleStyles.colorPalette} ${
+      vertical ? moduleStyles.colorPaletteVertical : ''
+    }`}
+  >
     {onShapeSelect && (
       <>
         <div className={moduleStyles.paletteRow}>

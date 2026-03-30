@@ -5,9 +5,17 @@ import {
   useReactFlow,
   type NodeProps,
 } from '@xyflow/react';
-import React, {useCallback, useState, useRef, useEffect, memo} from 'react';
+import React, {
+  useCallback,
+  useContext,
+  useState,
+  useRef,
+  useEffect,
+  memo,
+} from 'react';
 
 import NodePalette, {type NodeShape} from './NodePalette';
+import PalettePositionContext from './PalettePositionContext';
 
 import moduleStyles from './styles/sketchlab2-view.module.scss';
 
@@ -46,6 +54,7 @@ const TriangleSvg: React.FC<TriangleSvgProps> = ({fill, stroke}) => (
 
 const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
   const {updateNodeData, setNodes} = useReactFlow();
+  const palettePosition = useContext(PalettePositionContext);
   const [editing, setEditing] = useState(false);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -193,19 +202,21 @@ const TextBoxNode: React.FC<NodeProps> = memo(({id, data, selected}) => {
 
   return (
     <>
-      <NodeToolbar
-        isVisible={selected && !editing}
-        position={Position.Bottom}
-        align="center"
-        offset={23}
-      >
-        <NodePalette
-          selectedColor={color}
-          onColorSelect={onColorSelect}
-          selectedShape={shape}
-          onShapeSelect={onShapeSelect}
-        />
-      </NodeToolbar>
+      {palettePosition === 'top' && (
+        <NodeToolbar
+          isVisible={selected && !editing}
+          position={Position.Bottom}
+          align="center"
+          offset={23}
+        >
+          <NodePalette
+            selectedColor={color}
+            onColorSelect={onColorSelect}
+            selectedShape={shape}
+            onShapeSelect={onShapeSelect}
+          />
+        </NodeToolbar>
+      )}
       <div
         className={`${moduleStyles.textBoxNode} ${shapeClass} ${
           selected ? moduleStyles.textBoxNodeSelected : ''

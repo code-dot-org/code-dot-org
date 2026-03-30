@@ -81,6 +81,18 @@
   }
 }
 
+.fixedPalette {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 5;
+}
+
+// When the toolbar is also on the left, push the palette below it
+.fixedPaletteBelowToolbar {
+  top: 155px;
+}
+
 .textBoxNode {
   min-width: 150px;
   min-height: 60px;
@@ -140,10 +152,9 @@
   pointer-events: none;
 }
 
-// Shared content wrapper — sits above the triangle SVG for all shapes
+// Shared content wrapper — renders above the triangle SVG via DOM order
 .textBoxNodeContent {
   position: relative;
-  z-index: 1;
   width: 100%;
   flex: 1;
   display: flex;

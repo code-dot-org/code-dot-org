@@ -50,6 +50,8 @@ import {BackpackAPIContext} from '../sharedComponents/backpack/BackpackAPIContex
 import BackpackClientApi from '../sharedComponents/backpack/BackpackClientApi';
 
 import ImageNode from './ImageNode';
+import NodePalette, {type NodeShape} from './NodePalette';
+import PalettePositionContext from './PalettePositionContext';
 import TextBoxNode from './TextBoxNode';
 import {Sketchlab2Sources} from './types';
 import useSketchlab2Tour from './useSketchlab2Tour';
@@ -84,7 +86,6 @@ const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
     const shape = n.data?.shape as string | undefined;
     if (shape === 'triangle') {
       const w = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
-      if (n.style?.width === w && n.style?.height === SHAPE_HEIGHT) return n;
       return {
         ...n,
         width: w,
@@ -93,8 +94,6 @@ const normalizeNodeDimensions = (nodes: Node[]): Node[] =>
       };
     }
     if (shape === 'circle') {
-      if (n.style?.width === SHAPE_HEIGHT && n.style?.height === SHAPE_HEIGHT)
-        return n;
       return {
         ...n,
         width: SHAPE_HEIGHT,
@@ -138,6 +137,12 @@ const Sketchlab2Canvas: React.FC<{
     [currentSources.source.edges]
   );
 
+  console.log('sketchlab2 load:', {
+    nodes: initialNodes.length,
+    edges: initialEdges.length,
+    rawEdges: currentSources.source.edges,
+  });
+
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
 
@@ -150,6 +155,13 @@ const Sketchlab2Canvas: React.FC<{
       ? 'left'
       : 'top';
   }, []);
+
+  const palettePosition = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('sketchlab2-nodepalette-position') === 'left'
+      ? 'left'
+      : 'top';
+  }, []) as 'left' | 'top';
 
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
@@ -181,7 +193,7 @@ const Sketchlab2Canvas: React.FC<{
       saveSourcesTimeoutRef.current = setTimeout(() => {
         const viewport = reactFlowInstanceRef.current?.getViewport();
         const cleanNodes = currentNodes.map(
-          ({dragging, selected, measured, resizing, ...rest}) => rest
+          ({dragging, selected, resizing, ...rest}) => rest
         );
         const source = {
           nodes: cleanNodes as unknown as Sketchlab2Node[],
@@ -377,6 +389,92 @@ const Sketchlab2Canvas: React.FC<{
       'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
   }, [nodes]);
 
+  // --- Left-side palette for the selected textBox node ---
+  const selectedTextBox = nodes.find(n => n.selected && n.type === 'textBox');
+
+  const onPaletteColorSelect = useCallback(
+    (newColor: string | null) => {
+      if (!selectedTextBox) return;
+      setNodes(ns =>
+        ns.map(n =>
+          n.id === selectedTextBox.id
+            ? {...n, data: {...n.data, color: newColor}}
+            : n
+        )
+      );
+    },
+    [selectedTextBox, setNodes]
+  );
+
+  const onPaletteShapeSelect = useCallback(
+    (newShape: NodeShape) => {
+      if (!selectedTextBox) return;
+      const RECT_WIDTH = 170;
+      const TRI_WIDTH = Math.round(SHAPE_HEIGHT * (2 / Math.sqrt(3)));
+
+      setNodes(ns =>
+        ns.map(n => {
+          if (n.id !== selectedTextBox.id) return n;
+
+          const oldW =
+            (n.style?.width as number | undefined) ??
+            (n.measured as {width?: number} | undefined)?.width ??
+            RECT_WIDTH;
+          const newW =
+            newShape === 'circle'
+              ? SHAPE_HEIGHT
+              : newShape === 'triangle'
+              ? TRI_WIDTH
+              : RECT_WIDTH;
+          const dx = (oldW - newW) / 2;
+          const pos = {x: n.position.x + dx, y: n.position.y};
+          const base = {
+            ...n,
+            position: pos,
+            data: {...n.data, shape: newShape},
+          };
+
+          if (newShape === 'circle') {
+            return {
+              ...base,
+              width: SHAPE_HEIGHT,
+              height: SHAPE_HEIGHT,
+              style: {
+                ...(n.style ?? {}),
+                width: SHAPE_HEIGHT,
+                height: SHAPE_HEIGHT,
+              },
+            };
+          }
+          if (newShape === 'triangle') {
+            return {
+              ...base,
+              width: TRI_WIDTH,
+              height: SHAPE_HEIGHT,
+              style: {
+                ...(n.style ?? {}),
+                width: TRI_WIDTH,
+                height: SHAPE_HEIGHT,
+              },
+            };
+          }
+          const restStyle = {
+            ...((n.style ?? {}) as Record<string, unknown>),
+          };
+          delete restStyle.width;
+          delete restStyle.height;
+          return {
+            ...base,
+            width: undefined,
+            height: undefined,
+            style: restStyle,
+          };
+        })
+      );
+    },
+    [selectedTextBox, setNodes]
+  );
+
   const onInit = useCallback((instance: ReactFlowInstance) => {
     reactFlowInstanceRef.current = instance;
   }, []);
@@ -546,28 +644,30 @@ const Sketchlab2Canvas: React.FC<{
               <TeacherViewingStudentProjectAlert inWorkspaceContainer />
             )}
             <div className={moduleStyles.reactFlowWrapper}>
-              <ReactFlow
-                key={mountKey}
-                nodes={nodes}
-                edges={edges}
-                onNodesChange={readonlyWorkspace ? undefined : onNodesChange}
-                onEdgesChange={readonlyWorkspace ? undefined : onEdgesChange}
-                onConnect={readonlyWorkspace ? undefined : onConnect}
-                nodeTypes={nodeTypes}
-                onInit={onInit}
-                defaultViewport={defaultViewport}
-                nodesDraggable={!readonlyWorkspace}
-                nodesConnectable={!readonlyWorkspace}
-                elementsSelectable={!readonlyWorkspace}
-                nodesFocusable={true}
-                edgesFocusable={true}
-                colorMode={colorMode}
-                proOptions={{hideAttribution: true}}
-                fitView
-              >
-                <Controls />
-                <Background />
-              </ReactFlow>
+              <PalettePositionContext.Provider value={palettePosition}>
+                <ReactFlow
+                  key={mountKey}
+                  nodes={nodes}
+                  edges={edges}
+                  onNodesChange={readonlyWorkspace ? undefined : onNodesChange}
+                  onEdgesChange={readonlyWorkspace ? undefined : onEdgesChange}
+                  onConnect={readonlyWorkspace ? undefined : onConnect}
+                  nodeTypes={nodeTypes}
+                  onInit={onInit}
+                  defaultViewport={defaultViewport}
+                  nodesDraggable={!readonlyWorkspace}
+                  nodesConnectable={!readonlyWorkspace}
+                  elementsSelectable={!readonlyWorkspace}
+                  nodesFocusable={true}
+                  edgesFocusable={true}
+                  colorMode={colorMode}
+                  proOptions={{hideAttribution: true}}
+                  fitView
+                >
+                  <Controls />
+                  <Background />
+                </ReactFlow>
+              </PalettePositionContext.Provider>
               {!readonlyWorkspace && (
                 <div
                   className={`${moduleStyles.floatingToolbar} ${
@@ -613,6 +713,27 @@ const Sketchlab2Canvas: React.FC<{
                   >
                     <FontAwesomeV6Icon iconStyle="solid" iconName="download" />
                   </button>
+                </div>
+              )}
+              {palettePosition === 'left' && selectedTextBox && (
+                <div
+                  className={`${moduleStyles.fixedPalette} ${
+                    toolbarPosition === 'left'
+                      ? moduleStyles.fixedPaletteBelowToolbar
+                      : ''
+                  }`}
+                >
+                  <NodePalette
+                    selectedColor={
+                      (selectedTextBox.data.color as string | null) ?? null
+                    }
+                    onColorSelect={onPaletteColorSelect}
+                    selectedShape={
+                      (selectedTextBox.data.shape as NodeShape) ?? 'rectangle'
+                    }
+                    onShapeSelect={onPaletteShapeSelect}
+                    vertical
+                  />
                 </div>
               )}
             </div>
