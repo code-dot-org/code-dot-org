@@ -5,10 +5,12 @@ import React, {FC, useEffect, useRef, useState} from 'react';
 
 import {shouldShowAiTutor} from '@cdo/apps/aichat/helpers/aiChatAccess';
 import {fetchUserChatHistory} from '@cdo/apps/aichat/redux';
+import {useAiChatDisabledState} from '@cdo/apps/lab2/hooks/useAiChatDisabledState';
 import AiTutorChat from '@cdo/apps/lab2/views/components/AiTutorChat';
 import {LegacyLabsState} from '@cdo/apps/redux/legacyLabs';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {selectedSectionSelector} from '@cdo/apps/templates/teacherDashboard/teacherSectionsReduxSelectors';
+import {RootState} from '@cdo/apps/types/redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
@@ -56,6 +58,20 @@ export const AiTutorContainer: FC<{
   const sectionAiChatAccessLevel = useAppSelector(
     state => selectedSectionSelector(state)?.aiChatAccessLevel
   );
+
+  const isPredictLevel =
+    window?.appOptions?.level?.predictSettings?.isPredictLevel ?? false;
+  const awaitingContainedResponse = useAppSelector(
+    state =>
+      (state as RootState & {runState: {awaitingContainedResponse: boolean}})
+        .runState.awaitingContainedResponse
+  );
+
+  useAiChatDisabledState({
+    appName: labState.appType,
+    isPredictLevel,
+    hasSubmittedPredictResponse: !awaitingContainedResponse,
+  });
 
   const aiTutorAvailableForLevel =
     window?.appOptions?.level?.aiTutorAvailable ?? false;

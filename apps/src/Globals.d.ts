@@ -53,6 +53,9 @@ interface Window {
   appOptions?: {
     level?: {
       aiTutorAvailable?: boolean;
+      predictSettings?: {
+        isPredictLevel?: boolean;
+      };
     };
   };
 }
