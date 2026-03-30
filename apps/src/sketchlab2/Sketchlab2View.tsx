@@ -144,6 +144,13 @@ const Sketchlab2Canvas: React.FC<{
   // Remount key for when sources are reinitialized
   const [mountKey, setMountKey] = useState(0);
 
+  const toolbarPosition = useMemo(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('sketchlab2-toolbar-position') === 'left'
+      ? 'left'
+      : 'top';
+  }, []);
+
   const onClickStartOver = useCallback(() => {
     showStartOverDialog('custom', commonI18n.startOverGeneric());
   }, [showStartOverDialog]);
@@ -563,7 +570,11 @@ const Sketchlab2Canvas: React.FC<{
               </ReactFlow>
               {!readonlyWorkspace && (
                 <div
-                  className={`${moduleStyles.floatingToolbar} sketchlab2-toolbar`}
+                  className={`${moduleStyles.floatingToolbar} ${
+                    toolbarPosition === 'left'
+                      ? moduleStyles.floatingToolbarLeft
+                      : ''
+                  } sketchlab2-toolbar`}
                 >
                   <button
                     className={moduleStyles.toolbarButton}

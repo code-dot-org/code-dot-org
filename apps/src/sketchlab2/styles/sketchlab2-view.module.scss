@@ -8,6 +8,13 @@
   width: 100%;
   height: 100%;
   position: relative;
+
+  // Show a visible outline when nodes are focused via keyboard (Tab)
+  :global(.react-flow__node:focus-visible) {
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
 }
 
 .floatingToolbar {
@@ -16,35 +23,44 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 4px;
-  background: #fff;
-  border: 1px solid #ddd;
+  gap: 5px;
+  background: var(--neutral-gray-90);
+  border: 1px solid var(--neutral-gray-70);
   border-radius: 8px;
-  padding: 4px;
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.12);
+  padding: 6px 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.35);
   z-index: 5;
+}
+
+.floatingToolbarLeft {
+  left: 10px;
+  transform: none;
+  flex-direction: column;
 }
 
 .toolbarButton {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 6px;
+  width: 36px;
+  height: 32px;
+  border: 1px solid var(--neutral-gray-60);
+  border-radius: 5px;
   background: transparent;
-  color: #333;
+  color: var(--neutral-gray-30);
   cursor: pointer;
-  font-size: 22px;
+  font-size: 16px;
+  padding: 0;
+  transition: border-color 0.1s ease, color 0.1s ease;
 
   &:hover {
-    background: #f0f0f0;
+    border-color: var(--neutral-base-white);
+    color: var(--neutral-base-white);
   }
 
   &:focus-visible {
-    outline: 2px solid #4a90d9;
-    outline-offset: -2px;
+    outline: 2px solid var(--neutral-base-white);
+    outline-offset: 2px;
   }
 
   &:disabled {
@@ -55,9 +71,14 @@
 
 .toolbarSeparator {
   width: 1px;
-  height: 30px;
-  background: #ddd;
+  height: 24px;
+  background: var(--neutral-gray-70);
   align-self: center;
+
+  .floatingToolbarLeft & {
+    width: 24px;
+    height: 1px;
+  }
 }
 
 .textBoxNode {
