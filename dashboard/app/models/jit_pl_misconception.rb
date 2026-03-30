@@ -24,4 +24,13 @@ class JitPlMisconception < ApplicationRecord
   serialized_attrs %w(
     text_content
   )
+
+  def serialize
+    {
+      id: id,
+      name: name,
+      text_content: text_content,
+      resources: resources.map(&:summarize_for_lesson_edit),
+    }
+  end
 end

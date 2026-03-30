@@ -1,0 +1,78 @@
+<Weblab2>
+  <config><![CDATA[{
+  "game_id": 74,
+  "created_at": "2026-03-18T19:52:39.000Z",
+  "level_num": "custom",
+  "user_id": 14639,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Exploring Our Editor\r\n\r\nThis is Web Lab - a tool we'll be using to make websites. It has an AI Assistant built in, named AI Tutor. You can chat with AI tutor in the text box underneath this window.\r\n\r\nThis level is all about exploring Web Lab and having your first interaction with AI Tutor, referencing the otter webpage that's already been built for you.\r\n\r\n**Do This:**\r\n- Explore this page. Hover over icons to see what they do. See if you can make the webpage preview full-screen or find the Settings menu.\r\n- Ask AI Tutor to make a change to this webpage. You could ask it to add a new section, or change how the webpage looks, or even generate something entirely new!\r\n\r\nOnce AI Tutor has made at least one change to this site, press Continue to go to the next level.",
+    "submittable": "false",
+    "disable_edit_run_for_submission": "false",
+    "hide_share_and_remix": "true",
+    "widget_view": "false",
+    "initial_view_mode": "preview",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false
+    },
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "buildCSS",
+        "buildHTML"
+      ],
+      "answerTypeCustomizations": {
+        "explainCode": "- Limit responses to just HTML. Do not mention CSS or Javascript.",
+        "buildCSS": "- Do NOT use separate file name. Put all css in a `<style>` tag in the head of the index.html file\n- Do NOT use relative units. Use px values.\n- You should generate both HTML and CSS at the same time\n- Whenever the user makes a request, re-generate the entire website rather than a specific section\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works.",
+        "buildHTML": "- Do NOT link a style.css file\n- Do NOT use IDs or class on elements\n- Do NOT generate links or buttons\n- Whenever the user makes a request, re-generate the entire website rather than a specific section\n- Keep explanations sparse and simple, acknowledging the work that has been done. Do NOT list specific HTML tags or CSS rules that have been changed. Do NOT explain how HTML or CSS works."
+      }
+    },
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "contents": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>All About Otters!</title>\n  </head>\n  <body>\n    <header>\n      <h1>Welcome to the Otter Zone!</h1>\n      <img src=\"otter.jpg\" alt=\"A cute brown otter floating in a river\">\n      <p>Image by Michael Baird photography</p>\n    </header>\n\n    <main>\n      <section>\n        <h2>Cool Otter Facts!</h2>\n        <ul>\n          <li>Did you know otters hold hands when they sleep so they don't drift apart? Awww!</li>\n          <li>They can also hold their breath for a loooong time underwater!</li>\n        </ul>\n      </section>\n\n      <section>\n        <h2>Otterly Amazing Swimmers!</h2>\n        <p>Otters are super speedy in the water! They use their powerful tails and webbed feet to zoom around.</p>\n        <p>They can dive deep to find yummy snacks like fish and crabs.</p>\n      </section>\n\n      <section>\n        <h2>Where in the World are Otters?</h2>\n        <p>You can find different kinds of otters all over the globe, from chilly Alaska to sunny Brazil.</p>\n        <p>Some live in rivers, some in coasts, and some even in the open ocean!</p>\n      </section>\n    </main>\n\n    <footer>\n      <p>Thanks for visiting the otter-tastic website!</p>\n    </footer>\n  </body>\n</html>",
+          "active": true,
+          "folderId": "0"
+        },
+        "2": {
+          "id": "2",
+          "name": "otter.jpg",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/hoai-web-design-v2-2/uuid/de7dca6a-8250-448e-91ba-3507de49029a.jpg",
+          "type": "starter",
+          "active": false
+        },
+        "3": {
+          "id": "3",
+          "name": "vision.txt",
+          "contents": "Make me a website with the following details:\n\nI want a website about: Otters\nMake sure to include:\n- Interesting facts about otters\n- Information about how they swim\n- Places around the world to find otters\n\nI want the tone of my website to be: casual and fun\n\nI'm making this website because: I love otters and I want everyone to know",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    "product_tours": [
+      "resource_panel_onboarding"
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2026-03-18T19:52:39.328+00:00\",\"changed\":[\"cloned from \\\"hoai-web-design-weblab2-template\\\"\"],\"cloned_from\":\"hoai-web-design-weblab2-template\"},{\"changed_at\":\"2026-03-18 19:52:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:55:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 04:56:28 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 05:03:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 13:11:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:34:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-19 18:41:59 +0000\",\"changed\":[\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:24:08 +0000\",\"changed\":[\"long_instructions\",\"initial_view_mode\",\"ai_tutor_prompt_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:26 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:28 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2026-03-26 22:32:39 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Weblab2>

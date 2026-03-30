@@ -1,13 +1,33 @@
 import {html} from '@codemirror/lang-html';
-import {javascript} from '@codemirror/lang-javascript';
-import {json} from '@codemirror/lang-json';
+import {esLint, javascript} from '@codemirror/lang-javascript';
+import {json, jsonParseLinter} from '@codemirror/lang-json';
 import {markdown} from '@codemirror/lang-markdown';
 import {xml} from '@codemirror/lang-xml';
-import {EditorState, Extension} from '@codemirror/state';
-import {EditorView, ViewUpdate} from '@codemirror/view';
+import {
+  Diagnostic,
+  forEachDiagnostic,
+  lintGutter,
+  linter,
+} from '@codemirror/lint';
+import {
+  EditorState,
+  Extension,
+  StateEffect,
+  StateField,
+} from '@codemirror/state';
+import {
+  Decoration,
+  DecorationSet,
+  EditorView,
+  ViewUpdate,
+  lineNumbers,
+} from '@codemirror/view';
+import js from '@eslint/js';
+import * as eslint from 'eslint-linter-browserify';
+import globals from 'globals';
 import React from 'react';
 
-import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
+import {editorConfigWithoutLineNumbers} from '@cdo/apps/codemirror/editorConfig';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
@@ -32,25 +52,75 @@ interface CodeMirrorLegacyAdapter {
   getWrapperElement: () => HTMLElement;
   getCursor: () => number;
   setCursor: (position: number) => void;
+  setErrorLineIndexes: (lineIndexes: number[]) => void;
   on: (event: string, listener: (...args: unknown[]) => void) => void;
 }
 
 interface Options {
   callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
   attachments?: boolean;
+  onUpdateLinting?: (errors: Array<{message: string}>) => void;
+  lintConfig?: {
+    es5?: boolean;
+    disableRecommendedJsConfig?: boolean;
+  };
+  lineNumberFormatter?: (line: number) => string;
+  lineHighlightClassName?: string;
+  themeStyles?: Record<string, Record<string, string | number>>;
   preview?: string | Element;
   game?: string;
 }
 
-type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
+type EditorMode = 'text' | 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
     border: '1px solid #eee',
+    backgroundColor: 'white',
   },
 });
 
-const languageExtensionMap: Record<EditorMode, Extension> = {
+const setErrorLineIndexesEffect = StateEffect.define<number[]>();
+
+function createErrorLineDecorations(
+  state: EditorState,
+  lineIndexes: number[],
+  className: string
+): DecorationSet {
+  const decorations = lineIndexes
+    .filter(index => index >= 0 && index < state.doc.lines)
+    .map(index => {
+      const line = state.doc.line(index + 1);
+      return Decoration.line({class: className}).range(line.from);
+    });
+  return Decoration.set(decorations, true);
+}
+
+const createErrorLineHighlightField = (className: string) =>
+  StateField.define<DecorationSet>({
+    create() {
+      return Decoration.none;
+    },
+    update(decorations, transaction) {
+      const lineIndexesEffect = transaction.effects.find(e =>
+        e.is(setErrorLineIndexesEffect)
+      );
+      if (lineIndexesEffect) {
+        return createErrorLineDecorations(
+          transaction.state,
+          lineIndexesEffect.value,
+          className
+        );
+      }
+      if (transaction.docChanged) {
+        return decorations.map(transaction.changes);
+      }
+      return decorations;
+    },
+    provide: field => EditorView.decorations.from(field),
+  });
+
+const languageExtensionMap: Partial<Record<EditorMode, Extension>> = {
   javascript: javascript(),
   json: json(),
   markdown: markdown(),
@@ -58,17 +128,61 @@ const languageExtensionMap: Record<EditorMode, Extension> = {
   html: html(),
 };
 
-function getLanguageExtension(mode: EditorMode): Extension {
-  return languageExtensionMap[mode];
+function getLanguageExtension(mode: EditorMode): Extension | null {
+  return languageExtensionMap[mode] || null;
 }
 
-function resolveTarget(target: string | Element): HTMLTextAreaElement {
+const getLintExtension = (
+  mode: EditorMode,
+  lintConfig?: Options['lintConfig']
+): Extension | null => {
+  if (mode === 'json') {
+    return linter(jsonParseLinter());
+  }
+
+  if (mode === 'javascript') {
+    // Our core existing use case is for block editing, which needs to enforce ES5.
+    // It also doesn't want to enforce normal linting rules since the code being edited is often just a snippet that won't run on its own.
+    // So, we allow those existing use cases to override "normal" linting, but still offer the normal config for future use cases that want it.
+    const eslintConfig = {
+      ...(lintConfig?.disableRecommendedJsConfig ? {} : js.configs.recommended),
+      languageOptions: {
+        globals: {
+          ...(lintConfig?.disableRecommendedJsConfig ? {} : globals.browser),
+        },
+        ...(lintConfig?.es5 ? {ecmaVersion: 5, sourceType: 'script'} : {}),
+      },
+    };
+
+    return linter(esLint(new eslint.Linter(), eslintConfig));
+  }
+
+  return null;
+};
+
+const resolveTarget = (target: string | Element): HTMLTextAreaElement => {
   const node =
     typeof target === 'string' ? document.getElementById(target) : target;
   if (!(node instanceof HTMLTextAreaElement)) {
     throw new Error('initializeCodeMirror6 target must resolve to a textarea');
   }
   return node;
+};
+
+function getLintDiagnostics(state: EditorState): Diagnostic[] {
+  const diagnostics: Diagnostic[] = [];
+  forEachDiagnostic(state, diagnostic => {
+    diagnostics.push(diagnostic);
+  });
+  return diagnostics;
+}
+
+function getErrorMessages(diagnostics: Diagnostic[]): Array<{message: string}> {
+  return diagnostics
+    .filter(
+      diagnostic => !diagnostic.severity || diagnostic.severity === 'error'
+    )
+    .map(diagnostic => ({message: diagnostic.message}));
 }
 
 function resolvePreviewElement(
@@ -87,9 +201,11 @@ function resolvePreviewElement(
  * initializeCodeMirror6 syncs a textarea on the page with a full-featured
  * CodeMirror6 editor.
  * @param {!string|!Element} target - element or id of element to replace.
- * @param {!string} mode - editor syntax mode
+ * @param {!string} mode - editor syntax mode (`text` disables language/lint extensions)
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
+ * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
+ * @param {Object} [options.lintConfig] - configuration options for linting (only applicable for javascript mode).
  * @param {boolean} [options.attachments] - whether to enable attachment
  *        uploading in this editor.
  * @param {(string|Element)} [options.preview] - element or id of element to
@@ -103,9 +219,25 @@ function initializeCodeMirror6(
   options: Options = {}
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
-  const {callback, attachments, preview, game} = options;
+
+  const {
+    callback,
+    attachments,
+    onUpdateLinting,
+    lineNumberFormatter,
+    lineHighlightClassName,
+    themeStyles,
+    preview,
+    game,
+  } = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
+  const languageExtension = getLanguageExtension(mode);
+  const lintExtension = getLintExtension(mode, options.lintConfig);
+  const errorLineHighlightField = lineHighlightClassName
+    ? createErrorLineHighlightField(lineHighlightClassName)
+    : null;
+
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
   node.insertAdjacentElement('afterend', editorContainer);
@@ -132,6 +264,17 @@ function initializeCodeMirror6(
     setCursor(position) {
       editor.dispatch({
         selection: {anchor: position},
+      });
+    },
+    setErrorLineIndexes(lineIndexes) {
+      if (!lineHighlightClassName) {
+        console.warn(
+          'Please provide a lineHighlightClassName to enable error line highlighting.'
+        );
+        return;
+      }
+      editor.dispatch({
+        effects: setErrorLineIndexesEffect.of(lineIndexes),
       });
     },
     on(event, listener) {
@@ -178,25 +321,36 @@ function initializeCodeMirror6(
   };
 
   const extensions: Extension[] = [
-    ...editorConfig,
-    getLanguageExtension(mode),
+    ...editorConfigWithoutLineNumbers,
+    lineNumbers(
+      lineNumberFormatter ? {formatNumber: lineNumberFormatter} : undefined
+    ),
+    ...(languageExtension ? [languageExtension] : []),
     levelbuilderEditorTheme,
+    ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
+    ...(errorLineHighlightField ? [errorLineHighlightField] : []),
+    ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {
         dropListeners.forEach(listener => listener(event));
       },
     }),
     EditorView.updateListener.of(update => {
-      if (!update.docChanged) {
-        return;
+      if (update.docChanged) {
+        node.value = update.state.doc.toString();
+        changeListeners.forEach(listener => listener());
+        if (callback) {
+          callback(adapter, update);
+        }
+
+        updatePreview();
       }
-      node.value = update.state.doc.toString();
-      changeListeners.forEach(listener => listener());
-      if (callback) {
-        callback(adapter, update);
+
+      if (onUpdateLinting) {
+        const diagnostics = getLintDiagnostics(update.state);
+        onUpdateLinting(getErrorMessages(diagnostics));
       }
-      updatePreview();
     }),
   ];
 

@@ -315,6 +315,18 @@ class AichatGeminiClientTest < AichatAiClientTest
       end
     end
 
+    context 'when API returns 429 rate limit response' do
+      let(:new_message) {@new_message}
+      let(:level) {@level_with_level_system_prompt}
+
+      it 'raises ModelRateLimitedError' do
+        AichatGeminiClient.any_instance.stubs(:project_id).returns(@vertex_project_id)
+        AichatGeminiClient.any_instance.stubs(:bearer_token).returns(@vertex_bearer_token)
+        stub_request(:post, endpoint_url).to_return(status: 429, body: {}.to_json)
+        -> {call_get_response(internal_model_id, level, new_message, nil)}.must_raise(AichatAiHelper::ModelRateLimitedError)
+      end
+    end
+
     context 'without level system prompt' do
       let(:level) {@level_without_level_system_prompt}
 

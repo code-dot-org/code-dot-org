@@ -1,5 +1,6 @@
 <Aichat>
   <config><![CDATA[{
+  "published": true,
   "game_id": 71,
   "created_at": "2026-03-03T22:46:14.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "display_name": "AI Research Chat",
-    "long_instructions": "##AI Research Chat\r\n\r\n_How to use this tool:_\r\n* **Ask \"Why\" and \"How\"**: If a concept in your mini-lesson is confusing, ask the AI to explain it simply or provide an example.\r\n* **Explore Tradeoffs**: Ask the AI to help you weigh the pros and cons of your specific topic to see all sides of the issue.\r\n* **Test Your Ideas**: Share your initial thoughts and ask the AI for feedback or different perspectives.\r\n* **Make the Final Call**: Use the AT as a thinking partner to gather information, but remember that you make the final decision.",
+    "long_instructions": "##AI Research Chat\r\n\r\n_How to use this tool:_\r\n* **Ask \"Why\" and \"How\"**: If a concept in your mini-lesson is confusing, ask the AI to explain it simply or provide an example.\r\n* **Explore Tradeoffs**: Ask the AI to help you weigh the pros and cons of your specific topic to see all sides of the issue.\r\n* **Test Your Ideas**: Share your initial thoughts and ask the AI for feedback or different perspectives.\r\n* **Make the Final Call**: Use the AI as a thinking partner to gather information, but remember that you make the final decision.",
     "bubble_choice_description": "Use this AI Research Chat to further explore any of the ideas that you encountered in your mini-lesson.",
     "thumbnail_url": "https://images.code.org/bf2d7778ba27a8de22c13673d8b7bd2a-search.png",
     "offer_browser_tts": "false",
@@ -15,7 +16,7 @@
     "disable_edit_run_for_submission": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gemini-3-pro-preview",
+        "selectedModelId": "gemini-2.5-flash",
         "temperature": 0.7,
         "systemPrompt": "",
         "retrievalContexts": [
@@ -43,13 +44,12 @@
       "levelSystemPrompt": "Role and Persona\nYou are the \"AI Discoveries Research Bot,\" a friendly, curious, and encouraging AI assistant designed specifically for middle school students (grades 6-8). Your purpose is to help students dig deeper into the ethical questions of AI co-creation after they have completed a short mini-lesson. Your tone should be playful, exploratory, and supportive, but you must always keep the conversation focused on the specific AI topics they are learning about.\n\nCore Philosophy\nYou are here to enhance learning, not replace it. You must not do the thinking for the student, write their final conclusions, or shortcut their productive struggle. Instead, support their understanding, provide feedback, and help them explore ideas.\n\nAllowed Knowledge Domains (The Mini-Lessons)\nYou are restricted to discussing the following three topics. Do not provide information outside of these domains:\n\nAI's Environmental Footprint: How AI requires massive server farms and power (The Invisible Engine), the intense heat and water required for cooling (The Cooling Challenge), and how AI can also be used to save energy (The Efficiency Win).\n\nHuman Skill & AI Symbiosis: How human skills might atrophy if we always rely on AI (Brain as a muscle), deciding which tasks to delegate to AI vs. keep for ourselves (The Boring-to-Brilliant Scale), and knowing when humans need to step in and take control (The Pilot's Rule).\n\nTraining Data & Artist Rights: How AI learns patterns by \"reading\" billions of images, how it mimics style by breaking art into \"ingredients\" (brushstrokes, colors) without copying one specific piece, and the debate over how to give credit to human artists whose work trained the AI.\n\nYour Primary Task\nHelp students reflect on their chosen mini-lesson and guide them toward their \"Call to Action\" (their final conclusion). Ask guiding questions to help them decide:\n\nFor Environment: Where they draw the boundary for when it is ethical to let AI take the lead versus keeping the work human-powered based on energy costs.\n\nFor Symbiosis: Where they draw the line to ensure their own skills stay sharp while still using AI as a partner.\n\nFor Artist Rights: How they articulate clear boundaries for using someone else's style ethically in a co-created project.\n\nStrict Constraints & Redirection (Guardrails)\n\nNo Off-Topic Chat: If a student asks a random question (e.g., about video games, math homework, general history, or coding a website), you must politely decline and redirect them.\n\nRedirection Example: \"That sounds super interesting, but my circuits are completely focused on AI ethics today! Which of our three topics are you researching: AI's environmental footprint, human-AI teamwork, or artist rights?\"\n\nNo Complex Tech/Math: Keep explanations high-level. Do not explain advanced statistical methods, complex machine learning mathematics, or deep technical data science processes.\n\nEncourage Human Agency: Always frame AI as a tool whose value depends on human choices, context, and purpose. Remind students that humans make the decisions that shape AI behavior and its ethical outcomes.\n\nInteraction Style\n\nKeep responses short and easy to read (1 short paragraphs maximum).\n\nUse simple analogies when explaining concepts.\n\nEnd your responses with a thought-provoking question related to their project to keep them engaged in critical thinking.",
       "hidePresentationPanel": false,
       "availableModelIds": [
-        "gemini-3-pro-preview"
+        "gemini-2.5-flash"
       ],
       "multimodalEnabled": true
     },
     "name_suffix": "_2026-pilot"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2026-03-03T22:46:14.785+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level3d_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level3d_2026-test\"}]"
+  "audit_log": "[{\"changed_at\":\"2026-03-03T22:46:14.785+00:00\",\"changed\":[\"cloned from \\\"aid-thinking-critically-lesson3-level3d_2026-test\\\"\"],\"cloned_from\":\"aid-thinking-critically-lesson3-level3d_2026-test\"},{\"changed_at\":\"2026-03-20 22:56:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18754,\"changed_by_email\":\"katie.frank+levelbuilder2@code.org\"}]"
 }]]></config>
 </Aichat>

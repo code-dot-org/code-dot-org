@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-16 15:35:11 UTC",
+    "serialized_at": "2026-03-25 16:15:20 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -1208,6 +1208,28 @@
       "level_keys": [
         "pl-aif-2-U3-final-level"
       ]
+    },
+    {
+      "chapter": 44,
+      "position": 44,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Thoughts"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-aif-2-U3-EHCO"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "96795b73-fddf-429c-acfd-a3159408d6e9"
+      },
+      "level_keys": [
+        "pl-aif-2-U3-EHCO"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1720,6 +1742,18 @@
         "level.key": "pl-aif-2-U3-final-level",
         "script_level.level_keys": [
           "pl-aif-2-U3-final-level"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "pl-sandbox-aif-sem-2-unit-3",
+        "activity_section.key": "96795b73-fddf-429c-acfd-a3159408d6e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-aif-2-U3-EHCO",
+        "script_level.level_keys": [
+          "pl-aif-2-U3-EHCO"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

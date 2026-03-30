@@ -1,4 +1,4 @@
-/* global $ Dialog CodeMirror */
+/* global $ Dialog */
 
 (function() {
   var FIRST_SYMBOL = 0x2600; // ☀
@@ -124,15 +124,14 @@
     var poemDisplay = poemText;
     var dict = editor.getValue().split("\n").slice(0, MAX_DICT_ENTRIES);
     var errorInDictionary = false;
+    var errorLineIndexes = [];
 
     var validRules = dict.map(function (rule, index) {
-      var line = editor.getLineHandle(index);
       if (new RegExp('[' + dictEntries[index] + '-\\u' + LAST_SYMBOL.toString(16) + ']').test(rule)) {
-        editor.addLineClass(line, 'wrap', 'dict-error');
         errorInDictionary = true;
+        errorLineIndexes.push(index);
         return '';
       }
-      editor.removeLineClass(line, 'wrap', 'dict-error');
       return rule;
     });
 
@@ -145,6 +144,7 @@
     compressedPoemSize = poemDisplay.length;
     document.getElementById("compressedPoem").innerHTML = poemDisplay.replace(
       new RegExp('[' + SYMBOL_REGEX + ']+', "g"), "<mark>$&</mark>");
+    editor.setErrorLineIndexes(errorLineIndexes);
     calculateData(errorInDictionary);
   }
 
@@ -165,21 +165,62 @@
 
   var poemSelect = document.getElementById("poemsList");
   $('#writeYourOwn').click(showWriteYourOwnDialog);
-  window.editor = CodeMirror.fromTextArea($dictionary[0], {
-    lineNumbers: true,
-    lineWrapping: true,
-    firstLineNumber: 0,
-    lineNumberFormatter: function (line) {
-      return dictEntries[line] || '';
+
+  var themeStyles = {
+    '&': {
+      height: '100%',
+      fontSize: '14pt',
+      lineHeight: '1.4em',
+      minHeight: '200px',
+    },
+    '.cm-gutters': {
+      backgroundColor: '#ff9',
+    },
+    '.cm-lineNumbers .cm-gutterElement': {
+      color: '#000',
+      textAlign: 'center',
+      boxSizing: 'content-box',
+    },
+    '.cm-scroller': {
+      overflow: 'auto'
+    },
+    '.cm-line.dict-error': {
+      backgroundColor: '#f99'
     }
+  };
+
+  window.editor = window.initializeCodeMirror6($dictionary[0], 'text', {
+    lineNumberFormatter: function (lineNumber) {
+      return dictEntries[lineNumber - 1] || '';
+    },
+    lineHighlightClassName: 'dict-error',
+    themeStyles: themeStyles,
   });
+
   editor.on("change", compress);
-  editor.on("keypress", function (cm, e) {
+
+  var editorMount = editor.getWrapperElement().parentElement;
+  if (editorMount) {
+    editorMount.style.height = '100%';
+    editorMount.style.width = '100%';
+  }
+
+  editor.getWrapperElement().addEventListener("keydown", function (e) {
     if (e.keyCode === 32) {
-      CodeMirror.e_stop(e);
-      cm.replaceSelection('_');
+      e.preventDefault();
+      var cursorPosition = editor.getCursor();
+      var currentValue = editor.getValue();
+      editor.setValue(
+        currentValue.slice(0, cursorPosition) +
+          '_' +
+          currentValue.slice(cursorPosition)
+      );
+      editor.setCursor(cursorPosition + 1);
     }
   });
-  editor.setSize('100%', '100%');
+
+  editor.getWrapperElement().style.width = '100%';
+  editor.getWrapperElement().style.height = '100%';
+
   poemChanged();
 })();

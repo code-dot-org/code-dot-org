@@ -1,0 +1,97 @@
+<Weblab2>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 74,
+  "created_at": "2026-03-20T23:42:10.000Z",
+  "level_num": "custom",
+  "user_id": 22366,
+  "properties": {
+    "start_sources": {
+      "folders": {
+      },
+      "files": {
+        "1": {
+          "id": "1",
+          "name": "index.html",
+          "language": "html",
+          "contents": "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <title>Eco Actions</title>\n    <link rel=\"stylesheet\" href=\"style.css\" />\n    <script defer src=\"script.js\"></script>\n  </head>\n  <body>\n    <h1 class=\"title\">Eco Actions</h1>\n    <main class=\"container\">\n      <section class=\"left\">\n        <img id=\"image\" class=\"image\" src=\"image.png\" alt=\"Eco actions illustration showing water, energy, and reuse\" />\n      </section>\n      <section class=\"right\">\n        <div id=\"textArea\" class=\"textArea\" aria-live=\"polite\">Choose a category to get one tiny habit to try today.</div>\n        <div class=\"buttons\">\n          <button id=\"waterButton\" type=\"button\">Water</button>\n          <button id=\"energyButton\" type=\"button\">Energy</button>\n          <button id=\"transitButton\" type=\"button\">Transit</button>\n          <button id=\"foodButton\" type=\"button\">Food</button>\n          <button id=\"reuseButton\" type=\"button\">Reuse</button>\n        </div>\n      </section>\n    </main>\n  </body>\n</html>\n",
+          "folderId": "0",
+          "active": false
+        },
+        "2": {
+          "id": "2",
+          "name": "script.js",
+          "language": "js",
+          "contents": "",
+          "folderId": "0",
+          "active": true
+        },
+        "3": {
+          "id": "3",
+          "name": "style.css",
+          "language": "css",
+          "contents": "* {\n  box-sizing: border-box;\n}\n\nhtml,\nbody {\n  height: 100%;\n}\n\nbody {\n  margin: 0;\n  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;\n  background: #3ba36a;\n  color: #1f2937;\n}\n\n.title {\n  text-align: center;\n  margin: 16px 0 0;\n  font-size: 1.75rem;\n  letter-spacing: 0.5px;\n  color: #0f172a;\n}\n\n.container {\n  display: grid;\n  grid-template-columns: 1fr 1fr;\n  gap: 24px;\n  padding: 24px;\n  max-width: 1000px;\n  margin: 0 auto;\n}\n\n.left {\n  background: #fff;\n  border: 1px solid #e5e7eb;\n  border-radius: 12px;\n  padding: 16px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  overflow: hidden;\n}\n\n.image {\n  display: block;\n  max-width: 100%;\n  height: auto;\n  border-radius: 8px;\n  object-fit: contain;\n}\n\n.right {\n  display: flex;\n  flex-direction: column;\n  gap: 24px;\n}\n\n.textArea {\n  min-height: 120px;\n  border: 1px dashed #cbd5e1;\n  border-radius: 12px;\n  padding: 16px;\n  background: #fff;\n  font-size: 1.1rem;\n  line-height: 1.6;\n  color: #111827;\n}\n\n.buttons {\n  display: flex;\n  flex-direction: column;\n  gap: 12px;\n  width: 240px;\n  margin-inline: auto;\n}\n\n.buttons button {\n  padding: 12px 16px;\n  font-size: 1rem;\n  border-radius: 10px;\n  border: 1px solid #1f2937;\n  background: #ffffff;\n  color: #111827;\n  cursor: pointer;\n  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;\n}\n\n.buttons button:active {\n  transform: translateY(1px);\n}\n\n@media (max-width: 800px) {\n  .container {\n    grid-template-columns: 1fr;\n  }\n\n  .buttons {\n    width: 100%;\n  }\n}",
+          "folderId": "0",
+          "active": false
+        },
+        "4": {
+          "id": "4",
+          "name": "image.png",
+          "language": "png",
+          "contents": "",
+          "folderId": "0",
+          "url": "/level_starter_assets/ai-and-algorithmic-decisions-lesson2-level5-choiced-test-2025/uuid/5201eec3-d1fa-4af3-ba48-cd228ec32afe.png",
+          "type": "starter",
+          "active": false
+        },
+        "5": {
+          "id": "5",
+          "name": "prompt.md",
+          "language": "md",
+          "contents": "",
+          "folderId": "0",
+          "active": false
+        }
+      },
+      "openFiles": [
+        "2",
+        "5"
+      ]
+    },
+    "encrypted_exemplar_sources": "Dn7HQlwz0pFFO6c3d2DdXB/55clGnnwQzLWAr3sovMqSqAs/iIcTJvipkm4x\nH4xypmSaXdOnMfojz2Um+kozKMAUqEik3y04yVOQVFBH9RXgt69q6638J9vs\nG2xaL6zbtO4bu95cEWtCgFbg1IiBtP+ekcW/DM832KTVmpMah46HyMzT9vpM\ntb0jeFrZf9C1uGzRcCbMi0ylZ8zUI4l8mr4APHKXLnoj0FxFEKKF+qQGeUzV\n6Kb+krl8RlGiMzte2vDRQ66EuND0ldqrik+UoiCOyJwjrU6+tgts1tWMf/RL\nKVxR3rZwNIM+apBIGBuWbhy6uOECLo5H0oYjmvwQsNmTyK+v+1EaWcBf1CrR\n+PZbJnad8reCX22xs4vZXH2DmBUmE3u7Ra6UY/P4iYmljYVuo4Woosj7xy8J\nZ1a1A5KcQCFzHKW3JyExw5n5Jane/Ae7obE6IAA6zBfrJ0EwwryW67HMnljk\nNJ/X+l90zRriqlzGsiHz0n0vuQYX7fAWB5fm6sntZprYrD9sJMf5hn9FeEg1\no5ttma3NfgIzSeHQMQjjaHmPXhRcg03c2VXZ/3sEdv0xhw53R33zYMcG+jGu\nbniL+Plu21k9tcDVVS9QGyveFS+H+1YYil5OQ7ZiFJZyZNK2hWCAFJ5kDuQ1\nRsNJaWjtFsE7E/TC2a0pGqgjxkO7+MVFR4az8fozup4DhV+H3HHIBMooFCaD\nFZUH1sHONbHUHm+GUPGzyQDWCAulH82mHfcTlpp+Si4HubHB84j8YELavzpO\nOYGh1FnIy41YrVKDmXt4euteGYbUDiRgdjmj2F5CctHsDpNi2eo3/ngivnec\nn06KVmUOeqOsg1ztWhn8Og0pDrTkHDNwS9+IE4w4+U6dzu20t2XSsq01Y5AT\na5mNcpOlv0xBbHRwYoM/t2CCsWyvPqJiv3MuCcs3Z///U4g+VpyQI8etabFA\nIaDZoKwW78I3MeO+/XP/LmZ6VYX7JpxV0lcYO6tT9E565Q0FmRPpzTKPY769\nvMzkXhcsJPxFitT41cnz2bnUW+m4RUuBYC54BMGzoV06ezk/CJIbNvbzmWMf\nRvDgvq0MadC75LCWHJcZxBH2Lt88YhtfGGqdKbnvROPWcOM4LCzDzCZ+uHvM\nkczspD8EVJEa7pvry46O9un+3ZFzp7sG9rSJNeTKaPO3zmav0Br/tayZWdaC\nZAQwZrxLKGaPTaTh5qg4XYSqQDm43OY8ukv2eXfvLfFdBs0zVzJKkaYke+1N\n9CBY6p/wi+Z3AJ1F+0dQ8z7i9WusUnCMYch0g3KVIB6CenqJtpE+l0WH9lg1\nR1zelhE+irT/0ty/Mk/ffFc47FAM9rcFWgmDGSDXL3j25fgLlH6eG59P8sAQ\nalWaMU/L1xIYwKOlb0FMLClpJ3j1Cj3NB9KUOvzBOeh9W4toiCW4yJH8/eDD\nuembbHJtmowzxW0XtsfdSTD4bgQXYF1tEXH+wTnAaxDA9StwFzWGQuitCHtS\n3TVUodLRkYgF+0wOdDbtA7JwgXMh6YORs4PiL5eRk36W6sCeMOzbDd4J+YI4\nw2PLNZV5mpdYrwDLJQeZQCMHLdyiOa0ckACp5wXsVxeqsNlVtvm/lvAmWM2Y\nidbxc8eGN/H5QLkplyGQHLA2wZFpb1oFyikQTVAaCXcrsBJ+/oKEZ/dJFMkq\nBulco5F7nKsvfQzxjXmjv+2V3i9+HMKKXs0xYyKyZBw+Jhzxjvw2II+SdvrP\nZM4YnerAD3+SbWiPq/ufNDvdD6ccJnyW8+5ABzvnaJoPMuK+RzBFhvIgDRdd\nSeTo0sbfM6t4W4Y5RiL094wzKXXSqZCRH+HuKfYpwjfNhCu3RnMsMwf+9T95\nGDVxg3taKmIOH6FU+1BuLOQVPYgFcO6/ZdGu4onbwOUixaI3Cyi1rLfqZFgN\nHiDbdgS1SMA6vYwEcKzywb7wHcOLYWsxKisra4iyEwLmX6RZihHZuVZ2mGsV\nPB6kxnz51/YSDwMIZgAWVcY0f+03ES6VZr+Etl6qxuwZ4R4T8SrW2Qk5O3aW\nzZ6uh0u/Zq1lvHPST86x/MymoAEAMlYWoKwx3ami2DBHSEsQ+icB7/3V0ON9\ny6FkIZd8EzczGCz6e2fvum9RQ44DaQY+puSzhd8V3GJ+gWK1SEbakdf25qcd\nXEKYP8D2F4PkssyiFdgZMHmSk9D3MTbnQQ+rO3GGMwuKm4wNlFO/UUBgNqCC\n7iuUKIJNLDYnYs0Y1O3elCtYmLSVW6M6MgD09z+adMMORaCe7le6f070s+rg\n6vZvoyAJbruWFYLU5CQW9bW6JoU2UNPM9Fg/Tz0UcF6kvbTuzFwgZPoQOlR7\niOAnx23kF8PxBV/OXPymVjKTS9bi1beCW87UHUfUW1+5rcPLaLonUTpK+Ld8\n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\nhLAYPyqUM6DAJnOu/v8=\n",
+    "encrypted": "false",
+    "display_name": "Eco Actions App",
+    "bubble_choice_description": "Create a web app that gives useful advice for earth-friendly actions one might take.",
+    "thumbnail_url": "https://images.code.org/ef1d0bfa8eea3ffc1aab599c21ed456c-main-image.png",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "widget_view": "false",
+    "initial_view_mode": "split",
+    "disable_edit_run_for_submission": "false",
+    "ai_tutor_mode": "tutor",
+    "predict_settings": {
+      "isPredictLevel": false,
+      "solution": "",
+      "questionType": "freeResponse",
+      "placeholderText": "",
+      "multipleChoiceOptions": [
+        ""
+      ],
+      "freeResponseHeight": 50,
+      "codeEditableAfterSubmit": false,
+      "allowMultipleAttempts": false
+    },
+    "long_instructions": "### **Eco Actions App**\r\n\r\nYou are building an eco actions app. When a user clicks a category, the app should display one small action they can take in the text box.\r\n\r\n\r\n#### **Do This:**\r\n\r\n1. **Plan:** In `prompt.md`, write a prompt for one button.\r\n\r\n2. **Build:** Use AI to generate the code.\r\n\r\n3. **Test:** Click the button and check that it works as expected.\r\n\r\n4. **Check Code:** Make sure your code:\r\n\r\n   * selects the correct button\r\n   * adds a click event listener\r\n   * responds to the click event\r\n\r\n5. **Fix if needed:** If something does not match what you expect, update your prompt or edit the code.\r\n\r\n6. **Repeat:** Repeat these steps for each button until all buttons work.\r\n",
+    "name_suffix": "_2026",
+    "ai_tutor_prompt_settings": {
+      "answerTypes": [
+        "documentation",
+        "buildJavaScript"
+      ],
+      "answerTypeCustomizations": {
+      }
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2026-03-20T23:42:10.099+00:00\",\"changed\":[\"cloned from \\\"ai-and-algorithmic-decisions-lesson2-level4d_2025\\\"\"],\"cloned_from\":\"ai-and-algorithmic-decisions-lesson2-level4d_2025\"},{\"changed_at\":\"2026-03-26 23:00:41 +0000\",\"changed\":[\"bubble_choice_description\",\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:01:53 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:01 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:09 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:13 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:15 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:19 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:03:20 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:05:39 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:05:39 +0000\",\"changed\":[],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:06:45 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:07:57 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:07:59 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-26 23:08:20 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"},{\"changed_at\":\"2026-03-27 14:17:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":22366,\"changed_by_email\":\"joi.anderson@code.org\"}]"
+}]]></config>
+</Weblab2>
