@@ -25,5 +25,11 @@ module Observability
     initializer 'observability.sentry', after: 'observability.opentelemetry' do
       Observability::Sentry.setup
     end
+
+    config.to_prepare do
+      ActiveSupport.on_load(:action_controller) do
+        include Observability::Sentry::UserContext
+      end
+    end
   end
 end
