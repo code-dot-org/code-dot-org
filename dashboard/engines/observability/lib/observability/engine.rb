@@ -12,10 +12,16 @@ module Observability
     # Guard on running_web_application? to avoid loading Sentry in rake tasks,
     # migrations, and other non-web processes where setup() will immediately return.
     # sentry-opentelemetry is only needed when both integrations are active.
-    if CDO.enable_sentry && CDO.running_web_application?
+    if true
       require 'sentry-ruby'
       require 'sentry-rails'
       require 'sentry-opentelemetry' if CDO.enable_opentelemetry
+      config.to_prepare do
+        puts 'IN CONFIG'
+        ActiveSupport.on_load(:action_controller) do
+          include Observability::Sentry::UserContext
+        end
+      end
     end
 
     initializer 'observability.opentelemetry' do
@@ -24,12 +30,6 @@ module Observability
 
     initializer 'observability.sentry', after: 'observability.opentelemetry' do
       Observability::Sentry.setup
-    end
-
-    config.to_prepare do
-      ActiveSupport.on_load(:action_controller) do
-        include Observability::Sentry::UserContext
-      end
     end
   end
 end
