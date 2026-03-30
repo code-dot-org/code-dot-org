@@ -9,25 +9,14 @@ import {
   lintGutter,
   linter,
 } from '@codemirror/lint';
-import {
-  EditorState,
-  Extension,
-  StateEffect,
-  StateField,
-} from '@codemirror/state';
-import {
-  Decoration,
-  DecorationSet,
-  EditorView,
-  ViewUpdate,
-  lineNumbers,
-} from '@codemirror/view';
+import {EditorState, Extension} from '@codemirror/state';
+import {EditorView, ViewUpdate} from '@codemirror/view';
 import js from '@eslint/js';
 import * as eslint from 'eslint-linter-browserify';
 import globals from 'globals';
 import React from 'react';
 
-import {editorConfigWithoutLineNumbers} from '@cdo/apps/codemirror/editorConfig';
+import {editorConfig} from '@cdo/apps/codemirror/editorConfig';
 import {createReactRoot} from '@cdo/apps/util/createReactRoot';
 
 import MainInstructionsPreview from '../lab2/views/components/Instructions/MainInstructionsPreview';
@@ -52,7 +41,6 @@ interface CodeMirrorLegacyAdapter {
   getWrapperElement: () => HTMLElement;
   getCursor: () => number;
   setCursor: (position: number) => void;
-  setErrorLineIndexes: (lineIndexes: number[]) => void;
   on: (event: string, listener: (...args: unknown[]) => void) => void;
 }
 
@@ -64,14 +52,11 @@ interface Options {
     es5?: boolean;
     disableRecommendedJsConfig?: boolean;
   };
-  lineNumberFormatter?: (line: number) => string;
-  lineHighlightClassName?: string;
-  themeStyles?: Record<string, Record<string, string | number>>;
   preview?: string | Element;
   game?: string;
 }
 
-type EditorMode = 'text' | 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
+type EditorMode = 'javascript' | 'json' | 'markdown' | 'xml' | 'html';
 
 const levelbuilderEditorTheme = EditorView.theme({
   '&': {
@@ -80,47 +65,11 @@ const levelbuilderEditorTheme = EditorView.theme({
   },
 });
 
-const setErrorLineIndexesEffect = StateEffect.define<number[]>();
-
-function createErrorLineDecorations(
-  state: EditorState,
-  lineIndexes: number[],
-  className: string
-): DecorationSet {
-  const decorations = lineIndexes
-    .filter(index => index >= 0 && index < state.doc.lines)
-    .map(index => {
-      const line = state.doc.line(index + 1);
-      return Decoration.line({class: className}).range(line.from);
-    });
-  return Decoration.set(decorations, true);
+interface Options {
+  callback?: (editor: CodeMirrorLegacyAdapter, update: ViewUpdate) => void;
 }
 
-const createErrorLineHighlightField = (className: string) =>
-  StateField.define<DecorationSet>({
-    create() {
-      return Decoration.none;
-    },
-    update(decorations, transaction) {
-      const lineIndexesEffect = transaction.effects.find(e =>
-        e.is(setErrorLineIndexesEffect)
-      );
-      if (lineIndexesEffect) {
-        return createErrorLineDecorations(
-          transaction.state,
-          lineIndexesEffect.value,
-          className
-        );
-      }
-      if (transaction.docChanged) {
-        return decorations.map(transaction.changes);
-      }
-      return decorations;
-    },
-    provide: field => EditorView.decorations.from(field),
-  });
-
-const languageExtensionMap: Partial<Record<EditorMode, Extension>> = {
+const languageExtensionMap: Record<EditorMode, Extension> = {
   javascript: javascript(),
   json: json(),
   markdown: markdown(),
@@ -128,8 +77,8 @@ const languageExtensionMap: Partial<Record<EditorMode, Extension>> = {
   html: html(),
 };
 
-function getLanguageExtension(mode: EditorMode): Extension | null {
-  return languageExtensionMap[mode] || null;
+function getLanguageExtension(mode: EditorMode): Extension {
+  return languageExtensionMap[mode];
 }
 
 const getLintExtension = (
@@ -201,7 +150,7 @@ function resolvePreviewElement(
  * initializeCodeMirror6 syncs a textarea on the page with a full-featured
  * CodeMirror6 editor.
  * @param {!string|!Element} target - element or id of element to replace.
- * @param {!string} mode - editor syntax mode (`text` disables language/lint extensions)
+ * @param {!string} mode - editor syntax mode
  * @param {Object} options - misc optional arguments
  * @param {function} [options.callback] - onChange callback for editor
  * @param {onUpdateLinting} [options.onUpdateLinting] - callback that receives linting errors on each update.
@@ -220,23 +169,10 @@ function initializeCodeMirror6(
 ): CodeMirrorLegacyAdapter {
   const node = resolveTarget(target);
 
-  const {
-    callback,
-    attachments,
-    onUpdateLinting,
-    lineNumberFormatter,
-    lineHighlightClassName,
-    themeStyles,
-    preview,
-    game,
-  } = options;
+  const {callback, attachments, onUpdateLinting, preview, game} = options;
   const changeListeners: Array<() => void> = [];
   const dropListeners: Array<(event: DragEvent) => void> = [];
-  const languageExtension = getLanguageExtension(mode);
   const lintExtension = getLintExtension(mode, options.lintConfig);
-  const errorLineHighlightField = lineHighlightClassName
-    ? createErrorLineHighlightField(lineHighlightClassName)
-    : null;
 
   const editorContainer = document.createElement('div');
   node.style.display = 'none';
@@ -264,17 +200,6 @@ function initializeCodeMirror6(
     setCursor(position) {
       editor.dispatch({
         selection: {anchor: position},
-      });
-    },
-    setErrorLineIndexes(lineIndexes) {
-      if (!lineHighlightClassName) {
-        console.warn(
-          'Please provide a lineHighlightClassName to enable error line highlighting.'
-        );
-        return;
-      }
-      editor.dispatch({
-        effects: setErrorLineIndexesEffect.of(lineIndexes),
       });
     },
     on(event, listener) {
@@ -321,15 +246,10 @@ function initializeCodeMirror6(
   };
 
   const extensions: Extension[] = [
-    ...editorConfigWithoutLineNumbers,
-    lineNumbers(
-      lineNumberFormatter ? {formatNumber: lineNumberFormatter} : undefined
-    ),
-    ...(languageExtension ? [languageExtension] : []),
+    ...editorConfig,
+    getLanguageExtension(mode),
     levelbuilderEditorTheme,
-    ...(themeStyles ? [EditorView.theme(themeStyles)] : []),
     EditorView.lineWrapping,
-    ...(errorLineHighlightField ? [errorLineHighlightField] : []),
     ...(onUpdateLinting && lintExtension ? [lintExtension, lintGutter()] : []),
     EditorView.domEventHandlers({
       drop(event) {
