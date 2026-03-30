@@ -10,7 +10,8 @@ else
   bind "tcp://#{CDO.dashboard_host}:#{CDO.dashboard_port}"
 end
 
-workers :auto # Uses `Concurrent.available_processor_count`, rounded down if the result is fractional.
+# `:auto` Uses `Concurrent.available_processor_count`, rounded down if the result is fractional.
+workers CDO.dashboard_workers.is_a?(Numeric) ? CDO.dashboard_workers : :auto
 threads 1, 5
 
 directory deploy_dir('dashboard')
