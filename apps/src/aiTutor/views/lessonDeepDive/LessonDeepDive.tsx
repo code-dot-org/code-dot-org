@@ -17,14 +17,14 @@ import styles from '@cdo/apps/aiTutor/views/lessonDeepDive/lesson-deep-dive-ai-t
 
 type PracticeOption = 'summary' | 'flashcards' | 'chat' | null;
 
-export type LessonPracticeData = {
+export type LessonDeepDiveData = {
   lessonName: string;
   lessonSummary: string;
   vocabulary: {id: string; word: string; definition: string}[];
 };
 
-export const LessonPractice: FC<{lessonPracticeData: LessonPracticeData}> = ({
-  lessonPracticeData: {lessonName, lessonSummary, vocabulary},
+export const LessonDeepDive: FC<{lessonDeepDiveData: LessonDeepDiveData}> = ({
+  lessonDeepDiveData: {lessonName, lessonSummary, vocabulary},
 }) => {
   const [selectedOption, setSelectedOption] = useState<PracticeOption | null>(
     null
