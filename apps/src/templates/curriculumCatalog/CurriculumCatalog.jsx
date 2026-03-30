@@ -108,15 +108,15 @@ const CurriculumCatalog = ({
       getRecommendedSimilarCurriculum(key);
     const newRecommendedStretchCurriculum = getRecommendedStretchCurriculum(
       key,
-      newRecommendedSimilarCurriculum.key
+      newRecommendedSimilarCurriculum?.key
     );
 
     analyticsReporter.sendEvent(EVENTS.RECOMMENDED_CATALOG_CURRICULUM_SHOWN, {
       current_curriculum_offering: key,
       recommended_similar_curriculum_offering:
-        newRecommendedSimilarCurriculum.key,
+        newRecommendedSimilarCurriculum?.key,
       recommended_stretch_curriculum_offering:
-        newRecommendedStretchCurriculum.key,
+        newRecommendedStretchCurriculum?.key,
     });
 
     setRecommendedSimilarCurriculum(newRecommendedSimilarCurriculum);
@@ -177,7 +177,7 @@ const CurriculumCatalog = ({
       curriculaTaught
     );
     const recommendedCurriculum =
-      similarCurriculumKey === recommendations[0].key
+      similarCurriculumKey === recommendations[0]?.key
         ? recommendations[1]
         : recommendations[0];
 
