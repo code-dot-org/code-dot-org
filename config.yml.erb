@@ -211,6 +211,10 @@ crowdin_project_test_mapping:
 azure_content_moderation_endpoint: https://eastus.api.cognitive.microsoft.com/contentmoderator
 azure_content_moderation_key:
 
+# Azure AI Content Safety
+azure_ai_content_safety_endpoint: https://cdo-ai-content-safety.cognitiveservices.azure.com
+azure_ai_content_safety_key: !Secret
+
 # Credentials for SauceLabs.com, used for running selenium tests against
 # multiple browsers
 saucelabs_username:
@@ -253,8 +257,12 @@ acapela_ephemeral_password:
 new_relic_license_key:
 newrelic_logging: false
 
-# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/config/initializers/opentelemetry.rb` for more details.
+# Enables OpenTelemetry instrumentation and exporting to the OpenTelemetry Collector. See `dashboard/engines/observability/` for more details.
 enable_opentelemetry: false
+
+# Sentry trace and error reporting.
+enable_sentry: false
+sentry_dsn: !Secret
 
 # Credentials for Google-federated AWS access.
 # (Deprecated: move these configuration values to AWS config file)
@@ -453,19 +461,6 @@ pegasus_web_server_name: pegasus
 pegasus_workers: 8
 sinatra_session_secret:
 
-# Whether most pegasus content is present in the sites and sites.v3 directories.
-# This flag should be set to false if this content has been omitted from the
-# local git client via git-sparse-checkout.
-#
-# When set to false, application features and tests which depend on most
-# pegasus content will be disabled. A small subset of pegasus content will still
-# be available to support certain features used by dashboard, such as
-# certificates, dcdo flags, and image optimization.
-#
-# It is recommended to control this flag via the `HAS_PEGASUS_CONTENT`
-# environment variable, since that will also be picked up by the apps build.
-has_pegasus_content: <%= ENV['HAS_PEGASUS_CONTENT'] != 'false' %>
-
 # Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
 read_only: false
 
@@ -561,20 +556,14 @@ instance_type:
 branch:
 database_username:
 
-# Data-stack parameters.
-rds_host:
-rds_identifier:
-rds_username:
-rds_password:
-redshift_database:
+## Redshift
+redshift_cluster_id:
+# Legacy Redshift configuration (for connecting with a SQL client via the `pg` gem).
+redshift_host:
 redshift_username:
-rds_backup_account:
-logs_bucket:
+redshift_password:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
 
 devinternal_db_writer: !Secret
 
@@ -661,8 +650,10 @@ openai_lesson_summaries_api_key: !Secret
 elevenlabs_api_key: !Secret
 
 # Credentials for Langfuse API
-langfuse_secret_key: !Secret
-langfuse_public_key: !Secret
+tutor_langfuse_secret_key: !Secret
+tutor_langfuse_public_key: !Secret
+ta_langfuse_secret_key: !Secret
+ta_langfuse_public_key: !Secret
 
 # Credentials for Google Gemini API
 google_gemini_ai_chat_lab_api_key: !Secret

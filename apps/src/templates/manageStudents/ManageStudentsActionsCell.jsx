@@ -49,6 +49,7 @@ class ManageStudentsActionsCell extends Component {
     saveStudent: PropTypes.func,
     addStudent: PropTypes.func,
     loadSectionData: PropTypes.func,
+    syncEnabled: PropTypes.bool,
   };
 
   state = {
@@ -150,30 +151,32 @@ class ManageStudentsActionsCell extends Component {
 
     return (
       <div>
-        {!isEditing && loginType !== SectionLoginType.lti_v1 && (
-          <QuickActionsCell>
-            {this.props.canEdit && (
-              <PopUpMenu.Item onClick={this.onEdit}>
-                {i18n.edit()}
+        {!isEditing &&
+          (loginType !== SectionLoginType.lti_v1 ||
+            !this.props.syncEnabled) && (
+            <QuickActionsCell>
+              {this.props.canEdit && (
+                <PopUpMenu.Item onClick={this.onEdit}>
+                  {i18n.edit()}
+                </PopUpMenu.Item>
+              )}
+              {showWordPictureOptions && (
+                <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
+                  {i18n.printLoginCard()}
+                </PopUpMenu.Item>
+              )}
+              {showWordPictureOptions && (
+                <PopUpMenu.Item onClick={this.onViewParentLetter}>
+                  {i18n.viewParentLetter()}
+                </PopUpMenu.Item>
+              )}
+              {this.props.canEdit && <MenuBreak />}
+              <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
+                <FontAwesome icon="times-circle" style={styles.xIcon} />
+                {i18n.removeStudent()}
               </PopUpMenu.Item>
-            )}
-            {showWordPictureOptions && (
-              <PopUpMenu.Item onClick={this.onPrintLoginInfo}>
-                {i18n.printLoginCard()}
-              </PopUpMenu.Item>
-            )}
-            {showWordPictureOptions && (
-              <PopUpMenu.Item onClick={this.onViewParentLetter}>
-                {i18n.viewParentLetter()}
-              </PopUpMenu.Item>
-            )}
-            {this.props.canEdit && <MenuBreak />}
-            <PopUpMenu.Item onClick={this.onRequestDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.removeStudent()}
-            </PopUpMenu.Item>
-          </QuickActionsCell>
-        )}
+            </QuickActionsCell>
+          )}
         {isEditing && rowType !== RowType.ADD && (
           <div>
             <Button

@@ -6,15 +6,14 @@
 # high availability. If and when we want a real production namespace, it should
 # be segmented into its own private subnets.
 
-# This file creates the cluster networking inside an existing VPC. We re-use the
-# VPC and Internet Gateway, but create cluster-specific public/private subnets,
-# routing tables, and NAT gateways.
-
 data "aws_availability_zones" "available" {
   state = "available"
 }
 
 locals {
+  vpc_id              = var.create_new_vpc ? aws_vpc.this[0].id : var.existing_vpc_id
+  internet_gateway_id = var.create_new_vpc ? aws_internet_gateway.this[0].id : var.existing_internet_gateway_id
+  
   azs = slice(data.aws_availability_zones.available.names, 0, 2)
 
   public_subnet_tags = {
@@ -28,6 +27,18 @@ locals {
   }
 }
 
+# Validate if we're all in or all out on creating a new VPC
+# see: ./eks-cluster-networking-vpc.tf
+check "if_create_new_vpc_is_true_existing_vpc_id_must_be_null" {
+  assert {
+    condition = var.create_new_vpc ? (
+      var.existing_vpc_id == null && var.existing_internet_gateway_id == null
+    ) : (
+      var.existing_vpc_id != null && var.existing_internet_gateway_id != null
+    )
+    error_message = "When create_new_vpc is true, existing_vpc_id and existing_internet_gateway_id must both be unset. When create_new_vpc is false, both must be set."
+  }
+}
 
 #============================================================
 # Public Networking
@@ -37,20 +48,20 @@ locals {
 # Public route table and route to the Internet
 
 resource "aws_route_table" "public" {
-  vpc_id = var.vpc_id
+  vpc_id = local.vpc_id
 }
 
 resource "aws_route" "public_internet" {
   route_table_id         = aws_route_table.public.id
   destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = var.internet_gateway_id
+  gateway_id             = local.internet_gateway_id
 }
 
 # === Public Subnets ===
 # Public subnets with ELB role for external access
 
 resource "aws_subnet" "public_1" {
-  vpc_id                  = var.vpc_id
+  vpc_id                  = local.vpc_id
   cidr_block              = var.public_subnet_1_cidr
   availability_zone       = local.azs[0]
   map_public_ip_on_launch = true
@@ -63,7 +74,7 @@ resource "aws_route_table_association" "public_1" {
 }
 
 resource "aws_subnet" "public_2" {
-  vpc_id                  = var.vpc_id
+  vpc_id                  = local.vpc_id
   cidr_block              = var.public_subnet_2_cidr
   availability_zone       = local.azs[1]
   map_public_ip_on_launch = true
@@ -104,7 +115,7 @@ resource "aws_nat_gateway" "nat_2" {
 # Private route tables for each private subnet
 
 resource "aws_route_table" "private_1" {
-  vpc_id = var.vpc_id
+  vpc_id = local.vpc_id
 }
 
 resource "aws_route" "private_1_nat" {
@@ -114,7 +125,7 @@ resource "aws_route" "private_1_nat" {
 }
 
 resource "aws_route_table" "private_2" {
-  vpc_id = var.vpc_id
+  vpc_id = local.vpc_id
 }
 
 resource "aws_route" "private_2_nat" {
@@ -127,7 +138,7 @@ resource "aws_route" "private_2_nat" {
 # Private subnets for internal services
 
 resource "aws_subnet" "private_1" {
-  vpc_id                  = var.vpc_id
+  vpc_id                  = local.vpc_id
   cidr_block              = var.private_subnet_1_cidr
   availability_zone       = local.azs[0]
   map_public_ip_on_launch = false
@@ -140,7 +151,7 @@ resource "aws_route_table_association" "private_1" {
 }
 
 resource "aws_subnet" "private_2" {
-  vpc_id                  = var.vpc_id
+  vpc_id                  = local.vpc_id
   cidr_block              = var.private_subnet_2_cidr
   availability_zone       = local.azs[1]
   map_public_ip_on_launch = false

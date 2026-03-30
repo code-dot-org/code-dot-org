@@ -1,0 +1,38 @@
+{
+  "name": "csd-2026",
+  "script_names": [
+    "csd1-2026",
+    "csd3-2026",
+    "csd4-2026",
+    "csd5-2026",
+    "csd6a-2026",
+    "csd6b-2026",
+    "csd7-2026",
+    "programming-with-music-lab-2026"
+  ],
+  "original_script_names": [
+    "csd1-2026",
+    "csd3-2026",
+    "csd4-2026",
+    "csd5-2026",
+    "csd6a-2026",
+    "csd6b-2026",
+    "csd7-2026",
+    "programming-with-music-lab-2026"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csd",
+    "numbered_units": "auto",
+    "version_year": "2026"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

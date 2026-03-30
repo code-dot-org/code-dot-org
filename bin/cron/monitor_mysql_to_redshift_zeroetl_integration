@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+
+require_relative 'only_one'
+require_relative '../../dashboard/config/environment'
+require 'cdo/aws/redshift'
+require 'cdo/chat_client'
+
+NOTIFY_CHANNEL = 'data-alerts'
+ENVIRONMENT_TYPE = CDO.rack_env.to_s
+TARGET_DB = "#{ENVIRONMENT_TYPE}_learningplatform_mysql_zeroetl"
+REDSHIFT_SQL_USER = 'etl_client'
+
+# @param message [String] the (base) error message to log.
+def alert(message)
+  CDO.log.warn message
+  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red') if ENVIRONMENT_TYPE == 'production'
+end
+
+def main
+  redshift = Cdo::Redshift.new(db_user: REDSHIFT_SQL_USER)
+
+  # Check Integration-level status.
+  # Expected healthy states are `PendingDbConnectState`, `SchemaDiscoveryState`, and `CdcRefreshState`
+  # Unhealthy state: `ErrorState`
+  integration_query = <<~SQL
+    SELECT *
+    FROM SVV_INTEGRATION
+    WHERE target_database = '#{TARGET_DB}';
+  SQL
+
+  integrations = redshift.execute(integration_query)
+  integrations.each do |integration|
+    alert("Zero-ETL Integration Alert (#{ENVIRONMENT_TYPE})*\nIntegration `#{integration['integration_id']}` is in state `#{integration['state']}`. #{integration.to_json}") if integration['state'] == 'ErrorState'
+  end
+
+  # Check Table-level sync status.
+  # https://docs.aws.amazon.com/redshift/latest/dg/r_SVV_INTEGRATION_TABLE_STATE.html
+  # Possible values: `Synced`, `Failed`, `Deleted`, `ResyncRequired`, `ResyncInitiated`, and `DroppedSource`.
+  table_query = <<~SQL
+    SELECT *
+    FROM SVV_INTEGRATION_TABLE_STATE
+    WHERE target_database = '#{TARGET_DB}'
+      AND table_state != 'Synced'
+      AND table_state != 'ResyncInitiated';
+  SQL
+
+  tables = redshift.execute(table_query)
+  tables.each do |table|
+    alert("Zero-ETL Table Sync Alert (#{ENVIRONMENT_TYPE})*\nTable `#{table['schema_name']}.#{table['table_name']}` failed to sync.\nDetails: #{table.to_json}")
+  end
+rescue => exception
+  alert("💥 *Zero-ETL Monitor Script Failed (#{ENVIRONMENT_TYPE})*\nException: #{exception.message}")
+  raise exception
+end
+
+main

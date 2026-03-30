@@ -278,6 +278,7 @@ class Unit < ApplicationRecord
     content_area
     topic_tags
     enable_blockly_keyboard_navigation
+    ai_rubric_s3_config
   )
 
   def self.hoc_2014_unit
@@ -351,6 +352,12 @@ class Unit < ApplicationRecord
   def self.should_cache?
     return false if Rails.application.config.levelbuilder_mode
     return false unless Rails.application.config.cache_classes
+    # Unit caching is designed for use within the running web application, but we
+    # can't easily limit it to that scenario until the CDO.running_web_application?
+    # helper is fixed (see https://github.com/code-dot-org/code-dot-org/pull/71525).
+    # In the interim, make sure we skip caching during rake seed tasks, which
+    # sometimes break when caching is enabled.
+    return false if File.basename($0) == 'rake'
     return false if ENV['UNIT_TEST'] || ENV['CI']
     true
   end
@@ -1312,6 +1319,7 @@ class Unit < ApplicationRecord
         scriptPath: unit_path,
         showCalendar: is_migrated ? show_calendar : false, #prevent calendar from showing for non-migrated units for now
         weeklyInstructionalMinutes: weekly_instructional_minutes,
+        aiRubricS3Config: ai_rubric_s3_config,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
         courseVersionId: unit_group_unit&.cached_unit_group&.course_version&.id,
@@ -1607,7 +1615,8 @@ class Unit < ApplicationRecord
       :curriculum_umbrella,
       :weekly_instructional_minutes,
       :content_area,
-      :topic_tags
+      :topic_tags,
+      :ai_rubric_s3_config
     ]
     boolean_keys = [
       :has_unnumbered_lessons,

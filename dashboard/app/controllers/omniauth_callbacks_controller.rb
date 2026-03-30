@@ -640,7 +640,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return unless connecting_new_provider? || Policies::Lti.lti_registration_in_progress?(session)
     lock_reason = account_linking_locked?
     return unless lock_reason
-    redirect_back fallback_location: new_user_session_path, alert: lock_reason
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason, allow_other_host: true
   end
 
   # Determine whether to link a new LTI auth option to an existing account

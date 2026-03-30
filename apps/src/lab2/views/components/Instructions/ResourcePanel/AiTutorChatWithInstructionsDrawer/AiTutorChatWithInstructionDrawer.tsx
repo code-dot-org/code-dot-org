@@ -141,13 +141,6 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
     setIsCollapsed(isCollapsedByDefault);
   }, [isCollapsedByDefault]);
 
-  // Reset so that when drawer is expanded again, we set height from content.
-  useEffect(() => {
-    if (isCollapsed) {
-      hasSetInitialHeightFromContentRef.current = false;
-    }
-  }, [isCollapsed]);
-
   // Keep ref in sync with current height.
   useEffect(() => {
     rawInstructionsHeightRef.current = rawInstructionsHeight;
@@ -157,8 +150,11 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
   // (e.g., details elements expanded/collapsed), and set the drawer height to match.
   useEffect(() => {
     // Skip if instructions drawer is collapsed (unmounted).
+    // Reset the flag in cleanup so the next expand always restores full height.
     if (isCollapsed) {
-      return;
+      return () => {
+        hasSetInitialHeightFromContentRef.current = false;
+      };
     }
 
     const instructionsContentElement = instructionsContentRef.current;
@@ -200,6 +196,8 @@ const AiTutorChatWithInstructionDrawer: React.FunctionComponent<
 
     return () => {
       resizeObserver.disconnect();
+      // Reset so the next expand always restores full height from content.
+      hasSetInitialHeightFromContentRef.current = false;
     };
   }, [setRawInstructionsHeight, isCollapsed]);
 
