@@ -38,7 +38,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-11-19 01:18:06 UTC",
+    "serialized_at": "2026-03-30 18:12:45 UTC",
+    "hide_within_course": false,
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20360,6 +20361,7 @@
   "rubrics": [
     {
       "level_name": "CSD web project animated review_2024",
+      "s3_config_dir": "csd3-2023-L14",
       "seeding_key": {
         "lesson.key": "Mini-Project - Animation",
         "lesson_group.key": "lessonGroup-2",
@@ -20368,6 +20370,7 @@
     },
     {
       "level_name": "CSD U3 Sprites scene challenge_2024",
+      "s3_config_dir": "csd3-2023-L11",
       "seeding_key": {
         "lesson.key": "Mini-Project - Captioned Scenes",
         "lesson_group.key": "lessonGroup-2",
@@ -20376,6 +20379,7 @@
     },
     {
       "level_name": "CSD U3 collisions flyman bounceOff_2024",
+      "s3_config_dir": "csd3-2023-L24",
       "seeding_key": {
         "lesson.key": "Mini-Project - Flyer Game",
         "lesson_group.key": "lessonGroup-3",
@@ -20384,6 +20388,7 @@
     },
     {
       "level_name": "CSD U3 L7 mini project_2024",
+      "s3_config_dir": "csd3-2023-L7",
       "seeding_key": {
         "lesson.key": "Mini-Project - Robot Faces",
         "lesson_group.key": "lessonGroup-2",
@@ -20392,6 +20397,7 @@
     },
     {
       "level_name": "CSD games sidescroll review_2024",
+      "s3_config_dir": "csd3-2023-L21",
       "seeding_key": {
         "lesson.key": "Mini-Project - Side Scroller",
         "lesson_group.key": "lessonGroup-3",
@@ -20400,6 +20406,7 @@
     },
     {
       "level_name": "CSD games project review_2024",
+      "s3_config_dir": "csd3-2023-L28",
       "seeding_key": {
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "lessonGroup-3",
@@ -20408,6 +20415,7 @@
     },
     {
       "level_name": "CSD U3 Interactive Card Final_2024",
+      "s3_config_dir": "csd3-2023-L18",
       "seeding_key": {
         "lesson.key": "Project - Interactive Card",
         "lesson_group.key": "lessonGroup-2",

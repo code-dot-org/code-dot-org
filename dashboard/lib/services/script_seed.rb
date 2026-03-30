@@ -1000,10 +1000,14 @@ module Services
     end
 
     class RubricSerializer < ActiveModel::Serializer
-      attributes :level_name, :seeding_key
+      attributes :level_name, :s3_config_dir, :seeding_key
 
       def level_name
         object.level&.name
+      end
+
+      def s3_config_dir
+        @scope[:seed_context].script.ai_rubric_s3_config.try(:[], object.level&.name)
       end
 
       def seeding_key
