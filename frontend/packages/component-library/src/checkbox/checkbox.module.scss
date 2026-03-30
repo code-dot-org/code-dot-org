@@ -30,6 +30,7 @@
 
     & + i {
       vertical-align: bottom;
+      box-sizing: content-box;
 
       &::before {
         display: inline-block;
