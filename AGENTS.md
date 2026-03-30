@@ -7,12 +7,28 @@
 - broadly contains teacher tools, student labs (=learning activities), and levelbuilder (curriculum authoring tool)
 - key directories:
   - frontend is React, see apps/, particularly apps/src (most existing jsx/tsx), and frontend/ (some new modules)
-  - backend is Rails, see dashboard/ which is the root of a conventional Rails app 
+  - backend is Rails, see dashboard/ which is the root of a conventional Rails app
 
 ## A few other useful docs:
 - apps/README.md: how to run/build/test our frontend JS/TS/JSX/TSX
 - TESTING.md: how to run various types of tests, both frontend, backend and ui tests
+- frontend/AGENTS.md: conventions, commands, and architecture guidance for the Turborepo
+  workspace — read this before working in `frontend/`
 - Assorted docs are scattered through the repo, most as .md files, you may find these relevant as you work in different parts of the repo
+
+## README hierarchy
+
+Before editing or creating files in any subdirectory, read all `README.md`
+files in the directory path from the repo root down to and including the
+target file's directory. This helps identify local patterns, conventions,
+and architecture.
+
+**Example:** Before editing
+`dashboard/engines/observability/lib/observability/sentry.rb`, read:
+
+- `dashboard/README.md` (if exists)
+- `dashboard/engines/README.md` (if exists)
+- `dashboard/engines/observability/README.md` (if exists)
 
 ## Rails Tips and Tricks:
 - As previously mentioned, see `dashboard/` directory for a conventional rails app with the usual directories (i.e. with dashboard/app/controllers, dashboard/app/models, dashboard/bin/rails, etc)
@@ -56,7 +72,7 @@
   - dashboard/config/scripts contains a variety of curriculum related files with a nested directory structure
   - dashboard/config/scripts_json/*.script_json
   - etc
-  
+
 ## Other potentially interesting directories
 
 - `aws/`: contains IaC, in particular `aws/cloudformation`
@@ -87,7 +103,12 @@
 - finally, if there's a relevant test suite, run it
 - once you've done all that, if you need any testing that requires the UI or secrets, or you're ready for a full drone run, let the user know what you'd like tested that you could not test on your own
 
-# Agent skills
+## Agent skills
 - Add agent skills to the `.agents/skills` directory shared by all agents.
 - Skill directories matching `.agents/skills/*.local` are not committed to git.
 - Prefer adding agent skills to extending AGENTS.md.
+
+## Continuous improvement
+
+If you hit a wrong assumption or repeated correction working in this repo,
+propose an update to this file or the relevant subdirectory `AGENTS.md`.

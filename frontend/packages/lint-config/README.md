@@ -1,75 +1,102 @@
 # @code-dot-org/lint-config
 
-This package contains the Code.org engineering code style guide for the Code.org `frontend` directory.
+Shared ESLint, TypeScript, Prettier, Stylelint, and lint-staged configs for all packages and apps in `frontend/`. Not used by the legacy `apps/` bundle.
 
-**Note**: At this time, the top-level `apps` directory does not use this package.
+## ESLint
 
-This package includes:
+Three flat-config presets are available:
 
-1. Typescript Configuration Files (tsconfig)
-2. ESLint Configuration Files
-3. Prettier Configuration
+| Preset             | Use for                                            |
+| ------------------ | -------------------------------------------------- |
+| `eslint/node.mjs`  | Node.js tools, config files                        |
+| `eslint/react.mjs` | React apps and component libraries                 |
+| `eslint/jest.mjs`  | Jest test files (overlay on top of another preset) |
 
-## Typescript Configuration Files (tsconfig)
-
-Various default `tsconfig.json` flavors are available for different Node.js versions and frameworks.
-
-Most configurations use [@tsconfig](https://github.com/tsconfig/bases/tree/main) bases and this package
-overrides the base configuration for use within the Code.org engineering ecosystem.
-
-When updating these configuration files, be sure to keep them as general as possible. For example, don't
-add `jsx` to the node flavors as that would make all consumers of the node flavor to include jsx in its
-typescript compilation.
-
-### Current Flavors
-
-1. `tsconfig.node[version].json`: A tsconfig targeted for a specific node version.
-
-## ESLint Configuration Files
-
-ESLint [flat config](https://eslint.org/docs/latest/use/configure/configuration-files) style configuration files are available
-in the `eslint` directory for various flavors.
-
-When updating ESLint configuration files in this package, be sure to keep them as general as possible.
-Consuming packages can override defaults as needed.
-
-### Current Flavors
-
-1. `node`: Recommended node defaults from ESLint
-2. `react`: Recommended react defaults from ESLint
-
-### Usage
-
-Import and spread the shared configuation in your `eslint.config.mjs`:
+All presets include `eslint:recommended`, `typescript-eslint`, and `eslint-plugin-import-x` (with enforced import ordering). The `react` preset adds `eslint-plugin-jsx-a11y` (strict) and `eslint-plugin-react`.
 
 ```js
-import cdoEslint from './eslint/node.mjs';
+// eslint.config.mjs — React app
+import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
+import {globalIgnores} from 'eslint/config';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [...cdoEslint];
+export default [globalIgnores(['dist']), ...cdoReactConfig];
 ```
 
-## Prettier Configuration
+```js
+// eslint.config.mjs — with Jest overlay
+import cdoJestConfig from '@code-dot-org/lint-config/eslint/jest.mjs';
+import cdoReactConfig from '@code-dot-org/lint-config/eslint/react.mjs';
 
-Code.org uses the default prettier configuration with some overrides in the `prettier` directory.
-
-To use the shared configuration, add the following key to `package.json`:
-
-```
-  "prettier": "@code-dot-org/lint-config/prettier/index.mjs",
+export default [...cdoReactConfig, ...cdoJestConfig];
 ```
 
-The Code.org prettier configuration also does not utilize ESLint/Prettier plugins in accordance to the
-[Prettier](https://prettier.io/docs/en/integrating-with-linters) recommendation. Instead, the `lint` and
-`lint:fix` scripts run `prettier --check .` and `prettier --write .` respectively. Ensure the following scripts
-are added in the consuming packages' `package.json`:
+Spread and extend as needed — consuming packages can append additional rule overrides after the preset.
 
+## TypeScript
+
+Four tsconfig presets, all extending [`@tsconfig`](https://github.com/tsconfig/bases) bases:
+
+| Preset                               | Use for                       |
+| ------------------------------------ | ----------------------------- |
+| `typescript/tsconfig.node22.json`    | Node 22 tooling               |
+| `typescript/tsconfig.react.json`     | React library packages        |
+| `typescript/tsconfig.vite.app.json`  | Vite app `tsconfig.app.json`  |
+| `typescript/tsconfig.vite.node.json` | Vite app `tsconfig.node.json` |
+
+```json
+// tsconfig.app.json
+{
+  "extends": "@code-dot-org/lint-config/typescript/tsconfig.vite.app.json",
+  "compilerOptions": {"baseUrl": "."},
+  "include": ["src"]
+}
 ```
-    "lint": "eslint . && prettier --check .",
-    "lint:fix": "eslint --fix . && prettier --write .",
+
+The `tsconfig.vite.app.json` preset sets `"paths": {"@/*": ["src/*"]}` — mirror this alias in `vite.config.ts` `resolve.alias` if you use it.
+
+Keep these presets general-purpose. Package-specific options (`composite`, `declarationMap`, `paths`) go in the consuming package's own tsconfig.
+
+## Prettier
+
+```json
+// package.json
+{
+  "prettier": "@code-dot-org/lint-config/prettier/index.mjs"
+}
 ```
 
-### Editor Integration
+Key overrides from default Prettier: `singleQuote: true`, `bracketSpacing: false`, `arrowParens: 'avoid'`. Also includes `prettier-plugin-packagejson` for sorting `package.json` keys.
 
-Since prettier will not error out as a linter error, be sure to configure your editor of choice to automatically
-run prettier on save. For instructions for your editor of choice, see the [Prettier documentation](https://prettier.io/docs/en/editors).
+Run Prettier separately from ESLint (no ESLint/Prettier plugin):
+
+```json
+"lint": "eslint . && prettier --check .",
+"lint:fix": "eslint --fix . && prettier --write ."
+```
+
+Configure your editor to auto-format on save — see [Prettier editor integration](https://prettier.io/docs/en/editors).
+
+## Stylelint
+
+```js
+// stylelint.config.mjs
+import cdoStylelint from '@code-dot-org/lint-config/stylelint/index.mjs';
+export default cdoStylelint;
+```
+
+Extends `stylelint-config-standard-scss` with relaxed rules matching the legacy `apps/` style (vendor prefixes allowed, flexible selector patterns, SCSS globals permitted).
+
+## lint-staged
+
+```js
+// .lintstagedrc.mjs
+import baseConfig from '@code-dot-org/lint-config/lint-staged/lintstagedrc.mjs';
+export default baseConfig;
+```
+
+Default behavior on staged files:
+
+- `*.{js,cjs,mjs,ts,jsx,tsx,json,md}` → `eslint --fix` + `prettier --write`
+- `*.{css,sass,scss}` → `stylelint --fix` + `prettier --write`
+
+To customize, import `defaultLintFix`, `cssLintFix`, or `DEFAULT_EXTENSIONS_GLOB` and compose your own config.
