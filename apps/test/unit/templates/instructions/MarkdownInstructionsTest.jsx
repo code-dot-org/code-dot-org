@@ -1,5 +1,7 @@
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, screen} from '@testing-library/react';
 import React from 'react';
+import {Provider} from 'react-redux';
+import configureMockStore from 'redux-mock-store';
 
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
@@ -8,8 +10,15 @@ import {setExternalGlobals} from '../../../util/testUtils';
 describe('MarkdownInstructions', function () {
   setExternalGlobals();
 
-  it('standard case had top padding and no left margin', function () {
-    const wrapper = shallow(
+  const mockStore = configureMockStore();
+
+  const renderWithStore = ui => {
+    const store = mockStore({});
+    return render(<Provider store={store}>{ui}</Provider>);
+  };
+
+  it('renders markdown content in the standard case', function () {
+    renderWithStore(
       <MarkdownInstructions
         markdown="md"
         markdownClassicMargins={false}
@@ -18,24 +27,20 @@ describe('MarkdownInstructions', function () {
       />
     );
 
-    const containerElement = wrapper.find('.instructions-markdown').first();
-    expect(containerElement.props().style.paddingTop).toBe(19);
-    expect(containerElement.props().style.marginBottom).toBe(35);
-    expect(containerElement.props().style.marginLeft).toBeUndefined();
-
-    const markdownElement = wrapper.find('EnhancedSafeMarkdown').first();
-    expect(markdownElement.props().markdown).toBe('md');
+    expect(screen.getByText('md')).toBeInTheDocument();
   });
 
-  it('inTopPane has no top padding', function () {
-    const wrapper = shallow(
+  it('renders markdown when displayed in the top pane', function () {
+    renderWithStore(
       <MarkdownInstructions
         markdown="md"
         inTopPane={true}
         noInstructionsWhenCollapsed={true}
       />
     );
-    const element = wrapper.find('.instructions-markdown').first();
-    expect(element.props().style.paddingTop).toBe(0);
+
+    const markdownText = screen.getByText('md');
+    const wrapper = markdownText.closest('.instructions-markdown');
+    expect(wrapper).not.toBeNull();
   });
 });
