@@ -1028,7 +1028,7 @@ class ActivitiesControllerTest < ActionController::TestCase
 
     # Create a LevelGroup level.
     level = create(:level_group, :with_sublevels, name: 'LevelGroupLevel1')
-    level.properties['title'] =  'Long assessment 1'
+    level.properties['title'] = 'Long assessment 1'
     level.properties['submittable'] = true
     level.save!
 

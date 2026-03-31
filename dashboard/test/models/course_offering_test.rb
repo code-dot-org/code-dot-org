@@ -1108,7 +1108,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test 'finds corresponding offerings for pl course' do
-    pl_course_offering =create(:course_offering)
+    pl_course_offering = create(:course_offering)
     pl_course = create(:single_unit_course, :pl_course)
     create(:course_version, content_root: pl_course, course_offering: pl_course_offering)
 
