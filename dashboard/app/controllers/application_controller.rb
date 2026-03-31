@@ -12,6 +12,7 @@ class ApplicationController < ActionController::Base
 
   include Services::DatabaseConnections::ControllerFilter
 
+  # @see `/shared/middleware/varnish_environment.rb`
   prepend_before_action do
     I18n.locale = request.locale
   end
