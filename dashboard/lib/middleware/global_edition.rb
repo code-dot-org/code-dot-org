@@ -84,6 +84,18 @@ module Middleware
 
           setup_region(new_region)
           setup_redirect_to(redirect_path)
+        # Fallback legacy `/global/fa/*` path
+        elsif original_path_info.start_with?('/global/fa')
+          international_path = original_path_info.sub('/global/fa', '')
+          request.path_info = international_path unless existing_route?
+
+          if redirectable?(international_path)
+            fallback_path = regional_path_for('fa', international_path)
+            fallback_path = "#{fallback_path}?#{request.query_string}" if request.query_string.present?
+            setup_redirect_to(fallback_path)
+          end
+
+          setup_region('fa')
         elsif effective_region
           if effective_region == url_region
             normalize_request_for_routing
@@ -221,11 +233,11 @@ module Middleware
       # Determines if the request is eligible for redirection.
       # To improve efficiency, the redirection should only affect the browser's address bar,
       # avoiding redirection for non-visible to user requests such as AJAX, non-GET, or asset requests.
-      private def redirectable?
+      private def redirectable?(path = original_path)
         return false unless request.get? # only GET request can be redirected
         return false if request.xhr? # only non-AJAX requests should be redirected
 
-        !excluded_path?(original_path)
+        !excluded_path?(path)
       end
 
       private def regional_path_for(region, main_path)
