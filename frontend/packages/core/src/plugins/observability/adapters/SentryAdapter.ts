@@ -6,7 +6,14 @@ import type {ObservabilityConfig} from '../types';
 
 import {BaseAdapter} from './BaseAdapter';
 
+/**
+ * Sentry-backed implementation of the provider-agnostic observability client.
+ */
 export class SentryAdapter extends BaseAdapter {
+  /**
+   * Initialize the Sentry SDK using the normalized runtime configuration.
+   * @param config Normalized runtime configuration for the Sentry provider.
+   */
   protected initProvider(config: ObservabilityConfig): void {
     if (!config.sentry?.dsn) {
       throw new Error(
@@ -14,6 +21,8 @@ export class SentryAdapter extends BaseAdapter {
       );
     }
 
+    // Logs and metrics are sampled independently so the rollout can be tuned
+    // without changing tracing or error-reporting behavior.
     const enableLogs = this.isLogSampled(config.sampling?.logSampleRate);
     const enableMetrics = this.isMetricsSampled(
       config.sampling?.metricsSampleRate,
@@ -42,10 +51,19 @@ export class SentryAdapter extends BaseAdapter {
     });
   }
 
+  /**
+   * Consent is represented as a user id in Sentry so future events can be
+   * associated with the current signed-in user only after consent is granted.
+   * @param userId Signed-in user id, or `null` when consent is revoked.
+   */
   protected applyConsentToProvider(userId: string | null): void {
     Sentry.setUser(userId ? {id: userId} : null);
   }
 
+  /**
+   * Wrap the Sentry logger so SDK failures degrade to console warnings instead
+   * of breaking the caller's code path.
+   */
   protected initLogger(): void {
     const sentryLoggerMethods = {
       trace: Sentry.logger.trace,
@@ -79,6 +97,10 @@ export class SentryAdapter extends BaseAdapter {
     };
   }
 
+  /**
+   * Wrap Sentry metrics so SDK failures degrade to console warnings instead of
+   * breaking the caller's code path.
+   */
   protected initMetrics(): void {
     this.metrics = {
       count: (name, value = 1, attributes) => {
@@ -114,6 +136,11 @@ export class SentryAdapter extends BaseAdapter {
     };
   }
 
+  /**
+   * Capture an exception with optional structured context, if initialized.
+   * @param error The thrown value or exception-like object to record.
+   * @param context Optional structured metadata to attach to the error event.
+   */
   recordError(error: unknown, context?: Record<string, unknown>): void {
     if (!this.initialized) {
       return;
@@ -129,10 +156,20 @@ export class SentryAdapter extends BaseAdapter {
     }
   }
 
+  /**
+   * Flush and close the Sentry client.
+   * @returns A promise that resolves once Sentry has flushed and closed.
+   */
   async shutdown(): Promise<void> {
     await Sentry.close();
   }
 
+  /**
+   * Keep trace propagation limited to dashboard-origin requests, except in
+   * adhoc environments where assets may be served from CDN hosts.
+   * @param environment Current Code.org environment.
+   * @returns Host or pattern allowed to receive Sentry tracing headers.
+   */
   private getAllowedTracingTarget(environment: Environment): string | RegExp {
     if (environment === 'adhoc') {
       return /^https:\/\/.*\.cdn-code\.org/;
