@@ -87,7 +87,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-lesson-plan"
               href={lesson.lesson_plan_html_url}
               text={i18n.viewLessonPlan()}
-              icon="file-text"
+              icon="file-lines"
               color="blue"
               target="_blank"
               style={styles.button}
@@ -101,7 +101,7 @@ class ProgressLessonTeacherInfo extends React.Component {
               id="uitest-student-resources"
               href={lesson.student_lesson_plan_html_url}
               text={i18n.studentResources()}
-              icon="file-text"
+              icon="file-lines"
               color="purple"
               target="_blank"
               style={styles.button}

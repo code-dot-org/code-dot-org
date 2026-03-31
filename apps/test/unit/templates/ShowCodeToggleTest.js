@@ -144,7 +144,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa fa-code"
+            iconClass="fa-solid fa-code"
             label="Show Text"
             style={{display: 'inline-block'}}
           />
@@ -195,7 +195,7 @@ describe('The ShowCodeToggle component', () => {
                 id="show-code-header"
                 headerHasFocus={false}
                 isRtl={false}
-                iconClass="fa fa-code"
+                iconClass="fa-solid fa-code"
                 label="Show Text"
                 style={{display: 'inline-block'}}
               />
@@ -251,7 +251,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa fa-code"
+            iconClass="fa-solid fa-code"
             label="Show Code"
             style={{display: 'inline-block'}}
           />
@@ -284,7 +284,7 @@ describe('The ShowCodeToggle component', () => {
               id="show-code-header"
               headerHasFocus={false}
               isRtl={false}
-              iconClass="fa fa-code"
+              iconClass="fa-solid fa-code"
               label="Show Code"
               style={{display: 'none'}}
             />
@@ -307,7 +307,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa fa-code"
+            iconClass="fa-solid fa-code"
             label="Show Text"
             style={{display: 'none'}}
           />
@@ -333,7 +333,7 @@ describe('The ShowCodeToggle component', () => {
             id="show-code-header"
             headerHasFocus={false}
             isRtl={false}
-            iconClass="fa fa-code"
+            iconClass="fa-solid fa-code"
             label="Show Text"
             style={{display: 'none'}}
           />
