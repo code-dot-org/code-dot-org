@@ -83,15 +83,14 @@ end
 
 describe Observability::Sentry::UserContext do
   before do
+    # This engine test runs without the dashboard application's ApplicationController.
+    # rubocop:disable Rails/ApplicationController
     @controller_class = Class.new(ActionController::Base) do
       include Observability::Sentry::UserContext
 
-      attr_writer :current_user
-
-      def current_user
-        @current_user
-      end
+      attr_accessor :current_user
     end
+    # rubocop:enable Rails/ApplicationController
     @controller = @controller_class.new
   end
 
