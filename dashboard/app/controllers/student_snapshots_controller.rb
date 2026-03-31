@@ -253,17 +253,35 @@ class StudentSnapshotsController < ApplicationController
   end
 
   # GET /student_snapshots/lesson_insight
-  # Returns the system prompt for generating insights
   def lesson_insight
     lesson_id = params[:lesson_id]
     unit_id = params[:unit_id]
     student_id = params[:student_id]
     section_id = params[:section_id]
     teacher_id = current_user.id
+    refresh = params[:refresh] == 'true'
 
     return render json: {error: "Missing required parameters"}, status: :bad_request unless lesson_id && unit_id && student_id && section_id
 
+    existing = LessonInsight.find_by(unit_id: unit_id, lesson_id: lesson_id, student_id: student_id, section_id: section_id) unless refresh
+
+    if existing
+      stale = AiStudentSnapshotHelper.lesson_insight_stale?(
+        existing, unit_id, lesson_id, student_id
+      )
+
+      unless stale
+        return render json: {status: 200, json: existing.insight_json}
+      end
+    end
+
     response = AiStudentSnapshotHelper.generate_lesson_insight(unit_id, lesson_id, teacher_id, student_id, section_id)
+
+    LessonInsight.find_or_initialize_by(lesson_id: lesson_id, student_id: student_id, section_id: section_id, unit_id: unit_id).
+      tap do |record|
+        record.insight_json = response[:json]
+        record.save!
+      end
 
     render json: response
   end

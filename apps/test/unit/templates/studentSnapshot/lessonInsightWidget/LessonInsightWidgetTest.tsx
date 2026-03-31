@@ -153,6 +153,12 @@ describe('LessonInsightWidget', () => {
       expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(1);
     });
 
+    // Initial auto-load should NOT include refresh=true
+    expect(mockHttpClient.fetchJson).toHaveBeenNthCalledWith(
+      1,
+      expect.not.stringContaining('refresh=true')
+    );
+
     const refreshButton = screen.queryByLabelText('Refresh Insight');
     if (refreshButton) {
       await act(async () => {
@@ -162,6 +168,12 @@ describe('LessonInsightWidget', () => {
       await waitFor(() => {
         expect(mockHttpClient.fetchJson).toHaveBeenCalledTimes(2);
       });
+
+      // User-initiated refresh SHOULD include refresh=true
+      expect(mockHttpClient.fetchJson).toHaveBeenNthCalledWith(
+        2,
+        expect.stringContaining('refresh=true')
+      );
     }
   });
 });
