@@ -74,7 +74,7 @@ export default class AddDefaultSprite extends React.Component {
             ...styles.checkmark,
             visibility: displaySuccess ? 'visible' : 'hidden',
           }}
-          className="fa fa-check"
+          className="fa-solid fa-check"
           aria-hidden="true"
         />
       </div>

@@ -39,7 +39,7 @@ describe('SoundListEntry', () => {
     );
     // First child is a icon control for pause and play
     expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa fa-play-circle fa-2x'
+      'fa-solid fa-circle-play fa-2x'
     );
   });
 
@@ -50,7 +50,7 @@ describe('SoundListEntry', () => {
     wrapper.setState({isPlaying: true});
     // First child is a icon control for pause and play
     expect(wrapper.props().children[0].props.children.props.className).toEqual(
-      'fa fa-pause-circle fa-2x'
+      'fa-solid fa-circle-pause fa-2x'
     );
   });
 

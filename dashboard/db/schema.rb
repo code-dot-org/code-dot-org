@@ -2539,6 +2539,18 @@ ActiveRecord::Schema[7.0].define(version: 2026_03_30_181219) do
     t.index ["student_id"], name: "index_user_lesson_objective_reflections_on_student_id"
   end
 
+  create_table "user_lesson_reflections", charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+    t.integer "lesson_id", null: false
+    t.bigint "student_id", null: false
+    t.text "success"
+    t.text "struggle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id", "student_id"], name: "index_user_lesson_reflections_on_lesson_id_and_student_id"
+    t.index ["lesson_id"], name: "index_user_lesson_reflections_on_lesson_id"
+    t.index ["student_id"], name: "index_user_lesson_reflections_on_student_id"
+  end
+
   create_table "user_level_interactions", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "level_id", null: false
