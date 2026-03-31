@@ -24,6 +24,7 @@ class LessonGroup extends React.Component {
     groupedLesson: groupedLessonsType.isRequired,
     isPlc: PropTypes.bool.isRequired,
     isSummaryView: PropTypes.bool.isRequired,
+    isOnLevelView: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number,
@@ -121,7 +122,10 @@ class LessonGroup extends React.Component {
               styles.bottom,
             ]}
           >
-            <TableType groupedLesson={this.props.groupedLesson} />
+            <TableType
+              groupedLesson={this.props.groupedLesson}
+              isOnLevelView={this.props.isOnLevelView}
+            />
           </div>
         )}
       </div>
