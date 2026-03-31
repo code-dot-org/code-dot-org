@@ -24,6 +24,7 @@ interface ChatEventsListProps {
   isTeacherView?: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
   hasInstructionsDrawer?: boolean;
+  lastMessagePostText?: React.ReactNode;
 }
 
 /**
@@ -36,6 +37,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
   buildAssetUrl,
   hasInstructionsDrawer,
+  lastMessagePostText,
 }) => {
   const {chatDisabled, chatDisabledMessage} = useAiChatDisabled();
   const [isInChatNavigationMode, setIsInChatNavigationMode] = useState(false);
@@ -210,7 +212,7 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
                   buildAssetUrl={buildAssetUrl}
                   clientType={clientType}
                   modelParameters={modelParameters}
-                  isLastMessage={isLastMessage}
+                  postText={isLastMessage ? lastMessagePostText : undefined}
                   ref={isLastMessage ? finalEventRef : undefined}
                   tabIndex={isInChatNavigationMode ? 0 : -1}
                   onKeyDown={e => {

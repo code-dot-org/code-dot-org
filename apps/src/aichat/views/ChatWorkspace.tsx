@@ -63,6 +63,9 @@ interface ChatWorkspaceProps {
   logLevelActivity?: () => void;
 
   hasInstructionsDrawer?: boolean;
+
+  // Optional content to render after the last chat message (e.g. lab-specific actions).
+  lastMessagePostText?: React.ReactNode;
 }
 
 /**
@@ -81,6 +84,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   responseCallback,
   logLevelActivity,
   hasInstructionsDrawer,
+  lastMessagePostText,
 }) => {
   const {chatDisabled} = useAiChatDisabled();
   if (multimodalEnabled && (!levelName || !channelId)) {
@@ -319,6 +323,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           clientType={clientType}
           modelParameters={modelParameters}
           hasInstructionsDrawer={hasInstructionsDrawer}
+          lastMessagePostText={lastMessagePostText}
         />
       )}
       <div className={moduleStyles.footer}>

@@ -3,15 +3,12 @@ import React from 'react';
 
 import {sendAnalytics} from '@cdo/apps/aichat/redux';
 import {jsonVideoRehypeMap} from '@cdo/apps/jsonVideo/jsonVideoRehypeMap';
-import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import {EVENTS} from '@cdo/apps/metrics/AnalyticsConstants';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
-import AiTutorVersionActions from '../aiTutorVersionActions/AiTutorVersionActions';
 import CopyableCodeBlock from '../copyableCodeBlock/CopyableCodeBlock';
 
 import {Role} from './types';
@@ -26,7 +23,6 @@ interface ChatMessageProps {
   footer?: React.ReactNode;
   isTA?: boolean;
   messageStyle?: 'default' | 'warning' | 'danger';
-  isLastMessage?: boolean;
 }
 
 const codeCopiedAnalytics = (isTA: boolean) => () =>
@@ -55,20 +51,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   footer,
   isTA,
   messageStyle = 'default',
-  isLastMessage = false,
 }) => {
   const rehypeMap = isTA ? taRehypeMap : nonTaRehypeMap;
-
-  const viewingAiTutorVersionFileUpdates = useAppSelector(
-    isViewingAiTutorVersionFileUpdates
-  );
-
-  const versionFiles = useAppSelector(
-    state => state.lab2Project?.aiTutorVersionFiles
-  );
-
-  const showAiTutorVersionActions =
-    isLastMessage && viewingAiTutorVersionFileUpdates;
 
   const isAssistant = role === Role.ASSISTANT;
 
@@ -120,9 +104,6 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
                     rehypeMap={rehypeMap}
                     openExternalLinksInNewTab
                   />
-                  {showAiTutorVersionActions && versionFiles && (
-                    <AiTutorVersionActions files={versionFiles} />
-                  )}
                   {postText}
                 </div>
               ) : (

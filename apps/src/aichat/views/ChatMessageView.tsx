@@ -31,18 +31,18 @@ interface ChatMessageViewProps {
   chatMessage: ChatMessageType;
   isChatHistoryView: boolean;
   buildAssetUrl?: (asset: ChatAsset) => string;
-  isLastMessage?: boolean;
   clientType?: string;
   modelParameters?: ModelParameters;
+  postText?: React.ReactNode;
 }
 
 const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
   chatMessage,
   isChatHistoryView,
   buildAssetUrl,
-  isLastMessage,
   clientType,
   modelParameters,
+  postText,
 }) => {
   const user = useAppSelector(state => state.currentUser);
 
@@ -184,12 +184,12 @@ const ChatMessageView: React.FunctionComponent<ChatMessageViewProps> = ({
 
   return (
     <ChatMessage
-      isLastMessage={isLastMessage}
       text={displayText}
       role={role}
       messageStyle={getMessageStyle(status, role)}
       header={header}
       footer={footer}
+      postText={postText}
     />
   );
 };

@@ -11,9 +11,12 @@ import {
   ResponseSchemaSettings,
 } from '@cdo/apps/aichat/types';
 import ChatWorkspace from '@cdo/apps/aichat/views/ChatWorkspace';
+import AiTutorVersionActions from '@cdo/apps/aiComponentLibrary/aiTutorVersionActions/AiTutorVersionActions';
 import {useAiTutorModelParameters} from '@cdo/apps/aiTutor/hooks/useAiTutorModelParameters';
 import {defaultPrompts, levelPrompts} from '@cdo/apps/aiTutor/suggestedPrompts';
+import {isViewingAiTutorVersionFileUpdates} from '@cdo/apps/lab2/redux/lab2ReduxSelectors';
 import Spinner from '@cdo/apps/sharedComponents/Spinner';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AiChatClientTypes} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './AiTutorChat.module.scss';
@@ -46,6 +49,13 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
   aiTutorResponseSchemaSettings,
   hasInstructionsDrawer,
 }) => {
+  const viewingAiTutorVersionFileUpdates = useAppSelector(
+    isViewingAiTutorVersionFileUpdates
+  );
+  const versionFiles = useAppSelector(
+    state => state.lab2Project.aiTutorVersionFiles
+  );
+
   const {modelParameters, loading} = useAiTutorModelParameters({
     aiTutorSystemPrompt,
     aiTutorJsonSchema: aiTutorResponseSchemaSettings?.jsonSchema,
@@ -90,6 +100,11 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
     );
   }
 
+  const lastMessagePostText =
+    viewingAiTutorVersionFileUpdates && versionFiles ? (
+      <AiTutorVersionActions files={versionFiles} />
+    ) : undefined;
+
   return (
     <div className={moduleStyles.container}>
       <ChatWorkspace
@@ -103,6 +118,7 @@ const AiTutorChat: React.FunctionComponent<AiTutorChatProps> = ({
         hideModelChangeMessage={true}
         responseCallback={aiTutorResponseSchemaSettings?.responseCallback}
         hasInstructionsDrawer={hasInstructionsDrawer}
+        lastMessagePostText={lastMessagePostText}
       />
     </div>
   );
