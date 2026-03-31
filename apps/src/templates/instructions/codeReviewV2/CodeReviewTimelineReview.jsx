@@ -59,7 +59,7 @@ const CodeReviewTimelineReview = ({
       >
         <div style={styles.header}>
           <div style={styles.icon}>
-            <FontAwesome icon="comments-o" />
+            <FontAwesome icon="comments" iconStyle="regular" />
           </div>
           <div style={styles.title}>
             <div style={styles.codeReviewTitle}>

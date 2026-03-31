@@ -53,7 +53,7 @@ class ProgrammingExpressionsEditor extends Component {
             })
           }
         >
-          <i className="fa fa-trash" />
+          <i className="fa-solid fa-trash" />
         </div>
       </div>
     );

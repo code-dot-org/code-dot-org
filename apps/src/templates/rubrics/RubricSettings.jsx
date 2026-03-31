@@ -302,7 +302,7 @@ function RubricSettings({
                 disabled={statusAll !== STATUS_ALL.READY}
               >
                 {statusAll === STATUS_ALL.EVALUATION_PENDING && (
-                  <i className="fa fa-spinner fa-spin" />
+                  <i className="fa-solid fa-spinner fa-spin" />
                 )}
               </Button>
               <div className={style.detailsGroup}>

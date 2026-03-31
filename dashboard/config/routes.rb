@@ -473,7 +473,7 @@ Dashboard::Application.routes.draw do
         get 'summary_for_lesson_plans', to: 'script_levels#summary_for_lesson_plans', format: false
         get 'edit', to: 'lessons#edit_with_lesson_position'
         get 'level_properties', to: 'lessons#level_properties', format: false
-        get 'practice', to: 'lessons#practice', format: false
+        get 'tutor', to: 'lessons#tutor', format: false
 
         resources :script_levels, only: [:show], path: "/levels", format: false do
           member do
@@ -1072,10 +1072,7 @@ Dashboard::Application.routes.draw do
       end
     end
     if rack_env?(:staging, :test)
-      scope path: '/api/dev', controller: :dev do
-        post 'check-dts', action: 'check_dts'
-        post 'start-build', action: 'start_build'
-      end
+      post '/api/dev/check-dts', to: 'dev#check_dts'
     end
 
     namespace :api do
