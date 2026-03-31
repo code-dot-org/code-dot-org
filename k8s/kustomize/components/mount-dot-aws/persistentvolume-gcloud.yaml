@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: dot-config-gcloud
+  name: cdo-dot-config-gcloud
   labels:
     app.kubernetes.io/component: dot-config-gcloud
 spec:

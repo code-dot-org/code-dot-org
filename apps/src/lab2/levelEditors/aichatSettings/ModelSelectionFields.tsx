@@ -114,9 +114,12 @@ const ModelSelectionFields: React.FunctionComponent = () => {
             <>
               <Typography variant="body4" gutterBottom>
                 <i>
-                  Enables multimodal chat. Note that the list of models must
-                  include a multimodal model for this feature to be available to
-                  students (currently only GPT 4o-mini).
+                  Enables multimodal chat (allow uploading files and receiving
+                  images, if possible).
+                  <br />
+                  <b>IMPORTANT:</b> If using an image model like Gemini 2.5
+                  Flash Image, this setting MUST be enabled for generated images
+                  to appear in the chat.
                 </i>
               </Typography>
               <div className={moduleStyles.fieldRow}>

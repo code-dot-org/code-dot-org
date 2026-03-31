@@ -98,6 +98,7 @@ WebLab.prototype.init = function (config) {
   this.suppliedFilesVersionId = queryParams('version');
   this.initialFilesVersionId = this.suppliedFilesVersionId;
   this.disallowedHtmlTags = config.disallowedHtmlTags;
+  this.disallowedHtmlAttrs = config.disallowedHtmlAttrs;
   getStore().dispatch(actions.changeMaxProjectCapacity(MAX_PROJECT_CAPACITY));
 
   this.brambleHost = null;

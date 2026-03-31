@@ -211,6 +211,99 @@ module ShareFiltering
     nil
   end
 
+  # Extracts user-written text from JavaScript source code for profanity/PII filtering.
+  #
+  # Each token is space-separated in the output so that profanity filters which strip
+  # syntax characters cannot concatenate adjacent identifiers into a false positive
+  # (e.g. `totals(hits)` would become "totalshits" if parentheses were simply removed;
+  # this function returns "totals hits" instead).
+  #
+  # @param [String] code JavaScript source code
+  # @return [String] Extracted text content separated by spaces
+  def self.extract_text_from_js(code)
+    return '' unless code.is_a?(String) && !code.empty?
+
+    text_parts = []
+    remaining = code
+
+    # Extract single-line comments, then erase them from remaining code.
+    remaining.scan(/\/\/.*$/) do |comment|
+      cleaned = comment.
+        sub(/^\/\/\s*/, '').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\/.*$/, ' ')
+
+    # Extract multi-line comments, then erase them from remaining code.
+    remaining.scan(/\/\*.*?\*\//m) do |comment|
+      cleaned = comment.
+        gsub(/\A\/\*\s*|\s*\*\/\z/, '').
+        delete('*').
+        gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(/\/\*.*?\*\//m, ' ')
+
+    # Extract string literal contents, then replace each literal with a space.
+    string_pattern = /"(?:[^"\\]|\\.)*"|'(?:[^'\\]|\\.)*'|`(?:[^`\\]|\\.)*`/
+    remaining.scan(string_pattern) do |str|
+      content = str[1..-2]
+      unescaped = content.
+        gsub(/\\n/, ' ').
+        gsub(/\\t/, ' ').
+        gsub(/\\'/, "'").
+        gsub(/\\"/, '"').
+        gsub(/\\\\/, '')
+      cleaned = unescaped.gsub(/[(){}\[\];,.<>:]/, ' ')
+      text_parts << cleaned unless cleaned.strip.empty?
+    end
+    remaining = remaining.gsub(string_pattern, ' ')
+
+    # Extract identifiers (at least 2 characters) from what remains.
+    remaining.scan(/\b[a-zA-Z_][a-zA-Z0-9_]{1,}\b/) do |identifier|
+      text_parts << identifier
+    end
+
+    text_parts.join(' ').strip
+  end
+
+  # Builds the string passed to find_failure for App Lab library.json PUT bodies.
+  # Parses JSON (including double-encoded bodies), then uses only source/name/description
+  # so raw dropletConfig metadata cannot cause profanity false positives. Non-JSON or
+  # non-library bodies are returned unchanged for filtering as opaque text.
+  #
+  # @param [String] body Raw HTTP body
+  # @return [String] Text to scan for PII/profanity
+  def self.share_filter_text_from_library_request_body(body)
+    return body unless body.is_a?(String) && !body.empty?
+
+    begin
+      parsed = JSON.parse(body)
+      # Some requests send the library JSON double-encoded: the body is a JSON string
+      # whose value is another JSON document (first JSON.parse returns String).
+      if parsed.is_a?(String)
+        begin
+          inner = JSON.parse(parsed)
+          parsed = inner if inner.is_a?(Hash)
+        rescue JSON::ParserError
+          # Leave parsed as String; fall through to return raw body below.
+        end
+      end
+      if parsed.is_a?(Hash) && parsed.key?('source')
+        [
+          extract_text_from_js(parsed['source']),
+          parsed['name'],
+          parsed['description'],
+        ].compact.map(&:to_s).reject(&:empty?).join(' ')
+      else
+        body
+      end
+    rescue JSON::ParserError
+      body
+    end
+  end
+
   # Searches for all sources of offenses in text that might be worth flagging.
   # Returns both the error type and the offending text snippet.
   #

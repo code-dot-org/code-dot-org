@@ -95,13 +95,8 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       )}
     >
       <div className={moduleStyles.grid}>
-        {isAssistant && (
-          <div
-            className={classNames(
-              moduleStyles.botIconWrapper,
-              isTA && moduleStyles.botIconContainerWithOverlay
-            )}
-          >
+        {isAssistant && isTA && (
+          <div className={moduleStyles.botIconTAOverlayContainer}>
             <div className={classNames(moduleStyles.botIconContainer)}>
               <img
                 src={aiBotOutlineIcon}
@@ -116,7 +111,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             )}
           </div>
         )}
-        <div className={moduleStyles.messageAndHeader}>
+        <div className={moduleStyles[`message-and-header-${role}`]}>
           {header && <div className={moduleStyles.header}>{header}</div>}
           {(text || postText) && (
             <div
@@ -152,7 +147,12 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
         </div>
         {footer && (
           <div
-            className={classNames(isAssistant && moduleStyles.assistantFooter)}
+            className={classNames(
+              isAssistant &&
+                (isTA
+                  ? moduleStyles.assistantFooterBotIcon
+                  : moduleStyles.assistantFooterNoBotIcon)
+            )}
           >
             {footer}
           </div>

@@ -40,7 +40,7 @@ spec:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: cdo-local-secrets
+              name: {{ include "cdo.localSecretsName" . }}
               key: _mysql_root_password
         volumeMounts:
         - name: mysql-data

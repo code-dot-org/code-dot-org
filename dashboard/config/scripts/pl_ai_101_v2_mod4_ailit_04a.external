@@ -1,0 +1,67 @@
+name 'pl-ai-101-V2-mod4-AILit-04a'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Primary Examples
+
+<!-- Engaging with AI - Primary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Engaging with AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students work in pairs to solve multi-step word problems involving addition and multiplication. They show their work, explain their reasoning in writing, and share their thinking with the class. The lesson focuses on helping students explain each step clearly and justify how they arrived at an answer.</p>
+
+    <p><strong>Small AI shift:</strong> The teacher adds a printed AI-generated solution to one of the same problems alongside a student sample solution. Students compare the two, checking for accuracy, clarity, and reasoning. They identify any mistakes or confusing steps and decide which solution they trust more and why.</p>
+
+    <p><strong>Knowledge:</strong> AI’s Capabilities and Limitations<br>
+    <strong>Skills:</strong> Critical Thinking<br>
+    <strong>Attitudes:</strong> Responsible</p>
+  </div>
+</details>
+
+<!-- Creating with AI - Primary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Creating with AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students respond to a creative writing prompt such as “Write a story about a surprising adventure.” They brainstorm ideas, draft a narrative with a beginning, middle, and end, and revise to strengthen details, dialogue, and voice.</p>
+
+    <p><strong>Small AI shift:</strong> During the brainstorming phase, the teacher invites students to use an AI tool to generate possible characters, settings, or plot twists. Students review the suggestions and decide which ideas to keep, adapt, or reject before writing their own stories. The emphasis stays on student authorship, with students explaining how their final story reflects their own choices rather than simply copying the AI output.</p>
+
+    <p><strong>Knowledge:</strong> The Nature of AI<br>
+    <strong>Skills:</strong> Creativity; Communication<br>
+    <strong>Attitudes:</strong> Innovative; Responsible</p>
+  </div>
+</details>
+
+<!-- Managing AI - Primary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Managing AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students brainstorm ideas for a science fair project in small groups. They think about topics they are curious about, turn those interests into testable questions, and discuss what materials, observations, or experiments would be needed to complete the project.</p>
+
+    <p><strong>Small AI shift:</strong> The teacher allows groups to use an AI tool to generate additional science fair topics or refine their research questions. Students then evaluate the suggestions, deciding which ideas are realistic, safe, and actually testable in a classroom setting. The class discusses why some AI-generated ideas may be too broad, too complex, or not scientifically sound, reinforcing that students must use judgment rather than accept suggestions automatically.</p>
+
+    <p><strong>Knowledge:</strong> AI Reshapes Work and Human Roles<br>
+    <strong>Skills:</strong> Problem Solving; Collaboration<br>
+    <strong>Attitudes:</strong> Responsible; Curious</p>
+  </div>
+</details>
+
+<!-- Designing AI - Primary -->
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+  <summary style="font-size: 1.5em; font-weight: bold;">Designing AI</summary>
+
+  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom: 20px;">
+    <p><strong>Original lesson:</strong> Students sort objects such as animals, leaves, classroom items, or geometric shapes into categories based on observable features. They explain the rules they used for sorting and compare how different groups chose different categories or criteria.</p>
+
+    <p><strong>Small AI shift:</strong> The teacher reframes the task as “training an AI system.” Students decide how to label the categories, test their system with new examples, and notice what happens when categories are too broad, too narrow, or inconsistently applied. The class then discusses how human choices about labels and categories affect how well a system works and whether it treats examples fairly.</p>
+
+    <p><strong>Knowledge:</strong> AI Reflects Human Choices and Perspectives<br>
+    <strong>Skills:</strong> Computational Thinking; Problem Solving<br>
+    <strong>Attitudes:</strong> Curious; Responsible</p>
+  </div>
+</details>
+MARKDOWN

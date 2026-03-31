@@ -12,7 +12,8 @@ export async function saveRubricToTable(
   learningGoalList,
   setLearningGoalList,
   selectedLevelForAssessment,
-  lessonId
+  lessonId,
+  aiRubricS3Config
 ) {
   setSaveNotificationText(SAVING_TEXT);
   const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
@@ -31,6 +32,7 @@ export async function saveRubricToTable(
     levelId: selectedLevelForAssessment,
     lessonId: lessonId,
     learningGoalsAttributes: learningGoalListAsData,
+    aiRubricS3Config: aiRubricS3Config,
   };
 
   try {

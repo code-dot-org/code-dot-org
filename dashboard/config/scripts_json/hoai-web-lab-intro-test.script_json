@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-19 19:53:44 UTC",
+    "serialized_at": "2026-03-28 03:15:57 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -217,6 +217,17 @@
       },
       "seeding_key": {
         "activity_section.key": "e0b830cc-02d9-42a1-949e-14ac5b7113f5",
+        "lesson_activity.key": "405a3a62-9a3f-46fd-8026-ad98b21dc856"
+      }
+    },
+    {
+      "key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Student Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7",
         "lesson_activity.key": "405a3a62-9a3f-46fd-8026-ad98b21dc856"
       }
     }
@@ -661,6 +672,28 @@
       "level_keys": [
         "hoai-web-design-v2-16"
       ]
+    },
+    {
+      "chapter": 21,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Student Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7"
+      },
+      "level_keys": [
+        "hoai-web-design-v2-pilot-survey"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -902,6 +935,18 @@
         "lesson_group.key": "",
         "script.name": "hoai-web-lab-intro-test",
         "activity_section.key": "e0b830cc-02d9-42a1-949e-14ac5b7113f5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "hoai-web-design-v2-pilot-survey",
+        "script_level.level_keys": [
+          "hoai-web-design-v2-pilot-survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "hoai-web-lab-intro-test",
+        "activity_section.key": "501a2dc1-d4ee-44b0-9c4b-f5a36bc140a7"
       }
     }
   ],

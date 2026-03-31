@@ -21,7 +21,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2026-03-20 23:01:04 UTC",
+    "serialized_at": "2026-03-27 04:55:36 UTC",
     "hide_within_course": false,
     "published_state": "in_development",
     "instruction_type": null,
@@ -655,7 +655,7 @@
       "key": "89de04c3-40b2-4849-aaca-cba88f886774",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -669,7 +669,7 @@
       "key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -781,7 +781,7 @@
       "key": "816f3e71-d57c-43cc-9b64-6a3fe2407ce9",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -795,7 +795,7 @@
       "key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
@@ -1663,7 +1663,7 @@
       "key": "3b782fb7-5fe8-444c-bfb0-e568abcafd13",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that AI can generate web layouts quickly using pattern recognition, but it still requires human oversight to ensure quality, accuracy, and usability.\n\n"
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:**  Students use their knowledge of common web page components to predict what an AI-generated webpage will include and begin to recognize that AI generates outputs based on familiar design patterns.\n"
       },
       "seeding_key": {
         "activity_section.key": "3b782fb7-5fe8-444c-bfb0-e568abcafd13",
@@ -1674,6 +1674,8 @@
       "key": "e9c0e168-c49c-43cf-beb4-7daec68271a3",
       "position": 2,
       "properties": {
+        "description": "This is an example of a prompt — it's what someone types into an AI tool to tell it what to create.",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "e9c0e168-c49c-43cf-beb4-7daec68271a3",
@@ -1684,7 +1686,13 @@
       "key": "76a1804d-fe13-4c1c-9086-4185d687e4de",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What are all the things generative AI can do for you? List as many as you can think of.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Right now students may think that AI is just ChatGPT or image generation. They may have used AI to help them write essays or act as a tutor, but they don’t realize that they can use AI to build out full apps. Help students understand that modern AI tools can generate text, images, code, designs, and even entire working web pages. That said, AI should not be used to replace developers but as a tool to make developers’ work more efficient."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *What sections will likely appear?*\n- *What components do you expect?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students draw on their experience with common web page components (e.g., navigation bar, hero section, cards, footer) to predict what the AI-generated page will include. Listen for students identifying familiar structures and elements and explaining their reasoning based on patterns they've seen across websites. Students should begin to recognize that AI generates predictable layouts because it follows common design and language patterns.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this moment brief and focused. The goal is not to analyze every detail, but to help students recognize that AI-generated web pages follow predictable patterns based on what they’ve seen before."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "76a1804d-fe13-4c1c-9086-4185d687e4de",
@@ -1702,99 +1710,8 @@
       }
     },
     {
-      "key": "b3b87389-f293-4cbf-b6c4-df766ccb2baa",
-      "position": 5,
-      "properties": {
-        "description": "Before we look at what the AI actually generates, let’s pause and make a prediction. Take a moment to read the prompt carefully and think about the restaurant websites you’ve seen before. If you were asked to design this website, what would you create? What sections, design elements, or buttons usually show up on sites like this? Think about the patterns you’ve noticed across similar websites.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "b3b87389-f293-4cbf-b6c4-df766ccb2baa",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "dbfe0de5-ef1d-465f-bc4c-d2df4d81d944",
-      "position": 6,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "dbfe0de5-ef1d-465f-bc4c-d2df4d81d944",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "1aa6de63-1d7f-4b6c-bac2-0350de0b033c",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What sections will likely appear?*\n- *What elements do you expect?*\n- *What words will show up?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Likely, students will draw from their own experience and different restaurant websites they have seen in order to create a gourmet pizza restaurant. Students should understand that AI works the same way. AI will generate a predictable layout because it follows common design and language patterns.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "1aa6de63-1d7f-4b6c-bac2-0350de0b033c",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "62cb0bd2-7e83-4962-9627-47d95d63a648",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "62cb0bd2-7e83-4962-9627-47d95d63a648",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "378d8505-2425-4d13-9a7a-e87c47a70c14",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *What matched your predictions?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should connect what they predicted to what actually appeared. Students analyze the AI-generated webpage and identify how it reflects common website conventions, such as having a nav bar at the top of the page with familiar buttons. They should recognize that the layout, language, and structure feel familiar because AI follows widely used patterns, not because it “understands” restaurants.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "378d8505-2425-4d13-9a7a-e87c47a70c14",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "02bf17c8-0fb5-4460-b954-b868b99220cf",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "02bf17c8-0fb5-4460-b954-b868b99220cf",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "dc014145-95de-4884-bcf0-0573aec7c522",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Ask students whether they would publish the AI-generated address as is or edit it before making the site live. Have them explain their reasoning as if they were the developer responsible for the website.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students recognize that AI-generated content may look realistic but can contain errors or fabricated details. They understand that developers are responsible for reviewing, verifying, and refining AI output before publishing. The goal is to reinforce that AI is a tool that supports development, but humans remain accountable for accuracy, functionality, and safety.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students say they would trust the AI without checking, guide them to think about potential risks. Ask what could happen if the address were incorrect or if a small mistake went unnoticed. Prompt them to consider who would be responsible if customers showed up at the wrong location or if the site malfunctioned. Use this moment to reinforce that responsibility belongs to the human developer, not the AI.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "dc014145-95de-4884-bcf0-0573aec7c522",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
-      "key": "96dd7fa6-ee79-4294-a269-93f2fdd959da",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "96dd7fa6-ee79-4294-a269-93f2fdd959da",
-        "lesson_activity.key": "aa10ae43-719a-4e27-95a0-d71e01cb7e25"
-      }
-    },
-    {
       "key": "6f6124c7-3b0f-455c-bee5-d57441e60237",
-      "position": 13,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -1805,7 +1722,7 @@
     },
     {
       "key": "e7f71c5a-d6fa-4d10-b0d1-4650a31b5d6d",
-      "position": 14,
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1817,8 +1734,8 @@
       "key": "89bcaf28-f0e8-4171-ba35-cce05956a976",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students learn how generative AI uses training data and pattern recognition to make predictions.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to explain to students that before they start using AI to write code, they should understand how AI “knows” what to generate. Remind students that AI doesn't really understand code the way a developer does. Instead, AI predicts and recreates patterns it has seen in examples of real web pages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students’ attention to the collection of website examples feeding into the brain graphic. Explain that these represent the training data the AI learned from before anyone ever typed a prompt. Clarify that training data consists of real websites created by humans and that the AI studied many examples to learn from them. Emphasize that the AI does not begin with built-in knowledge about restaurants or web design, it learns from large collections of human-created content. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the repeated website elements shown on the slide and explain that the AI looks across many examples to identify what appears frequently. Highlight specific repeated features such as navigation bars at the top, red call-to-action buttons, large headlines, and menu sections with prices. Introduce the term “patterns” as structures or design choices that show up again and again across many sites. Reinforce that this step is about noticing similarities, not generating anything yet. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students’ attention to the brain-to-website diagram and explain that this step represents generation. Clarify that after identifying patterns, the AI produces new content by predicting what usually comes next based on what it has learned. Emphasize that the AI is not copying a single website but creating something new that fits the patterns it observed. Connect this explanation back to the pizza webpage students analyzed earlier to show how the prediction step results in the final output. \n",
-        "duration": "5",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that AI generates responses by recognizing patterns from existing examples and that what they include in a prompt influences the result.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Use the slide to briefly explain that AI doesn't understand code the way a human does. Instead, it predicts what to generate based on patterns it has seen in many examples. Emphasize that what students include in their prompt will influence what the AI produces. This is why the same prompt often produces similar types of web pages.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students' attention to the collection of website examples feeding into the brain graphic. Explain that these represent the training data the AI learned from before anyone ever typed a prompt. Clarify that training data consists of real websites created by humans and that the AI studied many examples to learn from them. Emphasize that the AI does not begin with built-in knowledge about restaurants or web design, it learns from large collections of human-created content. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the repeated website components shown on the slide and explain that the AI looks across many examples to identify what appears frequently. Highlight specific repeated features such as navigation bars at the top, red call-to-action buttons, large headlines, and menu sections with prices. Introduce the term “patterns” as structures or design choices that show up again and again across many sites. Reinforce that this step is about noticing similarities, not generating anything yet. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students' attention to the brain-to-website diagram and explain that this step represents generation. Clarify that after identifying patterns, the AI produces new content by predicting what usually comes next. Connect this back to the webpage students saw earlier to show how those predictions result in the final layout.\n",
+        "duration": "10",
         "name": "How AI Makes Predictions"
       },
       "seeding_key": {
@@ -1830,15 +1747,9 @@
       "key": "89a80367-e96a-436b-829e-c605b0479ddb",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize how to prompt AI for structure and style of their webpages using a requirements focused lens – stating the goals, constraints, and edge cases.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present HTML and CSS and ask students what the difference is between these two images. Explain that HTML provides the structure, text, and content of a page, while CSS adds the style and visual design. Direct students to look closely at the two versions of the page on the slide. Have them record in their activity guide what they think HTML is controlling and what CSS is controlling based on what they notice in each image.\n",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students explore the Web Lab tool and begin using AI to generate and modify their webpage, recognizing how their prompts influence the results.\n",
         "duration": "10",
-        "name": "Prompting for HTML and CSS ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to share a few observations before you confirm or elaborate. Use simple analogies to keep it intuitive:\n- HTML is the skeleton or blueprint that shapes the page.\n- CSS is the paint, layout, and personality that make it visually appealing.\n\nRemind students that they don't need to know any code yet—just focus on what seems to belong to structure versus style.\n"
-          }
-        ]
+        "name": "Explore Web Lab & Prompting"
       },
       "seeding_key": {
         "activity_section.key": "89a80367-e96a-436b-829e-c605b0479ddb",
@@ -1846,8 +1757,47 @@
       }
     },
     {
-      "key": "58afeb59-62e1-4526-a00e-81810b147b47",
+      "key": "d4cd0a01-7c4d-4a05-8457-89b59af763f3",
       "position": 3,
+      "properties": {
+        "description": "You just saw how AI generates web pages by recognizing patterns from examples. Designers often use AI tools to quickly create and test ideas like this. Now you're going to explore a tool that can generate and change your webpage for you, and start experimenting with how it works. Play around with the tool and see what you can discover. Don't worry! You can't break anything!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4cd0a01-7c4d-4a05-8457-89b59af763f3",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "8368a1d7-753a-46ed-b1a5-72ff923c5d19",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to explore the tool and select different tabs and buttons to see what they can discover. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Set a 3–5 minute timer and allow students to explore the tool. Encourage them to select different tabs on the left-hand side, switch between Code and Preview, and try asking the AI to make a simple change to the page. Remind students not to worry about making mistakes — they can’t break anything.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Once students begin to slow down in their exploration, move the class into the discussion to capture what they discovered."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8368a1d7-753a-46ed-b1a5-72ff923c5d19",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "8689bb4b-9318-4ee6-9492-c7fc1b52ba8f",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8689bb4b-9318-4ee6-9492-c7fc1b52ba8f",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "58afeb59-62e1-4526-a00e-81810b147b47",
+      "position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -1856,10 +1806,37 @@
       }
     },
     {
-      "key": "4fae0563-dbdc-4e7e-890b-90a9ff00336a",
-      "position": 4,
+      "key": "642a8fbb-f6a4-41d2-b529-2fcdac147180",
+      "position": 7,
       "properties": {
-        "description": "In this unit, you'll act as a web developer to plan and build web pages with AI assistance. The first step to using generative AI effectively, is knowing how to prompt it. ",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click the animated slide to display the \"notice\" and \"wonder\" prompts. Invite students to share what they discovered while exploring the tool. As students respond, briefly highlight the features they mention so all students are aware of them. If students raise questions about specific features, demonstrate them quickly without going into detail. Make sure to point out the different views, the file panel with different files and folders, and the tabs along the left-hand side which include the AI Tutor, Version History, and Backpack. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Keep this discussion focused and fast. The goal is to orient students to key features of Web Lab, not to explain how everything works. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "642a8fbb-f6a4-41d2-b529-2fcdac147180",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "a9b22045-bfdd-4118-9656-4e271af58433",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a9b22045-bfdd-4118-9656-4e271af58433",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "4fae0563-dbdc-4e7e-890b-90a9ff00336a",
+      "position": 9,
+      "properties": {
+        "description": "As you were exploring, you may have noticed that some AI changes affected the content of the page, while others changed the way it looked. Let’s take a closer look at that difference.",
         "remarks": true
       },
       "seeding_key": {
@@ -1869,9 +1846,15 @@
     },
     {
       "key": "a18f2a99-34d9-4ad2-90d0-7ff86d441d78",
-      "position": 5,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly review the three requirements that students need to include when writing AI prompts. Explain that they'll get more detailed guidance and examples in the following slides.\n"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what differences they notice between the two versions of the webpage shown. Guide them to identify what parts seem to control the structure and content versus what changes the visual appearance. Clarify that HTML provides the structure and content of a page, while CSS controls the style and visual design. Emphasize that students will work as Web Designers and use AI tools to make changes to both structure and style.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to share a few observations before you confirm or clarify. If needed, use simple analogies such as HTML being the structure or blueprint of the page and CSS being the visual design or style. Keep the focus on noticing differences rather than explaining code."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "a18f2a99-34d9-4ad2-90d0-7ff86d441d78",
@@ -1879,9 +1862,47 @@
       }
     },
     {
-      "key": "ad20421f-8d05-4eca-b021-c4a62c177418",
-      "position": 6,
+      "key": "b1ea08cd-c7e0-4fea-8803-60e6c86cbaaf",
+      "position": 11,
       "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1ea08cd-c7e0-4fea-8803-60e6c86cbaaf",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "fac379ac-c56c-4776-ab76-004391442d56",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly define prompt engineering as how you give instructions to AI to get the result you want. Let students know that the definitions for HTML, CSS, and prompt engineering are already included in their Unit Guide for them, so they do not need to write anything down right now.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, students are not asked to write down these definitions in their Unit Guide. The full definitions are already provided for them so that class time can focus on exploring and using AI. Students will engage more deeply with these ideas through practice in the activity and upcoming lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fac379ac-c56c-4776-ab76-004391442d56",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "60768cb1-94ef-433e-ab15-929fc3027fc5",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "60768cb1-94ef-433e-ab15-929fc3027fc5",
+        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
+      }
+    },
+    {
+      "key": "ad20421f-8d05-4eca-b021-c4a62c177418",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly explain that AI uses the words in a prompt to predict a response based on patterns it has learned. Point out that the AI pays attention to the task, context, tone, and details in a prompt, but keep the explanation high-level. Emphasize that what students include in their prompt will directly affect what the AI generates."
       },
       "seeding_key": {
         "activity_section.key": "ad20421f-8d05-4eca-b021-c4a62c177418",
@@ -1890,15 +1911,9 @@
     },
     {
       "key": "0db34686-f33b-4d5b-b62a-6670db56b209",
-      "position": 7,
+      "position": 15,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it gives a specific HTML layout for AI to generate. They should recognize that while Prompt #1 describes the same type of web app, it is too vague and open-ended. Likely, Prompt #1 will lead AI to generate something different from what the student actually wanted. Help students identify the difference between a vague goal (\"a menu app\") in Prompt #1 and a specific goal (\"3x4 grid,\" \"price in bold,\" \"bulleted list of ingredients\") in Prompt #2.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The more specific students can get in drafting their prompt the less back and forth they will have to do with AI later in the development process.\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students what they think the AI-generated webpage might look like from this prompt. Guide students to notice that the prompt is vague, so the AI has to make guesses about what to include.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask students how the AI-generated webpage might be different with this prompt. Invite students to compare it to the previous example and identify what would likely improve. Guide students to notice that adding context and specific details helps the AI generate a more organized and useful result."
       },
       "seeding_key": {
         "activity_section.key": "0db34686-f33b-4d5b-b62a-6670db56b209",
@@ -1906,62 +1921,21 @@
       }
     },
     {
-      "key": "d47915c7-ebf3-4c11-b008-2442972e0b8d",
-      "position": 8,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "d47915c7-ebf3-4c11-b008-2442972e0b8d",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "a8dc6cd2-7130-4ac9-99ed-d998adcb617f",
-      "position": 9,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #2 is better because it provides concrete, objective constraints like \"Dark Mode\" and \"sans-serif fonts\". They should recognize that \"nice\" and \"easy to read\" in Prompt #1 are subjective opinions that AI may interpret differently than the student.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Which AI prompt is better? Why?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should identify that Prompt #1 is better because it provides specific, logical behaviors for the AI to program into the app, like \"zero inventory.\" They should recognize that while Prompt #2 identifies potential problems like \"weird orders\" or \"no internet,\" it doesn't give the AI any instructions on how to handle them.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "a8dc6cd2-7130-4ac9-99ed-d998adcb617f",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "c223f16e-aff1-469c-9d12-1121cd368953",
-      "position": 10,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c223f16e-aff1-469c-9d12-1121cd368953",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "1899a295-ae57-4acc-851a-6a896f4298d9",
-      "position": 11,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *prompt engineering*. Direct students to fill in the vocab definition in their Unit Guide.\n"
-      },
-      "seeding_key": {
-        "activity_section.key": "1899a295-ae57-4acc-851a-6a896f4298d9",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "902230f0-fff5-462e-97ea-d7274e6cadf6",
-      "position": 12,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "902230f0-fff5-462e-97ea-d7274e6cadf6",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
       "key": "8b12435b-3b71-447a-a1e9-95202b68370a",
-      "position": 13,
+      "position": 16,
       "properties": {
-        "progression_name": "Web Lab"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete as many Scavenger Hunt Challenges as they can.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move around the room and check that students are using AI to make changes to their page rather than editing code directly. Look for students trying different prompts, reviewing the results, and refining their page over time. Ask questions like, \"What are you trying to change?\" and \"Did the AI output match what you expected?\" Encourage students to preview their page and make adjustments based on what they see.\n",
+        "progression_name": "Use AI to Create a Web Page",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to keep moving between challenges rather than trying to perfect one change. If students get stuck, prompt them to try a different or more specific request to the AI instead of troubleshooting on their own."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This level can be used as a formative assessment of the lesson objectives, including generating a web page using AI, refining prompts to improve results, and using iterative testing to make changes to HTML and CSS.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a",
@@ -1969,127 +1943,8 @@
       }
     },
     {
-      "key": "92a40975-add8-456b-8908-1f1657cdb12e",
-      "position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "92a40975-add8-456b-8908-1f1657cdb12e",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a",
-      "position": 15,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students practice prompting AI for HTML and CSS by stating the goals, constraints, and edge cases required for their user persona’s web app.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 5.\n- **Level 1**: Students practice the ROPE prompting framework and draft their own prompt.\n- **Level 2**: Students review how to prompt AI using the Accept/Reject flow and save their work.\n- **Level 3**: Students prompt AI to create the HTML for their webpage.\n- **Level 4**: Students prompt AI to create the CSS for their webpage.\n- **Level 5**: Students review how to roll back version history.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the levels, check that they're using details from their prompts (not just \"make a nav bar\"). Ask students questions like, \"What constraints did you give to AI?\" or \"How well did AI do in matching your expected output?\" Make sure to reinforce that iteration—trying, refining, and saving—is how developers manage complex builds.",
-        "duration": "10",
-        "name": "Prompting with AI",
-        "progression_name": "Plan Your AI Prompt",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Remind students that refining prompts and prompting AI is normal and expected. Developers don't just write perfect code once. They iterate, version, and improve, just like you.\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "df2abb80-4d28-43a6-9721-13f4bfe1ae5a",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "5f153896-fb66-48c3-a3f2-125542c04821",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5f153896-fb66-48c3-a3f2-125542c04821",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142",
-      "position": 17,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define *versioning*. Direct students to fill in the vocab definition in their Unit Guide.\n",
-        "progression_name": "Web Page Features"
-      },
-      "seeding_key": {
-        "activity_section.key": "14b90b2a-8095-48cf-bcc5-849ea8d2a142",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "62537cfc-35be-494d-b584-277ed3b6a919",
-      "position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "62537cfc-35be-494d-b584-277ed3b6a919",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "378ce071-67ad-40dc-b749-070aff7d8a9c",
-      "position": 19,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy set of the Feature Roulette Cards.",
-        "duration": "10",
-        "name": "Building with AI"
-      },
-      "seeding_key": {
-        "activity_section.key": "378ce071-67ad-40dc-b749-070aff7d8a9c",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "3922f3d4-170b-4288-b158-4f8a08e4eb64",
-      "position": 20,
-      "properties": {
-        "progression_name": "Revert to a Previous Version"
-      },
-      "seeding_key": {
-        "activity_section.key": "3922f3d4-170b-4288-b158-4f8a08e4eb64",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "2f857318-f2cd-47d0-adbd-c8d194391f2f",
-      "position": 21,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6. Explain that this is their chance to apply everything they've learned to finish building their first AI-assisted web page. Tell students they'll draw one card at a time from each category – HTML, CSS, Version History, and Try it Out – and follow the instructions. Encourage students to refer back to the panel levels (Level 2 and 5) as needed. \n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check if students are successfully refining their prompts and if they understand how to revert to a previous version. Ask questions like: \"What did you change in your latest version?\" or \"How are you deciding when your page is finished?\" or \"What did the AI get right, or wrong, this time?\" Encourage students to compare different AI outputs and think critically about what each version improved or broke.\n",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Emphasize that this activity is about experimentation and iteration. Developers rarely get a design perfect on the first try—they refine prompts, fix errors, and test new versions to get closer to their vision. Connect this to professional practice: \"Developers use AI as a creative partner, but they're still responsible for making decisions and improving the final product.\"\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "2f857318-f2cd-47d0-adbd-c8d194391f2f",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
-      "key": "16535a44-fd20-4cf7-9b95-72c1c827f299",
-      "position": 22,
-      "properties": {
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student interactions and final AI-generated pages to gauge understanding of how to apply prompting strategies, refine results, and using version history. Listen for language that shows students can explain their design choices or how they fixed an issue."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "16535a44-fd20-4cf7-9b95-72c1c827f299",
-        "lesson_activity.key": "428bfd05-6979-44b4-b140-2e049c3dd8c8"
-      }
-    },
-    {
       "key": "efbf6c24-0596-4de5-8a7a-4a01f3a33df1",
-      "position": 23,
+      "position": 17,
       "properties": {
       },
       "seeding_key": {
@@ -2099,13 +1954,17 @@
     },
     {
       "key": "c9eb31b8-e2fe-4270-9b2b-65d2938a0d2f",
-      "position": 24,
+      "position": 18,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Why might AI sometimes misunderstand what we mean?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students hypothesize possible causes of AI misunderstanding prompts—such as unclear wording, missing details, conflicting instructions, or biases in training data. The goal isn't for them to know exactly how models work, but to start reasoning about why clarity and iteration are essential in coding with AI.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the discussion prompts. \n- *Why might AI sometimes misunderstand what we mean?*\n- *How did you decide whether to accept or change the AI's output?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on their experience using AI and recognize that unclear or vague prompts can lead to unexpected results. Listen for students describing how they adjusted what they asked the AI to improve their webpage and how they decided whether to accept or change the output. Students should begin to understand that working with AI involves both giving clear instructions and making decisions about the results.",
         "tips": [
           {
             "type": "teachingTip",
             "markdown": "Validate all ideas. Emphasize that AI misunderstandings are normal and highlight why iteration matters: developers test, adjust, and refine prompts to guide AI toward what they want.\nIf discussion stalls, prompt students with:\n- Have you ever written a message and someone misunderstood you? What caused that?\n- How could that happen between a person and an AI?\n"
+          },
+          {
+            "type": "teachingTip",
+            "markdown": "Validate student ideas and connect responses to their experience in the activity. Highlight that students improved their results by adjusting what they asked the AI and deciding whether to accept or revise the output. Reinforce that they are responsible for guiding and refining what the AI produces."
           }
         ]
       },
@@ -2460,7 +2319,7 @@
       "key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6",
       "position": 17,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2-4.\n- Level 2a: Students use Sketch Lab to build a mood board that communicates a clear style.\n- Level 2b (Optional): Students may use the AI Chat Design Partner if they need help brainstorming colors, fonts, imagery, or style words before building.\n- Level 3: Students learn how to save to their “backpack” in Sketch Lab.\n- Level 4: Students refine their mood board and save it to their backpack.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they include all key components (colors, fonts/typography, images, and 2–3 style words). If students seem stuck or unsure how to begin, suggest they briefly visit the AI Chat Design Partner to generate ideas, then return to Sketch Lab to apply them intentionally. Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 2 and 3.\n- Level 2a: Students use Sketch Lab to build a mood board that communicates a clear style.\n- Level 2b (Optional): Students may use the AI Chat Design Partner if they need help brainstorming colors, fonts, imagery, or style words before building.\n- Level 3: Students refine their mood board and save it to their backpack.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they include all key components (colors, fonts/typography, images, and 2–3 style words). If students seem stuck or unsure how to begin, suggest they briefly visit the AI Chat Design Partner to generate ideas, then return to Sketch Lab to apply them intentionally. Encourage students who are only picking random images/colors to think about how their choices connect to the user experience and the vibe they want to communicate. Ask probing questions like: \"What feeling do you want your user to have when they see this?\" or \"Do these colors and fonts work together as a set?\"\n",
         "progression_name": "Mood Board Design"
       },
       "seeding_key": {
@@ -3063,8 +2922,8 @@
       "key": "ab2c1929-103b-4431-8df7-2d49b5537500",
       "position": 8,
       "properties": {
-        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 3.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students review how to add context (prompt, webpage, and design) so AI can generate more accurate results.\n- Level 3: Students use their plan to prompt AI to generate a CSS stylesheet, apply their brand’s colors and fonts, and refine the styling as needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students prompted AI to generate a separate CSS file and update the HTML to link the stylesheet in the <head>.\n\nIf students need help attaching images, code, or prompt files to AI Tutor, direct them to the **reference levels at the end of the lesson** for step-by-step instructions.",
-        "progression_name": "Apply a Stylesheet",
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 2.\n- Level 1: Students draft a structured prompt using goal, constraints, and edge cases before prompting AI.\n- Level 2: Students use their plan to prompt AI to generate a CSS stylesheet, apply their brand’s colors and fonts, and refine the styling as needed.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that students prompted AI to generate a separate CSS file and update the HTML to link the stylesheet in the `<head>`.",
+        "progression_name": "Apply and Test a Stylesheet",
         "tips": [
           {
             "type": "teachingTip",
@@ -3104,14 +2963,14 @@
       "key": "9eb75f7b-e630-4c51-95f4-156f04da9d5c",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 4 and choose one challenge to complete. Encourage them to think like designers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of the Activity: Students demonstrate mastery by refining and experimenting with CSS using AI assistance — improving accuracy, readability, and brand consistency.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students go to Level 3 and choose one challenge to complete. Encourage them to think like designers in a testing phase: What small refinements could make your page more polished, readable, or consistent across different screen sizes?\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, check that they:\n- Clearly define what they are improving before prompting AI.\n- Make one change at a time and preview the results before layering additional edits.\n- Understand what their AI-generated CSS is doing before changing it.\n- Resize the preview to check how their page behaves on smaller screens and refine the CSS if text overlaps or sections stop fitting.\n- Document what changed and why it improved the design.",
         "duration": "15",
         "name": "Style Choice Challenge",
-        "progression_name": "Styling Challenge",
+        "progression_name": "Style Choice Challenge",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use the Level 5 reflection level to formatively assess whether students can:\n- Describe one specific styling refinement they made.\n- Explain how they used AI intentionally (including how they adjusted their prompt, if needed).\n- Connect their change to improved brand alignment and usability.\n- Distinguish between structural changes (HTML) and styling changes (CSS).\n"
+            "markdown": "Use the Level 4 reflection level to formatively assess whether students can:\n- Describe one specific styling refinement they made.\n- Explain how they used AI intentionally (including how they adjusted their prompt, if needed).\n- Connect their change to improved brand alignment and usability.\n- Distinguish between structural changes (HTML) and styling changes (CSS).\n"
           }
         ]
       },
@@ -3490,7 +3349,7 @@
       "key": "14a19331-34a1-430f-a2ad-5105f30b50ea",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal: Students practice decomposition by organizing messy information into a clear, logical structure before learning the term site map.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two or three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of the Website cards."
+        "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** For each scenario, have students write the pages the user would click in order. Start at Home and follow the connected pages until the user reaches their goal.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What do these paths tell us about how this website is organized?*\n - *What do you notice about the order of pages from general to specific?*\n\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students explain what the paths show about how the website is organized. Students should notice that users start on broad pages and move to more specific pages to reach their goal.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "14a19331-34a1-430f-a2ad-5105f30b50ea",
@@ -3498,64 +3357,8 @@
       }
     },
     {
-      "key": "5d5d9851-f319-4d14-abd2-8606cab00e50",
-      "position": 2,
-      "properties": {
-        "description": "Your client's website is confusing! Users can't find what they need. How might you reorganize the pages so that navigation feels clear and logical?",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "5d5d9851-f319-4d14-abd2-8606cab00e50",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "aa4036e8-dd93-4b29-ba6d-5dbb33e06c05",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards into a logical structure, using arrows to show how users would move through the site.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Move between groups and ask why they grouped pages a certain way. Encourage reasoning such as \"We put Contact under About because users usually look for it with company info.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Let students know that the example on the slide is not the \"correct answer.\" There's no single right way to organize a site — what matters is whether the structure makes sense for the user. Encourage groups to explain their reasoning and compare different logical choices."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "aa4036e8-dd93-4b29-ba6d-5dbb33e06c05",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "bea6ba45-6a29-4696-8935-03eedd4e5bd0",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bea6ba45-6a29-4696-8935-03eedd4e5bd0",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
-      "key": "bfae031d-7b78-451d-9eef-8ffdf64b001b",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define site map. Explain that site maps help us see the overall structure and logic of a site — not just the pages themselves but how they relate. Tell students that now that they have explored what makes navigation clear, they will create their own structured site map later in today's activity.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *What patterns do we notice across site maps?*\n  - *Where did most groups put Home?*\n  - *Where did most groups put Contact?*\n  - *How did groups handle sections or sub-pages?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If students mention unusual or creative structures, validate them — use these examples to discuss when breaking convention can help or hurt usability."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bfae031d-7b78-451d-9eef-8ffdf64b001b",
-        "lesson_activity.key": "89de04c3-40b2-4849-aaca-cba88f886774"
-      }
-    },
-    {
       "key": "a210c99d-e6d0-4d6b-a31f-4b5941d1cd25",
-      "position": 6,
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -3565,7 +3368,7 @@
     },
     {
       "key": "37c4d390-898b-4bac-b076-fc4db9d0dc11",
-      "position": 7,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
@@ -3580,7 +3383,7 @@
       "properties": {
         "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Connect site mapping to real-world roles in tech and show how UX Designers plan user experiences before coding begins.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Briefly spotlight careers such as UX Designer or Information Architect. Explain that these roles are responsible for structuring site navigation and ensuring users can find what they need. Emphasize that today's activity mirrors that real-world process — planning first, building later.",
         "duration": "15",
-        "name": "User Experience Design",
+        "name": "Intro to Site Maps and User Flow",
         "tips": [
           {
             "type": "teachingTip",
@@ -3604,23 +3407,165 @@
       }
     },
     {
-      "key": "529108a6-9383-492b-bd11-1c60e48bafd6",
+      "key": "d168159e-8164-4cbe-824e-bd321d9c051e",
       "position": 3,
       "properties": {
-        "description": "As UX Designers, part of your job is planning how users move through a site to complete a goal — that's called a user flow. For example, if you're designing a food delivery app, the user flow might be: Home → Menu → Add to Cart → Checkout. Today, you'll create your own user flow for your app idea to make sure navigation makes sense before anything is built.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define site map. Direct students to record the definition in their Unit Guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge. Direct students to record the definition in their Unit Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "d168159e-8164-4cbe-824e-bd321d9c051e",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "f05e8818-4d82-4152-90de-87846e2bdc80",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f05e8818-4d82-4152-90de-87846e2bdc80",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "9ebb2312-ce41-4a79-b4d1-5a4af6c02128",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Put students into groups of two or three.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a set of the Website cards."
+      },
+      "seeding_key": {
+        "activity_section.key": "9ebb2312-ce41-4a79-b4d1-5a4af6c02128",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "13d02fff-6a0b-4bea-a62e-cb64f0d5cc2e",
+      "position": 6,
+      "properties": {
+        "description": "Now you're stepping into the role of a UX Designer. Your job is to organize these pages in a way that makes sense for the user and plan how they would move through the website.\n",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "529108a6-9383-492b-bd11-1c60e48bafd6",
+        "activity_section.key": "13d02fff-6a0b-4bea-a62e-cb64f0d5cc2e",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "180b8e5b-782d-45cd-bbfe-71c791da143b",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "180b8e5b-782d-45cd-bbfe-71c791da143b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "8e902b9e-5fa8-4006-87ac-c9a0f3284f47",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct groups to arrange the 12 page cards where they think users would expect to find each page, then draw arrows to show how a user could move from page to page.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Ask groups why they placed pages where they did and how their layout supports user navigation. Encourage user-centered reasoning by asking questions such as, \"Why would a user expect to find Contact there?\" or \"What page would they likely click next?\"",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that the example on the slide is only one possible arrangement. There is no single correct answer. What matters is whether the organization and navigation make sense for the user."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8e902b9e-5fa8-4006-87ac-c9a0f3284f47",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "58d65c74-3e19-4898-889e-76a17d779752",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58d65c74-3e19-4898-889e-76a17d779752",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "cec33bc7-31ed-485e-b86e-26749f9fe24d",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *Where did most groups put Home?*\n- *Where did most groups put Contact?*\n- *How did groups handle sections or sub-pages?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to surface shared principles of effective site maps, such as: clear hierarchy (Home at the top), consistent placement of key pages, logical grouping of related content. Capture a few criteria on the board for reference in later activities.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students mention unusual or creative structures, validate them — use these examples to discuss when breaking convention can help or hurt usability."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cec33bc7-31ed-485e-b86e-26749f9fe24d",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "3387f508-4c45-4172-9213-5b8f3a3a87b0",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3387f508-4c45-4172-9213-5b8f3a3a87b0",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "def1db0d-d49d-4b53-973b-fb5dd8da404b",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain that a site map helps AI understand what pages to create, how pages connect, and how the website is organized."
+      },
+      "seeding_key": {
+        "activity_section.key": "def1db0d-d49d-4b53-973b-fb5dd8da404b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "46d40806-7c97-402c-b717-d8b97a504cae",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "46d40806-7c97-402c-b717-d8b97a504cae",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "d07c751c-17a2-4f2b-b57d-69268a11c70b",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Students will apply site map and user flow concepts to plan a simple web app, explain how its structure supports users, and use that plan to guide AI in generating a connected multi-page website.\n",
+        "duration": "20",
+        "name": "UX Designer Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "d07c751c-17a2-4f2b-b57d-69268a11c70b",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "1d9eb6a8-ddf6-4b91-bffb-b6e56ecfd20c",
+      "position": 15,
+      "properties": {
+        "description": "Now you are going to apply what you learned by acting like a UX Designer. Your job is to plan how a website is organized, trace how a user would move through it, explain your design choices, and then hand that plan off to AI to build. Before AI generates anything, you need a clear structure.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d9eb6a8-ddf6-4b91-bffb-b6e56ecfd20c",
         "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
       }
     },
     {
       "key": "d8668fbf-ca41-418e-829b-46532091d801",
-      "position": 4,
+      "position": 16,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define user flow. Explain that they'll map one today as part of their site map challenge.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 1 through 7.\n- Levels 1 and 2: Students create a site map and trace a user flow for a chosen persona.\n- Levels 3 through 6: Students read and explain the key terms site map and user flow.\n- Level 7: Students respond to a final reflection or Check for Understanding question.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\"",
-        "progression_name": "Create a Site Map and User Flow"
+        "description": "\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Lesson 8, Level 1 to complete Levels 1 through 4.\n- Level 1: Create a site map for one app scenario.\n- Level 2: Trace a user flow through that site map.\n- Level 3: Explain how your design supports navigation and user needs.\n- Level 4: Upload your site map and use AI to generate the website.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** For Levels 1 and 2, check that groups are creating nested structures rather than flat lists. Prompt them with questions like, \"Would a user know where to find this page?\" and \"Does this structure help your persona reach their goal easily?\" For Level 4, prompt students with questions that build reflection and clarity: \"Does your website structure match your site map?\", \"What might you reword in your prompt to make the AI's output clearer?\", or \"If a link doesn't work, what does that tell you about how the AI interpreted your instructions?\"",
+        "progression_name": "Create a Site Map"
       },
       "seeding_key": {
         "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801",
@@ -3628,20 +3573,21 @@
       }
     },
     {
-      "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
-      "position": 5,
+      "key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5",
+      "position": 17,
       "properties": {
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "- Remind students to consider their persona's goals and challenges as they trace the flow. Does the flow make sense for that user?\n- Remind students that there isn't one \"right\" site structure — what matters is how well it serves their persona's needs. Encourage them to explain why their flow makes sense for that user."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use levels 1 and 2 to formatively assess student progress on lesson objectives. Check whether students can:\n- Creating a site map showing page hierarchy and navigation\n- Tracing a possible user flow across a web app."
-          }
-        ]
+        "progression_name": "Trace the User Flow"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
+      "key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
+      "position": 18,
+      "properties": {
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "9366881c-b43e-4b7c-9180-7ad99824b5f0",
@@ -3649,8 +3595,29 @@
       }
     },
     {
+      "key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
+      "position": 19,
+      "properties": {
+        "progression_name": "Build Your Web App with AI",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Show students how to click through the linked html pages in the navigation bar and see the URL change from index.html to challenges.html, for example. Make sure students evaluate AI’s output by testing out all of the hyperlinks in the navigation bar."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use Levels 1, 2, and 4 to formatively assess student progress on lesson objectives. Check whether students can:\n- Create a site map showing page hierarchy and navigation.\n- Trace a possible user flow across a web app.\n- Articulate a site map as a clear prompt to AI.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
+        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
+      }
+    },
+    {
       "key": "217cba01-e4f7-4c26-b6f9-e3bd98d6948f",
-      "position": 6,
+      "position": 20,
       "properties": {
       },
       "seeding_key": {
@@ -3659,28 +3626,10 @@
       }
     },
     {
-      "key": "147aa371-ffc6-406f-962a-974b01ce8856",
-      "position": 7,
-      "properties": {
-        "description": "Before we hand our site maps to the AI, let's think like designers and engineers. When we give instructions to an AI, it only knows what we tell it — it doesn't automatically understand our intent. Let's talk about how that affects the way we explain our designs.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "147aa371-ffc6-406f-962a-974b01ce8856",
-        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
-      }
-    },
-    {
       "key": "d44ff256-5f54-4b13-aadb-018a830b22a0",
-      "position": 8,
+      "position": 21,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *How do we explain our site's logic to AI so it builds what we intend?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should recognize that:\n- A clear site map helps users navigate and achieve goals easily.\n- Communicating that structure clearly helps the AI generate more accurate, user-friendly designs.\n\nEncourage students to explain their reasoning using examples: \"We put Help under Contact because that's where users expect it.\" and \"If we don't tell the AI why a section is important, it might skip it or place it wrong.\"",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "If time allows, ask one more additional question: What do you need to make sure the AI understands before it starts building? This primes students for precision and transparency — a great segue into the next task."
-          }
-        ]
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click the animated slide to display the prompts.\n- *How does your site map make navigation clear and support user needs?*\n- *Why might we want to check AI's work after we prompt it to create our site using a sitemap?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Guide students to connect human-centered design and AI collaboration. Students should:\n- identify how site maps improve navigation by organizing pages clearly, showing hierarchy, and helping users complete tasks without confusion.\n- share that AI-generated websites still need human review because AI can misinterpret the sitemap, leave out pages, or create broken or unclear navigation.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "d44ff256-5f54-4b13-aadb-018a830b22a0",
@@ -3689,35 +3638,11 @@
     },
     {
       "key": "2cb6ca96-21e8-4eb2-82a4-69e1ed9a3b91",
-      "position": 9,
+      "position": 22,
       "properties": {
       },
       "seeding_key": {
         "activity_section.key": "2cb6ca96-21e8-4eb2-82a4-69e1ed9a3b91",
-        "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
-      }
-    },
-    {
-      "key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
-      "position": 10,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> Goal of Activity: Students apply their site map and user flow to generate a working, multi-page website using AI. They practice writing clear, structured prompts that communicate their logic and verify whether the AI builds what they intended.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Have students complete Level 8. Explain that this is their AI hand-off phase—they'll take their plan and test whether the AI can interpret it accurately just like a UX Designer communicating with a development team. Remind them that AI doesn't \"see\" their reasoning—it can only follow what they describe clearly in the prompt. Encourage students to revise their prompt if something doesn't look right — this models iteration and precision in AI collaboration.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Prompt students with questions that build reflection and clarity: \"Does your website structure match your site map?\", \"What might you reword in your prompt to make the AI's output clearer?\", or \"If a link doesn't work, what does that tell you about how the AI interpreted your instructions?\"",
-        "duration": "15",
-        "name": "Articulate for AI",
-        "progression_name": "Build Your Web App with AI",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Show or read aloud the optional sample prompt to model precision. Emphasize that this isn't a script — students can adapt the wording as long as they're describing structure, navigation, and clarity."
-          },
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use this level to formatively assess student progress on lesson objectives. Check whether students can:\n- Translate design logic into precise, testable AI prompts (clarity and structure in communication).\n- Evaluate AI output for accuracy and alignment with their original site map and user flow.\n- Iterate thoughtfully — making targeted prompt revisions based on observed gaps or misinterpretations."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "8aa757d5-1214-4e6a-aff3-f70fdb3f50d7",
         "lesson_activity.key": "a14b51c1-c5dc-4393-9f7d-0e0cf1b1d598"
       }
     },
@@ -4352,7 +4277,7 @@
       "key": "4434fab1-54f0-4982-a9c6-b6b52b788bdc",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that combining structure (a map) with instructions (directions) leads to clearer results—introducing the idea that AI works best when given both a wireframe and a prompt.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Which would you rather have if you were trying to find a new place?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should reason that having both written directions and a map makes it easier to understand and follow a plan because it provides structure and context. Listen for students noting that each on its own can be confusing or incomplete — setting up the idea that combining both gives clearer guidance."
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students recognize that combining structure (a map) with instructions (directions) leads to clearer results—introducing the idea that AI works best when given both a wireframe and a prompt.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students quickly vote (by raising hands or turning to a partner) for A, B, or C. After voting, briefly highlight that a map provides structure while directions explain what to do, and that using both together leads to clearer understanding. "
       },
       "seeding_key": {
         "activity_section.key": "4434fab1-54f0-4982-a9c6-b6b52b788bdc",
@@ -4406,17 +4331,68 @@
       }
     },
     {
-      "key": "ed08db48-f3e6-40a8-81f1-093f71598511",
+      "key": "d1ce5209-880a-4fd6-9cb5-c12db6ffac4d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students generate their first AI-created layout from a wireframe using a structured prompt. They compare the AI output to their wireframe, identify matches and mismatches, and begin refining their process based on what they observe.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the From Wireframes to Layouts activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 1. Explain that they'll upload their wireframe from Lesson 10 and prompt the AI using the structured recipe.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe how students reason through the comparison. Ask guiding questions such as:\n- \"Where did the AI follow your wireframe well?\"\n- \"What doesn't match, and why do you think that happened?\"\n- \"What details might you add or change next time to get a closer match?\"",
+        "description": "How AI Interprets Wireframes (10 mins)\n\n<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students understand that AI interprets wireframes by recognizing patterns and may misinterpret unclear or ambiguous designs.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to each image from left to right and guide students through the process. Start with the wireframe and ask what they notice (such as sections, images, or navigation). Then explain that the AI scans the layout for patterns like spacing, grouping, and labels. Next, show how the AI uses those patterns to infer components and structure (such as headers, sections, or cards). Finally, explain that the AI generates code based on those predictions. Emphasize that at each step, the AI is making interpretations—not perfectly understanding the design.",
         "duration": "10",
+        "name": "How AI Interprets Wireframes",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI \"understands\" their design the same way they do. Emphasize that at each step—scanning patterns, inferring structure, and generating code—the AI is making educated guesses. This is why unclear layouts or missing details can lead to unexpected results. Keep this section brief and move quickly into the activity.\n\nKeep this section brief—focus on helping students recognize that AI interprets and may misinterpret wireframes, then move quickly into the activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d1ce5209-880a-4fd6-9cb5-c12db6ffac4d",
+        "lesson_activity.key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb"
+      }
+    },
+    {
+      "key": "9028956e-2691-4752-b406-9f226afdc2c1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Point to the wireframe example and highlight specific problem areas (unclear shapes, spacing, or overlapping elements). Explain that AI relies on recognizable patterns, so when these elements are unclear or inconsistent, the AI may interpret them incorrectly. Emphasize that when structure, grouping, or hierarchy isn’t clearly defined, the AI will make its best guess, which may not match the intended design. Connect this to prompting by noting that clearer descriptions and constraints help guide the AI toward a more accurate layout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may assume AI will understand their design exactly as they do. Use this example to highlight that AI makes guesses based on patterns. Later, if students say the AI \"got it wrong,\" prompt them to ask, \"What might the AI have been confused by?\" and connect mismatches back to unclear shapes, spacing, or missing details in their wireframe or prompt."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9028956e-2691-4752-b406-9f226afdc2c1",
+        "lesson_activity.key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb"
+      }
+    },
+    {
+      "key": "557d67c5-326a-4299-8092-408021b48c70",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** What's one thing in this wireframe that could be interpreted in different ways?\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students identify parts of the wireframe that could be interpreted in different ways and may disagree on what certain elements represent (for example, whether something is a button, logo, image, or card). Through sharing different responses, they recognize that people interpret the same visual differently. Use that moment to highlight that this same ambiguity applies to AI—it does not \"know\" the correct answer and instead makes its best guess based on patterns, which can lead to mismatches with the intended design.\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "557d67c5-326a-4299-8092-408021b48c70",
+        "lesson_activity.key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb"
+      }
+    },
+    {
+      "key": "ed08db48-f3e6-40a8-81f1-093f71598511",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students generate a layout from a wireframe using a planned prompt, then compare the AI output to their design to identify matches and mismatches.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the From Wireframes to Layouts activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 11, Level 1. Explain that they will use their wireframe and planned prompt to generate a layout, then compare the AI output to their design to identify matches and mismatches.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Observe how students reason through the comparison. Ask guiding questions such as:\n- \"What part of your layout matches your wireframe most closely?\"\n- \"What doesn't match, and how is it different from your design?\"\n- \"Why do you think the AI interpreted that part this way?\"\n- \"What could you change in your prompt to improve that?\"",
+        "duration": "20",
         "name": "Generate Using Wireframes",
         "progression_name": "Generate from a Wireframe",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If the AI's layout misses the mark, remind students they can clarify their prompt, add specific layout details, or generate smaller sections separately to get better results."
+            "markdown": "- If students didn't finish all four pages of their wireframe last class, reassure them that one completed page is enough to continue.\n- If students do not have a wireframe, have them use the Sample Wireframe provided in the level's panel files.\n- If the AI output doesn't match their design, encourage students to revise their prompt with more specific layout details or constraints."
+          },
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Use student responses in the activity guide and their work in Level 1 to formatively assess whether students can generate layouts from a wireframe, evaluate how well the AI output aligns with their design, and refine their prompts to improve that alignment."
           }
         ]
       },
@@ -4427,7 +4403,7 @@
     },
     {
       "key": "034528c2-bc4a-4fba-8273-7c5191632532",
-      "position": 2,
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -4437,9 +4413,9 @@
     },
     {
       "key": "0f6fb15b-f830-49b2-bb72-9a45a347e267",
-      "position": 3,
+      "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Did the AI omit any parts of your wireframe or miss user needs when generating your layout?*\n- *What might have caused that, and how did you adjust your prompt or code to fix it?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should recognize that some omissions may come from unclear prompts, while others reflect the AI's own limitations. Listen for students identifying specific mismatches between their wireframe and the generated layout and considering whether those issues came from how they prompted or from how the AI interpreted the task. Students should discuss possible causes for mismatches, like vague wording, missing details, or AI misunderstanding structure. They should describe how they iterated to improve results. Listen for students showing accountability (clarifying or refining their prompt) while also recognizing when AI-generated outputs require human correction or more guidance."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *Which part of your wireframe was hardest for AI to interpret?*\n- *What detail in your prompt might have helped AI build it correctly the first time?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students reflect on where AI misinterpreted their wireframe and recognize that unclear or incomplete prompts can lead to mismatches. They should identify that more specific details and constraints in their prompt can help guide the AI toward a more accurate layout. After a few responses, briefly reinforce that mismatches were not random—they were the result of how the AI interpreted the wireframe or how clearly the prompt described the design."
       },
       "seeding_key": {
         "activity_section.key": "0f6fb15b-f830-49b2-bb72-9a45a347e267",
@@ -4447,48 +4423,10 @@
       }
     },
     {
-      "key": "b07a6727-159a-48bd-94ef-061d9b944b1f",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa-solid fa-bullseye-arrow\"></i> **Goal of this activity:** Students refine their AI-generated layout by identifying targeted fixes, improving accessibility using the POUR checklist, and applying debugging strategies to resolve persistent issues. They iterate through multiple versions to move closer to a complete, functional design.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Level 2. Explain that this stage focuses on refining their layout and debugging issues that prevent it from matching their plan or being accessible. Students will upload their wireframe and use prompts to generate, refine, and debug their layout in Web Lab. They should use the Prompt Recipe Sheet, Refinement Checklist, and Debugging Checklist from their Unit Guide to help them iterate until the AI output matches their wireframe as closely as possible.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Encourage students to verbalize their reasoning:\n- \"What specific fix are you targeting in this version?\"\n- \"Which POUR principle did you apply, and why?\"\n- \"What debugging strategy are you trying, and how is it helping?\"\n\nListen for students describing how they test and refine their prompts systematically.",
-        "duration": "20",
-        "name": "Generate Using Wireframes",
-        "progression_name": "Refine, Debug, Iterate",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Encourage students to view each version as an experiment that brings them closer to their intended design and improves their collaboration with AI."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "b07a6727-159a-48bd-94ef-061d9b944b1f",
-        "lesson_activity.key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb"
-      }
-    },
-    {
-      "key": "9a464937-69c2-4b14-a586-48439f336030",
-      "position": 5,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- *How has your AI build workflow evolved now that you're translating wireframes into full layouts?*\n- *What's your responsibility when the AI's layout doesn't match your plan or your users' needs?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should describe how their workflow has become more intentional. Listen for students explaining that they now use wireframes as input to guide the AI, include clear goals or context in their prompts, and make targeted refinements to align structure with their plan. They should recognize that they're learning to communicate design intent more effectively to the AI. Students should identify that they are responsible for ensuring the final layout aligns with their design and user needs. Listen for students discussing how they revise prompts, debug or adjust code, and apply design principles to fix mismatches.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the check for understanding on Level 3.",
-        "progression_name": "Check for Understanding",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "Use student responses to gauge understanding of debugging and refinement. Consider displaying anonymous student responses on an interactive whiteboard to drive a class debrief."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9a464937-69c2-4b14-a586-48439f336030",
-        "lesson_activity.key": "5cc5c74a-4e33-481b-89b0-4d9c927a57bb"
-      }
-    },
-    {
       "key": "1ba43c2e-a088-431c-97eb-cfd38e5f359f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the Question of the Day in their Unit Guide. Give them 2–3 minutes to write independently, then invite 1–2 students to share. As students respond, prompt them to explain how they used their wireframe and prompt to guide the AI, and how they took responsibility for evaluating and refining the output when it didn’t match their design."
       },
       "seeding_key": {
         "activity_section.key": "1ba43c2e-a088-431c-97eb-cfd38e5f359f",
@@ -4637,19 +4575,6 @@
       },
       "seeding_key": {
         "activity_section.key": "e45814fb-b9a3-4811-b4f0-7eaf970ca637",
-        "lesson_activity.key": "40387f4f-233f-45a7-909e-6b3076890131"
-      }
-    },
-    {
-      "key": "43fd0162-d311-40a6-a358-55bbeabbcf81",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 12, Level 5 to complete the End of Lesson Survey.",
-        "name": "End of Lesson Survey",
-        "progression_name": "End of Lesson Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "43fd0162-d311-40a6-a358-55bbeabbcf81",
         "lesson_activity.key": "40387f4f-233f-45a7-909e-6b3076890131"
       }
     },
@@ -5151,7 +5076,7 @@
         "level_keys": [
           "ai-generated-design-lesson3-level1-explore_2026"
         ],
-        "progression": "Web Lab"
+        "progression": "Use AI to Create a Web Page"
       },
       "bonus": false,
       "seeding_key": {
@@ -5169,6 +5094,28 @@
     },
     {
       "chapter": 7,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Use AI to Create a Web Page"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      },
+      "level_keys": [
+        "ai-generated-design-lesson3-level2-challenges_2026"
+      ]
+    },
+    {
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5193,7 +5140,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5218,34 +5165,9 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 3,
       "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson4-level2_v2026"
-        ],
-        "progression": "Mood Board Design"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson4-level2_v2026"
-        ],
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson4-level2_v2026"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 4,
-      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -5351,7 +5273,7 @@
         "level_keys": [
           "ai-generated-design-lesson6-level4_2026-v4"
         ],
-        "progression": "Apply a Stylesheet"
+        "progression": "Apply and Test a Stylesheet"
       },
       "bonus": false,
       "seeding_key": {
@@ -5374,34 +5296,9 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "ai-generated-design-lesson6-level2_2026-v2"
-        ],
-        "progression": "Apply a Stylesheet"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2026-v2"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson6-level2_2026-v2"
-      ]
-    },
-    {
-      "chapter": 16,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "ai-generated-design-lesson6-level3_2026-v3"
         ],
-        "progression": "Apply a Stylesheet"
+        "progression": "Apply and Test a Stylesheet"
       },
       "bonus": false,
       "seeding_key": {
@@ -5418,15 +5315,15 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 4,
+      "chapter": 16,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson6-level4_2025-v2"
         ],
-        "progression": "Styling Challenge"
+        "progression": "Style Choice Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -5443,15 +5340,15 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 5,
+      "chapter": 17,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
         "level_keys": [
           "ai-generated-design-lesson6-level8_2026-v2"
         ],
-        "progression": "Styling Challenge"
+        "progression": "Style Choice Challenge"
       },
       "bonus": false,
       "seeding_key": {
@@ -5468,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5493,7 +5390,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5501,7 +5398,7 @@
         "level_keys": [
           "ai-generated-design-lesson8-level1_2026"
         ],
-        "progression": "Create a Site Map and User Flow"
+        "progression": "Create a Site Map"
       },
       "bonus": false,
       "seeding_key": {
@@ -5518,15 +5415,12 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson8-level2_2026"
-        ],
-        "progression": "Create a Site Map and User Flow"
+        "progression": "Trace the User Flow"
       },
       "bonus": false,
       "seeding_key": {
@@ -5536,14 +5430,14 @@
         "lesson.key": "Lesson 8: Site Maps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801"
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5"
       },
       "level_keys": [
         "ai-generated-design-lesson8-level2_2026"
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5568,7 +5462,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5593,7 +5487,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5618,7 +5512,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5643,7 +5537,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5668,7 +5562,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5693,7 +5587,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5718,7 +5612,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5743,20 +5637,17 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
-        ],
         "progression": "Web App Responsiveness"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
+          "ai-generated-design-lesson12-level1-v2"
         ],
         "lesson.key": "Lesson 12: Designing for Responsiveness",
         "lesson_group.key": "lessonGroup-3",
@@ -5764,11 +5655,11 @@
         "activity_section.key": "ce2a9c95-0b2c-4c6d-84e5-2428f67c68a0"
       },
       "level_keys": [
-        "ai-generated-design-lesson12-level1_2026"
+        "ai-generated-design-lesson12-level1-v2"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5793,32 +5684,7 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "ai-generated-design-lesson12-level5_2026"
-        ],
-        "progression": "End of Lesson Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ai-generated-design-lesson12-level5_2026"
-        ],
-        "lesson.key": "Lesson 12: Designing for Responsiveness",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "43fd0162-d311-40a6-a358-55bbeabbcf81"
-      },
-      "level_keys": [
-        "ai-generated-design-lesson12-level5_2026"
-      ]
-    },
-    {
-      "chapter": 33,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5843,7 +5709,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5868,7 +5734,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5893,7 +5759,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5918,7 +5784,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -6018,6 +5884,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ai-generated-design-lesson3-level2-challenges_2026",
+        "script_level.level_keys": [
+          "ai-generated-design-lesson3-level2-challenges_2026"
+        ],
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026",
+        "activity_section.key": "8b12435b-3b71-447a-a1e9-95202b68370a"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "ai-generated-design-lesson4-level1_v3_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson4-level1_v3_2026"
@@ -6033,18 +5911,6 @@
         "level.key": "ai-generated-design-lesson4-level1_2026",
         "script_level.level_keys": [
           "ai-generated-design-lesson4-level1_2026"
-        ],
-        "lesson.key": "Lesson 4: Finding Your Style",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "46b5d44c-d36e-4d90-87ee-ef5405ff30a6"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson4-level2_v2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson4-level2_v2026"
         ],
         "lesson.key": "Lesson 4: Finding Your Style",
         "lesson_group.key": "lessonGroup-3",
@@ -6105,18 +5971,6 @@
         "level.key": "ai-generated-design-lesson6-level4_2026-v4",
         "script_level.level_keys": [
           "ai-generated-design-lesson6-level4_2026-v4"
-        ],
-        "lesson.key": "Lesson 6: Intro to CSS",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "ab2c1929-103b-4431-8df7-2d49b5537500"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson6-level2_2026-v2",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson6-level2_2026-v2"
         ],
         "lesson.key": "Lesson 6: Intro to CSS",
         "lesson_group.key": "lessonGroup-3",
@@ -6193,7 +6047,7 @@
         "lesson.key": "Lesson 8: Site Maps",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
-        "activity_section.key": "d8668fbf-ca41-418e-829b-46532091d801"
+        "activity_section.key": "1ca7ab70-f3a4-4b28-aa63-ca4fc49e07e5"
       }
     },
     {
@@ -6294,9 +6148,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "ai-generated-design-lesson12-level1_2026",
+        "level.key": "ai-generated-design-lesson12-level1-v2",
         "script_level.level_keys": [
-          "ai-generated-design-lesson12-level1_2026"
+          "ai-generated-design-lesson12-level1-v2"
         ],
         "lesson.key": "Lesson 12: Designing for Responsiveness",
         "lesson_group.key": "lessonGroup-3",
@@ -6314,18 +6168,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026",
         "activity_section.key": "e0c423cc-eec9-420b-be10-63c12abca060"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "ai-generated-design-lesson12-level5_2026",
-        "script_level.level_keys": [
-          "ai-generated-design-lesson12-level5_2026"
-        ],
-        "lesson.key": "Lesson 12: Designing for Responsiveness",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026",
-        "activity_section.key": "43fd0162-d311-40a6-a358-55bbeabbcf81"
       }
     },
     {
@@ -7849,19 +7691,6 @@
       }
     },
     {
-      "key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-      "position": 2,
-      "learning_goal": "Refine prompts to improve results",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
       "key": "4ee779c4-00e6-4de5-beda-7e2f3c0c2f4d",
       "position": 1,
       "learning_goal": "Identify and categorize accessibility issues using POUR",
@@ -7888,32 +7717,6 @@
       }
     },
     {
-      "key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-      "position": 3,
-      "learning_goal": "Evaluate and improve AI-generated output",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-      "position": 1,
-      "learning_goal": "Use AI to generate a web page",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
       "key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
       "position": 2,
       "learning_goal": "Write effective AI prompts that propose accessibility fixes",
@@ -7922,6 +7725,45 @@
       "seeding_key": {
         "learning_goal.key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+      "position": 1,
+      "learning_goal": "Use AI to generate a web page",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+      "position": 2,
+      "learning_goal": "Refine prompts to improve results",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+      "position": 3,
+      "learning_goal": "Evaluate and improve AI-generated output",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }
@@ -8100,54 +7942,6 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Student does not revise prompts or relies on a single vague prompt.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student attempts prompting but makes minimal or unclear revisions.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student revises at least one prompt to improve the webpage.\n\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student writes clear and specific prompts and revises them multiple times to improve both structure and style.\n\n\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "44f7e0b4-edcb-4b60-af0a-fe8414ac9fbb",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
       "teacher_description": "Does not identify relevant accessibility issues, does not use the POUR framework, or gives responses unrelated to the task.",
       "ai_prompt": "",
       "seeding_key": {
@@ -8244,102 +8038,6 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "Student accepts AI output without evaluating or refining it.",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student accepts AI output with little evidence of review or improvement.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student reviews output and makes at least one meaningful improvement.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student reviews AI output, identifies strengths and issues, and makes meaningful improvements that better match their goal or user needs.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "866fdfd9-7ade-4ac5-8f20-1c422b6bf9c6",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
-      "teacher_description": "Student is unable to generate a webpage using AI.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "Student generates a webpage using AI but it is incomplete, unclear, or only includes structure or style.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "Student uses AI to generate a webpage with both structure and style that mostly reflects a chosen topic.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "Student uses AI to generate both structure (HTML) and style (CSS) that clearly reflects a chosen topic and includes multiple relevant sections.\n",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "9a1c1069-4853-4119-9795-4b8ae9af4d2d",
-        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "ai-generated-design-2026"
-      }
-    },
-    {
-      "understanding": 0,
       "teacher_description": "Does not write usable prompts, or the prompts are unrelated to accessibility improvements.",
       "ai_prompt": "",
       "seeding_key": {
@@ -8382,6 +8080,150 @@
         "understanding": 3,
         "learning_goal.key": "9d6f0076-be91-4e83-876b-fc41101dfdae",
         "lesson.key": "Lesson 9: Accessibility in Design",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student is unable to generate a webpage using AI.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student generates a webpage using AI but it is incomplete, unclear, or only includes structure or style.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student uses AI to generate a webpage with both structure and style that mostly reflects a chosen topic.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student uses AI to generate both structure (HTML) and style (CSS) that clearly reflects a chosen topic and includes multiple relevant sections.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b3e5ef5c-4b50-4312-b18e-e2e8dd3118e4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student does not revise prompts or relies on a single vague prompt.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student attempts prompting but makes minimal or unclear revisions.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student revises at least one prompt to improve the webpage.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student writes clear and specific prompts and revises them multiple times to improve both structure and style.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d2ecab73-f419-4bf4-ae5f-c8a3f27758c7",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Student accepts AI output without evaluating or refining it.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Student accepts AI output with little evidence of review or improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Student reviews output and makes at least one meaningful improvement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "ai-generated-design-2026"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Student reviews AI output, identifies strengths and issues, and makes meaningful improvements that better match their goal or user needs.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e872a52c-5869-40cc-a7bc-eecf9f9af8c4",
+        "lesson.key": "Lesson 3: Build Your First Web Page with AI",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "ai-generated-design-2026"
       }

@@ -270,6 +270,28 @@ describe('ManageStudentsTable', () => {
         );
         expect(screen.queryByText('Gender')).not.toBeInTheDocument();
       });
+
+      it('uses ManageStudentsGenderCell to render legacy gender values', () => {
+        const store = getStore();
+        const studentWithLegacyGender = {
+          ...fakeStudent,
+          gender: 'f',
+          genderTeacherInput: '',
+        };
+        store.dispatch(
+          setStudents({[studentWithLegacyGender.id]: studentWithLegacyGender})
+        );
+
+        render(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+
+        expect(
+          screen.getByText(i18n.genderFemale(), {selector: 'tbody td div'})
+        ).toBeInTheDocument();
+      });
     });
 
     it('renders an editable name field', async () => {
