@@ -784,7 +784,7 @@ module Services
       # The "seeded_from" property is set by the seeding process; we don't need
       # to include it in the serialization.
       attribute :properties do
-        object.properties.except("seeded_from").sort.to_h
+        object.properties.except("seeded_from", "ai_rubric_s3_config").sort.to_h
       end
 
       # A simple field to track when the script was most recently serialized.
@@ -1004,12 +1004,6 @@ module Services
 
       def level_name
         object.level&.name
-      end
-
-      # TODO: Remove this method once s3_config_dir is populated on all Rubric
-      # records, at which point the default attribute reader will suffice.
-      def s3_config_dir
-        @scope[:seed_context].script.ai_rubric_s3_config.try(:[], object.level&.name)
       end
 
       def seeding_key

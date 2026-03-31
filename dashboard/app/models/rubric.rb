@@ -57,6 +57,7 @@ class Rubric < ApplicationRecord
       id: id,
       lessonId: lesson_id,
       levelId: level_id,
+      s3ConfigDir: s3_config_dir,
       learningGoals: learning_goals.map(&:summarize_for_rubric_edit),
     }
   end

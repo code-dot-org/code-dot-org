@@ -7,7 +7,7 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 $(document).ready(() => {
   const rubric = getScriptData('rubricData');
   const lessonData = getScriptData('lessonData');
-  const {unitName, lessonNumber, levels, aiRubricS3Config} = lessonData;
+  const {unitName, lessonNumber, levels} = lessonData;
   const submittableLevels = levels.filter(level => level.isSubmittable);
 
   createReactRoot(
@@ -16,7 +16,6 @@ $(document).ready(() => {
       lessonNumber={lessonNumber}
       submittableLevels={submittableLevels}
       rubric={rubric}
-      aiRubricS3Config={aiRubricS3Config}
     />,
     document.getElementById('form')
   );

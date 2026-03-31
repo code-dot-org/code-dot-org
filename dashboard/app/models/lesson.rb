@@ -612,7 +612,6 @@ class Lesson < ApplicationRecord
       lessonNumber: relative_position,
       lessonName: name,
       levels: level_summary,
-      aiRubricS3Config: script.ai_rubric_s3_config || {}
     }
   end
 
