@@ -164,6 +164,8 @@ module Middleware
       end
 
       private def setup_region(new_region)
+        return if new_region == original_region
+
         # Resets the region if it's `nil` or sets it only if it's available.
         return unless new_region.nil? || Cdo::GlobalEdition.region_available?(new_region)
 
@@ -176,19 +178,17 @@ module Middleware
         # Updates the global `language` cookie to enforce the switch to the regional language.
         set_locale_cookie(new_locale)
 
-        unless new_region == original_region
-          Metrics::Events.log_event(
-            event_name: 'Global Edition Region Changed',
-            user: request.user,
-            session: request.session,
-            metadata: {
-              old_region: original_region,
-              old_locale: original_locale,
-              new_region:,
-              new_locale:,
-            },
-          )
-        end
+        Metrics::Events.log_event(
+          event_name: 'Global Edition Region Changed',
+          user: request.user,
+          session: request.session,
+          metadata: {
+            old_region: original_region,
+            old_locale: original_locale,
+            new_region:,
+            new_locale:,
+          },
+        )
       end
 
       private def existing_route?(path = original_path_info)
