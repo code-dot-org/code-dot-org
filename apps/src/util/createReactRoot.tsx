@@ -9,7 +9,7 @@ import {createRoot, Root} from 'react-dom/client';
 import {getCurrentBrand, getMuiThemeForBrand} from './brand';
 import {SiteConfigProvider} from './SiteConfigContext';
 
-interface CreateReactRootOptions {
+interface Options {
   legacyReactDomRender?: boolean;
 }
 
@@ -23,12 +23,12 @@ const rootsByContainer = new WeakMap<Element, Root>();
  *
  * @param component - The React component to render
  * @param container - The container element or selector to render into
- * @param options - Optional rendering behavior overrides
+ * @param options - Option to override default to use legacy rendering behavior
  */
 export function createReactRoot(
   component: ReactElement,
   container: Element | string,
-  options?: CreateReactRootOptions
+  options?: Options
 ): void {
   const containerElement =
     typeof container === 'string'
