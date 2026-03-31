@@ -2,6 +2,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import {Provider} from 'react-redux';
 
+import progress from '@cdo/apps/code-studio/progressRedux';
 import reducers, {
   initActivities,
   initLevelSearching,
@@ -46,6 +47,7 @@ describe('ActivitySectionCard', () => {
     stubRedux();
     registerReducers({
       ...reducers,
+      progress,
       resources: createResourcesReducer('lessonResource'),
       vocabularies: vocabulariesEditor,
     });

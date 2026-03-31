@@ -5,6 +5,7 @@ import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import progress from '@cdo/apps/code-studio/progressRedux';
 import reducers, {
   initActivities,
   initLevelSearching,
@@ -51,6 +52,7 @@ describe('LessonEditor', () => {
     stubRedux();
     registerReducers({
       ...reducers,
+      progress,
       resources: createResourcesReducer('lessonResource'),
       vocabularies: vocabulariesEditor,
       programmingExpressions: programmingExpressionsEditor,
